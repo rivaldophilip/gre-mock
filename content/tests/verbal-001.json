@@ -1,0 +1,1726 @@
+{
+ "id": "verbal-001",
+ "measure": "verbal",
+ "title": "Verbal Hard Mock 1",
+ "sections": [
+  {
+   "n": 1,
+   "minutes": 18
+  },
+  {
+   "n": 2,
+   "minutes": 23
+  }
+ ],
+ "passages": [
+  {
+   "id": "p1",
+   "paragraphs": [
+    "For decades, ecologists described forests as arenas of competition: each tree strains toward light and draws what it can from the soil, and the canopy is the visible record of who prevailed. The discovery that trees of different species are often joined underground by fungal threads seemed to complicate this picture, and some popularizers promptly declared the forest a cooperative commonwealth, in which established trees nurse their seedlings and ailing neighbors through the fungal network. The evidence for such nursing is, however, thinner than the enthusiasm suggests. Isotope-labelling experiments do show that carbon can move through the fungal threads, but the amounts transferred are usually small, and the fungi themselves, which are no mere conduits, may retain much of what passes through them. It does not follow that the transfers benefit the receiving trees; nor that natural selection has favored the donors for giving. A more cautious reading treats the network as a shared infrastructure whose costs and benefits fall unevenly, and whose ecological significance remains to be measured rather than assumed."
+   ],
+   "tags": [
+    {
+     "kind": "word",
+     "id": "light",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "prevail",
+     "role": "passage"
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "paragraphs": [
+    "Historians of Dutch painting have long treated the seventeenth-century still life as a moralizing genre: the overturned goblet, the peeled lemon, and the guttering candle are read as reminders that pleasure is fleeting. This interpretation, assembled largely from emblem books, has the appeal of coherence, and it has hardened into a convention that students are expected to recite. Yet the paintings were made for merchants who, by every account, enjoyed the objects shown, and who would hardly have hung over the dinner table a daily rebuke of the dinner. Recent scholars propose that the pictures traded on an ambivalence rather than resolving it: they displayed luxury and confessed its transience in a single gesture, leaving the viewer free to dwell on either. If so, the moralizing reading is not false but incomplete; it mistakes one pole of a tension for the whole."
+   ],
+   "tags": [
+    {
+     "kind": "word",
+     "id": "candle",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "fleeting",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "rebuke",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "resolve",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "table",
+     "role": "passage"
+    }
+   ]
+  },
+  {
+   "id": "a1",
+   "paragraphs": [
+    "A city's transit authority reports that after it replaced a downtown bus line with a streetcar line, weekday ridership along the route rose 30 percent. The authority concludes that riders find streetcars inherently more attractive than buses."
+   ],
+   "tags": [
+    {
+     "kind": "word",
+     "id": "inherent",
+     "role": "passage"
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "paragraphs": [
+    "Linguists who study creoles, full languages that arise when speakers of mutually unintelligible tongues must communicate, have traditionally explained their grammars as simplified blends of the languages in contact. The simplification thesis is attractive because it matches the circumstances: a pidgin, the makeshift ancestor of a creole, is by definition stripped of most inflection, and one expects its descendants to inherit the lack. But the thesis is difficult to square with the grammars of mature creoles, which often exhibit elaborate systems of verbal markers for tense, mood, and aspect that appear in none of the contributing languages. Some scholars have therefore argued that children, who are the first to acquire a creole as a native language, do not merely inherit the pidgin but reconstruct grammar from an innate template. Critics reply that this inference is premature: the markers in question may be traceable to a substrate language whose influence is easy to overlook precisely because its speakers were the least prestigious participants in the contact. The dispute is thus less about whether children contribute than about whether their contribution requires an innate endowment, or only the ordinary human capacity to regularize the input they receive."
+   ],
+   "tags": [
+    {
+     "kind": "word",
+     "id": "elaborate",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "makeshift",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "premature",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "question",
+     "role": "passage"
+    }
+   ]
+  },
+  {
+   "id": "p4",
+   "paragraphs": [
+    "Students who reread a text feel that they have learned it: the words flow, and fluency is easily mistaken for mastery. Psychologists who study memory have shown that the feeling is a poor guide. In a standard demonstration, one group reads a passage four times while another reads it once and then attempts to recall it; days later, the second group remembers markedly more. The reading group is, nevertheless, more confident of its recall. The explanation usually offered is that retrieval, unlike rereading, forces the learner to reconstruct the material, and reconstruction strengthens the routes by which it will be found again. A less flattering corollary is often overlooked. Because testing exposes gaps that rereading conceals, it is unpleasant, and learners who are free to choose their methods tend to avoid it. Instruction that relies on student discretion therefore tends to reward exactly the practices that feel productive and are not. The remedy is not to exhort students to study harder, which they already believe themselves to be doing, but to build retrieval into the structure of the course."
+   ],
+   "tags": [
+    {
+     "kind": "word",
+     "id": "conceal",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "exact",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "exhort",
+     "role": "passage"
+    }
+   ]
+  },
+  {
+   "id": "p5",
+   "paragraphs": [
+    "Critics have tended to read the late novels of a certain author as a retreat from the social world of her earlier work, citing their long interior monologues and their scarcity of dialogue. But the monologues are seldom solitary: nearly every one is addressed, explicitly or implicitly, to a particular person, and many are interrupted by the addressee's silence, which the narrator is forced to interpret. Seen this way, the late novels do not abandon the social; they dramatize its failure, rendering as private speech the conversations that the characters can no longer hold. The retreat, if there is one, belongs to the characters, not to the book."
+   ],
+   "tags": [
+    {
+     "kind": "word",
+     "id": "explicit",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "implicit",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "novel",
+     "role": "passage"
+    }
+   ]
+  },
+  {
+   "id": "a2",
+   "paragraphs": [
+    "A council member argues: 'Since the town banned plastic grocery bags last year, the amount of plastic collected at the town's recycling depot has fallen by a fifth. Clearly shoppers are using fewer plastic bags, and the ban deserves the credit.'"
+   ],
+   "tags": [
+    {
+     "kind": "word",
+     "id": "clear",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "plastic",
+     "role": "passage"
+    }
+   ]
+  }
+ ],
+ "figures": [],
+ "questions": [
+  {
+   "id": "s1q1",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "The committee's report, though fluent and thoroughly footnoted, was ___ : wherever the evidence was ambiguous, it was resolved in the direction its sponsors preferred.",
+   "blanks": [
+    [
+     "contentious",
+     "perfunctory",
+     "disingenuous",
+     "tendentious",
+     "meticulous"
+    ]
+   ],
+   "key": {
+    "sel": [
+     3
+    ]
+   },
+   "explanation": {
+    "key": "Resolving every ambiguity in the sponsors' favor makes the report slanted by design: tendentious. Disingenuous implies feigned innocence, which the sentence does not describe; contentious means disputed, not slanted.",
+    "distractors": {
+     "contentious": "Means given to arguing or disputed; the sentence describes slant, not controversy.",
+     "perfunctory": "Means superficial, contradicting 'thoroughly footnoted'.",
+     "disingenuous": "Means pretending candor; plausible but the sentence defines the flaw as one-directional resolution of ambiguity.",
+     "meticulous": "Means painstakingly careful; the opposite of the criticism."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "contentious",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "perfunctory",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "disingenuous",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "tendentious",
+     "role": "key",
+     "at": [
+      0,
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "meticulous",
+     "role": "distractor",
+     "at": [
+      0,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q2",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 3,
+   "prompt": "Known for his ___ personal habits, the tycoon nonetheless made business decisions so ___ that his own executives could not predict them.",
+   "blanks": [
+    [
+     "austere",
+     "opulent",
+     "lethargic"
+    ],
+    [
+     "prudent",
+     "systematic",
+     "capricious"
+    ]
+   ],
+   "key": {
+    "sel": [
+     0,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "'Nonetheless' signals contrast between a disciplined private life (austere) and unpredictable decisions (capricious).",
+    "distractors": {
+     "opulent": "Would make 'nonetheless' pointless; luxury does not contrast with unpredictability.",
+     "lethargic": "Sluggish; has no link to 'known for' a reputation of restraint.",
+     "prudent": "Prudent decisions would be predictable.",
+     "systematic": "Systematic decisions would be predictable."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "austere",
+     "role": "key",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "opulent",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "lethargic",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "prudent",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "capricious",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q3",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "Reformers who were quick to (i) ___ the board's integrity assumed that its rules concealed (ii) ___ ; a closer reading showed the procedures to be merely (iii) ___ , needlessly elaborate in their requirements but not deceitful.",
+   "blanks": [
+    [
+     "overshadow",
+     "impugn",
+     "kowtow"
+    ],
+    [
+     "paucity",
+     "equanimity",
+     "chicanery"
+    ],
+    [
+     "mundane",
+     "byzantine",
+     "lucid"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2,
+     1
+    ]
+   },
+   "explanation": {
+    "key": "(i) Questioning someone's integrity is to impugn it. (ii) What the reformers assumed the rules hid is trickery: chicanery. (iii) 'Needlessly elaborate ... but not deceitful' defines byzantine.",
+    "distractors": {
+     "overshadow": "To eclipse, not to question.",
+     "kowtow": "To grovel; reformers who kowtow would not be questioning integrity.",
+     "paucity": "Scarcity; a rule cannot 'conceal a scarcity' in this sense.",
+     "equanimity": "Calm; nothing to do with concealment.",
+     "mundane": "Ordinary, but the sentence says the rules were needlessly elaborate.",
+     "lucid": "Clear; the requirements are described as needlessly elaborate."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "overshadow",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "impugn",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "kowtow",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "paucity",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "equanimity",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "chicanery",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "mundane",
+     "role": "distractor",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "byzantine",
+     "role": "key",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "lucid",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q4",
+   "section": 1,
+   "type": "se",
+   "difficulty": 4,
+   "prompt": "The memo was so ___ that a reader who skipped three of its five pages would have lost nothing of substance.",
+   "choices": [
+    "prolix",
+    "convoluted",
+    "verbose",
+    "tortuous",
+    "terse",
+    "cogent"
+   ],
+   "key": {
+    "sel": [
+     0,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "Pages that can be skipped without loss are padding: prolix and verbose (wordy). Convoluted and tortuous describe twisting complexity, which would make skipping costly; terse and cogent describe economy and force.",
+    "distractors": {
+     "convoluted": "Complicated and twisting, which would make pages hard to skip, not redundant (trap pair with tortuous).",
+     "tortuous": "Twisting; about structure, not padding.",
+     "terse": "Brief, the opposite.",
+     "cogent": "Compelling, unrelated to padding."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "prolix",
+     "role": "key",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "convoluted",
+     "role": "distractor",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "verbose",
+     "role": "key",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "tortuous",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "terse",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "cogent",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q5",
+   "section": 1,
+   "type": "se",
+   "difficulty": 3,
+   "prompt": "Revised by three committees, the speech was so ___ that not even the most sensitive listener could take offense.",
+   "choices": [
+    "pernicious",
+    "anodyne",
+    "odious",
+    "lurid",
+    "innocuous",
+    "ominous"
+   ],
+   "key": {
+    "sel": [
+     1,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "A speech scrubbed of anything that could offend is harmless and bland: anodyne and innocuous.",
+    "distractors": {
+     "pernicious": "Harmful; the opposite meaning (trap pair with odious).",
+     "odious": "Hateful; same reversed direction as pernicious.",
+     "lurid": "Sensational; would invite offense.",
+     "ominous": "Threatening."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "pernicious",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "anodyne",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "odious",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "lurid",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "innocuous",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "ominous",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q6",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "Where her earlier essays had been generous even to rivals, her new column was ___ , its wit curdling into spite.",
+   "choices": [
+    "trenchant",
+    "caustic",
+    "benign",
+    "acerbic",
+    "incisive",
+    "lucid"
+   ],
+   "key": {
+    "sel": [
+     1,
+     3
+    ]
+   },
+   "explanation": {
+    "key": "Wit 'curdling into spite' calls for sharp, biting tone: caustic and acerbic. Trenchant and incisive are a trap pair: they also mean sharp, but connote penetrating insight, not spite.",
+    "distractors": {
+     "trenchant": "Keen and penetrating; admiring in tone, not spiteful.",
+     "incisive": "Clear-sighted and sharp, again without the spite the sentence stresses.",
+     "benign": "Kindly; the contrast the sentence draws is with generosity.",
+     "lucid": "Clear; says nothing about tone."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "trenchant",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "caustic",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "benign",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "acerbic",
+     "role": "key",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "incisive",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "lucid",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q7",
+   "section": 1,
+   "type": "se",
+   "difficulty": 4,
+   "prompt": "The staff, exhausted by months of delays, grew ___ in meetings, answering every proposal with a complaint.",
+   "choices": [
+    "jocular",
+    "querulous",
+    "cogent",
+    "petulant",
+    "flippant",
+    "apposite"
+   ],
+   "key": {
+    "sel": [
+     1,
+     3
+    ]
+   },
+   "explanation": {
+    "key": "Answering every proposal with a complaint describes fretful, complaining behavior: querulous and petulant.",
+    "distractors": {
+     "jocular": "Joking; trap pair with flippant (both humorous).",
+     "flippant": "Disrespectfully casual; not complaining.",
+     "cogent": "Convincing; unrelated to the complaining.",
+     "apposite": "Relevant; unrelated."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "jocular",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "querulous",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "cogent",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "petulant",
+     "role": "key",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "flippant",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "apposite",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q8",
+   "section": 1,
+   "type": "rc",
+   "difficulty": 4,
+   "prompt": "The author's statement that it does not follow 'that natural selection has favored the donors for giving' serves primarily to",
+   "passageId": "p1",
+   "key": {
+    "sel": [
+     0
+    ]
+   },
+   "explanation": {
+    "key": "The sentence separates two claims: that carbon moves (shown) and that the movement is an adaptation of donors (not shown). B overstates: the author says benefit to donors is unestablished, not that it is absent."
+   },
+   "tags": [],
+   "choices": [
+    "distinguish between showing that a transfer occurs and showing that it evolved because of its effects",
+    "suggest that donor trees receive no benefit from the network",
+    "rebut the claim that fungal networks connect different species",
+    "argue that natural selection cannot act on the behavior of fungi",
+    "point out that the experiments traced the wrong isotope"
+   ]
+  },
+  {
+   "id": "s1q9",
+   "section": 1,
+   "type": "rc_multi",
+   "difficulty": 5,
+   "prompt": "Consider each of the choices separately and select all that apply. The passage suggests which of the following about the 'cooperative commonwealth' view?",
+   "passageId": "p1",
+   "key": {
+    "sel": [
+     0,
+     1
+    ]
+   },
+   "explanation": {
+    "key": "A: the author says it does not follow that transfers benefit receivers or were selected for. B: the discovery 'seemed to complicate' the competition picture and popularizers 'promptly' declared the commonwealth. C: the author calls the evidence thin and wants the question measured, not that it is refuted."
+   },
+   "tags": [],
+   "choices": [
+    "It draws a conclusion about benefit and selection that the carbon-transfer findings do not establish.",
+    "It arose in response to the discovery that trees of different species can be connected.",
+    "It has been refuted by isotope-labelling experiments."
+   ]
+  },
+  {
+   "id": "s1q10",
+   "section": 1,
+   "type": "rc",
+   "difficulty": 3,
+   "prompt": "Which of the following best describes the relationship, as the author presents it, between the moralizing reading and the recent scholars' proposal?",
+   "passageId": "p2",
+   "key": {
+    "sel": [
+     1
+    ]
+   },
+   "explanation": {
+    "key": "The author says the moralizing reading is 'not false but incomplete' and mistakes 'one pole of a tension for the whole', so the proposal retains it as one pole. A overstates (it is not replaced); D is not what the proposal does."
+   },
+   "tags": [],
+   "choices": [
+    "The proposal replaces the moralizing reading with an incompatible one.",
+    "The proposal keeps the moralizing reading as one component of a broader account.",
+    "The proposal shows that the moralizing reading rested on misdated sources.",
+    "The proposal supports the moralizing reading by adding new emblematic evidence.",
+    "The proposal and the moralizing reading concern different genres of painting."
+   ]
+  },
+  {
+   "id": "s1q11",
+   "section": 1,
+   "type": "rc_select",
+   "difficulty": 3,
+   "prompt": "Select the sentence in which the author gives a reason, based on who owned the paintings, to doubt the moralizing reading.",
+   "passageId": "p2",
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "The third sentence ('Yet the paintings were made for merchants...') argues that owners who enjoyed the objects would not hang a rebuke of them over the dinner table."
+   },
+   "tags": []
+  },
+  {
+   "id": "s1q12",
+   "section": 1,
+   "type": "rc",
+   "difficulty": 4,
+   "prompt": "Which of the following, if true, most seriously weakens the authority's conclusion?",
+   "passageId": "a1",
+   "key": {
+    "sel": [
+     1
+    ]
+   },
+   "explanation": {
+    "key": "If the streetcar simply runs twice as often, the rise may come from frequency rather than from the vehicle type, so the conclusion about streetcars' inherent appeal is undermined. C, D and E each make the conclusion more plausible (E: riders came back despite a prior decline); A is about capacity, not rider preference."
+   },
+   "tags": [],
+   "choices": [
+    "Streetcars carry more passengers per vehicle than buses do.",
+    "The streetcar line runs twice as often as the bus line it replaced did.",
+    "Many new riders on the streetcar line previously drove cars.",
+    "The streetcar fare is higher than the bus fare it replaced.",
+    "Ridership on the downtown bus line had been falling for several years before the change."
+   ],
+   "subtype": "arg"
+  },
+  {
+   "id": "s2q1",
+   "section": 2,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "Although economists dismissed the proposal as ___ , its idealism won it a devoted following among younger voters.",
+   "blanks": [
+    [
+     "astute",
+     "cogent",
+     "lucid",
+     "quixotic",
+     "apposite"
+    ]
+   ],
+   "key": {
+    "sel": [
+     3
+    ]
+   },
+   "explanation": {
+    "key": "'Although ... dismissed ... its idealism won a following' signals that the proposal was seen as admirable but impractical: quixotic.",
+    "distractors": {
+     "astute": "Shrewd; economists would not dismiss a shrewd proposal.",
+     "cogent": "Convincing; same problem.",
+     "lucid": "Clear; same problem.",
+     "apposite": "Well suited; same problem."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "astute",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "cogent",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "lucid",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "quixotic",
+     "role": "key",
+     "at": [
+      0,
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "apposite",
+     "role": "distractor",
+     "at": [
+      0,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2q2",
+   "section": 2,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "Whereas the board was ___ , chasing quarterly gains with no thought for the decade ahead, its chairman spent his time trying to ___ himself with speeches about a legacy no one had asked for.",
+   "blanks": [
+    [
+     "astute",
+     "myopic",
+     "gregarious"
+    ],
+    [
+     "mollify",
+     "belittle",
+     "aggrandize"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) Chasing quarterly gains with no thought for the long term is short-sighted: myopic. (ii) Speeches about his own unrequested legacy are self-promotion: aggrandize himself.",
+    "distractors": {
+     "astute": "Shrewd; it contradicts 'no thought for the decade ahead'.",
+     "gregarious": "Sociable; not about foresight.",
+     "mollify": "To soothe; not what speeches about one's legacy do to oneself.",
+     "belittle": "To diminish; the opposite of what a legacy speech does for oneself."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "astute",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "myopic",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "gregarious",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "mollify",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "belittle",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "aggrandize",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2q3",
+   "section": 2,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "The pamphlet's central claim, that prosperity flows only from deregulation, rests on a (i) ___ argument whose examples are cherry-picked and whose reasoning is circular. Yet its (ii) ___ prose, padded with ornate qualifications, discouraged scrutiny, and the few reviewers who spotted the flaws met with (iii) ___ comparisons casting them as enemies of progress.",
+   "blanks": [
+    [
+     "cogent",
+     "specious",
+     "germane"
+    ],
+    [
+     "laconic",
+     "turgid",
+     "incisive"
+    ],
+    [
+     "invidious",
+     "apposite",
+     "scrupulous"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     1,
+     0
+    ]
+   },
+   "explanation": {
+    "key": "(i) An argument with cherry-picked examples and circular logic only seems sound: specious. (ii) Padded, ornate prose is turgid. (iii) Comparisons that cast critics as enemies unfairly are invidious.",
+    "distractors": {
+     "cogent": "Convincing; the argument is flawed.",
+     "germane": "Relevant; says nothing about soundness.",
+     "laconic": "Terse, the opposite of padded.",
+     "incisive": "Sharp and clear, the opposite of padded.",
+     "apposite": "Aptly relevant; the comparisons are unfair.",
+     "scrupulous": "Careful and fair; the comparisons are not."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "cogent",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "specious",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "germane",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "laconic",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "turgid",
+     "role": "key",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "incisive",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "invidious",
+     "role": "key",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "apposite",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "scrupulous",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2q4",
+   "section": 2,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "After the inquiry, the committee declined to (i) ___ the director publicly, though it also declined to (ii) ___ him of wrongdoing; his deputy, a notorious (iii) ___ who had flattered him through every scandal, was quietly reassigned.",
+   "blanks": [
+    [
+     "censure",
+     "laud",
+     "placate"
+    ],
+    [
+     "disparage",
+     "exonerate",
+     "mollify"
+    ],
+    [
+     "boor",
+     "martinet",
+     "sycophant"
+    ]
+   ],
+   "key": {
+    "sel": [
+     0,
+     1,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) Publicly rebuke: censure. (ii) 'Declined to ... him of wrongdoing' needs a verb used with 'of': exonerate. (iii) One who flatters through every scandal is a sycophant.",
+    "distractors": {
+     "laud": "To praise; not what an inquiry declines to do 'though' it also declines (ii).",
+     "placate": "To appease; not a public judgment.",
+     "disparage": "Does not take 'of wrongdoing'.",
+     "mollify": "Does not take 'of wrongdoing'.",
+     "boor": "A rude person, not a flatterer.",
+     "martinet": "A strict disciplinarian, not a flatterer."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "censure",
+     "role": "key",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "laud",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "placate",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "disparage",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "exonerate",
+     "role": "key",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "mollify",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "boor",
+     "role": "distractor",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "martinet",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "sycophant",
+     "role": "key",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2q5",
+   "section": 2,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "Only after the first week of protests did public anger begin to ___ , allowing the mayor to return to her office.",
+   "choices": [
+    "abate",
+    "assuage",
+    "subside",
+    "mollify",
+    "placate",
+    "appease"
+   ],
+   "key": {
+    "sel": [
+     0,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "The blank has no object: anger itself must 'begin to' do something. Abate and subside are intransitive and mean to lessen. Assuage, mollify, placate and appease all mean to soothe someone or something and need an object (someone placates anger); they cannot complete the sentence as written.",
+    "distractors": {
+     "assuage": "Transitive: to soothe (something); needs an object.",
+     "mollify": "Transitive: to calm a person.",
+     "placate": "Transitive: to appease a person.",
+     "appease": "Transitive: to pacify."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "abate",
+     "role": "key",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "assuage",
+     "role": "distractor",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "subside",
+     "role": "key",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "mollify",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "placate",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "appease",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2q6",
+   "section": 2,
+   "type": "se",
+   "difficulty": 4,
+   "prompt": "The senator's remarks about farm subsidies were largely ___ to a debate that concerned defense spending.",
+   "choices": [
+    "peripheral",
+    "pertinent",
+    "tangential",
+    "germane",
+    "crucial",
+    "apposite"
+   ],
+   "key": {
+    "sel": [
+     0,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "Remarks about farm subsidies in a debate on defense are marginal: peripheral and tangential. Pertinent, germane and apposite all mean relevant.",
+    "distractors": {
+     "pertinent": "Relevant, the opposite.",
+     "germane": "Relevant.",
+     "apposite": "Aptly relevant.",
+     "crucial": "Vital."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "peripheral",
+     "role": "key",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "pertinent",
+     "role": "distractor",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "tangential",
+     "role": "key",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "germane",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "apposite",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2q7",
+   "section": 2,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "The curator's collection was so ___ — a stuffed owl beside a Victorian tax ledger beside a child's abacus — that visitors left unsure what principle governed it.",
+   "choices": [
+    "disparate",
+    "spartan",
+    "heterogeneous",
+    "austere",
+    "cogent",
+    "lucid"
+   ],
+   "key": {
+    "sel": [
+     0,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "Items with nothing in common are disparate and heterogeneous. Spartan and austere (bare, unadorned) are a trap pair; cogent and lucid describe clarity of argument.",
+    "distractors": {
+     "spartan": "Bare; says nothing about variety.",
+     "austere": "Severe or plain; nothing about variety.",
+     "cogent": "Convincing.",
+     "lucid": "Clear."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "disparate",
+     "role": "key",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "spartan",
+     "role": "distractor",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "heterogeneous",
+     "role": "key",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "austere",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "cogent",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "lucid",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2q8",
+   "section": 2,
+   "type": "rc",
+   "difficulty": 4,
+   "prompt": "According to the passage, the simplification thesis is attractive primarily because it",
+   "passageId": "p3",
+   "key": {
+    "sel": [
+     1
+    ]
+   },
+   "explanation": {
+    "key": "The passage says the thesis 'matches the circumstances' and that a pidgin is stripped of inflection, so descendants are expected to lack it. D is the thesis's problem, not its appeal."
+   },
+   "tags": [],
+   "choices": [
+    "explains why children acquire creoles so readily",
+    "accords with the conditions under which creoles form and with the sparse grammar of pidgins",
+    "has been confirmed by studies of substrate languages",
+    "predicts the elaborate verbal markers found in mature creoles",
+    "is supported by accounts that posit an innate template"
+   ]
+  },
+  {
+   "id": "s2q9",
+   "section": 2,
+   "type": "rc",
+   "difficulty": 5,
+   "prompt": "The 'critics' mentioned in the passage would most likely agree with which of the following?",
+   "passageId": "p3",
+   "key": {
+    "sel": [
+     1
+    ]
+   },
+   "explanation": {
+    "key": "The critics' reply is that the markers may be traceable to a substrate language whose influence is easy to overlook. A contradicts the last sentence; C reverses the passage (pidgins are stripped of inflection); D is stronger than the critics' 'premature' objection; E reverses the claim that low-prestige influence is overlooked, not absent."
+   },
+   "tags": [],
+   "choices": [
+    "Children's contributions to creole grammars are negligible.",
+    "A system of verbal markers that seems absent from the languages usually counted as contributors could nonetheless derive from a substrate language.",
+    "The simplification thesis fails because pidgins contain elaborate inflection.",
+    "Innate templates cannot be reconciled with the observed grammars of creoles.",
+    "The least prestigious participants in the contact had little influence on the resulting grammar."
+   ]
+  },
+  {
+   "id": "s2q10",
+   "section": 2,
+   "type": "rc_multi",
+   "difficulty": 4,
+   "prompt": "Consider each of the choices separately and select all that apply. The passage suggests which of the following about the dispute it describes?",
+   "passageId": "p3",
+   "key": {
+    "sel": [
+     0,
+     1
+    ]
+   },
+   "explanation": {
+    "key": "A: the dispute is 'less about whether children contribute'. B: the critics' substrate explanation is offered against the innate-template inference. C: regularization is the alternative to an innate endowment, so it is central."
+   },
+   "tags": [],
+   "choices": [
+    "Both sides accept that children contribute to creole grammars.",
+    "Evidence that the verbal markers derive from a language involved in the original contact would bear on the dispute.",
+    "The ordinary human capacity to regularize input is irrelevant to the dispute."
+   ]
+  },
+  {
+   "id": "s2q11",
+   "section": 2,
+   "type": "rc",
+   "difficulty": 4,
+   "prompt": "The author's view of the recommendation that students be exhorted to study harder is that it",
+   "passageId": "p4",
+   "key": {
+    "sel": [
+     1
+    ]
+   },
+   "explanation": {
+    "key": "The author says students 'already believe themselves to be doing' so, and that discretion rewards practices that feel productive and are not. B names that gap. A reverses the passage; C, D and E are not supported."
+   },
+   "tags": [],
+   "choices": [
+    "is unnecessary because students already retrieve material regularly",
+    "fails to address that the methods students prefer are the ones that feel productive without being so",
+    "would work if combined with a longer rereading schedule",
+    "is the right remedy for students who avoid testing out of anxiety",
+    "has been shown to raise confidence but not recall"
+   ]
+  },
+  {
+   "id": "s2q12",
+   "section": 2,
+   "type": "rc",
+   "difficulty": 5,
+   "prompt": "Which of the following, if true, would most seriously weaken the explanation that the passage says is 'usually offered' for the superiority of the retrieval group?",
+   "passageId": "p4",
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "If the advantage survives when nothing must be reconstructed, reconstruction cannot be what produces it. A is already stated; B would strengthen the case for retrieval; D describes the standard design; E is about preference."
+   },
+   "tags": [],
+   "choices": [
+    "Rereaders rated their confidence higher than the retrieval group did.",
+    "The retrieval group spent less total time with the passage than the rereaders did.",
+    "Participants who 'retrieved' while the passage remained in view, so that no reconstruction was needed, showed the same advantage.",
+    "Participants in both groups were tested several days after reading.",
+    "Some learners prefer rereading to retrieval."
+   ]
+  },
+  {
+   "id": "s2q13",
+   "section": 2,
+   "type": "rc_select",
+   "difficulty": 5,
+   "prompt": "Select the sentence that gives the reason learners tend to avoid retrieval practice.",
+   "passageId": "p4",
+   "key": {
+    "sel": [
+     6
+    ]
+   },
+   "explanation": {
+    "key": "'Because testing exposes gaps that rereading conceals, it is unpleasant, and learners who are free to choose their methods tend to avoid it.' The next sentence states a consequence for instruction, not the reason for avoidance."
+   },
+   "tags": []
+  },
+  {
+   "id": "s2q14",
+   "section": 2,
+   "type": "rc",
+   "difficulty": 4,
+   "prompt": "The final sentence of the passage ('The retreat, if there is one, belongs to the characters, not to the book.') serves primarily to",
+   "passageId": "p5",
+   "key": {
+    "sel": [
+     1
+    ]
+   },
+   "explanation": {
+    "key": "The author has argued that the novels dramatize the failure of social life; the final sentence moves any 'retreat' from the book's stance to the characters' situation. C is tempting ('if there is one') but the author concedes nothing about the books' own withdrawal."
+   },
+   "tags": [],
+   "choices": [
+    "restate the critics' position in sharper form",
+    "relocate the apparent withdrawal from the author's practice to the characters' predicament",
+    "concede that the critics' reading is correct for some of the late novels",
+    "introduce an objection unrelated to the monologues",
+    "summarize the evidence drawn from the earlier novels"
+   ]
+  },
+  {
+   "id": "s2q15",
+   "section": 2,
+   "type": "rc",
+   "difficulty": 3,
+   "prompt": "The council member's argument assumes which of the following?",
+   "passageId": "a2",
+   "key": {
+    "sel": [
+     0
+    ]
+   },
+   "explanation": {
+    "key": "If the depot narrowed what it accepts, the fall in collected plastic could have nothing to do with bags; the inference from 'less plastic collected' to 'fewer bags used' needs the depot's intake to be otherwise unchanged."
+   },
+   "tags": [],
+   "choices": [
+    "During the period, the depot did not stop accepting some kinds of plastic it formerly accepted.",
+    "Plastic bags were the largest category of plastic collected at the depot.",
+    "Other towns have also banned plastic bags.",
+    "Most shoppers supported the ban.",
+    "The ban will remain in effect next year."
+   ],
+   "subtype": "arg"
+  }
+ ]
+}

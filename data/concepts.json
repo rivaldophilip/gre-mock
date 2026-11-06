@@ -1,0 +1,425 @@
+[
+ {
+  "id": "integers-properties",
+  "name": "Integer properties, even/odd, divisibility",
+  "area": "arithmetic",
+  "etsSection": "1.1",
+  "yield": 0.5,
+  "hand_yield": 0.5,
+  "officialCount": 5.0
+ },
+ {
+  "id": "primes-factors",
+  "name": "Primes, factors, multiples, GCD/LCM",
+  "area": "arithmetic",
+  "etsSection": "1.2",
+  "yield": 0.45,
+  "hand_yield": 0.65,
+  "officialCount": 2.5
+ },
+ {
+  "id": "remainders-units",
+  "name": "Remainders and units digits",
+  "area": "arithmetic",
+  "etsSection": "1.2",
+  "yield": 0.5,
+  "hand_yield": 0.9,
+  "officialCount": 1
+ },
+ {
+  "id": "fractions-decimals",
+  "name": "Fractions and decimals operations",
+  "area": "arithmetic",
+  "etsSection": "1.3",
+  "yield": 0.35,
+  "hand_yield": 0.45,
+  "officialCount": 2.5
+ },
+ {
+  "id": "exponents-roots",
+  "name": "Exponents and radicals",
+  "area": "arithmetic",
+  "etsSection": "1.4",
+  "yield": 0.65,
+  "hand_yield": 0.7,
+  "officialCount": 6.0
+ },
+ {
+  "id": "number-line-abs",
+  "name": "Number line, absolute value of numbers",
+  "area": "arithmetic",
+  "etsSection": "1.1",
+  "yield": 0.375,
+  "hand_yield": 0.55,
+  "officialCount": 2.0
+ },
+ {
+  "id": "estimation-sigfig",
+  "name": "Estimation, rounding, scientific notation",
+  "area": "arithmetic",
+  "etsSection": "1.5",
+  "yield": 0.15,
+  "hand_yield": 0.3,
+  "officialCount": 0
+ },
+ {
+  "id": "ratio-proportion",
+  "name": "Ratio and proportion",
+  "area": "arithmetic",
+  "etsSection": "1.6",
+  "yield": 0.425,
+  "hand_yield": 0.6,
+  "officialCount": 2.5
+ },
+ {
+  "id": "percent",
+  "name": "Percent, percent change, successive percent",
+  "area": "arithmetic",
+  "etsSection": "1.7",
+  "yield": 0.675,
+  "hand_yield": 0.75,
+  "officialCount": 6.0
+ },
+ {
+  "id": "sequences-patterns",
+  "name": "Sequences, series and patterns",
+  "area": "arithmetic",
+  "etsSection": "1.8",
+  "yield": 0.35,
+  "hand_yield": 0.5,
+  "officialCount": 2
+ },
+ {
+  "id": "number-sense-qc",
+  "name": "Number sense: sign, zero, magnitude cases",
+  "area": "arithmetic",
+  "etsSection": "1.1",
+  "yield": 0.7,
+  "hand_yield": 0.8,
+  "officialCount": 6.0
+ },
+ {
+  "id": "linear-equations",
+  "name": "Linear equations and simultaneous equations",
+  "area": "algebra",
+  "etsSection": "2.1",
+  "yield": 0.5,
+  "hand_yield": 0.55,
+  "officialCount": 4.5
+ },
+ {
+  "id": "quadratics-factoring",
+  "name": "Factoring and quadratic equations",
+  "area": "algebra",
+  "etsSection": "2.2",
+  "yield": 0.425,
+  "hand_yield": 0.7,
+  "officialCount": 1.5
+ },
+ {
+  "id": "algebraic-expressions",
+  "name": "Algebraic expressions, identities, simplification",
+  "area": "algebra",
+  "etsSection": "2.1",
+  "yield": 0.625,
+  "hand_yield": 0.55,
+  "officialCount": 7.0
+ },
+ {
+  "id": "inequalities",
+  "name": "Linear inequalities",
+  "area": "algebra",
+  "etsSection": "2.3",
+  "yield": 0.575,
+  "hand_yield": 0.7,
+  "officialCount": 4.5
+ },
+ {
+  "id": "abs-value-inequalities",
+  "name": "Absolute-value equations and inequalities",
+  "area": "algebra",
+  "etsSection": "2.3",
+  "yield": 0.5,
+  "hand_yield": 0.9,
+  "officialCount": 1
+ },
+ {
+  "id": "functions",
+  "name": "Functions, notation and composition",
+  "area": "algebra",
+  "etsSection": "2.5",
+  "yield": 0.425,
+  "hand_yield": 0.65,
+  "officialCount": 2
+ },
+ {
+  "id": "coordinate-geometry",
+  "name": "Coordinate plane, lines, slope, distance",
+  "area": "algebra",
+  "etsSection": "2.4",
+  "yield": 0.5,
+  "hand_yield": 0.65,
+  "officialCount": 3.5
+ },
+ {
+  "id": "graphs-of-functions",
+  "name": "Graphs of functions and parabolas",
+  "area": "algebra",
+  "etsSection": "2.4",
+  "yield": 0.325,
+  "hand_yield": 0.6,
+  "officialCount": 0.5
+ },
+ {
+  "id": "exponential-growth",
+  "name": "Exponential growth and compound interest",
+  "area": "algebra",
+  "etsSection": "2.6",
+  "yield": 0.3,
+  "hand_yield": 0.6,
+  "officialCount": 0
+ },
+ {
+  "id": "word-problems-rate",
+  "name": "Rate, work, distance and mixture problems",
+  "area": "algebra",
+  "etsSection": "2.7",
+  "yield": 0.5,
+  "hand_yield": 0.8,
+  "officialCount": 2.0
+ },
+ {
+  "id": "word-problems-interest",
+  "name": "Interest, profit, discount and cost problems",
+  "area": "algebra",
+  "etsSection": "2.7",
+  "yield": 0.275,
+  "hand_yield": 0.55,
+  "officialCount": 0
+ },
+ {
+  "id": "word-problems-age-sum",
+  "name": "Algebraic translation word problems",
+  "area": "algebra",
+  "etsSection": "2.7",
+  "yield": 0.25,
+  "hand_yield": 0.5,
+  "officialCount": 0
+ },
+ {
+  "id": "lines-angles",
+  "name": "Lines and angles, parallel lines",
+  "area": "geometry",
+  "etsSection": "3.1",
+  "yield": 0.25,
+  "hand_yield": 0.5,
+  "officialCount": 0
+ },
+ {
+  "id": "triangles",
+  "name": "Triangles: similar, isosceles, equilateral, inequality",
+  "area": "geometry",
+  "etsSection": "3.2",
+  "yield": 0.575,
+  "hand_yield": 0.7,
+  "officialCount": 4.5
+ },
+ {
+  "id": "pythagorean-special",
+  "name": "Pythagorean theorem and special right triangles",
+  "area": "geometry",
+  "etsSection": "3.3",
+  "yield": 0.4,
+  "hand_yield": 0.75,
+  "officialCount": 0.5
+ },
+ {
+  "id": "polygons-quadrilaterals",
+  "name": "Polygons and quadrilaterals",
+  "area": "geometry",
+  "etsSection": "3.4",
+  "yield": 0.375,
+  "hand_yield": 0.55,
+  "officialCount": 2.0
+ },
+ {
+  "id": "circles",
+  "name": "Circles: arcs, sectors, chords, tangents",
+  "area": "geometry",
+  "etsSection": "3.5",
+  "yield": 0.5,
+  "hand_yield": 0.7,
+  "officialCount": 3
+ },
+ {
+  "id": "inscribed-figures",
+  "name": "Inscribed and circumscribed figures, composite shapes",
+  "area": "geometry",
+  "etsSection": "3.6",
+  "yield": 0.55,
+  "hand_yield": 0.9,
+  "officialCount": 2.0
+ },
+ {
+  "id": "area-perimeter",
+  "name": "Area and perimeter",
+  "area": "geometry",
+  "etsSection": "3.7",
+  "yield": 0.55,
+  "hand_yield": 0.55,
+  "officialCount": 5.5
+ },
+ {
+  "id": "solids-volume",
+  "name": "Volume and surface area of solids",
+  "area": "geometry",
+  "etsSection": "3.8",
+  "yield": 0.3,
+  "hand_yield": 0.6,
+  "officialCount": 0
+ },
+ {
+  "id": "geometry-coordinate",
+  "name": "Geometry in the coordinate plane",
+  "area": "geometry",
+  "etsSection": "3.9",
+  "yield": 0.375,
+  "hand_yield": 0.65,
+  "officialCount": 1
+ },
+ {
+  "id": "figures-not-to-scale",
+  "name": "Reasoning from figures not drawn to scale",
+  "area": "geometry",
+  "etsSection": "3.1",
+  "yield": 0.425,
+  "hand_yield": 0.8,
+  "officialCount": 0.5
+ },
+ {
+  "id": "mean-median-mode",
+  "name": "Mean, median, mode, range",
+  "area": "data",
+  "etsSection": "4.1",
+  "yield": 0.675,
+  "hand_yield": 0.65,
+  "officialCount": 7.0
+ },
+ {
+  "id": "std-dev-normal",
+  "name": "Standard deviation and the normal distribution",
+  "area": "data",
+  "etsSection": "4.2",
+  "yield": 0.55,
+  "hand_yield": 0.9,
+  "officialCount": 2
+ },
+ {
+  "id": "quartiles-boxplots",
+  "name": "Quartiles, percentiles and boxplots",
+  "area": "data",
+  "etsSection": "4.3",
+  "yield": 0.45,
+  "hand_yield": 0.65,
+  "officialCount": 2.5
+ },
+ {
+  "id": "counting-permutations",
+  "name": "Counting: permutations and combinations",
+  "area": "data",
+  "etsSection": "4.4",
+  "yield": 0.6,
+  "hand_yield": 0.8,
+  "officialCount": 4.0
+ },
+ {
+  "id": "counting-restrictions",
+  "name": "Counting with restrictions and arrangements",
+  "area": "data",
+  "etsSection": "4.4",
+  "yield": 0.475,
+  "hand_yield": 0.9,
+  "officialCount": 0.5
+ },
+ {
+  "id": "probability-basic",
+  "name": "Probability: independent events, complement",
+  "area": "data",
+  "etsSection": "4.5",
+  "yield": 0.575,
+  "hand_yield": 0.75,
+  "officialCount": 4
+ },
+ {
+  "id": "probability-conditional",
+  "name": "Conditional probability and dependent events",
+  "area": "data",
+  "etsSection": "4.5",
+  "yield": 0.475,
+  "hand_yield": 0.9,
+  "officialCount": 0.5
+ },
+ {
+  "id": "overlapping-sets",
+  "name": "Overlapping sets, Venn diagrams",
+  "area": "data",
+  "etsSection": "4.4",
+  "yield": 0.525,
+  "hand_yield": 0.85,
+  "officialCount": 2
+ },
+ {
+  "id": "weighted-average",
+  "name": "Weighted average and changing averages",
+  "area": "data",
+  "etsSection": "4.1",
+  "yield": 0.45,
+  "hand_yield": 0.75,
+  "officialCount": 1.5
+ },
+ {
+  "id": "data-tables-graphs",
+  "name": "Reading tables, bar, line and circle graphs",
+  "area": "data",
+  "etsSection": "4.6",
+  "yield": 0.475,
+  "hand_yield": 0.6,
+  "officialCount": 3.5
+ },
+ {
+  "id": "data-interpretation-calc",
+  "name": "Data interpretation: percent and ratio from graphs",
+  "area": "data",
+  "etsSection": "4.6",
+  "yield": 0.85,
+  "hand_yield": 0.7,
+  "officialCount": 10.0
+ },
+ {
+  "id": "frequency-distributions",
+  "name": "Frequency distributions and histograms",
+  "area": "data",
+  "etsSection": "4.3",
+  "yield": 0.4,
+  "hand_yield": 0.5,
+  "officialCount": 3
+ },
+ {
+  "id": "min-max-bounding",
+  "name": "Bounding: minimum/maximum values under constraints",
+  "area": "algebra",
+  "etsSection": "2.3",
+  "yield": 0.45,
+  "hand_yield": 0.85,
+  "officialCount": 0.5
+ },
+ {
+  "id": "units-conversion",
+  "name": "Units and measurement conversions",
+  "area": "arithmetic",
+  "etsSection": "1.5",
+  "yield": 0.175,
+  "hand_yield": 0.35,
+  "officialCount": 0
+ }
+]

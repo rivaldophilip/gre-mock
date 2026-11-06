@@ -1,0 +1,469 @@
+{
+ "testId": "quant-001",
+ "measure": "quant",
+ "seed": 7,
+ "generatedAt": "2026-11-06T07:57:33.100Z",
+ "blueprint": {
+  "measure": "quant",
+  "sections": [
+   {
+    "n": 1,
+    "minutes": 21,
+    "slots": [
+     {
+      "type": "qc",
+      "level": 3
+     },
+     {
+      "type": "qc",
+      "level": 4
+     },
+     {
+      "type": "qc",
+      "level": 4
+     },
+     {
+      "type": "qc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 3
+     },
+     {
+      "type": "mc",
+      "level": 4
+     },
+     {
+      "type": "mc",
+      "level": 5
+     },
+     {
+      "type": "mc_multi",
+      "level": 4
+     },
+     {
+      "type": "numeric",
+      "level": 3
+     },
+     {
+      "type": "di",
+      "level": 3
+     },
+     {
+      "type": "di",
+      "level": 4
+     },
+     {
+      "type": "di",
+      "level": 5
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "minutes": 26,
+    "slots": [
+     {
+      "type": "qc",
+      "level": 4
+     },
+     {
+      "type": "qc",
+      "level": 5
+     },
+     {
+      "type": "qc",
+      "level": 5
+     },
+     {
+      "type": "qc",
+      "level": 4
+     },
+     {
+      "type": "qc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 4
+     },
+     {
+      "type": "mc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 4
+     },
+     {
+      "type": "mc",
+      "level": 3
+     },
+     {
+      "type": "mc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 4
+     },
+     {
+      "type": "mc_multi",
+      "level": 4
+     },
+     {
+      "type": "mc_multi",
+      "level": 5
+     },
+     {
+      "type": "numeric",
+      "level": 4
+     }
+    ]
+   }
+  ],
+  "notes": "S1: QC as Q1-4, then 3 MC, 1 multi, 1 numeric, 3-question data-interpretation set (shared figure/table; same figureId and setId). S2: 5 QC, 7 MC, 2 multi, 1 numeric. 27 concept slots."
+ },
+ "previous": [],
+ "exemplarIds": {
+  "qc": [
+   "ogq-t1-s5-7",
+   "ogq-t1-s6-8",
+   "ogq-t2-s6-8",
+   "ogq-t1-s6-9",
+   "ogq-t1-s6-6",
+   "ogq-t1-s5-8",
+   "ogq-t2-s5-9",
+   "ogq-t1-s5-6",
+   "ogq-t2-s6-5",
+   "ogq-t2-s6-9",
+   "ogq-t1-s6-7",
+   "ogq-t2-s6-4"
+  ],
+  "mc": [
+   "ogq-t1-s6-21",
+   "ogq-t1-s5-16",
+   "ogq-t1-s6-23",
+   "ogq-t1-s5-11",
+   "ogq-t1-s6-13",
+   "ogq-t1-s6-25",
+   "ogq-t2-s6-25",
+   "ogq-t1-s5-25",
+   "ogq-t1-s5-22",
+   "ogq-t2-s6-23",
+   "ogq-t1-s6-15",
+   "ogq-t2-s5-24"
+  ],
+  "numeric": [
+   "ogq-t1-s6-24",
+   "ogq-t1-s6-14",
+   "ogq-set3-13"
+  ],
+  "mc_multi": [
+   "ogq-t1-s6-11",
+   "ogq-t1-s5-23",
+   "ogq-t1-s5-15",
+   "ogq-t1-s6-16",
+   "ogq-set3-14",
+   "ogq-set3-15"
+  ],
+  "di": [
+   "ogq-t1-s6-20",
+   "ogq-t1-s5-19",
+   "ogq-t1-s6-19",
+   "ogq-t1-s6-18",
+   "ogq-t2-s5-20",
+   "ogq-set4-3",
+   "ogq-set4-7"
+  ],
+  "rc_multi": [
+   "ogt-t1s3-12",
+   "ogt-t1s4-8",
+   "ogt-t1s4-5",
+   "ogt-t1s4-23",
+   "ogt-t1s3-19",
+   "ogt-t1s3-1",
+   "ogv-set6-3",
+   "ogv-set6-4",
+   "ogv-set6-8"
+  ],
+  "rc_select": [],
+  "rc": [
+   "ogt-t1s4-6",
+   "ogt-t2s3-24",
+   "ogt-t2s4-24",
+   "ogt-t2s4-23",
+   "ogt-t2s4-20",
+   "ogv-set6-5",
+   "ogv-set6-6",
+   "ogv-set6-7"
+  ],
+  "arg": [
+   "ogt-t1s4-7",
+   "ogt-t2s3-21",
+   "ogt-t2s3-20",
+   "ogv-set6-1",
+   "ogv-set6-2"
+  ],
+  "tc2": [
+   "ogt-t1s4-18",
+   "ogt-t1s3-7",
+   "ogt-t1s3-16",
+   "ogt-t2s3-8",
+   "ogt-t2s3-3",
+   "ogv-set5-2",
+   "ogv-set5-3"
+  ],
+  "tc1": [
+   "ogt-t1s3-15",
+   "ogt-t1s4-12",
+   "ogt-t1s4-13",
+   "ogv-set5-1"
+  ],
+  "tc3": [
+   "ogt-t1s3-17",
+   "ogt-t1s4-20",
+   "ogt-t2s3-7",
+   "ogt-t1s4-11",
+   "ogt-t2s4-8",
+   "ogt-t2s4-7",
+   "ogv-set5-4",
+   "ogv-set5-5",
+   "ogv-set5-6"
+  ],
+  "se": [
+   "ogt-t1s3-21",
+   "ogt-t2s3-17",
+   "ogt-t1s3-22",
+   "ogt-t2s3-16",
+   "ogt-t2s3-18",
+   "ogv-set5-7",
+   "ogv-set5-8",
+   "ogv-set5-9"
+  ]
+ },
+ "conceptSlots": [
+  {
+   "slot": 1,
+   "concept": "abs-value-inequalities",
+   "name": "Absolute-value equations and inequalities",
+   "area": "algebra",
+   "bucket": "review",
+   "reason": "never tested"
+  },
+  {
+   "slot": 2,
+   "concept": "counting-restrictions",
+   "name": "Counting with restrictions and arrangements",
+   "area": "data",
+   "bucket": "review",
+   "reason": "never tested"
+  },
+  {
+   "slot": 3,
+   "concept": "remainders-units",
+   "name": "Remainders and units digits",
+   "area": "arithmetic",
+   "bucket": "review",
+   "reason": "never tested"
+  },
+  {
+   "slot": 4,
+   "concept": "std-dev-normal",
+   "name": "Standard deviation and the normal distribution",
+   "area": "data",
+   "bucket": "review",
+   "reason": "never tested"
+  },
+  {
+   "slot": 5,
+   "concept": "probability-conditional",
+   "name": "Conditional probability and dependent events",
+   "area": "data",
+   "bucket": "review",
+   "reason": "never tested"
+  },
+  {
+   "slot": 6,
+   "concept": "inscribed-figures",
+   "name": "Inscribed and circumscribed figures, composite shapes",
+   "area": "geometry",
+   "bucket": "review",
+   "reason": "never tested"
+  },
+  {
+   "slot": 7,
+   "concept": "overlapping-sets",
+   "name": "Overlapping sets, Venn diagrams",
+   "area": "data",
+   "bucket": "review",
+   "reason": "never tested"
+  },
+  {
+   "slot": 8,
+   "concept": "min-max-bounding",
+   "name": "Bounding: minimum/maximum values under constraints",
+   "area": "algebra",
+   "bucket": "review",
+   "reason": "never tested"
+  },
+  {
+   "slot": 9,
+   "concept": "counting-permutations",
+   "name": "Counting: permutations and combinations",
+   "area": "data",
+   "bucket": "review",
+   "reason": "never tested"
+  },
+  {
+   "slot": 10,
+   "concept": "number-sense-qc",
+   "name": "Number sense: sign, zero, magnitude cases",
+   "area": "arithmetic",
+   "bucket": "review",
+   "reason": "never tested"
+  },
+  {
+   "slot": 11,
+   "concept": "figures-not-to-scale",
+   "name": "Reasoning from figures not drawn to scale",
+   "area": "geometry",
+   "bucket": "review",
+   "reason": "never tested"
+  },
+  {
+   "slot": 12,
+   "concept": "word-problems-rate",
+   "name": "Rate, work, distance and mixture problems",
+   "area": "algebra",
+   "bucket": "review",
+   "reason": "never tested"
+  },
+  {
+   "slot": 13,
+   "concept": "probability-basic",
+   "name": "Probability: independent events, complement",
+   "area": "data",
+   "bucket": "review",
+   "reason": "never tested"
+  },
+  {
+   "slot": 14,
+   "concept": "percent",
+   "name": "Percent, percent change, successive percent",
+   "area": "arithmetic",
+   "bucket": "review",
+   "reason": "never tested"
+  },
+  {
+   "slot": 15,
+   "concept": "weighted-average",
+   "name": "Weighted average and changing averages",
+   "area": "data",
+   "bucket": "new",
+   "reason": "never tested"
+  },
+  {
+   "slot": 16,
+   "concept": "pythagorean-special",
+   "name": "Pythagorean theorem and special right triangles",
+   "area": "geometry",
+   "bucket": "new",
+   "reason": "never tested"
+  },
+  {
+   "slot": 17,
+   "concept": "exponents-roots",
+   "name": "Exponents and radicals",
+   "area": "arithmetic",
+   "bucket": "new",
+   "reason": "never tested"
+  },
+  {
+   "slot": 18,
+   "concept": "triangles",
+   "name": "Triangles: similar, isosceles, equilateral, inequality",
+   "area": "geometry",
+   "bucket": "new",
+   "reason": "never tested"
+  },
+  {
+   "slot": 19,
+   "concept": "data-interpretation-calc",
+   "name": "Data interpretation: percent and ratio from graphs",
+   "area": "data",
+   "bucket": "new",
+   "reason": "never tested"
+  },
+  {
+   "slot": 20,
+   "concept": "inequalities",
+   "name": "Linear inequalities",
+   "area": "algebra",
+   "bucket": "new",
+   "reason": "never tested"
+  },
+  {
+   "slot": 21,
+   "concept": "circles",
+   "name": "Circles: arcs, sectors, chords, tangents",
+   "area": "geometry",
+   "bucket": "new",
+   "reason": "never tested"
+  },
+  {
+   "slot": 22,
+   "concept": "quadratics-factoring",
+   "name": "Factoring and quadratic equations",
+   "area": "algebra",
+   "bucket": "new",
+   "reason": "never tested"
+  },
+  {
+   "slot": 23,
+   "concept": "functions",
+   "name": "Functions, notation and composition",
+   "area": "algebra",
+   "bucket": "new",
+   "reason": "never tested"
+  },
+  {
+   "slot": 24,
+   "concept": "primes-factors",
+   "name": "Primes, factors, multiples, GCD/LCM",
+   "area": "arithmetic",
+   "bucket": "wildcard",
+   "reason": "never tested"
+  },
+  {
+   "slot": 25,
+   "concept": "ratio-proportion",
+   "name": "Ratio and proportion",
+   "area": "arithmetic",
+   "bucket": "wildcard",
+   "reason": "never tested"
+  },
+  {
+   "slot": 26,
+   "concept": "geometry-coordinate",
+   "name": "Geometry in the coordinate plane",
+   "area": "geometry",
+   "bucket": "wildcard",
+   "reason": "never tested"
+  },
+  {
+   "slot": 27,
+   "concept": "number-line-abs",
+   "name": "Number line, absolute value of numbers",
+   "area": "arithmetic",
+   "bucket": "wildcard",
+   "reason": "never tested"
+  }
+ ],
+ "instructions": "Assign the 27 concept slots to the 27 blueprint slots (any order, but a DI set of 3 should share a concept area). Each question: one primary concept (the slot) and optional secondary tags. Provide a python verification script."
+}

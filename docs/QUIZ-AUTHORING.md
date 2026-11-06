@@ -1,0 +1,27 @@
+# Handover: authoring a hard GRE mock test
+
+You are the quiz-creation agent. Output: one **original** 27-question test (Section 1 = 12 questions, Section 2 = 15) as `content/tests/<measure>-NNN.json`. The same procedure runs for `verbal` and `quant`. **Never copy, closely paraphrase or reuse stems/passages from ETS or Big Book material.** The repo is public. Official material (local only, `../books/extracted/reference/items.jsonl`) is for style and difficulty calibration.
+
+## Procedure
+
+1. **Brief.** `npm run brief -- <measure>` → `content/briefs/<measure>-NNN.json`. It names the test id, blueprint (types and difficulty level per slot), the words or concepts you must target (with reasons), distractor words, passage words, tests/stems already used, and exemplar ids.
+2. **Read exemplars + patterns.** Read `docs/HARD-PATTERNS.md`. For each question type, read 2–3 of the brief's `exemplarIds` from the local reference file (`grep '"id": "<id>"'`) to anchor the style at the target level. Then write something new.
+3. **Author** the JSON against `lib/types.ts` (zod schema). Use `$...$` for math. Details below.
+4. **Validate.** `npm run validate -- <id>` until it prints OK.
+5. **Quant only.** Write `content/verify/<id>.py`: one assertion per question (brute force or exact arithmetic, using `fractions`). `python3 content/verify/<id>.py` must pass. It is not shipped to the app.
+6. **Blind-solve.** Make a copy of the test without keys/explanations/tags (`node -e` or a small script) and give it to 1–2 fresh subagents (no access to the key). They solve every item, rate difficulty 1–5 against official exemplars (P+ ≤ 30 is level 5, 30–45 level 4, 45–60 level 3), and flag ambiguity or a second defensible answer. If a solver's answer ≠ key, or the item is rated >1 level below target, **rewrite the item** and re-run this step.
+7. **Register + publish.** `npm run register -- <id>`, then `git add content && git commit && git push` (Vercel redeploys).
+
+## Structure rules (the validator enforces most)
+
+- Section 1 average difficulty ≥ 3.75 (mix ~4×L3, 5×L4, 3×L5); Section 2: ≤ 2 items at L3, ≥ one-third at L5, average ≈ 4.4. Difficulty levels: 3 = P+ 45–60, 4 = 30–45, 5 = < 30.
+- Each section opens with the TC block (verbal) or QC block (quant). Within a type block, mix easy and hard; do not climb.
+- **Verbal.** TC 1 blank = 5 choices; 2–3 blanks = 3 choices per blank; prompt contains one `___` per blank. SE = 6 choices, 2 keys, one `___`. RC = 5 choices (`rc`), or 3 choices select-all (`rc_multi`), or click-a-sentence (`rc_select`: key is the sentence index across the passage, using `lib/sentences.ts` splitting). Argument items: `type: "rc"`, `subtype: "arg"`, one-paragraph passage. RC questions reference `passageId`.
+- **Quant.** QC: `qc: {a, b, info?}`, key index 0=A greater, 1=B greater, 2=equal, 3=cannot determine. MC: 5 choices. `mc_multi`: 5–6 choices, ≥1 key. `numeric`: `numeric: {kind: "single"|"fraction"}`, key `{value: "3/8"}`. Section 1 has one 3-question data-interpretation set: same `setId` and `figureId`; figure is a `table` or inline `svg`.
+- **Tags.** Verbal: every TC/SE choice that is a bank word gets a tag `{kind:"word", id, role:"key"|"distractor", at}` — `at: [blank, choice]` for TC, `[choice]` for SE; the validator checks the choice text matches the word. Key choices MUST be tagged. Passage words go in `passages[].tags` with role `passage`. Word ids = vocab ids (`data/vocab.json`); a word not in the bank can't be tagged. Quant: one `primary` concept tag per question from `data/concepts.json`, optional `secondary`.
+- **Explanations.** Verbal: `key` (why the key fits: signal words, logic per blank), `distractors` (choice text → why it fails, incl. SE trap pairs). Quant: `steps` (numbered), `fast` (faster method) and `trap`.
+- Every item needs `difficulty` 1–5 (the level you are targeting).
+- No placeholders, no `TODO`.
+
+## Hardness checklist
+See `docs/HARD-PATTERNS.md`. In short: 3-blank TCs with a pivot and stacked negation; secondary senses; SE trap pairs (true synonyms that don't fit the sentence); dense academic RC with half-right and extreme distractors, EXCEPT-style multi items, and select-all with an unsupported-but-true choice; weaken/assumption arguments; QC with hidden cases (negatives, fractions, zero, figures not to scale); multi-answer quant needing min/max bounding.

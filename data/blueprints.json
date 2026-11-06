@@ -1,0 +1,280 @@
+{
+ "verbal": {
+  "measure": "verbal",
+  "sections": [
+   {
+    "n": 1,
+    "minutes": 18,
+    "slots": [
+     {
+      "type": "tc1",
+      "level": 4
+     },
+     {
+      "type": "tc2",
+      "level": 3
+     },
+     {
+      "type": "tc3",
+      "level": 5
+     },
+     {
+      "type": "se",
+      "level": 4
+     },
+     {
+      "type": "se",
+      "level": 3
+     },
+     {
+      "type": "se",
+      "level": 5
+     },
+     {
+      "type": "se",
+      "level": 4
+     },
+     {
+      "type": "rc",
+      "level": 4
+     },
+     {
+      "type": "rc_multi",
+      "level": 5
+     },
+     {
+      "type": "rc",
+      "level": 3
+     },
+     {
+      "type": "rc_select",
+      "level": 3
+     },
+     {
+      "type": "arg",
+      "level": 4
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "minutes": 23,
+    "slots": [
+     {
+      "type": "tc1",
+      "level": 4
+     },
+     {
+      "type": "tc2",
+      "level": 5
+     },
+     {
+      "type": "tc3",
+      "level": 5
+     },
+     {
+      "type": "tc3",
+      "level": 4
+     },
+     {
+      "type": "se",
+      "level": 5
+     },
+     {
+      "type": "se",
+      "level": 4
+     },
+     {
+      "type": "se",
+      "level": 5
+     },
+     {
+      "type": "rc",
+      "level": 4
+     },
+     {
+      "type": "rc",
+      "level": 5
+     },
+     {
+      "type": "rc_multi",
+      "level": 4
+     },
+     {
+      "type": "rc",
+      "level": 4
+     },
+     {
+      "type": "rc",
+      "level": 5
+     },
+     {
+      "type": "rc_select",
+      "level": 5
+     },
+     {
+      "type": "rc",
+      "level": 4
+     },
+     {
+      "type": "arg",
+      "level": 3
+     }
+    ]
+   }
+  ],
+  "passages": {
+   "1": [
+    {
+     "questions": 3,
+     "words": "3-5"
+    },
+    {
+     "questions": 2,
+     "words": "3-5"
+    }
+   ],
+   "2": [
+    {
+     "questions": 3,
+     "words": "4-6"
+    },
+    {
+     "questions": 2,
+     "words": "4-6"
+    },
+    {
+     "questions": 2,
+     "words": "4-6"
+    }
+   ]
+  },
+  "notes": "S1: 12 questions, S2: 15. Passage questions are the rc/rc_multi/rc_select slots in order; 'arg' is a short single-paragraph argument item. Every section opens with the TC block; order inside each type block is mixed, not easy-to-hard. 29 key-word slots."
+ },
+ "quant": {
+  "measure": "quant",
+  "sections": [
+   {
+    "n": 1,
+    "minutes": 21,
+    "slots": [
+     {
+      "type": "qc",
+      "level": 3
+     },
+     {
+      "type": "qc",
+      "level": 4
+     },
+     {
+      "type": "qc",
+      "level": 4
+     },
+     {
+      "type": "qc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 3
+     },
+     {
+      "type": "mc",
+      "level": 4
+     },
+     {
+      "type": "mc",
+      "level": 5
+     },
+     {
+      "type": "mc_multi",
+      "level": 4
+     },
+     {
+      "type": "numeric",
+      "level": 3
+     },
+     {
+      "type": "di",
+      "level": 3
+     },
+     {
+      "type": "di",
+      "level": 4
+     },
+     {
+      "type": "di",
+      "level": 5
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "minutes": 26,
+    "slots": [
+     {
+      "type": "qc",
+      "level": 4
+     },
+     {
+      "type": "qc",
+      "level": 5
+     },
+     {
+      "type": "qc",
+      "level": 5
+     },
+     {
+      "type": "qc",
+      "level": 4
+     },
+     {
+      "type": "qc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 4
+     },
+     {
+      "type": "mc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 4
+     },
+     {
+      "type": "mc",
+      "level": 3
+     },
+     {
+      "type": "mc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 4
+     },
+     {
+      "type": "mc_multi",
+      "level": 4
+     },
+     {
+      "type": "mc_multi",
+      "level": 5
+     },
+     {
+      "type": "numeric",
+      "level": 4
+     }
+    ]
+   }
+  ],
+  "notes": "S1: QC as Q1-4, then 3 MC, 1 multi, 1 numeric, 3-question data-interpretation set (shared figure/table; same figureId and setId). S2: 5 QC, 7 MC, 2 multi, 1 numeric. 27 concept slots."
+ }
+}

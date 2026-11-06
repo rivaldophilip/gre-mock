@@ -1,0 +1,1157 @@
+{
+ "id": "quant-001",
+ "measure": "quant",
+ "title": "Quant Hard Mock 1",
+ "sections": [
+  {
+   "n": 1,
+   "minutes": 21
+  },
+  {
+   "n": 2,
+   "minutes": 26
+  }
+ ],
+ "figures": [
+  {
+   "id": "fig-rev",
+   "caption": "Annual revenue of a company's four divisions ($ millions)",
+   "table": {
+    "head": [
+     "Division",
+     "2019",
+     "2023"
+    ],
+    "rows": [
+     [
+      "North",
+      "48",
+      "60"
+     ],
+     [
+      "South",
+      "36",
+      "45"
+     ],
+     [
+      "East",
+      "30",
+      "33"
+     ],
+     [
+      "West",
+      "24",
+      "42"
+     ],
+     [
+      "Total",
+      "138",
+      "180"
+     ]
+    ]
+   }
+  }
+ ],
+ "passages": [],
+ "questions": [
+  {
+   "id": "s1q1",
+   "section": 1,
+   "type": "qc",
+   "difficulty": 3,
+   "prompt": "$0 < x < 1$.",
+   "key": {
+    "sel": [
+     3
+    ]
+   },
+   "explanation": {
+    "key": "The relationship cannot be determined: it depends on how close $x$ is to 0 or 1.",
+    "steps": [
+     "Compare $\\frac1x$ with $1+x$. Try $x=\\frac12$: $\\frac1x=2$ and $1+x=1.5$, so A is greater.",
+     "Try $x=\\frac9{10}$: $\\frac1x\\approx1.11$ and $1+x=1.9$, so B is greater.",
+     "Two cases give different results, so the answer is D."
+    ],
+    "trap": "Testing only one 'nice' fraction such as $\\frac12$ gives A and looks conclusive. Always test both ends of the allowed range."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "number-sense-qc",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "inequalities",
+     "role": "secondary"
+    }
+   ],
+   "qc": {
+    "a": "$\\dfrac1x$",
+    "b": "$1+x$"
+   }
+  },
+  {
+   "id": "s1q2",
+   "section": 1,
+   "type": "qc",
+   "difficulty": 4,
+   "prompt": "$|x+2|<5$ and $x$ is a real number.",
+   "key": {
+    "sel": [
+     1
+    ]
+   },
+   "explanation": {
+    "key": "Quantity B is greater.",
+    "steps": [
+     "$|x+2|<5$ means $-5<x+2<5$, so $-7<x<3$ (both ends excluded).",
+     "The largest possible value of $x^2$ would be at $x=-7$, giving 49, but $x=-7$ is not allowed.",
+     "For every allowed $x$, $0\\le x^2<49$, so B (49) is always greater."
+    ],
+    "trap": "Reading the strict inequality as $\\le$ makes the endpoint $x=-7$ look allowed, which suggests (wrongly) that the two quantities can be equal."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "abs-value-inequalities",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "number-line-abs",
+     "role": "secondary"
+    }
+   ],
+   "qc": {
+    "a": "$x^2$",
+    "b": "$49$"
+   }
+  },
+  {
+   "id": "s1q3",
+   "section": 1,
+   "type": "qc",
+   "difficulty": 4,
+   "prompt": "A square is inscribed in a circle, and that circle is inscribed in a larger square whose area is 64.",
+   "key": {
+    "sel": [
+     0
+    ]
+   },
+   "explanation": {
+    "key": "Quantity A is greater.",
+    "steps": [
+     "The larger square has side 8, so the circle's diameter is 8 (radius 4).",
+     "The smaller square is inscribed in the circle, so its diagonal is the diameter, 8.",
+     "Its area is $\\dfrac{d^2}{2}=\\dfrac{64}2=32>30$, so A is greater."
+    ],
+    "fast": "An inscribed square has half the area of the circumscribed square: $64/2=32$.",
+    "trap": "Using the circle's diameter as the smaller square's side gives area 64; using the radius gives 16."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "inscribed-figures",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "circles",
+     "role": "secondary"
+    },
+    {
+     "kind": "concept",
+     "id": "pythagorean-special",
+     "role": "secondary"
+    }
+   ],
+   "qc": {
+    "a": "The area of the smaller square",
+    "b": "$30$"
+   }
+  },
+  {
+   "id": "s1q4",
+   "section": 1,
+   "type": "qc",
+   "difficulty": 5,
+   "prompt": "$x$ and $y$ are positive integers with $x>y$ and $x^2-y^2=45$.",
+   "key": {
+    "sel": [
+     3
+    ]
+   },
+   "explanation": {
+    "key": "The relationship cannot be determined.",
+    "steps": [
+     "Factor: $(x-y)(x+y)=45$. Both factors have the same parity (their sum $2x$ and difference $2y$ are even), and $x-y<x+y$.",
+     "The factor pairs of 45 are $(1,45),(3,15),(5,9)$, all odd, so all work.",
+     "$(1,45)$: $x=23$, $y=22$. $(3,15)$: $x=9$, $y=6$. $(5,9)$: $x=7$, $y=2$.",
+     "So $x$ can be 7 (less than 9), 9 (equal) or 23 (greater): the answer is D."
+    ],
+    "trap": "Finding one solution (often $x=9$, $y=6$) and stopping gives 'equal'. The question needs all admissible values."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "primes-factors",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "quadratics-factoring",
+     "role": "secondary"
+    }
+   ],
+   "qc": {
+    "a": "$x$",
+    "b": "$9$"
+   }
+  },
+  {
+   "id": "s1q5",
+   "section": 1,
+   "type": "mc",
+   "difficulty": 3,
+   "prompt": "A 40-liter solution is 25% alcohol. How many liters of water must be added to make it a 20% alcohol solution?",
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "10 liters.",
+    "steps": [
+     "The solution contains $0.25\\cdot40=10$ liters of alcohol, which stays constant.",
+     "After adding $w$ liters of water, $\\dfrac{10}{40+w}=0.2$, so $40+w=50$ and $w=10$."
+    ],
+    "fast": "10 L alcohol is 20% of a 50 L total, so add 10 L.",
+    "trap": "Adding water changes the total volume, so '5% of 40' style shortcuts miss; the amount of alcohol is the fixed quantity to track."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "percent",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "ratio-proportion",
+     "role": "secondary"
+    }
+   ],
+   "choices": [
+    "5",
+    "8",
+    "10",
+    "12",
+    "15"
+   ]
+  },
+  {
+   "id": "s1q6",
+   "section": 1,
+   "type": "mc",
+   "difficulty": 4,
+   "prompt": "What is the remainder when $17^{40}-2\\cdot11^{25}$ is divided by 6?",
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "3.",
+    "steps": [
+     "$17\\equiv5\\equiv-1\\pmod 6$, so $17^{40}\\equiv(-1)^{40}=1$.",
+     "$11\\equiv5\\equiv-1\\pmod 6$, so $11^{25}\\equiv(-1)^{25}=-1$ and $2\\cdot11^{25}\\equiv-2$.",
+     "The expression is $\\equiv1-(-2)=3\\pmod 6$."
+    ],
+    "trap": "Treating $11^{25}$ as $+1$ (forgetting the odd power of $-1$) gives $1-2=-1\\equiv5$."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "remainders-units",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "exponents-roots",
+     "role": "secondary"
+    }
+   ],
+   "choices": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ]
+  },
+  {
+   "id": "s1q7",
+   "section": 1,
+   "type": "mc",
+   "difficulty": 5,
+   "prompt": "Eight people, including Ann and Bob, sit in a row of eight seats. In how many ways can they be seated if Ann and Bob are not adjacent and neither sits at either end?",
+   "key": {
+    "sel": [
+     3
+    ]
+   },
+   "explanation": {
+    "key": "14,400.",
+    "steps": [
+     "Ann and Bob must use the six interior seats (2–7). Count ordered placements of the two: $6\\cdot5=30$.",
+     "Subtract the adjacent placements: there are 5 adjacent seat pairs among seats 2–7, each in 2 orders: $5\\cdot2=10$. So $30-10=20$.",
+     "The other six people fill the remaining six seats in $6!=720$ ways.",
+     "Total $=20\\cdot720=14{,}400$."
+    ],
+    "trap": "Choosing seats for Ann first then Bob (6 × 3) forgets that the number of non-adjacent seats for Bob depends on where Ann sits (end of the interior block vs middle)."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "counting-restrictions",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "counting-permutations",
+     "role": "secondary"
+    }
+   ],
+   "choices": [
+    "9,360",
+    "10,800",
+    "12,960",
+    "14,400",
+    "15,120"
+   ]
+  },
+  {
+   "id": "s1q8",
+   "section": 1,
+   "type": "mc_multi",
+   "difficulty": 4,
+   "prompt": "Integers $x$ and $y$ satisfy $-3\\le x\\le4$ and $1\\le y\\le5$. Select all of the following that could be the value of $xy$.",
+   "key": {
+    "sel": [
+     1,
+     3,
+     5
+    ]
+   },
+   "explanation": {
+    "key": "-15, 16 and 20.",
+    "steps": [
+     "The extremes: the least product is $(-3)(5)=-15$ and the greatest is $4\\cdot5=20$, so both are attainable; $-16$ lies below the minimum.",
+     "16 $=4\\cdot4$ works.",
+     "13 is prime and greater than 5, so it would need a factor beyond the allowed ranges. 18 needs factor pairs $(3,6),(2,9),(6,3),(9,2),(1,18),(18,1)$, none of which fits."
+    ],
+    "trap": "Checking only the endpoints of the range misses interior gaps: not every integer between $-15$ and $20$ is attainable."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "min-max-bounding",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "integers-properties",
+     "role": "secondary"
+    }
+   ],
+   "choices": [
+    "-16",
+    "-15",
+    "13",
+    "16",
+    "18",
+    "20"
+   ]
+  },
+  {
+   "id": "s1q9",
+   "section": 1,
+   "type": "numeric",
+   "difficulty": 3,
+   "prompt": "In a class, the mean score of the boys is 72 and the mean score of the girls is 84. If there are 12 boys and the mean score of the whole class is 80, how many girls are in the class?",
+   "key": {
+    "value": "24"
+   },
+   "explanation": {
+    "key": "24 girls.",
+    "steps": [
+     "Let $g$ be the number of girls: $\\dfrac{72\\cdot12+84g}{12+g}=80$.",
+     "$864+84g=960+80g\\Rightarrow4g=96\\Rightarrow g=24$."
+    ],
+    "fast": "Boys are 8 below 80, girls 4 above 80: the weights are inversely proportional, so girls : boys $=2:1$, giving 24."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "weighted-average",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "linear-equations",
+     "role": "secondary"
+    }
+   ],
+   "numeric": {
+    "kind": "single"
+   }
+  },
+  {
+   "id": "s1q10",
+   "section": 1,
+   "type": "mc",
+   "difficulty": 3,
+   "prompt": "Approximately by what percent did the combined revenue of the divisions other than North increase from 2019 to 2023?",
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "About 33%.",
+    "steps": [
+     "Other divisions in 2019: $36+30+24=90$. In 2023: $45+33+42=120$.",
+     "Increase $=\\dfrac{30}{90}\\approx33\\%$."
+    ],
+    "trap": "Using the company-wide totals ($138 \\to 180$, about 30%) answers a different question."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "data-interpretation-calc",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "percent",
+     "role": "secondary"
+    }
+   ],
+   "choices": [
+    "25%",
+    "30%",
+    "33%",
+    "40%",
+    "45%"
+   ],
+   "setId": "di1",
+   "figureId": "fig-rev"
+  },
+  {
+   "id": "s1q11",
+   "section": 1,
+   "type": "mc_multi",
+   "difficulty": 4,
+   "prompt": "Select all divisions whose revenue was a smaller fraction of the company's total revenue in 2023 than in 2019.",
+   "key": {
+    "sel": [
+     0,
+     1,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "North, South and East.",
+    "steps": [
+     "The total grew by about 30.4%. A division's share falls exactly when its revenue grew by a smaller percent than the total.",
+     "North: $12/48=25\\%$; South: $9/36=25\\%$; East: $3/30=10\\%$; all below 30.4%, so their shares fell (e.g. North $48/138\\approx34.8\\%\\to60/180\\approx33.3\\%$).",
+     "West grew $18/24=75\\%$, so its share rose."
+    ],
+    "trap": "Comparing dollar increases ($12, $9, $3, $18) instead of percent increases makes North look like it gained share."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "percent",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "data-interpretation-calc",
+     "role": "secondary"
+    }
+   ],
+   "choices": [
+    "North",
+    "South",
+    "East",
+    "West"
+   ],
+   "setId": "di1",
+   "figureId": "fig-rev"
+  },
+  {
+   "id": "s1q12",
+   "section": 1,
+   "type": "numeric",
+   "difficulty": 5,
+   "prompt": "Suppose that, beginning in 2024, West's revenue increases each year by the same dollar amount as its average yearly increase from 2019 to 2023, while the combined revenue of the other three divisions increases by $2 million per year from its 2023 level. In what calendar year will West's revenue first exceed the combined revenue of the other three divisions?",
+   "key": {
+    "value": "2062"
+   },
+   "explanation": {
+    "key": "2062.",
+    "steps": [
+     "West's average yearly increase 2019–2023 is $(42-24)/4=4.5$ (four years, not five).",
+     "The other three together were $60+45+33=138$ in 2023.",
+     "After $t$ years: $42+4.5t>138+2t\\Rightarrow2.5t>96\\Rightarrow t>38.4$, so $t=39$.",
+     "$2023+39=2062$."
+    ],
+    "trap": "Dividing by 5 instead of 4 gives a smaller growth rate; stopping at $t=38.4$ instead of rounding up to the first integer year gives 2061."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "inequalities",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "data-interpretation-calc",
+     "role": "secondary"
+    },
+    {
+     "kind": "concept",
+     "id": "word-problems-rate",
+     "role": "secondary"
+    }
+   ],
+   "numeric": {
+    "kind": "single"
+   },
+   "setId": "di1",
+   "figureId": "fig-rev"
+  },
+  {
+   "id": "s2q1",
+   "section": 2,
+   "type": "qc",
+   "difficulty": 4,
+   "prompt": "A fair coin is tossed 5 times.",
+   "key": {
+    "sel": [
+     1
+    ]
+   },
+   "explanation": {
+    "key": "Quantity B is greater.",
+    "steps": [
+     "P(at least 4 heads) $=\\dfrac{\\binom54+\\binom55}{32}=\\dfrac6{32}$.",
+     "P(exactly 2 heads) $=\\dfrac{\\binom52}{32}=\\dfrac{10}{32}$, so B is greater."
+    ]
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "probability-basic",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "counting-permutations",
+     "role": "secondary"
+    }
+   ],
+   "qc": {
+    "a": "The probability of getting at least 4 heads",
+    "b": "The probability of getting exactly 2 heads"
+   }
+  },
+  {
+   "id": "s2q2",
+   "section": 2,
+   "type": "qc",
+   "difficulty": 5,
+   "prompt": "A data set has mean 50 and standard deviation 6. Two values, 44 and 56, are added to the data set.",
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "The two quantities are equal.",
+    "steps": [
+     "The new values average to 50, so the mean stays 50 whatever the size $n$ of the original set.",
+     "The sum of squared deviations was $36n$. The new values add $(44-50)^2+(56-50)^2=72=2\\cdot36$.",
+     "New variance $=\\dfrac{36n+72}{n+2}=36$, so the standard deviation is still 6."
+    ],
+    "fast": "Each added value is exactly one standard deviation from the mean, so adding them leaves the standard deviation unchanged."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "std-dev-normal",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "mean-median-mode",
+     "role": "secondary"
+    }
+   ],
+   "qc": {
+    "a": "The standard deviation of the new data set",
+    "b": "$6$"
+   }
+  },
+  {
+   "id": "s2q3",
+   "section": 2,
+   "type": "qc",
+   "difficulty": 5,
+   "prompt": "Two cards are drawn, one after the other and without replacement, from a deck of 5 red cards and 3 blue cards.",
+   "key": {
+    "sel": [
+     0
+    ]
+   },
+   "explanation": {
+    "key": "Quantity A is greater.",
+    "steps": [
+     "By symmetry, the second card is red with probability $\\dfrac58$, just like the first card.",
+     "Given that the first card was red, only 4 red cards remain among 7: $\\dfrac47$.",
+     "$\\dfrac58=0.625>\\dfrac47\\approx0.571$, so A is greater."
+    ],
+    "trap": "Many assume 'the second draw is unconditionally less likely to be red because red cards are used up'. Without knowing the first card, each position is equally likely to be red."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "probability-conditional",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "probability-basic",
+     "role": "secondary"
+    }
+   ],
+   "qc": {
+    "a": "The probability that the second card is red",
+    "b": "The probability that the second card is red, given that the first card is red"
+   }
+  },
+  {
+   "id": "s2q4",
+   "section": 2,
+   "type": "qc",
+   "difficulty": 4,
+   "prompt": "$x$ and $y$ are positive integers and $xy=36$.",
+   "key": {
+    "sel": [
+     3
+    ]
+   },
+   "explanation": {
+    "key": "The relationship cannot be determined.",
+    "steps": [
+     "If $x=y=6$ then $x+y=12$: equal.",
+     "If $x=4$, $y=9$ then $x+y=13>12$: A greater.",
+     "Both outcomes occur, so the answer is D."
+    ]
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "number-sense-qc",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "primes-factors",
+     "role": "secondary"
+    },
+    {
+     "kind": "concept",
+     "id": "min-max-bounding",
+     "role": "secondary"
+    }
+   ],
+   "qc": {
+    "a": "$x+y$",
+    "b": "$12$"
+   }
+  },
+  {
+   "id": "s2q5",
+   "section": 2,
+   "type": "qc",
+   "difficulty": 5,
+   "prompt": "$n$ is a positive integer, and $d(m)$ denotes the number of positive divisors of the positive integer $m$.",
+   "key": {
+    "sel": [
+     3
+    ]
+   },
+   "explanation": {
+    "key": "The relationship cannot be determined.",
+    "steps": [
+     "For $n=1$: $d(n^2)=1$ and $3d(n)=3$, so B is greater.",
+     "If $n=p^a q^b r^c\\cdots$ then $d(n)=\\prod(a_i+1)$ and $d(n^2)=\\prod(2a_i+1)$.",
+     "Take $n=30=2\\cdot3\\cdot5$: $d(900)=27$ and $3d(30)=3\\cdot8=24$, so A is greater.",
+     "Two different outcomes: D."
+    ],
+    "trap": "Testing only a prime or prime power makes B win every time (each prime factor contributes a ratio below 2, but three or more primes multiply past 3)."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "primes-factors",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "exponents-roots",
+     "role": "secondary"
+    }
+   ],
+   "qc": {
+    "a": "$d(n^2)$",
+    "b": "$3\\cdot d(n)$"
+   }
+  },
+  {
+   "id": "s2q6",
+   "section": 2,
+   "type": "mc",
+   "difficulty": 4,
+   "prompt": "An urn holds 4 red balls and 6 blue balls. Two balls are drawn at random without replacement. Given that at least one of the balls drawn is red, what is the probability that both are red?",
+   "key": {
+    "sel": [
+     1
+    ]
+   },
+   "explanation": {
+    "key": "$\\dfrac15$.",
+    "steps": [
+     "P(both red) $=\\dfrac{\\binom42}{\\binom{10}2}=\\dfrac6{45}$.",
+     "P(at least one red) $=1-\\dfrac{\\binom62}{45}=1-\\dfrac{15}{45}=\\dfrac{30}{45}$.",
+     "Conditional probability $=\\dfrac{6/45}{30/45}=\\dfrac15$."
+    ],
+    "trap": "$\\frac6{45}=\\frac2{15}$ is the unconditional probability; the 'given' changes the denominator."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "probability-conditional",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "counting-permutations",
+     "role": "secondary"
+    }
+   ],
+   "choices": [
+    "$\\dfrac2{15}$",
+    "$\\dfrac15$",
+    "$\\dfrac4{15}$",
+    "$\\dfrac13$",
+    "$\\dfrac25$"
+   ]
+  },
+  {
+   "id": "s2q7",
+   "section": 2,
+   "type": "mc",
+   "difficulty": 5,
+   "prompt": "A square is inscribed in a semicircle of radius 5 so that one side of the square lies along the diameter of the semicircle and the other two vertices lie on the arc. What is the area of the square?",
+   "key": {
+    "sel": [
+     1
+    ]
+   },
+   "explanation": {
+    "key": "20.",
+    "steps": [
+     "Let the side be $s$. The center of the diameter is the midpoint of the square's base, so a top vertex is at horizontal distance $s/2$ and height $s$ from the center.",
+     "That vertex lies on the circle: $\\left(\\dfrac s2\\right)^2+s^2=25\\Rightarrow\\dfrac{5s^2}4=25\\Rightarrow s^2=20$."
+    ],
+    "trap": "Using the full semicircle height or setting the diagonal equal to the radius."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "inscribed-figures",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "pythagorean-special",
+     "role": "secondary"
+    },
+    {
+     "kind": "concept",
+     "id": "circles",
+     "role": "secondary"
+    }
+   ],
+   "choices": [
+    "16",
+    "20",
+    "$25/2$",
+    "$25\\sqrt2/2$",
+    "25"
+   ]
+  },
+  {
+   "id": "s2q8",
+   "section": 2,
+   "type": "mc",
+   "difficulty": 5,
+   "prompt": "What is the remainder when $5^{100}+7^{100}$ is divided by 13?",
+   "key": {
+    "sel": [
+     3
+    ]
+   },
+   "explanation": {
+    "key": "10.",
+    "steps": [
+     "$5^2=25\\equiv-1\\pmod{13}$, so $5^4\\equiv1$ and $5^{100}=(5^4)^{25}\\equiv1$.",
+     "$7^2=49\\equiv10$, $7^3\\equiv70\\equiv5$, $7^4\\equiv35\\equiv9$, $7^6\\equiv(7^3)^2\\equiv25\\equiv-1$, so $7^{12}\\equiv1$. $100=12\\cdot8+4$, so $7^{100}\\equiv7^4\\equiv9$.",
+     "Sum $\\equiv1+9=10$."
+    ],
+    "trap": "Assuming both bases share the same cycle length (4) gives $7^{100}\\equiv1$ and the answer 2."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "remainders-units",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "exponents-roots",
+     "role": "secondary"
+    }
+   ],
+   "choices": [
+    "2",
+    "6",
+    "8",
+    "10",
+    "12"
+   ]
+  },
+  {
+   "id": "s2q9",
+   "section": 2,
+   "type": "mc",
+   "difficulty": 4,
+   "prompt": "How many integers $x$ satisfy $|x-3|+|x+2|\\le9$?",
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "10.",
+    "steps": [
+     "For $-2\\le x\\le3$ the sum is always 5, so all those values work.",
+     "For $x>3$: $(x-3)+(x+2)=2x-1\\le9\\Rightarrow x\\le5$, adding 4 and 5.",
+     "For $x<-2$: $-(x-3)-(x+2)=-2x+1\\le9\\Rightarrow x\\ge-4$, adding $-4$ and $-3$.",
+     "The integers are $-4,-3,\\dots,5$: 10 of them."
+    ],
+    "fast": "The sum of distances to $-2$ and $3$ is at most 9. The ends are 2 beyond $[-2,3]$ on each side (since $9-5=4$, split as 2+2): $x\\in[-4,5]$."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "abs-value-inequalities",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "inequalities",
+     "role": "secondary"
+    },
+    {
+     "kind": "concept",
+     "id": "number-line-abs",
+     "role": "secondary"
+    }
+   ],
+   "choices": [
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
+   ]
+  },
+  {
+   "id": "s2q10",
+   "section": 2,
+   "type": "mc",
+   "difficulty": 4,
+   "prompt": "In triangle $ABC$, $AB=13$, $BC=14$ and $AC=15$. What is the length of the altitude from $B$ to side $AC$?",
+   "key": {
+    "sel": [
+     1
+    ]
+   },
+   "explanation": {
+    "key": "$\\dfrac{56}{5}$.",
+    "steps": [
+     "Heron's formula, $s=21$: area $=\\sqrt{21\\cdot8\\cdot7\\cdot6}=84$.",
+     "Altitude to $AC$: $\\tfrac12\\cdot15\\cdot h=84\\Rightarrow h=\\dfrac{168}{15}=\\dfrac{56}5=11.2$."
+    ],
+    "trap": "The 13-14-15 triangle's famous altitude of 12 is the one drawn to the side of length 14, not 15."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "triangles",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "area-perimeter",
+     "role": "secondary"
+    },
+    {
+     "kind": "concept",
+     "id": "pythagorean-special",
+     "role": "secondary"
+    }
+   ],
+   "choices": [
+    "11",
+    "$\\dfrac{56}{5}$",
+    "12",
+    "13",
+    "14"
+   ]
+  },
+  {
+   "id": "s2q11",
+   "section": 2,
+   "type": "mc",
+   "difficulty": 5,
+   "prompt": "If $f(x)=x^2-4x+7$, what is the minimum value of $f(f(x))$ over all real $x$?",
+   "key": {
+    "sel": [
+     0
+    ]
+   },
+   "explanation": {
+    "key": "4.",
+    "steps": [
+     "$f(x)=(x-2)^2+3\\ge3$, with minimum 3 at $x=2$.",
+     "So the inputs that $f$ receives in $f(f(x))$ lie in $[3,\\infty)$, where $f$ is increasing (it is increasing for $x\\ge2$).",
+     "The minimum of $f(f(x))$ is therefore $f(3)=9-12+7=4$, reached when $f(x)=3$, i.e. $x=2$."
+    ],
+    "trap": "Evaluating $f$ at its vertex $x=2$ gives 3, but the vertex of the outer $f$ is at 2 and the inner value never gets below 3."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "functions",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "quadratics-factoring",
+     "role": "secondary"
+    },
+    {
+     "kind": "concept",
+     "id": "graphs-of-functions",
+     "role": "secondary"
+    }
+   ],
+   "choices": [
+    "4",
+    "3",
+    "5",
+    "7",
+    "10"
+   ]
+  },
+  {
+   "id": "s2q12",
+   "section": 2,
+   "type": "mc",
+   "difficulty": 4,
+   "prompt": "Fifty people were surveyed: 30 own a dog and 28 own a cat. What is the greatest possible number of people who own exactly one of the two kinds of pet?",
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "42.",
+    "steps": [
+     "Let $b$ be the number who own both. Exactly one pet: $(30-b)+(28-b)=58-2b$.",
+     "To maximize this, minimize $b$. Since 30 + 28 = 58 exceeds 50, at least $58-50=8$ people own both.",
+     "Maximum $=58-16=42$."
+    ],
+    "trap": "Taking $b=0$ (no overlap) would give 58 people, impossible with only 50 surveyed."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "overlapping-sets",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "min-max-bounding",
+     "role": "secondary"
+    }
+   ],
+   "choices": [
+    "38",
+    "40",
+    "42",
+    "46",
+    "50"
+   ]
+  },
+  {
+   "id": "s2q13",
+   "section": 2,
+   "type": "mc_multi",
+   "difficulty": 4,
+   "prompt": "If $-1<a<0<b<1$, which of the following must be true? Select all that apply.",
+   "key": {
+    "sel": [
+     0,
+     1,
+     4,
+     5
+    ]
+   },
+   "explanation": {
+    "key": "A, B, E and F.",
+    "steps": [
+     "A: $|ab|<1\\cdot1$, so $ab>-1$. True.",
+     "B: $a>-1$ and $b>0$, so $a+b>-1$. True.",
+     "C: $b-a=b+|a|$ can exceed 1 (e.g. $b=0.9$, $a=-0.9$ gives 1.8). Not necessarily true.",
+     "D: $a^2$ vs $b^2$ can go either way. Not necessarily true.",
+     "E: $a^3<0<a^2b$. True.",
+     "F: $\\dfrac1a<0<\\dfrac1b$. True."
+    ],
+    "trap": "Choice C looks symmetric to B but $b-a$ adds magnitudes rather than letting them cancel."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "inequalities",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "number-sense-qc",
+     "role": "secondary"
+    }
+   ],
+   "choices": [
+    "$ab>-1$",
+    "$a+b>-1$",
+    "$b-a<1$",
+    "$a^2>b^2$",
+    "$a^3<a^2b$",
+    "$\\dfrac1a<\\dfrac1b$"
+   ]
+  },
+  {
+   "id": "s2q14",
+   "section": 2,
+   "type": "mc_multi",
+   "difficulty": 5,
+   "prompt": "The positive integers $x$, $y$ and $z$ satisfy $x<y<z$ and $xyz=120$. Select all of the following that could be the value of $z$.",
+   "key": {
+    "sel": [
+     0,
+     2,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "6, 12 and 24.",
+    "steps": [
+     "6: $(4,5,6)$. 12: $(2,5,12)$ (also $(1,10,12)$). 24: $(1,5,24)$.",
+     "9 does not divide 120. 16 does not divide 120. 45 does not divide 120.",
+     "Only divisors of 120 can be $z$; among the divisors the ones listed need an ordered distinct factor pair of $120/z$ below $z$."
+    ],
+    "trap": "Choice 9 and 45 are plausible-looking but not divisors of 120."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "min-max-bounding",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "primes-factors",
+     "role": "secondary"
+    },
+    {
+     "kind": "concept",
+     "id": "counting-permutations",
+     "role": "secondary"
+    }
+   ],
+   "choices": [
+    "6",
+    "9",
+    "12",
+    "16",
+    "24",
+    "45"
+   ]
+  },
+  {
+   "id": "s2q15",
+   "section": 2,
+   "type": "numeric",
+   "difficulty": 4,
+   "prompt": "How many integers from 1 to 200, inclusive, are divisible by 2 or by 3 but not by 5?",
+   "key": {
+    "value": "106"
+   },
+   "explanation": {
+    "key": "106.",
+    "steps": [
+     "Divisible by 2 or 3: $100+66-33=133$.",
+     "Among them, those divisible by 5: multiples of 10 (20) plus multiples of 15 (13) minus multiples of 30 (6) $=27$.",
+     "$133-27=106$."
+    ],
+    "trap": "Forgetting to add back the multiples of 30 when removing the ones divisible by 5 gives 100."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "counting-restrictions",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "overlapping-sets",
+     "role": "secondary"
+    },
+    {
+     "kind": "concept",
+     "id": "primes-factors",
+     "role": "secondary"
+    }
+   ],
+   "numeric": {
+    "kind": "single"
+   }
+  }
+ ]
+}
