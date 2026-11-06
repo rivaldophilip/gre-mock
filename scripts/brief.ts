@@ -26,17 +26,17 @@ function nextId() {
   return `${measure}-${String(n + 1).padStart(3, "0")}`;
 }
 
+/** Topics of every earlier test, stems of the latest only: the validator's overlap check already guards originality. */
 function previousTests() {
   const dir = "content/tests";
   if (!fs.existsSync(dir)) return [];
-  return fs
-    .readdirSync(dir)
-    .filter((f) => f.startsWith(measure + "-"))
+  const files = fs.readdirSync(dir).filter((f) => f.startsWith(measure + "-")).sort();
+  return files
     .map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), "utf8")))
-    .map((t) => ({
+    .map((t, i) => ({
       id: t.id,
-      passageTopics: (t.passages ?? []).map((p: { title?: string; paragraphs: string[] }) => p.title ?? p.paragraphs[0].slice(0, 80)),
-      stems: (t.questions ?? []).map((q: { prompt: string }) => q.prompt.slice(0, 90)),
+      passageTopics: (t.passages ?? []).map((p: { title?: string; paragraphs: string[] }) => p.title ?? p.paragraphs[0].slice(0, 70)),
+      ...(i === files.length - 1 ? { stems: (t.questions ?? []).map((q: { prompt: string }) => q.prompt.slice(0, 60)) } : {}),
     }));
 }
 
@@ -178,7 +178,7 @@ async function main() {
       distractorWords: { weak: weakD.map((s) => show(s)), untested: freshD.map((s) => show(s)) },
       passageWords: passPool.map((s) => show(s)),
       instructions:
-        "Use keyWords as the answers/keys across TC blanks and SE pairs (29 slots, order free). Fill distractors from distractorWords (about 40% weak). Weave 3-6 passageWords into each RC passage. Tag every word: role key|distractor|passage with `at` choice positions. Words must be spelled exactly as vocab lemma. Each key word's `sense` is the GRE-tested sense: write the sentence so THAT sense is the one that fits (for secondary=true words, the everyday sense must be the trap). Give each RC question one primary skill tag {kind:'concept', role:'primary'} from skillSlots (argument skills on the arg items, rc-select-verify suits rc_multi), optionally a secondary one; the reading skills can repeat." + focusNote,
+        "Use keyWords as the answers/keys across TC blanks and SE pairs (29 slots, order free); pair key words with each other in SE where the brief marks a partner with *, otherwise with a listed bank synonym. Fill distractors from distractorWords (about 40% weak). Weave 3-6 passageWords into each RC passage. Do not write word tags: `npm run tag` fills them from the choice and passage text (regular inflections match; tag an irregular form such as `forsworn` by hand). Each key word's `sense` is the GRE-tested sense: write the sentence so THAT sense is the one that fits (for secondary=true words, the everyday sense must be the trap). Give each RC question one primary skill tag {kind:'concept', role:'primary'} from skillSlots (argument skills on the arg items, rc-select-verify suits rc_multi), optionally a secondary one; the reading skills can repeat." + focusNote,
     });
   } else {
     const concepts = conceptRows.filter((c) => !SKILL_AREAS.includes(c.area));
@@ -194,6 +194,109 @@ async function main() {
   fs.mkdirSync("content/briefs", { recursive: true });
   const out = `content/briefs/${id}.json`;
   fs.writeFileSync(out, JSON.stringify(brief, null, 1));
-  console.log(`wrote ${out}`);
+  fs.writeFileSync(`content/briefs/${id}.md`, briefMarkdown(brief));
+  fs.writeFileSync(`content/briefs/${id}.local.md`, exemplarMarkdown(brief, refs));
+  console.log(`wrote ${out}, content/briefs/${id}.md (read this one) and ${id}.local.md (official exemplars, gitignored)`);
+}
+
+type Slot = { section: number; slot: number; type: string; level: number; exemplars: string[] };
+type Word = { word: string; id: string; secondary: boolean; sense: string | null; bucket?: string; reason?: string };
+
+/** Which passage each reading slot belongs to: blueprint passages in order (p1, p2, ...), arguments a1, a2. */
+function passageOfSlots(slots: Slot[]): Map<string, string> {
+  const out = new Map<string, string>();
+  let p = 0;
+  let a = 0;
+  for (const sec of blueprint.sections as { n: number }[]) {
+    const sizes = ((blueprint.passages ?? {})[String(sec.n)] ?? []).map((x: { questions: number }) => x.questions) as number[];
+    let left = 0;
+    for (const s of slots.filter((x) => x.section === sec.n)) {
+      if (s.type === "arg") out.set(`${s.section}.${s.slot}`, `a${++a}`);
+      else if (s.type.startsWith("rc")) {
+        if (left === 0) {
+          p++;
+          left = sizes.shift() ?? 99;
+        }
+        out.set(`${s.section}.${s.slot}`, `p${p}`);
+        left--;
+      }
+    }
+  }
+  return out;
+}
+
+/** Bank synonyms of a word in either direction (a word lists X, or X lists the word), for SE pairs. */
+function bankSynonyms() {
+  const vocab = JSON.parse(fs.readFileSync("data/vocab.json", "utf8")) as { id: string; lemma: string; senses?: { synonyms?: string[] }[] }[];
+  const idOf = new Map(vocab.map((v) => [v.lemma.toLowerCase(), v.id]));
+  const syn = new Map<string, Set<string>>();
+  const link = (a: string, b: string) => {
+    if (a === b) return;
+    if (!syn.has(a)) syn.set(a, new Set());
+    syn.get(a)!.add(b);
+  };
+  for (const v of vocab)
+    for (const s of v.senses ?? [])
+      for (const w of s.synonyms ?? []) {
+        const other = idOf.get(w.toLowerCase());
+        if (other) {
+          link(v.id, other);
+          link(other, v.id);
+        }
+      }
+  return syn;
+}
+
+function briefMarkdown(b: Record<string, unknown>): string {
+  const slots = b.slots as Slot[];
+  const where = passageOfSlots(slots);
+  const lines: string[] = [`# Brief ${b.testId} (${b.measure}, seed ${b.seed})`, "", "## Slots", "", "| sec | slot | type | level | passage |", "|---|---|---|---|---|"];
+  for (const s of slots) lines.push(`| ${s.section} | ${s.slot} | ${s.type} | ${s.level} | ${where.get(`${s.section}.${s.slot}`) ?? ""} |`);
+  const focus = (b.typeFocus as { type: string; need: number }[]).filter((t) => t.need >= 0.4).map((t) => t.type);
+  lines.push("", `Type focus (need >= 0.4, put the weakest items here): ${focus.length ? focus.join(", ") : "none"}`);
+  if (b.measure === "verbal") {
+    const keys = b.keyWords as Word[];
+    const keyIds = new Set(keys.map((k) => k.id));
+    const syn = bankSynonyms();
+    lines.push("", "## Key words (29 keys across TC blanks and SE pairs)", "", "SE partners: * = also a key word (best pair); otherwise a bank synonym may be the second key.", "");
+    for (const k of keys) {
+      const partners = [...(syn.get(k.id) ?? [])].sort((x, y) => Number(keyIds.has(y)) - Number(keyIds.has(x))).slice(0, 6);
+      lines.push(`- **${k.word}**${k.secondary ? " [secondary: everyday sense is the trap]" : ""}: ${k.sense ?? ""} (${k.bucket}, ${k.reason}). Synonyms: ${partners.map((x) => (keyIds.has(x) ? x + "*" : x)).join(", ") || "none in bank"}`);
+    }
+    const skills = JSON.parse(fs.readFileSync("data/rc_skills.json", "utf8")) as { id: string; description: string }[];
+    lines.push("", "## Reading skills for the 13 RC slots (arg-* on argument slots; may repeat)", "");
+    for (const s of b.skillSlots as { skill: string; bucket: string; reason: string }[])
+      lines.push(`- **${s.skill}** (${s.bucket}, ${s.reason}): ${skills.find((x) => x.id === s.skill)?.description ?? ""}`);
+    const d = b.distractorWords as { weak: Word[]; untested: Word[] };
+    lines.push("", "## Distractor words (about 40% of distractors)", "", `Weak: ${d.weak.map((w) => w.word).join(", ") || "none"}`, "", `Untested: ${d.untested.map((w) => w.word).join(", ")}`);
+    lines.push("", "## Passage words (weave 3-6 into each passage)", "", (b.passageWords as Word[]).map((w) => `${w.word}${w.secondary ? " (2nd sense)" : ""}`).join(", "));
+  } else {
+    lines.push("", "## Concept slots (one primary concept each)", "");
+    for (const c of b.conceptSlots as { slot: number; concept: string; name: string; area: string; reason: string }[]) lines.push(`- ${c.slot}. **${c.concept}** (${c.name}, ${c.area}): ${c.reason}`);
+  }
+  lines.push("", "## Earlier tests (do not repeat topics)", "");
+  for (const t of b.previous as { id: string; passageTopics: string[]; stems?: string[] }[]) {
+    lines.push(`- ${t.id}: ${t.passageTopics.join(" / ") || "(no passages)"}`);
+    if (t.stems) lines.push(`  - stems: ${t.stems.join(" · ")}`);
+  }
+  lines.push("", "## Instructions", "", String(b.instructions), "");
+  return lines.join("\n");
+}
+
+/** One official exemplar per distinct slot type and level, stem and choices only. Local file: official text is never committed. */
+function exemplarMarkdown(b: Record<string, unknown>, refs: RefItem[]): string {
+  const byId = new Map(refs.map((r) => [r.id, r as RefItem & Record<string, unknown>]));
+  const seen = new Set<string>();
+  const out = [`# Official exemplars for ${b.testId} (style and difficulty only; never copy)`];
+  for (const s of b.slots as Slot[]) {
+    const k = `${s.type} L${s.level}`;
+    const x = byId.get(s.exemplars[0]);
+    if (seen.has(k) || !x) continue;
+    seen.add(k);
+    const ch = x.choices as unknown;
+    const choices = Array.isArray(ch) ? (Array.isArray(ch[0]) ? (ch as string[][]).map((c) => c.join(" / ")).join(" || ") : (ch as string[]).join(" / ")) : "";
+    out.push("", `## ${k}: ${x.id} (P+ ${x.pplus ?? "?"}, answer ${JSON.stringify(x.answer)})`, String(x.stem ?? ""), x.qa ? `A: ${x.qa}  B: ${x.qb}` : "", choices);
+  }
+  return out.filter((l) => l !== "").join("\n") + "\n";
 }
 main().then(() => process.exit(0), (e) => { console.error(e); process.exit(1); });

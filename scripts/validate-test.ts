@@ -5,6 +5,7 @@ import { TestSchema, type Question, type Test } from "../lib/types";
 import { passageSentences } from "../lib/sentences";
 import { parseNumber } from "../lib/scoring";
 import { containment, MIN_SHINGLES, shingles } from "../lib/ngram";
+import { choiceIsWord } from "../lib/vocab-match";
 
 const id = process.argv[2];
 if (!id) {
@@ -147,8 +148,7 @@ for (const q of test.questions) {
       }
       if (t.at && (q.type === "tc" || q.type === "se")) {
         const text = (q.type === "tc" ? q.blanks?.[t.at[0]]?.[t.at[1]] : q.choices?.[t.at[0]])?.toLowerCase().trim();
-        const forms = [v.lemma, ...v.variants];
-        if (!text || !forms.some((f) => text === f || text.startsWith(f) || f.startsWith(text))) err(`${where}: tag ${t.id} at [${t.at}] points to "${text}"`);
+        if (!text || !choiceIsWord(text, v)) err(`${where}: tag ${t.id} at [${t.at}] points to "${text}"`);
         const isKey = q.type === "tc" ? sel[t.at[0]] === t.at[1] : sel.includes(t.at[0]);
         if (t.role === "key" && !isKey) err(`${where}: tag ${t.id} marked key but sits on a wrong choice`);
         if (t.role === "distractor" && isKey) err(`${where}: tag ${t.id} marked distractor but sits on a key`);

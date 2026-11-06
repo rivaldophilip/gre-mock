@@ -46,3 +46,7 @@ next-env.d.ts
 reference/
 extracted/
 __pycache__/
+
+# authoring scratch: official exemplars and blind copies stay local
+content/briefs/*.local.md
+content/.blind/
