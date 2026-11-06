@@ -4,10 +4,14 @@ import { and, eq, ne, notInArray, sql } from "drizzle-orm";
 import { schema, type DB } from "../../lib/db";
 import { TestSchema } from "../../lib/types";
 
-/** Upsert data/vocab.json and data/concepts.json; prune words dropped from the bank (never user_added). */
+/** Upsert data/vocab.json, data/concepts.json and data/rc_skills.json; prune words dropped from the bank (never user_added). */
 export async function seedDb(db: DB) {
   const vocab = JSON.parse(fs.readFileSync("data/vocab.json", "utf8")) as (typeof schema.vocab.$inferInsert)[];
-  const concepts = JSON.parse(fs.readFileSync("data/concepts.json", "utf8")) as (typeof schema.concepts.$inferInsert)[];
+  // quant concepts and reading/argument skills share the concepts table (skills use areas "reading" | "argument")
+  const concepts = [
+    ...JSON.parse(fs.readFileSync("data/concepts.json", "utf8")),
+    ...JSON.parse(fs.readFileSync("data/rc_skills.json", "utf8")),
+  ] as (typeof schema.concepts.$inferInsert)[];
 
   for (let i = 0; i < vocab.length; i += 200) {
     await db
@@ -49,6 +53,14 @@ export async function seedDb(db: DB) {
 
 export function testIds(): string[] {
   return fs.readdirSync("content/tests").filter((f) => f.endsWith(".json")).map((f) => f.replace(/\.json$/, "")).sort();
+}
+
+/** A test file, or null if it is missing or invalid. */
+export function loadTestFile(id: string) {
+  const file = `content/tests/${id}.json`;
+  if (!fs.existsSync(file)) return null;
+  const parsed = TestSchema.safeParse(JSON.parse(fs.readFileSync(file, "utf8")));
+  return parsed.success ? parsed.data : null;
 }
 
 /** Upsert one test (tests, questions, question_items). */

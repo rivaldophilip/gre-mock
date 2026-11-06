@@ -98,8 +98,13 @@ async function main() {
   const seed = seedArg > 0 ? Number(process.argv[seedArg + 1]) : Date.now() % 100000;
   const random = rng(seed);
   const now = new Date();
-  const events = (await db.select().from(schema.itemEvents)).filter((e) => e.kind === (measure === "verbal" ? "word" : "concept"));
-  const logged: LoggedEvent[] = events.map((e) => ({ itemId: e.itemId, event: e.event, weight: e.weight, createdAt: e.createdAt }));
+  const allEvents = await db.select().from(schema.itemEvents);
+  const eventsOf = (kind: "word" | "concept"): LoggedEvent[] =>
+    allEvents.filter((e) => e.kind === kind).map((e) => ({ itemId: e.itemId, event: e.event, weight: e.weight, createdAt: e.createdAt }));
+  const logged = eventsOf(measure === "verbal" ? "word" : "concept");
+  // quant concepts and reading skills share the concepts table; areas tell them apart
+  const SKILL_AREAS = ["reading", "argument"];
+  const conceptRows = await db.select().from(schema.concepts);
   const id = nextId();
   const refs = refItems();
   const brief: Record<string, unknown> = { testId: id, measure, seed, generatedAt: now.toISOString(), blueprint, previous: previousTests(), slots: slotExemplars(refs) };
@@ -139,15 +144,32 @@ async function main() {
       return { word: v.lemma, id: v.id, tier: v.tier, secondary: v.isSecondary, sense: sense ? `${sense.pos ?? ""} ${sense.def}`.trim() : null, bucket, reason: s.reason, P: +s.P.toFixed(2) };
     };
     const keySlots = keys.map((k) => ({ ...show(scores.find((s) => s.itemId === k.itemId)!, k.bucket), reason: k.reason }));
+    // reading skills: the blueprint's argument slots get argument skills, the other RC slots reading skills
+    const rcSlots = (blueprint.sections as { slots: { type: string }[] }[]).flatMap((sec) => sec.slots).filter((sl) => sl.type.startsWith("rc") || sl.type === "arg");
+    const nArg = rcSlots.filter((sl) => sl.type === "arg").length;
+    const skillRows = conceptRows.filter((c) => SKILL_AREAS.includes(c.area));
+    const skillScores = scoreAll(skillRows.map((c) => ({ id: c.id, yield: c.yield })), eventsOf("concept"), now);
+    const skillArea = new Map(skillRows.map((c) => [c.id, c.area]));
+    const pickSkills = (area: string, n: number) =>
+      allocateConcepts(skillScores.filter((s) => skillArea.get(s.itemId) === area).map((s) => ({ ...s, area })), n, [area], random);
+    const skillSlots = [...pickSkills("reading", rcSlots.length - nArg), ...pickSkills("argument", nArg)].map((p) => ({
+      skill: p.itemId,
+      name: skillRows.find((c) => c.id === p.itemId)?.name,
+      area: skillArea.get(p.itemId),
+      bucket: p.bucket,
+      reason: p.reason,
+      exemplars: conceptExemplars(refs, p.itemId),
+    }));
     Object.assign(brief, {
       keyWords: keySlots,
+      skillSlots,
       distractorWords: { weak: weakD.map((s) => show(s)), untested: freshD.map((s) => show(s)) },
       passageWords: passPool.map((s) => show(s)),
       instructions:
-        "Use keyWords as the answers/keys across TC blanks and SE pairs (29 slots, order free). Fill distractors from distractorWords (about 40% weak). Weave 3-6 passageWords into each RC passage. Tag every word: role key|distractor|passage with `at` choice positions. Words must be spelled exactly as vocab lemma. Each key word's `sense` is the GRE-tested sense: write the sentence so THAT sense is the one that fits (for secondary=true words, the everyday sense must be the trap).",
+        "Use keyWords as the answers/keys across TC blanks and SE pairs (29 slots, order free). Fill distractors from distractorWords (about 40% weak). Weave 3-6 passageWords into each RC passage. Tag every word: role key|distractor|passage with `at` choice positions. Words must be spelled exactly as vocab lemma. Each key word's `sense` is the GRE-tested sense: write the sentence so THAT sense is the one that fits (for secondary=true words, the everyday sense must be the trap). Give each RC question one primary skill tag {kind:'concept', role:'primary'} from skillSlots (argument skills on the arg items, rc-select-verify suits rc_multi), optionally a secondary one; the reading skills can repeat.",
     });
   } else {
-    const concepts = await db.select().from(schema.concepts);
+    const concepts = conceptRows.filter((c) => !SKILL_AREAS.includes(c.area));
     const scores = scoreAll(concepts.map((c) => ({ id: c.id, yield: c.yield })), logged, now);
     const areaOf = new Map(concepts.map((c) => [c.id, c.area]));
     const withArea = scores.map((s) => ({ ...s, area: areaOf.get(s.itemId)! }));

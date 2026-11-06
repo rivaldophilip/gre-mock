@@ -21,12 +21,18 @@ export default async function Stats() {
   const now = new Date();
   const ev = (kind: string): LoggedEvent[] => events.filter((e) => e.kind === kind).map((e) => ({ itemId: e.itemId, event: e.event, weight: e.weight, createdAt: e.createdAt }));
   const ws = scoreAll(vocab.map((v) => ({ id: v.id, yield: v.yield })), ev("word"), now);
-  const cs = scoreAll(concepts.map((c) => ({ id: c.id, yield: c.yield })), ev("concept"), now);
+  // quant concepts and reading/argument skills share the concepts table
+  const isSkill = (area?: string) => area === "reading" || area === "argument";
+  const cname = new Map(concepts.map((c) => [c.id, c]));
+  const all = scoreAll(concepts.map((c) => ({ id: c.id, yield: c.yield })), ev("concept"), now);
+  const cs = all.filter((s) => !isSkill(cname.get(s.itemId)?.area));
+  const ss = all.filter((s) => isSkill(cname.get(s.itemId)?.area));
   const weakWords = ws.filter((s) => s.weakEvidence > 0).sort((a, b) => b.P - a.P).slice(0, 25);
   const weakConcepts = cs.filter((s) => s.weakEvidence > 0).sort((a, b) => b.P - a.P).slice(0, 15);
-  const cname = new Map(concepts.map((c) => [c.id, c]));
+  const weakSkills = ss.filter((s) => s.weakEvidence > 0).sort((a, b) => b.P - a.P).slice(0, 10);
   const covW = { tested: ws.filter((s) => s.C >= 1).length, exposed: ws.filter((s) => s.C > 0 && s.C < 1).length, untested: ws.filter((s) => s.C === 0).length };
   const covC = { tested: cs.filter((s) => s.C >= 1).length, exposed: cs.filter((s) => s.C > 0 && s.C < 1).length, untested: cs.filter((s) => s.C === 0).length };
+  const covS = { tested: ss.filter((s) => s.C >= 1).length, untested: ss.filter((s) => s.C === 0).length };
 
   const qmap = new Map(qs.map((q) => [q.id, q]));
   const byType = new Map<string, { n: number; ok: number; ms: number }>();
@@ -40,17 +46,26 @@ export default async function Stats() {
     byType.set(t, s);
   }
 
-  // accuracy by concept area, through each question's primary concept
+  // accuracy by quant concept area and by reading skill, through each question's primary tag
   const primaryOf = new Map(qitems.filter((i) => i.kind === "concept" && i.role === "primary").map((i) => [i.questionId, i.itemId]));
   const byArea = new Map<string, { n: number; ok: number }>();
+  const bySkill = new Map<string, { n: number; ok: number; ms: number }>();
   for (const r of resp) {
     if (!r.finalized) continue;
-    const area = cname.get(primaryOf.get(r.questionId) ?? "")?.area;
-    if (!area) continue;
-    const s = byArea.get(area) ?? { n: 0, ok: 0 };
+    const c = cname.get(primaryOf.get(r.questionId) ?? "");
+    if (!c) continue;
+    if (isSkill(c.area)) {
+      const s = bySkill.get(c.id) ?? { n: 0, ok: 0, ms: 0 };
+      s.n++;
+      s.ok += r.isCorrect ? 1 : 0;
+      s.ms += r.timeMs;
+      bySkill.set(c.id, s);
+      continue;
+    }
+    const s = byArea.get(c.area) ?? { n: 0, ok: 0 };
     s.n++;
     s.ok += r.isCorrect ? 1 : 0;
-    byArea.set(area, s);
+    byArea.set(c.area, s);
   }
 
   return (
@@ -59,7 +74,8 @@ export default async function Stats() {
 
       <section><h2 className="mb-2 font-semibold">Coverage</h2>
         <p className="text-sm">Words — tested {covW.tested} · exposed {covW.exposed} · untested {covW.untested} (of {vocab.length})</p>
-        <p className="text-sm">Concepts — tested {covC.tested} · exposed {covC.exposed} · untested {covC.untested} (of {concepts.length})</p>
+        <p className="text-sm">Concepts — tested {covC.tested} · exposed {covC.exposed} · untested {covC.untested} (of {cs.length})</p>
+        <p className="text-sm">Reading skills — tested {covS.tested} · untested {covS.untested} (of {ss.length})</p>
       </section>
 
       <section><h2 className="mb-2 font-semibold">Weakest words</h2>
@@ -69,10 +85,17 @@ export default async function Stats() {
           </tbody></table>)}
       </section>
 
-      <section><h2 className="mb-2 font-semibold">Weakest concepts</h2>
+      <section><h2 className="mb-2 font-semibold">Weakest quant concepts</h2>
         {weakConcepts.length === 0 ? <p className="text-sm opacity-70">No weakness evidence yet.</p> : (
           <table className="w-full text-sm"><thead><tr className="text-left"><th>Concept</th><th>Area</th><th>Priority</th><th>Why</th></tr></thead><tbody>
             {weakConcepts.map((s) => <tr key={s.itemId} className="border-t"><td>{cname.get(s.itemId)?.name ?? s.itemId}</td><td>{cname.get(s.itemId)?.area}</td><td>{s.P.toFixed(2)}</td><td>{s.reason}</td></tr>)}
+          </tbody></table>)}
+      </section>
+
+      <section><h2 className="mb-2 font-semibold">Weakest reading skills</h2>
+        {weakSkills.length === 0 ? <p className="text-sm opacity-70">No weakness evidence yet.</p> : (
+          <table className="w-full text-sm"><thead><tr className="text-left"><th>Skill</th><th>Priority</th><th>Why</th></tr></thead><tbody>
+            {weakSkills.map((s) => <tr key={s.itemId} className="border-t"><td>{cname.get(s.itemId)?.name ?? s.itemId}</td><td>{s.P.toFixed(2)}</td><td>{s.reason}</td></tr>)}
           </tbody></table>)}
       </section>
 
@@ -86,6 +109,16 @@ export default async function Stats() {
         <section><h2 className="mb-2 font-semibold">Quant accuracy by concept area</h2>
           <table className="w-full text-sm"><thead><tr className="text-left"><th>Area</th><th>Answered</th><th>Accuracy</th></tr></thead><tbody>
             {[...byArea.entries()].map(([t, s]) => <tr key={t} className="border-t capitalize"><td>{t}</td><td>{s.n}</td><td>{Math.round((100 * s.ok) / s.n)}%</td></tr>)}
+          </tbody></table>
+        </section>
+      )}
+
+      {bySkill.size > 0 && (
+        <section><h2 className="mb-2 font-semibold">Reading accuracy by skill</h2>
+          <table className="w-full text-sm"><thead><tr className="text-left"><th>Skill</th><th>Answered</th><th>Accuracy</th><th>Avg time</th></tr></thead><tbody>
+            {[...bySkill.entries()].sort((a, b) => a[1].ok / a[1].n - b[1].ok / b[1].n).map(([id, s]) => (
+              <tr key={id} className="border-t"><td>{cname.get(id)?.name ?? id}</td><td>{s.n}</td><td>{Math.round((100 * s.ok) / s.n)}%</td><td>{Math.round(s.ms / s.n / 1000)}s</td></tr>
+            ))}
           </tbody></table>
         </section>
       )}

@@ -59,3 +59,36 @@ describe("eventsForResponse", () => {
     expect(slow).toContain("concept_slow");
   });
 });
+
+describe("reading skill events", () => {
+  const rc: Question = {
+    id: "q8",
+    section: 1,
+    type: "rc",
+    difficulty: 4,
+    prompt: "The author mentions X primarily in order to",
+    passageId: "p1",
+    choices: ["a", "b", "c", "d", "e"],
+    key: { sel: [2] },
+    explanation: { key: "k" },
+    tags: [
+      { kind: "concept", id: "rc-function", role: "primary" },
+      { kind: "concept", id: "rc-inference", role: "secondary" },
+    ],
+  };
+  const passage = [{ kind: "word" as const, id: "hegemony", role: "passage" as const }];
+
+  it("a wrong RC answer counts against its skills; passage words are exposure only", () => {
+    const e = eventsForResponse(rc, "verbal", { sel: [0] }, { guessed: false, timeMs: 30_000 }, passage);
+    expect(Object.fromEntries(e.map((x) => [x.itemId, x.event]))).toEqual({
+      "rc-function": "concept_wrong_primary",
+      "rc-inference": "concept_wrong_secondary",
+      hegemony: "exposure",
+    });
+  });
+
+  it("a right but slow RC answer is mastery plus a slowness signal", () => {
+    const e = eventsForResponse(rc, "verbal", { sel: [2] }, { guessed: false, timeMs: 120_000 });
+    expect(e.filter((x) => x.itemId === "rc-function").map((x) => x.event)).toEqual(["concept_right_primary", "concept_slow"]);
+  });
+});

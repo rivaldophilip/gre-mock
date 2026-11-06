@@ -1,0 +1,155 @@
+[
+ {
+  "id": "rc-main-idea",
+  "name": "Main idea / primary purpose",
+  "area": "reading",
+  "hand_yield": 0.5,
+  "description": "The passage's central claim, or why the author wrote it. Traps: too narrow (one paragraph's point), too broad, right topic with the wrong verb (\"refute\" vs \"qualify\").",
+  "officialCount": 7.0,
+  "yield": 0.413
+ },
+ {
+  "id": "rc-detail",
+  "name": "Detail (stated information)",
+  "area": "reading",
+  "hand_yield": 0.45,
+  "description": "What the passage says explicitly. Traps: right words from the wrong part of the passage, distortions of degree or scope.",
+  "officialCount": 9.0,
+  "yield": 0.434
+ },
+ {
+  "id": "rc-inference",
+  "name": "Inference (supported, unstated)",
+  "area": "reading",
+  "hand_yield": 0.75,
+  "description": "What must be true or is most strongly supported. Traps: plausible but unsupported, true in the world but not in the passage, extreme wording.",
+  "officialCount": 21.5,
+  "yield": 0.875
+ },
+ {
+  "id": "rc-function",
+  "name": "Function / purpose of a part",
+  "area": "reading",
+  "hand_yield": 0.8,
+  "description": "Why a sentence, example or paragraph is there (to concede, illustrate, qualify, contrast). Traps: an accurate paraphrase that misstates its role.",
+  "officialCount": 7.0,
+  "yield": 0.563
+ },
+ {
+  "id": "rc-attitude",
+  "name": "Author's attitude / tone",
+  "area": "reading",
+  "hand_yield": 0.6,
+  "description": "The author's stance and degree of certainty toward a view or person. Traps: tone too strong (\"scathing\") or the opposite polarity; the author vs a view the author reports.",
+  "officialCount": 3.0,
+  "yield": 0.37
+ },
+ {
+  "id": "rc-structure",
+  "name": "Structure / organization",
+  "area": "reading",
+  "hand_yield": 0.55,
+  "description": "How the passage or a paragraph is built (claim then counterexample, two views then a synthesis). Traps: one move out of order or missing.",
+  "officialCount": 1.0,
+  "yield": 0.298
+ },
+ {
+  "id": "rc-vocab-context",
+  "name": "Word or phrase in context",
+  "area": "reading",
+  "hand_yield": 0.5,
+  "description": "What a word or phrase means as used here. Traps: the word's common sense where the passage uses a secondary one.",
+  "officialCount": 4.0,
+  "yield": 0.343
+ },
+ {
+  "id": "rc-application",
+  "name": "Application / analogy",
+  "area": "reading",
+  "hand_yield": 0.45,
+  "description": "Which new situation parallels, would be explained by, or would be judged by the passage's idea.",
+  "officialCount": 1.0,
+  "yield": 0.248
+ },
+ {
+  "id": "rc-select-verify",
+  "name": "Select-all / EXCEPT verification",
+  "area": "reading",
+  "hand_yield": 0.7,
+  "description": "Each statement checked independently against the text (select-all or EXCEPT). Traps: a true-in-the-world but unsupported choice; one half-right choice.",
+  "officialCount": 20.5,
+  "yield": 0.827
+ },
+ {
+  "id": "arg-weaken",
+  "name": "Argument: weaken",
+  "area": "argument",
+  "hand_yield": 0.7,
+  "description": "New information that most undermines the conclusion, usually by attacking an assumption. Traps: out-of-scope facts, attacks on a premise rather than the link.",
+  "officialCount": 2.0,
+  "yield": 0.397
+ },
+ {
+  "id": "arg-strengthen",
+  "name": "Argument: strengthen / support",
+  "area": "argument",
+  "hand_yield": 0.6,
+  "description": "New information that most supports the conclusion. Traps: supports a related but different conclusion.",
+  "officialCount": 4.0,
+  "yield": 0.393
+ },
+ {
+  "id": "arg-assumption",
+  "name": "Argument: assumption",
+  "area": "argument",
+  "hand_yield": 0.75,
+  "description": "The unstated premise the argument depends on (negation test). Traps: sufficient but not necessary assumptions, too-strong wording.",
+  "officialCount": 1.0,
+  "yield": 0.398
+ },
+ {
+  "id": "arg-paradox",
+  "name": "Argument: resolve a paradox",
+  "area": "argument",
+  "hand_yield": 0.55,
+  "description": "Information that explains how two apparently conflicting facts can both be true. Traps: explains only one side.",
+  "officialCount": 2.0,
+  "yield": 0.322
+ },
+ {
+  "id": "arg-evaluate",
+  "name": "Argument: evaluate",
+  "area": "argument",
+  "hand_yield": 0.5,
+  "description": "The question whose answer would most help judge the argument (one answer strengthens, the other weakens).",
+  "officialCount": 0.0,
+  "yield": 0.25
+ },
+ {
+  "id": "arg-flaw",
+  "name": "Argument: flaw / method",
+  "area": "argument",
+  "hand_yield": 0.55,
+  "description": "The reasoning error or technique (sampling, causation from correlation, equivocation).",
+  "officialCount": 0.5,
+  "yield": 0.287
+ },
+ {
+  "id": "arg-role",
+  "name": "Argument: role of a statement (boldface)",
+  "area": "argument",
+  "hand_yield": 0.6,
+  "description": "What part a highlighted statement plays: conclusion, premise, counter-premise, intermediate conclusion.",
+  "officialCount": 1.0,
+  "yield": 0.323
+ },
+ {
+  "id": "arg-conclusion",
+  "name": "Argument: conclusion / inference",
+  "area": "argument",
+  "hand_yield": 0.5,
+  "description": "What the statements most strongly support, or the argument's main point.",
+  "officialCount": 2.5,
+  "yield": 0.308
+ }
+]

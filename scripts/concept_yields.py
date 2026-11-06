@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Recompute data/concepts.json `officialCount` and `yield` from the official quant items (local corpus).
+"""Recompute `officialCount` and `yield` from the official items (local corpus): data/concepts.json from the
+quant items, data/rc_skills.json from the reading and argument items.
 
 officialCount: how often the concept is tested in medium-or-harder official items (P+ < 60, or an OG set
 labelled medium/hard). The primary concept counts 1, a secondary one 0.5.
@@ -22,23 +23,31 @@ def hard_enough(r):
     return r.get("difficulty") in ("medium", "hard")
 
 
-concepts = json.load(open(CONCEPTS))
-count = {c["id"]: 0.0 for c in concepts}
-n = 0
-for line in open(ITEMS):
-    r = json.loads(line)
-    if r.get("type") not in QUANT or not hard_enough(r):
-        continue
-    n += 1
-    for i, c in enumerate(r.get("concepts") or []):
-        if c in count:
-            count[c] += 1.0 if i == 0 else 0.5
+SKILLS = os.path.join(ROOT, "data", "rc_skills.json")
+READING = {"rc", "rc_multi", "rc_select", "arg"}
+items = [json.loads(line) for line in open(ITEMS)]
 
-top_count = max(count.values()) or 1.0
-for c in concepts:
-    c["officialCount"] = count[c["id"]]
-    c["yield"] = round(0.5 * c["hand_yield"] + 0.5 * count[c["id"]] / top_count, 3)
-json.dump(concepts, open(CONCEPTS, "w"), indent=1)
-open(CONCEPTS, "a").write("\n")
-top = sorted(concepts, key=lambda c: -c["officialCount"])[:8]
-print(f"{n} medium/hard official quant items; top:", ", ".join(f"{c['id']}={c['officialCount']:g}" for c in top), file=sys.stderr)
+
+def recompute(path, types, label):
+    entries = json.load(open(path))
+    count = {c["id"]: 0.0 for c in entries}
+    n = 0
+    for r in items:
+        if r.get("type") not in types or not hard_enough(r):
+            continue
+        n += 1
+        for i, c in enumerate(r.get("concepts") or []):
+            if c in count:
+                count[c] += 1.0 if i == 0 else 0.5
+    top_count = max(count.values()) or 1.0
+    for c in entries:
+        c["officialCount"] = count[c["id"]]
+        c["yield"] = round(0.5 * c["hand_yield"] + 0.5 * count[c["id"]] / top_count, 3)
+    json.dump(entries, open(path, "w"), indent=1)
+    open(path, "a").write("\n")
+    top = sorted(entries, key=lambda c: -c["officialCount"])[:8]
+    print(f"{n} medium/hard official {label} items; top:", ", ".join(f"{c['id']}={c['officialCount']:g}" for c in top), file=sys.stderr)
+
+
+recompute(CONCEPTS, QUANT, "quant")
+recompute(SKILLS, READING, "reading")

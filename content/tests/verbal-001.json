@@ -775,7 +775,13 @@
    "explanation": {
     "key": "The sentence separates two claims: that carbon moves (shown) and that the movement is an adaptation of donors (not shown). B overstates: the author says benefit to donors is unestablished, not that it is absent."
    },
-   "tags": [],
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "rc-function",
+     "role": "primary"
+    }
+   ],
    "choices": [
     "distinguish between showing that a transfer occurs and showing that it evolved because of its effects",
     "suggest that donor trees receive no benefit from the network",
@@ -800,7 +806,18 @@
    "explanation": {
     "key": "A: the author says it does not follow that transfers benefit receivers or were selected for. B: the discovery 'seemed to complicate' the competition picture and popularizers 'promptly' declared the commonwealth. C: the author calls the evidence thin and wants the question measured, not that it is refuted."
    },
-   "tags": [],
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "rc-select-verify",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "rc-inference",
+     "role": "secondary"
+    }
+   ],
    "choices": [
     "It draws a conclusion about benefit and selection that the carbon-transfer findings do not establish.",
     "It arose in response to the discovery that trees of different species can be connected.",
@@ -822,7 +839,13 @@
    "explanation": {
     "key": "The author says the moralizing reading is 'not false but incomplete' and mistakes 'one pole of a tension for the whole', so the proposal retains it as one pole. A overstates (it is not replaced); D is not what the proposal does."
    },
-   "tags": [],
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "rc-structure",
+     "role": "primary"
+    }
+   ],
    "choices": [
     "The proposal replaces the moralizing reading with an incompatible one.",
     "The proposal keeps the moralizing reading as one component of a broader account.",
@@ -846,7 +869,13 @@
    "explanation": {
     "key": "The third sentence ('Yet the paintings were made for merchants...') argues that owners who enjoyed the objects would not hang a rebuke of them over the dinner table."
    },
-   "tags": []
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "rc-function",
+     "role": "primary"
+    }
+   ]
   },
   {
    "id": "s1q12",
@@ -863,7 +892,13 @@
    "explanation": {
     "key": "If the streetcar simply runs twice as often, the rise may come from frequency rather than from the vehicle type, so the conclusion about streetcars' inherent appeal is undermined. C, D and E each make the conclusion more plausible (E: riders came back despite a prior decline); A is about capacity, not rider preference."
    },
-   "tags": [],
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "arg-weaken",
+     "role": "primary"
+    }
+   ],
    "choices": [
     "Streetcars carry more passengers per vehicle than buses do.",
     "The streetcar line runs twice as often as the bus line it replaced did.",
@@ -1537,7 +1572,13 @@
    "explanation": {
     "key": "The passage says the thesis 'matches the circumstances' and that a pidgin is stripped of inflection, so descendants are expected to lack it. D is the thesis's problem, not its appeal."
    },
-   "tags": [],
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "rc-detail",
+     "role": "primary"
+    }
+   ],
    "choices": [
     "explains why children acquire creoles so readily",
     "accords with the conditions under which creoles form and with the sparse grammar of pidgins",
@@ -1561,7 +1602,13 @@
    "explanation": {
     "key": "The critics' reply is that the markers may be traceable to a substrate language whose influence is easy to overlook. A contradicts the last sentence; C reverses the passage (pidgins are stripped of inflection); D is stronger than the critics' 'premature' objection; E reverses the claim that low-prestige influence is overlooked, not absent."
    },
-   "tags": [],
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "rc-inference",
+     "role": "primary"
+    }
+   ],
    "choices": [
     "Children's contributions to creole grammars are negligible.",
     "A system of verbal markers that seems absent from the languages usually counted as contributors could nonetheless derive from a substrate language.",
@@ -1586,7 +1633,18 @@
    "explanation": {
     "key": "A: the dispute is 'less about whether children contribute'. B: the critics' substrate explanation is offered against the innate-template inference. C: regularization is the alternative to an innate endowment, so it is central."
    },
-   "tags": [],
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "rc-select-verify",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "rc-inference",
+     "role": "secondary"
+    }
+   ],
    "choices": [
     "Both sides accept that children contribute to creole grammars.",
     "Evidence that the verbal markers derive from a language involved in the original contact would bear on the dispute.",
@@ -1608,7 +1666,13 @@
    "explanation": {
     "key": "The author says students 'already believe themselves to be doing' so, and that discretion rewards practices that feel productive and are not. B names that gap. A reverses the passage; C, D and E are not supported."
    },
-   "tags": [],
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "rc-attitude",
+     "role": "primary"
+    }
+   ],
    "choices": [
     "is unnecessary because students already retrieve material regularly",
     "fails to address that the methods students prefer are the ones that feel productive without being so",
@@ -1632,7 +1696,18 @@
    "explanation": {
     "key": "If the advantage survives when nothing must be reconstructed, reconstruction cannot be what produces it. A is already stated; B would strengthen the case for retrieval; D describes the standard design; E is about preference."
    },
-   "tags": [],
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "arg-weaken",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "rc-inference",
+     "role": "secondary"
+    }
+   ],
    "choices": [
     "Rereaders rated their confidence higher than the retrieval group did.",
     "The retrieval group spent less total time with the passage than the rereaders did.",
@@ -1656,7 +1731,13 @@
    "explanation": {
     "key": "'Because testing exposes gaps that rereading conceals, it is unpleasant, and learners who are free to choose their methods tend to avoid it.' The next sentence states a consequence for instruction, not the reason for avoidance."
    },
-   "tags": []
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "rc-detail",
+     "role": "primary"
+    }
+   ]
   },
   {
    "id": "s2q14",
@@ -1673,7 +1754,13 @@
    "explanation": {
     "key": "The author has argued that the novels dramatize the failure of social life; the final sentence moves any 'retreat' from the book's stance to the characters' situation. C is tempting ('if there is one') but the author concedes nothing about the books' own withdrawal."
    },
-   "tags": [],
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "rc-function",
+     "role": "primary"
+    }
+   ],
    "choices": [
     "restate the critics' position in sharper form",
     "relocate the apparent withdrawal from the author's practice to the characters' predicament",
@@ -1697,7 +1784,13 @@
    "explanation": {
     "key": "If the depot narrowed what it accepts, the fall in collected plastic could have nothing to do with bags; the inference from 'less plastic collected' to 'fewer bags used' needs the depot's intake to be otherwise unchanged."
    },
-   "tags": [],
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "arg-assumption",
+     "role": "primary"
+    }
+   ],
    "choices": [
     "During the period, the depot did not stop accepting some kinds of plastic it formerly accepted.",
     "Plastic bags were the largest category of plastic collected at the depot.",

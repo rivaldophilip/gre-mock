@@ -10,9 +10,17 @@ import type { Answer, Question, Test } from "@/lib/types";
 import { Rich, RichInline } from "@/components/Rich";
 import { Figure } from "@/components/Figure";
 import { TaggablePassage, WordChip, type Sense } from "@/components/WordTagger";
+import rcSkills from "@/data/rc_skills.json";
 
 export const dynamic = "force-dynamic";
 const L = "ABCDEFGHIJ";
+const skillName = new Map(rcSkills.map((s) => [s.id, s.name]));
+
+/** The reading skill a question tests (its primary skill tag), for RC questions. */
+function skillOf(q: Question): string | undefined {
+  const t = q.tags.find((x) => x.kind === "concept" && x.role === "primary" && skillName.has(x.id));
+  return t && skillName.get(t.id);
+}
 
 function choiceWords(q: Question): string[] {
   if (q.type === "tc") return q.blanks?.flat() ?? [];
@@ -89,7 +97,7 @@ export default async function Review({ params }: { params: Promise<{ id: string;
         return (
           <section key={q.id} id={`q-${q.id}`} className={`space-y-3 rounded-lg border-l-4 border p-4 ${ok ? "border-l-green-600" : "border-l-red-500"}`}>
             <div className="flex flex-wrap items-baseline justify-between gap-2 text-sm">
-              <span className="font-semibold">S{q.section} · {q.type.toUpperCase()} · {q.id}</span>
+              <span className="font-semibold">S{q.section} · {q.type.toUpperCase()} · {q.id}{skillOf(q) && <span className="font-normal opacity-80"> · skill: {skillOf(q)}</span>}</span>
               <span>{ok ? "✓ correct" : "✗ incorrect"} · {Math.round((r?.timeMs ?? 0) / 1000)}s{r?.guessed ? " · guessed" : ""} · level {q.difficulty}</span>
             </div>
             {passage && (

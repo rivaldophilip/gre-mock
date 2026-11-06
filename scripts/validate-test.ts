@@ -27,6 +27,7 @@ if (test.id !== id) err(`id mismatch: file ${id}, test.id ${test.id}`);
 const blueprint = JSON.parse(fs.readFileSync("data/blueprints.json", "utf8"))[test.measure];
 const vocab = new Map((JSON.parse(fs.readFileSync("data/vocab.json", "utf8")) as { id: string; lemma: string; variants: string[] }[]).map((v) => [v.id, v]));
 const concepts = new Set((JSON.parse(fs.readFileSync("data/concepts.json", "utf8")) as { id: string }[]).map((c) => c.id));
+const skills = new Map((JSON.parse(fs.readFileSync("data/rc_skills.json", "utf8")) as { id: string; area: string }[]).map((c) => [c.id, c.area]));
 
 const slotType = (q: Question) => (q.type === "tc" ? `tc${q.blanks?.length}` : q.subtype === "arg" ? "arg" : q.type === "numeric" || q.type === "mc" || q.type === "mc_multi" || q.type === "qc" ? q.type : q.setId ? "di" : q.type);
 const typeOf = (q: Question) => (q.setId ? "di" : slotType(q));
@@ -152,15 +153,23 @@ for (const q of test.questions) {
         if (t.role === "key" && !isKey) err(`${where}: tag ${t.id} marked key but sits on a wrong choice`);
         if (t.role === "distractor" && isKey) err(`${where}: tag ${t.id} marked distractor but sits on a key`);
       } else if ((t.role === "key" || t.role === "distractor") && (q.type === "tc" || q.type === "se")) err(`${where}: tag ${t.id} needs "at"`);
-    } else if (!concepts.has(t.id)) err(`${where}: concept tag "${t.id}" not in data/concepts.json`);
+    } else if (test.measure === "quant" ? !concepts.has(t.id) : !skills.has(t.id)) {
+      err(`${where}: concept tag "${t.id}" not in ${test.measure === "quant" ? "data/concepts.json" : "data/rc_skills.json"}`);
+    }
     if (!slugOk(t.id)) err(`${where}: bad tag id ${t.id}`);
-    if (kind === "word" && t.kind !== "word" && q.tags.length) warns.push(`${where}: concept tag on a verbal item`);
+    if (kind === "word" && t.kind !== "word" && !q.type.startsWith("rc")) err(`${where}: skill tags belong on reading items only`);
   }
   if (test.measure === "verbal" && (q.type === "tc" || q.type === "se")) {
     const keyAts = q.type === "tc" ? sel.map((k, i) => `${i},${k}`) : sel.map((k) => `${k}`);
     for (const ka of keyAts) if (!q.tags.some((t) => t.role === "key" && t.at?.join(",") === ka)) err(`${where}: key choice [${ka}] has no word tag`);
   }
   if (test.measure === "quant" && !q.tags.some((t) => t.kind === "concept" && t.role === "primary")) err(`${where}: needs a primary concept tag`);
+  if (q.type.startsWith("rc")) {
+    // every reading question names the skill it tests; argument items test an argument skill
+    const primaries = q.tags.filter((t) => t.kind === "concept" && t.role === "primary");
+    if (primaries.length !== 1) err(`${where}: needs exactly one primary skill tag (data/rc_skills.json)`);
+    else if (q.subtype === "arg" && skills.get(primaries[0].id) !== "argument") err(`${where}: argument item needs an arg-* primary skill`);
+  }
 }
 for (const p of test.passages) for (const t of p.tags) if (t.kind === "word" && !vocab.has(t.id)) err(`passage ${p.id}: word tag "${t.id}" not in vocab`);
 
