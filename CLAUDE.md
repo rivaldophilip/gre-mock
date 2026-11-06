@@ -3,7 +3,7 @@
 Next.js (App Router) + TypeScript + Tailwind + Drizzle/Neon Postgres, deployed on Vercel. Tests are authored by Claude Code ahead of time as JSON in `content/tests/`; the webapp only takes and reviews them.
 
 - **To create a test:** run `/new-test verbal` or `/new-test quant`, which follows `docs/QUIZ-AUTHORING.md`.
-- Priority model for targeting weak words/concepts: `docs/PRIORITY.md`. Difficulty craft: `docs/HARD-PATTERNS.md`.
+- Priority model for targeting weak words, quant concepts and reading skills (`data/rc_skills.json`, which shares the concepts table under areas `reading` / `argument`): `docs/PRIORITY.md`. Difficulty craft: `docs/HARD-PATTERNS.md`.
 - **Public repo: never commit** ETS / Big Book text, the extracted corpus (`../books/extracted/`), `.env*`, or answer keys served to the client. Every test item must be original.
 - Next.js here is v16: `proxy.ts` replaces middleware, `params`/`searchParams` are Promises. Read `node_modules/next/dist/docs/` before changing framework-level code.
 - **Accounts and data isolation.** Sign-in is email + password, and **there is no sign-up path in the app; never add one.** Accounts are created only from the CLI: `npm run user:add -- <email>` (password from a hidden prompt), plus `user:passwd`, `user:list` and `user:remove`. Neon has two kinds of database on one branch:

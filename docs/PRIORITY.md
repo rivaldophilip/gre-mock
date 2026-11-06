@@ -33,3 +33,8 @@ Events are emitted when a response is *finalized*: on "Check answer" in Practice
 
 - Verbal: 29 key slots — 50% review (weakness evidence, ranked by P), 40% new (N·Y), 10% wildcard (random Y ≥ 0.6). If a bucket runs dry (first test: no history) the others fill in. ~40% of distractors come from weak words. Each RC passage gets 3–6 passage-tier words.
 - Quant: 27 concept slots — 50% highest weakness·yield, 35% least covered, 15% balance the four areas.
+- Reading skills: the 13 RC slots get skills from `data/rc_skills.json` by the same 50 / 35 / 15 rule. The 2 argument slots draw from the `argument` area, the other 11 from `reading`. Skills repeat when there are more slots than skills, and the brief lists official exemplars per skill.
+
+## Reading skills
+
+Each RC question has one primary skill tag (`kind: "concept"`; areas `reading` / `argument`, stored in the concepts table) and optionally a secondary one. A skill gets the concept events and weights above. The "slow" threshold is the verbal pace (90 s per question), so the first question on a long passage, which includes reading time, can register as slow. The skills' `yield` comes from how often each skill is tested in medium/hard official reading items (`scripts/concept_yields.py`). The official items' skills were assigned from their question stems (`reference/rc_skills.jsonl`, local only). After tagging questions a user has already answered, run `npm run backfill:concepts`.
