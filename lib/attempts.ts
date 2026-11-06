@@ -6,10 +6,11 @@ import { loadTest, orderedQuestions } from "./content";
 import { eventsForResponse } from "./events";
 import { scoreAnswer } from "./scoring";
 import type { Answer, Question, Test } from "./types";
+import { elapsedMs, paused, resumed, type SectionState } from "./clock";
 
 const { attempts, responses, itemEvents } = schema;
 
-export type SectionState = Record<string, { startedAt?: string; finishedAt?: string }>;
+export type { SectionState };
 export type Attempt = typeof attempts.$inferSelect;
 
 export async function getAttempt(id: number): Promise<Attempt | null> {
@@ -23,13 +24,32 @@ export function sectionStatus(a: Attempt, n: 1 | 2) {
   return { started: !!st?.startedAt, finished: !!st?.finishedAt, startedAt: st?.startedAt };
 }
 
-/** Seconds left in a section, from server time (so refresh cannot reset the clock). */
+/** Seconds left in a section, from server time (so refresh cannot reset the clock). Practice-mode pauses don't count. */
 export function secondsLeft(a: Attempt, test: Test, n: 1 | 2, now = Date.now()): number | null {
   if (!a.timerOn) return null;
   const st = (a.sectionState as SectionState)[String(n)];
   if (!st?.startedAt) return null;
   const total = test.sections.find((s) => s.n === n)!.minutes * 60;
-  return Math.max(0, Math.round(total - (now - new Date(st.startedAt).getTime()) / 1000));
+  return Math.max(0, Math.round(total - elapsedMs(st, now) / 1000));
+}
+
+/** Milliseconds the section clock has run (excluding pauses). */
+export function sectionElapsedMs(a: Attempt, n: 1 | 2, now = Date.now()): number {
+  return elapsedMs((a.sectionState as SectionState)[String(n)], now);
+}
+
+/**
+ * Practice mode: stop the section clock while a revealed answer is read, and restart it on the next
+ * navigation. Returns the attempt with its updated state (unchanged if there was nothing to do).
+ */
+export async function setClockPaused(a: Attempt, n: 1 | 2, pause: boolean, now = Date.now()): Promise<Attempt> {
+  const st = a.sectionState as SectionState;
+  const next = pause ? paused(st[String(n)], now) : resumed(st[String(n)], now);
+  if (!next) return a;
+  const sectionState = { ...st, [String(n)]: next };
+  const db = await userDb();
+  await db.update(attempts).set({ sectionState }).where(eq(attempts.id, a.id));
+  return { ...a, sectionState };
 }
 
 export function pairKey(testId: string, qid: string) {

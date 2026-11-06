@@ -3,6 +3,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { Answer, Explanation, Key, PublicTest } from "@/lib/types";
 import { isAnswered } from "@/lib/scoring";
+import type { SectionState } from "@/lib/clock";
 import { Calculator } from "./Calculator";
 import { Figure } from "./Figure";
 import { PassagePane } from "./PassagePane";
@@ -12,7 +13,6 @@ import { ReviewGrid } from "./ReviewGrid";
 
 type Meta = { guessed: boolean; marked: boolean; timeMs: number; finalized: boolean };
 type Reveal = { key: Key; explanation: Explanation; isCorrect: boolean };
-type SectionState = Record<string, { startedAt?: string; finishedAt?: string }>;
 
 export interface RunnerProps {
   test: PublicTest;
@@ -47,6 +47,8 @@ export function Runner(p: RunnerProps) {
   );
   const [reveals, setReveals] = useState<Record<string, Reveal>>(p.reveals);
   const [left, setLeft] = useState<number | null>(p.secondsLeft[String(section)] ?? null);
+  // practice mode: the clock stops while a revealed answer is read, and restarts on the next navigation
+  const [paused, setPaused] = useState(() => mode === "practice" && !!p.sectionState[String(section)]?.pausedAt);
   const [calc, setCalc] = useState(false);
   const [grid, setGrid] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -64,7 +66,7 @@ export function Runner(p: RunnerProps) {
   const dirty = useRef<Set<string>>(new Set());
 
   const post = useCallback(
-    async (qid: string, extra: { commit?: boolean; position?: number } = {}, spent = 0) => {
+    async (qid: string, extra: { commit?: boolean; position?: number; resume?: boolean } = {}, spent = 0) => {
       const m = latest.current.meta[qid] ?? { guessed: false, marked: false, timeMs: 0, finalized: false };
       try {
         const r = await fetch(`/api/attempts/${attemptId}/response`, {
@@ -125,10 +127,16 @@ export function Runner(p: RunnerProps) {
       if (!q) return;
       settle();
       if (timer.current) clearTimeout(timer.current);
-      void post(q.id, { position: to }).then(() => flush());
+      const resume = paused;
+      if (resume) setPaused(false);
+      void post(q.id, resume ? { position: to, resume: true } : { position: to }).then((j) => {
+        // resync with the server clock, which excluded the reading time
+        if (resume && typeof j?.secondsLeft === "number") setLeft(j.secondsLeft);
+        return flush();
+      });
       setIdx(to);
     },
-    [q, settle, post, flush],
+    [q, settle, post, flush, paused],
   );
 
   const finishSection = useCallback(async () => {
@@ -165,6 +173,7 @@ export function Runner(p: RunnerProps) {
     if (r.ok) {
       setSectionState(j.sectionState);
       setLeft(timerOn ? minutes * 60 : null);
+      setPaused(false);
       setIdx(0);
       entered.current = Date.now();
     }
@@ -172,14 +181,14 @@ export function Runner(p: RunnerProps) {
 
   // countdown (server-anchored at start; local tick)
   useEffect(() => {
-    if (!timerOn || !sectionStarted || sectionDone || left === null) return;
+    if (!timerOn || !sectionStarted || sectionDone || left === null || paused) return;
     if (left <= 0) {
       const t = setTimeout(() => void finishSection(), 0);
       return () => clearTimeout(t);
     }
     const t = setTimeout(() => setLeft((l) => (l === null ? l : l - 1)), 1000);
     return () => clearTimeout(t);
-  }, [left, timerOn, sectionStarted, sectionDone, finishSection]);
+  }, [left, timerOn, sectionStarted, sectionDone, paused, finishSection]);
 
   useEffect(() => {
     entered.current = Date.now();
@@ -259,6 +268,8 @@ export function Runner(p: RunnerProps) {
     const j = await post(q.id, { commit: true, position: idx }, 0);
     setBusy(false);
     if (j?.reveal) {
+      if (timerOn) setPaused(true);
+      if (typeof j.secondsLeft === "number") setLeft(j.secondsLeft);
       setReveals((r) => ({ ...r, [q.id]: j.reveal }));
       setMeta((m) => ({ ...m, [q.id]: { ...(m[q.id] ?? { guessed: false, marked: false, timeMs: 0 }), finalized: true } as Meta }));
     }
@@ -276,7 +287,10 @@ export function Runner(p: RunnerProps) {
         <span className="flex-1" />
         {saveErr && <span className="text-red-500">save failed — will retry</span>}
         {timerOn && left !== null && (
-          <span data-testid="timer" className={`font-mono ${left < 300 ? "text-red-500" : ""}`}>{fmt(left)}</span>
+          <span data-testid="timer" className={`font-mono ${paused ? "opacity-60" : left < 300 ? "text-red-500" : ""}`} title={paused ? "Paused while you read the answer; resumes on the next question" : undefined}>
+            {fmt(left)}
+            {paused && " ⏸"}
+          </span>
         )}
         {isQuant && <button className="rounded border px-2 py-1" onClick={() => setCalc((c) => !c)}>Calculator</button>}
         <button className="rounded border px-2 py-1" onClick={() => setFlag("marked", !cur?.marked)}>{cur?.marked ? "Unmark" : "Mark"}</button>

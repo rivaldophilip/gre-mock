@@ -3,7 +3,7 @@ import { z } from "zod";
 import { schema } from "@/lib/db";
 import { userDb } from "@/lib/session";
 import { eq } from "drizzle-orm";
-import { canReveal, finalizeResponse, loadAttemptTest, pairKey, responseFor, sectionStatus } from "@/lib/attempts";
+import { canReveal, finalizeResponse, loadAttemptTest, pairKey, responseFor, sectionElapsedMs, sectionStatus, secondsLeft, setClockPaused } from "@/lib/attempts";
 import { AnswerSchema } from "@/lib/types";
 import { scoreAnswer } from "@/lib/scoring";
 
@@ -16,8 +16,10 @@ const Body = z.object({
   guessed: z.boolean(),
   marked: z.boolean(),
   position: z.number().int().min(0).optional(),
-  /** practice mode: lock the answer and reveal the key */
+  /** practice mode: lock the answer and reveal the key (pauses the section clock) */
   commit: z.boolean().optional(),
+  /** practice mode: the test-taker moved on from a revealed answer (restarts the section clock) */
+  resume: z.boolean().optional(),
 });
 
 export async function POST(req: Request, ctx: { params: Promise<{ id: string }> }) {
@@ -26,16 +28,18 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
   const body = Body.safeParse(await req.json().catch(() => null));
   const loaded = await loadAttemptTest(Number(id));
   if (!body.success || !loaded) return NextResponse.json({ error: "bad request" }, { status: 400 });
-  const { a, test } = loaded;
+  const { test } = loaded;
+  let { a } = loaded;
   const q = test.questions.find((x) => x.id === body.data.questionId);
   if (!q) return NextResponse.json({ error: "unknown question" }, { status: 400 });
   if (a.finishedAt || sectionStatus(a, q.section).finished) return NextResponse.json({ error: "section closed" }, { status: 409 });
   // the clock is server-side: past time (plus a small grace for the final in-flight save) answers are refused
-  const started = sectionStatus(a, q.section).startedAt;
-  if (a.timerOn && started) {
+  if (a.timerOn && sectionStatus(a, q.section).started) {
     const limitMs = test.sections.find((s) => s.n === q.section)!.minutes * 60_000 + GRACE_MS;
-    if (Date.now() - new Date(started).getTime() > limitMs) return NextResponse.json({ error: "time is up" }, { status: 409 });
+    if (sectionElapsedMs(a, q.section) > limitMs) return NextResponse.json({ error: "time is up" }, { status: 409 });
   }
+  if (body.data.resume && a.mode === "practice") a = await setClockPaused(a, q.section, false);
+  const clock = () => ({ secondsLeft: secondsLeft(a, test, q.section) });
 
   const qkey = pairKey(test.id, q.id);
   const existing = await responseFor(a.id, qkey);
@@ -44,7 +48,7 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
     if (body.data.position !== undefined) {
       await db.update(schema.attempts).set({ currentPosition: body.data.position }).where(eq(schema.attempts.id, a.id));
     }
-    return NextResponse.json({ ok: true, locked: true });
+    return NextResponse.json({ ok: true, locked: true, ...clock() });
   }
 
   const ans = body.data.answer ?? undefined;
@@ -68,12 +72,14 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
   }
 
   if (body.data.commit && a.mode === "practice") {
+    a = await setClockPaused(a, q.section, true);
     await finalizeResponse(a, test, q, row.id);
     const fresh = await responseFor(a.id, qkey);
     return NextResponse.json({
       ok: true,
       reveal: canReveal(a, test, q, fresh) ? { key: q.key, explanation: q.explanation, isCorrect: fresh.isCorrect } : null,
+      ...clock(),
     });
   }
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({ ok: true, ...clock() });
 }
