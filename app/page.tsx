@@ -3,9 +3,10 @@ import { desc } from "drizzle-orm";
 import { schema } from "@/lib/db";
 import { userDb } from "@/lib/session";
 import { listTestIds, loadTest } from "@/lib/content";
-import { isClosed, sectionStatus, type SectionState } from "@/lib/attempts";
+import { isClosed, pairKey, sectionStatus, type SectionState } from "@/lib/attempts";
 import { isAway } from "@/lib/clock";
-import { bandText, estimateBand } from "@/lib/scoring";
+import { bandText, estimateBand, isAnswered } from "@/lib/scoring";
+import type { Answer, Question } from "@/lib/types";
 import { StartForm } from "@/components/StartForm";
 import { DiscardButton } from "@/components/DiscardButton";
 import { AppHeader } from "@/components/AppHeader";
@@ -22,9 +23,17 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
   const attempts = await db.select().from(schema.attempts).orderBy(desc(schema.attempts.startedAt));
   const correct = new Map<number, number>();
   const guessed = new Map<number, number>();
+  const answered = new Map<number, number>();
   const rows = await db
-    .select({ a: schema.responses.attemptId, ok: schema.responses.isCorrect, g: schema.responses.guessed, fin: schema.responses.finalized })
+    .select({ a: schema.responses.attemptId, qid: schema.responses.questionId, ok: schema.responses.isCorrect, g: schema.responses.guessed, fin: schema.responses.finalized, ans: schema.responses.answer })
     .from(schema.responses);
+  const qByKey = new Map<string, Question>();
+  for (const t of tests) for (const q of t.questions) qByKey.set(pairKey(t.id, q.id), q);
+  // progress of an open attempt: a cleared choice or a half-filled completion is not an answer
+  for (const r of rows) {
+    const q = qByKey.get(r.qid);
+    if (q && isAnswered(q, (r.ans ?? undefined) as Answer | undefined)) answered.set(r.a, (answered.get(r.a) ?? 0) + 1);
+  }
   // only finalized answers count: an exam section still open (or abandoned) has not been scored
   for (const r of rows) if (r.ok && r.fin) {
     correct.set(r.a, (correct.get(r.a) ?? 0) + 1);
@@ -92,15 +101,23 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
                                 <span className="hidden sm:inline">~{bandText(band)}</span>
                               </span>
                             )}
-                            <span className="h-1.5 w-12 overflow-hidden rounded-full bg-line" aria-hidden>
-                              <span className="block h-full rounded-full bg-accent" style={{ width: `${Math.round((100 * c) / total)}%` }} />
-                            </span>
                             <IconNext size={16} className="text-muted transition-transform group-hover:translate-x-0.5" />
                           </Link>
                         </li>
                       );
                     })}
                   </ul>
+                )}
+                {open && (
+                  <div className="space-y-1.5">
+                    <div className="flex items-center justify-between text-xs text-muted">
+                      <span>{pausedAway ? "Paused" : "In progress"} · <span className="capitalize">{open.mode}</span></span>
+                      <span className="tabular-nums">{answered.get(open.id) ?? 0}/{total} answered</span>
+                    </div>
+                    <div className="h-1.5 overflow-hidden rounded-full bg-line" aria-hidden>
+                      <div className="h-full rounded-full bg-warn" style={{ width: `${Math.round((100 * (answered.get(open.id) ?? 0)) / total)}%` }} />
+                    </div>
+                  </div>
                 )}
                 {open ? (
                   <div className="flex flex-col gap-2 sm:flex-row">
