@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { desc, eq } from "drizzle-orm";
+import { desc } from "drizzle-orm";
 import { db, schema } from "@/lib/db";
 import { listTestIds, loadTest } from "@/lib/content";
 import { StartForm } from "@/components/StartForm";
@@ -11,8 +11,6 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
   const measure = tab === "quant" ? "quant" : "verbal";
   const tests = listTestIds().map((id) => loadTest(id)!).filter((t) => t.measure === measure);
   const attempts = await db().select().from(schema.attempts).orderBy(desc(schema.attempts.startedAt));
-  const nq = async (testId: string) => (await db().select().from(schema.responses).where(eq(schema.responses.isCorrect, true))).length && testId;
-  void nq;
   const correct = new Map<number, number>();
   const rows = await db().select({ a: schema.responses.attemptId, ok: schema.responses.isCorrect }).from(schema.responses);
   for (const r of rows) if (r.ok) correct.set(r.a, (correct.get(r.a) ?? 0) + 1);

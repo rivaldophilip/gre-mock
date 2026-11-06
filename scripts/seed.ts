@@ -2,7 +2,7 @@
 import { config } from "dotenv";
 config({ path: ".env.local" });
 import fs from "node:fs";
-import { sql } from "drizzle-orm";
+import { and, ne, notInArray, sql } from "drizzle-orm";
 import { db, schema } from "../lib/db";
 
 async function main() {
@@ -31,6 +31,13 @@ async function main() {
         },
       });
   }
+  // words dropped from the bank (e.g. noise from the official-items mining) leave the DB too;
+  // words the test-taker added by tapping them are never pruned
+  const pruned = await db()
+    .delete(schema.vocab)
+    .where(and(ne(schema.vocab.tier, "user_added"), notInArray(schema.vocab.id, vocab.map((v) => v.id))))
+    .returning({ id: schema.vocab.id });
+  if (pruned.length) console.log(`pruned ${pruned.length} words no longer in the bank`);
   await db()
     .insert(schema.concepts)
     .values(concepts)

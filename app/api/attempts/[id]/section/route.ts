@@ -20,8 +20,11 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
 
   if (action === "start") {
     if (section === 2 && !sectionStatus(a, 1).finished) return NextResponse.json({ error: "finish section 1 first" }, { status: 409 });
-    if (!st[key]?.startedAt) st[key] = { startedAt: now };
-    await db().update(schema.attempts).set({ sectionState: st, currentPosition: 0 }).where(eq(schema.attempts.id, a.id));
+    // only the first start resets the position; a repeated start (double click, retry) is a no-op
+    if (!st[key]?.startedAt) {
+      st[key] = { startedAt: now };
+      await db().update(schema.attempts).set({ sectionState: st, currentPosition: 0 }).where(eq(schema.attempts.id, a.id));
+    }
   } else {
     if (!st[key]?.finishedAt) {
       st[key] = { ...st[key], startedAt: st[key]?.startedAt ?? now, finishedAt: now };

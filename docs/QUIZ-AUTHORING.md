@@ -5,7 +5,7 @@ You are the quiz-creation agent. Output: one **original** 27-question test (Sect
 ## Procedure
 
 1. **Brief.** `npm run brief -- <measure>` → `content/briefs/<measure>-NNN.json`. It names the test id, blueprint (types and difficulty level per slot), the words or concepts you must target (with reasons), distractor words, passage words, tests/stems already used, and exemplar ids.
-2. **Read exemplars + patterns.** Read `docs/HARD-PATTERNS.md`. For each question type, read 2–3 of the brief's `exemplarIds` from the local reference file (`grep '"id": "<id>"'`) to anchor the style at the target level. Then write something new.
+2. **Read exemplars + patterns.** Read `docs/HARD-PATTERNS.md`. For each slot, read the 2–3 official items in the brief's `slots[].exemplars` from the local reference file (`grep '"id": "<id>"'`). They match the slot's type and its target level. Quant concept slots also carry `conceptSlots[].exemplars`: the hardest official items with that concept as primary. Quant reference items carry repaired `stem`, `qa`/`qb`, `figure` (a text description) and `hard_driver` fields transcribed from the page images. Use them to anchor style and difficulty, then write something new. Verbal `keyWords[].sense` is the sense to test; for `secondary: true` words, build the sentence so the everyday sense is the trap.
 3. **Author** the JSON against `lib/types.ts` (zod schema). Use `$...$` for math. Details below.
 4. **Validate.** `npm run validate -- <id>` until it prints OK.
 5. **Quant only.** Write `content/verify/<id>.py`: one assertion per question (brute force or exact arithmetic, using `fractions`). `python3 content/verify/<id>.py` must pass. It is not shipped to the app.

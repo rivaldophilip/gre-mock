@@ -1,5 +1,6 @@
 "use client";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import type { Answer, Explanation, Key, PublicTest } from "@/lib/types";
 import { isAnswered } from "@/lib/scoring";
 import { Calculator } from "./Calculator";
@@ -29,6 +30,7 @@ const fmt = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "
 
 export function Runner(p: RunnerProps) {
   const { test, attemptId, mode, timerOn } = p;
+  const router = useRouter();
   const [sectionState, setSectionState] = useState<SectionState>(p.sectionState);
   const [section, setSection] = useState<1 | 2>(() => (p.sectionState["1"]?.finishedAt ? 2 : 1));
   const qs = useMemo(() => test.questions.filter((q) => q.section === section), [test, section]);
@@ -58,6 +60,8 @@ export function Runner(p: RunnerProps) {
     latest.current = { answers, meta };
   }, [answers, meta]);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // questions whose latest state has not reached the server yet (failed or pending saves)
+  const dirty = useRef<Set<string>>(new Set());
 
   const post = useCallback(
     async (qid: string, extra: { commit?: boolean; position?: number } = {}, spent = 0) => {
@@ -75,7 +79,9 @@ export function Runner(p: RunnerProps) {
             ...extra,
           }),
         });
-        setSaveErr(!r.ok && r.status !== 409);
+        // 409 = section closed / time up / answer locked: retrying cannot help
+        if (r.ok || r.status === 409) dirty.current.delete(qid);
+        setSaveErr(dirty.current.size > 0);
         return r.ok ? await r.json() : null;
       } catch {
         setSaveErr(true);
@@ -84,6 +90,17 @@ export function Runner(p: RunnerProps) {
     },
     [attemptId],
   );
+
+  /** Re-send every question whose last save failed. */
+  const flush = useCallback(async () => {
+    await Promise.all([...dirty.current].map((qid) => post(qid)));
+  }, [post]);
+
+  useEffect(() => {
+    const onOnline = () => void flush();
+    window.addEventListener("online", onOnline);
+    return () => window.removeEventListener("online", onOnline);
+  }, [flush]);
 
   // time spent on the current question is folded into meta whenever we leave it
   const settle = useCallback(() => {
@@ -108,11 +125,10 @@ export function Runner(p: RunnerProps) {
       if (!q) return;
       settle();
       if (timer.current) clearTimeout(timer.current);
-      void post(q.id, { position: to });
+      void post(q.id, { position: to }).then(() => flush());
       setIdx(to);
-      setCalc((c) => c);
     },
-    [q, settle, post],
+    [q, settle, post, flush],
   );
 
   const finishSection = useCallback(async () => {
@@ -122,6 +138,7 @@ export function Runner(p: RunnerProps) {
       if (timer.current) clearTimeout(timer.current);
       await post(q.id);
     }
+    await flush();
     const r = await fetch(`/api/attempts/${attemptId}/section`, {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -132,9 +149,9 @@ export function Runner(p: RunnerProps) {
     setGrid(false);
     if (r.ok) {
       setSectionState(j.sectionState);
-      if (section === 2) window.location.href = `/test/${test.id}/review/${attemptId}`;
+      if (section === 2) router.push(`/test/${test.id}/review/${attemptId}`);
     }
-  }, [q, settle, post, attemptId, section, test.id]);
+  }, [q, settle, post, flush, attemptId, section, test.id, router]);
 
   const startSection = useCallback(async () => {
     setBusy(true);
@@ -222,6 +239,7 @@ export function Runner(p: RunnerProps) {
   const a = answers[q.id];
   const setAnswer = (ans: Answer) => {
     if (locked) return;
+    dirty.current.add(q.id);
     setAnswers((m) => ({ ...m, [q.id]: ans }));
     latest.current = { ...latest.current, answers: { ...latest.current.answers, [q.id]: ans } };
     scheduleSave(q.id);
@@ -229,14 +247,16 @@ export function Runner(p: RunnerProps) {
   const setFlag = (k: "guessed" | "marked", v: boolean) => {
     setMeta((m) => ({ ...m, [q.id]: { ...(m[q.id] ?? { guessed: false, marked: false, timeMs: 0, finalized: false }), [k]: v } }));
     latest.current = { ...latest.current, meta: { ...latest.current.meta, [q.id]: { ...(latest.current.meta[q.id] ?? { guessed: false, marked: false, timeMs: 0, finalized: false }), [k]: v } } };
-    if (!locked) scheduleSave(q.id);
+    if (!locked) {
+      dirty.current.add(q.id);
+      scheduleSave(q.id);
+    }
   };
   const check = async () => {
     setBusy(true);
-    const spent = settle();
+    settle();
     if (timer.current) clearTimeout(timer.current);
     const j = await post(q.id, { commit: true, position: idx }, 0);
-    void spent;
     setBusy(false);
     if (j?.reveal) {
       setReveals((r) => ({ ...r, [q.id]: j.reveal }));
@@ -254,7 +274,7 @@ export function Runner(p: RunnerProps) {
         <span className="font-semibold">{test.title}</span>
         <span className="opacity-70">Section {section} · Q{idx + 1}/{qs.length}</span>
         <span className="flex-1" />
-        {saveErr && <span className="text-red-500">save failed — retrying on next action</span>}
+        {saveErr && <span className="text-red-500">save failed — will retry</span>}
         {timerOn && left !== null && (
           <span data-testid="timer" className={`font-mono ${left < 300 ? "text-red-500" : ""}`}>{fmt(left)}</span>
         )}

@@ -1,10 +1,12 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export function StartForm({ testId }: { testId: string }) {
   const [mode, setMode] = useState<"exam" | "practice">("exam");
   const [timerOn, setTimerOn] = useState(true);
   const [busy, setBusy] = useState(false);
+  const router = useRouter();
   async function start() {
     setBusy(true);
     const r = await fetch("/api/attempts", {
@@ -13,7 +15,7 @@ export function StartForm({ testId }: { testId: string }) {
       body: JSON.stringify({ testId, mode, timerOn }),
     });
     const j = await r.json();
-    if (r.ok) window.location.href = `/test/${testId}/run?attempt=${j.id}`;
+    if (r.ok) router.push(`/test/${testId}/run?attempt=${j.id}`);
     else setBusy(false);
   }
   return (

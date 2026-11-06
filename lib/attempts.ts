@@ -41,10 +41,17 @@ export function canReveal(a: Attempt, test: Test, q: Question, resp?: { finalize
   return sectionStatus(a, q.section).finished;
 }
 
-/** Emit item events for one response (idempotent through `finalized`). */
+/**
+ * Emit item events for one response. Idempotent: the response is claimed by flipping `finalized`
+ * first, so a double click or a timer racing the Finish button cannot log the events twice.
+ */
 export async function finalizeResponse(a: Attempt, test: Test, q: Question, respId: number) {
-  const [r] = await db().select().from(responses).where(eq(responses.id, respId));
-  if (!r || r.finalized) return;
+  const [r] = await db()
+    .update(responses)
+    .set({ finalized: true })
+    .where(and(eq(responses.id, respId), eq(responses.finalized, false)))
+    .returning();
+  if (!r) return;
   const ans = (r.answer ?? undefined) as Answer | undefined;
   const passageTags = q.passageId ? (test.passages.find((p) => p.id === q.passageId)?.tags ?? []) : [];
   const evs = eventsForResponse(q, test.measure, ans, { guessed: r.guessed, timeMs: r.timeMs }, passageTags);
@@ -53,7 +60,7 @@ export async function finalizeResponse(a: Attempt, test: Test, q: Question, resp
       .insert(itemEvents)
       .values(evs.map((e) => ({ kind: e.kind, itemId: e.itemId, event: e.event, weight: e.weight, responseId: r.id, attemptId: a.id })));
   }
-  await db().update(responses).set({ finalized: true, isCorrect: scoreAnswer(q, ans) }).where(eq(responses.id, r.id));
+  await db().update(responses).set({ isCorrect: scoreAnswer(q, ans) }).where(eq(responses.id, r.id));
 }
 
 export async function finalizeSection(a: Attempt, test: Test, n: 1 | 2) {

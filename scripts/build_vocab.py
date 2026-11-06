@@ -3,6 +3,10 @@
 
 usage: python3 scripts/build_vocab.py [--xlsx PATH] [--ets reference/*-words.txt ...]
 
+Inputs in data/: popular_words.txt (core), extra_words.json (secondary / extended / passage tiers from the
+expansion research), definitions.json (pos + senses per lemma, written by the definitions pass),
+dropped_words.txt (ordinary words the official-items mining pulled in; never applied to core words).
+
 Reads the xlsx directly (zip + xml). Sheet 2 holds the words; columns B..I are the lists;
 cell fill: yellow (FFF2CC) = common to other lists, pink (F4CCCC) = probably won't be tested.
 """
@@ -122,10 +126,15 @@ def main():
             if w and re.fullmatch(r"[a-z'-]{3,}", w):
                 ets_hits[w] += int(parts[1]) if len(parts) > 1 and parts[1].isdigit() else 1
 
+    defs = json.loads((ROOT / "data" / "definitions.json").read_text()) if (ROOT / "data" / "definitions.json").exists() else {}
+    dropped_file = ROOT / "data" / "dropped_words.txt"
+    dropped = {fold(w) for w in dropped_file.read_text().split()} if dropped_file.exists() else set()
     words = {}
 
     def add(w, tier):
         k = lemma_key(w, raw_forms | set(popular))
+        if tier != "core" and k in dropped and k not in words:
+            return None
         if k in words:
             if tier == "ets" and words[k]["tier"] not in ("ets",):
                 words[k]["tier"] = "ets" if words[k]["tier"] == "extended" else words[k]["tier"]
@@ -150,14 +159,20 @@ def main():
 
     for w in popular:
         add(w, "core")
-    for w, meta in extra.items():  # {"afford": {"tier": "secondary"}, ...}
+    for w, meta in extra.items():  # {"afford": {"tier": "secondary"}, "stem": {"secondary": true}, ...}
+        existed = lemma_key(fold(w), raw_forms | set(popular)) in words
         k = add(fold(w), meta.get("tier", "extended"))
-        if meta.get("tier") in ("secondary", "ets", "passage"):
+        if k is None:
+            continue
+        # a word already in the bank keeps its tier; only words this file introduces take the extra tier
+        if not existed and meta.get("tier") in ("secondary", "ets", "passage"):
             words[k]["tier"] = meta["tier"]
-        if meta.get("secondary"):
+        if meta.get("secondary") or meta.get("tier") == "secondary":
             words[k]["isSecondary"] = True
     for w, n in ets_hits.items():
         k = add(w, "ets")
+        if k is None:
+            continue
         words[k]["tier"] = "ets" if words[k]["tier"] in ("extended", "ets") else words[k]["tier"]
         words[k]["sources"] = sorted(set(words[k]["sources"]) | {"ets_official"})
     # xlsx words on 3+ lists and not pink join the extended tier
@@ -165,7 +180,20 @@ def main():
         if len(s) >= 3 and not (pink_votes[k][1] and pink_votes[k][0] / pink_votes[k][1] > 0.5):
             add(k, "extended")
 
+    # definitions may be keyed by the form a list used ("jaundiced") while the bank folded it to "jaundice"
+    universe = raw_forms | set(popular) | set(words)
+    defs_by_lemma = {}
+    for dk, dv in defs.items():
+        defs_by_lemma.setdefault(lemma_key(dk, universe), dv)
+    missing = []
     for k, w in words.items():
+        d = defs.get(k) or defs_by_lemma.get(k)
+        if d and d.get("keep", True) and d.get("senses"):
+            w["pos"] = d.get("pos") or d["senses"][0].get("pos")
+            w["senses"] = d["senses"]
+            w["isSecondary"] = w["isSecondary"] or bool(d.get("isSecondary"))
+        else:
+            missing.append(k)
         ets = "ets_official" in w["sources"]
         w["sourceCount"] = len([s for s in w["sources"] if s != "ets_official"])
         bonus = 0.2 if (w["isSecondary"] or ets) else 0
@@ -176,7 +204,9 @@ def main():
     tiers = defaultdict(int)
     for w in out:
         tiers[w["tier"]] += 1
-    print(f"{len(out)} words", dict(tiers), f"pink={sum(w['pink'] for w in out)}", file=sys.stderr)
+    print(f"{len(out)} words", dict(tiers), f"pink={sum(w['pink'] for w in out)}", f"secondary={sum(w['isSecondary'] for w in out)}", file=sys.stderr)
+    if missing:
+        print(f"{len(missing)} words have no definition: {', '.join(sorted(missing)[:40])}", file=sys.stderr)
 
 
 if __name__ == "__main__":

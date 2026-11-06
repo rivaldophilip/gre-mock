@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { and, eq, inArray } from "drizzle-orm";
+import { db, schema } from "@/lib/db";
 import { loadTest } from "@/lib/content";
 import { canReveal, getAttempt, pairKey, responsesFor, sectionStatus } from "@/lib/attempts";
 import { roughBand, scoreAnswer } from "@/lib/scoring";
 import type { Answer, Question, Test } from "@/lib/types";
 import { Rich, RichInline } from "@/components/Rich";
 import { Figure } from "@/components/Figure";
-import { TaggablePassage, WordChip } from "@/components/WordTagger";
+import { TaggablePassage, WordChip, type Sense } from "@/components/WordTagger";
 
 export const dynamic = "force-dynamic";
 const L = "ABCDEFGHIJ";
@@ -44,6 +46,22 @@ export default async function Review({ params }: { params: Promise<{ id: string;
   const rows = new Map((await responsesFor(a.id)).map((r) => [r.questionId, r]));
   const visible = test.questions.filter((q) => canReveal(a, test, q, rows.get(pairKey(id, q.id))));
   const correct = visible.filter((q) => scoreAnswer(q, (rows.get(pairKey(id, q.id))?.answer ?? undefined) as Answer | undefined)).length;
+  // definitions for every tagged word on the visible questions, and this attempt's "didn't know" tags
+  const wordIds = [...new Set(visible.flatMap((q) => q.tags.filter((t) => t.kind === "word").map((t) => t.id)))];
+  const vocabRows = wordIds.length
+    ? await db().select({ id: schema.vocab.id, senses: schema.vocab.senses }).from(schema.vocab).where(inArray(schema.vocab.id, wordIds))
+    : [];
+  const sensesOf = new Map(vocabRows.map((v) => [v.id, v.senses as Sense[] | null]));
+  const taggedRows = await db()
+    .select({ itemId: schema.itemEvents.itemId })
+    .from(schema.itemEvents)
+    .where(and(eq(schema.itemEvents.attemptId, a.id), eq(schema.itemEvents.event, "dont_know")));
+  const taggedIds = new Set(taggedRows.map((r) => r.itemId));
+  /** choice text -> vocab id, via the tag that sits on that choice */
+  const wordIdFor = (q: Question, text: string) => {
+    const at = (t: Question["tags"][number]) => (q.type === "tc" ? q.blanks?.[t.at?.[0] ?? -1]?.[t.at?.[1] ?? -1] : q.choices?.[t.at?.[0] ?? -1]);
+    return q.tags.find((t) => t.kind === "word" && t.at && at(t) === text)?.id;
+  };
   const waitingOn2 = !a.finishedAt && sectionStatus(a, 1).finished && !sectionStatus(a, 2).finished;
 
   return (
@@ -75,7 +93,7 @@ export default async function Review({ params }: { params: Promise<{ id: string;
             {passage && (
               <details className="rounded border p-3">
                 <summary className="cursor-pointer text-sm font-medium">Passage (tap words you didn’t know)</summary>
-                <div className="mt-2"><TaggablePassage paragraphs={passage.paragraphs} attemptId={a.id} /></div>
+                <div className="mt-2"><TaggablePassage paragraphs={passage.paragraphs} attemptId={a.id} initial={passage.tags.filter((t) => t.kind === "word" && taggedIds.has(t.id)).map((t) => t.id)} /></div>
               </details>
             )}
             {figure && <Figure fig={figure} />}
@@ -97,8 +115,11 @@ export default async function Review({ params }: { params: Promise<{ id: string;
               </ul>
             )}
             {words.length > 0 && (
-              <div className="flex flex-wrap gap-2 pt-1">
-                {words.map((w) => <WordChip key={w} word={w} attemptId={a.id} />)}
+              <div className="grid gap-2 pt-1 sm:grid-cols-2">
+                {words.map((w) => {
+                  const wid = wordIdFor(q, w);
+                  return <WordChip key={w} word={w} attemptId={a.id} senses={wid ? sensesOf.get(wid) : undefined} tagged={!!wid && taggedIds.has(wid)} />;
+                })}
               </div>
             )}
           </section>

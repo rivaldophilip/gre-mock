@@ -1,9 +1,11 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
   const [passcode, setPasscode] = useState("");
   const [err, setErr] = useState("");
+  const router = useRouter();
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     const r = await fetch("/api/login", {
@@ -11,7 +13,7 @@ export default function Login() {
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ passcode }),
     });
-    if (r.ok) window.location.href = "/";
+    if (r.ok) router.replace("/");
     else setErr("Wrong passcode");
   }
   return (

@@ -45,3 +45,4 @@ next-env.d.ts
 # local corpus pointers must never be committed
 reference/
 extracted/
+__pycache__/

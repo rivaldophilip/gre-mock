@@ -37,6 +37,16 @@ Level guide used by our validator and blind-solvers: **L3 = P+ 45–60, L4 = 30�
 - **Statistics:** standard deviation compared qualitatively (no computation), median effects of added data, weighted averages with changing group sizes.
 - **Data interpretation**: percent-of-percent and "approximately" comparisons where a rough estimate decides; distractors correspond to using the wrong base.
 - Numeric-entry and fraction-entry items: no choices to back-solve from; wrong answers come from a plausible slip (unit, off-by-one, inclusive count).
+- **What the 40 hardest repaired quant items (P+ 10–34) have in common.** These are drawn from the page-image transcriptions. Almost none are hard because of heavy computation. The recurring drivers:
+  - *The question asks for a neighbouring quantity:* the difference rather than the ratio, the count rather than the percent, or a percent of a percent ("0.01 percent" read as 0.01).
+  - *Structure beats arithmetic:* a factorable power, an expression that equals −1 (a reversed numerator/denominator), symmetric combinations, or a value that factors cleanly so that brute multiplication becomes a trap for the clock.
+  - *Divisibility of a factorial by a composite:* the composite fails only when it contains a prime larger than the factorial's base.
+  - *Hidden second case in geometry:* a given angle can be the vertex angle or a base angle; lines that look perpendicular or concurrent need not be; equal shaded areas need not imply equal unshaded areas.
+  - *Exponent behaviour off the integer line:* a base between 0 and 1, or a comparison that flips with whether x is above or below 1.
+  - *Scaling:* area scales with the square of the linear ratio; an inverse proportion is read as direct.
+  - *Must-be-true multi-answer:* each statement needs its own check against the full feasible range (a bounded price interval, a sign pattern of intercepts).
+  - *Probability and counting:* without-replacement products; casework over several group sizes; counting squares among C(n,4) vertex choices.
+  - *Rank tracking in data:* a value's percentile/quartile after the set grows; the median of an even-size set falling on either side of a threshold.
 - **Trap taxonomy** for explanations: wrong base for percent, assuming integers, assuming positive, double-counting overlap, off-by-one in inclusive counts, using the figure as if to scale.
 
 ## Calibrating our own items

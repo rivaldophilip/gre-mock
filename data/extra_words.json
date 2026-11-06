@@ -1,0 +1,2133 @@
+{
+"abandon": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: (noun) lack of restraint"
+},
+"abet": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"ablation": {
+"tier": "passage",
+"why": "wearing away of material, as by melting or erosion",
+"field": "geology"
+},
+"acculturation": {
+"tier": "passage",
+"why": "cultural change resulting from contact between groups",
+"field": "anthropology"
+},
+"acolyte": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"adduce": {
+"tier": "passage",
+"why": "to cite as evidence",
+"field": "general"
+},
+"aeolian": {
+"tier": "passage",
+"why": "produced or carried by wind",
+"field": "geology"
+},
+"afford": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to provide or yield"
+},
+"air": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to express publicly"
+},
+"albedo": {
+"tier": "passage",
+"why": "the fraction of light a surface reflects",
+"field": "astronomy"
+},
+"aleatory": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"allegorical": {
+"tier": "passage",
+"why": "having a hidden symbolic second meaning",
+"field": "literary theory"
+},
+"allusive": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"alluvial": {
+"tier": "passage",
+"why": "deposited by flowing water",
+"field": "geology"
+},
+"altruism": {
+"tier": "passage",
+"why": "in biology, behavior benefiting others at a cost to oneself",
+"field": "biology"
+},
+"ambit": {
+"tier": "passage",
+"why": "the scope or extent of something",
+"field": "general"
+},
+"animadversion": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"animism": {
+"tier": "passage",
+"why": "belief that natural objects possess spirits",
+"field": "anthropology"
+},
+"animus": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"anomie": {
+"tier": "passage",
+"why": "breakdown of social norms leaving individuals adrift; Durkheim",
+"field": "sociology"
+},
+"antediluvian": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"anthropocentric": {
+"tier": "passage",
+"why": "regarding humans as the center of existence",
+"field": "philosophy"
+},
+"antinomy": {
+"tier": "passage",
+"why": "a contradiction between two equally reasonable principles",
+"field": "philosophy"
+},
+"antiquarian": {
+"tier": "passage",
+"why": "concerned with collecting old objects or facts, often without analysis",
+"field": "history"
+},
+"apologia": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"apologist": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"aporia": {
+"tier": "passage",
+"why": "an irresolvable doubt or contradiction in a text or argument",
+"field": "literary theory"
+},
+"apostasy": {
+"tier": "passage",
+"why": "abandonment of one's religious faith or political principles",
+"field": "history"
+},
+"appreciate": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to rise in value"
+},
+"appropriate": {
+"secondary": true
+},
+"apt": {
+"tier": "extended",
+"secondary": true,
+"why": "gregmat-only"
+},
+"arbitrage": {
+"tier": "passage",
+"why": "profiting from price differences across markets",
+"field": "economics"
+},
+"archetypal": {
+"tier": "passage",
+"why": "embodying an original model or universal pattern; Jungian and mythic criticism",
+"field": "literary theory"
+},
+"arrest": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to halt; to catch attention"
+},
+"arriviste": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"assemblage": {
+"tier": "passage",
+"why": "a collection of items, especially found artifacts or objects in art",
+"field": "art history"
+},
+"asseverate": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"atavism": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"atavistic": {
+"tier": "passage",
+"why": "reverting to ancestral or primitive traits",
+"field": "biology"
+},
+"autarky": {
+"tier": "passage",
+"why": "economic self-sufficiency of a nation",
+"field": "economics"
+},
+"autochthonous": {
+"tier": "passage",
+"why": "native to a place; originating where found",
+"field": "anthropology"
+},
+"badinage": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"bald": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: blunt, undisguised"
+},
+"baroque": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"bathos": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"becoming": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: fitting, attractive"
+},
+"belletristic": {
+"tier": "passage",
+"why": "literary writing valued for style rather than information",
+"field": "literary theory"
+},
+"benighted": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"berate": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"bibulous": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"blanch": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to turn pale; to flinch"
+},
+"blandishment": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"brook": {
+"secondary": true
+},
+"buttress": {
+"secondary": true
+},
+"cant": {
+"tier": "extended",
+"secondary": true,
+"why": "hard high-register TC/SE word"
+},
+"casuistry": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"catastrophism": {
+"tier": "passage",
+"why": "the doctrine that sudden violent events shaped the earth",
+"field": "geology"
+},
+"cavil": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"cessation": {
+"tier": "passage",
+"why": "a ceasing or stopping",
+"field": "general"
+},
+"chafe": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to be irritated by restrictions"
+},
+"champion": {
+"secondary": true
+},
+"chattel": {
+"tier": "passage",
+"why": "movable property; in chattel slavery, people treated as owned goods",
+"field": "history"
+},
+"check": {
+"secondary": true
+},
+"circumlocution": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"clamorous": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"clangor": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"cleave": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to cling (and its opposite, to split)"
+},
+"clientelism": {
+"tier": "passage",
+"why": "exchanging goods or favors for political support",
+"field": "political science"
+},
+"coevolution": {
+"tier": "passage",
+"why": "reciprocal evolution of interacting species",
+"field": "biology"
+},
+"cognate": {
+"tier": "passage",
+"why": "related by common origin",
+"field": "linguistics"
+},
+"coin": {
+"secondary": true
+},
+"color": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to distort or influence"
+},
+"comity": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"commensal": {
+"tier": "passage",
+"why": "living with another organism, benefiting without harming it",
+"field": "biology"
+},
+"commodify": {
+"tier": "passage",
+"why": "to turn something into a commodity to be bought and sold",
+"field": "sociology"
+},
+"communitarian": {
+"tier": "passage",
+"why": "emphasizing community over individual rights",
+"field": "political science"
+},
+"compass": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: scope, range"
+},
+"compound": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to worsen"
+},
+"congener": {
+"tier": "passage",
+"why": "a member of the same genus; a similar thing",
+"field": "biology"
+},
+"congenial": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"conjectural": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"consanguinity": {
+"tier": "passage",
+"why": "relationship by blood",
+"field": "anthropology"
+},
+"conspecific": {
+"tier": "passage",
+"why": "belonging to the same species",
+"field": "biology"
+},
+"constitutive": {
+"tier": "passage",
+"why": "forming an essential part; making something what it is",
+"field": "philosophy"
+},
+"consummate": {
+"secondary": true
+},
+"contemporaneous": {
+"tier": "passage",
+"why": "existing or occurring at the same time",
+"field": "history"
+},
+"contextualize": {
+"tier": "passage",
+"why": "to place in a context that explains it",
+"field": "history"
+},
+"contravene": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"contumely": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"convalescent": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"corollary": {
+"tier": "passage",
+"why": "a proposition that follows directly from another; a natural consequence",
+"field": "general"
+},
+"coruscate": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"cosmogony": {
+"tier": "passage",
+"why": "theory or account of the origin of the universe",
+"field": "astronomy"
+},
+"countenance": {
+"secondary": true
+},
+"countercyclical": {
+"tier": "passage",
+"why": "moving opposite to the business cycle",
+"field": "economics"
+},
+"court": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to risk inviting; to seek favor"
+},
+"cow": {
+"secondary": true
+},
+"cozen": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"crux": {
+"tier": "passage",
+"why": "the decisive or most important point",
+"field": "general"
+},
+"cryptic": {
+"tier": "passage",
+"secondary": true,
+"why": "in biology, serving to camouflage; generally, mysterious",
+"field": "biology"
+},
+"cultivated": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: refined, cultured"
+},
+"curb": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"cynosure": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"debilitating": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"decadent": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"declension": {
+"tier": "passage",
+"secondary": true,
+"why": "a decline from earlier standards; the declension narrative",
+"field": "history"
+},
+"defer": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to yield to another's judgment"
+},
+"deft": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"deify": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"delimit": {
+"tier": "passage",
+"why": "to fix the boundaries of",
+"field": "general"
+},
+"demarcate": {
+"tier": "passage",
+"why": "to set or mark boundaries; to distinguish",
+"field": "general"
+},
+"demotic": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"denudation": {
+"tier": "passage",
+"why": "stripping away of surface material by erosion",
+"field": "geology"
+},
+"deracinate": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"descant": {
+"tier": "extended",
+"secondary": true,
+"why": "hard high-register TC/SE word"
+},
+"desideratum": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"determinism": {
+"tier": "passage",
+"why": "the view that events follow inevitably from prior causes; often contrasted with agency",
+"field": "philosophy"
+},
+"dialectical": {
+"tier": "passage",
+"why": "reasoning through opposition of contrary ideas toward synthesis; Hegelian and Marxist analysis",
+"field": "philosophy"
+},
+"dimorphism": {
+"tier": "passage",
+"why": "two distinct forms within a species, especially between sexes",
+"field": "biology"
+},
+"disaggregate": {
+"tier": "passage",
+"why": "to break data into component parts",
+"field": "economics"
+},
+"discount": {
+"tier": "extended",
+"secondary": true,
+"why": "gregmat-only"
+},
+"discriminate": {
+"secondary": true
+},
+"dissident": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"dissimulate": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"divorced": {
+"tier": "extended",
+"secondary": true,
+"why": "gregmat-only"
+},
+"dock": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to deduct"
+},
+"doctor": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to falsify or tamper with"
+},
+"dogged": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"doughty": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"dudgeon": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"economy": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: frugality; efficient use"
+},
+"effete": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"efflorescence": {
+"tier": "passage",
+"secondary": true,
+"why": "a flowering or peak of development; in chemistry, a powdery crust",
+"field": "art history"
+},
+"effulgent": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"elasticity": {
+"tier": "passage",
+"secondary": true,
+"why": "responsiveness of demand or supply to price changes",
+"field": "economics"
+},
+"eleemosynary": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"elide": {
+"tier": "passage",
+"why": "to omit or gloss over; to merge sounds",
+"field": "literary theory"
+},
+"emblematic": {
+"tier": "passage",
+"why": "serving as a symbol or typical example",
+"field": "general"
+},
+"empiricism": {
+"tier": "passage",
+"why": "the view that knowledge derives from observation and experience",
+"field": "philosophy of science"
+},
+"encyclopedic": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"endogamy": {
+"tier": "passage",
+"why": "marriage within one's own group",
+"field": "anthropology"
+},
+"endogenous": {
+"tier": "passage",
+"why": "originating within the system under study",
+"field": "economics"
+},
+"entertain": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to consider an idea"
+},
+"entrepot": {
+"tier": "passage",
+"why": "a trading port where goods are imported and re-exported",
+"field": "economics"
+},
+"epigone": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"epiphenomenal": {
+"tier": "passage",
+"why": "a by-product with no causal power of its own; used in mind-body and social-science arguments",
+"field": "philosophy"
+},
+"epistemological": {
+"tier": "passage",
+"why": "concerning the nature and limits of knowledge; contrasts with ontological",
+"field": "philosophy"
+},
+"epistolary": {
+"tier": "passage",
+"why": "written in the form of letters",
+"field": "literary theory"
+},
+"essentialist": {
+"tier": "passage",
+"why": "holds that categories have fixed inherent natures; frequent target in gender and race scholarship",
+"field": "philosophy"
+},
+"ethnocentric": {
+"tier": "passage",
+"why": "judging other cultures by one's own standards",
+"field": "anthropology"
+},
+"ethnography": {
+"tier": "passage",
+"why": "descriptive study of a culture from fieldwork",
+"field": "anthropology"
+},
+"etiolated": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"exact": {
+"secondary": true
+},
+"exaptation": {
+"tier": "passage",
+"why": "a trait that evolved for one use and was co-opted for another",
+"field": "biology"
+},
+"exceptionalism": {
+"tier": "passage",
+"why": "belief that a nation is unique and exempt from general patterns",
+"field": "history"
+},
+"excrescence": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"execrable": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"exiguous": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"exogenous": {
+"tier": "passage",
+"why": "originating outside the system under study",
+"field": "economics"
+},
+"exorcise": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"expansive": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: talkative, effusive"
+},
+"expiate": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"explicable": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"exploit": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: (noun) a bold deed"
+},
+"exploitative": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"externality": {
+"tier": "passage",
+"why": "a cost or benefit falling on third parties outside a transaction",
+"field": "economics"
+},
+"extravagant": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"extrinsic": {
+"tier": "passage",
+"why": "coming from outside; not inherent",
+"field": "general"
+},
+"factious": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"factitious": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"facultative": {
+"tier": "passage",
+"why": "optional; able to switch between modes of life",
+"field": "biology"
+},
+"falsifiable": {
+"tier": "passage",
+"why": "capable of being shown false by evidence; Popper's criterion for science",
+"field": "philosophy of science"
+},
+"farrago": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"fast": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: firmly fixed; loyal"
+},
+"fealty": {
+"tier": "passage",
+"why": "sworn loyalty of a vassal to a lord",
+"field": "history"
+},
+"fell": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: fierce, deadly"
+},
+"ferment": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: (noun) agitation, turmoil"
+},
+"fiduciary": {
+"tier": "passage",
+"why": "involving trust, especially duty to manage assets for another",
+"field": "economics"
+},
+"figurative": {
+"tier": "passage",
+"secondary": true,
+"why": "in art, depicting the human figure or real forms; in language, metaphorical",
+"field": "art history"
+},
+"flag": {
+"secondary": true
+},
+"flagitious": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"fleece": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to swindle"
+},
+"fluvial": {
+"tier": "passage",
+"why": "of or produced by rivers",
+"field": "geology"
+},
+"foil": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: a contrasting character; to thwart"
+},
+"forbear": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"formalist": {
+"tier": "passage",
+"why": "focused on form and structure rather than context or content",
+"field": "literary theory"
+},
+"forswear": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"forward": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: presumptuous, bold"
+},
+"founder": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to fail, collapse"
+},
+"fulcrum": {
+"tier": "passage",
+"secondary": true,
+"why": "the support on which a lever turns; a pivotal element",
+"field": "general"
+},
+"fungible": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"fustian": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"gall": {
+"secondary": true
+},
+"game": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: willing, eager"
+},
+"gimcrack": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"gloss": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to explain away; an annotation"
+},
+"gnomic": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"gradualism": {
+"tier": "passage",
+"why": "change by small, slow increments",
+"field": "biology"
+},
+"gratify": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"gravamen": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"grave": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: serious, solemn"
+},
+"gross": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: flagrant; total before deductions"
+},
+"hagiography": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"hail": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to acclaim; to come from"
+},
+"hamstring": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to cripple or hinder"
+},
+"harbor": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to hold in mind; to shelter"
+},
+"hauteur": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"headstrong": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"hedge": {
+"secondary": true
+},
+"heretofore": {
+"tier": "passage",
+"why": "until now; before this time",
+"field": "general"
+},
+"hermeneutic": {
+"tier": "passage",
+"why": "concerning methods of interpretation, especially of texts",
+"field": "literary theory"
+},
+"heuristic": {
+"tier": "passage",
+"why": "a rough rule or aid to discovery rather than a proof",
+"field": "philosophy of science"
+},
+"hidebound": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"hinterland": {
+"tier": "passage",
+"why": "the remote area behind a port or city that it draws on",
+"field": "history"
+},
+"historicism": {
+"tier": "passage",
+"why": "the view that ideas and events must be understood in their historical context",
+"field": "history"
+},
+"historiography": {
+"tier": "passage",
+"why": "the writing of history and the study of how history has been written",
+"field": "history"
+},
+"homiletic": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"homologous": {
+"tier": "passage",
+"why": "similar due to shared ancestry, not shared function",
+"field": "biology"
+},
+"hortatory": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"husband": {
+"secondary": true
+},
+"iconography": {
+"tier": "passage",
+"why": "the conventional symbols of an artistic tradition and their study",
+"field": "art history"
+},
+"illusionistic": {
+"tier": "passage",
+"why": "creating a convincing illusion of real space or objects",
+"field": "art history"
+},
+"immanent": {
+"tier": "passage",
+"why": "existing within something rather than beyond it; easily confused with imminent",
+"field": "philosophy"
+},
+"impolitic": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"incense": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: (verb) to enrage"
+},
+"inclined": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"indiscriminate": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"inelastic": {
+"tier": "passage",
+"why": "unresponsive to price changes",
+"field": "economics"
+},
+"inflect": {
+"tier": "passage",
+"secondary": true,
+"why": "in academic use, to color or shape; in grammar, to change form",
+"field": "general"
+},
+"insouciant": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"instantiate": {
+"tier": "passage",
+"why": "to be a concrete example of an abstract type",
+"field": "philosophy"
+},
+"insuperable": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"internecine": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"interrogate": {
+"tier": "passage",
+"secondary": true,
+"why": "in academic use, to examine critically",
+"field": "literary theory"
+},
+"intertextual": {
+"tier": "passage",
+"why": "relating to how texts echo and depend on other texts",
+"field": "literary theory"
+},
+"intimate": {
+"secondary": true
+},
+"ire": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"irenic": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"ironclad": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"irrefragable": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"irreverent": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"jaundiced": {
+"tier": "extended",
+"secondary": true,
+"why": "hard high-register TC/SE word"
+},
+"jeopardize": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"jeremiad": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"jibe": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to agree or be consistent"
+},
+"kitsch": {
+"tier": "passage",
+"why": "cheap, sentimental, mass-produced art in poor taste",
+"field": "art history"
+},
+"labile": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"lacuna": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"lacustrine": {
+"tier": "passage",
+"why": "of or formed in lakes",
+"field": "geology"
+},
+"laissez-faire": {
+"tier": "passage",
+"why": "policy of minimal government interference in the economy",
+"field": "economics"
+},
+"lambaste": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"lapidary": {
+"tier": "extended",
+"secondary": true,
+"why": "hard high-register TC/SE word"
+},
+"lean": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: meager, unproductive"
+},
+"license": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: excessive freedom"
+},
+"liminal": {
+"tier": "passage",
+"why": "on a threshold between states; transitional",
+"field": "anthropology"
+},
+"limn": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"list": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to tilt or lean"
+},
+"littoral": {
+"tier": "passage",
+"why": "relating to the shore or coastal zone",
+"field": "geology"
+},
+"locus": {
+"tier": "passage",
+"why": "the central place or site where something occurs",
+"field": "general"
+},
+"logorrhea": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"louche": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"lumber": {
+"secondary": true
+},
+"magniloquent": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"maladaptive": {
+"tier": "passage",
+"why": "poorly suited to the environment; counterproductive",
+"field": "biology"
+},
+"manichaean": {
+"tier": "passage",
+"why": "dividing the world into absolute good and evil",
+"field": "philosophy"
+},
+"manumission": {
+"tier": "passage",
+"why": "the formal freeing of an enslaved person",
+"field": "history"
+},
+"marshal": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to assemble and arrange"
+},
+"matrilineal": {
+"tier": "passage",
+"why": "tracing descent through the mother's line",
+"field": "anthropology"
+},
+"mean": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: stingy; inferior"
+},
+"mediate": {
+"tier": "passage",
+"secondary": true,
+"why": "in academic use, to shape something by standing between; also to arbitrate",
+"field": "general"
+},
+"mercantilism": {
+"tier": "passage",
+"why": "early modern doctrine that wealth means accumulating bullion via exports",
+"field": "economics"
+},
+"metaphysical": {
+"tier": "passage",
+"why": "concerning reality beyond the physical; in literature, the Metaphysical poets",
+"field": "philosophy"
+},
+"metonymy": {
+"tier": "passage",
+"why": "figure substituting an associated thing for the thing meant",
+"field": "literary theory"
+},
+"millenarian": {
+"tier": "passage",
+"why": "believing in an imminent transformation of the world",
+"field": "history"
+},
+"mimetic": {
+"tier": "passage",
+"why": "imitative of reality; central to debates about realism in art",
+"field": "literary theory"
+},
+"minute": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: tiny; meticulous"
+},
+"moment": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: importance"
+},
+"monopsony": {
+"tier": "passage",
+"why": "a market with only one buyer",
+"field": "economics"
+},
+"moot": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: debatable; or of no practical relevance"
+},
+"mortify": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to humiliate; to subdue through self-denial"
+},
+"mountebank": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"mulct": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"muster": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to summon up; to gather"
+},
+"mutualism": {
+"tier": "passage",
+"why": "relationship in which both species benefit",
+"field": "biology"
+},
+"nativism": {
+"tier": "passage",
+"why": "hostility to immigrants in favor of native-born inhabitants",
+"field": "history"
+},
+"nexus": {
+"tier": "passage",
+"why": "a central connection or link among things",
+"field": "general"
+},
+"nice": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: subtle, precise"
+},
+"niche": {
+"tier": "passage",
+"secondary": true,
+"why": "in ecology, a species' role and resource use in its habitat",
+"field": "biology"
+},
+"nonpareil": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"nullify": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"numinous": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"objurgate": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"obligate": {
+"tier": "passage",
+"secondary": true,
+"why": "in biology, restricted to one mode of life",
+"field": "biology"
+},
+"oblivious": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"obscurantism": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"obtain": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to prevail, be in effect"
+},
+"occasion": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to cause"
+},
+"oeuvre": {
+"tier": "passage",
+"why": "the whole body of an artist's or writer's work",
+"field": "art history"
+},
+"oleaginous": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"ontogeny": {
+"tier": "passage",
+"why": "the development of an individual organism",
+"field": "biology"
+},
+"ontological": {
+"tier": "passage",
+"why": "concerning the nature of being or what exists",
+"field": "philosophy"
+},
+"orotund": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"otiose": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"oust": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"palpable": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"pan": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to criticize harshly"
+},
+"paradigmatic": {
+"tier": "passage",
+"why": "serving as the model case; from Kuhn's notion of paradigm",
+"field": "philosophy of science"
+},
+"parlous": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"parvenu": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"paternalism": {
+"tier": "passage",
+"why": "controlling others supposedly for their own good",
+"field": "history"
+},
+"patrician": {
+"tier": "passage",
+"why": "aristocratic; of the hereditary upper class",
+"field": "history"
+},
+"peculiar": {
+"tier": "extended",
+"secondary": true,
+"why": "gregmat-only"
+},
+"pecuniary": {
+"tier": "passage",
+"why": "relating to money",
+"field": "economics"
+},
+"pedestrian": {
+"secondary": true
+},
+"peer": {
+"secondary": true
+},
+"pensive": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"periodicity": {
+"tier": "passage",
+"why": "recurrence at regular intervals",
+"field": "astronomy"
+},
+"periphrasis": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"perpetrate": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"perspicuous": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"pettifogging": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"pharisaical": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"phenomenological": {
+"tier": "passage",
+"why": "concerned with experience as it appears to consciousness",
+"field": "philosophy"
+},
+"philippic": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"phylogeny": {
+"tier": "passage",
+"why": "evolutionary history and relationships of a group",
+"field": "biology"
+},
+"pine": {
+"secondary": true
+},
+"plangent": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"plastic": {
+"secondary": true
+},
+"plume": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to pride oneself"
+},
+"polity": {
+"tier": "passage",
+"why": "an organized political community or state",
+"field": "political science"
+},
+"polymath": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"polyphonic": {
+"tier": "passage",
+"why": "many independent voices; Bakhtin's term for the novel",
+"field": "literary theory"
+},
+"pore": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to study closely"
+},
+"portend": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"positivist": {
+"tier": "passage",
+"why": "holds that only observable, verifiable claims count as knowledge; frequent target in humanities passages",
+"field": "philosophy of science"
+},
+"postulate": {
+"tier": "passage",
+"why": "to assume as a basis for reasoning",
+"field": "philosophy of science"
+},
+"praxis": {
+"tier": "passage",
+"why": "practice as opposed to theory, especially politically engaged action",
+"field": "philosophy"
+},
+"precession": {
+"tier": "passage",
+"why": "slow change in the orientation of a rotating body's axis",
+"field": "astronomy"
+},
+"precipitate": {
+"secondary": true
+},
+"prefigure": {
+"tier": "passage",
+"why": "to anticipate or foreshadow",
+"field": "literary theory"
+},
+"prerogative": {
+"tier": "passage",
+"why": "an exclusive right or privilege",
+"field": "political science"
+},
+"presage": {
+"tier": "passage",
+"why": "to signal or warn of a future event",
+"field": "general"
+},
+"prescriptive": {
+"tier": "passage",
+"why": "laying down rules; opposed to descriptive",
+"field": "linguistics"
+},
+"presentism": {
+"tier": "passage",
+"why": "judging the past by present-day values",
+"field": "history"
+},
+"primitivism": {
+"tier": "passage",
+"why": "Western artists' idealizing borrowing from cultures deemed primitive",
+"field": "art history"
+},
+"primordial": {
+"tier": "passage",
+"why": "existing from the very beginning",
+"field": "astronomy"
+},
+"problematize": {
+"tier": "passage",
+"why": "to treat as a problem; to question what is taken for granted",
+"field": "literary theory"
+},
+"propinquity": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"prosody": {
+"tier": "passage",
+"why": "the study or patterns of rhythm and meter in verse",
+"field": "literary theory"
+},
+"provenance": {
+"tier": "passage",
+"why": "the documented history of an object's origin and ownership",
+"field": "art history"
+},
+"proviso": {
+"tier": "passage",
+"why": "a condition attached to an agreement",
+"field": "general"
+},
+"purview": {
+"tier": "passage",
+"why": "the range of authority, concern, or competence",
+"field": "general"
+},
+"putative": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"qualify": {
+"secondary": true
+},
+"quarry": {
+"secondary": true
+},
+"quicken": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to stimulate, enliven"
+},
+"rail": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to complain bitterly"
+},
+"raillery": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"ramification": {
+"tier": "passage",
+"why": "a consequence, especially a complicating one",
+"field": "general"
+},
+"ratify": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to formally confirm or validate"
+},
+"rebarbative": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"recapitulate": {
+"tier": "passage",
+"why": "to summarize; in biology, to repeat ancestral stages in development",
+"field": "biology"
+},
+"recherche": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"reciprocity": {
+"tier": "passage",
+"why": "mutual exchange of goods or obligations",
+"field": "anthropology"
+},
+"recourse": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"recreant": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"redolent": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"reductive": {
+"tier": "passage",
+"why": "oversimplifying a complex phenomenon to one factor",
+"field": "philosophy"
+},
+"refract": {
+"tier": "passage",
+"secondary": true,
+"why": "to bend light; figuratively, to distort or transform through a medium",
+"field": "general"
+},
+"regress": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"reify": {
+"tier": "passage",
+"why": "to treat an abstraction as a concrete thing; a staple charge in social-science argument",
+"field": "philosophy"
+},
+"relay": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to pass along information"
+},
+"relief": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: prominence, contrast"
+},
+"remunerative": {
+"tier": "passage",
+"why": "profitable; paying well",
+"field": "economics"
+},
+"rent": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: a tear or split"
+},
+"rentier": {
+"tier": "passage",
+"why": "one living on income from property or investments rather than work",
+"field": "economics"
+},
+"repair": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to go somewhere"
+},
+"repercussion": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"representational": {
+"tier": "passage",
+"why": "depicting recognizable objects; opposed to abstract",
+"field": "art history"
+},
+"reserve": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: restraint in manner"
+},
+"retiring": {
+"secondary": true
+},
+"retrograde": {
+"tier": "passage",
+"why": "moving backward; also reverting to a worse state",
+"field": "astronomy"
+},
+"revanchism": {
+"tier": "passage",
+"why": "policy of seeking to recover lost territory or status",
+"field": "history"
+},
+"revisionist": {
+"tier": "passage",
+"why": "reinterpreting accepted historical accounts",
+"field": "history"
+},
+"rifle": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to search and plunder"
+},
+"rodomontade": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"row": {
+"secondary": true
+},
+"saltation": {
+"tier": "passage",
+"why": "an abrupt evolutionary leap rather than gradual change",
+"field": "biology"
+},
+"sanction": {
+"secondary": true
+},
+"sap": {
+"secondary": true
+},
+"saturnine": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"scintilla": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"scuttle": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to deliberately ruin or abandon"
+},
+"second": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to endorse; to assign temporarily"
+},
+"sedentary": {
+"tier": "passage",
+"why": "settled in one place; also inactive",
+"field": "anthropology"
+},
+"senescence": {
+"tier": "passage",
+"why": "biological aging and deterioration",
+"field": "biology"
+},
+"sensibility": {
+"tier": "passage",
+"why": "refined capacity for aesthetic or emotional response; an outlook",
+"field": "literary theory"
+},
+"servitude": {
+"tier": "passage",
+"why": "the condition of being enslaved or subject to another",
+"field": "history"
+},
+"sessile": {
+"tier": "passage",
+"why": "fixed in one place; not free to move",
+"field": "biology"
+},
+"settle": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to resolve; to bestow legally"
+},
+"shelve": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to postpone indefinitely"
+},
+"shibboleth": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"shore": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to prop up, support"
+},
+"sibylline": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"sinecure": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"skirt": {
+"secondary": true
+},
+"slight": {
+"secondary": true
+},
+"solipsistic": {
+"tier": "passage",
+"why": "absorbed in the self as the only reality; used of art, characters, and arguments",
+"field": "philosophy"
+},
+"sound": {
+"secondary": true
+},
+"spare": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: austere, lean"
+},
+"speciation": {
+"tier": "passage",
+"why": "formation of new species",
+"field": "biology"
+},
+"specie": {
+"tier": "passage",
+"why": "coined money, as opposed to paper",
+"field": "economics"
+},
+"spirit": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to convey away secretly"
+},
+"stay": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to stop or postpone"
+},
+"steep": {
+"secondary": true
+},
+"stem": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to stop or check a flow"
+},
+"still": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: (verb) to calm or quiet"
+},
+"stock": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: commonplace, stereotyped"
+},
+"stomach": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to tolerate"
+},
+"stratification": {
+"tier": "passage",
+"why": "division of society into hierarchical layers",
+"field": "sociology"
+},
+"stratigraphy": {
+"tier": "passage",
+"why": "study of rock or soil layers and their sequence",
+"field": "geology"
+},
+"strife": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"strike": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to delete; to arrive at"
+},
+"structuralism": {
+"tier": "passage",
+"why": "analysis of culture in terms of underlying systems of relations",
+"field": "literary theory"
+},
+"subaltern": {
+"tier": "passage",
+"why": "of a subordinate, marginalized group excluded from power",
+"field": "sociology"
+},
+"sublimate": {
+"tier": "passage",
+"why": "to redirect a drive into a socially acceptable form; Freudian criticism",
+"field": "literary theory"
+},
+"subordinate": {
+"tier": "extended",
+"secondary": true,
+"why": "gregmat-only"
+},
+"subservient": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"substrate": {
+"tier": "passage",
+"why": "an underlying layer or surface on which something grows or acts",
+"field": "biology"
+},
+"supererogatory": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"supply": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: (adj) flexible, supple"
+},
+"surmount": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"suzerainty": {
+"tier": "passage",
+"why": "overlordship that leaves a subordinate state internal autonomy",
+"field": "history"
+},
+"syncretic": {
+"tier": "passage",
+"why": "combining elements of different beliefs or traditions",
+"field": "anthropology"
+},
+"synecdoche": {
+"tier": "passage",
+"why": "figure in which a part stands for the whole or vice versa",
+"field": "literary theory"
+},
+"table": {
+"secondary": true
+},
+"tame": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: dull, unexciting"
+},
+"tantalizing": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"tautological": {
+"tier": "passage",
+"why": "true by definition and therefore uninformative; used to dismiss circular arguments",
+"field": "logic"
+},
+"tax": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to strain or burden"
+},
+"tectonic": {
+"tier": "passage",
+"why": "relating to the earth's crustal plates; metaphorically, massive and fundamental",
+"field": "geology"
+},
+"teleological": {
+"tier": "passage",
+"why": "explanation by purpose or end goal; common in critiques of evolutionary and historical narratives",
+"field": "philosophy"
+},
+"telling": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: revealing; significant"
+},
+"temper": {
+"secondary": true
+},
+"tender": {
+"secondary": true
+},
+"tergiversate": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"thenceforth": {
+"tier": "passage",
+"why": "from that time on",
+"field": "general"
+},
+"tract": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: a short polemical essay"
+},
+"traduce": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"triumphalist": {
+"tier": "passage",
+"why": "celebrating a group's success as inevitable or total",
+"field": "history"
+},
+"trope": {
+"tier": "passage",
+"why": "a recurring figure, motif, or convention",
+"field": "literary theory"
+},
+"truck": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: dealings"
+},
+"typology": {
+"tier": "passage",
+"why": "a classification by types",
+"field": "general"
+},
+"tyro": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"uniform": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: unvarying, consistent"
+},
+"uniformitarianism": {
+"tier": "passage",
+"why": "the doctrine that past changes resulted from present-day gradual processes",
+"field": "geology"
+},
+"valence": {
+"tier": "passage",
+"secondary": true,
+"why": "in general use, emotional value or attraction",
+"field": "psychology"
+},
+"valorize": {
+"tier": "passage",
+"why": "to assign value or prestige to; to celebrate",
+"field": "literary theory"
+},
+"venial": {
+"tier": "extended",
+"why": "hard high-register TC/SE word"
+},
+"versatile": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"visionary": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"votive": {
+"tier": "passage",
+"why": "offered in fulfillment of a vow or as devotion",
+"field": "art history"
+},
+"wag": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: a witty joker"
+},
+"wanting": {
+"secondary": true
+},
+"wanton": {
+"secondary": true
+},
+"wax": {
+"secondary": true
+},
+"wayward": {
+"tier": "extended",
+"why": "gregmat-only"
+},
+"wean": {
+"tier": "secondary",
+"secondary": true,
+"why": "secondary sense: to gradually detach from a habit"
+},
+"whiggish": {
+"tier": "passage",
+"why": "interpreting history as steady progress toward the present",
+"field": "history"
+}
+}

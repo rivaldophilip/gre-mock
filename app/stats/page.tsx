@@ -1,18 +1,21 @@
 import Link from "next/link";
 import { db, schema } from "@/lib/db";
 import { scoreAll, type LoggedEvent } from "@/lib/priority/compute";
+import { SenseLine, type Sense } from "@/components/WordTagger";
 
 export const dynamic = "force-dynamic";
 
 export default async function Stats() {
-  const [vocab, concepts, events, resp, attempts, qs] = await Promise.all([
+  const [vocab, concepts, events, resp, attempts, qs, qitems] = await Promise.all([
     db().select().from(schema.vocab),
     db().select().from(schema.concepts),
     db().select().from(schema.itemEvents),
     db().select().from(schema.responses),
     db().select().from(schema.attempts),
     db().select().from(schema.questions),
+    db().select().from(schema.questionItems),
   ]);
+  const vmap = new Map(vocab.map((v) => [v.id, v]));
   const now = new Date();
   const ev = (kind: string): LoggedEvent[] => events.filter((e) => e.kind === kind).map((e) => ({ itemId: e.itemId, event: e.event, weight: e.weight, createdAt: e.createdAt }));
   const ws = scoreAll(vocab.map((v) => ({ id: v.id, yield: v.yield })), ev("word"), now);
@@ -35,6 +38,19 @@ export default async function Stats() {
     byType.set(t, s);
   }
 
+  // accuracy by concept area, through each question's primary concept
+  const primaryOf = new Map(qitems.filter((i) => i.kind === "concept" && i.role === "primary").map((i) => [i.questionId, i.itemId]));
+  const byArea = new Map<string, { n: number; ok: number }>();
+  for (const r of resp) {
+    if (!r.finalized) continue;
+    const area = cname.get(primaryOf.get(r.questionId) ?? "")?.area;
+    if (!area) continue;
+    const s = byArea.get(area) ?? { n: 0, ok: 0 };
+    s.n++;
+    s.ok += r.isCorrect ? 1 : 0;
+    byArea.set(area, s);
+  }
+
   return (
     <main className="mx-auto w-full max-w-4xl space-y-8 p-6">
       <header className="flex items-baseline justify-between"><h1 className="text-2xl font-semibold">Stats</h1><Link href="/" className="underline">Dashboard</Link></header>
@@ -47,7 +63,7 @@ export default async function Stats() {
       <section><h2 className="mb-2 font-semibold">Weakest words</h2>
         {weakWords.length === 0 ? <p className="text-sm opacity-70">No weakness evidence yet.</p> : (
           <table className="w-full text-sm"><thead><tr className="text-left"><th>Word</th><th>Priority</th><th>Weakness</th><th>Why</th></tr></thead><tbody>
-            {weakWords.map((s) => <tr key={s.itemId} className="border-t"><td>{s.itemId}</td><td>{s.P.toFixed(2)}</td><td>{s.S.toFixed(2)}</td><td>{s.reason}</td></tr>)}
+            {weakWords.map((s) => <tr key={s.itemId} className="border-t"><td className="py-1"><strong>{vmap.get(s.itemId)?.lemma ?? s.itemId}</strong><br /><SenseLine senses={vmap.get(s.itemId)?.senses as Sense[] | null} /></td><td>{s.P.toFixed(2)}</td><td>{s.S.toFixed(2)}</td><td>{s.reason}</td></tr>)}
           </tbody></table>)}
       </section>
 
@@ -63,6 +79,14 @@ export default async function Stats() {
           {[...byType.entries()].map(([t, s]) => <tr key={t} className="border-t"><td>{t}</td><td>{s.n}</td><td>{Math.round((100 * s.ok) / s.n)}%</td><td>{Math.round(s.ms / s.n / 1000)}s</td></tr>)}
         </tbody></table>
       </section>
+
+      {byArea.size > 0 && (
+        <section><h2 className="mb-2 font-semibold">Quant accuracy by concept area</h2>
+          <table className="w-full text-sm"><thead><tr className="text-left"><th>Area</th><th>Answered</th><th>Accuracy</th></tr></thead><tbody>
+            {[...byArea.entries()].map(([t, s]) => <tr key={t} className="border-t capitalize"><td>{t}</td><td>{s.n}</td><td>{Math.round((100 * s.ok) / s.n)}%</td></tr>)}
+          </tbody></table>
+        </section>
+      )}
 
       <section><h2 className="mb-2 font-semibold">Attempt history</h2>
         <ul className="space-y-1 text-sm">{[...attempts].reverse().map((a) => <li key={a.id}><Link className="underline" href={`/test/${a.testId}/review/${a.id}`}>#{a.id} {a.testId}</Link> · {a.mode} · {a.finishedAt ? "finished" : "in progress"} · {a.startedAt.toISOString().slice(0, 10)}</li>)}</ul>
