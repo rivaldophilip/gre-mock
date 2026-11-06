@@ -89,3 +89,34 @@ export function allocateConcepts(
   }
   return out;
 }
+
+/** Secondary senses are a hard-item driver: at least this many verbal keys test one. */
+export const MIN_SECONDARY = 4;
+
+/** Verbal key words for a brief: allocateWords, then top up secondary-sense keys by replacing the weakest "new" picks. */
+export function allocateVerbalKeys(scores: ItemScore[], isSecondary: (id: string) => boolean, slots: number, random: () => number): Pick[] {
+  const keys = allocateWords(scores, slots, random);
+  const have = keys.filter((k) => isSecondary(k.itemId)).length;
+  if (have < MIN_SECONDARY) {
+    const taken = new Set(keys.map((k) => k.itemId));
+    const extra = scores.filter((s) => isSecondary(s.itemId) && !taken.has(s.itemId)).sort((a, b) => b.N * b.Y - a.N * a.Y || b.P - a.P);
+    // keep every review pick
+    const replaceable = keys.map((k, i) => ({ k, i })).filter(({ k }) => k.bucket !== "review" && !isSecondary(k.itemId)).reverse();
+    for (let j = 0; j < MIN_SECONDARY - have && j < extra.length && j < replaceable.length; j++) {
+      keys[replaceable[j].i] = { itemId: extra[j].itemId, bucket: "new", reason: `secondary sense (${extra[j].reason})` };
+    }
+  }
+  return keys;
+}
+
+/**
+ * Chance each item is picked by the next brief: run the (seeded, partly random) allocator `trials`
+ * times and count. Returns itemId -> share of runs it was picked in (0..1).
+ */
+export function selectionOdds(allocate: (random: () => number) => Pick[], trials = 200, seed = 1): Map<string, number> {
+  const hits = new Map<string, number>();
+  for (let i = 0; i < trials; i++) {
+    for (const id of new Set(allocate(rng(seed + i * 7919)).map((p) => p.itemId))) hits.set(id, (hits.get(id) ?? 0) + 1);
+  }
+  return new Map([...hits].map(([id, n]) => [id, n / trials]));
+}

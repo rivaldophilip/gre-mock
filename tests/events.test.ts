@@ -33,6 +33,11 @@ describe("eventsForResponse", () => {
     const e = ev(eventsForResponse(se, "verbal", { sel: [0, 2] }, { guessed: true, timeMs: 1000 }));
     expect(e.abate).toBe("key_guessed");
   });
+  it("slow correct key adds key_slow", () => {
+    const es = eventsForResponse(se, "verbal", { sel: [0, 2] }, { guessed: false, timeMs: 120_000 });
+    expect(es.filter((e) => e.event === "key_slow").map((e) => e.itemId)).toEqual(["abate", "mitigate"]);
+    expect(eventsForResponse(se, "verbal", { sel: [0, 2] }, { guessed: true, timeMs: 120_000 }).some((e) => e.event === "key_slow")).toBe(false);
+  });
   it("tc uses blank positions", () => {
     const tc: Question = {
       ...se,
@@ -90,5 +95,12 @@ describe("reading skill events", () => {
   it("a right but slow RC answer is mastery plus a slowness signal", () => {
     const e = eventsForResponse(rc, "verbal", { sel: [2] }, { guessed: false, timeMs: 120_000 });
     expect(e.filter((x) => x.itemId === "rc-function").map((x) => x.event)).toEqual(["concept_right_primary", "concept_slow"]);
+  });
+});
+
+describe("unanswered questions", () => {
+  it("record nothing when left blank", () => {
+    expect(eventsForResponse(se, "verbal", undefined, { guessed: false, timeMs: 1000 })).toEqual([]);
+    expect(eventsForResponse(se, "verbal", { sel: [] }, { guessed: false, timeMs: 1000 })).toEqual([]);
   });
 });

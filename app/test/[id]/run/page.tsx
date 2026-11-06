@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import { loadTest, publicTest } from "@/lib/content";
-import { canReveal, getAttempt, pairKey, responsesFor, secondsLeft } from "@/lib/attempts";
+import { canReveal, getAttempt, isClosed, pairKey, responsesFor, secondsLeft } from "@/lib/attempts";
 import { Runner } from "@/components/Runner";
 
 export const dynamic = "force-dynamic";
@@ -11,7 +11,7 @@ export default async function Run({ params, searchParams }: { params: Promise<{ 
   const test = loadTest(id);
   const a = attempt ? await getAttempt(Number(attempt)) : null;
   if (!test || !a || a.testId !== id) redirect("/");
-  if (a.finishedAt) redirect(`/test/${id}/review/${a.id}`);
+  if (isClosed(a)) redirect(`/test/${id}/review/${a.id}`);
 
   const rows = await responsesFor(a.id);
   const byQ = new Map(rows.map((r) => [r.questionId, r]));

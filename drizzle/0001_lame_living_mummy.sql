@@ -1,0 +1,1 @@
+ALTER TABLE "attempts" ADD COLUMN "abandoned_at" timestamp;

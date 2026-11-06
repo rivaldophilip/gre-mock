@@ -14,11 +14,11 @@ export function SenseLine({ senses }: { senses?: Sense[] | null }) {
   if (!senses?.length) return null;
   const s = senses[0];
   return (
-    <span className="text-xs opacity-80">
+    <span className="text-[13px] leading-snug text-muted">
       {s.pos && <em>{s.pos}. </em>}
       {s.def}
-      {s.secondary && <span className="ml-1 rounded bg-amber-500/20 px-1">secondary sense</span>}
-      {s.synonyms?.length ? <span className="opacity-70"> · {s.synonyms.slice(0, 3).join(", ")}</span> : null}
+      {s.secondary && <span className="ml-1 rounded-md bg-warn-soft px-1.5 py-px text-[11px] font-semibold text-warn">secondary sense</span>}
+      {s.synonyms?.length ? <span className="text-muted/80"> · {s.synonyms.slice(0, 3).join(", ")}</span> : null}
     </span>
   );
 }
@@ -37,11 +37,11 @@ export function WordChip({ word, attemptId, senses, tagged: initial = false }: {
     if (r) setTagged(!tagged);
   }
   return (
-    <div className="flex flex-col gap-0.5">
+    <div className="flex flex-col gap-1">
       <button
         onClick={toggle}
         title={tagged ? "Tap to undo" : "Tap if you didn't know this word"}
-        className={`self-start rounded-full border px-2 py-0.5 text-sm ${tagged ? "border-orange-500 bg-orange-500/20" : err ? "border-red-500" : "hover:bg-black/5 dark:hover:bg-white/10"}`}
+        className={`inline-flex min-h-9 items-center gap-1 self-start rounded-full border px-3 py-1 text-sm font-medium transition-colors ${tagged ? "border-warn/50 bg-warn-soft text-warn" : err ? "border-bad text-bad" : "border-line bg-surface hover:bg-surface-2"}`}
       >
         {word}
         {tagged && " ✓ didn't know"}
@@ -70,7 +70,7 @@ export function TaggablePassage({ paragraphs, attemptId, initial = [] }: { parag
     if (r) setTagged((m) => new Map(m).set(w, r.senses ?? null));
   }
   return (
-    <div className="space-y-2 leading-relaxed">
+    <div className="space-y-3 text-[15.5px] leading-[1.75]">
       {paragraphs.map((p, i) => (
         <p key={i}>
           {p.split(/(\s+)/).map((tok, j) => {
@@ -78,7 +78,7 @@ export function TaggablePassage({ paragraphs, attemptId, initial = [] }: { parag
             return /\s+/.test(tok) || w.length < 3 ? (
               tok
             ) : (
-              <span key={j} onClick={() => toggle(tok)} className={`cursor-pointer rounded hover:bg-orange-200/50 dark:hover:bg-orange-500/30 ${tagged.has(w) ? "bg-orange-300 dark:bg-orange-600/50" : ""}`}>
+              <span key={j} onClick={() => toggle(tok)} className={`cursor-pointer rounded px-px transition-colors ${tagged.has(w) ? "bg-warn-soft text-warn font-medium" : "hover:bg-surface-2"}`}>
                 {tok}
               </span>
             );
@@ -86,7 +86,7 @@ export function TaggablePassage({ paragraphs, attemptId, initial = [] }: { parag
         </p>
       ))}
       {tagged.size > 0 && (
-        <ul className="space-y-1 border-t pt-2 text-sm">
+        <ul className="space-y-1.5 border-t border-line pt-3 text-sm leading-snug">
           {[...tagged.entries()].map(([w, senses]) => (
             <li key={w}>
               <strong>{w}</strong> <SenseLine senses={senses} />

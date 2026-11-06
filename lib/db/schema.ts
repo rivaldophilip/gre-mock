@@ -76,6 +76,8 @@ export const attempts = pgTable(
     timerOn: boolean("timer_on").notNull().default(true),
     startedAt: timestamp("started_at").notNull().defaultNow(),
     finishedAt: timestamp("finished_at"),
+    // quit before the end: no events for sections not yet submitted; reviewable, and a new attempt can start
+    abandonedAt: timestamp("abandoned_at"),
     currentPosition: integer("current_position").notNull().default(0),
     // {"1": {startedAt, finishedAt?}, "2": {...}}
     sectionState: jsonb("section_state").notNull().default({}),

@@ -1,5 +1,6 @@
 "use client";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import type { Answer, Explanation, Key, PublicTest } from "@/lib/types";
 import { isAnswered } from "@/lib/scoring";
@@ -8,8 +9,10 @@ import { Calculator } from "./Calculator";
 import { Figure } from "./Figure";
 import { PassagePane } from "./PassagePane";
 import { QuestionRenderer } from "./QuestionRenderer";
-import { Rich } from "./Rich";
+import { Rich, RichInline } from "./Rich";
 import { ReviewGrid } from "./ReviewGrid";
+import { IconBack, IconCalc, IconCheck, IconClock, IconFlag, IconGrid, IconNext, IconPause, IconX } from "./icons";
+import { btn, card, iconBtn, seg, segItem } from "./ui";
 
 type Meta = { guessed: boolean; marked: boolean; timeMs: number; finalized: boolean };
 type Reveal = { key: Key; explanation: Explanation; isCorrect: boolean };
@@ -48,7 +51,12 @@ export function Runner(p: RunnerProps) {
   const [reveals, setReveals] = useState<Record<string, Reveal>>(p.reveals);
   const [left, setLeft] = useState<number | null>(p.secondsLeft[String(section)] ?? null);
   // practice mode: the clock stops while a revealed answer is read, and restarts on the next navigation
-  const [paused, setPaused] = useState(() => mode === "practice" && !!p.sectionState[String(section)]?.pausedAt);
+  const [paused, setPaused] = useState(() => {
+    const st = p.sectionState[String(section)];
+    return mode === "practice" && !!st?.pausedAt && (st.pausedFor ?? "reveal") === "reveal";
+  });
+  // the page is hidden (other tab or app, locked phone, closing): the server clock is paused for "away"
+  const [away, setAway] = useState(false);
   const [calc, setCalc] = useState(false);
   const [grid, setGrid] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -66,7 +74,7 @@ export function Runner(p: RunnerProps) {
   const dirty = useRef<Set<string>>(new Set());
 
   const post = useCallback(
-    async (qid: string, extra: { commit?: boolean; position?: number; resume?: boolean } = {}, spent = 0) => {
+    async (qid: string, extra: { commit?: boolean; position?: number; resume?: boolean } = {}, spent = 0, keepalive = false) => {
       const m = latest.current.meta[qid] ?? { guessed: false, marked: false, timeMs: 0, finalized: false };
       try {
         const r = await fetch(`/api/attempts/${attemptId}/response`, {
@@ -80,6 +88,7 @@ export function Runner(p: RunnerProps) {
             marked: m.marked,
             ...extra,
           }),
+          keepalive,
         });
         // 409 = section closed / time up / answer locked: retrying cannot help
         if (r.ok || r.status === 409) dirty.current.delete(qid);
@@ -181,62 +190,205 @@ export function Runner(p: RunnerProps) {
 
   // countdown (server-anchored at start; local tick)
   useEffect(() => {
-    if (!timerOn || !sectionStarted || sectionDone || left === null || paused) return;
+    if (!timerOn || !sectionStarted || sectionDone || left === null || paused || away) return;
     if (left <= 0) {
       const t = setTimeout(() => void finishSection(), 0);
       return () => clearTimeout(t);
     }
     const t = setTimeout(() => setLeft((l) => (l === null ? l : l - 1)), 1000);
     return () => clearTimeout(t);
-  }, [left, timerOn, sectionStarted, sectionDone, paused, finishSection]);
+  }, [left, timerOn, sectionStarted, sectionDone, paused, away, finishSection]);
+
+  // The clock only runs while the page is in front of the test-taker. Leaving (tab, app, lock, close, Pause & exit)
+  // saves what is pending and pauses it; coming back resumes it. Heartbeats let the server stop the clock on its own
+  // if the page dies without saying goodbye (see lib/clock.ts).
+  const active = sectionStarted && !sectionDone;
+  const running = timerOn && active;
+  const clock = useCallback(
+    async (action: "pause" | "resume" | "heartbeat", keepalive = false) => {
+      try {
+        const r = await fetch(`/api/attempts/${attemptId}/clock`, {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ section, action }),
+          keepalive,
+        });
+        return r.ok ? ((await r.json()) as { secondsLeft: number | null }) : null;
+      } catch {
+        return null;
+      }
+    },
+    [attemptId, section],
+  );
+  const leave = useCallback(() => {
+    if (!sectionStarted || sectionDone) return;
+    if (q) {
+      settle();
+      if (timer.current) clearTimeout(timer.current);
+      void post(q.id, {}, 0, true);
+    }
+    for (const qid of dirty.current) if (qid !== q?.id) void post(qid, {}, 0, true);
+    if (running) void clock("pause", true);
+  }, [sectionStarted, sectionDone, q, settle, post, running, clock]);
+  const leaveRef = useRef(leave);
+  useEffect(() => {
+    leaveRef.current = leave;
+  }, [leave]);
+  const gone = useRef(false);
+  const activeRef = useRef(active);
+  useEffect(() => {
+    activeRef.current = active;
+  }, [active]);
+
+  useEffect(() => {
+    if (!active) return;
+    const back = () => {
+      gone.current = false;
+      if (!running) return setAway(false);
+      void clock("resume").then((j) => {
+        if (typeof j?.secondsLeft === "number") setLeft(j.secondsLeft);
+        setAway(false);
+      });
+    };
+    const off = () => {
+      if (gone.current) return;
+      gone.current = true;
+      setAway(true);
+      leaveRef.current();
+    };
+    const onVis = () => (document.visibilityState === "hidden" ? off() : back());
+    document.addEventListener("visibilitychange", onVis);
+    window.addEventListener("pagehide", off);
+    window.addEventListener("pageshow", back);
+    // lifts an "away" pause left by the last visit (the server keeps a practice reveal pause as it is)
+    if (document.visibilityState === "visible") back();
+    const beat = setInterval(() => {
+      if (running && document.visibilityState === "visible") void clock("heartbeat");
+    }, 20_000);
+    return () => {
+      document.removeEventListener("visibilitychange", onVis);
+      window.removeEventListener("pagehide", off);
+      window.removeEventListener("pageshow", back);
+      clearInterval(beat);
+    };
+  }, [active, running, clock]);
+
+  // leaving through in-app navigation (browser Back) unmounts without a pagehide
+  useEffect(
+    () => () => {
+      if (activeRef.current && !gone.current) leaveRef.current();
+    },
+    [],
+  );
+
+  const pauseAndExit = useCallback(async () => {
+    setBusy(true);
+    gone.current = true;
+    if (q && sectionStarted && !sectionDone) {
+      settle();
+      if (timer.current) clearTimeout(timer.current);
+      await post(q.id);
+    }
+    await flush();
+    if (running) await clock("pause");
+    router.push("/");
+  }, [q, sectionStarted, sectionDone, settle, post, flush, running, clock, router]);
 
   useEffect(() => {
     entered.current = Date.now();
   }, [idx, section]);
 
-  if (!q && !sectionDone) return <p className="p-6">No questions in this section.</p>;
+  // phones show passage and question one at a time; the choice resets per question (rc_select answers in the passage)
+  const [paneFor, setPaneFor] = useState<{ id: string; pane: "passage" | "question" } | null>(null);
+  const pane = q && paneFor?.id === q.id ? paneFor.pane : q?.type === "rc_select" ? "passage" : "question";
+  const questionPane = useRef<HTMLElement>(null);
+  const passagePane = useRef<HTMLElement>(null);
+  const passageId = q?.passageId;
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+    questionPane.current?.scrollTo({ top: 0 });
+  }, [idx, section]);
+  useEffect(() => {
+    passagePane.current?.scrollTo({ top: 0 });
+  }, [passageId]);
+
+  if (!q && !sectionDone) return <p className="p-6 text-muted">No questions in this section.</p>;
 
   // ---------- interstitials ----------
+  const shell = (children: React.ReactNode) => (
+    <main className="flex flex-1 items-center justify-center px-4 py-10 pt-[max(2.5rem,env(safe-area-inset-top))] pb-[max(2.5rem,env(safe-area-inset-bottom))]">
+      <div className={`${card} w-full max-w-md space-y-6 p-6 sm:p-8`}>{children}</div>
+    </main>
+  );
+  const stat = (label: string, value: string) => (
+    <div className="rounded-xl bg-surface-2 px-3 py-2.5">
+      <div className="text-[11px] font-semibold uppercase tracking-[0.08em] text-muted">{label}</div>
+      <div className="font-semibold tabular-nums">{value}</div>
+    </div>
+  );
+
   if (sectionDone) {
     const sec1 = section === 1;
-    return (
-      <main className="mx-auto max-w-xl space-y-4 p-8">
-        <h1 className="text-xl font-semibold">Section {section} complete</h1>
-        {mode === "exam" && (
-          <a className="inline-block rounded border px-3 py-2 underline" target="_blank" href={`/test/${test.id}/review/${attemptId}`}>
-            Review Section {section} answers (new tab)
-          </a>
-        )}
-        {sec1 ? (
-          <button
-            className="block rounded bg-blue-600 px-4 py-2 text-white"
-            onClick={() => {
-              setSection(2);
-              setIdx(0);
-            }}
-          >
-            Continue to Section 2
-          </button>
-        ) : (
-          <a className="rounded bg-blue-600 px-4 py-2 text-white" href={`/test/${test.id}/review/${attemptId}`}>
-            See results
-          </a>
-        )}
-      </main>
+    return shell(
+      <>
+        <div className="space-y-3">
+          <span className="grid size-12 place-items-center rounded-2xl bg-ok-soft text-ok"><IconCheck size={24} /></span>
+          <div>
+            <p className="text-sm text-muted">{test.title}</p>
+            <h1 className="text-2xl font-semibold tracking-tight">Section {section} complete</h1>
+          </div>
+          {sec1 && <p className="text-muted">Take a breath. Section 2 starts its own timer when you begin it.</p>}
+        </div>
+        <div className="flex flex-col gap-2.5">
+          {sec1 ? (
+            <button
+              className={`${btn("primary", "lg")} w-full`}
+              onClick={() => {
+                setSection(2);
+                setIdx(0);
+              }}
+            >
+              Continue to Section 2 <IconNext size={18} />
+            </button>
+          ) : (
+            <a className={`${btn("primary", "lg")} w-full`} href={`/test/${test.id}/review/${attemptId}`}>
+              See results <IconNext size={18} />
+            </a>
+          )}
+          {mode === "exam" && sec1 && (
+            <a className={`${btn("secondary")} w-full`} target="_blank" href={`/test/${test.id}/review/${attemptId}`}>
+              Review Section 1 answers (new tab)
+            </a>
+          )}
+        </div>
+      </>,
     );
   }
 
   if (!sectionStarted) {
-    return (
-      <main className="mx-auto max-w-xl space-y-4 p-8">
-        <h1 className="text-xl font-semibold">{test.title} — Section {section}</h1>
-        <p>
-          {qs.length} questions · {timerOn ? `${minutes} minutes` : "untimed"} · {mode === "exam" ? "Exam mode: answers shown after the section" : "Practice mode: answer shown after each question"}
+    return shell(
+      <>
+        <div className="space-y-1">
+          <p className="text-sm text-muted">{test.title}</p>
+          <h1 className="text-2xl font-semibold tracking-tight">Section {section}</h1>
+        </div>
+        <div className="grid grid-cols-3 gap-2">
+          {stat("Questions", String(qs.length))}
+          {stat("Time", timerOn ? `${minutes} min` : "Untimed")}
+          {stat("Mode", mode === "exam" ? "Exam" : "Practice")}
+        </div>
+        <p className="text-muted">
+          {mode === "exam"
+            ? "Answers are shown after the section. You can move between questions and mark any to revisit."
+            : "Check each answer as you go. The clock pauses while you read an explanation."}
         </p>
-        <button disabled={busy} onClick={startSection} className="rounded bg-blue-600 px-4 py-2 text-white disabled:opacity-50">
-          Start Section {section}
-        </button>
-      </main>
+        <div className="flex flex-col gap-2.5">
+          <button disabled={busy} onClick={startSection} className={`${btn("primary", "lg")} w-full`}>
+            {busy ? "Starting…" : `Start Section ${section}`}
+          </button>
+          <Link href="/" className={`${btn("ghost")} w-full`}>Back to tests</Link>
+        </div>
+      </>,
     );
   }
 
@@ -279,72 +431,167 @@ export function Runner(p: RunnerProps) {
   const keySel = reveal && "sel" in reveal.key ? reveal.key.sel : undefined;
   const keyValue = reveal && "value" in reveal.key ? reveal.key.value : undefined;
 
+  const last = idx === qs.length - 1;
+  const unanswered = gridItems.filter((g) => !g.answered).length;
+  const openGrid = () => {
+    settle();
+    setGrid(true);
+  };
+  const showPassage = !!passage && pane === "passage";
+  const timerPill = timerOn && left !== null && (
+    <span
+      data-testid="timer"
+      title={paused ? "Paused while you read the answer; resumes on the next question" : undefined}
+      className={`inline-flex h-9 shrink-0 items-center gap-1.5 rounded-full px-3 font-mono text-sm font-semibold tabular-nums ${
+        paused ? "bg-surface-2 text-muted" : left < 300 ? "bg-warn-soft text-warn" : "bg-surface-2 text-fg"
+      }`}
+    >
+      {paused ? <IconPause size={12} /> : <IconClock size={15} />}
+      {fmt(left)}
+    </span>
+  );
+  const nextBtn = last ? (
+    <button className={btn("primary")} onClick={openGrid}>End section</button>
+  ) : (
+    <button className={`${btn("primary")} px-5`} onClick={() => go(idx + 1)}>
+      Next <IconNext size={17} />
+    </button>
+  );
+
   return (
-    <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-30 flex items-center gap-3 border-b bg-[var(--background)] px-4 py-2 text-sm">
-        <span className="font-semibold">{test.title}</span>
-        <span className="opacity-70">Section {section} · Q{idx + 1}/{qs.length}</span>
-        <span className="flex-1" />
-        {saveErr && <span className="text-red-500">save failed — will retry</span>}
-        {timerOn && left !== null && (
-          <span data-testid="timer" className={`font-mono ${paused ? "opacity-60" : left < 300 ? "text-red-500" : ""}`} title={paused ? "Paused while you read the answer; resumes on the next question" : undefined}>
-            {fmt(left)}
-            {paused && " ⏸"}
-          </span>
+    <div className="flex min-h-dvh flex-col md:h-dvh md:overflow-hidden">
+      <header className="sticky top-0 z-30 border-b border-line bg-surface/95 pt-[env(safe-area-inset-top)] backdrop-blur supports-[backdrop-filter]:bg-surface/80">
+        <div className="mx-auto flex h-14 w-full max-w-6xl items-center gap-2 px-3 sm:px-4">
+          <div className="min-w-0 flex-1">
+            <div className="truncate text-sm font-semibold">{test.title}</div>
+            <div className="truncate text-xs text-muted">
+              Section {section} · Question {idx + 1} of {qs.length}
+            </div>
+          </div>
+          {saveErr && (
+            <span role="status" className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-bad-soft px-2.5 py-1 text-xs font-medium text-bad">
+              <span className="size-1.5 animate-pulse rounded-full bg-bad" />
+              <span className="hidden sm:inline">Save failed, retrying</span>
+              <span className="sm:hidden">Not saved</span>
+            </span>
+          )}
+          {timerPill}
+          {isQuant && (
+            <button className={iconBtn(calc, "accent")} aria-label="Calculator" aria-pressed={calc} title="Calculator" onClick={() => setCalc((c) => !c)}>
+              <IconCalc size={18} />
+            </button>
+          )}
+          <button className={iconBtn(!!cur?.marked)} aria-label={cur?.marked ? "Unmark question" : "Mark question"} aria-pressed={!!cur?.marked} title={cur?.marked ? "Unmark" : "Mark for review"} onClick={() => setFlag("marked", !cur?.marked)}>
+            <IconFlag size={18} on={!!cur?.marked} />
+          </button>
+          <button
+            className={iconBtn()}
+            disabled={busy}
+            aria-label={timerOn ? "Pause and exit" : "Save and exit"}
+            title={timerOn ? "Pause the clock and exit; resume from the dashboard" : "Save and exit; resume from the dashboard"}
+            onClick={() => void pauseAndExit()}
+          >
+            <IconPause size={16} />
+          </button>
+          <div className="ml-2 hidden items-center gap-2 md:flex">
+            <button className={btn("soft")} onClick={openGrid}>
+              <IconGrid size={17} /> Review
+            </button>
+            <button className={btn("secondary")} disabled={idx === 0} onClick={() => go(idx - 1)}>
+              <IconBack size={17} /> Back
+            </button>
+            {nextBtn}
+          </div>
+        </div>
+        {passage && (
+          <div className="px-3 pb-2.5 md:hidden">
+            <div className={seg} role="tablist" aria-label="Show">
+              {(["passage", "question"] as const).map((p) => (
+                <button key={p} role="tab" aria-selected={pane === p} onClick={() => setPaneFor({ id: q.id, pane: p })} className={`${segItem(pane === p)} capitalize`}>
+                  {p}
+                </button>
+              ))}
+            </div>
+          </div>
         )}
-        {isQuant && <button className="rounded border px-2 py-1" onClick={() => setCalc((c) => !c)}>Calculator</button>}
-        <button className="rounded border px-2 py-1" onClick={() => setFlag("marked", !cur?.marked)}>{cur?.marked ? "Unmark" : "Mark"}</button>
-        <button className="rounded border px-2 py-1" onClick={() => { settle(); setGrid(true); }}>Review</button>
-        <button className="rounded border px-2 py-1 disabled:opacity-40" disabled={idx === 0} onClick={() => go(idx - 1)}>Back</button>
-        {idx < qs.length - 1 ? (
-          <button className="rounded bg-blue-600 px-3 py-1 text-white" onClick={() => go(idx + 1)}>Next</button>
-        ) : (
-          <button className="rounded bg-blue-600 px-3 py-1 text-white" onClick={() => { settle(); setGrid(true); }}>End section</button>
-        )}
+        <div className="h-[3px] bg-surface-2" aria-hidden>
+          <div className="h-full rounded-r-full bg-accent transition-[width] duration-300" style={{ width: `${((idx + 1) / qs.length) * 100}%` }} />
+        </div>
       </header>
 
-      <div className={`flex flex-1 ${passage || figure ? "flex-col md:flex-row" : ""}`}>
+      <div className={`flex-1 md:min-h-0 ${passage || figure ? "md:grid md:grid-cols-2 md:grid-rows-[minmax(0,1fr)]" : "md:overflow-y-auto"}`}>
         {(passage || figure) && (
-          <section className="max-h-[50vh] overflow-y-auto border-b p-5 md:max-h-none md:w-1/2 md:border-b-0 md:border-r">
-            {passage && (
-              <PassagePane
-                passage={passage}
-                selectable={q.type === "rc_select"}
-                selected={q.type === "rc_select" ? (a?.sel?.[0] ?? undefined) : undefined}
-                highlight={q.type === "rc_select" && keySel ? keySel[0] : undefined}
-                onSelect={(i) => setAnswer({ sel: [i] })}
-              />
-            )}
-            {figure && <Figure fig={figure} />}
+          <section
+            ref={passagePane}
+            className={`${showPassage ? "block" : "hidden"} border-line px-4 pb-28 pt-5 sm:px-6 md:block md:bg-surface md:overflow-y-auto md:border-r md:pb-10 md:pt-7 lg:px-10`}
+          >
+            <div className="mx-auto max-w-[68ch] space-y-4">
+              {passage && (
+                <PassagePane
+                  passage={passage}
+                  selectable={q.type === "rc_select"}
+                  selected={q.type === "rc_select" ? (a?.sel?.[0] ?? undefined) : undefined}
+                  highlight={q.type === "rc_select" && keySel ? keySel[0] : undefined}
+                  onSelect={(i) => setAnswer({ sel: [i] })}
+                />
+              )}
+              {figure && <Figure fig={figure} />}
+            </div>
           </section>
         )}
-        <section className={`flex-1 space-y-5 p-5 ${passage || figure ? "md:w-1/2" : "mx-auto w-full max-w-3xl"}`}>
-          <QuestionRenderer q={q} answer={a} onChange={setAnswer} disabled={locked} keySel={keySel} keyValue={keyValue} />
-          <div className="flex flex-wrap items-center gap-4 text-sm">
-            <label className="flex items-center gap-2">
-              <input type="checkbox" checked={!!cur?.guessed} disabled={locked} onChange={(e) => setFlag("guessed", e.target.checked)} /> I guessed
-            </label>
-            {mode === "practice" && !locked && (
-              <button disabled={busy || !isAnswered(q, a)} onClick={check} className="rounded bg-emerald-600 px-3 py-1 text-white disabled:opacity-40">
-                Check answer
-              </button>
+        <section ref={questionPane} className={`${showPassage ? "hidden" : "block"} px-4 pb-28 pt-5 sm:px-6 md:block md:overflow-y-auto md:pb-10 md:pt-7 lg:px-10`}>
+          <div className="mx-auto w-full max-w-2xl space-y-5">
+            {figure && !passage && (
+              <div className="md:hidden">
+                <Figure fig={figure} />
+              </div>
+            )}
+            <QuestionRenderer q={q} answer={a} onChange={setAnswer} disabled={locked} keySel={keySel} keyValue={keyValue} />
+            <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line pt-4">
+              <label className="flex min-h-11 cursor-pointer items-center gap-2.5 text-sm text-muted">
+                <input type="checkbox" className="size-5" checked={!!cur?.guessed} disabled={locked} onChange={(e) => setFlag("guessed", e.target.checked)} /> I guessed
+              </label>
+              {mode === "practice" && !locked && (
+                <button disabled={busy || !isAnswered(q, a)} onClick={check} className={`${btn("ok")} max-sm:flex-1`}>
+                  {busy ? "Checking…" : "Check answer"}
+                </button>
+              )}
+            </div>
+            {reveal && (
+              <div className={`space-y-3 rounded-2xl border p-4 leading-relaxed sm:p-5 ${reveal.isCorrect ? "border-ok/35 bg-ok-soft" : "border-bad/35 bg-bad-soft"}`}>
+                <p className={`flex items-center gap-2 text-base font-semibold ${reveal.isCorrect ? "text-ok" : "text-bad"}`}>
+                  {reveal.isCorrect ? <IconCheck size={20} /> : <IconX size={20} />}
+                  {reveal.isCorrect ? "Correct" : "Incorrect"}
+                </p>
+                <Rich text={reveal.explanation.key} />
+                {reveal.explanation.steps && (
+                  <ol className="list-decimal space-y-1.5 pl-5 marker:text-muted">
+                    {reveal.explanation.steps.map((s, i) => <li key={i}><Rich text={s} /></li>)}
+                  </ol>
+                )}
+                {reveal.explanation.fast && <p className="rounded-xl bg-surface/70 px-3.5 py-2.5"><strong>Faster:</strong> <RichInline text={reveal.explanation.fast} /></p>}
+                {reveal.explanation.trap && <p className="rounded-xl bg-surface/70 px-3.5 py-2.5"><strong>Trap:</strong> <RichInline text={reveal.explanation.trap} /></p>}
+                {paused && <p className="flex items-center gap-1.5 text-xs text-muted"><IconPause size={11} /> Timer paused. It resumes when you move to another question.</p>}
+              </div>
             )}
           </div>
-          {reveal && (
-            <div className={`space-y-2 rounded border p-4 ${reveal.isCorrect ? "border-green-600" : "border-red-500"}`}>
-              <p className="font-semibold">{reveal.isCorrect ? "Correct" : "Incorrect"}</p>
-              <Rich text={reveal.explanation.key} />
-              {reveal.explanation.steps && (
-                <ol className="list-decimal space-y-1 pl-5">
-                  {reveal.explanation.steps.map((s, i) => <li key={i}><Rich text={s} /></li>)}
-                </ol>
-              )}
-              {reveal.explanation.fast && <p><strong>Faster:</strong> {reveal.explanation.fast}</p>}
-              {reveal.explanation.trap && <p><strong>Trap:</strong> {reveal.explanation.trap}</p>}
-            </div>
-          )}
         </section>
       </div>
+
+      {/* phone action bar, in thumb reach */}
+      <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-surface/95 pb-[env(safe-area-inset-bottom)] backdrop-blur supports-[backdrop-filter]:bg-surface/85 md:hidden" aria-label="Question navigation">
+        <div className="flex gap-2 px-3 py-2.5">
+          <button className={`${btn("secondary")} px-3.5`} disabled={idx === 0} onClick={() => go(idx - 1)} aria-label="Previous question">
+            <IconBack size={17} />
+            <span className="max-[359px]:hidden">Back</span>
+          </button>
+          <button className={`${btn("soft")} min-w-0 flex-1`} onClick={openGrid}>
+            <IconGrid size={17} /> Review
+            {unanswered > 0 && <span className="rounded-full bg-warn-soft px-1.5 py-px text-xs font-semibold text-warn">{unanswered} left</span>}
+          </button>
+          {nextBtn}
+        </div>
+      </nav>
 
       {calc && (
         <Calculator
@@ -353,14 +600,24 @@ export function Runner(p: RunnerProps) {
         />
       )}
       {grid && (
-        <div>
-          <ReviewGrid items={gridItems} current={idx} onGo={(i) => { setGrid(false); go(i); }} onClose={() => setGrid(false)} />
-          <div className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2">
-            <button disabled={busy} onClick={finishSection} className="rounded bg-red-600 px-4 py-2 text-white shadow-lg disabled:opacity-50">
-              Finish Section {section} now
-            </button>
-          </div>
-        </div>
+        <ReviewGrid
+          title={`Section ${section} review`}
+          items={gridItems}
+          current={idx}
+          onGo={(i) => { setGrid(false); go(i); }}
+          onClose={() => setGrid(false)}
+          footer={
+            <div className="space-y-2.5 border-t border-line pt-4">
+              {unanswered > 0 && <p className="text-sm text-warn">{unanswered} question{unanswered === 1 ? " is" : "s are"} still unanswered.</p>}
+              <div className="flex gap-2">
+                <button className={`${btn("secondary")} flex-1`} onClick={() => setGrid(false)}>Back to Q{idx + 1}</button>
+                <button disabled={busy} onClick={finishSection} className={`${btn("danger")} flex-1`}>
+                  {busy ? "Finishing…" : `Finish Section ${section}`}
+                </button>
+              </div>
+            </div>
+          }
+        />
       )}
     </div>
   );

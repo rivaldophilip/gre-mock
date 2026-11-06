@@ -3,7 +3,7 @@ import { z } from "zod";
 import { schema } from "@/lib/db";
 import { userDb } from "@/lib/session";
 import { eq } from "drizzle-orm";
-import { canReveal, finalizeResponse, loadAttemptTest, pairKey, responseFor, sectionElapsedMs, sectionStatus, secondsLeft, setClockPaused } from "@/lib/attempts";
+import { canReveal, finalizeResponse, isClosed, loadAttemptTest, pairKey, responseFor, sectionElapsedMs, sectionStatus, secondsLeft, setClockPaused } from "@/lib/attempts";
 import { AnswerSchema } from "@/lib/types";
 import { scoreAnswer } from "@/lib/scoring";
 
@@ -32,13 +32,13 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
   let { a } = loaded;
   const q = test.questions.find((x) => x.id === body.data.questionId);
   if (!q) return NextResponse.json({ error: "unknown question" }, { status: 400 });
-  if (a.finishedAt || sectionStatus(a, q.section).finished) return NextResponse.json({ error: "section closed" }, { status: 409 });
+  if (isClosed(a) || sectionStatus(a, q.section).finished) return NextResponse.json({ error: "section closed" }, { status: 409 });
   // the clock is server-side: past time (plus a small grace for the final in-flight save) answers are refused
   if (a.timerOn && sectionStatus(a, q.section).started) {
     const limitMs = test.sections.find((s) => s.n === q.section)!.minutes * 60_000 + GRACE_MS;
     if (sectionElapsedMs(a, q.section) > limitMs) return NextResponse.json({ error: "time is up" }, { status: 409 });
   }
-  if (body.data.resume && a.mode === "practice") a = await setClockPaused(a, q.section, false);
+  if (body.data.resume && a.mode === "practice") a = await setClockPaused(a, q.section, false, "reveal");
   const clock = () => ({ secondsLeft: secondsLeft(a, test, q.section) });
 
   const qkey = pairKey(test.id, q.id);
@@ -72,7 +72,7 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
   }
 
   if (body.data.commit && a.mode === "practice") {
-    a = await setClockPaused(a, q.section, true);
+    a = await setClockPaused(a, q.section, true, "reveal");
     await finalizeResponse(a, test, q, row.id);
     const fresh = await responseFor(a.id, qkey);
     return NextResponse.json({

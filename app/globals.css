@@ -1,26 +1,142 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* `dark:` follows the resolved theme the head script in app/layout.tsx puts on <html> */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Teal + cool gray. Light values here; dark values below (twice: OS fallback before the script runs, and the explicit attribute). */
+:root {
+  --bg: #f5f8f8;
+  --surface: #ffffff;
+  --surface-2: #ecf1f1;
+  --fg: #13201f;
+  --muted: #5c6b6a;
+  --line: #dce5e4;
+  --accent: #0f8f84;
+  --accent-fg: #ffffff;
+  --accent-soft: #e1f3f0;
+  --ok: #16803a;
+  --ok-soft: #e6f5ea;
+  --bad: #d9434a;
+  --bad-soft: #fcecec;
+  --bad-fg: #ffffff;
+  --warn: #b45309;
+  --warn-soft: #fdf2e2;
+  --mark: #e08a12;
+  --scrim: rgb(10 25 24 / 0.45);
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not([data-theme="light"]) {
+    --bg: #0e1314;
+    --surface: #161d1e;
+    --surface-2: #1d2627;
+    --fg: #e3eceb;
+    --muted: #8fa2a0;
+    --line: #263334;
+    --accent: #2dd4bf;
+    --accent-fg: #052522;
+    --accent-soft: #123532;
+    --ok: #86efac;
+    --ok-soft: #14291c;
+    --bad: #f87171;
+    --bad-soft: #331919;
+    --bad-fg: #2b0d0d;
+    --warn: #fbbf24;
+    --warn-soft: #2d2412;
+    --mark: #fbbf24;
+    --scrim: rgb(0 0 0 / 0.6);
+    color-scheme: dark;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+:root[data-theme="dark"] {
+  --bg: #0e1314;
+  --surface: #161d1e;
+  --surface-2: #1d2627;
+  --fg: #e3eceb;
+  --muted: #8fa2a0;
+  --line: #263334;
+  --accent: #2dd4bf;
+  --accent-fg: #052522;
+  --accent-soft: #123532;
+  --ok: #86efac;
+  --ok-soft: #14291c;
+  --bad: #f87171;
+  --bad-soft: #331919;
+  --bad-fg: #2b0d0d;
+  --warn: #fbbf24;
+  --warn-soft: #2d2412;
+  --mark: #fbbf24;
+  --scrim: rgb(0 0 0 / 0.6);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-canvas: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-soft: var(--accent-soft);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --color-bad-fg: var(--bad-fg);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-mark: var(--mark);
+  --color-scrim: var(--scrim);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--line);
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    accent-color: var(--accent);
+    -webkit-tap-highlight-color: transparent;
+  }
+  a,
+  button,
+  label,
+  input,
+  select,
+  summary,
+  [role="button"] {
+    touch-action: manipulation;
+  }
+  button:not(:disabled),
+  [role="button"],
+  summary {
+    cursor: pointer;
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: color-mix(in srgb, var(--accent) 28%, transparent);
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
 }

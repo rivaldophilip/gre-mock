@@ -7,6 +7,7 @@ export const WORD_W = {
   key_guessed: 0.3,
   key_partial: -0.3,
   key_correct: -0.6,
+  key_slow: 0.2, // key right (not guessed) but slower than SLOW_MS.verbal
   distractor_rejected: -0.15,
   exposure: 0,
 } as const;

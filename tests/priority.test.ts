@@ -67,3 +67,18 @@ describe("concept allocation", () => {
     expect(picks.some((p) => p.itemId === "c9" && p.bucket === "review")).toBe(true);
   });
 });
+
+import { allocateVerbalKeys, selectionOdds } from "@/lib/priority/allocate";
+describe("selection odds", () => {
+  it("weak words are near-certain, untested ones share the rest", () => {
+    const items = Array.from({ length: 40 }, (_, i) => ({ id: `w${i}`, yield: 0.5 }));
+    const events: LoggedEvent[] = [{ itemId: "w3", event: "key_missed", weight: 0.8, createdAt: daysAgo(5) }];
+    const scores = scoreAll(items, events, now);
+    const odds = selectionOdds((r) => allocateVerbalKeys(scores, () => false, 10, r), 100);
+    expect(odds.get("w3")).toBe(1);
+    const others = [...odds].filter(([id]) => id !== "w3").map(([, p]) => p);
+    // 9 other slots spread over 39 equal words
+    expect(others.reduce((a, b) => a + b, 0)).toBeCloseTo(9, 5);
+    expect(Math.max(...others)).toBeLessThan(1);
+  });
+});

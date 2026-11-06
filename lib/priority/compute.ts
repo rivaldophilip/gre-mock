@@ -27,6 +27,11 @@ export interface ItemScore {
   P: number; // priority
   reason: string;
   weakEvidence: number; // decayed positive weight; > 0 means "has weakness evidence"
+  mastery: number; // decayed |negative| weight
+  /** decayed positive weight per event, largest first (for explaining S) */
+  evidence: { event: string; mass: number }[];
+  streak: number;
+  recent: boolean; // ×RECENT_FACTOR applied
   lastTestedAt: Date | null;
 }
 
@@ -54,11 +59,12 @@ export function wordYield(sourceCount: number, secondaryOrEts: boolean): number 
   return Math.min(1, sourceCount / WORD_YIELD_SOURCES_CAP + (secondaryOrEts ? WORD_YIELD_BONUS : 0));
 }
 
-const REASONS: Record<string, string> = {
+export const REASONS: Record<string, string> = {
   dont_know: "tagged 'didn't know'",
   key_missed: "missed as the answer",
   distractor_chosen: "chosen as a wrong answer",
   key_guessed: "answered correctly but guessed",
+  key_slow: "right but slow",
   concept_wrong_primary: "wrong on a question testing it",
   concept_wrong_secondary: "wrong on a question touching it",
   concept_guessed: "right but guessed",
@@ -102,17 +108,20 @@ export function scoreItem(itemId: string, events: LoggedEvent[], yieldWeight: nu
     if (MASTERY.has(e.event)) streak++;
     else if (e.weight > 0) break;
   }
-  const D = last ? Math.min(1, (now.getTime() - last.getTime()) / DAY / intervalFor(streak)) : 0;
+  // clamped at 0: a timestamp read back in the wrong time zone can land in the future
+  const D = last ? Math.min(1, Math.max(0, (now.getTime() - last.getTime()) / DAY / intervalFor(streak))) : 0;
 
   let P = P_WEIGHTS.S * S + P_WEIGHTS.N * N + P_WEIGHTS.D * D + P_WEIGHTS.Y * yieldWeight;
-  if (lastAny && (now.getTime() - lastAny.getTime()) / DAY < RECENT_DAYS) P *= RECENT_FACTOR;
+  const recent = !!lastAny && (now.getTime() - lastAny.getTime()) / DAY < RECENT_DAYS;
+  if (recent) P *= RECENT_FACTOR;
 
   let reason = "never tested";
   if (events.length) {
     const top = [...reasonMass.entries()].sort((a, b) => b[1] - a[1])[0];
     reason = top ? REASONS[top[0]] ?? top[0] : C >= 1 ? "covered, no weakness" : "partly covered";
   }
-  return { itemId, S, C, N, D, Y: yieldWeight, P, reason, weakEvidence: pos, lastTestedAt: last };
+  const evidence = [...reasonMass.entries()].map(([event, mass]) => ({ event, mass })).sort((a, b) => b.mass - a.mass);
+  return { itemId, S, C, N, D, Y: yieldWeight, P, reason, weakEvidence: pos, mastery: neg, evidence, streak, recent, lastTestedAt: last };
 }
 
 export function scoreAll(

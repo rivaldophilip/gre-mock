@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { parseNumber, scoreAnswer } from "@/lib/scoring";
+import { estimateBand, parseNumber, scoreAnswer } from "@/lib/scoring";
 import type { Question } from "@/lib/types";
 
 const base = { section: 1 as const, difficulty: 4, prompt: "p", explanation: { key: "k" }, tags: [] };
@@ -43,5 +43,27 @@ describe("scoreAnswer", () => {
     expect(parseNumber("abc")).toBeNaN();
     expect(parseNumber("1/0")).toBeNaN();
     expect(parseNumber("-2")).toBe(-2);
+  });
+});
+
+describe("estimateBand", () => {
+  it("is strict: 50% is 150 and 80% is 160", () => {
+    expect(estimateBand(27, 0, 54)!.mid).toBe(150);
+    expect(estimateBand(80, 0, 100)!.mid).toBe(160);
+    expect(estimateBand(27, 0, 27)!.mid).toBe(170);
+    expect(estimateBand(0, 0, 27)!.mid).toBe(130);
+  });
+  it("gives guessed-right answers half credit", () => {
+    const b = estimateBand(20, 4, 27)!;
+    expect(b.credit).toBe(18);
+    expect(b.mid).toBeLessThan(estimateBand(20, 0, 27)!.mid);
+  });
+  it("widens the range for fewer questions", () => {
+    const short = estimateBand(6, 0, 10)!;
+    const long = estimateBand(60, 0, 100)!;
+    expect(short.high - short.low).toBeGreaterThan(long.high - long.low);
+    expect(short.low).toBeLessThanOrEqual(short.mid);
+    expect(short.high).toBeGreaterThanOrEqual(short.mid);
+    expect(estimateBand(0, 0, 0)).toBeNull();
   });
 });

@@ -6,7 +6,7 @@ import { loadTest, orderedQuestions } from "./content";
 import { eventsForResponse } from "./events";
 import { scoreAnswer } from "./scoring";
 import type { Answer, Question, Test } from "./types";
-import { elapsedMs, paused, resumed, type SectionState } from "./clock";
+import { elapsedMs, paused, resumed, type PauseReason, type SectionState } from "./clock";
 
 const { attempts, responses, itemEvents } = schema;
 
@@ -17,6 +17,11 @@ export async function getAttempt(id: number): Promise<Attempt | null> {
   const db = await userDb();
   const [a] = await db.select().from(attempts).where(eq(attempts.id, id));
   return a ?? null;
+}
+
+/** Finished or abandoned: no more answers, every key can be shown. */
+export function isClosed(a: Attempt): boolean {
+  return !!a.finishedAt || !!a.abandonedAt;
 }
 
 export function sectionStatus(a: Attempt, n: 1 | 2) {
@@ -39,12 +44,13 @@ export function sectionElapsedMs(a: Attempt, n: 1 | 2, now = Date.now()): number
 }
 
 /**
- * Practice mode: stop the section clock while a revealed answer is read, and restart it on the next
- * navigation. Returns the attempt with its updated state (unchanged if there was nothing to do).
+ * Stop or restart the section clock: "reveal" while a practice answer is read (restarts on the next navigation),
+ * "away" while the test-taker is off the page. Resuming only lifts a pause of the same reason. Returns the attempt
+ * with its updated state (unchanged if there was nothing to do).
  */
-export async function setClockPaused(a: Attempt, n: 1 | 2, pause: boolean, now = Date.now()): Promise<Attempt> {
+export async function setClockPaused(a: Attempt, n: 1 | 2, pause: boolean, reason: PauseReason, now = Date.now()): Promise<Attempt> {
   const st = a.sectionState as SectionState;
-  const next = pause ? paused(st[String(n)], now) : resumed(st[String(n)], now);
+  const next = pause ? paused(st[String(n)], now, reason) : resumed(st[String(n)], now, reason);
   if (!next) return a;
   const sectionState = { ...st, [String(n)]: next };
   const db = await userDb();
@@ -58,7 +64,7 @@ export function pairKey(testId: string, qid: string) {
 
 /** Can the key/explanation for this question be shown right now? */
 export function canReveal(a: Attempt, test: Test, q: Question, resp?: { finalized: boolean }): boolean {
-  if (a.finishedAt) return true;
+  if (isClosed(a)) return true;
   if (a.mode === "practice") return !!resp?.finalized;
   return sectionStatus(a, q.section).finished;
 }
@@ -91,17 +97,9 @@ export async function finalizeSection(a: Attempt, test: Test, n: 1 | 2) {
   const rows = await db.select().from(responses).where(eq(responses.attemptId, a.id));
   const byQ = new Map(rows.map((r) => [r.questionId, r]));
   for (const q of orderedQuestions(test).filter((q) => q.section === n)) {
+    // never-reached questions have no row and stay out of stats; blank ones are finalized without events
     const r = byQ.get(pairKey(test.id, q.id));
     if (r) await finalizeResponse(a, test, q, r.id);
-    else {
-      // unanswered: record the miss so stats still see it
-      const [ins] = await db
-        .insert(responses)
-        .values({ attemptId: a.id, questionId: pairKey(test.id, q.id), answer: null, isCorrect: false })
-        .onConflictDoNothing()
-        .returning({ id: responses.id });
-      if (ins) await finalizeResponse(a, test, q, ins.id);
-    }
   }
 }
 

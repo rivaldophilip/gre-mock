@@ -74,16 +74,66 @@ export function scoreAnswer(q: Question, a: Answer | undefined): boolean {
   }
 }
 
-/** Raw score and a deliberately rough band (not an ETS conversion). */
-export function roughBand(correct: number, total: number): string {
-  if (total === 0) return "-";
-  const p = correct / total;
-  // Tests are harder than ETS, so the bands are shifted generously.
-  if (p >= 0.9) return "~168-170";
-  if (p >= 0.8) return "~165-167";
-  if (p >= 0.7) return "~161-164";
-  if (p >= 0.6) return "~157-160";
-  if (p >= 0.5) return "~153-156";
-  if (p >= 0.4) return "~149-152";
-  return "<149";
+/**
+ * Accuracy -> scaled score (130-170), piecewise linear. Set to roughly what the same accuracy earns on an
+ * official 27-question section. There is deliberately no credit for these mocks being harder than ETS.
+ */
+export const BAND_CURVE: [number, number][] = [
+  [0, 130], [0.1, 135], [0.2, 140], [0.3, 144], [0.4, 147], [0.5, 150],
+  [0.6, 153], [0.7, 156], [0.8, 160], [0.88, 163], [0.94, 166], [0.97, 168], [1, 170],
+];
+/** A correct answer flagged "guessed" earns this much credit. */
+export const GUESS_CREDIT = 0.5;
+
+function scaled(p: number): number {
+  const x = Math.min(1, Math.max(0, p));
+  for (let i = 1; i < BAND_CURVE.length; i++) {
+    const [p1, s1] = BAND_CURVE[i];
+    if (x <= p1) {
+      const [p0, s0] = BAND_CURVE[i - 1];
+      return Math.round(s0 + ((x - p0) / (p1 - p0)) * (s1 - s0));
+    }
+  }
+  return 170;
+}
+
+export interface Band {
+  mid: number;
+  low: number;
+  high: number;
+  correct: number;
+  guessed: number; // of the correct ones
+  total: number;
+  credit: number;
+  /** credited accuracy */
+  p: number;
+}
+
+/**
+ * Strict score estimate: guessed-right answers earn half credit, unanswered count as wrong, and the
+ * range is a ±1 standard-error (Wilson) interval on the credited accuracy, so a short or partial
+ * attempt gives a wide band.
+ */
+export function estimateBand(correct: number, guessed: number, total: number): Band | null {
+  if (total <= 0) return null;
+  const credit = correct - (1 - GUESS_CREDIT) * Math.min(guessed, correct);
+  const p = credit / total;
+  const z = 1;
+  const d = 1 + (z * z) / total;
+  const c = (p + (z * z) / (2 * total)) / d;
+  const h = (z * Math.sqrt((p * (1 - p)) / total + (z * z) / (4 * total * total))) / d;
+  return { mid: scaled(p), low: scaled(c - h), high: scaled(c + h), correct, guessed, total, credit, p };
+}
+
+export const bandText = (b: Band) => (b.low === b.high ? `${b.mid}` : `${b.mid} (${b.low}–${b.high})`);
+
+/** How the band was derived, for a hover tooltip. */
+export function bandWhy(b: Band): string {
+  const g = b.guessed ? ` − ${b.guessed} guessed × ${1 - GUESS_CREDIT}` : "";
+  return [
+    `Credit: ${b.correct} right${g} = ${+b.credit.toFixed(1)} of ${b.total} (${Math.round(100 * b.p)}%).`,
+    `${Math.round(100 * b.p)}% maps to ${b.mid} on the official-style curve (50% → 150, 70% → 156, 80% → 160, 94% → 166).`,
+    `Range ${b.low}–${b.high} is ±1 standard error for ${b.total} questions; fewer questions give a wider range.`,
+    "Unanswered counts as wrong. No bonus for these mocks being harder than ETS. Not an ETS conversion.",
+  ].join("\n");
 }

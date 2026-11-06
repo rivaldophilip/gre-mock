@@ -4,13 +4,18 @@ import { and, eq, inArray } from "drizzle-orm";
 import { schema } from "@/lib/db";
 import { userDb } from "@/lib/session";
 import { loadTest } from "@/lib/content";
-import { canReveal, getAttempt, pairKey, responsesFor, sectionStatus } from "@/lib/attempts";
-import { roughBand, scoreAnswer } from "@/lib/scoring";
+import { canReveal, getAttempt, isClosed, pairKey, responsesFor, sectionStatus } from "@/lib/attempts";
+import { bandText, bandWhy, estimateBand, scoreAnswer } from "@/lib/scoring";
+import { TYPE_INFO, slotType } from "@/lib/qtypes";
 import type { Answer, Question, Test } from "@/lib/types";
 import { Rich, RichInline } from "@/components/Rich";
 import { Figure } from "@/components/Figure";
 import { TaggablePassage, WordChip, type Sense } from "@/components/WordTagger";
 import rcSkills from "@/data/rc_skills.json";
+import { AppHeader } from "@/components/AppHeader";
+import { IconCheck, IconNext, IconX } from "@/components/icons";
+import { Explain } from "@/components/Explain";
+import { badge, btn, card } from "@/components/ui";
 
 export const dynamic = "force-dynamic";
 const L = "ABCDEFGHIJ";
@@ -72,69 +77,155 @@ export default async function Review({ params }: { params: Promise<{ id: string;
     const at = (t: Question["tags"][number]) => (q.type === "tc" ? q.blanks?.[t.at?.[0] ?? -1]?.[t.at?.[1] ?? -1] : q.choices?.[t.at?.[0] ?? -1]);
     return q.tags.find((t) => t.kind === "word" && t.at && at(t) === text)?.id;
   };
-  const waitingOn2 = !a.finishedAt && sectionStatus(a, 1).finished && !sectionStatus(a, 2).finished;
+  const waitingOn2 = !isClosed(a) && sectionStatus(a, 1).finished && !sectionStatus(a, 2).finished;
+
+  const pct = visible.length ? Math.round((100 * correct) / visible.length) : 0;
+  const results = visible.map((q) => ({ q, ok: scoreAnswer(q, (rows.get(pairKey(id, q.id))?.answer ?? undefined) as Answer | undefined) }));
+  const guessedRight = results.filter(({ q, ok }) => ok && rows.get(pairKey(id, q.id))?.guessed).length;
+  // an abandoned attempt shows its answers and keys, but is not a score
+  const band = a.abandonedAt ? null : estimateBand(correct, guessedRight, visible.length);
 
   return (
-    <main className="mx-auto w-full max-w-4xl space-y-6 p-6">
-      <header className="flex items-baseline justify-between">
-        <h1 className="text-xl font-semibold">{test.title} — review</h1>
-        <Link href="/" className="underline">Dashboard</Link>
-      </header>
-      <p>
-        <strong>{correct}/{visible.length}</strong> correct · rough band {roughBand(correct, visible.length)} <span className="text-xs opacity-60">(not an ETS conversion)</span>
-      </p>
-      {waitingOn2 && <Link className="inline-block rounded bg-blue-600 px-3 py-1 text-white" href={`/test/${id}/run?attempt=${a.id}`}>Continue to Section 2</Link>}
-      <p className="text-sm opacity-70">Tap any word you did not know — it raises that word’s priority in your next test.</p>
-
-      {visible.map((q) => {
-        const r = rows.get(pairKey(id, q.id));
-        const ans = (r?.answer ?? undefined) as Answer | undefined;
-        const ok = scoreAnswer(q, ans);
-        const passage = q.passageId ? test.passages.find((p) => p.id === q.passageId) : undefined;
-        const figure = q.figureId ? test.figures.find((f) => f.id === q.figureId) : undefined;
-        const words = [...new Set(choiceWords(q))];
-        const ex = q.explanation;
-        return (
-          <section key={q.id} id={`q-${q.id}`} className={`space-y-3 rounded-lg border-l-4 border p-4 ${ok ? "border-l-green-600" : "border-l-red-500"}`}>
-            <div className="flex flex-wrap items-baseline justify-between gap-2 text-sm">
-              <span className="font-semibold">S{q.section} · {q.type.toUpperCase()} · {q.id}{skillOf(q) && <span className="font-normal opacity-80"> · skill: {skillOf(q)}</span>}</span>
-              <span>{ok ? "✓ correct" : "✗ incorrect"} · {Math.round((r?.timeMs ?? 0) / 1000)}s{r?.guessed ? " · guessed" : ""} · level {q.difficulty}</span>
+    <>
+      <AppHeader />
+      <main className="mx-auto w-full max-w-3xl space-y-5 px-4 py-6 pb-[max(2.5rem,env(safe-area-inset-bottom))] sm:py-8">
+        <div className={`${card} space-y-4 p-5 sm:p-6`}>
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <p className="text-sm text-muted">
+                {waitingOn2 ? "Section 1 review" : "Review"}
+                {a.abandonedAt && <> · <span className={badge("muted")}>Abandoned</span></>}
+              </p>
+              <h1 className="text-xl font-semibold tracking-tight sm:text-2xl">{test.title}</h1>
             </div>
-            {passage && (
-              <details className="rounded border p-3">
-                <summary className="cursor-pointer text-sm font-medium">Passage (tap words you didn’t know)</summary>
-                <div className="mt-2"><TaggablePassage paragraphs={passage.paragraphs} attemptId={a.id} initial={passage.tags.filter((t) => t.kind === "word" && taggedIds.has(t.id)).map((t) => t.id)} /></div>
-              </details>
-            )}
-            {figure && <Figure fig={figure} />}
-            {q.type === "qc" ? (
-              <div className="space-y-1"><Rich text={q.prompt} />{q.qc && <p><strong>A:</strong> <RichInline text={q.qc.a} /> &nbsp; <strong>B:</strong> <RichInline text={q.qc.b} /></p>}</div>
-            ) : (
-              <Rich text={q.prompt.replaceAll("___", "_____")} />
-            )}
-            <p className="text-sm">Your answer: <strong>{yourAnswer(q, ans)}</strong> · Key: <strong className="text-green-600">{keyText(q)}</strong></p>
-            <Rich text={ex.key} className="rounded bg-black/5 p-3 dark:bg-white/5" />
-            {ex.steps && <ol className="list-decimal space-y-1 pl-5">{ex.steps.map((s, i) => <li key={i}><Rich text={s} /></li>)}</ol>}
-            {ex.fast && <p><strong>Faster:</strong> <RichInline text={ex.fast} /></p>}
-            {ex.trap && <p><strong>Trap:</strong> <RichInline text={ex.trap} /></p>}
-            {ex.distractors && (
-              <ul className="space-y-1 text-sm">
-                {Object.entries(ex.distractors).map(([c, why]) => (
-                  <li key={c}><strong>{c}</strong>: <RichInline text={why} /></li>
-                ))}
-              </ul>
-            )}
-            {words.length > 0 && (
-              <div className="grid gap-2 pt-1 sm:grid-cols-2">
-                {words.map((w) => {
-                  const wid = wordIdFor(q, w);
-                  return <WordChip key={w} word={w} attemptId={a.id} senses={wid ? sensesOf.get(wid) : undefined} tagged={!!wid && taggedIds.has(wid)} />;
-                })}
+            <div className="text-right">
+              <div className="font-mono text-3xl font-semibold tabular-nums">
+                {correct}
+                <span className="text-lg text-muted">/{visible.length}</span>
               </div>
-            )}
-          </section>
-        );
-      })}
-    </main>
+              <div className="text-xs text-muted">{pct}% correct</div>
+            </div>
+          </div>
+          <div className="h-2 overflow-hidden rounded-full bg-surface-2" aria-hidden>
+            <div className="h-full rounded-full bg-accent" style={{ width: `${pct}%` }} />
+          </div>
+          <p className="text-sm">
+            Estimated score{" "}
+            {band ? (
+              <Explain why={bandWhy(band) + (a.timerOn ? "" : "\nTaken untimed, so expect lower under the clock.")}>
+                <strong className="tabular-nums">~{bandText(band)}</strong>
+              </Explain>
+            ) : (
+              <strong>-</strong>
+            )}{" "}
+            <span className="text-xs text-muted">(strict estimate, not an ETS conversion{guessedRight ? `; ${guessedRight} guessed right at half credit` : ""})</span>
+          </p>
+          {results.length > 0 && (
+            <nav aria-label="Jump to question" className="flex flex-wrap gap-1.5">
+              {results.map(({ q, ok }, i) => (
+                <a
+                  key={q.id}
+                  href={`#q-${q.id}`}
+                  aria-label={`Question ${i + 1}, ${ok ? "correct" : "incorrect"}`}
+                  className={`grid size-8 place-items-center rounded-lg text-xs font-semibold tabular-nums transition-opacity hover:opacity-80 ${ok ? "bg-ok-soft text-ok" : "bg-bad-soft text-bad"}`}
+                >
+                  {i + 1}
+                </a>
+              ))}
+            </nav>
+          )}
+          {waitingOn2 && (
+            <Link className={`${btn("primary")} w-full sm:w-auto`} href={`/test/${id}/run?attempt=${a.id}`}>
+              Continue to Section 2 <IconNext size={17} />
+            </Link>
+          )}
+        </div>
+        <p className="rounded-xl bg-warn-soft px-4 py-3 text-sm text-fg">Tap any word you did not know. It raises that word’s priority in your next test.</p>
+
+        {visible.map((q, qi) => {
+          const r = rows.get(pairKey(id, q.id));
+          const ans = (r?.answer ?? undefined) as Answer | undefined;
+          const ok = scoreAnswer(q, ans);
+          const passage = q.passageId ? test.passages.find((p) => p.id === q.passageId) : undefined;
+          const figure = q.figureId ? test.figures.find((f) => f.id === q.figureId) : undefined;
+          const words = [...new Set(choiceWords(q))];
+          const ex = q.explanation;
+          return (
+            <section key={q.id} id={`q-${q.id}`} className={`${card} scroll-mt-20 space-y-4 p-4 sm:p-5`}>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className={badge(ok ? "ok" : "bad")}>
+                  {ok ? <IconCheck size={13} /> : <IconX size={13} />}
+                  {ok ? "Correct" : "Incorrect"}
+                </span>
+                <span className="text-sm font-semibold">Q{qi + 1}</span>
+                <span className="text-sm text-muted">
+                  S{q.section} · <Explain why={TYPE_INFO[slotType(q)].what}>{TYPE_INFO[slotType(q)].label}</Explain> · {q.id}
+                  {skillOf(q) && <> · skill: {skillOf(q)}</>}
+                </span>
+                <span className="ml-auto text-xs tabular-nums text-muted">
+                  {Math.round((r?.timeMs ?? 0) / 1000)}s{r?.guessed ? " · guessed" : ""} · level {q.difficulty}
+                </span>
+              </div>
+              {passage && (
+                <details className="group rounded-xl border border-line bg-surface-2/50">
+                  <summary className="flex min-h-11 list-none items-center justify-between gap-2 px-3.5 text-sm font-medium [&::-webkit-details-marker]:hidden">
+                    Passage (tap words you didn’t know)
+                    <IconNext size={16} className="text-muted transition-transform group-open:rotate-90" />
+                  </summary>
+                  <div className="px-3.5 pb-3.5"><TaggablePassage paragraphs={passage.paragraphs} attemptId={a.id} initial={passage.tags.filter((t) => t.kind === "word" && taggedIds.has(t.id)).map((t) => t.id)} /></div>
+                </details>
+              )}
+              {figure && <Figure fig={figure} />}
+              {q.type === "qc" ? (
+                <div className="space-y-2">
+                  <Rich text={q.prompt} />
+                  {q.qc && (
+                    <div className="grid grid-cols-2 gap-2 text-sm">
+                      <div className="rounded-xl bg-surface-2 px-3 py-2"><span className="text-xs font-semibold text-muted">A</span> <RichInline text={q.qc.a} /></div>
+                      <div className="rounded-xl bg-surface-2 px-3 py-2"><span className="text-xs font-semibold text-muted">B</span> <RichInline text={q.qc.b} /></div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Rich text={q.prompt.replaceAll("___", "_____")} className="leading-relaxed" />
+              )}
+              <dl className="grid gap-2 text-sm sm:grid-cols-2">
+                <div className={`rounded-xl px-3.5 py-2.5 ${ok ? "bg-ok-soft" : "bg-bad-soft"}`}>
+                  <dt className="text-xs font-semibold uppercase tracking-[0.08em] text-muted">Your answer</dt>
+                  <dd className={`font-medium ${ok ? "text-ok" : "text-bad"}`}>{yourAnswer(q, ans)}</dd>
+                </div>
+                <div className="rounded-xl bg-ok-soft px-3.5 py-2.5">
+                  <dt className="text-xs font-semibold uppercase tracking-[0.08em] text-muted">Key</dt>
+                  <dd className="font-medium text-ok">{keyText(q)}</dd>
+                </div>
+              </dl>
+              <div className="space-y-3 rounded-xl bg-surface-2 p-3.5 leading-relaxed sm:p-4">
+                <Rich text={ex.key} />
+                {ex.steps && <ol className="list-decimal space-y-1.5 pl-5 marker:text-muted">{ex.steps.map((s, i) => <li key={i}><Rich text={s} /></li>)}</ol>}
+                {ex.fast && <p><strong>Faster:</strong> <RichInline text={ex.fast} /></p>}
+                {ex.trap && <p><strong>Trap:</strong> <RichInline text={ex.trap} /></p>}
+              </div>
+              {ex.distractors && (
+                <ul className="space-y-1.5 text-sm leading-snug">
+                  {Object.entries(ex.distractors).map(([c, why]) => (
+                    <li key={c}>
+                      <strong>{c}</strong> <span className="text-muted"><RichInline text={why} /></span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {words.length > 0 && (
+                <div className="grid gap-3 border-t border-line pt-4 sm:grid-cols-2">
+                  {words.map((w) => {
+                    const wid = wordIdFor(q, w);
+                    return <WordChip key={w} word={w} attemptId={a.id} senses={wid ? sensesOf.get(wid) : undefined} tagged={!!wid && taggedIds.has(wid)} />;
+                  })}
+                </div>
+              )}
+            </section>
+          );
+        })}
+      </main>
+    </>
   );
 }

@@ -7,7 +7,8 @@ import path from "node:path";
 import { schema } from "../lib/db";
 import { oneTarget } from "./lib/accounts";
 import { scoreAll, type ItemScore, type LoggedEvent } from "../lib/priority/compute";
-import { allocateConcepts, allocateWords, rng } from "../lib/priority/allocate";
+import { allocateConcepts, allocateVerbalKeys, rng } from "../lib/priority/allocate";
+import { slotType, typeStats, TYPE_INFO, type SlotType } from "../lib/qtypes";
 
 const measure = process.argv[2] as "verbal" | "quant";
 if (measure !== "verbal" && measure !== "quant") {
@@ -37,6 +38,28 @@ function previousTests() {
       passageTopics: (t.passages ?? []).map((p: { title?: string; paragraphs: string[] }) => p.title ?? p.paragraphs[0].slice(0, 80)),
       stems: (t.questions ?? []).map((q: { prompt: string }) => q.prompt.slice(0, 90)),
     }));
+}
+
+/** Accuracy and pace per question type on this measure, most in need of practice first. */
+async function typeFocus(db: Awaited<ReturnType<typeof oneTarget>>["db"]) {
+  const dir = "content/tests";
+  const typeOf = new Map<string, SlotType>();
+  for (const f of fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.startsWith(measure + "-")) : []) {
+    const t = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
+    for (const q of t.questions ?? []) typeOf.set(`${t.id}:${q.id}`, slotType(q));
+  }
+  const rows = (await db.select().from(schema.responses))
+    .filter((r) => r.finalized && typeOf.has(r.questionId))
+    .map((r) => ({ type: typeOf.get(r.questionId)!, isCorrect: r.isCorrect, guessed: r.guessed, timeMs: r.timeMs }));
+  return typeStats(rows).map((s) => ({
+    type: s.type,
+    label: TYPE_INFO[s.type].label,
+    answered: s.n,
+    accuracy: +(s.correct / s.n).toFixed(2),
+    avgSec: Math.round(s.avgMs / 1000),
+    paceSec: TYPE_INFO[s.type].paceSec,
+    need: +s.need.toFixed(2),
+  }));
 }
 
 type RefItem = { id: string; type: string; source: string; pplus: number | null; difficulty: string | null; concepts?: string[]; answer_check?: string };
@@ -107,26 +130,15 @@ async function main() {
   const conceptRows = await db.select().from(schema.concepts);
   const id = nextId();
   const refs = refItems();
-  const brief: Record<string, unknown> = { testId: id, measure, seed, generatedAt: now.toISOString(), blueprint, previous: previousTests(), slots: slotExemplars(refs) };
+  const brief: Record<string, unknown> = { testId: id, measure, seed, generatedAt: now.toISOString(), blueprint, previous: previousTests(), slots: slotExemplars(refs), typeFocus: await typeFocus(db) };
+  const focusNote =
+    " typeFocus ranks question types by practice need (miss rate plus slowness against pace): put the weakest review words / skills / concepts on the slots of the top two types (need >= 0.4), so the practice lands where it is needed.";
 
   if (measure === "verbal") {
     const vocab = (await db.select().from(schema.vocab)).filter((v) => !v.pink);
     const byId = new Map(vocab.map((v) => [v.id, v]));
     const scores = scoreAll(vocab.map((v) => ({ id: v.id, yield: v.yield })), logged, now);
-    const keys = allocateWords(scores, 29, random);
-    // secondary senses are a hard-item driver: make sure at least MIN_SECONDARY keys test one
-    const MIN_SECONDARY = 4;
-    const isSec = (wid: string) => !!byId.get(wid)?.isSecondary;
-    const have = keys.filter((k) => isSec(k.itemId)).length;
-    if (have < MIN_SECONDARY) {
-      const taken = new Set(keys.map((k) => k.itemId));
-      const extra = scores.filter((s) => isSec(s.itemId) && !taken.has(s.itemId)).sort((a, b) => b.N * b.Y - a.N * a.Y || b.P - a.P);
-      // replace the weakest "new" picks, keeping every review pick
-      const replaceable = keys.map((k, i) => ({ k, i })).filter(({ k }) => k.bucket !== "review" && !isSec(k.itemId)).reverse();
-      for (let j = 0; j < MIN_SECONDARY - have && j < extra.length && j < replaceable.length; j++) {
-        keys[replaceable[j].i] = { itemId: extra[j].itemId, bucket: "new", reason: `secondary sense (${extra[j].reason})` };
-      }
-    }
+    const keys = allocateVerbalKeys(scores, (wid) => !!byId.get(wid)?.isSecondary, 29, random);
     const used = new Set(keys.map((k) => k.itemId));
     const rest = scores.filter((s) => !used.has(s.itemId));
     const weakD = rest.filter((s) => s.weakEvidence > 0).sort((a, b) => b.P - a.P).slice(0, 25);
@@ -166,7 +178,7 @@ async function main() {
       distractorWords: { weak: weakD.map((s) => show(s)), untested: freshD.map((s) => show(s)) },
       passageWords: passPool.map((s) => show(s)),
       instructions:
-        "Use keyWords as the answers/keys across TC blanks and SE pairs (29 slots, order free). Fill distractors from distractorWords (about 40% weak). Weave 3-6 passageWords into each RC passage. Tag every word: role key|distractor|passage with `at` choice positions. Words must be spelled exactly as vocab lemma. Each key word's `sense` is the GRE-tested sense: write the sentence so THAT sense is the one that fits (for secondary=true words, the everyday sense must be the trap). Give each RC question one primary skill tag {kind:'concept', role:'primary'} from skillSlots (argument skills on the arg items, rc-select-verify suits rc_multi), optionally a secondary one; the reading skills can repeat.",
+        "Use keyWords as the answers/keys across TC blanks and SE pairs (29 slots, order free). Fill distractors from distractorWords (about 40% weak). Weave 3-6 passageWords into each RC passage. Tag every word: role key|distractor|passage with `at` choice positions. Words must be spelled exactly as vocab lemma. Each key word's `sense` is the GRE-tested sense: write the sentence so THAT sense is the one that fits (for secondary=true words, the everyday sense must be the trap). Give each RC question one primary skill tag {kind:'concept', role:'primary'} from skillSlots (argument skills on the arg items, rc-select-verify suits rc_multi), optionally a secondary one; the reading skills can repeat." + focusNote,
     });
   } else {
     const concepts = conceptRows.filter((c) => !SKILL_AREAS.includes(c.area));
@@ -176,7 +188,7 @@ async function main() {
     const picks = allocateConcepts(withArea, 27, ["arithmetic", "algebra", "geometry", "data"], random);
     brief.conceptSlots = picks.map((p, i) => ({ slot: i + 1, concept: p.itemId, name: concepts.find((c) => c.id === p.itemId)?.name, area: areaOf.get(p.itemId), bucket: p.bucket, reason: p.reason, exemplars: conceptExemplars(refs, p.itemId) }));
     brief.instructions =
-      "Assign the 27 concept slots to the 27 blueprint slots (any order, but a DI set of 3 should share a concept area). Each question: one primary concept (the slot) and optional secondary tags. Provide a python verification script.";
+      "Assign the 27 concept slots to the 27 blueprint slots (any order, but a DI set of 3 should share a concept area). Each question: one primary concept (the slot) and optional secondary tags. Provide a python verification script." + focusNote;
   }
 
   fs.mkdirSync("content/briefs", { recursive: true });

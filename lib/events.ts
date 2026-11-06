@@ -1,5 +1,5 @@
 import type { Answer, Question, Tag } from "./types";
-import { scoreAnswer } from "./scoring";
+import { isAnswered, scoreAnswer } from "./scoring";
 import { WORD_W, CONCEPT_W, SLOW_MS } from "./priority/config";
 
 export type ItemKind = "word" | "concept";
@@ -10,6 +10,7 @@ export type EventKind =
   | "key_guessed"
   | "key_partial"
   | "key_correct"
+  | "key_slow"
   | "distractor_rejected"
   | "exposure"
   | "concept_wrong_primary"
@@ -88,12 +89,15 @@ export function eventsForResponse(
   opts: { guessed: boolean; timeMs: number },
   passageTags: Tag[] = [],
 ): ItemEvent[] {
+  // a blank (or partly filled) question says nothing about the words or concepts in it, so it records nothing
+  if (!isAnswered(q, a)) return [];
   const correct = scoreAnswer(q, a);
   const out: ItemEvent[] = [];
   for (const t of [...q.tags, ...passageTags]) {
     if (t.kind === "word") {
       const e = wordEvent(q, a, t, correct, opts.guessed);
       if (e) out.push(e);
+      if (e?.event === "key_correct" && opts.timeMs > SLOW_MS.verbal) out.push({ ...e, event: "key_slow", weight: WORD_W.key_slow });
     } else {
       out.push(...conceptEvents(t, correct, opts.guessed, opts.timeMs, measure));
     }

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { elapsedMs, paused, resumed } from "../lib/clock";
+import { STALE_MS, elapsedMs, heartbeat, isAway, paused, resumed } from "../lib/clock";
 
 const T0 = Date.parse("2026-11-06T10:00:00Z");
 const at = (s: number) => T0 + s * 1000;
@@ -33,5 +33,42 @@ describe("section clock with practice-mode pauses", () => {
     expect(paused({ startedAt: iso(0), finishedAt: iso(5) }, at(20))).toBeNull();
     expect(paused({}, at(20))).toBeNull();
     expect(elapsedMs(undefined, at(20))).toBe(0);
+  });
+});
+
+describe("section clock while the test-taker is away", () => {
+  it("stops at the last heartbeat once the page goes quiet, and the gap is folded in on resume", () => {
+    const st = { startedAt: iso(0), lastSeenAt: iso(100) };
+    expect(elapsedMs(st, at(100) + STALE_MS)).toBe(100_000 + STALE_MS); // still within the grace window
+    expect(elapsedMs(st, at(3600))).toBe(100_000); // an hour without heartbeats costs nothing
+    expect(isAway(st, at(3600))).toBe(true);
+    const back = resumed(st, at(3600), "away")!;
+    expect(back.pausedMs).toBe(3_500_000);
+    expect(elapsedMs(back, at(3630))).toBe(130_000);
+    expect(isAway(back, at(3630))).toBe(false);
+  });
+
+  it("a heartbeat keeps the clock running, and one after a silent gap does not charge the gap", () => {
+    let c = heartbeat({ startedAt: iso(0), lastSeenAt: iso(0) }, at(20))!;
+    expect(elapsedMs(c, at(30))).toBe(30_000);
+    c = heartbeat(c, at(500))!; // came back after a crash
+    expect(elapsedMs(c, at(500))).toBe(20_000);
+  });
+
+  it("an away pause does not lift a practice reveal pause, and vice versa", () => {
+    const reveal = paused({ startedAt: iso(0) }, at(60), "reveal")!;
+    expect(resumed(reveal, at(90), "away")).toBeNull();
+    expect(paused(reveal, at(70), "away")).toBeNull();
+    expect(isAway(reveal, at(90))).toBe(false);
+    const away = paused({ startedAt: iso(0) }, at(60), "away")!;
+    expect(resumed(away, at(90), "reveal")).toBeNull();
+    expect(isAway(away, at(90))).toBe(true);
+    expect(elapsedMs(resumed(away, at(90), "away")!, at(100))).toBe(70_000);
+  });
+
+  it("pausing a stale clock starts the pause at the last heartbeat", () => {
+    const p = paused({ startedAt: iso(0), lastSeenAt: iso(50) }, at(500), "away")!;
+    expect(p.pausedAt).toBe(iso(50));
+    expect(elapsedMs(p, at(900))).toBe(50_000);
   });
 });

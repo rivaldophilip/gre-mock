@@ -1,9 +1,18 @@
 "use client";
 import { useState } from "react";
+import { IconX } from "./icons";
+import { btn } from "./ui";
 
-function Btn({ label, onClick, cls = "" }: { label: string; onClick: () => void; cls?: string }) {
+const KEY = {
+  num: "bg-surface text-fg border border-line hover:bg-surface-2 text-lg",
+  op: "bg-accent-soft text-accent hover:bg-accent/20 text-lg",
+  fn: "bg-surface-2 text-muted hover:text-fg text-sm",
+  eq: "bg-accent text-accent-fg hover:bg-accent/90 text-lg",
+};
+
+function Btn({ label, onClick, kind = "num", aria }: { label: string; onClick: () => void; kind?: keyof typeof KEY; aria?: string }) {
   return (
-    <button onClick={onClick} className={`rounded border px-2 py-2 text-sm hover:bg-black/10 dark:hover:bg-white/10 ${cls}`}>
+    <button type="button" aria-label={aria} onClick={onClick} className={`h-12 select-none rounded-xl font-semibold tabular-nums transition-colors active:scale-95 md:h-10 ${KEY[kind]}`}>
       {label}
     </button>
   );
@@ -122,29 +131,37 @@ export function Calculator({ onTransfer, onClose }: { onTransfer?: (v: string) =
   const val = () => parseFloat(display);
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 w-64 rounded-lg border bg-[var(--background)] p-3 shadow-xl" role="dialog" aria-label="Calculator">
-      <div className="mb-2 flex items-center justify-between text-xs font-semibold">
-        <span>Calculator</span>
-        <button onClick={onClose} aria-label="Close calculator">✕</button>
+    // phone: bottom sheet over the action bar; desktop: floating panel
+    <div
+      className="fixed inset-x-0 bottom-0 z-50 rounded-t-3xl border border-line bg-surface p-4 pb-[max(1rem,env(safe-area-inset-bottom))] shadow-[0_-12px_40px_rgb(0_0_0/0.2)] md:inset-x-auto md:bottom-5 md:right-5 md:w-80 md:rounded-2xl md:pb-4 md:shadow-xl"
+      role="dialog"
+      aria-label="Calculator"
+    >
+      <div className="mx-auto mb-3 h-1.5 w-10 rounded-full bg-line md:hidden" aria-hidden />
+      <div className="mb-3 flex items-center justify-between">
+        <span className="text-sm font-semibold">Calculator{mem !== 0 && <span className="ml-2 rounded-md bg-surface-2 px-1.5 py-0.5 text-xs text-muted">M</span>}</span>
+        <button type="button" onClick={onClose} aria-label="Close calculator" className="grid size-9 place-items-center rounded-xl text-muted hover:bg-surface-2 hover:text-fg">
+          <IconX size={18} />
+        </button>
       </div>
-      <div className="mb-2 rounded border bg-black/5 px-2 py-2 text-right font-mono text-2xl dark:bg-white/10" data-testid="calc-display">{display}</div>
-      <div className="grid grid-cols-5 gap-1">
-        <Btn label="MR" onClick={() => { setDisplay(String(mem)); setFresh(true); }} />
-        <Btn label="MC" onClick={() => setMem(0)} />
-        <Btn label="M+" onClick={() => !err && setMem(mem + val())} />
-        <Btn label="CE" onClick={() => { setDisplay("0"); setFresh(true); setErr(false); }} />
-        <Btn label="C" onClick={clearAll} />
+      <div className={`mb-3 truncate rounded-xl bg-surface-2 px-3.5 py-3 text-right font-mono text-3xl font-medium tabular-nums ${err ? "text-bad" : ""}`} data-testid="calc-display">{display}</div>
+      <div className="grid grid-cols-5 gap-1.5">
+        <Btn kind="fn" label="MR" onClick={() => { setDisplay(String(mem)); setFresh(true); }} />
+        <Btn kind="fn" label="MC" onClick={() => setMem(0)} />
+        <Btn kind="fn" label="M+" onClick={() => !err && setMem(mem + val())} />
+        <Btn kind="fn" label="CE" onClick={() => { setDisplay("0"); setFresh(true); setErr(false); }} />
+        <Btn kind="fn" label="C" onClick={clearAll} />
         <Btn label="7" onClick={() => digit("7")} /><Btn label="8" onClick={() => digit("8")} /><Btn label="9" onClick={() => digit("9")} />
-        <Btn label="÷" onClick={() => op("/")} /><Btn label="√" onClick={() => !err && (val() < 0 ? (setErr(true), setDisplay("Error")) : (show(Math.sqrt(val())), setFresh(true)))} />
+        <Btn kind="op" label="÷" aria="divide" onClick={() => op("/")} /><Btn kind="op" label="√" aria="square root" onClick={() => !err && (val() < 0 ? (setErr(true), setDisplay("Error")) : (show(Math.sqrt(val())), setFresh(true)))} />
         <Btn label="4" onClick={() => digit("4")} /><Btn label="5" onClick={() => digit("5")} /><Btn label="6" onClick={() => digit("6")} />
-        <Btn label="×" onClick={() => op("*")} /><Btn label="±" onClick={() => !err && setDisplay(display.startsWith("-") ? display.slice(1) : display === "0" ? "0" : "-" + display)} />
+        <Btn kind="op" label="×" aria="multiply" onClick={() => op("*")} /><Btn kind="op" label="±" aria="change sign" onClick={() => !err && setDisplay(display.startsWith("-") ? display.slice(1) : display === "0" ? "0" : "-" + display)} />
         <Btn label="1" onClick={() => digit("1")} /><Btn label="2" onClick={() => digit("2")} /><Btn label="3" onClick={() => digit("3")} />
-        <Btn label="−" onClick={() => op("-")} /><Btn label="(" onClick={() => paren("(")} />
-        <Btn label="0" onClick={() => digit("0")} /><Btn label="." onClick={() => digit(".")} /><Btn label="=" onClick={equals} cls="bg-blue-600 text-white" />
-        <Btn label="+" onClick={() => op("+")} /><Btn label=")" onClick={() => paren(")")} />
+        <Btn kind="op" label="−" aria="subtract" onClick={() => op("-")} /><Btn kind="op" label="(" onClick={() => paren("(")} />
+        <Btn label="0" onClick={() => digit("0")} /><Btn label="." onClick={() => digit(".")} /><Btn kind="eq" label="=" aria="equals" onClick={equals} />
+        <Btn kind="op" label="+" aria="add" onClick={() => op("+")} /><Btn kind="op" label=")" onClick={() => paren(")")} />
       </div>
       {onTransfer && (
-        <button onClick={() => !err && onTransfer(display)} className="mt-2 w-full rounded border px-2 py-1 text-sm hover:bg-black/10 dark:hover:bg-white/10">
+        <button type="button" onClick={() => !err && onTransfer(display)} className={`${btn("primary")} mt-3 w-full`}>
           Transfer Display
         </button>
       )}
