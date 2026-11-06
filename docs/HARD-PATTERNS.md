@@ -27,6 +27,17 @@ Level guide used by our validator and blind-solvers: **L3 = P+ 45–60, L4 = 30�
 - **Distractor families**: half-right (correct first half, extreme second half), extreme quantifiers (*always, only, all*), reversed relation, outside knowledge, scope shift (about a different party than asked).
 - **Argument items**: weaken/strengthen/assumption/resolve-paradox/boldface roles. Hard ones require distinguishing *necessary* from *helpful* assumptions, or have a paradox whose resolution is a fact about measurement rather than about the mechanism.
 - **Select-in-passage**: the answer is the sentence performing a role (counterexample, concession, thesis), often a middle sentence, not the first or last.
+- **By skill** (ids in `data/rc_skills.json`; its descriptions list each skill's traps). How to push each one to L4–L5:
+  - *Inference:* the key needs two sentences combined. The best distractor is a claim the reader would believe anyway, or the right claim stated one notch too strongly.
+  - *Select-all / EXCEPT:* each choice must be checked separately. Include one true-but-unsupported choice, and make the number of correct choices unpredictable.
+  - *Function:* ask about a detail embedded in a concession or qualification. The distractors accurately restate what the detail says but misstate why it is there.
+  - *Main idea:* the passage qualifies a view rather than rejecting it. Distractors use the right topic with the wrong verb (refute / defend / reconcile) or cover only one paragraph.
+  - *Detail:* the answer sits in a different paragraph from the stem's keywords. The distractors reuse the passage's words with a reversed relation.
+  - *Attitude:* the author's stance is mixed or measured. Distractors misjudge the intensity (scathing, unreserved) or attribute a quoted view to the author.
+  - *Structure:* two passage structures that differ by one move (concede then rebut vs. rebut then concede).
+  - *Word in context:* the passage uses the word in a secondary sense, and the everyday sense is among the choices.
+  - *Application:* the new case matches on a surface feature but not on the structural one, or the other way round.
+  - *Argument skills:* weaken or strengthen through the unstated assumption, not the premises. Assumption keys are necessary, not merely sufficient, and stated mildly. Paradox keys explain both facts; evaluate keys are questions whose two answers would push the argument in opposite directions.
 
 ## Quantitative
 - **QC with hidden cases.** The relationship flips on negatives, zero, fractions between 0 and 1, or non-integers. Figures "not drawn to scale". A single case analysis (two cases suffice to prove D) makes it L4–L5.
