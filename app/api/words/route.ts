@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { and, eq, inArray, isNull, sql } from "drizzle-orm";
-import { db, schema } from "@/lib/db";
+import { schema } from "@/lib/db";
+import { userDb } from "@/lib/session";
 import { WORD_W } from "@/lib/priority/config";
 
 const Body = z.object({ word: z.string().min(2).max(40), attemptId: z.number().int().optional() });
@@ -24,14 +25,15 @@ function candidates(lemma: string): string[] {
 
 /** Resolve a tapped word to a bank entry: exact id, then a known variant, then an inflection. */
 async function resolve(lemma: string) {
+  const db = await userDb();
   const ids = candidates(lemma);
-  const rows = await db()
+  const rows = await db
     .select({ id: schema.vocab.id, lemma: schema.vocab.lemma, senses: schema.vocab.senses })
     .from(schema.vocab)
     .where(inArray(schema.vocab.id, ids));
   const byId = new Map(rows.map((r) => [r.id, r]));
   for (const id of ids) if (byId.has(id)) return byId.get(id)!;
-  const [v] = await db()
+  const [v] = await db
     .select({ id: schema.vocab.id, lemma: schema.vocab.lemma, senses: schema.vocab.senses })
     .from(schema.vocab)
     .where(sql`${lemma} = any(${schema.vocab.variants})`);
@@ -56,29 +58,31 @@ const sameTag = (id: string, attemptId: number | null) =>
 
 /** Tag a word as "didn't know" (once per attempt). Unknown words join the bank as tier=user_added. */
 export async function POST(req: Request) {
+  const db = await userDb();
   const p = parse(await req.json().catch(() => null));
   if (!p) return NextResponse.json({ error: "bad request" }, { status: 400 });
   let v = await resolve(p.lemma);
   let added = false;
   if (!v) {
     const id = slug(p.lemma);
-    await db().insert(schema.vocab).values({ id, lemma: p.lemma, tier: "user_added", yield: 0.6, sources: ["user"], sourceCount: 0 }).onConflictDoNothing();
+    await db.insert(schema.vocab).values({ id, lemma: p.lemma, tier: "user_added", yield: 0.6, sources: ["user"], sourceCount: 0 }).onConflictDoNothing();
     v = { id, lemma: p.lemma, senses: null };
     added = true;
   }
-  const [dup] = await db().select({ id: schema.itemEvents.id }).from(schema.itemEvents).where(sameTag(v.id, p.attemptId)).limit(1);
+  const [dup] = await db.select({ id: schema.itemEvents.id }).from(schema.itemEvents).where(sameTag(v.id, p.attemptId)).limit(1);
   if (!dup) {
-    await db().insert(schema.itemEvents).values({ kind: "word", itemId: v.id, event: "dont_know", weight: WORD_W.dont_know, attemptId: p.attemptId });
+    await db.insert(schema.itemEvents).values({ kind: "word", itemId: v.id, event: "dont_know", weight: WORD_W.dont_know, attemptId: p.attemptId });
   }
   return NextResponse.json({ ok: true, id: v.id, lemma: v.lemma, added, senses: v.senses });
 }
 
 /** Undo a "didn't know" tag made in this attempt (a mis-tap). */
 export async function DELETE(req: Request) {
+  const db = await userDb();
   const p = parse(await req.json().catch(() => null));
   if (!p) return NextResponse.json({ error: "bad request" }, { status: 400 });
   const v = await resolve(p.lemma);
   if (!v) return NextResponse.json({ ok: true, removed: 0 });
-  const gone = await db().delete(schema.itemEvents).where(sameTag(v.id, p.attemptId)).returning({ id: schema.itemEvents.id });
+  const gone = await db.delete(schema.itemEvents).where(sameTag(v.id, p.attemptId)).returning({ id: schema.itemEvents.id });
   return NextResponse.json({ ok: true, removed: gone.length });
 }

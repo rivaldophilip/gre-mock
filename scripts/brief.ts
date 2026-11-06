@@ -1,10 +1,11 @@
 // Build a generation brief from the DB: which words/concepts the next test must target.
-// usage: npm run brief -- verbal|quant [--seed N]
+// usage: npm run brief -- verbal|quant [--seed N] [--user <email>]  (the only account is the default)
 import { config } from "dotenv";
 config({ path: ".env.local" });
 import fs from "node:fs";
 import path from "node:path";
-import { db, schema } from "../lib/db";
+import { schema } from "../lib/db";
+import { oneTarget } from "./lib/accounts";
 import { scoreAll, type ItemScore, type LoggedEvent } from "../lib/priority/compute";
 import { allocateConcepts, allocateWords, rng } from "../lib/priority/allocate";
 
@@ -92,17 +93,19 @@ function conceptExemplars(items: RefItem[], concept: string) {
 }
 
 async function main() {
+  const { account, db } = await oneTarget();
+  console.log(`brief for ${account.email} (${account.dbName})`);
   const seed = seedArg > 0 ? Number(process.argv[seedArg + 1]) : Date.now() % 100000;
   const random = rng(seed);
   const now = new Date();
-  const events = (await db().select().from(schema.itemEvents)).filter((e) => e.kind === (measure === "verbal" ? "word" : "concept"));
+  const events = (await db.select().from(schema.itemEvents)).filter((e) => e.kind === (measure === "verbal" ? "word" : "concept"));
   const logged: LoggedEvent[] = events.map((e) => ({ itemId: e.itemId, event: e.event, weight: e.weight, createdAt: e.createdAt }));
   const id = nextId();
   const refs = refItems();
   const brief: Record<string, unknown> = { testId: id, measure, seed, generatedAt: now.toISOString(), blueprint, previous: previousTests(), slots: slotExemplars(refs) };
 
   if (measure === "verbal") {
-    const vocab = (await db().select().from(schema.vocab)).filter((v) => !v.pink);
+    const vocab = (await db.select().from(schema.vocab)).filter((v) => !v.pink);
     const byId = new Map(vocab.map((v) => [v.id, v]));
     const scores = scoreAll(vocab.map((v) => ({ id: v.id, yield: v.yield })), logged, now);
     const keys = allocateWords(scores, 29, random);
@@ -144,7 +147,7 @@ async function main() {
         "Use keyWords as the answers/keys across TC blanks and SE pairs (29 slots, order free). Fill distractors from distractorWords (about 40% weak). Weave 3-6 passageWords into each RC passage. Tag every word: role key|distractor|passage with `at` choice positions. Words must be spelled exactly as vocab lemma. Each key word's `sense` is the GRE-tested sense: write the sentence so THAT sense is the one that fits (for secondary=true words, the everyday sense must be the trap).",
     });
   } else {
-    const concepts = await db().select().from(schema.concepts);
+    const concepts = await db.select().from(schema.concepts);
     const scores = scoreAll(concepts.map((c) => ({ id: c.id, yield: c.yield })), logged, now);
     const areaOf = new Map(concepts.map((c) => [c.id, c.area]));
     const withArea = scores.map((s) => ({ ...s, area: areaOf.get(s.itemId)! }));

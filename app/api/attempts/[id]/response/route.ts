@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { db, schema } from "@/lib/db";
+import { schema } from "@/lib/db";
+import { userDb } from "@/lib/session";
 import { eq } from "drizzle-orm";
 import { canReveal, finalizeResponse, loadAttemptTest, pairKey, responseFor, sectionStatus } from "@/lib/attempts";
 import { AnswerSchema } from "@/lib/types";
@@ -20,6 +21,7 @@ const Body = z.object({
 });
 
 export async function POST(req: Request, ctx: { params: Promise<{ id: string }> }) {
+  const db = await userDb();
   const { id } = await ctx.params;
   const body = Body.safeParse(await req.json().catch(() => null));
   const loaded = await loadAttemptTest(Number(id));
@@ -40,7 +42,7 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
   if (existing?.finalized) {
     // answer is locked; still remember where the test-taker is
     if (body.data.position !== undefined) {
-      await db().update(schema.attempts).set({ currentPosition: body.data.position }).where(eq(schema.attempts.id, a.id));
+      await db.update(schema.attempts).set({ currentPosition: body.data.position }).where(eq(schema.attempts.id, a.id));
     }
     return NextResponse.json({ ok: true, locked: true });
   }
@@ -56,13 +58,13 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
     marked: body.data.marked,
     updatedAt: new Date(),
   };
-  const [row] = await db()
+  const [row] = await db
     .insert(schema.responses)
     .values(values)
     .onConflictDoUpdate({ target: [schema.responses.attemptId, schema.responses.questionId], set: values })
     .returning({ id: schema.responses.id });
   if (body.data.position !== undefined) {
-    await db().update(schema.attempts).set({ currentPosition: body.data.position }).where(eq(schema.attempts.id, a.id));
+    await db.update(schema.attempts).set({ currentPosition: body.data.position }).where(eq(schema.attempts.id, a.id));
   }
 
   if (body.data.commit && a.mode === "practice") {

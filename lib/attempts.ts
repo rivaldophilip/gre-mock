@@ -1,6 +1,7 @@
 import "server-only";
 import { and, eq } from "drizzle-orm";
-import { db, schema } from "./db";
+import { schema } from "./db";
+import { userDb } from "./session";
 import { loadTest, orderedQuestions } from "./content";
 import { eventsForResponse } from "./events";
 import { scoreAnswer } from "./scoring";
@@ -12,7 +13,8 @@ export type SectionState = Record<string, { startedAt?: string; finishedAt?: str
 export type Attempt = typeof attempts.$inferSelect;
 
 export async function getAttempt(id: number): Promise<Attempt | null> {
-  const [a] = await db().select().from(attempts).where(eq(attempts.id, id));
+  const db = await userDb();
+  const [a] = await db.select().from(attempts).where(eq(attempts.id, id));
   return a ?? null;
 }
 
@@ -46,7 +48,8 @@ export function canReveal(a: Attempt, test: Test, q: Question, resp?: { finalize
  * first, so a double click or a timer racing the Finish button cannot log the events twice.
  */
 export async function finalizeResponse(a: Attempt, test: Test, q: Question, respId: number) {
-  const [r] = await db()
+  const db = await userDb();
+  const [r] = await db
     .update(responses)
     .set({ finalized: true })
     .where(and(eq(responses.id, respId), eq(responses.finalized, false)))
@@ -56,22 +59,23 @@ export async function finalizeResponse(a: Attempt, test: Test, q: Question, resp
   const passageTags = q.passageId ? (test.passages.find((p) => p.id === q.passageId)?.tags ?? []) : [];
   const evs = eventsForResponse(q, test.measure, ans, { guessed: r.guessed, timeMs: r.timeMs }, passageTags);
   if (evs.length) {
-    await db()
+    await db
       .insert(itemEvents)
       .values(evs.map((e) => ({ kind: e.kind, itemId: e.itemId, event: e.event, weight: e.weight, responseId: r.id, attemptId: a.id })));
   }
-  await db().update(responses).set({ isCorrect: scoreAnswer(q, ans) }).where(eq(responses.id, r.id));
+  await db.update(responses).set({ isCorrect: scoreAnswer(q, ans) }).where(eq(responses.id, r.id));
 }
 
 export async function finalizeSection(a: Attempt, test: Test, n: 1 | 2) {
-  const rows = await db().select().from(responses).where(eq(responses.attemptId, a.id));
+  const db = await userDb();
+  const rows = await db.select().from(responses).where(eq(responses.attemptId, a.id));
   const byQ = new Map(rows.map((r) => [r.questionId, r]));
   for (const q of orderedQuestions(test).filter((q) => q.section === n)) {
     const r = byQ.get(pairKey(test.id, q.id));
     if (r) await finalizeResponse(a, test, q, r.id);
     else {
       // unanswered: record the miss so stats still see it
-      const [ins] = await db()
+      const [ins] = await db
         .insert(responses)
         .values({ attemptId: a.id, questionId: pairKey(test.id, q.id), answer: null, isCorrect: false })
         .onConflictDoNothing()
@@ -90,11 +94,13 @@ export async function loadAttemptTest(id: number) {
 }
 
 export async function responsesFor(attemptId: number) {
-  return db().select().from(responses).where(eq(responses.attemptId, attemptId));
+  const db = await userDb();
+  return db.select().from(responses).where(eq(responses.attemptId, attemptId));
 }
 
 export async function responseFor(attemptId: number, qkey: string) {
-  const [r] = await db()
+  const db = await userDb();
+  const [r] = await db
     .select()
     .from(responses)
     .where(and(eq(responses.attemptId, attemptId), eq(responses.questionId, qkey)));

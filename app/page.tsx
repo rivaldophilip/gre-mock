@@ -1,25 +1,32 @@
 import Link from "next/link";
 import { desc } from "drizzle-orm";
-import { db, schema } from "@/lib/db";
+import { schema } from "@/lib/db";
+import { userDb } from "@/lib/session";
 import { listTestIds, loadTest } from "@/lib/content";
 import { StartForm } from "@/components/StartForm";
 
 export const dynamic = "force-dynamic";
 
 export default async function Dashboard({ searchParams }: { searchParams: Promise<{ tab?: string }> }) {
+  const db = await userDb();
   const { tab } = await searchParams;
   const measure = tab === "quant" ? "quant" : "verbal";
   const tests = listTestIds().map((id) => loadTest(id)!).filter((t) => t.measure === measure);
-  const attempts = await db().select().from(schema.attempts).orderBy(desc(schema.attempts.startedAt));
+  const attempts = await db.select().from(schema.attempts).orderBy(desc(schema.attempts.startedAt));
   const correct = new Map<number, number>();
-  const rows = await db().select({ a: schema.responses.attemptId, ok: schema.responses.isCorrect }).from(schema.responses);
+  const rows = await db.select({ a: schema.responses.attemptId, ok: schema.responses.isCorrect }).from(schema.responses);
   for (const r of rows) if (r.ok) correct.set(r.a, (correct.get(r.a) ?? 0) + 1);
 
   return (
     <main className="mx-auto w-full max-w-3xl space-y-6 p-6">
       <header className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">GRE Hard Mocks</h1>
-        <Link href="/stats" className="underline">Stats</Link>
+        <div className="flex items-center gap-4">
+          <Link href="/stats" className="underline">Stats</Link>
+          <form action="/api/logout" method="post">
+            <button className="text-sm opacity-70 hover:opacity-100">Log out</button>
+          </form>
+        </div>
       </header>
       <nav className="flex gap-4 border-b">
         {(["verbal", "quant"] as const).map((m) => (

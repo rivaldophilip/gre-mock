@@ -1,19 +1,21 @@
 import Link from "next/link";
-import { db, schema } from "@/lib/db";
+import { schema } from "@/lib/db";
+import { userDb } from "@/lib/session";
 import { scoreAll, type LoggedEvent } from "@/lib/priority/compute";
 import { SenseLine, type Sense } from "@/components/WordTagger";
 
 export const dynamic = "force-dynamic";
 
 export default async function Stats() {
+  const db = await userDb();
   const [vocab, concepts, events, resp, attempts, qs, qitems] = await Promise.all([
-    db().select().from(schema.vocab),
-    db().select().from(schema.concepts),
-    db().select().from(schema.itemEvents),
-    db().select().from(schema.responses),
-    db().select().from(schema.attempts),
-    db().select().from(schema.questions),
-    db().select().from(schema.questionItems),
+    db.select().from(schema.vocab),
+    db.select().from(schema.concepts),
+    db.select().from(schema.itemEvents),
+    db.select().from(schema.responses),
+    db.select().from(schema.attempts),
+    db.select().from(schema.questions),
+    db.select().from(schema.questionItems),
   ]);
   const vmap = new Map(vocab.map((v) => [v.id, v]));
   const now = new Date();

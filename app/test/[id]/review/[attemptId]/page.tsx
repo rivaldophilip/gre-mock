@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { and, eq, inArray } from "drizzle-orm";
-import { db, schema } from "@/lib/db";
+import { schema } from "@/lib/db";
+import { userDb } from "@/lib/session";
 import { loadTest } from "@/lib/content";
 import { canReveal, getAttempt, pairKey, responsesFor, sectionStatus } from "@/lib/attempts";
 import { roughBand, scoreAnswer } from "@/lib/scoring";
@@ -39,6 +40,7 @@ function keyText(q: Question): string {
 }
 
 export default async function Review({ params }: { params: Promise<{ id: string; attemptId: string }> }) {
+  const db = await userDb();
   const { id, attemptId } = await params;
   const test = loadTest(id) as Test | null;
   const a = await getAttempt(Number(attemptId));
@@ -49,10 +51,10 @@ export default async function Review({ params }: { params: Promise<{ id: string;
   // definitions for every tagged word on the visible questions, and this attempt's "didn't know" tags
   const wordIds = [...new Set(visible.flatMap((q) => q.tags.filter((t) => t.kind === "word").map((t) => t.id)))];
   const vocabRows = wordIds.length
-    ? await db().select({ id: schema.vocab.id, senses: schema.vocab.senses }).from(schema.vocab).where(inArray(schema.vocab.id, wordIds))
+    ? await db.select({ id: schema.vocab.id, senses: schema.vocab.senses }).from(schema.vocab).where(inArray(schema.vocab.id, wordIds))
     : [];
   const sensesOf = new Map(vocabRows.map((v) => [v.id, v.senses as Sense[] | null]));
-  const taggedRows = await db()
+  const taggedRows = await db
     .select({ itemId: schema.itemEvents.itemId })
     .from(schema.itemEvents)
     .where(and(eq(schema.itemEvents.attemptId, a.id), eq(schema.itemEvents.event, "dont_know")));

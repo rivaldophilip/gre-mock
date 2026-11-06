@@ -4,13 +4,13 @@ You are the quiz-creation agent. Output: one **original** 27-question test (Sect
 
 ## Procedure
 
-1. **Brief.** `npm run brief -- <measure>` → `content/briefs/<measure>-NNN.json`. It names the test id, blueprint (types and difficulty level per slot), the words or concepts you must target (with reasons), distractor words, passage words, tests/stems already used, and exemplar ids.
+1. **Brief.** `npm run brief -- <measure>` (add `--user <email>` once there is more than one account) → `content/briefs/<measure>-NNN.json`. It targets that user's weak items. It names the test id, blueprint (types and difficulty level per slot), the words or concepts you must target (with reasons), distractor words, passage words, tests/stems already used, and exemplar ids.
 2. **Read exemplars + patterns.** Read `docs/HARD-PATTERNS.md`. For each slot, read the 2–3 official items in the brief's `slots[].exemplars` from the local reference file (`grep '"id": "<id>"'`). They match the slot's type and its target level. Quant concept slots also carry `conceptSlots[].exemplars`: the hardest official items with that concept as primary. Quant reference items carry repaired `stem`, `qa`/`qb`, `figure` (a text description) and `hard_driver` fields transcribed from the page images. Use them to anchor style and difficulty, then write something new. Verbal `keyWords[].sense` is the sense to test; for `secondary: true` words, build the sentence so the everyday sense is the trap.
 3. **Author** the JSON against `lib/types.ts` (zod schema). Use `$...$` for math. Details below.
 4. **Validate.** `npm run validate -- <id>` until it prints OK.
 5. **Quant only.** Write `content/verify/<id>.py`: one assertion per question (brute force or exact arithmetic, using `fractions`). `python3 content/verify/<id>.py` must pass. It is not shipped to the app.
 6. **Blind-solve.** Make a copy of the test without keys/explanations/tags (`node -e` or a small script) and give it to 1–2 fresh subagents (no access to the key). They solve every item, rate difficulty 1–5 against official exemplars (P+ ≤ 30 is level 5, 30–45 level 4, 45–60 level 3), and flag ambiguity or a second defensible answer. If a solver's answer ≠ key, or the item is rated >1 level below target, **rewrite the item** and re-run this step.
-7. **Register + publish.** `npm run register -- <id>`, then `git add content && git commit && git push` (Vercel redeploys).
+7. **Register + publish.** `npm run register -- <id>` (registers into every user's database), then `git add content && git commit && git push` (Vercel redeploys).
 
 ## Structure rules (the validator enforces most)
 
