@@ -1,0 +1,1054 @@
+{
+  "id": "quant-002",
+  "measure": "quant",
+  "title": "Quant Hard Mock 2",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 21
+    },
+    {
+      "n": 2,
+      "minutes": 26
+    }
+  ],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Note: Figure not drawn to scale.",
+      "svg": "<svg viewBox=\"0 0 300 205\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"serif\" font-size=\"16\" fill=\"currentColor\"><polygon points=\"150,25 30,170 270,170\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"150\" y1=\"25\" x2=\"150\" y2=\"170\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"144\" y=\"18\">A</text><text x=\"14\" y=\"180\">B</text><text x=\"276\" y=\"180\">C</text><text x=\"144\" y=\"192\">D</text><text x=\"74\" y=\"92\">5</text><text x=\"218\" y=\"92\">5</text><text x=\"86\" y=\"190\">3</text></svg>"
+    },
+    {
+      "id": "fig2",
+      "caption": "Number of books read over the summer by the 200 students in Grades 7 and 8 at a school",
+      "table": {
+        "head": [
+          "Books read",
+          "Grade 7 students",
+          "Grade 8 students"
+        ],
+        "rows": [
+          [
+            "0",
+            "12",
+            "8"
+          ],
+          [
+            "1",
+            "20",
+            "14"
+          ],
+          [
+            "2",
+            "28",
+            "22"
+          ],
+          [
+            "3",
+            "22",
+            "30"
+          ],
+          [
+            "4",
+            "12",
+            "16"
+          ],
+          [
+            "5 or more",
+            "6",
+            "10"
+          ]
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "$x$ is a real number and $|x-3| < |x+5|$.",
+      "qc": {
+        "a": "$x$",
+        "b": "$-1$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "$|x-3|$ is the distance from $x$ to 3 and $|x+5|$ is the distance to $-5$. Being closer to 3 than to $-5$ means lying to the right of their midpoint, $-1$, so $x>-1$.",
+        "steps": [
+          "Square both sides (both are nonnegative): $(x-3)^2<(x+5)^2$.",
+          "$x^2-6x+9<x^2+10x+25 \\Rightarrow -16<16x \\Rightarrow x>-1$.",
+          "So Quantity A is always greater."
+        ],
+        "fast": "The midpoint of 3 and $-5$ is $-1$; points nearer 3 are to its right.",
+        "trap": "Solving $|x-3|=|x+5|$ gives $x=-1$ and tempts 'equal'; the strict inequality excludes that point."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-line-abs",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "Compare the two quantities.",
+      "qc": {
+        "a": "$\\dfrac{3^{20}+3^{18}}{3^{19}}$",
+        "b": "$\\dfrac{10}{3}$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Factor $3^{18}$ from the numerator: $\\dfrac{3^{18}(9+1)}{3^{19}}=\\dfrac{10}{3}$.",
+        "steps": [
+          "$3^{20}+3^{18}=3^{18}(3^2+1)=10\\cdot3^{18}$.",
+          "Divide by $3^{19}$: $\\dfrac{10\\cdot3^{18}}{3^{19}}=\\dfrac{10}{3}$.",
+          "The quantities are equal."
+        ],
+        "fast": "Split: $\\dfrac{3^{20}}{3^{19}}+\\dfrac{3^{18}}{3^{19}}=3+\\dfrac13$.",
+        "trap": "Adding exponents ($3^{38}$) or cancelling term by term to get $3^{20-19}+3^{18}$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponents-roots",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "figureId": "fig1",
+      "prompt": "In the figure, $D$ is a point on side $BC$ of triangle $ABC$, $AB=AC=5$ and $BD=3$.",
+      "qc": {
+        "a": "$DC$",
+        "b": "$3$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Nothing says $AD\\perp BC$ or that $D$ is the midpoint. $BC$ can be any length between 3 and 10, so $DC=BC-3$ can be 3 or not.",
+        "steps": [
+          "If $BC=6$, $D$ is the midpoint and $DC=3$ (equal).",
+          "If $BC=8$ (a valid isosceles triangle, since $8<10$), $DC=5>3$.",
+          "Two different relationships, so it cannot be determined."
+        ],
+        "fast": "The segment AD looks like an altitude, but that is not given. Try two lengths for BC.",
+        "trap": "Reading the figure as if $AD$ were an altitude, which makes $D$ the midpoint and gives 'equal'."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "figures-not-to-scale",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "lines-angles",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "$k$ is a positive integer, and when $k^2$ is divided by 8 the remainder is 1.",
+      "qc": {
+        "a": "The remainder when $k$ is divided by 8",
+        "b": "The remainder when $k^3$ is divided by 8"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "$k^3=k\\cdot k^2$, and $k^2\\equiv1 \\pmod 8$, so $k^3\\equiv k \\pmod 8$. The two remainders are always equal.",
+        "steps": [
+          "$k^3-k=k(k^2-1)$.",
+          "$k^2-1$ is divisible by 8 by hypothesis, so $k^3-k$ is divisible by 8.",
+          "Hence $k^3$ and $k$ leave the same remainder on division by 8 (check $k=3$: 3 and $27=3\\cdot8+3$)."
+        ],
+        "fast": "Multiply $k^2\\equiv1$ by $k$.",
+        "trap": "Noting that $k$ can be 1, 3, 5 or 7 modulo 8 and concluding 'cannot be determined' without checking that both quantities move together."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "integers-properties",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "A pump moves water at a constant rate of 1.5 liters per second. How many cubic meters of water does it move in 2 hours? (1 cubic meter = 1,000 liters)",
+      "choices": [
+        "0.18",
+        "1.08",
+        "10.8",
+        "108",
+        "180"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "2 hours = 7,200 seconds; $1.5\\times7200=10{,}800$ liters $=10.8$ cubic meters.",
+        "steps": [
+          "Convert time: $2\\times3600=7200$ s.",
+          "Volume: $1.5\\times7200=10800$ L.",
+          "Convert: $10800/1000=10.8$ m$^3$."
+        ],
+        "fast": "5,400 L per hour, so 10,800 L in 2 hours.",
+        "trap": "Using 120 (minutes) instead of 7,200 seconds gives 0.18; dropping a factor of 10 gives 1.08 or 108."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "units-conversion",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "In a circle of radius 6, chord $AB$ has length $6\\sqrt3$. What is the length of the minor arc $AB$?",
+      "choices": [
+        "$2\\pi$",
+        "$3\\pi$",
+        "$4\\pi$",
+        "$6\\pi$",
+        "$8\\pi$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The perpendicular from the center bisects the chord: half-chord $3\\sqrt3$, radius 6, so the half-angle has $\\sin=\\frac{\\sqrt3}{2}$: $60^\\circ$. The central angle is $120^\\circ$ and the arc is $\\frac{120}{360}\\cdot12\\pi=4\\pi$.",
+        "steps": [
+          "Half-chord $=3\\sqrt3$; distance from center $=\\sqrt{36-27}=3$.",
+          "30-60-90 triangle: half central angle $=60^\\circ$, so the central angle is $120^\\circ$.",
+          "Arc $=\\frac13\\cdot2\\pi\\cdot6=4\\pi$."
+        ],
+        "fast": "A chord of $r\\sqrt3$ subtends $120^\\circ$.",
+        "trap": "Using the half-angle ($60^\\circ$) as the central angle gives $2\\pi$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "circles",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "How many even four-digit positive integers have four different digits that decrease from left to right (for example, 9520)?",
+      "choices": [
+        "84",
+        "105",
+        "126",
+        "130",
+        "210"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "A set of 4 distinct digits gives exactly one decreasing arrangement, and its last (smallest) digit decides parity. Count sets whose minimum is even.",
+        "steps": [
+          "Minimum 0: choose the other 3 from 1–9: $\\binom93=84$.",
+          "Minimum 2: choose 3 from 3–9: $\\binom73=35$.",
+          "Minimum 4: $\\binom53=10$; minimum 6: $\\binom33=1$; minimum 8: impossible.",
+          "Total $84+35+10+1=130$."
+        ],
+        "fast": "Sum $\\binom{9}{3}+\\binom73+\\binom53+\\binom33$.",
+        "trap": "Halving all $\\binom{10}{4}=210$ decreasing numbers (105) assumes even and odd smallest digits are equally likely; they are not."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-permutations",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "If $x+\\dfrac1x=4$, which of the following must be integers? Select all such quantities.",
+      "choices": [
+        "$x^2+\\dfrac{1}{x^2}$",
+        "$x-\\dfrac1x$",
+        "$x^3+\\dfrac{1}{x^3}$",
+        "$\\left(x-\\dfrac1x\\right)^2$",
+        "$x^2-\\dfrac{1}{x^2}$",
+        "$\\dfrac{x^2+1}{x}$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2,
+          3,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "Square and cube the given sum; the differences involve $\\sqrt{12}$.",
+        "steps": [
+          "$x^2+\\frac1{x^2}=4^2-2=14$.",
+          "$\\left(x-\\frac1x\\right)^2=14-2=12$, so $x-\\frac1x=\\pm2\\sqrt3$: not an integer.",
+          "$x^3+\\frac1{x^3}=4^3-3\\cdot4=52$.",
+          "$x^2-\\frac1{x^2}=\\left(x+\\frac1x\\right)\\left(x-\\frac1x\\right)=\\pm8\\sqrt3$: not an integer.",
+          "$\\frac{x^2+1}{x}=x+\\frac1x=4$."
+        ],
+        "fast": "Anything symmetric in $x$ and $\\frac1x$ is an integer; anything antisymmetric carries $\\sqrt3$.",
+        "trap": "Overlooking that $\\frac{x^2+1}{x}$ is just the given sum, or treating $(x-\\frac1x)^2$ like $x-\\frac1x$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "algebraic-expressions",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 3,
+      "prompt": "In a club, the ratio of members who play chess to members who do not is $3:5$. After 12 new members, all of whom play chess, join the club, the ratio becomes $3:4$. How many members did the club have before the new members joined?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "128"
+      },
+      "explanation": {
+        "key": "Let the original counts be $3k$ and $5k$; the non-players do not change.",
+        "steps": [
+          "$\\dfrac{3k+12}{5k}=\\dfrac34$.",
+          "$12k+48=15k \\Rightarrow k=16$.",
+          "Original total $=8k=128$."
+        ],
+        "fast": "Non-players 5k must be a multiple of 4; test $k=16$: $60:80=3:4$.",
+        "trap": "Giving the new total (140) or the number of chess players."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "ratio-proportion",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig2",
+      "difficulty": 3,
+      "prompt": "How many of the 200 students read at least 3 books?",
+      "choices": [
+        "40",
+        "44",
+        "56",
+        "96",
+        "104"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Add the rows for 3, 4 and 5 or more in both grades.",
+        "steps": [
+          "Grade 7: $22+12+6=40$.",
+          "Grade 8: $30+16+10=56$.",
+          "Total: 96."
+        ],
+        "fast": "Total 200 minus those reading 0–2: $200-(20+34+50)=96$.",
+        "trap": "Reading 'at least 3' as 'more than 3' (44), or counting one grade only."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-tables-graphs",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig2",
+      "difficulty": 4,
+      "prompt": "The number of Grade 8 students who read exactly 3 books is approximately what percent greater than the number of Grade 7 students who read exactly 3 books?",
+      "choices": [
+        "8%",
+        "27%",
+        "36%",
+        "73%",
+        "136%"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Percent greater uses the Grade 7 count as the base: $\\frac{30-22}{22}\\approx36\\%$.",
+        "steps": [
+          "Difference: $30-22=8$.",
+          "Base: 22.",
+          "$8/22\\approx0.364$."
+        ],
+        "fast": "$8/22$ is a bit over $1/3$.",
+        "trap": "Dividing by 30 (27%) uses the wrong base; 136% is the ratio $30/22$, not the increase."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig2",
+      "difficulty": 5,
+      "prompt": "Suppose that each Grade 7 student who read 0 books had instead read 4 books, and all other data were unchanged. By how much would the median number of books read by Grade 7 students change?",
+      "choices": [
+        "0",
+        "0.5",
+        "1",
+        "1.5",
+        "It cannot be determined from the information given."
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The median of the 100 Grade 7 values is the average of the 50th and 51st values. Moving 12 students from the bottom to 4 shifts both positions from 2 to 3. The open '5 or more' row does not matter for the median.",
+        "steps": [
+          "Before: cumulative counts 12 (0 books), 32 (1), 60 (2), so the 50th and 51st values are 2; median 2.",
+          "After: 0 (0 books), 20 (1), 48 (2), 70 (3), so the 50th and 51st values are 3; median 3.",
+          "Change: 1."
+        ],
+        "fast": "Removing 12 from the bottom pushes the middle up past the 48 students reading at most 2.",
+        "trap": "Choosing 'cannot be determined' because of the open-ended '5 or more' row; that row affects the mean, not this median."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "frequency-distributions",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q1",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "A list of five integers has mean 10 and median 12.",
+      "qc": {
+        "a": "The greatest possible value of the least integer in the list",
+        "b": "$8$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Write $a\\le b\\le12\\le d\\le e$ with sum 50. To make $a$ large, make $d=e=12$ (as small as allowed) and $b=a$: $2a+36=50$, so $a=7$.",
+        "steps": [
+          "Sum $=5\\times10=50$; middle value 12.",
+          "$d,e\\ge12$, so $a+b\\le50-12-24=14$.",
+          "$a\\le b$ gives $2a\\le14$, $a\\le7$; the list 7, 7, 12, 12, 12 works.",
+          "$7<8$: Quantity B is greater."
+        ],
+        "fast": "Minimize everything else: $50-12\\cdot3=14$, split evenly.",
+        "trap": "Forgetting that the two values above the median must be at least 12, or assuming the values must be distinct in the wrong direction."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q2",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "List $L$ consists of 10 different numbers. List $M$ consists of the numbers in $L$ together with two more: one less than every number in $L$ and one greater than every number in $L$. (The first and third quartiles of a list with an even number of values are the medians of its lower half and its upper half.)",
+      "qc": {
+        "a": "The interquartile range of $M$",
+        "b": "The interquartile range of $L$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Let $L$ in order be $l_1<\\dots<l_{10}$. For $L$: $Q_1=l_3$, $Q_3=l_8$. For $M$ (12 values) the lower half is the new minimum and $l_1,\\dots,l_5$, so $Q_1=\\frac{l_2+l_3}{2}<l_3$; similarly $Q_3=\\frac{l_8+l_9}{2}>l_8$.",
+        "steps": [
+          "$L$: lower half $l_1..l_5$, $Q_1=l_3$; upper half $l_6..l_{10}$, $Q_3=l_8$.",
+          "$M$: lower half has 6 values, $Q_1$ = average of the 3rd and 4th: $l_2$ and $l_3$.",
+          "Upper half: $Q_3$ = average of $l_8$ and $l_9$.",
+          "Distinct values give $Q_1(M)<Q_1(L)$ and $Q_3(M)>Q_3(L)$, so the IQR of $M$ is larger."
+        ],
+        "fast": "The halves grow from 5 to 6 values, so each quartile moves to a midpoint one step outward.",
+        "trap": "Thinking that adding one value at each extreme leaves the middle of the data, and so the IQR, unchanged."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quartiles-boxplots",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q3",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "Quadrilateral $ABCD$ has $AB=BC=CD=DA=6$ and diagonal $AC=6\\sqrt3$.",
+      "qc": {
+        "a": "The area of $ABCD$",
+        "b": "$31$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Equal sides make $ABCD$ a rhombus whose diagonals bisect each other at right angles. Half of $BD$ is $\\sqrt{36-27}=3$, so $BD=6$ and the area is $\\frac12\\cdot6\\sqrt3\\cdot6=18\\sqrt3\\approx31.18$.",
+        "steps": [
+          "Rhombus diagonals are perpendicular bisectors of each other.",
+          "Half-diagonals: $3\\sqrt3$ and $x$, with $x^2+27=36$, $x=3$.",
+          "Area $=\\frac{d_1d_2}{2}=\\frac{6\\sqrt3\\cdot6}{2}=18\\sqrt3$.",
+          "$18\\times1.732=31.18>31$."
+        ],
+        "fast": "Two equilateral-free 30-30-120 triangles: area $2\\cdot\\frac12\\cdot6\\cdot6\\sin120^\\circ=18\\sqrt3$.",
+        "trap": "Using $\\sqrt3\\approx1.7$ gives 30.6 and the wrong answer; the margin needs $1.73$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "polygons-quadrilaterals",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q4",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "A bar over digits means that block of digits repeats forever.",
+      "qc": {
+        "a": "$0.\\overline{27}+0.\\overline{72}$",
+        "b": "$1$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "$0.\\overline{27}=\\frac{27}{99}$ and $0.\\overline{72}=\\frac{72}{99}$; the sum is $\\frac{99}{99}=1$.",
+        "steps": [
+          "A two-digit repeating block $\\overline{ab}$ equals $\\frac{ab}{99}$.",
+          "$\\frac{27+72}{99}=1$."
+        ],
+        "fast": "The digits add to $0.\\overline{99}=0.999\\ldots=1$.",
+        "trap": "Believing $0.999\\ldots$ is slightly less than 1."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "fractions-decimals",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "The graph of $y=x^2+bx+c$ in the $xy$-plane crosses the $x$-axis at two points, one on each side of the $y$-axis.",
+      "qc": {
+        "a": "$b$",
+        "b": "$c$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "With roots $r>0>s$: $c=rs<0$, but $b=-(r+s)$ can have either sign.",
+        "steps": [
+          "Roots 1 and $-1$: $b=0$, $c=-1$, so $b>c$.",
+          "Roots 10 and $-0.1$: $b=-9.9$, $c=-1$, so $b<c$.",
+          "Cannot be determined."
+        ],
+        "fast": "$c$ is fixed negative, but $b$ depends on which root is larger in size.",
+        "trap": "Concluding from $c<0$ alone that $b$ must be greater, assuming $b\\ge0$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "graphs-of-functions",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "quadratics-factoring",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q6",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "In a right triangle, the altitude drawn to the hypotenuse divides the hypotenuse into segments of lengths 4 and 9. What is the perimeter of the triangle?",
+      "choices": [
+        "$19$",
+        "$25$",
+        "$13+\\sqrt{13}$",
+        "$13+5\\sqrt{13}$",
+        "$13+6\\sqrt{13}$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The altitude is the geometric mean of the segments: $h=\\sqrt{4\\cdot9}=6$. Legs: $\\sqrt{16+36}=2\\sqrt{13}$ and $\\sqrt{81+36}=3\\sqrt{13}$; hypotenuse 13.",
+        "steps": [
+          "$h^2=4\\cdot9$, $h=6$.",
+          "Legs $2\\sqrt{13}$ and $3\\sqrt{13}$ (check: $52+117=169$).",
+          "Perimeter $=13+5\\sqrt{13}$."
+        ],
+        "fast": "Legs are $\\sqrt{13\\cdot4}$ and $\\sqrt{13\\cdot9}$.",
+        "trap": "Adding the segment lengths to the altitude ($4+9+6=19$) instead of finding the legs."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q7",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A sequence is defined by $a_1=3$ and $a_{n+1}=\\dfrac{1}{1-a_n}$ for $n\\ge1$. What is the sum of the first 100 terms?",
+      "choices": [
+        "$\\dfrac{209}{2}$",
+        "$\\dfrac{215}{2}$",
+        "$\\dfrac{323}{3}$",
+        "$\\dfrac{950}{3}$",
+        "$300$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The terms cycle $3, -\\frac12, \\frac23, 3, \\ldots$ with period 3 and cycle sum $\\frac{19}{6}$. 100 terms = 33 full cycles plus $a_{100}=3$.",
+        "steps": [
+          "$a_2=\\frac1{1-3}=-\\frac12$, $a_3=\\frac1{3/2}=\\frac23$, $a_4=\\frac1{1/3}=3$.",
+          "Cycle sum: $3-\\frac12+\\frac23=\\frac{19}{6}$.",
+          "$33\\cdot\\frac{19}{6}=\\frac{209}{2}$; add $a_{100}=a_1=3$: $\\frac{215}{2}$."
+        ],
+        "fast": "99 terms = 33 cycles; the 100th starts a new cycle.",
+        "trap": "Stopping at 33 cycles ($\\frac{209}{2}$) or using 34 cycles ($\\frac{323}{3}$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "sequences-patterns",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q8",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A closed cylindrical tank with radius 3 meters and length 10 meters lies on its side, so that its axis is horizontal. It holds water to a depth of 1.5 meters. What is the volume of the water, in cubic meters?",
+      "choices": [
+        "$15\\pi-\\dfrac{45\\sqrt3}{2}$",
+        "$30\\pi-45\\sqrt3$",
+        "$30\\pi-\\dfrac{45\\sqrt3}{2}$",
+        "$30\\pi$",
+        "$45\\pi$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The water's cross-section is a circular segment. The water surface is 1.5 m below the center, half the radius, so the chord subtends a central angle of $120^\\circ$.",
+        "steps": [
+          "$\\cos\\theta=\\frac{1.5}{3}=\\frac12$, half-angle $60^\\circ$, central angle $120^\\circ$.",
+          "Sector area $=\\frac13\\cdot9\\pi=3\\pi$; triangle area $=\\frac12\\cdot9\\sin120^\\circ=\\frac{9\\sqrt3}{4}$.",
+          "Segment $=3\\pi-\\frac{9\\sqrt3}{4}$; multiply by length 10: $30\\pi-\\frac{45\\sqrt3}{2}$."
+        ],
+        "fast": "Sanity check: about $55$ m$^3$, roughly a fifth of the $90\\pi\\approx283$ m$^3$ tank, which fits a depth of a quarter of the diameter.",
+        "trap": "Taking the sector without subtracting the triangle ($30\\pi$), or using the $60^\\circ$ half-angle as the central angle."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "solids-volume",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "circles",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q9",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "Line $\\ell$ passes through the point $(2, 5)$ and is perpendicular to the line $3x-4y=12$. At what point does $\\ell$ intersect the $x$-axis?",
+      "choices": [
+        "$\\left(-\\dfrac74, 0\\right)$",
+        "$\\left(\\dfrac{23}{4}, 0\\right)$",
+        "$\\left(\\dfrac{26}{3}, 0\\right)$",
+        "$\\left(-\\dfrac{14}{3}, 0\\right)$",
+        "$\\left(0, \\dfrac{23}{3}\\right)$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The given line has slope $\\frac34$, so $\\ell$ has slope $-\\frac43$: $y-5=-\\frac43(x-2)$. Setting $y=0$ gives $x=\\frac{23}{4}$.",
+        "steps": [
+          "$3x-4y=12 \\Rightarrow y=\\frac34x-3$, slope $\\frac34$.",
+          "Perpendicular slope $-\\frac43$.",
+          "$0-5=-\\frac43(x-2) \\Rightarrow x-2=\\frac{15}{4} \\Rightarrow x=\\frac{23}{4}$."
+        ],
+        "fast": "From $(2,5)$, dropping 5 units at slope $-\\frac43$ moves right $\\frac{15}{4}$.",
+        "trap": "Forgetting the sign flip ($-\\frac74$), forgetting the reciprocal ($\\frac{26}{3}$), or giving the $y$-intercept."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "coordinate-geometry",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q10",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "Pipe A alone can fill a tank in 6 hours and pipe B alone can fill it in 4 hours. A drain alone can empty the full tank in 12 hours. If the tank starts empty and both pipes and the drain are all open, how many hours will it take to fill the tank?",
+      "choices": [
+        "2",
+        "2.4",
+        "3",
+        "3.5",
+        "5"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Net rate $=\\frac16+\\frac14-\\frac1{12}=\\frac4{12}=\\frac13$ tank per hour, so 3 hours.",
+        "steps": [
+          "Rates: A $\\frac16$, B $\\frac14$, drain $-\\frac1{12}$.",
+          "Common denominator 12: $\\frac{2+3-1}{12}=\\frac13$.",
+          "Time $=3$ hours."
+        ],
+        "fast": "In 12 hours: A fills 2 tanks, B fills 3, the drain removes 1, a net 4 tanks.",
+        "trap": "Ignoring the drain gives 2.4; adding the drain's rate gives 2."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-rate",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q11",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "In the $xy$-plane, the points $(1, 2)$ and $(7, 6)$ are opposite vertices of a square. Which of the following is another vertex of the square?",
+      "choices": [
+        "$(1, 6)$",
+        "$(7, 2)$",
+        "$(2, 7)$",
+        "$(3, 8)$",
+        "$(6, 0)$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The other diagonal has the same midpoint $(4, 4)$, the same length, and is perpendicular. The half-diagonal vector $(3, 2)$ rotated by $90^\\circ$ is $(-2, 3)$, giving vertices $(2, 7)$ and $(6, 1)$.",
+        "steps": [
+          "Midpoint: $(4, 4)$; half-diagonal from the midpoint to $(7,6)$: $(3, 2)$.",
+          "Rotate $90^\\circ$: $(-2, 3)$ or $(2, -3)$.",
+          "Vertices: $(4-2, 4+3)=(2, 7)$ and $(6, 1)$.",
+          "Check: $(2,7)$ is at distance $\\sqrt{26}$ from both $(1,2)$ and $(7,6)$, and the two sides are perpendicular."
+        ],
+        "fast": "Test each choice: a vertex must be equidistant from both given points with a right angle between.",
+        "trap": "$(1,6)$ and $(7,2)$ complete a rectangle with horizontal and vertical sides, which is not a square because $6\\ne4$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "geometry-coordinate",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q12",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A rectangle has perimeter 34 and a diagonal of length 13. What is the area of the rectangle?",
+      "choices": [
+        "30",
+        "60",
+        "72",
+        "84.5",
+        "120"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$l+w=17$ and $l^2+w^2=169$. Then $2lw=(l+w)^2-(l^2+w^2)=289-169=120$, so $lw=60$.",
+        "steps": [
+          "$(l+w)^2=l^2+2lw+w^2$.",
+          "$289=169+2lw$, $lw=60$ (the 5-by-12 rectangle)."
+        ],
+        "fast": "Recognize the 5-12-13 triple: $5+12=17$.",
+        "trap": "Stopping at $2lw=120$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "area-perimeter",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q13",
+      "section": 2,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "Two parallel lines are cut by a transversal that is not perpendicular to them. Two of the eight angles formed have measures $(3x+10)^\\circ$ and $(5x-30)^\\circ$. Which of the following could be the value of $x$? Select all such values.",
+      "choices": [
+        "15",
+        "20",
+        "22.5",
+        "25",
+        "27.5",
+        "40"
+      ],
+      "key": {
+        "sel": [
+          1,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Any two of the eight angles are either equal or supplementary.",
+        "steps": [
+          "Equal: $3x+10=5x-30$, $x=20$ (both $70^\\circ$).",
+          "Supplementary: $8x-20=180$, $x=25$ ($85^\\circ$ and $95^\\circ$).",
+          "No other value works; for example, $x=40$ gives $130^\\circ$ and $170^\\circ$."
+        ],
+        "fast": "Set equal, then set the sum to 180.",
+        "trap": "Checking only the 'equal' case."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "lines-angles",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q14",
+      "section": 2,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "The equation $x^2+kx+36=0$ has two different integer solutions. Which of the following could be the value of $k$? Select all such values.",
+      "choices": [
+        "$-37$",
+        "$-12$",
+        "$12$",
+        "$13$",
+        "$15$",
+        "$20$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3,
+          4,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "If the roots are $r$ and $s$, then $rs=36$ and $k=-(r+s)$. Distinct integer factor pairs of 36 are $\\pm(1,36),\\pm(2,18),\\pm(3,12),\\pm(4,9)$, giving $k=\\mp37,\\mp20,\\mp15,\\mp13$.",
+        "steps": [
+          "Positive pairs give $k=-37,-20,-15,-13$; negative pairs give $k=37,20,15,13$.",
+          "$(6,6)$ and $(-6,-6)$ give $k=\\mp12$, but those are repeated roots, so they are excluded.",
+          "From the list: $-37$, 13, 15, 20."
+        ],
+        "fast": "List the factor pairs of 36 and drop the square pair.",
+        "trap": "Including $\\pm12$ from the double root $\\pm6$, or forgetting the negative factor pairs (which give positive $k$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quadratics-factoring",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "integers-properties",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q15",
+      "section": 2,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "For what value of the constant $k$ does the system of equations $kx+3y=6$ and $12x+ky=12$ have no solution $(x, y)$?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "-6"
+      },
+      "explanation": {
+        "key": "A linear system has no solution exactly when the lines are parallel but distinct: the coefficients are proportional and the constants are not. $\\frac{k}{12}=\\frac{3}{k}$ gives $k^2=36$, $k=\\pm6$. At $k=6$ the equations are $6x+3y=6$ and $12x+6y=12$, the same line (infinitely many solutions). At $k=-6$ they are $-6x+3y=6$ and $12x-6y=12$, i.e. $y=2x+2$ and $y=2x-2$: parallel and distinct.",
+        "steps": [
+          "Parallel lines: $\\frac{k}{12}=\\frac{3}{k}\\Rightarrow k^2=36$.",
+          "$k=6$: second equation is twice the first, so the lines coincide (infinitely many solutions).",
+          "$k=-6$: slopes both 2, intercepts $2$ and $-2$, so there is no solution.",
+          "Answer: $-6$."
+        ],
+        "fast": "Determinant $k^2-36=0$, then check which root makes the constants inconsistent.",
+        "trap": "Entering 6, which gives infinitely many solutions rather than none, or stopping at $k^2=36$ without testing both roots."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "linear-equations",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}
