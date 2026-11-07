@@ -3,6 +3,7 @@ import {
   HALF_LIFE_DAYS,
   INTERVALS_DAYS,
   P_WEIGHTS,
+  PENDING_FACTOR,
   RECENT_DAYS,
   RECENT_FACTOR,
   SMOOTH,
@@ -33,6 +34,8 @@ export interface ItemScore {
   streak: number;
   recent: boolean; // ×RECENT_FACTOR applied
   lastTestedAt: Date | null;
+  /** id of a registered, unfinished test that already targets this item */
+  pending?: string;
 }
 
 const DAY = 86_400_000;
@@ -136,4 +139,16 @@ export function scoreAll(
     else by.set(e.itemId, [e]);
   }
   return items.map((it) => scoreItem(it.id, by.get(it.id) ?? [], it.yield, now));
+}
+
+/**
+ * Items a registered but unfinished test already targets (as key / primary): the user has not
+ * answered them yet, so a new brief should not pick them again. The allocators use them only
+ * when nothing else is left, and P is damped. `pending` maps itemId -> the test id that holds it.
+ */
+export function markPending(scores: ItemScore[], pending: Map<string, string>): ItemScore[] {
+  return scores.map((s) => {
+    const test = pending.get(s.itemId);
+    return test ? { ...s, P: s.P * PENDING_FACTOR, pending: test, reason: `${s.reason}; already in untaken ${test}` } : s;
+  });
 }

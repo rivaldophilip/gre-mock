@@ -31,5 +31,7 @@ export const INTERVALS_DAYS = [1, 3, 7, 14, 30] as const;
 export const P_WEIGHTS = { S: 0.4, N: 0.3, D: 0.15, Y: 0.15 } as const;
 export const RECENT_DAYS = 2;
 export const RECENT_FACTOR = 0.3;
+/** Items already tested by a registered test the user has not finished: damped, and not drawn as new, until it is taken. */
+export const PENDING_FACTOR = 0.3;
 export const WORD_YIELD_SOURCES_CAP = 5;
 export const WORD_YIELD_BONUS = 0.2;

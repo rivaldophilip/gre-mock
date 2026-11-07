@@ -37,6 +37,7 @@ The section clock (`lib/clock.ts`) pauses while the test-taker is off the page (
 - Verbal: 29 key slots — 50% review (weakness evidence, ranked by P), 40% new (N·Y), 10% wildcard (random Y ≥ 0.6). If a bucket runs dry (first test: no history) the others fill in. ~40% of distractors come from weak words. Each RC passage gets 3–6 passage-tier words.
 - Quant: 27 concept slots — 50% highest weakness·yield, 35% least covered, 15% balance the four areas.
 - Reading skills: the 13 RC slots get skills from `data/rc_skills.json` by the same 50 / 35 / 15 rule. The 2 argument slots draw from the `argument` area, the other 11 from `reading`. Skills repeat when there are more slots than skills, and the brief lists official exemplars per skill.
+- **Untaken tests.** A registered test with no finished attempt has not produced any events yet. Its key words and primary skills or concepts are *pending*: P × 0.3 (`PENDING_FACTOR`), and the allocators take them only after every other candidate. So briefs made back to back spread across new targets instead of repeating the same weak items. Once the test is taken, its events count as usual. Where a pool is smaller than its slots (11 reading slots, 9 reading skills), pending items still fill the remainder.
 
 ## Reading skills
 

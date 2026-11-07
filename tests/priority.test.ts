@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { decay, intervalFor, scoreItem, wordYield, type LoggedEvent } from "@/lib/priority/compute";
 import { allocateWords, rng } from "@/lib/priority/allocate";
-import { scoreAll } from "@/lib/priority/compute";
+import { markPending, scoreAll } from "@/lib/priority/compute";
 
 const now = new Date("2026-11-06T00:00:00Z");
 const daysAgo = (d: number) => new Date(now.getTime() - d * 86_400_000);
@@ -80,5 +80,35 @@ describe("selection odds", () => {
     // 9 other slots spread over 39 equal words
     expect(others.reduce((a, b) => a + b, 0)).toBeCloseTo(9, 5);
     expect(Math.max(...others)).toBeLessThan(1);
+  });
+});
+
+describe("pending tests", () => {
+  // weak words a and b, plenty of untested words
+  const events: LoggedEvent[] = ["a", "b"].map((id) => ({ itemId: id, event: "key_missed", weight: 0.8, createdAt: daysAgo(10) }));
+  const items = ["a", "b", ...Array.from({ length: 20 }, (_, i) => `n${i}`)].map((id) => ({ id, yield: 0.5 }));
+  const base = scoreAll(items, events, now);
+
+  it("damps a pending item and names the test holding it", () => {
+    const [a, b] = markPending(base, new Map([["a", "verbal-002"]]));
+    expect(a.P).toBeCloseTo(base[0].P * 0.3);
+    expect(a.pending).toBe("verbal-002");
+    expect(a.reason).toMatch(/untaken verbal-002/);
+    expect(b.pending).toBeUndefined();
+  });
+
+  it("uses pending items only when nothing else is left", () => {
+    const all = markPending(base, new Map(items.slice(0, 20).map((it) => [it.id, "verbal-002"])));
+    const picks = allocateWords(all, 4, rng(3)).map((p) => p.itemId);
+    expect(picks).toHaveLength(4);
+    expect(picks.filter((id) => !all.find((s) => s.itemId === id)!.pending)).toHaveLength(2);
+  });
+
+  it("a second brief before the first test is taken picks different words", () => {
+    const first = allocateWords(base, 6, rng(1)).map((p) => p.itemId);
+    const pending = new Map(first.map((id) => [id, "verbal-002"]));
+    const second = allocateWords(markPending(base, pending), 6, rng(2)).map((p) => p.itemId);
+    expect(first).toEqual(expect.arrayContaining(["a", "b"]));
+    expect(second.filter((id) => first.includes(id))).toEqual([]);
   });
 });

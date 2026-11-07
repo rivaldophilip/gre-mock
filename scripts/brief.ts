@@ -6,7 +6,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { schema } from "../lib/db";
 import { oneTarget } from "./lib/accounts";
-import { scoreAll, type ItemScore, type LoggedEvent } from "../lib/priority/compute";
+import { markPending, scoreAll, type ItemScore, type LoggedEvent } from "../lib/priority/compute";
 import { allocateConcepts, allocateVerbalKeys, rng } from "../lib/priority/allocate";
 import { slotType, typeStats, TYPE_INFO, type SlotType } from "../lib/qtypes";
 
@@ -38,6 +38,22 @@ function previousTests() {
       passageTopics: (t.passages ?? []).map((p: { title?: string; paragraphs: string[] }) => p.title ?? p.paragraphs[0].slice(0, 70)),
       ...(i === files.length - 1 ? { stems: (t.questions ?? []).map((q: { prompt: string }) => q.prompt.slice(0, 60)) } : {}),
     }));
+}
+
+/**
+ * Items that registered tests without a finished attempt already target (key words, primary skills / concepts),
+ * as itemId -> test id. Making several tests before taking them then spreads the targets instead of repeating them.
+ */
+async function pendingItems(db: Awaited<ReturnType<typeof oneTarget>>["db"]) {
+  const tests = await db.select({ id: schema.tests.id }).from(schema.tests);
+  const taken = new Set((await db.select({ t: schema.attempts.testId, f: schema.attempts.finishedAt }).from(schema.attempts)).filter((a) => a.f).map((a) => a.t));
+  const untaken = new Set(tests.map((t) => t.id).filter((id) => !taken.has(id)));
+  const out = new Map<string, string>();
+  for (const r of await db.select().from(schema.questionItems)) {
+    const test = r.questionId.split(":")[0];
+    if (untaken.has(test) && (r.role === "key" || r.role === "primary") && !out.has(r.itemId)) out.set(r.itemId, test);
+  }
+  return { untaken: [...untaken].sort(), items: out };
 }
 
 /** Accuracy and pace per question type on this measure, most in need of practice first. */
@@ -130,14 +146,16 @@ async function main() {
   const conceptRows = await db.select().from(schema.concepts);
   const id = nextId();
   const refs = refItems();
-  const brief: Record<string, unknown> = { testId: id, measure, seed, generatedAt: now.toISOString(), blueprint, previous: previousTests(), slots: slotExemplars(refs), typeFocus: await typeFocus(db) };
+  const pending = await pendingItems(db);
+  if (pending.untaken.length) console.log(`untaken tests: ${pending.untaken.join(", ")}; ${pending.items.size} of their targets are damped`);
+  const brief: Record<string, unknown> = { testId: id, measure, seed, generatedAt: now.toISOString(), untakenTests: pending.untaken, blueprint, previous: previousTests(), slots: slotExemplars(refs), typeFocus: await typeFocus(db) };
   const focusNote =
     " typeFocus ranks question types by practice need (miss rate plus slowness against pace): put the weakest review words / skills / concepts on the slots of the top two types (need >= 0.4), so the practice lands where it is needed.";
 
   if (measure === "verbal") {
     const vocab = (await db.select().from(schema.vocab)).filter((v) => !v.pink);
     const byId = new Map(vocab.map((v) => [v.id, v]));
-    const scores = scoreAll(vocab.map((v) => ({ id: v.id, yield: v.yield })), logged, now);
+    const scores = markPending(scoreAll(vocab.map((v) => ({ id: v.id, yield: v.yield })), logged, now), pending.items);
     const keys = allocateVerbalKeys(scores, (wid) => !!byId.get(wid)?.isSecondary, 29, random);
     const used = new Set(keys.map((k) => k.itemId));
     const rest = scores.filter((s) => !used.has(s.itemId));
@@ -160,7 +178,7 @@ async function main() {
     const rcSlots = (blueprint.sections as { slots: { type: string }[] }[]).flatMap((sec) => sec.slots).filter((sl) => sl.type.startsWith("rc") || sl.type === "arg");
     const nArg = rcSlots.filter((sl) => sl.type === "arg").length;
     const skillRows = conceptRows.filter((c) => SKILL_AREAS.includes(c.area));
-    const skillScores = scoreAll(skillRows.map((c) => ({ id: c.id, yield: c.yield })), eventsOf("concept"), now);
+    const skillScores = markPending(scoreAll(skillRows.map((c) => ({ id: c.id, yield: c.yield })), eventsOf("concept"), now), pending.items);
     const skillArea = new Map(skillRows.map((c) => [c.id, c.area]));
     const pickSkills = (area: string, n: number) =>
       allocateConcepts(skillScores.filter((s) => skillArea.get(s.itemId) === area).map((s) => ({ ...s, area })), n, [area], random);
@@ -182,7 +200,7 @@ async function main() {
     });
   } else {
     const concepts = conceptRows.filter((c) => !SKILL_AREAS.includes(c.area));
-    const scores = scoreAll(concepts.map((c) => ({ id: c.id, yield: c.yield })), logged, now);
+    const scores = markPending(scoreAll(concepts.map((c) => ({ id: c.id, yield: c.yield })), logged, now), pending.items);
     const areaOf = new Map(concepts.map((c) => [c.id, c.area]));
     const withArea = scores.map((s) => ({ ...s, area: areaOf.get(s.itemId)! }));
     const picks = allocateConcepts(withArea, 27, ["arithmetic", "algebra", "geometry", "data"], random);
@@ -250,7 +268,9 @@ function bankSynonyms() {
 function briefMarkdown(b: Record<string, unknown>): string {
   const slots = b.slots as Slot[];
   const where = passageOfSlots(slots);
-  const lines: string[] = [`# Brief ${b.testId} (${b.measure}, seed ${b.seed})`, "", "## Slots", "", "| sec | slot | type | level | passage |", "|---|---|---|---|---|"];
+  const untaken = (b.untakenTests as string[] | undefined) ?? [];
+  const lines: string[] = [`# Brief ${b.testId} (${b.measure}, seed ${b.seed})`, "",
+    ...(untaken.length ? [`Untaken tests (their targets are damped, so this test spreads to other items): ${untaken.join(", ")}`, ""] : []), "## Slots", "", "| sec | slot | type | level | passage |", "|---|---|---|---|---|"];
   for (const s of slots) lines.push(`| ${s.section} | ${s.slot} | ${s.type} | ${s.level} | ${where.get(`${s.section}.${s.slot}`) ?? ""} |`);
   const focus = (b.typeFocus as { type: string; need: number }[]).filter((t) => t.need >= 0.4).map((t) => t.type);
   lines.push("", `Type focus (need >= 0.4, put the weakest items here): ${focus.length ? focus.join(", ") : "none"}`);

@@ -38,13 +38,15 @@ export function allocateWords(scores: ItemScore[], slots: number, random: () => 
     }
     return n;
   };
-  const review = scores.filter((s) => s.weakEvidence > 0 || s.C > 0).sort((a, b) => b.P - a.P);
+  // items an untaken test already targets wait until it is taken (last resort below)
+  const live = scores.filter((s) => !s.pending);
+  const review = live.filter((s) => s.weakEvidence > 0 || s.C > 0).sort((a, b) => b.P - a.P);
   // shuffle first so equal-yield words don't always come out alphabetically
-  const fresh = scores
+  const fresh = live
     .filter((s) => s.N === 1)
     .sort(() => random() - 0.5)
     .sort((a, b) => b.N * b.Y - a.N * a.Y);
-  const wildPool = scores.filter((s) => s.Y >= 0.6).sort(() => random() - 0.5);
+  const wildPool = live.filter((s) => s.Y >= 0.6).sort(() => random() - 0.5);
 
   let shortReview = take(review.filter((s) => s.weakEvidence > 0), nReview, "review");
   // fill the review shortfall from partly covered items, then from new
@@ -52,6 +54,7 @@ export function allocateWords(scores: ItemScore[], slots: number, random: () => 
   take(fresh, nNew + shortReview, "new");
   const shortWild = take(wildPool, nWild, "wildcard");
   take(fresh, shortWild, "new");
+  take(scores.filter((s) => s.pending).sort((a, b) => b.P - a.P), slots - out.length, "review");
   return out;
 }
 
@@ -76,7 +79,11 @@ export function allocateConcepts(
     count.set(s.area, (count.get(s.area) ?? 0) + 1);
   };
   const shuffled = [...scores].sort(() => random() - 0.5); // random tie-breaks
-  const fresh = (list: typeof scores) => list.filter((s) => !used.has(s.itemId)).concat(used.size >= scores.length ? list : []);
+  // unused first (reuse only once every concept is used), and items an untaken test already targets last
+  const fresh = (list: typeof scores) => {
+    const l = list.filter((s) => !used.has(s.itemId)).concat(used.size >= scores.length ? list : []);
+    return [...l.filter((s) => !s.pending), ...l.filter((s) => s.pending)];
+  };
   // weakness-evidence concepts first (by P), then high-yield ones to fill
   const byWeak = [...shuffled].sort((a, b) => (b.weakEvidence > 0 ? 1 : 0) - (a.weakEvidence > 0 ? 1 : 0) || (b.weakEvidence > 0 ? b.P - a.P : b.Y - a.Y));
   for (let i = 0; i < nWeak; i++) take(fresh(byWeak)[0], "review");
