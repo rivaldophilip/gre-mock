@@ -22,7 +22,8 @@
     "user:list": "tsx scripts/users.ts list",
     "user:remove": "tsx scripts/users.ts remove",
     "backfill:concepts": "tsx scripts/backfill-concept-events.ts",
-    "cleanup:unanswered": "tsx scripts/cleanup-unanswered-events.ts"
+    "cleanup:unanswered": "tsx scripts/cleanup-unanswered-events.ts",
+    "rebuild:words": "tsx scripts/rebuild-word-events.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",

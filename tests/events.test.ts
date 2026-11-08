@@ -27,7 +27,7 @@ describe("eventsForResponse", () => {
   });
   it("one key right, one distractor chosen", () => {
     const e = ev(eventsForResponse(se, "verbal", { sel: [0, 1] }, { guessed: false, timeMs: 1000 }));
-    expect(e).toEqual({ abate: "key_partial", mitigate: "key_missed", abase: "distractor_chosen" });
+    expect(e).toEqual({ abate: "key_correct", mitigate: "key_missed", abase: "distractor_chosen" });
   });
   it("guessed key", () => {
     const e = ev(eventsForResponse(se, "verbal", { sel: [0, 2] }, { guessed: true, timeMs: 1000 }));
@@ -51,7 +51,11 @@ describe("eventsForResponse", () => {
       ],
     };
     const e = ev(eventsForResponse(tc, "verbal", { sel: [1, 2] }, { guessed: false, timeMs: 1 }));
-    expect(e).toEqual({ b: "key_partial", d: "key_missed", f: "distractor_chosen" });
+    expect(e).toEqual({ b: "key_correct", d: "key_missed", f: "distractor_chosen" });
+    // the right blank's distractors were rejected; the wrong blank's unpicked ones say nothing
+    const tc3: Question = { ...tc, tags: [...tc.tags, { kind: "word", id: "c", role: "distractor", at: [0, 2] }, { kind: "word", id: "e", role: "distractor", at: [1, 1] }] };
+    const e3 = ev(eventsForResponse(tc3, "verbal", { sel: [1, 2] }, { guessed: true, timeMs: 1 }));
+    expect(e3).toEqual({ b: "key_guessed", d: "key_missed", f: "distractor_chosen", c: "distractor_rejected" });
   });
   it("concepts: wrong, right, slow", () => {
     const m: Question = {

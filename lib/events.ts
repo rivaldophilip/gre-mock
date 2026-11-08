@@ -33,10 +33,21 @@ function chosen(q: Question, a: Answer | undefined, at: number[] | undefined): b
   return a.sel.includes(at[0]);
 }
 
+/**
+ * Whether the part of the answer a word sits in was right. Each text-completion blank is judged on its own, and an
+ * SE key the test-taker picked is a right pick even when the other pick was wrong: only the wrong words count against.
+ */
+function partRight(q: Question, a: Answer | undefined, t: Tag, correct: boolean): boolean {
+  if (q.type === "tc" && t.at && "sel" in q.key) return a?.sel?.[t.at[0]] === q.key.sel[t.at[0]];
+  if (q.type === "se" && t.role === "key") return chosen(q, a, t.at);
+  return correct;
+}
+
 function wordEvent(q: Question, a: Answer | undefined, t: Tag, correct: boolean, guessed: boolean): ItemEvent | null {
   const base = { kind: "word" as const, itemId: t.id };
   if (t.role === "passage" || t.role === "stem") return { ...base, event: "exposure", weight: 0 };
   const picked = chosen(q, a, t.at);
+  correct = partRight(q, a, t, correct);
   if (t.role === "key") {
     if (!picked) return { ...base, event: "key_missed", weight: WORD_W.key_missed };
     if (!correct) return { ...base, event: "key_partial", weight: WORD_W.key_partial };

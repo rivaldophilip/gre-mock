@@ -7,6 +7,7 @@ import { avgTimeWhy, missWhy, needWhy, oddsWhy, paceWhy, weaknessWhy } from "@/l
 import { SLOW_MS } from "@/lib/priority/config";
 import { listTestIds, loadTest } from "@/lib/content";
 import { pairKey } from "@/lib/attempts";
+import { attemptNumbers, attemptTimeMs, fmtDuration, isListed } from "@/lib/attempt-summary";
 import { bandText, bandWhy, estimateBand, isAnswered } from "@/lib/scoring";
 import { slotType, typeStats, TYPE_INFO, type SlotType } from "@/lib/qtypes";
 import type { Answer, Question } from "@/lib/types";
@@ -14,7 +15,7 @@ import blueprints from "@/data/blueprints.json";
 import { SenseLine, type Sense } from "@/components/WordTagger";
 import { AppHeader } from "@/components/AppHeader";
 import { Explain } from "@/components/Explain";
-import { badge, card } from "@/components/ui";
+import { badge, card, seg, segItem } from "@/components/ui";
 
 export const dynamic = "force-dynamic";
 
@@ -23,9 +24,17 @@ const TRIALS = 200;
 const QUANT_AREAS = ["arithmetic", "algebra", "geometry", "data"];
 const slotsOf = (m: "verbal" | "quant") => blueprints[m].sections.flatMap((s) => s.slots.map((x) => x.type));
 const pct = (x: number) => `${Math.round(100 * x)}%`;
+const RANGES = [
+  { id: "7d", label: "7 days", days: 7 },
+  { id: "1m", label: "1 month", days: 30 },
+  { id: "3m", label: "3 months", days: 91 },
+  { id: "all", label: "All time", days: Infinity },
+] as const;
 
-export default async function Stats() {
+export default async function Stats({ searchParams }: { searchParams: Promise<{ range?: string }> }) {
   const db = await userDb();
+  const { range: rangeParam } = await searchParams;
+  const range = RANGES.find((r) => r.id === rangeParam) ?? RANGES[0];
   const [vocab, concepts, events, resp, attempts, qitems] = await Promise.all([
     db.select().from(schema.vocab),
     db.select().from(schema.concepts),
@@ -127,6 +136,25 @@ export default async function Stats() {
 
   const pctOf = (s: { n: number; ok: number }) => Math.round((100 * s.ok) / s.n);
 
+  // abandoned attempts are not listed and take no number
+  const listed = attempts.filter(isListed);
+  const numberOf = attemptNumbers(listed);
+  const bandOf = (a: (typeof attempts)[number]) => {
+    const s = byAttempt.get(a.id) ?? { correct: 0, guessed: 0 };
+    return a.finishedAt ? estimateBand(s.correct, s.guessed, tests.get(a.testId)?.questions.length ?? 0) : null;
+  };
+  // the summary counts finished attempts, by when they were finished
+  const since = now.getTime() - range.days * 86_400_000;
+  const inRange = listed.filter((a) => a.finishedAt && a.finishedAt.getTime() >= since);
+  const mean = (xs: number[]) => (xs.length ? xs.reduce((t, x) => t + x, 0) / xs.length : null);
+  const avgTimeMs = mean(inRange.map((a) => attemptTimeMs(a)));
+  const scoreSummary = (m: "verbal" | "quant") => {
+    const mids = inRange.filter((a) => tests.get(a.testId)?.measure === m).flatMap((a) => bandOf(a)?.mid ?? []);
+    return { n: mids.length, avg: mean(mids), best: mids.length ? Math.max(...mids) : null };
+  };
+  const vScore = scoreSummary("verbal");
+  const qScore = scoreSummary("quant");
+
   return (
     <>
       <AppHeader active="stats" />
@@ -135,6 +163,37 @@ export default async function Stats() {
           <h1 className="text-2xl font-semibold tracking-tight">Stats</h1>
           <p className="text-sm text-muted">What you have covered, and where to aim next.</p>
         </div>
+
+        <section className="space-y-3">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <h2 className="font-semibold">Attempts</h2>
+            <nav className={`${seg} w-full sm:w-auto`} aria-label="Period">
+              {RANGES.map((r) => (
+                <Link key={r.id} href={`/stats?range=${r.id}`} scroll={false} aria-current={r.id === range.id ? "page" : undefined} className={`${segItem(r.id === range.id)} whitespace-nowrap`}>
+                  {r.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+          <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+            <Tile label="Finished attempts" value={String(inRange.length)} note={`${vScore.n} verbal · ${qScore.n} quant`} />
+            <Tile
+              label="Avg time spent"
+              value={avgTimeMs === null ? "–" : fmtDuration(avgTimeMs)}
+              note="per attempt, pauses excluded"
+            />
+            <ScoreTile label="Avg verbal score" s={vScore} />
+            <ScoreTile label="Avg quant score" s={qScore} />
+          </div>
+          {inRange.length === 0 && (
+            <p className="text-sm text-muted">
+              No attempt finished in the last {range.label.toLowerCase()}.
+              {range.id !== "all" && listed.some((a) => a.finishedAt) && (
+                <> <Link href="/stats?range=all" scroll={false} className="font-medium text-accent hover:underline">Show all time</Link></>
+              )}
+            </p>
+          )}
+        </section>
 
         <Section title="Coverage">
           <div className="grid gap-3 sm:grid-cols-3">
@@ -244,17 +303,18 @@ export default async function Stats() {
         )}
 
         <Section title="Attempt history">
-          {attempts.length === 0 ? <Empty text="No attempts yet." /> : (
+          {listed.length === 0 ? <Empty text="No attempts yet." /> : (
             <ul className={`${card} divide-y divide-line overflow-hidden`}>
-              {[...attempts].reverse().map((a) => {
+              {[...listed].sort((x, y) => y.startedAt.getTime() - x.startedAt.getTime()).map((a) => {
                 const total = tests.get(a.testId)?.questions.length ?? 0;
                 const s = byAttempt.get(a.id) ?? { correct: 0, guessed: 0 };
-                const band = a.finishedAt ? estimateBand(s.correct, s.guessed, total) : null;
+                const band = bandOf(a);
                 return (
                   <li key={a.id} className="flex flex-wrap items-center gap-x-3 gap-y-1 px-4 py-3 text-sm">
-                    <Link className="font-medium underline-offset-4 hover:underline" href={`/test/${a.testId}/review/${a.id}`}>#{a.id} {a.testId}</Link>
+                    <Link className="font-medium underline-offset-4 hover:underline" href={`/test/${a.testId}/review/${a.id}`}>{a.testId} · attempt {numberOf.get(a.id)}</Link>
                     <span className="capitalize text-muted">{a.mode}{a.timerOn ? "" : ", untimed"}</span>
-                    <span className={badge(a.finishedAt ? "ok" : a.abandonedAt ? "muted" : "warn")}>{a.finishedAt ? "Finished" : a.abandonedAt ? "Abandoned" : "In progress"}</span>
+                    <span className={badge(a.finishedAt ? "ok" : "warn")}>{a.finishedAt ? "Finished" : "In progress"}</span>
+                    <span className="tabular-nums text-muted" title="Time on the section clocks, without pauses">{fmtDuration(attemptTimeMs(a))}</span>
                     {band && (
                       <span className="tabular-nums">
                         <span className="text-muted">{s.correct}/{total} · </span>
@@ -316,6 +376,28 @@ function Accuracy({ pct }: { pct: number }) {
       </span>
       {pct}%
     </span>
+  );
+}
+
+function Tile({ label, value, note, why }: { label: string; value: string; note: string; why?: string }) {
+  return (
+    <div className={`${card} space-y-1 p-4`}>
+      <div className="text-xs font-semibold uppercase tracking-[0.08em] text-muted">{label}</div>
+      <div className="font-mono text-2xl font-semibold">{why ? <Explain why={why}>{value}</Explain> : value}</div>
+      <div className="text-xs text-muted">{note}</div>
+    </div>
+  );
+}
+
+function ScoreTile({ label, s }: { label: string; s: { n: number; avg: number | null; best: number | null } }) {
+  if (s.avg === null) return <Tile label={label} value="–" note="no finished attempt" />;
+  return (
+    <Tile
+      label={label}
+      value={`~${Math.round(s.avg)}`}
+      note={`best ~${s.best} · ${s.n} attempt${s.n === 1 ? "" : "s"}`}
+      why={`Mean of the strict score estimates (the middle of each band) of ${s.n} finished attempt${s.n === 1 ? "" : "s"} in this period, on the 130–170 scale. Untimed attempts count too.`}
+    />
   );
 }
 

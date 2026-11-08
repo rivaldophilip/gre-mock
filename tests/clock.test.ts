@@ -33,6 +33,8 @@ describe("section clock with practice-mode pauses", () => {
     expect(paused({ startedAt: iso(0), finishedAt: iso(5) }, at(20))).toBeNull();
     expect(paused({}, at(20))).toBeNull();
     expect(elapsedMs(undefined, at(20))).toBe(0);
+    expect(elapsedMs({ startedAt: iso(0), finishedAt: iso(600) }, at(90_000))).toBe(600_000); // stops at the end
+    expect(elapsedMs({ startedAt: iso(0), pausedMs: 30_000, pausedAt: iso(500), finishedAt: iso(600) }, at(90_000))).toBe(470_000);
   });
 });
 

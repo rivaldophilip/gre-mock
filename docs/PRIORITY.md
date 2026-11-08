@@ -12,11 +12,13 @@ Positive weight = evidence of weakness, negative = mastery.
 | `key_missed` | answer word you did not select | +0.8 |
 | `distractor_chosen` | wrong word you selected | +0.6 |
 | `key_guessed` | key selected, question flagged "guessed" | +0.3 |
-| `key_partial` | key selected but the question was wrong (e.g. other SE pick wrong) | −0.3 |
+| `key_partial` | key selected but the question was wrong (other types; not TC or SE, see below) | −0.3 |
 | `key_correct` | key selected, question right, not guessed | −0.6 |
 | `key_slow` | as `key_correct`, but the question took > 90 s (logged in addition) | +0.2 |
 | `distractor_rejected` | distractor not picked on a question you got right | −0.15 |
 | `exposure` | word in a passage/stem | 0 (coverage only) |
+
+Text completion and SE are judged per word: on a wrong question, a right blank (TC) or a right pick (SE) logs `key_correct` (or `key_guessed`), and the distractors of a right blank `distractor_rejected`; only the wrong blank's or pick's words log `key_missed` / `distractor_chosen`. `npm run rebuild:words [-- --apply]` re-derives the word events that older TC/SE answers logged.
 
 Concepts: primary wrong +0.8, secondary wrong +0.4, right-but-guessed +0.3, right-but-slow +0.2 (>105 s quant, >90 s verbal), primary right −0.6, secondary right −0.3.
 

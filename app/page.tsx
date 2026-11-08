@@ -6,6 +6,7 @@ import { conceptNames, listTestIds, loadTest } from "@/lib/content";
 import { matchCount } from "@/lib/search";
 import { isClosed, pairKey, sectionStatus, type SectionState } from "@/lib/attempts";
 import { isAway } from "@/lib/clock";
+import { attemptNumbers, attemptTimeMs, fmtDuration, isListed } from "@/lib/attempt-summary";
 import { bandText, estimateBand, isAnswered } from "@/lib/scoring";
 import type { Answer, Question } from "@/lib/types";
 import { StartForm } from "@/components/StartForm";
@@ -38,7 +39,9 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
   const tests = all.filter((t) => t.measure === measure && (!query || hits.has(t.id)));
   const otherHits = query ? all.filter((t) => t.measure === other && hits.has(t.id)).length : 0;
   const tabHref = (m: string) => `/?tab=${m}${query ? `&q=${encodeURIComponent(query)}` : ""}`;
-  const attempts = await db.select().from(schema.attempts).orderBy(desc(schema.attempts.startedAt));
+  // abandoned attempts are not listed and take no number: each test counts its own attempts from 1
+  const attempts = (await db.select().from(schema.attempts).orderBy(desc(schema.attempts.startedAt))).filter(isListed);
+  const numberOf = attemptNumbers(attempts);
   const correct = new Map<number, number>();
   const guessed = new Map<number, number>();
   const answered = new Map<number, number>();
@@ -69,8 +72,7 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
       minutes: t.sections.reduce((s, x) => s + x.minutes, 0),
       open,
       done,
-      // abandoned attempts stay listed, but only a finished one (exam or practice) makes the test done
-      latest: done.find((a) => a.finishedAt),
+      latest: done[0],
     };
   });
   type View = (typeof views)[number];
@@ -132,20 +134,12 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
     );
   };
 
-  const newRow = ({ t, total, minutes, done }: View) => (
+  const newRow = ({ t, total, minutes }: View) => (
     <li key={t.id} className={`${row} flex flex-col gap-2.5 border-line bg-surface sm:flex-row sm:items-center sm:gap-3`}>
       <div className="min-w-0 flex-1">
         <h2 className="font-semibold leading-snug">{t.title}{hit(t.id)}</h2>
         <p className="text-sm text-muted">
           {total} questions · {minutes} min
-          {done.map((a) => (
-            <span key={a.id}>
-              {" · "}
-              <Link href={`/test/${t.id}/review/${a.id}`} className="underline decoration-line underline-offset-2 hover:text-fg">
-                attempt {a.id} abandoned
-              </Link>
-            </span>
-          ))}
         </p>
       </div>
       <StartForm testId={t.id} />
@@ -164,8 +158,8 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
           <li key={a.id}>
             <Link href={`/test/${t.id}/review/${a.id}`} className="group flex items-center gap-3 rounded-lg bg-surface-2 px-3 py-2 text-sm transition-colors hover:bg-line/60">
               <span className="flex-1 text-muted">
-                Attempt {a.id} · <span className="capitalize">{a.mode}</span>
-                {!a.finishedAt && <> · <span className={badge("muted")}>Abandoned</span></>}
+                Attempt {numberOf.get(a.id)} · <span className="capitalize">{a.mode}</span> ·{" "}
+                <span className="tabular-nums" title="Time on the section clocks, without pauses">{fmtDuration(attemptTimeMs(a))}</span>
               </span>
               {score(a, total)}
               <IconNext size={15} className={`${chevron} group-hover:translate-x-0.5`} />

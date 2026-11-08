@@ -34,9 +34,10 @@ export function isAway(st: SectionClock | undefined, now = Date.now()): boolean 
   return stoppedAt(st, now) !== null;
 }
 
-/** Time the section clock has actually run: wall time since start minus every pause, including a current one. */
+/** Time the section clock has actually run: wall time since start minus every pause, including a current one. A finished clock stops at finishedAt. */
 export function elapsedMs(st: SectionClock | undefined, now = Date.now()): number {
   if (!st?.startedAt) return 0;
+  if (st.finishedAt) now = Math.min(now, new Date(st.finishedAt).getTime());
   const stop = stoppedAt(st, now);
   const paused = (st.pausedMs ?? 0) + (stop !== null ? Math.max(0, now - stop) : 0);
   return Math.max(0, now - new Date(st.startedAt).getTime() - paused);
