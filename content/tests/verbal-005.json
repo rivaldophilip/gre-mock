@@ -1,0 +1,1845 @@
+{
+  "id": "verbal-005",
+  "measure": "verbal",
+  "title": "Verbal Hard Mock 5",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 18
+    },
+    {
+      "n": 2,
+      "minutes": 23
+    }
+  ],
+  "passages": [
+    {
+      "id": "p1",
+      "paragraphs": [
+        "When a nineteenth-century naturalist called the lake a microcosm, he gave limnology an image that would organize the discipline for half a century. A lake, on this view, was a small world whose shoreline delimited it as cleanly as the walls of a flask: its fish, plankton and dissolved nutrients formed a system whose fluctuations were explicable by processes internal to the water. The image was more than ornament. It licensed a research program in which one basin, sampled season after season, could stand for a type, and in which local observation promised general laws.",
+        "Later limnologists are often said to have overturned this picture by showing that lakes are not closed at all: streams, groundwater and the leaf litter of surrounding forests deliver much of the carbon on which many lakes' food webs depend, so that a lake divorced from its watershed is an abstraction. Yet the reversal was less complete than the usual account implies. The watershed studies that exposed the lake's openness relied on habits the microcosm had instilled, treating the basin as the unit of measurement and keeping a budget of what enters and leaves it, and their most striking finding, that some lakes respire more carbon than their own plankton fix, could be stated only as an imbalance within such a budget. The closed lake survived, in other words, as the fulcrum of the very method that dismantled it as a description."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "delimit",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "explicable",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "divorced",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "fulcrum",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "paragraphs": [
+        "The portolan charts of the late Middle Ages, drawn on sheepskin for Mediterranean pilots, have long embarrassed historians of cartography. Their coastlines are startlingly accurate, yet they predate any method of fixing longitude at sea and ignore the theoretical geography the universities taught. Earlier historians, unable to reconcile such skill with such ignorance, were inclined to explain the charts away: some posited a lost ancient survey, others a single deft compiler whose work later copyists merely transmitted. Recent scholars have regarded these stories with a jaundiced eye. Measurements of distortion across hundreds of surviving charts show errors that accumulate region by region, as would be expected if each stretch of coast had been assembled from pilots' compass bearings and estimated sailing times and then joined to its neighbors. The charts' accuracy, on this view, needs no lost source: it is a demotic achievement, the sediment of countless voyages, each correcting the last."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "inclined",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "deft",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "jaundice",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "demotic",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "a1",
+      "paragraphs": [
+        "Until two years ago, Wexmoor College gave letter grades in all of its courses. It then began grading every first-year course on a pass/fail basis. Since the change, the proportion of first-year students who enroll in the college's advanced mathematics electives has nearly doubled. The dean concludes that, under letter grading, concern about receiving a low grade had been deterring capable first-year students from attempting demanding courses."
+      ],
+      "tags": []
+    },
+    {
+      "id": "p3",
+      "paragraphs": [
+        "Few findings in behavioral economics have been more widely publicized than the power of defaults. When employers enroll new workers in a retirement plan automatically, leaving them free to withdraw, participation far exceeds that under plans requiring workers to sign up, though the choice offered is formally identical. The early literature attributed the gap to inertia: opting out takes effort, however slight, and people forbear from spending it on decisions whose payoff lies decades away. On this account the default position is fungible: any option placed there should hold roughly the same share of the undecided.",
+        "That prediction has not fared well. When experimenters make an unattractive option the default, such as a contribution rate high enough to strain most budgets, far more people abandon it than inertia alone would allow, and the share who remain depends on who is thought to have chosen it. Defaults presented as an employer's recommendation hold more participants than identical defaults described as assigned by lottery. Such results suggest that people read a default as advice, a tacit and faintly hortatory message about what a knowledgeable party thinks they ought to do.",
+        "It would be hasty, though, to replace inertia with endorsement wholesale. Even the lottery defaults, which carry no advice at all, retain more participants than an active-choice design would predict, and the retention is greatest among workers who report the least interest in financial matters. The two mechanisms are better seen as layered: endorsement determines how far a default can stray from what people would otherwise choose, while inertia holds in place those who have given the question no thought. Policy designers who deify the default as a nearly costless lever, indiscriminate in its effects, mistake a conditional phenomenon for a law."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "forbear",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "fungible",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "hortatory",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "deify",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "indiscriminate",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "paragraphs": [
+        "To the reformers who campaigned against it, benefit of clergy was the very type of legal absurdity. A privilege that had once removed accused clerics to the church's courts had by the seventeenth century been extended to any defendant who could read a set verse of scripture, so that a convicted thief might escape the gallows by reciting lines that many had simply memorized. Reformers berated the courts for maintaining a fiction so transparent that judges and prisoners alike knew it for one, and historians long echoed their hauteur, treating the doctrine as a relic that a hidebound profession lacked the nerve to abolish.",
+        "That verdict mistakes the fiction for the function. In an age when Parliament attached death to an ever-lengthening list of felonies, the reading test gave judges a means of sparing first offenders without openly defying statutes they had no power to amend; branding on the thumb, which prevented a second claim, turned the privilege into something like a formal warning. None of this makes the doctrine admirable. That it rewarded literacy, and so favored the defendant who had been schooled, was a defect its defenders never answered. But a device that let the law's letter stand while its severity was quietly relieved is better understood as the courts' deft accommodation of an execrable penal code than as a symptom of their indolence."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "berate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "hauteur",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "hidebound",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "deft",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "execrable",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "paragraphs": [
+        "For most of the nineteenth and early twentieth centuries, the temperature of the sea surface was taken by hauling a bucket of seawater onto a ship's deck and inserting a thermometer. The method seems artless, but its errors were systematic rather than random. Water in an uninsulated canvas bucket cools by evaporation while it waits to be read, and how much it cools depends on the wind, the air temperature and the patience of the sailor holding the thermometer; the dogged empiricism of later researchers, who swung replica buckets on deck in measured winds and timed the loss, has put numbers on each factor. When ships began instead to report the temperature of the water drawn in to cool their engines, the readings ran warm, because intake pipes pass through heated engine rooms.",
+        "Climatologists assembling a century of observations thus confront not one record but several, each with its own bias, spliced together at the dates when fleets changed their practices. A sudden warming in the combined series may reflect a change in how the sea was measured rather than in the sea itself. The corrections that remove such artifacts are sometimes dismissed by dissident commentators as factitious, a device for manufacturing whatever trend their authors prefer. The suspicion would carry more weight if the corrections ran in the direction their critics impute to them; taken together, however, they reduce rather than enlarge the century-scale warming that the raw ocean readings show. None of this means the record is settled: for the years in which fleets were changing over, even the share of readings made by each method is uncertain, and so, therefore, is the size of the correction."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "dogged",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "empiricism",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "dissident",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "factitious",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "paragraphs": [
+        "At auctions of rare wines, bottles whose labels are stained or torn sell for markedly less than bottles from the same lot whose labels are intact. Yet when panels of experienced tasters sampled, without seeing the bottles, wine from damaged-label and intact-label bottles of the same lots, they could not reliably tell the two apart and rated them equally. Moreover, at these auctions label damage almost always results from cellar humidity, which, if anything, helps preserve wine during long storage."
+      ],
+      "tags": []
+    }
+  ],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "That reviewers singled out the continuity editing and the punctual delivery on budget as the chief merits of the director's studio debut told admirers of her hallucinatory short films everything they needed to know: the new picture was ___.",
+      "blanks": [
+        [
+          "lurid",
+          "eccentric",
+          "pellucid",
+          "novel",
+          "pedestrian"
+        ]
+      ],
+      "key": {
+        "sel": [
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Praise confined to editing continuity and staying on budget is faint praise: it tells admirers of daring work that the film had nothing more remarkable to offer. Pedestrian here is the adjective sense, dull and uninspired.",
+        "distractors": {
+          "lurid": "Sensational and vivid: it echoes 'hallucinatory', but that describes the short films the debut is being contrasted with.",
+          "eccentric": "Unconventional: the opposite of what faint praise for routine competence implies.",
+          "pellucid": "Clear: a compliment, whereas the sentence uses the merits named to damn the film.",
+          "novel": "New and original: the opposite of the implied judgment."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "lurid",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "eccentric",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pellucid",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "novel",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pedestrian",
+          "role": "key",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 3,
+      "prompt": "Visitors who knew the reform order only by its founding rule, which forbade ornament of any kind, expected its houses to be uniformly (i) ___; they were unprepared for the abbot's quarters, whose gilt and brocade seemed chosen less to indulge a private weakness than to (ii) ___ that rule before every guest.",
+      "blanks": [
+        [
+          "opulent",
+          "austere",
+          "inscrutable"
+        ],
+        [
+          "flout",
+          "disseminate",
+          "uphold"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) A rule forbidding ornament leads visitors to expect plain, severe houses: austere. (ii) Gilt and brocade displayed 'before every guest', and not as a private weakness, amount to open, contemptuous disregard of the rule: flout.",
+        "distractors": {
+          "opulent": "Lavish: what the abbot's quarters were, not what the rule led visitors to expect.",
+          "inscrutable": "Mysterious: nothing about the rule suggests hidden meaning.",
+          "disseminate": "To spread: displaying gilt does not spread a rule against ornament.",
+          "uphold": "Gilt contradicts a rule against ornament, so it cannot uphold it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "opulent",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "austere",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inscrutable",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "flout",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "disseminate",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The editor's preface boasts that no single sensibility governs the anthology, and the table of contents, which sets pulp serials beside sermons and laboratory notebooks, appears to bear out her claim that the collection is (i) ___. Read through, however, the pieces converge: nearly every one, whether a detective's confession or a chemist's log, pauses at its close to draw the lesson its reader is meant to carry away, so that the diversity proves (ii) ___ and the book, whatever its sources, is at bottom (iii) ___.",
+      "blanks": [
+        [
+          "monotonous",
+          "hortatory",
+          "eclectic"
+        ],
+        [
+          "pronounced",
+          "nominal",
+          "patent"
+        ],
+        [
+          "didactic",
+          "laconic",
+          "discreet"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) The editor's claim, which the varied contents seem to support, is that the book draws on many sources: eclectic. (ii) 'However... converge' turns against that claim: the variety exists in name only, so nominal. (iii) Pieces that each end by drawing a lesson make the book instructive and moralizing: didactic.",
+        "distractors": {
+          "monotonous": "Contradicts the editor's boast about variety.",
+          "hortatory": "True of the book as the second sentence reveals it, but it is not what the editor claims or what the varied table of contents supports.",
+          "pronounced": "The diversity is visible in the contents, but 'however... converge' says it does not hold up on reading.",
+          "patent": "Obvious: the same trap as pronounced, the surface variety rather than what reading shows.",
+          "laconic": "Brief: closing every piece with a lesson is the reverse of saying little.",
+          "discreet": "Reserved: a book that spells out its morals is not discreet."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "monotonous",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hortatory",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "eclectic",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pronounced",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nominal",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "patent",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "didactic",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "laconic",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "discreet",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Observers who remembered the coalition's founding convention, at which merely adopting an agenda consumed three days, had braced for a ___ caucus once the alliance took office; what astonished them was the discipline with which its members voted.",
+      "choices": [
+        "contentious",
+        "placid",
+        "acerbic",
+        "fractious",
+        "caustic",
+        "docile"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "A three-day fight over an agenda leads observers to expect a quarrelsome caucus, and 'discipline' is what surprised them. Contentious and fractious both mean quarrelsome and hard to manage.",
+        "distractors": {
+          "placid": "Trap pair with docile: calm and compliant describes what the caucus turned out to be, not what observers braced for.",
+          "docile": "Trap pair with placid: the wrong polarity.",
+          "acerbic": "Trap pair with caustic: sharp-tongued describes a manner of speaking, not a body prone to infighting, and it is not the opposite of disciplined voting.",
+          "caustic": "Trap pair with acerbic: biting in speech, not quarrelsome as a group."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "contentious",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "placid",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "acerbic",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fractious",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "caustic",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "docile",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "se",
+      "difficulty": 3,
+      "prompt": "Having spent two decades dismissing the novelist as a mere purveyor of entertainments, the critic startled his readers by choosing, in his final column, to ___ her late work, a reversal his rivals attributed less to conversion than to his instinct for which way taste was turning.",
+      "choices": [
+        "censure",
+        "extol",
+        "eclipse",
+        "laud",
+        "castigate",
+        "enhance"
+      ],
+      "key": {
+        "sel": [
+          1,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "A 'reversal' of years of dismissal means praise: extol and laud.",
+        "distractors": {
+          "censure": "Trap pair with castigate: criticism continues the dismissal and is no reversal.",
+          "castigate": "Trap pair with censure: the wrong polarity.",
+          "eclipse": "To overshadow: a column cannot eclipse a novel, and the word carries no reversal.",
+          "enhance": "A review does not improve the work it reviews."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "censure",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "extol",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "eclipse",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "laud",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "castigate",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "enhance",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Those who mistook her marginal comments for mere economy (they seldom ran beyond a phrase) missed what made authors dread them: not their tone, which was unfailingly gentle, but that they were so ___, each finding at once the weakness its author had hoped would pass unnoticed.",
+      "choices": [
+        "terse",
+        "incisive",
+        "acerbic",
+        "laconic",
+        "trenchant",
+        "pithy"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The sentence rules out brevity ('mistook... for mere economy') and harshness ('not their tone'); what remains is penetrating insight, each comment going straight to the hidden weakness. Incisive and trenchant both mean sharply perceptive.",
+        "distractors": {
+          "terse": "Trap pair with laconic: brevity is exactly the 'mere economy' the sentence says observers mistook for the point.",
+          "laconic": "Trap pair with terse: the same brevity trap.",
+          "pithy": "Concise and meaningful: closer, but still praises economy, which the sentence sets aside.",
+          "acerbic": "Harsh in tone: ruled out by 'not their tone, which was unfailingly gentle'."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "terse",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "incisive",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "acerbic",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "laconic",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "trenchant",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pithy",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "His defenders called his silence during the purge discretion; the colleagues whose dismissals he had watched without a word, and who noticed how promptly he found his voice once speaking carried no risk, judged him ___.",
+      "choices": [
+        "discreet",
+        "craven",
+        "prudent",
+        "phlegmatic",
+        "taciturn",
+        "pusillanimous"
+      ],
+      "key": {
+        "sel": [
+          1,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "The semicolon sets the colleagues against the defenders. Silence while others were dismissed, followed by speech once it was safe, shows fear rather than discretion: craven and pusillanimous both mean cowardly.",
+        "distractors": {
+          "discreet": "Trap pair with prudent: this is the defenders' charitable view, which the colleagues reject.",
+          "prudent": "Trap pair with discreet: the defenders' reading.",
+          "taciturn": "Habitually silent: it echoes 'silence', but he spoke readily once speaking was safe, so the silence was not temperament.",
+          "phlegmatic": "Calm and unexcitable: describes temperament, not the moral failing the colleagues saw."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "discreet",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "craven",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "prudent",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "phlegmatic",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "taciturn",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pusillanimous",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p1",
+      "prompt": "The primary purpose of the passage is to",
+      "choices": [
+        "defend the nineteenth-century conception of the lake as an accurate description of how lakes function",
+        "argue that an idea commonly said to have been discarded by limnologists persisted in another capacity",
+        "explain how watershed studies established that some lakes respire more carbon than their plankton fix",
+        "refute the claim that lakes receive much of their carbon from their surroundings",
+        "trace the development of limnology from its nineteenth-century origins to the present"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The author accepts that the closed-lake picture was abandoned as a description but argues that it survived as the method, the basin budget, of the studies that overturned it. The passage qualifies the 'overturned' story rather than rejecting it.",
+        "distractors": {
+          "defend the nineteenth-century conception of the lake as an accurate description of how lakes function": "The author says the method 'dismantled it as a description'.",
+          "explain how watershed studies established that some lakes respire more carbon than their plankton fix": "Too narrow: the carbon finding is evidence for the main point.",
+          "refute the claim that lakes receive much of their carbon from their surroundings": "The author accepts that claim.",
+          "trace the development of limnology from its nineteenth-century origins to the present": "Too broad and too neutral: the passage makes an argument about one idea."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-main-idea",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "rc_multi",
+      "difficulty": 5,
+      "passageId": "p1",
+      "prompt": "Consider each of the choices separately and select all that apply. The passage supports which of the following statements about the watershed studies?",
+      "choices": [
+        "They depended on a form of accounting that the view they undermined had made habitual.",
+        "They met initial resistance from investigators who still regarded the lake as a closed system.",
+        "They confirmed the earlier program's assumption that a single lake can stand for a type."
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "A: Supported. The studies 'relied on habits the microcosm had instilled', including 'keeping a budget of what enters and leaves', and the microcosm view is the one they undermined. B: Plausible as history, but the passage says nothing about resistance. C: Half-right. The studies kept the basin as the unit of measurement, but the passage never says they kept the claim that one lake stands for a type; their finding concerns 'some lakes'.",
+        "distractors": {}
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "In the context in which it appears, \"jaundiced\" most nearly means",
+      "choices": [
+        "discolored with age",
+        "envious",
+        "weary",
+        "distrustful",
+        "indulgent"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Recent scholars doubt the stories of a lost survey or a lone genius and offer a different explanation, so a jaundiced eye here is a skeptical, distrustful one.",
+        "distractors": {
+          "discolored with age": "The literal sense, suggested by old sheepskin charts, but the word describes the scholars' view.",
+          "envious": "A dictionary sense of the word, but nothing suggests the scholars envy the earlier historians.",
+          "weary": "The scholars reject the stories on evidence; they are not tired of them.",
+          "indulgent": "The opposite: they do not tolerate the stories."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-vocab-context",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "rc_select",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "Select the sentence that presents evidence bearing on how the charts were actually compiled.",
+      "key": {
+        "sel": [
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The fifth sentence (Measurements of distortion...) reports measured patterns of error, which fit assembly from pilots' bearings and sailing times. The third sentence reports speculations rather than evidence, and the sixth draws the conclusion."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-detail",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 4,
+      "passageId": "a1",
+      "prompt": "Which of the following, if true, most strengthens the dean's conclusion?",
+      "choices": [
+        "First-year students under pass/fail grading report spending fewer hours each week on coursework than first-year students reported under letter grading.",
+        "Over the same period, the rate at which Wexmoor's upper-class students, who are still letter-graded, enroll in the advanced mathematics electives has remained essentially unchanged.",
+        "Several of the advanced mathematics electives are now taught by instructors whom students rate as more approachable than the instructors they replaced.",
+        "First-year students who passed an advanced elective under pass/fail grading were more likely than earlier students to take further mathematics courses.",
+        "The college adopted pass/fail grading partly in response to complaints from parents about the stress of the first year."
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The dean credits the grading change, which applied only to first-year courses. If the still letter-graded upper-class students show no rise, a general trend such as new instructors, a stronger cohort or fashion is less likely to explain the doubling, so the grading change becomes the more plausible cause.",
+        "distractors": {
+          "Several of the advanced mathematics electives are now taught by instructors whom students rate as more approachable than the instructors they replaced.": "Offers a rival cause, so it weakens.",
+          "First-year students who passed an advanced elective under pass/fail grading were more likely than earlier students to take further mathematics courses.": "About what happened after enrollment, not why enrollment rose.",
+          "The college adopted pass/fail grading partly in response to complaints from parents about the stress of the first year.": "The motive for the policy says nothing about its effect on course choice.",
+          "First-year students under pass/fail grading report spending fewer hours each week on coursework than first-year students reported under letter grading.": "About effort once enrolled, not about what kept students out of demanding courses; if anything it suggests a different effect of the policy."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-strengthen",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q1",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Far from forestalling a run on the bank, the regulators' reassuring announcement, the first public sign that anyone had been watching the bank closely at all, may have helped ___ one, by informing depositors who had heard nothing that there was something to watch.",
+      "blanks": [
+        [
+          "scuttle",
+          "eclipse",
+          "precipitate",
+          "dispatch",
+          "censure"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "'Far from forestalling' requires the opposite of preventing: the announcement brought on a run that had not yet begun. Precipitate means to cause something to happen suddenly or prematurely.",
+        "distractors": {
+          "scuttle": "To sink or wreck: helping to scuttle a run would mean preventing it, which is what the announcement failed to do.",
+          "eclipse": "To overshadow: there was no run yet to overshadow.",
+          "dispatch": "To finish off quickly: the same polarity as forestalling.",
+          "censure": "To criticize formally: an announcement does not criticize a run."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "scuttle",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "eclipse",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "precipitate",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dispatch",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "censure",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q2",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "That the trustees, who for decades had answered every proposal for a second building by reciting the founder's stipulation that the collection be kept under one roof, should have (i) ___ that stipulation the moment the holdings began to (ii) ___ will surprise only those who mistook their piety for conviction: a rule invoked chiefly because it cost nothing to obey was never likely to survive the first occasion on which obeying it would.",
+      "blanks": [
+        [
+          "enshrine",
+          "jettison",
+          "reaffirm"
+        ],
+        [
+          "dwindle",
+          "diverge",
+          "burgeon"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The colon explains the first clause: a rule kept only because obeying it was free will not survive once obeying it costs something. So (i) the trustees discarded the stipulation: jettison. (ii) Obeying a one-roof rule becomes costly only when the collection outgrows its building: burgeon. 'Will surprise only those who mistook their piety for conviction' is the ironic pivot: the reversal is unsurprising to anyone who saw through the trustees' reverence.",
+        "distractors": {
+          "enshrine": "Their old posture toward the rule; the colon says the rule did not survive.",
+          "reaffirm": "Same polarity as enshrine: a reaffirmation would surprise no one and would not be the rule's failing to 'survive'.",
+          "dwindle": "A shrinking collection makes the one-roof rule cheaper to obey, not costly.",
+          "diverge": "Branching apart creates no pressure on space, so obeying the rule would still cost nothing."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "jettison",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "diverge",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "burgeon",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q3",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Historians who (i) ___ medieval chroniclers as (ii) ___ rarely notice how often those same chroniclers marked a marvel as something they had merely heard; such caveats, though plainly (iii) ___ to the charge, tend to vanish from the anthologies from which the charge is usually argued.",
+      "blanks": [
+        [
+          "extol",
+          "exonerate",
+          "disparage"
+        ],
+        [
+          "credulous",
+          "skeptical",
+          "taciturn"
+        ],
+        [
+          "extraneous",
+          "implicit",
+          "pertinent"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Blanks (i) and (ii) depend on each other. 'The charge' makes the historians' description an accusation, and caveats marking stories as hearsay are what would rebut a charge of believing every marvel. So (i) disparage and (ii) credulous. (iii) 'Though plainly ___, tend to vanish' needs a contrast: the caveats bear directly on the charge and are still left out, so pertinent.",
+        "distractors": {
+          "extol": "Extol... as skeptical would read smoothly, but praise is not 'the charge', and the hearsay caveats would confirm such praise, not escape notice.",
+          "exonerate": "To clear: the historians are making an accusation, not clearing anyone.",
+          "skeptical": "The hearsay caveats show skepticism, which is what the historians fail to notice, not what they assert.",
+          "taciturn": "Reticent: chroniclers who record marvels are not accused of silence.",
+          "extraneous": "Irrelevant: it removes the contrast that 'though' requires, since irrelevant caveats would naturally be dropped.",
+          "implicit": "Unstated: the caveats are explicit markings, and 'implicit to' is not idiomatic."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "extol",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exonerate",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "disparage",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "credulous",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "taciturn",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "extraneous",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "implicit",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pertinent",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q4",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The gossip columns, which called the evening a (i) ___, were for once not exaggerating: chairs were overturned and two guests left under escort. What puzzled observers was the host's surprise, which seemed entirely (ii) ___; a man who had seated rival claimants to the same inheritance side by side, amid furnishings so (iii) ___ that each could tally exactly what was at stake, could hardly have expected a peaceful evening, yet he appeared genuinely never to have imagined otherwise.",
+      "blanks": [
+        [
+          "paean",
+          "fracas",
+          "discrepancy"
+        ],
+        [
+          "calculated",
+          "phlegmatic",
+          "ingenuous"
+        ],
+        [
+          "opulent",
+          "austere",
+          "monotonous"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) Overturned chairs and guests under escort make a noisy brawl: fracas. (ii) 'He appeared genuinely never to have imagined otherwise' shows the surprise was artless and unfeigned: ingenuous. (iii) Furnishings that let the claimants 'tally exactly what was at stake' must display great wealth: opulent.",
+        "distractors": {
+          "paean": "A song of praise: the opposite of a brawl.",
+          "discrepancy": "An inconsistency: it does not describe a violent evening.",
+          "calculated": "Feigned: contradicted by 'genuinely'.",
+          "phlegmatic": "Unemotional: surprise is an emotion, and it does not explain the puzzle.",
+          "austere": "Plain: it would leave little wealth on display to tally.",
+          "monotonous": "Says nothing about the stakes on display."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "paean",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fracas",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "discrepancy",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "phlegmatic",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ingenuous",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "opulent",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "austere",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "monotonous",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Though she declined to penalize anyone who had profited from the department's habit of granting credit for seminars no one attended, the new dean let it be known that her leniency toward the past should not be mistaken for a readiness to ___ the practice in future.",
+      "choices": [
+        "countenance",
+        "censure",
+        "extol",
+        "castigate",
+        "condone",
+        "fabricate"
+      ],
+      "key": {
+        "sel": [
+          0,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Leniency could be misread as willingness to tolerate the practice; the dean denies that. Condone and countenance (the verb: to tolerate or tacitly permit) both fit.",
+        "distractors": {
+          "censure": "Trap pair with castigate: leniency could never be mistaken for readiness to condemn, so the sentence's warning would make no sense.",
+          "castigate": "Trap pair with censure: the wrong polarity.",
+          "extol": "Too strong: leniency might be mistaken for tolerance, not for active praise.",
+          "fabricate": "To invent: a practice that already exists is not fabricated."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "countenance",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "censure",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "extol",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "castigate",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "condone",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fabricate",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q6",
+      "section": 2,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Her supporters hailed the inquiry's report as doing at last what they had long demanded, namely to ___ the engineer; a closer reading shows only that it declined to assign the collapse to any single error, a finding that left her no more blameless than anyone else on the project.",
+      "choices": [
+        "denigrate",
+        "exonerate",
+        "edify",
+        "disparage",
+        "exculpate",
+        "implicate"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Supporters wanted her cleared, and the second clause says the report fell short of declaring her blameless: exonerate and exculpate.",
+        "distractors": {
+          "denigrate": "Trap pair with disparage: supporters would not demand that she be belittled.",
+          "disparage": "Trap pair with denigrate: the wrong polarity.",
+          "edify": "To instruct morally: unrelated to blame.",
+          "implicate": "To show involvement in wrongdoing: the opposite of what supporters demanded."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "denigrate",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exonerate",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "edify",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "disparage",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exculpate",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "implicate",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q7",
+      "section": 2,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Far from dismissing the proposal as beneath notice, as its sponsors had feared, the committee chose to ___ it at length, devoting three sessions to an itemized account of its failings, a hostility that the sponsors, oddly, took as a compliment, since no one troubles to demolish what does not matter.",
+      "choices": [
+        "extol",
+        "belittle",
+        "castigate",
+        "laud",
+        "slight",
+        "excoriate"
+      ],
+      "key": {
+        "sel": [
+          2,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "The committee treated the proposal as important enough to attack in detail: severe criticism ('hostility', 'demolish') that takes its object seriously. Castigate and excoriate.",
+        "distractors": {
+          "belittle": "Trap pair with slight: treating the proposal as small or unworthy of attention is the 'dismissing as beneath notice' that the committee did not do.",
+          "extol": "Trap pair with laud: the sponsors took it as a compliment, but the sentence calls it 'hostility'.",
+          "laud": "Trap pair with extol: the wrong polarity.",
+          "slight": "Trap pair with belittle: to slight is to treat with disregard, the reaction the sponsors feared and did not get."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "extol",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "belittle",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "castigate",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "laud",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "slight",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "excoriate",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q8",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "Which of the following best describes the organization of the passage?",
+      "choices": [
+        "An explanation of a phenomenon is presented, evidence against one of its predictions is reported, and a second explanation is adopted in its place.",
+        "Two explanations of a phenomenon are presented, and evidence is reviewed that decides between them in favor of the second.",
+        "An explanation of a phenomenon is presented, evidence against one of its predictions is reported, and a second explanation suggested by that evidence is combined with the first rather than substituted for it.",
+        "A phenomenon is described, a popular explanation of it is defended against objections, and a policy recommendation is drawn.",
+        "Two explanations of a phenomenon are presented together, and evidence is then offered showing that each applies to a different group of people."
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Paragraph 1 gives inertia and its 'fungible' prediction; paragraph 2 reports evidence against that prediction and the endorsement reading it suggests; paragraph 3 declines to 'replace inertia with endorsement wholesale' and layers the two.",
+        "distractors": {
+          "An explanation of a phenomenon is presented, evidence against one of its predictions is reported, and a second explanation is adopted in its place.": "Misses the last move: the author explicitly refuses the replacement.",
+          "Two explanations of a phenomenon are presented, and evidence is reviewed that decides between them in favor of the second.": "The explanations arrive in sequence, and neither wins.",
+          "A phenomenon is described, a popular explanation of it is defended against objections, and a policy recommendation is drawn.": "Inertia is qualified, not defended, and the last sentence is a warning rather than a recommendation.",
+          "Two explanations of a phenomenon are presented together, and evidence is then offered showing that each applies to a different group of people.": "Half-right: the mechanisms are layered, acting on the same choices, not divided between populations."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-structure",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q9",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 5,
+      "passageId": "p3",
+      "prompt": "The author mentions that retention of lottery defaults \"is greatest among workers who report the least interest in financial matters\" primarily in order to",
+      "choices": [
+        "show that endorsement effects are strongest among workers who know little about finance",
+        "suggest that defaults should be designed differently for workers with different levels of financial interest",
+        "challenge the view that people interpret defaults as advice",
+        "explain why unattractive defaults are abandoned more often than inertia would predict",
+        "support the claim that inertia contributes to default effects even when a default conveys no advice"
+      ],
+      "key": {
+        "sel": [
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Lottery defaults carry no advice, so whatever retention they show must come from something else. That it is highest among the least engaged points to inertia, which backs the author's refusal to drop inertia and the layered account that follows.",
+        "distractors": {
+          "show that endorsement effects are strongest among workers who know little about finance": "Lottery defaults carry no endorsement, so the detail cannot measure endorsement.",
+          "suggest that defaults should be designed differently for workers with different levels of financial interest": "No such design proposal is made.",
+          "challenge the view that people interpret defaults as advice": "Too strong: the author keeps endorsement as one layer and only denies that it explains everything.",
+          "explain why unattractive defaults are abandoned more often than inertia would predict": "That is paragraph 2's point, explained by endorsement, not by this detail."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-function",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q10",
+      "section": 2,
+      "type": "rc_multi",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "Consider each of the choices separately and select all that apply. The passage supports which of the following statements?",
+      "choices": [
+        "If inertia were the only mechanism behind default effects, an unattractive default would retain roughly as large a share of workers as an attractive one.",
+        "Employers seldom describe the defaults in their retirement plans as having been assigned by lottery.",
+        "Policy designers who expect a default to work about equally well whatever option it is set to are mistaken."
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "A: Supported. On the inertia account the position is 'fungible', so any option placed there should hold the same share; paragraph 2 calls this the prediction that failed. B: Plausible in the world, since lottery defaults appear here as an experimental condition, but the passage says nothing about how employers describe their plans. C: Supported. Endorsement limits 'how far a default can stray', so treating the default as 'indiscriminate in its effects' is the mistake the last sentence names.",
+        "distractors": {}
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q11",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p4",
+      "prompt": "The author's attitude toward benefit of clergy is best described as",
+      "choices": [
+        "scornful, regarding it as a transparent fiction that the courts should have abandoned",
+        "unreservedly admiring of its humanity toward the accused",
+        "reluctantly approving, on the grounds that the protection it gave literate defendants outweighed its defects",
+        "appreciative of the practical role it played, while acknowledging a defect it never overcame",
+        "indifferent, regarding its merits and defects as of merely antiquarian interest"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The author calls it a 'deft accommodation' that relieved a harsh code, yet says 'None of this makes the doctrine admirable' and names an unanswered defect: favoring the literate.",
+        "distractors": {
+          "scornful, regarding it as a transparent fiction that the courts should have abandoned": "This is the reformers' view, which the author rejects.",
+          "unreservedly admiring of its humanity toward the accused": "Too strong: 'None of this makes the doctrine admirable.'",
+          "reluctantly approving, on the grounds that the protection it gave literate defendants outweighed its defects": "Half-right: favoring the literate is the defect itself, and the author weighs nothing against it.",
+          "indifferent, regarding its merits and defects as of merely antiquarian interest": "The author argues a position about how it should be understood."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-attitude",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q12",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 5,
+      "passageId": "p4",
+      "prompt": "Which of the following situations is most closely analogous to the role the author attributes to benefit of clergy?",
+      "choices": [
+        "A statute exempts ordained ministers from compulsory military service, and draft boards apply the exemption to anyone who presents credentials of ordination.",
+        "Judges facing a mandatory sentence they consider unjust publicly refuse to impose it, declaring the statute void.",
+        "A customs code imposes a heavy fine for any undeclared item, a rule officials cannot change; inspectors routinely classify a traveler's first undeclared item as a 'personal effect' outside the code, a classification each traveler may receive only once.",
+        "After a long campaign by reformers, a legislature repeals a statute that imposed severe penalties for minor offenses.",
+        "A university waives its entrance examination for applicants who can demonstrate that they read Latin."
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The author's point is structural: officials who cannot amend a harsh rule use an acknowledged pretext to spare first offenders, leaving the rule's letter intact, with a mark that prevents a second use. The customs case has every element.",
+        "distractors": {
+          "A statute exempts ordained ministers from compulsory military service, and draft boards apply the exemption to anyone who presents credentials of ordination.": "Matches the surface (clergy, exemption), but it is an open statutory exemption, not a fiction that softens a rule.",
+          "Judges facing a mandatory sentence they consider unjust publicly refuse to impose it, declaring the statute void.": "Open defiance, which the author says the reading test let judges avoid.",
+          "After a long campaign by reformers, a legislature repeals a statute that imposed severe penalties for minor offenses.": "Amendment of the law, whereas the device worked because the law could not be amended.",
+          "A university waives its entrance examination for applicants who can demonstrate that they read Latin.": "Matches the surface (a reading test) but involves no harsh rule being relieved."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-application",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q13",
+      "section": 2,
+      "type": "rc_select",
+      "difficulty": 5,
+      "passageId": "p5",
+      "prompt": "Select the sentence that the author offers as a reason to doubt a view the author attributes to others.",
+      "key": {
+        "sel": [
+          7
+        ]
+      },
+      "explanation": {
+        "key": "The eighth sentence (The suspicion would carry more weight...) answers the dissident commentators of the previous sentence: corrections said to manufacture warming in fact reduce it. The second sentence corrects an impression ('seems artless') that no one is said to hold, and the last sentence concedes uncertainty without disputing anyone's view."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-function",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q14",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p5",
+      "prompt": "It can be inferred from the passage that a sea-surface temperature series spliced from bucket readings and later engine-intake readings, if left uncorrected, would most likely",
+      "choices": [
+        "exaggerate the warming between the period of bucket readings and the period of intake readings",
+        "overstate the temperatures recorded during the period of bucket readings",
+        "show a warming trend that the corrections, once applied, would enlarge",
+        "contain errors too erratic to be estimated",
+        "understate how uncertain the share of readings made by each method is"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Bucket water cools before it is read, so those readings run low; intake readings run warm. Splicing a low-reading era onto a high-reading one adds spurious warming, which fits the statement that the corrections reduce the warming in the raw readings.",
+        "distractors": {
+          "overstate the temperatures recorded during the period of bucket readings": "Reversed: evaporation makes bucket readings too cool.",
+          "show a warming trend that the corrections, once applied, would enlarge": "Contradicts the statement that the corrections reduce the warming.",
+          "contain errors too erratic to be estimated": "The errors are 'systematic rather than random', and researchers have put numbers on them.",
+          "understate how uncertain the share of readings made by each method is": "Scope shift: that uncertainty concerns the records of the changeover years, not a property of the uncorrected series."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q15",
+      "section": 2,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 3,
+      "passageId": "a2",
+      "prompt": "Which of the following is most strongly supported by the information above?",
+      "choices": [
+        "Buyers at rare-wine auctions are generally unable to judge the quality of wine.",
+        "Wine stored in humid cellars tastes better than wine stored in dry ones.",
+        "Auction houses would raise their revenues by repairing damaged labels before sale.",
+        "Most buyers of rare wines purchase them as investments rather than to drink.",
+        "The lower prices paid for damaged-label bottles are not explained by any difference in how the wine tastes."
+      ],
+      "key": {
+        "sel": [
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Blind tasters rated wine from the two kinds of bottle equally, and the usual cause of label damage does not harm the wine. So the price gap does not track taste.",
+        "distractors": {
+          "Buyers at rare-wine auctions are generally unable to judge the quality of wine.": "Too strong: buyers may judge well and still pay for labels for other reasons.",
+          "Wine stored in humid cellars tastes better than wine stored in dry ones.": "Overreach: 'if anything, helps preserve' and the equal ratings do not show better taste.",
+          "Auction houses would raise their revenues by repairing damaged labels before sale.": "Buyers might discount repaired labels too; the passage gives no basis.",
+          "Most buyers of rare wines purchase them as investments rather than to drink.": "One possible explanation of the gap, but nothing in the passage establishes it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-conclusion",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}
