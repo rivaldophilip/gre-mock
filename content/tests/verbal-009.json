@@ -1,0 +1,1782 @@
+{
+  "id": "verbal-009",
+  "measure": "verbal",
+  "title": "Verbal Hard Mock 9",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 18
+    },
+    {
+      "n": 2,
+      "minutes": 23
+    }
+  ],
+  "passages": [
+    {
+      "id": "p1",
+      "paragraphs": [
+        "For most of the eighteenth century, chemists who wished to predict the outcome of a reaction consulted tables of affinity: grids, descended from one that Étienne-François Geoffroy presented to the Paris Academy in 1718, that ranked substances by how readily each combined with a given reagent. The tables were the period's great monument to empiricism, built up from thousands of dogged displacement trials, and by the 1780s Torbern Bergman's version had grown nearly encyclopedic. The standard history holds that Claude-Louis Berthollet demolished the enterprise around 1800, when he noticed that on the shores of Egyptian salt lakes, common salt and limestone were yielding soda (the reverse of what every table predicted) and concluded that the quantity of a reagent present, not its affinity alone, governs which way a reaction runs.",
+        "Yet it is misleading to cast Berthollet as the destroyer of a hidebound tradition. The table-makers had never claimed that affinity acted in isolation; Bergman himself warned that heat could invert his rankings, and he kept separate columns for reactions carried out in solution and for those carried out by heating dry materials. What Berthollet supplied was a reason, rather than a list of exceptions, for such reversals, and he presented it as a refinement of affinity, not a rival to it. Nor did his argument carry the day: within a decade, chemists persuaded by Joseph-Louis Proust's evidence that compounds form in fixed proportions had rejected Berthollet's claim that combination could vary continuously, and with it much of his account of mass. The tables faded less because Berthollet refuted them than because the fulcrum of the science had moved, from the question of what combines with what to the question of the weights in which elements combine."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "empiricism",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "dogged",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "encyclopedic",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "hidebound",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "fulcrum",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "paragraphs": [
+        "Historians of pronunciation cannot hear medieval speakers, so they attend instead to the mistakes those speakers made in writing. The most revealing mistakes are not phonetic misspellings, which might reflect one writer's careless hand or a purely local habit, but what linguists call inverse spellings. Once the consonant written gh in words such as light had fallen silent, writers who knew that those letters could stand for nothing began to insert them where no consonant had ever been, so that a word borrowed from French as delit came to be written delight. Such a spelling is possible only for a writer in whose speech light and delit already rhymed, and it is therefore a kind of involuntary testimony, all the more trustworthy for being factitious: no one invents a false spelling in order to record his own pronunciation. The method has limits that its deft practitioners are careful to state. An inverse spelling shows that a change had occurred in one writer's speech by the date of the document; it cannot show when the change began, and because spellings were copied from manuscript to manuscript, a form may outlive by generations the scribe who coined it. Read with that caution, however, such errors can delimit the spread of a change through the demotic speech of a region more securely than any grammarian's description, since grammarians described the speech they approved of rather than the speech they heard."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "factitious",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "deft",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "delimit",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "demotic",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "paragraphs": [
+        "When the first detailed records from Antarctic ice cores were published, one finding drew a clamorous response out of all proportion to its size. At the end of the last glacial period, about eighteen thousand years ago, the temperature recorded in the ice appeared to begin rising several centuries before the concentration of carbon dioxide in the air bubbles trapped in the same ice. Dissident commentators seized on the lag as proof that carbon dioxide follows temperature rather than driving it, and some climate scientists, in replying, conceded more than they needed to, treating the lag as established and arguing only that carbon dioxide had amplified a warming begun by changes in Earth's orbit.",
+        "The lag was always less secure than either side supposed, because the two quantities are not read from the same material. Temperature is inferred from the isotopic composition of the ice itself, whereas carbon dioxide is measured in air that was sealed off only when the overlying snow had compacted into ice, a process that at cold, slowly accumulating sites such as the interior of Antarctica can take several thousand years. The gas in any layer is therefore younger than the ice that encloses it, and the size of that difference must be modeled rather than measured. Early models, calibrated on present-day conditions, overstated the depth at which air was sealed during glacial times; the gas they dated was thus divorced from its enclosing ice by more years than had in fact separated them, and the apparent lag was in part an artifact of the correction itself.",
+        "When researchers later reconstructed the sealing depth independently, using nitrogen isotopes in the trapped air that record how deeply it had settled, the lag shrank to within the uncertainty of the dating: at most a couple of centuries, and possibly none at all. This result does not contravene the view that orbital changes set the end of the glacial period in motion, since the warming of northern summers that began it still precedes the Antarctic changes. What it removes is the particular sequence on which the original controversy turned. Nor should the revision be read as vindicating everything said in carbon dioxide's defense: those who built elaborate explanations for an eight-century delay had abetted the same error as their opponents, accepting a number whose derivation neither side had examined."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "clamorous",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "dissident",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "divorced",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "contravene",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "abet",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "paragraphs": [
+        "The margins of Gothic manuscripts teem with figures that seem to have wandered in from another book: apes in bishops' mitres, knights fleeing from snails, hybrids of baroque invention whose human torsos end in coiled tails, often crowded beside the most hortatory passages of a psalter. For much of the last century such drolleries were treated as a decadent symptom, evidence that illuminators had grown bored with sacred texts and amused themselves at their patrons' expense. A later generation of scholars reversed the verdict, reading the margins as a deliberate space of resistance in which the popular culture of the street mocked the authority of the page.",
+        "That reading has the merit of taking the images seriously, and it has rightly exorcised the notion that they were idle doodling. But it struggles to say who was being resisted. Many of the most irreverent margins appear in books commissioned by the very bishops and noblewomen they seem to mock, and where workshop accounts survive, they show patrons paying for marginal figures by the piece. An image that the owner of the book paid for separately is a strange vehicle of protest. The margins are better understood as licensed play, akin to the feast days on which a choirboy was made bishop for an afternoon: their inversions gratified readers precisely because the order they overturned was secure enough to be laughed at."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "baroque",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "hortatory",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "decadent",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "exorcise",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "gratify",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "paragraphs": [
+        "Because a glacier's front advances when snowfall outpaces melting and retreats when the balance reverses, the positions of glacier fronts have long served as a rough gauge of past climate. Glaciers are not fungible instruments, however, and surge-type glaciers make particularly poor witnesses. For decades such a glacier may creep forward slowly or even stagnate, and then, within a year or two, its front may lurch several kilometers down its valley with no change in the weather to make the advance explicable. The cause lies at the glacier's bed: as ice thickens in the upper basin during the quiet phase, meltwater beneath it is trapped at rising pressure until the ice is partly lifted from the rock and slides rapidly forward.",
+        "Many glaciologists are therefore inclined to exclude surge-type glaciers from climate records altogether, a policy with the virtue of simplicity. It is true that a single surge says nothing about the climate of the year in which it occurs. But the length of the quiet phase is not fixed; it depends on how quickly the upper basin can rebuild its store of ice, and so on snowfall over decades. Where glaciers have surged at shortening or lengthening intervals over the past century, the change in tempo may itself be a climatic signal, one that a dogged record of surge dates could recover even where the positions of the fronts are uninformative."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "fungible",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "explicable",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "inclined",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "dogged",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "a1",
+      "paragraphs": [
+        "Since the Hartwell Museum began requiring visitors to reserve a timed entry slot, complaints about crowded galleries have fallen by more than half, although total annual attendance is unchanged. The museum's director concludes that the crowding visitors had complained of was caused not by the number of visitors but by their tendency to arrive at the same hours, and that the timed slots, by spreading arrivals across the day, eliminated most of it."
+      ],
+      "tags": []
+    },
+    {
+      "id": "a2",
+      "paragraphs": [
+        "Planners in the Varden Valley expect that subsidizing drip irrigation, which delivers water directly to the roots of crops and loses far less to evaporation than flood irrigation does, will reduce the valley's total agricultural water use. This expectation is probably mistaken. Farmers in the valley are limited not by their water rights, which are generous, but by the cost of pumping, and drip systems lower that cost per acre irrigated. Farmers who adopt drip systems are therefore likely to bring dry, marginal land under cultivation, so that the water saved on each old acre is spent on new ones."
+      ],
+      "tags": []
+    }
+  ],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Sponsors who had feared that the council would kill the measure outright were relieved when it voted only to ___ it, though veterans of the chamber warned that such a reprieve was usually just a slower route to the same end.",
+      "blanks": [
+        [
+          "censure",
+          "shelve",
+          "broach",
+          "ratify",
+          "expurgate"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "\"Only to\" makes the council's action milder than killing the measure, and \"reprieve ... slower route to the same end\" says the measure was put off, not decided: to shelve it (set aside for later consideration).",
+        "distractors": {
+          "censure": "To condemn formally; a censure is no reprieve.",
+          "broach": "To raise a subject for discussion (the British sense of table); the measure was already before the council, and raising it is no reprieve.",
+          "ratify": "Approval would leave nothing for the sponsors to fear and no 'same end' to reach slowly.",
+          "expurgate": "To cut objectionable passages; it neither spares the measure nor leads slowly to its death."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "censure",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "shelve",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ratify",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "expurgate",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 3,
+      "prompt": "Although the young sculptor had spent a decade as the master's most devoted (i) ___, critics who expected her first independent commission to be merely (ii) ___ were surprised to find in it almost nothing of his manner.",
+      "blanks": [
+        [
+          "precursor",
+          "acolyte",
+          "detractor"
+        ],
+        [
+          "novel",
+          "austere",
+          "derivative"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) A decade of devoted service to a master makes her his acolyte, a devoted follower. (ii) The critics' expectation is the opposite of what surprised them ('almost nothing of his manner'), so they expected work imitative of him: derivative.",
+        "distractors": {
+          "precursor": "A forerunner comes before the master; a student cannot precede her teacher.",
+          "detractor": "A critic of the master would not be 'devoted', and would give no reason to expect imitation.",
+          "novel": "Original work is what they found, not what they expected.",
+          "austere": "Severity of style has nothing to do with whether the master's manner survives."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "precursor",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "acolyte",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "novel",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "austere",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "derivative",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The minister's allies greeted the inquiry's report with relief, as having (i) ___ him, but it did him little good: by finding that his deputies had (ii) ___ payments from contractors without his knowledge, it freed him of legal liability only to saddle him with a reputation for (iii) ___ supervision.",
+      "blanks": [
+        [
+          "lionized",
+          "cleared",
+          "implicated"
+        ],
+        [
+          "exacted",
+          "audited",
+          "declined"
+        ],
+        [
+          "meticulous",
+          "indolent",
+          "pernicious"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          0,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) The report 'freed him of legal liability', so the allies hailed it as having cleared him (secondary sense: declared free of blame); 'but it did him little good' is about the cost to his reputation, not a reversal of the finding. (ii) The deputies' conduct must be wrongdoing hidden from him: they exacted (demanded and extracted) payments from contractors. (iii) Wrongdoing under his nose without his knowledge earns a reputation for lax, lazy supervision: indolent. 'Meticulous' is the everyday sense of exact, placed as the trap.",
+        "distractors": {
+          "lionized": "A report finds facts; it does not celebrate. The only thing it did for him was to clear him of liability.",
+          "implicated": "Allies would not greet with relief a report that implicated him, and it freed him of liability; 'did him little good' refers only to the damage to his reputation.",
+          "audited": "Checking payments is no misconduct, so it could not damage his reputation.",
+          "declined": "Refusing payments is honest conduct and would reflect well on his department.",
+          "meticulous": "The opposite of the reputation earned; it echoes the adjective exact (precise), the everyday sense of the key in blank (ii).",
+          "pernicious": "Harmful or malicious supervision implies active wrongdoing, but the report found he knew nothing."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "lionize",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "clear",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "implicate",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exact",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "decline",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "meticulous",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "indolent",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pernicious",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The mayor had intended the commission as a gesture that would ___ the striking dockworkers, and it was a measure of how badly he had misjudged them that they took the offer of a study as proof he meant to outlast them.",
+      "choices": [
+        "mollify",
+        "embolden",
+        "placate",
+        "hearten",
+        "censure",
+        "disparage"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The workers' reaction (suspicion, hardened opposition) shows he misjudged them, so he intended the opposite: to soothe their anger. Mollify and placate.",
+        "distractors": {
+          "embolden": "Trap pair with hearten: a mayor facing a strike would not aim to encourage the strikers, and their distrust would be no misjudgment of that aim.",
+          "hearten": "Trap pair with embolden: same problem.",
+          "censure": "A commission to study grievances is not a reprimand, and the misjudgment is about conciliation.",
+          "disparage": "Belittling the workers is not a 'gesture' toward them; it does not fit 'misjudged'."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "mollify",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "placate",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "censure",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "disparage",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "se",
+      "difficulty": 3,
+      "prompt": "What the diarist prized in the northern lights was precisely what defeated the painters who tried to record them: a splendor so ___ that any canvas completed afterward in the studio was a record of memory rather than of sight.",
+      "choices": [
+        "fleeting",
+        "luminous",
+        "latent",
+        "evanescent",
+        "radiant",
+        "patent"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "A painting finished afterward can record only memory if the sight vanished before it could be painted: fleeting and evanescent.",
+        "distractors": {
+          "luminous": "Trap pair with radiant: the lights are bright, but brightness does not explain why a canvas must be painted from memory.",
+          "radiant": "Trap pair with luminous: same problem.",
+          "latent": "Hidden or undeveloped; a splendor the diarist prized was plainly seen.",
+          "patent": "Obvious; that would help the painters, not defeat them."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "fleeting",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "luminous",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "latent",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "evanescent",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "patent",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The organizers did not ask the delegates to ___ their national rivalries, only to set them aside for the week of the congress; the distinction mattered, since a vow that no one meant to keep would have poisoned the proceedings more surely than candid suspicion.",
+      "choices": [
+        "shelve",
+        "forswear",
+        "flaunt",
+        "postpone",
+        "abjure",
+        "acknowledge"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The blank must be stronger than 'set aside', and the second clause names it as a vow: to renounce solemnly. Forswear and abjure.",
+        "distractors": {
+          "shelve": "Trap pair with postpone: both mean to set aside for later, which is exactly what the organizers did ask, so 'not ... only to' rules them out.",
+          "flaunt": "No organizer would ask delegates to show off rivalries, and it is not a vow.",
+          "acknowledge": "Admitting rivalries is not a vow, and is not stronger than setting them aside in the way the distinction requires.",
+          "postpone": "Trap pair with shelve: same problem (postpone = set aside)."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "shelve",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "forswear",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "abjure",
+          "role": "key",
+          "at": [
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The memoir that the disgraced financier published within a year of his release disappointed readers who had hoped that prison would leave him ___: the only regret it expressed was for having been caught.",
+      "choices": [
+        "contrite",
+        "unrepentant",
+        "taciturn",
+        "penitent",
+        "impenitent",
+        "laconic"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The memoir disappointed their hope, and what it showed was no remorse (regret only for being caught), so they had hoped he would come out remorseful: contrite and penitent.",
+        "distractors": {
+          "unrepentant": "Trap pair with impenitent: it describes the memoir itself, so a reader hoping for it would not be disappointed (and readers do not hope a criminal stays remorseless).",
+          "impenitent": "Trap pair with unrepentant: same problem.",
+          "taciturn": "Paired in meaning with laconic: a memoir would disappoint a hope for silence, but the colon names its lack of remorse, not its talkativeness, as the disappointment.",
+          "laconic": "Paired with taciturn: same problem."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "contrite",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "taciturn",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "penitent",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "laconic",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p1",
+      "prompt": "The author mentions that Bergman kept separate columns for reactions carried out in solution and for those carried out by heating dry materials primarily in order to",
+      "choices": [
+        "illustrate how nearly encyclopedic Bergman's table had become by the 1780s",
+        "support the claim that the table-makers already recognized that the outcome of a reaction could depend on the conditions under which it was carried out",
+        "suggest that Bergman had anticipated Berthollet's explanation of why reactions reverse",
+        "concede that the affinity tradition was more hidebound than its modern defenders allow",
+        "explain why Berthollet's observations in Egypt were at first disregarded by other chemists"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The detail follows the claim that the table-makers 'had never claimed that affinity acted in isolation'. Separate columns for wet and dry conditions are evidence that they knew conditions alter outcomes, which supports the author's case against calling the tradition hidebound.",
+        "distractors": {
+          "illustrate how nearly encyclopedic Bergman's table had become by the 1780s": "True of the table, but the detail appears in paragraph 2 to show awareness of conditions, not size.",
+          "suggest that Bergman had anticipated Berthollet's explanation of why reactions reverse": "One notch too strong: Berthollet supplied 'a reason, rather than a list of exceptions'; Bergman had only the exceptions.",
+          "concede that the affinity tradition was more hidebound than its modern defenders allow": "Reversed: the detail argues that the tradition was not hidebound.",
+          "explain why Berthollet's observations in Egypt were at first disregarded by other chemists": "The passage never says the observations were disregarded; it was his later claim about continuous combination that was rejected."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-function",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "rc_multi",
+      "difficulty": 5,
+      "passageId": "p1",
+      "prompt": "Consider each of the choices separately and select all that apply. The passage supports which of the following?",
+      "choices": [
+        "Berthollet did not regard his conclusions about quantity as a reason to abandon the concept that the affinity tables were designed to represent.",
+        "Berthollet was the first chemist to recognize that the rankings in an affinity table could be reversed.",
+        "The decline of the affinity tables did not depend on the acceptance of Berthollet's claims about the role of quantity."
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "A: supported; he 'presented it as a refinement of affinity, not a rival to it'. B: not supported; Bergman had already 'warned that heat could invert his rankings', so reversals were known before Berthollet; the 'reverse of what every table predicted' phrase tempts this. C: supported by combining two sentences: chemists rejected 'much of his account of mass', yet the tables still faded, and they faded 'less because Berthollet refuted them' than because the science's questions shifted. So their decline did not need his claims to be accepted.",
+        "distractors": {
+          "Berthollet was the first chemist to recognize that the rankings in an affinity table could be reversed.": "Contradicted by Bergman's warning about heat; Berthollet supplied the first reason, not the first observation."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "In the context in which it appears, \"hand\" most nearly means",
+      "choices": [
+        "assistance",
+        "handwriting",
+        "control",
+        "point of view",
+        "laborer"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "A phonetic misspelling 'might reflect one writer's careless hand': a scribe's careless penmanship, so hand means handwriting.",
+        "distractors": {
+          "assistance": "The common sense of 'a hand' (give a hand); nothing is being helped.",
+          "control": "As in 'a firm hand'; the passage is about writing, not governing.",
+          "point of view": "As in 'on the other hand'; it does not fit 'careless'.",
+          "laborer": "As in 'a farm hand'; a writer is not described as a worker here."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-vocab-context",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "rc_select",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "Select the sentence that explains why a particular inverse spelling may be found in documents written long after the spelling first arose.",
+      "key": {
+        "sel": [
+          5
+        ]
+      },
+      "explanation": {
+        "key": "The sixth sentence (An inverse spelling shows ...) says that 'because spellings were copied from manuscript to manuscript, a form may outlive by generations the scribe who coined it'. The third sentence describes how inverse spellings arose, and the last compares them with grammarians' descriptions; neither explains a spelling's survival."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-detail",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 4,
+      "passageId": "a1",
+      "prompt": "The director's conclusion depends on which of the following assumptions?",
+      "choices": [
+        "Every visitor since the change has arrived within the slot printed on his or her reservation.",
+        "Timed entry is the most effective means available to the museum of reducing crowding in its galleries.",
+        "Before the timed slots were introduced, arrivals at the museum were not already distributed fairly evenly across the hours it was open.",
+        "All of the visitors who complained about crowding before the change have continued to visit the museum since.",
+        "Complaints about matters other than crowding have not risen since the timed slots were introduced."
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The director credits the slots with spreading arrivals across the day. Negate the key: if arrivals were already spread evenly, the slots had nothing to spread, and the fall in crowding complaints cannot be explained by the mechanism the director names. Stated mildly ('not already ... fairly evenly'), it is necessary.",
+        "distractors": {
+          "Every visitor since the change has arrived within the slot printed on his or her reservation.": "Sufficient-style and too strong: most visitors keeping to their slots would be enough.",
+          "Timed entry is the most effective means available to the museum of reducing crowding in its galleries.": "The conclusion is that the slots worked, not that nothing could work better.",
+          "All of the visitors who complained about crowding before the change have continued to visit the museum since.": "Too strong: some complainers could stop visiting without undermining the conclusion.",
+          "Complaints about matters other than crowding have not risen since the timed slots were introduced.": "Irrelevant: other complaints say nothing about crowding."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-assumption",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q1",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The retrospective's organizers, eager to rescue the painter from her reputation as a doctrinaire abstractionist, made much of late canvases in which, they insisted, a reclining woman or a sleeping dog could be discerned; but the works are ___ only in a sense so loose that a viewer must be told what to look for before finding anything at all.",
+      "blanks": [
+        [
+          "nonrepresentational",
+          "didactic",
+          "figurative",
+          "derivative",
+          "pellucid"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The organizers claim the canvases depict recognizable forms (a woman, a dog), against the painter's abstract reputation; the author grants this 'only in a sense so loose' that the forms must be pointed out. The word must mean depicting recognizable forms: figurative in its art-historical sense, not 'metaphorical'.",
+        "distractors": {
+          "nonrepresentational": "Reversed: this is the reputation the organizers wanted to rescue her from.",
+          "didactic": "Instructive; that a viewer 'must be told what to look for' tempts it, but the claim concerns depiction, not teaching.",
+          "derivative": "Imitative; nothing in the sentence concerns borrowing.",
+          "pellucid": "Clear; if the images were clear, no one would need telling what to look for."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "didactic",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "figurative",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "derivative",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pellucid",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q2",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "That the reform caucus eventually (i) ___ is usually credited to its leaders' (ii) ___, but the caucus minutes tell another story: at three separate junctures the leaders drafted terms of surrender, and were spared from submitting them only because their opponents, divided among themselves, could not agree on whether to accept.",
+      "blanks": [
+        [
+          "capitulated",
+          "prevailed",
+          "floundered"
+        ],
+        [
+          "diffidence",
+          "resolve",
+          "avarice"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) The leaders never submitted their surrender terms and outlasted divided opponents, so the caucus won out: prevailed. (ii) The usual credit is contradicted ('another story') by the drafted surrenders, so it names the trait those drafts disprove: firm determination, resolve.",
+        "distractors": {
+          "capitulated": "The drafts of surrender tempt it, but they were never submitted.",
+          "floundered": "Struggling helplessly is no outcome that anyone would 'credit' to the leaders.",
+          "diffidence": "The minutes would confirm timidity, not 'tell another story'; nor is timidity credited for a win.",
+          "avarice": "Greed has no bearing on surrender drafts, so the minutes would not contradict it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "capitulate",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "prevail",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "flounder",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "diffidence",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "resolve",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "avarice",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q3",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Later readers, finding the traveler's account of the steppe herders suspiciously vivid, assumed that he had (i) ___ it; yet the details that seemed most fanciful have since been confirmed, and what proves false is instead his claim, so (ii) ___ among the scholars of his day that no reviewer thought to question it, that the herders had taken up their wandering only recently, having once been (iii) ___ farmers whom famine had uprooted.",
+      "blanks": [
+        [
+          "expurgated",
+          "embellished",
+          "abridged"
+        ],
+        [
+          "contentious",
+          "novel",
+          "orthodox"
+        ],
+        [
+          "itinerant",
+          "sedentary",
+          "bellicose"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Suspiciously vivid' and 'most fanciful' mean readers suspected invented detail: embellished. The confirmation of those details answers exactly that charge. (ii) A claim so ___ 'that no reviewer thought to question it' must have been the accepted view: orthodox. (iii) Herders who 'had taken up their wandering only recently' and whom famine 'uprooted' had once lived in one place: sedentary.",
+        "distractors": {
+          "expurgated": "Cutting offensive material would make an account less vivid, not suspiciously vivid.",
+          "contentious": "A disputed claim is one reviewers would question.",
+          "novel": "A new claim would draw scrutiny, not escape it.",
+          "itinerant": "Wandering is the later state the clause contrasts with the earlier one.",
+          "bellicose": "Warlike; nothing contrasts it with wandering or connects it to being uprooted.",
+          "abridged": "Shortening an account would make it sparser, not suspiciously vivid, and the confirmation of fanciful details answers no charge of abridgment."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "expurgate",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "embellish",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "abridge",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "contentious",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "novel",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "orthodox",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "itinerant",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sedentary",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bellicose",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q4",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The founder liked to say that the foundation's application process was itself (i) ___, since it taught small community groups to think like professional grant-seekers; but the forty-page form proved so (ii) ___ that groups without a grants officer tended to (iii) ___ in it for months before giving up, leaving the money to the large institutions that least needed the lesson.",
+      "blanks": [
+        [
+          "exploitative",
+          "beneficent",
+          "austere"
+        ],
+        [
+          "cumbersome",
+          "terse",
+          "pellucid"
+        ],
+        [
+          "burgeon",
+          "flounder",
+          "acquiesce"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          0,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) The founder claims the process 'taught' groups a valuable skill, so he called it a good deed in itself: beneficent. (ii) 'But' turns against him: a forty-page form that defeats small groups is unwieldy, cumbersome. (iii) Struggling 'for months before giving up' is to flounder.",
+        "distractors": {
+          "exploitative": "The founder is praising his process, not condemning it.",
+          "austere": "Plain severity is not why teaching would make a process good; the claim is about benefit.",
+          "terse": "A forty-page form is not brief.",
+          "pellucid": "A clear form would not defeat applicants for months.",
+          "burgeon": "To flourish; the groups give up.",
+          "acquiesce": "To accept quietly; it does not describe months of struggle followed by giving up, and 'in it' does not fit."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "exploitative",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "beneficent",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "austere",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cumbersome",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "terse",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pellucid",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "burgeon",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "flounder",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "acquiesce",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Visitors who inferred the monastery's poverty from its bare cells and single daily meal mistook for necessity a regime that was ___ by choice: the estates that sustained it ranked among the richest in the province.",
+      "choices": [
+        "impoverished",
+        "spartan",
+        "sumptuous",
+        "indigent",
+        "ascetic",
+        "capricious"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Bare cells and one meal, chosen rather than forced by poverty, describe self-denying simplicity: spartan and ascetic.",
+        "distractors": {
+          "impoverished": "Trap pair with indigent: what the visitors wrongly inferred; the rich estates rule it out, and poverty is not something chosen.",
+          "indigent": "Trap pair with impoverished: same problem.",
+          "sumptuous": "Lavish; contradicts bare cells and a single meal, though the rich estates tempt it.",
+          "capricious": "Changeable; a fixed regime of bare cells and one meal is the opposite."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "spartan",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "indigent",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ascetic",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "capricious",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q6",
+      "section": 2,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Academic historians dismissed the dealer's catalog essays as gossip, but they could not explain away how ___ her judgments had proved: of the forgotten minor masters she bought in the 1970s, nearly all now hang in national collections.",
+      "choices": [
+        "astute",
+        "contentious",
+        "caustic",
+        "perspicacious",
+        "controversial",
+        "pithy"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "'But' sets her record against the historians' dismissal, and the evidence is that her purchases were vindicated by the national collections: her judgments proved shrewd. Astute and perspicacious.",
+        "distractors": {
+          "contentious": "Trap pair with controversial: the historians' dismissal tempts it, but the evidence after the colon shows her judgments were borne out, not disputed.",
+          "controversial": "Trap pair with contentious: same problem.",
+          "caustic": "Biting in tone; it describes prose, not whether purchases were borne out.",
+          "pithy": "Concise; it fits essays, not a judgment that proved right over decades."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "astute",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "contentious",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "caustic",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "perspicacious",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pithy",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q7",
+      "section": 2,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Survivors remembered the expedition's leader not as reckless but as ___: he grasped every danger the icefall posed and simply declined to let any of them spoil his breakfast.",
+      "choices": [
+        "oblivious",
+        "blithe",
+        "rash",
+        "unwitting",
+        "insouciant",
+        "diffident"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "He knew the dangers ('grasped every danger') but was untroubled by them: carefree indifference, blithe and insouciant. 'Not as reckless' excludes words of heedless risk-taking.",
+        "distractors": {
+          "oblivious": "Trap pair with unwitting: an unworried manner tempts them, but he 'grasped every danger', so he was not unaware.",
+          "unwitting": "Trap pair with oblivious: same problem.",
+          "rash": "A synonym of the 'reckless' the sentence rejects.",
+          "diffident": "Shy and unsure; nothing suggests timidity."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "oblivious",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "blithe",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rash",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "insouciant",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "diffident",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q8",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "The primary purpose of the passage is to",
+      "choices": [
+        "refute the view that changes in Earth's orbit initiated the end of the last glacial period",
+        "defend climate scientists' account of carbon dioxide as an amplifier of warming against the objections of dissident commentators",
+        "argue that a much-debated finding owed much of its size to an unexamined correction, and clarify what the finding's revision does and does not show",
+        "explain the method by which the age of the gas trapped in ice cores is estimated",
+        "show that temperature and carbon dioxide records from Antarctic ice cannot be reliably compared"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Paragraph 1 presents the lag and the debate it drew, paragraph 2 traces the lag partly to the modeled gas-age correction, and paragraph 3 reports the revision and limits its significance (it neither contravenes orbital initiation nor vindicates the defenders).",
+        "distractors": {
+          "refute the view that changes in Earth's orbit initiated the end of the last glacial period": "Reversed: the revision 'does not contravene' that view.",
+          "defend climate scientists' account of carbon dioxide as an amplifier of warming against the objections of dissident commentators": "Wrong verb: the author faults the defenders too, for conceding too much and for accepting an unexamined number.",
+          "explain the method by which the age of the gas trapped in ice cores is estimated": "Too narrow: this is paragraph 2's content, in service of the larger argument.",
+          "show that temperature and carbon dioxide records from Antarctic ice cannot be reliably compared": "Extreme: the independent reconstruction shows they can be compared once the sealing depth is measured."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-main-idea",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q9",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 5,
+      "passageId": "p3",
+      "prompt": "The passage most strongly suggests that at a site where snow accumulated much faster than in the interior of Antarctica, the difference between the age of the trapped gas and the age of the enclosing ice would be",
+      "choices": [
+        "larger, because a thicker layer of snow would have to compact before the air in it was sealed off",
+        "eliminated, because air would be sealed into the snow as soon as it fell",
+        "smaller, and the gas record there would therefore show carbon dioxide rising before temperature at the end of the last glacial period",
+        "smaller, so that an error of the kind the early models made would distort the comparison of the two records less",
+        "unchanged, since the difference depends on the isotopic composition of the ice rather than on the rate of snowfall"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The passage ties the multi-thousand-year delay in sealing to 'cold, slowly accumulating sites'; faster accumulation buries snow to the sealing depth sooner, so the gas-ice age difference is smaller. Since the lag was partly an artifact of mis-modeling that difference, a smaller difference leaves less room for such an error to distort the comparison.",
+        "distractors": {
+          "larger, because a thicker layer of snow would have to compact before the air in it was sealed off": "Reversed: the passage links the long delay to slow accumulation, and nothing says faster snowfall deepens the sealing point.",
+          "eliminated, because air would be sealed into the snow as soon as it fell": "Extreme: air is sealed only after compaction into ice, at any site.",
+          "smaller, and the gas record there would therefore show carbon dioxide rising before temperature at the end of the last glacial period": "Half-right: the first half is supported, but nothing implies that carbon dioxide led temperature.",
+          "unchanged, since the difference depends on the isotopic composition of the ice rather than on the rate of snowfall": "Confuses the two records: isotopes give temperature; the age difference depends on how long compaction takes."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q10",
+      "section": 2,
+      "type": "rc_multi",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "Consider each of the choices separately and select all that apply. The author would most likely agree with which of the following about the climate scientists who replied to the dissident commentators by treating the lag as established?",
+      "choices": [
+        "They accepted a figure that the evidence available to them did not securely establish.",
+        "Their view that carbon dioxide amplified a warming begun by orbital changes has since been shown to be mistaken.",
+        "They could have defended the role of carbon dioxide without conceding that its rise followed the rise in temperature."
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "A: yes; the lag 'was always less secure than either side supposed', and the defenders accepted 'a number whose derivation neither side had examined'. B: no; the revision 'does not contravene' orbital initiation, and the passage never says the amplification view is wrong, only that the defenders conceded too much. C: yes; they 'conceded more than they needed to'.",
+        "distractors": {
+          "Their view that carbon dioxide amplified a warming begun by orbital changes has since been shown to be mistaken.": "The revision removed the lag, not the amplification account or orbital initiation."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-attitude",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q11",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p4",
+      "prompt": "The author's attitude toward the reading of the margins proposed by the \"later generation of scholars\" is best described as",
+      "choices": [
+        "dismissive, because the reading mistakes idle doodling for meaningful imagery",
+        "appreciative of its seriousness about the images, but doubtful that it fits the circumstances in which the books were made",
+        "approving of its conclusion that the margins were a space of resistance, though skeptical of its method",
+        "unreservedly favorable, since it corrected the earlier view of the drolleries as symptoms of decadence",
+        "neutral, since the author declines to choose between it and the earlier view"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The author credits the reading with 'taking the images seriously' and with rightly dispelling the doodling notion, then doubts it because patrons commissioned and paid for the mocking images. That is measured approval of its approach plus doubt about its conclusion.",
+        "distractors": {
+          "dismissive, because the reading mistakes idle doodling for meaningful imagery": "Wrong polarity: the author praises it for rejecting the doodling notion.",
+          "approving of its conclusion that the margins were a space of resistance, though skeptical of its method": "Reversed: the author accepts its seriousness (method) and rejects its conclusion (resistance).",
+          "unreservedly favorable, since it corrected the earlier view of the drolleries as symptoms of decadence": "Too strong: 'But it struggles to say who was being resisted'.",
+          "neutral, since the author declines to choose between it and the earlier view": "The author proposes a third view and judges both."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-attitude",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q12",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 5,
+      "passageId": "p4",
+      "prompt": "Which of the following, if it were discovered, would the author most likely regard as most closely parallel to the \"licensed play\" that the passage attributes to the margins?",
+      "choices": [
+        "A pamphlet printed in secret by a town's apprentices, ridiculing the guild masters and distributed at night to escape punishment",
+        "A court jester whose jokes at the king's expense grew bolder each year until the king finally banished him",
+        "A painter who, bored with religious commissions, slipped caricatures of his patrons into the background of an altarpiece without their knowledge",
+        "An annual pageant, paid for out of the guild masters' own dues, in which apprentices staged a mock trial that condemned the masters",
+        "A set of cathedral carvings, commissioned by the bishop, showing the virtues trampling the vices underfoot"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Licensed play has two features: those mocked sponsor the mockery (patrons paid for the figures), and the inversion is enjoyable because the order is secure. The pageant paid for by the masters, in which apprentices mock them, matches both.",
+        "distractors": {
+          "A pamphlet printed in secret by a town's apprentices, ridiculing the guild masters and distributed at night to escape punishment": "Mockery, but unlicensed and secret: real resistance, the reading the author rejects.",
+          "A court jester whose jokes at the king's expense grew bolder each year until the king finally banished him": "A surface match (the licensed fool), but the banishment shows the order was not secure enough to laugh at him.",
+          "A painter who, bored with religious commissions, slipped caricatures of his patrons into the background of an altarpiece without their knowledge": "This is the older 'decadent boredom' account, and the patrons did not commission it.",
+          "A set of cathedral carvings, commissioned by the bishop, showing the virtues trampling the vices underfoot": "Commissioned by authority, but it affirms the order rather than playfully inverting it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-application",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q13",
+      "section": 2,
+      "type": "rc_select",
+      "difficulty": 5,
+      "passageId": "p5",
+      "prompt": "Select the sentence that functions in the passage chiefly to supply the ground for the proposal made in the passage's last sentence.",
+      "key": {
+        "sel": [
+          6
+        ]
+      },
+      "explanation": {
+        "key": "The seventh sentence (But the length of the quiet phase ...) says the interval between surges depends on decades of snowfall; that link is what would let a change in surge tempo serve as the climatic signal proposed in the last sentence. The fourth sentence gives the mechanism of a surge but not its dependence on climate; the sixth is a concession that a single surge says nothing about climate."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-function",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q14",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p5",
+      "prompt": "Which of the following best describes the organization of the passage?",
+      "choices": [
+        "A conventional method is described, its theoretical basis is shown to be mistaken, and an alternative method is proposed to replace it.",
+        "A phenomenon is described, two competing explanations of it are compared, and the author endorses one of them.",
+        "A conventional method is described, a class of cases that confounds it is identified and explained, a common response to those cases is noted, and the author proposes that the troublesome cases might yield evidence of a different kind.",
+        "A class of anomalous cases is identified, a policy for handling them is endorsed, and the advantages of that policy are illustrated with an example.",
+        "A conventional method is described, a class of cases that confounds it is identified, and the author argues that, once their mechanism is understood, those cases can be read in the same way as any other glacier."
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Glacier fronts as climate gauges (method); surge-type glaciers as poor witnesses, with their bed mechanism (cases explained); the exclusion policy (response); the proposal to read surge tempo instead of front positions (different evidence).",
+        "distractors": {
+          "A conventional method is described, its theoretical basis is shown to be mistaken, and an alternative method is proposed to replace it.": "The front-position method is not shown to be mistaken in general; only surge-type glaciers confound it.",
+          "A phenomenon is described, two competing explanations of it are compared, and the author endorses one of them.": "Only one explanation of surges is given.",
+          "A class of anomalous cases is identified, a policy for handling them is endorsed, and the advantages of that policy are illustrated with an example.": "The author qualifies the exclusion policy rather than endorsing it.",
+          "A conventional method is described, a class of cases that confounds it is identified, and the author argues that, once their mechanism is understood, those cases can be read in the same way as any other glacier.": "One move wrong: the author proposes reading surge intervals, not their fronts, which stay 'uninformative'."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-structure",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q15",
+      "section": 2,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 3,
+      "passageId": "a2",
+      "prompt": "In the argument, the claim that drip systems lower the cost of pumping per acre irrigated plays which of the following roles?",
+      "choices": [
+        "It is the main conclusion of the argument.",
+        "It is evidence that the planners offer in support of the expectation that the argument disputes.",
+        "It is a premise that supports a prediction, which is in turn offered as grounds for the argument's main conclusion.",
+        "It is a consideration that the argument acknowledges counts against its own conclusion.",
+        "It is a prediction that the argument supports with the claim that water rights in the valley are generous."
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Main conclusion: the planners' expectation 'is probably mistaken'. Support: farmers are limited by pumping cost, and drip lowers that cost (premises), 'therefore' farmers will cultivate new land (intermediate prediction), which is why water use will not fall. The claim is a premise feeding that prediction.",
+        "distractors": {
+          "It is the main conclusion of the argument.": "The main conclusion is that the planners' expectation is probably mistaken.",
+          "It is evidence that the planners offer in support of the expectation that the argument disputes.": "The planners cite reduced evaporation; the cost claim is the argument's own premise against them.",
+          "It is a consideration that the argument acknowledges counts against its own conclusion.": "It supports the conclusion; cheaper pumping drives the expansion.",
+          "It is a prediction that the argument supports with the claim that water rights in the valley are generous.": "It is stated as fact, not predicted, and the water-rights claim works alongside it rather than supporting it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-role",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}
