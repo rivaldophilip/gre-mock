@@ -1,0 +1,1056 @@
+{
+  "id": "quant-006",
+  "measure": "quant",
+  "title": "Quant Hard Mock 6",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 21
+    },
+    {
+      "n": 2,
+      "minutes": 26
+    }
+  ],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Enrollment in three language courses at Westbrook High School, 2019–2024 (each point is labelled with its exact value)",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 570 360\" width=\"100%\" role=\"img\" aria-label=\"Line chart of enrollment in Spanish, French and Mandarin, 2019 to 2024\" font-family=\"sans-serif\" font-size=\"12\" fill=\"currentColor\"><line x1=\"60\" y1=\"300\" x2=\"550\" y2=\"300\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"52\" y=\"304\" text-anchor=\"end\">0</text><line x1=\"60\" y1=\"270\" x2=\"550\" y2=\"270\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"52\" y=\"274\" text-anchor=\"end\">100</text><line x1=\"60\" y1=\"240\" x2=\"550\" y2=\"240\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"52\" y=\"244\" text-anchor=\"end\">200</text><line x1=\"60\" y1=\"210\" x2=\"550\" y2=\"210\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"52\" y=\"214\" text-anchor=\"end\">300</text><line x1=\"60\" y1=\"180\" x2=\"550\" y2=\"180\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"52\" y=\"184\" text-anchor=\"end\">400</text><line x1=\"60\" y1=\"150\" x2=\"550\" y2=\"150\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"52\" y=\"154\" text-anchor=\"end\">500</text><line x1=\"60\" y1=\"120\" x2=\"550\" y2=\"120\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"52\" y=\"124\" text-anchor=\"end\">600</text><line x1=\"60\" y1=\"90\" x2=\"550\" y2=\"90\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"52\" y=\"94\" text-anchor=\"end\">700</text><line x1=\"60\" y1=\"60\" x2=\"550\" y2=\"60\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"52\" y=\"64\" text-anchor=\"end\">800</text><line x1=\"60\" y1=\"30\" x2=\"550\" y2=\"30\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"52\" y=\"34\" text-anchor=\"end\">900</text><line x1=\"60\" y1=\"30\" x2=\"60\" y2=\"300\" stroke=\"currentColor\"/><line x1=\"60\" y1=\"300\" x2=\"550\" y2=\"300\" stroke=\"currentColor\"/><text x=\"90\" y=\"318\" text-anchor=\"middle\">2019</text><text x=\"178\" y=\"318\" text-anchor=\"middle\">2020</text><text x=\"266\" y=\"318\" text-anchor=\"middle\">2021</text><text x=\"354\" y=\"318\" text-anchor=\"middle\">2022</text><text x=\"442\" y=\"318\" text-anchor=\"middle\">2023</text><text x=\"530\" y=\"318\" text-anchor=\"middle\">2024</text><text x=\"16\" y=\"165\" transform=\"rotate(-90 16 165)\" text-anchor=\"middle\">Students enrolled</text><polyline points=\"90,42 178,54 266,60 354,78 442,84 530,90\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"90\" cy=\"42\" r=\"4\"/><text x=\"90\" y=\"32\" text-anchor=\"middle\">860</text><circle cx=\"178\" cy=\"54\" r=\"4\"/><text x=\"178\" y=\"44\" text-anchor=\"middle\">820</text><circle cx=\"266\" cy=\"60\" r=\"4\"/><text x=\"266\" y=\"50\" text-anchor=\"middle\">800</text><circle cx=\"354\" cy=\"78\" r=\"4\"/><text x=\"354\" y=\"68\" text-anchor=\"middle\">740</text><circle cx=\"442\" cy=\"84\" r=\"4\"/><text x=\"442\" y=\"74\" text-anchor=\"middle\">720</text><circle cx=\"530\" cy=\"90\" r=\"4\"/><text x=\"530\" y=\"80\" text-anchor=\"middle\">700</text><polyline points=\"90,156 178,150 266,153 354,162 442,165 530,168\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"8 5\"/><rect x=\"86\" y=\"152\" width=\"8\" height=\"8\"/><text x=\"90\" y=\"146\" text-anchor=\"middle\">480</text><rect x=\"174\" y=\"146\" width=\"8\" height=\"8\"/><text x=\"178\" y=\"140\" text-anchor=\"middle\">500</text><rect x=\"262\" y=\"149\" width=\"8\" height=\"8\"/><text x=\"266\" y=\"143\" text-anchor=\"middle\">490</text><rect x=\"350\" y=\"158\" width=\"8\" height=\"8\"/><text x=\"354\" y=\"152\" text-anchor=\"middle\">460</text><rect x=\"438\" y=\"161\" width=\"8\" height=\"8\"/><text x=\"442\" y=\"155\" text-anchor=\"middle\">450</text><rect x=\"526\" y=\"164\" width=\"8\" height=\"8\"/><text x=\"530\" y=\"158\" text-anchor=\"middle\">440</text><polyline points=\"90,264 178,255 266,240 354,228 442,219 530,210\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"2 4\"/><polygon points=\"90,259 85,268 95,268\"/><text x=\"90\" y=\"254\" text-anchor=\"middle\">120</text><polygon points=\"178,250 173,259 183,259\"/><text x=\"178\" y=\"245\" text-anchor=\"middle\">150</text><polygon points=\"266,235 261,244 271,244\"/><text x=\"266\" y=\"230\" text-anchor=\"middle\">200</text><polygon points=\"354,223 349,232 359,232\"/><text x=\"354\" y=\"218\" text-anchor=\"middle\">240</text><polygon points=\"442,214 437,223 447,223\"/><text x=\"442\" y=\"209\" text-anchor=\"middle\">270</text><polygon points=\"530,205 525,214 535,214\"/><text x=\"530\" y=\"200\" text-anchor=\"middle\">300</text><line x1=\"120\" y1=\"345\" x2=\"156\" y2=\"345\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"138\" cy=\"345\" r=\"4\"/><text x=\"164\" y=\"349\">Spanish</text><line x1=\"270\" y1=\"345\" x2=\"306\" y2=\"345\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"8 5\"/><rect x=\"284\" y=\"341\" width=\"8\" height=\"8\"/><text x=\"314\" y=\"349\">French</text><line x1=\"410\" y1=\"345\" x2=\"446\" y2=\"345\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"2 4\"/><polygon points=\"428,340 423,349 433,349\"/><text x=\"454\" y=\"349\">Mandarin</text></svg>"
+    },
+    {
+      "id": "fig2",
+      "caption": "Triangle PQR (not drawn to scale)",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 220\" width=\"100%\" role=\"img\" aria-label=\"Triangle PQR with PQ = 6 and QR = 8\" font-family=\"sans-serif\" font-size=\"14\" fill=\"currentColor\"><polygon points=\"40,190 280,190 139.5,40\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"26\" y=\"196\">Q</text><text x=\"286\" y=\"196\">R</text><text x=\"134.5\" y=\"32\">P</text><text x=\"73.7\" y=\"115.0\">6</text><text x=\"160.0\" y=\"210\" text-anchor=\"middle\">8</text></svg>"
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "$x < 0 < y$ and $x + y > 0$.",
+      "qc": {
+        "a": "$\\dfrac{x}{y}$",
+        "b": "$\\dfrac{y}{x}$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Since $x+y>0$ with $x<0<y$, we have $|x|<y$, so $\\dfrac{x}{y}$ lies between $-1$ and $0$, while its reciprocal $\\dfrac{y}{x}$ is less than $-1$.",
+        "steps": [
+          "1. $x+y>0$ means $y>-x=|x|$.",
+          "2. So $-1<\\dfrac{x}{y}<0$.",
+          "3. $\\dfrac{y}{x}$ is the reciprocal of a number in $(-1,0)$, so $\\dfrac{y}{x}<-1$.",
+          "4. Quantity A is greater."
+        ],
+        "fast": "Try $x=-1$, $y=2$: A $=-\\tfrac12$, B $=-2$. The sign facts force the same order every time.",
+        "trap": "Thinking two negative quantities can't be ordered without values, or comparing $|x/y|$ and $|y/x|$ and picking B because its size is larger."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-sense-qc",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "Compare the two quantities.",
+      "qc": {
+        "a": "The remainder when $2^{50}$ is divided by 7",
+        "b": "The remainder when $3^{50}$ is divided by 7"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Powers of 2 repeat with period 3 mod 7 ($2^3=8\\equiv1$), and powers of 3 with period 6 ($3^6=729\\equiv1$). $2^{50}=2^{48}\\cdot2^2\\equiv4$; $3^{50}=3^{48}\\cdot3^2\\equiv9\\equiv2$.",
+        "steps": [
+          "1. $2^3 = 8 = 7+1$, so $2^{48}=(2^3)^{16}$ leaves remainder 1.",
+          "2. $2^{50}=2^{48}\\cdot 4$ leaves remainder 4.",
+          "3. Remainders of $3^n$ mod 7: 3, 2, 6, 4, 5, 1, so the cycle length is 6.",
+          "4. $50 = 6\\cdot 8 + 2$, so $3^{50}$ leaves the same remainder as $3^2=9$, which is 2.",
+          "5. $4 > 2$: Quantity A is greater."
+        ],
+        "fast": "Find each cycle length (3 and 6), reduce the exponent 50 by it, and compare $2^2$ with $3^2$ mod 7.",
+        "trap": "Assuming both cycles have the same length, or reading $3^2=9$ as the remainder instead of $9-7=2$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "remainders-units",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "figureId": "fig2",
+      "prompt": "In triangle $PQR$, $PQ = 6$, $QR = 8$, and the area of the triangle is 20. (The figure is not drawn to scale.)",
+      "qc": {
+        "a": "$PR$",
+        "b": "10"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The height from $P$ to line $QR$ is $\\dfrac{2\\cdot20}{8}=5$. With $PQ=6$, the foot of that height is $\\sqrt{36-25}=\\sqrt{11}$ from $Q$, and it can lie on either side of $Q$. Angle $Q$ can therefore be acute ($PR\\approx6.9$) or obtuse ($PR\\approx12.4$).",
+        "steps": [
+          "1. Height from $P$: $h=\\dfrac{2(20)}{8}=5$.",
+          "2. Horizontal offset of $P$ from $Q$: $\\sqrt{6^2-5^2}=\\sqrt{11}$, toward $R$ or away from it.",
+          "3. Toward $R$: $PR^2=25+(8-\\sqrt{11})^2\\approx46.9$, so $PR<10$.",
+          "4. Away from $R$: $PR^2=25+(8+\\sqrt{11})^2\\approx153$, so $PR>10$.",
+          "5. Both triangles have area 20: the relationship cannot be determined."
+        ],
+        "fast": "If angle $Q$ were $90^\\circ$, the area would be 24 and $PR$ would be 10. Area 20 rules that out, but both an acute and an obtuse angle $Q$ give area 20.",
+        "trap": "Trusting the drawing (acute angle $Q$) and answering B, or seeing the 6-8-10 triple and answering C."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "figures-not-to-scale",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "At a climbing gym, the 24 route-setting scores recorded in March have an average of 70 and a standard deviation of 5. Two scores recorded in April, 65 and 75, are added to the March scores to form a list of 26 scores.",
+      "qc": {
+        "a": "The standard deviation of the 26 scores",
+        "b": "5"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "65 and 75 keep the average at 70, and each lies exactly one standard deviation (5) from it. Each added squared deviation is 25, the same as the average squared deviation of the March scores, so the variance stays 25 and the standard deviation stays 5.",
+        "steps": [
+          "1. New average: $(24\\cdot70+65+75)/26=70$.",
+          "2. Sum of squared deviations for March: $24\\cdot25=600$.",
+          "3. Added: $5^2+5^2=50$; new total 650.",
+          "4. New variance: $650/26=25$, so the standard deviation is 5.",
+          "5. (With the $n-1$ convention: $(23\\cdot25+50)/25=25$ as well.) The quantities are equal."
+        ],
+        "fast": "Adding values whose squared deviation equals the current variance leaves the variance unchanged.",
+        "trap": "Reasoning that values inside the range \"pull the spread in\" (B) or that more values mean more spread (A). Only their distance from the average, compared with 5, matters."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "std-dev-normal",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "A farm stand raised the price of a jar of honey by 20 percent in June and then lowered the new price by 20 percent in September. In December it raised the September price by $p$ percent, which brought the price back exactly to its original value. To the nearest tenth, what is $p$?",
+      "choices": [
+        "$0.0$",
+        "$4.0$",
+        "$4.2$",
+        "$4.8$",
+        "$20.0$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "After the two changes the price is $1.2\\times0.8=0.96$ of the original. Returning to 1 needs a factor $\\dfrac{1}{0.96}=1.041\\overline{6}$, an increase of about 4.2 percent.",
+        "steps": [
+          "1. Net factor after June and September: $1.20\\times0.80=0.96$.",
+          "2. Needed factor: $1/0.96=25/24$.",
+          "3. $p=\\dfrac{1}{24}\\times100\\approx4.17$, which is 4.2 to the nearest tenth."
+        ],
+        "fast": "A 4% drop from 100 leaves 96; recovering 4 on a base of 96 is a bit more than 4%.",
+        "trap": "Assuming +20% then −20% cancels (0.0), or recovering the 4% drop with 4.0% on the wrong base."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "percent",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A kayaker paddles at a constant speed in still water. On a river whose current flows at 2 kilometers per hour, she paddles 12 kilometers upstream and then 12 kilometers back downstream, for a total time of 4.5 hours. How many more minutes did the upstream leg take than the downstream leg?",
+      "choices": [
+        "$30$",
+        "$45$",
+        "$60$",
+        "$90$",
+        "$120$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "With still-water speed $v$: $\\dfrac{12}{v-2}+\\dfrac{12}{v+2}=4.5$ gives $v=6$. Upstream takes $12/4=3$ hours and downstream $12/8=1.5$ hours, a difference of 1.5 hours, or 90 minutes.",
+        "steps": [
+          "1. $\\dfrac{12}{v-2}+\\dfrac{12}{v+2}=\\dfrac{24v}{v^2-4}=4.5$.",
+          "2. $4.5v^2-24v-18=0$, i.e. $3v^2-16v-12=0$, so $(3v+2)(v-6)=0$ and $v=6$.",
+          "3. Upstream: $12/(6-2)=3$ h. Downstream: $12/(6+2)=1.5$ h.",
+          "4. Difference: 1.5 h $=90$ minutes."
+        ],
+        "fast": "Test speeds: $v=6$ gives $3+1.5=4.5$ at once. Then subtract the legs.",
+        "trap": "Stopping at the speed (6) or at one leg's time, or answering in hours (1.5 read as a choice near 60)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-rate",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "How many four-digit positive integers have digits whose product is 24?",
+      "choices": [
+        "$36$",
+        "$48$",
+        "$52$",
+        "$60$",
+        "$64$"
+      ],
+      "key": {
+        "sel": [
+          4
+        ]
+      },
+      "explanation": {
+        "key": "No digit can be 0, so list the multisets of four digits from 1–9 with product 24: {1,1,3,8}, {1,1,4,6}, {1,2,2,6}, {1,2,3,4}, {2,2,2,3}. They give 12, 12, 12, 24 and 4 arrangements, 64 in all.",
+        "steps": [
+          "1. $24=2^3\\cdot3$, and every digit is between 1 and 9.",
+          "2. Multisets: {1,1,3,8}, {1,1,4,6}, {1,2,2,6}, {1,2,3,4}, {2,2,2,3}.",
+          "3. Arrangements: $\\tfrac{4!}{2!}=12$ for each of the first three, $4!=24$ for {1,2,3,4}, $\\tfrac{4!}{3!}=4$ for {2,2,2,3}.",
+          "4. Total $12+12+12+24+4=64$."
+        ],
+        "fast": "Organize by how many 1s appear (two, one, none) so that no factorization is skipped.",
+        "trap": "Missing {2,2,2,3} (the one with no 1s) gives 60; missing {1,2,3,4} gives 40; treating every multiset as 12 arrangements gives 60."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-restrictions",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "counting-permutations",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "The number $x$ satisfies $-2 \\le 3 - 5x < 18$. Which of the following could be the value of $x^2$? Indicate all such values.",
+      "choices": [
+        "$-1$",
+        "$0$",
+        "$1$",
+        "$4$",
+        "$8.5$",
+        "$9$"
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The inequality gives $-3<x\\le1$. Because the interval contains 0, $x^2$ takes every value from 0 up to (but not including) 9, the value approached as $x\\to-3$.",
+        "steps": [
+          "1. $-2\\le3-5x$ gives $5x\\le5$, so $x\\le1$.",
+          "2. $3-5x<18$ gives $-5x<15$, so $x>-3$ (the sign flips).",
+          "3. On $(-3,1]$, $x^2$ ranges over $[0,9)$: 0 at $x=0$, 1 at $x=\\pm1$, 4 at $x=-2$, 8.5 at $x=-\\sqrt{8.5}\\approx-2.92$.",
+          "4. 9 would need $x=\\pm3$, both excluded; $-1$ is never a square."
+        ],
+        "fast": "Solve for the interval, then remember the square of an interval through 0 starts at 0 and ends at the larger endpoint squared.",
+        "trap": "Squaring the endpoints only (giving the range 1 to 9 and dropping 0), or forgetting to flip the sign and getting $x<-3$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inequalities",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 3,
+      "prompt": "What is the value of $\\left(1-\\dfrac{1}{4}\\right)\\left(1-\\dfrac{1}{9}\\right)\\left(1-\\dfrac{1}{16}\\right)\\cdots\\left(1-\\dfrac{1}{100}\\right)$, the product of the factors $1-\\dfrac{1}{k^2}$ for $k=2, 3, \\ldots, 10$? Give your answer as a fraction.",
+      "numeric": {
+        "kind": "fraction"
+      },
+      "key": {
+        "value": "11/20"
+      },
+      "explanation": {
+        "key": "$1-\\dfrac1{k^2}=\\dfrac{k-1}{k}\\cdot\\dfrac{k+1}{k}$. The product of the first factors telescopes to $\\dfrac{1}{10}$ and of the second factors to $\\dfrac{11}{2}$; the result is $\\dfrac{11}{20}$.",
+        "steps": [
+          "1. Factor each term: $\\dfrac{(k-1)(k+1)}{k^2}$.",
+          "2. $\\prod_{k=2}^{10}\\dfrac{k-1}{k}=\\dfrac{1}{10}$.",
+          "3. $\\prod_{k=2}^{10}\\dfrac{k+1}{k}=\\dfrac{11}{2}$.",
+          "4. Product: $\\dfrac{11}{20}$."
+        ],
+        "fast": "Write the terms as $\\tfrac{1\\cdot3}{2\\cdot2}\\cdot\\tfrac{2\\cdot4}{3\\cdot3}\\cdots$ and watch everything cancel except $\\tfrac12$ and $\\tfrac{11}{10}$.",
+        "trap": "Stopping at $k=9$ or starting at $k=1$ (an off-by-one), or multiplying out nine fractions by hand."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "fractions-decimals",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 3,
+      "prompt": "The percent increase in Mandarin enrollment from 2021 to 2024 was how many times the percent decrease in Spanish enrollment from 2021 to 2024?",
+      "choices": [
+        "$1$",
+        "$2.5$",
+        "$3.5$",
+        "$4$",
+        "$5$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Mandarin rose from 200 to 300, a 50 percent increase. Spanish fell from 800 to 700, a 12.5 percent decrease. $50/12.5=4$.",
+        "steps": [
+          "1. Mandarin: $(300-200)/200=50\\%$.",
+          "2. Spanish: $(800-700)/800=12.5\\%$.",
+          "3. Ratio: $50/12.5=4$."
+        ],
+        "fast": "Both changed by 100 students, so the ratio of the percents is the inverse ratio of the bases: $800/200=4$.",
+        "trap": "Comparing the absolute changes (1), or using the 2024 values as bases (33.3% and 14.3%, about 2.3 to 2.5)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "percent",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 4,
+      "prompt": "In 2023, exactly 60 students were enrolled in both French and Mandarin, and no other student was enrolled in more than one of the three courses. One of the students enrolled in at least one of the three courses in 2023 is to be chosen at random. Given that the student chosen is not enrolled in Spanish, what is the probability that the student is enrolled in both French and Mandarin?",
+      "choices": [
+        "$\\dfrac{1}{23}$",
+        "$\\dfrac{1}{12}$",
+        "$\\dfrac{1}{11}$",
+        "$\\dfrac{2}{15}$",
+        "$\\dfrac{2}{9}$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "In 2023 French had 450 and Mandarin 270 students. The students not in Spanish are those in French or Mandarin: $450+270-60=660$. Of these, 60 take both: $60/660=1/11$.",
+        "steps": [
+          "1. Read 2023: French 450, Mandarin 270.",
+          "2. Students not in Spanish = French ∪ Mandarin = $450+270-60=660$.",
+          "3. $P=\\dfrac{60}{660}=\\dfrac{1}{11}$."
+        ],
+        "fast": "Restrict the sample space to the union of French and Mandarin, counting the overlap once.",
+        "trap": "Using $450+270=720$ as the base (double-counting the 60) gives $1/12$; using all 1,380 students gives $1/23$; using only Mandarin gives $2/9$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-conditional",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "overlapping-sets",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 5,
+      "prompt": "Suppose that French enrollment in 2025 is $x$ students, and that for the seven years 2019 through 2025 the median of the annual French enrollments equals their average (arithmetic mean). What is the sum of all possible values of $x$?",
+      "choices": [
+        "$470$",
+        "$870$",
+        "$940$",
+        "$1010$",
+        "$1410$"
+      ],
+      "key": {
+        "sel": [
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The six French values sort to 440, 450, 460, 480, 490, 500 (sum 2,820). The median of seven values is 460 if $x\\le460$, $x$ itself if $460\\le x\\le480$, and 480 if $x\\ge480$. Setting each equal to $(2820+x)/7$ gives $x=400$, $x=470$ and $x=540$, all consistent with their cases. Sum: 1,410.",
+        "steps": [
+          "1. French 2019–2024: 480, 500, 490, 460, 450, 440; sum 2,820.",
+          "2. Case $x\\le460$: median 460, so $2820+x=3220$ and $x=400$ ✓.",
+          "3. Case $460\\le x\\le480$: median $x$, so $2820+x=7x$ and $x=470$ ✓.",
+          "4. Case $x\\ge480$: median 480, so $2820+x=3360$ and $x=540$ ✓.",
+          "5. Sum: $400+470+540=1410$."
+        ],
+        "fast": "The median can only be 460, $x$ or 480; solve the mean equation in each case and keep the solutions that land in their case.",
+        "trap": "Finding only the middle case (470), or only one outer case (870 or 1010)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q1",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "Compare the two quantities.",
+      "qc": {
+        "a": "$\\sqrt{17}-\\sqrt{15}$",
+        "b": "$\\sqrt{15}-\\sqrt{13}$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Rationalize: $\\sqrt{17}-\\sqrt{15}=\\dfrac{2}{\\sqrt{17}+\\sqrt{15}}$ and $\\sqrt{15}-\\sqrt{13}=\\dfrac{2}{\\sqrt{15}+\\sqrt{13}}$. The first denominator is larger, so Quantity A is smaller.",
+        "steps": [
+          "1. Multiply each difference by its conjugate.",
+          "2. A $=\\dfrac{2}{\\sqrt{17}+\\sqrt{15}}$, B $=\\dfrac{2}{\\sqrt{15}+\\sqrt{13}}$.",
+          "3. Equal numerators; A has the larger denominator.",
+          "4. Quantity B is greater."
+        ],
+        "fast": "$\\sqrt{x}$ grows more slowly as $x$ grows, so equal steps of 2 under the root give shrinking differences.",
+        "trap": "Thinking equal gaps under the radical give equal gaps between the roots (C)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponents-roots",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q2",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "Compare the two quantities.",
+      "qc": {
+        "a": "The number of integers $x$ such that $|x+3| > 2|x-1|$",
+        "b": "4"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Both sides are nonnegative, so square: $x^2+6x+9>4x^2-8x+4$, i.e. $3x^2-14x-5<0$, i.e. $(3x+1)(x-5)<0$. So $-\\tfrac13<x<5$, which contains the five integers 0, 1, 2, 3, 4.",
+        "steps": [
+          "1. Square both (nonnegative) sides: $3x^2-14x-5<0$.",
+          "2. Factor: $(3x+1)(x-5)<0$, so $-\\tfrac13<x<5$.",
+          "3. Integers: 0, 1, 2, 3, 4, five of them.",
+          "4. Check $x=0$: $3>2$ ✓; $x=5$: $8>8$ fails.",
+          "5. Quantity A is greater."
+        ],
+        "fast": "Split at $x=1$: for $x\\ge1$ you get $x<5$ (1 to 4); for $x<1$ you get $3x>-1$, which adds $x=0$.",
+        "trap": "Solving only the case $x\\ge1$ (four integers, C), or counting the endpoint 5."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "abs-value-inequalities",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q3",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A fair coin is to be tossed several times.",
+      "qc": {
+        "a": "The probability of getting more heads than tails in 5 tosses",
+        "b": "The probability of getting more heads than tails in 6 tosses"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "With 5 tosses a tie is impossible, so by symmetry P(more heads) $=\\tfrac12$. With 6 tosses a 3–3 tie has probability $\\binom63/64=\\tfrac{20}{64}$, so P(more heads) $=\\tfrac12\\left(1-\\tfrac{20}{64}\\right)=\\tfrac{11}{32}$.",
+        "steps": [
+          "1. 5 tosses: heads and tails can't tie; more heads and more tails are equally likely, so A $=\\tfrac12$.",
+          "2. 6 tosses: P(3 heads) $=\\tfrac{20}{64}=\\tfrac{5}{16}$.",
+          "3. B $=\\tfrac12\\left(1-\\tfrac5{16}\\right)=\\tfrac{11}{32}<\\tfrac12$.",
+          "4. Quantity A is greater."
+        ],
+        "fast": "Symmetry splits the non-tie probability in half; only the even number of tosses loses probability to ties.",
+        "trap": "Answering C because \"a fair coin is fair either way\", without noticing that a tie is possible only with an even number of tosses."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-basic",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q4",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "$k$ is a positive integer, and $k^2$ is divisible by 72.",
+      "qc": {
+        "a": "The greatest integer that must be a divisor of $k$",
+        "b": "12"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "$72=2^3\\cdot3^2$. For $k^2$ to contain $2^3$, $k$ needs at least $2^2$ (its square then has $2^4$); for $3^2$, $k$ needs $3$. So $12\\mid k$, and $k=12$ itself works ($144=2\\cdot72$), so nothing larger must divide $k$.",
+        "steps": [
+          "1. $72=2^3\\cdot3^2$.",
+          "2. Exponents in $k^2$ are even, so $2^3\\mid k^2$ forces $2^4\\mid k^2$, i.e. $2^2\\mid k$.",
+          "3. $3^2\\mid k^2$ forces $3\\mid k$.",
+          "4. So $12\\mid k$; $k=12$ is allowed, so 12 is the greatest guaranteed divisor.",
+          "5. The quantities are equal."
+        ],
+        "fast": "Smallest such $k$ is 12, and every valid $k$ is a multiple of it.",
+        "trap": "Taking $\\sqrt{72}\\approx8.5$ and guessing 6 (but $6^2=36$ is not divisible by 72), or thinking $k$ must be divisible by 72 itself."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "integers-properties",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "$a$ and $b$ are real numbers such that $a^2 + b^2 = 14$ and $ab = 5$.",
+      "qc": {
+        "a": "$|a| + |b|$",
+        "b": "5"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$(a+b)^2=a^2+b^2+2ab=24$. Since $ab>0$, $a$ and $b$ have the same sign, so $|a|+|b|=|a+b|=\\sqrt{24}\\approx4.90<5$.",
+        "steps": [
+          "1. $(a+b)^2=14+10=24$, so $a+b=\\pm\\sqrt{24}$.",
+          "2. $ab=5>0$: same sign, so $|a|+|b|=|a+b|$.",
+          "3. $|a|+|b|=\\sqrt{24}<\\sqrt{25}=5$.",
+          "4. Quantity B is greater."
+        ],
+        "fast": "The sign case split collapses because $ab>0$; then compare $\\sqrt{24}$ with $\\sqrt{25}$.",
+        "trap": "Answering D because $a+b$ could be negative, or using $(a-b)^2=4$ and getting $|a|+|b|$ from the wrong identity."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "algebraic-expressions",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q6",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "At a plant nursery, the ratio of ferns to succulents was $5:3$. After 40 succulents were sold and 20 ferns were delivered, the ratio of ferns to succulents became $3:1$. What is the total number of ferns and succulents now at the nursery?",
+      "choices": [
+        "$195$",
+        "$240$",
+        "$260$",
+        "$280$",
+        "$300$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Let the original counts be $5k$ and $3k$. Then $5k+20=3(3k-40)$, so $k=35$: 175 ferns and 105 succulents. Now there are 195 ferns and 65 succulents, 260 in all.",
+        "steps": [
+          "1. $\\dfrac{5k+20}{3k-40}=3$.",
+          "2. $5k+20=9k-120$, so $k=35$.",
+          "3. Now: $175+20=195$ ferns and $105-40=65$ succulents.",
+          "4. Total $195+65=260$."
+        ],
+        "fast": "Write the equation in $k$, then answer the question actually asked (the current total, not the ferns).",
+        "trap": "Stopping at the ferns (195), or giving the original total $8k=280$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "ratio-proportion",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q7",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "Two lawn sprinklers each water a circular region of radius 6 meters. The sprinklers are placed $6\\sqrt{2}$ meters apart. What is the area, in square meters, of the part of the lawn watered by both sprinklers?",
+      "choices": [
+        "$9\\pi - 18$",
+        "$18\\pi - 36$",
+        "$18\\pi - 18$",
+        "$24\\pi - 18\\sqrt{3}$",
+        "$36\\pi - 36$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The two centers and the two intersection points form a square of side 6 (its diagonal is the center distance $6\\sqrt2$), so each circle's arc bounding the overlap subtends $90^\\circ$. Each half of the lens is a quarter-circle ($9\\pi$) minus a right isosceles triangle with legs 6 (area 18). Overlap $=2(9\\pi-18)=18\\pi-36$.",
+        "steps": [
+          "1. Each intersection point is 6 from both centers; with center distance $6\\sqrt2$, the radii to it are perpendicular (6-6-$6\\sqrt2$ is a 45-45-90 triangle).",
+          "2. So the overlap's arcs each subtend $90^\\circ$ at their centers.",
+          "3. One segment: quarter circle $\\tfrac14\\pi(36)=9\\pi$ minus triangle $\\tfrac12(6)(6)=18$.",
+          "4. Two segments: $18\\pi-36$."
+        ],
+        "fast": "Distance $r\\sqrt2$ between centers means a $90^\\circ$ central angle; the lens is two quarter-circle segments.",
+        "trap": "Using the $120^\\circ$ case (centers $r$ apart) gives $24\\pi-18\\sqrt3$; counting only one segment gives $9\\pi-18$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "circles",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q8",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "Eight tennis players, among them the siblings Ana and Ben and the siblings Cara and Dev, are to be split into four doubles teams of two players each. The teams are not labelled or ordered. In how many of the possible splits are no two siblings on the same team?",
+      "choices": [
+        "$72$",
+        "$75$",
+        "$78$",
+        "$90$",
+        "$105$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "All splits of 8 players into 4 unlabelled pairs: $7\\cdot5\\cdot3\\cdot1=105$. Ana with Ben: the other 6 pair up in 15 ways; likewise Cara with Dev: 15. Both sibling pairs together: the other 4 pair up in 3 ways. Inclusion-exclusion: $105-15-15+3=78$.",
+        "steps": [
+          "1. Total splits: Ana has 7 possible partners, the next unpaired player 5, then 3, then 1: 105.",
+          "2. Splits with Ana and Ben together: $5\\cdot3\\cdot1=15$. Same for Cara and Dev: 15.",
+          "3. Splits with both sibling teams: the remaining 4 players pair up in $3\\cdot1=3$ ways.",
+          "4. Splits with at least one sibling team: $15+15-3=27$.",
+          "5. Splits with none: $105-27=78$."
+        ],
+        "fast": "Count the complement with inclusion-exclusion: $105-(15+15-3)$.",
+        "trap": "Subtracting both 15s without adding back the 3 splits counted twice gives 75; removing only one sibling pair gives 90; 105 ignores the restriction."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-permutations",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "counting-restrictions",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q9",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A gift basket holds $x$ jars of jam, $y$ bags of coffee and $z$ boxes of tea, with at least one of each. At Shop 1, which charges \\$2 per jar, \\$3 per bag and \\$4 per box, the basket's contents cost \\$29. At Shop 2, which charges \\$4 per jar, \\$3 per bag and \\$2 per box, they cost \\$25. What is the greatest possible value of $z$?",
+      "choices": [
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Adding the equations: $6(x+y+z)=54$, so $x+y+z=9$. Subtracting: $2z-2x=4$, so $z=x+2$. Then $y=7-2x\\ge1$ forces $x\\le3$, so $z\\le5$; $(3,1,5)$ works.",
+        "steps": [
+          "1. $2x+3y+4z=29$ and $4x+3y+2z=25$.",
+          "2. Add: $x+y+z=9$. Subtract: $z-x=2$.",
+          "3. $y=9-x-z=7-2x$; $y\\ge1$ gives $x\\le3$.",
+          "4. Largest $z=3+2=5$ with $(x,y,z)=(3,1,5)$: $6+3+20=29$ and $12+3+10=25$ ✓."
+        ],
+        "fast": "Add and subtract the equations instead of eliminating one variable; then push $x$ as high as $y\\ge1$ allows.",
+        "trap": "Allowing $y\\le0$ (for example $x=4$, $y=-1$, $z=6$), or stopping at the first solution found, such as $z=3$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "linear-equations",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "min-max-bounding",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q10",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "A rectangular photograph measuring 4 inches by 6 inches is surrounded by a frame of uniform width. The area of the frame alone equals the area of the photograph. What is the outer perimeter of the frame, in inches?",
+      "choices": [
+        "$20$",
+        "$24$",
+        "$28$",
+        "$32$",
+        "$48$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "With frame width $w$, the outer rectangle has area $2\\cdot24=48$: $(4+2w)(6+2w)=48$ gives $w^2+5w-6=0$, so $w=1$. The outer rectangle is 6 by 8, with perimeter 28.",
+        "steps": [
+          "1. Outer area = photo + frame $=24+24=48$.",
+          "2. $(4+2w)(6+2w)=48$: $4w^2+20w-24=0$, so $(w+6)(w-1)=0$ and $w=1$.",
+          "3. Outer dimensions $6\\times8$; perimeter $2(6+8)=28$."
+        ],
+        "fast": "Look for a rectangle of area 48 whose sides exceed 4 and 6 by the same amount: $6\\times8$.",
+        "trap": "Adding $w$ once per side instead of twice, or giving the photo's perimeter (20) or the outer area (48)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "area-perimeter",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q11",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A square is inscribed in a semicircle of radius 5, with two vertices of the square on the diameter and the other two on the arc. A circle is inscribed in the square. What is the area of the region that lies inside the semicircle but outside the circle?",
+      "choices": [
+        "$5\\pi$",
+        "$\\dfrac{15\\pi}{2}$",
+        "$\\dfrac{25\\pi}{2}-20$",
+        "$10\\pi$",
+        "$\\dfrac{25\\pi}{4}$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The square is centered on the diameter, so a top vertex is at $(s/2, s)$ from the center: $\\tfrac{s^2}{4}+s^2=25$, $s^2=20$. The inscribed circle has radius $s/2=\\sqrt5$ and area $5\\pi$. Semicircle area $\\tfrac{25\\pi}{2}$; difference $\\tfrac{15\\pi}{2}$.",
+        "steps": [
+          "1. By symmetry the square's base is centered at the semicircle's center.",
+          "2. Top corner: $(s/2)^2+s^2=5^2$, so $s^2=20$.",
+          "3. Inscribed circle: radius $\\tfrac{s}{2}$, area $\\pi\\tfrac{s^2}{4}=5\\pi$.",
+          "4. Semicircle: $\\tfrac12\\pi(25)=\\tfrac{25\\pi}{2}$.",
+          "5. Region: $\\tfrac{25\\pi}{2}-5\\pi=\\tfrac{15\\pi}{2}$."
+        ],
+        "fast": "You never need $s$, only $s^2=20$: the circle's area is $\\pi s^2/4$.",
+        "trap": "Placing the square's corner at distance $s$ (not $s/2$) from the center, or subtracting the square instead of the circle ($\\tfrac{25\\pi}{2}-20$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inscribed-figures",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q12",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "In quadrilateral $ABCD$, angle $ABC$ and angle $ACD$ are right angles, $AB = BC = 6$, and angle $CAD$ measures $30^\\circ$. What is the length of $AD$?",
+      "choices": [
+        "$6\\sqrt{2}$",
+        "$4\\sqrt{6}$",
+        "$6\\sqrt{3}$",
+        "$12$",
+        "$12\\sqrt{2}$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Triangle $ABC$ is 45-45-90, so $AC=6\\sqrt2$. In right triangle $ACD$ (right angle at $C$), $AC$ is the leg adjacent to the $30^\\circ$ angle, so it is $\\tfrac{\\sqrt3}{2}$ of the hypotenuse $AD$: $AD=\\dfrac{2\\cdot6\\sqrt2}{\\sqrt3}=4\\sqrt6$.",
+        "steps": [
+          "1. $AC=6\\sqrt2$ (isosceles right triangle).",
+          "2. In triangle $ACD$, angles are $30^\\circ$ at $A$, $90^\\circ$ at $C$, $60^\\circ$ at $D$.",
+          "3. Sides in ratio $1:\\sqrt3:2$, with $AC$ opposite $60^\\circ$: $AC=\\sqrt3\\cdot CD$, so $CD=2\\sqrt6$.",
+          "4. $AD=2\\cdot CD=4\\sqrt6\\approx9.8$."
+        ],
+        "fast": "$AD=AC\\cdot\\dfrac{2}{\\sqrt3}=\\dfrac{12\\sqrt2}{\\sqrt3}=4\\sqrt6$.",
+        "trap": "Treating $AC$ as the side opposite the $30^\\circ$ angle (gives $AD=12\\sqrt2$), or as the hypotenuse."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q13",
+      "section": 2,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "Of the 80 members of a hiking club, 52 have hiked the ridge trail and 41 have hiked the canyon trail. At least 10 members have hiked neither trail. Which of the following could be the number of members who have hiked exactly one of the two trails? Indicate all such numbers.",
+      "choices": [
+        "$11$",
+        "$20$",
+        "$27$",
+        "$46$",
+        "$47$",
+        "$49$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "If $b$ members hiked both, the number who hiked exactly one is $52+41-2b=93-2b$, which is always odd. At most 70 hiked at least one, so $93-b\\le70$ and $b\\ge23$; also $b\\le41$. So exactly-one runs over the odd numbers from $93-82=11$ to $93-46=47$.",
+        "steps": [
+          "1. Exactly one $=(52-b)+(41-b)=93-2b$.",
+          "2. Union $=93-b\\le80-10=70$, so $b\\ge23$; and $b\\le41$.",
+          "3. $b=41$ gives 11; $b=23$ gives 47; every odd value between is possible.",
+          "4. 20 and 46 are even (impossible); 49 needs $b=22$ (too few hiked neither)."
+        ],
+        "fast": "Exactly one = 93 − 2(both): odd, between 11 and 47.",
+        "trap": "Missing the parity (choosing 20 or 46), or ignoring the 'at least 10 neither' condition (choosing 49)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "overlapping-sets",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "min-max-bounding",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q14",
+      "section": 2,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "Three wooden rods have lengths, in centimeters, that are three different integers with a sum of 30, and the rods can be joined end to end to form a triangle. Which of the following could be the length, in centimeters, of the shortest rod? Indicate all such lengths.",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$6$",
+        "$9$",
+        "$10$"
+      ],
+      "key": {
+        "sel": [
+          2,
+          3,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "With lengths $a<b<c$, the triangle inequality $c<a+b=30-c$ gives $c\\le14$, so $b\\le13$ and $a=30-b-c\\ge3$. And $a<b<c$ with sum 30 gives $a\\le9$ (9, 10, 11). Every $a$ from 3 to 9 works, e.g. (3, 13, 14), (6, 11, 13), (9, 10, 11).",
+        "steps": [
+          "1. Longest side: $c<a+b=30-c$, so $c<15$, $c\\le14$.",
+          "2. Then $b\\le13$, so $a\\ge30-13-14=3$.",
+          "3. Upper bound: $3a<a+b+c=30$ with $a<b<c$ gives $a\\le9$.",
+          "4. Witnesses: (3,13,14), (6,11,13), (9,10,11). So 3, 6 and 9 are possible; 1, 2 and 10 are not."
+        ],
+        "fast": "The longest rod is at most 14; with distinct lengths the other two can be at most 13 and 14, which leaves the shortest at least 3.",
+        "trap": "Forgetting that the lengths are distinct (allowing 2, 14, 14) or applying the triangle inequality only to the shortest rod."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "min-max-bounding",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q15",
+      "section": 2,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "In triangle $ABC$, $AB = 7$, $BC = 11$, and the length of $AC$ is an integer. For how many possible values of $AC$ is triangle $ABC$ obtuse?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "8"
+      },
+      "explanation": {
+        "key": "$AC$ ranges over the integers 5 to 17. The triangle is obtuse at $B$ when $AC^2>7^2+11^2=170$ ($AC=14$ to 17, four values) and obtuse at $A$ when $11^2>7^2+AC^2$, i.e. $AC^2<72$ ($AC=5$ to 8, four values). Total 8.",
+        "steps": [
+          "1. Triangle inequality: $4<AC<18$, so $AC\\in\\{5,\\ldots,17\\}$.",
+          "2. $AC$ longest and obtuse: $AC^2>170$, so $AC\\ge14$: 14, 15, 16, 17.",
+          "3. $BC=11$ longest and obtuse: $121>49+AC^2$, so $AC^2<72$: 5, 6, 7, 8.",
+          "4. No integer gives a right triangle ($\\sqrt{170}$ and $\\sqrt{72}$ are not integers). Total: 8."
+        ],
+        "fast": "Two obtuse cases: the unknown side is the longest, or 11 is the longest.",
+        "trap": "Counting only the case where $AC$ is the longest side (4), or including the endpoints 4 and 18."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}
