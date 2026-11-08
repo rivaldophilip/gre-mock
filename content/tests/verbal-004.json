@@ -1,0 +1,1803 @@
+{
+  "id": "verbal-004",
+  "measure": "verbal",
+  "title": "Verbal Hard Mock 4",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 18
+    },
+    {
+      "n": 2,
+      "minutes": 23
+    }
+  ],
+  "passages": [
+    {
+      "id": "p1",
+      "paragraphs": [
+        "Zircon, a mineral that crystallizes from cooling magma, is prized by geochemists because it is nearly indestructible: grains eroded from their parent rock can survive billions of years of weathering and burial while preserving the chemistry of the melt in which they grew. For this reason a handful of zircon grains older than any surviving rock have become the fulcrum of a debate about the earliest Earth. Some of these grains are enriched in the heavier isotope of oxygen, a signature that, in younger rocks, arises when material that has interacted with liquid water at low temperature is buried, melted and recrystallized. Many researchers have taken the enrichment to show that oceans existed within a few hundred million years of the planet's formation, long before the molten, waterless surface that textbooks once assumed had cooled.",
+        "Skeptics have been inclined to dismiss the signature as an artifact. Zircon, for all its durability, is not immune to alteration: radiation from the uranium it contains damages its crystal lattice, and fluids can later penetrate the damaged zones and reset their isotopes. That objection is serious but not decisive. Analyses confined to undamaged domains of the grains, identified by their intact crystal structure, still find the enrichment, so the signal cannot be explained away as indiscriminate contamination acquired after the grains formed.",
+        "What the grains cannot do is delimit the extent of the water they record. The isotopic signature requires only that some crustal material met water at the surface before it was buried and melted; a few shallow seas, or even transient pools on an otherwise barren crust, would produce it as readily as a global ocean. The zircons thus establish that liquid water existed very early, a conclusion that even the most dogged skepticism has not overturned, but they leave entirely open whether the young planet resembled the one we know."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "fulcrum",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "inclined",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "indiscriminate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "delimit",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "dogged",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "paragraphs": [
+        "In the 1570s and 1580s a circle of English poets set out to write verse on the principles of Latin prosody, in which a line is measured not by the alternation of stressed and unstressed syllables but by the duration of its syllables, long or short. Literary historians have usually treated the experiment as an effete diversion, a hidebound reverence for antiquity that English, a language whose rhythm is governed by stress, was bound to defeat. That verdict mistakes the experiment's purpose. Its practitioners did not imagine that quantity would displace accent in demotic speech; what they wanted was a discipline that would make the poet attend to properties of syllables (the weight of a cluster of consonants, the length of a vowel) that accentual verse lets the ear pass over. Read in that light, the factitious rules they devised for deciding which English syllables counted as long were less a failure than a set of exercises, and several poets who later abandoned the method wrote accentual lines whose dense consonantal texture suggests that they had learned from it."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "effete",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "hidebound",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "demotic",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "factitious",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "paragraphs": [
+        "The young women who staffed the silk-reeling mills of central Japan in the decades after 1880 have long served historians as emblems of an exploitative industrialization. Recruited from poor farming households, bound by contracts their fathers signed, housed in dormitories they could leave only with permission, and paid under a system of fines and bonuses that set each reeler against her neighbors, they seem to have possessed nothing that could be called bargaining power. Accounts written in this vein are not wrong about the hours or the dormitories. They err in treating the workers as fungible units whose only recourse was flight or, more rarely, a strike.",
+        "Records kept by the mill owners themselves complicate that picture. In the main reeling district, owners complained constantly that headstrong reelers, abetted by rival mills offering advances on wages, were breaking their contracts, and in 1900 the owners formed an association whose central purpose was to register each worker with a single mill and to forbid any member to hire a woman registered elsewhere. Owners do not build such machinery to restrain a labor force that has no choices. The registry's existence, together with the frequency with which members were fined for contravening it, implies that skilled reelers moved between mills often enough, and on terms favorable enough, to threaten the owners' margins.",
+        "None of this makes the reelers' situation enviable, and it would be perverse to read their mobility as evidence that the mills were benign. The point is narrower. Bargaining power in these mills was distributed by skill: a reeler whose thread came off the cocoons even and unbroken could command an advance and a choice of employers, while a novice could not, and the bonus system that historians cite as proof of the owners' dominance was itself partly a concession wrung from owners competing for the best hands. To see the workers only as victims is to miss the market that the owners were trying, with mixed success, to abolish."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "exploitative",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "fungible",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "headstrong",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "abet",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "contravene",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "paragraphs": [
+        "Asked to describe what they see, most people report a visual field that is encyclopedic in its detail: the whole room, not merely the cup they happen to be looking at, seems present to them in full color and sharp focus. Experiments on so-called change blindness appear to expose this report as a kind of self-deception. When an image is briefly interrupted and then restored with some prominent element altered, viewers frequently fail to notice the change, even after repeated viewings. Some philosophers, perhaps jaundiced by a long tradition of overrating introspection, have concluded that the richness of ordinary visual experience is an illusion, a story the mind tells about a world whose details it has never registered.",
+        "The conclusion outruns the evidence, however deftly the experiments were designed. Failing to notice a change requires two things: registering the scene before the change and comparing it with the scene after. The experiments show that the comparison often fails; they do not show that the first registration was sparse. A viewer might experience the whole scene richly at each moment yet retain too little of it to detect what has been altered, much as a reader may take in every word of a page and still be unable, a minute later, to say whether a given word appeared on it. On this reading, change blindness is fully explicable as a fact about memory rather than about experience.",
+        "Whether that reading is correct is harder to say than either side tends to allow. If experience can be divorced from anything the viewer is later able to report, it becomes difficult to see what evidence could ever confirm that it is rich, and the defender of rich experience risks resting her case on something no experiment could detect. But the skeptic's position is no more secure, for it assumes that what cannot be reported was never experienced, which is precisely the point in dispute. The experiments, in short, have sharpened the question without settling it."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "encyclopedic",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "jaundice",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "explicable",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "divorced",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "paragraphs": [
+        "Roman harbor walls built of concrete two thousand years ago still stand in seawater that ruins modern concrete within decades, and materials scientists have lately tried to explain the difference rather than merely deify Roman builders or invent baroque theories of lost recipes. Much of the explanation lies in what seawater does to the Roman material. Modern concrete is designed to be chemically inert once it has set, so water that seeps into its cracks can only corrode it. The Roman mixture, made with lime and volcanic ash, went on reacting: seawater percolating through it dissolved parts of the ash and deposited new interlocking minerals in the pores, so that the material grew more cohesive with age.",
+        "A further feature has proved more contentious. Roman concrete is studded with small white lumps of lime, which earlier investigators took as evidence of careless mixing, a mark of decadent workmanship. Several researchers, in a conclusion that would gratify the builders' modern admirers, now propose that the lumps were deliberate, or at least useful: when a crack reaches one, water dissolves some of its lime, and the solution recrystallizes in the crack and seals it. Laboratory samples made to include such lumps do close their cracks when soaked, while otherwise identical samples without them do not. That result shows that the lumps can heal cracks; it does not show that Roman builders knew they could, and the ancient technical writers, who describe the slaking and mixing of lime in some detail, say nothing of the lumps at all. Whether the lumps were an innovation or a fortunate by-product of how the lime was prepared is a question the chemistry alone cannot answer."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "deify",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "baroque",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "decadent",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "gratify",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "a1",
+      "paragraphs": [
+        "Three years ago the fisheries board of a coastal province required trawlers to use nets with a larger mesh, which lets smaller fish slip through. Since then, the average length of the cod landed at the province's ports has increased by nearly a fifth. The board concludes that, by allowing young cod to escape and mature, the new rule has begun to restore the province's depleted cod stock."
+      ],
+      "tags": []
+    },
+    {
+      "id": "a2",
+      "paragraphs": [
+        "Since a coastal province began requiring storm shutters on all new houses, the houses built under the requirement have suffered markedly less damage in storms than comparable older houses. Yet over the same period, the average amount that insurers have paid per storm-damage claim on houses built under the requirement has been higher than the average they have paid per claim on the older houses."
+      ],
+      "tags": []
+    }
+  ],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Those who took the arbitrator's ___ for indifference had it exactly backward: it was because neither outcome could profit or cost her anything that she was free to care, as no advocate for either side could, whether the settlement was just.",
+      "blanks": [
+        [
+          "apathy",
+          "partisanship",
+          "disinterest",
+          "diffidence",
+          "opprobrium"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The quality is her having no stake in the outcome ('neither outcome could profit or cost her anything'), which some mistook for not caring; in fact it is what frees her to care about justice. That is disinterest in its GRE sense, impartiality. The sentence rules out the 'lack of interest' sense: on that reading, taking her disinterest for indifference would be no mistake, exactly as with apathy.",
+        "distractors": {
+          "apathy": "Apathy is indifference, so 'took her apathy for indifference' would be no mistake at all; the sentence says the reading was backward.",
+          "partisanship": "Contradicts the clue: someone whom neither outcome can profit has no side to favor.",
+          "diffidence": "Shyness or lack of confidence; the clue concerns her having no stake, not her self-assurance.",
+          "opprobrium": "Public disgrace, a thing one suffers, not a disposition that could be mistaken for indifference."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "apathy",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "disinterest",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "diffidence",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "opprobrium",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 3,
+      "prompt": "The broker had expected the auction house to be a refuge from the (i) ___ of the trading floor, and in one sense it was: no one shouted. But she soon found the auctioneer's (ii) ___ patter more wearing than any din, its unbroken sweetness leaving her no pause in which to think.",
+      "blanks": [
+        [
+          "decorum",
+          "cacophony",
+          "tedium"
+        ],
+        [
+          "strident",
+          "staccato",
+          "mellifluous"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'In one sense it was: no one shouted' says what the refuge was from, so the trading floor's defining quality was noise: cacophony. (ii) 'Unbroken sweetness' describes the patter: mellifluous. Its being 'more wearing than any din' is the irony, not a sign that it was harsh.",
+        "distractors": {
+          "decorum": "Propriety; no one would seek refuge from decorum, and 'no one shouted' says the trading floor lacked it.",
+          "tedium": "Boredom; the sense in which the auction house was a refuge ('no one shouted') concerns noise, not dullness.",
+          "strident": "Tempting after 'more wearing than any din', but harsh and grating contradicts 'unbroken sweetness'.",
+          "staccato": "Clipped and disconnected, the opposite of 'unbroken'."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "decorum",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cacophony",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "strident",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mellifluous",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The memoirist is too shrewd to accuse her former partner of (i) ___ outright: she quotes no forged letter and names no embezzled sum. Instead she lets the order of the incidents (ii) ___ what she never asserts, and the method works precisely because it is slow; by the final chapter a charge she has nowhere made has become all but (iii) ___.",
+      "blanks": [
+        [
+          "paternalism",
+          "perfidy",
+          "profligacy"
+        ],
+        [
+          "belie",
+          "obscure",
+          "intimate"
+        ],
+        [
+          "patent",
+          "latent",
+          "dubious"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) A forged letter and an embezzled sum, used against a partner, are acts of betrayal: perfidy. (ii) The incidents convey what she never states outright, so they hint at it: intimate in its verb sense (to suggest indirectly), not the adjective 'close'. (iii) The slow method 'works', so by the end the unstated charge is all but obvious: patent.",
+        "distractors": {
+          "paternalism": "A charge one might bring against a guardian, but forgery and embezzlement are not condescension.",
+          "profligacy": "Tempting because of 'embezzled sum', but profligacy is reckless spending of one's own means; stealing from a partner is a betrayal of trust.",
+          "belie": "To contradict: the incidents would then undercut the charge, but the method 'works'.",
+          "obscure": "To hide; the incidents bring the charge out, they do not hide it.",
+          "latent": "Hidden or dormant: the reverse of what a method that 'works' achieves by the final chapter.",
+          "dubious": "Doubtful; the slow method makes the charge more convincing, not less."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "paternalism",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "perfidy",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "belie",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obscure",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "intimate",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "patent",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "latent",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dubious",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "That the members never put the arrangement in writing was no sign of its fragility; on the contrary, an understanding so ___ could be honored for decades without any member's having to concede, in public, that it existed.",
+      "choices": [
+        "tacit",
+        "tenuous",
+        "explicit",
+        "implicit",
+        "flimsy",
+        "contentious"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The understanding was never written down and never publicly acknowledged, and that unstated quality is what let it last: tacit and implicit (understood without being stated) give the same sentence.",
+        "distractors": {
+          "tenuous": "Trap pair with flimsy: they match the 'fragility' the sentence raises, but 'no sign of its fragility; on the contrary' rejects that reading.",
+          "flimsy": "Trap pair with tenuous: a weak understanding is the reading the sentence denies.",
+          "explicit": "Openly stated, the opposite of an arrangement never written down or conceded in public.",
+          "contentious": "Disputed; an understanding honored for decades without anyone's having to mention it is not quarreled over."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "tacit",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tenuous",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "explicit",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "implicit",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "contentious",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "se",
+      "difficulty": 3,
+      "prompt": "The critic who could hold forth for an hour on anyone else's novels became, when the talk turned to her own, almost ___, as though she feared that any account she gave of them would be taken for the books themselves.",
+      "choices": [
+        "voluble",
+        "taciturn",
+        "haughty",
+        "garrulous",
+        "reticent",
+        "trenchant"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "'Hold forth ... on anyone else's' contrasts with her behavior about her own books, and the fear that any account would replace the books explains a refusal to talk: taciturn and reticent (saying little).",
+        "distractors": {
+          "voluble": "Trap pair with garrulous: talkative describes her on other people's novels, the side the contrast sets aside.",
+          "garrulous": "Trap pair with voluble: excessive talk is the opposite of the change the sentence describes.",
+          "haughty": "Arrogant; the sentence attributes her manner to fear, not pride.",
+          "trenchant": "Incisive and forceful, a quality of speech; she is avoiding speech."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "voluble",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "taciturn",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "haughty",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "garrulous",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "reticent",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "trenchant",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The reform died in committee less because its opponents ever mustered a majority than because its supporters, whose ardor had been so conspicuous in the spring, allowed it to ___ through a summer of postponed hearings.",
+      "choices": [
+        "wax",
+        "flag",
+        "burgeon",
+        "fester",
+        "wane",
+        "harden"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The reform died because of its supporters, not its opponents, so their once-conspicuous ardor must have weakened over the summer: flag (secondary sense, to grow weak or less enthusiastic) and wane.",
+        "distractors": {
+          "wax": "Trap pair with burgeon: growing ardor cannot explain a reform that died through its supporters' neglect.",
+          "burgeon": "Trap pair with wax: flourishing is the wrong direction.",
+          "fester": "To worsen or rankle, said of grievances; ardor that festered would not let a reform die quietly.",
+          "harden": "Ardor that hardened would become more resolute, the opposite of what killed the reform."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "wax",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "flag",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "burgeon",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fester",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "wane",
+          "role": "key",
+          "at": [
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Paradoxically, the critic's standing was never higher than during the years in which she published nothing: the long silence after her second book, which admirers took as proof of exacting standards, marked the ___ of her reputation, and the uneven third book began its decline.",
+      "choices": [
+        "nadir",
+        "apogee",
+        "precursor",
+        "ebb",
+        "zenith",
+        "aberration"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "'Never higher' and 'began its decline' make the silence the high point: apogee and zenith. The paradox is that a silence, which sounds like a low point, was the peak.",
+        "distractors": {
+          "nadir": "Trap pair with ebb: 'silence' suggests a low point, but 'never higher' fixes the peak.",
+          "ebb": "Trap pair with nadir: a low point contradicts 'never higher'.",
+          "precursor": "Something that comes before; the silence is the peak itself, not a forerunner of it.",
+          "aberration": "A departure from the norm; the sentence locates the high point, not an anomaly."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "nadir",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "apogee",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "precursor",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "zenith",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "aberration",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p1",
+      "prompt": "Which of the following best describes the author's primary purpose in the passage?",
+      "choices": [
+        "To refute the claim that the oldest known zircon grains preserve evidence of liquid water on the early Earth",
+        "To show how radiation damage allows fluids to alter the isotopic composition of zircon long after it crystallized",
+        "To reconcile the view that the zircons' isotopic signature is genuine with the view that it is an artifact of later alteration",
+        "To defend an inference drawn from certain mineral evidence against an objection, while denying that the evidence settles a broader question it has been taken to settle",
+        "To argue that the early Earth was covered by oceans far earlier than geologists had once assumed"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Paragraph 2 defends the signature against the alteration objection, and paragraph 3 limits it: it shows that water existed but not how much, so the global-ocean conclusion of paragraph 1 is left open.",
+        "distractors": {
+          "To refute the claim that the oldest known zircon grains preserve evidence of liquid water on the early Earth": "Wrong verb: the author defends that claim ('a conclusion that even the most dogged skepticism has not overturned').",
+          "To show how radiation damage allows fluids to alter the isotopic composition of zircon long after it crystallized": "Too narrow: that mechanism is the skeptics' objection in paragraph 2, raised in order to be answered.",
+          "To reconcile the view that the zircons' isotopic signature is genuine with the view that it is an artifact of later alteration": "The author does not reconcile the two views; analyses of undamaged domains rule the artifact view out.",
+          "To argue that the early Earth was covered by oceans far earlier than geologists had once assumed": "That is the broader conclusion the author says the grains leave 'entirely open'."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-main-idea",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "rc_multi",
+      "difficulty": 5,
+      "passageId": "p1",
+      "prompt": "Consider each of the choices separately and select all that apply. The passage supports which of the following statements about the ancient zircon grains it discusses?",
+      "choices": [
+        "Their oxygen-isotope enrichment cannot be accounted for entirely by fluids that entered the grains after they crystallized.",
+        "The uranium they contain makes it possible to determine how long ago they crystallized.",
+        "They indicate that the water present on the early Earth was confined to shallow seas or transient pools."
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "A: supported in two steps. Later fluids can reset isotopes only in radiation-damaged zones, and undamaged domains still show the enrichment, so later contamination cannot be the whole story. B: true in the real world (uranium-lead dating), but the passage mentions uranium only as a source of lattice damage, never as a means of dating. C: the passage says shallow seas or pools would produce the signature as readily as an ocean, so the grains cannot tell which; it does not say the water was confined to them."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "In the context in which it appears, \"discipline\" most nearly means",
+      "choices": [
+        "a field of academic study",
+        "a regimen that trains a particular faculty",
+        "a penalty imposed for an infraction",
+        "a set of rules enforced by an authority",
+        "a habit of obedience"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The poets wanted something that 'would make the poet attend to' features of syllables, and the passage later calls their rules 'a set of exercises': a training regimen for the ear.",
+        "distractors": {
+          "a field of academic study": "The everyday academic sense; the poets were not founding a subject of study.",
+          "a penalty imposed for an infraction": "The punitive sense; nothing is being punished.",
+          "a set of rules enforced by an authority": "Half-right: the poets did devise rules, but they were self-imposed exercises, not rules enforced by anyone.",
+          "a habit of obedience": "The point is heightened attention to sound, not submission."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-vocab-context",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "rc_select",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "Select the sentence that states what the poets who wrote English quantitative verse intended the practice to accomplish.",
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The fourth sentence ('Its practitioners did not imagine ... lets the ear pass over') says what they wanted: a discipline that would make the poet attend to the weight and length of syllables. The last sentence gives the author's judgment of the results, not the poets' aim, and the second gives the historians' verdict."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-detail",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 4,
+      "passageId": "a1",
+      "prompt": "Which of the following, if true, most seriously weakens the board's conclusion?",
+      "choices": [
+        "Cod reach the length at which they first spawn at about three years of age.",
+        "The number of cod landed at the province's ports fell in the first year after the rule took effect, as the board had predicted it would.",
+        "The increase in the average length of landed cod occurred almost entirely within the first two months after the rule took effect and has scarcely changed since.",
+        "Several trawler operators have complained that the larger-mesh nets are more costly to buy and to repair.",
+        "In a neighboring province that adopted no such rule, the average length of the cod landed has not changed."
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The board assumes that the rise in average landed length reflects more mature cod in the sea. Young fish take years to grow, so a jump within two months, followed by no further change, is what the mesh's filtering of small fish out of the catch would produce on its own, with no recovery of the stock at all.",
+        "distractors": {
+          "Cod reach the length at which they first spawn at about three years of age.": "If anything this fits the board's timeline: fish spared three years ago would be reaching spawning size now.",
+          "The number of cod landed at the province's ports fell in the first year after the rule took effect, as the board had predicted it would.": "A drop in numbers is the expected result of letting small fish escape; it says nothing about whether the stock is recovering.",
+          "Several trawler operators have complained that the larger-mesh nets are more costly to buy and to repair.": "Cost to operators is outside the scope of a conclusion about the cod stock.",
+          "In a neighboring province that adopted no such rule, the average length of the cod landed has not changed.": "This supports the claim that the rule changed the average length, which the argument does not dispute; it does not show that the change reflects recovery."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-weaken",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q1",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Although she granted that no statute obliged a candidate to name his donors, the challenger insisted that such disclosure was ___ on anyone who asked voters, as the mayor did, to take his integrity on trust.",
+      "blanks": [
+        [
+          "gratuitous",
+          "incumbent",
+          "contingent",
+          "extrinsic",
+          "aberrant"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "'Although ... no statute obliged' concedes there is no legal duty; 'insisted' then asserts a duty of another kind: disclosure is obligatory, incumbent on (secondary sense) anyone asking for trust. The everyday sense, an officeholder, makes the word look wrong at first.",
+        "distractors": {
+          "gratuitous": "Unnecessary: it agrees with the concession ('no statute obliged') and ignores the turn at 'insisted'.",
+          "contingent": "'Contingent on anyone' would make the disclosure depend on the candidate, not be required of him.",
+          "extrinsic": "External or not essential; the challenger is claiming the opposite, that disclosure is required.",
+          "aberrant": "Deviating from the norm; it gives no sense of obligation."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "gratuitous",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "incumbent",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "contingent",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "extrinsic",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "aberrant",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q2",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Critics who call the poet's late lyrics (i) ___ are right about their effect but wrong about its cause: the poems are built almost entirely out of the demotic speech of the street, and they resist us not because their phrases are unfamiliar but because she sets those phrases in arrangements (ii) ___ to the uses that first gave them meaning.",
+      "blanks": [
+        [
+          "derivative",
+          "hermetic",
+          "pellucid"
+        ],
+        [
+          "faithful",
+          "antithetical",
+          "ancillary"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) The critics' word must be right about the effect (the poems 'resist us') and imply a wrong cause. Hermetic, in its secondary sense, does both: impenetrable to understanding, and suggesting verse sealed off from ordinary speech, which the poems are not. The everyday sense, airtight, makes the word look out of place. (ii) The resistance comes from arrangements opposed to the phrases' original uses: antithetical.",
+        "distractors": {
+          "derivative": "It describes the true cause (borrowed street speech), but it says nothing about the effect, so critics using it could not be 'right about their effect'.",
+          "pellucid": "Transparently clear, which is wrong about the effect: the poems 'resist us'.",
+          "faithful": "Arrangements faithful to the phrases' original uses would leave them familiar, so they could not explain the resistance.",
+          "ancillary": "Subordinate or supplementary; it gives no reason the phrases should become hard to read."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "derivative",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hermetic",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pellucid",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "antithetical",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q3",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The firms' lawyers portrayed the regulators as implacable, but the record suggests otherwise: the agency had offered from the outset to (i) ___ the penalties of any company (ii) ___ enough to open its books to independent auditors, and if it later imposed the full fines on most of them, that was because its offer had always been (iii) ___ on the auditors' finding nothing the companies had not already disclosed, a condition few of them, as it turned out, could meet.",
+      "blanks": [
+        [
+          "compound",
+          "mitigate",
+          "levy"
+        ],
+        [
+          "intransigent",
+          "adverse",
+          "amenable"
+        ],
+        [
+          "incumbent",
+          "contingent",
+          "incidental"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Not implacable' means the agency offered leniency: to mitigate the penalties. (ii) The leniency went to companies cooperative enough to open their books: amenable. (iii) Full fines were imposed anyway because the offer depended on a condition few could meet: contingent on the auditors' findings.",
+        "distractors": {
+          "compound": "To make worse; it fits the later full fines but contradicts 'the record suggests otherwise'.",
+          "levy": "To impose; an offer to impose penalties is no evidence against implacability.",
+          "intransigent": "Uncompromising; an intransigent firm would not open its books.",
+          "adverse": "Harmful or unfavorable (often confused with averse); neither sense describes a firm that opens its books.",
+          "incumbent": "Obligatory; 'incumbent on the auditors' finding' would make the offer a duty of the auditors, which makes no sense.",
+          "incidental": "Minor or accidental; the condition was central, the reason the fines were imposed."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "compound",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mitigate",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "intransigent",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "adverse",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "amenable",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "incumbent",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "contingent",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q4",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Mourners who had braced for the (i) ___ solemnity of a state funeral were disarmed by the eulogist's lightness of touch. The critics, however, were less impressed, and not because of the tone: beneath the wit, they complained, lay nothing (ii) ___, only a string of (iii) ___ about how grief ennobles those who bear it.",
+      "blanks": [
+        [
+          "genial",
+          "lugubrious",
+          "placid"
+        ],
+        [
+          "facile",
+          "trite",
+          "novel"
+        ],
+        [
+          "apologias",
+          "platitudes",
+          "imprecations"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) The solemnity they braced for contrasts with 'lightness', so it is mournful and heavy: lugubrious. (ii) 'Nothing X, only Y' sets X against Y; a complaint about content means nothing original: novel. (iii) Remarks about grief ennobling the bereaved are worn-out truisms: platitudes.",
+        "distractors": {
+          "genial": "Friendly and cheerful; it would not contrast with the eulogist's lightness.",
+          "placid": "Calm, but not the gloom that lightness of touch disarms.",
+          "facile": "Glib: 'nothing facile, only platitudes' contradicts itself, since platitudes are facile.",
+          "trite": "The same contradiction: platitudes are trite, so 'nothing trite' cannot introduce them.",
+          "apologias": "Formal defenses of a position; a eulogy's remarks on grief defend nothing.",
+          "imprecations": "Curses, wildly out of place in a eulogy."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "genial",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lugubrious",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "placid",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "facile",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "trite",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "novel",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "apologia",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "platitude",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "imprecation",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Historians who trace the valley's feuds to the drought of 1880 mistake the occasion for the cause: the rivalries had been ___ for a generation, which is why the diarists who recorded every quarrel over water rights scarcely mention them, and the drought supplied only the scarcity that made them worth fighting over.",
+      "choices": [
+        "patent",
+        "latent",
+        "nascent",
+        "manifest",
+        "dormant",
+        "erstwhile"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The rivalries predate the drought (the drought was only the 'occasion'), yet diarists who recorded every quarrel barely mention them, so they existed without showing: latent and dormant.",
+        "distractors": {
+          "patent": "Trap pair with manifest: they capture 'existed for a generation' but contradict the diarists' silence.",
+          "manifest": "Trap pair with patent: openly evident rivalries would fill diaries that recorded every quarrel.",
+          "nascent": "Just coming into being; rivalries a generation old are not newly emerging.",
+          "erstwhile": "Former; the rivalries had not ended but were about to break out."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "patent",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "latent",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nascent",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "manifest",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dormant",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "erstwhile",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q6",
+      "section": 2,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Readers who knew the critic only through her reviews, whose ___ asides had ended more than one promising career, were unprepared for the tenderness of her letters, in which even the dullest correspondent was answered with patience.",
+      "choices": [
+        "acerbic",
+        "affable",
+        "diffident",
+        "caustic",
+        "cordial",
+        "placid"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Asides that ended careers, set against the 'tenderness' readers were unprepared for, must be biting: acerbic and caustic.",
+        "distractors": {
+          "affable": "Trap pair with cordial: warm describes the letters, the side of the contrast that surprised readers.",
+          "cordial": "Trap pair with affable: friendly asides do not end careers.",
+          "diffident": "Timid; diffident asides would hardly destroy careers.",
+          "placid": "Calm and mild, without the bite the careers testify to."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "acerbic",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "affable",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "diffident",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "caustic",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cordial",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "placid",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q7",
+      "section": 2,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The charge that the treatise is obscure would be easier to answer if its sentences were less ___: a muddy sentence can always be rewritten, but nothing can be done for one that already says exactly what it means and is still understood by no one.",
+      "choices": [
+        "hermetic",
+        "pellucid",
+        "turgid",
+        "recondite",
+        "lucid",
+        "dogmatic"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The counterintuitive claim is explained by the colon. A muddy sentence can be fixed, but a sentence that 'already says exactly what it means' cannot. So the charge would be easier to answer if the sentences were muddier, that is, less clear: pellucid and lucid. The obscurity lies in the ideas, which no rewriting can reach.",
+        "distractors": {
+          "hermetic": "Trap pair with recondite: 'less obscure would be easier to defend' is the natural first reading, but the colon says muddy sentences are the fixable kind.",
+          "recondite": "Trap pair with hermetic: less obscure sentences would leave nothing to rewrite, and the colon makes rewritability the point.",
+          "turgid": "A fault of muddy prose, the kind the sentence says can always be rewritten; it has the same reversed logic as the trap pair.",
+          "dogmatic": "Asserted without proof; it says nothing about whether the sentences can be understood or rewritten."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "hermetic",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pellucid",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "turgid",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "recondite",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lucid",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dogmatic",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q8",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "Which of the following best describes the organization of the passage?",
+      "choices": [
+        "A prevailing characterization is rejected outright, evidence against it is presented, and an alternative characterization is defended against an objection.",
+        "Evidence from owners' records is presented, a prevailing characterization is shown to be inconsistent with it, and the scope of that inconsistency is then qualified.",
+        "A prevailing characterization is partly accepted and partly faulted, evidence is offered against the faulted part, and the implications of that evidence are then limited and stated more precisely.",
+        "A prevailing characterization is partly accepted and partly faulted, evidence is offered against the faulted part, and a broader conclusion about the benign character of the mills is drawn.",
+        "Two competing characterizations of the mill workers are described, evidence is offered for each, and the author declines to choose between them."
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Paragraph 1 grants the victim narrative its facts ('not wrong about the hours') but faults its picture of fungible workers; paragraph 2 brings the owners' registry as evidence; paragraph 3 limits what that shows ('none of this makes ... enviable', 'the point is narrower') and states it precisely (power distributed by skill).",
+        "distractors": {
+          "A prevailing characterization is rejected outright, evidence against it is presented, and an alternative characterization is defended against an objection.": "The first move is wrong: the author concedes the hours and dormitories rather than rejecting the account outright.",
+          "Evidence from owners' records is presented, a prevailing characterization is shown to be inconsistent with it, and the scope of that inconsistency is then qualified.": "Moves out of order: the prevailing view comes first and the evidence second.",
+          "A prevailing characterization is partly accepted and partly faulted, evidence is offered against the faulted part, and a broader conclusion about the benign character of the mills is drawn.": "The last move is reversed: the author calls it 'perverse' to read the mobility as evidence that the mills were benign.",
+          "Two competing characterizations of the mill workers are described, evidence is offered for each, and the author declines to choose between them.": "Only one prevailing view is described, and the author plainly takes a position."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-structure",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q9",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 5,
+      "passageId": "p3",
+      "prompt": "Which of the following arguments most closely parallels the reasoning by which the author, in the second paragraph, draws a conclusion from the owners' association?",
+      "choices": [
+        "Because a guild's charter forbade members to hire a craftsman registered with another member, a historian concludes that the guild's members trusted one another to honor its rules.",
+        "Because a medieval city repeatedly reissued, with ever heavier penalties, an ordinance forbidding residents to sell grain outside the municipal market, a historian concludes that such sales were common and worth the risk.",
+        "Because a town's ordinance against street trading was seldom enforced, a historian concludes that there must have been little street trading in the town.",
+        "Because the surviving letters of mill workers complain of long hours, a historian concludes that hours in the mills were long.",
+        "Because a monastery's rule required silence at meals, a historian concludes that its monks valued silence above conversation."
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The author reasons from a costly restraint (the registry) and its frequent violation (the fines) to the conclusion that the restrained behavior was common and profitable. The reissued, ever-stiffer grain ordinance matches that structure exactly, even though its subject is unrelated.",
+        "distractors": {
+          "Because a guild's charter forbade members to hire a craftsman registered with another member, a historian concludes that the guild's members trusted one another to honor its rules.": "Matches the surface (a hiring registry), but it infers mutual trust among the members, not the prevalence of the behavior the rule restrains. The fines in the passage imply the opposite of trust.",
+          "Because a town's ordinance against street trading was seldom enforced, a historian concludes that there must have been little street trading in the town.": "It reasons from lax enforcement to the rarity of the practice, the reverse direction of the author's inference.",
+          "Because the surviving letters of mill workers complain of long hours, a historian concludes that hours in the mills were long.": "It takes testimony at face value, the method of the accounts the author faults; it involves no inference from a restraint.",
+          "Because a monastery's rule required silence at meals, a historian concludes that its monks valued silence above conversation.": "It infers that the people bound by a rule shared its values; the author infers that they were doing what the rule forbade."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-application",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q10",
+      "section": 2,
+      "type": "rc_multi",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "Consider each of the choices separately and select all that apply. It can be inferred from the passage that the author would agree with which of the following statements?",
+      "choices": [
+        "The bonus system was not merely an instrument by which the owners imposed their will on the reelers.",
+        "The owners' association largely succeeded in ending the movement of skilled reelers between mills.",
+        "Some reelers went to work at mills other than the one named in the contracts their fathers had signed."
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "A: paragraph 3 calls the bonus system 'partly a concession wrung from owners competing for the best hands'. B: the frequent fines for contravening the registry, and the owners' 'mixed success', point the other way. C: combine paragraph 1 (contracts signed by fathers) with paragraph 2 (owners complained that reelers lured by rival mills were breaking their contracts): some reelers left the mill their contract named."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q11",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p4",
+      "prompt": "The author's attitude toward the reading of change blindness presented at the end of the second paragraph is best described as which of the following?",
+      "choices": [
+        "Endorsement of it as the correct account of what change blindness reveals about visual experience",
+        "Acceptance of it as enough to show that the experiments do not establish the skeptics' conclusion, without a claim that it is correct",
+        "Rejection of it on the grounds that it rests on something no experiment could ever detect",
+        "Impatience with it as a mere restatement of the conclusion it is offered to oppose",
+        "Indifference to it, since the author regards the dispute over change blindness as merely verbal"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The author uses the memory reading to show that 'the conclusion outruns the evidence', since the reading is consistent with the experiments, then says whether it is correct 'is harder to say than either side tends to allow'. It works as a counter-possibility, not as an endorsed thesis.",
+        "distractors": {
+          "Endorsement of it as the correct account of what change blindness reveals about visual experience": "Too strong: the author offers the reading but declines to call it correct.",
+          "Rejection of it on the grounds that it rests on something no experiment could ever detect": "Too strong: the author says its defender 'risks' this difficulty and applies an equal doubt to the skeptic.",
+          "Impatience with it as a mere restatement of the conclusion it is offered to oppose": "The reading opposes the skeptics' conclusion rather than restating it, and the author shows no impatience.",
+          "Indifference to it, since the author regards the dispute over change blindness as merely verbal": "The author says the experiments have sharpened a real question; nothing suggests the dispute is merely verbal."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-attitude",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q12",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 5,
+      "passageId": "p4",
+      "prompt": "Which of the following situations is most closely analogous to the possibility the author raises in the second paragraph about viewers who fail to notice a change?",
+      "choices": [
+        "A driver fails to notice that a road sign has been replaced because she never looked at the sign at all.",
+        "A listener who attends two performances of a sonata on successive evenings cannot say which was faster, although on each evening she followed every phrase.",
+        "A proofreader comparing two drafts side by side misses a changed word because she is reading for sense rather than for spelling.",
+        "A student who cannot recall a lecture the next day concludes that she must not have been listening to it.",
+        "A reader who can recite every word of a page cannot reconstruct the argument the page made."
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The author's possibility is full experience at each moment combined with a failed comparison across time, because too little is retained. The listener experiences each performance fully but cannot compare them a day apart.",
+        "distractors": {
+          "A driver fails to notice that a road sign has been replaced because she never looked at the sign at all.": "This is the skeptic's picture: the scene was never registered in the first place.",
+          "A proofreader comparing two drafts side by side misses a changed word because she is reading for sense rather than for spelling.": "It shares the surface (a missed change), but both versions are present at once, so memory plays no part; the failure is one of attention.",
+          "A student who cannot recall a lecture the next day concludes that she must not have been listening to it.": "This is the skeptic's inference from failed recall to absent experience, the inference the author resists.",
+          "A reader who can recite every word of a page cannot reconstruct the argument the page made.": "Retention is perfect here and understanding fails, which inverts the author's case of rich experience with poor retention."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-application",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q13",
+      "section": 2,
+      "type": "rc_select",
+      "difficulty": 5,
+      "passageId": "p5",
+      "prompt": "Select the sentence that supplies the evidence for a claim whose implications the author then limits.",
+      "key": {
+        "sel": [
+          7
+        ]
+      },
+      "explanation": {
+        "key": "The eighth sentence ('Laboratory samples made to include such lumps do close their cracks ...') is the experimental support for the researchers' claim, made in the sentence before it, that the lumps are useful. The next sentence limits that claim: the result shows that the lumps can heal cracks, not that the builders knew it. The seventh sentence states the claim rather than supporting it; the ninth is the limitation itself; the fourth supports a claim the author never limits."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-function",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q14",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p5",
+      "prompt": "The reasoning in the second paragraph would most directly support which of the following judgments about a different case?",
+      "choices": [
+        "If a medieval glass formula yielded windows that have lasted for centuries, the glassmakers who used it must have understood why it did so.",
+        "If laboratory replicas of an ancient pigment fade exactly as the originals have, the replicas must have been made from the same ingredients as the originals.",
+        "That an impurity in a traditional dye is now known to make the dye resist fading does not by itself show that the dyers who left it there meant to.",
+        "A material that grows stronger as it ages will always outlast one designed to remain chemically inert.",
+        "A feature once attributed to careless workmanship should be presumed deliberate once it is shown to serve a useful purpose."
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The author separates what a feature does (the lumps heal cracks) from whether its makers intended it (the builders may not have known). The dye case applies the same separation: a beneficial effect does not show intent.",
+        "distractors": {
+          "If a medieval glass formula yielded windows that have lasted for centuries, the glassmakers who used it must have understood why it did so.": "It infers understanding from a good result, the inference the author refuses to make.",
+          "If laboratory replicas of an ancient pigment fade exactly as the originals have, the replicas must have been made from the same ingredients as the originals.": "It concerns matching ingredients, not effect versus intention, and the passage's experiment runs the other way (built-in lumps tested for an effect).",
+          "A material that grows stronger as it ages will always outlast one designed to remain chemically inert.": "'Always' goes far beyond a comparison drawn from one case, and the comparison belongs to paragraph 1.",
+          "A feature once attributed to careless workmanship should be presumed deliberate once it is shown to serve a useful purpose.": "This is the researchers' tempting move, which the author says the chemistry cannot settle."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-application",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q15",
+      "section": 2,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 3,
+      "passageId": "a2",
+      "prompt": "Which of the following, if true, most helps to resolve the apparent discrepancy described above?",
+      "choices": [
+        "Construction costs have risen throughout the province, raising the cost of repairs to older and newer houses alike.",
+        "Insurers in the province charge lower premiums for houses equipped with storm shutters.",
+        "Many owners of older houses have voluntarily installed storm shutters of the kind the requirement mandates.",
+        "Most storm damage to shuttered houses costs less to repair than the deductible owners must pay before their insurers pay anything, so such houses generate claims chiefly when the damage is severe.",
+        "The houses built under the requirement are, on average, no larger than the older houses with which they have been compared."
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "If minor damage to shuttered houses never reaches a claim, the claims that are filed on them are mostly the severe ones, so the average per claim is high even though total damage is low. Both facts stand.",
+        "distractors": {
+          "Construction costs have risen throughout the province, raising the cost of repairs to older and newer houses alike.": "This explains higher payouts in general, but it applies to both groups and so cannot explain the gap between them.",
+          "Insurers in the province charge lower premiums for houses equipped with storm shutters.": "Premiums are what owners pay, not what insurers pay out per claim.",
+          "Many owners of older houses have voluntarily installed storm shutters of the kind the requirement mandates.": "This would narrow the damage gap; it does nothing to explain why newer houses cost more per claim.",
+          "The houses built under the requirement are, on average, no larger than the older houses with which they have been compared.": "It removes one possible explanation (bigger, costlier houses) and offers none in its place."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-paradox",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}
