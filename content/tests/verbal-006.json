@@ -1,0 +1,1776 @@
+{
+  "id": "verbal-006",
+  "measure": "verbal",
+  "title": "Verbal Hard Mock 6",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 18
+    },
+    {
+      "n": 2,
+      "minutes": 23
+    }
+  ],
+  "passages": [
+    {
+      "id": "p1",
+      "paragraphs": [
+        "For most of the twentieth century, textbooks demarcated the immune system into two arms: an innate arm, quick and indiscriminate, that meets every invader in the same way every time, and an adaptive arm, slow to mobilize but capable of memory, which allows a second encounter with a pathogen to be met faster and more forcefully than the first. Memory, on this account, was what made vaccination explicable, and it belonged to the adaptive arm alone. The observation that unsettled this division was epidemiological before it was cellular. Infants vaccinated against tuberculosis in several West African trials died less often of illnesses that the vaccine was never designed to prevent, an effect too large to be credited to tuberculosis averted.",
+        "Laboratory work has since supplied a mechanism. Monocytes exposed to the vaccine, or to certain fungal cell-wall components, respond to unrelated microbes weeks later with a heightened output of inflammatory signals, and the change persists because the exposure reprograms the progenitor cells in bone marrow from which monocytes descend, opening stretches of their chromatin that are ordinarily closed. Some immunologists have taken this trained immunity as proof that the textbook division was always a hidebound fiction. That conclusion outruns the evidence. Trained monocytes recognize nothing in particular: their heightened response is a general readiness, not a recollection of a specific foe, and it fades within months rather than lasting decades. What the findings overturn is not the distinction between the two arms but the assumption that only one of them can be altered by experience. The adaptive arm remembers; the innate arm, it now appears, can be tuned, an elasticity that the older vocabulary, which knew only memory and its absence, had no word to describe."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "demarcate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "indiscriminate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "explicable",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "hidebound",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "elasticity",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "paragraphs": [
+        "Around 1900 the pictorialists, determined to win for photography the standing of painting, smeared their lenses with grease, printed on textured paper and scratched their negatives until a photograph of a river barge could pass, at a distance, for a watercolor. Their critics, then and since, have treated the movement as an effete detour, a deft but factitious imitation that divorced the medium from the one thing it did better than any brush: the record of what was actually there. Yet the charge assumes that the pictorialists misunderstood their medium, and the evidence suggests the opposite. Their journals discussed exposure times and lens aberrations with an engineer's precision, and their soft focus was a calculated adjustment rather than an accident of ignorance. What they rejected was not the camera's fidelity but the hauteur of the painters who said that fidelity was all a camera had. The candid street pictures that later critics would celebrate as photography's true vocation became possible, in part, because the pictorialists had first shown that a photographer could choose what the camera would make of a scene."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "effete",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "deft",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "factitious",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "divorced",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "hauteur",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "paragraphs": [
+        "Protestant reformers of the sixteenth century commonly taught that miracles had ceased with the apostles: the wonders recorded in scripture had served to establish the faith, and a faith once established needed no further proof. Historians tracing the origins of the modern scientific outlook have often treated this doctrine of cessation as a first step toward a world without wonders. If God no longer suspended the order of nature, the argument runs, then nature could be studied as a closed system, and the empiricism of the following century needed only to finish what the reformers had begun.",
+        "The difficulty with this story is that the reformers' contemporaries did not behave as though the supernatural had been exorcised. The same English clergy who mocked the healing shrines of the old religion filled their sermons and pamphlets with providences: a fire that consumed a sabbath-breaker's barn and spared his neighbor's, a storm that scattered an invading fleet, a hailstone shaped like a cross. These events, preachers insisted, did not contravene the order of nature; God worked them through ordinary causes, timing a natural fire or a natural wind to deliver a judgment. The distinction was a fine one, and the demotic pamphlets that retold such stories rarely troubled to observe it.",
+        "Cessation, read in this light, was less a philosophical principle than a factious weapon. Aimed at the miracle claims of Catholic rivals, it denied them the evidential support that a miracle would lend; it was never meant to deny that God acted in the world, only that he acted in ways that favored Rome. Yet the historians who saw in it the seed of a disenchanted nature were not simply wrong. By locating God's acts within natural causes rather than against them, the providentialists committed themselves to a nature regular enough for its irregular timings to be read as messages, and a nature that regular could, in time, be read without them."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "empiricism",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "exorcise",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "contravene",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "demotic",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "factious",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "paragraphs": [
+        "When sociologists began tracking individual households through gentrifying neighborhoods, the results seemed to deflate a clamorous public debate. Poor renters in neighborhoods where rents and incomes were rising fast turned out to be no more likely to move away than poor renters elsewhere, and those who stayed reported, on average, greater satisfaction with their streets. Some commentators, inclined to treat the matter as settled, took the findings as proof that displacement was a story told by the jaundiced rather than a fact. The studies deserve better readers than that, and their authors were usually careful to say what they had measured: departures.",
+        "What a count of departures cannot register is the household that never arrives. In a neighborhood where poor renters were always leaving at the ordinary rate, for a job, a marriage or a larger flat, each vacancy once went to another family like them; once rents climb, it goes to someone else. The neighborhood can change as completely as if its residents had been evicted, though no one has been. Satisfaction surveys, likewise, treat their respondents as fungible, so that the contentment of newcomers can offset the losses of those who remember the block's grocer, church and barber, and even a long-time tenant's dogged loyalty to a changed block may be a fact about the tenant rather than about the block."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "clamorous",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "inclined",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "jaundice",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "fungible",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "dogged",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "paragraphs": [
+        "Champions of the long take have tended to write in a hortatory mood, urging directors to forbear from cutting so that the spectator may be left free. Where montage breaks a scene into the fragments a director wants noticed, an unbroken shot of several minutes, they argue, lets the eye wander and assemble a meaning of its own. The freedom is real, but it is more narrowly delimited than the praise implies. A take of that length is among the most rehearsed things in cinema, its baroque choreography of actors and camera fixed in advance so that the wandering eye will arrive, on schedule, where it was expected. Montage, by contrast, can afford accident, since a fumbled line or an unplanned glance can be kept or discarded in the cutting room. None of this makes the long take a deception. It means only that its freedom belongs to the spectator's experience rather than to the film's construction, and that a critic who infers the one from the other confuses the feeling of choosing with the fact of it."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "hortatory",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "forbear",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "delimit",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "baroque",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "a1",
+      "paragraphs": [
+        "Two years ago the Calder Valley growers' cooperative began encouraging its members to mount nest boxes for barn owls, which prey on gophers, in their vineyards, and roughly 40 percent of members did so. Since then, the number of vines lost to gopher damage per hectare has fallen by a third in members' vineyards with boxes, while in members' vineyards without boxes it has stayed roughly level. The cooperative concludes that the owls are responsible for the decline in gopher damage and plans to pay for nest boxes in every member's vineyard."
+      ],
+      "tags": []
+    },
+    {
+      "id": "a2",
+      "paragraphs": [
+        "Director of the Hollis Municipal Museum: Visitors who rent our audio guide spend, on average, forty minutes longer in the galleries than visitors who do not. Since a longer visit means deeper engagement with the collection, we should stop charging for the guide; once the guide is free, our visitors as a whole will engage more deeply with the art."
+      ],
+      "tags": []
+    }
+  ],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Readers who knew the critic's review only from the publisher's advertisement, which quoted her calling the novel the debut of the decade, were puzzled by the publisher's private fury; though she stood by that phrase and repeated it in later interviews, the paragraphs that followed it in the review ___ it so thoroughly that the advertisement amounted to a misquotation.",
+      "blanks": [
+        [
+          "repudiated",
+          "tempered",
+          "galvanized",
+          "amplified",
+          "extrapolated"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The phrase is genuine (she stood by it and repeated it), yet quoting it alone misrepresents the review, so the later paragraphs must have hedged and softened it without retracting it: 'tempered' in its secondary sense, to moderate or make less extreme. The everyday association of tempering with hardening steel is the trap.",
+        "distractors": {
+          "repudiated": "Rejecting the phrase would contradict 'stood by that phrase and repeated it'.",
+          "galvanized": "To stir into action; makes no sense applied to a verdict, and would not make the quotation misleading.",
+          "amplified": "Strengthening the praise would make the advertisement a fair quotation, not a misquotation.",
+          "extrapolated": "To extend a trend to unknown cases; the paragraphs do not project the phrase anywhere."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "repudiate",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "temper",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "galvanize",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "extrapolate",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 3,
+      "prompt": "Biographers who know her only through her field notebooks, in which a page on tidal pools may break off mid-line to become a grocery list, call her research (i) ___; a comparison of her published monographs with their sources suggests that the word belongs to her notebooks rather than to her mind, so (ii) ___ is her handling of quotation that scarcely one quotation departs by a comma from the original.",
+      "blanks": [
+        [
+          "methodical",
+          "incisive",
+          "desultory"
+        ],
+        [
+          "fastidious",
+          "cavalier",
+          "laconic"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) A page that wanders from tidal pools to groceries suggests aimless, jumping-about work: 'desultory'. The second clause says that word fits the notebooks but not her mind. (ii) Quotations accurate to the comma show exacting attention to detail: 'fastidious'.",
+        "distractors": {
+          "methodical": "The opposite of what the broken-off notebook page suggests; the second clause would then have nothing to correct.",
+          "incisive": "Sharp and penetrating; not what a page that drifts into a grocery list suggests.",
+          "cavalier": "Careless or offhand; reverses the comma-perfect quotation.",
+          "laconic": "Using few words; says nothing about accuracy of quotation."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "incisive",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "desultory",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fastidious",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cavalier",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "laconic",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "That the academy he had spent forty years (i) ___ should claim him at his death was, his friends felt, the last indignity an (ii) ___ could suffer: its president's (iii) ___, which recast every insult the painter had hurled at the institution as a lover's quarrel, left the mourners unsure whether they had heard a tribute or an annexation.",
+      "blanks": [
+        [
+          "adorning",
+          "serving",
+          "repudiating"
+        ],
+        [
+          "iconoclast",
+          "academician",
+          "epigone"
+        ],
+        [
+          "censure",
+          "eulogy",
+          "exoneration"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          0,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) The painter hurled insults at the academy, and its claiming him is an indignity, so he had spent his career rejecting it: 'repudiating'. (ii) Someone who attacks a cherished institution is an 'iconoclast', and only for such a person is being claimed by it the 'last indignity'. (iii) A speech at his death that the mourners take for 'a tribute' is a 'eulogy'; its recasting of insults as affection is what makes it feel like an annexation.",
+        "distractors": {
+          "adorning": "Would make the academy's claim natural rather than an indignity, and clashes with the insults.",
+          "serving": "Same problem as 'adorning': a loyal servant is honored, not affronted, by the claim.",
+          "academician": "A member of the academy would not regard being claimed by it as an indignity.",
+          "epigone": "A mere imitator of a master; nothing suggests derivativeness, and imitators do not hurl insults at the institution.",
+          "censure": "A formal rebuke cannot be mistaken for 'a tribute'.",
+          "exoneration": "Tempting, since recasting insults could look like forgiving them, but the mourners weigh 'tribute' against 'annexation': the speech praises the dead man, it does not acquit him."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "repudiate",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "iconoclast",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "epigone",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "censure",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "eulogy",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Those who defended the magistrate on the ground that no one had ever seen him favor a friend or a faction missed the point of the charge against him: it was not that he was partial but that he was ___, his judgments going, with perfect evenhandedness, to whichever party had last visited his chambers with a satchel.",
+      "choices": [
+        "evenhanded",
+        "venal",
+        "equitable",
+        "phlegmatic",
+        "mercenary",
+        "complicit"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The 'evenhandedness' is ironic: rulings go to whoever brings the satchel, that is, whoever pays. The charge is that he could be bought: 'venal' and 'mercenary'.",
+        "distractors": {
+          "evenhanded": "Trap pair with 'equitable': both echo the sentence's ironic 'evenhandedness', but being fair is not a 'charge against him'.",
+          "equitable": "Trap pair with 'evenhanded': fairness is the defense, not the charge.",
+          "phlegmatic": "Calm and unexcitable; says nothing about the satchel.",
+          "complicit": "Needs a partner in some wrongdoing and leaves the satchel unexplained; he is the one being paid, not an accomplice."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "venal",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "equitable",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "phlegmatic",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mercenary",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "complicit",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "se",
+      "difficulty": 3,
+      "prompt": "Advertised as an introduction for the general public, the lecture series soon became, in one disappointed listener's phrase, a conversation the speakers were having with one another in public: no allusion was too ___ for them to leave it unexplained.",
+      "choices": [
+        "pellucid",
+        "esoteric",
+        "latent",
+        "lucid",
+        "recondite",
+        "pithy"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "'No allusion was too X to leave unexplained' means they left even the most X allusions unexplained, and the complaint is that only specialists could follow. X must be 'hard for outsiders to understand': 'esoteric' and 'recondite'.",
+        "distractors": {
+          "pellucid": "Trap pair with 'lucid': clear allusions need no explanation, so leaving them unexplained would be no complaint.",
+          "lucid": "Trap pair with 'pellucid': the wrong polarity.",
+          "latent": "Present but hidden or undeveloped; an allusion is not 'latent' in a way that bears on the audience's confusion.",
+          "pithy": "Concise and forceful; brevity is not what shuts out a general audience."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "pellucid",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "esoteric",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "latent",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lucid",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "recondite",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pithy",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The confraternity's members had wanted the bishop's letter to settle their standing one way or the other, and it settled nothing: he would not ___ their processions, as the cathedral chapter's hostility made them need him to, but neither would he forbid them, leaving the devotion at once permitted and unprotected.",
+      "choices": [
+        "censure",
+        "sanction",
+        "denounce",
+        "curtail",
+        "countenance",
+        "adjudicate"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Three constraints agree. X is what the chapter's hostility made the members need from him, so it protects them. 'Would not X, but neither would he forbid' sets X against forbidding. And the result is 'permitted' (not forbidden) and 'unprotected' (not officially approved). X = give official approval: 'sanction' in its approving sense, and 'countenance'. The penalizing sense of 'sanction' is the trap that makes it look like a synonym of 'censure'.",
+        "distractors": {
+          "censure": "Trap pair with 'denounce': both fit the topic of a bishop ruling on a devotion, but no one under hostile attack needs to be censured, 'would not censure, but neither would he forbid' has no contrast, and refusing to censure would not leave the devotion 'unprotected'.",
+          "denounce": "Trap pair with 'censure': the same direction as forbidding and the hostile chapter, so it cannot be what the members needed or explain 'unprotected'.",
+          "curtail": "Restricting the processions is the same direction as forbidding them; it does not account for 'unprotected'.",
+          "adjudicate": "To judge a dispute; there is no dispute for the bishop to rule on."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "censure",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sanction",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "denounce",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "curtail",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "countenance",
+          "role": "key",
+          "at": [
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The memoir surprised colleagues who had mistaken the surgeon's ___ manner in the theater, which no hemorrhage or failing heart was ever seen to ruffle, for indifference to whether his patients lived: he had, it emerged, felt every death keenly, and had simply refused to let the feeling reach his hands.",
+      "choices": [
+        "callous",
+        "phlegmatic",
+        "obtuse",
+        "unfeeling",
+        "imperturbable",
+        "acerbic"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The manner is something the colleagues 'mistook for indifference', so it cannot itself be indifference; it is a manner that no crisis 'was ever seen to ruffle', and the memoir explains it as feeling kept from his hands. So it is outward calm: 'phlegmatic' and 'imperturbable'.",
+        "distractors": {
+          "callous": "Trap pair with 'unfeeling': a callous manner is indifference to suffering, so it could not be 'mistaken for indifference', and the memoir shows he felt every death.",
+          "unfeeling": "Trap pair with 'callous': the same problem, and contradicted by 'felt every death keenly'.",
+          "obtuse": "Slow-witted or imperceptive; a matter of understanding, not of composure under strain.",
+          "acerbic": "Sharp-tongued; nothing in the sentence concerns his manner of speaking."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "callous",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "phlegmatic",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obtuse",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "imperturbable",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "acerbic",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p1",
+      "prompt": "The primary purpose of the passage is to",
+      "choices": [
+        "demonstrate that the traditional distinction between innate and adaptive immunity was never supported by evidence",
+        "explain how a tuberculosis vaccine reduces deaths from illnesses it was not designed to prevent",
+        "argue that findings about trained immunity call for a revision, rather than an abandonment, of the traditional division of the immune system",
+        "reconcile the epidemiological findings about vaccinated infants with the laboratory findings about monocytes",
+        "defend the textbook division of the immune system against evidence that innate cells can be altered by prior exposure"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The author rejects the claim that the division was 'a hidebound fiction' but says the findings overturn 'the assumption that only one of them can be altered by experience'. That is a qualification: keep the distinction, revise what it claims.",
+        "distractors": {
+          "demonstrate that the traditional distinction between innate and adaptive immunity was never supported by evidence": "This is the view of 'some immunologists' that the author says 'outruns the evidence'.",
+          "explain how a tuberculosis vaccine reduces deaths from illnesses it was not designed to prevent": "Too narrow: the mechanism is a step toward the author's point about the division, not the point itself.",
+          "reconcile the epidemiological findings about vaccinated infants with the laboratory findings about monocytes": "Wrong verb: the two kinds of findings never conflict; the laboratory work 'supplied a mechanism' for the trials.",
+          "defend the textbook division of the immune system against evidence that innate cells can be altered by prior exposure": "Half right: the author keeps the distinction but accepts that innate cells can be altered, and treats that as the part of the textbook view that must go."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-main-idea",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "rc_multi",
+      "difficulty": 5,
+      "passageId": "p1",
+      "prompt": "Consider each of the choices separately and select all that apply. The passage indicates that the altered state of trained monocytes differs from adaptive immune memory in which of the following respects?",
+      "choices": [
+        "The heightened response it produces is not directed at the particular agent that brought it about.",
+        "It persists for a shorter period.",
+        "It is maintained by changes in precursor cells rather than in the responding cells themselves."
+      ],
+      "key": {
+        "sel": [
+          0,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "A: correct. Trained monocytes 'recognize nothing in particular' and respond to 'unrelated microbes'; the response is 'not a recollection of a specific foe', whereas adaptive memory meets 'a second encounter with a pathogen'. B: correct. It 'fades within months rather than lasting decades', set against adaptive memory. C: not supported. The passage does say that trained immunity persists through reprogrammed bone-marrow progenitors, but it never says how adaptive memory is maintained, so it gives no ground for calling this a difference. That makes C a true-sounding but unsupported choice."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "In the context in which it appears, \"candid\" most nearly means",
+      "choices": [
+        "forthright",
+        "unposed",
+        "unflattering",
+        "impartial",
+        "ingenuous"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "'Candid street pictures' are photographs taken of people as they are found, without arrangement or posing: the photographic sense of 'candid'. The point of the last sentence is that such pictures depend on the photographer choosing what the camera makes of an unarranged scene.",
+        "distractors": {
+          "forthright": "The everyday sense of 'candid' (frank in speech), which does not apply to pictures.",
+          "unflattering": "Candid shots may happen to be unflattering, but the word here refers to how they are taken, not to how they look.",
+          "impartial": "Another sense of candid (fair-minded) that has nothing to do with street photography.",
+          "ingenuous": "Innocent or artless; describes a person's character, not a kind of photograph."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-vocab-context",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "rc_select",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "Select the sentence that names the people whose view of the camera the pictorialists were rejecting.",
+      "key": {
+        "sel": [
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The fifth sentence (What they rejected was not the camera's fidelity but the hauteur of the painters...) says outright that what the pictorialists rejected was the painters' view that fidelity was all a camera had. The second sentence names a different group, the pictorialists' critics, who criticized the pictorialists rather than being rejected by them; the sixth names later critics."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-detail",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 4,
+      "passageId": "a1",
+      "prompt": "Which of the following would it be most useful to determine in order to evaluate the cooperative's conclusion?",
+      "choices": [
+        "Whether barn owls in the valley also hunt prey other than gophers",
+        "Whether members who mounted nest boxes were also more likely than other members to have begun trapping or baiting gophers during the same two years",
+        "Whether vine losses to gophers are greater in the cooperative's vineyards than in vineyards outside the cooperative",
+        "Whether the cost of a nest box is less than the value of the vines it would save if the boxes work as the cooperative believes",
+        "Whether gopher populations throughout the valley rose during the past two years"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Members chose for themselves whether to mount boxes, so the box vineyards may differ in other ways. If those growers also started trapping or baiting, the decline could come from that, which weakens the conclusion. If they did not, the owls become the likelier cause, which strengthens it.",
+        "distractors": {
+          "Whether barn owls in the valley also hunt prey other than gophers": "Owls can eat other prey and still reduce gophers; the answer does not bear on the causal claim.",
+          "Whether vine losses to gophers are greater in the cooperative's vineyards than in vineyards outside the cooperative": "The comparison that matters is within the cooperative, between vineyards with and without boxes.",
+          "Whether the cost of a nest box is less than the value of the vines it would save if the boxes work as the cooperative believes": "Bears on whether the plan is worth funding, not on whether the owls caused the decline; it even assumes they did.",
+          "Whether gopher populations throughout the valley rose during the past two years": "A valley-wide change would affect vineyards with and without boxes alike, and the comparison between the two already controls for it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-evaluate",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q1",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "That the old banker, who was said to count his household's candles, never once ___ the restorers of his chapel is no proof that his parsimony stopped at the chapel door: he knew better than anyone that a fresco repainted on the cheap must soon be repainted again.",
+      "blanks": [
+        [
+          "overpaid",
+          "stinted",
+          "berated",
+          "daunted",
+          "exonerated"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "'Is no proof that his parsimony stopped' means the fact in the blank looks like generosity but is really thrift: cheap work costs more in the end. So he never skimped on the restorers: 'stinted' in its secondary sense, to be sparing in giving. The noun sense (a period of work, as in 'a stint') is the trap that hides it.",
+        "distractors": {
+          "overpaid": "A miser who never overpays is behaving like a miser; that would not look like evidence that his parsimony stopped, so 'no proof' would have nothing to deny.",
+          "berated": "To scold angrily; not doing so says nothing about money, so it could not look like the end of his parsimony.",
+          "daunted": "To intimidate; nothing in the sentence concerns frightening the restorers.",
+          "exonerated": "To clear of blame; no charge against the restorers is mentioned."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "stint",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "berate",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "daunt",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exonerate",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q2",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "That the duke was (i) ___ in his final years, it now appears, was less a lapse of discipline than a policy: creditors who had been (ii) ___ during his frugal decade, reading every economy as a sign that the treasury was empty and hurrying to be paid before it was, grew patient once they saw the court spending as though its credit were bottomless.",
+      "blanks": [
+        [
+          "ascetic",
+          "venal",
+          "profligate"
+        ],
+        [
+          "exigent",
+          "indulgent",
+          "phlegmatic"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) The final years are contrasted with the earlier 'frugal decade' and described as spending 'as though its credit were bottomless': 'profligate'. (ii) During the frugal decade the creditors read each economy as a sign of an empty treasury and hurried to be paid, and they only 'grew patient' later: so they had been pressing and demanding, 'exigent'. The everyday expectation that frugality calms creditors is the trap.",
+        "distractors": {
+          "ascetic": "Describes the frugal decade, not the final years of bottomless spending.",
+          "venal": "Open to bribery; the passage is about spending, not about being bought.",
+          "indulgent": "Contradicted twice: creditors 'hurrying to be paid' are not lenient, and they 'grew patient' only later.",
+          "phlegmatic": "Calm creditors are not 'hurrying to be paid', and could not later grow patient; the same reversal as 'indulgent'."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "ascetic",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "venal",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "profligate",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exigent",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "phlegmatic",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q3",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Scholars hoping to recover the historical abbot behind the legend are (i) ___ less by the scarcity of early sources than by the abundance of late ones. The legend grew by (ii) ___, each generation of monks adding a miracle without discarding any, and because those monks, faced with rival versions of an episode, preferred to (iii) ___ them rather than choose, the layers have fused so thoroughly that no philologist can now say which came first.",
+      "blanks": [
+        [
+          "heartened",
+          "daunted",
+          "edified"
+        ],
+        [
+          "accretion",
+          "winnowing",
+          "abridgment"
+        ],
+        [
+          "adjudicate",
+          "repudiate",
+          "amalgamate"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) The second sentence shows why the many late sources are a problem: their fused layers cannot be dated. So the scholars are discouraged, more by the abundance than by the scarcity: 'daunted'. (ii) Growth by adding without discarding is 'accretion'. (iii) Rival versions that were neither chosen between nor dropped, and have 'fused', were merged: 'amalgamate'.",
+        "distractors": {
+          "heartened": "The trap: abundant sources sound like good news, but the next sentence shows they block the scholars' aim.",
+          "edified": "Morally or intellectually improved; the sentence is about an obstacle to research.",
+          "winnowing": "Sifting out and discarding, contradicted by 'without discarding any'.",
+          "abridgment": "Shortening, which also contradicts 'adding a miracle without discarding any'.",
+          "adjudicate": "To decide between rival versions is to 'choose', which the monks would not do.",
+          "repudiate": "Rejecting a version is also choosing, and would not leave layers to fuse."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "daunt",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "edify",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "accretion",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "winnow",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "repudiate",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "amalgamate",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q4",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The irony of the expurgated edition is that its editors, determined that the diary should (i) ___ its young readers, removed precisely the passages most likely to do so: those in which the diarist was most (ii) ___ about her own envy and sloth. Of the three editors, only the youngest (iii) ___, and his objection, that a saint without faults instructs no one, was overruled.",
+      "blanks": [
+        [
+          "perturb",
+          "edify",
+          "gratify"
+        ],
+        [
+          "reticent",
+          "sanctimonious",
+          "candid"
+        ],
+        [
+          "concurred",
+          "demurred",
+          "equivocated"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) The youngest editor's objection, that a faultless saint 'instructs no one', shows that the aim was moral instruction: 'edify'. (ii) The irony is that the cut passages were the instructive ones, the frank confessions of her faults: 'candid'. (iii) He raised an 'objection' that was overruled: he 'demurred'.",
+        "distractors": {
+          "perturb": "The trap: confessions of envy might disturb readers, and the irony would still hold, but the objection about instruction shows the goal was improving readers, not unsettling them.",
+          "gratify": "Pleasing readers is not what an objection about instruction answers.",
+          "reticent": "Passages in which she was reserved about her faults would not be the instructive ones.",
+          "sanctimonious": "Self-righteous passages would not be 'most likely' to instruct by showing faults.",
+          "concurred": "Agreeing with the others contradicts 'his objection'.",
+          "equivocated": "Hedging contradicts a clear objection that had to be overruled."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "perturb",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "edify",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "gratify",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "reticent",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sanctimonious",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "candid",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "concur",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "demur",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "equivocate",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "What scandalized the magistrates about the comedy was not its cruelty, which they had tolerated in a dozen tragedies, but its ___ songs, whose double meanings left the apprentices in the pit roaring and their sweethearts blushing.",
+      "choices": [
+        "acerbic",
+        "wanton",
+        "gratuitous",
+        "licentious",
+        "caustic",
+        "mellifluous"
+      ],
+      "key": {
+        "sel": [
+          1,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Double meanings that make sweethearts blush are bawdy ones, and the sentence sets them against 'cruelty'. So the songs are lewd: 'wanton' in its sexual sense, and 'licentious'. The everyday sense of 'wanton' (needlessly cruel, as in 'wanton destruction') is the trap the word 'cruelty' sets.",
+        "distractors": {
+          "acerbic": "Trap pair with 'caustic': satire also trades in double meanings and could scandalize magistrates, but biting satire does not make sweethearts blush.",
+          "caustic": "Trap pair with 'acerbic': the same problem.",
+          "gratuitous": "Matches the everyday sense of 'wanton' (needless), which suits cruelty, but the sentence says cruelty was not the problem.",
+          "mellifluous": "Sweet-sounding; nothing scandalous in that."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "acerbic",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "wanton",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "gratuitous",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "licentious",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "caustic",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mellifluous",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q6",
+      "section": 2,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The delegate's genial manner (he thanked every speaker, yielded every point of procedure and laughed at every joke) misled his counterparts for three weeks; only when the final text was tabled did they discover how ___ he had been on the one clause that mattered.",
+      "choices": [
+        "amiable",
+        "obdurate",
+        "pliant",
+        "affable",
+        "intransigent",
+        "laconic"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The genial manner 'misled' them, so what they discovered was the opposite of what it suggested: on the clause that mattered he had not given an inch. 'Obdurate' and 'intransigent'.",
+        "distractors": {
+          "amiable": "Trap pair with 'affable': both describe the genial manner, which is what misled them, not what they discovered.",
+          "affable": "Trap pair with 'amiable': the same problem.",
+          "pliant": "Yielding is what the manner suggested; the discovery must reverse it.",
+          "laconic": "Terse; the issue is his firmness on the clause, not how much he said."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "amiable",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obdurate",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pliant",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "affable",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "intransigent",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "laconic",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q7",
+      "section": 2,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Those who praised the senator's statement for offending neither faction mistook the source of its tact: it was not that she had found common ground between them but that she had ___, as both factions discovered when each tried to hold her to the promise it had heard.",
+      "choices": [
+        "conciliated",
+        "equivocated",
+        "pontificated",
+        "mediated",
+        "prevaricated",
+        "demurred"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Each faction 'heard' a different promise and found it could not hold her to it, so her words were deliberately ambiguous and evasive: 'equivocated' and 'prevaricated' (spoken evasively). The contrast with 'found common ground' rules out any genuine reconciling.",
+        "distractors": {
+          "conciliated": "Trap pair with 'mediated': both fit 'offending neither faction', but the sentence denies that she 'found common ground'.",
+          "mediated": "Trap pair with 'conciliated': the same problem.",
+          "pontificated": "Lecturing pompously would more likely offend both sides, and does not explain the two different promises.",
+          "demurred": "Objecting mildly gives no one a promise to hold her to."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "conciliate",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "equivocate",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mediate",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "prevaricate",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "demur",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q8",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "Which of the following best describes the organization of the passage?",
+      "choices": [
+        "A historical thesis is described, evidence against it is presented, and the thesis is rejected in favor of an alternative account.",
+        "A historical thesis is described, evidence that complicates it is presented, and the thesis is then partly vindicated on different grounds.",
+        "Two rival interpretations of a doctrine are presented, and the author shows that each relies on evidence the other ignores.",
+        "A doctrine is explained, its polemical origins are traced, and its influence on later science is shown to have been negligible.",
+        "A historical thesis is described and partly vindicated, and evidence is then offered showing that its proponents misread their sources."
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Paragraph 1 gives the historians' thesis (cessation as a first step toward disenchantment). Paragraph 2 complicates it with providences. Paragraph 3 recasts cessation as a polemical weapon, then says the historians 'were not simply wrong', because providentialism committed believers to a regular nature. That is a partial vindication on grounds other than the ones the historians gave.",
+        "distractors": {
+          "A historical thesis is described, evidence against it is presented, and the thesis is rejected in favor of an alternative account.": "One move off: the passage ends by partly vindicating the thesis ('not simply wrong'), not by rejecting it.",
+          "Two rival interpretations of a doctrine are presented, and the author shows that each relies on evidence the other ignores.": "Only one interpretation is presented and then qualified; there is no symmetrical pair.",
+          "A doctrine is explained, its polemical origins are traced, and its influence on later science is shown to have been negligible.": "The last sentence argues the opposite: the providentialists' regular nature could later 'be read without' God.",
+          "A historical thesis is described and partly vindicated, and evidence is then offered showing that its proponents misread their sources.": "Wrong order: the complicating evidence comes before the partial vindication, and the historians are not said to have misread sources."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-structure",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q9",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 5,
+      "passageId": "p3",
+      "prompt": "The author mentions the pamphlets that retold stories of providences (paragraph 2) primarily in order to",
+      "choices": [
+        "criticize popular writers for distorting the theology of the clergy whose sermons they retold",
+        "concede that the evidence for providential belief comes largely from sources of doubtful reliability",
+        "reinforce the claim that the supernatural had not been banished from contemporaries' picture of the world, by suggesting that a learned qualification went largely unobserved",
+        "show that belief in providences was confined to readers with little theological education",
+        "indicate that the doctrine of cessation was more widely accepted among the clergy than among the laity"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Paragraph 2 argues that contemporaries 'did not behave as though the supernatural had been exorcised'. The preachers' fine distinction (natural causes timed by God) might seem to cut against that claim. The pamphlet sentence concedes that the distinction was fine, then notes that popular retellings ignored it, so in the public mind providences worked much as miracles had. The detail supports the paragraph's claim.",
+        "distractors": {
+          "criticize popular writers for distorting the theology of the clergy whose sermons they retold": "Restates what the sentence says (the pamphlets did not observe the distinction) but mistakes its role: the author is not passing judgment on the pamphleteers but using them as evidence.",
+          "concede that the evidence for providential belief comes largely from sources of doubtful reliability": "The pamphlets are not questioned as sources; they are evidence of how the stories were received.",
+          "show that belief in providences was confined to readers with little theological education": "The clergy themselves preached providences, so the belief was not confined to the uneducated.",
+          "indicate that the doctrine of cessation was more widely accepted among the clergy than among the laity": "Plausible, but the passage never compares how widely the two groups accepted cessation."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-function",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q10",
+      "section": 2,
+      "type": "rc_multi",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "Consider each of the choices separately and select all that apply. The passage suggests which of the following about the English clergy who preached providences?",
+      "choices": [
+        "They rejected at least some claims of miraculous healing made on behalf of a rival religious tradition.",
+        "They held that the events they described could be fully explained by natural causes, without reference to divine purpose.",
+        "They believed that the ordinary workings of nature could convey a divine verdict."
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "A: correct. These clergy 'mocked the healing shrines of the old religion', the rival tradition whose 'miracle claims' cessation was aimed at (paragraph 3); mocking the shrines' healings is rejecting those claims. B: not supported. It is half right: they said providences worked 'through ordinary causes', but God did the 'timing' to 'deliver a judgment', so divine purpose was essential. C: correct. A 'natural fire or a natural wind' timed 'to deliver a judgment' is ordinary nature carrying a divine verdict."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q11",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p4",
+      "prompt": "The author's attitude toward the studies that tracked individual households is best described as",
+      "choices": [
+        "dismissive, on the grounds that they measure a quantity that has no bearing on the debate about displacement",
+        "approving, since they refute the exaggerated claims of those who decry gentrification",
+        "respectful of what they establish, but concerned that some who cite them overlook the limits of what they measured",
+        "skeptical of their findings about departures but persuaded by their findings about satisfaction",
+        "neutral, since the author declines to say whether their findings bear on the debate about displacement"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "'The studies deserve better readers than that, and their authors were usually careful to say what they had measured' shows respect for the studies. The rest of the passage shows what a count of departures 'cannot register', a limit the commentators who 'treat the matter as settled' ignore.",
+        "distractors": {
+          "dismissive, on the grounds that they measure a quantity that has no bearing on the debate about displacement": "Too strong: the author defends the studies against their careless readers and never calls departures irrelevant.",
+          "approving, since they refute the exaggerated claims of those who decry gentrification": "Attributes the commentators' reading to the author, who denies that the studies settle the matter.",
+          "skeptical of their findings about departures but persuaded by their findings about satisfaction": "Reversed: the author accepts the departure counts as far as they go and questions the satisfaction surveys ('treat their respondents as fungible').",
+          "neutral, since the author declines to say whether their findings bear on the debate about displacement": "The author takes a clear position: the findings bear on the debate but do not settle it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-attitude",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q12",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 5,
+      "passageId": "p4",
+      "prompt": "Which of the following situations is most closely analogous to the limitation the author attributes to a count of departures?",
+      "choices": [
+        "A survey finds that residents of a town strongly approve of a new highway, but the survey reached only residents who live far from the highway.",
+        "A factory that laid off a quarter of its workers finds that most of those dismissed had found new jobs within six months.",
+        "A social club raises its dues sharply, and a count of resignations shows that half of its longtime members quit within a year.",
+        "A hospital reports that no nurses were laid off during a merger; in the same years, nurses who retired or resigned were replaced, at the usual pace, by temporary agency staff.",
+        "A city's population falls, and officials attribute the decline to residents' moving away rather than to a fall in births."
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The author's point: no one is pushed out, and people leave at the ordinary rate, but the vacancies go to a different kind of occupant, so the group changes completely while a count of exits shows nothing unusual. The hospital matches: no layoffs, normal turnover, and the posts refilled by a different kind of worker.",
+        "distractors": {
+          "A survey finds that residents of a town strongly approve of a new highway, but the survey reached only residents who live far from the highway.": "Matches the surface (a survey of residents) but its flaw is a biased sample, not what an exit count misses.",
+          "A factory that laid off a quarter of its workers finds that most of those dismissed had found new jobs within six months.": "Concerns how displaced people fare after leaving; in the author's case no one is pushed out.",
+          "A social club raises its dues sharply, and a count of resignations shows that half of its longtime members quit within a year.": "Matches the surface (rising costs push out old members) but is ordinary displacement, which a count of departures does register; the author's point is a change that such a count misses.",
+          "A city's population falls, and officials attribute the decline to residents' moving away rather than to a fall in births.": "About the cause of a decline in numbers, not about a change in makeup that a count of exits cannot detect."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-application",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q13",
+      "section": 2,
+      "type": "rc_select",
+      "difficulty": 5,
+      "passageId": "p5",
+      "prompt": "Select the sentence in which the author draws a contrast in order to reinforce a claim about how the long take is made.",
+      "key": {
+        "sel": [
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The fifth sentence (Montage, by contrast, can afford accident...) sets montage's tolerance for accident against the claim in the fourth sentence that the long take is rehearsed and fixed in advance. The second sentence also contrasts montage with the long take, but it reports the champions' view of the spectator's experience, not a claim about how the long take is made."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-function",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q14",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p5",
+      "prompt": "Which of the following best describes the organization of the passage?",
+      "choices": [
+        "A view is presented and then refuted by an argument about how a technique is produced, and a rival technique is recommended.",
+        "Two techniques are compared, and the author concludes that the one usually praised for the freedom it allows in fact allows less freedom than its rival.",
+        "A view is presented, the author concedes its central claim, and the author then argues that its proponents have misread the history of the technique.",
+        "A view is presented and qualified, and the author then concludes that critics should stop judging techniques by the freedom they allow spectators.",
+        "A view is presented, qualified by an argument about how a technique is produced, and the qualification is then limited so that it is not mistaken for a rejection."
+      ],
+      "key": {
+        "sel": [
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Sentences 1-2 give the champions' view. Sentences 3-5 qualify it ('real, but more narrowly delimited') by pointing to rehearsal, set against montage. Sentences 6-7 limit the critique: 'None of this makes the long take a deception'; the freedom is real as experience.",
+        "distractors": {
+          "A view is presented and then refuted by an argument about how a technique is produced, and a rival technique is recommended.": "The author says 'the freedom is real' and recommends nothing.",
+          "Two techniques are compared, and the author concludes that the one usually praised for the freedom it allows in fact allows less freedom than its rival.": "Too strong: the author never says montage gives the spectator more freedom, only that montage can afford accident.",
+          "A view is presented, the author concedes its central claim, and the author then argues that its proponents have misread the history of the technique.": "The passage says nothing about the technique's history.",
+          "A view is presented and qualified, and the author then concludes that critics should stop judging techniques by the freedom they allow spectators.": "Half right: the qualification is there, but the conclusion is only that critics should not infer the film's construction from the spectator's experience, not that they should abandon the criterion."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-structure",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q15",
+      "section": 2,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 3,
+      "passageId": "a2",
+      "prompt": "The reasoning in the director's argument is most vulnerable to criticism on the grounds that it",
+      "choices": [
+        "presumes, without justification, that the length of a visit is a reliable measure of engagement with a collection",
+        "relies on a premise that merely restates its conclusion",
+        "treats the association between renting the guide and longer visits as evidence that the guide causes them, without considering that visitors already inclined to stay long may be the ones who rent it",
+        "fails to consider that making the guide free would reduce the museum's revenue",
+        "draws a conclusion about all museums from evidence about a single museum"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The argument infers that the guide makes visits longer from the fact that renters stay longer. But visitors who already plan long, attentive visits are the ones most likely to pay for a guide, so the guide may be a mark of their engagement rather than its cause. Making it free would then add little.",
+        "distractors": {
+          "presumes, without justification, that the length of a visit is a reliable measure of engagement with a collection": "The director states this openly as a premise ('Since a longer visit means deeper engagement'); even if it is granted, the causal leap remains.",
+          "relies on a premise that merely restates its conclusion": "The premises (renters stay longer; length means engagement) do not restate the conclusion that a free guide will deepen engagement.",
+          "fails to consider that making the guide free would reduce the museum's revenue": "A cost of the policy, not a flaw in the reasoning that it would deepen engagement.",
+          "draws a conclusion about all museums from evidence about a single museum": "The conclusion concerns only this museum's visitors."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-flaw",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}
