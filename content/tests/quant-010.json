@@ -1,0 +1,1071 @@
+{
+  "id": "quant-010",
+  "measure": "quant",
+  "title": "Quant Hard Mock 10",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 21
+    },
+    {
+      "n": 2,
+      "minutes": 26
+    }
+  ],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Finishing times of the 260 runners in a 10-kilometer charity run, by age group. Each box plot marks the least time, the first quartile, the median, the third quartile and the greatest time of its group. In each group, exactly one-fourth of the runners have times in each of the four intervals the plot marks, no two of the 260 runners have the same time, and no runner's time is exactly equal to a quartile or median shown.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 670 300' width='670' height='300' font-family='sans-serif' font-size='12' fill='currentColor'><line x1='130' y1='15' x2='130' y2='240' stroke='currentColor' stroke-opacity='0.25' stroke-dasharray='3 3'/><line x1='130' y1='240' x2='130' y2='246' stroke='currentColor'/><text x='130' y='260' text-anchor='middle'>30</text><line x1='170' y1='15' x2='170' y2='240' stroke='currentColor' stroke-opacity='0.25' stroke-dasharray='3 3'/><line x1='170' y1='240' x2='170' y2='246' stroke='currentColor'/><text x='170' y='260' text-anchor='middle'>35</text><line x1='210' y1='15' x2='210' y2='240' stroke='currentColor' stroke-opacity='0.25' stroke-dasharray='3 3'/><line x1='210' y1='240' x2='210' y2='246' stroke='currentColor'/><text x='210' y='260' text-anchor='middle'>40</text><line x1='250' y1='15' x2='250' y2='240' stroke='currentColor' stroke-opacity='0.25' stroke-dasharray='3 3'/><line x1='250' y1='240' x2='250' y2='246' stroke='currentColor'/><text x='250' y='260' text-anchor='middle'>45</text><line x1='290' y1='15' x2='290' y2='240' stroke='currentColor' stroke-opacity='0.25' stroke-dasharray='3 3'/><line x1='290' y1='240' x2='290' y2='246' stroke='currentColor'/><text x='290' y='260' text-anchor='middle'>50</text><line x1='330' y1='15' x2='330' y2='240' stroke='currentColor' stroke-opacity='0.25' stroke-dasharray='3 3'/><line x1='330' y1='240' x2='330' y2='246' stroke='currentColor'/><text x='330' y='260' text-anchor='middle'>55</text><line x1='370' y1='15' x2='370' y2='240' stroke='currentColor' stroke-opacity='0.25' stroke-dasharray='3 3'/><line x1='370' y1='240' x2='370' y2='246' stroke='currentColor'/><text x='370' y='260' text-anchor='middle'>60</text><line x1='410' y1='15' x2='410' y2='240' stroke='currentColor' stroke-opacity='0.25' stroke-dasharray='3 3'/><line x1='410' y1='240' x2='410' y2='246' stroke='currentColor'/><text x='410' y='260' text-anchor='middle'>65</text><line x1='450' y1='15' x2='450' y2='240' stroke='currentColor' stroke-opacity='0.25' stroke-dasharray='3 3'/><line x1='450' y1='240' x2='450' y2='246' stroke='currentColor'/><text x='450' y='260' text-anchor='middle'>70</text><line x1='490' y1='15' x2='490' y2='240' stroke='currentColor' stroke-opacity='0.25' stroke-dasharray='3 3'/><line x1='490' y1='240' x2='490' y2='246' stroke='currentColor'/><text x='490' y='260' text-anchor='middle'>75</text><line x1='530' y1='15' x2='530' y2='240' stroke='currentColor' stroke-opacity='0.25' stroke-dasharray='3 3'/><line x1='530' y1='240' x2='530' y2='246' stroke='currentColor'/><text x='530' y='260' text-anchor='middle'>80</text><line x1='570' y1='15' x2='570' y2='240' stroke='currentColor' stroke-opacity='0.25' stroke-dasharray='3 3'/><line x1='570' y1='240' x2='570' y2='246' stroke='currentColor'/><text x='570' y='260' text-anchor='middle'>85</text><line x1='610' y1='15' x2='610' y2='240' stroke='currentColor' stroke-opacity='0.25' stroke-dasharray='3 3'/><line x1='610' y1='240' x2='610' y2='246' stroke='currentColor'/><text x='610' y='260' text-anchor='middle'>90</text><line x1='650' y1='15' x2='650' y2='240' stroke='currentColor' stroke-opacity='0.25' stroke-dasharray='3 3'/><line x1='650' y1='240' x2='650' y2='246' stroke='currentColor'/><text x='650' y='260' text-anchor='middle'>95</text><line x1='130' y1='240' x2='650' y2='240' stroke='currentColor'/><text x='390' y='288' text-anchor='middle'>Finishing time (minutes)</text><text x='120' y='47' text-anchor='end' font-weight='bold'>Under 30</text><text x='120' y='63' text-anchor='end' fill-opacity='0.75'>(80 runners)</text><line x1='170' y1='50' x2='250' y2='50' stroke='currentColor' stroke-width='2'/><line x1='370' y1='50' x2='490' y2='50' stroke='currentColor' stroke-width='2'/><line x1='170' y1='40' x2='170' y2='60' stroke='currentColor' stroke-width='2'/><line x1='490' y1='40' x2='490' y2='60' stroke='currentColor' stroke-width='2'/><rect x='250' y='32' width='120' height='36' fill='currentColor' fill-opacity='0.12' stroke='currentColor' stroke-width='2'/><line x1='290' y1='32' x2='290' y2='68' stroke='currentColor' stroke-width='3'/><text x='120' y='117' text-anchor='end' font-weight='bold'>Ages 30 to 49</text><text x='120' y='133' text-anchor='end' fill-opacity='0.75'>(120 runners)</text><line x1='210' y1='120' x2='290' y2='120' stroke='currentColor' stroke-width='2'/><line x1='410' y1='120' x2='570' y2='120' stroke='currentColor' stroke-width='2'/><line x1='210' y1='110' x2='210' y2='130' stroke='currentColor' stroke-width='2'/><line x1='570' y1='110' x2='570' y2='130' stroke='currentColor' stroke-width='2'/><rect x='290' y='102' width='120' height='36' fill='currentColor' fill-opacity='0.12' stroke='currentColor' stroke-width='2'/><line x1='370' y1='102' x2='370' y2='138' stroke='currentColor' stroke-width='3'/><text x='120' y='187' text-anchor='end' font-weight='bold'>Ages 50 and over</text><text x='120' y='203' text-anchor='end' fill-opacity='0.75'>(60 runners)</text><line x1='250' y1='190' x2='370' y2='190' stroke='currentColor' stroke-width='2'/><line x1='490' y1='190' x2='610' y2='190' stroke='currentColor' stroke-width='2'/><line x1='250' y1='180' x2='250' y2='200' stroke='currentColor' stroke-width='2'/><line x1='610' y1='180' x2='610' y2='200' stroke='currentColor' stroke-width='2'/><rect x='370' y='172' width='120' height='36' fill='currentColor' fill-opacity='0.12' stroke='currentColor' stroke-width='2'/><line x1='410' y1='172' x2='410' y2='208' stroke='currentColor' stroke-width='3'/></svg>"
+    },
+    {
+      "id": "fig2",
+      "caption": "Triangle PQR (not drawn to scale)",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 200' width='360' height='200' font-family='serif' font-size='16' fill='currentColor'><polygon points='80,170 40,40 330,170' fill='none' stroke='currentColor' stroke-width='2'/><text x='72' y='192'>P</text><text x='26' y='38'>Q</text><text x='338' y='178'>R</text><text x='40' y='112'>5</text><text x='200' y='190'>8</text><text x='88' y='158'>x°</text></svg>"
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "$x$ and $y$ are nonzero numbers, and $\\dfrac{x}{y} > 1$.",
+      "qc": {
+        "a": "$x$",
+        "b": "$y$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "$x/y > 1$ forces $x$ and $y$ to have the same sign and $|x| > |y|$. If both are positive, $x > y$; if both are negative, $x < y$.",
+        "steps": [
+          "1. $x/y > 1 > 0$, so $x$ and $y$ have the same sign.",
+          "2. $x = 3$, $y = 2$: $x/y = 1.5$, and A is greater.",
+          "3. $x = -3$, $y = -2$: $x/y = 1.5$, and B is greater.",
+          "4. Two outcomes, so the relationship cannot be determined."
+        ],
+        "trap": "Multiplying both sides by $y$ without flipping the inequality for negative $y$ gives $x > y$ and the answer A."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-sense-qc",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "inequalities",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "Compare the two quantities.",
+      "qc": {
+        "a": "$\\sqrt{8+2\\sqrt{15}}-\\sqrt{8-2\\sqrt{15}}$",
+        "b": "$\\sqrt{12}$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Quantity A is positive and its square is $16 - 2\\sqrt{64-60} = 12$, so A equals $\\sqrt{12}$.",
+        "steps": [
+          "1. A is positive, because $8+2\\sqrt{15} > 8-2\\sqrt{15}$.",
+          "2. $A^2 = (8+2\\sqrt{15}) + (8-2\\sqrt{15}) - 2\\sqrt{(8+2\\sqrt{15})(8-2\\sqrt{15})}$.",
+          "3. The product under the root is $64 - 4 \\cdot 15 = 4$, so $A^2 = 16 - 4 = 12$.",
+          "4. A positive number whose square is 12 is $\\sqrt{12}$: the quantities are equal.",
+          "Alternatively, $8 \\pm 2\\sqrt{15} = (\\sqrt5 \\pm \\sqrt3)^2$, so A $= 2\\sqrt3$."
+        ],
+        "trap": "Estimating each root to one decimal place ($3.97 - 0.50$) leaves A looking a little above or below 3.46, and the solver guesses A or B."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponents-roots",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "algebraic-expressions",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "figureId": "fig2",
+      "prompt": "In triangle $PQR$, $PQ = 5$, $PR = 8$, and angle $QPR$ measures $x^\\circ$, where $x < 60$. (Note: the figure is not drawn to scale.)",
+      "qc": {
+        "a": "The length of $QR$",
+        "b": "$7$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "With the two sides fixed, $QR$ grows as angle $x$ grows. At exactly $60^\\circ$, $QR = 7$, so for $x < 60$, $QR < 7$.",
+        "steps": [
+          "1. Fix $PQ = 5$ and $PR = 8$; opening the angle at $P$ pushes $Q$ away from $R$, so $QR$ increases with $x$.",
+          "2. At $x = 60$, drop the perpendicular from $Q$ to $PR$: the foot is $5\\cos 60^\\circ = 2.5$ from $P$, and the height is $2.5\\sqrt3$.",
+          "3. Then $QR^2 = (8-2.5)^2 + (2.5\\sqrt3)^2 = 30.25 + 18.75 = 49$, so $QR = 7$.",
+          "4. For $x < 60$, $QR < 7$: B is greater."
+        ],
+        "trap": "The figure shows an obtuse angle at $P$ and a long side $QR$; reading it to scale suggests A."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "figures-not-to-scale",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "Two sections of a statistics course each had 10 students take the same exam. In Section 1 the scores had a mean of 70 and a standard deviation of 5; in Section 2 they had a mean of 80 and a standard deviation of 5.",
+      "qc": {
+        "a": "The standard deviation of all 20 scores",
+        "b": "$5$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Pooling adds spread between the groups to the spread within them. Measured from the combined mean of 75, every score's squared deviation picks up the 5-point gap between its section's mean and 75, so the combined average squared deviation is $25 + 25 = 50$ and the standard deviation is $\\sqrt{50} \\approx 7.1$.",
+        "steps": [
+          "1. Combined mean: 75 (equal section sizes).",
+          "2. For a Section 1 score $x$: $(x - 75)^2 = (x - 70)^2 - 10(x - 70) + 25$; the middle term sums to 0 over the section.",
+          "3. So each section's squared deviations from 75 total $10 \\cdot 25 + 10 \\cdot 25 = 500$.",
+          "4. Over 20 scores: $1000/20 = 50$, a standard deviation of $\\sqrt{50} > 5$. (With the $n - 1$ definition: $(9 \\cdot 25 \\cdot 2 + 500)/19 = 50$ as well.)",
+          "Example: five 65s and five 75s, five 75s and five 85s: the pooled scores sit 10 apart around 75, clearly more spread out."
+        ],
+        "trap": "Two groups with the same standard deviation are assumed to combine into a group with that standard deviation (C); the gap between the means adds spread."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "std-dev-normal",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "A hardware store raised the price of a can of wood stain by 25 percent. Later it reduced the new price by 30 percent. The final price was \\$1.05 less than the original price. What was the price, in dollars, of the can just after the 25 percent increase?",
+      "choices": [
+        "8.40",
+        "9.45",
+        "10.50",
+        "11.25",
+        "12.00"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The two changes multiply to $1.25 \\times 0.70 = 0.875$, a 12.5 percent net drop. So $0.125p = 1.05$, $p = 8.40$, and the raised price was $1.25 \\times 8.40 = 10.50$.",
+        "steps": [
+          "1. Net factor: $1.25 \\times 0.7 = 0.875$.",
+          "2. The drop is $0.125p = 1.05$, so the original price $p = 8.40$.",
+          "3. The question asks for the price after the increase: $1.25 \\times 8.40 = 10.50$."
+        ],
+        "fast": "A 12.5 percent drop is $1/8$, so $p = 8 \\times 1.05 = 8.40$; add a quarter: 10.50.",
+        "trap": "Stopping at the original price, 8.40, or treating +25 and −30 as a net −5 percent."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "percent",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "Two swimmers start at the same moment from opposite ends of a 50-meter pool and swim lengths back and forth at constant speeds of 1.25 meters per second and 1 meter per second, turning instantly at each wall. The second time the two swimmers are at the same point of the pool, how many meters are they from the faster swimmer's starting wall?",
+      "choices": [
+        "$\\dfrac{200}{9}$",
+        "$\\dfrac{50}{3}$",
+        "$25$",
+        "$\\dfrac{250}{9}$",
+        "$\\dfrac{100}{3}$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "By the second meeting the two together have covered three pool lengths, 150 m. The faster swimmer covers $\\frac{1.25}{2.25}$ of that, $\\frac{250}{3}$ m: one full length plus $\\frac{100}{3}$ m on the way back, which leaves him $50 - \\frac{100}{3} = \\frac{50}{3}$ m from his starting wall.",
+        "steps": [
+          "1. First meeting: combined distance 50 m. Second meeting: each swimmer reaches the far wall and turns, and they close one more combined 100 m, so 150 m in all.",
+          "2. Time: $150 / 2.25 = \\frac{200}{3}$ s. The faster swimmer goes $1.25 \\times \\frac{200}{3} = \\frac{250}{3}$ m.",
+          "3. He reached the far wall at 50 m and has swum $\\frac{100}{3}$ m back, so he is $\\frac{50}{3}$ m from his start.",
+          "4. Check with the slower one: $\\frac{200}{3}$ m, i.e. 50 m plus $\\frac{50}{3}$ m back toward his own wall, which is $\\frac{50}{3}$ m from the faster swimmer's wall."
+        ],
+        "fast": "Three lengths combined; the faster swimmer's share is $\\frac59 \\times 150$.",
+        "trap": "$\\frac{100}{3}$ measures from the wrong wall; $\\frac{250}{9}$ is the first meeting; 2 combined lengths instead of 3 gives other choices."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-rate",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A museum is forming a 4-person installation crew from 6 carpenters, among them Kim and Lee, and 4 electricians. The crew must include at least one electrician, and Kim and Lee cannot both be on it. How many different crews are possible?",
+      "choices": [
+        "152",
+        "167",
+        "173",
+        "182",
+        "195"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Crews with at least one electrician: $\\binom{10}{4} - \\binom64 = 210 - 15 = 195$. Among them, those with both Kim and Lee: the other two members come from the 8 others with at least one electrician, $\\binom82 - \\binom42 = 28 - 6 = 22$. So $195 - 22 = 173$.",
+        "steps": [
+          "1. All crews: $\\binom{10}{4} = 210$.",
+          "2. All-carpenter crews: $\\binom64 = 15$, leaving 195.",
+          "3. Crews with Kim and Lee plus two others: $\\binom82 = 28$; of these, $\\binom42 = 6$ add two more carpenters and so have no electrician.",
+          "4. Forbidden crews within the 195: $28 - 6 = 22$. Answer: $195 - 22 = 173$."
+        ],
+        "fast": "Two complements, the second one restricted to crews that already pass the first rule.",
+        "trap": "Subtracting all 28 Kim-and-Lee crews from 195 gives 167, double-removing the 6 crews already excluded as all-carpenter."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-restrictions",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "counting-permutations",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "The number $x$ satisfies both $|2x - 5| \\le 7$ and $|x + 1| > 3$. Which of the following could be the value of $x$? Indicate all such values.",
+      "choices": [
+        "$-3$",
+        "$-1$",
+        "$2$",
+        "$\\dfrac{5}{2}$",
+        "$6$",
+        "$7$"
+      ],
+      "key": {
+        "sel": [
+          3,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The first condition gives $-1 \\le x \\le 6$; the second gives $x > 2$ or $x < -4$. Together: $2 < x \\le 6$. Only $\\frac52$ and 6 qualify.",
+        "steps": [
+          "1. $|2x - 5| \\le 7 \\iff -7 \\le 2x - 5 \\le 7 \\iff -1 \\le x \\le 6$.",
+          "2. $|x + 1| > 3 \\iff x + 1 > 3$ or $x + 1 < -3$, i.e. $x > 2$ or $x < -4$.",
+          "3. The branch $x < -4$ misses $[-1, 6]$, so $2 < x \\le 6$.",
+          "4. $-3$, $-1$ and 2 fail the second condition (2 gives $|3| = 3$, not $> 3$); 7 fails the first."
+        ],
+        "trap": "Including the endpoint 2 (the strict inequality excludes it) or dropping 6 (the non-strict one includes it)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "abs-value-inequalities",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 3,
+      "prompt": "In a community choir, the ratio of sopranos to altos was $5 : 3$. Then 2 sopranos left the choir and 6 new altos joined, after which the choir had equal numbers of sopranos and altos. How many sopranos and altos in total does the choir have now?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "36"
+      },
+      "explanation": {
+        "key": "Write the original counts as $5k$ and $3k$. Then $5k - 2 = 3k + 6$, so $k = 4$: 20 sopranos and 12 altos became 18 and 18, a total of 36.",
+        "steps": [
+          "1. Original: $5k$ sopranos, $3k$ altos.",
+          "2. After the changes: $5k - 2 = 3k + 6 \\Rightarrow k = 4$.",
+          "3. Now: $18 + 18 = 36$."
+        ],
+        "fast": "The gap $2k$ must close by $2 + 6 = 8$, so $k = 4$.",
+        "trap": "Answering with the original total, 32."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "ratio-proportion",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 3,
+      "prompt": "To the nearest percent, what percent of all 260 runners had finishing times of less than 60 minutes?",
+      "choices": [
+        "46%",
+        "50%",
+        "52%",
+        "55%",
+        "58%"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "60 minutes is the third quartile of the under-30 group (60 of 80 runners below it), the median of the 30-to-49 group (60 of 120) and the first quartile of the 50-and-over group (15 of 60). Total $135/260 \\approx 51.9\\%$.",
+        "steps": [
+          "1. Under 30: 60 is $Q_3$, so $\\frac34 \\times 80 = 60$ runners.",
+          "2. Ages 30 to 49: 60 is the median, so $\\frac12 \\times 120 = 60$.",
+          "3. Ages 50 and over: 60 is $Q_1$, so $\\frac14 \\times 60 = 15$.",
+          "4. $135 / 260 \\approx 0.519$, about 52%."
+        ],
+        "fast": "75%, 50% and 25% of groups weighted 80, 120 and 60.",
+        "trap": "Averaging the three percents without weights gives 50%."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "quartiles-boxplots",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 4,
+      "prompt": "Which of the following could be the mean finishing time, in minutes, of the runners in the under-30 group?",
+      "choices": [
+        "44",
+        "46",
+        "55",
+        "59",
+        "62"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Each quarter holds 20 runners. The mean is more than the average of the four interval lower ends, $(35+45+50+60)/4 = 47.5$, and less than the average of the upper ends, $(45+50+60+75)/4 = 57.5$. Only 55 lies strictly between.",
+        "steps": [
+          "1. The four intervals are 35–45, 45–50, 50–60 and 60–75, with 20 runners each.",
+          "2. Smallest possible mean: every runner near the low end of its interval, giving just over $\\frac{35+45+50+60}{4} = 47.5$.",
+          "3. Largest possible mean: every runner near the high end, just under $\\frac{45+50+60+75}{4} = 57.5$.",
+          "4. Every value strictly between is reachable; of the choices only 55 is."
+        ],
+        "fast": "Bound the mean by pushing each quarter to its interval's ends.",
+        "trap": "Treating the mean as anything between the least and greatest times (so 44 is excluded but 46 looks fine) or as anything inside the box (so 59 looks fine)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "quartiles-boxplots",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 5,
+      "prompt": "One runner is to be chosen at random from among the runners in all three groups whose finishing times were less than 60 minutes. What is the greatest possible probability that the runner chosen is in the 30-to-49 group and had a finishing time of less than 55 minutes?",
+      "choices": [
+        "$\\dfrac{3}{13}$",
+        "$\\dfrac{2}{9}$",
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{4}{9}$",
+        "$\\dfrac{1}{2}$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The pool is fixed at $60 + 60 + 15 = 135$ runners. In the 30-to-49 group, 30 runners are below 50 and up to all 30 runners between 50 and 60 could be below 55, so at most 60 qualify: $60/135 = 4/9$.",
+        "steps": [
+          "1. Runners under 60 minutes: 60 (under 30) + 60 (30 to 49) + 15 (50 and over) = 135, whatever the exact times.",
+          "2. Ages 30 to 49 below 55: the 30 runners below $Q_1 = 50$ certainly; the 30 runners between 50 and the median 60 may all be below 55.",
+          "3. Greatest count: 60. Probability: $60/135 = 4/9$."
+        ],
+        "fast": "Fixed denominator 135; the numerator ranges from 30 to 60.",
+        "trap": "$\\frac12$ uses only the 120 runners of one group as the base; $\\frac{3}{13}$ uses all 260 runners; $\\frac29$ is the least possible value."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-conditional",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "quartiles-boxplots",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q1",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "$n$ is a positive integer.",
+      "qc": {
+        "a": "The units digit of $7^n \\cdot 3^n$",
+        "b": "The units digit of $7^n + 3^n$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "A is the units digit of $21^n$, which is always 1. B follows the cycles $7, 9, 3, 1$ and $3, 9, 7, 1$: the sums end in 0, 8, 0, 2 for $n = 1, 2, 3, 4$. So B can be less than 1 (0) or greater (8 or 2).",
+        "steps": [
+          "1. $7^n \\cdot 3^n = 21^n$, whose units digit is 1 for every $n$.",
+          "2. $n = 1$: $7 + 3 = 10$, units digit 0, less than A.",
+          "3. $n = 2$: $49 + 9 = 58$, units digit 8, greater than A.",
+          "4. Two outcomes: the relationship cannot be determined."
+        ],
+        "trap": "Checking only $n = 1$ (or only odd $n$, where the cycles cancel to 0) and choosing A."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "remainders-units",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q2",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "In triangle $JKL$, $JK = 5$, $KL = 8$, and the area of the triangle is 12.",
+      "qc": {
+        "a": "$JL$",
+        "b": "$8$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The height from $J$ onto line $KL$ is $2(12)/8 = 3$, so its foot is $\\sqrt{25 - 9} = 4$ from $K$. If the foot lies on segment $KL$ (acute angle at $K$), $JL = \\sqrt{4^2 + 3^2} = 5$; if it lies on the extension beyond $K$ (obtuse angle at $K$), $JL = \\sqrt{12^2 + 3^2} = \\sqrt{153} > 12$. One is less than 8 and one greater.",
+        "steps": [
+          "1. Area $= \\frac12 \\cdot KL \\cdot h = 4h = 12$, so the height from $J$ is $h = 3$.",
+          "2. In the right triangle formed by $JK = 5$ and the height, the foot of the height is 4 from $K$.",
+          "3. Foot on segment $KL$: it is $8 - 4 = 4$ from $L$, and $JL = \\sqrt{16 + 9} = 5$.",
+          "4. Foot on the far side of $K$: it is $8 + 4 = 12$ from $L$, and $JL = \\sqrt{144 + 9} = \\sqrt{153}$.",
+          "5. Both triangles have area 12, so the relationship cannot be determined."
+        ],
+        "trap": "Finding the 3-4-5 picture, getting $JL = 5$ and choosing B, missing the obtuse triangle with the same two sides and the same area."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q3",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A box holds 10 raffle tickets, 4 of which are winning tickets. Kai draws 3 tickets at random, returning each ticket to the box before the next draw. Lena draws 3 tickets at random from the full box without returning any.",
+      "qc": {
+        "a": "The probability that Kai draws at least one winning ticket",
+        "b": "The probability that Lena draws at least one winning ticket"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Use complements. Kai misses every time with probability $(0.6)^3 = 0.216$, so A $= 0.784$. Lena misses every time with probability $\\frac{6}{10}\\cdot\\frac59\\cdot\\frac48 = \\frac16$, so B $= \\frac56 \\approx 0.833$.",
+        "steps": [
+          "1. A $= 1 - (6/10)^3 = 1 - 0.216 = 0.784$.",
+          "2. B $= 1 - \\frac{6 \\cdot 5 \\cdot 4}{10 \\cdot 9 \\cdot 8} = 1 - \\frac16 = \\frac56$.",
+          "3. $\\frac56 > 0.784$, so B is greater.",
+          "Without computing: each losing ticket Lena removes makes the next draw likelier to win, so missing three times is less likely for her."
+        ],
+        "trap": "Assuming replacement makes no difference to an 'at least one' probability (C), or that replacement gives more chances (A)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-basic",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "probability-conditional",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q4",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "$(p + q)^2 = 49$ and $(p - q)^2 = 9$.",
+      "qc": {
+        "a": "$p^2 + q^2$",
+        "b": "$3pq$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Adding the two equations gives $2(p^2 + q^2) = 58$, so A $= 29$. Subtracting gives $4pq = 40$, so $pq = 10$ and B $= 30$.",
+        "steps": [
+          "1. $(p+q)^2 + (p-q)^2 = 2p^2 + 2q^2 = 58 \\Rightarrow p^2 + q^2 = 29$.",
+          "2. $(p+q)^2 - (p-q)^2 = 4pq = 40 \\Rightarrow pq = 10$.",
+          "3. B $= 30 > 29$, whatever the signs of $p$ and $q$."
+        ],
+        "trap": "Taking square roots ($p + q = 7$, $p - q = 3$) and worrying about the sign cases leads to D; the identities fix both quantities without them."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "algebraic-expressions",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "$-2 \\le x \\le 3$ and $-4 \\le y \\le 1$.",
+      "qc": {
+        "a": "The greatest possible value of $x^2 - y^2$",
+        "b": "The greatest possible value of $xy$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "A: make $x^2$ as large as possible (9, at $x = 3$) and $y^2$ as small as possible (0, at $y = 0$), so A $= 9$. B: two negatives give $(-2)(-4) = 8$, more than $3 \\cdot 1 = 3$, so B $= 8$.",
+        "steps": [
+          "1. $x^2$ ranges over $[0, 9]$ and $y^2$ over $[0, 16]$; the two can be chosen independently.",
+          "2. Greatest $x^2 - y^2$: $9 - 0 = 9$, at $x = 3$, $y = 0$.",
+          "3. Greatest $xy$: compare the corner products $3 \\cdot 1 = 3$, $(-2)(-4) = 8$; the others are negative. B $= 8$.",
+          "4. $9 > 8$: A is greater."
+        ],
+        "trap": "Trying only the endpoint values of $y$ gives A $= 9 - 1 = 8$ and the answer C; $y = 0$ lies inside the interval. Using only positive endpoints gives B $= 3$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "min-max-bounding",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "inequalities",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q6",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "Points $A$, $B$ and $C$ lie on a circle of radius 6, and angle $ACB$ measures $45^\\circ$. What is the area of the region bounded by chord $AB$ and the minor arc $AB$?",
+      "choices": [
+        "$9\\pi - 18$",
+        "$9\\pi - 36$",
+        "$\\dfrac{9\\pi}{2} - 9\\sqrt{2}$",
+        "$18\\pi - 18$",
+        "$27\\pi + 18$"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "An inscribed angle of $45^\\circ$ cuts off an arc of $90^\\circ$, so the central angle $AOB$ is a right angle. Segment area = quarter circle − right triangle $= \\frac14 \\cdot 36\\pi - \\frac12 \\cdot 6 \\cdot 6 = 9\\pi - 18$.",
+        "steps": [
+          "1. Central angle $= 2 \\times 45^\\circ = 90^\\circ$ ($C$ must be on the major arc, since a $45^\\circ$ angle subtends an arc of only $90^\\circ$).",
+          "2. Sector $AOB$: $\\frac{90}{360} \\cdot \\pi \\cdot 6^2 = 9\\pi$.",
+          "3. Triangle $AOB$: legs 6 and 6, area 18.",
+          "4. Region: $9\\pi - 18$."
+        ],
+        "fast": "Quarter circle minus half of a $6 \\times 6$ square.",
+        "trap": "Using $45^\\circ$ as the central angle gives $\\frac{9\\pi}{2} - 9\\sqrt2$; $27\\pi + 18$ is the region on the major-arc side."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "circles",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q7",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "Each of the 120 people at a one-day conference attended at least one of three sessions: 70 attended the morning keynote, 85 attended the afternoon panel, and 40 attended the evening dinner. What is the greatest possible number of people who attended all three sessions?",
+      "choices": [
+        "35",
+        "37",
+        "38",
+        "40",
+        "45"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The three attendance figures sum to 195, which is 75 more than the 120 people. Someone at exactly two sessions accounts for 1 of that excess and someone at all three for 2, so if $t$ attended all three, $2t \\le 75$ and $t \\le 37$. A Venn split with $t = 37$ exists.",
+        "steps": [
+          "1. Let $e_1, e_2, e_3$ count people at exactly one, two, three sessions: $e_1 + e_2 + e_3 = 120$ and $e_1 + 2e_2 + 3e_3 = 195$.",
+          "2. Subtract: $e_2 + 2e_3 = 75$, so $e_3 \\le 37$.",
+          "3. Example with 37: all three 37; keynote and panel only 1; keynote only 32; panel only 47; dinner only 3. Totals: keynote 70, panel 85, dinner 40, people 120.",
+          "4. Greatest: 37."
+        ],
+        "fast": "Excess over the head count is $195 - 120 = 75$; each triple attendee uses 2 of it.",
+        "trap": "40, the size of the smallest session, ignores that every one of the 120 people must be counted."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "overlapping-sets",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "min-max-bounding",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q8",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A regular hexagon is inscribed in a circle of radius 6, and a smaller circle is inscribed in the hexagon. What is the total area of the two regions that lie inside the larger circle but outside the hexagon, and inside the hexagon but outside the smaller circle?",
+      "choices": [
+        "$9\\pi$",
+        "$27\\pi$",
+        "$54\\sqrt{3} - 27\\pi$",
+        "$36\\pi - 54\\sqrt{3}$",
+        "$63\\pi - 108\\sqrt{3}$"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Together the two regions form the ring between the circles, so the hexagon's area cancels. The smaller radius is the hexagon's apothem, $6 \\cdot \\frac{\\sqrt3}{2} = 3\\sqrt3$, so the area is $36\\pi - 27\\pi = 9\\pi$.",
+        "steps": [
+          "1. (Larger circle − hexagon) + (hexagon − smaller circle) = larger circle − smaller circle.",
+          "2. The hexagon is six equilateral triangles of side 6; the inscribed circle's radius is their height, $3\\sqrt3$.",
+          "3. $\\pi \\cdot 36 - \\pi \\cdot 27 = 9\\pi$."
+        ],
+        "fast": "Ring area $= \\pi(R^2 - a^2) = \\pi \\cdot (\\frac{R}{2})^2 = 9\\pi$, since $R^2 - a^2$ is the square of half a side.",
+        "trap": "$54\\sqrt3 - 27\\pi$ and $36\\pi - 54\\sqrt3$ are each one region alone; $27\\pi$ uses an inner radius of 3."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inscribed-figures",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "area-perimeter",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q9",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "At a stationery shop, 1 pen, 2 notebooks and 3 folders cost \\$26 in total, and 3 pens, 2 notebooks and 1 folder cost \\$22 in total. What is the total cost, in dollars, of 1 pen, 1 notebook and 1 folder?",
+      "choices": [
+        "8",
+        "12",
+        "16",
+        "24",
+        "It cannot be determined from the information given."
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Adding the two purchases gives 4 pens, 4 notebooks and 4 folders for \\$48, so one of each costs \\$12, although the separate prices are not determined.",
+        "steps": [
+          "1. $p + 2n + 3f = 26$ and $3p + 2n + f = 22$.",
+          "2. Add: $4p + 4n + 4f = 48$.",
+          "3. Divide by 4: $p + n + f = 12$."
+        ],
+        "fast": "The coefficients add to 4, 4, 4.",
+        "trap": "Two equations in three unknowns look unsolvable, so many choose 'cannot be determined'; the question asks only for a combination the equations do fix."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "linear-equations",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q10",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "What is the value of $\\dfrac{0.\\overline{6} - 0.25}{0.2 - 0.0\\overline{3}}$ ?",
+      "choices": [
+        "$-\\dfrac{25}{8}$",
+        "$\\dfrac{5}{12}$",
+        "$\\dfrac{125}{51}$",
+        "$\\dfrac{5}{2}$",
+        "$\\dfrac{25}{6}$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Convert the repeating decimals: $0.\\overline{6} = \\frac23$ and $0.0\\overline{3} = \\frac{1}{30}$. Numerator $\\frac23 - \\frac14 = \\frac{5}{12}$; denominator $\\frac15 - \\frac{1}{30} = \\frac16$; quotient $\\frac{5}{12} \\times 6 = \\frac52$.",
+        "steps": [
+          "1. $0.\\overline{6} = \\frac23$; $0.0\\overline{3} = \\frac{1}{10} \\cdot 0.\\overline{3} = \\frac{1}{30}$.",
+          "2. Numerator: $\\frac23 - \\frac14 = \\frac{8 - 3}{12} = \\frac{5}{12}$.",
+          "3. Denominator: $\\frac15 - \\frac{1}{30} = \\frac{6 - 1}{30} = \\frac16$.",
+          "4. $\\frac{5}{12} \\div \\frac16 = \\frac{5}{2}$."
+        ],
+        "fast": "Multiply top and bottom by 60: $\\frac{40 - 15}{12 - 2} = \\frac{25}{10}$.",
+        "trap": "Reading $0.0\\overline{3}$ as $\\frac13$ gives $-\\frac{25}{8}$; truncating it to $0.03$ gives $\\frac{125}{51}$; stopping at the numerator gives $\\frac{5}{12}$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "fractions-decimals",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q11",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A bag holds six letter tiles: three marked K, two marked L and one marked M. Tiles marked with the same letter are indistinguishable. How many different 4-letter sequences can be formed by drawing 4 of the tiles and placing them in a row?",
+      "choices": [
+        "24",
+        "34",
+        "38",
+        "45",
+        "60"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Count by which tiles are used. K K K L: 4. K K K M: 4. K K L L: $\\frac{4!}{2!2!} = 6$. K K L M: $\\frac{4!}{2!} = 12$. K L L M: 12. Total 38.",
+        "steps": [
+          "1. Possible letter multisets of size 4 (at most three K, two L, one M): KKKL, KKKM, KKLL, KKLM, KLLM.",
+          "2. Arrangements: $4 + 4 + 6 + 12 + 12$.",
+          "3. Total: 38."
+        ],
+        "fast": "List the five multisets, then divide $4!$ by the repeats.",
+        "trap": "Missing a case (34 drops KKKM), or treating the tiles as distinct."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-permutations",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q12",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "In rectangle $ABCD$, diagonal $AC$ has length 12 and angle $CAB$ measures $30^\\circ$. Point $E$ lies on side $AB$ so that angle $ADE$ measures $45^\\circ$. What is the area of quadrilateral $EBCD$?",
+      "choices": [
+        "$36\\sqrt{3} - 18$",
+        "$36\\sqrt{3} - 36$",
+        "$18\\sqrt{3}$",
+        "$18\\sqrt{3} + 18$",
+        "$54 - 18\\sqrt{3}$"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Triangle $ABC$ is 30-60-90 with hypotenuse 12, so $AB = 6\\sqrt3$ and $BC = AD = 6$. Triangle $ADE$ is 45-45-90, so $AE = AD = 6$ and its area is 18. The quadrilateral is the rectangle ($36\\sqrt3$) minus that triangle.",
+        "steps": [
+          "1. $BC = 12 \\sin 30^\\circ = 6$, $AB = 12 \\cos 30^\\circ = 6\\sqrt3$; rectangle area $36\\sqrt3$.",
+          "2. Angle $DAE = 90^\\circ$ and angle $ADE = 45^\\circ$, so $AE = AD = 6$ (which is less than $6\\sqrt3$, so $E$ is on the side).",
+          "3. Triangle $ADE$: $\\frac12 \\cdot 6 \\cdot 6 = 18$.",
+          "4. $EBCD = 36\\sqrt3 - 18$."
+        ],
+        "fast": "Rectangle $6 \\times 6\\sqrt3$ minus an isosceles right triangle with legs 6.",
+        "trap": "Swapping the sides ($AB = 6$) or subtracting the whole $6 \\times 6$ square gives $36\\sqrt3 - 36$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "area-perimeter",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q13",
+      "section": 2,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "$-3 < a < 2$ and $1 < b < 4$. Which of the following must be true? Indicate all such statements.",
+      "choices": [
+        "$a - b < 1$",
+        "$ab > -8$",
+        "$a + b > -1$",
+        "$a^2 < 9$",
+        "$\\dfrac{a}{b} > -1$",
+        "$b - a < 6$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Find each expression's full range. $a - b < 2 - 1 = 1$ always. $a^2 < 9$ since $|a| < 3$. The others fail near the corners: $ab$ approaches $-12$, $a + b$ approaches $-2$, $a/b$ approaches $-3$, and $b - a$ approaches 7.",
+        "steps": [
+          "1. $a - b$ ranges over $(-7, 1)$: always less than 1. True.",
+          "2. $ab$: $a = -2.9$, $b = 3.9$ gives about $-11.3$. Not always.",
+          "3. $a + b$: $a = -2.9$, $b = 1.05$ gives $-1.85$. Not always.",
+          "4. $a^2$: $-3 < a < 2$ means $|a| < 3$, so $a^2 < 9$. True.",
+          "5. $a/b$: $a = -2.9$, $b = 1.1$ gives about $-2.6$. Not always.",
+          "6. $b - a$: $b = 3.9$, $a = -2.9$ gives 6.8. Not always."
+        ],
+        "trap": "Pairing endpoints of the same sign only (for example $(-3)(1)$ for $ab$, $(4)-(2)$ for $b - a$) understates how far the expressions reach."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inequalities",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "min-max-bounding",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q14",
+      "section": 2,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "$p$ and $q$ are positive integers such that $p^2 - q^2 = 72$. Which of the following could be the value of $q$? Indicate all such values.",
+      "choices": [
+        "$1$",
+        "$3$",
+        "$6$",
+        "$7$",
+        "$9$",
+        "$17$"
+      ],
+      "key": {
+        "sel": [
+          1,
+          3,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "$(p - q)(p + q) = 72$, and $p - q$, $p + q$ have the same parity, so both are even: $2 \\times 36$, $4 \\times 18$, $6 \\times 12$. These give $(p, q) = (19, 17), (11, 7), (9, 3)$.",
+        "steps": [
+          "1. Factor: $(p-q)(p+q) = 72$ with $0 < p - q < p + q$.",
+          "2. $p - q$ and $p + q$ differ by $2q$, an even number, so they are both even or both odd; 72 is even, so both are even.",
+          "3. Even pairs: $(2, 36), (4, 18), (6, 12)$. Then $q = \\frac{(p+q) - (p-q)}{2} = 17, 7, 3$.",
+          "4. Pairs such as $(8, 9)$ or $(3, 24)$ mix parities and give non-integers."
+        ],
+        "trap": "9 is a value of $p$, not $q$; 6 comes from reading the factor pair $6 \\times 12$ as $q$; 1 comes from the mixed-parity pair $(8, 9)$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "integers-properties",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "algebraic-expressions",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q15",
+      "section": 2,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "A rectangular sheet of plywood is cut into four smaller rectangles by one straight cut parallel to its length and one straight cut parallel to its width. Three of the pieces have areas 12, 18 and 30 square feet, and the 12-square-foot piece shares a full side with each of the other two. If every piece has side lengths that are whole numbers of feet, what is the least possible perimeter, in feet, of the original sheet?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "44"
+      },
+      "explanation": {
+        "key": "Let the 12-piece be $w \\times h$. The 18-piece shares its height, so its width is $18/h$; the 30-piece shares its width, so its height is $30/w$. Whole numbers need $h \\mid 18$ and $w \\mid 30$ with $wh = 12$: $(w, h) = (2, 6)$ or $(6, 2)$. The sheets are $5 \\times 21$ (perimeter 52) or $15 \\times 7$ (perimeter 44).",
+        "steps": [
+          "1. 12-piece: $w \\times h = 12$. 18-piece: $\\frac{18}{h} \\times h$. 30-piece: $w \\times \\frac{30}{w}$.",
+          "2. Sheet: width $w + \\frac{18}{h}$, height $h + \\frac{30}{w}$.",
+          "3. Divisor pairs of 12 with $h \\mid 18$ and $w \\mid 30$: $(2, 6)$ and $(6, 2)$.",
+          "4. $(2, 6)$: $5 \\times 21$, perimeter 52. $(6, 2)$: $15 \\times 7$, perimeter 44.",
+          "5. Least: 44. (The fourth piece is 45 square feet either way.)"
+        ],
+        "fast": "Widths in ratio $2:3$, heights in ratio $2:5$; try the two even splits of 12.",
+        "trap": "Stopping at the first factorization found (52), or answering with the total area, 105."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "area-perimeter",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "ratio-proportion",
+          "role": "secondary"
+        }
+      ]
+    }
+  ]
+}
