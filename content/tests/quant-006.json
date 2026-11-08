@@ -980,15 +980,15 @@
       "id": "s2q14",
       "section": 2,
       "type": "mc_multi",
-      "difficulty": 6,
-      "prompt": "Three wooden rods have lengths, in centimeters, that are three different integers with a sum of 30, and the rods can be joined end to end to form a triangle. Which of the following could be the length, in centimeters, of the shortest rod? Indicate all such lengths.",
+      "difficulty": 4,
+      "prompt": "Three wooden rods have lengths, in centimeters, that are three different integers with a sum of 30, and the rods can be joined end to end to form a triangle. Which of the following could be the length, in centimeters, of the longest rod? Indicate all such lengths.",
       "choices": [
-        "$1$",
-        "$2$",
-        "$3$",
-        "$6$",
         "$9$",
-        "$10$"
+        "$10$",
+        "$11$",
+        "$13$",
+        "$14$",
+        "$15$"
       ],
       "key": {
         "sel": [
@@ -998,15 +998,14 @@
         ]
       },
       "explanation": {
-        "key": "With lengths $a<b<c$, the triangle inequality $c<a+b=30-c$ gives $c\\le14$, so $b\\le13$ and $a=30-b-c\\ge3$. And $a<b<c$ with sum 30 gives $a\\le9$ (9, 10, 11). Every $a$ from 3 to 9 works, e.g. (3, 13, 14), (6, 11, 13), (9, 10, 11).",
+        "key": "With lengths $a<b<c$, the triangle inequality $c<a+b=30-c$ gives $c\\le14$. Since the lengths are different, $a+b\\le(c-2)+(c-1)$, so $30-c\\le2c-3$ and $c\\ge11$. Every $c$ from 11 to 14 works, e.g. (9, 10, 11), (6, 11, 13), (3, 13, 14).",
         "steps": [
-          "1. Longest side: $c<a+b=30-c$, so $c<15$, $c\\le14$.",
-          "2. Then $b\\le13$, so $a\\ge30-13-14=3$.",
-          "3. Upper bound: $3a<a+b+c=30$ with $a<b<c$ gives $a\\le9$.",
-          "4. Witnesses: (3,13,14), (6,11,13), (9,10,11). So 3, 6 and 9 are possible; 1, 2 and 10 are not."
+          "1. Upper bound: $c<a+b=30-c$, so $c<15$, $c\\le14$.",
+          "2. Lower bound: $b\\le c-1$ and $a\\le c-2$, so $30=a+b+c\\le3c-3$, giving $c\\ge11$.",
+          "3. Witnesses: (9,10,11), (6,11,13), (3,13,14). So 11, 13 and 14 are possible; 9, 10 and 15 are not."
         ],
-        "fast": "The longest rod is at most 14; with distinct lengths the other two can be at most 13 and 14, which leaves the shortest at least 3.",
-        "trap": "Forgetting that the lengths are distinct (allowing 2, 14, 14) or applying the triangle inequality only to the shortest rod."
+        "fast": "The longest rod must be shorter than the other two together, so under half of 30; and with three different lengths it must be above the average of 10.",
+        "trap": "15 gives a flat triangle (15 = 7 + 8), not a real one; 10 needs the lengths 10, 10, 10, which are not different."
       },
       "tags": [
         {
@@ -1025,24 +1024,24 @@
       "id": "s2q15",
       "section": 2,
       "type": "numeric",
-      "difficulty": 6,
-      "prompt": "In triangle $ABC$, $AB = 7$, $BC = 11$, and the length of $AC$ is an integer. For how many possible values of $AC$ is triangle $ABC$ obtuse?",
+      "difficulty": 5,
+      "prompt": "In triangle $ABC$, $AB = 7$, $BC = 11$, and the length of $AC$ is an integer less than 11. For how many possible values of $AC$ is triangle $ABC$ obtuse?",
       "numeric": {
         "kind": "single"
       },
       "key": {
-        "value": "8"
+        "value": "4"
       },
       "explanation": {
-        "key": "$AC$ ranges over the integers 5 to 17. The triangle is obtuse at $B$ when $AC^2>7^2+11^2=170$ ($AC=14$ to 17, four values) and obtuse at $A$ when $11^2>7^2+AC^2$, i.e. $AC^2<72$ ($AC=5$ to 8, four values). Total 8.",
+        "key": "Since $AC<11$, side $BC=11$ is the longest, so the only angle that can be obtuse is $A$, opposite it: $11^2>7^2+AC^2$, i.e. $AC^2<72$, so $AC\\le8$. The triangle inequality needs $AC>11-7=4$. So $AC$ is 5, 6, 7 or 8: 4 values.",
         "steps": [
-          "1. Triangle inequality: $4<AC<18$, so $AC\\in\\{5,\\ldots,17\\}$.",
-          "2. $AC$ longest and obtuse: $AC^2>170$, so $AC\\ge14$: 14, 15, 16, 17.",
-          "3. $BC=11$ longest and obtuse: $121>49+AC^2$, so $AC^2<72$: 5, 6, 7, 8.",
-          "4. No integer gives a right triangle ($\\sqrt{170}$ and $\\sqrt{72}$ are not integers). Total: 8."
+          "1. $AC<11$ and $AB=7<11$, so $BC$ is the longest side and the obtuse angle, if any, is at $A$.",
+          "2. Obtuse at $A$: $121>49+AC^2$, so $AC^2<72$ and $AC\\le8$ ($\\sqrt{72}$ is not an integer, so no right triangle).",
+          "3. Triangle inequality: $AC>11-7=4$, so $AC\\ge5$.",
+          "4. $AC\\in\\{5,6,7,8\\}$: 4 values."
         ],
-        "fast": "Two obtuse cases: the unknown side is the longest, or 11 is the longest.",
-        "trap": "Counting only the case where $AC$ is the longest side (4), or including the endpoints 4 and 18."
+        "fast": "The obtuse angle sits opposite 11, so $AC^2<72$; then drop the lengths too short to close the triangle.",
+        "trap": "Counting 1 through 8 (8 values) forgets the triangle inequality, which rules out $AC\\le4$."
       },
       "tags": [
         {

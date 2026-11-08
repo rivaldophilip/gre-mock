@@ -764,14 +764,14 @@
       "id": "s2q8",
       "section": 2,
       "type": "mc",
-      "difficulty": 6,
-      "prompt": "Each of the 200 pass holders at a three-day film festival attended on at least one of the three days. Exactly 170 attended on Friday, 160 on Saturday and 150 on Sunday. What is the greatest possible number of pass holders who attended on exactly two of the three days?",
+      "difficulty": 5,
+      "prompt": "Each of the 200 pass holders at a three-day film festival attended on at least one of the three days. Exactly 170 attended on Friday, 160 on Saturday and 150 on Sunday, and exactly 20 attended on only one of the three days. How many pass holders attended on exactly two of the three days?",
       "choices": [
+        "$60$",
         "$80$",
+        "$100$",
         "$120$",
-        "$140$",
-        "$150$",
-        "$280$"
+        "$180$"
       ],
       "key": {
         "sel": [
@@ -779,26 +779,21 @@
         ]
       },
       "explanation": {
-        "key": "With $e_1, e_2, e_3$ pass holders attending exactly 1, 2, 3 days: $e_1 + e_2 + e_3 = 200$ and $e_1 + 2e_2 + 3e_3 = 480$, so $e_2 = 280 - 2e_3$ and $e_1 = e_3 - 80$. Then $e_3 \\ge 80$, so $e_2 \\le 120$; 120 is reached with 80 attending all three days and pairwise-only counts 50, 40, 30.",
+        "key": "With $e_1, e_2, e_3$ pass holders attending exactly 1, 2, 3 days: $e_1 + e_2 + e_3 = 200$ and $e_1 + 2e_2 + 3e_3 = 480$. With $e_1 = 20$: $e_2 + e_3 = 180$ and $2e_2 + 3e_3 = 460$, so $e_3 = 100$ and $e_2 = 80$.",
         "steps": [
           "1. Total attendances: $170 + 160 + 150 = 480$.",
-          "2. Subtract the head count: $e_2 + 2e_3 = 280$.",
-          "3. $e_1 = 200 - e_2 - e_3 = e_3 - 80 \\ge 0$, so $e_3 \\ge 80$ and $e_2 = 280 - 2e_3 \\le 120$.",
-          "4. Achievable: all three days 80; Fri+Sat only 50, Fri+Sun only 40, Sat+Sun only 30; nobody on one day only. Fri $= 80 + 50 + 40 = 170$, Sat $= 80 + 50 + 30 = 160$, Sun $= 80 + 40 + 30 = 150$."
+          "2. Head count: $e_2 + e_3 = 200 - 20 = 180$.",
+          "3. Attendances: $2e_2 + 3e_3 = 480 - 20 = 460$.",
+          "4. Subtract twice step 2: $e_3 = 460 - 360 = 100$, so $e_2 = 80$."
         ],
-        "fast": "Maximizing exactly-two means minimizing all-three, and the minimum all-three is forced by the need for $e_1 \\ge 0$.",
-        "trap": "280 ignores that each all-three attendee absorbs two of the extra attendances; 80 is the minimum number attending all three days, not the answer."
+        "fast": "$3 \\times 200 - 480 = 2e_1 + e_2$, so $120 = 40 + e_2$ and $e_2 = 80$.",
+        "trap": "100 is the number attending all three days; 180 counts everyone who attended more than one day; 120 forgets that the 20 one-day pass holders are in the head count."
       },
       "tags": [
         {
           "kind": "concept",
           "id": "overlapping-sets",
           "role": "primary"
-        },
-        {
-          "kind": "concept",
-          "id": "min-max-bounding",
-          "role": "secondary"
         }
       ]
     },
@@ -879,13 +874,13 @@
       "id": "s2q11",
       "section": 2,
       "type": "mc",
-      "difficulty": 6,
-      "prompt": "A bag holds six number tiles: two tiles marked 1, two tiles marked 2, one tile marked 3 and one tile marked 4. How many different four-digit numbers can be formed by placing four of the six tiles side by side?",
+      "difficulty": 5,
+      "prompt": "A bag holds six number tiles: two tiles marked 1 and one tile each marked 2, 3, 4 and 5. How many different four-digit numbers can be formed by placing four of the six tiles side by side?",
       "choices": [
-        "$72$",
-        "$96$",
-        "$102$",
+        "$120$",
         "$180$",
+        "$192$",
+        "$264$",
         "$360$"
       ],
       "key": {
@@ -894,15 +889,14 @@
         ]
       },
       "explanation": {
-        "key": "Split by repeated digits: all four digits different, $4! = 24$; one pair plus two other digits, $2 \\times 3 \\times 12 = 72$; two pairs (1, 1, 2, 2), $\\tfrac{4!}{2!2!} = 6$. Total 102.",
+        "key": "Split on whether both 1s are used. At most one 1: four different digits from {1, 2, 3, 4, 5}, $5 \\times 4 \\times 3 \\times 2 = 120$. Both 1s: choose their 2 places, $\\binom{4}{2} = 6$, then fill the other two places from {2, 3, 4, 5} in order, $4 \\times 3 = 12$: 72. Total 192.",
         "steps": [
-          "1. Four different digits {1, 2, 3, 4}: $4! = 24$.",
-          "2. Exactly one pair: choose the pair (1 or 2), then 2 of the other 3 digit values: $2 \\times 3 = 6$ multisets, each with $4!/2! = 12$ orders: 72.",
-          "3. Two pairs {1, 1, 2, 2}: $4!/(2!\\,2!) = 6$.",
-          "4. $24 + 72 + 6 = 102$."
+          "1. Four different digits from {1, 2, 3, 4, 5}: $5 \\times 4 \\times 3 \\times 2 = 120$.",
+          "2. Two 1s: places for the 1s $\\binom{4}{2} = 6$; the other two places $4 \\times 3 = 12$; $6 \\times 12 = 72$.",
+          "3. $120 + 72 = 192$."
         ],
-        "fast": "Case on how many digits repeat.",
-        "trap": "360 treats the six tiles as distinct; 180 halves once for one repeated pair only."
+        "fast": "Distinct digits 120, plus numbers with two 1s 72.",
+        "trap": "360 treats the two 1-tiles as different; 180 halves that for every number, but only numbers containing a 1 were double-counted; 120 misses the numbers with two 1s; 264 orders the two-1 case as $6 \\times 4!$ without dividing out the matching 1s."
       },
       "tags": [
         {
@@ -994,13 +988,13 @@
       "id": "s2q14",
       "section": 2,
       "type": "mc_multi",
-      "difficulty": 6,
+      "difficulty": 5,
       "prompt": "The numbers $x$ and $y$ satisfy $1 \\le x \\le 4$, $2 \\le y \\le 6$ and $x + y \\le 7$. Which of the following could be the value of $xy$? Indicate all such values.",
       "choices": [
         "$1.5$",
         "$2$",
+        "$7.5$",
         "$12$",
-        "$12.25$",
         "$14$",
         "$24$"
       ],
@@ -1012,15 +1006,14 @@
         ]
       },
       "explanation": {
-        "key": "The smallest product is $1 \\cdot 2 = 2$. For the largest, $x + y \\le 7$ caps it: $xy \\le (7/2)^2 = 12.25$, reached at $x = y = 3.5$. Every value from 2 to 12.25 occurs, so 2, 12 and 12.25.",
+        "key": "The smallest product is $1 \\cdot 2 = 2$. For the largest, $x + y \\le 7$ caps it at $(7/2)^2 = 12.25$, well below $4 \\times 6$. Every value from 2 to 12.25 occurs, so 2, 7.5 and 12.",
         "steps": [
-          "1. Minimum: both factors positive and smallest at $x = 1$, $y = 2$: $xy = 2$.",
-          "2. Maximum: for a fixed sum $s \\le 7$, $xy \\le (s/2)^2 \\le 12.25$; $x = y = 3.5$ satisfies all constraints.",
-          "3. The feasible region is connected, so $xy$ takes every value in $[2, 12.25]$: 12 (e.g. $x = 3$, $y = 4$) works.",
-          "4. 1.5 is too small; 14 and 24 are too large."
+          "1. Minimum: both factors positive and smallest at $x = 1$, $y = 2$: $xy = 2$, so 1.5 is out.",
+          "2. 7.5 works with $x = 2.5$, $y = 3$; 12 works with $x = 3$, $y = 4$ ($x + y = 7$).",
+          "3. Maximum: with $x + y \\le 7$, $xy \\le (7/2)^2 = 12.25$, so 14 and 24 are out."
         ],
-        "fast": "Fixed sum → product largest when the two numbers are equal.",
-        "trap": "Multiplying the separate maximums ($4 \\times 6 = 24$) ignores $x + y \\le 7$; thinking only of integers stops at 12 and misses 12.25."
+        "fast": "Fixed sum → product largest when the two numbers are equal: at most 12.25.",
+        "trap": "Multiplying the separate maximums ($4 \\times 6 = 24$) ignores $x + y \\le 7$; 14 looks reachable with $x = 2$, $y = 7$ or $x = 3.5$, $y = 4$, but each breaks a constraint."
       },
       "tags": [
         {

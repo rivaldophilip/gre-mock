@@ -990,32 +990,34 @@
       "id": "s2q14",
       "section": 2,
       "type": "mc_multi",
-      "difficulty": 6,
+      "difficulty": 5,
       "prompt": "A rectangle has a diagonal of length 10. Which of the following could be the perimeter of the rectangle?\n\nIndicate all such values.",
       "choices": [
-        "14",
-        "20",
+        "22",
         "24",
+        "26",
         "28",
-        "28.5",
+        "29",
         "30"
       ],
       "key": {
         "sel": [
+          0,
+          1,
           2,
           3
         ]
       },
       "explanation": {
-        "key": "The perimeter can be any value greater than 20 and at most $20\\sqrt2 \\approx 28.28$.",
+        "key": "The perimeter can be any value greater than 20 and at most $20\\sqrt2 \\approx 28.28$, so 22, 24, 26 and 28 are possible.",
         "steps": [
           "Let the sides be $l$ and $w$: $l^2 + w^2 = 100$, and the perimeter is $2(l + w)$.",
-          "$(l + w)^2 = 100 + 2lw$, and $0 < 2lw \\le l^2 + w^2 = 100$, so $100 < (l + w)^2 \\le 200$.",
-          "So $10 < l + w \\le 10\\sqrt2$, and $20 < P \\le 20\\sqrt2 \\approx 28.28$.",
-          "24 and 28 work. 14 and 20 are too small (20 would need a side of length 0); 28.5 and 30 exceed the square's perimeter."
+          "$(l + w)^2 = 100 + 2lw$ and $2lw \\le l^2 + w^2 = 100$, so $(l + w)^2 \\le 200$, with equality for the square.",
+          "So $P \\le 20\\sqrt2 \\approx 28.28$; and as the rectangle flattens, $P$ falls toward 20 and takes every value in between.",
+          "22, 24, 26 and 28 work; 29 and 30 exceed the square's perimeter."
         ],
-        "fast": "The square ($P = 20\\sqrt2 \\approx 28.3$) has the greatest perimeter; flattening the rectangle pushes $P$ down toward 20 without reaching it.",
-        "trap": "Assuming whole-number sides (only the 6-8-10 rectangle, perimeter 28), or accepting the degenerate value 20."
+        "fast": "The square ($P = 20\\sqrt2 \\approx 28.3$) has the greatest perimeter; the sides need not be whole numbers, so every smaller value down to 20 is reachable.",
+        "trap": "Assuming whole-number sides (only the 6-8-10 rectangle, perimeter 28), or thinking a longer, thinner rectangle has a larger perimeter (29, 30)."
       },
       "tags": [
         {

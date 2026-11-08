@@ -144,17 +144,18 @@ assert abs(math.dist(circ, A) - math.dist(circ, B)) < 1e-12
 r3 = math.sqrt(3)
 pick("s2q7", [math.sqrt(5), 2 * math.sqrt(2), 3, math.sqrt(13), 2 * math.sqrt(5)], math.dist(inc, circ))
 
-# s2q8: 200 people, |F|=170, |Sa|=160, |Su|=150, everyone in at least one: max number in exactly two
-best = -1
+# s2q8: 200 people, |F|=170, |Sa|=160, |Su|=150, everyone in at least one, 20 in exactly one: number in exactly two
+twos = set()
 for t3 in range(0, 151):
     for fs in range(0, 171 - t3):
         for fu in range(0, 171 - t3 - fs):
             ss = 280 - 2 * t3 - fs - fu  # forced by the head count of 200
             regions = [170 - t3 - fs - fu, 160 - t3 - fs - ss, 150 - t3 - fu - ss, fs, fu, ss, t3]
-            if min(regions) >= 0:
+            if min(regions) >= 0 and sum(regions[:3]) == 20:
                 assert sum(regions) == 200
-                best = max(best, fs + fu + ss)
-t.choice("s2q8", best)
+                twos.add(fs + fu + ss)
+assert len(twos) == 1
+t.choice("s2q8", twos.pop())
 
 # s2q9: r = 5, OP = 10; kite minus sector
 r, op = 5, 10
@@ -168,8 +169,8 @@ pick("s2q9", [25 * r3 - 25 * pi / 6, 25 * r3 - 25 * pi / 3, 50 * r3 - 25 * pi / 
 w = next(w for w in (F(n, 2) for n in range(1, 200)) if (F(3, 2) * w + 4) * (w + 4) - F(3, 2) * w * w == 136)
 t.choice("s2q10", 2 * (w + F(3, 2) * w))
 
-# s2q11: distinct 4-digit strings from tiles 1,1,2,2,3,4
-t.choice("s2q11", len(set(permutations("112234", 4))))
+# s2q11: distinct 4-digit strings from tiles 1,1,2,3,4,5
+t.choice("s2q11", len(set(permutations("112345", 4))))
 
 # s2q12: angle B 45, C 30, AC 8; law of sines then area
 Bang, Cang = math.radians(45), math.radians(30)

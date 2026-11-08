@@ -88,14 +88,10 @@ for zz in range(-10, 11):
             cases.append((xx + yy + zz, 2 * zz - 2 * xx))
 t.qc("s2q4", cases)
 
-# s2q5: independent, pq = 0.2, p + q - pq = 0.7, p > q; A = p, B = 0.5
-roots = []
-for pn in range(0, 1001):
-    p = F(pn, 1000); q = F(9, 10) - p
-    if 0 <= q <= 1 and p * q == F(1, 5) and p > q:
-        roots.append(p)
+# s2q5: independent, P(train) = 0.5, P(at least one) = 0.7; A = P(bus), B = 0.4
+roots = [q for q in (F(n, 1000) for n in range(0, 1001)) if F(1, 2) + q - F(1, 2) * q == F(7, 10)]
 assert len(roots) == 1
-t.qc("s2q5", [(roots[0], F(1, 2))])
+t.qc("s2q5", [(roots[0], F(2, 5))])
 
 # s2q6: chord 16 at distance 6 -> r; chord 12 parallel; greatest distance between chords
 r = math.hypot(8, 6); d2 = math.sqrt(r * r - 36)

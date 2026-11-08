@@ -91,11 +91,11 @@ t.where("s1q12", lambda v: v in medians)
 # s2q1: ordered pairs of positive integers with m^2 - n^2 = 48; B = 4
 t.qc("s2q1", [(sum(1 for m in range(1, 100) for n in range(1, m) if m * m - n * n == 48), 4)])
 
-# s2q2: PQ = 7, QR = 4, some angle obtuse; A = PR, B = 8
+# s2q2: PQ = 7 longest, QR = 4, some angle obtuse; A = PR, B = 6
 def obtuse(a, b, c):
     s = sorted((a, b, c))
     return s[0] + s[1] > s[2] and s[2] ** 2 > s[0] ** 2 + s[1] ** 2
-t.qc("s2q2", [(F(x, 10), 8) for x in range(31, 110) if obtuse(7, 4, F(x, 10))])
+t.qc("s2q2", [(F(x, 100), 6) for x in range(301, 700) if obtuse(7, 4, F(x, 100))])
 
 # s2q3: units digit of 3^n is 7; A = units digit of 7^n, B = n mod 8
 t.qc("s2q3", [(pow(7, n, 10), n % 8) for n in range(1, 400) if pow(3, n, 10) == 7])
@@ -118,9 +118,9 @@ r = next(r for r in range(1, 50) if (2 * r) ** 2 - r**2 == 27)
 side = 2 * r * sqrt(3)
 pick("s2q7", 3 * side)
 
-# s2q8: four hikers, 4 trails, exactly one trail unused
-outcomes = list(product(range(4), repeat=4))
-t.choice("s2q8", F(sum(1 for o in outcomes if len(set(o)) == 3), len(outcomes)))
+# s2q8: three hikers, 4 trails, exactly one trail unused
+outcomes = list(product(range(4), repeat=3))
+t.choice("s2q8", F(sum(1 for o in outcomes if 4 - len(set(o)) == 1), len(outcomes)))
 
 # s2q9: drones 40t and 60(t - 1/2), t hours after 9:00; second 10 km ahead
 tt = next(F(m, 60) for m in range(30, 600) if 60 * (F(m, 60) - F(1, 2)) - 40 * F(m, 60) == 10)

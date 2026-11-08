@@ -193,11 +193,11 @@ def safe(f, x):
 given = lambda x: (x * x - 9) / (x * x + 3 * x)
 exprs = [
     lambda x: 1 - 3 / x,
-    lambda x: (x - 9) / (x + 3),
+    lambda x: (x + 3) / x,
     lambda x: (3 - x) / (-x),
     lambda x: (x * x - 6 * x + 9) / (x * x - 3 * x),
-    lambda x: (x * x - 3 * x) / (x * x),
-    lambda x: x / (x + 3) - 3 / (x + 3),
+    lambda x: (x - 3) / (x + 3),
+    lambda x: (2 * x - 6) / (2 * x),
 ]
 dom = [x for x in (F(n, 3) for n in range(-60, 61)) if safe(given, x) is not None]
 t.sel("s2q13", [i for i, e in enumerate(exprs) if all(safe(e, x) == given(x) for x in dom)])

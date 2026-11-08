@@ -10,7 +10,7 @@ import path from "node:path";
 import { TestSchema, type Question, type Test } from "../lib/types";
 import { passageSentences } from "../lib/sentences";
 import { parseNumber } from "../lib/scoring";
-import { difficultyRules } from "./validate-test";
+import { difficultyRules, TOP_CAP } from "./validate-test";
 import { die, readTestFile } from "./lib/test-file";
 
 const L = "ABCDEFGHI";
@@ -168,8 +168,26 @@ export function checkAnswers(test: Test, answers: Map<string, SolverLine>, offse
     issues.push(...mine);
     act.add(q.id);
   }
+  // quant: a raw rating of 4+ is where items land at level 6+ after calibration (official hard items get 4 about 15% of
+  // the time), so more than TOP_CAP per section overshoots the real GRE; ease the extra ones (docs/CALIBRATION.md)
+  if (test.measure === "quant")
+    for (const n of [1, 2] as const) {
+      const top = test.questions
+        .filter((q) => q.section === n && (answers.get(q.id)?.difficulty ?? 0) >= TOP_RATING)
+        .sort((x, y) => answers.get(y.id)!.difficulty! - answers.get(x.id)!.difficulty!);
+      if (top.length <= TOP_CAP) continue;
+      const ease = top.slice(TOP_CAP).map((q) => q.id);
+      issues.push(
+        `S${n} too hard: ${top.length} items rated ${TOP_RATING}+ (${top.map((q) => q.id).join(", ")}), cap ${TOP_CAP} per section; ` +
+          `ease ${ease.join(", ")} to official-L5 difficulty (drop one move, keep the trap and the level-5 tag)`,
+      );
+      ease.forEach((id) => act.add(id));
+    }
   return { right, total: qs.length, issues, act: [...act] };
 }
+
+/** Raw quant solver rating from which an item usually calibrates to level 6+. */
+export const TOP_RATING = 4;
 
 // ---- calibration set: official items of known P+ (local corpus only, never committed)
 const REF = path.resolve("../books/extracted/reference/items.jsonl");

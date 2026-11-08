@@ -978,33 +978,33 @@
       "id": "s2q14",
       "section": 2,
       "type": "mc_multi",
-      "difficulty": 6,
-      "prompt": "The equation $x^2+kx+36=0$ has two different integer solutions. Which of the following could be the value of $k$? Select all such values.",
+      "difficulty": 4,
+      "prompt": "The equation $x^2+kx+36=0$ has two different positive integer solutions. Which of the following could be the value of $k$? Select all such values.",
       "choices": [
         "$-37$",
+        "$-20$",
+        "$-15$",
         "$-12$",
-        "$12$",
-        "$13$",
-        "$15$",
-        "$20$"
+        "$-10$",
+        "$13$"
       ],
       "key": {
         "sel": [
           0,
-          3,
-          4,
-          5
+          1,
+          2
         ]
       },
       "explanation": {
-        "key": "If the roots are $r$ and $s$, then $rs=36$ and $k=-(r+s)$. Distinct integer factor pairs of 36 are $\\pm(1,36),\\pm(2,18),\\pm(3,12),\\pm(4,9)$, giving $k=\\mp37,\\mp20,\\mp15,\\mp13$.",
+        "key": "If the roots are $r$ and $s$, then $rs=36$ and $k=-(r+s)$. The pairs of different positive integers with product 36 are $(1,36),(2,18),(3,12),(4,9)$, so $k$ is $-37$, $-20$, $-15$ or $-13$.",
         "steps": [
-          "Positive pairs give $k=-37,-20,-15,-13$; negative pairs give $k=37,20,15,13$.",
-          "$(6,6)$ and $(-6,-6)$ give $k=\\mp12$, but those are repeated roots, so they are excluded.",
-          "From the list: $-37$, 13, 15, 20."
+          "By Vieta, $r+s=-k$ and $rs=36$, so $k$ is the negative of a factor-pair sum of 36.",
+          "$(6,6)$ would give $k=-12$, but that is a repeated root, not two different solutions.",
+          "$-10$ would need $r+s=10$ with $rs=36$; no factor pair of 36 sums to 10. And $13$ is positive, while positive roots force $k<0$ (the pair $(4,9)$ gives $-13$, not 13).",
+          "From the list: $-37$, $-20$, $-15$."
         ],
-        "fast": "List the factor pairs of 36 and drop the square pair.",
-        "trap": "Including $\\pm12$ from the double root $\\pm6$, or forgetting the negative factor pairs (which give positive $k$)."
+        "fast": "List the factor pairs of 36, negate their sums, and drop the square pair $(6,6)$.",
+        "trap": "Including $-12$ from the double root $x=6$, or taking $k=+(r+s)$ and picking 13."
       },
       "tags": [
         {

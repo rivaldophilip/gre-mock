@@ -628,11 +628,11 @@
       "id": "s2q5",
       "section": 2,
       "type": "qc",
-      "difficulty": 6,
-      "prompt": "Whether a commuter's morning train is late and whether her evening bus is late are independent events. On any given day, the probability that both are late is 0.2, the probability that at least one of them is late is 0.7, and the train is more likely to be late than the bus.",
+      "difficulty": 4,
+      "prompt": "Whether a commuter's morning train is late and whether her evening bus is late are independent events. On any given day, the probability that the train is late is 0.5 and the probability that at least one of the two is late is 0.7.",
       "qc": {
-        "a": "The probability that the morning train is late",
-        "b": "$0.5$"
+        "a": "The probability that the evening bus is late",
+        "b": "$0.4$"
       },
       "key": {
         "sel": [
@@ -640,15 +640,14 @@
         ]
       },
       "explanation": {
-        "key": "Let $p$ and $q$ be the train and bus probabilities. Independence: $pq = 0.2$. Union: $p + q - pq = 0.7$, so $p + q = 0.9$. Then $p$ and $q$ are the roots of $t^2 - 0.9t + 0.2 = 0$, which are 0.5 and 0.4. Since $p > q$, $p = 0.5$: equal.",
+        "key": "Let $q$ be the bus probability. Independence makes $P(\\text{both}) = 0.5q$, so $0.5 + q - 0.5q = 0.7$, giving $0.5q = 0.2$ and $q = 0.4$: equal.",
         "steps": [
-          "1. $P(\\text{both}) = pq = 0.2$.",
-          "2. $P(\\text{at least one}) = p + q - pq = 0.7$, so $p + q = 0.9$.",
-          "3. $t^2 - 0.9t + 0.2 = (t - 0.5)(t - 0.4) = 0$.",
-          "4. The train is the likelier: $p = 0.5$. C."
+          "1. Independence: $P(\\text{both}) = 0.5q$.",
+          "2. At least one: $0.5 + q - 0.5q = 0.7$.",
+          "3. $0.5q = 0.2$, so $q = 0.4$. C."
         ],
-        "fast": "Numbers with sum 0.9 and product 0.2: 0.5 and 0.4.",
-        "trap": "Subtracting $0.7 - 0.2 = 0.5$ gives the probability that exactly one is late, not the train's probability; the match with 0.5 is a coincidence of these numbers. Stopping at $p + q = 0.9$ suggests D."
+        "fast": "Neither late: $0.5(1 - q) = 1 - 0.7 = 0.3$, so $1 - q = 0.6$.",
+        "trap": "Subtracting $0.7 - 0.5 = 0.2$ treats the two delays as never happening together, which independence rules out, and suggests B."
       },
       "tags": [
         {

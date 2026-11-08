@@ -126,8 +126,8 @@ def fits(x):
     return 0 < p < 180 and 0 < q < 180 and (p == q or p + q == 180)
 t.where("s2q13", fits)
 
-# s2q14: x^2 + kx + 36 = 0 with two distinct integer roots
-ks = {-(r + 36 // r) for r in range(-36, 37) if r and 36 % r == 0 and r != 36 // r}
+# s2q14: x^2 + kx + 36 = 0 with two distinct positive integer roots
+ks = {-(r + 36 // r) for r in range(1, 37) if 36 % r == 0 and r != 36 // r}
 t.where("s2q14", lambda k: k in ks)
 
 # s2q15: kx+3y=6, 12x+ky=12 has no solution only at k=-6 (k=6 gives coincident lines)

@@ -152,14 +152,14 @@ t.sel("s2q12", [i for i, val in enumerate(vals) if abs(val - ad) < 1e-9])
 exactly_one = {52 + 41 - 2 * b for b in range(0, 42) if 52 + 41 - b <= 80 - 10}
 t.where("s2q13", lambda c: c in exactly_one)
 
-# s2q14: distinct integers a<b<c, sum 30, triangle: possible shortest
-shortest = {a for a in range(1, 30) for b in range(a + 1, 30) for c in range(b + 1, 30) if a + b + c == 30 and a + b > c}
-t.where("s2q14", lambda c: c in shortest)
+# s2q14: distinct integers a<b<c, sum 30, triangle: possible longest
+longest = {c for a in range(1, 30) for b in range(a + 1, 30) for c in range(b + 1, 30) if a + b + c == 30 and a + b > c}
+t.where("s2q14", lambda c: c in longest)
 
-# s2q15: AB=7, BC=11, integer AC, obtuse triangles
+# s2q15: AB=7, BC=11, integer AC < 11, obtuse triangles
 def obtuse(x, y, z):
     a, b, c = sorted((x, y, z))
     return a + b > c and a * a + b * b < c * c
-t.value("s2q15", sum(1 for ac in range(1, 40) if obtuse(7, 11, ac)))
+t.value("s2q15", sum(1 for ac in range(1, 11) if obtuse(7, 11, ac)))
 
 t.done()

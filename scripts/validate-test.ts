@@ -11,6 +11,9 @@ import { readTestFile } from "./lib/test-file";
 
 type Rated = Pick<Question, "section" | "difficulty">;
 
+/** At most this many items per section may sit above official hard difficulty (levels 6-7, docs/CALIBRATION.md). */
+export const TOP_CAP = 2;
+
 /** The section difficulty rules (docs/QUIZ-AUTHORING.md), one entry per rule, each with whether it passes. */
 export function difficultyRules(questions: Rated[]) {
   const out: { rule: string; ok: boolean }[] = [];
@@ -18,6 +21,8 @@ export function difficultyRules(questions: Rated[]) {
     const qs = questions.filter((q) => q.section === n);
     if (!qs.length) continue;
     const avg = qs.reduce((a, q) => a + q.difficulty, 0) / qs.length;
+    const top = qs.filter((q) => q.difficulty >= 6).length;
+    if (top) out.push({ rule: `S${n} L6+ ${top} (<=${TOP_CAP})`, ok: top <= TOP_CAP });
     if (n === 1) out.push({ rule: `S1 avg ${avg.toFixed(2)} (>=3.75)`, ok: avg >= 3.75 });
     else {
       const l3 = qs.filter((q) => q.difficulty <= 3).length;
@@ -83,7 +88,9 @@ export function validateTest(raw: unknown, id: string): Validation {
     qs.forEach((q) => (got[typeOf(q)] = (got[typeOf(q)] ?? 0) + 1));
     for (const t of new Set([...Object.keys(want), ...Object.keys(got)])) if ((want[t] ?? 0) !== (got[t] ?? 0)) err(`section ${sec.n}: type ${t} x${got[t] ?? 0}, blueprint wants x${want[t] ?? 0}`);
   }
-  for (const r of difficultyRules(test.questions)) if (!r.ok) err(`difficulty: ${r.rule} fails; raise levels honestly (harder items), see docs/HARD-PATTERNS.md`);
+  for (const r of difficultyRules(test.questions))
+    if (!r.ok)
+      err(`difficulty: ${r.rule} fails; ${r.rule.includes("L6+") ? "ease the extra items to official-L5 difficulty and re-rate them, see docs/CALIBRATION.md" : "raise levels honestly (harder items), see docs/HARD-PATTERNS.md"}`);
   // block order: TC (verbal) / QC (quant) must open each section
   for (const n of [1, 2] as const) {
     const qs = test.questions.filter((q) => q.section === n);

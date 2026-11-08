@@ -216,30 +216,30 @@
       "id": "s1q6",
       "section": 1,
       "type": "mc",
-      "difficulty": 6,
-      "prompt": "Two swimmers start at the same moment from opposite ends of a 50-meter pool and swim lengths back and forth at constant speeds of 1.25 meters per second and 1 meter per second, turning instantly at each wall. The second time the two swimmers are at the same point of the pool, how many meters are they from the faster swimmer's starting wall?",
+      "difficulty": 5,
+      "prompt": "Two swimmers start at the same moment from opposite ends of a 50-meter pool and swim lengths back and forth at constant speeds of 1.25 meters per second and 1 meter per second, turning instantly at each wall. How many seconds after the start are the two swimmers at the same point of the pool for the second time?",
       "choices": [
         "$\\dfrac{200}{9}$",
-        "$\\dfrac{50}{3}$",
-        "$25$",
-        "$\\dfrac{250}{9}$",
-        "$\\dfrac{100}{3}$"
+        "$\\dfrac{400}{9}$",
+        "$\\dfrac{200}{3}$",
+        "$80$",
+        "$100$"
       ],
       "key": {
         "sel": [
-          1
+          2
         ]
       },
       "explanation": {
-        "key": "By the second meeting the two together have covered three pool lengths, 150 m. The faster swimmer covers $\\frac{1.25}{2.25}$ of that, $\\frac{250}{3}$ m: one full length plus $\\frac{100}{3}$ m on the way back, which leaves him $50 - \\frac{100}{3} = \\frac{50}{3}$ m from his starting wall.",
+        "key": "Between meetings the two must together cover two more pool lengths, so by the second meeting they have covered three lengths, 150 m, at a combined 2.25 m/s: $150 / 2.25 = \\frac{200}{3}$ seconds.",
         "steps": [
-          "1. First meeting: combined distance 50 m. Second meeting: each swimmer reaches the far wall and turns, and they close one more combined 100 m, so 150 m in all.",
-          "2. Time: $150 / 2.25 = \\frac{200}{3}$ s. The faster swimmer goes $1.25 \\times \\frac{200}{3} = \\frac{250}{3}$ m.",
-          "3. He reached the far wall at 50 m and has swum $\\frac{100}{3}$ m back, so he is $\\frac{50}{3}$ m from his start.",
-          "4. Check with the slower one: $\\frac{200}{3}$ m, i.e. 50 m plus $\\frac{50}{3}$ m back toward his own wall, which is $\\frac{50}{3}$ m from the faster swimmer's wall."
+          "1. First meeting: combined distance 50 m, after $\\frac{200}{9}$ s.",
+          "2. After passing, each swimmer goes on to the far wall and turns back; to meet again they must together cover 100 m more, so 150 m in all.",
+          "3. Time: $150 / 2.25 = \\frac{200}{3} \\approx 66.7$ s.",
+          "4. Check that no overtaking comes first: the faster swimmer turns at 40 s, the slower at 50 s, and between those times both head toward the faster swimmer's wall and the slower one, already within 10 m of that wall, reaches it long before the faster one can catch him, so they do not meet. At $\\frac{200}{3}$ s the faster is at $100 - \\frac{250}{3} = \\frac{50}{3}$ m from his wall and the slower at $\\frac{200}{3} - 50 = \\frac{50}{3}$ m: the same point."
         ],
-        "fast": "Three lengths combined; the faster swimmer's share is $\\frac59 \\times 150$.",
-        "trap": "$\\frac{100}{3}$ measures from the wrong wall; $\\frac{250}{9}$ is the first meeting; 2 combined lengths instead of 3 gives other choices."
+        "fast": "Each later meeting needs two more combined lengths: three lengths over 2.25 m/s.",
+        "trap": "$\\frac{400}{9}$ assumes two combined lengths for the second meeting; $\\frac{200}{9}$ is the first meeting; 80 and 100 are when each swimmer gets back to his own start."
       },
       "tags": [
         {
@@ -867,14 +867,14 @@
       "id": "s2q11",
       "section": 2,
       "type": "mc",
-      "difficulty": 6,
-      "prompt": "A bag holds six letter tiles: three marked K, two marked L and one marked M. Tiles marked with the same letter are indistinguishable. How many different 4-letter sequences can be formed by drawing 4 of the tiles and placing them in a row?",
+      "difficulty": 4,
+      "prompt": "A bag holds six letter tiles: three marked K, two marked L and one marked M. Tiles marked with the same letter are indistinguishable. How many different 3-letter sequences can be formed by drawing 3 of the tiles and placing them in a row?",
       "choices": [
-        "24",
-        "34",
-        "38",
-        "45",
-        "60"
+        "16",
+        "18",
+        "19",
+        "20",
+        "27"
       ],
       "key": {
         "sel": [
@@ -882,14 +882,15 @@
         ]
       },
       "explanation": {
-        "key": "Count by which tiles are used. K K K L: 4. K K K M: 4. K K L L: $\\frac{4!}{2!2!} = 6$. K K L M: $\\frac{4!}{2!} = 12$. K L L M: 12. Total 38.",
+        "key": "Without limits there would be $3^3 = 27$ sequences of K, L and M. The bag rules out any sequence with two or more M's ($3 \\times 2 + 1 = 7$ of them) and LLL (1). That leaves $27 - 7 - 1 = 19$.",
         "steps": [
-          "1. Possible letter multisets of size 4 (at most three K, two L, one M): KKKL, KKKM, KKLL, KKLM, KLLM.",
-          "2. Arrangements: $4 + 4 + 6 + 12 + 12$.",
-          "3. Total: 38."
+          "1. Count all 3-letter strings of K, L, M: $3^3 = 27$.",
+          "2. Only one M exists: strings with exactly two M's number $\\binom{3}{2} \\times 2 = 6$, plus MMM, so 7 are impossible.",
+          "3. Only two L's exist: LLL is impossible. Three K's are available, so KKK is allowed.",
+          "4. Total: $27 - 7 - 1 = 19$. Check by multisets: KKK 1, KKL 3, KKM 3, KLL 3, KLM 6, LLM 3."
         ],
-        "fast": "List the five multisets, then divide $4!$ by the repeats.",
-        "trap": "Missing a case (34 drops KKKM), or treating the tiles as distinct."
+        "fast": "$3^3$ minus the strings the bag can't supply: 7 with repeated M, and LLL.",
+        "trap": "27 ignores the tile limits; 20 forgets that LLL is impossible; 18 or 16 come from dropping KKK or LLM when listing cases."
       },
       "tags": [
         {

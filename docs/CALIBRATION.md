@@ -36,7 +36,9 @@ Per item, the score is z = mean over the two rulers of (rating − official-L5 m
 | 6 | z ≥ 1 | 1 of 38 official items (1 of 10 official hard items) | Matches the hardest tenth of official hard items, an estimated P+ of about 10–17. That is about 1.3–2 times fewer correct answers than a median hard GRE item. |
 | 7 | z ≥ 2 | none (the highest official z is 1.38) | Beyond every official item measured, an estimated P+ under 10 (extrapolated). That is more than 2 times fewer correct answers than a median hard item. |
 
-The levels only ever go up: an item is never lowered by this calibration. The first pass retagged 44 quant items to L6 and 4 to L7 across quant-001 to quant-010.
+The levels only ever go up: an item is never lowered by this calibration.
+
+**Cap: at most 2 items at level 6+ per section.** The real GRE has almost none, so more would turn a mock into a poor guide to test day. The validator enforces the cap. For new quant tests the blind check flags a section with more than 2 items rated 4+ and names the extra ones to ease. Existing mocks over the cap had their extra items rewritten to official-L5 difficulty and re-rated. The first pass retagged 44 quant items to L6 and 4 to L7 across quant-001 to quant-010. Applying the cap below then eased 13 of the L6 items. Re-rated, 9 of them now measure L5 and 4 measure L4 (retagged 4). That leaves 31 at L6 and 4 at L7.
 
 ## Caveats
 
@@ -79,20 +81,20 @@ The ruler score is z: 0 is a typical official hard item (L5), negative is easier
 | verbal, Official Guide | 39% | 29% | 20% | 12% |
 | verbal, Big Book | 56% | 34% | 8% | 2% |
 
-**Our mocks** (27 items each: L3 / L4 / L5 / L6 / L7, then the ruler)
+**Our mocks** (27 items each: L3 / L4 / L5 / L6 / L7 after the cap; the ruler columns were measured before it)
 
 | mock | levels | mean z | ruler profile ≤L2 / L3–4 / L5 / L6 / L7 |
 |---|---|---|---|
 | quant-001 | 4 / 13 / 7 / 3 / 0 | −0.36 | 5 / 4 / 15 / 3 / 0 |
-| quant-002 | 5 / 12 / 6 / 4 / 0 | −0.63 | 9 / 2 / 12 / 4 / 0 |
-| quant-003 | 5 / 11 / 7 / 4 / 0 | −0.33 | 5 / 6 / 12 / 4 / 0 |
-| quant-004 | 5 / 9 / 8 / 5 / 0 | −0.16 | 5 / 6 / 11 / 5 / 0 |
+| quant-002 | 5 / 13 / 6 / 3 / 0 | −0.63 | 9 / 2 / 12 / 4 / 0 |
+| quant-003 | 5 / 11 / 8 / 3 / 0 | −0.33 | 5 / 6 / 12 / 4 / 0 |
+| quant-004 | 5 / 9 / 9 / 4 / 0 | −0.16 | 5 / 6 / 11 / 5 / 0 |
 | quant-005 | 5 / 12 / 8 / 2 / 0 | −0.43 | 6 / 2 / 17 / 2 / 0 |
-| quant-006 | 5 / 10 / 6 / 6 / 0 | +0.09 | 1 / 5 / 15 / 6 / 0 |
-| quant-007 | 5 / 12 / 4 / 4 / 2 | 0.00 | 5 / 3 / 13 / 4 / 2 |
-| quant-008 | 5 / 12 / 5 / 5 / 0 | −0.14 | 4 / 4 / 14 / 5 / 0 |
-| quant-009 | 5 / 10 / 5 / 7 / 0 | −0.09 | 3 / 6 / 11 / 7 / 0 |
-| quant-010 | 5 / 10 / 6 / 4 / 2 | −0.03 | 4 / 4 / 13 / 4 / 2 |
+| quant-006 | 5 / 11 / 7 / 4 / 0 | +0.09 | 1 / 5 / 15 / 6 / 0 |
+| quant-007 | 5 / 12 / 6 / 2 / 2 | 0.00 | 5 / 3 / 13 / 4 / 2 |
+| quant-008 | 5 / 13 / 5 / 4 / 0 | −0.14 | 4 / 4 / 14 / 5 / 0 |
+| quant-009 | 5 / 10 / 8 / 4 / 0 | −0.09 | 3 / 6 / 11 / 7 / 0 |
+| quant-010 | 5 / 11 / 7 / 2 / 2 | −0.03 | 4 / 4 / 13 / 4 / 2 |
 | verbal-001 | 5 / 12 / 10 / – / – | −0.36 | 2 / 8 / 16 / 1 / 0 |
 | verbal-002 | 5 / 13 / 9 / – / – | −0.11 | 2 / 5 / 18 / 2 / 0 |
 | verbal-003 | 5 / 13 / 9 / – / – | −0.24 | 2 / 4 / 19 / 2 / 0 |

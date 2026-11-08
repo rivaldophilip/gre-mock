@@ -32,6 +32,7 @@ Read this page, the brief and `docs/HARD-PATTERNS.md`; nothing else is needed. E
    - Give that path to the `gre-blind-solver` agent. Pass its reply straight to the checker, with no file to write: `npm run -s blind -- <id> --check - <<'EOF'` … reply … `EOF`. The checker saves the reply to `content/.blind/<id>.answers.txt` and prints only what needs action, one line per issue, each with the solver's note and what to do:
      - **WRONG** (key and solver answer, both in letters) or **flagged** (a real ambiguity): rewrite the item.
      - **Too easy:** the check already adds the solver's rating offset (`data/solver-calibration.json`; solvers rate about 1.5 levels below official difficulty). It offers either a rewrite, or a retag to the honest level when the section rules still pass. Take the retag only if the item is otherwise sound.
+     - **Too hard (quant):** more than 2 items in a section rated 4+ by the solver. Those calibrate to level 6+ (harder than official hard items), and each section may hold at most 2. Ease the extra ones the check names to official-L5 difficulty: drop one move, keep the trap and the level-5 tag.
      - **Skill mismatch:** make the stem test the tagged skill, or retag it if the brief's skill mix still holds.
    - After fixes, run `npm run -s check -- <id>`, then `npm run -s blind -- <id> --only s1q3,s2q5`. This writes `<id>.only.md`, and the full copy stays. SendMessage that path to the **same** solver, then check its reply with `--check - --only s1q3,s2q5`.
 5. **Register and publish.** `npm run -s register -- <id>` writes to every user's database. It refuses a test that does not validate, and warns if no blind check is on record. Then run `git add content && git commit && git push` (Vercel redeploys).
@@ -42,7 +43,7 @@ Recalibrate only after changing the solver's model: `npm run -s blind -- --calib
 
 ## Structure rules (the validator enforces most)
 
-- Difficulty levels: 3 = P+ 45–60, 4 = 30–45, 5 = < 30. Author at most 5; levels 6–7 (harder than official hard items, quant only) are set afterwards by calibration, see `docs/CALIBRATION.md`. Section 1 average ≥ 3.75 (about 4×L3, 5×L4, 3×L5). Section 2: ≤ 2 items at L3, ≥ one-third at L5, average ≥ 4.2.
+- Difficulty levels: 3 = P+ 45–60, 4 = 30–45, 5 = < 30. Author at most 5; levels 6–7 (harder than official hard items, quant only) are set afterwards by calibration, see `docs/CALIBRATION.md`. At most 2 items per section may be at level 6+ (the validator enforces it). Aim a quant L5 at the official hard item, not past it. Section 1 average ≥ 3.75 (about 4×L3, 5×L4, 3×L5). Section 2: ≤ 2 items at L3, ≥ one-third at L5, average ≥ 4.2.
 - Each section opens with its TC block (verbal) or QC block (quant). Within a type block, mix easy and hard; don't climb.
 - Question ids are `s1q1` … `s2q15`. Passages are `p1, p2, …` (reading) and `a1, a2` (arguments), as the brief's slot table assigns them.
 - **Verbal.** TC: 1 blank = 5 choices; 2–3 blanks = 3 choices per blank; one `___` per blank, written `(i) ___` when there are several. SE: 6 choices, 2 keys. RC: `rc` has 5 choices; `rc_multi` has 3 choices, select all; `rc_select` keys a sentence index across the whole passage (sentences split on `. ` before a capital). Arguments: `type: "rc"`, `subtype: "arg"`, a one-paragraph passage.

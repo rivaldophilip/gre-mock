@@ -63,3 +63,4 @@ Levels (L3 = P+ 45–60, L4 = 30–45, L5 = under 30) and the section rules are 
 ## Calibrating our own items
 - A level-5 item should be one a strong test-taker misses on the first read under time pressure, but whose key is *unarguable* afterward. Avoid difficulty from ambiguity: if two solvers defend different answers, rewrite.
 - Raise difficulty by (verbal) adding a second constraint or a secondary-sense key, (quant) adding a case split or a bounding step, not by obscure trivia.
+- **Don't overshoot (quant).** Official hard items (P+ < 30) usually turn on one hidden case or trap plus one more step. Calibration (`docs/CALIBRATION.md`) showed our quant drifting about a level above its labels, because items stacked three or more moves (case split + bounding + a neighbouring-quantity question). Give an L5 item two moves at most. Leave the extreme items (level 6+, at most 2 per section) to the few that need them, and keep the rest of the section at real-test difficulty.

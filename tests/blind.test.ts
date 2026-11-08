@@ -2,7 +2,7 @@ import fs from "node:fs";
 import { describe, expect, it } from "vitest";
 import { TestSchema } from "@/lib/types";
 import { blindCopy, checkAnswers, keyText, parseAnswers } from "@/scripts/blind-test";
-import { validateTest } from "@/scripts/validate-test";
+import { difficultyRules, validateTest } from "@/scripts/validate-test";
 
 const test = TestSchema.parse(JSON.parse(fs.readFileSync("content/tests/verbal-002.json", "utf8")));
 const answers = parseAnswers(fs.readFileSync("tests/fixtures/verbal-002.answers.txt", "utf8"));
@@ -68,6 +68,14 @@ describe("checkAnswers", () => {
     expect(about("s1q6").join()).toMatch(/flagged/);
     expect(about("s1q9")).toEqual([]);
     expect(about("s2q12").join()).toMatch(/skill/);
+  });
+});
+
+describe("hardest-item cap", () => {
+  it("fails a section with more than two level-6+ items", () => {
+    const qs = [6, 6, 7, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4].map((d) => ({ section: 2 as const, difficulty: d }));
+    expect(difficultyRules(qs).find((r) => r.rule.startsWith("S2 L6+"))).toEqual({ rule: "S2 L6+ 3 (<=2)", ok: false });
+    expect(difficultyRules(qs.map((q, i) => (i === 2 ? { ...q, difficulty: 5 } : q))).find((r) => r.rule.startsWith("S2 L6+"))?.ok).toBe(true);
   });
 });
 

@@ -476,11 +476,12 @@
     },
     {
      "id": "s2q14",
-     "authored": 5,
-     "sonnet": 4,
-     "haiku": 4,
-     "z": 1.38,
-     "level": 6
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4,
+     "eased": true
     },
     {
      "id": "s2q15",
@@ -695,10 +696,11 @@
     {
      "id": "s2q14",
      "authored": 5,
-     "sonnet": 4,
+     "sonnet": 3,
      "haiku": 4,
-     "z": 1.38,
-     "level": 6
+     "z": 0.6,
+     "level": 5,
+     "eased": true
     },
     {
      "id": "s2q15",
@@ -904,11 +906,12 @@
     },
     {
      "id": "s2q13",
-     "authored": 4,
-     "sonnet": 4,
-     "haiku": 4,
-     "z": 1.38,
-     "level": 6
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 5,
+     "eased": true
     },
     {
      "id": "s2q14",
@@ -1348,19 +1351,21 @@
     },
     {
      "id": "s2q14",
-     "authored": 5,
-     "sonnet": 4,
-     "haiku": 4,
-     "z": 1.38,
-     "level": 6
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4,
+     "eased": true
     },
     {
      "id": "s2q15",
-     "authored": 4,
-     "sonnet": 4,
-     "haiku": 4,
-     "z": 1.38,
-     "level": 6
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5,
+     "eased": true
     }
    ],
    "quant-007": [
@@ -1471,10 +1476,11 @@
     {
      "id": "s2q2",
      "authored": 5,
-     "sonnet": 4,
-     "haiku": 4,
-     "z": 1.38,
-     "level": 6
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5,
+     "eased": true
     },
     {
      "id": "s2q3",
@@ -1519,10 +1525,11 @@
     {
      "id": "s2q8",
      "authored": 5,
-     "sonnet": 4,
-     "haiku": 4,
-     "z": 1.38,
-     "level": 6
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5,
+     "eased": true
     },
     {
      "id": "s2q9",
@@ -1712,11 +1719,12 @@
     },
     {
      "id": "s2q5",
-     "authored": 5,
-     "sonnet": 4,
-     "haiku": 4,
-     "z": 1.38,
-     "level": 6
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 4,
+     "eased": true
     },
     {
      "id": "s2q6",
@@ -1955,10 +1963,11 @@
     {
      "id": "s2q8",
      "authored": 5,
-     "sonnet": 4,
-     "haiku": 4,
-     "z": 1.38,
-     "level": 6
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5,
+     "eased": true
     },
     {
      "id": "s2q9",
@@ -1979,10 +1988,11 @@
     {
      "id": "s2q11",
      "authored": 5,
-     "sonnet": 4,
-     "haiku": 4,
-     "z": 1.38,
-     "level": 6
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 5,
+     "eased": true
     },
     {
      "id": "s2q12",
@@ -2003,10 +2013,11 @@
     {
      "id": "s2q14",
      "authored": 5,
-     "sonnet": 4,
+     "sonnet": 3,
      "haiku": 4,
-     "z": 1.38,
-     "level": 6
+     "z": 0.6,
+     "level": 5,
+     "eased": true
     },
     {
      "id": "s2q15",
@@ -2060,11 +2071,12 @@
     },
     {
      "id": "s1q6",
-     "authored": 4,
-     "sonnet": 4,
+     "authored": 5,
+     "sonnet": 3,
      "haiku": 4,
-     "z": 1.38,
-     "level": 6
+     "z": 0.6,
+     "level": 5,
+     "eased": true
     },
     {
      "id": "s1q7",
@@ -2196,11 +2208,12 @@
     },
     {
      "id": "s2q11",
-     "authored": 5,
-     "sonnet": 4,
-     "haiku": 4,
-     "z": 1.38,
-     "level": 6
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4,
+     "eased": true
     },
     {
      "id": "s2q12",
@@ -2235,6 +2248,11 @@
      "level": 7
     }
    ]
+  },
+  "cap": {
+   "maxLevel6PlusPerSection": 2,
+   "easedItems": 13,
+   "easedAt": "2026-11-08"
   }
  },
  "verbal": {

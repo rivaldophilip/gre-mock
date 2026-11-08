@@ -904,32 +904,32 @@
       "id": "s2q13",
       "section": 2,
       "type": "mc_multi",
-      "difficulty": 6,
+      "difficulty": 5,
       "prompt": "Which of the following expressions are defined, and equal to $\\dfrac{x^2-9}{x^2+3x}$, at every value of $x$ for which $\\dfrac{x^2-9}{x^2+3x}$ is defined? Indicate all such expressions.",
       "choices": [
         "$1-\\dfrac{3}{x}$",
-        "$\\dfrac{x-9}{x+3}$",
+        "$\\dfrac{x+3}{x}$",
         "$\\dfrac{3-x}{-x}$",
         "$\\dfrac{x^2-6x+9}{x^2-3x}$",
-        "$\\dfrac{x^2-3x}{x^2}$",
-        "$\\dfrac{x}{x+3}-\\dfrac{3}{x+3}$"
+        "$\\dfrac{x-3}{x+3}$",
+        "$\\dfrac{2x-6}{2x}$"
       ],
       "key": {
         "sel": [
           0,
           2,
-          4
+          5
         ]
       },
       "explanation": {
         "key": "The given expression is $\\dfrac{(x-3)(x+3)}{x(x+3)}=\\dfrac{x-3}{x}$, defined for $x\\ne0,-3$. A choice must equal $\\dfrac{x-3}{x}$ and be defined at all those $x$, including $x=3$.",
         "steps": [
           "A: $1-\\tfrac3x=\\tfrac{x-3}{x}$. Yes.",
-          "B: cancels $x^2$ illegally; at $x=1$ it gives $-2$, the given gives $-2$, but at $x=2$ it gives $-1.4$ versus $-0.5$. No.",
+          "B: $\\tfrac{x+3}{x}$ cancels the wrong factor; at $x=3$ it is 2, while the given is 0. No.",
           "C: $\\tfrac{3-x}{-x}=\\tfrac{x-3}{x}$. Yes.",
           "D: equals $\\tfrac{(x-3)^2}{x(x-3)}$, which is undefined at $x=3$, where the given expression is 0. No.",
-          "E: $\\tfrac{x(x-3)}{x^2}=\\tfrac{x-3}{x}$ for $x\\ne0$. Yes.",
-          "F: $\\tfrac{x-3}{x+3}$. No."
+          "E: $\\tfrac{x-3}{x+3}$ cancels $x$ instead of $x+3$; at $x=1$ it is $-\\tfrac12$, while the given is $-2$. No.",
+          "F: $\\tfrac{2(x-3)}{2x}=\\tfrac{x-3}{x}$. Yes."
         ],
         "fast": "Reduce to $\\tfrac{x-3}{x}$, then check each choice's own forbidden values against $x=3$.",
         "trap": "Accepting D because it simplifies to the same thing, without noticing it is undefined at $x=3$."

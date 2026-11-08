@@ -51,7 +51,7 @@ t.qc("s1q4", pairs4)
 p = next(F(c, 100) for c in range(1, 100000) if F(c, 100) - F(c, 100) * F(5, 4) * F(7, 10) == F(105, 100))
 t.choice("s1q5", p * F(5, 4))
 
-# s1q6: swimmers from opposite ends of a 50 m pool at 5/4 and 1 m/s; second meeting, distance from the faster one's wall
+# s1q6: swimmers from opposite ends of a 50 m pool at 5/4 and 1 m/s; time of the second meeting
 L = 50
 def pos(start, speed, tm):
     d = (speed * tm) % (2 * L)
@@ -66,7 +66,7 @@ for a, b in zip(breaks, breaks[1:]):
         meets.append(a)
     elif fa * fb < 0:
         meets.append(a + (b - a) * fa / (fa - fb))
-t.choice("s1q6", pos(0, v1, meets[1]))
+t.choice("s1q6", meets[1])
 
 # s1q7: 4 from 6 carpenters (Kim, Lee among them) and 4 electricians; >= 1 electrician; not both Kim and Lee
 people = ["Kim", "Lee", "c3", "c4", "c5", "c6", "e1", "e2", "e3", "e4"]
@@ -194,8 +194,8 @@ def repeating(prefix_digits, rep, places):
     return F(prefix_digits, 10**places) + F(rep, 9 * 10**places)
 t.choice("s2q10", (repeating(0, 6, 0) - F(1, 4)) / (F(1, 5) - repeating(0, 3, 1)))
 
-# s2q11: 4-letter sequences from tiles KKKLLM
-t.choice("s2q11", len(set(permutations("KKKLLM", 4))))
+# s2q11: 3-letter sequences from tiles KKKLLM
+t.choice("s2q11", len(set(permutations("KKKLLM", 3))))
 
 # s2q12: rectangle ABCD, AC = 12, angle CAB = 30, E on AB with angle ADE = 45; area of EBCD
 ab, bc = 12 * math.cos(math.radians(30)), 12 * math.sin(math.radians(30))
