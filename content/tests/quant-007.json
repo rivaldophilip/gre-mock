@@ -1,0 +1,1060 @@
+{
+  "id": "quant-007",
+  "measure": "quant",
+  "title": "Quant Hard Mock 7",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 21
+    },
+    {
+      "n": 2,
+      "minutes": 26
+    }
+  ],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Volunteers at two food banks last year, by number of hours logged per volunteer. Each volunteer logged a whole number of hours.",
+      "table": {
+        "head": [
+          "Hours logged",
+          "Northside",
+          "Lakeview"
+        ],
+        "rows": [
+          [
+            "0–9",
+            "20",
+            "10"
+          ],
+          [
+            "10–19",
+            "36",
+            "34"
+          ],
+          [
+            "20–29",
+            "28",
+            "24"
+          ],
+          [
+            "30–39",
+            "16",
+            "15"
+          ],
+          [
+            "40–49",
+            "10",
+            "7"
+          ],
+          [
+            "Total",
+            "110",
+            "90"
+          ]
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "$x$ is a nonzero number such that $x^3 < x$.",
+      "qc": {
+        "a": "$x^2$",
+        "b": "$|x|$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "$x^3 < x$ holds for $0 < x < 1$ and for $x < -1$. In the first case $x^2 < |x|$; in the second $x^2 > |x|$. So the relationship cannot be determined.",
+        "steps": [
+          "1. $x^3 - x = x(x-1)(x+1) < 0$ exactly when $x < -1$ or $0 < x < 1$.",
+          "2. $x^2 = |x|^2$, so $x^2 < |x|$ when $|x| < 1$ and $x^2 > |x|$ when $|x| > 1$.",
+          "3. $x = \\frac12$: A $= \\frac14 <$ B $= \\frac12$. $x = -2$: A $= 4 >$ B $= 2$.",
+          "4. Both cases satisfy the condition, so the answer is D."
+        ],
+        "fast": "Test one value from each interval of $x^3 < x$: $\\frac12$ and $-2$.",
+        "trap": "Dividing $x^3 < x$ by $x$ as if $x$ were positive gives $x^2 < 1$, so only $0 < x < 1$ seems possible and the answer looks like B."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-sense-qc",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "Compare the two quantities.",
+      "qc": {
+        "a": "$\\dfrac{3^{40}-3^{38}}{3^{39}+3^{37}}$",
+        "b": "$\\dfrac{12}{5}$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Factoring $3^{38}$ from the numerator and $3^{37}$ from the denominator gives $\\frac{3 \\cdot 8}{10} = \\frac{12}{5}$, so the quantities are equal.",
+        "steps": [
+          "1. Numerator: $3^{40} - 3^{38} = 3^{38}(3^2 - 1) = 8 \\cdot 3^{38}$.",
+          "2. Denominator: $3^{39} + 3^{37} = 3^{37}(3^2 + 1) = 10 \\cdot 3^{37}$.",
+          "3. Quotient: $\\frac{8 \\cdot 3^{38}}{10 \\cdot 3^{37}} = \\frac{8 \\cdot 3}{10} = \\frac{24}{10} = \\frac{12}{5}$."
+        ],
+        "fast": "Factor the smallest power out of each line; the leftover factor is $3$.",
+        "trap": "Cancelling term by term ($\\frac{3^{40}}{3^{39}} = 3$) gives 3 and the answer A; you cannot cancel across a sum or difference."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponents-roots",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "Points $A$, $B$, $C$ and $D$ lie on a line, not necessarily in that order. $AB = 6$, $BC = 4$, $CD = 3$, and point $C$ does not lie between $A$ and $B$.",
+      "qc": {
+        "a": "$AD$",
+        "b": "$8$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "$C$ must be 4 beyond $B$ on the side away from $A$, so $AC = 10$, but $D$ can be on either side of $C$: $AD = 13$ or $AD = 7$. One is greater than 8 and one is less.",
+        "steps": [
+          "1. Put $A$ at 0 and $B$ at 6. $C$ is at $6 + 4 = 10$ or $6 - 4 = 2$.",
+          "2. $C$ at 2 would lie between $A$ and $B$, which is excluded, so $C$ is at 10.",
+          "3. $D$ is 3 from $C$: at 13 or at 7, so $AD = 13$ or $AD = 7$.",
+          "4. $13 > 8$ but $7 < 8$, so the relationship cannot be determined."
+        ],
+        "fast": "Fix $C$ with the given condition, then remember nothing fixes which side of $C$ point $D$ is on.",
+        "trap": "Reading the points in alphabetical order gives $AD = 6 + 4 + 3 = 13$ and the answer A."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "figures-not-to-scale",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "The weights of the apples harvested at an orchard are approximately normally distributed with a mean of 150 grams and a standard deviation of 20 grams.",
+      "qc": {
+        "a": "Among the apples that weigh more than 170 grams, the fraction that weigh more than 190 grams",
+        "b": "$0.1$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "About 16% of the apples weigh more than 170 g (1 SD above the mean) and about 2.5% weigh more than 190 g (2 SD above), so the fraction asked for is about $\\frac{2.5}{16} \\approx 0.16$, which is greater than 0.1.",
+        "steps": [
+          "1. 170 g is 1 standard deviation above the mean; about 68% of a normal distribution is within 1 SD, so about $\\frac{100 - 68}{2} = 16\\%$ lies above 170 g.",
+          "2. 190 g is 2 standard deviations above; about 95% is within 2 SD, so about 2.5% lies above 190 g.",
+          "3. Every apple over 190 g is also over 170 g, so the fraction is about $\\frac{2.5\\%}{16\\%} \\approx 0.156$ (the exact normal value is about 0.14).",
+          "4. Either way the fraction is clearly greater than 0.1."
+        ],
+        "fast": "Conditional on being over 1 SD, the share over 2 SD is about 1 in 6 or 7.",
+        "trap": "Answering with the share of all apples over 190 g (about 0.025) instead of the share among apples over 170 g; that wrong base gives B."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "std-dev-normal",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "In 2023 a community farm divided its budget among seed, tools and labor in the ratio $3:5:8$. In 2024 the farm kept the seed and labor amounts the same as in 2023, raised the tools amount by 600 dollars, and tools then made up exactly $\\frac{1}{3}$ of the total budget. What was the farm's total budget in 2024, in dollars?",
+      "choices": [
+        "18,000",
+        "19,200",
+        "19,800",
+        "20,400",
+        "21,600"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "With amounts $3k$, $5k$ and $8k$, the 2024 condition $5k + 600 = \\frac13(16k + 600)$ gives $k = 1{,}200$, so the 2024 total is $16(1{,}200) + 600 = 19{,}800$.",
+        "steps": [
+          "1. 2023: seed $3k$, tools $5k$, labor $8k$, total $16k$.",
+          "2. 2024: tools $5k + 600$, total $16k + 600$.",
+          "3. $3(5k + 600) = 16k + 600 \\Rightarrow 15k + 1{,}800 = 16k + 600 \\Rightarrow k = 1{,}200$.",
+          "4. 2024 total $= 19{,}200 + 600 = 19{,}800$."
+        ],
+        "fast": "Check: tools $6{,}600$ is one third of $19{,}800$.",
+        "trap": "Stopping at $16k = 19{,}200$, the 2023 total."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "ratio-proportion",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A circle with center $O$ has radius 10, and chord $AB$ has length 16. Point $C$ lies on the circle, on the shorter of the two arcs from $A$ to $B$, so that $AC = BC$. What is the length of $AC$?",
+      "choices": [
+        "$4\\sqrt{3}$",
+        "$8$",
+        "$4\\sqrt{5}$",
+        "$10$",
+        "$8\\sqrt{5}$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "$C$ is the midpoint of the minor arc, so it lies on the perpendicular from $O$ to $AB$. The chord is 6 from $O$, so $C$ is $10 - 6 = 4$ from the chord, and $AC = \\sqrt{8^2 + 4^2} = 4\\sqrt5$.",
+        "steps": [
+          "1. Let $M$ be the midpoint of $AB$: $AM = 8$ and $OM = \\sqrt{10^2 - 8^2} = 6$.",
+          "2. $AC = BC$ puts $C$ on the perpendicular bisector of $AB$, the line $OM$; on the minor arc, $C$ is on the far side of $M$ from $O$, so $MC = 10 - 6 = 4$.",
+          "3. In right triangle $AMC$: $AC = \\sqrt{8^2 + 4^2} = \\sqrt{80} = 4\\sqrt5$."
+        ],
+        "fast": "Distance from chord to the arc midpoint is radius minus the chord's distance from the center.",
+        "trap": "Taking $C$ on the major arc gives $MC = 16$ and $AC = 8\\sqrt5$; using $MC = 6$ gives 10."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "circles",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "Four adults and three children, including a girl named Mia and her father, are to stand in a row of 7 places for a photograph. No two children may stand next to each other, and Mia must stand next to her father. How many different arrangements of the 7 people are possible?",
+      "choices": [
+        "288",
+        "432",
+        "576",
+        "720",
+        "1,440"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Line up the 4 adults ($4! = 24$ ways); the children go into 3 of the 5 gaps around them, one per gap. Mia's father always has exactly two neighbouring gaps, so Mia has 2 choices, the other two children fill 2 of the remaining 4 gaps in $4 \\cdot 3 = 12$ ways: $24 \\cdot 2 \\cdot 12 = 576$.",
+        "steps": [
+          "1. No two children adjacent: arrange the adults first, then place each child in a different one of the 5 gaps (two ends and three between adults).",
+          "2. A child in a gap stands next to the adult(s) bordering that gap, so Mia is next to her father exactly when she is in one of the two gaps on either side of him. Even if he is first in the adult line, the end gap beside him counts, so there are always 2 such gaps.",
+          "3. Count: $4! \\times 2 \\times (4 \\times 3) = 24 \\times 24 = 576$."
+        ],
+        "fast": "Without the Mia rule there are $24 \\cdot 5 \\cdot 4 \\cdot 3 = 1{,}440$ arrangements; Mia is in one of the 2 gaps next to her father with probability $\\frac{2}{5}$, giving 576.",
+        "trap": "Thinking a father at the end of the adult line has only one neighbouring gap gives $24 \\cdot 1.5 \\cdot 12 = 432$; ignoring Mia's rule gives 1,440."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-restrictions",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "Which of the following values of $x$ satisfy $|x - 2| + |x + 3| < 9$? Select all such values.",
+      "choices": [
+        "$-6$",
+        "$-4.5$",
+        "$-2$",
+        "$3.5$",
+        "$4$",
+        "$5$"
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The sum is the total distance from $x$ to 2 and to $-3$. Between $-3$ and 2 it is always 5; outside, it grows by 2 per unit, reaching 9 at $x = 4$ and $x = -5$. So the solution set is $-5 < x < 4$: $-4.5$, $-2$ and $3.5$.",
+        "steps": [
+          "1. For $-3 \\le x \\le 2$: $(2 - x) + (x + 3) = 5 < 9$, always true.",
+          "2. For $x > 2$: $(x - 2) + (x + 3) = 2x + 1 < 9 \\Rightarrow x < 4$.",
+          "3. For $x < -3$: $(2 - x) + (-x - 3) = -2x - 1 < 9 \\Rightarrow x > -5$.",
+          "4. Solution: $-5 < x < 4$. Check: $-6$ gives 11, 4 gives 9 (not less than 9), 5 gives 11."
+        ],
+        "fast": "Distance picture: the 5-unit gap between $-3$ and 2 uses 5 of the 9; the remaining 4 is split as 2 beyond each endpoint.",
+        "trap": "Treating 4 as a solution (the sum equals 9 there, and the inequality is strict), or solving only one case and losing the left half."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "abs-value-inequalities",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 3,
+      "prompt": "A bakery raised the price of its signature cake by 20 percent. Later it lowered the new price by $p$ percent, and the final price was 4 percent lower than the original price. What is the value of $p$?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "20"
+      },
+      "explanation": {
+        "key": "$1.2\\,(1 - \\frac{p}{100}) = 0.96$, so $1 - \\frac{p}{100} = 0.8$ and $p = 20$.",
+        "steps": [
+          "1. Let the original price be 100. After the raise it is 120.",
+          "2. The final price is $100 - 4 = 96$.",
+          "3. The cut is $120 - 96 = 24$, which is $\\frac{24}{120} = 20\\%$ of 120."
+        ],
+        "fast": "Successive multipliers: $1.2 \\times 0.8 = 0.96$.",
+        "trap": "Adding percents ($20 + 4 = 24$) uses the original price as the base for the cut instead of the raised price."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "percent",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 3,
+      "prompt": "Approximately what percent of the volunteers who logged at least 30 hours were Lakeview volunteers?",
+      "choices": [
+        "11%",
+        "24%",
+        "46%",
+        "54%",
+        "85%"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "At least 30 hours: Lakeview $15 + 7 = 22$, Northside $16 + 10 = 26$, total 48. $\\frac{22}{48} \\approx 46\\%$.",
+        "steps": [
+          "1. Lakeview volunteers with at least 30 hours: $15 + 7 = 22$.",
+          "2. All volunteers with at least 30 hours: $22 + 16 + 10 = 48$.",
+          "3. $\\frac{22}{48} \\approx 0.458$, about 46%."
+        ],
+        "fast": "22 is a bit less than half of 48.",
+        "trap": "Wrong base: $\\frac{22}{90} \\approx 24\\%$ (all Lakeview volunteers), $\\frac{22}{200} = 11\\%$ (everyone), or $\\frac{22}{26} \\approx 85\\%$ (Lakeview against Northside)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "percent",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 4,
+      "prompt": "Two different volunteers are to be selected at random from the volunteers at the two food banks who logged fewer than 10 hours. Given that at least one of the two selected is a Northside volunteer, what is the probability that both are Northside volunteers?",
+      "choices": [
+        "$\\dfrac{4}{9}$",
+        "$\\dfrac{38}{87}$",
+        "$\\dfrac{19}{39}$",
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{2}{3}$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "There are 30 such volunteers (20 Northside, 10 Lakeview). Pairs with at least one Northside: $\\binom{30}{2} - \\binom{10}{2} = 435 - 45 = 390$. Pairs with both Northside: $\\binom{20}{2} = 190$. Probability $\\frac{190}{390} = \\frac{19}{39}$.",
+        "steps": [
+          "1. Fewer than 10 hours: Northside 20, Lakeview 10, total 30.",
+          "2. All pairs: $\\binom{30}{2} = 435$. Pairs with no Northside volunteer: $\\binom{10}{2} = 45$. So 390 pairs have at least one.",
+          "3. Pairs with two Northside volunteers: $\\binom{20}{2} = 190$, all of them inside the 390.",
+          "4. Conditional probability: $\\frac{190}{390} = \\frac{19}{39}$."
+        ],
+        "fast": "Restrict the sample space first (complement), then count the favourable pairs inside it.",
+        "trap": "$\\frac{38}{87} = \\frac{190}{435}$ ignores the condition; $\\frac49 = (\\frac23)^2$ treats the picks as with replacement and ignores the condition."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-conditional",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 5,
+      "prompt": "Which of the following could be the median number of hours logged by the 200 volunteers at the two food banks combined?",
+      "choices": [
+        "12",
+        "14.5",
+        "24",
+        "25.5",
+        "27"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Exactly $30 + 70 = 100$ volunteers logged fewer than 20 hours, so the median is the average of the 100th value (in 10–19) and the 101st (in 20–29). That average is at least $\\frac{10 + 20}{2} = 15$ and at most $\\frac{19 + 29}{2} = 24$; only 24 is in range.",
+        "steps": [
+          "1. Combined counts: 0–9: 30; 10–19: 70; so 100 volunteers logged at most 19 hours.",
+          "2. With 200 values the median is the mean of the 100th and 101st smallest. The 100th is the largest value in 10–19, and the 101st is the smallest value in 20–29.",
+          "3. The 100th is between 10 and 19 and the 101st between 20 and 29 (whole numbers), so the median is between 15 and 24 inclusive.",
+          "4. Only 24 (for example $\\frac{19 + 29}{2}$ or $\\frac{20 + 28}{2}$) is possible; 12 and 14.5 are too small, 25.5 and 27 too large."
+        ],
+        "fast": "Cumulative count hits exactly half at a group boundary, so the median straddles two groups.",
+        "trap": "Assuming the median must lie inside one group: 12 or 14.5 (the 10–19 group) or 25.5 or 27 (the 20–29 group)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q1",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "$m$ and $n$ are positive integers such that $m^2 - n^2 = 48$.",
+      "qc": {
+        "a": "The number of different possible ordered pairs $(m, n)$",
+        "b": "$4$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$(m - n)(m + n) = 48$ with both factors the same parity (their sum is $2m$) and $m - n < m + n$. Only the even pairs $2 \\times 24$, $4 \\times 12$ and $6 \\times 8$ work, giving 3 ordered pairs, fewer than 4.",
+        "steps": [
+          "1. $m^2 - n^2 = (m - n)(m + n) = 48$, with $0 < m - n < m + n$.",
+          "2. $(m + n) + (m - n) = 2m$ is even, so the two factors are both even or both odd; 48 is even, so both are even.",
+          "3. Factor pairs of 48: $1 \\times 48$ and $3 \\times 16$ fail (mixed parity); $2 \\times 24 \\to (13, 11)$; $4 \\times 12 \\to (8, 4)$; $6 \\times 8 \\to (7, 1)$.",
+          "4. Quantity A is 3, so B is greater."
+        ],
+        "fast": "Write 48 as $4 \\times 12$: pairs of even factors of 48 correspond to factor pairs of 12 with the smaller first: $1 \\times 12$, $2 \\times 6$, $3 \\times 4$.",
+        "trap": "Counting all five factor pairs of 48 gives 5 and the answer A."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "integers-properties",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q2",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "In triangle $PQR$, $PQ = 7$ and $QR = 4$. One of the angles of triangle $PQR$ measures more than $90^\\circ$.",
+      "qc": {
+        "a": "$PR$",
+        "b": "$8$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The obtuse angle could be at $Q$ (then $PR^2 > 49 + 16$, so $PR > \\sqrt{65} > 8$) or at $R$ (then $49 > 16 + PR^2$, so $PR < \\sqrt{33} < 8$). Both cases are possible, so the relationship cannot be determined.",
+        "steps": [
+          "1. An obtuse angle is opposite the longest side, and it is obtuse exactly when the square of that side exceeds the sum of the squares of the other two.",
+          "2. Angle at $P$ is opposite $QR = 4$, which is shorter than $PQ$, so it cannot be obtuse.",
+          "3. Obtuse at $Q$: $PR^2 > 7^2 + 4^2 = 65$, so $\\sqrt{65} < PR < 11$; for example $PR = 9$.",
+          "4. Obtuse at $R$: $7^2 > 4^2 + PR^2$, so $PR^2 < 33$ and $3 < PR < \\sqrt{33}$; for example $PR = 5$.",
+          "5. $PR$ can be greater or less than 8."
+        ],
+        "fast": "Ask which vertex can carry the obtuse angle: two of them can, on opposite sides of 8.",
+        "trap": "Assuming the obtuse angle is at $Q$, between the two given sides, gives $PR > \\sqrt{65} > 8$ and the answer A."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q3",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "$n$ is a positive integer, and the units digit of $3^n$ is 7.",
+      "qc": {
+        "a": "The units digit of $7^n$",
+        "b": "The remainder when $n$ is divided by 8"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Units digit 7 for $3^n$ means $n \\equiv 3 \\pmod 4$, which makes the units digit of $7^n$ equal to 3. But $n$ divided by 8 leaves 3 (for $n = 3, 11, \\dots$) or 7 (for $n = 7, 15, \\dots$).",
+        "steps": [
+          "1. Units digits of $3^n$ cycle 3, 9, 7, 1, so a units digit of 7 means $n = 3, 7, 11, 15, \\dots$, i.e. $n$ leaves remainder 3 when divided by 4.",
+          "2. Units digits of $7^n$ cycle 7, 9, 3, 1, so for every such $n$ the units digit of $7^n$ is 3. Quantity A is always 3.",
+          "3. $n = 3$: remainder 3 when divided by 8 (equal to A). $n = 7$: remainder 7 (greater than A).",
+          "4. So the relationship cannot be determined."
+        ],
+        "fast": "Knowing $n$ mod 4 does not fix $n$ mod 8: test $n = 3$ and $n = 7$.",
+        "trap": "Testing only the smallest case, $n = 3$, gives remainder 3 and the answer C."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "remainders-units",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q4",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "$a - b = 4$ and $ab = 5$.",
+      "qc": {
+        "a": "$a^3 - b^3$",
+        "b": "$(a + b)^3$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "$a^3 - b^3 = (a - b)(a^2 + ab + b^2) = 4(26 + 5) = 124$ always, but $(a + b)^2 = (a - b)^2 + 4ab = 36$, so $a + b = 6$ or $-6$ and Quantity B is 216 or $-216$.",
+        "steps": [
+          "1. $a^2 + b^2 = (a - b)^2 + 2ab = 16 + 10 = 26$.",
+          "2. $a^3 - b^3 = (a - b)(a^2 + ab + b^2) = 4 \\times 31 = 124$.",
+          "3. $(a + b)^2 = (a - b)^2 + 4ab = 36$, so $a + b = \\pm 6$; both occur: $(a, b) = (5, 1)$ or $(-1, -5)$.",
+          "4. B is 216 (greater than 124) or $-216$ (less than 124)."
+        ],
+        "fast": "Solve directly: $a = 5, b = 1$ or $a = -1, b = -5$. Both give A $= 124$; B flips sign.",
+        "trap": "Taking $a + b = 6$ only (assuming positive numbers) gives B $= 216$ and the answer B."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "algebraic-expressions",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "Each of the 60 students at a language school studies Spanish, Mandarin, both or neither. Exactly 38 of the students study Spanish, and exactly 41 study Mandarin.",
+      "qc": {
+        "a": "The number of students who study both languages minus the number of students who study neither language",
+        "b": "$19$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "$60 = 38 + 41 - \\text{both} + \\text{neither}$, so $\\text{both} - \\text{neither} = 79 - 60 = 19$ whatever the individual numbers are.",
+        "steps": [
+          "1. Two-set formula: total $=$ Spanish $+$ Mandarin $-$ both $+$ neither.",
+          "2. $60 = 38 + 41 - \\text{both} + \\text{neither}$.",
+          "3. Rearranged: $\\text{both} - \\text{neither} = 79 - 60 = 19$.",
+          "4. The number studying both can be anywhere from 19 to 38, but the difference is always 19."
+        ],
+        "fast": "Each student studying neither must be balanced by one extra student counted twice.",
+        "trap": "Seeing that 'both' is not fixed (19 to 38) and concluding the difference cannot be determined."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "overlapping-sets",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q6",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "In quadrilateral $ABCD$, diagonal $AC$ divides the quadrilateral into triangles $ABC$ and $ACD$. Angles $ABC$ and $ADC$ are right angles, $AB = BC$, angle $CAD$ measures $30^\\circ$, and $CD = 4$. What is the area of $ABCD$?",
+      "choices": [
+        "$8+8\\sqrt{3}$",
+        "$16+8\\sqrt{3}$",
+        "$16+16\\sqrt{3}$",
+        "$32+8\\sqrt{3}$",
+        "$24\\sqrt{3}$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Triangle $ACD$ is 30-60-90 with short leg $CD = 4$, so $AD = 4\\sqrt3$, $AC = 8$ and its area is $8\\sqrt3$. Triangle $ABC$ is an isosceles right triangle with hypotenuse 8, so its legs are $4\\sqrt2$ and its area is 16. Total $16 + 8\\sqrt3$.",
+        "steps": [
+          "1. In right triangle $ACD$, $CD$ is opposite the $30^\\circ$ angle, so $AC = 2 \\cdot 4 = 8$ and $AD = 4\\sqrt3$.",
+          "2. Area of $ACD = \\frac12 \\cdot 4 \\cdot 4\\sqrt3 = 8\\sqrt3$.",
+          "3. In right isosceles triangle $ABC$ with hypotenuse $AC = 8$: $AB = BC = \\frac{8}{\\sqrt2} = 4\\sqrt2$.",
+          "4. Area of $ABC = \\frac12 (4\\sqrt2)^2 = 16$. Total: $16 + 8\\sqrt3$."
+        ],
+        "fast": "A right isosceles triangle's area is (hypotenuse)$^2/4$: $64/4 = 16$.",
+        "trap": "Treating $AC = 8$ as a leg of triangle $ABC$ gives area 32 and $32 + 8\\sqrt3$; taking $AB = CD = 4$ gives $8 + 8\\sqrt3$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "area-perimeter",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q7",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "An equilateral triangle is inscribed in a circle, and a second circle is inscribed in the triangle. The region inside the larger circle but outside the smaller circle has area $27\\pi$. What is the perimeter of the triangle?",
+      "choices": [
+        "$6\\sqrt{3}$",
+        "$9\\sqrt{3}$",
+        "$18$",
+        "$18\\sqrt{3}$",
+        "$36$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "For an equilateral triangle the circumradius is twice the inradius: $R = 2r$. Then $\\pi(4r^2 - r^2) = 3\\pi r^2 = 27\\pi$, so $r = 3$, $R = 6$, the side is $R\\sqrt3 = 6\\sqrt3$ and the perimeter is $18\\sqrt3$.",
+        "steps": [
+          "1. The center of an equilateral triangle divides each median in the ratio $2:1$, so $R = 2r$.",
+          "2. Ring area: $\\pi R^2 - \\pi r^2 = 3\\pi r^2 = 27\\pi$, so $r = 3$ and $R = 6$.",
+          "3. The median (height) is $R + r = 9$, and side $= \\frac{2}{\\sqrt3} \\cdot 9 = 6\\sqrt3$.",
+          "4. Perimeter $= 3 \\cdot 6\\sqrt3 = 18\\sqrt3$."
+        ],
+        "fast": "Height $= 3r$; side $=$ height $\\times \\frac{2}{\\sqrt3}$.",
+        "trap": "Stopping at the side length $6\\sqrt3$, or swapping the radii ($R = 3$) and getting a side of $3\\sqrt3$ and a perimeter of $9\\sqrt3$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inscribed-figures",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q8",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "Each of four hikers independently chooses one of 4 trails at random, each trail being equally likely. What is the probability that exactly one of the 4 trails is chosen by none of the hikers?",
+      "choices": [
+        "$\\dfrac{3}{32}$",
+        "$\\dfrac{81}{256}$",
+        "$\\dfrac{9}{16}$",
+        "$\\dfrac{21}{32}$",
+        "$\\dfrac{29}{32}$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Exactly one unused trail means the four hikers use exactly 3 trails: choose the unused trail (4 ways), the two hikers who share a trail ($\\binom42 = 6$), and assign the three groups to the three trails ($3! = 6$): $144$ of $4^4 = 256$ outcomes, so $\\frac{144}{256} = \\frac{9}{16}$.",
+        "steps": [
+          "1. Total outcomes: $4^4 = 256$.",
+          "2. Using exactly 3 trails: unused trail 4 ways; the pair of hikers who share 6 ways; the pair and the two single hikers go to the 3 trails in $3! = 6$ ways. $4 \\cdot 6 \\cdot 6 = 144$.",
+          "3. Check by complement: all 4 trails used, $4! = 24$; exactly 2 used, $\\binom42 (2^4 - 2) = 84$; exactly 1 used, 4. $256 - 24 - 84 - 4 = 144$.",
+          "4. Probability $= \\frac{144}{256} = \\frac{9}{16}$."
+        ],
+        "fast": "$P(\\text{some trail unused}) = 1 - \\frac{24}{256} = \\frac{29}{32}$; then remove the outcomes with 2 or 3 unused trails ($\\frac{88}{256}$).",
+        "trap": "$\\frac{29}{32}$ counts at least one unused trail, not exactly one; $(\\frac34)^4 = \\frac{81}{256}$ is the chance that one particular trail is unused; $\\frac{3}{32} = \\frac{24}{256}$ is the chance that every trail is used."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-basic",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q9",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A delivery drone leaves a depot at 9:00 a.m. and flies along a straight route at a constant 40 kilometers per hour. A second drone leaves the same depot at 9:30 a.m. and flies along the same route at a constant 60 kilometers per hour. At what time will the second drone be 10 kilometers ahead of the first?",
+      "choices": [
+        "10:30 a.m.",
+        "10:45 a.m.",
+        "11:00 a.m.",
+        "11:15 a.m.",
+        "11:30 a.m."
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "At 9:30 the first drone is 20 km ahead. The second gains 20 km per hour, so it must gain $20 + 10 = 30$ km, which takes 1.5 hours: 11:00 a.m.",
+        "steps": [
+          "1. Head start at 9:30: $40 \\times 0.5 = 20$ km.",
+          "2. Closing speed: $60 - 40 = 20$ km per hour.",
+          "3. To be 10 km ahead, the second drone gains $20 + 10 = 30$ km: $\\frac{30}{20} = 1.5$ hours after 9:30.",
+          "4. Time: 11:00 a.m."
+        ],
+        "fast": "Positions $40t$ and $60(t - \\frac12)$ with $t$ in hours after 9:00: $20t - 30 = 10 \\Rightarrow t = 2$.",
+        "trap": "10:30 a.m. is when the second drone only draws level (it has made up the 20 km head start); the extra 10 km takes another half hour."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-rate",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q10",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "Which of the following fractions lies between $\\dfrac{5}{8}$ and $\\dfrac{7}{11}$?",
+      "choices": [
+        "$\\dfrac{3}{5}$",
+        "$\\dfrac{12}{19}$",
+        "$\\dfrac{9}{14}$",
+        "$\\dfrac{2}{3}$",
+        "$\\dfrac{7}{10}$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$\\frac58 = 0.625$ and $\\frac{7}{11} \\approx 0.636$. $\\frac{12}{19} \\approx 0.632$ is between them; it is the mediant $\\frac{5 + 7}{8 + 11}$, which always lies between two fractions.",
+        "steps": [
+          "1. $\\frac58 = 0.625$, $\\frac{7}{11} = 0.6363\\ldots$",
+          "2. $\\frac35 = 0.6$ (too small); $\\frac{9}{14} \\approx 0.643$, $\\frac23 \\approx 0.667$, $\\frac{7}{10} = 0.7$ (too large).",
+          "3. $\\frac{12}{19} \\approx 0.6316$ is between. Cross-check: $5 \\cdot 19 = 95 < 96 = 12 \\cdot 8$ and $12 \\cdot 11 = 132 < 133 = 7 \\cdot 19$."
+        ],
+        "fast": "Add numerators and denominators: $\\frac{5 + 7}{8 + 11}$.",
+        "trap": "$\\frac{9}{14}$ looks close (0.643) but is just above $\\frac{7}{11}$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "fractions-decimals",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q11",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A coach will choose 4 of 7 runners, including Xia and Yusuf, and assign them to the first, second, third and fourth legs of a relay, one runner per leg. Yusuf can be chosen only if Xia is also chosen, and Xia cannot run the first leg. How many different assignments are possible?",
+      "choices": [
+        "360",
+        "420",
+        "480",
+        "540",
+        "600"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Split on who runs. Neither: $5 \\cdot 4 \\cdot 3 \\cdot 2 = 120$. Xia without Yusuf: Xia takes leg 2, 3 or 4, and 3 of the other 5 fill the rest in order: $3 \\cdot 60 = 180$. Both: Xia 3 legs, Yusuf 3 remaining legs, the other two legs from 5 runners: $3 \\cdot 3 \\cdot 20 = 180$. Total 480.",
+        "steps": [
+          "1. Neither Xia nor Yusuf: ordered choice of 4 from the other 5 runners, $5 \\cdot 4 \\cdot 3 \\cdot 2 = 120$.",
+          "2. Xia but not Yusuf: Xia on leg 2, 3 or 4 (3 ways); fill the other 3 legs from the 5 others in order: $5 \\cdot 4 \\cdot 3 = 60$. Subtotal 180.",
+          "3. Both: Xia on leg 2, 3 or 4 (3 ways), Yusuf on one of the 3 remaining legs (3 ways), the last 2 legs from the 5 others: $5 \\cdot 4 = 20$. Subtotal 180.",
+          "4. Yusuf without Xia is not allowed. Total: $120 + 180 + 180 = 480$."
+        ],
+        "fast": "Complement: $7 \\cdot 6 \\cdot 5 \\cdot 4 = 840$ line-ups, minus $4 \\cdot 60 = 240$ with Yusuf but not Xia, minus $6 \\cdot 5 \\cdot 4 = 120$ with Xia on leg 1: 480.",
+        "trap": "Forgetting that the Yusuf condition still allows the line-ups with neither of them (dropping the 120 gives 360), or restricting Xia's leg in only one of the cases."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-permutations",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "counting-restrictions",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q12",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "At a café, 3 muffins, 5 scones and 7 croissants cost a total of 41 dollars, and 1 muffin, 3 scones and 5 croissants cost a total of 25 dollars. What is the total cost, in dollars, of 1 muffin, 2 scones and 3 croissants?",
+      "choices": [
+        "8.00",
+        "13.50",
+        "16.50",
+        "33.00",
+        "It cannot be determined from the information given."
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "With prices $x$, $y$, $z$: $x + 2y + 3z$ is exactly one quarter of the sum of the two equations, $(3x + 5y + 7z) + (x + 3y + 5z) = 4x + 8y + 12z = 66$, so the cost is $\\frac{66}{4} = 16.50$.",
+        "steps": [
+          "1. $3x + 5y + 7z = 41$ and $x + 3y + 5z = 25$.",
+          "2. Look for $\\alpha$, $\\beta$ with $\\alpha(3, 5, 7) + \\beta(1, 3, 5) = (1, 2, 3)$: $\\alpha = \\beta = \\frac14$ works for all three coordinates.",
+          "3. So $x + 2y + 3z = \\frac{41 + 25}{4} = 16.5$, even though the individual prices are not determined."
+        ],
+        "fast": "Add the equations: every coefficient becomes a multiple of 4.",
+        "trap": "Concluding that three unknowns and two equations can't give an answer; or computing $x + y + z = 8$ from the difference of the equations and stopping there."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "linear-equations",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q13",
+      "section": 2,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "Which of the following values of $x$ satisfy $\\dfrac{6 - x}{-2} < x + 3 \\le 15 - 2x$? Select all such values.",
+      "choices": [
+        "$-13$",
+        "$-12$",
+        "$-6$",
+        "$0$",
+        "$4$",
+        "$4.5$"
+      ],
+      "key": {
+        "sel": [
+          2,
+          3,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Left part: multiplying by $-2$ flips the sign, $6 - x > -2x - 6$, so $x > -12$. Right part: $3x \\le 12$, so $x \\le 4$. Solutions: $-12 < x \\le 4$, i.e. $-6$, 0 and 4.",
+        "steps": [
+          "1. $\\frac{6 - x}{-2} < x + 3$. Multiply by $-2$ and reverse: $6 - x > -2x - 6 \\Rightarrow x > -12$.",
+          "2. $x + 3 \\le 15 - 2x \\Rightarrow 3x \\le 12 \\Rightarrow x \\le 4$.",
+          "3. Both: $-12 < x \\le 4$. $-12$ is excluded (strict), 4 is included."
+        ],
+        "fast": "Check the endpoints: at $x = -12$ the left side equals $-9 = x + 3$ (not less); at $x = 4$ both right-hand sides are 7.",
+        "trap": "Not reversing the inequality when multiplying by $-2$ gives $x < -12$, which makes the set seem empty; or including $-12$ or excluding 4."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inequalities",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q14",
+      "section": 2,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "Seven volunteers sorted a total of 50 donated coats. Each volunteer sorted at least one coat, and no two volunteers sorted the same number of coats. Which of the following could be the median of the seven numbers of coats sorted? Select all such values.",
+      "choices": [
+        "4",
+        "6",
+        "9",
+        "10",
+        "11",
+        "13"
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The median $m$ needs three distinct smaller numbers, so $m \\ge 4$. To make $m$ large, make the others small: $1 + 2 + 3 + m + (m+1) + (m+2) + (m+3) = 4m + 12 \\le 50$, so $m \\le 9$. Every value from 4 to 9 works, so 4, 6 and 9.",
+        "steps": [
+          "1. Order the numbers $a < b < c < m < e < f < g$.",
+          "2. Lower bound: $a, b, c$ are distinct positive integers below $m$, so $m \\ge 4$; $m = 4$ works with $1, 2, 3, 4, 5, 6, 29$.",
+          "3. Upper bound: the smallest total with median $m$ is $1 + 2 + 3 + m + (m+1) + (m+2) + (m+3) = 4m + 12$, which must be at most 50, so $m \\le 9.5$, i.e. $m \\le 9$. $m = 9$ works with $1, 2, 3, 9, 10, 11, 14$.",
+          "4. $m = 6$ works too, for example $1, 2, 3, 6, 7, 8, 23$. 10, 11 and 13 exceed the bound."
+        ],
+        "fast": "Bound the median from above by pushing the three numbers below it to 1, 2, 3 and the three above it to $m+1, m+2, m+3$.",
+        "trap": "Guessing from the average ($50/7 \\approx 7$), or bounding with the three larger values only somewhat above $m$, lets 10 or 11 in; forgetting that the numbers must be distinct does the same."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "min-max-bounding",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q15",
+      "section": 2,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "A rectangular poster has a perimeter of 66 inches. It is mounted on a rectangular board so that a border 3 inches wide surrounds the poster on all sides. What is the area, in square inches, of the border?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "234"
+      },
+      "explanation": {
+        "key": "With poster sides $L$ and $W$ ($L + W = 33$), the board is $(L + 6)(W + 6)$, so the border is $(L + 6)(W + 6) - LW = 6(L + W) + 36 = 198 + 36 = 234$, whatever $L$ and $W$ are.",
+        "steps": [
+          "1. $2(L + W) = 66$, so $L + W = 33$.",
+          "2. Board area: $(L + 6)(W + 6) = LW + 6(L + W) + 36$.",
+          "3. Border area: $6(L + W) + 36 = 198 + 36 = 234$."
+        ],
+        "fast": "Border = (perimeter × width) + four corner squares: $66 \\cdot 3 + 4 \\cdot 9$.",
+        "trap": "Leaving out the four $3 \\times 3$ corners gives 198; thinking the dimensions are needed stalls the solver."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "area-perimeter",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}
