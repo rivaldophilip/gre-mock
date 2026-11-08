@@ -1,0 +1,803 @@
+{
+ "testId": "quant-005",
+ "measure": "quant",
+ "seed": 40697,
+ "generatedAt": "2026-11-08T05:39:00.697Z",
+ "untakenTests": [
+  "quant-001",
+  "quant-002",
+  "quant-003",
+  "quant-004",
+  "verbal-003"
+ ],
+ "blueprint": {
+  "measure": "quant",
+  "sections": [
+   {
+    "n": 1,
+    "minutes": 21,
+    "slots": [
+     {
+      "type": "qc",
+      "level": 3
+     },
+     {
+      "type": "qc",
+      "level": 4
+     },
+     {
+      "type": "qc",
+      "level": 4
+     },
+     {
+      "type": "qc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 3
+     },
+     {
+      "type": "mc",
+      "level": 4
+     },
+     {
+      "type": "mc",
+      "level": 5
+     },
+     {
+      "type": "mc_multi",
+      "level": 4
+     },
+     {
+      "type": "numeric",
+      "level": 3
+     },
+     {
+      "type": "di",
+      "level": 3
+     },
+     {
+      "type": "di",
+      "level": 4
+     },
+     {
+      "type": "di",
+      "level": 5
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "minutes": 26,
+    "slots": [
+     {
+      "type": "qc",
+      "level": 4
+     },
+     {
+      "type": "qc",
+      "level": 5
+     },
+     {
+      "type": "qc",
+      "level": 5
+     },
+     {
+      "type": "qc",
+      "level": 4
+     },
+     {
+      "type": "qc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 4
+     },
+     {
+      "type": "mc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 4
+     },
+     {
+      "type": "mc",
+      "level": 3
+     },
+     {
+      "type": "mc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 4
+     },
+     {
+      "type": "mc_multi",
+      "level": 4
+     },
+     {
+      "type": "mc_multi",
+      "level": 5
+     },
+     {
+      "type": "numeric",
+      "level": 4
+     }
+    ]
+   }
+  ],
+  "notes": "S1: QC as Q1-4, then 3 MC, 1 multi, 1 numeric, 3-question data-interpretation set (shared figure/table; same figureId and setId). S2: 5 QC, 7 MC, 2 multi, 1 numeric. 27 concept slots."
+ },
+ "previous": [
+  {
+   "id": "quant-001",
+   "passageTopics": []
+  },
+  {
+   "id": "quant-002",
+   "passageTopics": []
+  },
+  {
+   "id": "quant-003",
+   "passageTopics": []
+  },
+  {
+   "id": "quant-004",
+   "passageTopics": [],
+   "stems": [
+    "$a$ and $b$ are numbers such that $ab > 0$ and $a > b$.",
+    "Compare the two quantities.",
+    "In triangle $ABC$ shown, point $D$ lies on side $BC$,…",
+    "$x$ and $y$ are real numbers such that $|x-y| = |x| + |y|$.",
+    "Seed blend X contains clover seed and grass seed in the…",
+    "A courier rides from a print shop to a law office at an…",
+    "A 4-person review panel is to be chosen from 6 engineers and…",
+    "For which of the following values of the constant $k$ is the…",
+    "A museum raised its annual membership fee by 25 percent. A…",
+    "By approximately what percent did the total number of trips…",
+    "Suppose the company had also operated a sixth zone,…",
+    "In 2024, 15 percent of the trips that started in Riverside…",
+    "One of the angles of an isosceles triangle measures…",
+    "List $S$ consists of 10 numbers with mean 50 and standard…",
+    "$n$ is a positive integer.",
+    "$k$ is a positive odd integer less than 10.",
+    "$n$ is a positive integer that has exactly 3 positive…",
+    "A circular fountain is surrounded by a ring-shaped stone…",
+    "A fair six-sided die, with faces numbered 1 through 6, is…",
+    "A circle is inscribed in a right triangle whose legs have…",
+    "For how many integers $k$ does the system of equations…",
+    "A rectangular garden measures 24 meters by 10 meters. A…",
+    "Each of the 120 volunteers at a festival is trained for at…",
+    "In triangle $ABC$, angle $A$ measures $30^\\circ$, angle $B$…",
+    "Which of the following expressions are defined, and equal to…",
+    "$x$ and $y$ are numbers such that $2\\le x\\le5$, $-3\\le…",
+    "Six flags are to be hung in a row: 2 identical red flags, 2…"
+   ]
+  }
+ ],
+ "slots": [
+  {
+   "section": 1,
+   "slot": 1,
+   "type": "qc",
+   "level": 3,
+   "exemplars": [
+    "bb-t3s6-11",
+    "ogq-t2-s5-4",
+    "ogq-t1-s5-9"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 2,
+   "type": "qc",
+   "level": 4,
+   "exemplars": [
+    "bb-t2s5-15",
+    "ogq-t1-s6-9",
+    "bb-t3s2-15"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 3,
+   "type": "qc",
+   "level": 4,
+   "exemplars": [
+    "bb-t3s6-14",
+    "ogq-t1-s6-6",
+    "bb-t1s7-9"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 4,
+   "type": "qc",
+   "level": 5,
+   "exemplars": [
+    "bb-t3s2-13",
+    "bb-t1s7-11",
+    "bb-t2s2-15"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 5,
+   "type": "mc",
+   "level": 3,
+   "exemplars": [
+    "ogq-t2-s6-22",
+    "bb-t3s2-28",
+    "bb-t3s6-26"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 6,
+   "type": "mc",
+   "level": 4,
+   "exemplars": [
+    "ogq-t1-s6-25",
+    "bb-t1s3-27",
+    "bb-t1s7-28"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 7,
+   "type": "mc",
+   "level": 5,
+   "exemplars": [
+    "ogq-t1-s6-21",
+    "bb-t1s3-29",
+    "ogq-t1-s5-16"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 8,
+   "type": "mc_multi",
+   "level": 4,
+   "exemplars": [
+    "ogq-set3-14",
+    "ogq-set3-15",
+    "ogq-t1-s6-11"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 9,
+   "type": "numeric",
+   "level": 3,
+   "exemplars": [
+    "ogq-set2-11",
+    "ogq-set2-12",
+    "ogq-t1-s5-12"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 10,
+   "type": "di",
+   "level": 3,
+   "exemplars": [
+    "bb-t3s2-25",
+    "bb-t3s6-25",
+    "ogq-t2-s5-20"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 11,
+   "type": "di",
+   "level": 4,
+   "exemplars": [
+    "ogq-t1-s6-20",
+    "bb-t1s7-25",
+    "bb-t2s2-25"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 12,
+   "type": "di",
+   "level": 5,
+   "exemplars": [
+    "bb-t2s5-24",
+    "ogq-set4-3",
+    "ogq-set4-7"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 1,
+   "type": "qc",
+   "level": 4,
+   "exemplars": [
+    "bb-t2s2-13",
+    "ogq-t1-s5-8",
+    "bb-t1s3-15"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 2,
+   "type": "qc",
+   "level": 5,
+   "exemplars": [
+    "bb-t1s3-12",
+    "ogq-t1-s5-7",
+    "ogq-t1-s6-8"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 3,
+   "type": "qc",
+   "level": 5,
+   "exemplars": [
+    "bb-t2s2-14",
+    "bb-t1s7-14",
+    "ogq-t2-s6-8"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 4,
+   "type": "qc",
+   "level": 4,
+   "exemplars": [
+    "ogq-t2-s5-9",
+    "bb-t2s2-11",
+    "ogq-t1-s5-6"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 5,
+   "type": "qc",
+   "level": 5,
+   "exemplars": [
+    "bb-t3s6-15",
+    "ogq-set3-1",
+    "ogq-set3-2"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 6,
+   "type": "mc",
+   "level": 4,
+   "exemplars": [
+    "ogq-t2-s6-25",
+    "ogq-t1-s5-25",
+    "bb-t2s5-29"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 7,
+   "type": "mc",
+   "level": 5,
+   "exemplars": [
+    "bb-t2s5-30",
+    "bb-t3s2-30",
+    "ogq-t1-s6-23"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 8,
+   "type": "mc",
+   "level": 5,
+   "exemplars": [
+    "ogq-t1-s5-11",
+    "bb-t2s5-28",
+    "ogq-t1-s6-13"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 9,
+   "type": "mc",
+   "level": 4,
+   "exemplars": [
+    "bb-t3s6-30",
+    "ogq-t1-s5-22",
+    "ogq-t2-s6-23"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 10,
+   "type": "mc",
+   "level": 3,
+   "exemplars": [
+    "ogq-t2-s6-16",
+    "bb-t1s3-26",
+    "bb-t1s3-30"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 11,
+   "type": "mc",
+   "level": 5,
+   "exemplars": [
+    "ogq-set3-7",
+    "ogq-set3-8",
+    "ogq-set3-9"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 12,
+   "type": "mc",
+   "level": 4,
+   "exemplars": [
+    "bb-t2s2-30",
+    "bb-t2s2-29",
+    "ogq-t1-s6-15"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 13,
+   "type": "mc_multi",
+   "level": 4,
+   "exemplars": [
+    "ogq-t1-s5-23",
+    "ogq-t1-s5-15",
+    "ogq-t1-s6-16"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 14,
+   "type": "mc_multi",
+   "level": 5,
+   "exemplars": [
+    "ogq-t1-s6-11",
+    "ogq-t1-s5-23",
+    "ogq-t1-s5-15"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 15,
+   "type": "numeric",
+   "level": 4,
+   "exemplars": [
+    "ogq-t1-s6-14",
+    "ogq-set3-13",
+    "ogq-t1-s6-24"
+   ]
+  }
+ ],
+ "typeFocus": [],
+ "conceptSlots": [
+  {
+   "slot": 1,
+   "concept": "data-interpretation-calc",
+   "name": "Data interpretation: percent and ratio from graphs",
+   "area": "data",
+   "bucket": "review",
+   "reason": "never tested; already in untaken quant-001",
+   "exemplars": [
+    "bb-t2s5-24",
+    "ogq-set4-3"
+   ]
+  },
+  {
+   "slot": 2,
+   "concept": "exponents-roots",
+   "name": "Exponents and radicals",
+   "area": "arithmetic",
+   "bucket": "review",
+   "reason": "never tested; already in untaken quant-002",
+   "exemplars": [
+    "bb-t2s2-15",
+    "ogq-t1-s5-16"
+   ]
+  },
+  {
+   "slot": 3,
+   "concept": "number-sense-qc",
+   "name": "Number sense: sign, zero, magnitude cases",
+   "area": "arithmetic",
+   "bucket": "review",
+   "reason": "never tested; already in untaken quant-001",
+   "exemplars": [
+    "bb-t3s2-13",
+    "bb-t2s2-13"
+   ]
+  },
+  {
+   "slot": 4,
+   "concept": "percent",
+   "name": "Percent, percent change, successive percent",
+   "area": "arithmetic",
+   "bucket": "review",
+   "reason": "never tested; already in untaken quant-001",
+   "exemplars": [
+    "bb-t1s3-29",
+    "ogq-t1-s5-15"
+   ]
+  },
+  {
+   "slot": 5,
+   "concept": "triangles",
+   "name": "Triangles: similar, isosceles, equilateral, inequality",
+   "area": "geometry",
+   "bucket": "review",
+   "reason": "never tested; already in untaken quant-001",
+   "exemplars": [
+    "bb-t1s3-12",
+    "bb-t3s6-15"
+   ]
+  },
+  {
+   "slot": 6,
+   "concept": "algebraic-expressions",
+   "name": "Algebraic expressions, identities, simplification",
+   "area": "algebra",
+   "bucket": "review",
+   "reason": "never tested; already in untaken quant-002",
+   "exemplars": [
+    "bb-t1s7-14",
+    "ogq-set3-9"
+   ]
+  },
+  {
+   "slot": 7,
+   "concept": "inequalities",
+   "name": "Linear inequalities",
+   "area": "algebra",
+   "bucket": "review",
+   "reason": "never tested; already in untaken quant-001",
+   "exemplars": [
+    "ogq-set3-8",
+    "ogq-t2-s5-24"
+   ]
+  },
+  {
+   "slot": 8,
+   "concept": "circles",
+   "name": "Circles: arcs, sectors, chords, tangents",
+   "area": "geometry",
+   "bucket": "review",
+   "reason": "never tested; already in untaken quant-002",
+   "exemplars": [
+    "bb-t1s7-11",
+    "ogq-t1-s6-23"
+   ]
+  },
+  {
+   "slot": 9,
+   "concept": "mean-median-mode",
+   "name": "Mean, median, mode, range",
+   "area": "data",
+   "bucket": "review",
+   "reason": "never tested; already in untaken quant-002",
+   "exemplars": [
+    "ogq-set3-15",
+    "ogq-set4-7"
+   ]
+  },
+  {
+   "slot": 10,
+   "concept": "pythagorean-special",
+   "name": "Pythagorean theorem and special right triangles",
+   "area": "geometry",
+   "bucket": "review",
+   "reason": "never tested; already in untaken quant-002",
+   "exemplars": [
+    "bb-t2s2-14",
+    "bb-t2s5-28"
+   ]
+  },
+  {
+   "slot": 11,
+   "concept": "std-dev-normal",
+   "name": "Standard deviation and the normal distribution",
+   "area": "data",
+   "bucket": "review",
+   "reason": "never tested; already in untaken quant-001",
+   "exemplars": [
+    "ogq-set3-5",
+    "ogq-t1-s5-9"
+   ]
+  },
+  {
+   "slot": 12,
+   "concept": "overlapping-sets",
+   "name": "Overlapping sets, Venn diagrams",
+   "area": "data",
+   "bucket": "review",
+   "reason": "never tested; already in untaken quant-001",
+   "exemplars": [
+    "ogq-t2-s6-4",
+    "bb-t1s7-23"
+   ]
+  },
+  {
+   "slot": 13,
+   "concept": "word-problems-rate",
+   "name": "Rate, work, distance and mixture problems",
+   "area": "algebra",
+   "bucket": "review",
+   "reason": "never tested; already in untaken quant-002",
+   "exemplars": [
+    "bb-t1s3-11",
+    "bb-t2s5-29"
+   ]
+  },
+  {
+   "slot": 14,
+   "concept": "area-perimeter",
+   "name": "Area and perimeter",
+   "area": "geometry",
+   "bucket": "review",
+   "reason": "never tested; already in untaken quant-002",
+   "exemplars": [
+    "bb-t2s5-30",
+    "bb-t3s6-30"
+   ]
+  },
+  {
+   "slot": 15,
+   "concept": "inscribed-figures",
+   "name": "Inscribed and circumscribed figures, composite shapes",
+   "area": "geometry",
+   "bucket": "new",
+   "reason": "never tested; already in untaken quant-001",
+   "exemplars": [
+    "ogq-set2-3"
+   ]
+  },
+  {
+   "slot": 16,
+   "concept": "remainders-units",
+   "name": "Remainders and units digits",
+   "area": "arithmetic",
+   "bucket": "new",
+   "reason": "never tested; already in untaken quant-001",
+   "exemplars": [
+    "ogq-t1-s6-7",
+    "bb-t1s3-8"
+   ]
+  },
+  {
+   "slot": 17,
+   "concept": "figures-not-to-scale",
+   "name": "Reasoning from figures not drawn to scale",
+   "area": "geometry",
+   "bucket": "new",
+   "reason": "never tested; already in untaken quant-002",
+   "exemplars": []
+  },
+  {
+   "slot": 18,
+   "concept": "linear-equations",
+   "name": "Linear equations and simultaneous equations",
+   "area": "algebra",
+   "bucket": "new",
+   "reason": "never tested; already in untaken quant-002",
+   "exemplars": [
+    "ogq-t1-s6-8",
+    "bb-t1s3-27"
+   ]
+  },
+  {
+   "slot": 19,
+   "concept": "counting-permutations",
+   "name": "Counting: permutations and combinations",
+   "area": "data",
+   "bucket": "new",
+   "reason": "never tested; already in untaken quant-002",
+   "exemplars": [
+    "ogq-t2-s6-8",
+    "ogq-set3-7"
+   ]
+  },
+  {
+   "slot": 20,
+   "concept": "counting-restrictions",
+   "name": "Counting with restrictions and arrangements",
+   "area": "data",
+   "bucket": "new",
+   "reason": "never tested; already in untaken quant-001",
+   "exemplars": [
+    "ogq-t1-s5-11"
+   ]
+  },
+  {
+   "slot": 21,
+   "concept": "probability-conditional",
+   "name": "Conditional probability and dependent events",
+   "area": "data",
+   "bucket": "new",
+   "reason": "never tested; already in untaken quant-001",
+   "exemplars": [
+    "ogq-set2-10"
+   ]
+  },
+  {
+   "slot": 22,
+   "concept": "min-max-bounding",
+   "name": "Bounding: minimum/maximum values under constraints",
+   "area": "algebra",
+   "bucket": "new",
+   "reason": "never tested; already in untaken quant-001",
+   "exemplars": []
+  },
+  {
+   "slot": 23,
+   "concept": "probability-basic",
+   "name": "Probability: independent events, complement",
+   "area": "data",
+   "bucket": "new",
+   "reason": "never tested; already in untaken quant-001",
+   "exemplars": [
+    "ogq-t1-s6-24",
+    "ogq-t1-s5-6"
+   ]
+  },
+  {
+   "slot": 24,
+   "concept": "fractions-decimals",
+   "name": "Fractions and decimals operations",
+   "area": "arithmetic",
+   "bucket": "wildcard",
+   "reason": "never tested; already in untaken quant-002",
+   "exemplars": [
+    "bb-t3s6-14",
+    "bb-t2s2-28"
+   ]
+  },
+  {
+   "slot": 25,
+   "concept": "ratio-proportion",
+   "name": "Ratio and proportion",
+   "area": "arithmetic",
+   "bucket": "wildcard",
+   "reason": "never tested; already in untaken quant-002",
+   "exemplars": [
+    "bb-t1s7-28",
+    "ogq-t1-s5-25"
+   ]
+  },
+  {
+   "slot": 26,
+   "concept": "abs-value-inequalities",
+   "name": "Absolute-value equations and inequalities",
+   "area": "algebra",
+   "bucket": "wildcard",
+   "reason": "never tested; already in untaken quant-001",
+   "exemplars": [
+    "ogq-t2-s5-21"
+   ]
+  },
+  {
+   "slot": 27,
+   "concept": "integers-properties",
+   "name": "Integer properties, even/odd, divisibility",
+   "area": "arithmetic",
+   "bucket": "wildcard",
+   "reason": "never tested; already in untaken quant-002",
+   "exemplars": [
+    "ogq-t1-s6-16",
+    "ogq-set3-6"
+   ]
+  }
+ ],
+ "instructions": "Assign the 27 concept slots to the 27 blueprint slots (any order, but a DI set of 3 should share a concept area). Each question: one primary concept (the slot) and optional secondary tags. Provide a python verification script. typeFocus ranks question types by practice need (miss rate plus slowness against pace): put the weakest review words / skills / concepts on the slots of the top two types (need >= 0.4), so the practice lands where it is needed."
+}
