@@ -316,7 +316,7 @@
       "id": "s1q8",
       "section": 1,
       "type": "mc_multi",
-      "difficulty": 4,
+      "difficulty": 6,
       "prompt": "Each of the 80 students at a language school studies Spanish, Japanese, both or neither. If 50 of the students study Spanish and 45 study Japanese, which of the following could be the number of students who study exactly one of the two languages?\n\nIndicate all such numbers.",
       "choices": [
         "3",
@@ -723,7 +723,7 @@
       "id": "s2q7",
       "section": 2,
       "type": "mc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "A gardener will plant 6 shrubs in a row along a fence: 2 identical boxwoods, 2 identical hollies and 2 identical junipers. How many different orders of the shrubs have no two shrubs of the same kind next to each other?",
       "choices": [
         "6",
@@ -873,7 +873,7 @@
       "id": "s2q11",
       "section": 2,
       "type": "mc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "In triangle $ABC$, angle $A$ measures $45^\\circ$, angle $B$ measures $30^\\circ$, and $BC = 8$. What is the area of triangle $ABC$?",
       "choices": [
         "$8\\sqrt3$",
@@ -990,7 +990,7 @@
       "id": "s2q14",
       "section": 2,
       "type": "mc_multi",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "A rectangle has a diagonal of length 10. Which of the following could be the perimeter of the rectangle?\n\nIndicate all such values.",
       "choices": [
         "14",

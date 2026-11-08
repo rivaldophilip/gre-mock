@@ -248,7 +248,7 @@
       "id": "s1q7",
       "section": 1,
       "type": "mc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "How many four-digit positive integers have digits whose product is 24?",
       "choices": [
         "$36$",
@@ -450,7 +450,7 @@
       "type": "mc",
       "setId": "di1",
       "figureId": "fig1",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "Suppose that French enrollment in 2025 is $x$ students, and that for the seven years 2019 through 2025 the median of the annual French enrollments equals their average (arithmetic mean). What is the sum of all possible values of $x$?",
       "choices": [
         "$470$",
@@ -739,7 +739,7 @@
       "id": "s2q8",
       "section": 2,
       "type": "mc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "Eight tennis players, among them the siblings Ana and Ben and the siblings Cara and Dev, are to be split into four doubles teams of two players each. The teams are not labelled or ordered. In how many of the possible splits are no two siblings on the same team?",
       "choices": [
         "$72$",
@@ -935,7 +935,7 @@
       "id": "s2q13",
       "section": 2,
       "type": "mc_multi",
-      "difficulty": 4,
+      "difficulty": 6,
       "prompt": "Of the 80 members of a hiking club, 52 have hiked the ridge trail and 41 have hiked the canyon trail. At least 10 members have hiked neither trail. Which of the following could be the number of members who have hiked exactly one of the two trails? Indicate all such numbers.",
       "choices": [
         "$11$",
@@ -980,7 +980,7 @@
       "id": "s2q14",
       "section": 2,
       "type": "mc_multi",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "Three wooden rods have lengths, in centimeters, that are three different integers with a sum of 30, and the rods can be joined end to end to form a triangle. Which of the following could be the length, in centimeters, of the shortest rod? Indicate all such lengths.",
       "choices": [
         "$1$",
@@ -1025,7 +1025,7 @@
       "id": "s2q15",
       "section": 2,
       "type": "numeric",
-      "difficulty": 4,
+      "difficulty": 6,
       "prompt": "In triangle $ABC$, $AB = 7$, $BC = 11$, and the length of $AC$ is an integer. For how many possible values of $AC$ is triangle $ABC$ obtuse?",
       "numeric": {
         "kind": "single"

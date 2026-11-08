@@ -42,7 +42,7 @@ Recalibrate only after changing the solver's model: `npm run -s blind -- --calib
 
 ## Structure rules (the validator enforces most)
 
-- Difficulty levels: 3 = P+ 45–60, 4 = 30–45, 5 = < 30. Section 1 average ≥ 3.75 (about 4×L3, 5×L4, 3×L5). Section 2: ≤ 2 items at L3, ≥ one-third at L5, average ≥ 4.2.
+- Difficulty levels: 3 = P+ 45–60, 4 = 30–45, 5 = < 30. Author at most 5; levels 6–7 (harder than official hard items, quant only) are set afterwards by calibration, see `docs/CALIBRATION.md`. Section 1 average ≥ 3.75 (about 4×L3, 5×L4, 3×L5). Section 2: ≤ 2 items at L3, ≥ one-third at L5, average ≥ 4.2.
 - Each section opens with its TC block (verbal) or QC block (quant). Within a type block, mix easy and hard; don't climb.
 - Question ids are `s1q1` … `s2q15`. Passages are `p1, p2, …` (reading) and `a1, a2` (arguments), as the brief's slot table assigns them.
 - **Verbal.** TC: 1 blank = 5 choices; 2–3 blanks = 3 choices per blank; one `___` per blank, written `(i) ___` when there are several. SE: 6 choices, 2 keys. RC: `rc` has 5 choices; `rc_multi` has 3 choices, select all; `rc_select` keys a sentence index across the whole passage (sentences split on `. ` before a capital). Arguments: `type: "rc"`, `subtype: "arg"`, a one-paragraph passage.

@@ -251,7 +251,7 @@
       "id": "s1q7",
       "section": 1,
       "type": "mc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "Six different talks, including talks by Alvarez, Brandt and Chen, are to be scheduled in six consecutive time slots, one talk per slot. Alvarez's talk must come earlier than Brandt's talk but not in the slot immediately before it, and Chen's talk cannot be in the first slot. How many different schedules are possible?",
       "choices": [
         "180",
@@ -443,7 +443,7 @@
       "type": "mc",
       "setId": "di1",
       "figureId": "fig1",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "The company plans to open a fifth warehouse and wants the median of the five warehouses' total orders to equal the mean of the five totals. If the four existing warehouses keep their 2025 totals, what is the greatest number of orders the fifth warehouse could ship for this to happen?",
       "choices": [
         "40,000",
@@ -628,7 +628,7 @@
       "id": "s2q5",
       "section": 2,
       "type": "qc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "Whether a commuter's morning train is late and whether her evening bus is late are independent events. On any given day, the probability that both are late is 0.2, the probability that at least one of them is late is 0.7, and the train is more likely to be late than the bus.",
       "qc": {
         "a": "The probability that the morning train is late",
@@ -856,7 +856,7 @@
       "id": "s2q11",
       "section": 2,
       "type": "mc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "A coach will choose 4 of 7 sprinters, including Xu and Yates, and assign them to the 4 legs of a relay, one sprinter per leg. Yates will run only if Xu also runs, and Xu will not run the first leg. How many different assignments are possible?",
       "choices": [
         "480",
@@ -973,7 +973,7 @@
       "id": "s2q14",
       "section": 2,
       "type": "mc_multi",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "Five beekeepers each harvested a different positive whole number of kilograms of honey this season. The average of the five harvests was 20 kilograms, and the median was 18 kilograms. Which of the following could be the greatest of the five harvests, in kilograms?\n\nIndicate all such amounts.",
       "choices": [
         "22",

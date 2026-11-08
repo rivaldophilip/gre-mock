@@ -283,7 +283,7 @@
       "id": "s1q7",
       "section": 1,
       "type": "mc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "How many even four-digit positive integers have four different digits that decrease from left to right (for example, 9520)?",
       "choices": [
         "84",
@@ -579,7 +579,7 @@
       "id": "s2q3",
       "section": 2,
       "type": "qc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "Quadrilateral $ABCD$ has $AB=BC=CD=DA=6$ and diagonal $AC=6\\sqrt3$.",
       "qc": {
         "a": "The area of $ABCD$",
@@ -755,7 +755,7 @@
       "id": "s2q8",
       "section": 2,
       "type": "mc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "A closed cylindrical tank with radius 3 meters and length 10 meters lies on its side, so that its axis is horizontal. It holds water to a depth of 1.5 meters. What is the volume of the water, in cubic meters?",
       "choices": [
         "$15\\pi-\\dfrac{45\\sqrt3}{2}$",
@@ -978,7 +978,7 @@
       "id": "s2q14",
       "section": 2,
       "type": "mc_multi",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "The equation $x^2+kx+36=0$ has two different integer solutions. Which of the following could be the value of $k$? Select all such values.",
       "choices": [
         "$-37$",

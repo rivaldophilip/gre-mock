@@ -594,7 +594,7 @@
       "id": "s2q3",
       "section": 2,
       "type": "qc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "Four parcels in a mailroom have four different weights, each a whole number of kilograms. Their total weight is 30 kilograms, and no parcel weighs more than 10 kilograms.",
       "qc": {
         "a": "The least possible weight, in kilograms, of the second-heaviest parcel",
@@ -771,8 +771,8 @@
       "id": "s2q8",
       "section": 2,
       "type": "mc",
-      "difficulty": 5,
-      "prompt": "A coach will choose 4 of a club's 9 runners and assign them to legs 1, 2, 3 and 4 of a relay. Two of the runners, Pat and Quinn, will run only if both are chosen, and if both are chosen they must run consecutive legs. How many different assignments are possible?",
+      "difficulty": 6,
+      "prompt": "A coach will choose 4 of a club's 9 runners and assign them to legs 1, 2, 3 and 4 of a relay. Two of the runners, Pat and Quinn, are either both chosen or both left out, and if both are chosen they must run consecutive legs. How many different assignments are possible?",
       "choices": [
         "840",
         "1,092",

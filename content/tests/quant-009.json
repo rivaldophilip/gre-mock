@@ -136,7 +136,7 @@
       "id": "s1q3",
       "section": 1,
       "type": "qc",
-      "difficulty": 4,
+      "difficulty": 6,
       "figureId": "fig2",
       "prompt": "In triangle $ABC$ shown, point $D$ lies on side $BC$, and $AD = BD = DC$.",
       "qc": {
@@ -284,7 +284,7 @@
       "id": "s1q7",
       "section": 1,
       "type": "mc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "Seven speakers, among them the keynote speaker, Ames and Brook, are to be scheduled in seven consecutive time slots, one speaker per slot. The keynote speaker may not be in the first or the last slot, Ames must speak at some time before Brook, and Ames and Brook may not be in consecutive slots. How many different schedules are possible?",
       "choices": [
         "$960$",
@@ -590,7 +590,7 @@
       "id": "s2q3",
       "section": 2,
       "type": "qc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "List $L$ consists of 20 numbers whose mean is 50 and whose standard deviation is 8. List $M$ consists of the 20 numbers in $L$ together with the two numbers 42 and 58.",
       "qc": {
         "a": "The standard deviation of the numbers in $M$",
@@ -624,7 +624,7 @@
       "id": "s2q4",
       "section": 2,
       "type": "qc",
-      "difficulty": 4,
+      "difficulty": 6,
       "prompt": "A triangle has sides of lengths 6, 8 and $x$, where $x$ is an integer, and the triangle has an obtuse angle.",
       "qc": {
         "a": "The number of possible values of $x$",
@@ -764,7 +764,7 @@
       "id": "s2q8",
       "section": 2,
       "type": "mc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "Each of the 200 pass holders at a three-day film festival attended on at least one of the three days. Exactly 170 attended on Friday, 160 on Saturday and 150 on Sunday. What is the greatest possible number of pass holders who attended on exactly two of the three days?",
       "choices": [
         "$80$",
@@ -879,7 +879,7 @@
       "id": "s2q11",
       "section": 2,
       "type": "mc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "A bag holds six number tiles: two tiles marked 1, two tiles marked 2, one tile marked 3 and one tile marked 4. How many different four-digit numbers can be formed by placing four of the six tiles side by side?",
       "choices": [
         "$72$",
@@ -994,7 +994,7 @@
       "id": "s2q14",
       "section": 2,
       "type": "mc_multi",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "The numbers $x$ and $y$ satisfy $1 \\le x \\le 4$, $2 \\le y \\le 6$ and $x + y \\le 7$. Which of the following could be the value of $xy$? Indicate all such values.",
       "choices": [
         "$1.5$",

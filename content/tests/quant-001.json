@@ -494,7 +494,7 @@
    "id": "s1q12",
    "section": 1,
    "type": "numeric",
-   "difficulty": 5,
+   "difficulty": 6,
    "prompt": "Suppose that, beginning in 2024, West's revenue increases each year by the same dollar amount as its average yearly increase from 2019 to 2023, while the combined revenue of the other three divisions increases by $2 million per year from its 2023 level. In what calendar year will West's revenue first exceed the combined revenue of the other three divisions?",
    "key": {
     "value": "2062"
@@ -686,7 +686,7 @@
    "id": "s2q5",
    "section": 2,
    "type": "qc",
-   "difficulty": 5,
+   "difficulty": 6,
    "prompt": "$n$ is a positive integer, and $d(m)$ denotes the number of positive divisors of the positive integer $m$.",
    "key": {
     "sel": [
@@ -808,7 +808,7 @@
    "id": "s2q8",
    "section": 2,
    "type": "mc",
-   "difficulty": 5,
+   "difficulty": 6,
    "prompt": "What is the remainder when $5^{100}+7^{100}$ is divided by 13?",
    "key": {
     "sel": [

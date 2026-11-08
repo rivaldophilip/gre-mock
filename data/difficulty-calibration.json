@@ -1,0 +1,2259 @@
+{
+ "measuredAt": "2026-11-08",
+ "doc": "docs/CALIBRATION.md",
+ "anchors": {
+  "powerprep": "PowerPrep Test 1 section 1, 20 verbal + 20 quant",
+  "official": "38 verbal + 38 quant items of known P+, 10 per level L2-L5 before exclusions"
+ },
+ "quant": {
+  "officialL5": {
+   "sonnet": {
+    "mean": 2.75,
+    "sd": 0.64
+   },
+   "haiku": {
+    "mean": 3.6,
+    "sd": 0.49
+   }
+  },
+  "corrWithPplus": {
+   "sonnet": -0.58,
+   "haiku": -0.5
+  },
+  "levels": {
+   "6": {
+    "z": 1,
+    "pplusEstimate": "10-17",
+    "officialItemsAtOrAbove": "1/38"
+   },
+   "7": {
+    "z": 2,
+    "pplusEstimate": "<10 (extrapolated)",
+    "officialItemsAtOrAbove": "0/38"
+   }
+  },
+  "meanRating": {
+   "sonnet": {
+    "officialL2": 1.75,
+    "officialL3": 1.94,
+    "officialL4": 2.25,
+    "officialL5": 2.75,
+    "powerprepS1": 2.12,
+    "oursL3": 2.18,
+    "oursL4": 2.81,
+    "oursL5": 3.49
+   },
+   "haiku": {
+    "officialL2": 2.6,
+    "officialL3": 3.0,
+    "officialL4": 2.9,
+    "officialL5": 3.6,
+    "powerprepS1": 2.65,
+    "oursL3": 2.54,
+    "oursL4": 3.33,
+    "oursL5": 3.8
+   }
+  },
+  "items": {
+   "quant-001": [
+    {
+     "id": "s1q1",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 3
+    },
+    {
+     "id": "s1q2",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s1q3",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4
+    },
+    {
+     "id": "s1q4",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5
+    },
+    {
+     "id": "s1q5",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 3
+    },
+    {
+     "id": "s1q6",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s1q7",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 5
+    },
+    {
+     "id": "s1q8",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 4
+    },
+    {
+     "id": "s1q9",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 3
+    },
+    {
+     "id": "s1q10",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 3
+    },
+    {
+     "id": "s1q11",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 4
+    },
+    {
+     "id": "s1q12",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4.5,
+     "z": 1.89,
+     "level": 6
+    },
+    {
+     "id": "s2q1",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 4
+    },
+    {
+     "id": "s2q2",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 3.5,
+     "z": 0.87,
+     "level": 5
+    },
+    {
+     "id": "s2q3",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 2.5,
+     "z": -0.93,
+     "level": 5
+    },
+    {
+     "id": "s2q4",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 4
+    },
+    {
+     "id": "s2q5",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4.5,
+     "z": 1.89,
+     "level": 6
+    },
+    {
+     "id": "s2q6",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s2q7",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5
+    },
+    {
+     "id": "s2q8",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q9",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s2q10",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4
+    },
+    {
+     "id": "s2q11",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 5
+    },
+    {
+     "id": "s2q12",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s2q13",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 4
+    },
+    {
+     "id": "s2q14",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 5
+    },
+    {
+     "id": "s2q15",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 4
+    }
+   ],
+   "quant-002": [
+    {
+     "id": "s1q1",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 3
+    },
+    {
+     "id": "s1q2",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 4
+    },
+    {
+     "id": "s1q3",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 4
+    },
+    {
+     "id": "s1q4",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5
+    },
+    {
+     "id": "s1q5",
+     "authored": 3,
+     "sonnet": 1,
+     "haiku": 1.5,
+     "z": -3.51,
+     "level": 3
+    },
+    {
+     "id": "s1q6",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 4
+    },
+    {
+     "id": "s1q7",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s1q8",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 4
+    },
+    {
+     "id": "s1q9",
+     "authored": 3,
+     "sonnet": 3,
+     "haiku": 2,
+     "z": -1.44,
+     "level": 3
+    },
+    {
+     "id": "s1q10",
+     "authored": 3,
+     "sonnet": 1,
+     "haiku": 1.5,
+     "z": -3.51,
+     "level": 3
+    },
+    {
+     "id": "s1q11",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 4
+    },
+    {
+     "id": "s1q12",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5
+    },
+    {
+     "id": "s2q1",
+     "authored": 4,
+     "sonnet": 4,
+     "haiku": 3,
+     "z": 0.36,
+     "level": 4
+    },
+    {
+     "id": "s2q2",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 3.5,
+     "z": 0.87,
+     "level": 5
+    },
+    {
+     "id": "s2q3",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q4",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 4
+    },
+    {
+     "id": "s2q5",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 3,
+     "z": 0.36,
+     "level": 5
+    },
+    {
+     "id": "s2q6",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s2q7",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 5
+    },
+    {
+     "id": "s2q8",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q9",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4
+    },
+    {
+     "id": "s2q10",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 3
+    },
+    {
+     "id": "s2q11",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5
+    },
+    {
+     "id": "s2q12",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 4
+    },
+    {
+     "id": "s2q13",
+     "authored": 4,
+     "sonnet": 4,
+     "haiku": 3.5,
+     "z": 0.87,
+     "level": 4
+    },
+    {
+     "id": "s2q14",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q15",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 4
+    }
+   ],
+   "quant-003": [
+    {
+     "id": "s1q1",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 3
+    },
+    {
+     "id": "s1q2",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 4
+    },
+    {
+     "id": "s1q3",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 4
+    },
+    {
+     "id": "s1q4",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 2.5,
+     "z": -0.93,
+     "level": 5
+    },
+    {
+     "id": "s1q5",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 3
+    },
+    {
+     "id": "s1q6",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4
+    },
+    {
+     "id": "s1q7",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 5
+    },
+    {
+     "id": "s1q8",
+     "authored": 4,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s1q9",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 3
+    },
+    {
+     "id": "s1q10",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 3
+    },
+    {
+     "id": "s1q11",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s1q12",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 5
+    },
+    {
+     "id": "s2q1",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4
+    },
+    {
+     "id": "s2q2",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 5
+    },
+    {
+     "id": "s2q3",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 5
+    },
+    {
+     "id": "s2q4",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 4
+    },
+    {
+     "id": "s2q5",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 3,
+     "z": 0.36,
+     "level": 5
+    },
+    {
+     "id": "s2q6",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s2q7",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q8",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 5
+    },
+    {
+     "id": "s2q9",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 2,
+     "z": -1.44,
+     "level": 4
+    },
+    {
+     "id": "s2q10",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 3
+    },
+    {
+     "id": "s2q11",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q12",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 4
+    },
+    {
+     "id": "s2q13",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 4
+    },
+    {
+     "id": "s2q14",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q15",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4
+    }
+   ],
+   "quant-004": [
+    {
+     "id": "s1q1",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 3
+    },
+    {
+     "id": "s1q2",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 4
+    },
+    {
+     "id": "s1q3",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3.5,
+     "z": -0.69,
+     "level": 4
+    },
+    {
+     "id": "s1q4",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 5
+    },
+    {
+     "id": "s1q5",
+     "authored": 3,
+     "sonnet": 3,
+     "haiku": 2.5,
+     "z": -0.93,
+     "level": 3
+    },
+    {
+     "id": "s1q6",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 4
+    },
+    {
+     "id": "s1q7",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 5
+    },
+    {
+     "id": "s1q8",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 4
+    },
+    {
+     "id": "s1q9",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 3
+    },
+    {
+     "id": "s1q10",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 3
+    },
+    {
+     "id": "s1q11",
+     "authored": 4,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s1q12",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q1",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4
+    },
+    {
+     "id": "s2q2",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 3.5,
+     "z": 0.87,
+     "level": 5
+    },
+    {
+     "id": "s2q3",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 5
+    },
+    {
+     "id": "s2q4",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 4
+    },
+    {
+     "id": "s2q5",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 5
+    },
+    {
+     "id": "s2q6",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 2.5,
+     "z": -0.93,
+     "level": 4
+    },
+    {
+     "id": "s2q7",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5
+    },
+    {
+     "id": "s2q8",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 5
+    },
+    {
+     "id": "s2q9",
+     "authored": 4,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q10",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 3
+    },
+    {
+     "id": "s2q11",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q12",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 4
+    },
+    {
+     "id": "s2q13",
+     "authored": 4,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q14",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 5
+    },
+    {
+     "id": "s2q15",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4
+    }
+   ],
+   "quant-005": [
+    {
+     "id": "s1q1",
+     "authored": 3,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 3
+    },
+    {
+     "id": "s1q2",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 4
+    },
+    {
+     "id": "s1q3",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 4
+    },
+    {
+     "id": "s1q4",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 3.5,
+     "z": 0.87,
+     "level": 5
+    },
+    {
+     "id": "s1q5",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 3
+    },
+    {
+     "id": "s1q6",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s1q7",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 5
+    },
+    {
+     "id": "s1q8",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 4
+    },
+    {
+     "id": "s1q9",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 3
+    },
+    {
+     "id": "s1q10",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 3
+    },
+    {
+     "id": "s1q11",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 4
+    },
+    {
+     "id": "s1q12",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 5
+    },
+    {
+     "id": "s2q1",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s2q2",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5
+    },
+    {
+     "id": "s2q3",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q4",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s2q5",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5
+    },
+    {
+     "id": "s2q6",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4
+    },
+    {
+     "id": "s2q7",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5
+    },
+    {
+     "id": "s2q8",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4.5,
+     "z": 1.89,
+     "level": 6
+    },
+    {
+     "id": "s2q9",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4
+    },
+    {
+     "id": "s2q10",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 3
+    },
+    {
+     "id": "s2q11",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5
+    },
+    {
+     "id": "s2q12",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s2q13",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 4
+    },
+    {
+     "id": "s2q14",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 5
+    },
+    {
+     "id": "s2q15",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    }
+   ],
+   "quant-006": [
+    {
+     "id": "s1q1",
+     "authored": 3,
+     "sonnet": 3,
+     "haiku": 2.5,
+     "z": -0.93,
+     "level": 3
+    },
+    {
+     "id": "s1q2",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s1q3",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 4
+    },
+    {
+     "id": "s1q4",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 3.5,
+     "z": 0.87,
+     "level": 5
+    },
+    {
+     "id": "s1q5",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 3
+    },
+    {
+     "id": "s1q6",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s1q7",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s1q8",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s1q9",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 3
+    },
+    {
+     "id": "s1q10",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 3
+    },
+    {
+     "id": "s1q11",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 4
+    },
+    {
+     "id": "s1q12",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4.5,
+     "z": 1.89,
+     "level": 6
+    },
+    {
+     "id": "s2q1",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s2q2",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 5
+    },
+    {
+     "id": "s2q3",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 5
+    },
+    {
+     "id": "s2q4",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 4
+    },
+    {
+     "id": "s2q5",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5
+    },
+    {
+     "id": "s2q6",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4
+    },
+    {
+     "id": "s2q7",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 5
+    },
+    {
+     "id": "s2q8",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q9",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 4
+    },
+    {
+     "id": "s2q10",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 3
+    },
+    {
+     "id": "s2q11",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 5
+    },
+    {
+     "id": "s2q12",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s2q13",
+     "authored": 4,
+     "sonnet": 4,
+     "haiku": 4.5,
+     "z": 1.89,
+     "level": 6
+    },
+    {
+     "id": "s2q14",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q15",
+     "authored": 4,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    }
+   ],
+   "quant-007": [
+    {
+     "id": "s1q1",
+     "authored": 3,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 3
+    },
+    {
+     "id": "s1q2",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 4
+    },
+    {
+     "id": "s1q3",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 4
+    },
+    {
+     "id": "s1q4",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 5
+    },
+    {
+     "id": "s1q5",
+     "authored": 3,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 3
+    },
+    {
+     "id": "s1q6",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 4
+    },
+    {
+     "id": "s1q7",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 5,
+     "z": 2.4,
+     "level": 7
+    },
+    {
+     "id": "s1q8",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4
+    },
+    {
+     "id": "s1q9",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 3
+    },
+    {
+     "id": "s1q10",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 3
+    },
+    {
+     "id": "s1q11",
+     "authored": 4,
+     "sonnet": 4,
+     "haiku": 3.5,
+     "z": 0.87,
+     "level": 4
+    },
+    {
+     "id": "s1q12",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q1",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 4
+    },
+    {
+     "id": "s2q2",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q3",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 5
+    },
+    {
+     "id": "s2q4",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 4
+    },
+    {
+     "id": "s2q5",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5
+    },
+    {
+     "id": "s2q6",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 4
+    },
+    {
+     "id": "s2q7",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5
+    },
+    {
+     "id": "s2q8",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q9",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4
+    },
+    {
+     "id": "s2q10",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 3
+    },
+    {
+     "id": "s2q11",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 5,
+     "z": 2.4,
+     "level": 7
+    },
+    {
+     "id": "s2q12",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 4
+    },
+    {
+     "id": "s2q13",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 2.5,
+     "z": -0.93,
+     "level": 4
+    },
+    {
+     "id": "s2q14",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4.5,
+     "z": 1.89,
+     "level": 6
+    },
+    {
+     "id": "s2q15",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 4
+    }
+   ],
+   "quant-008": [
+    {
+     "id": "s1q1",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 3
+    },
+    {
+     "id": "s1q2",
+     "authored": 4,
+     "sonnet": 4,
+     "haiku": 3.5,
+     "z": 0.87,
+     "level": 4
+    },
+    {
+     "id": "s1q3",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s1q4",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 5
+    },
+    {
+     "id": "s1q5",
+     "authored": 3,
+     "sonnet": 3,
+     "haiku": 2.5,
+     "z": -0.93,
+     "level": 3
+    },
+    {
+     "id": "s1q6",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s1q7",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s1q8",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s1q9",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 3
+    },
+    {
+     "id": "s1q10",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 3
+    },
+    {
+     "id": "s1q11",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4
+    },
+    {
+     "id": "s1q12",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q1",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s2q2",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 3,
+     "z": 0.36,
+     "level": 5
+    },
+    {
+     "id": "s2q3",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 3.5,
+     "z": 0.87,
+     "level": 5
+    },
+    {
+     "id": "s2q4",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 4
+    },
+    {
+     "id": "s2q5",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q6",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 4
+    },
+    {
+     "id": "s2q7",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5
+    },
+    {
+     "id": "s2q8",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 5
+    },
+    {
+     "id": "s2q9",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 4
+    },
+    {
+     "id": "s2q10",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 3
+    },
+    {
+     "id": "s2q11",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4.5,
+     "z": 1.89,
+     "level": 6
+    },
+    {
+     "id": "s2q12",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4
+    },
+    {
+     "id": "s2q13",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s2q14",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4.5,
+     "z": 1.89,
+     "level": 6
+    },
+    {
+     "id": "s2q15",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 4
+    }
+   ],
+   "quant-009": [
+    {
+     "id": "s1q1",
+     "authored": 3,
+     "sonnet": 3,
+     "haiku": 2,
+     "z": -1.44,
+     "level": 3
+    },
+    {
+     "id": "s1q2",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 2,
+     "z": -1.44,
+     "level": 4
+    },
+    {
+     "id": "s1q3",
+     "authored": 4,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s1q4",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5
+    },
+    {
+     "id": "s1q5",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 3
+    },
+    {
+     "id": "s1q6",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4
+    },
+    {
+     "id": "s1q7",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4.5,
+     "z": 1.89,
+     "level": 6
+    },
+    {
+     "id": "s1q8",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s1q9",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 3
+    },
+    {
+     "id": "s1q10",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 3
+    },
+    {
+     "id": "s1q11",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s1q12",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 5
+    },
+    {
+     "id": "s2q1",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 4
+    },
+    {
+     "id": "s2q2",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 3,
+     "z": 0.36,
+     "level": 5
+    },
+    {
+     "id": "s2q3",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q4",
+     "authored": 4,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q5",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5
+    },
+    {
+     "id": "s2q6",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4
+    },
+    {
+     "id": "s2q7",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 5
+    },
+    {
+     "id": "s2q8",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q9",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 4
+    },
+    {
+     "id": "s2q10",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 3
+    },
+    {
+     "id": "s2q11",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q12",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 4
+    },
+    {
+     "id": "s2q13",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 4
+    },
+    {
+     "id": "s2q14",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q15",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    }
+   ],
+   "quant-010": [
+    {
+     "id": "s1q1",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 3
+    },
+    {
+     "id": "s1q2",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s1q3",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 4
+    },
+    {
+     "id": "s1q4",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s1q5",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2.5,
+     "z": -1.71,
+     "level": 3
+    },
+    {
+     "id": "s1q6",
+     "authored": 4,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s1q7",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 5
+    },
+    {
+     "id": "s1q8",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4
+    },
+    {
+     "id": "s1q9",
+     "authored": 3,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 3
+    },
+    {
+     "id": "s1q10",
+     "authored": 3,
+     "sonnet": 3,
+     "haiku": 2.5,
+     "z": -0.93,
+     "level": 3
+    },
+    {
+     "id": "s1q11",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 4
+    },
+    {
+     "id": "s1q12",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4.5,
+     "z": 1.89,
+     "level": 6
+    },
+    {
+     "id": "s2q1",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 4
+    },
+    {
+     "id": "s2q2",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 5
+    },
+    {
+     "id": "s2q3",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 5
+    },
+    {
+     "id": "s2q4",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 4
+    },
+    {
+     "id": "s2q5",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5
+    },
+    {
+     "id": "s2q6",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 3,
+     "z": -1.2,
+     "level": 4
+    },
+    {
+     "id": "s2q7",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 5,
+     "z": 2.4,
+     "level": 7
+    },
+    {
+     "id": "s2q8",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 5
+    },
+    {
+     "id": "s2q9",
+     "authored": 4,
+     "sonnet": 2,
+     "haiku": 2,
+     "z": -2.22,
+     "level": 4
+    },
+    {
+     "id": "s2q10",
+     "authored": 3,
+     "sonnet": 3,
+     "haiku": 3,
+     "z": -0.42,
+     "level": 3
+    },
+    {
+     "id": "s2q11",
+     "authored": 5,
+     "sonnet": 4,
+     "haiku": 4,
+     "z": 1.38,
+     "level": 6
+    },
+    {
+     "id": "s2q12",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 4
+    },
+    {
+     "id": "s2q13",
+     "authored": 4,
+     "sonnet": 3,
+     "haiku": 4,
+     "z": 0.6,
+     "level": 4
+    },
+    {
+     "id": "s2q14",
+     "authored": 5,
+     "sonnet": 3,
+     "haiku": 3.5,
+     "z": 0.09,
+     "level": 5
+    },
+    {
+     "id": "s2q15",
+     "authored": 4,
+     "sonnet": 4,
+     "haiku": 5,
+     "z": 2.4,
+     "level": 7
+    }
+   ]
+  }
+ },
+ "verbal": {
+  "corrWithPplus": {
+   "sonnet": -0.22,
+   "haiku": -0.04
+  },
+  "meanRating": {
+   "sonnet": {
+    "officialL2": 2.5,
+    "officialL3": 2.78,
+    "officialL4": 2.72,
+    "officialL5": 3.05,
+    "powerprepS1": 2.48,
+    "oursL3": 2.31,
+    "oursL4": 2.7,
+    "oursL5": 3.13
+   }
+  },
+  "levels": "no levels above 5: the rulers do not separate verbal difficulty finely enough"
+ }
+}

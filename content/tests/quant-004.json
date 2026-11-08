@@ -395,7 +395,7 @@
       "type": "mc",
       "setId": "di1",
       "figureId": "fig1",
-      "difficulty": 4,
+      "difficulty": 6,
       "prompt": "Suppose the company had also operated a sixth zone, Northgate, in 2024, and that for the 2024 trip counts of all six zones the median equals the mean. How many thousand trips started in Northgate in 2024?",
       "choices": [
         "47.5",
@@ -439,7 +439,7 @@
       "type": "numeric",
       "setId": "di1",
       "figureId": "fig1",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "In 2024, 15 percent of the trips that started in Riverside lasted longer than 30 minutes. Of all 2024 trips that started in Uptown or Riverside and lasted longer than 30 minutes, 60 percent started in Uptown. If one 2024 trip is chosen at random from the trips that started in Uptown or Riverside, what is the probability that it lasted longer than 30 minutes? Give your answer as a fraction.",
       "numeric": {
         "kind": "fraction"
@@ -748,7 +748,7 @@
       "id": "s2q9",
       "section": 2,
       "type": "mc",
-      "difficulty": 4,
+      "difficulty": 6,
       "prompt": "For how many integers $k$ does the system of equations $x+2y=7$ and $3x+ky=5$ have a solution $(x, y)$ in which both $x$ and $y$ are integers?",
       "choices": [
         "5",
@@ -820,7 +820,7 @@
       "id": "s2q11",
       "section": 2,
       "type": "mc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "Each of the 120 volunteers at a festival is trained for at least one of three tasks: 90 are trained for first aid, 85 for ticketing and 80 for stage setup. What is the greatest possible number of volunteers who are trained for exactly one of the three tasks?",
       "choices": [
         "15",
@@ -904,7 +904,7 @@
       "id": "s2q13",
       "section": 2,
       "type": "mc_multi",
-      "difficulty": 4,
+      "difficulty": 6,
       "prompt": "Which of the following expressions are defined, and equal to $\\dfrac{x^2-9}{x^2+3x}$, at every value of $x$ for which $\\dfrac{x^2-9}{x^2+3x}$ is defined? Indicate all such expressions.",
       "choices": [
         "$1-\\dfrac{3}{x}$",

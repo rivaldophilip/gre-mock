@@ -21,8 +21,8 @@
     },
     {
       "id": "fig2",
-      "caption": "Triangle PQR (not drawn to scale)",
-      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 200' width='360' height='200' font-family='serif' font-size='16' fill='currentColor'><polygon points='80,170 40,40 330,170' fill='none' stroke='currentColor' stroke-width='2'/><text x='72' y='192'>P</text><text x='26' y='38'>Q</text><text x='338' y='178'>R</text><text x='40' y='112'>5</text><text x='200' y='190'>8</text><text x='88' y='158'>x°</text></svg>"
+      "caption": "Triangle XYZ (not drawn to scale)",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 200' width='360' height='200' font-family='serif' font-size='16' fill='currentColor'><polygon points='80,170 40,40 330,170' fill='none' stroke='currentColor' stroke-width='2'/><text x='72' y='192'>X</text><text x='26' y='38'>Y</text><text x='338' y='178'>Z</text><text x='40' y='112'>5</text><text x='200' y='190'>8</text><text x='88' y='158'>x°</text></svg>"
     }
   ],
   "questions": [
@@ -109,9 +109,9 @@
       "type": "qc",
       "difficulty": 4,
       "figureId": "fig2",
-      "prompt": "In triangle $PQR$, $PQ = 5$, $PR = 8$, and angle $QPR$ measures $x^\\circ$, where $x < 60$. (Note: the figure is not drawn to scale.)",
+      "prompt": "In triangle $XYZ$, $XY = 5$, $XZ = 8$, and angle $YXZ$ measures $x^\\circ$, where $x < 60$. (Note: the figure is not drawn to scale.)",
       "qc": {
-        "a": "The length of $QR$",
+        "a": "The length of $YZ$",
         "b": "$7$"
       },
       "key": {
@@ -120,14 +120,14 @@
         ]
       },
       "explanation": {
-        "key": "With the two sides fixed, $QR$ grows as angle $x$ grows. At exactly $60^\\circ$, $QR = 7$, so for $x < 60$, $QR < 7$.",
+        "key": "With the two sides fixed, $YZ$ grows as angle $x$ grows. At exactly $60^\\circ$, $YZ = 7$, so for $x < 60$, $YZ < 7$.",
         "steps": [
-          "1. Fix $PQ = 5$ and $PR = 8$; opening the angle at $P$ pushes $Q$ away from $R$, so $QR$ increases with $x$.",
-          "2. At $x = 60$, drop the perpendicular from $Q$ to $PR$: the foot is $5\\cos 60^\\circ = 2.5$ from $P$, and the height is $2.5\\sqrt3$.",
-          "3. Then $QR^2 = (8-2.5)^2 + (2.5\\sqrt3)^2 = 30.25 + 18.75 = 49$, so $QR = 7$.",
-          "4. For $x < 60$, $QR < 7$: B is greater."
+          "1. Fix $XY = 5$ and $XZ = 8$; opening the angle at $X$ pushes $Y$ away from $Z$, so $YZ$ increases with $x$.",
+          "2. At $x = 60$, drop the perpendicular from $Y$ to $XZ$: the foot is $5\\cos 60^\\circ = 2.5$ from $X$, and the height is $2.5\\sqrt3$.",
+          "3. Then $YZ^2 = (8-2.5)^2 + (2.5\\sqrt3)^2 = 30.25 + 18.75 = 49$, so $YZ = 7$.",
+          "4. For $x < 60$, $YZ < 7$: B is greater."
         ],
-        "trap": "The figure shows an obtuse angle at $P$ and a long side $QR$; reading it to scale suggests A."
+        "trap": "The figure shows an obtuse angle at $X$ and a long side $YZ$; reading it to scale suggests A."
       },
       "tags": [
         {
@@ -146,7 +146,7 @@
       "id": "s1q4",
       "section": 1,
       "type": "qc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "Two sections of a statistics course each had 10 students take the same exam. In Section 1 the scores had a mean of 70 and a standard deviation of 5; in Section 2 they had a mean of 80 and a standard deviation of 5.",
       "qc": {
         "a": "The standard deviation of all 20 scores",
@@ -216,7 +216,7 @@
       "id": "s1q6",
       "section": 1,
       "type": "mc",
-      "difficulty": 4,
+      "difficulty": 6,
       "prompt": "Two swimmers start at the same moment from opposite ends of a 50-meter pool and swim lengths back and forth at constant speeds of 1.25 meters per second and 1 meter per second, turning instantly at each wall. The second time the two swimmers are at the same point of the pool, how many meters are they from the faster swimmer's starting wall?",
       "choices": [
         "$\\dfrac{200}{9}$",
@@ -453,7 +453,7 @@
       "type": "mc",
       "setId": "di1",
       "figureId": "fig1",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "One runner is to be chosen at random from among the runners in all three groups whose finishing times were less than 60 minutes. What is the greatest possible probability that the runner chosen is in the 30-to-49 group and had a finishing time of less than 55 minutes?",
       "choices": [
         "$\\dfrac{3}{13}$",
@@ -528,7 +528,7 @@
       "section": 2,
       "type": "qc",
       "difficulty": 5,
-      "prompt": "In triangle $JKL$, $JK = 5$, $KL = 8$, and the area of the triangle is 12.",
+      "prompt": "Two sides of triangle $JKL$ have lengths $JK = 5$ and $KL = 8$, and its area is 12 square units.",
       "qc": {
         "a": "$JL$",
         "b": "$8$"
@@ -711,7 +711,7 @@
       "id": "s2q7",
       "section": 2,
       "type": "mc",
-      "difficulty": 5,
+      "difficulty": 7,
       "prompt": "Each of the 120 people at a one-day conference attended at least one of three sessions: 70 attended the morning keynote, 85 attended the afternoon panel, and 40 attended the evening dinner. What is the greatest possible number of people who attended all three sessions?",
       "choices": [
         "35",
@@ -867,7 +867,7 @@
       "id": "s2q11",
       "section": 2,
       "type": "mc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "A bag holds six letter tiles: three marked K, two marked L and one marked M. Tiles marked with the same letter are indistinguishable. How many different 4-letter sequences can be formed by drawing 4 of the tiles and placing them in a row?",
       "choices": [
         "24",
@@ -1034,7 +1034,7 @@
       "id": "s2q15",
       "section": 2,
       "type": "numeric",
-      "difficulty": 4,
+      "difficulty": 7,
       "prompt": "A rectangular sheet of plywood is cut into four smaller rectangles by one straight cut parallel to its length and one straight cut parallel to its width. Three of the pieces have areas 12, 18 and 30 square feet, and the 12-square-foot piece shares a full side with each of the other two. If every piece has side lengths that are whole numbers of feet, what is the least possible perimeter, in feet, of the original sheet?",
       "numeric": {
         "kind": "single"

@@ -37,9 +37,11 @@ const LEVEL_WHY: Record<number, string> = {
   3: "Level 3: medium. About 45–60% of real GRE test-takers get an item like this right, close to the average official item (about 50%).",
   4: "Level 4: hard. Only about 30–45% of real GRE test-takers get an item like this right: the harder items of a hard second section.",
   5: "Level 5: very hard. Under 30% of real GRE test-takers get an item like this right: the toughest items ETS uses.",
+  6: "Level 6: harder than a typical GRE hard item. It rates like the hardest tenth of official hard items (an estimated 10–17% of test-takers correct), about 1.3–2 times fewer correct answers than a median level-5 item.",
+  7: "Level 7: beyond the real GRE. It rates above every official item we measured (an estimated under 10% correct, extrapolated), more than twice as hard as a median level-5 item.",
 };
 const levelWhy = (n: number) =>
-  `${LEVEL_WHY[n]}\nThe level is set when the test is written and checked against official items of known difficulty; it is an estimate, not an ETS rating.`;
+  `${LEVEL_WHY[n]}\nThe level is set when the test is written and checked against official items of known difficulty (levels 6–7: docs/CALIBRATION.md); it is an estimate, not an ETS rating.`;
 
 function choiceWords(q: Question): string[] {
   if (q.type === "tc") return q.blanks?.flat() ?? [];
@@ -47,23 +49,46 @@ function choiceWords(q: Question): string[] {
   return [];
 }
 
-function yourAnswer(q: Question, a: Answer | undefined): string {
-  if (!a) return "—";
-  if (q.type === "numeric") return a.frac ? `${a.frac[0]}/${a.frac[1]}` : (a.text ?? "—");
-  if (!a.sel?.length) return "—";
-  if (q.type === "tc") return a.sel.map((v, i) => (v >= 0 ? q.blanks?.[i]?.[v] : "—")).join(" / ");
-  if (q.type === "rc_select") return `sentence ${a.sel[0] + 1}`;
-  if (q.type === "qc") return a.sel.map((i) => L[i]).join(", ");
-  return a.sel.map((i) => `${L[i]}. ${q.choices?.[i] ?? ""}`).join("; ");
+/** One blank or pick of an answer; `ok` is set where a multi-part answer is right in some parts and wrong in others. */
+type Part = { text: string; ok?: boolean };
+type Parts = { parts: Part[]; sep: string };
+
+function yourAnswer(q: Question, a: Answer | undefined): Parts {
+  const none = { parts: [{ text: "—" }], sep: "" };
+  if (!a) return none;
+  if (q.type === "numeric") return { parts: [{ text: a.frac ? `${a.frac[0]}/${a.frac[1]}` : (a.text ?? "—") }], sep: "" };
+  if (!a.sel?.length) return none;
+  const key = "sel" in q.key ? q.key.sel : [];
+  if (q.type === "tc") return { parts: a.sel.map((v, i) => ({ text: v >= 0 ? (q.blanks?.[i]?.[v] ?? "—") : "—", ok: v === key[i] })), sep: " / " };
+  if (q.type === "rc_select") return { parts: [{ text: `sentence ${a.sel[0] + 1}` }], sep: "" };
+  if (q.type === "qc") return { parts: a.sel.map((i) => ({ text: L[i] })), sep: ", " };
+  const multi = q.type === "se" || q.type === "rc_multi" || q.type === "mc_multi";
+  return { parts: a.sel.map((i) => ({ text: `${L[i]}. ${q.choices?.[i] ?? ""}`, ok: multi ? key.includes(i) : undefined })), sep: "; " };
 }
 
-function keyText(q: Question): string {
+function keyText(q: Question): Parts {
   const k = q.key;
-  if ("value" in k) return k.value;
-  if (q.type === "tc") return k.sel.map((v, i) => q.blanks?.[i]?.[v]).join(" / ");
-  if (q.type === "rc_select") return `sentence ${k.sel[0] + 1}`;
-  if (q.type === "qc") return k.sel.map((i) => L[i]).join(", ");
-  return k.sel.map((i) => `${L[i]}. ${q.choices?.[i] ?? ""}`).join("; ");
+  if ("value" in k) return { parts: [{ text: k.value }], sep: "" };
+  if (q.type === "tc") return { parts: k.sel.map((v, i) => ({ text: q.blanks?.[i]?.[v] ?? "" })), sep: " / " };
+  if (q.type === "rc_select") return { parts: [{ text: `sentence ${k.sel[0] + 1}` }], sep: "" };
+  if (q.type === "qc") return { parts: k.sel.map((i) => ({ text: L[i] })), sep: ", " };
+  return { parts: k.sel.map((i) => ({ text: `${L[i]}. ${q.choices?.[i] ?? ""}` })), sep: "; " };
+}
+
+/** Answer text with its $math$ rendered; on a wrong multi-part answer each right part is green and each wrong one red. */
+function AnswerText({ parts, sep }: Parts) {
+  return (
+    <>
+      {parts.map((p, i) => (
+        <span key={i}>
+          {i > 0 && sep}
+          <span className={p.ok === undefined ? undefined : p.ok ? "text-ok" : "text-bad"}>
+            <RichInline text={p.text} />
+          </span>
+        </span>
+      ))}
+    </>
+  );
 }
 
 export default async function Review({ params }: { params: Promise<{ id: string; attemptId: string }> }) {
@@ -206,11 +231,11 @@ export default async function Review({ params }: { params: Promise<{ id: string;
               <dl className="grid gap-2 text-sm sm:grid-cols-2">
                 <div className={`rounded-xl px-3.5 py-2.5 ${ok ? "bg-ok-soft" : "bg-bad-soft"}`}>
                   <dt className="text-xs font-semibold uppercase tracking-[0.08em] text-muted">Your answer</dt>
-                  <dd className={`font-medium ${ok ? "text-ok" : "text-bad"}`}>{yourAnswer(q, ans)}</dd>
+                  <dd className={`font-medium ${ok ? "text-ok" : "text-bad"}`}><AnswerText {...yourAnswer(q, ans)} /></dd>
                 </div>
                 <div className="rounded-xl bg-ok-soft px-3.5 py-2.5">
                   <dt className="text-xs font-semibold uppercase tracking-[0.08em] text-muted">Key</dt>
-                  <dd className="font-medium text-ok">{keyText(q)}</dd>
+                  <dd className="font-medium text-ok"><AnswerText {...keyText(q)} /></dd>
                 </div>
               </dl>
               <div className="space-y-3 rounded-xl bg-surface-2 p-3.5 leading-relaxed sm:p-4">

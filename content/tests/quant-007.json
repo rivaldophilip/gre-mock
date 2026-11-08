@@ -276,7 +276,7 @@
       "id": "s1q7",
       "section": 1,
       "type": "mc",
-      "difficulty": 5,
+      "difficulty": 7,
       "prompt": "Four adults and three children, including a girl named Mia and her father, are to stand in a row of 7 places for a photograph. No two children may stand next to each other, and Mia must stand next to her father. How many different arrangements of the 7 people are possible?",
       "choices": [
         "288",
@@ -466,7 +466,7 @@
       "type": "mc",
       "setId": "di1",
       "figureId": "fig1",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "Which of the following could be the median number of hours logged by the 200 volunteers at the two food banks combined?",
       "choices": [
         "12",
@@ -542,7 +542,7 @@
       "id": "s2q2",
       "section": 2,
       "type": "qc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "In triangle $PQR$, $PQ = 7$ and $QR = 4$. One of the angles of triangle $PQR$ measures more than $90^\\circ$.",
       "qc": {
         "a": "$PR$",
@@ -758,7 +758,7 @@
       "id": "s2q8",
       "section": 2,
       "type": "mc",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "Each of four hikers independently chooses one of 4 trails at random, each trail being equally likely. What is the probability that exactly one of the 4 trails is chosen by none of the hikers?",
       "choices": [
         "$\\dfrac{3}{32}$",
@@ -868,7 +868,7 @@
       "id": "s2q11",
       "section": 2,
       "type": "mc",
-      "difficulty": 5,
+      "difficulty": 7,
       "prompt": "A coach will choose 4 of 7 runners, including Xia and Yusuf, and assign them to the first, second, third and fourth legs of a relay, one runner per leg. Yusuf can be chosen only if Xia is also chosen, and Xia cannot run the first leg. How many different assignments are possible?",
       "choices": [
         "360",
@@ -985,7 +985,7 @@
       "id": "s2q14",
       "section": 2,
       "type": "mc_multi",
-      "difficulty": 5,
+      "difficulty": 6,
       "prompt": "Seven volunteers sorted a total of 50 donated coats. Each volunteer sorted at least one coat, and no two volunteers sorted the same number of coats. Which of the following could be the median of the seven numbers of coats sorted? Select all such values.",
       "choices": [
         "4",

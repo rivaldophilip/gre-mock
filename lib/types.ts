@@ -52,7 +52,8 @@ export const QuestionSchema = z.object({
   id: z.string(),
   section: z.union([z.literal(1), z.literal(2)]),
   type: z.enum(QTYPES),
-  difficulty: z.number().int().min(1).max(5),
+  /** 1-5 follow official P+ bands; 6-7 are set only by calibration (docs/CALIBRATION.md): harder than official hard items */
+  difficulty: z.number().int().min(1).max(7),
   /** "arg" marks a short argument item (type rc over a one-paragraph passage) */
   subtype: z.literal("arg").optional(),
   /** stem. Markdown-ish text; $...$ is KaTeX. For tc, use ___ (blank) markers, one per blank. */
