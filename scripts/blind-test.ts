@@ -141,12 +141,14 @@ export function checkAnswers(test: Test, answers: Map<string, SolverLine>, offse
     const mine: string[] = [];
     if (matches(q, readAnswer(q, a.answer))) right++;
     else mine.push(`${q.id}  WRONG: solver "${a.answer}"${a.confidence ? ` (${a.confidence})` : ""}, key "${keyText(q)}"; rewrite so only the key is defensible`);
-    if (a.difficulty !== null && a.difficulty + offset < q.difficulty - 1) {
+    // levels 6-7 come from calibration against official items (docs/CALIBRATION.md), so the authoring bar stops at 5
+    const target = Math.min(5, q.difficulty);
+    if (a.difficulty !== null && a.difficulty + offset < target - 1) {
       const est = a.difficulty + offset;
       const honest = Math.max(1, Math.min(5, Math.round(est)));
       const trial = levels.map((x) => (x.id === q.id ? { ...x, difficulty: honest } : x));
       const broken = difficultyRules(trial).filter((r) => !r.ok);
-      const head = `${q.id}  too easy: rated ${a.difficulty} (+${offset} = ${est}) vs target ${q.difficulty}; rewrite it harder`;
+      const head = `${q.id}  too easy: rated ${a.difficulty} (+${offset} = ${est}) vs target ${target}; rewrite it harder`;
       if (broken.length) mine.push(`${head} (retagging it ${honest} would break ${broken.map((r) => r.rule).join(", ")})`);
       else {
         mine.push(`${head}, or set difficulty ${q.difficulty}→${honest} (sections still pass${retags ? " with the retags above" : ""})`);

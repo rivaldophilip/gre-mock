@@ -112,6 +112,7 @@ export function validateTest(raw: unknown, id: string): Validation {
         if (![1, 2, 3].includes(b.length)) err(`${where}: tc needs 1-3 blanks`);
         b.forEach((c, i) => c.length !== (b.length === 1 ? 5 : 3) && err(`${where}: blank ${i + 1} has ${c.length} choices, expected ${b.length === 1 ? 5 : 3}`));
         if ((q.prompt.match(/___/g) ?? []).length !== b.length) err(`${where}: prompt has ${(q.prompt.match(/___/g) ?? []).length} blank markers, ${b.length} blanks`);
+        if (b.length === 1 && /\(i\)\s*___/.test(q.prompt)) err(`${where}: a single blank is a plain ___, not "(i) ___"`);
         if (sel.length !== b.length || sel.some((k, i) => !(k >= 0 && k < (b[i]?.length ?? 0)))) err(`${where}: bad tc key`);
         break;
       }
