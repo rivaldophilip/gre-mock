@@ -51,3 +51,56 @@ The levels only ever go up: an item is never lowered by this calibration. The fi
 4. Re-register the tests.
 
 The authoring "too easy" check caps targets at 5, so L6 and L7 come only from this calibration.
+
+## Level mix per mock vs official material (2026-11-08)
+
+The ruler score is z: 0 is a typical official hard item (L5), negative is easier. The profile columns sort items by z into official-equivalent bands:
+- ≤L2-like: z < −1.52
+- L3–4-like: −1.52 to −0.55 (the ruler cannot separate official L3 from L4)
+- L5-like: −0.55 to 1
+- L6: 1 to 2
+- L7: 2 and above
+
+**Reference sets on the ruler**
+
+| set | mean z | ≤L2 / L3–4 / L5 / L6 / L7 |
+|---|---|---|
+| quant official L2, L3, L4, L5 | −1.80, −1.24, −1.10, 0.00 | L5 set: 0 / 4 / 5 / 1 / 0 |
+| quant PowerPrep T1 section 1 (20) | −1.46 | 8 / 6 / 6 / 0 / 0 |
+| verbal official L2, L3, L4, L5 | −0.35, −0.67, −0.44, 0.00 | L5 set: 1 / 1 / 5 / 3 / 0 |
+| verbal PowerPrep T1 section 1 (20) | −0.75 | 5 / 9 / 5 / 1 / 0 |
+
+**Real P+ mix of the official corpus (share of items per level)**
+
+| source | L2 | L3 | L4 | L5 |
+|---|---|---|---|---|
+| quant, Official Guide | 37% | 26% | 24% | 13% |
+| quant, Big Book | 55% | 23% | 15% | 7% |
+| verbal, Official Guide | 39% | 29% | 20% | 12% |
+| verbal, Big Book | 56% | 34% | 8% | 2% |
+
+**Our mocks** (27 items each: L3 / L4 / L5 / L6 / L7, then the ruler)
+
+| mock | levels | mean z | ruler profile ≤L2 / L3–4 / L5 / L6 / L7 |
+|---|---|---|---|
+| quant-001 | 4 / 13 / 7 / 3 / 0 | −0.36 | 5 / 4 / 15 / 3 / 0 |
+| quant-002 | 5 / 12 / 6 / 4 / 0 | −0.63 | 9 / 2 / 12 / 4 / 0 |
+| quant-003 | 5 / 11 / 7 / 4 / 0 | −0.33 | 5 / 6 / 12 / 4 / 0 |
+| quant-004 | 5 / 9 / 8 / 5 / 0 | −0.16 | 5 / 6 / 11 / 5 / 0 |
+| quant-005 | 5 / 12 / 8 / 2 / 0 | −0.43 | 6 / 2 / 17 / 2 / 0 |
+| quant-006 | 5 / 10 / 6 / 6 / 0 | +0.09 | 1 / 5 / 15 / 6 / 0 |
+| quant-007 | 5 / 12 / 4 / 4 / 2 | 0.00 | 5 / 3 / 13 / 4 / 2 |
+| quant-008 | 5 / 12 / 5 / 5 / 0 | −0.14 | 4 / 4 / 14 / 5 / 0 |
+| quant-009 | 5 / 10 / 5 / 7 / 0 | −0.09 | 3 / 6 / 11 / 7 / 0 |
+| quant-010 | 5 / 10 / 6 / 4 / 2 | −0.03 | 4 / 4 / 13 / 4 / 2 |
+| verbal-001 | 5 / 12 / 10 / – / – | −0.36 | 2 / 8 / 16 / 1 / 0 |
+| verbal-002 | 5 / 13 / 9 / – / – | −0.11 | 2 / 5 / 18 / 2 / 0 |
+| verbal-003 | 5 / 13 / 9 / – / – | −0.24 | 2 / 4 / 19 / 2 / 0 |
+| verbal-004 | 5 / 12 / 10 / – / – | −0.12 | 4 / 2 / 18 / 3 / 0 |
+| verbal-005 | 5 / 12 / 10 / – / – | −0.36 | 4 / 6 / 17 / 0 / 0 |
+| verbal-006 | 5 / 12 / 10 / – / – | −0.54 | 6 / 5 / 16 / 0 / 0 |
+| verbal-007 | 5 / 13 / 9 / – / – | −0.47 | 5 / 7 / 15 / 0 / 0 |
+| verbal-008 | 5 / 12 / 10 / – / – | −0.27 | 3 / 5 / 17 / 2 / 0 |
+| verbal-009 | 5 / 12 / 10 / – / – | −0.02 | 1 / 5 / 17 / 4 / 0 |
+
+Verbal profiles above L5 are shown for information only. The verbal ruler puts some official L2 and L4 items at z ≥ 1 too, so no verbal item is retagged to 6 or 7.
