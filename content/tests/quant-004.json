@@ -1,0 +1,1020 @@
+{
+  "id": "quant-004",
+  "measure": "quant",
+  "title": "Quant Hard Mock 4",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 21
+    },
+    {
+      "n": 2,
+      "minutes": 26
+    }
+  ],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Number of bike-share trips (in thousands) that started in each of five city zones, 2023 and 2024",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 520 350\" width=\"520\" height=\"350\" font-family=\"sans-serif\" font-size=\"12\" fill=\"currentColor\"><line x1=\"50\" y1=\"300\" x2=\"505\" y2=\"300\" stroke=\"currentColor\" stroke-opacity=\"0.6\"/><text x=\"42\" y=\"304\" text-anchor=\"end\">0</text><line x1=\"50\" y1=\"260\" x2=\"505\" y2=\"260\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"42\" y=\"264\" text-anchor=\"end\">10</text><line x1=\"50\" y1=\"220\" x2=\"505\" y2=\"220\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"42\" y=\"224\" text-anchor=\"end\">20</text><line x1=\"50\" y1=\"180\" x2=\"505\" y2=\"180\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"42\" y=\"184\" text-anchor=\"end\">30</text><line x1=\"50\" y1=\"140\" x2=\"505\" y2=\"140\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"42\" y=\"144\" text-anchor=\"end\">40</text><line x1=\"50\" y1=\"100\" x2=\"505\" y2=\"100\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"42\" y=\"104\" text-anchor=\"end\">50</text><line x1=\"50\" y1=\"60\" x2=\"505\" y2=\"60\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"42\" y=\"64\" text-anchor=\"end\">60</text><line x1=\"50\" y1=\"20\" x2=\"505\" y2=\"20\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"42\" y=\"24\" text-anchor=\"end\">70</text><text x=\"14\" y=\"160\" text-anchor=\"middle\" transform=\"rotate(-90 14 160)\">Trips (thousands)</text><rect x=\"64\" y=\"140\" width=\"28\" height=\"160\" fill=\"none\" fill-opacity=\"0\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"78\" y=\"135\" text-anchor=\"middle\" font-size=\"11\">40</text><rect x=\"96\" y=\"92\" width=\"28\" height=\"208\" fill=\"currentColor\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"110\" y=\"87\" text-anchor=\"middle\" font-size=\"11\">52</text><text x=\"94\" y=\"318\" text-anchor=\"middle\">Harbor</text><rect x=\"154\" y=\"44\" width=\"28\" height=\"256\" fill=\"none\" fill-opacity=\"0\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"168\" y=\"39\" text-anchor=\"middle\" font-size=\"11\">64</text><rect x=\"186\" y=\"84\" width=\"28\" height=\"216\" fill=\"currentColor\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"200\" y=\"79\" text-anchor=\"middle\" font-size=\"11\">54</text><text x=\"184\" y=\"318\" text-anchor=\"middle\">Market</text><rect x=\"244\" y=\"156\" width=\"28\" height=\"144\" fill=\"none\" fill-opacity=\"0\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"258\" y=\"151\" text-anchor=\"middle\" font-size=\"11\">36</text><rect x=\"276\" y=\"76\" width=\"28\" height=\"224\" fill=\"currentColor\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"290\" y=\"71\" text-anchor=\"middle\" font-size=\"11\">56</text><text x=\"274\" y=\"318\" text-anchor=\"middle\">Campus</text><rect x=\"334\" y=\"188\" width=\"28\" height=\"112\" fill=\"none\" fill-opacity=\"0\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"348\" y=\"183\" text-anchor=\"middle\" font-size=\"11\">28</text><rect x=\"366\" y=\"160\" width=\"28\" height=\"140\" fill=\"currentColor\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"380\" y=\"155\" text-anchor=\"middle\" font-size=\"11\">35</text><text x=\"364\" y=\"318\" text-anchor=\"middle\">Uptown</text><rect x=\"424\" y=\"100\" width=\"28\" height=\"200\" fill=\"none\" fill-opacity=\"0\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"438\" y=\"95\" text-anchor=\"middle\" font-size=\"11\">50</text><rect x=\"456\" y=\"60\" width=\"28\" height=\"240\" fill=\"currentColor\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"470\" y=\"55\" text-anchor=\"middle\" font-size=\"11\">60</text><text x=\"454\" y=\"318\" text-anchor=\"middle\">Riverside</text><rect x=\"170\" y=\"332\" width=\"14\" height=\"12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"190\" y=\"342\">2023</text><rect x=\"260\" y=\"332\" width=\"14\" height=\"12\" fill=\"currentColor\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"280\" y=\"342\">2024</text></svg>"
+    },
+    {
+      "id": "fig2",
+      "caption": "Note: Figure not drawn to scale.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 200\" width=\"360\" height=\"200\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\"><polygon points=\"30,170 330,170 230,30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"180\" y1=\"170\" x2=\"230\" y2=\"30\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"232\" y=\"22\" text-anchor=\"middle\" font-style=\"italic\">A</text><text x=\"18\" y=\"185\" font-style=\"italic\">B</text><text x=\"335\" y=\"185\" font-style=\"italic\">C</text><text x=\"176\" y=\"190\" font-style=\"italic\">D</text><text x=\"118\" y=\"92\">5</text><text x=\"196\" y=\"105\">4</text><text x=\"100\" y=\"188\">3</text><text x=\"250\" y=\"188\">3</text></svg>"
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "$a$ and $b$ are numbers such that $ab > 0$ and $a > b$.",
+      "qc": {
+        "a": "$\\dfrac{1}{a}$",
+        "b": "$\\dfrac{1}{b}$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$ab>0$ means $a$ and $b$ have the same sign, and for two numbers of the same sign the larger one has the smaller reciprocal.",
+        "steps": [
+          "$\\dfrac1b-\\dfrac1a=\\dfrac{a-b}{ab}$.",
+          "The numerator $a-b$ is positive because $a>b$; the denominator $ab$ is positive by the given condition.",
+          "So $\\dfrac1b-\\dfrac1a>0$: Quantity B is always greater."
+        ],
+        "fast": "Try $a=2,b=1$ ($\\tfrac12<1$) and $a=-1,b=-2$ ($-1<-\\tfrac12$): B wins both times, and the sign condition rules out a mixed pair.",
+        "trap": "Remembering that 'negatives flip reciprocal order' and choosing D; that flip only happens when $a$ and $b$ have opposite signs, which $ab>0$ excludes."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-sense-qc",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "Compare the two quantities.",
+      "qc": {
+        "a": "$\\sqrt{3^{9}+3^{9}+3^{9}}$",
+        "b": "$\\left(\\sqrt{27}\\right)^{10/3}$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Both quantities are $3^5=243$.",
+        "steps": [
+          "$3^9+3^9+3^9=3\\cdot3^9=3^{10}$, so Quantity A $=\\sqrt{3^{10}}=3^5$.",
+          "$\\sqrt{27}=3^{3/2}$, so Quantity B $=\\left(3^{3/2}\\right)^{10/3}=3^{5}$.",
+          "The quantities are equal."
+        ],
+        "fast": "Write everything as a power of 3: A is $3^{10/2}$ and B is $3^{(3/2)(10/3)}$.",
+        "trap": "Adding exponents inside the root ($3^{27}$) or treating $3\\cdot3^9$ as $9^9$; either makes A look far larger."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponents-roots",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "figureId": "fig2",
+      "prompt": "In triangle $ABC$ shown, point $D$ lies on side $BC$, $BD=DC=3$, $AB=5$ and $AD=4$.",
+      "qc": {
+        "a": "$AC$",
+        "b": "$5$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The three lengths 3, 4, 5 force a right angle at $D$, which then fixes $AC$, whatever the drawing suggests.",
+        "steps": [
+          "In triangle $ABD$, $BD^2+AD^2=9+16=25=AB^2$, so by the converse of the Pythagorean theorem angle $ADB$ is a right angle.",
+          "Since $B$, $D$, $C$ are collinear, angle $ADC$ is also $90^\\circ$.",
+          "In right triangle $ADC$, $AC=\\sqrt{AD^2+DC^2}=\\sqrt{16+9}=5$. The quantities are equal."
+        ],
+        "fast": "3-4-5 in triangle $ABD$ means $AD\\perp BC$; then $ADC$ is the same 3-4-5 triangle.",
+        "trap": "Seeing 'not drawn to scale' and a slanted $AD$ and choosing D, or trusting the drawing, in which $AC$ looks shorter than $AB$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "figures-not-to-scale",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "$x$ and $y$ are real numbers such that $|x-y| = |x| + |y|$.",
+      "qc": {
+        "a": "$(x+y)^2$",
+        "b": "$(x-y)^2$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The condition means $xy\\le 0$, and the case $xy=0$ is allowed.",
+        "steps": [
+          "Square the condition: $x^2-2xy+y^2=x^2+2|xy|+y^2$, so $-xy=|xy|$, which holds exactly when $xy\\le0$.",
+          "$(x-y)^2-(x+y)^2=-4xy\\ge0$.",
+          "If $x=2,y=-1$: A $=1$, B $=9$, B is greater. If $x=0,y=5$: A $=$ B $=25$. The relationship cannot be determined."
+        ],
+        "fast": "Opposite signs make B bigger; but zero is allowed and then the two are equal.",
+        "trap": "Reading the condition as 'opposite signs' (strictly) and choosing B; $x=0$ or $y=0$ also satisfies it."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "abs-value-inequalities",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "number-sense-qc",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "Seed blend X contains clover seed and grass seed in the ratio $1:3$ by weight, and seed blend Y contains them in the ratio $3:2$ by weight. How many kilograms of blend Y must be mixed with 12 kilograms of blend X so that the mixture contains equal weights of clover seed and grass seed?",
+      "choices": [
+        "6",
+        "12",
+        "18",
+        "24",
+        "30"
+      ],
+      "key": {
+        "sel": [
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Track the clover and the grass separately; the condition is clover = grass in the mixture.",
+        "steps": [
+          "12 kg of X has $\\tfrac14\\cdot12=3$ kg clover and 9 kg grass.",
+          "$y$ kg of Y has $0.6y$ kg clover and $0.4y$ kg grass.",
+          "$3+0.6y=9+0.4y\\Rightarrow0.2y=6\\Rightarrow y=30$."
+        ],
+        "fast": "X has a grass surplus of $9-3=6$ kg; each kilogram of Y offsets $0.6-0.4=0.2$ kg of it, so $6/0.2=30$.",
+        "trap": "Averaging the ratios (equal amounts, 12 kg), or treating $1:3$ as one-third clover (gives 4 kg clover and a different answer)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "ratio-proportion",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A courier rides from a print shop to a law office at an average speed of 40 kilometers per hour and returns along the same route. If the average speed for the whole round trip is 48 kilometers per hour, what is the average speed, in kilometers per hour, on the return trip?",
+      "choices": [
+        "52",
+        "56",
+        "60",
+        "64",
+        "72"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Average speed is total distance over total time, so it is the harmonic mean of the two speeds, not the ordinary mean.",
+        "steps": [
+          "Let the one-way distance be $d$ and the return speed $v$. Then $\\dfrac{2d}{d/40+d/v}=48$.",
+          "$\\dfrac{1}{40}+\\dfrac1v=\\dfrac{2}{48}=\\dfrac1{24}$, so $\\dfrac1v=\\dfrac1{24}-\\dfrac1{40}=\\dfrac{5-3}{120}=\\dfrac1{60}$.",
+          "$v=60$."
+        ],
+        "fast": "Pick $d=120$: the round trip takes $240/48=5$ h; the outbound leg took 3 h, so the return took 2 h, i.e. 60 km/h.",
+        "trap": "Averaging the speeds: $(40+v)/2=48$ gives 56."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-rate",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A 4-person review panel is to be chosen from 6 engineers and 4 designers. The panel must include at least one designer, and two particular engineers, Kemal and Lior, refuse to serve on the same panel. How many different panels are possible?",
+      "choices": [
+        "151",
+        "167",
+        "173",
+        "180",
+        "195"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Count panels with at least one designer, then remove those that contain both Kemal and Lior and still have a designer.",
+        "steps": [
+          "All panels: $\\binom{10}{4}=210$. Panels with no designer: $\\binom64=15$. So 195 panels have at least one designer.",
+          "Panels containing both Kemal and Lior: choose the other 2 from the remaining 8 people, $\\binom82=28$. Of these, the ones with no designer pick both others from the 4 other engineers: $\\binom42=6$. So 22 of them have a designer.",
+          "$195-22=173$."
+        ],
+        "fast": "Subtract only the Kemal-and-Lior panels that survived the first cut: $195-(28-6)$.",
+        "trap": "Subtracting all 28 Kemal-and-Lior panels (167), double-removing the 6 that the designer rule already excluded."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-restrictions",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "For which of the following values of the constant $k$ is the inequality $kx-2 < x+k$ true for every $x$ with $1\\le x\\le 3$? Indicate all such values.",
+      "choices": [
+        "$-4$",
+        "$0$",
+        "$2$",
+        "$2.5$",
+        "$3$",
+        "$5$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Rewrite as $(k-1)x<k+2$. The left side is linear in $x$, so it holds on the whole interval exactly when it holds at both endpoints.",
+        "steps": [
+          "At $x=1$: $k-1<k+2$, which is always true.",
+          "At $x=3$: $3k-3<k+2$, so $k<2.5$.",
+          "A linear expression that is below the bound at both ends of an interval is below it throughout, so the condition is $k<2.5$: $-4$, $0$ and $2$ work; $2.5$ fails at $x=3$ (equality), and 3 and 5 fail."
+        ],
+        "fast": "Only the endpoint $x=3$ can fail; solve $3k-3<k+2$.",
+        "trap": "Dividing by $k-1$ without checking its sign, which reverses the inequality for $k<1$ and seems to rule out $-4$ and $0$; or including $2.5$, where $x=3$ gives equality."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inequalities",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 3,
+      "prompt": "A museum raised its annual membership fee by 25 percent. A year later it lowered the new fee, and the lowered fee was 10 percent less than the original fee. By what percent was the raised fee lowered?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "28"
+      },
+      "explanation": {
+        "key": "The cut is a percent of the raised fee, not of the original.",
+        "steps": [
+          "Let the original fee be 100. The raised fee is 125 and the final fee is 90.",
+          "The cut is $125-90=35$, and $35/125=0.28$.",
+          "The raised fee was lowered by 28 percent."
+        ],
+        "fast": "$1.25(1-d)=0.9\\Rightarrow1-d=0.72$.",
+        "trap": "Entering 35, the cut as a percent of the original fee, or 15 ($25-10$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "percent",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 3,
+      "prompt": "By approximately what percent did the total number of trips in the five zones increase from 2023 to 2024?",
+      "choices": [
+        "15%",
+        "18%",
+        "23%",
+        "28%",
+        "39%"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Use the totals, with 2023 as the base.",
+        "steps": [
+          "2023 total: $40+64+36+28+50=218$ thousand.",
+          "2024 total: $52+54+56+35+60=257$ thousand.",
+          "Increase: $39/218\\approx0.179$, about 18%."
+        ],
+        "fast": "Net change by zone: $+12-10+20+7+10=+39$, and $39/218$ is a little under $40/220\\approx18\\%$.",
+        "trap": "Dividing by the 2024 total (15%), or averaging the five zones' percent changes (23%), which weights the small Campus base too heavily."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "percent",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 4,
+      "prompt": "Suppose the company had also operated a sixth zone, Northgate, in 2024, and that for the 2024 trip counts of all six zones the median equals the mean. How many thousand trips started in Northgate in 2024?",
+      "choices": [
+        "47.5",
+        "53",
+        "55",
+        "61",
+        "73"
+      ],
+      "key": {
+        "sel": [
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Where the new value falls changes which two values form the median, so try each position.",
+        "steps": [
+          "The five 2024 values in order are 35, 52, 54, 56, 60, with sum 257. Let Northgate be $x$; the mean of six values is $(257+x)/6$.",
+          "If $x\\le52$, the median is $(52+54)/2=53$, giving $x=61$, which contradicts $x\\le52$.",
+          "If $52\\le x\\le56$, the median is $(x+54)/2$; then $3x+162=257+x$ gives $x=47.5$, outside the range.",
+          "If $x\\ge56$, the median is $(54+56)/2=55$; then $257+x=330$ gives $x=73$, which is consistent. So $x=73$."
+        ],
+        "fast": "A very large Northgate pulls the mean up but leaves the median at 55, so test $6\\cdot55-257=73$.",
+        "trap": "Assuming the median stays at 53 (the middle of the old values) and solving to 61, without checking that 61 would move the median."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "numeric",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 5,
+      "prompt": "In 2024, 15 percent of the trips that started in Riverside lasted longer than 30 minutes. Of all 2024 trips that started in Uptown or Riverside and lasted longer than 30 minutes, 60 percent started in Uptown. If one 2024 trip is chosen at random from the trips that started in Uptown or Riverside, what is the probability that it lasted longer than 30 minutes? Give your answer as a fraction.",
+      "numeric": {
+        "kind": "fraction"
+      },
+      "key": {
+        "value": "9/38"
+      },
+      "explanation": {
+        "key": "The 60 percent is a share of the long trips, not of Uptown's trips; Riverside's long trips are the remaining 40 percent.",
+        "steps": [
+          "Riverside 2024: 60 thousand trips, so $0.15\\times60=9$ thousand long trips.",
+          "These are 40 percent of the long trips, so all long trips in the two zones total $9/0.4=22.5$ thousand (13.5 thousand in Uptown).",
+          "Uptown plus Riverside in 2024: $35+60=95$ thousand trips. Probability $=22.5/95=45/190=9/38$."
+        ],
+        "fast": "Long trips $=9\\cdot\\tfrac52=22.5$; divide by $95$.",
+        "trap": "Reading 60 percent as the share of Uptown trips that were long, or averaging 15 percent with Uptown's own rate ($13.5/35\\approx38.6$ percent) instead of weighting by zone size."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-conditional",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q1",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "One of the angles of an isosceles triangle measures $40^\\circ$.",
+      "qc": {
+        "a": "The measure of the largest angle of the triangle, in degrees",
+        "b": "Twice the measure of the smallest angle of the triangle, in degrees"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The $40^\\circ$ angle can be the vertex angle or one of the two equal base angles.",
+        "steps": [
+          "If $40^\\circ$ is the vertex angle, the angles are $40^\\circ,70^\\circ,70^\\circ$: A $=70$, B $=2\\cdot40=80$, B is greater.",
+          "If $40^\\circ$ is a base angle, the angles are $40^\\circ,40^\\circ,100^\\circ$: A $=100$, B $=80$, A is greater.",
+          "The relationship cannot be determined."
+        ],
+        "fast": "Two cases, two different winners.",
+        "trap": "Treating the given angle as the vertex angle only (B) or as a base angle only (A)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q2",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "List $S$ consists of 10 numbers with mean 50 and standard deviation 8. List $T$ consists of the 10 numbers in $S$ together with the two numbers 42 and 58.",
+      "qc": {
+        "a": "The standard deviation of the numbers in list $T$",
+        "b": "$8$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The added values keep the mean at 50 and each sits exactly one standard deviation from it, so the average squared deviation does not change.",
+        "steps": [
+          "Mean of $T$: $(500+42+58)/12=600/12=50$, unchanged.",
+          "The squared deviations in $S$ total $10\\cdot64=640$. The new values add $8^2+8^2=128$.",
+          "Variance of $T$: $(640+128)/12=64$, so its standard deviation is 8. The quantities are equal. (With the $n-1$ convention: $(9\\cdot64+128)/11=64$, the same result.)"
+        ],
+        "fast": "Adding points at exactly mean $\\pm$ SD leaves the SD unchanged; points closer to the mean would lower it, farther would raise it.",
+        "trap": "Thinking that any added data near the middle lowers the spread (B), or that more data always raises it (A)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "std-dev-normal",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q3",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "$n$ is a positive integer.",
+      "qc": {
+        "a": "The units digit of $3^{n}+7^{n}$",
+        "b": "The units digit of $3^{n}\\cdot 7^{n}$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "B is always 1, but A depends on whether $n$ is odd or even.",
+        "steps": [
+          "$3^n\\cdot7^n=21^n$, whose units digit is always 1. So B $=1$.",
+          "For odd $n$, $3^n+7^n$ is divisible by $3+7=10$, so its units digit is 0 (e.g. $n=1$: 10). Then B is greater.",
+          "For $n=2$: $9+49=58$, units digit 8, so A is greater. The relationship cannot be determined."
+        ],
+        "fast": "Test $n=1$ (10 vs 21) and $n=2$ (58 vs 441).",
+        "trap": "Testing only $n=1$ (or only odd $n$) and choosing B."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "remainders-units",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q4",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "$k$ is a positive odd integer less than 10.",
+      "qc": {
+        "a": "The number of digits to the right of the decimal point in the decimal form of $\\dfrac{k}{2^{6}\\cdot5^{3}}$",
+        "b": "$5$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "A fraction in lowest terms $\\dfrac{m}{2^a5^b}$ terminates after exactly $\\max(a,b)$ decimal places; an odd $k$ cannot cancel any factor of 2.",
+        "steps": [
+          "$2^6\\cdot5^3=8000$. For odd $k$, the factor $2^6$ stays in the reduced denominator (even $k=5$ only reduces it to $2^6\\cdot5^2$).",
+          "So the decimal has 6 places: e.g. $1/8000=0.000125$, $5/8000=0.000625$, $9/8000=0.001125$.",
+          "A $=6>5$ for every allowed $k$: Quantity A is greater."
+        ],
+        "fast": "Multiply top and bottom by $5^3$: $\\dfrac{k\\cdot125}{10^6}$, and $125k$ is odd, so it does not end in 0.",
+        "trap": "Counting only the powers of 5 (3) or thinking $k=5$ shortens the decimal; it cancels a 5, but the six 2s still need six places."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "fractions-decimals",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "$n$ is a positive integer that has exactly 3 positive divisors.",
+      "qc": {
+        "a": "The number of positive divisors of $n^2$",
+        "b": "The number of positive divisors of $2n$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Exactly 3 divisors means $n=p^2$ for a prime $p$; whether $p=2$ changes the divisor count of $2n$.",
+        "steps": [
+          "$n^2=p^4$ has 5 divisors, so A $=5$.",
+          "If $p$ is odd, $2n=2\\cdot p^2$ has $2\\cdot3=6$ divisors: B is greater (e.g. $n=9$: 18 has 6 divisors).",
+          "If $p=2$, $2n=8=2^3$ has 4 divisors: A is greater. The relationship cannot be determined."
+        ],
+        "fast": "Test $n=4$ (A $=5$, B $=4$) and $n=9$ (A $=5$, B $=6$).",
+        "trap": "Assuming $p$ is odd (forgetting $n=4$) and choosing B."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "integers-properties",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q6",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A circular fountain is surrounded by a ring-shaped stone walkway; the fountain's edge and the walkway's outer edge are concentric circles. A straight railing 16 meters long runs across the walkway with both ends on the outer edge, and it touches the fountain's edge at exactly one point. What is the area of the walkway, in square meters?",
+      "choices": [
+        "$16\\pi$",
+        "$32\\pi$",
+        "$64\\pi$",
+        "$128\\pi$",
+        "$256\\pi$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The railing is a chord of the outer circle tangent to the inner circle, so the inner radius meets it at its midpoint at a right angle.",
+        "steps": [
+          "Let the radii be $R$ (outer) and $r$ (inner). The radius to the tangent point is perpendicular to the chord and bisects it.",
+          "Right triangle: $r^2+8^2=R^2$, so $R^2-r^2=64$.",
+          "Walkway area $=\\pi R^2-\\pi r^2=64\\pi$."
+        ],
+        "fast": "Neither radius is needed; only $R^2-r^2$, which the half-chord gives directly.",
+        "trap": "Using the full chord as a leg ($256\\pi$), or concluding the radii are needed and guessing."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "circles",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q7",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A fair six-sided die, with faces numbered 1 through 6, is rolled three times. What is the probability that the product of the three numbers rolled is divisible by 4?",
+      "choices": [
+        "$\\dfrac{91}{216}$",
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{5}{8}$",
+        "$\\dfrac{3}{4}$",
+        "$\\dfrac{7}{8}$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Use the complement: the product fails to be a multiple of 4 when it has at most one factor of 2.",
+        "steps": [
+          "Odd faces: 1, 3, 5. Faces with exactly one factor of 2: 2, 6. Face 4 has two factors of 2.",
+          "No factor of 2: all three odd, $3^3=27$ outcomes.",
+          "Exactly one factor of 2: one roll is 2 or 6 and the other two are odd, $3\\cdot2\\cdot3^2=54$ outcomes.",
+          "Not divisible by 4: $81$ of $216$. So $P=1-\\tfrac{81}{216}=\\tfrac{135}{216}=\\tfrac58$."
+        ],
+        "fast": "$P(\\text{all odd})+P(\\text{one }2/6,\\text{ rest odd})=\\tfrac18+3\\cdot\\tfrac13\\cdot\\tfrac14=\\tfrac38$; the answer is $1-\\tfrac38$.",
+        "trap": "Requiring a 4 to be rolled ($\\tfrac{91}{216}$), which misses products like $2\\cdot6\\cdot1$; or computing 'the product is even' ($\\tfrac78$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-basic",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q8",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A circle is inscribed in a right triangle whose legs have lengths 6 and 8. What is the distance from the center of the circle to the vertex of the triangle's smallest angle?",
+      "choices": [
+        "$2\\sqrt{2}$",
+        "$2\\sqrt{5}$",
+        "$2\\sqrt{10}$",
+        "$6$",
+        "$4\\sqrt{3}$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Find the inradius, place the triangle on axes, and identify which vertex has the smallest angle.",
+        "steps": [
+          "The hypotenuse is 10. Inradius $r=\\dfrac{6+8-10}{2}=2$ (or area $24=r\\cdot s$ with $s=12$).",
+          "Put the right angle at $(0,0)$ with legs along the axes to $(8,0)$ and $(0,6)$. The center is $(2,2)$.",
+          "The smallest angle is opposite the shortest side (the leg of length 6), so it is at $(8,0)$. Distance $=\\sqrt{6^2+2^2}=\\sqrt{40}=2\\sqrt{10}$."
+        ],
+        "fast": "Tangent lengths from the vertices are $s-a$: from the vertex at the end of the 8-leg it is $12-6=6$, so the distance is $\\sqrt{6^2+2^2}$.",
+        "trap": "Using the other acute vertex, at the end of the 6-leg ($2\\sqrt5$), or the right-angle vertex ($2\\sqrt2$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inscribed-figures",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q9",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "For how many integers $k$ does the system of equations $x+2y=7$ and $3x+ky=5$ have a solution $(x, y)$ in which both $x$ and $y$ are integers?",
+      "choices": [
+        "5",
+        "6",
+        "9",
+        "10",
+        "11"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Eliminate $x$; the integer condition becomes a divisibility condition on $k-6$, which can be negative.",
+        "steps": [
+          "From the first equation, $x=7-2y$. Substituting: $21-6y+ky=5$, so $(k-6)y=-16$.",
+          "If $k=6$ there is no solution. Otherwise $y=\\dfrac{-16}{k-6}$, an integer exactly when $k-6$ divides 16; then $x=7-2y$ is an integer too.",
+          "The divisors of 16 are $\\pm1,\\pm2,\\pm4,\\pm8,\\pm16$: 10 values of $k-6$, so 10 values of $k$."
+        ],
+        "fast": "$(k-6)y=-16$: count the divisors of 16, both signs.",
+        "trap": "Counting only positive divisors (5), or adding $k=6$ (11)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "linear-equations",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q10",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "A rectangular garden measures 24 meters by 10 meters. A gravel path of uniform width surrounds the garden, and the area of the path alone is 152 square meters. What is the perimeter, in meters, of the outer edge of the path?",
+      "choices": [
+        "68",
+        "76",
+        "84",
+        "92",
+        "100"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Find the path width from the area, then ask for the outer perimeter, not the width.",
+        "steps": [
+          "With width $w$: $(24+2w)(10+2w)-240=152$, so $4w^2+68w-152=0$, i.e. $w^2+17w-38=0$.",
+          "$(w+19)(w-2)=0$, so $w=2$.",
+          "Outer rectangle: $28\\times14$, perimeter $2(28+14)=84$."
+        ],
+        "fast": "Test $w=2$: $28\\cdot14=392=240+152$.",
+        "trap": "Giving the garden's own perimeter (68), or adding the width only once to each dimension (76)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "area-perimeter",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q11",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "Each of the 120 volunteers at a festival is trained for at least one of three tasks: 90 are trained for first aid, 85 for ticketing and 80 for stage setup. What is the greatest possible number of volunteers who are trained for exactly one of the three tasks?",
+      "choices": [
+        "15",
+        "37",
+        "45",
+        "52",
+        "67"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Count trainings: singles, doubles and triples must use up 255 trainings among 120 people, and more triples free up more singles.",
+        "steps": [
+          "Let $s,d,t$ be the numbers trained for exactly 1, 2, 3 tasks. Then $s+d+t=120$ and $s+2d+3t=90+85+80=255$.",
+          "Subtracting: $d+2t=135$, so $d=135-2t$ and $s=120-d-t=t-15$. To maximize $s$, maximize $t$.",
+          "$d\\ge0$ gives $t\\le67$. With $t=67$, $d=1$, $s=52$; this is achievable, e.g. one volunteer in first aid and ticketing only, and 22, 17, 13 volunteers in first aid, ticketing and setup only.",
+          "So the greatest possible number is 52."
+        ],
+        "fast": "$s=t-15$, and $t$ is capped by $d=135-2t\\ge0$, not by the smallest group (80).",
+        "trap": "Giving the minimum number of triples (15) or capping $t$ at 80 and ignoring that doubles cannot be negative."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "overlapping-sets",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "min-max-bounding",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q12",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "In triangle $ABC$, angle $A$ measures $30^\\circ$, angle $B$ measures $45^\\circ$ and $BC=6\\sqrt2$. What is the area of triangle $ABC$?",
+      "choices": [
+        "$18\\sqrt3$",
+        "$36$",
+        "$18+6\\sqrt3$",
+        "$18+18\\sqrt3$",
+        "$36+18\\sqrt3$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Drop the altitude from $C$ to $AB$; it splits the triangle into a 45-45-90 and a 30-60-90 triangle.",
+        "steps": [
+          "Angle $C=105^\\circ$, so the foot $D$ of the altitude from $C$ lies between $A$ and $B$.",
+          "In 45-45-90 triangle $CDB$ with hypotenuse $6\\sqrt2$: $CD=BD=6$.",
+          "In 30-60-90 triangle $CDA$ with $CD=6$ opposite $30^\\circ$: $AD=6\\sqrt3$.",
+          "Area $=\\tfrac12(6+6\\sqrt3)(6)=18+18\\sqrt3$."
+        ],
+        "fast": "Altitude 6, base $6+6\\sqrt3$.",
+        "trap": "Using $BC$ as if it were the altitude, or forgetting the halving ($36+36\\sqrt3$-type slips), or giving only the 30-60-90 piece ($18\\sqrt3$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q13",
+      "section": 2,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "Which of the following expressions are defined, and equal to $\\dfrac{x^2-9}{x^2+3x}$, at every value of $x$ for which $\\dfrac{x^2-9}{x^2+3x}$ is defined? Indicate all such expressions.",
+      "choices": [
+        "$1-\\dfrac{3}{x}$",
+        "$\\dfrac{x-9}{x+3}$",
+        "$\\dfrac{3-x}{-x}$",
+        "$\\dfrac{x^2-6x+9}{x^2-3x}$",
+        "$\\dfrac{x^2-3x}{x^2}$",
+        "$\\dfrac{x}{x+3}-\\dfrac{3}{x+3}$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The given expression is $\\dfrac{(x-3)(x+3)}{x(x+3)}=\\dfrac{x-3}{x}$, defined for $x\\ne0,-3$. A choice must equal $\\dfrac{x-3}{x}$ and be defined at all those $x$, including $x=3$.",
+        "steps": [
+          "A: $1-\\tfrac3x=\\tfrac{x-3}{x}$. Yes.",
+          "B: cancels $x^2$ illegally; at $x=1$ it gives $-2$, the given gives $-2$, but at $x=2$ it gives $-1.4$ versus $-0.5$. No.",
+          "C: $\\tfrac{3-x}{-x}=\\tfrac{x-3}{x}$. Yes.",
+          "D: equals $\\tfrac{(x-3)^2}{x(x-3)}$, which is undefined at $x=3$, where the given expression is 0. No.",
+          "E: $\\tfrac{x(x-3)}{x^2}=\\tfrac{x-3}{x}$ for $x\\ne0$. Yes.",
+          "F: $\\tfrac{x-3}{x+3}$. No."
+        ],
+        "fast": "Reduce to $\\tfrac{x-3}{x}$, then check each choice's own forbidden values against $x=3$.",
+        "trap": "Accepting D because it simplifies to the same thing, without noticing it is undefined at $x=3$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "algebraic-expressions",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q14",
+      "section": 2,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "$x$ and $y$ are numbers such that $2\\le x\\le5$, $-3\\le y\\le1$ and $y\\ne0$. Which of the following could be the value of $\\dfrac{x}{y}$? Indicate all such values.",
+      "choices": [
+        "$-5$",
+        "$-\\dfrac{2}{3}$",
+        "$-\\dfrac{1}{2}$",
+        "$0$",
+        "$1.5$",
+        "$2$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "The range of $x/y$ splits into two pieces because $y$ crosses zero, leaving a gap.",
+        "steps": [
+          "For $-3\\le y<0$: $x/y$ is negative, and its largest (closest to 0) value is $2/(-3)=-2/3$; it can be as negative as desired as $y\\to0^-$. So the values here are all of $x/y\\le-2/3$.",
+          "For $0<y\\le1$: $x/y\\ge2/1=2$, and any value $\\ge2$ occurs.",
+          "$-5$ (e.g. $x=5,y=-1$): yes. $-2/3$ ($x=2,y=-3$): yes. $-1/2$ and $0$ and $1.5$ lie in the gap $(-2/3,2)$: no. $2$ ($x=2,y=1$): yes."
+        ],
+        "fast": "$|x/y|\\ge2/3$ when $y<0$ and $x/y\\ge2$ when $y>0$.",
+        "trap": "Dividing endpoint by endpoint ($5/-3$, $2/1$, ...) and assuming every value between the extremes is reachable, which wrongly includes $-1/2$, $0$ and $1.5$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "min-max-bounding",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "inequalities",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q15",
+      "section": 2,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "Six flags are to be hung in a row: 2 identical red flags, 2 identical blue flags, 1 green flag and 1 white flag. If the two red flags may not hang next to each other, how many different arrangements are possible?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "120"
+      },
+      "explanation": {
+        "key": "Count all distinguishable arrangements, then subtract those with the red flags together.",
+        "steps": [
+          "All arrangements: $\\dfrac{6!}{2!\\,2!}=180$.",
+          "Red flags together: treat them as one block, giving 5 items with 2 identical blues: $\\dfrac{5!}{2!}=60$.",
+          "$180-60=120$."
+        ],
+        "fast": "Arrange the other 4 flags ($4!/2!=12$ ways), then choose 2 of the 5 gaps for the reds: $12\\cdot\\binom52=120$.",
+        "trap": "Forgetting to divide by $2!$ for the identical blues (240), or treating the red flags as distinct."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-permutations",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}
