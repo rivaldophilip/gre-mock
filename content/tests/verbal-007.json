@@ -1,0 +1,1743 @@
+{
+  "id": "verbal-007",
+  "measure": "verbal",
+  "title": "Verbal Hard Mock 7",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 18
+    },
+    {
+      "n": 2,
+      "minutes": 23
+    }
+  ],
+  "passages": [
+    {
+      "id": "p1",
+      "paragraphs": [
+        "For more than a century, paleontologists have repeated as a rule of thumb the observation, credited to Edward Drinker Cope, that animal lineages tend to grow larger over evolutionary time. The pattern is easy to illustrate: horses, proboscideans and several groups of dinosaurs began small and ended, in at least some of their branches, very large. What has been harder to establish is whether such cases reflect a pervasive advantage of large size, or whether the pattern would arise even if selection were indiscriminate with respect to size.",
+        "The second possibility rests on a simple geometric point. Most clades originate at small body sizes, perhaps because small, generalized animals are best placed to survive the crises that open new ecological opportunities, and there is a lower limit below which an animal of a given body plan cannot function. A lineage that begins near that floor, and whose descendants vary in size at random, will over time spread out in the only direction available to it. Its mean size will rise and its largest members will grow larger, yet no species need have been inclined toward increase: the trend is explicable as diffusion away from a wall rather than as a march toward a goal.",
+        "The two models make different predictions, and that difference is the fulcrum of recent work. If increase in size were actively favored, descendant species should tend to exceed their ancestors throughout the size range, not only near the floor; under passive diffusion, species already well above the minimum should be as likely to shrink as to grow. Dogged tabulations of ancestor-descendant pairs have so far yielded mixed results: in some groups, such as certain Cretaceous molluscs, increases and decreases are roughly balanced away from the minimum, while in others, including several mammalian lineages, increases predominate throughout. The rule, it appears, names a pattern rather than a process, and different processes produce it in different clades."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "indiscriminate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "inclined",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "explicable",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "fulcrum",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "dogged",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "paragraphs": [
+        "Historians of mathematics have sometimes treated the European resistance to negative numbers as a simple failure of nerve, as though sixteenth- and seventeenth-century algebraists were too hidebound to accept what their own calculations plainly required. The charge is not quite fair. Writers who called negative quantities 'absurd' or 'fictitious' were often deft in manipulating them, carrying them through long computations and setting them aside only at the end, when a negative root of an equation was dismissed as meaningless. Their scruple concerned not technique but reference: in a mathematics still understood as the science of magnitude, a quantity less than nothing seemed to name nothing at all. That scruple was never exorcised by a proof. It faded as algebra came to be understood as the study of operations rather than of the magnitudes they act upon, and once that shift had occurred, the earlier reluctance came to look like obstinacy only because the question it answered was no longer being asked."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "hidebound",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "deft",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "exorcise",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "a1",
+      "paragraphs": [
+        "In the Kessel valley, apple growers who have put up nest boxes for barn owls lose far fewer young trees to voles, which gnaw the bark, than growers who have not. Barn owls hunt voles almost exclusively, a breeding pair hunts over an area about the size of a typical orchard, and an occupied box is usually used by the same pair for years. The valley's growers' association therefore argues that if every grower in the valley put up nest boxes, vole damage throughout the valley would fall to the level now seen on the farms that have them."
+      ],
+      "tags": []
+    },
+    {
+      "id": "p3",
+      "paragraphs": [
+        "In the classic anthropological account, a gift differs from a commodity because it is never wholly divorced from the person who gives it. A commodity, once sold, carries no trace of its seller; it is fungible, interchangeable with any other unit of its kind, and the transaction that moves it ends when the price is paid. A gift, by contrast, is said to bind giver and recipient in a debt that persists until it is answered by a return, and the return in turn creates a new obligation. On this view, exchange in societies organized around gifts is less a means of acquiring things than a way of making and remaking relationships, and the apparent altruism of the giver conceals a demand: to give is to put the recipient in one's debt.",
+        "This account has been criticized from two directions. Some critics object that it romanticizes gift economies, treating as a distinct moral order what is often an arena of calculation as shrewd, and at times as exploitative, as any market, in which gifts are timed and sized to humiliate rivals or to gratify patrons whose favor is wanted. Others object that the opposition between gift and commodity is too clean even on its own terms, since in many societies the same object may move as a gift on one occasion and be bartered on another. Neither objection, however, disposes of the account's central observation. That a gift can be wielded strategically presupposes that it creates obligations; a gift that bound no one could humiliate no one. And that an object can move between the two spheres shows only that what distinguishes them is the manner of transfer, not the nature of the thing.",
+        "A more searching revision came from fieldwork showing that the most valued objects in some exchange systems were precisely those that were never given away. Heirloom shell valuables, finely woven cloths and named ornaments might circulate briefly on loan, but their owners labored to keep them within the descent group, and their prestige grew with each generation that succeeded in doing so. The ability to give, it now appeared, depended on the ability to keep: an owner whose lineage could not hold on to its inalienable treasures had little standing from which to make gifts that others would feel bound to return. Reciprocity, which earlier theorists had placed at the center of the gift, turned out to rest on a foundation of things withheld from reciprocity altogether."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "divorced",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "fungible",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "altruism",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "exploitative",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "gratify",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "paragraphs": [
+        "It has long been a commonplace that the boulevards cut through Paris under Baron Haussmann in the 1850s and 1860s were designed above all to defeat the barricade. Broad, straight and paved in macadam rather than in the cobblestones that insurgents had pried up in 1830 and 1848, the new avenues would, on this reading, let troops move quickly between the barracks and the restive, often clamorous eastern districts and give artillery a clear line of fire. The interpretation has the attraction of explaining a great deal at once, and Haussmann himself, defending the cost of the works before a factious legislature, did not forbear to mention their strategic advantages.",
+        "Yet the evidence that military calculation drove the plan is thinner than its popularity suggests. The routes of many boulevards follow lines that earlier planners, with no thought of insurrection, had proposed for reasons of traffic and drainage, and several of the most celebrated cuts pass through districts that had never sheltered a barricade. Haussmann's strategic arguments, moreover, appear chiefly in speeches meant to win over legislators who balked at the expense; that a planner reached for whatever justification would carry a vote tells us what he thought his audience valued, not necessarily what he valued himself. None of this shows that the control of crowds played no part in the government's thinking. It does suggest that the military reading owes its durability less to the archival record than to the satisfaction of a story in which a single sinister motive accounts for a vast and baroque enterprise."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "clamorous",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "factious",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "forbear",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "baroque",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "paragraphs": [
+        "For much of the twentieth century, comparative anatomists treated the five-digited hand and foot as the starting point of tetrapod evolution. Encyclopedic surveys of the vertebrate limb all but deified the pentadactyl pattern, describing every hoof, flipper and wing as a reduction or modification of an ancestral hand of five. Fossils of the earliest limbed vertebrates, recovered from Devonian rocks from the 1980s onward, contravened that assumption as directly as evidence can: one had eight digits on its forelimb, another seven on its hindlimb, a third six. Five, it now appears, was not the original number but a later stabilization.",
+        "Why the number stabilized is less clear. One proposal holds that five digits gave some mechanical advantage once limbs had to bear an animal's weight on land. That the many-digited Devonian forms seem to have spent much of their lives in shallow water is consistent with this idea, but it is equally consistent with almost any account in which the change came after the move ashore, and the proposal has never specified what the advantage was. A second proposal looks instead to development. In living tetrapods, the genes that pattern the digits also act in other tissues, so that a mutation altering digit number tends to disturb development elsewhere. Once such linkages had formed, the number would be held in place not because five was best but because departures from it had become costly. On this view the constancy of five is a constraint rather than an adaptation, an inheritance that persists for want of a cheap way to change it."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "encyclopedic",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "deify",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "contravene",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "paragraphs": [
+        "Bookshops in Velden that moved their poetry sections from the back of the store to the front have seen poetry sales rise sharply. Some booksellers conclude that poetry has simply been hidden from customers who would buy it if they saw it. But this conclusion is premature. The shops that moved their poetry sections were, almost without exception, those that had recently hired staff who read and recommend poetry, and customers in those shops report that a recommendation, not a display, prompted their purchase. The rise in sales, then, may owe more to who works in the shop than to where the shelves stand."
+      ],
+      "tags": []
+    }
+  ],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The engineers had budgeted for months of remedial piling on the marshy site, but the surveyors' soundings found a gravel shelf so close to the surface that the contingency plans, though no one ever faulted them, were in the end not so much rejected as ___.",
+      "blanks": [
+        [
+          "discredited",
+          "obviated",
+          "vindicated",
+          "censured",
+          "mitigated"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "A gravel shelf near the surface means the piling the plans provided for was never needed. 'Not so much rejected as ___' wants a way of being set aside that involves no fault ('no one ever faulted them'): the plans were made unnecessary, i.e. obviated.",
+        "distractors": {
+          "discredited": "A synonym of 'rejected' with fault attached; both 'not so much rejected' and 'no one ever faulted them' rule it out.",
+          "vindicated": "Would mean the plans proved necessary and right; the shallow gravel shelf made them unnecessary.",
+          "censured": "Formal criticism, contradicted by 'no one ever faulted them'.",
+          "mitigated": "One mitigates a harm, not a plan; the sentence gives no harm being lessened."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "discredit",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obviate",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "vindicate",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "censure",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mitigate",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 3,
+      "prompt": "The reviewer did not borrow the label 'the Basement School' from anyone; he (i) ___ it in a notice meant to (ii) ___ the young poets, who promptly adopted it as a badge of honor and so stood his intention on its head.",
+      "blanks": [
+        [
+          "appropriated",
+          "coined",
+          "popularized"
+        ],
+        [
+          "laud",
+          "belittle",
+          "exonerate"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Did not borrow ... from anyone' contrasts with originating the label: coined (invented a phrase), not the money sense of 'coin'. (ii) The poets' adopting it as a badge of honor 'stood his intention on its head', so his intention was the opposite of honoring them: belittle.",
+        "distractors": {
+          "appropriated": "To appropriate is to take from someone else, which 'did not borrow' excludes.",
+          "popularized": "The poets, not the reviewer, spread the label; popularizing also doesn't contrast with borrowing.",
+          "laud": "The trap from 'badge of honor': if he had meant to praise them, their adoption would fulfil his intention, not invert it.",
+          "exonerate": "To clear of blame; nothing suggests the poets stood accused."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "appropriate",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "coin",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "laud",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "belittle",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exonerate",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The regent's apologists insist that he was only apparently (i) ___ during the succession crisis: by declining to commit himself, they argue, he denied each faction the pretext it needed to (ii) ___ its rivals into open revolt. Yet the very chroniclers who record his reticence also report that he (iii) ___ to whichever envoy had reached the court most recently, a habit difficult to square with any strategy of studied neutrality.",
+      "blanks": [
+        [
+          "imperious",
+          "irresolute",
+          "austere"
+        ],
+        [
+          "goad",
+          "lull",
+          "exonerate"
+        ],
+        [
+          "condescended",
+          "dissembled",
+          "kowtowed"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) What looked like weakness was 'declining to commit himself', which the apologists recast as calculation: he only seemed irresolute. (ii) A pretext lets a faction provoke its rivals into revolt: goad ... into. (iii) 'Yet' introduces evidence against the strategic reading: deferring abjectly to whoever arrived last (kowtowed) is not neutrality but the very indecision the apologists deny.",
+        "distractors": {
+          "austere": "Severity of manner or life is not what 'declining to commit himself' shows.",
+          "lull": "One lulls people into complacency, not into revolt.",
+          "exonerate": "Clearing of blame makes no sense with 'into open revolt'.",
+          "condescended": "Treating the latest envoy with disdain would not undermine a claim of neutrality the way favoring him does.",
+          "dissembled": "Deceiving envoys is compatible with a calculated strategy, so it would not be 'difficult to square' with it.",
+          "imperious": "Domineering is the opposite of 'declining to commit himself'; nothing he did imposed his will."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "imperious",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "irresolute",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "austere",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "goad",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lull",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exonerate",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dissemble",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "kowtow",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The memoir's account of the shipwreck is accurate in every particular, which only makes its ___ tone the more jarring: the author recounts the drowning of half the crew in the same chatty register he elsewhere reserves for the merits of the ship's marmalade.",
+      "choices": [
+        "cavalier",
+        "punctilious",
+        "acerbic",
+        "flippant",
+        "meticulous",
+        "laconic"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Narrating a catastrophe in the register used for marmalade treats a grave matter as trivial; that offhand lack of seriousness is what jars against the careful accuracy. Cavalier and flippant both name it.",
+        "distractors": {
+          "punctilious": "Trap pair with meticulous: both echo 'accurate in every particular', but the accuracy is what the tone contrasts with, not the tone itself.",
+          "meticulous": "Trap pair with punctilious: careful precision describes the facts, not the jarring tone.",
+          "acerbic": "Sharp and bitter; a chatty marmalade register is not bitter.",
+          "laconic": "Terse; 'chatty' rules out brevity."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "cavalier",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "punctilious",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "acerbic",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "flippant",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "meticulous",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "laconic",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "se",
+      "difficulty": 3,
+      "prompt": "Investors who blamed bad luck for the founder's string of failed ventures were overlooking a pattern: her ___ for walking away from each company at precisely the moment it became profitable enough to bore her.",
+      "choices": [
+        "propensity",
+        "aptitude",
+        "disdain",
+        "proclivity",
+        "flair",
+        "precursor"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "'A pattern' of repeated behavior that luck does not explain is a habitual tendency: propensity, proclivity.",
+        "distractors": {
+          "aptitude": "Trap pair with flair: both mean a talent, but abandoning a company out of boredom is a habit, not a skill.",
+          "flair": "Trap pair with aptitude: natural skill, not inclination.",
+          "disdain": "Disdain for walking away would mean she avoided doing it, the reverse of the pattern.",
+          "precursor": "A forerunner; 'her precursor for walking away' makes no sense."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "propensity",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "proclivity",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "precursor",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Even those who conceded that the informer's testimony had saved dozens of lives found the man himself ___: what they could not forgive was not the betrayal of his former comrades but the evident relish with which he described it.",
+      "choices": [
+        "odious",
+        "perfidious",
+        "dispassionate",
+        "repugnant",
+        "treacherous",
+        "pernicious"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "'Even those who conceded' his usefulness still judged him negatively, and the colon says why: not the betrayal itself but his relish in it, which makes the man personally repellent. Odious and repugnant.",
+        "distractors": {
+          "perfidious": "Trap pair with treacherous: they fit the informer topic, but the colon says it was not the betrayal they held against him.",
+          "treacherous": "Trap pair with perfidious: the sentence explicitly sets the betrayal aside as the ground of the judgment.",
+          "dispassionate": "'Evident relish' is the opposite of dispassion.",
+          "pernicious": "Harmful; the concession says his testimony saved lives, and the objection is to his character, not his effects."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "odious",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "perfidious",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dispassionate",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "repugnant",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "treacherous",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pernicious",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "To a family that had heard the same silence at the grandfather's bedside a week before he died, the physicians' reticence seemed ___; it was in fact only the habit of men who never discussed a prognosis in front of the patient.",
+      "choices": [
+        "ominous",
+        "reassuring",
+        "garrulous",
+        "portentous",
+        "heartening",
+        "banal"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The family last heard this silence just before a death, so they read it as a sign of something bad to come; 'in fact only the habit' corrects that reading. Ominous and portentous both mean foreboding.",
+        "distractors": {
+          "reassuring": "Trap pair with heartening: silence is often read as 'no bad news', but this family last heard it a week before a death.",
+          "heartening": "Trap pair with reassuring: wrong polarity given the grandfather's death.",
+          "garrulous": "Talkative contradicts 'silence' and 'reticence'.",
+          "banal": "Commonplace is what the silence actually was ('only the habit'), not what it seemed to the family."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "ominous",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "garrulous",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "portentous",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "banal",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p1",
+      "prompt": "The primary purpose of the passage is to",
+      "choices": [
+        "refute the claim that animal lineages tend to increase in body size by showing that the trend is an artifact of where clades begin",
+        "explain why a long-observed evolutionary pattern does not by itself reveal what produces it, and describe how rival explanations can be tested",
+        "defend the view that large body size confers a general advantage against an alternative that attributes size trends to chance",
+        "argue that passive diffusion from a lower size limit, rather than selection, accounts for the increase in size in most lineages",
+        "describe the evidence from Cretaceous molluscs and mammalian lineages that first led paleontologists to formulate Cope's rule"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Paragraph 1 accepts the pattern and asks what causes it; paragraph 2 sets out the diffusion model; paragraph 3 gives the test that distinguishes the models and concludes that the rule 'names a pattern rather than a process'.",
+        "distractors": {
+          "refute the claim that animal lineages tend to increase in body size by showing that the trend is an artifact of where clades begin": "Wrong verb: the passage never denies the pattern, only that it reveals a single cause.",
+          "defend the view that large body size confers a general advantage against an alternative that attributes size trends to chance": "The passage takes neither side; the evidence is mixed.",
+          "argue that passive diffusion from a lower size limit, rather than selection, accounts for the increase in size in most lineages": "One notch too strong: mammals fit active increase, and the author says different processes act in different clades.",
+          "describe the evidence from Cretaceous molluscs and mammalian lineages that first led paleontologists to formulate Cope's rule": "That evidence is recent work testing the rule, not what led to it; also too narrow."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-main-idea",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "rc_multi",
+      "difficulty": 5,
+      "passageId": "p1",
+      "prompt": "Consider each of the choices separately and select all that apply. The passage supports which of the following statements about the explanation that treats increase in size as diffusion away from a lower limit?",
+      "choices": [
+        "It predicts that a species whose body size is far above the minimum for its body plan is no more likely to give rise to a larger descendant species than to a smaller one.",
+        "It attributes the small size of most clades at their origin to the same random variation in size that later carries their descendants upward.",
+        "It is more consistent with the ancestor-descendant comparisons reported for certain Cretaceous molluscs than with those reported for several mammalian lineages."
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "A: Correct. Paragraph 3: under passive diffusion, species well above the minimum 'should be as likely to shrink as to grow'. B: Incorrect. The passage suggests small origins may be due to small, generalized animals surviving crises, a separate fact the model takes as given, not a product of random variation. C: Correct, by combining the two predictions with the results: molluscs show balanced change away from the minimum (the diffusion prediction), while mammals show increases throughout (the active prediction)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "The author's attitude toward the sixteenth- and seventeenth-century algebraists who resisted negative numbers is best described as",
+      "choices": [
+        "dismissive of their objections as a failure of nerve",
+        "appreciative of their technical facility but critical of their conservatism",
+        "sympathetic to their reluctance as reasonable given the conception of mathematics they held",
+        "admiring of their reluctance as a philosophically correct position later abandoned",
+        "indifferent to whether their reluctance was justified"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The author calls the 'failure of nerve' charge 'not quite fair', explains the scruple by the period's view of mathematics as the science of magnitude, and says it looks like obstinacy only in hindsight: a sympathetic but not endorsing stance.",
+        "distractors": {
+          "dismissive of their objections as a failure of nerve": "That is the historians' view, which the author rejects.",
+          "appreciative of their technical facility but critical of their conservatism": "Half right: the author praises their deftness but defends rather than criticizes the reluctance.",
+          "admiring of their reluctance as a philosophically correct position later abandoned": "Too strong: the author calls it reasonable in context, never correct.",
+          "indifferent to whether their reluctance was justified": "The author argues it was understandable."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-attitude",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "rc_select",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "Select the sentence that identifies what, according to the author, actually brought about the decline of the reluctance described in the passage.",
+      "key": {
+        "sel": [
+          5
+        ]
+      },
+      "explanation": {
+        "key": "The sixth sentence ('It faded as algebra came to be understood as the study of operations ...') names the cause. The fifth sentence says only what did not end it (no proof); the fourth explains the reluctance's grounds, not its decline."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-detail",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 4,
+      "passageId": "a1",
+      "prompt": "The growers' association's argument depends on which of the following assumptions?",
+      "choices": [
+        "Voles do more damage to young apple trees in the valley than any other animal does.",
+        "None of the growers who have put up nest boxes uses any other method of controlling voles.",
+        "The valley could support more hunting barn owls than it now has if more nest sites were available.",
+        "Every grower in the valley would be willing to put up nest boxes if the association recommended them.",
+        "Barn owls in the valley do not nest anywhere except in boxes put up by growers."
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Each pair covers about one orchard. If the valley cannot hold more owls (negate the key: prey or territory, not nest sites, limits their number), extra boxes merely spread the same pairs over more farms, and the farms that have boxes now would lose protection; valley-wide damage could not fall to their level. So the argument needs nest sites to be what limits owl numbers.",
+        "distractors": {
+          "Voles do more damage to young apple trees in the valley than any other animal does.": "The conclusion concerns vole damage only; other pests are irrelevant.",
+          "None of the growers who have put up nest boxes uses any other method of controlling voles.": "Too strong: some growers using other methods would weaken the evidence a little but not destroy the argument.",
+          "Every grower in the valley would be willing to put up nest boxes if the association recommended them.": "The conclusion is conditional ('if every grower ... put up nest boxes'), so willingness is not assumed.",
+          "Barn owls in the valley do not nest anywhere except in boxes put up by growers.": "Too strong: owls could also nest in barns or trees and the argument would stand."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-assumption",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q1",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The minister's critics, who had long accused him of nothing worse than incompetence, were almost relieved when the leaked memoranda revealed his ___ instead: a man who falsifies the record must at least have read it.",
+      "blanks": [
+        [
+          "casuistry",
+          "ineptitude",
+          "mendacity",
+          "opprobrium",
+          "diffidence"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The colon explains the relief: falsifying the record proves he knew the facts, so what was revealed 'instead' of incompetence is lying, mendacity.",
+        "distractors": {
+          "casuistry": "Specious moral reasoning; the clue is falsified records, not clever rationalization.",
+          "ineptitude": "This is the incompetence that 'instead' sets aside.",
+          "opprobrium": "Public disgrace is something one suffers, not a trait memoranda reveal in a person.",
+          "diffidence": "Shyness or lack of confidence has nothing to do with falsifying records."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "casuistry",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mendacity",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "opprobrium",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "diffidence",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q2",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Union leaders had expected management's threats to (i) ___ the membership, but hostility, it turned out, only hardened its resolve; what finally broke the strike was the mediator's (ii) ___ manner, which left the members nothing to push against.",
+      "blanks": [
+        [
+          "galvanize",
+          "enervate",
+          "incense"
+        ],
+        [
+          "caustic",
+          "emollient",
+          "obdurate"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'But ... only hardened its resolve' reverses the leaders' expectation, so they expected the threats to do the opposite of hardening: to weaken and drain the members, enervate. (ii) What broke the strike gave them 'nothing to push against', so it was soothing rather than hostile: emollient.",
+        "distractors": {
+          "galvanize": "What threats are usually thought to do, but rousing the members would agree with hardened resolve, not contrast with it as 'but ... only' requires.",
+          "incense": "Angering the members would also harden resolve, so 'but' would have nothing to reverse.",
+          "caustic": "A biting manner is something to push against; the sentence says the manner offered nothing of the kind.",
+          "obdurate": "An unyielding mediator would present resistance to push against."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "galvanize",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "enervate",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "incense",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "caustic",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "emollient",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obdurate",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q3",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "It would be a mistake to infer from the fact that the anchoresses of medieval England were (i) ___ for life in cells built against a church wall that their influence was similarly (ii) ___: bishops and magnates sought their counsel by letter. What remains (iii) ___ is less their reach than their motive, for it is hard to see why anyone who wished to be heard would choose a life that made being heard so laborious.",
+      "blanks": [
+        [
+          "venerated",
+          "immured",
+          "ostracized"
+        ],
+        [
+          "pernicious",
+          "exaggerated",
+          "circumscribed"
+        ],
+        [
+          "opaque",
+          "patent",
+          "trivial"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) Confined for life in cells: immured, walled in. (ii) 'Similarly' carries the confinement over to their influence, and the mistaken inference is that it was limited: circumscribed, refuted by bishops seeking their counsel. (iii) 'It is hard to see why' marks the motive as the puzzle: opaque, hard to understand.",
+        "distractors": {
+          "venerated": "Honored, but 'similarly' needs a physical confinement to transfer to their influence.",
+          "ostracized": "Exclusion by others does not fit 'for life in cells built against a church wall', and their cells were chosen.",
+          "pernicious": "Harmful influence is not what letters from bishops seeking counsel refute.",
+          "exaggerated": "Nothing in the cells parallels exaggeration, so 'similarly' fails.",
+          "patent": "Obvious is the reverse of 'hard to see why'.",
+          "trivial": "The sentence treats the motive as the real question, not a minor one."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "venerate",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "immure",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pernicious",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "circumscribe",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "opaque",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "patent",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "trivial",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q4",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Few expedients were more tempting to a medieval monarch short of silver than to (i) ___ the coinage: the gain reached the treasury at once, while the cost, merchants' growing reluctance to accept the king's money at its face value, fell on whoever held the throne a decade later. The kings who (ii) ___ the measure were, tellingly, those who had come to the throne young: they were (iii) ___ rather than high-minded, since the bill would have come to them.",
+      "blanks": [
+        [
+          "hoard",
+          "debase",
+          "standardize"
+        ],
+        [
+          "devised",
+          "eschewed",
+          "embraced"
+        ],
+        [
+          "prudent",
+          "profligate",
+          "eccentric"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          1,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) Merchants refusing coins at face value means the coins held less silver than they claimed: debase. (ii) The cost fell on whoever reigned a decade later, and 'since the bill would have come to them' explains the young kings' choice by their expecting to bear that cost, so they avoided the measure: eschewed. (iii) Avoiding it out of self-interested foresight, not principle, is being prudent 'rather than high-minded'.",
+        "distractors": {
+          "hoard": "Hoarding coin does not make merchants doubt its face value.",
+          "standardize": "Standardizing would increase trust in the money, not erode it.",
+          "devised": "The expedient was an old one, and the young kings' expectation of paying the bill explains avoiding it, not inventing it.",
+          "embraced": "A king who expected the bill to come to him would have reason to refuse the measure; 'since the bill would have come to them' cannot explain adopting it.",
+          "profligate": "Wasteful kings would adopt the expedient, and the reason given (they would pay the bill) is a reason for restraint.",
+          "eccentric": "Oddity has nothing to do with the stated reason, the expectation of bearing the cost."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "debase",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "eschew",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "prudent",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "profligate",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "eccentric",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The partisans who cite the newly found letter at every opportunity seem not to have noticed that it would ___ the attribution only if the church had been designed after 1611, when the letter shows the architect first arriving in the town; the contract, signed two years earlier, makes the letter less an asset to their case than an embarrassment.",
+      "choices": [
+        "buttress",
+        "undercut",
+        "obviate",
+        "bolster",
+        "undermine",
+        "explicate"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The letter puts the architect in town from 1611. That presence would help the attribution only if the design came later; since the contract dates from 1609, it hurts instead. So the conditional names the support the partisans assume: buttress (figurative, to support an argument, not the architectural sense the topic invites) and bolster.",
+        "distractors": {
+          "undercut": "Trap pair with undermine: the letter does in fact hurt the case, but the blank is what it would do only if the design came after his arrival, and then his presence would support it.",
+          "undermine": "Trap pair with undercut: reverses the conditional; arrival before the design would help, not harm, the attribution.",
+          "obviate": "A letter cannot make the attribution unnecessary.",
+          "explicate": "Explaining the attribution is not something that depends on the date of design."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "buttress",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obviate",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bolster",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "undermine",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "explicate",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q6",
+      "section": 2,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Colleagues who attributed the negotiator's ___ to years of training had not seen her at nine, the only passenger on a stalled and smoke-filled train who neither wept nor shouted but simply closed her book and asked the conductor which exit was nearest.",
+      "choices": [
+        "equanimity",
+        "tenacity",
+        "ardor",
+        "sangfroid",
+        "persistence",
+        "alacrity"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The anecdote shows composure under danger that was there long before any training: equanimity and sangfroid.",
+        "distractors": {
+          "tenacity": "Trap pair with persistence: a negotiator's classic trait, but the anecdote shows calm, not dogged effort.",
+          "persistence": "Trap pair with tenacity: nothing in the anecdote involves keeping at something.",
+          "ardor": "Passionate enthusiasm is the opposite of closing a book and calmly asking for the exit.",
+          "alacrity": "Eager readiness; the anecdote's point is the absence of agitation, not eagerness."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "equanimity",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ardor",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sangfroid",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "alacrity",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q7",
+      "section": 2,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Nothing did more to damage the housing estate's standing among architects than its developers' readiness to ___ it, since the profession had long assumed that a building which must be talked up cannot speak for itself.",
+      "choices": [
+        "tout",
+        "disparage",
+        "explicate",
+        "extol",
+        "denigrate",
+        "demarcate"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The 'since' clause gives the cause: the profession distrusts buildings that 'must be talked up', so what damaged the estate was its developers' eagerness to praise and promote it. Tout (to promote insistently, not the ticket-selling sense) and extol.",
+        "distractors": {
+          "disparage": "Trap pair with denigrate: they match 'damage the ... standing', but the 'since' clause says the harm came from talking the building up.",
+          "denigrate": "Trap pair with disparage: developers running down their own estate contradicts 'talked up'.",
+          "explicate": "Explaining the estate is not talking it up.",
+          "demarcate": "Marking boundaries has nothing to do with praise."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "tout",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "disparage",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "explicate",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "extol",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "denigrate",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "demarcate",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q8",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "Which of the following best describes the organization of the passage?",
+      "choices": [
+        "A view is set out; two objections to it are described and endorsed; a further finding is presented that reconciles the view with those objections.",
+        "A view is set out; two objections to it are described and shown not to touch its central claim; a further finding is then presented that revises the view more fundamentally.",
+        "A view is set out; two objections to it are described and rebutted; a further finding is presented that confirms the view in its original form.",
+        "Two competing views are described; one is shown to rest on a misunderstanding; evidence is then presented that favors the other.",
+        "A view is set out and a finding presented that undermines it; two objections to that finding are then considered and rejected."
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Paragraph 1 states the classic account; paragraph 2 gives two objections and argues that 'neither ... disposes of the account's central observation'; paragraph 3 calls the fieldwork 'a more searching revision'.",
+        "distractors": {
+          "A view is set out; two objections to it are described and endorsed; a further finding is presented that reconciles the view with those objections.": "The author answers the objections rather than endorsing them.",
+          "A view is set out; two objections to it are described and rebutted; a further finding is presented that confirms the view in its original form.": "One move wrong: the fieldwork revises the account (reciprocity rests on things withheld), it does not confirm it unchanged.",
+          "Two competing views are described; one is shown to rest on a misunderstanding; evidence is then presented that favors the other.": "There is one view and its critics, not two competing views.",
+          "A view is set out and a finding presented that undermines it; two objections to that finding are then considered and rejected.": "Wrong order: the objections come before the finding and are aimed at the account, not at the finding."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-structure",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q9",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 5,
+      "passageId": "p3",
+      "prompt": "In the context of the passage, the statement that 'a gift that bound no one could humiliate no one' functions primarily to",
+      "choices": [
+        "illustrate the kind of shrewd calculation that, according to some critics, the classic account fails to acknowledge",
+        "support the claim that one objection to the classic account in fact depends on what that account asserts",
+        "concede that the classic account's description of gift economies is in one respect romanticized",
+        "explain why the same object can move as a gift on one occasion and be bartered on another",
+        "anticipate the finding, described in the final paragraph, that the most valued objects were never given away"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "It follows 'Neither objection ... disposes of the account's central observation' and backs the claim that strategic use 'presupposes that it creates obligations': the romanticism objection relies on the very obligation the account describes.",
+        "distractors": {
+          "illustrate the kind of shrewd calculation that, according to some critics, the classic account fails to acknowledge": "Restates the critics' material accurately but misses why the author uses it: to turn the objection around, not to illustrate it.",
+          "concede that the classic account's description of gift economies is in one respect romanticized": "The author does not concede the charge here; the sentence defends the account.",
+          "explain why the same object can move as a gift on one occasion and be bartered on another": "That is the second objection, answered in the next sentence.",
+          "anticipate the finding, described in the final paragraph, that the most valued objects were never given away": "The statement concerns obligation, not objects withheld."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-function",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q10",
+      "section": 2,
+      "type": "rc_multi",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "Consider each of the choices separately and select all that apply. It can be inferred from the passage that the author would agree with which of the following?",
+      "choices": [
+        "The theorists who placed reciprocity at the center of the gift were wrong to regard it as important to gift exchange.",
+        "An owner's capacity to create obligations by giving can depend on objects the owner never gives away.",
+        "In the systems described in the third paragraph, the most valued objects never left their owners' hands."
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "A: Incorrect. One notch too strong: the author says reciprocity rests on a foundation of things withheld, not that it is unimportant. B: Correct. 'The ability to give ... depended on the ability to keep': an owner without inalienable treasures 'had little standing' to make gifts others felt bound to return. C: Incorrect. Tempting because such objects were 'never given away', but they 'might circulate briefly on loan'."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q11",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p4",
+      "prompt": "In the context in which it appears, 'baroque' most nearly means",
+      "choices": [
+        "built in an ornamental seventeenth-century style",
+        "elaborately complicated",
+        "extravagantly expensive",
+        "old-fashioned",
+        "deliberately deceptive"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The story is satisfying because 'a single sinister motive accounts for' an enterprise that is vast and many-sided; baroque here means intricate, elaborately complicated.",
+        "distractors": {
+          "built in an ornamental seventeenth-century style": "The everyday art-history sense, tempting in an architecture passage, but Haussmann's boulevards are not seventeenth-century work and the contrast is with 'a single ... motive'.",
+          "extravagantly expensive": "The passage mentions the cost, but the point here is complexity set against a single explanation.",
+          "old-fashioned": "Nothing in the context concerns being out of date.",
+          "deliberately deceptive": "The 'sinister motive' is the story's, not a property of the enterprise."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-vocab-context",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q12",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p4",
+      "prompt": "The author's attitude toward Haussmann's strategic arguments before the legislature is best described as",
+      "choices": [
+        "convinced that they were insincere, since they were offered to secure funding rather than to explain the plan",
+        "wary of treating them as evidence of his own priorities, since they may reflect only what he expected to persuade his hearers",
+        "persuaded that they reveal the military purpose that the routes of the boulevards conceal",
+        "confident that they prove the government gave no thought to the control of crowds",
+        "dismissive of them as a later invention of historians who favor the military reading"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The author says a planner's use of whatever justification would carry a vote 'tells us what he thought his audience valued, not necessarily what he valued himself': caution about the speeches as evidence, without a verdict that they were false.",
+        "distractors": {
+          "convinced that they were insincere, since they were offered to secure funding rather than to explain the plan": "One notch too strong: 'not necessarily' leaves open that he meant them.",
+          "persuaded that they reveal the military purpose that the routes of the boulevards conceal": "Reverses the author's use of the speeches and of the routes, which point to traffic and drainage.",
+          "confident that they prove the government gave no thought to the control of crowds": "The author says 'none of this shows that the control of crowds played no part'.",
+          "dismissive of them as a later invention of historians who favor the military reading": "The passage treats the speeches as real; Haussmann 'did not forbear to mention' those advantages."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-attitude",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q13",
+      "section": 2,
+      "type": "rc_select",
+      "difficulty": 5,
+      "passageId": "p5",
+      "prompt": "Select the sentence that acknowledges a consideration in one proposal's favor and then argues that this consideration does not discriminate among rival accounts.",
+      "key": {
+        "sel": [
+          6
+        ]
+      },
+      "explanation": {
+        "key": "The seventh sentence ('That the many-digited Devonian forms seem to have spent much of their lives in shallow water is consistent with this idea, but it is equally consistent with almost any account ...') grants the mechanical proposal some support and then says the evidence does not discriminate between accounts. The sixth sentence only states the proposal; the third overturns the older assumption rather than conceding anything."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-function",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q14",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p5",
+      "prompt": "Which of the following, if true, would be most closely analogous to the explanation that the developmental proposal gives for the constancy of five digits?",
+      "choices": [
+        "In a lineage of fishes, the number of fin rays varied widely among early species but became fixed after the lineage colonized fast-flowing streams, where that number gives the most efficient stroke.",
+        "Across mammals with necks of very different lengths, the number of neck vertebrae is almost invariant, and mutations that change it are usually accompanied by serious defects in other organs.",
+        "In a group of flowering plants, petal number varies freely among species, and the genes that set petal number appear to have no other function.",
+        "Older textbooks described the six legs of insects as a reduction from a many-legged ancestor, a view that later fossil discoveries overturned.",
+        "Several lineages of running birds have independently lost one of their toes, a change that reduces the weight of the lower limb."
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The developmental proposal explains a constant number by side effects: altering it disturbs development elsewhere, so the constancy is a constraint, not an advantage. The neck-vertebra case has the same structure: a near-invariant count held in place because changing it brings defects in other organs.",
+        "distractors": {
+          "In a lineage of fishes, the number of fin rays varied widely among early species but became fixed after the lineage colonized fast-flowing streams, where that number gives the most efficient stroke.": "Matches the surface (variable, then fixed) but explains the fixing by advantage, which parallels the mechanical proposal.",
+          "In a group of flowering plants, petal number varies freely among species, and the genes that set petal number appear to have no other function.": "Consistent with the developmental logic, but it is the mirror case (no linkage, no constancy), not an analogous constancy.",
+          "Older textbooks described the six legs of insects as a reduction from a many-legged ancestor, a view that later fossil discoveries overturned.": "Parallels the overturned textbook view of paragraph 1, not the developmental explanation.",
+          "Several lineages of running birds have independently lost one of their toes, a change that reduces the weight of the lower limb.": "An adaptive change in number, the opposite of a constraint that keeps the number fixed."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-application",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q15",
+      "section": 2,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 3,
+      "passageId": "a2",
+      "prompt": "In the argument, the information about the staff recently hired by the shops that moved their poetry sections plays which of the following roles?",
+      "choices": [
+        "It is evidence that the booksellers cite in support of their conclusion.",
+        "It is a consideration that the argument uses to support an alternative explanation of the rise in poetry sales.",
+        "It is the conclusion that the argument as a whole is meant to establish.",
+        "It is a consideration that the argument acknowledges counts against its own conclusion.",
+        "It is a premise from which the argument infers that moving poetry sections to the front has no effect on sales."
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The main conclusion is that the booksellers' conclusion 'is premature'. The hiring information, with the customers' reports, supports the rival explanation in the last sentence (staff recommendations), which is why the booksellers' inference is premature.",
+        "distractors": {
+          "It is evidence that the booksellers cite in support of their conclusion.": "The booksellers cite only the sales rise after the move; the hiring information is the argument's reply to them.",
+          "It is the conclusion that the argument as a whole is meant to establish.": "It is a factual premise; the conclusion is that the booksellers' inference is premature.",
+          "It is a consideration that the argument acknowledges counts against its own conclusion.": "It supports the argument's conclusion rather than counting against it.",
+          "It is a premise from which the argument infers that moving poetry sections to the front has no effect on sales.": "Too strong: the argument says only that the rise 'may owe more' to staff, not that placement has no effect."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-role",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}
