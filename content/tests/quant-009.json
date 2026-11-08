@@ -1,0 +1,1065 @@
+{
+  "id": "quant-009",
+  "measure": "quant",
+  "title": "Quant Hard Mock 9",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 21
+    },
+    {
+      "n": 2,
+      "minutes": 26
+    }
+  ],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Animals admitted to a wildlife rescue center in 2025, by status on December 31, 2025 (each percent is a percent of that group's number admitted)",
+      "table": {
+        "head": [
+          "Animal group",
+          "Number admitted",
+          "Released",
+          "Transferred",
+          "Still in care"
+        ],
+        "rows": [
+          [
+            "Birds",
+            "840",
+            "45%",
+            "20%",
+            "35%"
+          ],
+          [
+            "Mammals",
+            "520",
+            "40%",
+            "35%",
+            "25%"
+          ],
+          [
+            "Reptiles",
+            "180",
+            "25%",
+            "45%",
+            "30%"
+          ],
+          [
+            "Amphibians",
+            "60",
+            "90%",
+            "5%",
+            "5%"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fig2",
+      "caption": "Triangle ABC with point D on side BC (note: figure not drawn to scale)",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 200' width='260' height='200' font-family='serif' font-size='16'><polygon points='30,150 230,150 130,70' fill='none' stroke='currentColor' stroke-width='2'/><line x1='130' y1='70' x2='130' y2='150' stroke='currentColor' stroke-width='1.5'/><text x='124' y='62' fill='currentColor'>A</text><text x='12' y='166' fill='currentColor'>B</text><text x='236' y='166' fill='currentColor'>C</text><text x='125' y='170' fill='currentColor'>D</text><text x='40' y='194' fill='currentColor' font-size='12'>Note: Figure not drawn to scale.</text></svg>"
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "Compare the two quantities.",
+      "qc": {
+        "a": "$\\dfrac{0.\\overline{12}}{0.\\overline{3}}$",
+        "b": "$\\dfrac{0.12}{0.3}$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$0.\\overline{12} = \\tfrac{12}{99} = \\tfrac{4}{33}$ and $0.\\overline{3} = \\tfrac13$, so A = $\\tfrac{12}{33} = \\tfrac{4}{11} \\approx 0.364$. B = $0.4$. B is greater.",
+        "steps": [
+          "1. A two-digit repeating block over 99: $0.\\overline{12} = \\tfrac{12}{99} = \\tfrac{4}{33}$.",
+          "2. $0.\\overline{3} = \\tfrac39 = \\tfrac13$.",
+          "3. A = $\\tfrac{4}{33} \\div \\tfrac13 = \\tfrac{12}{33} = \\tfrac{4}{11} = 0.\\overline{36}$.",
+          "4. B = $\\tfrac{12}{30} = 0.4 > 0.\\overline{36}$."
+        ],
+        "fast": "A = $\\tfrac{12/99}{3/9} = \\tfrac{12}{33}$ and B = $\\tfrac{12}{30}$: same numerator, smaller denominator wins.",
+        "trap": "Dropping the bars and assuming the repeating decimals keep the same ratio as 0.12 and 0.3 gives C; the two repeating numbers are over 99 and 9, not 100 and 10."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "fractions-decimals",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "The number $a$ satisfies $a^3 < a$.",
+      "qc": {
+        "a": "$a^2$",
+        "b": "$-a$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "$a^3 < a$ holds exactly when $a < -1$ or $0 < a < 1$. In both cases $a^2 > -a$.",
+        "steps": [
+          "1. $a^3 - a = a(a-1)(a+1) < 0$ gives $a < -1$ or $0 < a < 1$.",
+          "2. If $0 < a < 1$: $a^2 > 0 > -a$.",
+          "3. If $a < -1$: $-a = |a| > 1$, so $a^2 = |a|^2 > |a| = -a$.",
+          "4. A is greater in every case."
+        ],
+        "fast": "$a^2 + a = a(a+1)$ is positive for $a > 0$ and for $a < -1$, which covers every allowed $a$.",
+        "trap": "Expecting the two cases to point in opposite directions and answering D without checking the negative case."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-sense-qc",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "figureId": "fig2",
+      "prompt": "In triangle $ABC$ shown, point $D$ lies on side $BC$, and $AD = BD = DC$.",
+      "qc": {
+        "a": "$AB + AC$",
+        "b": "$\\sqrt{2}\\cdot BC$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "$A$ lies on the circle with diameter $BC$, so angle $BAC = 90^\\circ$ and $AB^2 + AC^2 = BC^2$. Then $AB + AC \\le \\sqrt2\\,BC$, with equality only when $AB = AC$; nothing given forces that.",
+        "steps": [
+          "1. $D$ is the midpoint of $BC$ and $DA = DB = DC$, so $A$ is on the circle with diameter $BC$: angle $A = 90^\\circ$.",
+          "2. $(AB + AC)^2 = BC^2 + 2\\,AB\\cdot AC \\le BC^2 + (AB^2 + AC^2) = 2BC^2$.",
+          "3. If $AB = AC$ the quantities are equal; if, say, $AB = 6$, $AC = 8$, $BC = 10$, then A = 14 < $10\\sqrt2 \\approx 14.1$.",
+          "4. The relationship cannot be determined."
+        ],
+        "fast": "Right angle at A; a 45-45-90 case gives equality and a 6-8-10 case gives B larger.",
+        "trap": "The figure shows $A$ directly above $D$, so it looks isosceles and suggests C. The figure is not to scale, and $AD = BD = DC$ allows any position of $A$ on the semicircle."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "figures-not-to-scale",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "Compare the two quantities.",
+      "qc": {
+        "a": "The remainder when $2^{100} + 3^{100}$ is divided by 7",
+        "b": "The remainder when $5^{100}$ is divided by 7"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Powers cycle modulo 7: $2^3 \\equiv 1$ and $3^6 \\equiv 1$, $5^6 \\equiv 1$. So $2^{100} \\equiv 2$, $3^{100} \\equiv 3^4 \\equiv 4$, and A = 6; $5^{100} \\equiv 5^4 \\equiv 2$, so B = 2.",
+        "steps": [
+          "1. $2^3 = 8 \\equiv 1 \\pmod 7$ and $100 = 3 \\cdot 33 + 1$, so $2^{100} \\equiv 2$.",
+          "2. $3^6 \\equiv 1 \\pmod 7$ and $100 = 6 \\cdot 16 + 4$, so $3^{100} \\equiv 3^4 = 81 \\equiv 4$.",
+          "3. A: $2 + 4 = 6$, which is already less than 7, so the remainder is 6.",
+          "4. $5^{100} \\equiv 5^4 = 625 = 7 \\cdot 89 + 2$, so B = 2.",
+          "5. A is greater."
+        ],
+        "fast": "Work mod 7 with $5 \\equiv -2$: $5^{100} \\equiv 2^{100} \\equiv 2$, while A adds $3^{100} \\equiv 4$ to that same 2.",
+        "trap": "Treating $2^{100} + 3^{100}$ as if it behaved like $(2 + 3)^{100}$ suggests C; powers do not distribute over a sum."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "remainders-units",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "A bakery sells muffins at \\$2, \\$3 and \\$4 each, depending on size. One morning it sold 120 muffins for a total of \\$340. How many more \\$2 muffins than \\$4 muffins did it sell that morning?",
+      "choices": [
+        "$10$",
+        "$20$",
+        "$40$",
+        "$60$",
+        "It cannot be determined from the information given."
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "With $s$, $m$, $l$ muffins at \\$2, \\$3, \\$4: $s + m + l = 120$ and $2s + 3m + 4l = 340$. Subtracting 3 times the first equation gives $-s + l = -20$, so $s - l = 20$, whatever the individual counts are.",
+        "steps": [
+          "1. $s + m + l = 120$ and $2s + 3m + 4l = 340$.",
+          "2. Multiply the first by 3: $3s + 3m + 3l = 360$.",
+          "3. Subtract: $(2s + 3m + 4l) - (3s + 3m + 3l) = 340 - 360$, so $l - s = -20$.",
+          "4. There were 20 more \\$2 muffins than \\$4 muffins (e.g. $s = 30$, $m = 80$, $l = 10$, or $s = 50$, $m = 40$, $l = 30$)."
+        ],
+        "fast": "Measure prices from the middle price \\$3: each \\$2 muffin is −\\$1, each \\$4 muffin is +\\$1, and the total is \\$20 below $120 \\times 3$.",
+        "trap": "Three unknowns and two equations seem to make the answer undeterminable, but the question asks for a combination that the equations fix."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "linear-equations",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A courier drove from a depot to a town at an average speed of 60 kilometers per hour, stopped in the town for 30 minutes, and then drove back to the depot along the same road at an average speed of 40 kilometers per hour. The whole trip, including the stop, took 5 hours. What was the courier's average speed, in kilometers per hour, for the whole trip, including the stop?",
+      "choices": [
+        "$43.2$",
+        "$45$",
+        "$48$",
+        "$50$",
+        "$54$"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Driving time is 4.5 hours, so $d/60 + d/40 = 4.5$ gives $d = 108$ km each way. Average speed = $216/5 = 43.2$.",
+        "steps": [
+          "1. Driving time = 5 − 0.5 = 4.5 hours.",
+          "2. $\\dfrac{d}{60} + \\dfrac{d}{40} = \\dfrac{d}{24} = 4.5$, so $d = 108$.",
+          "3. Total distance 216 km over the full 5 hours: $216/5 = 43.2$."
+        ],
+        "fast": "The driving-only average is the harmonic mean 48; it covers 4.5 of the 5 hours, so $48 \\times 0.9 = 43.2$.",
+        "trap": "48 ignores the stop; 50 averages the two speeds."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-rate",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "Seven speakers, among them the keynote speaker, Ames and Brook, are to be scheduled in seven consecutive time slots, one speaker per slot. The keynote speaker may not be in the first or the last slot, Ames must speak at some time before Brook, and Ames and Brook may not be in consecutive slots. How many different schedules are possible?",
+      "choices": [
+        "$960$",
+        "$1{,}080$",
+        "$1{,}320$",
+        "$1{,}800$",
+        "$2{,}520$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Place Ames and Brook first (15 ordered, non-adjacent position pairs), then the keynote in an interior slot that is still free, then the other four speakers in $4! = 24$ ways: $55 \\times 24 = 1{,}320$.",
+        "steps": [
+          "1. Position pairs $a < b$ with $b - a \\ge 2$: $\\binom72 - 6 = 15$.",
+          "2. Interior slots are 2–6. Pair (1, 7) uses none of them, leaving 5 for the keynote: 1 pair × 5.",
+          "3. Pairs with exactly one end slot: $a = 1, b \\in \\{3,4,5,6\\}$ or $b = 7, a \\in \\{2,3,4,5\\}$: 8 pairs × 4.",
+          "4. Pairs inside 2–6 that are not adjacent: $10 - 4 = 6$ pairs × 3.",
+          "5. $5 + 32 + 18 = 55$ placements, times $4! = 24$ for the rest: 1,320."
+        ],
+        "fast": "Without the keynote rule: $15 \\times 5! = 1{,}800$. Count keynote placements by how many interior slots Ames and Brook take.",
+        "trap": "1,800 drops either the keynote rule or the no-adjacency rule; 2,520 keeps only the Ames-before-Brook rule. Multiplying separate fractions (5/7, 1/2, ...) fails because the restrictions interact."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-restrictions",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "The number $x$ satisfies both $-2 < \\dfrac{6 - 3x}{2} \\le 9$ and $x^2 > 4$. Which of the following could be the value of $x$? Indicate all such values.",
+      "choices": [
+        "$-4$",
+        "$-3$",
+        "$-2$",
+        "$0$",
+        "$3$",
+        "$\\dfrac{10}{3}$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The first condition gives $-4 \\le x < 10/3$; the second removes $-2 \\le x \\le 2$. So $x \\in [-4, -2) \\cup (2, 10/3)$: −4, −3 and 3.",
+        "steps": [
+          "1. Multiply by 2: $-4 < 6 - 3x \\le 18$.",
+          "2. Subtract 6: $-10 < -3x \\le 12$.",
+          "3. Divide by −3 and flip: $-4 \\le x < \\tfrac{10}{3}$.",
+          "4. $x^2 > 4$ means $x < -2$ or $x > 2$.",
+          "5. Allowed: $-4 \\le x < -2$ or $2 < x < 10/3$. Check the choices: −4 yes, −3 yes, −2 no, 0 no, 3 yes, 10/3 no."
+        ],
+        "fast": "Test each choice directly in both conditions.",
+        "trap": "Forgetting to flip the inequalities when dividing by −3 swaps which endpoint is included: −4 is in, 10/3 is out."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inequalities",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 3,
+      "prompt": "At a seed library, the ratio of packets of tomato seeds to packets of pepper seeds was 7 to 4. After 15 packets of pepper seeds were added and no other packets were added or removed, the ratio became 7 to 5. How many packets of tomato and pepper seeds combined did the library have after the 15 packets were added?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "180"
+      },
+      "explanation": {
+        "key": "With $7k$ tomato and $4k$ pepper packets, $\\dfrac{7k}{4k + 15} = \\dfrac75$ gives $k = 15$: 105 tomato and 75 pepper after the addition, 180 in all.",
+        "steps": [
+          "1. $35k = 28k + 105$, so $k = 15$.",
+          "2. Before: 105 tomato, 60 pepper. After: 105 tomato, 75 pepper.",
+          "3. Total after: 180."
+        ],
+        "fast": "Tomato is fixed at 7 parts, so the 15 new packets are the one extra pepper part: 1 part = 15, and the new total is 12 parts = 180.",
+        "trap": "165 is the total before the packets were added."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "ratio-proportion",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 3,
+      "prompt": "Compared with the reptile transfers, by approximately what percent did the count of mammal transfers exceed them?",
+      "choices": [
+        "$55\\%$",
+        "$80\\%$",
+        "$125\\%$",
+        "$225\\%$",
+        "$290\\%$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Mammals transferred: $0.35 \\times 520 = 182$. Reptiles transferred: $0.45 \\times 180 = 81$. $(182 - 81)/81 \\approx 1.25$, so about 125% greater.",
+        "steps": [
+          "1. $0.35 \\times 520 = 182$.",
+          "2. $0.45 \\times 180 = 81$.",
+          "3. Percent greater = $\\dfrac{182 - 81}{81} \\approx 124.7\\%$."
+        ],
+        "fast": "182 is a bit more than $2.25 \\times 81 = 182.25$, so about 125% greater.",
+        "trap": "Comparing the percents (35% vs 45%) suggests reptiles; 225% is the ratio, not the percent greater; 55% uses 182 as the base."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "percent",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 4,
+      "prompt": "Suppose that in 2026 the center admits the same number of animals in each group as in 2025, and that the percents released for birds, reptiles and amphibians are the same as in 2025. Approximately what percent of the mammals would have to be released for 50 percent of all the animals admitted in 2026 to be released?",
+      "choices": [
+        "$40\\%$",
+        "$50\\%$",
+        "$56\\%$",
+        "$62\\%$",
+        "$70\\%$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Half of 1,600 is 800 releases. Birds, reptiles and amphibians give $378 + 45 + 54 = 477$, so mammals need 323 of 520, about 62%.",
+        "steps": [
+          "1. Total admitted: $840 + 520 + 180 + 60 = 1{,}600$; 50% is 800.",
+          "2. Others released: $0.45(840) + 0.25(180) + 0.90(60) = 378 + 45 + 54 = 477$.",
+          "3. Mammals needed: $800 - 477 = 323$; $323/520 \\approx 62\\%$."
+        ],
+        "fast": "Weighted, not simple: the four percents already average 50% (45, 40, 25, 90), but the large bird group pulls the true combined rate down to about 43%.",
+        "trap": "Averaging the four group percents gives exactly 50% with mammals at 40%, so 40% looks like the answer; that ignores the very different group sizes."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 5,
+      "prompt": "In January 2026, exactly half of the birds and exactly one-fifth of the mammals that were still in care on December 31, 2025, were released, and no other animal in the table changed status. One animal is to be chosen at random from all the animals in the table that had been released by January 31, 2026. The probability that the chosen animal is a mammal is closest to which of the following?",
+      "choices": [
+        "$0.15$",
+        "$0.24$",
+        "$0.27$",
+        "$0.30$",
+        "$0.33$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Released by January 31: 685 from 2025 plus $147 + 26 = 173$ in January, 858 in all. Mammals: $208 + 26 = 234$. $234/858 = 3/11 \\approx 0.27$.",
+        "steps": [
+          "1. Released in 2025: birds 378, mammals 208, reptiles 45, amphibians 54; total 685.",
+          "2. Still in care: birds $0.35 \\times 840 = 294$, mammals $0.25 \\times 520 = 130$.",
+          "3. January releases: $294/2 = 147$ birds and $130/5 = 26$ mammals.",
+          "4. Released mammals $208 + 26 = 234$ out of $685 + 173 = 858$: $234/858 = 3/11 \\approx 0.273$."
+        ],
+        "fast": "Only the bird and mammal counts change; add both January groups to the denominator.",
+        "trap": "Ignoring January gives $208/685 \\approx 0.30$; adding only the mammals' January releases gives $234/711 \\approx 0.33$; dividing by all 1,600 animals gives about 0.15."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-conditional",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q1",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "Compare the two quantities.",
+      "qc": {
+        "a": "$\\sqrt{9^5 + 9^5 + 9^5}$",
+        "b": "$\\dfrac{3^6}{\\sqrt{3}}$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "$9^5 + 9^5 + 9^5 = 3 \\cdot 3^{10} = 3^{11}$, so A = $3^{11/2}$. B = $3^{6 - 1/2} = 3^{11/2}$. Equal.",
+        "steps": [
+          "1. $3 \\cdot 9^5 = 3 \\cdot 3^{10} = 3^{11}$.",
+          "2. A = $\\sqrt{3^{11}} = 3^{5.5}$.",
+          "3. B = $3^6 / 3^{0.5} = 3^{5.5}$."
+        ],
+        "fast": "Square both: A² = $3^{11}$, B² = $3^{12}/3 = 3^{11}$.",
+        "trap": "Treating $9^5 + 9^5 + 9^5$ as $27^5$ or $9^{15}$ makes A look far larger."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponents-roots",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q2",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "The number $x$ satisfies $|x - 1| + |x + 3| = 4$.",
+      "qc": {
+        "a": "$x^2 + 2x$",
+        "b": "$3$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The distance between 1 and −3 is exactly 4, so every $x$ from −3 to 1 satisfies the equation. On that interval $x^2 + 2x = (x+1)^2 - 1$ ranges from −1 to 3: it equals 3 at the endpoints and is less inside.",
+        "steps": [
+          "1. $|x - 1| + |x + 3|$ is the sum of the distances from $x$ to 1 and to −3; it equals 4 for every $x$ in $[-3, 1]$ and exceeds 4 outside.",
+          "2. $x = 1$ or $x = -3$: A = 3, equal to B.",
+          "3. $x = 0$: A = 0 < 3.",
+          "4. Cannot be determined."
+        ],
+        "fast": "Try $x = 0$: $1 + 3 = 4$ works, and A = 0. Then try $x = 1$: A = 3.",
+        "trap": "Solving as if the equation had only the two solutions $x = 1$ and $x = -3$; both give A = 3, which suggests C."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "abs-value-inequalities",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q3",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "List $L$ consists of 20 numbers whose mean is 50 and whose standard deviation is 8. List $M$ consists of the 20 numbers in $L$ together with the two numbers 42 and 58.",
+      "qc": {
+        "a": "The standard deviation of the numbers in $M$",
+        "b": "The standard deviation of the numbers in $L$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "42 and 58 keep the mean at 50, and each lies exactly one standard deviation (8) from it, so each adds exactly the average squared deviation, 64. The variance stays 64 and the standard deviation stays 8. The same holds with the $n - 1$ divisor: $19 \\cdot 64 + 2 \\cdot 64 = 21 \\cdot 64$, so either convention gives C.",
+        "steps": [
+          "1. The mean of $M$ is still 50, since 42 and 58 are symmetric about 50.",
+          "2. Sum of squared deviations in $L$: $20 \\times 64 = 1{,}280$.",
+          "3. In $M$: $1{,}280 + 64 + 64 = 1{,}408$, and $1{,}408/22 = 64$.",
+          "4. Both standard deviations are 8. (With the $n - 1$ divisor: $19 \\cdot 64 + 128 = 1{,}344 = 21 \\cdot 64$, the same result.)"
+        ],
+        "fast": "Adding values at exactly mean ± SD leaves the SD unchanged; values inside that band would lower it and values outside would raise it.",
+        "trap": "Assuming more data near the middle always lowers the SD (B), or that widening the list raises it (A)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "std-dev-normal",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q4",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "A triangle has sides of lengths 6, 8 and $x$, where $x$ is an integer, and the triangle has an obtuse angle.",
+      "qc": {
+        "a": "The number of possible values of $x$",
+        "b": "$6$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The obtuse angle can be opposite $x$ ($x^2 > 100$: 11, 12, 13) or opposite the side 8 ($64 > 36 + x^2$: 3, 4, 5). Six values.",
+        "steps": [
+          "1. Triangle inequality: $2 < x < 14$.",
+          "2. Obtuse opposite $x$: $x^2 > 6^2 + 8^2 = 100$, so $x = 11, 12, 13$.",
+          "3. Obtuse opposite 8: $8^2 > 6^2 + x^2$, so $x^2 < 28$: $x = 3, 4, 5$.",
+          "4. The angle opposite 6 can never be obtuse (6 is not the longest side). Total: 6."
+        ],
+        "fast": "Two cases for the longest side: $x$ or 8.",
+        "trap": "Only treating $x$ as the longest side gives 3 values and the answer B."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "On each weekday, independently of other days, the probability that a commuter's morning train is late is $\\dfrac12$.",
+      "qc": {
+        "a": "The probability that the train is late on at least 1 of 3 given weekdays",
+        "b": "The probability that the train is late on at least 2 of 6 given weekdays"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "A = $1 - (1/2)^3 = 56/64$. B = $1 - [\\binom60 + \\binom61]/64 = 1 - 7/64 = 57/64$. B is greater.",
+        "steps": [
+          "1. A: complement of no late days in 3: $1 - 1/8 = 7/8 = 56/64$.",
+          "2. B: complement of 0 or 1 late days in 6: $(1 + 6)/64 = 7/64$, so B = $57/64$.",
+          "3. $57/64 > 56/64$."
+        ],
+        "fast": "Put both over 64 using complements.",
+        "trap": "Thinking “at least 1 of 3” and “at least 2 of 6” are the same proportion, so the probabilities are equal (C)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-basic",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q6",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "In 2020, 40 percent of the households in a town had heat pumps. From 2020 to 2025 the number of households in the town increased by 25 percent, and the number of households with heat pumps increased by 50 percent. By what percent did the fraction of the town's households that had heat pumps increase from 2020 to 2025?",
+      "choices": [
+        "$8\\%$",
+        "$20\\%$",
+        "$25\\%$",
+        "$48\\%$",
+        "$60\\%$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The fraction is multiplied by $1.5/1.25 = 1.2$: it rose from 40% to 48%, a 20 percent increase.",
+        "steps": [
+          "1. Take 100 households in 2020, 40 with heat pumps.",
+          "2. In 2025: 125 households, 60 with heat pumps, so the fraction is $60/125 = 48\\%$.",
+          "3. Percent increase of the fraction: $(48 - 40)/40 = 20\\%$."
+        ],
+        "fast": "$1.5 / 1.25 = 1.2$.",
+        "trap": "8 is the change in percentage points; 48% is the 2025 fraction itself; 25% subtracts the growth rates (50 − 25)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "percent",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q7",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A triangular park has sides of lengths 6, 8 and 10 meters. A circular fountain is placed so that its edge touches all three sides of the park, and a lamp post stands at the point that is equidistant from the park's three corners. What is the distance, in meters, from the center of the fountain to the lamp post?",
+      "choices": [
+        "$\\sqrt{5}$",
+        "$2\\sqrt{2}$",
+        "$3$",
+        "$\\sqrt{13}$",
+        "$2\\sqrt{5}$"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "The fountain is the inscribed circle, centered 2 m from each side; the lamp post is the circumcenter, the midpoint of the hypotenuse. With the right angle at the origin, they are at (2, 2) and (3, 4): distance $\\sqrt{5}$.",
+        "steps": [
+          "1. 6-8-10 is a right triangle. Put the right angle at (0, 0) and the legs along the axes: corners (0, 0), (6, 0), (0, 8).",
+          "2. Inradius $r = (6 + 8 - 10)/2 = 2$, so the incenter is (2, 2).",
+          "3. The circumcenter of a right triangle is the midpoint of the hypotenuse: from (6, 0) to (0, 8), that is (3, 4).",
+          "4. Distance: $\\sqrt{(3-2)^2 + (4-2)^2} = \\sqrt5$."
+        ],
+        "fast": "Euler's relation $d^2 = R(R - 2r) = 5(5 - 4) = 5$.",
+        "trap": "Subtracting the radii ($R - r = 5 - 2 = 3$) as if the two centers lay on one radius."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inscribed-figures",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q8",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "Each of the 200 pass holders at a three-day film festival attended on at least one of the three days. Exactly 170 attended on Friday, 160 on Saturday and 150 on Sunday. What is the greatest possible number of pass holders who attended on exactly two of the three days?",
+      "choices": [
+        "$80$",
+        "$120$",
+        "$140$",
+        "$150$",
+        "$280$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "With $e_1, e_2, e_3$ pass holders attending exactly 1, 2, 3 days: $e_1 + e_2 + e_3 = 200$ and $e_1 + 2e_2 + 3e_3 = 480$, so $e_2 = 280 - 2e_3$ and $e_1 = e_3 - 80$. Then $e_3 \\ge 80$, so $e_2 \\le 120$; 120 is reached with 80 attending all three days and pairwise-only counts 50, 40, 30.",
+        "steps": [
+          "1. Total attendances: $170 + 160 + 150 = 480$.",
+          "2. Subtract the head count: $e_2 + 2e_3 = 280$.",
+          "3. $e_1 = 200 - e_2 - e_3 = e_3 - 80 \\ge 0$, so $e_3 \\ge 80$ and $e_2 = 280 - 2e_3 \\le 120$.",
+          "4. Achievable: all three days 80; Fri+Sat only 50, Fri+Sun only 40, Sat+Sun only 30; nobody on one day only. Fri $= 80 + 50 + 40 = 170$, Sat $= 80 + 50 + 30 = 160$, Sun $= 80 + 40 + 30 = 150$."
+        ],
+        "fast": "Maximizing exactly-two means minimizing all-three, and the minimum all-three is forced by the need for $e_1 \\ge 0$.",
+        "trap": "280 ignores that each all-three attendee absorbs two of the extra attendances; 80 is the minimum number attending all three days, not the answer."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "overlapping-sets",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "min-max-bounding",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q9",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "Point $P$ is 10 units from the center $O$ of a circle of radius 5. The two lines through $P$ that are tangent to the circle touch it at points $S$ and $T$. What is the area of the region bounded by segments $PS$ and $PT$ and the minor arc $ST$?",
+      "choices": [
+        "$25\\sqrt{3} - \\dfrac{25\\pi}{6}$",
+        "$25\\sqrt{3} - \\dfrac{25\\pi}{3}$",
+        "$50\\sqrt{3} - \\dfrac{25\\pi}{3}$",
+        "$\\dfrac{25\\sqrt{3}}{2} - \\dfrac{25\\pi}{6}$",
+        "$25\\sqrt{3} - \\dfrac{50\\pi}{3}$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$OS \\perp PS$ and $OS = 5 = OP/2$, so angle $SOP = 60^\\circ$ and $PS = 5\\sqrt3$. Kite $OSPT$ has area $2 \\cdot \\tfrac12 \\cdot 5 \\cdot 5\\sqrt3 = 25\\sqrt3$; subtract the $120^\\circ$ sector, $\\tfrac13 \\cdot 25\\pi$.",
+        "steps": [
+          "1. Triangle $OSP$ is right-angled at $S$ with hypotenuse 10 and leg 5: a 30-60-90 triangle, angle $SOP = 60^\\circ$, $PS = 5\\sqrt3$.",
+          "2. Kite area: $2 \\times \\tfrac12 \\times 5 \\times 5\\sqrt3 = 25\\sqrt3$.",
+          "3. Angle $SOT = 120^\\circ$, sector area $= \\tfrac{120}{360}\\pi \\cdot 25 = \\tfrac{25\\pi}{3}$.",
+          "4. Region: $25\\sqrt3 - \\tfrac{25\\pi}{3}$."
+        ],
+        "fast": "30-60-90 triangle, then kite minus a third of the circle.",
+        "trap": "Using the 60° angle $SOP$ for the sector gives $25\\pi/6$; using one right triangle instead of the kite halves the first term."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "circles",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q10",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "The length of a rectangular mural is 1.5 times its width. If each dimension were increased by 4 feet, the area of the mural would increase by 136 square feet. What is the perimeter, in feet, of the original mural?",
+      "choices": [
+        "$48$",
+        "$60$",
+        "$68$",
+        "$76$",
+        "$96$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$(1.5w + 4)(w + 4) - 1.5w^2 = 10w + 16 = 136$, so $w = 12$, length 18, perimeter 60.",
+        "steps": [
+          "1. Expand: $1.5w^2 + 6w + 4w + 16 - 1.5w^2 = 10w + 16$.",
+          "2. $10w + 16 = 136$ gives $w = 12$, length $18$.",
+          "3. Perimeter: $2(12 + 18) = 60$."
+        ],
+        "fast": "The added area is 4 × (width + length) + 16 = 136, so width + length = 30.",
+        "trap": "76 is the perimeter of the enlarged mural."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "area-perimeter",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q11",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A bag holds six number tiles: two tiles marked 1, two tiles marked 2, one tile marked 3 and one tile marked 4. How many different four-digit numbers can be formed by placing four of the six tiles side by side?",
+      "choices": [
+        "$72$",
+        "$96$",
+        "$102$",
+        "$180$",
+        "$360$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Split by repeated digits: all four digits different, $4! = 24$; one pair plus two other digits, $2 \\times 3 \\times 12 = 72$; two pairs (1, 1, 2, 2), $\\tfrac{4!}{2!2!} = 6$. Total 102.",
+        "steps": [
+          "1. Four different digits {1, 2, 3, 4}: $4! = 24$.",
+          "2. Exactly one pair: choose the pair (1 or 2), then 2 of the other 3 digit values: $2 \\times 3 = 6$ multisets, each with $4!/2! = 12$ orders: 72.",
+          "3. Two pairs {1, 1, 2, 2}: $4!/(2!\\,2!) = 6$.",
+          "4. $24 + 72 + 6 = 102$."
+        ],
+        "fast": "Case on how many digits repeat.",
+        "trap": "360 treats the six tiles as distinct; 180 halves once for one repeated pair only."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-permutations",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q12",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "In triangle $ABC$, angle $B$ measures $45^\\circ$, angle $C$ measures $30^\\circ$, and $AC = 8$. What is the area of triangle $ABC$?",
+      "choices": [
+        "$8 + 4\\sqrt{3}$",
+        "$8 + 8\\sqrt{3}$",
+        "$16\\sqrt{3}$",
+        "$16 + 16\\sqrt{3}$",
+        "$32$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Drop the altitude $AD$ to $BC$. In the 30-60-90 triangle $ADC$: $AD = 4$, $DC = 4\\sqrt3$. In the 45-45-90 triangle $ADB$: $BD = 4$. Area $= \\tfrac12 (4 + 4\\sqrt3)(4) = 8 + 8\\sqrt3$.",
+        "steps": [
+          "1. Angle $A = 105^\\circ$ is obtuse, but angles $B$ and $C$ are acute, so $D$ falls between $B$ and $C$.",
+          "2. $AD = AC \\sin 30^\\circ = 4$, $DC = 4\\sqrt3$.",
+          "3. $BD = AD = 4$.",
+          "4. Area $= \\tfrac12 \\cdot BC \\cdot AD = \\tfrac12 (4 + 4\\sqrt3) \\cdot 4 = 8 + 8\\sqrt3$."
+        ],
+        "fast": "Altitude splits it into a 30-60-90 and a 45-45-90 triangle that share the leg 4.",
+        "trap": "Forgetting the factor 1/2 gives $16 + 16\\sqrt3$; using only the 30-60-90 part gives $8\\sqrt3$-type answers."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q13",
+      "section": 2,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "The numbers $a$ and $b$ satisfy $a + b = 6$ and $ab = 4$. Which of the following have an integer value? Indicate all such expressions.",
+      "choices": [
+        "$a^2 + b^2$",
+        "$a^2 - b^2$",
+        "$a^3 + b^3$",
+        "$\\dfrac1a + \\dfrac1b$",
+        "$\\sqrt{a} + \\sqrt{b}$",
+        "$(a - b)^2$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "Symmetric expressions follow from $a + b$ and $ab$: $a^2 + b^2 = 28$, $a^3 + b^3 = 144$, $(a - b)^2 = 20$. The others are $\\pm 12\\sqrt5$, $3/2$ and $\\sqrt{10}$.",
+        "steps": [
+          "1. $a^2 + b^2 = 36 - 8 = 28$.",
+          "2. $(a - b)^2 = 28 - 8 = 20$, so $a - b = \\pm 2\\sqrt5$ and $a^2 - b^2 = 6(a - b) = \\pm 12\\sqrt5$.",
+          "3. $a^3 + b^3 = (a + b)^3 - 3ab(a + b) = 216 - 72 = 144$.",
+          "4. $\\tfrac1a + \\tfrac1b = \\tfrac{a + b}{ab} = \\tfrac32$.",
+          "5. $a, b > 0$; $(\\sqrt a + \\sqrt b)^2 = 6 + 2\\sqrt4 = 10$, so $\\sqrt a + \\sqrt b = \\sqrt{10}$."
+        ],
+        "fast": "Only symmetric expressions are forced to be rational here; then check each.",
+        "trap": "$(\\sqrt a + \\sqrt b)^2 = 10$ is an integer but its square root is not; $a^2 - b^2$ looks as tidy as $a^2 + b^2$ but contains $a - b$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "algebraic-expressions",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q14",
+      "section": 2,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "The numbers $x$ and $y$ satisfy $1 \\le x \\le 4$, $2 \\le y \\le 6$ and $x + y \\le 7$. Which of the following could be the value of $xy$? Indicate all such values.",
+      "choices": [
+        "$1.5$",
+        "$2$",
+        "$12$",
+        "$12.25$",
+        "$14$",
+        "$24$"
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The smallest product is $1 \\cdot 2 = 2$. For the largest, $x + y \\le 7$ caps it: $xy \\le (7/2)^2 = 12.25$, reached at $x = y = 3.5$. Every value from 2 to 12.25 occurs, so 2, 12 and 12.25.",
+        "steps": [
+          "1. Minimum: both factors positive and smallest at $x = 1$, $y = 2$: $xy = 2$.",
+          "2. Maximum: for a fixed sum $s \\le 7$, $xy \\le (s/2)^2 \\le 12.25$; $x = y = 3.5$ satisfies all constraints.",
+          "3. The feasible region is connected, so $xy$ takes every value in $[2, 12.25]$: 12 (e.g. $x = 3$, $y = 4$) works.",
+          "4. 1.5 is too small; 14 and 24 are too large."
+        ],
+        "fast": "Fixed sum → product largest when the two numbers are equal.",
+        "trap": "Multiplying the separate maximums ($4 \\times 6 = 24$) ignores $x + y \\le 7$; thinking only of integers stops at 12 and misses 12.25."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "min-max-bounding",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q15",
+      "section": 2,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "How many positive divisors of 720 are divisible by 6 but not divisible by 9?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "8"
+      },
+      "explanation": {
+        "key": "$720 = 2^4 \\cdot 3^2 \\cdot 5$. A divisor divisible by 6 but not by 9 has $2^a$ with $a = 1$ to 4, exactly $3^1$, and $5^0$ or $5^1$: $4 \\times 1 \\times 2 = 8$.",
+        "steps": [
+          "1. $720 = 2^4 \\cdot 3^2 \\cdot 5$.",
+          "2. Divisible by 6: exponent of 2 at least 1 (4 options), exponent of 3 at least 1.",
+          "3. Not divisible by 9: exponent of 3 exactly 1.",
+          "4. Exponent of 5: 0 or 1. Total $4 \\cdot 1 \\cdot 2 = 8$."
+        ],
+        "fast": "Divisors of the form $6m$ with $m \\mid 120$ and $3 \\nmid m$: divisors of 40, which number 8.",
+        "trap": "16 counts all divisors divisible by 6, including those divisible by 9."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "integers-properties",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}
