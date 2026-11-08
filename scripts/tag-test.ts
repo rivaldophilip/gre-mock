@@ -4,13 +4,14 @@
 import fs from "node:fs";
 import type { Question, Tag, Test } from "../lib/types";
 import { vocabIndex, wordIdOf, type VocabEntry } from "../lib/vocab-match";
+import { writeTestFile } from "./lib/test-file";
 
 type Raw = Omit<Test, "questions" | "passages"> & { questions: (Question & { tags?: Tag[] })[]; passages?: { id: string; paragraphs: string[]; tags?: Tag[] }[] };
 
 export function tagTest(test: Raw, vocab: VocabEntry[], passageWords: string[] = []) {
   const index = vocabIndex(vocab);
   const untagged: string[] = [];
-  const missingKeys: string[] = [];
+  const missingKeys: { id: string; text: string }[] = [];
   for (const q of test.questions) {
     if (q.type !== "tc" && q.type !== "se") continue;
     const sel = "sel" in q.key ? q.key.sel : [];
@@ -22,7 +23,8 @@ export function tagTest(test: Raw, vocab: VocabEntry[], passageWords: string[] =
     for (const [text, at, isKey] of slots) {
       const id = wordIdOf(text, index);
       if (id) words.push({ kind: "word", id, role: isKey ? "key" : "distractor", at });
-      else (isKey ? missingKeys : untagged).push(`${q.id} "${text}"`);
+      else if (isKey) missingKeys.push({ id: q.id, text });
+      else untagged.push(`${q.id} "${text}"`);
     }
     q.tags = [...(q.tags ?? []).filter((t) => !(t.kind === "word" && (t.role === "key" || t.role === "distractor"))), ...words];
   }
@@ -42,7 +44,7 @@ export function tagTest(test: Raw, vocab: VocabEntry[], passageWords: string[] =
 if (process.argv[1]?.endsWith("tag-test.ts")) {
   const id = process.argv[2];
   if (!id) {
-    console.error("usage: npm run tag -- <test-id>");
+    console.error("usage: npm run -s tag -- <test-id>");
     process.exit(1);
   }
   const file = `content/tests/${id}.json`;
@@ -55,13 +57,13 @@ if (process.argv[1]?.endsWith("tag-test.ts")) {
   const briefFile = `content/briefs/${id}.json`;
   const brief = fs.existsSync(briefFile) ? JSON.parse(fs.readFileSync(briefFile, "utf8")) : {};
   const { untagged, missingKeys } = tagTest(test, vocab, (brief.passageWords ?? []).map((w: { id: string }) => w.id));
-  fs.writeFileSync(file, JSON.stringify(test, null, 1) + "\n");
+  writeTestFile(id, test);
   const n = test.questions.reduce((a, q) => a + (q.tags ?? []).filter((t) => t.kind === "word").length, 0);
   const np = (test.passages ?? []).reduce((a, p) => a + (p.tags ?? []).length, 0);
   console.log(`tagged ${id}: ${n} choice tags, ${np} passage tags`);
   if (untagged.length) console.log(`not bank words (left untagged, fine for distractors): ${untagged.join(", ")}`);
   if (missingKeys.length) {
-    console.error(`KEY CHOICES NOT IN THE BANK (use a bank word, or add it to data/definitions.json and rebuild vocab): ${missingKeys.join(", ")}`);
+    console.error(`KEY CHOICES NOT IN THE BANK (use a bank word, or add it to data/definitions.json and rebuild vocab): ${missingKeys.map((m) => `${m.id} "${m.text}"`).join(", ")}`);
     process.exit(1);
   }
 }

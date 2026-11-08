@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { btn } from "./ui";
+import { IconX } from "./icons";
 
 const WARN = {
   exam: "Discard this attempt? Answers in the section you have not finished will not count toward your stats. You can still review it and start the test again.",
@@ -20,8 +20,8 @@ export function DiscardButton({ attemptId, mode }: { attemptId: number; mode: "e
     setBusy(false);
   }
   return (
-    <button disabled={busy} onClick={discard} className={`${btn("ghost")} w-full sm:w-auto`}>
-      {busy ? "Discarding…" : "Discard attempt"}
+    <button disabled={busy} onClick={discard} aria-label="Discard attempt" title="Discard attempt" className="inline-grid size-9 shrink-0 place-items-center rounded-xl text-muted transition-colors hover:bg-surface hover:text-fg disabled:opacity-45">
+      <IconX size={16} />
     </button>
   );
 }

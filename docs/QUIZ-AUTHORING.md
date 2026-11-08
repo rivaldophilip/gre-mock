@@ -2,30 +2,43 @@
 
 Output: one **original** 27-question test (Section 1 = 12 questions, Section 2 = 15) as `content/tests/<measure>-NNN.json`. The same steps run for `verbal` and `quant`. **Never copy, closely paraphrase or reuse stems/passages from ETS or Big Book material.** The repo is public. Official items (local only, `../books/extracted/reference/items.jsonl`) are for style and difficulty calibration.
 
-This page and the brief are all you need to read. Open `lib/types.ts`, `scripts/validate-test.ts` or older tests only if a command below fails and its message is not enough.
+Read this page, the brief and `docs/HARD-PATTERNS.md`; nothing else is needed. Every command below prints what is wrong by question id and ends with a `next:` line naming the step to run. Open `lib/types.ts`, the scripts or older tests only if a message is not enough. Run the scripts as `npm run -s …` (no npm banner).
 
 ## Steps
 
-1. **Brief.** `npm run brief -- <measure>` (add `--user <email>` once there is more than one account). Read `content/briefs/<id>.md`. It has the slot table (type, level and passage of every slot) and what to target:
-   - verbal: key words with their bank synonyms, the 13 reading-skill slots, distractor words and passage words;
+1. **Brief.** `npm run -s brief -- <measure>` (add `--user <email>` once there is more than one account). Read `content/briefs/<id>.md`. It has the slot table (type, level and passage of every slot) and what to target:
+   - verbal: key words with their bank synonyms, reading-skill slots, distractor words and passage words;
    - quant: concept slots.
 
-   Skim `content/briefs/<id>.local.md` (official exemplars, one per slot type and level) only for a type you are unsure how to pitch. Also read `docs/HARD-PATTERNS.md`. The `.json` brief is for scripts; don't read it.
-2. **Author** the whole test in one Write, using the shapes below. Write `$...$` for math. Do **not** write word tags; write each RC question's skill tag and each quant question's concept tags.
-3. **Tag and validate.**
-   - Verbal: `npm run tag -- <id>` fills the TC/SE word tags and the passage-word tags. A key choice that is not a bank word fails here; use a bank word.
-   - Both measures: `npm run validate -- <id>` until it prints OK. Fix with Edit, not a rewrite.
-4. **Quant only.** Write `content/verify/<id>.py`: one assertion per question (brute force or exact arithmetic with `fractions`). `python3 content/verify/<id>.py` must pass.
-5. **Blind-solve with one solver.**
-   - `npm run blind -- <id>` writes `content/.blind/<id>.md`, a copy with no keys, explanations, tags or difficulty that includes the skill list.
-   - Give that path to the `gre-blind-solver` agent and save its reply to `content/.blind/<id>.answers.txt`. Then run `npm run blind -- <id> --check content/.blind/<id>.answers.txt`. It prints only what needs action.
-   - **Wrong answer, or a real ambiguity:** rewrite the item.
-   - **Too easy:** the solver rates about 1.5 levels below official difficulty. The offset is in `data/solver-calibration.json`, and the check already adds it. Rewrite an item only when it is still more than one level under target; otherwise set `difficulty` to the honest level, as long as the section rules below still pass.
-   - **Skill mismatch:** make the stem test the tagged skill, or retag it if the brief's skill mix still holds.
-   - After rewrites, run `npm run blind -- <id> --only s1q3,s2q5`, send the new file to the **same** solver (SendMessage), and check again with the same `--only`.
-6. **Register and publish.** `npm run register -- <id>` (writes to every user's database), then `git add content && git commit && git push` (Vercel redeploys).
+   Skim `content/briefs/<id>.local.md` (official exemplars, one per slot type and level) only for a type you are unsure how to pitch. The `.json` brief is for scripts; don't read it.
+2. **Author** the whole test in one Write, using the shapes below. Write `$...$` for math. Spend the brief as the structure rules say:
+   - key words as keys;
+   - distractor words for about 40% of distractors, with the weak ones first;
+   - 3-6 passage words woven into each reading passage;
+   - the weakest review items on the slots of the brief's type-focus line, if it names any.
 
-Recalibrate only after changing the solver's model: `npm run blind -- --calibrate verbal|quant` builds a local file of official items with known P+. Then run `--calibrate <measure> --check <answers>` on the solver's reply; it stores the new offset.
+   Write each RC question's skill tag and each quant question's concept tags. Do **not** write word tags; check fills them. An irregular form (`forsworn`) is the one exception: tag that by hand.
+
+   **Quant:** also write `content/verify/<id>.py` with `content/verify/keys.py`, using `content/verify/quant-002.py` as the example. Compute each answer (brute force, or exact arithmetic with `fractions`) and hand it to `t.qc` / `t.choice` / `t.where` / `t.sel` / `t.value`, which compare it with the JSON key. End with `t.done()`. Never restate a key by hand.
+3. **Check.** `npm run -s check -- <id>` after the Write and after every round of Edits, until it prints `OK`. Fix with Edit, not a rewrite. One run does all of the following:
+   - fills the verbal word tags;
+   - validates the test, including the 25% overlap check against earlier tests and the official corpus;
+   - runs the quant verify script;
+   - prints the difficulty rules and coverage against the brief: unused key words, skill slots, passage words per passage, and quant concepts.
+
+   A key choice that is not a bank word fails here, and the message names bank words with that sense. Treat coverage gaps as things to fix where the brief allows; they are not errors.
+4. **Blind-solve with one solver.**
+   - `npm run -s blind -- <id>` writes `content/.blind/<id>.md`. This copy has no keys, explanations, tags or difficulty, and it includes the skill list.
+   - Give that path to the `gre-blind-solver` agent. Pass its reply straight to the checker, with no file to write: `npm run -s blind -- <id> --check - <<'EOF'` … reply … `EOF`. The checker saves the reply to `content/.blind/<id>.answers.txt` and prints only what needs action, one line per issue, each with the solver's note and what to do:
+     - **WRONG** (key and solver answer, both in letters) or **flagged** (a real ambiguity): rewrite the item.
+     - **Too easy:** the check already adds the solver's rating offset (`data/solver-calibration.json`; solvers rate about 1.5 levels below official difficulty). It offers either a rewrite, or a retag to the honest level when the section rules still pass. Take the retag only if the item is otherwise sound.
+     - **Skill mismatch:** make the stem test the tagged skill, or retag it if the brief's skill mix still holds.
+   - After fixes, run `npm run -s check -- <id>`, then `npm run -s blind -- <id> --only s1q3,s2q5`. This writes `<id>.only.md`, and the full copy stays. SendMessage that path to the **same** solver, then check its reply with `--check - --only s1q3,s2q5`.
+5. **Register and publish.** `npm run -s register -- <id>` writes to every user's database. It refuses a test that does not validate, and warns if no blind check is on record. Then run `git add content && git commit && git push` (Vercel redeploys).
+
+Recalibrate only after changing the solver's model: `npm run -s blind -- --calibrate verbal|quant` builds a local file of official items with known P+. Give it to the solver, then `--calibrate <measure> --check -` with its reply stores the new offset.
+
+**Improving the pipeline.** After a run, `python3 scripts/session_stats.py` (add `--commands` for the command list) summarizes the newest transcript: tool calls, errors, how many check and blind rounds ran, and tokens. When a step keeps looping or erroring, fix its script's message or this page, not the next test.
 
 ## Structure rules (the validator enforces most)
 
@@ -33,13 +46,13 @@ Recalibrate only after changing the solver's model: `npm run blind -- --calibrat
 - Each section opens with its TC block (verbal) or QC block (quant). Within a type block, mix easy and hard; don't climb.
 - Question ids are `s1q1` … `s2q15`. Passages are `p1, p2, …` (reading) and `a1, a2` (arguments), as the brief's slot table assigns them.
 - **Verbal.** TC: 1 blank = 5 choices; 2–3 blanks = 3 choices per blank; one `___` per blank, written `(i) ___` when there are several. SE: 6 choices, 2 keys. RC: `rc` has 5 choices; `rc_multi` has 3 choices, select all; `rc_select` keys a sentence index across the whole passage (sentences split on `. ` before a capital). Arguments: `type: "rc"`, `subtype: "arg"`, a one-paragraph passage.
-- **Verbal key words.** Spend the brief's 29 key words as the keys of the 15 TC blanks and 7 SE pairs. For an SE pair, use two key words the brief marks with `*`. If there aren't enough such pairs, pair a key word with one of its listed bank synonyms, and use any leftover key words as distractors. For words marked `[secondary]`, build the sentence so the everyday sense is the trap.
+- **Verbal key words.** Spend the brief's 29 key words (each in the GRE sense the brief gives) as the keys of the 15 TC blanks and 7 SE pairs. For an SE pair, use two key words the brief marks with `*`. If there aren't enough such pairs, pair a key word with one of its listed bank synonyms, and use any leftover key words as distractors. For words marked `[secondary]`, build the sentence so the everyday sense is the trap.
 - **Verbal skill tags.** Every RC question gets exactly one `{"kind":"concept","id":<skill>,"role":"primary"}` from the brief, plus an optional `secondary`. Argument items need an `arg-*` skill; `rc-select-verify` suits `rc_multi`. Write the stem so the skill is unambiguous (function: "…primarily in order to").
 - **Quant.** QC key: 0 = A greater, 1 = B greater, 2 = equal, 3 = cannot be determined. MC: 5 choices. `mc_multi`: 5–6 choices, at least 1 key. `numeric`: `{"kind":"single"|"fraction"}`, key `{"value":"3/8"}`. Section 1 has one 3-question data-interpretation set sharing `setId` and `figureId`; the figure is a `table` or inline `svg`. Each question gets one `primary` concept tag from `data/concepts.json`, plus optional `secondary` tags.
 - **Explanations.** Verbal: `key` (why the key fits: signal words, logic per blank) and `distractors` (choice text → why it fails, including the SE trap pair). Quant: `steps` (numbered), `fast` and `trap`.
 - Every item gets a `difficulty` of 1–5. No placeholders, no `TODO`.
 
-## Shapes (copy these; word tags are added by `npm run tag`)
+## Shapes (copy these; word tags are added by `npm run -s check`)
 
 ```json
 { "id": "verbal-003", "measure": "verbal", "title": "Verbal Hard Mock 3",

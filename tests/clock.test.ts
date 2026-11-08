@@ -66,6 +66,16 @@ describe("section clock while the test-taker is away", () => {
     expect(elapsedMs(resumed(away, at(90), "away")!, at(100))).toBe(70_000);
   });
 
+  it("a practice hold survives leaving and coming back, and only Resume lifts it", () => {
+    const hold = paused({ startedAt: iso(0) }, at(60), "hold")!;
+    expect(paused(hold, at(70), "away")).toBeNull();
+    expect(resumed(hold, at(80), "away")).toBeNull();
+    expect(resumed(hold, at(80), "reveal")).toBeNull();
+    expect(heartbeat(hold, at(85))!.pausedFor).toBe("hold");
+    expect(isAway(hold, at(90))).toBe(false);
+    expect(elapsedMs(resumed(hold, at(90), "hold")!, at(100))).toBe(70_000);
+  });
+
   it("pausing a stale clock starts the pause at the last heartbeat", () => {
     const p = paused({ startedAt: iso(0), lastSeenAt: iso(50) }, at(500), "away")!;
     expect(p.pausedAt).toBe(iso(50));

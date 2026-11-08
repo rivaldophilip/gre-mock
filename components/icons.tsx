@@ -56,6 +56,11 @@ export const IconPause = (p: P) => (
     <rect x="14" y="5" width="4" height="14" rx="1" />
   </Svg>
 );
+export const IconPlay = (p: P) => (
+  <Svg {...p} fill>
+    <path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z" />
+  </Svg>
+);
 export const IconSun = (p: P) => (
   <Svg {...p}>
     <circle cx="12" cy="12" r="4" />
@@ -78,5 +83,11 @@ export const IconAlert = (p: P) => (
   <Svg {...p}>
     <circle cx="12" cy="12" r="9" />
     <path d="M12 7.5v5M12 16.5h.01" />
+  </Svg>
+);
+export const IconSearch = (p: P) => (
+  <Svg {...p}>
+    <circle cx="11" cy="11" r="6.5" />
+    <path d="M16 16l4 4" />
   </Svg>
 );

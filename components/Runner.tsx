@@ -11,7 +11,7 @@ import { PassagePane } from "./PassagePane";
 import { QuestionRenderer } from "./QuestionRenderer";
 import { Rich, RichInline } from "./Rich";
 import { ReviewGrid } from "./ReviewGrid";
-import { IconBack, IconCalc, IconCheck, IconClock, IconFlag, IconGrid, IconNext, IconPause, IconX } from "./icons";
+import { IconBack, IconCalc, IconCheck, IconClock, IconFlag, IconGrid, IconNext, IconPause, IconPlay, IconX } from "./icons";
 import { btn, card, iconBtn, seg, segItem } from "./ui";
 
 type Meta = { guessed: boolean; marked: boolean; timeMs: number; finalized: boolean };
@@ -55,6 +55,8 @@ export function Runner(p: RunnerProps) {
     const st = p.sectionState[String(section)];
     return mode === "practice" && !!st?.pausedAt && (st.pausedFor ?? "reveal") === "reveal";
   });
+  // practice mode: the test-taker pressed Pause; the clock stays stopped (and the question hidden) until Resume
+  const [held, setHeld] = useState(() => mode === "practice" && p.sectionState[String(section)]?.pausedFor === "hold");
   // the page is hidden (other tab or app, locked phone, closing): the server clock is paused for "away"
   const [away, setAway] = useState(false);
   const [calc, setCalc] = useState(false);
@@ -190,14 +192,14 @@ export function Runner(p: RunnerProps) {
 
   // countdown (server-anchored at start; local tick)
   useEffect(() => {
-    if (!timerOn || !sectionStarted || sectionDone || left === null || paused || away) return;
+    if (!timerOn || !sectionStarted || sectionDone || left === null || paused || held || away) return;
     if (left <= 0) {
       const t = setTimeout(() => void finishSection(), 0);
       return () => clearTimeout(t);
     }
     const t = setTimeout(() => setLeft((l) => (l === null ? l : l - 1)), 1000);
     return () => clearTimeout(t);
-  }, [left, timerOn, sectionStarted, sectionDone, paused, away, finishSection]);
+  }, [left, timerOn, sectionStarted, sectionDone, paused, held, away, finishSection]);
 
   // The clock only runs while the page is in front of the test-taker. Leaving (tab, app, lock, close, Pause & exit)
   // saves what is pending and pauses it; coming back resumes it. Heartbeats let the server stop the clock on its own
@@ -205,7 +207,7 @@ export function Runner(p: RunnerProps) {
   const active = sectionStarted && !sectionDone;
   const running = timerOn && active;
   const clock = useCallback(
-    async (action: "pause" | "resume" | "heartbeat", keepalive = false) => {
+    async (action: "pause" | "resume" | "heartbeat" | "hold" | "release", keepalive = false) => {
       try {
         const r = await fetch(`/api/attempts/${attemptId}/clock`, {
           method: "POST",
@@ -293,6 +295,27 @@ export function Runner(p: RunnerProps) {
     if (running) await clock("pause");
     router.push("/");
   }, [q, sectionStarted, sectionDone, settle, post, flush, running, clock, router]);
+
+  // practice Pause / Resume: stays on the page; time on hold counts neither to the section nor to the question
+  const toggleHold = useCallback(async () => {
+    setBusy(true);
+    if (!held) {
+      setHeld(true);
+      if (q) {
+        settle();
+        if (timer.current) clearTimeout(timer.current);
+        void post(q.id);
+      }
+      const j = await clock("hold");
+      if (typeof j?.secondsLeft === "number") setLeft(j.secondsLeft);
+    } else {
+      const j = await clock("release");
+      if (typeof j?.secondsLeft === "number") setLeft(j.secondsLeft);
+      entered.current = Date.now();
+      setHeld(false);
+    }
+    setBusy(false);
+  }, [held, q, settle, post, clock]);
 
   useEffect(() => {
     entered.current = Date.now();
@@ -441,12 +464,12 @@ export function Runner(p: RunnerProps) {
   const timerPill = timerOn && left !== null && (
     <span
       data-testid="timer"
-      title={paused ? "Paused while you read the answer; resumes on the next question" : undefined}
+      title={held ? "Paused" : paused ? "Paused while you read the answer; resumes on the next question" : undefined}
       className={`inline-flex h-9 shrink-0 items-center gap-1.5 rounded-full px-3 font-mono text-sm font-semibold tabular-nums ${
-        paused ? "bg-surface-2 text-muted" : left < 300 ? "bg-warn-soft text-warn" : "bg-surface-2 text-fg"
+        paused || held ? "bg-surface-2 text-muted" : left < 300 ? "bg-warn-soft text-warn" : "bg-surface-2 text-fg"
       }`}
     >
-      {paused ? <IconPause size={12} /> : <IconClock size={15} />}
+      {paused || held ? <IconPause size={12} /> : <IconClock size={15} />}
       {fmt(left)}
     </span>
   );
@@ -484,15 +507,28 @@ export function Runner(p: RunnerProps) {
           <button className={iconBtn(!!cur?.marked)} aria-label={cur?.marked ? "Unmark question" : "Mark question"} aria-pressed={!!cur?.marked} title={cur?.marked ? "Unmark" : "Mark for review"} onClick={() => setFlag("marked", !cur?.marked)}>
             <IconFlag size={18} on={!!cur?.marked} />
           </button>
-          <button
-            className={iconBtn()}
-            disabled={busy}
-            aria-label={timerOn ? "Pause and exit" : "Save and exit"}
-            title={timerOn ? "Pause the clock and exit; resume from the dashboard" : "Save and exit; resume from the dashboard"}
-            onClick={() => void pauseAndExit()}
-          >
-            <IconPause size={16} />
-          </button>
+          {mode === "practice" && timerOn ? (
+            <button
+              className={iconBtn(held, "accent")}
+              disabled={busy}
+              aria-label={held ? "Resume" : "Pause"}
+              aria-pressed={held}
+              title={held ? "Resume the clock" : "Pause the clock"}
+              onClick={() => void toggleHold()}
+            >
+              {held ? <IconPlay size={16} /> : <IconPause size={16} />}
+            </button>
+          ) : (
+            <button
+              className={iconBtn()}
+              disabled={busy}
+              aria-label={timerOn ? "Pause and exit" : "Save and exit"}
+              title={timerOn ? "Pause the clock and exit; resume from the dashboard" : "Save and exit; resume from the dashboard"}
+              onClick={() => void pauseAndExit()}
+            >
+              <IconPause size={16} />
+            </button>
+          )}
           <div className="ml-2 hidden items-center gap-2 md:flex">
             <button className={btn("soft")} onClick={openGrid}>
               <IconGrid size={17} /> Review
@@ -598,6 +634,22 @@ export function Runner(p: RunnerProps) {
           onClose={() => setCalc(false)}
           onTransfer={q.type === "numeric" ? (v) => setAnswer(q.numeric?.kind === "fraction" ? { frac: [v, a?.frac?.[1] ?? ""] } : { text: v }) : undefined}
         />
+      )}
+      {held && (
+        <div className="fixed inset-x-0 bottom-0 top-[calc(3.5rem+env(safe-area-inset-top))] z-30 flex items-center justify-center bg-scrim p-4 backdrop-blur-xl" role="dialog" aria-modal="true" aria-label="Paused">
+          <div className={`${card} w-full max-w-sm space-y-5 p-6 text-center`}>
+            <div className="space-y-1.5">
+              <p className="flex items-center justify-center gap-2 text-lg font-semibold"><IconPause size={16} /> Paused</p>
+              <p className="text-sm text-muted">The clock is stopped{left !== null ? ` with ${fmt(left)} left` : ""}.</p>
+            </div>
+            <div className="flex gap-2">
+              <button className={`${btn("secondary")} flex-1`} disabled={busy} onClick={() => void pauseAndExit()}>Exit</button>
+              <button className={`${btn("primary")} flex-1`} disabled={busy} onClick={() => void toggleHold()} autoFocus>
+                <IconPlay size={15} /> Resume
+              </button>
+            </div>
+          </div>
+        </div>
       )}
       {grid && (
         <ReviewGrid

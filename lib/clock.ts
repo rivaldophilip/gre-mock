@@ -6,13 +6,13 @@ export interface SectionClock {
   pausedMs?: number;
   /** set while paused */
   pausedAt?: string;
-  /** why it is paused: a revealed practice answer (until the next navigation), or the test-taker left the page */
+  /** why it is paused: a revealed practice answer (until the next navigation), the test-taker left the page, or they pressed Pause (practice) */
   pausedFor?: PauseReason;
   /** last heartbeat from an open page; a running clock that has not heard one for STALE_MS counts as paused since then */
   lastSeenAt?: string;
 }
 export type SectionState = Record<string, SectionClock>;
-export type PauseReason = "reveal" | "away";
+export type PauseReason = "reveal" | "away" | "hold";
 
 /** A running clock with no heartbeat for this long is treated as paused from its last heartbeat (crash, lost connection). */
 export const STALE_MS = 60_000;

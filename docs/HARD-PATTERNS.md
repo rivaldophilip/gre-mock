@@ -2,7 +2,7 @@
 
 Derived from the official items with low P+ (share of real test-takers correct): verbal items at P+ ≤ 35 and the "Hard" practice sets, quant items at P+ ≤ 40. This is analysis only; nothing here reproduces official text. Observed in the corpus: official verbal items span P+ 10–94 (mean ≈ 54); quant mean ≈ 50, with the hardest quant items at P+ 10–17.
 
-Level guide used by our validator and blind-solvers: **L3 = P+ 45–60, L4 = 30–45, L5 = under 30.**
+Levels (L3 = P+ 45–60, L4 = 30–45, L5 = under 30) and the section rules are defined once, in `docs/QUIZ-AUTHORING.md`, Structure rules.
 
 ## Text completion
 - **Hard TCs are logic puzzles, not vocabulary quizzes.** The hardest 3-blank items give a two- or three-sentence passage whose blanks must stay mutually consistent; one early blank usually fixes the others (a "rather than…" or "however…" turn flips polarity partway).

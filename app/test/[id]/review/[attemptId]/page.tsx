@@ -27,6 +27,20 @@ function skillOf(q: Question): string | undefined {
   return t && skillName.get(t.id);
 }
 
+/**
+ * What a difficulty level means on the real GRE. Levels follow official P+ (the share of real test-takers who got an
+ * item right), with the same bands the authoring scripts use (docs/QUIZ-AUTHORING.md, scripts/brief.ts).
+ */
+const LEVEL_WHY: Record<number, string> = {
+  1: "Level 1: easy. On the real GRE, well over 60% of test-takers get an item like this right.",
+  2: "Level 2: easier than average. Over 60% of real GRE test-takers get an item like this right.",
+  3: "Level 3: medium. About 45–60% of real GRE test-takers get an item like this right, close to the average official item (about 50%).",
+  4: "Level 4: hard. Only about 30–45% of real GRE test-takers get an item like this right: the harder items of a hard second section.",
+  5: "Level 5: very hard. Under 30% of real GRE test-takers get an item like this right: the toughest items ETS uses.",
+};
+const levelWhy = (n: number) =>
+  `${LEVEL_WHY[n]}\nThe level is set when the test is written and checked against official items of known difficulty; it is an estimate, not an ETS rating.`;
+
 function choiceWords(q: Question): string[] {
   if (q.type === "tc") return q.blanks?.flat() ?? [];
   if (q.type === "se") return q.choices ?? [];
@@ -163,7 +177,7 @@ export default async function Review({ params }: { params: Promise<{ id: string;
                   {skillOf(q) && <> · skill: {skillOf(q)}</>}
                 </span>
                 <span className="ml-auto text-xs tabular-nums text-muted">
-                  {Math.round((r?.timeMs ?? 0) / 1000)}s{r?.guessed ? " · guessed" : ""} · level {q.difficulty}
+                  {Math.round((r?.timeMs ?? 0) / 1000)}s{r?.guessed ? " · guessed" : ""} · <Explain why={levelWhy(q.difficulty)}>level {q.difficulty}</Explain>
                 </span>
               </div>
               {passage && (

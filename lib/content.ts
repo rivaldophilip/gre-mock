@@ -1,6 +1,8 @@
 import "server-only";
 import fs from "node:fs";
 import path from "node:path";
+import concepts from "@/data/concepts.json";
+import rcSkills from "@/data/rc_skills.json";
 import { TestSchema, type PublicTest, type Test } from "./types";
 
 const DIR = path.join(process.cwd(), "content", "tests");
@@ -34,3 +36,6 @@ export function publicTest(t: Test): PublicTest {
 export function orderedQuestions(t: Test) {
   return [...t.questions].sort((a, b) => a.section - b.section);
 }
+
+/** Concept and reading-skill id -> name, for search. */
+export const conceptNames = new Map<string, string>([...concepts, ...rcSkills].map((c) => [c.id, c.name]));

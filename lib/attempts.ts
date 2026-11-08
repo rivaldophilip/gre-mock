@@ -45,7 +45,7 @@ export function sectionElapsedMs(a: Attempt, n: 1 | 2, now = Date.now()): number
 
 /**
  * Stop or restart the section clock: "reveal" while a practice answer is read (restarts on the next navigation),
- * "away" while the test-taker is off the page. Resuming only lifts a pause of the same reason. Returns the attempt
+ * "away" while the test-taker is off the page, "hold" while a practice test-taker has pressed Pause. Resuming only lifts a pause of the same reason. Returns the attempt
  * with its updated state (unchanged if there was nothing to do).
  */
 export async function setClockPaused(a: Attempt, n: 1 | 2, pause: boolean, reason: PauseReason, now = Date.now()): Promise<Attempt> {

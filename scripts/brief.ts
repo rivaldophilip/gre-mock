@@ -1,7 +1,7 @@
 // Build a generation brief from the DB: which words/concepts the next test must target.
 // usage: npm run brief -- verbal|quant [--seed N] [--user <email>]  (the only account is the default)
 import { config } from "dotenv";
-config({ path: ".env.local" });
+config({ path: ".env.local", quiet: true });
 import fs from "node:fs";
 import path from "node:path";
 import { schema } from "../lib/db";
@@ -20,10 +20,38 @@ const seedArg = process.argv.indexOf("--seed");
 const blueprint = JSON.parse(fs.readFileSync("data/blueprints.json", "utf8"))[measure];
 const REF = path.resolve("../books/extracted/reference/items.jsonl"); // local-only corpus (not in the repo)
 
+/** Test ids this measure already uses: written tests plus briefs still being authored (so parallel runs don't collide). */
+function usedNumbers() {
+  const nums = (dir: string, re: RegExp) =>
+    fs.existsSync(dir) ? fs.readdirSync(dir).map((f) => re.exec(f)).filter((m) => m).map((m) => Number(m![1])) : [];
+  return [...nums("content/tests", new RegExp(`^${measure}-(\\d+)\\.json$`)), ...nums("content/briefs", new RegExp(`^${measure}-(\\d+)\\.json$`))];
+}
 function nextId() {
-  const dir = "content/tests";
-  const n = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.startsWith(measure + "-")).length : 0;
-  return `${measure}-${String(n + 1).padStart(3, "0")}`;
+  return `${measure}-${String(Math.max(0, ...usedNumbers()) + 1).padStart(3, "0")}`;
+}
+
+/** Targets of briefs whose test is not registered yet (still being authored), as itemId -> test id. */
+function inFlightBriefs(registered: Set<string>) {
+  const dir = "content/briefs";
+  const out = new Map<string, string>();
+  for (const f of fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => new RegExp(`^${measure}-\\d+\\.json$`).test(f)).sort() : []) {
+    const b = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
+    if (registered.has(b.testId)) continue;
+    const ids: string[] = [
+      ...(b.keyWords ?? []).map((k: { id: string }) => k.id),
+      ...(b.skillSlots ?? []).map((k: { skill: string }) => k.skill),
+      ...(b.conceptSlots ?? []).map((k: { concept: string }) => k.concept),
+    ];
+    for (const id of ids) if (!out.has(id)) out.set(id, b.testId);
+  }
+  return out;
+}
+
+/** Cut at a word boundary, so a topic reads as words rather than a fragment. */
+function clip(s: string, n: number) {
+  if (s.length <= n) return s;
+  const i = s.lastIndexOf(" ", n);
+  return s.slice(0, i > 0 ? i : n) + "…";
 }
 
 /** Topics of every earlier test, stems of the latest only: the validator's overlap check already guards originality. */
@@ -35,8 +63,8 @@ function previousTests() {
     .map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), "utf8")))
     .map((t, i) => ({
       id: t.id,
-      passageTopics: (t.passages ?? []).map((p: { title?: string; paragraphs: string[] }) => p.title ?? p.paragraphs[0].slice(0, 70)),
-      ...(i === files.length - 1 ? { stems: (t.questions ?? []).map((q: { prompt: string }) => q.prompt.slice(0, 60)) } : {}),
+      passageTopics: (t.passages ?? []).map((p: { title?: string; paragraphs: string[] }) => p.title ?? clip(p.paragraphs[0], 70)),
+      ...(i === files.length - 1 ? { stems: (t.questions ?? []).map((q: { prompt: string }) => clip(q.prompt, 60)) } : {}),
     }));
 }
 
@@ -52,6 +80,11 @@ async function pendingItems(db: Awaited<ReturnType<typeof oneTarget>>["db"]) {
   for (const r of await db.select().from(schema.questionItems)) {
     const test = r.questionId.split(":")[0];
     if (untaken.has(test) && (r.role === "key" || r.role === "primary") && !out.has(r.itemId)) out.set(r.itemId, test);
+  }
+  // briefs still being authored count as untaken tests too
+  for (const [item, test] of inFlightBriefs(new Set(tests.map((t) => t.id)))) {
+    untaken.add(test);
+    if (!out.has(item)) out.set(item, test);
   }
   return { untaken: [...untaken].sort(), items: out };
 }
@@ -283,23 +316,32 @@ function briefMarkdown(b: Record<string, unknown>): string {
       const partners = [...(syn.get(k.id) ?? [])].sort((x, y) => Number(keyIds.has(y)) - Number(keyIds.has(x))).slice(0, 6);
       lines.push(`- **${k.word}**${k.secondary ? " [secondary: everyday sense is the trap]" : ""}: ${k.sense ?? ""} (${k.bucket}, ${k.reason}). Synonyms: ${partners.map((x) => (keyIds.has(x) ? x + "*" : x)).join(", ") || "none in bank"}`);
     }
+    // one line per distinct skill: a skill drawn for several slots is described once, with its count
     const skills = JSON.parse(fs.readFileSync("data/rc_skills.json", "utf8")) as { id: string; description: string }[];
-    lines.push("", "## Reading skills for the 13 RC slots (arg-* on argument slots; may repeat)", "");
-    for (const s of b.skillSlots as { skill: string; bucket: string; reason: string }[])
-      lines.push(`- **${s.skill}** (${s.bucket}, ${s.reason}): ${skills.find((x) => x.id === s.skill)?.description ?? ""}`);
+    const slotsOf = new Map<string, string[]>();
+    for (const s of b.skillSlots as { skill: string; bucket: string; reason: string }[]) {
+      const why = `${s.bucket}, ${s.reason.replace(/; already in untaken \S+$/, "")}`;
+      slotsOf.set(s.skill, [...(slotsOf.get(s.skill) ?? []), why]);
+    }
+    lines.push("", `## Reading skills for the ${(b.skillSlots as unknown[]).length} RC slots (arg-* on argument slots)`, "");
+    for (const [skill, whys] of slotsOf)
+      lines.push(`- **${skill}**${whys.length > 1 ? ` ×${whys.length}` : ""} (${[...new Set(whys)].join("; ")}): ${skills.find((x) => x.id === skill)?.description ?? ""}`);
     const d = b.distractorWords as { weak: Word[]; untested: Word[] };
     lines.push("", "## Distractor words (about 40% of distractors)", "", `Weak: ${d.weak.map((w) => w.word).join(", ") || "none"}`, "", `Untested: ${d.untested.map((w) => w.word).join(", ")}`);
     lines.push("", "## Passage words (weave 3-6 into each passage)", "", (b.passageWords as Word[]).map((w) => `${w.word}${w.secondary ? " (2nd sense)" : ""}`).join(", "));
   } else {
-    lines.push("", "## Concept slots (one primary concept each)", "");
-    for (const c of b.conceptSlots as { slot: number; concept: string; name: string; area: string; reason: string }[]) lines.push(`- ${c.slot}. **${c.concept}** (${c.name}, ${c.area}): ${c.reason}`);
+    lines.push("", "## Concept slots (one primary concept per question, any order; a DI set shares an area)");
+    const byReason = new Map<string, string[]>();
+    for (const c of b.conceptSlots as { concept: string; name: string; area: string; reason: string }[])
+      byReason.set(c.reason, [...(byReason.get(c.reason) ?? []), `- **${c.concept}**: ${c.name} (${c.area})`]);
+    for (const [reason, cs] of byReason) lines.push("", `${reason} (${cs.length}):`, ...cs);
   }
   lines.push("", "## Earlier tests (do not repeat topics)", "");
   for (const t of b.previous as { id: string; passageTopics: string[]; stems?: string[] }[]) {
     lines.push(`- ${t.id}: ${t.passageTopics.join(" / ") || "(no passages)"}`);
     if (t.stems) lines.push(`  - stems: ${t.stems.join(" · ")}`);
   }
-  lines.push("", "## Instructions", "", String(b.instructions), "");
+  lines.push("", "How to use this brief: docs/QUIZ-AUTHORING.md, step 2 and the structure rules.", "");
   return lines.join("\n");
 }
 

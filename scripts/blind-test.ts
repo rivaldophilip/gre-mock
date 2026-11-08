@@ -1,12 +1,17 @@
 // Blind copy for the solver, and a checker for its answers.
-//   npm run blind -- <id> [--only s1q3,s2q5]        write content/.blind/<id>.md (no keys, explanations, tags, difficulty)
-//   npm run blind -- <id> --check <answers.txt>     compare the solver's lines with the key; print only what needs action
-//   npm run blind -- --calibrate verbal|quant [--check <answers.txt>]   official items of known P+, to measure the solver's rating offset
+//   npm run -s blind -- <id>                      write content/.blind/<id>.md (no keys, explanations, tags, difficulty)
+//   npm run -s blind -- <id> --only s1q3,s2q5     write content/.blind/<id>.only.md with just those items (the full copy stays)
+//   npm run -s blind -- <id> --check [file|-] [--only ids]
+//       compare the solver's lines with the key and print only what needs action, then the next step.
+//       The file defaults to content/.blind/<id>.answers.txt (<id>.only.answers.txt with --only); "-" reads stdin and saves it there.
+//   npm run -s blind -- --calibrate verbal|quant [--check file|-]   official items of known P+, to measure the solver's rating offset
 import fs from "node:fs";
 import path from "node:path";
 import { TestSchema, type Question, type Test } from "../lib/types";
 import { passageSentences } from "../lib/sentences";
 import { parseNumber } from "../lib/scoring";
+import { difficultyRules } from "./validate-test";
+import { die, readTestFile } from "./lib/test-file";
 
 const L = "ABCDEFGHI";
 const DIR = "content/.blind";
@@ -57,22 +62,39 @@ export function blindCopy(test: Test, only?: Set<string>): string {
   return out;
 }
 
-export type SolverLine = { id: string; answer: string; difficulty: number | null; skill: string | null; problems: string };
+export type SolverLine = { id: string; answer: string; confidence: string | null; difficulty: number | null; skill: string | null; problems: string; note: string };
 
-/** Lines like `s1q3 | B C A | high | 4 | rc-inference | none`; tolerant of markdown and annotations. */
+/**
+ * Lines like `s1q3 | B C A | high | 4 | rc-inference | none`; tolerant of markdown and annotations.
+ * Prose under an item (the solver's reason for a flag or a low confidence) is kept as that item's note.
+ */
 export function parseAnswers(text: string): Map<string, SolverLine> {
   const out = new Map<string, SolverLine>();
+  let last: SolverLine | null = null;
   for (const line of text.split("\n")) {
     const cells = line.split("|").map((c) => c.replace(/[*`]/g, "").trim());
     if (cells[0] === "") cells.shift();
     if (cells.at(-1) === "") cells.pop();
     const id = cells[0]?.match(/^-?\s*((?:s[12]q\d+)|(?:c\d+))\b/)?.[1];
-    if (!id || cells.length < 3) continue;
+    if (!id || cells.length < 3) {
+      const prose = line.replace(/^[\s>*-]+/, "").trim();
+      if (last && prose && !line.includes("|") && !prose.startsWith("#")) last.note = (last.note ? last.note + " " : "") + prose;
+      continue;
+    }
     const diff = cells.slice(2).map((c) => c.match(/^([1-5])\b/)).find(Boolean);
     const skill = cells.slice(2).map((c) => c.match(/\b((?:rc|arg)-[a-z-]+)/)?.[1]).find(Boolean) ?? null;
-    out.set(id, { id, answer: cells[1], difficulty: diff ? Number(diff[1]) : null, skill, problems: cells.at(-1) ?? "" });
+    const confidence = cells.slice(2).map((c) => c.match(/^(high|medium|low)\b/i)?.[1].toLowerCase()).find(Boolean) ?? null;
+    last = { id, answer: cells[1], confidence, difficulty: diff ? Number(diff[1]) : null, skill, problems: cells.at(-1) ?? "", note: "" };
+    out.set(id, last);
   }
   return out;
+}
+
+/** The key as the solver sees it in the blind copy: letters (per blank for tc), a sentence number, or a value. */
+export function keyText(q: Pick<Question, "type" | "key">): string {
+  if ("value" in q.key) return q.key.value;
+  if (q.type === "rc_select") return `sentence ${q.key.sel[0]}`;
+  return (q.type === "tc" ? q.key.sel : [...q.key.sel].sort()).map((i) => L[i]).join(" ");
 }
 
 /** The solver's answer in key form: choice indices, a sentence index, or a number. */
@@ -97,28 +119,54 @@ function calibration(measure: string): { offset: number; model?: string } | null
   return (JSON.parse(fs.readFileSync(CAL, "utf8")) as Record<string, { offset: number; model?: string }>)[measure] ?? null;
 }
 
+/**
+ * Compare the solver's lines with the key. Each issue is one line per item (plus the solver's note), worded as the
+ * action to take; `act` lists the items to fix and re-solve. A too-easy item is offered a retag to its honest level
+ * when the section difficulty rules still pass with it (and with the retags offered before it).
+ */
 export function checkAnswers(test: Test, answers: Map<string, SolverLine>, offset: number, only?: Set<string>) {
   const issues: string[] = [];
+  const act = new Set<string>();
   let right = 0;
+  let levels = test.questions.map((q) => ({ id: q.id, section: q.section, difficulty: q.difficulty }));
+  let retags = 0;
   const qs = test.questions.filter((q) => !only || only.has(q.id));
   for (const q of qs) {
     const a = answers.get(q.id);
     if (!a) {
-      issues.push(`${q.id}  no answer from the solver`);
+      issues.push(`${q.id}  no answer from the solver (its reply has no line for this id)`);
+      act.add(q.id);
       continue;
     }
+    const mine: string[] = [];
     if (matches(q, readAnswer(q, a.answer))) right++;
-    else issues.push(`${q.id}  WRONG: solver "${a.answer}", key ${JSON.stringify(q.key)}`);
-    if (a.difficulty !== null && a.difficulty + offset < q.difficulty - 1)
-      issues.push(`${q.id}  too easy: rated ${a.difficulty} (+${offset} = ${a.difficulty + offset}) vs target ${q.difficulty}`);
+    else mine.push(`${q.id}  WRONG: solver "${a.answer}"${a.confidence ? ` (${a.confidence})` : ""}, key "${keyText(q)}"; rewrite so only the key is defensible`);
+    if (a.difficulty !== null && a.difficulty + offset < q.difficulty - 1) {
+      const est = a.difficulty + offset;
+      const honest = Math.max(1, Math.min(5, Math.round(est)));
+      const trial = levels.map((x) => (x.id === q.id ? { ...x, difficulty: honest } : x));
+      const broken = difficultyRules(trial).filter((r) => !r.ok);
+      const head = `${q.id}  too easy: rated ${a.difficulty} (+${offset} = ${est}) vs target ${q.difficulty}; rewrite it harder`;
+      if (broken.length) mine.push(`${head} (retagging it ${honest} would break ${broken.map((r) => r.rule).join(", ")})`);
+      else {
+        mine.push(`${head}, or set difficulty ${q.difficulty}→${honest} (sections still pass${retags ? " with the retags above" : ""})`);
+        levels = trial;
+        retags++;
+      }
+    }
     const primary = q.tags.find((t) => t.kind === "concept" && t.role === "primary")?.id;
     const secondary = q.tags.filter((t) => t.kind === "concept" && t.role === "secondary").map((t) => t.id);
     if (q.type.startsWith("rc") && a.skill && primary && a.skill !== primary && !secondary.includes(a.skill))
-      issues.push(`${q.id}  skill: solver says ${a.skill}, tagged ${primary}`);
+      mine.push(`${q.id}  skill: solver says ${a.skill}, tagged ${primary}; make the stem test ${primary}, or retag it if the brief's skill mix still holds`);
     const prob = a.problems.trim();
-    if (!NO_PROBLEM.test(prob.replace(/\([^)]*\)/g, "").split(/[.;:,]/)[0].trim())) issues.push(`${q.id}  flagged: ${prob}`);
+    if (!NO_PROBLEM.test(prob.replace(/\([^)]*\)/g, "").split(/[.;:,]/)[0].trim())) mine.push(`${q.id}  flagged: ${prob}`);
+    else if (a.confidence === "low" && !mine.length) mine.push(`${q.id}  low confidence on the right answer; check for a second defensible choice`);
+    if (!mine.length) continue;
+    if (a.note) mine[0] += `\n      solver's note: ${a.note}`;
+    issues.push(...mine);
+    act.add(q.id);
   }
-  return { right, total: qs.length, issues };
+  return { right, total: qs.length, issues, act: [...act] };
 }
 
 // ---- calibration set: official items of known P+ (local corpus only, never committed)
@@ -148,23 +196,38 @@ function calibrationSet(measure: string) {
   return { md, key };
 }
 
+/** The solver's reply: `--check -` reads stdin (saved to `fallback` for the record), `--check <file>` a file, bare `--check` the fallback. */
+function readReply(args: string[], fallback: string): string {
+  const v = args[args.indexOf("--check") + 1];
+  if (v === "-") {
+    const text = fs.readFileSync(0, "utf8");
+    fs.writeFileSync(fallback, text);
+    return text;
+  }
+  const file = !v || v.startsWith("--") ? fallback : v;
+  if (!fs.existsSync(file)) die(`no ${file}. Pipe the solver's reply instead: npm run -s blind -- ${args[0] === "--calibrate" ? `--calibrate ${args[1]}` : args[0]} --check - <<'EOF' … EOF`);
+  return fs.readFileSync(file, "utf8");
+}
+
+/** Where `check` records each blind check; `register` warns when a test has none. */
+export const checkRecord = (id: string) => `${DIR}/${id}.checked.json`;
+
 function main() {
   const args = process.argv.slice(2);
   const opt = (name: string) => (args.includes(name) ? args[args.indexOf(name) + 1] : undefined);
   fs.mkdirSync(DIR, { recursive: true });
   if (args[0] === "--calibrate") {
     const measure = args[1];
-    if (measure !== "verbal" && measure !== "quant") throw new Error("usage: npm run blind -- --calibrate verbal|quant [--check <answers.txt>]");
+    if (measure !== "verbal" && measure !== "quant") die("usage: npm run -s blind -- --calibrate verbal|quant [--check file|-]");
     const { md, key } = calibrationSet(measure);
-    const checkFile = opt("--check");
-    if (!checkFile) {
+    if (!args.includes("--check")) {
       fs.writeFileSync(`${DIR}/calibration-${measure}.md`, md);
-      console.log(`wrote ${DIR}/calibration-${measure}.md (${Object.keys(key).length} items); give it to the gre-blind-solver agent, save its reply, then --check it`);
+      console.log(`wrote ${DIR}/calibration-${measure}.md (${Object.keys(key).length} items)\nnext: give it to the gre-blind-solver agent, then npm run -s blind -- --calibrate ${measure} --check - with its reply`);
       return;
     }
-    const ans = parseAnswers(fs.readFileSync(checkFile, "utf8"));
+    const ans = parseAnswers(readReply(args, `${DIR}/calibration-${measure}.answers.txt`));
     const gaps = Object.entries(key).flatMap(([id, lv]) => (ans.get(id)?.difficulty ? [lv - ans.get(id)!.difficulty!] : []));
-    if (!gaps.length) throw new Error("no ratings found in the answers file");
+    if (!gaps.length) die("no ratings found in the solver's reply: expected lines like `c1 | B | high | 3 | | none`");
     const offset = Math.round((gaps.reduce((a, b) => a + b, 0) / gaps.length) * 2) / 2;
     const cal = fs.existsSync(CAL) ? JSON.parse(fs.readFileSync(CAL, "utf8")) : {};
     cal[measure] = { model: opt("--model") ?? cal[measure]?.model ?? "sonnet", offset, measuredAt: new Date().toISOString().slice(0, 10), items: gaps.length };
@@ -173,21 +236,32 @@ function main() {
     return;
   }
   const id = args[0];
-  if (!id) throw new Error("usage: npm run blind -- <test-id> [--only ids] [--check <answers.txt>]");
-  const test = TestSchema.parse(JSON.parse(fs.readFileSync(`content/tests/${id}.json`, "utf8")));
-  const only = opt("--only") ? new Set(opt("--only")!.split(",")) : undefined;
-  const checkFile = opt("--check");
-  if (!checkFile) {
-    const file = `${DIR}/${id}.md`;
-    fs.writeFileSync(file, blindCopy(test, only));
-    console.log(`wrote ${file} (${only ? only.size : test.questions.length} items)`);
+  const usage = "npm run -s blind -- <test-id> [--only ids] [--check [file|-]]";
+  const parsed = TestSchema.safeParse(readTestFile(id, usage));
+  if (!parsed.success) die(`${id} does not parse as a test; run npm run -s check -- ${id} and fix what it reports first`);
+  const test = parsed.data;
+  const only = opt("--only") ? new Set(opt("--only")!.split(",").map((x) => x.trim())) : undefined;
+  const unknown = [...(only ?? [])].filter((x) => !test.questions.some((q) => q.id === x));
+  if (unknown.length) die(`--only names ids not in ${id}: ${unknown.join(", ")} (ids look like s1q3, s2q15)`);
+  const base = `${DIR}/${id}${only ? ".only" : ""}`;
+  if (!args.includes("--check")) {
+    fs.writeFileSync(`${base}.md`, blindCopy(test, only));
+    console.log(`wrote ${base}.md (${only ? only.size : test.questions.length} items)`);
+    console.log(`next: ${only ? "SendMessage the same gre-blind-solver agent" : "give the gre-blind-solver agent"} the path ${base}.md, then npm run -s blind -- ${id}${only ? ` --only ${[...only].join(",")}` : ""} --check - <<'EOF' with its reply`);
     return;
   }
   const cal = calibration(test.measure);
   if (!cal) console.warn(`warn: no ${test.measure} calibration in ${CAL}; difficulty compared with offset 0`);
-  const { right, total, issues } = checkAnswers(test, parseAnswers(fs.readFileSync(checkFile, "utf8")), cal?.offset ?? 0, only);
+  const { right, total, issues, act } = checkAnswers(test, parseAnswers(readReply(args, `${base}.answers.txt`)), cal?.offset ?? 0, only);
+  fs.writeFileSync(checkRecord(id), JSON.stringify({ at: new Date().toISOString(), only: only ? [...only] : null, right, total, toFix: act }) + "\n");
   console.log(`${id}: ${right}/${total} match the key${issues.length ? "" : "; nothing to fix"}`);
   for (const i of issues) console.log("  " + i);
+  const ids = act.join(",");
+  console.log(
+    act.length
+      ? `next: fix ${act.join(", ")} with Edit, npm run -s check -- ${id}, then npm run -s blind -- ${id} --only ${ids} and SendMessage the same solver the new file`
+      : `next: npm run -s register -- ${id}, then commit and push`,
+  );
 }
 
 if (process.argv[1]?.endsWith("blind-test.ts")) main();

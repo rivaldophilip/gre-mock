@@ -11,6 +11,7 @@
     "seed": "tsx scripts/seed.ts",
     "brief": "tsx scripts/brief.ts",
     "tag": "tsx scripts/tag-test.ts",
+    "check": "tsx scripts/check-test.ts",
     "validate": "tsx scripts/validate-test.ts",
     "blind": "tsx scripts/blind-test.ts",
     "register": "tsx scripts/register-test.ts",
