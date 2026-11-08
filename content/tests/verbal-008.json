@@ -1,0 +1,1765 @@
+{
+  "id": "verbal-008",
+  "measure": "verbal",
+  "title": "Verbal Hard Mock 8",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 18
+    },
+    {
+      "n": 2,
+      "minutes": 23
+    }
+  ],
+  "passages": [
+    {
+      "id": "p1",
+      "paragraphs": [
+        "That sleep benefits memory is no longer seriously disputed; how it does so remains contested. The dominant account holds that during deep sleep the hippocampus replays the day's experiences, reactivating the sequences of neural firing that accompanied them and thereby transferring them, gradually, to more durable storage in the cortex. Its strongest support comes from targeted cueing: when sounds that were paired with learned material during waking are played softly to sleepers, the cued material is later recalled better than material that was not cued. A rival account, the synaptic homeostasis hypothesis, proposes something nearly opposite. Waking experience, on this view, strengthens neural connections indiscriminately, a process that, left unchecked, would saturate the brain and exhaust its elasticity; sleep's work is to weaken connections across the board, a pruning from which the strongest, those encoding what was learned well, emerge proportionally more distinct.",
+        "The two accounts are usually presented as mutually exclusive, but the evidence most often cited against the homeostasis view is less decisive than it appears. Targeted cueing shows that something in sleep can favor particular memories; it does not show that favoring them is all sleep does, and the gains it produces are modest, explicable as easily by a cue that spares a memory from general pruning as by one that adds to its strength. What the cueing studies do accomplish is to delimit the homeostasis view: if sleep merely pruned, uniformly, a cue would have nothing to select. A synthesis in which sleep prunes broadly but protects selectively would accommodate both bodies of evidence, though it would require of each camp a concession that neither has yet been willing to make."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "elasticity",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "explicable",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "delimit",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "paragraphs": [
+        "Critics who dismissed the realist novel's lists of furniture and fabrics as encyclopedic padding, the residue of an age that confused inventory with insight, missed what the lists were doing. In the hands of its best practitioners, the catalog of a parlor's contents was rarely divorced from judgment: a reader taught to notice that the drapes were new and the books uncut learned, without being told, how a family wished to be seen and how far it fell short. Such description was demotic in its materials, drawn from the shop window and the auction notice, but exacting in its demands, since it asked readers to perform the moral inference the narrator withheld. The later charge that realism was a decadent art, sunk in surfaces, thus inverts its method. The surface was where the novel hid its argument."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "encyclopedic",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "divorced",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "demotic",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "decadent",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "a1",
+      "paragraphs": [
+        "Last year the public libraries of Brennan County stopped charging fines for overdue books and mailed every borrower whose account showed an overdue item a notice announcing the change. In the twelve months that followed, nearly three times as many books more than a year overdue were returned as in the preceding twelve months. The county's library director concludes that the fines had been keeping many borrowers from returning long-overdue books."
+      ],
+      "tags": []
+    },
+    {
+      "id": "p3",
+      "paragraphs": [
+        "Histories of commercial credit in the nineteenth-century United States have usually been written as stories of disembedding. In the small-town economy, the argument runs, a merchant extended credit to people he knew, and his judgment of a borrower's character was inseparable from what he knew of the borrower's family, church and habits. The credit-reporting agencies that arose in the 1840s, which compiled reports on hundreds of thousands of businesses and eventually reduced them to letter-and-number ratings, are said to have dissolved this world by making trust fungible: a rating issued in New York could be read and acted on in New Orleans by a wholesaler who had never met the man it described.",
+        "The agencies' own archives complicate this account without overturning it. The reports on which the ratings rested were written not by analysts at a distance but by local correspondents, usually attorneys, who were paid little or nothing for the work and were inclined to set down whatever their neighbors said; the agencies, which judged correspondents by the volume of their reports rather than by their accuracy, abetted the habit. A shopkeeper's drinking, his wife's taste for finery, a rumor that he had once tried to cozen a creditor: such talk filled the ledgers alongside inventories and debts. The rating, in other words, did not replace local reputation. It transcribed it, stripped of the context that had allowed those who knew the borrower to discount it.",
+        "What the agencies abolished, then, was less the dependence of credit on character than the borrower's ability to contest how his character was judged. In the small town, a man slandered at the tavern could answer his accuser before the very people whose opinion mattered; a man rated poorly in a distant ledger often did not know that a report on him existed. Those who celebrate the agencies as engines of impersonal efficiency and those who condemn them as exploitative instruments of surveillance thus share a premise the archives do not support: that the agencies made credit impersonal. They made it anonymous on one side only."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "fungible",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "inclined",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "abet",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "cozen",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "exploitative",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "paragraphs": [
+        "For a long time the anatomical theaters of early-modern Europe were remembered chiefly as monuments to the triumph of empiricism, and the anatomists who presided in them were all but deified as heroes of observation: here, in steep wooden bowls of tiered seats, students crowded around a dissecting table to see for themselves what the ancient authorities had only described. More recent scholarship has insisted that this picture omits most of what took place. Public dissections were held in winter, when the cold slowed decay, and were civic occasions as much as lessons, attended by magistrates and townspeople who paid for admission; the bodies were those of executed criminals, and the proceedings carried the hortatory weight of a sermon, with skeletons posed about the theater bearing reminders of mortality.",
+        "The revisionists are right that the theaters did not demarcate science from spectacle in the way the older story assumed, and their work has made it impossible to treat the dissections as laboratory demonstrations to which an audience happened to be attached. Yet in correcting one anachronism they risk another. To dismiss the moral and ceremonial trappings as a distraction from inquiry, or, conversely, to treat the inquiry as a pretext for the ceremony, is to assume that the participants experienced the two as distinct. The anatomists who wrote of the human body as the most perfect work of a divine maker saw no tension between opening it to learn its structure and displaying it to inspire awe; for them, the more precisely the body's workings were exhibited, the more forcefully the lesson of its fragility was taught. A history that separates the lesson from the inquiry will find the theaters either execrable as science or trivial as ritual, and it will be wrong both times."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "empiricism",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "deify",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "hortatory",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "demarcate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "execrable",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "paragraphs": [
+        "When the bark of the cinchona tree reached Europe in the seventeenth century, carried from Peru and promoted at first by Jesuit apothecaries, it posed a problem that its efficacy alone could not solve. Physicians trained in the Galenic tradition understood fevers as disorders of the humors, to be cured by expelling corrupt matter through bleeding, purging or sweating. The bark did none of these things; it simply stopped the intermittent fevers it was given for, and many learned physicians regarded with a jaundiced eye a cure that their theory could not explain, suspecting that it merely suppressed the fever while driving the corrupt matter deeper into the body.",
+        "It is tempting to read their resistance as the reflex of a hidebound profession, and some of it was. But the objection was not foolish: a remedy that removes a symptom without touching its cause can do harm, and convalescent patients treated with the bark did sometimes relapse. The bark's champions were often empirics working outside the learned faculties, dissidents who cared more that a remedy worked than why; their dogged trust in trial was vindicated in this instance, but the same indifference to mechanism sustained a great many worthless nostrums. What finally secured the bark's place in medicine was less a victory of observation over theory than the slow construction of a new theory, in which a specific remedy for a specific disease made sense."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "jaundice",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "hidebound",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "convalescent",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "dissident",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "dogged",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "paragraphs": [
+        "Orchard owners in the Talgar Valley who rent honeybee hives during the spring bloom have reported larger apple harvests than owners who rely on wild pollinators alone. Some growers have concluded that renting hives is responsible for the difference. The owners who rent hives, however, are disproportionately those with the largest and most heavily irrigated orchards, and irrigation by itself is known to increase the proportion of blossoms that set fruit. The difference in harvests therefore does not, by itself, show that renting hives raises yields."
+      ],
+      "tags": []
+    }
+  ],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The chair conceded that the witness's anecdotes were accurate in every particular; what she objected to was that admitting them would have turned a hearing on whether the bridge could bear its load into a referendum on the engineer's character. Truth, she remarked, is a necessary but hardly a sufficient condition of testimony's being ___.",
+      "blanks": [
+        [
+          "patent",
+          "laconic",
+          "germane",
+          "contentious",
+          "tacit"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The chair grants the anecdotes are true and objects only that they would shift the hearing from the bridge's load to the engineer's character: the defect is irrelevance. So truth is necessary but not sufficient for testimony to be germane (relevant to the matter at hand).",
+        "distractors": {
+          "patent": "Obvious; the chair's complaint is not that the anecdotes were unclear.",
+          "laconic": "Brief; nothing in the sentence concerns length.",
+          "contentious": "Truth is not a condition of being controversial, and the objection is about relevance.",
+          "tacit": "Unspoken; testimony is spoken by definition."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "patent",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "laconic",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "germane",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "contentious",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tacit",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 3,
+      "prompt": "Readers who knew the diarist only from the (i) ___ excerpts the newspapers chose to reprint (the duel, the debts, the midnight elopement) are surprised to find that most of the journal chronicles nothing more scandalous than an endless round of dinners and card parties, the record less of a reprobate than of a man so (ii) ___ that he seems scarcely to have spent an evening alone.",
+      "blanks": [
+        [
+          "austere",
+          "lurid",
+          "laconic"
+        ],
+        [
+          "taciturn",
+          "itinerant",
+          "gregarious"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) The newspapers picked the duel, debts and elopement, the sensational parts, contrasted with 'nothing more scandalous': lurid. (ii) Endless dinners and card parties and scarcely an evening alone describe a man fond of company: gregarious.",
+        "distractors": {
+          "austere": "Severe and plain; the opposite of sensational excerpts.",
+          "laconic": "Brief; the contrast is about scandal, not length.",
+          "taciturn": "Reserved and silent; the reverse of a man who is never alone.",
+          "itinerant": "Travelling; the sentence is about company, not movement."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "austere",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lurid",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "laconic",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "taciturn",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "itinerant",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "gregarious",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Her nineteenth-century editors, who prized concision above every other virtue, held up the letters as (i) ___ of the plain style. The drafts recently found among her papers do not so much overturn that judgment as complicate its premise: they show that she let herself (ii) ___ for pages before cutting each letter to a paragraph, so that the (iii) ___ prose her editors admired was less a habit of mind than the residue of ruthless revision.",
+      "blanks": [
+        [
+          "parodies",
+          "exemplars",
+          "repudiations"
+        ],
+        [
+          "dissemble",
+          "carp",
+          "maunder"
+        ],
+        [
+          "pithy",
+          "mellifluous",
+          "opulent"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) Editors who prized concision 'held up' the letters, and the drafts do not overturn that judgment, so the letters were models: exemplars. (ii) Pages of draft cut to a paragraph means the drafts rambled: maunder. (iii) The admired prose is the concise result of the cutting, what editors who prized concision would praise: pithy.",
+        "distractors": {
+          "parodies": "Mocking imitations; editors who admired the letters would not hold them up as parodies.",
+          "repudiations": "Rejections of the style; the opposite of the editors' praise.",
+          "dissemble": "To conceal one's motives; the contrast is between length and brevity, not honesty.",
+          "carp": "To complain pettily; nothing suggests the drafts were complaints.",
+          "mellifluous": "Sweet-sounding; topical for admired prose, but the logic (concision, cutting) calls for brevity, not euphony.",
+          "opulent": "Lavish; the opposite of prose produced by ruthless cutting."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "parody",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exemplar",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dissemble",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "maunder",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pithy",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mellifluous",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "opulent",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Critics who had mocked the minister as a vacillator for deferring every decision to the last possible moment were obliged to revise their verdict once it emerged that he had waited precisely because he expected his rivals' promises to collapse of their own weight: the delays they had ridiculed had been uncommonly ___.",
+      "choices": [
+        "sagacious",
+        "irresolute",
+        "fortunate",
+        "astute",
+        "wavering",
+        "overweening"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The critics must revise their verdict of 'vacillator' because the waiting was a deliberate calculation that paid off: the delays were shrewd. Sagacious and astute both give that meaning.",
+        "distractors": {
+          "irresolute": "Trap pair with wavering: true synonyms that restate the critics' original verdict, which the sentence says had to be revised.",
+          "wavering": "Trap pair with irresolute: the verdict being overturned, not the revised one.",
+          "fortunate": "Implies luck, but the sentence stresses that he waited 'precisely because he expected' the collapse.",
+          "overweening": "Arrogant; nothing about presumption is at issue."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "sagacious",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "irresolute",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "astute",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "overweening",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "se",
+      "difficulty": 3,
+      "prompt": "The understudy's performance was called ___ by critics who, unusually, meant the word as praise: in a production whose leads tore every passion to tatters, her refusal to emote read less as a deficiency than as a rebuke.",
+      "choices": [
+        "stolid",
+        "histrionic",
+        "taciturn",
+        "phlegmatic",
+        "melodramatic",
+        "lugubrious"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Her 'refusal to emote' is the quality named, and 'unusually, meant as praise' signals a word normally used as a criticism of unemotional people: stolid and phlegmatic.",
+        "distractors": {
+          "histrionic": "Trap pair with melodramatic: true synonyms describing the leads who 'tore every passion to tatters', not the understudy.",
+          "melodramatic": "Trap pair with histrionic: describes the leads, the opposite of her.",
+          "taciturn": "Near decoy: sparing of speech, but the point is that she withholds emotion, not words.",
+          "lugubrious": "Mournful; that is an emotion, which she refuses to show."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "stolid",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "histrionic",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "taciturn",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "phlegmatic",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lugubrious",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Readers who expect the late sequence to yield, as the earlier poems did, to patience and a good library are disappointed: its allusions point only to one another and to a private history the poet never disclosed, so that the poems remain ___ however diligently they are annotated.",
+      "choices": [
+        "hermetic",
+        "derivative",
+        "pellucid",
+        "esoteric",
+        "imitative",
+        "jocose"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Allusions that point only inward and to an undisclosed private history make the poems closed to outsiders, so that no annotation opens them: hermetic in its secondary sense (impenetrable to outside understanding) and esoteric.",
+        "distractors": {
+          "derivative": "Trap pair with imitative: allusions suggest borrowing, but these point 'only to one another', and the sentence is about inaccessibility, not originality.",
+          "imitative": "Trap pair with derivative: on topic, wrong logic.",
+          "pellucid": "Clear; the opposite of poems that resist annotation.",
+          "jocose": "Playful; tone is not at issue."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "hermetic",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "derivative",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pellucid",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "esoteric",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "jocose",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Reviewers were right that the novel's momentum seems to ___ in its middle chapters but wrong about the reason: the author's letters show her, far from tiring of the book, deliberately slackening its pace so that the final reversal would land with greater force.",
+      "choices": [
+        "quicken",
+        "flag",
+        "surge",
+        "persist",
+        "wane",
+        "pertain"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The reviewers were right about the effect (the pace slackens) but wrong to blame fatigue. So the momentum grows weaker: flag (secondary sense, to lose vigor; not 'to mark') and wane.",
+        "distractors": {
+          "quicken": "Trap pair with surge: true synonyms, both the reverse of the slackening the letters describe.",
+          "surge": "Trap pair with quicken: wrong direction.",
+          "persist": "Continuing unchanged contradicts the slackening.",
+          "pertain": "To relate to; makes no sense here."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "quicken",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "flag",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "wane",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pertain",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p1",
+      "prompt": "The author describes the gains produced by targeted cueing as \"modest\" primarily in order to",
+      "choices": [
+        "acknowledge a weakness in the experimental design of the cueing studies",
+        "suggest that the cueing results could reflect a cue's sparing a memory from pruning rather than its strengthening that memory",
+        "argue that the homeostasis hypothesis explains the cueing results better than the replay account does",
+        "imply that sleep contributes less to memory than is commonly assumed",
+        "concede that the evidence for hippocampal replay is weaker than its proponents claim"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The word sits inside the author's argument that cueing is 'less decisive than it appears' against homeostasis: modest gains are 'explicable as easily' by protection from pruning as by added strength. The detail is there to open that alternative reading.",
+        "distractors": {
+          "acknowledge a weakness in the experimental design of the cueing studies": "The author never faults the studies' design, only the inference drawn from them.",
+          "argue that the homeostasis hypothesis explains the cueing results better than the replay account does": "One notch too strong: the author says 'as easily', not better.",
+          "imply that sleep contributes less to memory than is commonly assumed": "The passage opens by granting that sleep benefits memory; the size of the cueing effect is not used to shrink that.",
+          "concede that the evidence for hippocampal replay is weaker than its proponents claim": "Misreads the target: the point concerns what cueing shows against homeostasis, and the author grants that something in sleep favors particular memories."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-function",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "rc_multi",
+      "difficulty": 5,
+      "passageId": "p1",
+      "prompt": "Consider each of the choices separately and select all that apply. The passage suggests which of the following about the synaptic homeostasis hypothesis?",
+      "choices": [
+        "In its unqualified form, it cannot account for the results of targeted cueing.",
+        "Its proponents have acknowledged that sleep can protect particular memories from pruning.",
+        "It is compatible with the finding that sleep improves memory."
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "A: yes. 'If sleep merely pruned, uniformly, a cue would have nothing to select', and cueing does select, so the pure view cannot explain it; only the synthesis (protect selectively) can. B: no. The synthesis would demand of each camp 'a concession that neither has yet been willing to make'. C: yes. On the hypothesis, well-learned connections 'emerge proportionally more distinct', which is a benefit to memory, and the opening sentence treats that benefit as undisputed by both camps."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "In the context in which it appears, \"exacting\" most nearly means",
+      "choices": [
+        "precise",
+        "demanding",
+        "punitive",
+        "extortionate",
+        "costly"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "'Exacting in its demands, since it asked readers to perform the moral inference the narrator withheld': the description required much of its readers, so demanding.",
+        "distractors": {
+          "precise": "The everyday association with 'exact'; the clause explains what the description asked of readers, not how accurate it was.",
+          "punitive": "Nothing is being punished.",
+          "extortionate": "Draws on 'exact' as in extracting money; no payment is involved.",
+          "costly": "No expense is at issue; the demand is on the reader's attention and judgment."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-vocab-context",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "rc_select",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "Select the sentence that identifies where the realist novelists found the materials of their descriptions.",
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The third sentence (\"Such description was demotic in its materials, drawn from the shop window and the auction notice...\") names the sources. The second sentence gives examples of described objects (drapes, books) but not where the novelists drew them from."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-detail",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 4,
+      "passageId": "a1",
+      "prompt": "The director's conclusion depends on which of the following assumptions?",
+      "choices": [
+        "Most of the borrowers who returned long-overdue books after the change went on to borrow more books.",
+        "No borrower who returned a long-overdue book after receiving the notice had been unaware that the book was overdue.",
+        "Many of the borrowers who returned long-overdue books after receiving the notice had known, before it arrived, that they had those books.",
+        "The number of books that became overdue in the twelve months after the change was no greater than in the preceding twelve months.",
+        "Libraries in neighboring counties that still charge fines did not see a comparable rise in the return of long-overdue books."
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The notice did two things at once: it announced the end of fines and it reminded borrowers of their overdue books. For the fines to have been what kept books away, the returners must have known they had them; negate C (few knew) and the surge is explained by the reminder, so the fines cannot have been deterring those borrowers.",
+        "distractors": {
+          "Most of the borrowers who returned long-overdue books after the change went on to borrow more books.": "The conclusion concerns returns, not later borrowing.",
+          "No borrower who returned a long-overdue book after receiving the notice had been unaware that the book was overdue.": "Too strong: a few forgetful borrowers would not hurt the conclusion, so this is sufficient but not necessary.",
+          "The number of books that became overdue in the twelve months after the change was no greater than in the preceding twelve months.": "New overdue books bear on whether fines encourage prompt returns, which the director does not claim.",
+          "Libraries in neighboring counties that still charge fines did not see a comparable rise in the return of long-overdue books.": "Would strengthen the conclusion, but its negation (a regional trend) would not by itself defeat it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-assumption",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q1",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Contemporaries who took the merchant's late endowment of the hospital as an effort to ___ the privateering that had made his fortune credited him with a conscience his letters do not reveal: in them he regrets nothing, and hopes only that the episode will in time be forgotten.",
+      "blanks": [
+        [
+          "efface",
+          "flaunt",
+          "expiate",
+          "disparage",
+          "jeopardize"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The contemporaries' reading 'credited him with a conscience', which the letters (no regret, only a wish to be forgotten) deny. A reading that presupposes conscience is one of atonement: expiate. A reading of the endowment as an effort to bury the past would need no conscience and would match the letters.",
+        "distractors": {
+          "efface": "The trap: wiping out the memory is exactly what the letters say he wanted, and it requires no conscience, so contemporaries who read the endowment that way would not have credited him with one.",
+          "flaunt": "Showing off the privateering implies pride, not conscience, and contradicts the wish that it be forgotten.",
+          "disparage": "Belittling one's own past through an endowment makes little sense, and it is not a reading that credits a conscience.",
+          "jeopardize": "Endangering the privateering makes no sense in context."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "expiate",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "disparage",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "jeopardize",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q2",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The ledgers on which the prosecutors had counted to (i) ___ the minister proved (ii) ___ only where the defense had already yielded: that the payments had been made was never in question, and on the matter of who had authorized them the ledgers were silent.",
+      "blanks": [
+        [
+          "vindicate",
+          "implicate",
+          "placate"
+        ],
+        [
+          "inconclusive",
+          "contentious",
+          "incontrovertible"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) Prosecutors count on evidence to show the minister's involvement: implicate. (ii) The ledgers settled only the point the defense had conceded (that payments were made) and were silent on authorization, so they were beyond dispute only where that was useless: incontrovertible.",
+        "distractors": {
+          "vindicate": "Clearing the minister is what the defense, not the prosecution, would hope for.",
+          "placate": "To pacify; ledgers do not soothe a minister, and prosecutors would not want them to.",
+          "inconclusive": "The trap: the ledgers were inconclusive on authorization, which is not where the defense had yielded; on the conceded point they were decisive.",
+          "contentious": "A point 'never in question' cannot be where the ledgers were disputed."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "vindicate",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "implicate",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "placate",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inconclusive",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "contentious",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "incontrovertible",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q3",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Historians long cast the duke's (i) ___ refusal to treat with the guilds as the (ii) ___ of the absolutism his grandson would perfect. The newly catalogued correspondence suggests that the refusal owed less to principle than to arithmetic: the guilds' demands had grown so (iii) ___ that no treasury of the period could have met them, and the duke, who had bargained readily enough while their terms were modest, simply stopped answering.",
+      "blanks": [
+        [
+          "tentative",
+          "peremptory",
+          "conciliatory"
+        ],
+        [
+          "culmination",
+          "precursor",
+          "apogee"
+        ],
+        [
+          "austere",
+          "tacit",
+          "extravagant"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) A refusal read as absolutist, and in fact a flat stop to answering, is curt and allows no discussion: peremptory. (ii) The grandson 'would perfect' the absolutism later, so the duke's act came before and led toward it: precursor. (iii) Demands that 'no treasury could have met', in contrast with earlier 'modest' terms: extravagant.",
+        "distractors": {
+          "tentative": "A hesitant refusal could not be read as absolutism, and 'simply stopped answering' is not hesitant.",
+          "conciliatory": "A refusal to treat cannot be conciliatory.",
+          "culmination": "The high point would be the grandson's perfected absolutism, which came later.",
+          "apogee": "Like culmination, a peak; the duke's refusal came before the peak.",
+          "austere": "Severe or plain; the contrast with 'modest' and unpayable sums calls for excess.",
+          "tacit": "Unspoken; the demands were explicit."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "tentative",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "peremptory",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "conciliatory",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "precursor",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "apogee",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "austere",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tacit",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "extravagant",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q4",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The fortress its engineers had pronounced (i) ___ fell not to the besiegers' guns but to two decades of neglect: so (ii) ___ had its walls become that the garrison spent the siege propping them up rather than manning them, and the surrender, chroniclers agreed, marked the (iii) ___ of a city whose fortunes took a generation to revive.",
+      "blanks": [
+        [
+          "impregnable",
+          "precarious",
+          "makeshift"
+        ],
+        [
+          "formidable",
+          "dilapidated",
+          "opulent"
+        ],
+        [
+          "apogee",
+          "interregnum",
+          "nadir"
+        ]
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) The irony of 'fell not to the guns' needs the engineers' boast: impregnable. (ii) Neglect and walls that had to be propped up: dilapidated. (iii) Fortunes that took a generation to revive afterward put the surrender at the lowest point: nadir.",
+        "distractors": {
+          "precarious": "Engineers would not 'pronounce' their own fortress unstable; the irony needs a boast.",
+          "makeshift": "Improvised; no engineer's pronouncement, and no contrast with the fall.",
+          "formidable": "Walls that must be propped up are not formidable.",
+          "opulent": "Lavish; neglect produces decay, not luxury.",
+          "apogee": "The highest point, the opposite of a low from which recovery took a generation.",
+          "interregnum": "A gap between reigns; on topic for a city's history, but recovery from a low point calls for nadir."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "impregnable",
+          "role": "key",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "precarious",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "makeshift",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "formidable",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dilapidated",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "opulent",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "apogee",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "interregnum",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nadir",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The economist's admirers, eager to distance him from a reform that ended badly, insist that he merely acquiesced in it, never presuming to ___ it; his correspondence, however, shows him lobbying ministers on its behalf for a decade.",
+      "choices": [
+        "espouse",
+        "abide",
+        "advocate",
+        "tolerate",
+        "disparage",
+        "jeopardize"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The admirers concede passive acceptance ('merely acquiesced') and deny something more, which the decade of lobbying proves. The denied extra is active support: espouse and advocate.",
+        "distractors": {
+          "abide": "Trap pair with tolerate: true synonyms for putting up with, but that is what 'merely acquiesced' already grants, so denying it would contradict the admirers' own claim.",
+          "tolerate": "Trap pair with abide: the conceded minimum, not the denied extra.",
+          "disparage": "Admirers distancing him from a failed reform would not deny that he belittled it, and lobbying for it does not answer that.",
+          "jeopardize": "Endangering the reform does not answer the lobbying evidence."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "espouse",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "advocate",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "disparage",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "jeopardize",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q6",
+      "section": 2,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "That the composer's habit of answering commissions with insults would ___ his aristocratic patrons was predictable, and is not in dispute; what the new biography contests is the assumption that he paid a price for it, since each patron he lost seems to have been replaced by two subscribers from a public that relished seeing the aristocracy snubbed.",
+      "choices": [
+        "estrange",
+        "placate",
+        "alienate",
+        "appease",
+        "exonerate",
+        "embolden"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Insults cost him patrons ('each patron he lost'); the biography grants that and disputes only that it hurt him. So the insults drove the patrons away: estrange and alienate.",
+        "distractors": {
+          "placate": "Trap pair with appeased: true synonyms on the patron topic but the reverse of what insults do.",
+          "appease": "Trap pair with placated: wrong direction.",
+          "exonerate": "Clearing of blame; insults do not clear anyone.",
+          "embolden": "Patrons who left were not made bolder; the sentence says he lost them."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "estrange",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "placate",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "alienate",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "appease",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exonerate",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q7",
+      "section": 2,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Ministers schooled under the old king, who rewarded flattery, were slow to grasp that his daughter regarded those who ___ as more dangerous than those who openly opposed her, reasoning that a man who will say anything to please will also say anything to survive.",
+      "choices": [
+        "fawn",
+        "demur",
+        "kowtow",
+        "dissent",
+        "carp",
+        "temporize"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The group is set against 'those who openly opposed her' and described as men who 'will say anything to please', the flatterers the old king rewarded: fawn (secondary sense, to seek favor by servility) and kowtow.",
+        "distractors": {
+          "demur": "Trap pair with dissent: true synonyms for objecting, but objectors are the other group, 'those who openly opposed her'.",
+          "dissent": "Trap pair with demur: would make the comparison circular.",
+          "carp": "Petty complaining is a form of opposition, not pleasing.",
+          "temporize": "Stalling to gain time; the sentence describes flattery, saying anything to please."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "fawn",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "demur",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "kowtow",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dissent",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q8",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "The primary purpose of the passage is to",
+      "choices": [
+        "refute the view that the credit-reporting agencies transformed the basis on which credit was extended",
+        "explain why the reports compiled by the agencies' local correspondents were unreliable",
+        "reconcile two opposing evaluations of the credit-reporting agencies",
+        "revise a prevailing account of a historical change by redescribing what that change actually altered",
+        "defend the credit-reporting agencies against the charge that they were instruments of surveillance"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The archives 'complicate this account without overturning it': the agencies did change credit, but what they abolished was the borrower's ability to contest judgments of his character, not credit's dependence on character. That is a revision of the disembedding story, not a refutation.",
+        "distractors": {
+          "refute the view that the credit-reporting agencies transformed the basis on which credit was extended": "Wrong verb: the author says the account is complicated, not overturned, and grants that something real changed.",
+          "explain why the reports compiled by the agencies' local correspondents were unreliable": "Too narrow: one strand of the second paragraph.",
+          "reconcile two opposing evaluations of the credit-reporting agencies": "The author shows the celebrants and critics share a mistaken premise; that rejects both rather than reconciling them.",
+          "defend the credit-reporting agencies against the charge that they were instruments of surveillance": "The author takes no side between the two evaluations and stresses the agencies' one-sided anonymity."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-main-idea",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q9",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 5,
+      "passageId": "p3",
+      "prompt": "The passage most strongly supports which of the following about a nineteenth-century borrower who received a poor rating from a credit-reporting agency?",
+      "choices": [
+        "He was likely to have been rated chiefly on his inventories and debts rather than on reports of his conduct.",
+        "He would ordinarily have learned of the rating from the correspondent who prepared the report.",
+        "He may have been judged partly on the kind of talk that, had it circulated only in his own town, he could have answered.",
+        "He was probably the victim of deliberate misrepresentation by the agency's correspondent.",
+        "He was less likely to obtain credit from merchants in his own town than from distant wholesalers."
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Combine two paragraphs: the ratings transcribed local talk (gossip 'filled the ledgers'; the rating 'transcribed' local reputation), and in the small town a slandered man 'could answer his accuser'. So the rating may rest on the same talk he could have rebutted at home.",
+        "distractors": {
+          "He was likely to have been rated chiefly on his inventories and debts rather than on reports of his conduct.": "Reverses the second paragraph: gossip about conduct appeared 'alongside' inventories and debts.",
+          "He would ordinarily have learned of the rating from the correspondent who prepared the report.": "Contradicted: such a man 'often did not know that a report on him existed'.",
+          "He was probably the victim of deliberate misrepresentation by the agency's correspondent.": "Too strong: correspondents set down what neighbors said; the passage alleges carelessness, not deliberate falsehood.",
+          "He was less likely to obtain credit from merchants in his own town than from distant wholesalers.": "Nothing compares his chances with local and distant lenders."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q10",
+      "section": 2,
+      "type": "rc_multi",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "Consider each of the choices separately and select all that apply. According to the passage, the local correspondents who wrote the agencies' reports",
+      "choices": [
+        "were valued by the agencies chiefly for the accuracy of their reports",
+        "were for the most part members of the legal profession",
+        "recorded information about borrowers' domestic lives as well as about their business affairs"
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "A: no. The agencies 'judged correspondents by the volume of their reports rather than by their accuracy'. B: yes. They were 'usually attorneys'. C: yes. A shopkeeper's drinking and his wife's taste for finery appear 'alongside inventories and debts'."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-detail",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q11",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p4",
+      "prompt": "The author's attitude toward the \"more recent scholarship\" mentioned in the first paragraph is best described as",
+      "choices": [
+        "approving of its conclusions but doubtful of the evidence on which they rest",
+        "enthusiastic, regarding it as having settled what the theaters were for",
+        "approving of its central correction but wary that it may introduce a misreading of its own",
+        "dismissive, on the grounds that it projects modern categories onto the past",
+        "skeptical of its claim that the dissections were attended by paying townspeople"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "'The revisionists are right' and have made the old reading 'impossible'; 'yet in correcting one anachronism they risk another'. Measured approval with a specific worry.",
+        "distractors": {
+          "approving of its conclusions but doubtful of the evidence on which they rest": "Half right: the author's reservation is about an assumption, not the evidence, which the author accepts.",
+          "enthusiastic, regarding it as having settled what the theaters were for": "Too strong: the whole second paragraph corrects the revisionists.",
+          "dismissive, on the grounds that it projects modern categories onto the past": "Too strong and partly reversed: the author says they 'risk' an anachronism, after granting they are right.",
+          "skeptical of its claim that the dissections were attended by paying townspeople": "The author reports these facts without doubting them."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-attitude",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q12",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 5,
+      "passageId": "p4",
+      "prompt": "The author refers to anatomists who wrote of the human body as \"the most perfect work of a divine maker\" primarily in order to",
+      "choices": [
+        "illustrate the hortatory character of the public dissections described in the first paragraph",
+        "concede that the revisionists were right to emphasize the religious dimension of the theaters",
+        "support the claim that the participants did not experience inquiry and moral display as separate pursuits",
+        "suggest that religious conviction hindered the development of anatomical knowledge",
+        "show that the older account was right to regard the anatomists as heroes of observation"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The sentence follows the claim that both rival readings 'assume that the participants experienced the two as distinct'. The anatomists 'saw no tension' between learning structure and inspiring awe, which is evidence against that assumption.",
+        "distractors": {
+          "illustrate the hortatory character of the public dissections described in the first paragraph": "Accurate about the content but not its role: the hortatory trappings were the first paragraph's point; here the anatomists' words serve the second paragraph's argument about unity.",
+          "concede that the revisionists were right to emphasize the religious dimension of the theaters": "Half right: the concession came earlier ('The revisionists are right'); this sentence supports the author's correction of them.",
+          "suggest that religious conviction hindered the development of anatomical knowledge": "Reversed: precision and piety reinforced each other.",
+          "show that the older account was right to regard the anatomists as heroes of observation": "The author rejects separating observation from ceremony, the older account's premise."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-function",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q13",
+      "section": 2,
+      "type": "rc_select",
+      "difficulty": 5,
+      "passageId": "p5",
+      "prompt": "Select the sentence that states the general principle on which a present-day physician could most reasonably rely in declining to prescribe a drug that lowers a patient's fever without treating the infection that causes it.",
+      "key": {
+        "sel": [
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The fifth sentence (\"But the objection was not foolish: a remedy that removes a symptom without touching its cause can do harm...\") states the principle in general form: removing the symptom (fever) while the cause (infection) goes untreated. The third sentence also concerns suppressing a fever, but its ground (driving corrupt matter deeper) belongs to humoral theory, which no present-day physician would invoke. The sixth sentence concerns indifference to mechanism, the champions' stance."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-application",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q14",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p5",
+      "prompt": "Which of the following best describes the organization of the passage?",
+      "choices": [
+        "A difficulty raised by a new remedy is described; resistance to the remedy is partly excused; the remedy's supporters are partly faulted; and the difficulty's eventual resolution is attributed to a change in theory.",
+        "A difficulty raised by a new remedy is described; resistance to the remedy is condemned as hidebound; the remedy's supporters are vindicated; and the difficulty's resolution is attributed to the triumph of observation over theory.",
+        "A difficulty raised by a new remedy is described; the remedy's supporters are partly faulted; resistance to the remedy is then partly excused; and the difficulty's resolution is attributed to a change in theory.",
+        "A difficulty raised by a new remedy is described; the positions of its opponents and supporters are each partly endorsed; and the difficulty's resolution is presented as a compromise between those positions.",
+        "A new remedy is described; the mechanism by which it works is explained; objections to it are answered; and its eventual adoption is traced."
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "First paragraph: the bark's efficacy could not be explained in humoral terms. Second paragraph: the resistance was partly hidebound but 'not foolish' (partly excused); the champions were vindicated here but their indifference to mechanism sustained nostrums (partly faulted); and the bark was secured by 'the slow construction of a new theory'.",
+        "distractors": {
+          "A difficulty raised by a new remedy is described; resistance to the remedy is condemned as hidebound; the remedy's supporters are vindicated; and the difficulty's resolution is attributed to the triumph of observation over theory.": "Two moves wrong: the author says the objection 'was not foolish', and the last sentence denies that the outcome was 'a victory of observation over theory'.",
+          "A difficulty raised by a new remedy is described; the remedy's supporters are partly faulted; resistance to the remedy is then partly excused; and the difficulty's resolution is attributed to a change in theory.": "One move out of order: the opponents are discussed before the supporters.",
+          "A difficulty raised by a new remedy is described; the positions of its opponents and supporters are each partly endorsed; and the difficulty's resolution is presented as a compromise between those positions.": "The new theory is not a compromise between the two positions; it is something neither side supplied.",
+          "A new remedy is described; the mechanism by which it works is explained; objections to it are answered; and its eventual adoption is traced.": "The passage never explains how the bark works; its point is that the bark's action could not be explained."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-structure",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q15",
+      "section": 2,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 3,
+      "passageId": "a2",
+      "prompt": "In the argument, the two statements quoted below play which of the following roles? (1) \"Some growers have concluded that renting hives is responsible for the difference.\" (2) \"The difference in harvests therefore does not, by itself, show that renting hives raises yields.\"",
+      "choices": [
+        "The first is a conclusion that the argument rejects as false; the second is evidence offered for that rejection.",
+        "The first is evidence on which the argument relies; the second is a conclusion drawn from that evidence.",
+        "The first is a conclusion whose support the argument calls into question; the second is the argument's main conclusion.",
+        "The first is a conclusion whose support the argument calls into question; the second is an intermediate conclusion offered in support of a further claim.",
+        "The first is the argument's main conclusion; the second is a qualification of that conclusion."
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The growers' conclusion (1) is challenged by the irrigation confound, and (2), introduced by 'therefore', is what the argument concludes from that: the harvest gap does not show hives raise yields. The argument does not say hives fail to help, only that the evidence does not establish it.",
+        "distractors": {
+          "The first is a conclusion that the argument rejects as false; the second is evidence offered for that rejection.": "Too strong: the argument questions the support, not the truth, of (1), and (2) is the conclusion, not evidence.",
+          "The first is evidence on which the argument relies; the second is a conclusion drawn from that evidence.": "(1) is a view the argument opposes, not its evidence.",
+          "The first is a conclusion whose support the argument calls into question; the second is an intermediate conclusion offered in support of a further claim.": "Nothing follows from (2); it is the final conclusion.",
+          "The first is the argument's main conclusion; the second is a qualification of that conclusion.": "The argument's conclusion is (2); (1) belongs to some growers."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-role",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}
