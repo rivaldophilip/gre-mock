@@ -4,6 +4,7 @@ import path from "node:path";
 import concepts from "@/data/concepts.json";
 import rcSkills from "@/data/rc_skills.json";
 import { TestSchema, type PublicTest, type Test } from "./types";
+import { StudySchema, type Study } from "./study";
 
 const DIR = path.join(process.cwd(), "content", "tests");
 
@@ -14,6 +15,13 @@ export function listTestIds(): string[] {
     .filter((f) => f.endsWith(".json"))
     .map((f) => f.replace(/\.json$/, ""))
     .sort();
+}
+
+/** The study guide for a measure (content/study/<measure>.json), or null if none is written yet. */
+export function loadStudy(measure: "verbal" | "quant"): Study | null {
+  const file = path.join(process.cwd(), "content", "study", `${measure}.json`);
+  if (!fs.existsSync(file)) return null;
+  return StudySchema.parse(JSON.parse(fs.readFileSync(file, "utf8")));
 }
 
 export function loadTest(id: string): Test | null {
