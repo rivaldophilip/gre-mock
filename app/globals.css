@@ -22,6 +22,9 @@
   --warn: #b45309;
   --warn-soft: #fdf2e2;
   --mark: #e08a12;
+  /* chart series (validated for CVD separation on --surface) */
+  --series-verbal: #2a78d6;
+  --series-quant: #eb6834;
   --scrim: rgb(10 25 24 / 0.45);
   color-scheme: light;
 }
@@ -45,6 +48,8 @@
     --warn: #fbbf24;
     --warn-soft: #2d2412;
     --mark: #fbbf24;
+    --series-verbal: #3987e5;
+    --series-quant: #d95926;
     --scrim: rgb(0 0 0 / 0.6);
     color-scheme: dark;
   }
@@ -68,6 +73,8 @@
   --warn: #fbbf24;
   --warn-soft: #2d2412;
   --mark: #fbbf24;
+  --series-verbal: #3987e5;
+  --series-quant: #d95926;
   --scrim: rgb(0 0 0 / 0.6);
   color-scheme: dark;
 }
@@ -90,6 +97,8 @@
   --color-warn: var(--warn);
   --color-warn-soft: var(--warn-soft);
   --color-mark: var(--mark);
+  --color-series-verbal: var(--series-verbal);
+  --color-series-quant: var(--series-quant);
   --color-scrim: var(--scrim);
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;

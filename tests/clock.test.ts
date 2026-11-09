@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { STALE_MS, elapsedMs, heartbeat, isAway, paused, resumed } from "../lib/clock";
+import { STALE_MS, clockSecondsLeft, elapsedMs, heartbeat, isAway, overtimeMs, paused, resumed } from "../lib/clock";
 
 const T0 = Date.parse("2026-11-06T10:00:00Z");
 const at = (s: number) => T0 + s * 1000;
@@ -82,5 +82,29 @@ describe("section clock while the test-taker is away", () => {
     const p = paused({ startedAt: iso(0), lastSeenAt: iso(50) }, at(500), "away")!;
     expect(p.pausedAt).toBe(iso(50));
     expect(elapsedMs(p, at(900))).toBe(50_000);
+  });
+});
+
+describe("past the limit the clock runs negative", () => {
+  // a 1-minute section, with heartbeats so the clock never goes stale
+  const live = (s: number) => ({ startedAt: iso(0), lastSeenAt: iso(s) });
+
+  it("counts down through zero", () => {
+    expect(clockSecondsLeft(live(40), 1, at(40))).toBe(20);
+    expect(clockSecondsLeft(live(60), 1, at(60))).toBe(0);
+    expect(clockSecondsLeft(live(95), 1, at(95))).toBe(-35);
+  });
+
+  it("measures overtime only past the limit, and stops at finishedAt", () => {
+    expect(overtimeMs(live(40), 1, at(40))).toBe(0);
+    expect(overtimeMs(live(95), 1, at(95))).toBe(35_000);
+    expect(overtimeMs({ startedAt: iso(0), finishedAt: iso(80) }, 1, at(10_000))).toBe(20_000);
+    expect(overtimeMs(undefined, 1, at(500))).toBe(0);
+  });
+
+  it("does not count pauses as overtime", () => {
+    const st = { startedAt: iso(0), pausedMs: 30_000, finishedAt: iso(80) };
+    expect(clockSecondsLeft(st, 1, at(80))).toBe(10);
+    expect(overtimeMs(st, 1, at(80))).toBe(0);
   });
 });

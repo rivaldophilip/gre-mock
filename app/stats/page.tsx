@@ -6,8 +6,8 @@ import { allocateConcepts, allocateVerbalKeys, selectionOdds } from "@/lib/prior
 import { avgTimeWhy, missWhy, needWhy, oddsWhy, paceWhy, weaknessWhy } from "@/lib/priority/explain";
 import { SLOW_MS } from "@/lib/priority/config";
 import { listTestIds, loadTest } from "@/lib/content";
-import { pairKey } from "@/lib/attempts";
-import { attemptNumbers, attemptTimeMs, fmtDuration, isListed } from "@/lib/attempt-summary";
+import { pairKey, sectionOvertimeMs } from "@/lib/attempts";
+import { attemptNumbers, attemptTimeMs, finishedOrdinals, fmtDuration, isListed } from "@/lib/attempt-summary";
 import { bandText, bandWhy, estimateBand, isAnswered } from "@/lib/scoring";
 import { slotType, typeStats, TYPE_INFO, type SlotType } from "@/lib/qtypes";
 import type { Answer, Question } from "@/lib/types";
@@ -15,6 +15,7 @@ import blueprints from "@/data/blueprints.json";
 import { SenseLine, type Sense } from "@/components/WordTagger";
 import { AppHeader } from "@/components/AppHeader";
 import { Explain } from "@/components/Explain";
+import { ProgressChart, type ProgressPoint } from "@/components/ProgressChart";
 import { badge, card, seg, segItem } from "@/components/ui";
 
 export const dynamic = "force-dynamic";
@@ -155,6 +156,23 @@ export default async function Stats({ searchParams }: { searchParams: Promise<{ 
   const vScore = scoreSummary("verbal");
   const qScore = scoreSummary("quant");
 
+  // the progress chart: finished attempts in the period, numbered within their measure over all time
+  const measureOf = (a: (typeof attempts)[number]) => tests.get(a.testId)?.measure;
+  const ordinal = finishedOrdinals(listed, measureOf);
+  const progress: ProgressPoint[] = inRange.flatMap((a) => {
+    const band = bandOf(a);
+    const m = measureOf(a);
+    if (!band || !m) return [];
+    return [{
+      id: a.id, measure: m, n: ordinal.get(a.id)!, finishedAt: a.finishedAt!.getTime(), score: { mid: band.mid, low: band.low, high: band.high },
+      timeMs: attemptTimeMs(a), testId: a.testId, attemptNo: numberOf.get(a.id) ?? 1, timed: a.timerOn, mode: a.mode, href: `/test/${a.testId}/review/${a.id}`,
+    }];
+  });
+  const firstAt = Math.min(...progress.map((p) => p.finishedAt));
+  const chartDomain: [number, number] = [Number.isFinite(since) ? since : firstAt - 43_200_000, now.getTime()];
+  const limitMs = { verbal: 0, quant: 0 };
+  for (const m of ["verbal", "quant"] as const) limitMs[m] = blueprints[m].sections.reduce((t, s) => t + s.minutes, 0) * 60_000;
+
   return (
     <>
       <AppHeader active="stats" />
@@ -185,6 +203,7 @@ export default async function Stats({ searchParams }: { searchParams: Promise<{ 
             <ScoreTile label="Avg verbal score" s={vScore} />
             <ScoreTile label="Avg quant score" s={qScore} />
           </div>
+          {progress.length > 0 && <ProgressChart points={progress} domain={chartDomain} limitMs={limitMs} />}
           {inRange.length === 0 && (
             <p className="text-sm text-muted">
               No attempt finished in the last {range.label.toLowerCase()}.
@@ -309,12 +328,15 @@ export default async function Stats({ searchParams }: { searchParams: Promise<{ 
                 const total = tests.get(a.testId)?.questions.length ?? 0;
                 const s = byAttempt.get(a.id) ?? { correct: 0, guessed: 0 };
                 const band = bandOf(a);
+                const test = tests.get(a.testId);
+                const overMs = test ? sectionOvertimeMs(a, test, 1) + sectionOvertimeMs(a, test, 2) : 0;
                 return (
                   <li key={a.id} className="flex flex-wrap items-center gap-x-3 gap-y-1 px-4 py-3 text-sm">
                     <Link className="font-medium underline-offset-4 hover:underline" href={`/test/${a.testId}/review/${a.id}`}>{a.testId} · attempt {numberOf.get(a.id)}</Link>
                     <span className="capitalize text-muted">{a.mode}{a.timerOn ? "" : ", untimed"}</span>
                     <span className={badge(a.finishedAt ? "ok" : "warn")}>{a.finishedAt ? "Finished" : "In progress"}</span>
                     <span className="tabular-nums text-muted" title="Time on the section clocks, without pauses">{fmtDuration(attemptTimeMs(a))}</span>
+                    {overMs >= 1000 && <span className={badge("bad")} title="Ran past the section clock; answers given in overtime still count">+{fmtDuration(overMs)} over</span>}
                     {band && (
                       <span className="tabular-nums">
                         <span className="text-muted">{s.correct}/{total} · </span>

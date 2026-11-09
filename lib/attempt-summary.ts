@@ -28,3 +28,21 @@ export function fmtDuration(ms: number): string {
   const m = Math.max(ms > 0 ? 1 : 0, Math.round(ms / 60_000));
   return m < 60 ? `${m}m` : `${Math.floor(m / 60)}h ${String(m % 60).padStart(2, "0")}m`;
 }
+
+/**
+ * Finished attempts numbered 1, 2, … within their measure (all verbal mocks, all quant mocks), by when they
+ * were finished, so a progress chart's x axis reads "your 7th verbal mock" across every test and retake.
+ */
+export function finishedOrdinals<A extends AttemptLike & { finishedAt: Date | null }>(attempts: A[], measureOf: (a: A) => string | undefined): Map<number, number> {
+  const out = new Map<number, number>();
+  const seen = new Map<string, number>();
+  const done = attempts.filter((a) => isListed(a) && a.finishedAt);
+  for (const a of done.sort((x, y) => x.finishedAt!.getTime() - y.finishedAt!.getTime() || x.id - y.id)) {
+    const m = measureOf(a);
+    if (!m) continue;
+    const n = (seen.get(m) ?? 0) + 1;
+    seen.set(m, n);
+    out.set(a.id, n);
+  }
+  return out;
+}

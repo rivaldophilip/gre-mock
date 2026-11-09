@@ -3,11 +3,9 @@ import { z } from "zod";
 import { schema } from "@/lib/db";
 import { userDb } from "@/lib/session";
 import { eq } from "drizzle-orm";
-import { canReveal, finalizeResponse, isClosed, loadAttemptTest, pairKey, responseFor, sectionElapsedMs, sectionStatus, secondsLeft, setClockPaused } from "@/lib/attempts";
+import { canReveal, finalizeResponse, isClosed, loadAttemptTest, pairKey, responseFor, sectionStatus, secondsLeft, setClockPaused } from "@/lib/attempts";
 import { AnswerSchema } from "@/lib/types";
 import { scoreAnswer } from "@/lib/scoring";
-
-const GRACE_MS = 15_000;
 
 const Body = z.object({
   questionId: z.string(),
@@ -33,11 +31,7 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
   const q = test.questions.find((x) => x.id === body.data.questionId);
   if (!q) return NextResponse.json({ error: "unknown question" }, { status: 400 });
   if (isClosed(a) || sectionStatus(a, q.section).finished) return NextResponse.json({ error: "section closed" }, { status: 409 });
-  // the clock is server-side: past time (plus a small grace for the final in-flight save) answers are refused
-  if (a.timerOn && sectionStatus(a, q.section).started) {
-    const limitMs = test.sections.find((s) => s.n === q.section)!.minutes * 60_000 + GRACE_MS;
-    if (sectionElapsedMs(a, q.section) > limitMs) return NextResponse.json({ error: "time is up" }, { status: 409 });
-  }
+  // past the limit the clock runs negative and answers are still taken; the review shows the overtime
   if (body.data.resume && a.mode === "practice") a = await setClockPaused(a, q.section, false, "reveal");
   const clock = () => ({ secondsLeft: secondsLeft(a, test, q.section) });
 

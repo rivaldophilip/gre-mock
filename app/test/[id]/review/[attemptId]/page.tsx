@@ -4,7 +4,7 @@ import { and, eq, inArray } from "drizzle-orm";
 import { schema } from "@/lib/db";
 import { userDb } from "@/lib/session";
 import { loadTest } from "@/lib/content";
-import { canReveal, getAttempt, isClosed, pairKey, responsesFor, sectionStatus } from "@/lib/attempts";
+import { canReveal, getAttempt, isClosed, pairKey, responsesFor, sectionOvertimeMs, sectionStatus } from "@/lib/attempts";
 import { bandText, bandWhy, estimateBand, scoreAnswer } from "@/lib/scoring";
 import { TYPE_INFO, slotType } from "@/lib/qtypes";
 import type { Answer, Question, Test } from "@/lib/types";
@@ -42,6 +42,12 @@ const LEVEL_WHY: Record<number, string> = {
 };
 const levelWhy = (n: number) =>
   `${LEVEL_WHY[n]}\nThe level is set when the test is written and checked against official items of known difficulty (levels 6–7: docs/CALIBRATION.md); it is an estimate, not an ETS rating.`;
+
+/** "3:12" from milliseconds. */
+const mss = (ms: number) => {
+  const s = Math.round(ms / 1000);
+  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+};
 
 function choiceWords(q: Question): string[] {
   if (q.type === "tc") return q.blanks?.flat() ?? [];
@@ -117,6 +123,8 @@ export default async function Review({ params }: { params: Promise<{ id: string;
     return q.tags.find((t) => t.kind === "word" && t.at && at(t) === text)?.id;
   };
   const waitingOn2 = !isClosed(a) && sectionStatus(a, 1).finished && !sectionStatus(a, 2).finished;
+  // the clock runs negative past the limit; under a second over is rounding, not overtime
+  const overBy = ([1, 2] as const).map((n) => ({ n, ms: sectionStatus(a, n).finished ? sectionOvertimeMs(a, test, n) : 0 })).filter((o) => o.ms >= 1000);
 
   const pct = visible.length ? Math.round((100 * correct) / visible.length) : 0;
   const results = visible.map((q) => ({ q, ok: scoreAnswer(q, (rows.get(pairKey(id, q.id))?.answer ?? undefined) as Answer | undefined) }));
@@ -159,6 +167,14 @@ export default async function Review({ params }: { params: Promise<{ id: string;
             )}{" "}
             <span className="text-xs text-muted">(strict estimate, not an ETS conversion{guessedRight ? `; ${guessedRight} guessed right at half credit` : ""})</span>
           </p>
+          {overBy.length > 0 && (
+            <p className="flex flex-wrap items-center gap-1.5 text-sm">
+              <Explain why={"The clock kept running after it reached zero. Answers given in overtime still count here; on the real exam the section would have closed at zero, so expect a lower score under the real clock."}>
+                <span className={badge("bad")}>Over time</span>
+              </Explain>
+              <span className="tabular-nums text-muted">{overBy.map((o) => `Section ${o.n} +${mss(o.ms)}`).join(" · ")}</span>
+            </p>
+          )}
           {results.length > 0 && (
             <nav aria-label="Jump to question" className="flex flex-wrap gap-1.5">
               {results.map(({ q, ok }, i) => (

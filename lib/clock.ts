@@ -71,3 +71,13 @@ export function heartbeat(st: SectionClock | undefined, now = Date.now()): Secti
   if (st.pausedAt) return { ...st, lastSeenAt: new Date(now).toISOString() };
   return resumed(st, now) ?? { ...st, lastSeenAt: new Date(now).toISOString() };
 }
+
+/** Seconds left on a section of `minutes`; negative once the clock has run past zero (it keeps going until the section is finished). */
+export function clockSecondsLeft(st: SectionClock | undefined, minutes: number, now = Date.now()): number {
+  return Math.round(minutes * 60 - elapsedMs(st, now) / 1000);
+}
+
+/** How far past the limit the section clock ran (0 if within it or not started). Stops growing at finishedAt. */
+export function overtimeMs(st: SectionClock | undefined, minutes: number, now = Date.now()): number {
+  return Math.max(0, elapsedMs(st, now) - minutes * 60_000);
+}

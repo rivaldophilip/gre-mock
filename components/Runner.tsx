@@ -29,7 +29,13 @@ export interface RunnerProps {
   position: number;
 }
 
-const fmt = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+/** "4:05"; past zero the clock reads "−1:20" (time over the limit). */
+const fmt = (s: number) => {
+  const a = Math.abs(s);
+  return `${s < 0 ? "−" : ""}${Math.floor(a / 60)}:${String(a % 60).padStart(2, "0")}`;
+};
+/** The response API's cap on time per question. */
+const MAX_Q_MS = 3_600_000;
 
 export function Runner(p: RunnerProps) {
   const { test, attemptId, mode, timerOn } = p;
@@ -85,7 +91,7 @@ export function Runner(p: RunnerProps) {
           body: JSON.stringify({
             questionId: qid,
             answer: latest.current.answers[qid] ?? null,
-            timeMs: m.timeMs + spent,
+            timeMs: Math.min(m.timeMs + spent, MAX_Q_MS),
             guessed: m.guessed,
             marked: m.marked,
             ...extra,
@@ -190,16 +196,14 @@ export function Runner(p: RunnerProps) {
     }
   }, [attemptId, section, timerOn, minutes]);
 
-  // countdown (server-anchored at start; local tick)
+  // countdown (server-anchored at start; local tick). It keeps going below zero: the section stays open until the
+  // test-taker finishes it, and the review shows the overtime.
   useEffect(() => {
     if (!timerOn || !sectionStarted || sectionDone || left === null || paused || held || away) return;
-    if (left <= 0) {
-      const t = setTimeout(() => void finishSection(), 0);
-      return () => clearTimeout(t);
-    }
     const t = setTimeout(() => setLeft((l) => (l === null ? l : l - 1)), 1000);
     return () => clearTimeout(t);
-  }, [left, timerOn, sectionStarted, sectionDone, paused, held, away, finishSection]);
+  }, [left, timerOn, sectionStarted, sectionDone, paused, held, away]);
+  const over = left !== null && left < 0;
 
   // The clock only runs while the page is in front of the test-taker. Leaving (tab, app, lock, close, Pause & exit)
   // saves what is pending and pauses it; coming back resumes it. Heartbeats let the server stop the clock on its own
@@ -464,9 +468,9 @@ export function Runner(p: RunnerProps) {
   const timerPill = timerOn && left !== null && (
     <span
       data-testid="timer"
-      title={held ? "Paused" : paused ? "Paused while you read the answer; resumes on the next question" : undefined}
+      title={held ? "Paused" : paused ? "Paused while you read the answer; resumes on the next question" : over ? "Over time: finish the section when you are ready" : undefined}
       className={`inline-flex h-9 shrink-0 items-center gap-1.5 rounded-full px-3 font-mono text-sm font-semibold tabular-nums ${
-        paused || held ? "bg-surface-2 text-muted" : left < 300 ? "bg-warn-soft text-warn" : "bg-surface-2 text-fg"
+        paused || held ? "bg-surface-2 text-muted" : over ? "bg-bad-soft text-bad" : left < 300 ? "bg-warn-soft text-warn" : "bg-surface-2 text-fg"
       }`}
     >
       {paused || held ? <IconPause size={12} /> : <IconClock size={15} />}
@@ -539,6 +543,11 @@ export function Runner(p: RunnerProps) {
             {nextBtn}
           </div>
         </div>
+        {over && (
+          <p role="status" className="border-t border-line bg-bad-soft px-3 py-1.5 text-center text-xs font-medium text-bad sm:px-4">
+            Time is up. The clock keeps running; finish the section when you are done.
+          </p>
+        )}
         {passage && (
           <div className="px-3 pb-2.5 md:hidden">
             <div className={seg} role="tablist" aria-label="Show">
@@ -640,7 +649,7 @@ export function Runner(p: RunnerProps) {
           <div className={`${card} w-full max-w-sm space-y-5 p-6 text-center`}>
             <div className="space-y-1.5">
               <p className="flex items-center justify-center gap-2 text-lg font-semibold"><IconPause size={16} /> Paused</p>
-              <p className="text-sm text-muted">The clock is stopped{left !== null ? ` with ${fmt(left)} left` : ""}.</p>
+              <p className="text-sm text-muted">The clock is stopped{left !== null ? (over ? ` at ${fmt(-left)} over time` : ` with ${fmt(left)} left`) : ""}.</p>
             </div>
             <div className="flex gap-2">
               <button className={`${btn("secondary")} flex-1`} disabled={busy} onClick={() => void pauseAndExit()}>Exit</button>

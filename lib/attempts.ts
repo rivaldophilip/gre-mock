@@ -6,7 +6,7 @@ import { loadTest, orderedQuestions } from "./content";
 import { eventsForResponse } from "./events";
 import { scoreAnswer } from "./scoring";
 import type { Answer, Question, Test } from "./types";
-import { elapsedMs, paused, resumed, type PauseReason, type SectionState } from "./clock";
+import { clockSecondsLeft, elapsedMs, overtimeMs, paused, resumed, type PauseReason, type SectionState } from "./clock";
 
 const { attempts, responses, itemEvents } = schema;
 
@@ -29,13 +29,22 @@ export function sectionStatus(a: Attempt, n: 1 | 2) {
   return { started: !!st?.startedAt, finished: !!st?.finishedAt, startedAt: st?.startedAt };
 }
 
-/** Seconds left in a section, from server time (so refresh cannot reset the clock). Practice-mode pauses don't count. */
+/**
+ * Seconds left in a section, from server time (so refresh cannot reset the clock). Practice-mode pauses don't count.
+ * Negative once time is up: the section stays open until the test-taker finishes it, and the overtime is shown in review.
+ */
 export function secondsLeft(a: Attempt, test: Test, n: 1 | 2, now = Date.now()): number | null {
   if (!a.timerOn) return null;
   const st = (a.sectionState as SectionState)[String(n)];
   if (!st?.startedAt) return null;
-  const total = test.sections.find((s) => s.n === n)!.minutes * 60;
-  return Math.max(0, Math.round(total - elapsedMs(st, now) / 1000));
+  return clockSecondsLeft(st, test.sections.find((s) => s.n === n)!.minutes, now);
+}
+
+/** Milliseconds a timed section ran past its limit (0 untimed, in time, or not started). */
+export function sectionOvertimeMs(a: Attempt, test: Test, n: 1 | 2, now = Date.now()): number {
+  if (!a.timerOn) return 0;
+  const sec = test.sections.find((s) => s.n === n);
+  return sec ? overtimeMs((a.sectionState as SectionState)[String(n)], sec.minutes, now) : 0;
 }
 
 /** Milliseconds the section clock has run (excluding pauses). */
