@@ -8,7 +8,10 @@ const Lines = z.array(z.string().min(1)).min(1);
 export const StudySchema = z.object({
   measure: z.enum(["verbal", "quant"]),
   intro: z.string().min(1),
-  quickRef: z.array(z.object({ title: z.string().min(1), lines: Lines })).min(1),
+  /** formula tiles: a plain name, the formula (bare TeX, no $), and an optional one-line note (Rich) */
+  quickRef: z
+    .array(z.object({ title: z.string().min(1), items: z.array(z.object({ name: z.string().min(1), tex: z.string().min(1), note: z.string().optional() })).min(1) }))
+    .min(1),
   formats: z.array(
     z.object({
       type: z.enum(["tc1", "tc2", "tc3", "se", "rc", "rc_multi", "rc_select", "arg", "qc", "mc", "mc_multi", "numeric", "di"]),
@@ -24,6 +27,9 @@ export const StudySchema = z.object({
         title: z.string().min(1),
         /** concept (or reading-skill) ids this section teaches; a question counts here if any of its tags is one of them */
         concepts: z.array(z.string()).min(1),
+        /** the one-sentence intuition the section hangs on */
+        idea: z.string().min(1),
+        example: z.object({ q: z.string().min(1), steps: Lines }),
         facts: Lines,
         tricks: Lines,
         traps: Lines,

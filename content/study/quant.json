@@ -1,61 +1,223 @@
 {
  "measure": "quant",
- "intro": "Built from your own quant mocks. Sections are sorted by your accuracy on their concepts, weakest first, and the numbers update after every finished mock. Each section has the facts to know cold, the shortcuts, and the traps the mocks are built around. Open **Your misses** to reread the full explanation of each question you got wrong.",
+ "intro": "Your weakest topics are at the top, based on your own mocks, and the order updates after every mock you finish. Start each topic with its **big idea** and the worked example, then read the rules and the traps.",
  "quickRef": [
   {
-   "title": "Circles & triangles",
-   "lines": [
-    "Circle: $C=2\\pi r$, $A=\\pi r^2$; arc $=\\frac{\\theta}{360}\\cdot2\\pi r$, sector $=\\frac{\\theta}{360}\\cdot\\pi r^2$",
-    "Square in circle: diagonal $=2r$, area $=2r^2$ · circle in square: side $=2r$",
-    "Square in semicircle (side on the diameter): $s^2=\\frac45r^2$",
-    "Chord $c$ at distance $d$ from the center: $\\left(\\frac c2\\right)^2+d^2=r^2$",
-    "$45$-$45$-$90$: $1:1:\\sqrt2$ · $30$-$60$-$90$: $1:\\sqrt3:2$",
-    "Triples: $3$-$4$-$5$, $5$-$12$-$13$, $8$-$15$-$17$, $7$-$24$-$25$ and multiples",
-    "Equilateral: $h=\\frac{\\sqrt3}{2}s$, $A=\\frac{\\sqrt3}{4}s^2$ · altitude to a side $=\\frac{2A}{\\text{side}}$",
-    "Third side: $|a-b|<c<a+b$"
+   "title": "Circles",
+   "items": [
+    {
+     "name": "Area",
+     "tex": "\\pi r^2"
+    },
+    {
+     "name": "Distance around",
+     "tex": "2\\pi r",
+     "note": "the circumference"
+    },
+    {
+     "name": "Arc (piece of the edge)",
+     "tex": "\\tfrac{\\text{angle}}{360}\\times 2\\pi r",
+     "note": "use the angle at the center"
+    },
+    {
+     "name": "Slice (sector)",
+     "tex": "\\tfrac{\\text{angle}}{360}\\times \\pi r^2"
+    },
+    {
+     "name": "Square inside a circle",
+     "tex": "\\text{area}=2r^2",
+     "note": "its diagonal is the circle's width, $2r$"
+    },
+    {
+     "name": "Circle inside a square",
+     "tex": "\\text{side}=2r"
+    },
+    {
+     "name": "Square in a half-circle",
+     "tex": "\\text{area}=\\tfrac45 r^2",
+     "note": "sitting on the flat edge"
+    },
+    {
+     "name": "Chord",
+     "tex": "\\left(\\tfrac{\\text{chord}}{2}\\right)^2+d^2=r^2",
+     "note": "$d$ = distance from the center to the chord"
+    }
    ]
   },
   {
-   "title": "Polygons, solids, coordinates",
-   "lines": [
-    "Interior sum $(n-2)\\cdot180^\\circ$ · exterior sum $360^\\circ$ · diagonals $\\frac{n(n-3)}{2}$",
-    "Trapezoid $\\frac{b_1+b_2}{2}h$ · rhombus $\\frac{d_1d_2}{2}$ · box diagonal $\\sqrt{l^2+w^2+h^2}$",
-    "Cylinder: $V=\\pi r^2h$, surface $2\\pi r^2+2\\pi rh$",
-    "Slope $\\frac{\\Delta y}{\\Delta x}$; $Ax+By=C$ has slope $-\\frac AB$ · perpendicular: $m_1m_2=-1$",
-    "Distance $\\sqrt{\\Delta x^2+\\Delta y^2}$ · midpoint = average of the coordinates"
+   "title": "Triangles",
+   "items": [
+    {
+     "name": "Pythagoras",
+     "tex": "a^2+b^2=c^2",
+     "note": "3-4-5 · 5-12-13 · 8-15-17 · 7-24-25"
+    },
+    {
+     "name": "45-45-90",
+     "tex": "1 : 1 : \\sqrt2",
+     "note": "half of a square"
+    },
+    {
+     "name": "30-60-90",
+     "tex": "1 : \\sqrt3 : 2",
+     "note": "half of an equilateral triangle"
+    },
+    {
+     "name": "Area",
+     "tex": "\\tfrac12\\times\\text{base}\\times\\text{height}",
+     "note": "any side can be the base"
+    },
+    {
+     "name": "Equilateral area",
+     "tex": "\\tfrac{\\sqrt3}{4}s^2"
+    },
+    {
+     "name": "Third side",
+     "tex": "a-b < c < a+b",
+     "note": "two sides always beat the third"
+    }
    ]
   },
   {
-   "title": "Counting, probability, sets",
-   "lines": [
-    "$_nP_k=\\frac{n!}{(n-k)!}$ · $\\binom nk=\\frac{n!}{k!\\,(n-k)!}$ · repeats: $\\frac{n!}{a!\\,b!\\cdots}$ · circle: $(n-1)!$",
-    "Together: block it, then $\\times$ internal orders · apart: total $-$ together",
-    "$|A\\cup B\\cup C|=\\Sigma|A|-\\Sigma|A\\cap B|+|A\\cap B\\cap C|$",
-    "$P(\\text{at least one})=1-P(\\text{none})$ · $P(A|B)=\\frac{P(A\\cap B)}{P(B)}$",
-    "Total $=A+B-\\text{Both}+\\text{Neither}$ · exactly one $=A+B-2\\cdot\\text{Both}$",
-    "$\\max(0,\\,A+B-T)\\le\\text{Both}\\le\\min(A,B)$"
+   "title": "Shapes & lines",
+   "items": [
+    {
+     "name": "Inside angles, total",
+     "tex": "(n-2)\\times180^\\circ",
+     "note": "$n$ = number of sides"
+    },
+    {
+     "name": "Outside angles, total",
+     "tex": "360^\\circ",
+     "note": "always, for any polygon"
+    },
+    {
+     "name": "Diagonals",
+     "tex": "\\tfrac{n(n-3)}{2}"
+    },
+    {
+     "name": "Box volume",
+     "tex": "l\\times w\\times h"
+    },
+    {
+     "name": "Cylinder volume",
+     "tex": "\\pi r^2 h",
+     "note": "circle area × height"
+    },
+    {
+     "name": "Slope",
+     "tex": "\\tfrac{y_2-y_1}{x_2-x_1}",
+     "note": "rise over run"
+    },
+    {
+     "name": "Perpendicular slope",
+     "tex": "m \\to -\\tfrac1m",
+     "note": "flip it and change the sign"
+    },
+    {
+     "name": "Distance",
+     "tex": "\\sqrt{(\\Delta x)^2+(\\Delta y)^2}",
+     "note": "Pythagoras on the grid"
+    }
    ]
   },
   {
-   "title": "Number theory & algebra",
-   "lines": [
-    "Divisors of $p^aq^b$: $(a+1)(b+1)$; of its square: $(2a+1)(2b+1)$",
-    "Odd$^2$ leaves remainder 1 on division by 8 · $k\\equiv-1$: even powers $\\equiv1$",
-    "Units cycles: 2, 3, 7, 8 every 4 · 4, 9 every 2 · 0, 1, 5, 6 fixed",
-    "$\\gcd(a,b)\\cdot\\operatorname{lcm}(a,b)=ab$",
-    "$x+\\frac1x=s$: $x^2+\\frac1{x^2}=s^2-2$, $x^3+\\frac1{x^3}=s^3-3s$, $\\left(x-\\frac1x\\right)^2=s^2-4$",
-    "$x^2+bx+c=0$: roots sum $-b$, product $c$ · vertex at $x=-\\frac{b}{2a}$",
-    "$|x-a|+|x-b|\\le c$: $\\frac{a+b-c}{2}\\le x\\le\\frac{a+b+c}{2}$"
+   "title": "Counting & groups",
+   "items": [
+    {
+     "name": "Line up $n$ things",
+     "tex": "n!",
+     "note": "$4! = 4\\times3\\times2\\times1 = 24$"
+    },
+    {
+     "name": "Choose $k$ of $n$",
+     "tex": "\\tbinom nk=\\tfrac{n!}{k!\\,(n-k)!}",
+     "note": "order doesn't matter"
+    },
+    {
+     "name": "With repeats",
+     "tex": "\\tfrac{n!}{a!\\,b!}",
+     "note": "AABB has $\\frac{4!}{2!\\,2!}=6$ orders"
+    },
+    {
+     "name": "At least one",
+     "tex": "1-P(\\text{none})"
+    },
+    {
+     "name": "Two groups",
+     "tex": "A+B-\\text{both}+\\text{neither}",
+     "note": "= the total"
+    },
+    {
+     "name": "Exactly one group",
+     "tex": "A+B-2\\times\\text{both}"
+    }
    ]
   },
   {
-   "title": "Percent, growth, statistics",
-   "lines": [
-    "$+p\\%$ is $\\times\\left(1+\\frac p{100}\\right)$ · $+700\\%$ is $\\times8$ · % change $=\\frac{\\text{new}-\\text{old}}{\\text{old}}$",
-    "Equal growth over $k$ periods: each period is the $k$-th root of the total factor",
-    "Combined mean $=\\frac{n_1\\bar x_1+n_2\\bar x_2}{n_1+n_2}$",
-    "Normal: 68% within $1\\sigma$, 95% within $2\\sigma$ · above $+1\\sigma\\approx16\\%$, above $+2\\sigma\\approx2.5\\%$",
-    "$+c$ to every value: mean, median shift; SD, range don't · $\\times k$: all scale by $|k|$"
+   "title": "Numbers & algebra",
+   "items": [
+    {
+     "name": "Number of factors",
+     "tex": "(a+1)(b+1)",
+     "note": "for $n = 2^a\\times3^b$"
+    },
+    {
+     "name": "Last digits repeat",
+     "tex": "2,3,7,8:\\ \\text{every }4",
+     "note": "4 and 9 every 2; 0, 1, 5, 6 never change"
+    },
+    {
+     "name": "Odd number squared ÷ 8",
+     "tex": "\\text{remainder } 1"
+    },
+    {
+     "name": "If $x+\\frac1x=s$",
+     "tex": "x^2+\\tfrac1{x^2}=s^2-2",
+     "note": "square both sides"
+    },
+    {
+     "name": "Roots of $x^2+bx+c$",
+     "tex": "\\text{add to } {-b},\\ \\text{multiply to } c"
+    },
+    {
+     "name": "Inequality rule",
+     "tex": "\\times(\\text{negative}) \\Rightarrow \\text{flip}",
+     "note": "$<$ becomes $>$"
+    }
+   ]
+  },
+  {
+   "title": "Percent & averages",
+   "items": [
+    {
+     "name": "Percent change",
+     "tex": "\\tfrac{\\text{new}-\\text{old}}{\\text{old}}",
+     "note": "divide by where you started"
+    },
+    {
+     "name": "Up $p$%",
+     "tex": "\\times\\left(1+\\tfrac{p}{100}\\right)",
+     "note": "up 700% means ×8, not ×7"
+    },
+    {
+     "name": "Average of two groups",
+     "tex": "\\tfrac{n_1a_1+n_2a_2}{n_1+n_2}",
+     "note": "big groups count more"
+    },
+    {
+     "name": "Bell curve",
+     "tex": "68\\%\\ \\text{in } 1\\,\\text{SD},\\ 95\\%\\ \\text{in } 2",
+     "note": "SD = standard deviation"
+    },
+    {
+     "name": "Above +1 SD",
+     "tex": "\\approx 16\\%"
+    },
+    {
+     "name": "Above +2 SD",
+     "tex": "\\approx 2.5\\%"
+    }
    ]
   }
  ],
@@ -64,139 +226,164 @@
    "type": "qc",
    "title": "Quantitative Comparison",
    "rules": [
-    "Both quantities fixed numbers? Then (D) is impossible: compute and compare.",
-    "With a variable, try the special values: $0$, $1$, $-1$, a fraction between 0 and 1, a negative, a large number, and **both ends** of any range.",
-    "One case gives A and another gives B? Stop: it's (D).",
-    "Simplify both sides with the same operation; only multiply or divide by something you know is positive.",
-    "Figure not to scale: deform it in every way the given facts allow."
+    "Your job is to try to **break** it. Try two very different numbers. If the winner changes, the answer is (D).",
+    "Good numbers to try: $0$, $1$, $-1$, $\\frac12$, a big number, and both ends of any allowed range.",
+    "No letters, just numbers? Then it can't be (D). Just work it out.",
+    "Picture 'not drawn to scale' shapes stretched or squished in every way the facts allow."
    ]
   },
   {
    "type": "mc",
    "title": "Multiple choice, one answer",
    "rules": [
-    "Glance at the choices first: their spread says how precise you need to be, and their form ($\\sqrt3$, $\\pi$, fractions) hints at the method.",
-    "Back-solve from the middle choice when the setup is slow and the question asks for one number.",
-    "Pick numbers for questions about variables or percents with no values given.",
-    "Wrong choices are the classic slips (half-angle, wrong base, missing $\\frac12$). Landing on a choice isn't proof; sanity-check it."
+    "Look at the answers first. They tell you how exact you need to be.",
+    "Stuck setting it up? Try the middle answer in the question and see if it's too big or too small.",
+    "No numbers given? Make some up (like 100 for percents).",
+    "The wrong answers are the usual mistakes. Getting one of them doesn't prove you're right."
    ]
   },
   {
    "type": "mc_multi",
    "title": "Select all that apply",
    "rules": [
-    "No partial credit: treat every choice as its own true/false question.",
-    "First find the general rule (a range, a form like $47k$, the odd numbers from 5 to 65), then test each choice against it and check **both** ends.",
-    "Selecting every choice is rarely right. If you're about to, look for the condition built to rule one out: a boundary, 'distinct', 'positive', 'must be'."
+    "All or nothing: no partial credit. Judge each choice yes/no on its own.",
+    "First find the rule (a range, 'multiples of 47', 'odd numbers from 5 to 65'), then test every choice against it, including **both ends**.",
+    "Picking every choice is almost never right. Look for the one built to fail."
    ]
   },
   {
    "type": "numeric",
    "title": "Numeric Entry",
    "rules": [
-    "No choices to catch a mistake: reread the last line and **circle the noun** before you type.",
-    "Plug your answer back into the original conditions; it takes 15 seconds.",
-    "Fractions don't need reducing; decimals need exactly the rounding asked for. Negative answers are allowed."
+    "There are no choices to catch a mistake, so reread the last sentence and **underline what they're asking for**.",
+    "Plug your answer back into the question to check it.",
+    "Fractions don't need simplifying. Negative answers are allowed."
    ]
   },
   {
    "type": "di",
-   "title": "Data Interpretation",
+   "title": "Charts & tables",
    "rules": [
-    "Read the title, axes, units and footnotes before the first question; every question in the set shares the figure.",
-    "Estimate first; compute only as precisely as the gaps between choices need.",
-    "Watch the base of every percent: it changes from question to question."
+    "Read the title, labels and units before you start.",
+    "Estimate first. The answers are often far apart.",
+    "For 'percent of' and 'percent more than', check what you're dividing by."
    ]
   }
  ],
  "pacing": [
-  "The real GRE gives 21 minutes for 12 questions, then 26 minutes for 15: about **1:45** per question.",
-  "First pass: answer everything you can in under 2 minutes. At **2:30** with no clear path, mark it, guess, and move on.",
-  "Second pass: return to the marked questions with the time you saved. A fresh look often finds the shortcut.",
-  "Take the next mocks in **exam mode with the timer on**; untimed accuracy is a ceiling, not your score.",
-  "A 170 allows roughly 0–2 misses. The cheapest points to win back are QC traps and misread questions."
+  "About **1:45 per question**: 12 questions in 21 minutes, then 15 in 26.",
+  "If you're at **2:30** with no plan, guess, mark it, and move on. You can come back.",
+  "Do the easy ones first; come back to marked ones with the time you saved.",
+  "Practice with the timer on (exam mode), so your score is real.",
+  "A 170 means 0–2 mistakes. The easiest points to win back are comparison traps and misreading the question."
  ],
  "sections": [
   {
    "id": "circles",
-   "title": "Circles & inscribed figures",
+   "title": "Circles & shapes inside circles",
    "concepts": [
     "circles",
     "inscribed-figures"
    ],
+   "idea": "Almost every circle problem is a **right triangle** in disguise. Draw a line from the center to a point on the circle: that's the radius, and it's usually the long side of a right triangle.",
+   "example": {
+    "q": "A square has all four corners on a circle of radius 5. What is the area of the square?",
+    "steps": [
+     "The square's diagonal (corner to corner) goes straight across the circle, so the diagonal is $2\\times5=10$.",
+     "A square with diagonal $d$ has area $\\frac{d^2}{2}$.",
+     "Area $=\\frac{100}{2}=50$. (Quick check with the shortcut: $2r^2=2\\times25=50$.)"
+    ]
+   },
    "facts": [
-    "A square inscribed in a circle has its **diagonal** equal to the diameter: $s\\sqrt2=2r$, so its area is $2r^2$.",
-    "A circle inscribed in a square has diameter equal to the **side**: $s=2r$. In 'square in circle in square' the areas go $4r^2\\to\\pi r^2\\to2r^2$: each square is half the next one out.",
-    "Square in a semicircle with one side on the diameter: the square is centered, so a top corner sits at $\\left(\\frac s2,\\,s\\right)$ from the center. Then $\\left(\\frac s2\\right)^2+s^2=r^2$ and $s^2=\\frac45r^2$.",
-    "The perpendicular from the center to a chord **bisects** the chord. Half-chord, center distance and radius make a right triangle: $\\left(\\frac c2\\right)^2+d^2=r^2$.",
-    "Arc length $=\\frac{\\theta}{360}\\cdot2\\pi r$ uses the **central** angle. An inscribed angle is half the central angle on the same arc.",
-    "A tangent is perpendicular to the radius at the point of contact."
+    "**Square inside a circle:** the diagonal = the circle's width ($2r$). Area $=2r^2$.",
+    "**Circle inside a square:** the circle touches all four sides, so the side $=2r$. Area $=4r^2$.",
+    "Square in a circle in a square: each square is exactly **half** the one around it.",
+    "**Square in a half-circle** (sitting on the flat side): area $=\\frac45r^2$. Its top corners are half a side across and one full side up from the center, so $\\left(\\frac s2\\right)^2+s^2=r^2$.",
+    "**Chord** = a straight line across the circle. A line from the center that meets it at a right angle cuts it exactly **in half**.",
+    "**Arc** = part of the edge. Arc $=\\frac{\\text{center angle}}{360}\\times2\\pi r$.",
+    "A line that just touches the circle (a tangent) makes a right angle with the radius."
    ],
    "tricks": [
-    "Draw the radius to every point that lies on the circle. Almost every inscribed-figure problem becomes a right triangle with the radius as its hypotenuse.",
-    "Put the center at the origin and write a corner's coordinates; $x^2+y^2=r^2$ is then one equation.",
-    "Half-chord over radius gives the **half**-angle: $\\frac{3\\sqrt3}{6}=\\frac{\\sqrt3}{2}$ means $60^\\circ$, so the central angle is $120^\\circ$.",
-    "Two parallel chords on opposite sides of the center: their distances from the center **add** to the gap between them. On the same side, they subtract."
+    "Stuck? Draw the radius to every point that's on the circle and look for the right triangle.",
+    "Two chords on **opposite sides** of the center: their distances from the center **add up** to the gap between them.",
+    "If half the chord ÷ radius $=\\frac{\\sqrt3}{2}$, the half-angle is $60^\\circ$, so the full center angle is $120^\\circ$."
    ],
    "traps": [
-    "Using the diameter (or radius) as the inscribed square's side, instead of matching the square's **diagonal** to the diameter.",
-    "Taking the half-angle from the half-chord triangle as the central angle: the arc comes out half as long.",
-    "Assuming half a circle holds 'half the square'. The semicircle square is $\\frac45r^2$, not $r^2$.",
-    "Using full chord lengths in the Pythagorean step; it's always the half-chord."
+    "Using the diameter as the square's **side**. It's the square's **diagonal** that equals the diameter.",
+    "Using the half-angle as the center angle. Your arc comes out half as long as it should.",
+    "Using the whole chord in the triangle. Always use **half** the chord."
    ]
   },
   {
    "id": "triangles",
-   "title": "Triangles & special right triangles",
+   "title": "Triangles",
    "concepts": [
     "triangles",
     "pythagorean-special",
     "lines-angles",
     "figures-not-to-scale"
    ],
+   "idea": "Learn two special triangles by heart. Most hard triangle questions are one of them in disguise; you just have to **cut the shape** the right way.",
+   "example": {
+    "q": "In triangle $ABC$, angle $B=30^\\circ$ and side $BC=8$. How long is the height from $C$ straight down to side $AB$?",
+    "steps": [
+     "Drop the height from $C$. On the $B$ side you get a 30-60-90 triangle, and $BC=8$ is its longest side.",
+     "In a 30-60-90 triangle, the side across from $30^\\circ$ is **half** the longest side.",
+     "The height is across from the $30^\\circ$ angle, so it is $\\frac82=4$."
+    ]
+   },
    "facts": [
-    "$45$-$45$-$90$: sides $1:1:\\sqrt2$. $30$-$60$-$90$: sides $1:\\sqrt3:2$, with the short leg opposite $30^\\circ$.",
-    "Area $=\\frac12bh$ with **any** side as the base, so the altitude to side $a$ is $\\frac{2A}{a}$. The 13-14-15 triangle splits into 5-12-13 and 9-12-15, so its area is 84 and its altitudes are 12 (to 14), $\\frac{56}{5}$ (to 15) and $\\frac{168}{13}$ (to 13).",
-    "Triangle inequality: $|a-b|<c<a+b$. An isosceles triangle with legs 5 can have any base strictly between 0 and 10.",
-    "The larger angle faces the longer side. An exterior angle equals the sum of the two remote interior angles.",
-    "Similar triangles: lengths scale by $k$, areas by $k^2$, volumes by $k^3$."
+    "**45-45-90** (half a square): sides $1:1:\\sqrt2$. The long side = short side $\\times\\sqrt2$.",
+    "**30-60-90** (half an equilateral triangle): sides $1:\\sqrt3:2$. The shortest side is across from $30^\\circ$, and the longest is twice that.",
+    "**Area** $=\\frac12\\times$ base $\\times$ height, and **any** side can be the base. So the height to a side $=\\frac{2\\times\\text{area}}{\\text{that side}}$.",
+    "Any two sides add up to **more** than the third side.",
+    "The biggest angle is across from the longest side.",
+    "Whole-number right triangles to know: 3-4-5, 5-12-13, 8-15-17, 7-24-25, and their multiples like 6-8-10."
    ],
    "tricks": [
-    "A non-right triangle with two known angles? **Drop an altitude** from the third vertex so each piece is a special triangle. Angles of $45^\\circ$ and $30^\\circ$ give a 45-45-90 and a 30-60-90 sharing the altitude.",
-    "'Not drawn to scale' means trust only the text. In QC, try to **stretch** the figure: if a length or angle can move while every given fact still holds, the answer is often (D).",
-    "Know the triples and their multiples on sight (6-8-10, 9-12-15, 10-24-26) to skip square roots."
+    "Not a right triangle? **Drop a height** to split it into two special right triangles.",
+    "'Not drawn to scale' means don't trust your eyes. Imagine stretching the shape every way the facts still allow."
    ],
    "traps": [
-    "Treating a triangle as right-angled because it looks it, or because special angles appear in it.",
-    "Using a memorized number (the famous altitude 12) without checking which side it goes to.",
-    "Reading a drawn segment as an altitude, bisector or midpoint when nothing says so.",
-    "Dropping the $\\frac12$ in the area formula."
+    "Assuming an angle is $90^\\circ$ just because it looks like one.",
+    "Assuming a line hits the middle, or is a height, when the question never says so.",
+    "Forgetting the $\\frac12$ in the area."
    ]
   },
   {
    "id": "coordinate",
-   "title": "Coordinate geometry",
+   "title": "Lines & graphs",
    "concepts": [
     "coordinate-geometry",
     "geometry-coordinate",
     "graphs-of-functions"
    ],
+   "idea": "Slope just means 'how far **up** for each step **right**'. Most line questions come down to slope.",
+   "example": {
+    "q": "A line goes through $(1, 6)$ and is perpendicular to a line with slope $\\frac23$. Where does it cross the $x$-axis?",
+    "steps": [
+     "Perpendicular slope: flip the fraction and change the sign. $\\frac23\\to-\\frac32$.",
+     "$-\\frac32$ means every 2 steps right, the line drops 3.",
+     "To get from $y=6$ down to $y=0$ it drops 6. That takes $2\\times2=4$ steps right.",
+     "$x=1+4=5$, so it crosses at $(5, 0)$."
+    ]
+   },
    "facts": [
-    "Slope $m=\\frac{y_2-y_1}{x_2-x_1}$. The line $Ax+By=C$ has slope $-\\frac AB$.",
-    "Perpendicular slopes multiply to $-1$: flip the sign **and** take the reciprocal ($\\frac34\\to-\\frac43$). Parallel lines share a slope.",
-    "Distance $\\sqrt{\\Delta x^2+\\Delta y^2}$; midpoint = average of the coordinates.",
-    "$x$-intercept: set $y=0$. $y$-intercept: set $x=0$.",
-    "$y=a(x-h)^2+k$ has its vertex at $(h,k)$ and opens up when $a>0$.",
-    "$f(x-h)$ shifts right by $h$; $f(x)+k$ shifts up by $k$; $-f(x)$ reflects over the $x$-axis."
+    "Slope $=\\frac{\\text{rise}}{\\text{run}}=\\frac{y_2-y_1}{x_2-x_1}$.",
+    "For a line written as $Ax+By=C$, the slope is $-\\frac AB$.",
+    "**Perpendicular** lines (meeting at a right angle): flip the fraction **and** change the sign.",
+    "**Parallel** lines have the **same** slope.",
+    "Crossing the $x$-axis means $y=0$. Crossing the $y$-axis means $x=0$.",
+    "Midpoint: average the $x$'s, average the $y$'s."
    ],
    "tricks": [
-    "A square from two opposite vertices: the other diagonal has the same midpoint, the same length, and is perpendicular. Take the vector $(a,b)$ from the midpoint to one vertex and rotate it to $(-b,a)$ and $(b,-a)$.",
-    "Sketch the points. Choices on the wrong side of an axis, or far too long, go in seconds."
+    "Sketch it quickly. Answers on the wrong side of an axis can be crossed off right away.",
+    "Square from two opposite corners: find the middle point. Walk from the middle to one corner (say 3 right, 2 up). Turn that walk a quarter turn (2 left, 3 up) to find another corner."
    ],
    "traps": [
-    "Flipping the sign without taking the reciprocal, or the reverse.",
-    "Answering with the $y$-intercept when the $x$-intercept was asked.",
-    "Completing a rectangle with horizontal and vertical sides and calling it a square without checking that the sides are equal."
+    "Changing the sign but forgetting to flip the fraction, or flipping it without changing the sign.",
+    "Answering where the line crosses the $y$-axis when they asked about the $x$-axis.",
+    "Calling a rectangle a square without checking that its sides are equal."
    ]
   },
   {
@@ -207,22 +394,31 @@
     "area-perimeter",
     "solids-volume"
    ],
+   "idea": "Walk all the way around any shape and you turn one full circle, so the outside angles **always add up to $360^\\circ$**. That one fact solves most polygon angle questions.",
+   "example": {
+    "q": "Each inside angle of a regular polygon is $140^\\circ$. How many diagonals does it have?",
+    "steps": [
+     "Inside + outside angle make a straight line, so the outside angle is $180-140=40^\\circ$.",
+     "All outside angles add to $360^\\circ$, so it has $\\frac{360}{40}=9$ sides.",
+     "Diagonals $=\\frac{9\\times(9-3)}{2}=\\frac{54}{2}=27$."
+    ]
+   },
    "facts": [
-    "Interior angle sum $(n-2)\\cdot180^\\circ$; exterior angles always sum to $360^\\circ$. Regular polygon: exterior $\\frac{360}{n}$, interior $180-\\frac{360}{n}$.",
-    "Number of diagonals $=\\frac{n(n-3)}{2}$.",
-    "Fixed perimeter: the square has the largest area. Fixed diagonal $d$: the perimeter can be anything in $(2d,\\,2\\sqrt2\\,d]$, with the square at the top.",
-    "Trapezoid $\\frac{b_1+b_2}{2}h$; parallelogram $bh$; rhombus $\\frac{d_1d_2}{2}$.",
-    "Box: $V=lwh$, surface $2(lw+lh+wh)$, space diagonal $\\sqrt{l^2+w^2+h^2}$. Cylinder: $V=\\pi r^2h$, surface $2\\pi r^2+2\\pi rh$."
+    "Outside angles add to $360^\\circ$. In a regular shape (all sides equal), each one is $\\frac{360}{n}$.",
+    "Inside angle + outside angle $=180^\\circ$.",
+    "All inside angles add to $(n-2)\\times180^\\circ$: triangle 180, square 360, pentagon 540.",
+    "Diagonals $=\\frac{n(n-3)}{2}$. Each corner connects to $n-3$ others, and every diagonal gets counted twice.",
+    "Rectangles with the same diagonal: the **square** has the biggest perimeter. The skinnier the rectangle, the smaller the perimeter.",
+    "Box volume = length × width × height. Cylinder volume $=\\pi r^2\\times$ height."
    ],
    "tricks": [
-    "Interior is $k$ times exterior? Use interior + exterior $=180^\\circ$: exterior $=\\frac{180}{k+1}$, then $n=\\frac{360}{\\text{exterior}}$.",
-    "For 'which could be' questions about perimeter or area, find the **range** first (both extremes), then check each choice against it.",
-    "With $a^2+b^2=d^2$ fixed, $(a+b)^2=d^2+2ab$, so $a+b$ is largest when $ab$ is: at $a=b$."
+    "'Inside angle is 5 times the outside angle': outside + 5 × outside $=180$, so outside $=30^\\circ$ and there are $\\frac{360}{30}=12$ sides.",
+    "'Which could be' questions: find the **smallest and largest** possible values first, then check each choice."
    ],
    "traps": [
-    "Assuming whole-number sides when nothing says so.",
-    "Thinking a longer, thinner rectangle has a larger perimeter. With the diagonal fixed it gets **smaller**.",
-    "Entering the number of sides when the question asked for diagonals, or forgetting to halve $n(n-3)$."
+    "Assuming the sides are whole numbers when the question never says so.",
+    "Giving the number of sides when they asked for diagonals.",
+    "Forgetting to divide $n(n-3)$ by 2."
    ]
   },
   {
@@ -234,56 +430,70 @@
     "probability-basic",
     "probability-conditional"
    ],
+   "idea": "Counting is **filling slots**. Count the choices for each slot and multiply, and always fill the **pickiest** slot first.",
+   "example": {
+    "q": "In how many ways can 5 people stand in a line if Sam and Tia must stand next to each other?",
+    "steps": [
+     "Tape Sam and Tia together into one block. Now you're lining up 4 things: $4!=24$ ways.",
+     "Inside the block they can be Sam-Tia or Tia-Sam: $\\times2$.",
+     "$24\\times2=48$ ways."
+    ]
+   },
    "facts": [
-    "Order matters: $\\frac{n!}{(n-k)!}$. Order doesn't: $\\binom nk$.",
-    "Arrangements with repeats: $\\frac{n!}{a!\\,b!\\cdots}$. AABBCC has $\\frac{6!}{2!\\,2!\\,2!}=90$.",
-    "Must be together: glue them into one block, arrange the $n-1$ units, then multiply by the block's internal orders ($2!$ for a pair).",
-    "Must be apart: total minus together.",
-    "Inclusion–exclusion: $|A\\cup B\\cup C|=\\Sigma|A|-\\Sigma|A\\cap B|+|A\\cap B\\cap C|$. 'None of the bad things happen' = total minus that.",
-    "$P(\\text{not }A)=1-P(A)$; independent: $P(A\\text{ and }B)=P(A)P(B)$; conditional: $P(A|B)=\\frac{P(A\\cap B)}{P(B)}$."
+    "Lining up $n$ different things: $n!$ ways ($4!=4\\times3\\times2\\times1=24$).",
+    "Picking a group where order doesn't matter: $\\binom nk$, read '$n$ choose $k$'. $\\binom52=10$.",
+    "Some things the same? Divide out the repeats: AABB has $\\frac{4!}{2!\\,2!}=6$ orders.",
+    "**Must be together:** tape them into a block, line up the blocks, then $\\times2$ because the two can swap.",
+    "**Must NOT be together:** all the ways − the ways they're together.",
+    "Probability $=\\frac{\\text{good outcomes}}{\\text{all outcomes}}$. P(at least one) $=1-$ P(none)."
    ],
    "tricks": [
-    "**Place the restricted people first.** Someone who can't sit at either end of 8 seats has 6 choices before anyone else is seated.",
-    "When one choice changes how many options the next has, split into cases or count the complement.",
-    "Two people not adjacent among $k$ allowed seats in a row: ordered pairs $k(k-1)$ minus adjacent ordered pairs $2(k-1)$. With $k=6$: $30-10=20$.",
-    "'Digits in decreasing order', or any forced order, means you only choose a **set**: each set gives exactly one arrangement, so count with $\\binom nk$.",
-    "Doubt a formula? Shrink the problem to 3 or 4 objects, list them all, and check."
+    "**Pickiest first.** If Ann can't sit at either end of 8 seats, give Ann her 6 choices before anyone else sits.",
+    "If one person's choice changes how many choices the next person has, split it into cases, or count the opposite and subtract.",
+    "'Digits in decreasing order' means the order is already decided. You're only **choosing** the digits, so use $\\binom nk$.",
+    "Not sure? Try a tiny version (3 people) and list every possibility to check your method."
    ],
    "traps": [
-    "Multiplying choices as if independent when a restriction links them (where Bob can sit depends on where Ann sat).",
-    "Forgetting that the two people inside a block can swap.",
-    "Stopping inclusion–exclusion early: subtract the singles, add back the pairs, **subtract** the triple.",
-    "Halving to get 'even' when even and odd outcomes aren't equally likely."
+    "Multiplying as if the choices don't affect each other when they do.",
+    "Forgetting the $\\times2$ for the two people in a block swapping places.",
+    "In 'none of A, B or C' problems, subtracting the overlaps but forgetting to add the triple overlap back."
    ]
   },
   {
    "id": "sets",
-   "title": "Overlapping sets & min/max",
+   "title": "Overlapping groups & max/min",
    "concepts": [
     "overlapping-sets",
     "min-max-bounding"
    ],
+   "idea": "When people are in two groups, the ones in **both** get counted twice. Every group formula is just fixing that double count.",
+   "example": {
+    "q": "Of 40 students, 25 play soccer and 22 play basketball. What is the fewest number who could play both?",
+    "steps": [
+     "$25+22=47$, but there are only 40 students.",
+     "So at least $47-40=7$ students were counted twice.",
+     "The fewest who play both is **7** (that's when every student plays at least one)."
+    ]
+   },
    "facts": [
-    "Two sets: $T=A+B-\\text{Both}+\\text{Neither}$.",
-    "Exactly one $=A+B-2\\cdot\\text{Both}$; at least one $=A+B-\\text{Both}$.",
-    "Both is bounded: $\\max(0,\\,A+B-T)\\le\\text{Both}\\le\\min(A,B)$.",
-    "Three sets: $T=A+B+C-(\\text{pair overlaps})+\\text{all three}+\\text{neither}$, where each pair overlap includes the triple."
+    "Total $=A+B-$ both $+$ neither.",
+    "Exactly one group $=A+B-2\\times$ both. (Take the 'both' people out of each group.)",
+    "'Both' can't be bigger than the smaller group, and can't be smaller than $A+B-$ total."
    ],
    "tricks": [
-    "Turn every min/max set question into the bounds on Both. Max 'exactly one' needs the **least** Both; min 'exactly one' needs the most.",
-    "For 'which could be', write the quantity as a formula in Both (e.g. $95-2b$), find $b$'s range, then note the step (here: odd numbers only).",
-    "Four groups? Draw a 2×2 table (A / not A by B / not B) with totals on the edges.",
-    "Min/max in general: push everything else to an extreme. To make one item as large as possible, make the others as small as the constraints allow."
+    "Max or min question? First find the smallest and biggest possible 'both', then plug those in.",
+    "Draw a 2×2 table (in A / not in A by in B / not in B). Fill what you know; the rest falls out.",
+    "To make one thing as **big** as possible, make everything else as **small** as allowed."
    ],
    "traps": [
-    "Assuming no overlap, or no 'neither', when the total doesn't allow it.",
-    "Checking only parity and forgetting the ends of the range.",
-    "Assuming everyone is in at least one set."
+    "Assuming nobody is in both groups when the numbers don't allow it.",
+    "Assuming everyone is in at least one group.",
+    "In 'which could be' questions, checking odd/even but forgetting the smallest and largest limits."
    ]
   },
   {
    "id": "number-theory",
-   "title": "Number theory",
+   "title": "Remainders, factors & powers",
    "concepts": [
     "integers-properties",
     "primes-factors",
@@ -291,24 +501,31 @@
     "exponents-roots",
     "sequences-patterns"
    ],
+   "idea": "Remainders and last digits **repeat in a pattern**. Find the pattern with the first few powers, and you never have to work out a huge number.",
+   "example": {
+    "q": "What is the last digit of $7^{43}$?",
+    "steps": [
+     "Last digits of $7^1, 7^2, 7^3, 7^4$: 7, 9, 3, 1. Then it starts over, so the pattern repeats every 4.",
+     "$43=40+3$. The 40 is ten full rounds, so we land on the **3rd** spot.",
+     "The 3rd spot is **3**."
+    ]
+   },
    "facts": [
-    "Divisors of $p^aq^br^c$: $(a+1)(b+1)(c+1)$. For $n^2$: $(2a+1)(2b+1)(2c+1)$.",
-    "Remainders survive adding and multiplying: replace the base by its remainder first. If $k\\equiv-1$ then even powers of $k$ leave 1 and odd powers leave $-1$.",
-    "Every odd square leaves remainder 1 on division by 8.",
-    "Units-digit cycles: 2, 3, 7, 8 repeat every 4; 4 and 9 every 2; 0, 1, 5, 6 never change.",
-    "Each base has its **own** cycle length for a given divisor. List powers until the remainder comes back to 1.",
-    "$\\gcd(a,b)\\cdot\\operatorname{lcm}(a,b)=ab$. Perfect squares are the only numbers with an odd number of divisors.",
-    "$a^ma^n=a^{m+n}$, $(a^m)^n=a^{mn}$, $a^{-n}=\\frac1{a^n}$. Combine only like bases or like exponents."
+    "You can swap a number for its remainder. 17 leaves 1 when divided by 8, so $17^{50}$ leaves $1^{50}=1$.",
+    "Last digits repeat: 2, 3, 7, 8 every 4 powers; 4 and 9 every 2; 0, 1, 5, 6 never change.",
+    "**Each number has its own pattern length.** Don't assume two bases repeat at the same speed.",
+    "Any odd number squared leaves remainder 1 when divided by 8 ($9$, $25$, $49$…).",
+    "Counting factors: write $n=2^a\\times3^b\\times\\ldots$, then the count is $(a+1)(b+1)\\cdots$. $12=2^2\\times3$ has $3\\times2=6$ factors.",
+    "Only perfect squares have an odd number of factors."
    ],
    "tricks": [
-    "Power remainder: write the first few remainders until they repeat, then reduce the exponent modulo the cycle length.",
-    "A remainder condition with a variable: pick the smallest number that fits (remainder 5 on division by 6: $k=5$), then confirm with a second one ($k=11$).",
-    "Divisor-count QCs: test $n=1$, a prime, a prime power **and** a product of three primes. The ratio changes with how many primes there are."
+    "Write out the first few remainders until they repeat, then jump ahead using the pattern length.",
+    "'$k$ leaves remainder 5 when divided by 6'? Test real numbers: $k=5$, then $k=11$.",
+    "Comparing factor counts? Test 1, a prime, a prime power **and** a number made of several primes, like 30."
    ],
    "traps": [
-    "Assuming two bases share a cycle length.",
-    "Testing only primes or prime powers and missing the case that flips the comparison.",
-    "Hunting for a cycle of 4 when the real cycle is 2 or 1."
+    "Assuming two different bases repeat at the same speed.",
+    "Testing only primes and missing the case that flips the answer."
    ]
   },
   {
@@ -323,30 +540,38 @@
     "functions",
     "number-line-abs"
    ],
+   "idea": "An inequality works like an equation with **one extra rule**: multiply or divide by a negative and you must flip the sign.",
+   "example": {
+    "q": "How many integers $x$ make $|x-1|+|x-5|\\le6$ true?",
+    "steps": [
+     "$|x-1|$ is the distance from $x$ to 1, so this says: distance to 1 + distance to 5 is at most 6.",
+     "Anywhere between 1 and 5 the total is 4. Each step outside adds 2.",
+     "So you can go 1 step past each end: $0\\le x\\le6$.",
+     "That's 0, 1, 2, 3, 4, 5, 6: **7** integers."
+    ]
+   },
    "facts": [
-    "Multiplying or dividing an inequality by a negative **flips** it. Strict endpoints ($<$) are excluded, so plugging them in proves nothing.",
-    "$|x-a|$ is the distance from $x$ to $a$. $|x-a|+|x-b|$ equals $|a-b|$ between the two points and grows by 2 per unit outside them, so $|x-a|+|x-b|\\le c$ is the interval $\\left[\\frac{a+b-c}{2},\\,\\frac{a+b+c}{2}\\right]$.",
-    "If $x+\\frac1x=s$: $x^2+\\frac1{x^2}=s^2-2$, $x^3+\\frac1{x^3}=s^3-3s$, $\\left(x-\\frac1x\\right)^2=s^2-4$.",
-    "$x^2+bx+c=0$ with roots $r,s$: $r+s=-b$ and $rs=c$. 'Two different roots' rules out the double root.",
-    "Two linear equations: one solution when the slopes differ; **none** when the coefficients are proportional but the constants aren't; **infinitely many** when everything is proportional.",
-    "Composition $f(g(x))$: work from the inside out."
+    "Multiply or divide by a negative → **flip** the $<$ or $>$.",
+    "$|x-a|$ means 'how far $x$ is from $a$ on the number line'.",
+    "If $x+\\frac1x=s$, squaring both sides gives $x^2+\\frac1{x^2}=s^2-2$.",
+    "For $x^2+bx+c=0$, the two answers **add** to $-b$ and **multiply** to $c$.",
+    "Two lines with the same slope never meet: **no solution**. If they're the exact same line: **infinitely many**."
    ],
    "tricks": [
-    "Two inequalities: solve each, write the overlap as one interval, then factor the comparison ($x^2+4x=x(x+4)$) and read its sign on that interval.",
-    "When a parameter comes out as $k^2=\\ldots$, plug **both** roots back into the original.",
-    "'Must be an integer' options: compute what the given allows ($s^2-2$, $s^3-3s$); the difference forms usually hide a square root.",
-    "Absolute values: mark the points on a number line and read the distances."
+    "Two inequalities at once? Solve each, draw both on a number line, and keep the overlap.",
+    "Getting $k^2=36$? Try **both** $6$ and $-6$ back in the question.",
+    "Can't solve it? Plug in the answer choices."
    ],
    "traps": [
-    "Forgetting to flip the sign when dividing by a negative.",
-    "Counting an excluded endpoint as part of the range.",
-    "Choosing the parameter that makes the lines identical (infinitely many solutions) when 'no solution' was asked.",
-    "Taking $k=+(r+s)$ instead of $-(r+s)$."
+    "Forgetting to flip the sign.",
+    "Using an endpoint that isn't allowed. With $<$, the endpoint itself is out.",
+    "Choosing the value that makes the two lines the **same** when they asked for 'no solution'.",
+    "Sign mix-up: the answers add to $-b$, not $b$."
    ]
   },
   {
    "id": "word-problems",
-   "title": "Ratios, percent & word problems",
+   "title": "Ratios, percents & word problems",
    "concepts": [
     "ratio-proportion",
     "percent",
@@ -356,31 +581,37 @@
     "word-problems-age-sum",
     "units-conversion"
    ],
+   "idea": "Find the thing that **doesn't change** and build your equation around it.",
+   "example": {
+    "q": "A club's ratio of boys to girls is $2:3$. After 10 boys join, the ratio is $1:1$. How many people were in the club before?",
+    "steps": [
+     "The girls don't change. Call them $3k$; the boys were $2k$.",
+     "After: boys $2k+10$ = girls $3k$, so $k=10$.",
+     "Before: $2k+3k=5k=$ **50** people. (They asked for 'before', not after.)"
+    ]
+   },
    "facts": [
-    "Ratio $a:b$ means the parts are $ak$ and $bk$, so the total is a multiple of $a+b$.",
-    "Chain ratios through the shared term: $4:7$ and $3:2$ (sharing the 7 and the 3) become $12:21:14$, using the LCM of 7 and 3.",
-    "'Percent greater than $X$' $=\\frac{\\text{difference}}{X}$: the base is the number after 'than'.",
-    "An increase of $p\\%$ multiplies by $1+\\frac p{100}$: $+700\\%$ is $\\times8$, $-25\\%$ is $\\times0.75$.",
-    "Equal growth each period: the total factor splits by **roots**, not division. $\\times8$ over 3 equal blocks is $\\times2$ per block.",
-    "Rate $\\times$ time = work; rates of people working together add: $\\frac1a+\\frac1b$ per hour.",
-    "Simple interest $Prt$; compound $P(1+r)^t$."
+    "A ratio of $3:5$ means the amounts are $3k$ and $5k$. The total, $8k$, is a multiple of 8.",
+    "Joining two ratios: make the shared item match. A:B $=2:3$ and B:C $=4:5$. Make B 12: A:B:C $=8:12:15$.",
+    "'X is what percent **more than** Y': divide the difference by Y, the number after 'than'.",
+    "Up $p\\%$ means multiply by $1+\\frac p{100}$. Up 25% = $\\times1.25$. Up 700% = $\\times8$, **not** $\\times7$.",
+    "Growing the same percent every year means **multiplying** by the same number every year. $\\times8$ over 3 periods is $\\times2$ each time, because $2\\times2\\times2=8$.",
+    "Working together: **add the rates**. A takes 3 hours ($\\frac13$ of the job per hour) and B takes 6 ($\\frac16$ per hour). Together: $\\frac13+\\frac16=\\frac12$ per hour, so 2 hours."
    ],
    "tricks": [
-    "Find what **doesn't change** (the members who don't join, the salt in a mixture) and anchor the equation to it.",
-    "Name one variable for the smallest share and write everything else in terms of it.",
-    "Before you answer, reread the last line and **circle the noun**: the total, one share, the original or the new amount.",
-    "Plug the answer back into the story: 15 seconds that catch most numeric-entry slips."
+    "Let one letter stand for the smallest amount and write everything else using it.",
+    "Before you answer, reread the last sentence and **underline what they're asking for**.",
+    "Plug your answer back into the story to check."
    ],
    "traps": [
-    "Entering an intermediate quantity (one person's share, the new total) instead of what was asked.",
-    "Combining ratios without a common middle term.",
-    "Splitting a compound percent change evenly across periods.",
-    "Using the wrong base for 'percent greater', or reporting the ratio (136%) instead of the increase (36%)."
+    "Giving a middle step (one person's share) instead of what they asked for (the total).",
+    "Splitting growth evenly: up 700% over 3 periods is **not** 233% each time.",
+    "Dividing by the wrong number in 'percent more than' questions."
    ]
   },
   {
    "id": "statistics",
-   "title": "Data & statistics",
+   "title": "Averages, spread & charts",
    "concepts": [
     "mean-median-mode",
     "std-dev-normal",
@@ -390,48 +621,64 @@
     "data-interpretation-calc",
     "frequency-distributions"
    ],
+   "idea": "When you combine groups, **group size matters**: a big group pulls the average toward itself.",
+   "example": {
+    "q": "Class A has 10 students averaging 80. Class B has 30 students averaging 60. What is the average of all 40?",
+    "steps": [
+     "Totals: $10\\times80=800$ and $30\\times60=1800$.",
+     "All together: $\\frac{800+1800}{40}=\\frac{2600}{40}=65$.",
+     "Not 70! The bigger class pulls the average toward 60."
+    ]
+   },
    "facts": [
-    "The combined mean of groups is **weighted** by group size: $\\frac{n_1\\bar x_1+n_2\\bar x_2}{n_1+n_2}$. It equals the plain average of the means only when the sizes are equal.",
-    "Normal: 68% within $1\\sigma$, 95% within $2\\sigma$. So about 16% lie above $\\mu+\\sigma$ and about 2.5% above $\\mu+2\\sigma$.",
-    "Quartiles of an even-sized list: Q1 and Q3 are the medians of the lower and upper halves. IQR $=$ Q3 $-$ Q1.",
-    "Adding values at the extremes shifts which values sit at the quartile positions, so the IQR can change even though no middle value moved.",
-    "Adding a constant to every value shifts the mean and median but not the SD or range. Multiplying by $k$ scales all of them by $|k|$.",
-    "SD measures spread around the mean: adding a value equal to the mean shrinks it; adding values far from the mean grows it."
+    "Combining groups: add all the totals, then divide by everyone. Don't just average the averages.",
+    "Bell curve: about 68% are within 1 standard deviation (SD) of the middle, and 95% within 2.",
+    "So about **16%** are more than 1 SD **above** the middle, and about **2.5%** are more than 2 SD above.",
+    "SD measures how spread out the numbers are. Add the same amount to every number and the spread stays the same.",
+    "Median = the middle number once they're sorted. With an even count, average the two middle ones.",
+    "Q1 = middle of the lower half, Q3 = middle of the upper half. IQR = Q3 − Q1."
    ],
    "tricks": [
-    "Several groups and one cutoff: convert the cutoff to a $z$-score **for each group separately** before using 16% or 2.5%.",
-    "Data interpretation: estimate first and compute only as precisely as the gaps between the choices need.",
-    "Say the units and what each axis or column measures before computing; most DI misses are a misread label, not arithmetic."
+    "Groups with different spreads? Work out how many SDs the cutoff is **for each group separately**.",
+    "Charts: read the title, labels and units first. Estimate before you calculate."
    ],
    "traps": [
-    "Averaging group means without weighting by size.",
-    "Using the same tail percentage for groups with different SDs.",
-    "Using both tails (32%) when only one tail was asked.",
-    "Assuming the IQR can't change when values are added at the ends."
+    "Averaging the averages.",
+    "Using 32% (both tails of the curve) when they only asked about one side.",
+    "Thinking new numbers at the far ends can't change the quartiles. They change which numbers sit in the middle of each half."
    ]
   },
   {
    "id": "number-sense",
-   "title": "QC number sense",
+   "title": "Comparison number sense",
    "concepts": [
     "number-sense-qc",
     "fractions-decimals",
     "estimation-sigfig"
    ],
+   "idea": "In comparison questions, try to **break** the comparison. If two different numbers give different winners, the answer is (D).",
+   "example": {
+    "q": "$-1<x<1$. Compare A: $x^2$ and B: $x$.",
+    "steps": [
+     "Try $x=\\frac12$: A $=\\frac14$, B $=\\frac12$. B wins.",
+     "Try $x=-\\frac12$: A $=\\frac14$, B $=-\\frac12$. A wins.",
+     "Different winners, so the answer is **(D)**."
+    ]
+   },
    "facts": [
-    "$0.\\overline{ab}=\\frac{ab}{99}$, and $0.\\overline{9}=1$ exactly.",
-    "For $0<x<1$: $x^2<x<\\sqrt x$ and $\\frac1x>1$. For $x>1$ the order reverses.",
-    "Scientific notation: $0.00052=5.2\\times10^{-4}$. Move the decimal and track the exponent."
+    "Between 0 and 1, squaring makes a number **smaller**: $\\left(\\frac12\\right)^2=\\frac14$. Above 1, it makes it bigger.",
+    "For a number between 0 and 1, $\\frac1x$ is bigger than 1.",
+    "$0.999\\ldots$ (repeating forever) is **exactly** 1.",
+    "A repeating decimal like $0.\\overline{27}$ equals $\\frac{27}{99}$."
    ],
    "tricks": [
-    "Test **at least two very different values**: near each end of the allowed range, plus the special ones ($0$, $1$, $-1$, a fraction, a negative, a large number).",
-    "Mismatched results across cases means (D). Stop computing.",
-    "Simplify both quantities with the same operation until the comparison is obvious; never multiply by something whose sign you don't know."
+    "Always try at least two numbers: $0$, $1$, $-1$, $\\frac12$, a negative, a big number, and both ends of the allowed range.",
+    "Only numbers, no letters? Then it can't be (D). Just work it out.",
+    "Simplify by doing the same thing to both sides, but only multiply by numbers you know are positive."
    ],
    "traps": [
-    "Testing a single 'nice' value (like $\\frac12$) and calling it.",
-    "Believing $0.999\\ldots$ is a little less than 1.",
-    "Answering a QC with a variable in under 30 seconds without trying a second case."
+    "Trying only one number and stopping.",
+    "Answering in 20 seconds without trying a second number."
    ]
   }
  ]

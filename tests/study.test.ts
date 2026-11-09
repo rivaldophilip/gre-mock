@@ -1,11 +1,20 @@
 import fs from "node:fs";
 import { describe, expect, it } from "vitest";
+import katex from "katex";
 import concepts from "@/data/concepts.json";
 import { orderSections, StudySchema, studyStats, type Study } from "@/lib/study";
 import type { Test } from "@/lib/types";
 
 describe("content/study/quant.json", () => {
   const guide = StudySchema.parse(JSON.parse(fs.readFileSync("content/study/quant.json", "utf8")));
+  /** every Rich string in the guide (formula tiles' tex is bare TeX, checked separately) */
+  const lines = () => [
+    guide.intro,
+    ...guide.quickRef.flatMap((g) => g.items.flatMap((it) => [it.name, it.note ?? ""])),
+    ...guide.formats.flatMap((f) => f.rules),
+    ...guide.pacing,
+    ...guide.sections.flatMap((s) => [s.idea, s.example.q, ...s.example.steps, ...s.facts, ...s.tricks, ...s.traps]),
+  ];
 
   it("puts every quant concept in exactly one section, and names no unknown one", () => {
     const known = new Set(concepts.map((c) => c.id));
@@ -18,21 +27,37 @@ describe("content/study/quant.json", () => {
   it("has unique section ids and balanced $math$ in every line", () => {
     const ids = guide.sections.map((s) => s.id);
     expect(new Set(ids).size).toBe(ids.length);
-    const lines = [guide.intro, ...guide.quickRef.flatMap((g) => g.lines), ...guide.formats.flatMap((f) => f.rules), ...guide.pacing, ...guide.sections.flatMap((s) => [...s.facts, ...s.tricks, ...s.traps])];
-    expect(lines.filter((l) => (l.match(/\$/g) ?? []).length % 2 !== 0)).toEqual([]);
+    expect(lines().filter((l) => (l.match(/\$/g) ?? []).length % 2 !== 0)).toEqual([]);
+  });
+
+  it("renders every formula and every $math$ span in KaTeX without an error", () => {
+    const tex = [
+      ...guide.quickRef.flatMap((g) => g.items.map((it) => it.tex)),
+      ...lines().flatMap((l) => [...l.matchAll(/\$([^$]+)\$/g)].map((m) => m[1])),
+    ];
+    expect(tex.length).toBeGreaterThan(200);
+    const bad = tex.filter((t) => {
+      try {
+        katex.renderToString(t, { throwOnError: true });
+        return false;
+      } catch {
+        return true;
+      }
+    });
+    expect(bad).toEqual([]);
   });
 });
 
 const guide: Study = {
   measure: "quant",
   intro: "x",
-  quickRef: [{ title: "x", lines: ["x"] }],
+  quickRef: [{ title: "x", items: [{ name: "x", tex: "x" }] }],
   formats: [],
   pacing: ["x"],
   sections: [
-    { id: "geo", title: "Geometry", concepts: ["circles", "triangles"], facts: ["x"], tricks: ["x"], traps: ["x"] },
-    { id: "count", title: "Counting", concepts: ["counting-permutations"], facts: ["x"], tricks: ["x"], traps: ["x"] },
-    { id: "sets", title: "Sets", concepts: ["overlapping-sets"], facts: ["x"], tricks: ["x"], traps: ["x"] },
+    { id: "geo", title: "Geometry", concepts: ["circles", "triangles"], idea: "x", example: { q: "x", steps: ["x"] }, facts: ["x"], tricks: ["x"], traps: ["x"] },
+    { id: "count", title: "Counting", concepts: ["counting-permutations"], idea: "x", example: { q: "x", steps: ["x"] }, facts: ["x"], tricks: ["x"], traps: ["x"] },
+    { id: "sets", title: "Sets", concepts: ["overlapping-sets"], idea: "x", example: { q: "x", steps: ["x"] }, facts: ["x"], tricks: ["x"], traps: ["x"] },
   ],
 };
 

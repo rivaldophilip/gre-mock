@@ -7,9 +7,10 @@ import { LONG_MS, orderSections, studyStats, type Miss, type Tally } from "@/lib
 import { TYPE_INFO } from "@/lib/qtypes";
 import type { Test } from "@/lib/types";
 import { AppHeader } from "@/components/AppHeader";
-import { RichInline } from "@/components/Rich";
+import { RichInline, Tex } from "@/components/Rich";
 import { IconNext } from "@/components/icons";
 import { PrintOpen } from "@/components/PrintOpen";
+import { OpenOnHash } from "@/components/OpenOnHash";
 import { badge, card, eyebrow, seg, segItem } from "@/components/ui";
 
 export const dynamic = "force-dynamic";
@@ -28,7 +29,10 @@ const mss = (ms: number) => {
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
 };
 const pct = (t: Tally) => `${Math.round((100 * t.correct) / t.n)}%`;
-const tone = (t?: Tally) => (!t || !t.n ? "muted" : t.correct / t.n < 0.5 ? "bad" : t.correct / t.n < 0.8 ? "warn" : "ok");
+const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const chip = "inline-flex items-center rounded-full border border-line bg-surface px-3 py-1 text-sm font-medium text-fg transition-colors hover:bg-surface-2";
+const DOT = { bad: "bg-bad", warn: "bg-warn", ok: "bg-ok", muted: "bg-line" } as const;
+const tone = (t?: Tally): keyof typeof DOT => (!t || !t.n ? "muted" : t.correct / t.n < 0.5 ? "bad" : t.correct / t.n < 0.8 ? "warn" : "ok");
 
 export default async function Study({ searchParams }: { searchParams: Promise<{ m?: string }> }) {
   const { m } = await searchParams;
@@ -39,6 +43,7 @@ export default async function Study({ searchParams }: { searchParams: Promise<{ 
     <>
       <AppHeader active="study" />
       <PrintOpen />
+      <OpenOnHash />
       <main className="mx-auto w-full max-w-4xl space-y-8 px-4 py-6 pb-[max(2.5rem,env(safe-area-inset-bottom))] sm:py-8">
         <div className="flex flex-wrap items-end justify-between gap-3">
           <div>
@@ -79,7 +84,14 @@ async function Guide({ guide }: { guide: NonNullable<ReturnType<typeof loadStudy
 
   return (
     <>
-      <p className="max-w-2xl text-sm leading-relaxed"><RichInline text={guide.intro} /></p>
+      <div className="space-y-3">
+        <p className="max-w-2xl text-[15px] leading-relaxed"><RichInline text={guide.intro} /></p>
+        <nav aria-label="On this page" className="flex flex-wrap gap-1.5 print:hidden">
+          {[["formulas", "Formula sheet"], ["topics", "Topics"], ["formats", "Question types"], ["pacing", "Pacing"]].map(([id, label]) => (
+            <a key={id} href={`#${id}`} className={chip}>{label}</a>
+          ))}
+        </nav>
+      </div>
 
       <section className="space-y-3">
         <h2 className="font-semibold">Where you are</h2>
@@ -115,40 +127,74 @@ async function Guide({ guide }: { guide: NonNullable<ReturnType<typeof loadStudy
         )}
       </section>
 
-      <section className="space-y-3 break-inside-avoid">
-        <h2 className="font-semibold">Formula quick-ref</h2>
-        <div className={`${card} grid gap-x-8 gap-y-5 p-4 sm:grid-cols-2 sm:p-5`}>
-          {guide.quickRef.map((g) => (
-            <div key={g.title} className="space-y-1.5 break-inside-avoid">
-              <div className={eyebrow}>{g.title}</div>
-              <ul className="space-y-1 text-sm leading-relaxed">
-                {g.lines.map((l, i) => <li key={i}><RichInline text={l} /></li>)}
-              </ul>
-            </div>
-          ))}
+      <section id="formulas" className="scroll-mt-20 space-y-4">
+        <div className="space-y-2">
+          <div>
+            <h2 className="font-semibold">Formula sheet</h2>
+            <p className="text-sm text-muted">Every formula you need, one per card.</p>
+          </div>
+          <nav aria-label="Formula groups" className="flex flex-wrap gap-1.5 print:hidden">
+            {guide.quickRef.map((g) => (
+              <a key={g.title} href={`#f-${slug(g.title)}`} className={chip}>{g.title}</a>
+            ))}
+          </nav>
         </div>
+        {guide.quickRef.map((g) => (
+          <div key={g.title} id={`f-${slug(g.title)}`} className="scroll-mt-20 space-y-2">
+            <h3 className={eyebrow}>{g.title}</h3>
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              {g.items.map((it) => (
+                <div key={it.name} className={`${card} flex flex-col gap-1.5 p-3.5 break-inside-avoid`}>
+                  <div className="text-xs font-medium text-muted"><RichInline text={it.name} /></div>
+                  <div className="overflow-x-auto overflow-y-hidden py-0.5 text-[1.15rem] leading-snug"><Tex tex={it.tex} /></div>
+                  {it.note && <div className="text-xs leading-relaxed text-muted"><RichInline text={it.note} /></div>}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
       </section>
 
-      <section className="space-y-3">
-        <div>
-          <h2 className="font-semibold">Topics</h2>
-          <p className="text-sm text-muted">Weakest first, by your accuracy on questions tagged with each topic’s concepts.</p>
+      <section id="topics" className="scroll-mt-20 space-y-3">
+        <div className="space-y-2">
+          <div>
+            <h2 className="font-semibold">Topics</h2>
+            <p className="text-sm text-muted">Weakest first, based on how you did on each topic’s questions. Tap one to open it.</p>
+          </div>
+          <nav aria-label="Topics" className="flex flex-wrap gap-1.5 print:hidden">
+            {sections.map((s) => {
+              const t = stats.sections.get(s.id)!;
+              return (
+                <a key={s.id} href={`#t-${s.id}`} className={`${chip} gap-1.5`}>
+                  <span className={`size-2 rounded-full ${DOT[tone(t)]}`} aria-hidden />
+                  {s.title}
+                </a>
+              );
+            })}
+          </nav>
         </div>
         <div className="space-y-2">
           {sections.map((s, i) => {
             const t = stats.sections.get(s.id)!;
             return (
-              <details key={s.id} className={`${card} group break-inside-avoid`} open={i < OPEN && t.n > 0}>
-                <summary className="flex min-h-14 list-none items-center gap-3 px-4 [&::-webkit-details-marker]:hidden">
+              <details key={s.id} id={`t-${s.id}`} className={`${card} group scroll-mt-20`} open={i < OPEN && t.n > 0}>
+                <summary className="flex min-h-14 list-none items-center gap-3 px-4 py-2 [&::-webkit-details-marker]:hidden">
                   <IconNext size={16} className="shrink-0 text-muted transition-transform group-open:rotate-90 print:hidden" />
                   <span className="flex-1 font-semibold">{s.title}</span>
-                  {t.n > 0 && <span className="hidden text-xs tabular-nums text-muted sm:inline">avg {mss(t.avgMs)}</span>}
-                  <span className={badge(tone(t))}>{t.n ? `${t.correct}/${t.n}` : "not tested yet"}</span>
+                  {t.misses.length > 0 && <span className="hidden text-xs tabular-nums text-muted sm:inline">{t.misses.length} missed</span>}
+                  <span className={badge(tone(t))}>{t.n ? `${t.correct}/${t.n} right` : "not tested yet"}</span>
                 </summary>
-                <div className="space-y-4 border-t border-line px-4 py-4">
-                  <Block label="Know cold" lines={s.facts} />
-                  <Block label="Shortcuts" lines={s.tricks} />
-                  <Block label="Traps" lines={s.traps} tone="bad" />
+                <div className="space-y-5 border-t border-line p-4 sm:p-5">
+                  <p className="rounded-xl bg-accent-soft px-4 py-3 text-[15px] leading-relaxed">
+                    <span className="font-semibold text-accent">Big idea: </span>
+                    <RichInline text={s.idea} />
+                  </p>
+                  <Example q={s.example.q} steps={s.example.steps} />
+                  <Block label="Rules to remember" lines={s.facts} />
+                  <div className="grid gap-5 sm:grid-cols-2">
+                    <Block label="Shortcuts" lines={s.tricks} tone="ok" />
+                    <Block label="Watch out" lines={s.traps} tone="bad" />
+                  </div>
                   {t.misses.length > 0 && <Misses misses={t.misses} numberOf={numberOf} />}
                 </div>
               </details>
@@ -157,8 +203,8 @@ async function Guide({ guide }: { guide: NonNullable<ReturnType<typeof loadStudy
         </div>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="font-semibold">Format playbooks</h2>
+      <section id="formats" className="scroll-mt-20 space-y-3">
+        <h2 className="font-semibold">Question types</h2>
         <div className="grid gap-3 sm:grid-cols-2">
           {formats.map((f) => (
             <div key={f.type} className={`${card} space-y-2 p-4 break-inside-avoid`}>
@@ -171,7 +217,7 @@ async function Guide({ guide }: { guide: NonNullable<ReturnType<typeof loadStudy
                   avg {mss(f.t.avgMs)} per question · target {mss(TYPE_INFO[f.type].paceSec * 1000)}
                 </p>
               )}
-              <ul className="list-disc space-y-1 pl-5 text-sm leading-relaxed marker:text-muted">
+              <ul className="list-disc space-y-1.5 pl-5 text-[15px] leading-relaxed marker:text-muted">
                 {f.rules.map((r, i) => <li key={i}><RichInline text={r} /></li>)}
               </ul>
             </div>
@@ -179,10 +225,10 @@ async function Guide({ guide }: { guide: NonNullable<ReturnType<typeof loadStudy
         </div>
       </section>
 
-      <section className="space-y-3 break-inside-avoid">
+      <section id="pacing" className="scroll-mt-20 space-y-3 break-inside-avoid">
         <h2 className="font-semibold">Pacing for a 170</h2>
         <div className={`${card} p-4`}>
-          <ul className="list-disc space-y-1.5 pl-5 text-sm leading-relaxed marker:text-muted">
+          <ul className="list-disc space-y-1.5 pl-5 text-[15px] leading-relaxed marker:text-muted">
             {guide.pacing.map((p, i) => <li key={i}><RichInline text={p} /></li>)}
           </ul>
         </div>
@@ -191,13 +237,34 @@ async function Guide({ guide }: { guide: NonNullable<ReturnType<typeof loadStudy
   );
 }
 
-function Block({ label, lines, tone }: { label: string; lines: string[]; tone?: "bad" }) {
+function Block({ label, lines, tone }: { label: string; lines: string[]; tone?: "ok" | "bad" }) {
+  const color = tone === "bad" ? "text-bad" : tone === "ok" ? "text-ok" : "";
+  const marker = tone === "bad" ? "marker:text-bad" : tone === "ok" ? "marker:text-ok" : "marker:text-muted";
   return (
-    <div className="space-y-1.5">
-      <div className={`${eyebrow} ${tone === "bad" ? "text-bad" : ""}`}>{label}</div>
-      <ul className="list-disc space-y-1.5 pl-5 text-sm leading-relaxed marker:text-muted">
+    <div className="space-y-2">
+      <h3 className={`${eyebrow} ${color}`}>{label}</h3>
+      <ul className={`list-disc space-y-2 pl-5 text-[15px] leading-relaxed ${marker}`}>
         {lines.map((l, i) => <li key={i}><RichInline text={l} /></li>)}
       </ul>
+    </div>
+  );
+}
+
+function Example({ q, steps }: { q: string; steps: string[] }) {
+  return (
+    <div className="overflow-hidden rounded-xl border border-line">
+      <div className="space-y-1 border-b border-line bg-surface-2 px-4 py-3">
+        <h3 className={eyebrow}>Worked example</h3>
+        <p className="text-[15px] font-medium leading-relaxed"><RichInline text={q} /></p>
+      </div>
+      <ol className="space-y-2.5 px-4 py-3.5">
+        {steps.map((st, i) => (
+          <li key={i} className="flex gap-3 text-[15px] leading-relaxed">
+            <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-accent-soft text-xs font-semibold text-accent">{i + 1}</span>
+            <span><RichInline text={st} /></span>
+          </li>
+        ))}
+      </ol>
     </div>
   );
 }

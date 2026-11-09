@@ -36,3 +36,9 @@ export function Rich({ text, className }: { text: string; className?: string }) 
 export function RichInline({ text }: { text: string }) {
   return <>{inline(text, "i")}</>;
 }
+
+/** One formula on its own, set at display size (fractions full height), for formula cards. */
+export function Tex({ tex, className }: { tex: string; className?: string }) {
+  const html = katex.renderToString(`\\displaystyle ${tex}`, { throwOnError: false });
+  return <span className={className} dangerouslySetInnerHTML={{ __html: html }} />;
+}
