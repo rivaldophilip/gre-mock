@@ -1,0 +1,1758 @@
+{
+  "id": "verbal-013",
+  "measure": "verbal",
+  "title": "Verbal Hard Mock 13",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 18
+    },
+    {
+      "n": 2,
+      "minutes": 23
+    }
+  ],
+  "passages": [
+    {
+      "id": "p1",
+      "paragraphs": [
+        "Sailing among the atolls of the Indian Ocean in the 1830s, Charles Darwin was struck by a puzzle that still bears his name: how can some of the most productive communities in the sea flourish in waters as poor in nutrients as any on the planet? For much of the twentieth century the answer seemed to lie in the partnership between reef-building corals and the single-celled algae that live inside their tissues. The algae photosynthesize and pass most of the sugars they make to their host; the coral, in turn, supplies the algae with the nitrogen and phosphorus in its own wastes, so that nutrients cycle within a single animal instead of leaking into the surrounding water. On this account a reef is less an oasis in a desert than a closed economy, and the symbiosis is the nexus on which everything else depends.",
+        "That account is not wrong, but it explains less than its proponents supposed. A coral that recycles its own nitrogen still loses some with every particle of mucus it sheds, and the shortfall becomes palpable when one compares a reef's total production with what recycling inside individual colonies could sustain. Recent work has drawn attention to a second circuit, one that runs through organisms long treated as marginal. Sponges living in the reef's crevices absorb the dissolved organic matter that corals and algae release, material that few other animals can use, and convert it into cells that they shed at a remarkable rate and that are eaten in turn by snails, worms and crustaceans. What looked like a loss from the system is thereby returned to it. None of this demotes the coral symbiosis, without which there would be no reef to harbor the sponges. But it suggests that Darwin's paradox is resolved not by any single partnership but by the multiplicity of channels through which a reef keeps nutrients from escaping, and that an ecologist who studies corals alone, oblivious to the occupants of the crevices, will misjudge the reef's elasticity: how much stress it can absorb before it collapses."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "nexus",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "palpable",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "oblivious",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "elasticity",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "paragraphs": [
+        "The white walls of the early modernist house are usually read as a manifesto: a rejection of ornament in favor of a purity that the machine age was supposed to demand. Yet the architects who built them seldom achieved that purity, and some did not attempt it. Their walls were most often brick or block, rendered and painted to mimic poured concrete, and the mimetic finish needed constant repair. In photographs, through which most critics came to know the buildings, the surfaces appear flawless; on site, they cracked and stained within a few winters. Several of the movement's leading designers, moreover, inflected the white with color, painting a single wall ochre or blue to make a room seem to advance or recede, or to demarcate one zone of an open plan from another. The white house, then, was less a material fact than an image, sustained by paint, by retouched prints and by critics willing to limn what they had seen only on the page."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "mimetic",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "inflect",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "demarcate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "limn",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "paragraphs": [
+        "Karl Popper proposed that a theory counts as scientific only if some possible observation could refute it, and for a generation the criterion seemed to separate science from its imitators with admirable economy. Astrology and certain schools of psychoanalysis, Popper argued, could accommodate any outcome whatever, and so said nothing; physics, by contrast, staked its claims on predictions that might fail. Part of the criterion's appeal was moral. The scientist who exposes a cherished theory to refutation displays a courage that the pseudoscientist, forever reinterpreting, lacks, and Popper plainly hoped that the criterion would exorcise from inquiry the metaphysical habit of treating every setback as confirmation in disguise.",
+        "The sharpest objection came not from logicians but from historians, who found that working scientists rarely behave as the criterion says they should. When the orbit of Uranus strayed from the path that Newtonian mechanics predicted, astronomers did not abandon Newton; they postulated an unseen planet beyond it, and Neptune was duly found. When the orbit of Mercury strayed in a similar way, the same maneuver, an unseen planet provisionally named Vulcan, failed, and the anomaly persisted for decades until general relativity absorbed it. At the moment of choice the two cases were logically alike: in each, a theory faced a contrary observation, and its defenders shielded it with an auxiliary hypothesis. Only hindsight distinguishes the triumph from the evasion. If the criterion condemns the second maneuver it must condemn the first, and if it permits the first it cannot fault the astrologer for a similar move.",
+        "Popper's defenders reply that the criterion was never meant to describe what scientists do, only to prescribe what they ought to do, and that an auxiliary hypothesis is legitimate so long as it too risks refutation, as the postulate of Neptune, which told astronomers where to point their telescopes, plainly did. The reply has real force, but it shifts the criterion's burden in a way its proponents seldom acknowledge. A theory can no longer be judged falsifiable in isolation; the judgment attaches to the theory together with whatever auxiliary claims its defenders are prepared to make, and those change over time. Falsifiability thus becomes a property not of a theory but of a research program at a given moment, one that may be exemplary in one decade and evasive in the next. The demarcation survives, but it no longer divides kinds of knowledge from one another; it marks, rather, the conduct of the people who pursue them, and to apply it one must interrogate not only what a theory says but what its adherents do when it is in trouble."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "exorcise",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "metaphysical",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "interrogate",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "paragraphs": [
+        "The classic theory of the demographic transition holds that birth rates fall only after death rates have done so, and only once industrialization has made children costly rather than useful. France is the embarrassment of the theory. Its fertility began to decline in the 1780s, in villages that were neither industrial nor notably healthier than their neighbors across the Rhine, and a full century before England, the paradigmatic industrial nation, followed. Demographers have accordingly treated France as an exception to be explained, and the favored explanation has been inheritance law: the Revolution's requirement that estates be divided equally among heirs, it is argued, gave peasants a pecuniary motive to have fewer children, lest their land be fragmented into plots too small to live on.",
+        "The argument is elegant, and it is not without evidence: fertility did fall early in some regions where equal division was most strictly enforced. But the chronology is awkward, since in many villages the decline began before the revolutionary codes were written, and regions with long traditions of equal division under the old regime were not always early adopters of family limitation. A more promising line of research has ceased to ask what made France exceptional and asks instead how the decline spread. Mapped commune by commune, the decline follows lines of language and of religious practice more closely than lines of property law: it moved quickly among communities that shared a dialect with early adopters and slowly across linguistic boundaries, even where economic conditions were similar on both sides. Such a pattern does not refute the inheritance argument, which may well describe why some families first had reason to limit births. It suggests, though, that what spread was less a calculation than a norm, a sense, carried by the ordinary propinquity of neighbors who could talk to one another, that limiting births was something people like oneself did."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "paradigmatic",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "pecuniary",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "propinquity",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "paragraphs": [
+        "Why so many species of small fish can live together on a single patch of reef has long troubled ecologists. The textbook expectation is that species competing for the same resource will either divide it, each settling into its own niche, or else wage an internecine struggle until one ousts the others. Some reef fish do divide the reef, by depth or by the kind of coral they shelter in, and for them the textbook account suffices. But on many reefs dozens of species with nearly identical diets and habits share the same coral heads, and none appears to be winning. One influential answer, the lottery hypothesis, holds that space on a reef is freed unpredictably, as residents die, and is claimed by whichever larvae happen to arrive first from the plankton; since no species can foresee where vacancies will open, none can monopolize them, and coexistence is maintained by chance rather than by any difference in ability. The hypothesis appealed to ecologists partly because it demanded no hidden differences in habit of the kind that field workers had sought without success. Yet chance alone, it soon became clear, cannot sustain coexistence indefinitely: in a pure lottery, random runs of bad luck would eliminate one species after another, much as repeated wagers eventually ruin a gambler with finite stakes. What rescues the hypothesis is a fact about these fish that its first proponents had treated as incidental. Because the adults live for many years, a species that suffers a poor year for larval arrival is not jeopardized; its long-lived adults hold their places until a good year comes, so that the very variability once thought merely to permit coexistence turns out to sustain it."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "niche",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "internecine",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "oust",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "jeopardize",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "a1",
+      "paragraphs": [
+        "Eighteen months ago the Dunmore Gazette began charging readers for access to its website. Since then, the revenue the Gazette has earned from online subscriptions has exceeded the advertising revenue it lost as traffic to the site declined. The Gazette's publisher, who also owns the Ashby Ledger, concludes that charging for online access would improve the Ledger's finances as well, and has ordered the Ledger to do so."
+      ],
+      "tags": []
+    },
+    {
+      "id": "a2",
+      "paragraphs": [
+        "Advertisement: Of the people who completed all ninety lessons of the Fluentia Spanish course last year, 85 percent passed the national intermediate proficiency examination on their first attempt. Clearly, the Fluentia course will bring most of the people who sign up for it to an intermediate level of Spanish."
+      ],
+      "tags": []
+    }
+  ],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "So exhaustive was the survey that even the rivals who had built careers on disputing its author found little in it to ___; their objections, when at last they came, concerned what the data meant rather than what the data were.",
+      "blanks": [
+        [
+          "aver",
+          "emulate",
+          "garner",
+          "gainsay",
+          "intimate"
+        ]
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The second clause explains the first: the rivals' objections were about interpretation, not about the facts. So the survey's facts were beyond contradiction; there was little to gainsay (deny or contradict).",
+        "distractors": {
+          "aver": "To aver is to assert firmly, the opposite of what eager disputants would want to do.",
+          "emulate": "Imitating the survey is unrelated to the contrast between disputing facts and disputing meaning.",
+          "garner": "To garner is to gather or collect; it has no link to the rivals' objections.",
+          "intimate": "To intimate is to hint; 'little to hint' makes no sense here."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "aver",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "emulate",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "garner",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "gainsay",
+          "role": "key",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "intimate",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 3,
+      "prompt": "Those who knew the surveyor only through his field notes, which recorded every measurement without a wasted word, were unprepared for the man himself: a (i) ___ who could stretch the loss of a single theodolite into an evening's entertainment, and whose manner was so (ii) ___ that newcomers routinely mistook his gravest warnings for teasing.",
+      "blanks": [
+        [
+          "pedant",
+          "boor",
+          "raconteur"
+        ],
+        [
+          "jocular",
+          "laconic",
+          "stoic"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) Someone who can turn a small mishap into an evening's entertainment is a raconteur, a skilled teller of anecdotes, in contrast to the terse notes. (ii) Warnings mistaken for teasing imply a habitually jocular (joking) manner.",
+        "distractors": {
+          "pedant": "A pedant fusses over details; it does not explain the entertaining storytelling.",
+          "boor": "A boor is rude and coarse, nothing in the sentence suggests rudeness.",
+          "laconic": "Laconic describes the field notes, which the man himself is contrasted with.",
+          "stoic": "A stoic manner would not make warnings sound like teasing."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "boor",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "raconteur",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "jocular",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "laconic",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "stoic",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The trouble with the upland parish registers is not that they are (i) ___ (a handful of entries per decade would serve, if each could be trusted) but that their clerks recorded burials by whim; a demographer who (ii) ___ from them as confidently as from the dense lowland series will mistake changes in a clerk's habits for changes in the population, unless she remains (iii) ___ for the telltale shift in hand or format that marks a new clerk.",
+      "blanks": [
+        [
+          "unreliable",
+          "sparse",
+          "anachronistic"
+        ],
+        [
+          "abstains",
+          "diverges",
+          "extrapolates"
+        ],
+        [
+          "vigilant",
+          "sanguine",
+          "discreet"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) The parenthesis says a few entries would be enough, so the problem the author denies is scarcity: the registers are sparse, but that is not the trouble. (ii) A demographer who reasons outward from the records to estimate the population extrapolates from them; doing so as confidently as from the dense series causes the error described. (iii) The error is avoided only if she stays vigilant, watching for signs of a new clerk.",
+        "distractors": {
+          "unreliable": "Trap: the sentence goes on to say the real trouble IS unreliability (recording by whim), so 'not that they are unreliable' contradicts it.",
+          "anachronistic": "Nothing concerns the registers being out of their time.",
+          "abstains": "A demographer who abstains from using the registers could not be misled by them.",
+          "diverges": "Diverging from the registers is not a way of using them that could produce the error.",
+          "sanguine": "A sanguine (confidently optimistic) demographer is the one who falls into the error, not the one who avoids it.",
+          "discreet": "Discretion (tactful reserve) has nothing to do with watching for changes of hand."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "sparse",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "anachronistic",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "abstain",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "diverge",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "extrapolate",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "vigilant",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sanguine",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "discreet",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Officials who released the full list of contracts expected it to quiet the rumors of favoritism, and in a narrow sense it did, since no one could now claim the list was being hidden; but by showing how many contracts had gone to firms owned by the minister's former partners, it ___ the very suspicion it was meant to allay.",
+      "choices": [
+        "mitigated",
+        "exacerbated",
+        "belied",
+        "ameliorated",
+        "compounded",
+        "nullified"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "'But' turns away from the narrow success: revealing the partners' share made the suspicion worse. Exacerbated and compounded (in its sense of 'made worse') both say this.",
+        "distractors": {
+          "mitigated": "Trap pair with ameliorated: true synonyms that match the officials' expectation and the 'narrow sense' concession, but the 'but' clause says the opposite happened.",
+          "ameliorated": "Trap pair with mitigated: improving the situation is the reverse of the outcome.",
+          "belied": "To belie is to contradict or give a false picture of; the list confirmed the suspicion rather than contradicting it.",
+          "nullified": "Nullifying the suspicion would mean cancelling it, again the wrong direction."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "mitigate",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exacerbate",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "belie",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ameliorate",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "compound",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nullify",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "se",
+      "difficulty": 3,
+      "prompt": "Her arguments are difficult, but the difficulty lies wholly in what she asks the reader to accept, never in how she says it: the prose is so ___ that readers often reach the end of a chapter before noticing how much they have conceded.",
+      "choices": [
+        "limpid",
+        "recondite",
+        "didactic",
+        "hermetic",
+        "laconic",
+        "pellucid"
+      ],
+      "key": {
+        "sel": [
+          0,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "The difficulty is 'never in how she says it', and readers glide through without noticing what they concede, so the prose is perfectly clear: limpid, pellucid.",
+        "distractors": {
+          "recondite": "Trap pair with hermetic: both mean obscure, which is exactly what the sentence denies of her style.",
+          "hermetic": "Trap pair with recondite: obscure, accessible only to insiders.",
+          "didactic": "Didactic (preachy, instructive) prose would make readers more, not less, aware of what is being urged on them.",
+          "laconic": "Brevity is not the point; clarity is."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "limpid",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "recondite",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "didactic",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hermetic",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "laconic",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pellucid",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Opponents of the new liturgy read the bishop's silence as a rebuke, but the reformers understood him better: in a diocese where he was known to denounce at once whatever displeased him, his refusal to say anything at all amounted to a decision to ___ the changes.",
+      "choices": [
+        "censure",
+        "countenance",
+        "extol",
+        "reprove",
+        "deplore",
+        "sanction"
+      ],
+      "key": {
+        "sel": [
+          1,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "Because the bishop always denounces what displeases him, silence means he is not displeased: it is tacit permission. Countenance (tolerate, approve) and sanction in its sense of 'authorize, approve' give that meaning. The everyday sense of sanction (penalize) would match the opponents' mistaken reading.",
+        "distractors": {
+          "censure": "Trap pair with reprove: both mean to rebuke, which is the opponents' reading that the reformers correct.",
+          "reprove": "Trap pair with censure.",
+          "extol": "Too strong: silence is permission, not lavish praise.",
+          "deplore": "To deplore is to condemn, again the opponents' reading."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "censure",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "countenance",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "extol",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "reprove",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sanction",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "No single scandal cost the chairman his post; each, taken alone, he weathered with ease. What he could not weather was their accumulation, which ___ his authority so gradually that his allies noticed its loss only when junior members stopped bothering to consult him.",
+      "choices": [
+        "toppled",
+        "bolstered",
+        "undermined",
+        "overthrew",
+        "sapped",
+        "consolidated"
+      ],
+      "key": {
+        "sel": [
+          2,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The damage was cumulative and gradual, noticed only late, so the scandals weakened his authority little by little: undermined, and sapped in its sense of 'gradually weakened' (not the plant fluid).",
+        "distractors": {
+          "toppled": "Trap pair with overthrew: both describe a sudden fall, which the sentence denies ('no single scandal cost him his post', 'so gradually').",
+          "overthrew": "Trap pair with toppled.",
+          "bolstered": "Trap pair with consolidated: both strengthen, the wrong polarity.",
+          "consolidated": "Trap pair with bolstered."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "bolster",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "undermine",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sap",
+          "role": "key",
+          "at": [
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p1",
+      "prompt": "The primary purpose of the passage is to",
+      "choices": [
+        "challenge the view that the coral symbiosis plays any significant role in resolving Darwin's paradox",
+        "reconcile two competing explanations of how reefs sustain high productivity in nutrient-poor waters",
+        "show that an explanation long regarded as sufficient accounts for only part of the phenomenon it was invoked to explain",
+        "describe the mechanism by which corals and their algae recycle nitrogen and phosphorus",
+        "argue that ecologists should study sponges rather than corals when assessing a reef's health"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Paragraph 1 presents the symbiosis account; paragraph 2 says it 'is not wrong, but it explains less than its proponents supposed' and adds the sponge circuit as a further channel. The passage qualifies the account rather than rejecting it.",
+        "distractors": {
+          "challenge the view that the coral symbiosis plays any significant role in resolving Darwin's paradox": "Too strong: 'None of this demotes the coral symbiosis.'",
+          "reconcile two competing explanations of how reefs sustain high productivity in nutrient-poor waters": "Wrong verb: the sponge circuit is presented as an addition, not as a rival account that had to be reconciled.",
+          "describe the mechanism by which corals and their algae recycle nitrogen and phosphorus": "Too narrow: that is paragraph 1's content, which the passage then qualifies.",
+          "argue that ecologists should study sponges rather than corals when assessing a reef's health": "Distorts the last sentence, which faults studying corals alone, not studying corals at all."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-main-idea",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "rc_multi",
+      "difficulty": 5,
+      "passageId": "p1",
+      "prompt": "Consider each of the choices separately and select all that apply. The passage suggests which of the following about the sponges discussed in the second paragraph?",
+      "choices": [
+        "Their contribution to a reef's nutrient economy depends, at least indirectly, on the coral symbiosis.",
+        "They draw much of their nourishment from bacteria and plankton that they filter from the water flowing through the reef.",
+        "Their capacity to use dissolved organic matter is not shared by any other animal on the reef."
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "A: supported in two steps. The sponges live in the reef's crevices, and 'without [the symbiosis] there would be no reef to harbor the sponges', so their contribution depends on the symbiosis. B: true of sponges in the world, but the passage mentions only their absorption of dissolved organic matter. C: one notch too strong; the passage says 'few other animals' can use the material, not that none can."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "In the context in which it appears, \"inflected\" most nearly means",
+      "choices": [
+        "curved",
+        "modulated",
+        "conjugated",
+        "tainted",
+        "concealed"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The designers varied the white by adding a colored wall for deliberate effects (making rooms advance or recede, marking zones). To inflect here is to modulate or vary, not the grammatical sense.",
+        "distractors": {
+          "curved": "The physical sense of 'inflect' (to bend); nothing about the walls is bent.",
+          "conjugated": "The grammatical sense of 'inflect', which does not apply to walls.",
+          "tainted": "The color is a deliberate design effect, not a corruption.",
+          "concealed": "One wall was painted; the white was not hidden."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-vocab-context",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "rc_select",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "Select the sentence that describes a specific technique by which some architects deliberately varied the appearance of the white wall.",
+      "key": {
+        "sel": [
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The fifth sentence ('Several of the movement's leading designers, moreover, inflected the white with color...') describes painting one wall ochre or blue on purpose. The third sentence describes paint used to imitate concrete, which preserves the white look rather than varying it, and the second says only that some architects did not attempt purity."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-detail",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 4,
+      "passageId": "a1",
+      "prompt": "The publisher's conclusion depends on which of the following assumptions?",
+      "choices": [
+        "The Ledger's website currently attracts at least as much traffic as the Gazette's did before the Gazette began charging for access.",
+        "Readers of the Ledger are not markedly less willing than readers of the Gazette to pay for access to a newspaper's website.",
+        "Charging for online access will raise the Ledger's revenue by at least as much as it raised the Gazette's.",
+        "Most readers who stopped visiting the Gazette's site after it began charging turned to a competing newspaper instead.",
+        "No factor other than the decision to charge for access contributed to the growth in the Gazette's online subscription revenue."
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The argument carries the Gazette's result over to the Ledger. Negate B: if Ledger readers are markedly less willing to pay, subscription revenue may not cover the lost advertising, and the conclusion collapses.",
+        "distractors": {
+          "The Ledger's website currently attracts at least as much traffic as the Gazette's did before the Gazette began charging for access.": "A smaller site could still gain proportionally; the conclusion needs no comparison of size.",
+          "Charging for online access will raise the Ledger's revenue by at least as much as it raised the Gazette's.": "Too strong: any improvement suffices, so this is sufficient but not necessary.",
+          "Most readers who stopped visiting the Gazette's site after it began charging turned to a competing newspaper instead.": "Where lost readers went does not affect whether subscriptions outweighed lost ads.",
+          "No factor other than the decision to charge for access contributed to the growth in the Gazette's online subscription revenue.": "Too strong: other factors (marketing, a good news year) could have helped without undermining the inference; there is no subscription revenue without charging in any case."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-assumption",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q1",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "His accountants, accustomed to watching him haggle over the price of lamp oil, were puzzled that the shipowner refused to ___ on his vessels' lifeboats, until they learned that as a boy he had been one of four survivors of a wreck.",
+      "blanks": [
+        [
+          "insist",
+          "splurge",
+          "dwell",
+          "stint",
+          "fulminate"
+        ]
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The accountants know him as a haggler, so what puzzles them is that he would not economize on lifeboats; the wreck explains that refusal. To stint (on) is to be sparing or skimp, its secondary sense, not 'a period of work'.",
+        "distractors": {
+          "insist": "A wreck survivor refusing to insist on lifeboats would not be explained by the wreck; the logic runs the other way.",
+          "splurge": "A haggler refusing to splurge would not puzzle anyone, and the wreck would explain splurging, not refusing to.",
+          "dwell": "Refusing to dwell on lifeboats does not connect to his thrift or to the wreck.",
+          "fulminate": "Railing against lifeboats is not what the accountants' puzzle concerns."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "stint",
+          "role": "key",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fulminate",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q2",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Read today, the courtier's letters to the king seem less (i) ___ than his enemies alleged, though not because the flattery they complained of is absent: it is there, as convention required, but it is laced with a candor that would have passed for mere frankness in a letter to an equal and, addressed to a monarch, must have seemed almost (ii) ___.",
+      "blanks": [
+        [
+          "ingenuous",
+          "obsequious",
+          "strident"
+        ],
+        [
+          "churlish",
+          "servile",
+          "frivolous"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) The enemies complained of flattery, so they alleged the courtier was fawning; the letters seem less obsequious because the flattery is mixed with candor. (ii) Candor that is merely frank toward an equal would, toward a king, look nearly rude: churlish.",
+        "distractors": {
+          "strident": "Harsh loudness is not what flattery is accused of.",
+          "servile": "Servility is the flattery, not the candor that tempers it.",
+          "frivolous": "Frankness is not frivolity; the contrast is about rudeness toward rank.",
+          "ingenuous": "Enemies complaining of flattery would never have alleged artless sincerity, so 'less ingenuous than alleged' has no point; the candor would make him more ingenuous, not less."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "ingenuous",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obsequious",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "strident",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "churlish",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "servile",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "frivolous",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q3",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The chemist's admirers call her lone campaign against the consensus (i) ___, and her letters, though they hand her detractors ample ammunition, do not finally discredit the word: they reveal a temperament so (ii) ___ that she would not concede even points she privately granted were sound, and a readiness to (iii) ___ in print colleagues whose only offense was to have agreed with her too tepidly, but they also show that she foresaw exactly the ridicule the campaign would cost her and undertook it anyway.",
+      "blanks": [
+        [
+          "foolhardy",
+          "ingenuous",
+          "intrepid"
+        ],
+        [
+          "scrupulous",
+          "obstinate",
+          "pliant"
+        ],
+        [
+          "placate",
+          "assail",
+          "emulate"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) The admirers' word survives the letters because they show she foresaw the ridicule and went ahead anyway: courage with open eyes, so intrepid. It must also be a word admirers would use. (ii) The letters give detractors 'ammunition', so the trait is a fault, and refusing to concede points she privately accepted is stubbornness: obstinate. (iii) 'Offense' shows she attacked those colleagues: assail.",
+        "distractors": {
+          "foolhardy": "Trap: it fits a risky lone campaign, but it is pejorative, so admirers would not choose it, and foreseeing the cost and accepting it is the opposite of rashness.",
+          "scrupulous": "Trap: scruple would make her concede points she knew were sound; it is also no 'ammunition' for detractors.",
+          "pliant": "A pliant temperament concedes readily, the opposite of what the letters show.",
+          "placate": "Soothing colleagues does not fit 'whose only offense'.",
+          "emulate": "Imitating colleagues does not fit 'offense' either.",
+          "ingenuous": "Trap: admirers might praise her guilelessness, but the letters show she foresaw exactly what the campaign would cost her, so innocence of the consequences is what the evidence rules out."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "foolhardy",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ingenuous",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "intrepid",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "scrupulous",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obstinate",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pliant",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "placate",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "assail",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "emulate",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q4",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Though she would (i) ___, whenever the subject arose, that other people's affairs held no interest for her, the diarist's notebooks record fifty years of (ii) ___ eavesdropping, and her particular gift lay in knowing which idle question, put at which moment, would (iii) ___ a confidence its owner had resolved to keep.",
+      "blanks": [
+        [
+          "lament",
+          "aver",
+          "recant"
+        ],
+        [
+          "reluctant",
+          "latent",
+          "inveterate"
+        ],
+        [
+          "elicit",
+          "stanch",
+          "forestall"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Though' sets her claim against her conduct, so she firmly asserted her lack of interest: aver. (ii) Fifty years of a contrary practice: inveterate (habitual, deeply rooted) eavesdropping. (iii) Her gift was drawing out secrets others meant to keep: elicit.",
+        "distractors": {
+          "recant": "To recant is to take back an earlier belief; it does not fit 'to anyone who asked that...'.",
+          "reluctant": "Reluctant eavesdropping undercuts the contrast with her claim of indifference.",
+          "latent": "Fifty years of recorded eavesdropping is not hidden or undeveloped.",
+          "stanch": "To stanch is to stop a flow; it does not describe her gift.",
+          "forestall": "Preventing a confidence is the reverse of her gift.",
+          "lament": "She is professing indifference, not grieving over it; lamenting would also blunt the 'though' contrast with her eavesdropping."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "lament",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "aver",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "recant",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "latent",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inveterate",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "elicit",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "stanch",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "forestall",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The archaeologist's second report is often described as a retreat from her first, but that misdescribes it: she abandoned none of her original claims, choosing instead to ___ them, so that a date she had once called certain became merely the likeliest of three.",
+      "choices": [
+        "recant",
+        "reiterate",
+        "temper",
+        "abjure",
+        "abridge",
+        "qualify"
+      ],
+      "key": {
+        "sel": [
+          2,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "She kept every claim but softened its strength (certain became likeliest). Temper and qualify, both in their secondary senses (to moderate, to limit), say this; the everyday senses (anger, meeting requirements) are irrelevant.",
+        "distractors": {
+          "recant": "Trap pair with abjure: both mean to renounce, which is the 'retreat' reading the sentence rejects ('abandoned none').",
+          "abjure": "Trap pair with recant.",
+          "reiterate": "Fits 'abandoned none' but not the weakening from certain to likeliest.",
+          "abridge": "Shortening the claims is not what turned certainty into likelihood."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "recant",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "temper",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "abjure",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "abridge",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "qualify",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q6",
+      "section": 2,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Those who knew the envoy only from transcripts thought him artless, even blunt; those who had sat across a table from him knew that the bluntness was itself a way to ___, a display of candor so persuasive that no one thought to ask what it was covering.",
+      "choices": [
+        "dissemble",
+        "divulge",
+        "fulminate",
+        "disclose",
+        "dissimulate",
+        "digress"
+      ],
+      "key": {
+        "sel": [
+          0,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The candor was a performance that covered something, so the bluntness was a way to hide his real intentions behind a false appearance: dissemble, dissimulate.",
+        "distractors": {
+          "divulge": "Trap pair with disclose: both mean to reveal, which matches the surface 'candor' but not 'what it was covering'.",
+          "disclose": "Trap pair with divulge.",
+          "fulminate": "Bluntness is not raging denunciation, and fulminating covers nothing.",
+          "digress": "Wandering off the subject is not a display of candor."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "dissemble",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "divulge",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fulminate",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dissimulate",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "digress",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q7",
+      "section": 2,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Contrition might have shortened his sentence; instead, the convicted forger offered to authenticate, for a fee, the very canvases he had painted, a proposal whose ___ the judge found harder to forgive than the forgeries themselves.",
+      "choices": [
+        "ingenuity",
+        "caprice",
+        "effrontery",
+        "resourcefulness",
+        "contrition",
+        "temerity"
+      ],
+      "key": {
+        "sel": [
+          2,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "Instead of contrition he offered, shamelessly, to profit again from his own fakes, and the judge finds this harder to forgive, so the word names insolent boldness: effrontery, temerity.",
+        "distractors": {
+          "ingenuity": "Trap pair with resourcefulness: the scheme is clever, but cleverness is not what one finds hard to forgive.",
+          "resourcefulness": "Trap pair with ingenuity.",
+          "caprice": "Whimsy does not capture the calculated, shameless offer.",
+          "contrition": "The sentence says he chose the opposite of contrition."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "ingenuity",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "caprice",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "effrontery",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "temerity",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q8",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "The primary purpose of the passage is to",
+      "choices": [
+        "defend a criterion for distinguishing science from pseudoscience by showing that a historical objection to it misconstrues the criterion's purpose",
+        "argue that a criterion for distinguishing science from pseudoscience survives a historical objection only by changing what it is a criterion of",
+        "show that the history of astronomy refutes the claim that science can be distinguished from pseudoscience",
+        "contrast the successful prediction of Neptune with the unsuccessful search for Vulcan",
+        "explain why historians rather than logicians raised the most serious objection to a philosophical criterion"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The passage sets out Popper's criterion, gives the historians' objection, and then argues that the defenders' reply works only by making falsifiability a property of a research program at a moment, or of its adherents' conduct, rather than of a theory: 'The demarcation survives, but...'.",
+        "distractors": {
+          "show that the history of astronomy refutes the claim that science can be distinguished from pseudoscience": "Wrong verb: 'The demarcation survives.'",
+          "contrast the successful prediction of Neptune with the unsuccessful search for Vulcan": "Too narrow: the contrast serves the objection in paragraph 2.",
+          "explain why historians rather than logicians raised the most serious objection to a philosophical criterion": "The passage notes who raised it but never explains why.",
+          "defend a criterion for distinguishing science from pseudoscience by showing that a historical objection to it misconstrues the criterion's purpose": "Half right: that is the defenders' reply. The author grants it 'real force' but argues that it changes the criterion into a judgment about research programs and conduct, so the passage does not simply defend the criterion."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-main-idea",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q9",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 5,
+      "passageId": "p3",
+      "prompt": "Which of the following would best illustrate the author's claim that a research program \"may be exemplary in one decade and evasive in the next\"?",
+      "choices": [
+        "A theory whose defenders, after a failed prediction, postulated an undetected cause that, like Vulcan, was searched for and never found",
+        "A theory that could not be tested when it was first proposed, because the instruments needed to check its predictions did not yet exist, but that became testable once they were built",
+        "A research program whose early auxiliary hypotheses each specified where a telling observation could be made, but whose later auxiliary hypotheses, though no fewer, specified nothing that could fail to occur",
+        "A theory whose predictions were borne out for decades and were then contradicted by a new observation that its defenders accepted as decisive",
+        "A theory whose central claims were revised after a failed prediction, the revised version making new predictions that might also fail"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "On the author's view falsifiability belongs to a theory together with its defenders' auxiliary claims, and an auxiliary is legitimate when it risks refutation (like the Neptune postulate, which said where to look). A program whose auxiliaries first risked refutation and later risked nothing passes from exemplary to evasive.",
+        "distractors": {
+          "A theory whose defenders, after a failed prediction, postulated an undetected cause that, like Vulcan, was searched for and never found": "Trap: a failed auxiliary is not an evasion. The passage calls Vulcan 'the same maneuver' as Neptune, logically alike at the moment of choice; failing is not the same as refusing to risk failure.",
+          "A theory that could not be tested when it was first proposed, because the instruments needed to check its predictions did not yet exist, but that became testable once they were built": "Surface match (a change over time), but the change runs from untestable to testable and concerns instruments, not the conduct of the theory's adherents.",
+          "A theory whose predictions were borne out for decades and were then contradicted by a new observation that its defenders accepted as decisive": "The defenders accept refutation: their conduct is exemplary throughout, even though the theory's fortunes change.",
+          "A theory whose central claims were revised after a failed prediction, the revised version making new predictions that might also fail": "Revising a theory so that it makes new risky predictions is exemplary conduct both before and after; nothing becomes evasive."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-application",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q10",
+      "section": 2,
+      "type": "rc_multi",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "Consider each of the choices separately and select all that apply. The passage indicates which of the following about the hypotheses that postulated Neptune and Vulcan?",
+      "choices": [
+        "When each was proposed, nothing in the logical form of the situation marked one as a legitimate response to an anomaly and the other as an evasion.",
+        "Unlike the Neptune hypothesis, the Vulcan hypothesis did not expose itself to the risk of refutation.",
+        "The Neptune hypothesis yielded a prediction about where an observation should be made."
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "A: paragraph 2, 'At the moment of choice the two cases were logically alike' and 'Only hindsight distinguishes the triumph from the evasion.' B: unsupported; the passage calls Vulcan 'the same maneuver', and it failed, which implies it did risk refutation. C: paragraph 3, the Neptune postulate 'told astronomers where to point their telescopes.'"
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-detail",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q11",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p4",
+      "prompt": "The author's attitude toward the inheritance-law explanation is best described as",
+      "choices": [
+        "dismissive: the author regards it as refuted by the chronology of the decline",
+        "enthusiastic: the author regards it as the most elegant and best-supported account available",
+        "noncommittal: the author reports the explanation without assessing its merits",
+        "qualified: the author grants that it has some support and may explain part of the phenomenon but doubts that it accounts for the way the decline spread",
+        "ambivalent: the author finds the evidence for it persuasive but its underlying logic implausible"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The author calls the argument 'elegant' and 'not without evidence', notes the 'awkward' chronology, and says the diffusion pattern 'does not refute' it but suggests that what spread was a norm rather than a calculation.",
+        "distractors": {
+          "dismissive: the author regards it as refuted by the chronology of the decline": "Too strong: the chronology is 'awkward', and the author explicitly says the argument is not refuted.",
+          "enthusiastic: the author regards it as the most elegant and best-supported account available": "The author prefers the diffusion research as 'more promising'.",
+          "noncommittal: the author reports the explanation without assessing its merits": "The author does assess it, point by point.",
+          "ambivalent: the author finds the evidence for it persuasive but its underlying logic implausible": "Reversed: the logic is 'elegant'; it is the evidence (chronology, old-regime regions) that is weak."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-attitude",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q12",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 5,
+      "passageId": "p4",
+      "prompt": "The passage most strongly suggests which of the following about the French families who were the first to limit births?",
+      "choices": [
+        "They were motivated chiefly by a desire to keep their land from being divided among several heirs.",
+        "They lived predominantly in regions that had practiced equal division of estates under the old regime.",
+        "They were responding to declines in infant mortality that went unrecorded at the time.",
+        "They shared a single dialect, which allowed the practice of family limitation to spread among them.",
+        "Their reasons for limiting births may have differed from those of the families who later followed their example."
+      ],
+      "key": {
+        "sel": [
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Combine two sentences: the inheritance argument 'may well describe why some families first had reason to limit births', while 'what spread was less a calculation than a norm'. So the first families may have acted from a calculation and later ones from a norm.",
+        "distractors": {
+          "They were motivated chiefly by a desire to keep their land from being divided among several heirs.": "One notch too strong: the author says only that the inheritance argument 'may well' explain some first families.",
+          "They lived predominantly in regions that had practiced equal division of estates under the old regime.": "Contradicted: such regions 'were not always early adopters'.",
+          "They were responding to declines in infant mortality that went unrecorded at the time.": "Outside the passage, which says the early villages were not notably healthier.",
+          "They shared a single dialect, which allowed the practice of family limitation to spread among them.": "Distortion: language guided the spread from early adopters to others; nothing says the early adopters themselves shared one dialect."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q13",
+      "section": 2,
+      "type": "rc_select",
+      "difficulty": 5,
+      "passageId": "p5",
+      "prompt": "Select the sentence in which the author makes a concession that limits the scope of the puzzle the passage addresses.",
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The third sentence ('Some reef fish do divide the reef...') grants that the textbook account works for some species, so the puzzle concerns only the rest. The fourth sentence states the puzzle itself, and the seventh criticizes the lottery hypothesis rather than limiting the puzzle."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-function",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q14",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p5",
+      "prompt": "Which of the following best describes the organization of the passage?",
+      "choices": [
+        "A puzzle is posed and its scope limited; an explanation is described; an objection to the explanation is raised; and the explanation is rescued by a consideration already present in the situation it describes.",
+        "A puzzle is posed and its scope limited; an explanation is described; an objection is raised; and the explanation is replaced by an account that restores the role of differences in ability.",
+        "A puzzle is posed; two explanations of it are contrasted; and the one that appeals to chance is shown to be superior to the one that appeals to niche differences.",
+        "A puzzle is posed; an explanation is described and its appeal accounted for; and an objection to it is presented as decisive.",
+        "A puzzle is posed and its scope limited; an explanation is described; and an objection to it is answered by showing that the objection rests on a misreading of the explanation."
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Puzzle (sentence 1-2), concession limiting it (3-4), the lottery hypothesis and its appeal (5-6), the objection from random elimination (7), and the rescue by the fishes' long adult lives, a fact 'its first proponents had treated as incidental' (8-9).",
+        "distractors": {
+          "A puzzle is posed and its scope limited; an explanation is described; an objection is raised; and the explanation is replaced by an account that restores the role of differences in ability.": "The hypothesis is rescued, not replaced, and coexistence still rests on chance and variability, not ability.",
+          "A puzzle is posed; two explanations of it are contrasted; and the one that appeals to chance is shown to be superior to the one that appeals to niche differences.": "The textbook view is set aside for the species in question; no head-to-head contest is staged.",
+          "A puzzle is posed; an explanation is described and its appeal accounted for; and an objection to it is presented as decisive.": "Missing the final move: the objection is overcome.",
+          "A puzzle is posed and its scope limited; an explanation is described; and an objection to it is answered by showing that the objection rests on a misreading of the explanation.": "The objection is granted ('it soon became clear'); the answer adds an overlooked fact rather than exposing a misreading."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-structure",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q15",
+      "section": 2,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 3,
+      "passageId": "a2",
+      "prompt": "The reasoning in the advertisement is most vulnerable to criticism on the grounds that it",
+      "choices": [
+        "relies on the testimony of the course's own customers, who may be biased in its favor",
+        "confuses a condition that is necessary for passing the examination with one that is sufficient",
+        "uses the term \"intermediate\" in two different senses",
+        "draws a conclusion about everyone who signs up for the course from the results of a group that may differ systematically from those who sign up",
+        "presumes that people who failed the examination on their first attempt never passed it"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The evidence comes only from people who finished all ninety lessons; those who quit, likely the less able or less motivated, are left out, yet the conclusion is about everyone who signs up.",
+        "distractors": {
+          "relies on the testimony of the course's own customers, who may be biased in its favor": "The evidence is an external examination, not customer testimony.",
+          "confuses a condition that is necessary for passing the examination with one that is sufficient": "No necessary/sufficient claim is made.",
+          "uses the term \"intermediate\" in two different senses": "'Intermediate' is used consistently for the examination's level.",
+          "presumes that people who failed the examination on their first attempt never passed it": "The argument makes no claim about later attempts."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-flaw",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}
