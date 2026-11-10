@@ -1,0 +1,1725 @@
+{
+  "id": "verbal-012",
+  "measure": "verbal",
+  "title": "Verbal Hard Mock 12",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 18
+    },
+    {
+      "n": 2,
+      "minutes": 23
+    }
+  ],
+  "passages": [
+    {
+      "id": "p1",
+      "paragraphs": [
+        "Many bacteria regulate certain genes according to the abundance of their own kind. Each cell releases a small signaling molecule, and only when the molecule's concentration crosses a threshold do the cells switch on behaviors, such as secreting digestive enzymes or emitting light, that would be futile if a lone cell attempted them. The standard account of this quorum sensing treats the signal as a census: the molecule mediates between the size of the population and the decision to act. Because the products the system governs are public goods, benefiting every cell nearby whether or not it helped to make them, quorum sensing has also become a favorite puzzle for students of microbial altruism. A mutant that enjoys the enzyme but declines to produce it ought to prosper at the expense of its neighbors and, in time, to nullify the arrangement on which it depends.",
+        "Yet the census reading assumes that the concentration of the signal tracks the number of cells, and often it does not. In a confined pore of soil a handful of cells can reach the threshold, because the molecule cannot diffuse away; in an open current a dense population may never reach it. Some microbiologists therefore propose that what the signal measures is not density but diffusion, that is, whether secreted products will stay close enough to repay their cost. On this view the cheater problem is less acute than it appears, for the conditions that trigger production are those of close propinquity, in which a cell's products return disproportionately to itself and its clonal kin. The two readings need not be rivals. A cell cannot tell crowding from confinement, and it has no need to, since either condition signals that secretion is likely to pay."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "mediate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "altruism",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "nullify",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "propinquity",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "paragraphs": [
+        "When the polymath Francis Galton compared the heights of parents with those of their grown children in the 1880s, he found that unusually tall parents tended to have children who were tall but less so, and that unusually short parents tended to have children who were short but less so. Galton called the pattern “regression toward mediocrity” and took it to reveal a hereditary force that drew each lineage back toward the type of its ancestors. Later statisticians showed that no such force is needed: whenever two measurements are imperfectly correlated, extreme values of one will on average be paired with less extreme values of the other, simply because an extreme value owes part of its extremity to influences that the two measurements do not share. Nor could Galton's force account for a fact his own tables contained: the pattern runs backward as well as forward, so that unusually tall children have parents who are, on average, less tall than they are. Galton's misreading proved paradigmatic, and it recurs wherever a group is chosen because of an extreme score: the schools with the worst results improve the next year, the patients who enroll in a trial when their symptoms peak report relief, and neither change by itself portends anything about the remedy applied. To interrogate a claim of improvement, then, one must first ask how the group came to be chosen."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "polymath",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "paradigmatic",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "portend",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "interrogate",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "paragraphs": [
+        "For economists from Adam Smith onward, the craft guilds of early modern Europe were cartels in ceremonial dress: associations of masters that limited entry to their trades, fixed prices and lambasted any outsider who undersold them, all on the pretext of protecting the public from shoddy work. A generation of revisionist historians has replied that the pretext was often real. Where a buyer could not judge a bolt of cloth or a silver cup before paying for it, the guild's mark and its inspections supplied information that the market could not, and the long apprenticeship the guild required transmitted skills that no written manual could convey.",
+        "Both accounts, however, treat the guild as a single actor whose interests can be set against those of its customers, and the records of the guild courts tell a more factious story. In city after city the bulk of the litigation pitted masters not against interlopers but against their own journeymen: over wages, over the length of the working day and, above all, over the terms of admission to mastership. As the cost of the masterpiece, the entry fee and the obligatory banquet rose through the seventeenth century, the very standards that the revisionists credit with protecting buyers also kept the number of masters small, and the sons and sons-in-law of masters were routinely excused from them. Journeymen answered with brotherhoods of their own, which boycotted workshops that had earned their ire, ousted strikebreakers from the lodging houses and could close a town's trade for weeks.",
+        "None of this shows that the revisionists are wrong about information or training; a rule can protect buyers and exclude rivals at once. What it shows is that the question of whom the guild served has no single answer, because the guild was less an actor than an arena, a structure within which masters and journeymen contended, often in internecine fashion, over the pecuniary value of skill. To read a guild's statutes either as the charter of a cartel or as the curriculum of a school is to mistake the record of a settlement, frequently a temporary one, for the intention of a single party."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "lambaste",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "factious",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "ire",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "oust",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "internecine",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "pecuniary",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "paragraphs": [
+        "Western collectors who began buying Japanese woodblock prints in the 1860s brought with them a habit of mind formed by European painting: a picture was the work of the person who conceived it, and the name worth knowing was the one on the sheet. Under that habit the landscapes of Hiroshige, whom many of them ranked as nonpareil, and the actor portraits of Sharaku were catalogued as theirs alone, although the designer's part in a print was a brush drawing on thin paper that was pasted face down on a block of cherry wood and destroyed when the carver cut through it. The carver decided how the drawn line would be limned in wood, whether a stroke the brush had inflected, swelling and tapering, would keep that modulation or stiffen into an even contour; and the printer, working from a few spoken instructions and a proof or two, decided how a gradation of blue would fade across a sky. The publisher, who commissioned the design, paid for the blocks and judged when they were too worn to print from, is seldom mentioned at all.",
+        "It would be easy to conclude that the designer's preeminence is a fiction imposed by foreign buyers, and some recent scholarship, irreverent toward the old catalogues, comes close to saying so. But it was the publishers who put the designer's signature on the sheet and who advertised new series under the names of designers popular enough to sell them; carvers and printers, though now and then identified by a small seal, were never advertised. The cult of the designer, in other words, was not simply imported. What the collectors added was the assumption that the name on a print identifies the source of every quality a viewer admires in it, so that a sky whose gradation is prized in one impression and missing from a later one was taken as evidence of the designer's genius or decline rather than of a printer's skill or a publisher's decision to economize."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "nonpareil",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "limn",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "inflect",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "irreverent",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "paragraphs": [
+        "When a population of bacteria is exposed to a lethal dose of an antibiotic, most cells die quickly, but the killing then slows: a small fraction survives for hours or days and, once the drug is withdrawn, regrows into a population as susceptible as the original. These survivors, called persisters, are not resistant mutants, since their offspring inherit no protection. For decades persisters were explained as dormant cells that escape drugs acting only on growing cells simply because they are not growing. The explanation had a palpable clinical appeal, for it implied that waking persisters before treatment would leave them vulnerable.",
+        "Yet when microbiologists tracked single cells under the microscope, they found that many persisters had been dividing just before the drug arrived and that many dormant cells died. Dormancy, it now appears, is neither necessary nor sufficient for persistence; what survivors share is less a state than a response, a slowing of whatever processes a given drug corrupts, beginning at the moment of exposure. This is not to exorcise dormancy from the story: in populations that have stopped growing for lack of nutrients, dormant cells do make up most of the survivors, and such populations are common in the chronic infections where persisters matter most. But the revision does jeopardize the hope of a single awakening treatment, since a cell that slows in response to the drug cannot be roused in advance of it."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "palpable",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "exorcise",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "jeopardize",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "a1",
+      "paragraphs": [
+        "Two years ago Kestrel Air began requiring its maintenance crews to photograph each completed repair and upload the image before signing the job off. Since then, the proportion of signed-off repairs that the airline's inspectors later find to be incomplete has fallen by 40 percent. The airline's operations director concludes that the photograph requirement has made crews more thorough in carrying out repairs."
+      ],
+      "tags": []
+    },
+    {
+      "id": "a2",
+      "paragraphs": [
+        "Last year 70 percent of the hikers rescued in the Carrow Range were carrying satellite messengers, although only about 30 percent of all hikers in the range carry them. Evidently, carrying a satellite messenger leads hikers to take risks they would otherwise avoid, and so makes them more likely to get into trouble."
+      ],
+      "tags": []
+    }
+  ],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Critics who complained that the reform had stripped the smaller provinces of their influence on the council were wrong about the reform but right about the provinces: the influence the reform abolished had been ___ for decades, since the council could act only on proposals drafted by its three largest members.",
+      "blanks": [
+        [
+          "robust",
+          "latent",
+          "manifest",
+          "nominal",
+          "pernicious"
+        ]
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "“Wrong about the reform but right about the provinces”: the provinces really lack influence, but the reform did not take it away, because the influence it abolished existed only on paper. The cause clause (the council acted only on the big members' drafts) says why. Nominal = in name only.",
+        "distractors": {
+          "robust": "Trap: something “stripped” sounds as if it was strong, but then the critics would be right about the reform too.",
+          "latent": "Latent influence is real but unused, so abolishing it would be a real loss, and the critics would be right about the reform.",
+          "manifest": "Openly evident influence contradicts the council's structure.",
+          "pernicious": "Harmful influence has nothing to do with the clause about who drafts proposals."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "robust",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "latent",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "manifest",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nominal",
+          "role": "key",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pernicious",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 3,
+      "prompt": "Mourners who knew the shipowner only by his (i) ___ funeral, with its hired choir and its procession of plumed horses, would scarcely have guessed how (ii) ___ a life it closed; the display was his widow's doing, and he would have counted it a waste of the money he had spent forty years not spending.",
+      "blanks": [
+        [
+          "somber",
+          "opulent",
+          "decorous"
+        ],
+        [
+          "dissolute",
+          "convivial",
+          "austere"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) The hired choir, the plumed horses and “the display”, which he would have counted a waste of money, make the funeral lavish: opulent. (ii) “Would scarcely have guessed” sets the life against the funeral, and the forty years of not spending make it severely plain: austere.",
+        "distractors": {
+          "somber": "Topic trap: funerals are somber, but the blank has to carry the extravagance that the rest of the sentence calls a display and a waste.",
+          "decorous": "Also suits a funeral, but propriety is not what he would have counted a waste of money.",
+          "dissolute": "Trap for readers who take “would scarcely have guessed” as a hint of scandal; forty years of not spending point to thrift, not vice.",
+          "convivial": "A sociable life is not the contrast with a costly display; the clue is money."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "opulent",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "decorous",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "convivial",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "austere",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Visiting restorers mistook the villagers' refusal to clean the shrine's carvings for indifference, when it was the opposite: a scruple so (i) ___ that no one would lay a hand on the stone. The prohibition was never written down or even stated aloud; it was (ii) ___, but no less binding for that, and it became (iii) ___ only when lichen began to eat the carvings and the village had to choose between custom and the carvings' survival.",
+      "blanks": [
+        [
+          "perfunctory",
+          "reverent",
+          "irreverent"
+        ],
+        [
+          "nominal",
+          "explicit",
+          "tacit"
+        ],
+        [
+          "inviolate",
+          "contentious",
+          "dormant"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) The opposite of indifference, so strong that no one would touch the stone: reverent. (ii) Never written down or stated aloud, yet “no less binding”: understood without being stated, which is tacit. (iii) A forced choice between custom and survival turns an unquestioned rule into a disputed one: contentious.",
+        "distractors": {
+          "perfunctory": "Going through the motions is close to the indifference the restorers wrongly saw.",
+          "irreverent": "Wrong polarity: the villagers' scruple is the opposite of indifference.",
+          "nominal": "Trap: an unwritten rule suggests a rule in name only, but “no less binding for that” says everyone observed it.",
+          "explicit": "An unwritten, unspoken rule is not explicit.",
+          "inviolate": "The rule was already untouchable; the lichen crisis is what put it in question.",
+          "dormant": "Nothing suggests the rule lay inactive and then woke; it was observed throughout."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "perfunctory",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "reverent",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "irreverent",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nominal",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "explicit",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tacit",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inviolate",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "contentious",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dormant",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Collectors who boast that they have never been ___ by a forger are usually the least reliable judges of authenticity, since their confidence rests largely on the forgeries they failed to notice.",
+      "choices": [
+        "cowed",
+        "duped",
+        "intimidated",
+        "eclipsed",
+        "hoodwinked",
+        "disparaged"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The forgeries they failed to notice fooled them without their knowing, so their boast is that they have never been deceived. Duped = hoodwinked.",
+        "distractors": {
+          "cowed": "Trap pair with intimidated: true synonyms that suit a boast, but fear has nothing to do with forgeries they failed to notice.",
+          "intimidated": "Trap pair with cowed.",
+          "eclipsed": "Being outshone is not what unnoticed forgeries show.",
+          "disparaged": "A forger's belittling is unrelated to the logic."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "cow",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dupe",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "eclipse",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hoodwink",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "disparage",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "se",
+      "difficulty": 3,
+      "prompt": "That both parties to the dispute cited the minister's statement the next morning as an endorsement of their own position testified less to her sympathy for either side than to how ___ her drafters had made it.",
+      "choices": [
+        "conciliatory",
+        "ambiguous",
+        "lucid",
+        "placatory",
+        "equivocal",
+        "strident"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Each side read it as support, and the reason given is not sympathy, so the wording must allow more than one reading: ambiguous = equivocal.",
+        "distractors": {
+          "conciliatory": "Trap pair with placatory: they fit a minister's statement, but “less to her sympathy for either side” rules out a soothing gesture as the explanation.",
+          "placatory": "Trap pair with conciliatory.",
+          "lucid": "A clear statement could not serve both sides.",
+          "strident": "Wrong tone, and it would not explain the double reading."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "conciliatory",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ambiguous",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lucid",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "equivocal",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "strident",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Visitors who knew the abbess only as a patron of devotional art were surprised less by the altarpieces in her private rooms than by the tavern scenes hanging beside them, for her taste proved ___ in a way that her commissions had never revealed.",
+      "choices": [
+        "pious",
+        "catholic",
+        "parochial",
+        "devout",
+        "recondite",
+        "eclectic"
+      ],
+      "key": {
+        "sel": [
+          1,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "Tavern scenes beside altarpieces show a range of taste wider than her devotional commissions suggested. Catholic in its secondary sense (wide-ranging) = eclectic.",
+        "distractors": {
+          "pious": "Trap pair with devout: they suit an abbess and devotional art, but piety is what visitors already knew; the surprise is the tavern scenes. The religious association also lures readers to misread “catholic”.",
+          "devout": "Trap pair with pious.",
+          "parochial": "Narrow is the opposite of what the tavern scenes reveal.",
+          "recondite": "Tavern scenes are not obscure or abstruse."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "pious",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "catholic",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "parochial",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "recondite",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "eclectic",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "In a firm where every other budget line had been cut twice, the research allowance remained ___, less because anyone defended it than because no manager wanted to be the first to propose touching it.",
+      "choices": [
+        "trifling",
+        "inviolate",
+        "robust",
+        "negligible",
+        "sacrosanct",
+        "extraneous"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Every other line was cut, and nobody dared propose touching this one, so it was treated as untouchable: inviolate = sacrosanct.",
+        "distractors": {
+          "trifling": "Trap pair with negligible: an allowance can be small, but size does not explain why nobody dared to touch it.",
+          "negligible": "Trap pair with trifling.",
+          "robust": "Near decoy: an uncut allowance may be healthy, but the clause is about its being untouchable, and robust has no partner.",
+          "extraneous": "Irrelevance does not explain why it was spared."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "trifling",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inviolate",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "robust",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sacrosanct",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "extraneous",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p1",
+      "prompt": "Which of the following best describes the organization of the passage?",
+      "choices": [
+        "A puzzle is posed, two competing accounts of it are presented, and evidence is cited that decides between them.",
+        "A phenomenon and its standard account are described along with a puzzle that account raises; an assumption of the account is then questioned, and an alternative is proposed and said to be compatible with it.",
+        "A phenomenon and its standard account are described along with a puzzle that account raises; an assumption of the account is then questioned, and an alternative is proposed and shown to supersede it.",
+        "An alternative account of a phenomenon is defended, and the standard account is then introduced as a rival that the evidence fails to support.",
+        "A standard account is presented, an objection to it is raised, and the objection is shown to rest on a misunderstanding of the phenomenon."
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Paragraph 1: the phenomenon, the census account and the cheater puzzle. Paragraph 2: the census assumption is questioned (“often it does not”), the diffusion view is proposed, and then “the two readings need not be rivals”.",
+        "distractors": {
+          "A puzzle is posed, two competing accounts of it are presented, and evidence is cited that decides between them.": "Nothing decides between the readings; the author says they need not be rivals.",
+          "A phenomenon and its standard account are described along with a puzzle that account raises; an assumption of the account is then questioned, and an alternative is proposed and shown to supersede it.": "One move off: the alternative is reconciled with the standard account, not shown to replace it.",
+          "An alternative account of a phenomenon is defended, and the standard account is then introduced as a rival that the evidence fails to support.": "Wrong order: the standard account comes first, and it is not rejected.",
+          "A standard account is presented, an objection to it is raised, and the objection is shown to rest on a misunderstanding of the phenomenon.": "The objection (the signal need not track numbers) is upheld, not dismissed."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-structure",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "rc_multi",
+      "difficulty": 5,
+      "passageId": "p1",
+      "prompt": "Consider each of the choices separately and select all that apply. The passage suggests which of the following about a mutant that benefits from the enzyme without producing it?",
+      "choices": [
+        "Its advantage over cells that produce the enzyme would be smaller in a confined pore than the census reading by itself would lead one to expect.",
+        "It would eventually be eliminated from populations that live in confined spaces.",
+        "It would gain a further advantage by producing less of the signaling molecule as well."
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "A: yes. The census reading raises the cheater puzzle, but under confinement (close propinquity) a producer's enzyme returns mostly to itself and its kin, so the cheater gains less than the census reading implies. This takes two sentences of paragraph 2 together. B: no, one notch too strong; the problem is only “less acute”. C: no. Cheaters that also skimp on the signal exist in nature, but the passage never discusses signal production costs; true in the world, unsupported here."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "As the passage presents it, Galton's term “mediocrity” refers to",
+      "choices": [
+        "inferior quality",
+        "the average value",
+        "a lack of ambition",
+        "obscurity",
+        "moderation in conduct"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Both tall and short lineages move toward it, and it is the “type of its ancestors”, so it is the middle or average value, not poor quality.",
+        "distractors": {
+          "inferior quality": "The everyday sense; tall parents' children are not moving toward inferiority, and short parents' children move up toward the same point.",
+          "a lack of ambition": "A personal trait, not a value that heights approach.",
+          "obscurity": "Nothing about fame.",
+          "moderation in conduct": "A moral sense, not a statistical one."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-vocab-context",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "rc_select",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "Select the sentence that reports a feature of Galton's own measurements that his hereditary explanation could not account for.",
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The fourth sentence (“Nor could Galton's force account for a fact his own tables contained…”) says outright that his tables show the pattern running backward, which a force acting on descendants cannot explain. The third sentence says only that the force is unnecessary, and it concerns correlated measurements in general, not Galton's own data."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-detail",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 4,
+      "passageId": "a1",
+      "prompt": "Which of the following is an assumption on which the operations director's argument relies?",
+      "choices": [
+        "Before the requirement was introduced, most repairs that inspectors found incomplete had been performed by inexperienced crew members.",
+        "The photograph requirement has not significantly increased the time crews need to complete a repair.",
+        "Every incomplete repair that inspectors failed to detect before the requirement would have been revealed by a photograph.",
+        "Since the requirement was introduced, inspectors have not begun to examine signed-off repairs less closely on the strength of the uploaded photographs.",
+        "The number of repairs performed by Kestrel's crews has not increased since the requirement was introduced."
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The evidence is what inspectors find. If inspectors now relied on the photos and looked less closely, fewer incomplete repairs would be found even if crews were no more thorough. Negated, D breaks the argument.",
+        "distractors": {
+          "Before the requirement was introduced, most repairs that inspectors found incomplete had been performed by inexperienced crew members.": "Who did the bad repairs earlier is irrelevant to whether the drop reflects thoroughness.",
+          "The photograph requirement has not significantly increased the time crews need to complete a repair.": "A cost of the policy, not a link in the reasoning.",
+          "Every incomplete repair that inspectors failed to detect before the requirement would have been revealed by a photograph.": "Far too strong, and the argument does not need it.",
+          "The number of repairs performed by Kestrel's crews has not increased since the requirement was introduced.": "The figure is a proportion, so a change in the number of repairs does not matter."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-assumption",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q1",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "That the director, so lavish with the festival's opening galas, should ___ on the visiting artists' fees struck observers as inconsistent until they learned that the galas were paid for by sponsors who would fund nothing else.",
+      "blanks": [
+        [
+          "splurge",
+          "dwell",
+          "stint",
+          "insist",
+          "capitalize"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Observers saw an inconsistency with her lavishness, so she was sparing with the fees. The explanation (sponsors pay only for galas) resolves it: the festival's own money was thin. Stint on = skimp on, the secondary sense. The everyday noun (a spell of work) is no help here.",
+        "distractors": {
+          "splurge": "Consistent with her lavishness, so there would be nothing inconsistent to explain.",
+          "dwell": "Dwelling on the fees is not something the sponsor fact would explain.",
+          "insist": "Insisting on fees does not contrast with lavishness.",
+          "capitalize": "Profiting from the fees does not fit, and the sponsor fact would not explain it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "stint",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q2",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Had his hosts been less (i) ___ of his comfort, the ambassador might never have taken (ii) ___; but in his own country such care was lavished only on invalids, and he read their attentions as a verdict on his health.",
+      "blanks": [
+        [
+          "heedless",
+          "solicitous",
+          "dismissive"
+        ],
+        [
+          "ill",
+          "heart",
+          "umbrage"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "“Such care” and “their attentions” show the hosts were eager about his comfort: solicitous. He read that care as a slight on his health, so he took offense: umbrage. The counterfactual says less care would have meant no offense.",
+        "distractors": {
+          "heedless": "The hosts lavished care, so they were not heedless; and “less heedless” would mean more care, the opposite of the counterfactual.",
+          "dismissive": "Same polarity error as heedless.",
+          "ill": "A topic trap (invalids, health): his hosts' care did not make him ill; he read it as a judgment.",
+          "heart": "Taking heart is the opposite of reading their care as an insult."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "solicitous",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "umbrage",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q3",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Readers who remember the review as a tirade have confused its verdict with its tone. The verdict was (i) ___, leaving nothing of the novel standing; but the prose was so (ii) ___ that the novelist's friends, combing it for evidence of malice, found nothing to quote, and it never stooped to (iii) ___ the novelist herself, whose gifts it took for granted throughout.",
+      "blanks": [
+        [
+          "tepid",
+          "scathing",
+          "ambivalent"
+        ],
+        [
+          "histrionic",
+          "vitriolic",
+          "dispassionate"
+        ],
+        [
+          "disparage",
+          "extol",
+          "emulate"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Verdict and tone are separated. (i) The verdict left nothing standing: scathing. (ii) The tone was not a tirade; friends looking for malice found none: dispassionate. (iii) “Stooped” marks something low, and it took her gifts for granted, so it did not belittle her: disparage.",
+        "distractors": {
+          "tepid": "A lukewarm verdict would not leave nothing standing.",
+          "ambivalent": "Mixed feelings contradict a total demolition.",
+          "histrionic": "Theatrical prose would supply the tirade the readers remember.",
+          "vitriolic": "Venomous prose would hand the friends plenty of malice to quote.",
+          "extol": "One does not “stoop” to praise, and praise is not what the contrast with destroying the novel needs.",
+          "emulate": "Imitating the novelist has nothing to do with the verdict–tone contrast."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "tepid",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "scathing",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ambivalent",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "histrionic",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "vitriolic",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dispassionate",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "disparage",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "extol",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "emulate",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q4",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The board's decision to (i) ___ the old curriculum's emphasis on memorization was less radical than it appeared. The habit was so (ii) ___ among the school's teachers that its survival had long been (iii) ___ not on any rule but on the way the teachers themselves had been trained, and the rule's disappearance changed little in their classrooms.",
+      "blanks": [
+        [
+          "codify",
+          "jettison",
+          "reinstate"
+        ],
+        [
+          "dormant",
+          "discreet",
+          "pervasive"
+        ],
+        [
+          "incumbent",
+          "contingent",
+          "lavished"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) “The rule's disappearance” shows the board got rid of it: jettison (discard as unneeded, the secondary sense). It looked radical but changed little, because (ii) the habit was everywhere among the teachers (pervasive), and (iii) its survival depended on their training, not on the rule: contingent on.",
+        "distractors": {
+          "codify": "Writing the emphasis into rules contradicts “the rule's disappearance”.",
+          "reinstate": "Same: the rule disappeared, it was not restored.",
+          "dormant": "An inactive habit would not need to survive the rule's removal.",
+          "discreet": "Discretion says nothing about how widespread the habit was.",
+          "incumbent": "Fluent trap with “on”: incumbent on means obligatory for, not dependent on.",
+          "lavished": "Lavished on makes no sense with “survival”."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "jettison",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dormant",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "discreet",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pervasive",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "incumbent",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "contingent",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lavish",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Although it had been commissioned by the engineers' fiercest critics and was written in a tone of unrelieved reproach, the inquiry's report did more to ___ the engineers than any of their defenders had managed, for the flaw it identified in the steel was one that no inspection then in use could have detected.",
+      "choices": [
+        "implicate",
+        "exculpate",
+        "lambaste",
+        "incriminate",
+        "mollify",
+        "exonerate"
+      ],
+      "key": {
+        "sel": [
+          1,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "“Although” sets the critics and the tone against the effect, and “than any of their defenders” says the effect is a defense. An undetectable flaw clears the engineers of blame: exculpate = exonerate.",
+        "distractors": {
+          "implicate": "Trap pair with incriminate: they match the critics and the reproachful tone, but the “for” clause shows the report cleared the engineers.",
+          "incriminate": "Trap pair with implicate.",
+          "lambaste": "Matches the tone, but a defense is what defenders attempt.",
+          "mollify": "Soothing the engineers is not what an undetectable flaw does, and it has no partner."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "implicate",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exculpate",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lambaste",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mollify",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exonerate",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q6",
+      "section": 2,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The expedition's leader remained ___ even after the second supply drop failed, not because she discounted the danger, which she described to her team in unsparing detail, but because she had seen thinner margins survived.",
+      "choices": [
+        "heedless",
+        "sanguine",
+        "despondent",
+        "reckless",
+        "buoyant",
+        "taciturn"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "“Even after” the failure she stayed hopeful, and the reason is experience, not denial: sanguine = buoyant (cheerfully optimistic in difficulty).",
+        "distractors": {
+          "heedless": "Trap pair with reckless: they suit a risky expedition, but “not because she discounted the danger” rules out disregard.",
+          "reckless": "Trap pair with heedless.",
+          "despondent": "Wrong polarity: having seen thinner margins survived is a reason for hope.",
+          "taciturn": "She described the danger in unsparing detail."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "sanguine",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "buoyant",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "taciturn",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q7",
+      "section": 2,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Colleagues who had braced themselves for her verdict on the proposal found it ___ rather than wounding: she named at once the flaw the committee had circled for months, and she said nothing at all about the people who had missed it.",
+      "choices": [
+        "caustic",
+        "trenchant",
+        "terse",
+        "vitriolic",
+        "incisive",
+        "diffident"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "“Rather than wounding” rules out harshness; naming at once a flaw others had circled for months is sharp perception: trenchant = incisive.",
+        "distractors": {
+          "caustic": "Trap pair with vitriolic: they fit the colleagues' bracing, but “rather than wounding” excludes them.",
+          "vitriolic": "Trap pair with caustic.",
+          "terse": "Near decoy: she was quick, but brevity is not the point of the contrast with “wounding”, and terse has no partner.",
+          "diffident": "Naming the flaw at once is not timid."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "caustic",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "trenchant",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "terse",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "vitriolic",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "incisive",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "diffident",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q8",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "The primary purpose of the passage is to",
+      "choices": [
+        "refute the revisionist claim that guild standards protected buyers who could not judge goods themselves",
+        "defend the economists' view of guilds as cartels against the objections of revisionist historians",
+        "argue that two opposing accounts of the guilds share an assumption that obscures conflict within the guilds",
+        "trace the rise of journeymen's brotherhoods as rivals to the guilds in the seventeenth century",
+        "reconcile the economists' and the revisionists' accounts by showing that each describes the guilds of a different period"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "“Both accounts, however, treat the guild as a single actor”: the court records show master–journeyman conflict, and the guild is “less an actor than an arena”.",
+        "distractors": {
+          "refute the revisionist claim that guild standards protected buyers who could not judge goods themselves": "Wrong verb: “None of this shows that the revisionists are wrong about information or training.”",
+          "defend the economists' view of guilds as cartels against the objections of revisionist historians": "The author faults the economists' view on the same ground as the revisionists'.",
+          "trace the rise of journeymen's brotherhoods as rivals to the guilds in the seventeenth century": "Too narrow: the brotherhoods are evidence inside paragraph 2.",
+          "reconcile the economists' and the revisionists' accounts by showing that each describes the guilds of a different period": "No division by period; the author rejects the premise both share."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-main-idea",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q9",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 5,
+      "passageId": "p3",
+      "prompt": "The author's attitude toward the revisionist historians' account of the guilds is best described as",
+      "choices": [
+        "acceptance of the evidence on which it rests, together with a belief that it goes too far in rejecting the economists' view",
+        "admiration for its correction of the economists, tempered by the belief that it holds only for trades whose goods buyers could not judge",
+        "acceptance of its claims about what guilds provided, combined with the view that it shares a misleading premise with the account it opposes",
+        "qualified approval of its method, coupled with doubt that its claims about apprenticeship are accurate",
+        "scathing rejection of its claim that guild standards protected buyers"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The author grants the information and training claims (“None of this shows that the revisionists are wrong…”) but says that both accounts wrongly treat the guild as a single actor.",
+        "distractors": {
+          "acceptance of the evidence on which it rests, together with a belief that it goes too far in rejecting the economists' view": "Half-right: the author never says the revisionists should have kept more of the cartel view; a rule “can protect buyers and exclude rivals at once” corrects both.",
+          "admiration for its correction of the economists, tempered by the belief that it holds only for trades whose goods buyers could not judge": "Invents a limit of scope; the author's reservation is about the single-actor premise.",
+          "qualified approval of its method, coupled with doubt that its claims about apprenticeship are accurate": "Reverses the stance: the author accepts the training claim.",
+          "scathing rejection of its claim that guild standards protected buyers": "Far too strong, and the wrong polarity."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-attitude",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q10",
+      "section": 2,
+      "type": "rc_multi",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "Consider each of the choices separately and select all that apply. The passage indicates which of the following about the requirements for admission to mastership?",
+      "choices": [
+        "They were not applied equally to all candidates.",
+        "They grew more costly to meet during the seventeenth century.",
+        "They were adopted chiefly in order to keep the number of masters small."
+      ],
+      "key": {
+        "sel": [
+          0,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "A: yes; masters' sons and sons-in-law “were routinely excused from them”. B: yes; the cost of the masterpiece, fee and banquet “rose through the seventeenth century”. C: no. The standards “also kept the number of masters small”, which is an effect, not a stated purpose, and the last sentence warns against reading statutes as the intention of one party."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-detail",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q11",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p4",
+      "prompt": "Which of the following is most closely analogous to the assumption that the author attributes to the Western collectors?",
+      "choices": [
+        "A publisher markets a cookbook under a celebrity chef's name, although a staff of writers developed and tested its recipes.",
+        "A historian argues that a treaty named after one diplomat was in fact negotiated by his staff, so that his name on it is merely a convenience.",
+        "A listener credits a pianist with the warmth of a recording's sound, although that warmth was produced by the engineer's choice of microphones.",
+        "A collector pays more for early printings of a book because later printings introduced errors.",
+        "A critic refuses to judge a building until she knows which of the architect's assistants drew its plans."
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The collectors' assumption is that the name on a work identifies the source of every quality a viewer admires in it. The listener credits the named performer with a quality that someone else in the production supplied.",
+        "distractors": {
+          "A publisher markets a cookbook under a celebrity chef's name, although a staff of writers developed and tested its recipes.": "Matches the publishers' practice (putting a selling name on the work), not the viewers' inference about where admired qualities come from.",
+          "A historian argues that a treaty named after one diplomat was in fact negotiated by his staff, so that his name on it is merely a convenience.": "Parallels the recent scholarship that calls the designer's preeminence a fiction, not the collectors.",
+          "A collector pays more for early printings of a book because later printings introduced errors.": "Shares only the surface feature of early versus late impressions.",
+          "A critic refuses to judge a building until she knows which of the architect's assistants drew its plans.": "The opposite habit: attention to collaborators."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-application",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q12",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 5,
+      "passageId": "p4",
+      "prompt": "It can be inferred from the passage that",
+      "choices": [
+        "Western collectors were the first to treat the designer as the principal author of a print",
+        "the name of a popular designer had commercial value in Japan before Western collectors began buying the prints",
+        "later impressions of a print are generally inferior to earlier impressions of the same design",
+        "carvers and printers resented the prominence that publishers gave to designers",
+        "the recent scholarship the author mentions is mistaken in holding that carvers and printers shaped the qualities of a print"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Publishers advertised series under designers “popular enough to sell them”, and the cult of the designer “was not simply imported”, so the name was already selling prints in Japan before the collectors of the 1860s arrived. This takes two sentences together.",
+        "distractors": {
+          "Western collectors were the first to treat the designer as the principal author of a print": "Contradicted: the publishers had already done so.",
+          "later impressions of a print are generally inferior to earlier impressions of the same design": "One example of a lost gradation, stated as a general rule; true of many prints in the world, unsupported here.",
+          "carvers and printers resented the prominence that publishers gave to designers": "Their feelings are never mentioned.",
+          "the recent scholarship the author mentions is mistaken in holding that carvers and printers shaped the qualities of a print": "The author agrees they did; the reservation is about calling the designer's preeminence a foreign fiction."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q13",
+      "section": 2,
+      "type": "rc_select",
+      "difficulty": 5,
+      "passageId": "p5",
+      "prompt": "Select the sentence that limits the scope of a conclusion the author has just drawn.",
+      "key": {
+        "sel": [
+          6
+        ]
+      },
+      "explanation": {
+        "key": "The seventh sentence (“This is not to exorcise dormancy from the story…”) follows the conclusion that dormancy is neither necessary nor sufficient, and keeps dormancy as the main route to survival in starved populations. The second sentence qualifies what persisters are, but no conclusion has yet been drawn; the last sentence draws a further consequence instead of limiting one."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-function",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q14",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p5",
+      "prompt": "The passage states each of the following about persisters EXCEPT:",
+      "choices": [
+        "Their offspring are no more resistant to the drug than the population from which they came.",
+        "Some of them were dividing shortly before they were exposed to the drug.",
+        "They survive by slowing processes that the drug disrupts.",
+        "They are more numerous in chronic infections than in acute ones.",
+        "They are not, as a rule, genetic mutants resistant to the drug."
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The passage says starved populations are common in chronic infections and that persisters “matter most” there; it never compares their numbers in chronic and acute infections.",
+        "distractors": {
+          "Their offspring are no more resistant to the drug than the population from which they came.": "Stated: regrowth is “as susceptible as the original”; “their offspring inherit no protection”.",
+          "Some of them were dividing shortly before they were exposed to the drug.": "Stated: “many persisters had been dividing just before the drug arrived”.",
+          "They survive by slowing processes that the drug disrupts.": "Stated: “a slowing of whatever processes a given drug corrupts”.",
+          "They are not, as a rule, genetic mutants resistant to the drug.": "Stated: “not resistant mutants”."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-detail",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q15",
+      "section": 2,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 3,
+      "passageId": "a2",
+      "prompt": "The reasoning in the argument is most vulnerable to criticism on the grounds that it",
+      "choices": [
+        "takes for granted that hikers who carry satellite messengers are more experienced than those who do not",
+        "infers from the fact that most rescued hikers carried messengers that most hikers who carry messengers are rescued",
+        "fails to consider that hikers in trouble who carry a satellite messenger are more likely than other hikers in trouble to be located and rescued",
+        "ignores the possibility that some hikers carry devices other than satellite messengers",
+        "assumes that the proportion of hikers who carry messengers will continue to rise"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The data count rescues, not troubles. A messenger summons help, so hikers who carry one are over-represented among the rescued even if they get into trouble no more often. The argument treats rescue as a measure of trouble (a sampling flaw).",
+        "distractors": {
+          "takes for granted that hikers who carry satellite messengers are more experienced than those who do not": "The argument assumes nothing about experience; if anything, more experience would cut against its conclusion.",
+          "infers from the fact that most rescued hikers carried messengers that most hikers who carry messengers are rescued": "Describes a reversal the argument never makes.",
+          "ignores the possibility that some hikers carry devices other than satellite messengers": "Other devices would not explain the 70-versus-30 gap.",
+          "assumes that the proportion of hikers who carry messengers will continue to rise": "The argument makes no prediction about the future."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-flaw",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}
