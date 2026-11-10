@@ -1,0 +1,1732 @@
+{
+  "id": "verbal-014",
+  "measure": "verbal",
+  "title": "Verbal Hard Mock 14",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 18
+    },
+    {
+      "n": 2,
+      "minutes": 23
+    }
+  ],
+  "passages": [
+    {
+      "id": "p1",
+      "paragraphs": [
+        "Defenders of federal constitutions have usually rested their case on a geography of trust: authority exercised by a provincial legislature, they argue, benefits from the propinquity of rulers and ruled, who share local knowledge that a distant capital lacks. The standard objection, which James Madison pressed against the champions of small republics, is that propinquity also breeds faction; a compact polity is easily captured by a single interest, and its quarrels tend to be internecine precisely because everyone knows everyone else. Madison's answer was to treat the scale of the union, rather than the virtue of its parts, as the safeguard.",
+        "A more recent school of political theorists holds that neither local trust nor continental scale explains why federations endure. What holds them together, on this view, is not the formal demarcation of powers in a constitutional text, which courts enforce only sporadically, but political parties that operate at both levels and so mediate between them: a national politician who depends on provincial organizations has every reason to respect provincial prerogatives. The thesis has real explanatory merit, since it accounts for the otherwise puzzling durability of federations whose courts almost never strike down a national statute. Yet it is curiously silent about the converse case. A party disciplined enough to carry provincial interests into the capital is disciplined enough to carry the capital's instructions back to the provinces, and where a single such party dominates, the formal autonomy of the provinces can be nullified without a single amendment being passed. The political safeguards of federalism, in other words, work only so long as party competition remains factious enough that no one organization commands both levels at once."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "propinquity",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "internecine",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "mediate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "nullify",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "factious",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "paragraphs": [
+        "The lightest elements are primordial: hydrogen, helium and a trace of lithium emerged from the first minutes after the Big Bang. Nearly everything heavier was forged later, in stars, but fusion can carry a star only as far as iron, beyond which building heavier nuclei consumes energy rather than releasing it. The heavier elements must therefore be assembled by neutron capture. In the slow process, nuclei inside aging giant stars absorb neutrons one at a time over thousands of years, each capture followed by radioactive decay before the next arrives. The rapid process, which yields much of the universe's gold and uranium, requires a flood of neutrons so dense that nuclei swell faster than they can decay, and for decades its site was a matter of conjecture. The 2017 detection of gravitational waves from two merging neutron stars, followed by light whose colors bore the palpable signature of freshly made heavy elements, settled that such mergers produce rapid-process elements; whether they produce enough of them, early enough in cosmic history, remains open, and the unexpectedly gold-rich atmospheres of some very old stars may portend a second site not yet identified."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "primordial",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "palpable",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "portend",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "a1",
+      "paragraphs": [
+        "Two years ago the Mirren Chess League required players in its rated tournaments to record their moves on tablets, which flag an illegal move the moment it is entered, instead of on paper scoresheets. Since then, disputes over illegal moves referred to the league's arbiters have fallen from about one in every forty games to about one in every hundred. The league's directors conclude that the tablets have made players less likely to make illegal moves in the first place."
+      ],
+      "tags": []
+    },
+    {
+      "id": "p3",
+      "paragraphs": [
+        "For much of the twentieth century, literary historians treated the Spanish picaresque novel as an apprenticeship that European fiction had to outgrow. Lazarillo de Tormes (1554) and its successors were credited with irreverent energy, with an insouciant low-born narrator who cozens his way from master to master, and with a satirical survey of a society whose priests, nobles and officials prove no more honest than he; but they were faulted for their form. The episodes follow one another without development, the hero learns tricks rather than wisdom, and the book could end almost anywhere. On this account the picaresque supplied the realist novel with its subject, the ordinary and the poor, while leaving to later writers the task of giving that subject a shape.",
+        "Revisionist critics have interrogated that verdict, arguing that the charge of formlessness misreads a form. A life lived from one meal to the next, they contend, cannot be narrated as a career; the string of separate episodes is mimetic of a precariousness in which no plan survives the next change of master, and to demand development of such a book is to demand that its hero be someone other than poor. This defense has the merit of taking the books' structure seriously, and it disposes of the assumption that episodic narrative is merely a failure to achieve plot. But it purchases coherence for the episodes by denying them a designer. The picaresque narrator is not only the hero of his adventures but their retrospective teller, and he tells them to someone: Lazarillo addresses an unnamed person of rank who has asked for an account of a scandal touching the narrator's household. Read in that light, the episodes are not a passive record of what poverty did to a boy but a selection of evidence, arranged to show that a man so schooled could hardly have acted otherwise. The form of the early picaresque is less mimetic than forensic; its apparent artlessness is the artfulness of a defendant."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "irreverent",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "insouciant",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "cozen",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "interrogate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "mimetic",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "paragraphs": [
+        "It was once a commonplace that the mechanical clock was a monastic invention. The Benedictine rule divided the day among offices of prayer, and historians from Lewis Mumford onward took the monastery, with its bells and its regimented hours, as the paradigmatic setting in which Europeans first learned to live by the clock. The documentary record tells a different story. The earliest weight-driven clocks, which appeared around 1300, drifted by a quarter of an hour or more a day and had to be reset against a sundial; they could hardly have improved on a bell-ringer's judgment, and monastic sources rarely mention them. Where they appear in abundance is in the towers of Italian and Flemish towns, whose councils, clamorous rivals in most things, competed to pay for machines that announced the hours with a clangor audible across the whole commune.",
+        "The difference was not merely one of location; it was, in a sense, metaphysical. The monastic hours were unequal: the offices were fixed by sunrise and sunset, so that an hour of a summer day was far longer than an hour of a winter one. The town clock, by contrast, struck twenty-four equal hours in every season, an hour indifferent to daylight and, for that very reason, convenient for fixing the length of a working day or the term of a loan. Some monastic houses did own water-driven alarms to wake the sacristan, and these may well have contributed the mechanism of the striking train. But the conception of time the tower clocks broadcast, uniform and detached from the sun, was alien to the monastic day the older story assigned them to serve."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "paradigmatic",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "clamorous",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "clangor",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "metaphysical",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "paragraphs": [
+        "In a celebrated essay, a historian of the English working class argued that industrialization replaced the task-oriented rhythms of rural labor, in which a day's work ended when the hay was in, with the abstract discipline of the clock, and that workers experienced the change as a theft. Later scholars have objected that the essay romanticized the preindustrial past, since farm laborers were hired by the day and docked for lateness long before the first mill was built. Yet the more interesting difficulty lies elsewhere.",
+        "The essay's own evidence shows workers who were far from oblivious to the clock: their ire was directed less at the measurement of time than at its ownership, and mill masters were accused of setting the factory clock back in the evening and forward in the morning. Workers who could afford pocket watches bought them, in part, to check the master's hours against their own. It might be supposed that such purchases mark a capitulation, the moment at which workers internalized the discipline the essay describes. But a watch bought to audit an employer is a weapon rather than a halter: these workers had accepted that time had a pecuniary value, and what they contested was who would keep the account. To describe their experience as the imposition of clock time is therefore to inflect it in a way that hides how quickly they turned the new order's instruments against the masters who had introduced them."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "oblivious",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "ire",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "pecuniary",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "inflect",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "paragraphs": [
+        "On Kilnworth, an online marketplace for handmade ceramics, listings illustrated with photographs by professional photographers sell, on average, within nine days of being posted, whereas listings illustrated with the sellers' own photographs take about thirty days. Ines, a potter who sells through Kilnworth, concludes that if she hires a professional photographer for her listings, her pieces will sell roughly three times as fast as they do now."
+      ],
+      "tags": []
+    }
+  ],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Guests who knew the duke only through his effusive letters to his clockmaker, or who had watched him display the astronomical clock to every visitor, would hardly have guessed from those performances how readily he could ___ once his admiration had to be paid in coin: the account books record payments that were never late and never generous.",
+      "blanks": [
+        [
+          "temporize",
+          "stint",
+          "diverge",
+          "dither",
+          "relent"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The colon explains what the guests could not guess: payments 'never late' (so no delay) but 'never generous' (meager). Being sparing in giving is to stint, the verb sense of a word more familiar as a noun ('a stint abroad'). The effusive praise is the concession; the reversal is that the money was skimped.",
+        "distractors": {
+          "temporize": "To stall or delay; ruled out by 'never late'. It is the trap for readers who see only 'once ... had to be paid'.",
+          "diverge": "To differ or branch off; the duke's words and payments do diverge, but the blank describes what he did when paying, and 'how readily he could diverge' says nothing about meager sums.",
+          "dither": "To hesitate indecisively; again excluded by payments that were never late.",
+          "relent": "To soften or give way; a relenting payer would be generous, the opposite of the account books."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "stint",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "diverge",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dither",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 3,
+      "prompt": "Reviewers who dismissed the young novelist as a mere (i) ___ of the masters she admired were not wrong to notice her borrowings; they were (ii) ___, however, in failing to see that she borrowed in order to quarrel.",
+      "blanks": [
+        [
+          "iconoclast",
+          "epigone",
+          "detractor"
+        ],
+        [
+          "lucid",
+          "discreet",
+          "obtuse"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'A mere ___ of the masters she admired', justified by her 'borrowings', is an inferior imitator: epigone. (ii) 'However' turns from what the reviewers got right to what they missed; failing to see her purpose makes them slow to understand: obtuse.",
+        "distractors": {
+          "iconoclast": "An attacker of established idols; the reviewers' charge was imitation, not attack, and 'mere' makes it a belittling label.",
+          "detractor": "A critic who disparages; she admired the masters, so the reviewers could not call her their detractor.",
+          "lucid": "Clear-thinking; praise, but 'failing to see' is a fault.",
+          "discreet": "Tactful or reserved (not discrete, separate); tact has nothing to do with failing to grasp her purpose."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "iconoclast",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "epigone",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lucid",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "discreet",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obtuse",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Those who served under the admiral expected a (i) ___, and his first orders, terse and exacting, seemed to confirm the reputation; yet the logbooks show that he regularly chose to (ii) ___ the improvised repairs his officers made without authority, and that the punishments the regulations prescribed he would (iii) ___ so consistently that his crews came to regard the printed scale as a ceiling rather than a rule.",
+      "blanks": [
+        [
+          "mediator",
+          "martinet",
+          "maverick"
+        ],
+        [
+          "countermand",
+          "sanction",
+          "censure"
+        ],
+        [
+          "temper",
+          "exact",
+          "perpetuate"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          1,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) A reputation that terse, exacting orders 'confirm' is that of a strict disciplinarian: martinet. (ii) 'Yet' reverses that expectation, so he approved the unauthorized repairs: sanction in its sense of authorize, not its everyday sense of penalize. (iii) A printed scale that becomes 'a ceiling rather than a rule' means the punishments were regularly reduced below it: temper (moderate), not exact.",
+        "distractors": {
+          "mediator": "A go-between; terse, exacting orders would not confirm such a reputation.",
+          "maverick": "An unconventional independent; exacting orders confirm strictness, not independence.",
+          "countermand": "To revoke an order; what a martinet would do, which is exactly what 'yet' rules out.",
+          "censure": "To condemn formally; the same wrong polarity. Readers who take sanction in its 'penalty' sense lump it with this choice and miss the key.",
+          "exact": "To demand and inflict in full; that would make the printed scale the rule, not a ceiling.",
+          "perpetuate": "To keep in existence; it does not explain why the scale came to be seen as an upper limit."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "mediator",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "martinet",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "maverick",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sanction",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "censure",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "temper",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exact",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "perpetuate",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Colleagues who mocked the registrar's ledgers as vanity mistook their character: what they took for display was the ___ habit of a man who had once watched a lawsuit turn on a single misdated entry.",
+      "choices": [
+        "ostentatious",
+        "punctilious",
+        "laconic",
+        "scrupulous",
+        "showy",
+        "didactic"
+      ],
+      "key": {
+        "sel": [
+          1,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "'Mistook their character' rejects the vanity reading, and the lawsuit that turned on one misdated entry explains a careful attention to correct detail: punctilious and scrupulous.",
+        "distractors": {
+          "ostentatious": "Trap pair with showy: this is what the colleagues 'took' the ledgers for, the reading the sentence rejects.",
+          "showy": "Trap pair with ostentatious: same rejected reading.",
+          "laconic": "Using few words; brevity is not what a misdated entry would teach.",
+          "didactic": "Intended to instruct; the habit protected the records, it did not teach anyone."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "ostentatious",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "punctilious",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "laconic",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "scrupulous",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "didactic",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "se",
+      "difficulty": 3,
+      "prompt": "Historians long treated the water-driven alarm and the weight-driven escapement as successive stages in a single line of development, the second refining the first; the newly dated fragments from the cathedral workshop, however, show the two mechanisms to have been ___, so that neither can have been the other's ancestor.",
+      "choices": [
+        "sequential",
+        "contemporaneous",
+        "antithetical",
+        "successive",
+        "coeval",
+        "derivative"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "'However' reverses 'successive stages', and new dating that rules out descent means the two existed at the same time: contemporaneous and coeval.",
+        "distractors": {
+          "sequential": "Trap pair with successive: the old view the 'however' overturns.",
+          "successive": "Trap pair with sequential.",
+          "antithetical": "Directly opposed; dating says when the mechanisms existed, not that they were opposites.",
+          "derivative": "Derived from another; exactly the ancestry the sentence denies."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "contemporaneous",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "antithetical",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "coeval",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "derivative",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The biographer is careful never to ___ the poet in his own voice; the damaging stories are always attributed to her enemies, though he repeats them with a relish that makes his scruple look like a technicality.",
+      "choices": [
+        "exculpate",
+        "malign",
+        "emulate",
+        "absolve",
+        "traduce",
+        "flatter"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The 'scruple' is the thing he avoids doing himself while passing on 'damaging stories' with relish: speaking ill of her. Malign and traduce both mean to slander. The relish makes the scruple a technicality because he gets the slander told without telling it.",
+        "distractors": {
+          "exculpate": "Trap pair with absolve: clearing her of blame. Avoiding that in his own voice would be no 'scruple', and it would not be undercut by repeating the damaging stories.",
+          "absolve": "Trap pair with exculpate.",
+          "emulate": "To imitate; unrelated to damaging stories.",
+          "flatter": "Wrong polarity: the stories are damaging, and declining to flatter is no scruple."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "exculpate",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "malign",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "emulate",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "traduce",
+          "role": "key",
+          "at": [
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "His rivals took the envoy's endless requests for clarification as proof of a slow mind; only after the treaty was signed did they grasp that he had ___ confusion throughout, having understood the draft better than the clerks who wrote it.",
+      "choices": [
+        "betrayed",
+        "feigned",
+        "allayed",
+        "shammed",
+        "manifested",
+        "mitigated"
+      ],
+      "key": {
+        "sel": [
+          1,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "He understood the draft better than its authors, so the confusion his rivals saw was not real: he pretended it. Feigned and shammed both mean put on a false show of.",
+        "distractors": {
+          "betrayed": "Trap pair with manifested: both mean showed, but they imply the confusion was genuine, which 'having understood the draft better' rules out.",
+          "manifested": "Trap pair with betrayed.",
+          "allayed": "Near-pair with mitigated: lessened. The envoy's requests did not reduce anyone's confusion; his rivals were misled, not reassured.",
+          "mitigated": "Near-pair with allayed."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "betray",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "feign",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sham",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "manifest",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mitigate",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p1",
+      "prompt": "The author's attitude toward the view of the 'more recent school' of theorists is best described as",
+      "choices": [
+        "unreserved: the view is presented as explaining both why federations endure and how they come to fail",
+        "appreciative but critical: the view is credited with explaining a genuine puzzle, though the mechanism it identifies is shown to be capable of undoing what it is said to protect",
+        "dismissive: the view is treated as a rationalization of courts' reluctance to enforce the constitutional division of powers",
+        "approving of its rejection of judicial enforcement, but doubtful that parties can carry provincial interests into the national capital",
+        "favorable on balance, since the view improves on Madison's argument even though it abandons Madison's concern with faction"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The author grants 'real explanatory merit' (it accounts for durable federations whose courts rarely strike down statutes) but says it is 'curiously silent about the converse case': the same party discipline can nullify provincial autonomy. That is measured appreciation plus a specific criticism.",
+        "distractors": {
+          "unreserved: the view is presented as explaining both why federations endure and how they come to fail": "Too strong: the author says the view is silent about how the mechanism can fail.",
+          "dismissive: the view is treated as a rationalization of courts' reluctance to enforce the constitutional division of powers": "Wrong polarity: the author credits it with real explanatory merit.",
+          "approving of its rejection of judicial enforcement, but doubtful that parties can carry provincial interests into the national capital": "Half-right in tone, wrong in content: the view notes that courts enforce sporadically rather than rejecting enforcement, and the author's worry is the reverse, that parties carry the capital's instructions to the provinces.",
+          "favorable on balance, since the view improves on Madison's argument even though it abandons Madison's concern with faction": "The author never ranks the view against Madison's; the closing point about faction is the author's own correction, not a complaint that the view abandoned Madison."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-attitude",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "rc_multi",
+      "difficulty": 5,
+      "passageId": "p1",
+      "prompt": "Consider each of the choices separately and select all that apply. The passage supports which of the following?",
+      "choices": [
+        "A federation in which courts seldom strike down national statutes need not be one in which provincial prerogatives are disregarded.",
+        "Provincial autonomy is likely to be more secure where rival parties compete at both levels of government than where a single party commands both.",
+        "Madison regarded the propinquity of rulers and ruled as having no political value."
+      ],
+      "key": {
+        "sel": [
+          0,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "A: Supported. The author grants that the party thesis explains the durability of federations whose courts almost never strike down a national statute: there, parties make national politicians respect provincial prerogatives. B: Supported, by combining the last two sentences. A single dominant party can nullify provincial autonomy, and the safeguards work only while competition keeps any one organization from commanding both levels. C: Not supported, one notch too strong. Madison held that propinquity also breeds faction, which is a cost, not a claim that it has no value.",
+        "distractors": {}
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "In the context in which it appears, “settled” most nearly means",
+      "choices": [
+        "resolved by a compromise between rival hypotheses",
+        "established beyond reasonable doubt",
+        "made less turbulent",
+        "fixed permanently in position",
+        "paid in full"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The detection, an observation, 'settled that such mergers produce rapid-process elements', in contrast with the earlier 'matter of conjecture' and with what 'remains open'. It established the fact.",
+        "distractors": {
+          "made less turbulent": "The sense of settling a liquid or a mind; nothing calmed.",
+          "fixed permanently in position": "The sense of settling into place; the question was resolved, not located.",
+          "paid in full": "The sense of settling a debt.",
+          "resolved by a compromise between rival hypotheses": "The sense of settling a dispute by mutual concession; here an observation decided the question outright, and nothing was split between the hypotheses."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-vocab-context",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "rc_select",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "Select the sentence that explains why the elements heavier than iron cannot have been made in the way most of the lighter elements forged in stars were made.",
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The second sentence ('Nearly everything heavier was forged later, in stars, but fusion can carry a star only as far as iron ...') gives the reason: beyond iron, fusion consumes energy instead of releasing it. The third sentence draws the consequence (neutron capture) but gives no reason, and the fourth and fifth describe the two capture processes."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-detail",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 4,
+      "passageId": "a1",
+      "prompt": "The directors' conclusion depends on which of the following assumptions?",
+      "choices": [
+        "Most illegal moves made before the tablets were introduced were made by inexperienced players.",
+        "The tablets flag every illegal move entered on them without error.",
+        "The proportion of illegal moves that end in a dispute referred to an arbiter has not fallen substantially since the tablets were introduced.",
+        "Arbiters now spend less time resolving disputes over illegal moves than they did before the tablets were introduced.",
+        "Players who used paper scoresheets were less likely to notice their opponents' illegal moves than their own."
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The evidence is about disputes; the conclusion is about illegal moves. Because the tablets flag an illegal move on entry, they may simply let it be caught and corrected at the board, so it never becomes a dispute. Negate C: if a much smaller share of illegal moves now ends in a dispute, the fall in disputes is explained without any fall in illegal moves, and the conclusion collapses.",
+        "distractors": {
+          "Most illegal moves made before the tablets were introduced were made by inexperienced players.": "Who made the moves is irrelevant to whether the tablets reduced them.",
+          "The tablets flag every illegal move entered on them without error.": "Too strong: the argument survives an occasional missed flag.",
+          "Arbiters now spend less time resolving disputes over illegal moves than they did before the tablets were introduced.": "A likely consequence of fewer disputes, not a premise the conclusion needs.",
+          "Players who used paper scoresheets were less likely to notice their opponents' illegal moves than their own.": "A comparison the argument never relies on; negating it leaves the inference from disputes to moves untouched."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-assumption",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q1",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The pamphlet's authors were careful never to ___ the new chronometer's accuracy themselves, preferring to quote the naval officers who had tested it at sea, a modesty that persuaded more buyers than any boast could have.",
+      "blanks": [
+        [
+          "gauge",
+          "impugn",
+          "tout",
+          "belie",
+          "pan"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The closing phrase names what the authors avoided: the restraint was 'a modesty' that worked better than 'any boast'. So they avoided promoting the accuracy insistently themselves: tout.",
+        "distractors": {
+          "gauge": "To measure; it fits the first half (they quoted the officers who tested it), but declining to measure is not 'modesty' set against 'boast'.",
+          "impugn": "To call into question; sellers have no reason to doubt their own product, and avoiding doubt is not modesty.",
+          "belie": "To contradict or misrepresent; it has no link to boasting.",
+          "pan": "To criticize harshly; the wrong polarity for a boast."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "impugn",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tout",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "belie",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pan",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q2",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Critics who treat the mottoes cut into old sundials as ornament mistake their makers' priorities: to the men who carved them, an inscription was hardly (i) ___ to the instrument, since a dial that told the hour without (ii) ___ the brevity of life was only half made.",
+      "blanks": [
+        [
+          "germane",
+          "intrinsic",
+          "extrinsic"
+        ],
+        [
+          "denoting",
+          "belying",
+          "dismissing"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) The critics' error is treating the motto as ornament; the makers' view is the reverse, and 'hardly' negates the blank. So the blank must mean ornamental or external: hardly extrinsic, which means essential. The tempting intrinsic gives 'hardly essential', the critics' view. (ii) A dial without its motto was 'only half made', so the full dial had to indicate life's brevity as well as the hour: denoting.",
+        "distractors": {
+          "germane": "Relevant; 'hardly germane' would side with the critics.",
+          "intrinsic": "The polarity trap: with 'hardly' it says the motto was inessential, which is the critics' mistake, not the makers' view.",
+          "belying": "Contradicting; the motto is meant to state life's brevity, not contradict it.",
+          "dismissing": "Setting aside as unimportant; the motto exists to insist on life's brevity, so a dial 'without dismissing' it would be the complete one, not the half-made one: the polarity is reversed."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "germane",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "intrinsic",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "extrinsic",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "denote",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q3",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The poem the nephew wrote in the year of the count's death has always been read as a(n) (i) ___, and the grief in it is real; but the letters show the count to have been a (ii) ___ to his last winter, and the feasts the poem so movingly records him renouncing were never renounced at all. Biographers who mine the poem for the inner man and the letters for the outer, treating them as (iii) ___ sources, miss that the nephew mourned a man the count never was.",
+      "blanks": [
+        [
+          "lampoon",
+          "elegy",
+          "polemic"
+        ],
+        [
+          "recluse",
+          "sybarite",
+          "ascetic"
+        ],
+        [
+          "corroborating",
+          "nebulous",
+          "discrete"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) A poem written in the year of a death, with real grief in it, is a lament: elegy. (ii) 'But' and the feasts that were 'never renounced at all' show the count kept his pleasures: sybarite. (iii) The biographers split the sources, one for the inner man and one for the outer, so they treat them as separate and non-overlapping: discrete. The final clause says that split is the mistake, because the poem's inner man is a fiction.",
+        "distractors": {
+          "lampoon": "A satirical attack; it clashes with 'the grief in it is real'.",
+          "polemic": "A controversial argument; it does not fit a poem of mourning.",
+          "recluse": "One who withdraws from society; a man who kept feasting was no recluse.",
+          "ascetic": "The poem's picture of the count, which the letters disprove; 'but' requires the opposite.",
+          "corroborating": "Confirming each other; the poem and letters conflict, and the biographers use them for different halves of the man.",
+          "nebulous": "Vague; nothing says the biographers think the sources unclear, only that they split them."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "lampoon",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "elegy",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "polemic",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "recluse",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sybarite",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ascetic",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "corroborate",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nebulous",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "discrete",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q4",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Outsiders called the astronomers a (i) ___, and meant it to sting; the members, far from being (ii) ___, adopted the word themselves, observing that a society admitting only those trained at a single observatory could hardly object to being called exclusive. Their own scorn they saved for the popularizers, whose books they would (iii) ___ in their lectures and consult, a little guiltily, at home.",
+      "blanks": [
+        [
+          "rabble",
+          "coterie",
+          "vanguard"
+        ],
+        [
+          "mollified",
+          "gratified",
+          "perturbed"
+        ],
+        [
+          "tout",
+          "deride",
+          "cite"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) The word the members later accept as meaning 'exclusive' is a small, closed group: coterie. (ii) The label was 'meant to sting', and 'far from being ___' they adopted it, so the blank is the stung reaction they did not have: perturbed. (iii) 'Scorn' for the popularizers, contrasted with consulting their books 'guiltily' at home, means they ridiculed the books in public: deride.",
+        "distractors": {
+          "rabble": "A disorderly crowd; an insult, but not one a society could accept as meaning 'exclusive'.",
+          "vanguard": "Leaders of a movement; a compliment, not a word meant to sting.",
+          "mollified": "Soothed; a stinging label cannot soothe, so 'far from being mollified' makes no sense.",
+          "gratified": "Pleased; the same wrong polarity.",
+          "tout": "To promote; the opposite of scorn.",
+          "cite": "To refer to; this creates no contrast with consulting the books 'guiltily' at home."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "coterie",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mollify",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "gratify",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "perturb",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tout",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "deride",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The picaro recounts his thefts at leisurely length and in the same ___ tone he uses for the weather, and this is the source of the novel's comedy and of its chill: a reader braced for remorse is denied even the satisfaction of a confession.",
+      "choices": [
+        "laconic",
+        "nonchalant",
+        "contrite",
+        "terse",
+        "insouciant",
+        "rueful"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Telling of thefts in the tone 'he uses for the weather', with no remorse, is casual unconcern: nonchalant and insouciant.",
+        "distractors": {
+          "laconic": "Trap pair with terse: both mean brief and clipped, and they fit an unemotional narrator, but 'at leisurely length' rules out brevity.",
+          "terse": "Trap pair with laconic.",
+          "contrite": "Trap pair with rueful: remorseful, which is exactly the remorse the reader is 'denied'.",
+          "rueful": "Trap pair with contrite."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "laconic",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nonchalant",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "contrite",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "terse",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "insouciant",
+          "role": "key",
+          "at": [
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q6",
+      "section": 2,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The boundary dispute the commissioners had hoped to settle in a season outlasted three commissions; it was not that the parties were bitter, for the sessions were unfailingly courteous, but that each concession seemed to generate a fresh claim, so that the dispute remained as ___ at the end as at the start.",
+      "choices": [
+        "acrimonious",
+        "intractable",
+        "tractable",
+        "rancorous",
+        "refractory",
+        "quiescent"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "A dispute that outlasted three commissions because every concession produced a new claim stayed resistant to solution: intractable and refractory.",
+        "distractors": {
+          "acrimonious": "Trap pair with rancorous: both mean bitter and fit a long dispute, but 'it was not that the parties were bitter' rules them out.",
+          "rancorous": "Trap pair with acrimonious.",
+          "tractable": "Manageable; the opposite of a dispute that outlasted three commissions.",
+          "quiescent": "Dormant; fresh claims kept coming, so the dispute was not quiet."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "acrimonious",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "intractable",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tractable",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rancorous",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "refractory",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "quiescent",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q7",
+      "section": 2,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The letter is remarkable less for its anger than for its restraint: the bishop, who had every reason to be harsh with the young priest, chose instead to ___ him, naming the fault plainly but closing with an invitation to dine.",
+      "choices": [
+        "castigate",
+        "admonish",
+        "pardon",
+        "excoriate",
+        "reprove",
+        "absolve"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "'Instead' of being harsh, yet 'naming the fault plainly', means a firm but mild correction: admonish and reprove.",
+        "distractors": {
+          "castigate": "Trap pair with excoriate: severe rebuke, the harshness the bishop chose 'instead' to avoid.",
+          "excoriate": "Trap pair with castigate.",
+          "pardon": "Trap pair with absolve: to forgive. But the bishop names the fault plainly, which is a correction, not a release from blame.",
+          "absolve": "Trap pair with pardon."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "castigate",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "admonish",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "excoriate",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "reprove",
+          "role": "key",
+          "at": [
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q8",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "The passage is primarily concerned with",
+      "choices": [
+        "defending the traditional view that the episodic form of the picaresque was a defect later corrected by the realist novel",
+        "showing that the poverty of the picaresque hero accounts for both the genre's subject matter and its structure",
+        "arguing that a revisionist defense of picaresque form rightly rejects one charge but misidentifies the source of the form's coherence",
+        "reconciling the traditional and revisionist accounts by showing that each describes a different phase of the genre",
+        "demonstrating that Lazarillo de Tormes is better understood as a legal deposition than as a work of fiction"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Paragraph 1 states the traditional verdict. Paragraph 2 presents the revisionist defense, credits it with disposing of the 'failure to achieve plot' assumption, then objects that it 'purchases coherence ... by denying them a designer', and puts forward a forensic, narrator-designed coherence instead.",
+        "distractors": {
+          "defending the traditional view that the episodic form of the picaresque was a defect later corrected by the realist novel": "Wrong verb: the author accepts that the revisionists disposed of the 'defect' assumption.",
+          "showing that the poverty of the picaresque hero accounts for both the genre's subject matter and its structure": "That is the revisionist view, which the author qualifies.",
+          "reconciling the traditional and revisionist accounts by showing that each describes a different phase of the genre": "No phases are distinguished; the author corrects both accounts.",
+          "demonstrating that Lazarillo de Tormes is better understood as a legal deposition than as a work of fiction": "Extreme: 'forensic' describes the form of the narration; the author never denies the book is fiction."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-main-idea",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q9",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 5,
+      "passageId": "p3",
+      "prompt": "The author's argument suggests that the traditional literary historians and the revisionist critics share which of the following assumptions about the early picaresque novel?",
+      "choices": [
+        "Its satire is directed chiefly at the clergy and the nobility.",
+        "Its episodic structure should be judged by the standards of the realist novel.",
+        "The order and selection of its episodes are not the product of a narrator's deliberate design.",
+        "Its hero's poverty is what prevents the episodes from showing development.",
+        "Its narrator addresses his story to an imagined reader rather than to a particular person."
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Two steps. The traditional account finds no shape ('the book could end almost anywhere'), so it sees no design. The revisionists explain the shape as a mirror of the hero's precarious life, which the author says 'purchases coherence ... by denying them a designer'. Both views leave out the narrator who arranges the episodes, and that narrator is the author's own contribution.",
+        "distractors": {
+          "Its satire is directed chiefly at the clergy and the nobility.": "The satire's targets are mentioned only in the traditional account, and 'chiefly' is not said.",
+          "Its episodic structure should be judged by the standards of the realist novel.": "Only the traditional view judges it so; the revisionists reject that demand.",
+          "Its hero's poverty is what prevents the episodes from showing development.": "The revisionist explanation; the traditional historians simply fault the form.",
+          "Its narrator addresses his story to an imagined reader rather than to a particular person.": "Neither group is said to hold this, and the author stresses a particular addressee."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q10",
+      "section": 2,
+      "type": "rc_multi",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "Consider each of the choices separately and select all that apply. According to the passage, the traditional account of the picaresque holds which of the following?",
+      "choices": [
+        "The picaresque made the lives of ordinary and poor people available as material for later fiction.",
+        "The picaresque spares the clergy and nobility while exposing the dishonesty of its low-born narrator.",
+        "The picaresque hero acquires practical cunning without acquiring wisdom."
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "A: Yes. The picaresque 'supplied the realist novel with its subject, the ordinary and the poor'. B: No, the relation is reversed: priests, nobles and officials 'prove no more honest than he'. C: Yes. 'The hero learns tricks rather than wisdom' is among the traditional complaints.",
+        "distractors": {}
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-detail",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q11",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p4",
+      "prompt": "Which of the following best describes the organization of the passage?",
+      "choices": [
+        "A traditional account is stated; a concession about monastic alarms is made; evidence about town clocks is then used to reject the account entirely.",
+        "A traditional account is stated; evidence about where early clocks were used is offered against it; a difference in how hours were reckoned is shown to deepen the objection, and a limited monastic contribution is conceded.",
+        "Two rival accounts of the clock's origin are presented, and the evidence is shown to favor neither.",
+        "A traditional account is stated, evidence against it is presented, and the account is then revised to locate the clock's invention in the towns rather than the monasteries.",
+        "A claim about the inaccuracy of early clocks is advanced and then qualified by evidence that monastic alarms kept better time."
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Paragraph 1: the monastic-origin commonplace, then the documentary evidence (inaccurate clocks, rare in monastic sources, abundant in town towers). Paragraph 2: equal versus unequal hours makes the gap 'metaphysical', not just one of location; the alarms 'may well have contributed' the striking mechanism (a concession); the conception of time was alien to the monastery.",
+        "distractors": {
+          "A traditional account is stated; a concession about monastic alarms is made; evidence about town clocks is then used to reject the account entirely.": "Wrong order, since the concession comes near the end, and 'entirely' ignores that concession.",
+          "Two rival accounts of the clock's origin are presented, and the evidence is shown to favor neither.": "The evidence clearly tells against the traditional account.",
+          "A traditional account is stated, evidence against it is presented, and the account is then revised to locate the clock's invention in the towns rather than the monasteries.": "Half-right: the passage says where clocks appeared in abundance, not where they were invented, and it ends on a conceptual difference, not a relocated invention.",
+          "A claim about the inaccuracy of early clocks is advanced and then qualified by evidence that monastic alarms kept better time.": "The alarms' accuracy is never compared."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-structure",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q12",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 5,
+      "passageId": "p4",
+      "prompt": "Which of the following is most closely analogous to the relationship the passage describes between the monastic water-driven alarms and the town clocks?",
+      "choices": [
+        "A navigational instrument designed for ships is later adopted by land surveyors, who use it to fix positions just as sailors did.",
+        "A calendar reform introduced by a church is resisted for decades by merchants who prefer the older reckoning of the year.",
+        "A mechanical toy built to amuse a court supplies the valve design later used in factory pumps meant to replace human labor, a purpose its builders never contemplated.",
+        "A town's clock tower is refitted with a more accurate mechanism but continues to strike the unequal hours of the old offices.",
+        "A treatise preserved in a monastery library inspires university scholars, who develop its ideas and acknowledge their debt to it."
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The alarms may have 'contributed the mechanism of the striking train', but the conception of time the tower clocks broadcast was 'alien' to the monastic world. The structure is a device passing on its mechanism to a successor whose purpose is foreign to the original's setting. The toy and the pumps match that.",
+        "distractors": {
+          "A navigational instrument designed for ships is later adopted by land surveyors, who use it to fix positions just as sailors did.": "The purpose carries over unchanged; in the passage the conception does not.",
+          "A calendar reform introduced by a church is resisted for decades by merchants who prefer the older reckoning of the year.": "A surface match (religious and commercial timekeeping) with no mechanism handed on.",
+          "A town's clock tower is refitted with a more accurate mechanism but continues to strike the unequal hours of the old offices.": "A surface match on clocks; here the old conception survives, the reverse of the passage.",
+          "A treatise preserved in a monastery library inspires university scholars, who develop its ideas and acknowledge their debt to it.": "Ideas are what pass on here, whereas in the passage only the mechanism passed and the idea did not."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-application",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q13",
+      "section": 2,
+      "type": "rc_select",
+      "difficulty": 5,
+      "passageId": "p5",
+      "prompt": "Select the sentence that introduces a reading of the workers' conduct that would, if accepted, support the celebrated essay's thesis rather than complicate it.",
+      "key": {
+        "sel": [
+          5
+        ]
+      },
+      "explanation": {
+        "key": "The sixth sentence ('It might be supposed that such purchases mark a capitulation ...') offers a reading on which buying watches shows workers absorbing the clock discipline imposed on them, which fits the essay's thesis. The next sentence rejects it ('a weapon rather than a halter'). The objection about farm laborers and the evidence about clock-tampering both complicate the thesis rather than support it."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-function",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q14",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p5",
+      "prompt": "In the context in which it appears, the phrase “who would keep the account” refers to",
+      "choices": [
+        "who would maintain the mill's financial ledgers",
+        "who would set the wage paid for an hour of work",
+        "who would control the measurement of the hours that were worked",
+        "who would record the history of the workers' grievances",
+        "who would be held responsible for time lost to lateness"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The account is the reckoning of time itself. Workers had accepted that time had a pecuniary value, and their quarrel was with masters who set the factory clock back and forward, while their watches let them 'check the master's hours against their own'. What they contested was who controlled the measurement of hours worked.",
+        "distractors": {
+          "who would maintain the mill's financial ledgers": "The literal bookkeeping sense; the dispute was over the clock, not the mill's books.",
+          "who would set the wage paid for an hour of work": "The workers contested the measurement of hours, not the rate paid for them; the passage says they had accepted time's pecuniary value.",
+          "who would record the history of the workers' grievances": "Takes 'account' as a narrative; no one in the passage is writing a history of grievances.",
+          "who would be held responsible for time lost to lateness": "Echoes the earlier docking for lateness, but the sentence concerns who keeps the reckoning, not who bears the penalty."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-vocab-context",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q15",
+      "section": 2,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 3,
+      "passageId": "a2",
+      "prompt": "The reasoning in Ines's argument is most vulnerable to criticism on the grounds that it",
+      "choices": [
+        "relies on figures from a marketplace whose buyers may not be typical of all buyers of handmade ceramics",
+        "takes for granted that a faster sale is always preferable to a sale at a higher price",
+        "overlooks the possibility that sellers who hire professional photographers differ from other sellers in ways that would make their pieces sell faster regardless of the photographs",
+        "confuses the number of pieces a seller lists with the speed at which each piece sells",
+        "fails to consider whether a professional photographer would charge more than Ines could afford"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Ines infers cause from a correlation between groups. Sellers who pay for professional photographs may be more established, better known or more skilled, and those traits, not the photographs, could explain the faster sales.",
+        "distractors": {
+          "relies on figures from a marketplace whose buyers may not be typical of all buyers of handmade ceramics": "Her conclusion concerns sales on Kilnworth itself, so other buyers do not matter.",
+          "takes for granted that a faster sale is always preferable to a sale at a higher price": "She predicts speed; she does not claim speed is preferable.",
+          "confuses the number of pieces a seller lists with the speed at which each piece sells": "No figures about the number of listings appear.",
+          "fails to consider whether a professional photographer would charge more than Ines could afford": "That bears on whether the plan is wise, not on whether her prediction follows."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-flaw",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}
