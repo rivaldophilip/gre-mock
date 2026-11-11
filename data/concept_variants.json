@@ -1,0 +1,337 @@
+{
+ "integers-properties": [
+  "even/odd parity of sums and products of unknown integers",
+  "divisibility of an expression such as n(n+1)(n+2) for every integer n",
+  "consecutive integers: sum, product or count in a range",
+  "must be / could be an integer from a stated condition",
+  "digits and place value of an unknown number"
+ ],
+ "primes-factors": [
+  "number of positive divisors from the prime factorization",
+  "GCD / LCM from two products or a word problem",
+  "smallest multiplier that makes a perfect square or cube",
+  "highest power of a prime dividing n! or a product",
+  "count of primes or factors in a stated range"
+ ],
+ "remainders-units": [
+  "remainder of a sum or product from the remainders of its parts",
+  "units digit of a large power (cycle length)",
+  "two remainder conditions at once: smallest such number",
+  "remainder of a negative or fractional expression of n",
+  "remainder written as a decimal part (n/d = q.25)",
+  "last two digits of a product too large for the calculator"
+ ],
+ "fractions-decimals": [
+  "terminating vs repeating decimal from the denominator's prime factors",
+  "the k-th digit after the decimal point of a repeating decimal",
+  "ordering fractions with unknowns or near-equal values",
+  "complex (nested) fractions",
+  "rational vs irrational: which expressions must be rational"
+ ],
+ "exponents-roots": [
+  "equations solved by rewriting to a common base",
+  "comparing large powers or roots without a calculator",
+  "nested and conjugate radicals (rationalizing a denominator)",
+  "negative and fractional exponents",
+  "factoring out a common power: 2^{n+2} - 2^n",
+  "bases between 0 and 1 or negative bases"
+ ],
+ "number-line-abs": [
+  "positions of unlabeled points on a number line",
+  "distance between two numbers as an absolute value",
+  "ordering expressions of a number located between two marks",
+  "|a| + |b| against |a + b| for signed values"
+ ],
+ "estimation-sigfig": [
+  "scientific notation arithmetic with large powers of 10",
+  "rounding to a place, then computing",
+  "estimating a product or quotient to pick the closest choice",
+  "order of magnitude comparison in QC"
+ ],
+ "ratio-proportion": [
+  "combining two ratios that share a term (a:b and b:c)",
+  "ratio change after adding or removing items",
+  "direct vs inverse proportion",
+  "part-to-part vs part-to-whole confusion",
+  "scale maps and models"
+ ],
+ "percent": [
+  "successive percent changes and reversal (up x%, then down x%)",
+  "percent of a percent across subgroups",
+  "percent change vs percentage-point change",
+  "finding the original value after a change",
+  "percent comparisons in QC with unknown bases"
+ ],
+ "sequences-patterns": [
+  "recursive sequence: find a term or a sum",
+  "arithmetic sequence: n-th term, sum, count of terms",
+  "geometric sequence or a repeating cycle of terms",
+  "sum of integers in a range with a condition (multiples of 3)",
+  "pattern in a defined list (terms that alternate or repeat)",
+  "telescoping sum of differences"
+ ],
+ "number-sense-qc": [
+  "sign cases: negatives, zero and fractions between 0 and 1",
+  "a square or a reciprocal against the original number",
+  "non-integer test values that flip the relationship",
+  "both quantities depend on one variable with a restricted range"
+ ],
+ "linear-equations": [
+  "a system with no solution or infinitely many",
+  "solving for an expression (x + y) instead of each variable",
+  "three variables, two equations: what can be determined",
+  "a literal equation: solve for one letter in terms of the others"
+ ],
+ "quadratics-factoring": [
+  "special products: (a+b)^2, (a-b)^2, a^2 - b^2",
+  "sum and product of the roots",
+  "a quadratic in disguise (x^4, sqrt x or 1/x as the variable)",
+  "dividing by a variable that may be zero",
+  "the discriminant: number of real solutions"
+ ],
+ "algebraic-expressions": [
+  "an expression's value from a related expression (x + 1/x given)",
+  "simplifying a rational expression",
+  "identities across QC quantities",
+  "expressions with nested parentheses and signs"
+ ],
+ "inequalities": [
+  "multiplying or dividing by a negative",
+  "compound inequality: range of x + y or x - y or xy",
+  "a word problem with an inequality constraint",
+  "ordering several expressions under a given range"
+ ],
+ "quadratic-inequalities": [
+  "sign analysis of a factored product (x - a)(x - b) < 0",
+  "integer count in a solution set such as x^2 < 10",
+  "powers against the number: where x^2 > x or x^3 < x",
+  "an inequality with x in the denominator (case on sign)"
+ ],
+ "abs-value-inequalities": [
+  "|x - a| < b as a distance interval",
+  "an absolute-value equation with two cases, one extraneous",
+  "nested or summed absolute values",
+  "|x| against x in QC"
+ ],
+ "functions": [
+  "a defined operation (x ◊ y = ...) applied twice",
+  "composition f(g(x)), or solving f(x) = g(x)",
+  "a function given by a table",
+  "domain restrictions (square roots, denominators)",
+  "f(a + b) against f(a) + f(b)",
+  "a function property such as f(-x) = -f(x) or f(x + 1) = f(x)",
+  "f given on a transformed input, such as f((x + 3)/2)"
+ ],
+ "coordinate-geometry": [
+  "slope and intercepts from two points",
+  "parallel and perpendicular lines",
+  "distance and midpoint",
+  "a region defined by inequalities in the plane",
+  "which quadrants a line passes through"
+ ],
+ "graphs-of-functions": [
+  "parabola vertex, axis of symmetry and intercepts",
+  "a shift, a stretch or a reflection of a graph",
+  "reading the value of f at a point from a graph",
+  "intersections of two graphs",
+  "symmetry about an axis, the origin or y = x"
+ ],
+ "exponential-growth": [
+  "doubling or halving time",
+  "compound interest against simple interest",
+  "growth by a factor over a stated number of periods",
+  "comparing two exponential models"
+ ],
+ "word-problems-rate": [
+  "combined work rates",
+  "relative speed: meeting or overtaking",
+  "average speed over two legs",
+  "rate with a unit change mid-problem",
+  "pipes filling and draining at once",
+  "mixing two solutions to a target concentration"
+ ],
+ "word-problems-interest": [
+  "markup then discount",
+  "profit as a percent of cost vs of price",
+  "tiered pricing or commission",
+  "simple interest over a partial year",
+  "whole-unit pricing and boundary cases (sold only by the full yard; \"or less\")"
+ ],
+ "word-problems-age-sum": [
+  "ages then and now",
+  "coins or tickets of two denominations",
+  "consecutive-number sums",
+  "translating 'more than' / 'less than' in order"
+ ],
+ "min-max-bounding": [
+  "greatest or least value of one item under a sum constraint",
+  "extreme values of a mean or median",
+  "optimizing a product or a difference under constraints",
+  "worst-case count (pigeonhole)"
+ ],
+ "units-conversion": [
+  "chained unit conversion",
+  "area or volume unit conversion (squares and cubes)",
+  "rates with mixed units",
+  "currency or exchange rates"
+ ],
+ "lines-angles": [
+  "parallel lines cut by a transversal",
+  "angles around a point or on a straight line",
+  "angle bisectors",
+  "angles formed by several intersecting lines"
+ ],
+ "triangles": [
+  "similar triangles: side and area ratios",
+  "triangle inequality: the range of the third side",
+  "isosceles or equilateral properties hidden in a figure",
+  "exterior angle theorem",
+  "area with an altitude outside the triangle",
+  "larger side opposite the larger angle; obtuse vs acute from c^2 against a^2 + b^2"
+ ],
+ "pythagorean-special": [
+  "30-60-90 triangle inside another figure",
+  "45-45-90 triangle (square diagonal)",
+  "Pythagorean triples and their multiples",
+  "space diagonal of a rectangular box",
+  "Pythagorean theorem used twice"
+ ],
+ "polygons-quadrilaterals": [
+  "interior angle sum of an n-gon, and regular polygons",
+  "parallelogram, rhombus or trapezoid properties",
+  "a regular hexagon split into triangles",
+  "the number of diagonals of a polygon"
+ ],
+ "circles": [
+  "arc length and sector area from the central angle",
+  "inscribed angle vs central angle",
+  "tangent lines and the radius",
+  "chord length from the distance to the center",
+  "circumference, or the number of rotations of a wheel"
+ ],
+ "inscribed-figures": [
+  "a square inscribed in a circle, or a circle in a square",
+  "an equilateral triangle in a circle",
+  "a shaded region: whole minus part",
+  "overlapping circles or semicircles"
+ ],
+ "area-perimeter": [
+  "perimeter fixed, area varies (or the reverse)",
+  "the area of an irregular composite figure",
+  "the effect of scaling a side on the area",
+  "a border or path around a rectangle"
+ ],
+ "solids-volume": [
+  "cylinder volume or surface area",
+  "rectangular solid: faces, volume, diagonal",
+  "liquid poured between containers",
+  "cubes painted or cut into smaller cubes",
+  "scaling a dimension: the effect on volume",
+  "a diagonal cross-section of a box"
+ ],
+ "geometry-coordinate": [
+  "area of a polygon from its vertex coordinates",
+  "a circle in the coordinate plane",
+  "reflection of a point across an axis or y = x",
+  "a triangle's vertices on the axes"
+ ],
+ "figures-not-to-scale": [
+  "an angle or length that can vary: answer D",
+  "a figure looks symmetric, but the givens don't force it",
+  "only what is given fixes the relationship",
+  "a point looks like a midpoint but is not stated as one"
+ ],
+ "mean-median-mode": [
+  "a mean after adding or removing values",
+  "median of a list with unknowns",
+  "the mean against the median of a skewed list",
+  "a sum from the mean and the count",
+  "mode and range of a combined list",
+  "median of two lists combined"
+ ],
+ "std-dev-normal": [
+  "comparing the spread of two lists without computing",
+  "the effect of adding a constant or multiplying by one",
+  "values within k standard deviations of the mean",
+  "adding a value at the mean, or far from it"
+ ],
+ "normal-distribution": [
+  "the 68-95-99.7 rule for a probability",
+  "a percentile from a z-score",
+  "comparing values in two normal distributions (z-scores)",
+  "symmetry: P(X > m + a) = P(X < m - a)"
+ ],
+ "random-variables": [
+  "expected value from a probability table",
+  "probability from areas under a density curve",
+  "a uniform distribution over an interval",
+  "mean and median of a discrete distribution table"
+ ],
+ "quartiles-boxplots": [
+  "reading quartiles and the IQR from a boxplot",
+  "the percentile rank of a value in a list",
+  "comparing two boxplots",
+  "quartiles of a list with an even count"
+ ],
+ "counting-permutations": [
+  "arrangements of letters with repeated items",
+  "choosing a group (combinations) vs ordering it",
+  "circular arrangements",
+  "multiplication principle across independent choices",
+  "committees with roles: chair plus members",
+  "subset counts and the symmetry C(n, k) = C(n, n - k)"
+ ],
+ "counting-restrictions": [
+  "two people must sit together, or apart",
+  "complement counting: total minus the forbidden",
+  "digits with restrictions (no repeats, even, > 500)",
+  "at least one of a type in a selection"
+ ],
+ "probability-basic": [
+  "complement: at least one success",
+  "independent events across repeated trials",
+  "geometric probability (a point in a region)",
+  "probability from a count of outcomes with dice or coins",
+  "probability as a ratio of combinations (choose k of n)"
+ ],
+ "probability-conditional": [
+  "drawing without replacement",
+  "conditional probability from a two-way table",
+  "P(A or B) with overlap",
+  "dependent events in sequence",
+  "bounds on P(A and B) or P(A or B) from P(A) and P(B)",
+  "exactly one of two independent events"
+ ],
+ "overlapping-sets": [
+  "three-set Venn diagram",
+  "the neither region from a two-set problem",
+  "maximum and minimum of the overlap",
+  "a double-matrix (two-way) table"
+ ],
+ "weighted-average": [
+  "combining the means of two groups",
+  "a mixture's concentration as a weighted average",
+  "the change in the mean when a group joins",
+  "the ratio of group sizes from the means"
+ ],
+ "data-tables-graphs": [
+  "reading values from a stacked or segmented bar graph",
+  "a scatterplot: counting points or reading a trend line",
+  "a time plot: the largest change between periods",
+  "a circle graph: central angle and percent",
+  "a two-way table with totals"
+ ],
+ "data-interpretation-calc": [
+  "percent of a percent across two charts",
+  "a ratio between two categories in different graphs",
+  "estimation to pick the closest value",
+  "the percent increase between two periods",
+  "a value implied but not shown (derived total)"
+ ],
+ "frequency-distributions": [
+  "median from a frequency table",
+  "mean from a histogram's grouped data",
+  "relative frequency and cumulative frequency",
+  "which interval contains the median or a percentile"
+ ]
+}

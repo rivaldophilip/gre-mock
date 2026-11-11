@@ -22,7 +22,7 @@
   "name": "Inference (supported, unstated)",
   "area": "reading",
   "hand_yield": 0.75,
-  "description": "What must be true or is most strongly supported. Traps: plausible but unsupported, true in the world but not in the passage, extreme wording.",
+  "description": "What must be true or is most strongly supported, including what a scholar or group the passage cites believes or would agree with. Traps: plausible but unsupported, true in the world but not in the passage, extreme wording, the author's view given for a cited party's.",
   "officialCount": 21.5,
   "yield": 0.875
  },
@@ -40,7 +40,7 @@
   "name": "Author's attitude / tone",
   "area": "reading",
   "hand_yield": 0.6,
-  "description": "The author's stance and degree of certainty toward a view or person. Traps: tone too strong (\"scathing\") or the opposite polarity; the author vs a view the author reports.",
+  "description": "The author's stance and degree of certainty toward a view or person. Traps: tone too strong (\"scathing\") or the opposite polarity; a view the author only reports, or floats as speculation, read as one the author holds.",
   "officialCount": 3.0,
   "yield": 0.37
  },
@@ -93,63 +93,72 @@
   "id": "arg-strengthen",
   "name": "Argument: strengthen / support",
   "area": "argument",
-  "hand_yield": 0.6,
-  "description": "New information that most supports the conclusion. Traps: supports a related but different conclusion.",
-  "officialCount": 4.0,
-  "yield": 0.393
+  "hand_yield": 0.65,
+  "description": "New information that most supports the conclusion or a proposed explanation. Traps: supports a related but different conclusion.",
+  "officialCount": 3.5,
+  "yield": 0.406
  },
  {
   "id": "arg-assumption",
   "name": "Argument: assumption",
   "area": "argument",
-  "hand_yield": 0.75,
+  "hand_yield": 0.5,
   "description": "The unstated premise the argument depends on (negation test). Traps: sufficient but not necessary assumptions, too-strong wording.",
   "officialCount": 1.0,
-  "yield": 0.398
+  "yield": 0.273
  },
  {
   "id": "arg-paradox",
   "name": "Argument: resolve a paradox",
   "area": "argument",
-  "hand_yield": 0.55,
-  "description": "Information that explains how two apparently conflicting facts can both be true. Traps: explains only one side.",
+  "hand_yield": 0.7,
+  "description": "Information that explains how two apparently conflicting facts can both be true; the hard form adds a constraint (explain the discrepancy while leaving a stated theory intact). Traps: explains only one side, or resolves it by breaking the constraint.",
   "officialCount": 2.0,
-  "yield": 0.322
+  "yield": 0.397
  },
  {
   "id": "arg-evaluate",
   "name": "Argument: evaluate",
   "area": "argument",
-  "hand_yield": 0.5,
+  "hand_yield": 0.3,
   "description": "The question whose answer would most help judge the argument (one answer strengthens, the other weakens).",
   "officialCount": 0.0,
-  "yield": 0.25
+  "yield": 0.15
  },
  {
   "id": "arg-flaw",
   "name": "Argument: flaw / method",
   "area": "argument",
-  "hand_yield": 0.55,
+  "hand_yield": 0.3,
   "description": "The reasoning error or technique (sampling, causation from correlation, equivocation).",
   "officialCount": 0.5,
-  "yield": 0.287
+  "yield": 0.162
  },
  {
   "id": "arg-role",
   "name": "Argument: role of a statement (boldface)",
   "area": "argument",
-  "hand_yield": 0.6,
+  "hand_yield": 0.5,
   "description": "What part a highlighted statement plays: conclusion, premise, counter-premise, intermediate conclusion.",
   "officialCount": 1.0,
-  "yield": 0.323
+  "yield": 0.273
  },
  {
   "id": "arg-conclusion",
   "name": "Argument: conclusion / inference",
   "area": "argument",
-  "hand_yield": 0.5,
-  "description": "What the statements most strongly support, or the argument's main point.",
-  "officialCount": 2.5,
-  "yield": 0.308
+  "hand_yield": 0.6,
+  "description": "What the statements most strongly support, the point the passage emphasizes, or which statement the information directly contradicts. Traps: a claim one notch too strong, or one the passage merely does not mention.",
+  "officialCount": 2.0,
+  "yield": 0.347
+ },
+ {
+  "id": "arg-complete",
+  "name": "Argument: complete the passage",
+  "area": "argument",
+  "hand_yield": 0.55,
+  "description": "Which statement most logically fills the blank that ends the passage, often after \"since\" or \"because\", so the key is the missing premise that makes the conclusion follow. Traps: a choice that restates the conclusion, or supports a neighbouring claim.",
+  "officialCount": 1.0,
+  "yield": 0.298
  }
 ]

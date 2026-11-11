@@ -536,6 +536,7 @@
     "quadratics-factoring",
     "algebraic-expressions",
     "inequalities",
+    "quadratic-inequalities",
     "abs-value-inequalities",
     "functions",
     "number-line-abs"
@@ -552,6 +553,7 @@
    },
    "facts": [
     "Multiply or divide by a negative → **flip** the $<$ or $>$.",
+    "$(x-a)(x-b)<0$ (with $a<b$) holds only **between** $a$ and $b$. With $>0$, it holds **outside** them.",
     "$|x-a|$ means 'how far $x$ is from $a$ on the number line'.",
     "If $x+\\frac1x=s$, squaring both sides gives $x^2+\\frac1{x^2}=s^2-2$.",
     "For $x^2+bx+c=0$, the two answers **add** to $-b$ and **multiply** to $c$.",
@@ -615,6 +617,8 @@
    "concepts": [
     "mean-median-mode",
     "std-dev-normal",
+    "normal-distribution",
+    "random-variables",
     "quartiles-boxplots",
     "weighted-average",
     "data-tables-graphs",
@@ -634,6 +638,8 @@
     "Combining groups: add all the totals, then divide by everyone. Don't just average the averages.",
     "Bell curve: about 68% are within 1 standard deviation (SD) of the middle, and 95% within 2.",
     "So about **16%** are more than 1 SD **above** the middle, and about **2.5%** are more than 2 SD above.",
+    "A z-score counts SDs from the mean: $z=\\frac{x-\\text{mean}}{\\text{SD}}$. Compare values from two bell curves by their z-scores.",
+    "Expected value of a random variable: multiply each value by its probability, then add.",
     "SD measures how spread out the numbers are. Add the same amount to every number and the spread stays the same.",
     "Median = the middle number once they're sorted. With an even count, average the two middle ones.",
     "Q1 = middle of the lower half, Q3 = middle of the upper half. IQR = Q3 − Q1."

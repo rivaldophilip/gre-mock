@@ -34,8 +34,8 @@ export interface ItemScore {
   streak: number;
   recent: boolean; // ×RECENT_FACTOR applied
   lastTestedAt: Date | null;
-  /** id of a registered, unfinished test that already targets this item */
-  pending?: string;
+  /** ids of the registered, unfinished tests (or unregistered briefs) that already target this item */
+  pending?: string[];
 }
 
 const DAY = 86_400_000;
@@ -144,11 +144,18 @@ export function scoreAll(
 /**
  * Items a registered but unfinished test already targets (as key / primary): the user has not
  * answered them yet, so a new brief should not pick them again. The allocators use them only
- * when nothing else is left, and P is damped. `pending` maps itemId -> the test id that holds it.
+ * when nothing else is left, fewest holders first, and P is damped once per holder.
+ * `pending` maps itemId -> the test ids that hold it.
  */
-export function markPending(scores: ItemScore[], pending: Map<string, string>): ItemScore[] {
+export function markPending(scores: ItemScore[], pending: Map<string, string[]>): ItemScore[] {
   return scores.map((s) => {
-    const test = pending.get(s.itemId);
-    return test ? { ...s, P: s.P * PENDING_FACTOR, pending: test, reason: `${s.reason}; already in untaken ${test}` } : s;
+    const tests = pending.get(s.itemId);
+    if (!tests?.length) return s;
+    return { ...s, P: s.P * PENDING_FACTOR ** tests.length, pending: tests, reason: `${s.reason}; already in untaken ${tests.join(", ")}` };
   });
+}
+
+/** How many untaken tests already hold an item (0 when none). */
+export function heldBy(s: ItemScore): number {
+  return s.pending?.length ?? 0;
 }

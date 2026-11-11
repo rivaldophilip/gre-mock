@@ -101,15 +101,15 @@
       "level": 4
      },
      {
+      "type": "rc_select",
+      "level": 5
+     },
+     {
       "type": "rc",
       "level": 4
      },
      {
       "type": "rc",
-      "level": 5
-     },
-     {
-      "type": "rc_select",
       "level": 5
      },
      {
@@ -127,29 +127,29 @@
    "1": [
     {
      "questions": 2,
-     "words": "3-5"
+     "paragraphs": "1-2"
     },
     {
      "questions": 2,
-     "words": "3-5"
+     "paragraphs": "1"
     }
    ],
    "2": [
     {
-     "questions": 3,
-     "words": "4-6"
+     "questions": 4,
+     "paragraphs": "2-4"
     },
     {
      "questions": 2,
-     "words": "4-6"
+     "paragraphs": "1"
     },
     {
-     "questions": 2,
-     "words": "4-6"
+     "questions": 1,
+     "paragraphs": "1"
     }
    ]
   },
-  "notes": "S1: 12 questions, S2: 15. Passage questions are the rc/rc_multi/rc_select slots in order; 'arg' is a short single-paragraph argument item. Every section opens with the TC block; order inside each type block is mixed, not easy-to-hard. 29 key-word slots."
+  "notes": "S1: 12 questions, S2: 15. Passage questions are the rc/rc_multi/rc_select slots in order; 'paragraphs' is each passage's paragraph count (the S2 4-question passage is the test's long one; at most 2 passages per test may run past one paragraph). 'arg' is a short single-paragraph argument item. Every section opens with the TC block; order inside each type block is mixed, not easy-to-hard. 29 key-word slots."
  },
  "quant": {
   "measure": "quant",

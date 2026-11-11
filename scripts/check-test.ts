@@ -14,6 +14,7 @@ type Brief = {
   skillSlots?: { skill: string }[];
   passageWords?: { id: string }[];
   conceptSlots?: { concept: string }[];
+  slots?: { type: string; keys?: number }[];
 };
 type BankWord = VocabEntry & { senses?: { synonyms?: string[] }[] };
 
@@ -37,6 +38,12 @@ function verbalCoverage(test: Test, brief: Brief) {
   lines.push(`skills ${fmtCount(count(skillTags))}${missing.length ? ` (brief slots not tagged: ${missing.join(", ")})` : ""}`);
   const thin = test.passages.filter((p) => !p.id.startsWith("a")).map((p) => `${p.id} ${p.tags.filter((t) => t.role === "passage").length}`);
   lines.push(`passage words per passage (aim 3-6): ${thin.join(", ")}`);
+  const wantKeys = (brief.slots ?? []).filter((s) => s.type === "rc_multi" && s.keys).map((s) => s.keys!);
+  if (wantKeys.length) {
+    const have = test.questions.filter((q) => q.type === "rc_multi").map((q) => ("sel" in q.key ? q.key.sel.length : 0));
+    const same = [...have].sort().join() === [...wantKeys].sort().join();
+    lines.push(`select-all key counts ${have.join(", ")}${same ? " (as the brief draws)" : ` (brief draws ${wantKeys.join(", ")}: match it)`}`);
+  }
   return { lines, unusedKeys };
 }
 

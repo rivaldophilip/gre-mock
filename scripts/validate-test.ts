@@ -3,7 +3,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { TestSchema, type Question, type Test } from "../lib/types";
-import { passageSentences } from "../lib/sentences";
+import { passageSentences, splitSentences } from "../lib/sentences";
 import { parseNumber } from "../lib/scoring";
 import { containment, MIN_SHINGLES, shingles } from "../lib/ngram";
 import { choiceIsWord } from "../lib/vocab-match";
@@ -13,6 +13,52 @@ type Rated = Pick<Question, "section" | "difficulty">;
 
 /** At most this many items per section may sit above official hard difficulty (levels 6-7, docs/CALIBRATION.md). */
 export const TOP_CAP = 2;
+
+/** Verbal tests from this number on follow the official-format rules in verbalFormatRules (earlier tests predate them). */
+export const VERBAL_FORMAT_FROM = 15;
+/** Minimum 3-blank TCs of 3-5 sentences, and minimum blanks whose choices are all phrases, per verbal test. */
+export const LONG_TC3_MIN = 2;
+export const PHRASE_BLANKS_MIN = 3;
+/** At most this many reading passages (not arguments) may run past one paragraph. */
+export const MULTI_PARA_MAX = 2;
+
+/** True when every choice of a TC blank is a multi-word phrase ("at odds with", "a perfunctory"). */
+export const isPhraseBlank = (choices: string[]) => choices.every((c) => /\s/.test(c.trim()));
+
+/**
+ * The official-format rules for verbal (docs/QUIZ-AUTHORING.md, Structure rules): passage shapes from the blueprint,
+ * TC length and phrase blanks, and a select-all key count other than the habitual two.
+ */
+export function verbalFormatRules(test: Test, blueprint: { passages?: Record<string, { questions: number; paragraphs?: string }[]> }): string[] {
+  const out: string[] = [];
+  const reading = test.passages.filter((p) => test.questions.some((q) => q.passageId === p.id && q.subtype !== "arg"));
+  const multi = reading.filter((p) => p.paragraphs.length > 1);
+  if (multi.length > MULTI_PARA_MAX) out.push(`${multi.length} reading passages run past one paragraph (${multi.map((p) => p.id).join(", ")}); at most ${MULTI_PARA_MAX}, as on the real test: make the others one paragraph`);
+  for (const n of [1, 2] as const) {
+    const want = blueprint.passages?.[String(n)] ?? [];
+    const order: string[] = [];
+    for (const q of test.questions) if (q.section === n && q.passageId && q.subtype !== "arg" && !order.includes(q.passageId)) order.push(q.passageId);
+    const sizes = order.map((id) => test.questions.filter((q) => q.passageId === id).length);
+    if (sizes.join(",") !== want.map((w) => w.questions).join(","))
+      out.push(`section ${n}: passages carry ${sizes.join(" + ") || "no"} questions, blueprint wants ${want.map((w) => w.questions).join(" + ")} (in slot order)`);
+    else
+      order.forEach((id, i) => {
+        const [lo, hi = lo] = (want[i].paragraphs ?? "1-9").split("-").map(Number);
+        const k = test.passages.find((p) => p.id === id)!.paragraphs.length;
+        if (k < lo || k > hi) out.push(`passage ${id}: ${k} paragraph(s), blueprint wants ${want[i].paragraphs}`);
+      });
+  }
+  const tc = test.questions.filter((q) => q.type === "tc");
+  const long = tc.filter((q) => q.blanks?.length === 3 && splitSentences(q.prompt).length >= 3).length;
+  if (long < LONG_TC3_MIN) out.push(`only ${long} 3-blank TC(s) of 3-5 sentences; write at least ${LONG_TC3_MIN} as short passages whose deciding clue sits a sentence away from the blank (docs/HARD-PATTERNS.md)`);
+  const blanks = tc.flatMap((q) => (q.blanks ?? []).map((b, i) => ({ q, b, i })));
+  for (const { q, b, i } of blanks) if (!isPhraseBlank(b) && b.some((c) => /\s/.test(c.trim()))) out.push(`${q.id}: blank ${i + 1} mixes phrases and single words; make all three choices the same form`);
+  const phrase = blanks.filter((x) => isPhraseBlank(x.b)).length;
+  if (phrase < PHRASE_BLANKS_MIN) out.push(`${phrase} TC blank(s) with phrase choices; at least ${PHRASE_BLANKS_MIN} of the 15 blanks need all-phrase choices ("at odds with", "a perfunctory", noun phrases), each holding its key word`);
+  const multiKeys = test.questions.filter((q) => q.type === "rc_multi").map((q) => ("sel" in q.key ? q.key.sel.length : 0));
+  if (multiKeys.length && multiKeys.every((k) => k === 2)) out.push(`every rc_multi has 2 keys; official select-all items have 1, 2 or 3 correct answers about 40/40/20: use the key counts the brief's slot table gives`);
+  return out;
+}
 
 /** The section difficulty rules (docs/QUIZ-AUTHORING.md), one entry per rule, each with whether it passes. */
 export function difficultyRules(questions: Rated[]) {
@@ -70,6 +116,7 @@ export function validateTest(raw: unknown, id: string): Validation {
   const concepts = new Set((JSON.parse(fs.readFileSync("data/concepts.json", "utf8")) as { id: string }[]).map((c) => c.id));
   const skills = new Map((JSON.parse(fs.readFileSync("data/rc_skills.json", "utf8")) as { id: string; area: string }[]).map((c) => [c.id, c.area]));
 
+  const formatRules = test.measure === "verbal" && Number(/-(\d+)$/.exec(test.id)?.[1] ?? 0) >= VERBAL_FORMAT_FROM;
   const slotType = (q: Question) => (q.type === "tc" ? `tc${q.blanks?.length}` : q.subtype === "arg" ? "arg" : q.type === "numeric" || q.type === "mc" || q.type === "mc_multi" || q.type === "qc" ? q.type : q.setId ? "di" : q.type);
   const typeOf = (q: Question) => (q.setId ? "di" : slotType(q));
 
@@ -140,6 +187,10 @@ export function validateTest(raw: unknown, id: string): Validation {
         const p = test.passages.find((x) => x.id === q.passageId);
         if (!p) err(`${where}: rc_select needs a passage`);
         else if (sel.length !== 1 || sel[0] >= passageSentences(p.paragraphs).length) err(`${where}: key sentence index out of range`);
+        else if (q.paras) {
+          if (q.paras.some((i) => i >= p.paragraphs.length)) err(`${where}: paras ${JSON.stringify(q.paras)} names a paragraph the passage lacks (0-based)`);
+          else if (!q.paras.includes(passageSentences(p.paragraphs)[sel[0]].para)) err(`${where}: key sentence lies outside paras ${JSON.stringify(q.paras)}`);
+        } else if (formatRules && p.paragraphs.length > 1) err(`${where}: on a multi-paragraph passage, set "paras" to the 1-2 paragraphs (0-based) the sentence is picked from`);
         break;
       }
       case "qc":
@@ -207,6 +258,9 @@ export function validateTest(raw: unknown, id: string): Validation {
     }
   }
   for (const p of test.passages) for (const t of p.tags) if (t.kind === "word" && !vocab.has(t.id)) err(`passage ${p.id}: word tag "${t.id}" not in vocab`);
+  for (const q of test.questions)
+    if (q.type === "tc" && splitSentences(q.prompt).length > 5) err(`${q.id} (tc): ${splitSentences(q.prompt).length} sentences; a TC passage has 1-5`);
+  if (formatRules) for (const m of verbalFormatRules(test, blueprint)) err(`format: ${m}`);
 
   // ---- placeholders
   const all = JSON.stringify(raw);

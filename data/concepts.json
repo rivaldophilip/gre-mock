@@ -28,7 +28,7 @@
  },
  {
   "id": "fractions-decimals",
-  "name": "Fractions and decimals operations",
+  "name": "Fractions, decimals and decimal representation",
   "area": "arithmetic",
   "etsSection": "1.3",
   "yield": 0.458,
@@ -127,12 +127,21 @@
  },
  {
   "id": "inequalities",
-  "name": "Linear inequalities",
+  "name": "Linear and simultaneous inequalities",
   "area": "algebra",
   "etsSection": "2.3",
   "yield": 0.559,
   "hand_yield": 0.7,
   "officialCount": 9.0
+ },
+ {
+  "id": "quadratic-inequalities",
+  "name": "Quadratic and other nonlinear inequalities (sign analysis)",
+  "area": "algebra",
+  "etsSection": "2.3",
+  "yield": 0.3,
+  "hand_yield": 0.6,
+  "officialCount": 0.0
  },
  {
   "id": "abs-value-inequalities",
@@ -145,7 +154,7 @@
  },
  {
   "id": "functions",
-  "name": "Functions, notation and composition",
+  "name": "Functions, notation, composition and defined operations",
   "area": "algebra",
   "etsSection": "2.5",
   "yield": 0.418,
@@ -163,7 +172,7 @@
  },
  {
   "id": "graphs-of-functions",
-  "name": "Graphs of functions and parabolas",
+  "name": "Graphs of functions and parabolas, shifts and reflections",
   "area": "algebra",
   "etsSection": "2.4",
   "yield": 0.312,
@@ -307,12 +316,21 @@
  },
  {
   "id": "std-dev-normal",
-  "name": "Standard deviation and the normal distribution",
+  "name": "Standard deviation: spread, SD units, effect of shifting and scaling",
   "area": "data",
   "etsSection": "4.2",
-  "yield": 0.52,
+  "yield": 0.473,
   "hand_yield": 0.9,
-  "officialCount": 3.0
+  "officialCount": 1.0
+ },
+ {
+  "id": "normal-distribution",
+  "name": "Normal distribution: 68-95-99.7 rule, z-scores, percentiles",
+  "area": "data",
+  "etsSection": "4.2",
+  "yield": 0.447,
+  "hand_yield": 0.8,
+  "officialCount": 2.0
  },
  {
   "id": "quartiles-boxplots",
@@ -360,6 +378,15 @@
   "officialCount": 1.0
  },
  {
+  "id": "random-variables",
+  "name": "Random variables, probability distributions, expected value",
+  "area": "data",
+  "etsSection": "4.5",
+  "yield": 0.3,
+  "hand_yield": 0.6,
+  "officialCount": 0.0
+ },
+ {
   "id": "overlapping-sets",
   "name": "Overlapping sets, Venn diagrams",
   "area": "data",
@@ -379,7 +406,7 @@
  },
  {
   "id": "data-tables-graphs",
-  "name": "Reading tables, bar, line and circle graphs",
+  "name": "Reading tables, bar, line, circle graphs, scatterplots and time plots",
   "area": "data",
   "etsSection": "4.6",
   "yield": 0.416,

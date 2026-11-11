@@ -577,6 +577,7 @@ export function Runner(p: RunnerProps) {
                   selectable={q.type === "rc_select"}
                   selected={q.type === "rc_select" ? (a?.sel?.[0] ?? undefined) : undefined}
                   highlight={q.type === "rc_select" && keySel ? keySel[0] : undefined}
+                  scope={q.type === "rc_select" ? q.paras : undefined}
                   onSelect={(i) => setAnswer({ sel: [i] })}
                 />
               )}

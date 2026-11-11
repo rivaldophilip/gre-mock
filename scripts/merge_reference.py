@@ -6,6 +6,8 @@ and every figure, so those items were re-transcribed from the page images. A rep
 {id, stem, qa, qb, choices, figure, answer, answer_check, concepts, hard_driver, page} and overrides
 those fields on the record with the same id.
 
+Concepts added later get their official items from reference/concept_retags.jsonl ({id, concepts}, primary first).
+
 Reading items get their skill tags (data/rc_skills.json ids, primary first) from reference/rc_skills.jsonl,
 stored in the same `concepts` field the quant items use.
 """
@@ -19,7 +21,7 @@ ALIAS = {"qc-hidden-cases": "number-sense-qc"}  # early spec name for the QC hid
 
 out, n, types = [], 0, {}
 for f in sorted(glob.glob(os.path.join(ref, "*.jsonl"))):
-    if os.path.basename(f) in ("items.jsonl", "rc_skills.jsonl") or "explanations" in f:
+    if os.path.basename(f) in ("items.jsonl", "rc_skills.jsonl", "concept_retags.jsonl") or "explanations" in f:
         continue
     for line in open(f):
         line = line.strip()
@@ -61,6 +63,19 @@ for f in sorted(glob.glob(os.path.join(ref, "fixes", "*.jsonl"))):
         fixed += 1
         check_counts[p.get("answer_check")] = check_counts.get(p.get("answer_check"), 0) + 1
 
+# concepts added after the repairs were made: reference/concept_retags.jsonl ({id, concepts}) replaces the tags
+retagged = 0
+retags_path = os.path.join(ref, "concept_retags.jsonl")
+if os.path.exists(retags_path):
+    for line in open(retags_path):
+        if not line.strip():
+            continue
+        p = json.loads(line)
+        r = by_id.get(p["id"])
+        if r is not None and all(c in VALID for c in p["concepts"]):
+            r["concepts"] = p["concepts"]
+            retagged += 1
+
 skilled = 0
 skills_path = os.path.join(ref, "rc_skills.jsonl")
 if os.path.exists(skills_path):
@@ -76,4 +91,5 @@ with open(os.path.join(ref, "items.jsonl"), "w") as fh:
         fh.write(json.dumps(r, ensure_ascii=False) + "\n")
 print(n, "records", types, file=sys.stderr)
 print(fixed, "repaired from page images", check_counts, file=sys.stderr)
+print(retagged, "items retagged from concept_retags.jsonl", file=sys.stderr)
 print(skilled, "reading items tagged with skills", file=sys.stderr)

@@ -1,4 +1,4 @@
-import type { ItemScore } from "./compute";
+import { heldBy, type ItemScore } from "./compute";
 
 export interface Pick {
   itemId: string;
@@ -54,7 +54,7 @@ export function allocateWords(scores: ItemScore[], slots: number, random: () => 
   take(fresh, nNew + shortReview, "new");
   const shortWild = take(wildPool, nWild, "wildcard");
   take(fresh, shortWild, "new");
-  take(scores.filter((s) => s.pending).sort((a, b) => b.P - a.P), slots - out.length, "review");
+  take(scores.filter((s) => s.pending).sort((a, b) => heldBy(a) - heldBy(b) || b.P - a.P), slots - out.length, "review");
   return out;
 }
 
@@ -79,10 +79,11 @@ export function allocateConcepts(
     count.set(s.area, (count.get(s.area) ?? 0) + 1);
   };
   const shuffled = [...scores].sort(() => random() - 0.5); // random tie-breaks
-  // unused first (reuse only once every concept is used), and items an untaken test already targets last
+  // unused first (reuse only once every concept is used), and items untaken tests already target last,
+  // fewest holders first: once every concept is held, briefs made back to back rotate through all of them
   const fresh = (list: typeof scores) => {
     const l = list.filter((s) => !used.has(s.itemId)).concat(used.size >= scores.length ? list : []);
-    return [...l.filter((s) => !s.pending), ...l.filter((s) => s.pending)];
+    return [...l].sort((a, b) => heldBy(a) - heldBy(b)); // stable: keeps each list's own order within a count
   };
   // weakness-evidence concepts first (by P), then high-yield ones to fill
   const byWeak = [...shuffled].sort((a, b) => (b.weakEvidence > 0 ? 1 : 0) - (a.weakEvidence > 0 ? 1 : 0) || (b.weakEvidence > 0 ? b.P - a.P : b.Y - a.Y));
@@ -114,6 +115,44 @@ export function allocateVerbalKeys(scores: ItemScore[], isSecondary: (id: string
     }
   }
   return keys;
+}
+
+/**
+ * One variant (sub-form) per picked concept: the one used least so far, counting earlier briefs (`used`:
+ * concept -> variant -> times used) and the earlier slots of this brief, ties random. So a concept that comes
+ * back in mock after mock is tested a different way each time. A concept with no variants listed gets none.
+ */
+export function assignVariants(
+  concepts: string[],
+  variants: Record<string, string[]>,
+  used: Map<string, Map<string, number>>,
+  random: () => number,
+): (string | undefined)[] {
+  const count = new Map([...used].map(([c, m]) => [c, new Map(m)]));
+  return concepts.map((c) => {
+    const options = variants[c] ?? [];
+    if (!options.length) return undefined;
+    const seen = count.get(c) ?? new Map<string, number>();
+    const least = Math.min(...options.map((v) => seen.get(v) ?? 0));
+    const ties = options.filter((v) => (seen.get(v) ?? 0) === least);
+    const pick = ties[Math.floor(random() * ties.length)];
+    count.set(c, seen.set(pick, least + 1));
+    return pick;
+  });
+}
+
+/**
+ * How many keys each select-all (rc_multi) slot gets: 1, 2 or 3 with the official weights (about 40 / 40 / 20 in the
+ * Official Guide). If every draw comes out 2, the last is redrawn as 1 or 3, so no test teaches "it's always two".
+ */
+export function drawMultiKeys(n: number, random: () => number): number[] {
+  const draw = (): number => {
+    const r = random();
+    return r < 0.4 ? 1 : r < 0.8 ? 2 : 3;
+  };
+  const out = Array.from({ length: n }, draw);
+  if (n && !out.some((k) => k !== 2)) out[n - 1] = random() < 2 / 3 ? 1 : 3;
+  return out;
 }
 
 /**

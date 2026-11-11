@@ -17,6 +17,12 @@ describe("wordIdOf", () => {
   });
   it("returns null for words outside the bank", () => {
     expect(wordIdOf("synthetic", index)).toBeNull();
+    expect(wordIdOf("at odds with", index)).toBeNull();
+  });
+  it("finds the bank word inside a phrase choice", () => {
+    expect(wordIdOf("a perfunctory", index)).toBe("perfunctory");
+    expect(wordIdOf("lend credence to", index)).toBe("credence");
+    expect(wordIdOf("impervious to", index)).toBe("impervious");
   });
   it("lists the literal form first", () => {
     expect(baseForms("abetted")).toEqual(expect.arrayContaining(["abetted", "abet"]));
@@ -28,6 +34,11 @@ describe("choiceIsWord", () => {
     const v = vocab.find((x) => x.id === "disparage")!;
     expect(choiceIsWord("disparaging", v)).toBe(true);
     expect(choiceIsWord("extol", v)).toBe(false);
+  });
+  it("accepts a phrase that holds the word", () => {
+    const v = vocab.find((x) => x.id === "credence")!;
+    expect(choiceIsWord("lend credence to", v)).toBe(true);
+    expect(choiceIsWord("lend support to", v)).toBe(false);
   });
 });
 

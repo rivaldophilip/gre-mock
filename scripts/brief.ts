@@ -7,7 +7,7 @@ import path from "node:path";
 import { schema } from "../lib/db";
 import { oneTarget } from "./lib/accounts";
 import { markPending, scoreAll, type ItemScore, type LoggedEvent } from "../lib/priority/compute";
-import { allocateConcepts, allocateVerbalKeys, rng } from "../lib/priority/allocate";
+import { allocateConcepts, allocateVerbalKeys, assignVariants, drawMultiKeys, rng } from "../lib/priority/allocate";
 import { slotType, typeStats, TYPE_INFO, type SlotType } from "../lib/qtypes";
 
 const measure = process.argv[2] as "verbal" | "quant";
@@ -30,10 +30,10 @@ function nextId() {
   return `${measure}-${String(Math.max(0, ...usedNumbers()) + 1).padStart(3, "0")}`;
 }
 
-/** Targets of briefs whose test is not registered yet (still being authored), as itemId -> test id. */
+/** Targets of briefs whose test is not registered yet (still being authored), as [itemId, test id] pairs. */
 function inFlightBriefs(registered: Set<string>) {
   const dir = "content/briefs";
-  const out = new Map<string, string>();
+  const out: [string, string][] = [];
   for (const f of fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => new RegExp(`^${measure}-\\d+\\.json$`).test(f)).sort() : []) {
     const b = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
     if (registered.has(b.testId)) continue;
@@ -42,9 +42,25 @@ function inFlightBriefs(registered: Set<string>) {
       ...(b.skillSlots ?? []).map((k: { skill: string }) => k.skill),
       ...(b.conceptSlots ?? []).map((k: { concept: string }) => k.concept),
     ];
-    for (const id of ids) if (!out.has(id)) out.set(id, b.testId);
+    for (const id of ids) out.push([id, b.testId]);
   }
   return out;
+}
+
+/** Concept variants earlier briefs of this measure assigned (concept -> variant -> times), registered or not. */
+function variantsUsed(current: string) {
+  const dir = "content/briefs";
+  const used = new Map<string, Map<string, number>>();
+  for (const f of fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => new RegExp(`^${measure}-\\d+\\.json$`).test(f)) : []) {
+    const b = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
+    if (b.testId === current) continue;
+    for (const s of (b.conceptSlots ?? []) as { concept: string; variant?: string }[]) {
+      if (!s.variant) continue;
+      const m = used.get(s.concept) ?? new Map<string, number>();
+      used.set(s.concept, m.set(s.variant, (m.get(s.variant) ?? 0) + 1));
+    }
+  }
+  return used;
 }
 
 /** Cut at a word boundary, so a topic reads as words rather than a fragment. */
@@ -70,21 +86,26 @@ function previousTests() {
 
 /**
  * Items that registered tests without a finished attempt already target (key words, primary skills / concepts),
- * as itemId -> test id. Making several tests before taking them then spreads the targets instead of repeating them.
+ * as itemId -> the test ids holding it. Making several tests before taking them then spreads the targets instead of
+ * repeating them; once every item is held, the least-held ones come first.
  */
 async function pendingItems(db: Awaited<ReturnType<typeof oneTarget>>["db"]) {
   const tests = await db.select({ id: schema.tests.id }).from(schema.tests);
   const taken = new Set((await db.select({ t: schema.attempts.testId, f: schema.attempts.finishedAt }).from(schema.attempts)).filter((a) => a.f).map((a) => a.t));
   const untaken = new Set(tests.map((t) => t.id).filter((id) => !taken.has(id)));
-  const out = new Map<string, string>();
+  const out = new Map<string, string[]>();
+  const hold = (item: string, test: string) => {
+    const held = out.get(item) ?? [];
+    if (!held.includes(test)) out.set(item, [...held, test]);
+  };
   for (const r of await db.select().from(schema.questionItems)) {
     const test = r.questionId.split(":")[0];
-    if (untaken.has(test) && (r.role === "key" || r.role === "primary") && !out.has(r.itemId)) out.set(r.itemId, test);
+    if (untaken.has(test) && (r.role === "key" || r.role === "primary")) hold(r.itemId, test);
   }
   // briefs still being authored count as untaken tests too
   for (const [item, test] of inFlightBriefs(new Set(tests.map((t) => t.id)))) {
     untaken.add(test);
-    if (!out.has(item)) out.set(item, test);
+    hold(item, test);
   }
   return { untaken: [...untaken].sort(), items: out };
 }
@@ -181,7 +202,11 @@ async function main() {
   const refs = refItems();
   const pending = await pendingItems(db);
   if (pending.untaken.length) console.log(`untaken tests: ${pending.untaken.join(", ")}; ${pending.items.size} of their targets are damped`);
-  const brief: Record<string, unknown> = { testId: id, measure, seed, generatedAt: now.toISOString(), untakenTests: pending.untaken, blueprint, previous: previousTests(), slots: slotExemplars(refs), typeFocus: await typeFocus(db) };
+  const slots: Slot[] = slotExemplars(refs);
+  // select-all slots get their key count up front (official 1 / 2 / 3 mix), so the author doesn't default to two
+  const multi = slots.filter((s) => s.type === "rc_multi");
+  drawMultiKeys(multi.length, random).forEach((k, i) => (multi[i].keys = k));
+  const brief: Record<string, unknown> = { testId: id, measure, seed, generatedAt: now.toISOString(), untakenTests: pending.untaken, blueprint, previous: previousTests(), slots, typeFocus: await typeFocus(db) };
   const focusNote =
     " typeFocus ranks question types by practice need (miss rate plus slowness against pace): put the weakest review words / skills / concepts on the slots of the top two types (need >= 0.4), so the practice lands where it is needed.";
 
@@ -237,9 +262,10 @@ async function main() {
     const areaOf = new Map(concepts.map((c) => [c.id, c.area]));
     const withArea = scores.map((s) => ({ ...s, area: areaOf.get(s.itemId)! }));
     const picks = allocateConcepts(withArea, 27, ["arithmetic", "algebra", "geometry", "data"], random);
-    brief.conceptSlots = picks.map((p, i) => ({ slot: i + 1, concept: p.itemId, name: concepts.find((c) => c.id === p.itemId)?.name, area: areaOf.get(p.itemId), bucket: p.bucket, reason: p.reason, exemplars: conceptExemplars(refs, p.itemId) }));
+    const variants = assignVariants(picks.map((p) => p.itemId), JSON.parse(fs.readFileSync("data/concept_variants.json", "utf8")), variantsUsed(id), random);
+    brief.conceptSlots = picks.map((p, i) => ({ slot: i + 1, concept: p.itemId, name: concepts.find((c) => c.id === p.itemId)?.name, variant: variants[i], area: areaOf.get(p.itemId), bucket: p.bucket, reason: p.reason, exemplars: conceptExemplars(refs, p.itemId) }));
     brief.instructions =
-      "Assign the 27 concept slots to the 27 blueprint slots (any order, but a DI set of 3 should share a concept area). Each question: one primary concept (the slot) and optional secondary tags. Provide a python verification script." + focusNote;
+      "Assign the 27 concept slots to the 27 blueprint slots (any order, but a DI set of 3 should share a concept area). Each question: one primary concept (the slot) and optional secondary tags. Write each question as its slot's variant, the form of the concept earlier mocks used least. Provide a python verification script." + focusNote;
   }
 
   fs.mkdirSync("content/briefs", { recursive: true });
@@ -250,25 +276,30 @@ async function main() {
   console.log(`wrote ${out}, content/briefs/${id}.md (read this one) and ${id}.local.md (official exemplars, gitignored)`);
 }
 
-type Slot = { section: number; slot: number; type: string; level: number; exemplars: string[] };
+type Slot = { section: number; slot: number; type: string; level: number; exemplars: string[]; keys?: number };
 type Word = { word: string; id: string; secondary: boolean; sense: string | null; bucket?: string; reason?: string };
 
-/** Which passage each reading slot belongs to: blueprint passages in order (p1, p2, ...), arguments a1, a2. */
+/**
+ * Which passage each reading slot belongs to: blueprint passages in order (p1, p2, ...), arguments a1, a2. The first
+ * slot of each passage also carries its shape, e.g. "p3 (2-4 paragraphs, 4 questions)".
+ */
 function passageOfSlots(slots: Slot[]): Map<string, string> {
   const out = new Map<string, string>();
   let p = 0;
   let a = 0;
   for (const sec of blueprint.sections as { n: number }[]) {
-    const sizes = ((blueprint.passages ?? {})[String(sec.n)] ?? []).map((x: { questions: number }) => x.questions) as number[];
+    const shapes = [...((blueprint.passages ?? {})[String(sec.n)] ?? [])] as { questions: number; paragraphs?: string }[];
     let left = 0;
     for (const s of slots.filter((x) => x.section === sec.n)) {
       if (s.type === "arg") out.set(`${s.section}.${s.slot}`, `a${++a}`);
       else if (s.type.startsWith("rc")) {
+        let label = `p${p}`;
         if (left === 0) {
-          p++;
-          left = sizes.shift() ?? 99;
+          const shape = shapes.shift();
+          left = shape?.questions ?? 99;
+          label = `p${++p}${shape ? ` (${shape.paragraphs ?? "1"} paragraph${shape.paragraphs === "1" ? "" : "s"}, ${shape.questions} question${shape.questions > 1 ? "s" : ""})` : ""}`;
         }
-        out.set(`${s.section}.${s.slot}`, `p${p}`);
+        out.set(`${s.section}.${s.slot}`, label);
         left--;
       }
     }
@@ -304,7 +335,12 @@ function briefMarkdown(b: Record<string, unknown>): string {
   const untaken = (b.untakenTests as string[] | undefined) ?? [];
   const lines: string[] = [`# Brief ${b.testId} (${b.measure}, seed ${b.seed})`, "",
     ...(untaken.length ? [`Untaken tests (their targets are damped, so this test spreads to other items): ${untaken.join(", ")}`, ""] : []), "## Slots", "", "| sec | slot | type | level | passage |", "|---|---|---|---|---|"];
-  for (const s of slots) lines.push(`| ${s.section} | ${s.slot} | ${s.type} | ${s.level} | ${where.get(`${s.section}.${s.slot}`) ?? ""} |`);
+  for (const s of slots) lines.push(`| ${s.section} | ${s.slot} | ${s.type}${s.keys ? ` (${s.keys} key${s.keys > 1 ? "s" : ""})` : ""} | ${s.level} | ${where.get(`${s.section}.${s.slot}`) ?? ""} |`);
+  if (b.measure === "verbal")
+    lines.push(
+      "",
+      "Format (the validator enforces it): passage shapes as in the table, at most 2 reading passages longer than one paragraph; each rc_multi with the key count shown; rc_select on a multi-paragraph passage sets `paras`; at least 2 of the 3-blank TCs are 3-5 sentence passages; at least 3 TC blanks have all-phrase choices. Details: docs/QUIZ-AUTHORING.md, Structure rules.",
+    );
   const focus = (b.typeFocus as { type: string; need: number }[]).filter((t) => t.need >= 0.4).map((t) => t.type);
   lines.push("", `Type focus (need >= 0.4, put the weakest items here): ${focus.length ? focus.join(", ") : "none"}`);
   if (b.measure === "verbal") {
@@ -320,7 +356,7 @@ function briefMarkdown(b: Record<string, unknown>): string {
     const skills = JSON.parse(fs.readFileSync("data/rc_skills.json", "utf8")) as { id: string; description: string }[];
     const slotsOf = new Map<string, string[]>();
     for (const s of b.skillSlots as { skill: string; bucket: string; reason: string }[]) {
-      const why = `${s.bucket}, ${s.reason.replace(/; already in untaken \S+$/, "")}`;
+      const why = `${s.bucket}, ${s.reason.replace(/; already in untaken .*$/, "")}`;
       slotsOf.set(s.skill, [...(slotsOf.get(s.skill) ?? []), why]);
     }
     lines.push("", `## Reading skills for the ${(b.skillSlots as unknown[]).length} RC slots (arg-* on argument slots)`, "");
@@ -330,10 +366,14 @@ function briefMarkdown(b: Record<string, unknown>): string {
     lines.push("", "## Distractor words (about 40% of distractors)", "", `Weak: ${d.weak.map((w) => w.word).join(", ") || "none"}`, "", `Untested: ${d.untested.map((w) => w.word).join(", ")}`);
     lines.push("", "## Passage words (weave 3-6 into each passage)", "", (b.passageWords as Word[]).map((w) => `${w.word}${w.secondary ? " (2nd sense)" : ""}`).join(", "));
   } else {
-    lines.push("", "## Concept slots (one primary concept per question, any order; a DI set shares an area)");
+    lines.push("", "## Concept slots (one primary concept per question, any order; a DI set shares an area)", "", "Write each question as its variant: the form of the concept earlier mocks used least.");
     const byReason = new Map<string, string[]>();
-    for (const c of b.conceptSlots as { concept: string; name: string; area: string; reason: string }[])
-      byReason.set(c.reason, [...(byReason.get(c.reason) ?? []), `- **${c.concept}**: ${c.name} (${c.area})`]);
+    for (const c of b.conceptSlots as { concept: string; name: string; area: string; reason: string; variant?: string }[]) {
+      // group by the score's reason; how many untaken tests already hold the concept goes on its own line
+      const held = /; already in untaken (.*)$/.exec(c.reason)?.[1].split(", ").length ?? 0;
+      const reason = c.reason.replace(/; already in untaken .*$/, "");
+      byReason.set(reason, [...(byReason.get(reason) ?? []), `- **${c.concept}**: ${c.name} (${c.area})${held ? ` [in ${held} untaken]` : ""}${c.variant ? `. Variant: ${c.variant}` : ""}`]);
+    }
     for (const [reason, cs] of byReason) lines.push("", `${reason} (${cs.length}):`, ...cs);
   }
   lines.push("", "## Earlier tests (do not repeat topics)", "");

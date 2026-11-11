@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { decay, intervalFor, scoreItem, wordYield, type LoggedEvent } from "@/lib/priority/compute";
-import { allocateWords, rng } from "@/lib/priority/allocate";
+import { allocateWords, assignVariants, rng } from "@/lib/priority/allocate";
 import { markPending, scoreAll } from "@/lib/priority/compute";
 
 const now = new Date("2026-11-06T00:00:00Z");
@@ -90,15 +90,15 @@ describe("pending tests", () => {
   const base = scoreAll(items, events, now);
 
   it("damps a pending item and names the test holding it", () => {
-    const [a, b] = markPending(base, new Map([["a", "verbal-002"]]));
+    const [a, b] = markPending(base, new Map([["a", ["verbal-002"]]]));
     expect(a.P).toBeCloseTo(base[0].P * 0.3);
-    expect(a.pending).toBe("verbal-002");
+    expect(a.pending).toEqual(["verbal-002"]);
     expect(a.reason).toMatch(/untaken verbal-002/);
     expect(b.pending).toBeUndefined();
   });
 
   it("uses pending items only when nothing else is left", () => {
-    const all = markPending(base, new Map(items.slice(0, 20).map((it) => [it.id, "verbal-002"])));
+    const all = markPending(base, new Map(items.slice(0, 20).map((it) => [it.id, ["verbal-002"]])));
     const picks = allocateWords(all, 4, rng(3)).map((p) => p.itemId);
     expect(picks).toHaveLength(4);
     expect(picks.filter((id) => !all.find((s) => s.itemId === id)!.pending)).toHaveLength(2);
@@ -106,9 +106,77 @@ describe("pending tests", () => {
 
   it("a second brief before the first test is taken picks different words", () => {
     const first = allocateWords(base, 6, rng(1)).map((p) => p.itemId);
-    const pending = new Map(first.map((id) => [id, "verbal-002"]));
+    const pending = new Map(first.map((id) => [id, ["verbal-002"]]));
     const second = allocateWords(markPending(base, pending), 6, rng(2)).map((p) => p.itemId);
     expect(first).toEqual(expect.arrayContaining(["a", "b"]));
     expect(second.filter((id) => first.includes(id))).toEqual([]);
+  });
+  it("damps once per untaken test that holds the item", () => {
+    const [a] = markPending(base, new Map([["a", ["verbal-002", "verbal-003"]]]));
+    expect(a.P).toBeCloseTo(base[0].P * 0.3 * 0.3);
+    expect(a.reason).toMatch(/untaken verbal-002, verbal-003$/);
+  });
+
+  it("once every item is held, picks the least-held first", () => {
+    const all = markPending(base, new Map(items.map((it, i) => [it.id, i < 6 ? ["verbal-002"] : ["verbal-002", "verbal-003"]])));
+    const picks = allocateWords(all, 6, rng(4)).map((p) => p.itemId);
+    expect(picks.sort()).toEqual(items.slice(0, 6).map((it) => it.id).sort());
+  });
+});
+
+describe("concepts across mocks made before any is taken", () => {
+  const areas = ["arithmetic", "algebra", "geometry", "data"];
+  const items = Array.from({ length: 50 }, (_, i) => ({ id: `c${i}`, yield: 0.3 + (i % 7) / 10 }));
+  const base = scoreAll(items, [], now).map((s, i) => ({ ...s, area: areas[i % 4] }));
+
+  it("rotates through every concept instead of repeating the same 27", () => {
+    const held = new Map<string, string[]>();
+    const briefs: string[][] = [];
+    for (let t = 0; t < 6; t++) {
+      const scores = markPending(base, held).map((s, i) => ({ ...s, area: areas[i % 4] }));
+      const picks = allocateConcepts(scores, 27, areas, rng(t + 1)).map((p) => p.itemId);
+      briefs.push(picks);
+      for (const id of picks) held.set(id, [...(held.get(id) ?? []), `quant-${t}`]);
+    }
+    // 6 × 27 = 162 picks over 50 concepts: each is held 3 or 4 times, none left out
+    const n = items.map((it) => held.get(it.id)?.length ?? 0);
+    expect(Math.min(...n)).toBeGreaterThanOrEqual(3);
+    expect(Math.max(...n)).toBeLessThanOrEqual(4);
+    for (let t = 1; t < briefs.length; t++) expect(briefs[t]).not.toEqual(briefs[t - 1]);
+  });
+});
+
+describe("concept variants", () => {
+  const variants = { a: ["a1", "a2", "a3"], b: ["b1"] };
+
+  it("picks the least-used variant; none for a concept without variants", () => {
+    const used = new Map([["a", new Map([["a1", 2], ["a2", 1]])]]);
+    expect(assignVariants(["a", "b", "z"], variants, used, rng(1))).toEqual(["a3", "b1", undefined]);
+  });
+
+  it("gives a concept that repeats in one brief a different variant each time", () => {
+    for (let seed = 1; seed <= 20; seed++) expect(new Set(assignVariants(["a", "a", "a"], variants, new Map(), rng(seed))).size).toBe(3);
+  });
+
+  it("does not change the history it is given", () => {
+    const used = new Map([["a", new Map([["a1", 1]])]]);
+    assignVariants(["a"], variants, used, rng(1));
+    expect(used.get("a")).toEqual(new Map([["a1", 1]]));
+  });
+});
+
+import { drawMultiKeys } from "@/lib/priority/allocate";
+describe("select-all key counts", () => {
+  it("never gives every rc_multi slot two keys", () => {
+    for (let seed = 1; seed <= 300; seed++) {
+      const ks = drawMultiKeys(2, rng(seed));
+      expect(ks.every((k) => k >= 1 && k <= 3)).toBe(true);
+      expect(ks.every((k) => k === 2)).toBe(false);
+    }
+  });
+  it("draws three keys in a fair share of tests", () => {
+    let three = 0;
+    for (let seed = 1; seed <= 500; seed++) if (drawMultiKeys(2, rng(seed)).includes(3)) three++;
+    expect(three / 500).toBeGreaterThan(0.3);
   });
 });

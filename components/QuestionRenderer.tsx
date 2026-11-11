@@ -164,7 +164,11 @@ export function QuestionRenderer({
         <div className="space-y-3">
           <Rich text={q.prompt} className="text-[17px] leading-relaxed" />
           <p className={`rounded-xl px-3.5 py-3 text-sm ${sel.length ? "bg-accent-soft text-fg" : "bg-surface-2 text-muted"}`}>
-            {sel.length ? <>Selected sentence {sel[0] + 1}. Tap another sentence to change it.</> : "Tap a sentence in the passage to select it."}
+            {sel.length
+              ? <>Selected sentence {sel[0] + 1}. Tap another sentence to change it.</>
+              : q.paras
+                ? `Tap a sentence in ${q.paras.length > 1 ? "one of the paragraphs" : "the paragraph"} marked ➜ to select it.`
+                : "Tap a sentence in the passage to select it."}
           </p>
         </div>
       );

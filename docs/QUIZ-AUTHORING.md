@@ -8,7 +8,7 @@ Read this page, the brief and `docs/HARD-PATTERNS.md`; nothing else is needed. E
 
 1. **Brief.** `npm run -s brief -- <measure>` (add `--user <email>` once there is more than one account). Read `content/briefs/<id>.md`. It has the slot table (type, level and passage of every slot) and what to target:
    - verbal: key words with their bank synonyms, reading-skill slots, distractor words and passage words;
-   - quant: concept slots.
+   - quant: concept slots, each with a variant (the form of the concept that earlier mocks used least). Write the question as that variant.
 
    Skim `content/briefs/<id>.local.md` (official exemplars, one per slot type and level) only for a type you are unsure how to pitch. The `.json` brief is for scripts; don't read it.
 2. **Author** the whole test in one Write, using the shapes below. Write `$...$` for math. Spend the brief as the structure rules say:
@@ -46,7 +46,13 @@ Recalibrate only after changing the solver's model: `npm run -s blind -- --calib
 - Difficulty levels: 3 = P+ 45–60, 4 = 30–45, 5 = < 30. Author at most 5; levels 6–7 (harder than official hard items, quant only) are set afterwards by calibration, see `docs/CALIBRATION.md`. At most 2 items per section may be at level 6+ (the validator enforces it). Aim a quant L5 at the official hard item, not past it. Section 1 average ≥ 3.75 (about 4×L3, 5×L4, 3×L5). Section 2: ≤ 2 items at L3, ≥ one-third at L5, average ≥ 4.2.
 - Each section opens with its TC block (verbal) or QC block (quant). Within a type block, mix easy and hard; don't climb.
 - Question ids are `s1q1` … `s2q15`. Passages are `p1, p2, …` (reading) and `a1, a2` (arguments), as the brief's slot table assigns them.
-- **Verbal.** TC: 1 blank = 5 choices; 2–3 blanks = 3 choices per blank; one `___` per blank, written `(i) ___` when there are several. SE: 6 choices, 2 keys. RC: `rc` has 5 choices; `rc_multi` has 3 choices, select all; `rc_select` keys a sentence index across the whole passage (sentences split on `. ` before a capital). Arguments: `type: "rc"`, `subtype: "arg"`, a one-paragraph passage.
+- **Verbal.** TC: 1 blank = 5 choices; 2–3 blanks = 3 choices per blank; one `___` per blank, written `(i) ___` when there are several; 1–5 sentences. SE: 6 choices, 2 keys. RC: `rc` has 5 choices; `rc_multi` has 3 choices, select all; `rc_select` keys a sentence index across the whole passage (sentences split on `. ` before a capital). Arguments: `type: "rc"`, `subtype: "arg"`, a one-paragraph passage.
+- **Verbal format** (from verbal-015 on; the validator enforces it, matching the Official Guide):
+  - Passages follow the brief's slot table: S1 two 2-question passages (the first may run to 2 paragraphs); S2 one long passage of 2–4 paragraphs with 4 questions, then a 2-question and a 1-question passage, each one paragraph. At most 2 reading passages run past one paragraph.
+  - `rc_select` on a multi-paragraph passage sets `paras`, the 1–2 paragraphs (0-based) the sentence is picked from. The runner marks them with an arrow and the rest can't be clicked; the stem may say "in the second paragraph". The key must lie inside `paras`.
+  - Each `rc_multi` has the key count the slot table gives (1, 2 or 3). Never all 2.
+  - At least 2 of the 3-blank TCs are short passages of 3–5 sentences.
+  - At least 3 of the 15 TC blanks have all-phrase choices ("at odds with", "wary of", "a perfunctory", "the fragility of the consensus"). All three choices in a blank share one form. A phrase key still holds its key word, which check tags.
 - **Verbal key words.** Spend the brief's 29 key words (each in the GRE sense the brief gives) as the keys of the 15 TC blanks and 7 SE pairs. For an SE pair, use two key words the brief marks with `*`. If there aren't enough such pairs, pair a key word with one of its listed bank synonyms, and use any leftover key words as distractors. For words marked `[secondary]`, build the sentence so the everyday sense is the trap.
 - **Verbal skill tags.** Every RC question gets exactly one `{"kind":"concept","id":<skill>,"role":"primary"}` from the brief, plus an optional `secondary`. Argument items need an `arg-*` skill; `rc-select-verify` suits `rc_multi`. Write the stem so the skill is unambiguous (function: "…primarily in order to").
 - **Quant.** QC key: 0 = A greater, 1 = B greater, 2 = equal, 3 = cannot be determined. MC: 5 choices. `mc_multi`: 5–6 choices, at least 1 key. `numeric`: `{"kind":"single"|"fraction"}`, key `{"value":"3/8"}`. Section 1 has one 3-question data-interpretation set sharing `setId` and `figureId`; the figure is a `table` or inline `svg`. Each question gets one `primary` concept tag from `data/concepts.json`, plus optional `secondary` tags.
@@ -66,8 +72,8 @@ Recalibrate only after changing the solver's model: `npm run -s blind -- --calib
     { "id": "s1q1", "section": 1, "type": "tc", "difficulty": 4, "prompt": "… ___ …",
       "blanks": [["w1", "w2", "w3", "w4", "w5"]], "key": { "sel": [2] },
       "explanation": { "key": "…", "distractors": { "w1": "…", "w2": "…", "w4": "…", "w5": "…" } } },
-    { "id": "s1q3", "section": 1, "type": "tc", "difficulty": 5, "prompt": "… (i) ___ … (ii) ___ … (iii) ___ …",
-      "blanks": [["a", "b", "c"], ["d", "e", "f"], ["g", "h", "i"]], "key": { "sel": [1, 2, 0] },
+    { "id": "s1q3", "section": 1, "type": "tc", "difficulty": 5, "prompt": "First sentence … (i) ___ …. Second … (ii) ___ …. Third … (iii) ___ ….",
+      "blanks": [["a", "b", "c"], ["receptive to", "impervious to", "indebted to"], ["g", "h", "i"]], "key": { "sel": [1, 1, 0] },
       "explanation": { "key": "(i) … (ii) … (iii) …", "distractors": { "a": "…" } } },
     { "id": "s1q4", "section": 1, "type": "se", "difficulty": 4, "prompt": "… ___ …",
       "choices": ["w1", "w2", "w3", "w4", "w5", "w6"], "key": { "sel": [1, 3] },
@@ -80,8 +86,8 @@ Recalibrate only after changing the solver's model: `npm run -s blind -- --calib
       "prompt": "Consider each of the choices separately and select all that apply. The passage suggests which of the following about …",
       "choices": ["…", "…", "…"], "key": { "sel": [0, 2] }, "explanation": { "key": "A: … B: … C: …" },
       "tags": [{ "kind": "concept", "id": "rc-select-verify", "role": "primary" }, { "kind": "concept", "id": "rc-inference", "role": "secondary" }] },
-    { "id": "s1q11", "section": 1, "type": "rc_select", "difficulty": 3, "passageId": "p2", "prompt": "Select the sentence that …",
-      "key": { "sel": [3] }, "explanation": { "key": "The fourth sentence (…) …" },
+    { "id": "s1q11", "section": 1, "type": "rc_select", "difficulty": 3, "passageId": "p2", "prompt": "Select the sentence in the second paragraph that …",
+      "paras": [1], "key": { "sel": [6] }, "explanation": { "key": "The seventh sentence (…) …" },
       "tags": [{ "kind": "concept", "id": "rc-detail", "role": "primary" }] },
     { "id": "s1q12", "section": 1, "type": "rc", "subtype": "arg", "difficulty": 4, "passageId": "a1",
       "prompt": "Which of the following, if true, most seriously weakens the argument?",
@@ -103,4 +109,4 @@ Quant question shapes (the test wrapper is the same, with `"measure": "quant"` a
 ```
 
 ## Hardness checklist
-See `docs/HARD-PATTERNS.md`. In short: 3-blank TCs with a pivot and stacked negation; secondary senses; SE trap pairs (true synonyms that don't fit the sentence); dense academic RC with half-right and extreme distractors, EXCEPT-style multi items, and select-all with an unsupported-but-true choice; weaken/assumption arguments; QC with hidden cases (negatives, fractions, zero, figures not to scale); multi-answer quant needing min/max bounding. Make a clue indirect rather than definitional: a sentence that defines the key in other words reads as level 2.
+See `docs/HARD-PATTERNS.md`. In short: 3-blank TCs as 3–5 sentence passages with a pivot, stacked negation and the deciding clue near a later blank; phrase blanks; secondary senses; SE trap pairs (true synonyms that don't fit the sentence) and a lone perfect fit with no partner; dense academic RC with half-right and extreme distractors, EXCEPT-style items, stems on what a cited scholar believes, and select-all with an unsupported-but-true choice; arguments mostly weaken, paradox and strengthen, with the occasional complete-the-passage or contradiction item; QC with hidden cases (negatives, fractions, zero, figures not to scale); multi-answer quant needing min/max bounding. Make a clue indirect rather than definitional: a sentence that defines the key in other words reads as level 2.

@@ -20,24 +20,36 @@ export function baseForms(text: string): string[] {
   return out;
 }
 
+/** The words of a phrase choice ("at odds with", "a perfunctory", "the fragility of the consensus"); one word for a plain choice. */
+const phraseWords = (text: string) => text.toLowerCase().trim().split(/\s+/).filter(Boolean);
+
 export function vocabIndex(vocab: VocabEntry[]): Map<string, string> {
   const forms = new Map<string, string>();
   for (const v of vocab) for (const f of [v.lemma, ...v.variants]) if (!forms.has(f.toLowerCase())) forms.set(f.toLowerCase(), v.id);
   return forms;
 }
 
-/** The bank word id this text is a form of, or null. */
+/** The bank word id this text is a form of, or null. A phrase choice resolves to the first bank word it contains. */
 export function wordIdOf(text: string, index: Map<string, string>): string | null {
   for (const f of baseForms(text)) {
     const id = index.get(f);
     if (id) return id;
   }
+  const words = phraseWords(text);
+  if (words.length > 1)
+    for (const w of words)
+      for (const f of baseForms(w)) {
+        const id = index.get(f);
+        if (id) return id;
+      }
   return null;
 }
 
-/** Does the choice text spell this bank word? Old tests were tagged under a looser prefix rule, which still counts. */
+/** Does the choice text spell this bank word (or, for a phrase, contain it)? Old tests were tagged under a looser prefix rule, which still counts. */
 export function choiceIsWord(text: string, v: VocabEntry): boolean {
   const t = text.toLowerCase().trim();
   const forms = [v.lemma, ...v.variants].map((f) => f.toLowerCase());
-  return baseForms(t).some((b) => forms.includes(b)) || forms.some((f) => t.startsWith(f) || f.startsWith(t));
+  if (baseForms(t).some((b) => forms.includes(b)) || forms.some((f) => t.startsWith(f) || f.startsWith(t))) return true;
+  const words = phraseWords(t);
+  return words.length > 1 && words.some((w) => baseForms(w).some((b) => forms.includes(b)));
 }

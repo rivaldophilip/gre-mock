@@ -37,7 +37,8 @@ export function blindCopy(test: Test, only?: Set<string>): string {
         const how = q.type === "se" ? "Select exactly two." : q.type === "rc_multi" || q.type === "mc_multi" ? "Select all that apply (one or more)." : "Select one.";
         out += `${how}\n${q.choices.map((c, j) => `${L[j]}. ${c}`).join("\n")}\n`;
       }
-      if (q.type === "rc_select") out += "Answer with the sentence number from the numbered passage.\n";
+      if (q.type === "rc_select")
+        out += `Answer with the sentence number from the numbered passage${q.paras ? `, choosing only from paragraph${q.paras.length > 1 ? "s" : ""} ${q.paras.map((i) => i + 1).join(" and ")}` : ""}.\n`;
       if (q.numeric) out += `Enter ${q.numeric.kind === "fraction" ? "a fraction" : "a number"}${q.numeric.unit ? ` (${q.numeric.unit})` : ""}.\n`;
     }
   }
@@ -46,7 +47,9 @@ export function blindCopy(test: Test, only?: Set<string>): string {
   for (const p of passages) {
     out += `\n### ${p.id}\n`;
     const s = passageSentences(p.paragraphs);
-    s.forEach((x, i) => (out += `[${i}] ${x.text}${x.para !== s[i + 1]?.para ? "\n\n" : " "}`));
+    // multi-paragraph passages label each paragraph, so a select-in-passage scope ("paragraph 2") can be found
+    const label = (i: number) => (p.paragraphs.length > 1 && s[i].para !== s[i - 1]?.para ? `(Paragraph ${s[i].para + 1}) ` : "");
+    s.forEach((x, i) => (out += `${label(i)}[${i}] ${x.text}${x.para !== s[i + 1]?.para ? "\n\n" : " "}`));
   }
   const figures = test.figures.filter((f) => used.has(f.id));
   if (figures.length) out += "\n## Figures\n";

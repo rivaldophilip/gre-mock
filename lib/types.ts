@@ -59,6 +59,8 @@ export const QuestionSchema = z.object({
   /** stem. Markdown-ish text; $...$ is KaTeX. For tc, use ___ (blank) markers, one per blank. */
   prompt: z.string().min(1),
   passageId: z.string().optional(),
+  /** rc_select on a multi-paragraph passage: the 1-2 paragraphs (0-based) a sentence may be picked from; others are inert */
+  paras: z.array(z.number().int().min(0)).min(1).max(2).optional(),
   setId: z.string().optional(), // data-interpretation set (shares a figure)
   figureId: z.string().optional(),
   blanks: z.array(z.array(z.string())).optional(), // tc: choices per blank
