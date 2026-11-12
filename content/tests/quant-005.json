@@ -96,7 +96,9 @@
           "id": "abs-value-inequalities",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "x > y and 1/x > 1/y force opposite signs; compare x - y with |x + y|",
+      "variant": "the sign of a product or quotient from a condition (ab < 0, a/b > 1)"
     },
     {
       "id": "s1q2",
@@ -130,7 +132,9 @@
           "id": "exponents-roots",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "(b^{n+k} ± b^n) over a similar sum of powers: factor out the common power",
+      "variant": "factoring out a common power: 2^{n+2} - 2^n"
     },
     {
       "id": "s1q3",
@@ -175,7 +179,9 @@
           "id": "pythagorean-special",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "AD = BD = DC forces a right angle; compare the sum of two sides with sqrt(2) times the third",
+      "variant": "only what is given fixes the relationship"
     },
     {
       "id": "s1q4",
@@ -209,7 +215,8 @@
           "id": "std-dev-normal",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "two values added at mean ± 1 SD to a list; compare the new SD with the old"
     },
     {
       "id": "s1q5",
@@ -245,7 +252,9 @@
           "id": "ratio-proportion",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "ratio before and after adding or removing items of one or both kinds; a total",
+      "variant": "ratio change after adding or removing items"
     },
     {
       "id": "s1q6",
@@ -281,7 +290,9 @@
           "id": "remainders-units",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "remainder of a^n ± b^n mod a small number via power cycles",
+      "variant": "remainder of a sum or product from the remainders of its parts"
     },
     {
       "id": "s1q7",
@@ -318,7 +329,9 @@
           "id": "counting-restrictions",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "order items so that no two of one group are consecutive and the first isn't from it (gaps)",
+      "variant": "two people must sit together, or apart"
     },
     {
       "id": "s1q8",
@@ -358,7 +371,9 @@
           "id": "abs-value-inequalities",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "sum of two absolute values |x - a| + |x - b| against a bound",
+      "variant": "nested or summed absolute values"
     },
     {
       "id": "s1q9",
@@ -388,7 +403,9 @@
           "id": "fractions-decimals",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "tank goes from one fraction full to another after a draw; amount to fill",
+      "variant": "complex (nested) fractions"
     },
     {
       "id": "s1q10",
@@ -431,7 +448,9 @@
           "id": "percent",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "DI: percent change of one category between two years",
+      "variant": "the percent increase between two periods"
     },
     {
       "id": "s1q11",
@@ -473,7 +492,9 @@
           "id": "data-interpretation-calc",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "DI: combined mean of two groups weighted by counts",
+      "variant": "a sum from the mean and the count"
     },
     {
       "id": "s1q12",
@@ -516,7 +537,9 @@
           "id": "data-interpretation-calc",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "DI: reverse conditional probability from percents of two groups",
+      "variant": "conditional probability from a two-way table"
     },
     {
       "id": "s2q1",
@@ -554,7 +577,9 @@
           "id": "remainders-units",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "k(k+1)(k+2) not divisible by 4 fixes k mod 4; compare with a value",
+      "variant": "divisibility of an expression such as n(n+1)(n+2) for every integer n"
     },
     {
       "id": "s2q2",
@@ -588,7 +613,9 @@
           "id": "circles",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "arc length and sector area give r and angle; compare the chord with a value",
+      "variant": "arc length and sector area from the central angle"
     },
     {
       "id": "s2q3",
@@ -622,7 +649,9 @@
           "id": "min-max-bounding",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "distinct integer weights with a sum and a cap; least possible second-largest",
+      "variant": "greatest or least value of one item under a sum constraint"
     },
     {
       "id": "s2q4",
@@ -655,7 +684,9 @@
           "id": "inequalities",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "6/x < 2 and a quadratic inequality; sign of x",
+      "variant": "multiplying or dividing by a negative"
     },
     {
       "id": "s2q5",
@@ -688,7 +719,9 @@
           "id": "probability-basic",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "two independent draws from different-sized boxes; P(first > second) vs a value",
+      "variant": "probability from a count of outcomes with dice or coins"
     },
     {
       "id": "s2q6",
@@ -724,7 +757,9 @@
           "id": "percent",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "list price above cost, two successive discounts, final price; markup percent",
+      "variant": "successive percent changes and reversal (up x%, then down x%)"
     },
     {
       "id": "s2q7",
@@ -765,7 +800,9 @@
           "id": "circles",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "equilateral triangle between its incircle and circumcircle; ring area gives the side",
+      "variant": "an equilateral triangle in a circle"
     },
     {
       "id": "s2q8",
@@ -807,7 +844,9 @@
           "id": "counting-restrictions",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "choose and order relay runners with a pairing condition between two runners",
+      "variant": "committees with roles: chair plus members"
     },
     {
       "id": "s2q9",
@@ -843,7 +882,9 @@
           "id": "word-problems-rate",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "one crew starts alone, the other joins; finish at a set time; solo time",
+      "variant": "combined work rates"
     },
     {
       "id": "s2q10",
@@ -879,7 +920,9 @@
           "id": "linear-equations",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "counts of items at two or three prices from a total count and revenue",
+      "variant": "solving for an expression (x + y) instead of each variable"
     },
     {
       "id": "s2q11",
@@ -915,7 +958,9 @@
           "id": "overlapping-sets",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "three sets with all-three and neither counts; number in exactly one",
+      "variant": "three-set Venn diagram"
     },
     {
       "id": "s2q12",
@@ -951,7 +996,9 @@
           "id": "pythagorean-special",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "30-60-90 right triangle with the altitude to the hypotenuse given; hypotenuse",
+      "variant": "altitude to the hypotenuse: similar right triangles"
     },
     {
       "id": "s2q13",
@@ -991,7 +1038,9 @@
           "id": "algebraic-expressions",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "which expressions equal (a - b)^2 (a + b)^2 identically",
+      "variant": "identities across QC quantities"
     },
     {
       "id": "s2q14",
@@ -1036,7 +1085,9 @@
           "id": "pythagorean-special",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "two sides given and an obtuse (or bounded) angle; the third side's range from c^2 against a^2 + b^2",
+      "variant": "larger side opposite the larger angle; obtuse vs acute from c^2 against a^2 + b^2"
     },
     {
       "id": "s2q15",
@@ -1066,7 +1117,9 @@
           "id": "area-perimeter",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "uniform border around a rectangle; border area against the outer dimensions or perimeter",
+      "variant": "a border or path around a rectangle"
     }
   ]
 }

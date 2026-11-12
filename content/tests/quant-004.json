@@ -57,7 +57,9 @@
           "id": "number-sense-qc",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "ab > 0 and a > b; compare 1/a with 1/b (same sign flips the order)",
+      "variant": "a square or a reciprocal against the original number"
     },
     {
       "id": "s1q2",
@@ -90,7 +92,9 @@
           "id": "exponents-roots",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "sqrt(3·9^n) against a power of 3: rewrite as powers of 3",
+      "variant": "equations solved by rewriting to a common base"
     },
     {
       "id": "s1q3",
@@ -129,7 +133,9 @@
           "id": "pythagorean-special",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "median AD with BD = DC and a 3-4-5 right triangle forced; compare AC with a value",
+      "variant": "only what is given fixes the relationship"
     },
     {
       "id": "s1q4",
@@ -167,7 +173,9 @@
           "id": "number-sense-qc",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "forces opposite signs; compare (x + y)^2 with (x - y)^2",
+      "variant": "nested or summed absolute values"
     },
     {
       "id": "s1q5",
@@ -203,7 +211,9 @@
           "id": "ratio-proportion",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "mix two blends with different part ratios to reach a 1:1 mixture",
+      "variant": "part-to-part vs part-to-whole confusion"
     },
     {
       "id": "s1q6",
@@ -239,7 +249,9 @@
           "id": "word-problems-rate",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "out and back at two speeds; average speed for the round trip",
+      "variant": "average speed over two legs"
     },
     {
       "id": "s1q7",
@@ -275,7 +287,9 @@
           "id": "counting-restrictions",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "committee with at least one of a group and two people who cannot serve together",
+      "variant": "at least one of a type in a selection"
     },
     {
       "id": "s1q8",
@@ -314,7 +328,9 @@
           "id": "inequalities",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "for which k a linear inequality holds for every x in an interval (check endpoints)",
+      "variant": "an inequality with a parameter: for which k a solution exists"
     },
     {
       "id": "s1q9",
@@ -344,7 +360,9 @@
           "id": "percent",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "price up p% then down q% (or back to a reference); find the missing percent or value",
+      "variant": "finding the original value after a change"
     },
     {
       "id": "s1q10",
@@ -387,7 +405,9 @@
           "id": "percent",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "DI: percent increase in the total across all categories",
+      "variant": "the percent increase between two periods"
     },
     {
       "id": "s1q11",
@@ -431,7 +451,9 @@
           "id": "data-interpretation-calc",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "add one value so the median equals the mean",
+      "variant": "a mean after adding or removing values"
     },
     {
       "id": "s1q12",
@@ -468,7 +490,9 @@
           "id": "data-interpretation-calc",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "DI: reverse conditional probability from percents of two groups",
+      "variant": "conditional probability from a two-way table"
     },
     {
       "id": "s2q1",
@@ -501,7 +525,9 @@
           "id": "triangles",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "isosceles triangle with one 40° angle: two cases; compare the largest angle with twice the smallest",
+      "variant": "isosceles or equilateral properties hidden in a figure"
     },
     {
       "id": "s2q2",
@@ -534,7 +560,8 @@
           "id": "std-dev-normal",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "two values added at mean ± 1 SD to a list; compare the new SD with the old"
     },
     {
       "id": "s2q3",
@@ -567,7 +594,9 @@
           "id": "remainders-units",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "units digits of 3^n and 7^n combined (sum vs product) for every n",
+      "variant": "units digit of a large power (cycle length)"
     },
     {
       "id": "s2q4",
@@ -600,7 +629,9 @@
           "id": "fractions-decimals",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "digits after the decimal point of k/(2^a 5^b) for odd k",
+      "variant": "terminating vs repeating decimal from the denominator's prime factors"
     },
     {
       "id": "s2q5",
@@ -633,7 +664,9 @@
           "id": "integers-properties",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "n with exactly 3 divisors is p^2; compare divisor counts of n^2 and 2n",
+      "variant": "must be / could be an integer from a stated condition"
     },
     {
       "id": "s2q6",
@@ -669,7 +702,9 @@
           "id": "circles",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "annulus with a chord of the outer circle tangent to the inner; ring area",
+      "variant": "tangent lines and the radius"
     },
     {
       "id": "s2q7",
@@ -706,7 +741,9 @@
           "id": "probability-basic",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "three dice: P(product divisible by 4) via complement cases",
+      "variant": "probability from a count of outcomes with dice or coins"
     },
     {
       "id": "s2q8",
@@ -742,7 +779,9 @@
           "id": "inscribed-figures",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "incircle of a right triangle; distance from the incenter to a vertex or the circumcenter",
+      "variant": "a circle inscribed in a right triangle"
     },
     {
       "id": "s2q9",
@@ -778,7 +817,9 @@
           "id": "linear-equations",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "count integer k for which a 2x2 system has an integer solution",
+      "variant": "solving for an expression (x + y) instead of each variable"
     },
     {
       "id": "s2q10",
@@ -814,7 +855,9 @@
           "id": "area-perimeter",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "uniform border around a rectangle; border area against the outer dimensions or perimeter",
+      "variant": "a border or path around a rectangle"
     },
     {
       "id": "s2q11",
@@ -856,7 +899,9 @@
           "id": "min-max-bounding",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "three overlapping sets, everyone in at least one; greatest number in exactly one",
+      "variant": "three-set Venn diagram"
     },
     {
       "id": "s2q12",
@@ -898,7 +943,8 @@
           "id": "triangles",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "oblique triangle with 45° and 30° angles split by an altitude into two special right triangles; area or a side"
     },
     {
       "id": "s2q13",
@@ -940,7 +986,9 @@
           "id": "algebraic-expressions",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "which expressions equal a rational expression on its whole domain (removable points)",
+      "variant": "simplifying a rational expression"
     },
     {
       "id": "s2q14",
@@ -984,7 +1032,9 @@
           "id": "inequalities",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "x/y over interval ranges with y ≠ 0; select possible values",
+      "variant": "optimizing a product or a difference under constraints"
     },
     {
       "id": "s2q15",
@@ -1014,7 +1064,9 @@
           "id": "counting-permutations",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "arrange flags with repeated colors, two identical ones not adjacent (complement)",
+      "variant": "arrangements of letters with repeated items"
     }
   ]
 }

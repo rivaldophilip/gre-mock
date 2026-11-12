@@ -107,7 +107,11 @@ export function allocateVerbalKeys(scores: ItemScore[], isSecondary: (id: string
   const have = keys.filter((k) => isSecondary(k.itemId)).length;
   if (have < MIN_SECONDARY) {
     const taken = new Set(keys.map((k) => k.itemId));
-    const extra = scores.filter((s) => isSecondary(s.itemId) && !taken.has(s.itemId)).sort((a, b) => b.N * b.Y - a.N * a.Y || b.P - a.P);
+    // fewest holders first, as in allocateWords: otherwise the same high-yield secondary words top up every brief
+    const extra = scores
+      .filter((s) => isSecondary(s.itemId) && !taken.has(s.itemId))
+      .sort(() => random() - 0.5)
+      .sort((a, b) => heldBy(a) - heldBy(b) || b.N * b.Y - a.N * a.Y || b.P - a.P);
     // keep every review pick
     const replaceable = keys.map((k, i) => ({ k, i })).filter(({ k }) => k.bucket !== "review" && !isSecondary(k.itemId)).reverse();
     for (let j = 0; j < MIN_SECONDARY - have && j < extra.length && j < replaceable.length; j++) {

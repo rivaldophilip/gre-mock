@@ -91,7 +91,9 @@
           "id": "number-sense-qc",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "x^3 < x restricts x; compare x^2 with |x| or -x",
+      "variant": "x between -1 and 0: powers and reciprocals ordered"
     },
     {
       "id": "s1q2",
@@ -125,7 +127,9 @@
           "id": "remainders-units",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "k ≡ 5 mod 6; remainders of high powers of k mod 8 and mod 3",
+      "variant": "remainder of a sum or product from the remainders of its parts"
     },
     {
       "id": "s1q3",
@@ -158,7 +162,9 @@
           "id": "triangles",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "isosceles with sides 4 and 9: the third side must be 9; perimeter vs a value",
+      "variant": "triangle inequality: the range of the third side"
     },
     {
       "id": "s1q4",
@@ -197,7 +203,9 @@
           "id": "algebraic-expressions",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "two linear inequalities give an interval; compare x^2 with -4x",
+      "variant": "compound inequality: range of x + y or x - y or xy"
     },
     {
       "id": "s1q5",
@@ -233,7 +241,9 @@
           "id": "percent",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "price up p% then down q% (or back to a reference); find the missing percent or value",
+      "variant": "successive percent changes and reversal (up x%, then down x%)"
     },
     {
       "id": "s1q6",
@@ -274,7 +284,9 @@
           "id": "percent",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "lots sold at markup and at a discount off list; cost per unit from total profit",
+      "variant": "markup then discount"
     },
     {
       "id": "s1q7",
@@ -310,7 +322,9 @@
           "id": "counting-restrictions",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "lane assignment: two runners adjacent, a third not at either end",
+      "variant": "two people must sit together, or apart"
     },
     {
       "id": "s1q8",
@@ -350,7 +364,9 @@
           "id": "overlapping-sets",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "two-set problem with a neither bound; range of the number in exactly one",
+      "variant": "maximum and minimum of the overlap"
     },
     {
       "id": "s1q9",
@@ -380,7 +396,9 @@
           "id": "word-problems-age-sum",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "three people's shares related by more-than / twice / percent of the total",
+      "variant": "translating 'more than' / 'less than' in order"
     },
     {
       "id": "s1q10",
@@ -418,7 +436,9 @@
           "id": "data-interpretation-calc",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "DI: one category's percent of a total across groups",
+      "variant": "percent of a percent across two charts"
     },
     {
       "id": "s1q11",
@@ -461,7 +481,9 @@
           "id": "data-interpretation-calc",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "DI: change in the mean per nest when one group is excluded",
+      "variant": "a mean after adding or removing values"
     },
     {
       "id": "s1q12",
@@ -504,7 +526,9 @@
           "id": "data-interpretation-calc",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "DI with a normal assumption: count above mean + 1 SD across two groups",
+      "variant": "values within k standard deviations of the mean"
     },
     {
       "id": "s2q1",
@@ -537,7 +561,9 @@
           "id": "exponents-roots",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "sqrt(3·9^n) against a power of 3: rewrite as powers of 3",
+      "variant": "equations solved by rewriting to a common base"
     },
     {
       "id": "s2q2",
@@ -576,7 +602,9 @@
           "id": "polygons-quadrilaterals",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "rhombus with side and diagonal given: area vs a value (fixed)",
+      "variant": "only what is given fixes the relationship"
     },
     {
       "id": "s2q3",
@@ -609,7 +637,9 @@
           "id": "fractions-decimals",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "compare (10^8 + 1)/(10^9 + 1) with (10^9 + 1)/(10^10 + 1)",
+      "variant": "ordering fractions with unknowns or near-equal values"
     },
     {
       "id": "s2q4",
@@ -642,7 +672,9 @@
           "id": "algebraic-expressions",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "value of a symmetric expression (a^3 ± b^3, |a| + |b|, a^2 + b^2) from a ± b, ab or a^2 + b^2",
+      "variant": "identities across QC quantities"
     },
     {
       "id": "s2q5",
@@ -675,7 +707,9 @@
           "id": "exponential-growth",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "constant yearly growth with an overall 700% increase; percent over a third of the period",
+      "variant": "growth by a factor over a stated number of periods"
     },
     {
       "id": "s2q6",
@@ -717,7 +751,9 @@
           "id": "pythagorean-special",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "two parallel chords at known distances from the center",
+      "variant": "chord length from the distance to the center"
     },
     {
       "id": "s2q7",
@@ -759,7 +795,9 @@
           "id": "counting-restrictions",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "arrange pairs of identical items with no two alike adjacent",
+      "variant": "arrangements of letters with repeated items"
     },
     {
       "id": "s2q8",
@@ -795,7 +833,9 @@
           "id": "inscribed-figures",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "square inscribed in a semicircle with one side on the diameter",
+      "variant": "a rectangle inscribed in a circle or semicircle (diameter as diagonal)"
     },
     {
       "id": "s2q9",
@@ -831,7 +871,9 @@
           "id": "word-problems-rate",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "second traveller leaves later and faster on the same route; when it leads by a distance",
+      "variant": "relative speed: meeting or overtaking"
     },
     {
       "id": "s2q10",
@@ -867,7 +909,9 @@
           "id": "estimation-sigfig",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "estimate a product and quotient of numbers in scientific notation",
+      "variant": "scientific notation arithmetic with large powers of 10"
     },
     {
       "id": "s2q11",
@@ -909,7 +953,8 @@
           "id": "triangles",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "oblique triangle with 45° and 30° angles split by an altitude into two special right triangles; area or a side"
     },
     {
       "id": "s2q12",
@@ -946,7 +991,9 @@
           "id": "linear-equations",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "counts of items at two or three prices from a total count and revenue",
+      "variant": "three variables, two equations: what can be determined"
     },
     {
       "id": "s2q13",
@@ -984,7 +1031,9 @@
           "id": "ratio-proportion",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "chained ratios a:b and b:c with bounds; possible totals",
+      "variant": "combining two ratios that share a term (a:b and b:c)"
     },
     {
       "id": "s2q14",
@@ -1030,7 +1079,9 @@
           "id": "inequalities",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "rectangle with a fixed diagonal; select possible perimeters (range)",
+      "variant": "perimeter fixed, area varies (or the reverse)"
     },
     {
       "id": "s2q15",
@@ -1060,7 +1111,9 @@
           "id": "polygons-quadrilaterals",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "interior angle k times the exterior angle; number of diagonals",
+      "variant": "interior angle sum of an n-gon, and regular polygons"
     }
   ]
 }

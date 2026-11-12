@@ -19,8 +19,9 @@ A = sp.sqrt(8 + 2 * sp.sqrt(15)) - sp.sqrt(8 - 2 * sp.sqrt(15))
 assert A.evalf() > 0
 t.qc("s1q2", [(sp.nsimplify(sp.expand(A**2)), 12)])
 
-# s1q3: sides 5 and 8 with included angle x < 60; A = third side, B = 7 (compare squares)
-t.qc("s1q3", [(25 + 64 - 80 * math.cos(math.radians(x / 10)), 49) for x in range(1, 600)])
+# s1q3: PQ = 7, QR = 9, PR = 10; angle P (opposite QR) vs angle R (opposite PQ) by the law of cosines
+ang = lambda opp, s1, s2: math.degrees(math.acos((s1 * s1 + s2 * s2 - opp * opp) / (2 * s1 * s2)))
+t.qc("s1q3", [(ang(9, 7, 10), ang(7, 9, 10))])  # A opposite 9; B between 9 and 10 = opposite 7
 
 # s1q4: two sections of 10 scores, means 70 and 80, each SD 5; A = SD of all 20, B = 5.
 # Sections built exactly (sympy) from random integer lists rescaled to the given mean and SD, both SD definitions.
@@ -47,9 +48,8 @@ for sample in (False, True):
         pairs4.append((float(var(both, sample)), 25))
 t.qc("s1q4", pairs4)
 
-# s1q5: +25% then -30%, final is 1.05 below original; price after the raise
-p = next(F(c, 100) for c in range(1, 100000) if F(c, 100) - F(c, 100) * F(5, 4) * F(7, 10) == F(105, 100))
-t.choice("s1q5", p * F(5, 4))
+# s1q5: 40% of the 30% dog owners
+t.choice("s1q5", F(40, 100) * 30)
 
 # s1q6: swimmers from opposite ends of a 50 m pool at 5/4 and 1 m/s; time of the second meeting
 L = 50
@@ -68,16 +68,18 @@ for a, b in zip(breaks, breaks[1:]):
         meets.append(a + (b - a) * fa / (fa - fb))
 t.choice("s1q6", meets[1])
 
-# s1q7: 4 from 6 carpenters (Kim, Lee among them) and 4 electricians; >= 1 electrician; not both Kim and Lee
-people = ["Kim", "Lee", "c3", "c4", "c5", "c6", "e1", "e2", "e3", "e4"]
-t.choice("s1q7", sum(1 for c in combinations(people, 4) if any(x[0] == "e" for x in c) and not ("Kim" in c and "Lee" in c)))
+# s1q7: exactly 2 electricians; Kim only if Lee
+people7 = ["Kim", "Lee", "c3", "c4", "c5", "c6", "e1", "e2", "e3", "e4"]
+t.choice("s1q7", sum(1 for crew in combinations(people7, 4)
+                     if sum(p.startswith("e") for p in crew) == 2 and ("Kim" not in crew or "Lee" in crew)))
 
-# s1q8: |2x-5| <= 7 and |x+1| > 3
-t.where("s1q8", lambda x: abs(2 * x - 5) <= 7 and abs(x + 1) > 3)
+# s1q8: statements true for every real x (grid including negatives and non-integers)
+xs8 = [F(k, 4) for k in range(-40, 41)]
+st8 = [lambda x: abs(x) >= x, lambda x: abs(x) >= -x, lambda x: abs(x - 1) >= abs(x) - 1, lambda x: abs(x) ** 2 == x * x, lambda x: abs(-x) == x, lambda x: math.sqrt(x * x) == x]
+t.sel("s1q8", [i for i, f in enumerate(st8) if all(f(x) for x in xs8)])
 
-# s1q9: sopranos:altos = 5:3, 2 sopranos leave and 6 altos join -> equal; total now
-k = next(k for k in range(1, 1000) if 5 * k - 2 == 3 * k + 6)
-t.value("s1q9", (5 * k - 2) + (3 * k + 6))
+# s1q9: 6 painters x 10 hours; 4 painters
+t.value("s1q9", F(6 * 10, 4))
 
 # DI: five-number summaries; one-fourth of each group in each interval, all times distinct
 groups = {"u30": (80, (35, 45, 50, 60, 75)), "30-49": (120, (40, 50, 60, 65, 85)), "50+": (60, (45, 60, 65, 75, 90))}
@@ -96,29 +98,24 @@ def below(g, x):
             hi += c - (1 if i == 3 else 0)
     return lo, hi
 
-# s1q10: percent of all 260 under 60 minutes (each count must be determined)
-counts = [below(g, 60) for g in groups]
-assert all(lo == hi for lo, hi in counts)
-total = sum(n for n, _ in groups.values())
-t.choice("s1q10", round(100 * F(sum(lo for lo, _ in counts), total)))
+# s1q10: groups whose IQR is at least 15
+t.sel("s1q10", [sum(1 for _, f in groups.values() if f[3] - f[1] >= 15)])
 
-# s1q11: possible mean of the under-30 group lies strictly between the quarter-lower-end and quarter-upper-end averages
-n, f = groups["u30"]
-mean_lo = F(sum(f[i] for i in range(4)), 4)
-mean_hi = F(sum(f[i + 1] for i in range(4)), 4)
-t.where("s1q11", lambda v: mean_lo < v < mean_hi)
+# s1q11: range of all runners minus range of the 30-49 group
+lo11 = min(f[0] for _, f in groups.values())
+hi11 = max(f[4] for _, f in groups.values())
+t.choice("s1q11", (hi11 - lo11) - (groups["30-49"][1][4] - groups["30-49"][1][0]))
 
 # s1q12: greatest P(30-49 group and time < 55 | time < 60)
 base = sum(below(g, 60)[0] for g in groups)
 t.choice("s1q12", F(below("30-49", 55)[1], base))
 
-# s2q1: A = units digit of 7^n * 3^n, B = units digit of 7^n + 3^n
-t.qc("s2q1", [((7**n * 3**n) % 10, (7**n + 3**n) % 10) for n in range(1, 60)])
+# s2q1: last digit of 3^n + 7^n is 0; A = last digit of 9^n, B = 9
+t.qc("s2q1", [(pow(9, n, 10), 9) for n in range(1, 200) if (pow(3, n, 10) + pow(7, n, 10)) % 10 == 0])
 
-# s2q2: JK = 5, KL = 8, area 12 -> sin K = 3/5, cos K = +-4/5; A = JL, B = 8 (compare squares)
-sin = F(2 * 12, 5 * 8)
-cos_abs = rational_sqrt(1 - sin * sin)
-t.qc("s2q2", [(25 + 64 - 2 * 5 * 8 * c, 64) for c in (cos_abs, -cos_abs)])
+# s2q2: exterior angle at C = 130, A = B + 20; A = angle A, B = angle C
+b2 = next(b for b in range(1, 180) if (b + 20) + b == 130)
+t.qc("s2q2", [(b2 + 20, 180 - 130)])
 
 # s2q3: 10 tickets, 4 winners; 3 draws with replacement (A) vs without (B); P(at least one winner)
 tickets = [1] * 4 + [0] * 6
@@ -128,94 +125,59 @@ pa = F(sum(1 for d in withr if any(tickets[i] for i in d)), len(withr))
 pb = F(sum(1 for d in without if any(tickets[i] for i in d)), len(without))
 t.qc("s2q3", [(pa, pb)])
 
-# s2q4: (p+q)^2 = 49, (p-q)^2 = 9; A = p^2+q^2, B = 3pq over all real solutions
-sols = [(F(s + d, 2), F(s - d, 2)) for s in (7, -7) for d in (3, -3)]
-t.qc("s2q4", [(p * p + q * q, 3 * p * q) for p, q in sols])
+# s2q4: x^2 + 6x + k = (x + 3)^2 - 4 for all x; A = k, B = 5
+xx = sp.Symbol("x")
+k4 = sp.expand((xx + 3) ** 2 - 4 - xx**2 - 6 * xx)
+t.qc("s2q4", [(k4, 5)])
 
 # s2q5: -2<=x<=3, -4<=y<=1; A = max x^2-y^2, B = max xy (grid step 1/4)
 xs = [F(i, 4) for i in range(-8, 13)]
 ys = [F(i, 4) for i in range(-16, 5)]
 t.qc("s2q5", [(max(x * x - y * y for x in xs for y in ys), max(x * y for x in xs for y in ys))])
 
-# s2q6: radius 6, inscribed angle 45 -> segment area; find the central angle by placing C on the major arc
-r = 6
-def inscribed(theta):
-    A_, B_ = (r, 0), (r * math.cos(theta), r * math.sin(theta))
-    C_ = (r * math.cos(theta / 2 + math.pi), r * math.sin(theta / 2 + math.pi))
-    u = (A_[0] - C_[0], A_[1] - C_[1]); w = (B_[0] - C_[0], B_[1] - C_[1])
-    return math.degrees(math.acos((u[0] * w[0] + u[1] * w[1]) / math.hypot(*u) / math.hypot(*w)))
-lo_, hi_ = 1e-6, math.pi
-for _ in range(200):
-    mid = (lo_ + hi_) / 2
-    lo_, hi_ = (mid, hi_) if inscribed(mid) < 45 else (lo_, mid)
-theta = lo_
-seg = r * r / 2 * (theta - math.sin(theta))
-pi, s3, s2 = math.pi, math.sqrt(3), math.sqrt(2)
-vals6 = [9 * pi - 18, 9 * pi - 36, 9 * pi / 2 - 9 * s2, 18 * pi - 18, 27 * pi + 18]
-t.sel("s2q6", [i for i, v in enumerate(vals6) if abs(v - seg) < 1e-6])
+# s2q6: lanes differ by 1.5 m in radius; extra distance over 2 laps
+t.choice("s2q6", round(2 * 2 * math.pi * 1.5, 1))
 
-# s2q7: 120 people, sessions 70, 85, 40, everyone at >= 1; greatest number at all three
-def feasible(x):
-    for ab in range(0, 76):
-        for ac in range(0, 76):
-            bc = 75 - 2 * x - ab - ac
-            if bc < 0:
-                continue
-            a, b, c = 70 - x - ab - ac, 85 - x - ab - bc, 40 - x - ac - bc
-            if min(a, b, c) >= 0 and a + b + c + ab + ac + bc + x == 120:
-                return True
-    return False
-t.choice("s2q7", max(x for x in range(0, 41) if feasible(x)))
+# s2q7: 150 = 90 + 70 - both + neither, both = 2 neither
+t.choice("s2q7", next(n for n in range(0, 151) if 90 + 70 - 2 * n + n == 150))
 
-# s2q8: hexagon in circle R = 6, circle inscribed in hexagon; (circle - hexagon) + (hexagon - small circle)
-R = 6
-V = [(R * math.cos(k * math.pi / 3), R * math.sin(k * math.pi / 3)) for k in range(6)]
-hexa = abs(sum(V[i][0] * V[(i + 1) % 6][1] - V[(i + 1) % 6][0] * V[i][1] for i in range(6))) / 2
-apo = math.hypot((V[0][0] + V[1][0]) / 2, (V[0][1] + V[1][1]) / 2)
-region = (pi * R * R - hexa) + (hexa - pi * apo * apo)
-vals8 = [9 * pi, 27 * pi, 54 * s3 - 27 * pi, 36 * pi - 54 * s3, 63 * pi - 108 * s3]
-t.sel("s2q8", [i for i, v in enumerate(vals8) if abs(v - region) < 1e-6])
+# s2q8: four unit circles in a 4 x 4 square; central region (grid count inside the centers' square, outside all circles)
+cs = [(1, 1), (3, 1), (3, 3), (1, 3)]
+N8 = 1000
+inside = sum(1 for i in range(N8) for j in range(N8)
+             if all((1 + 2 * (i + 0.5) / N8 - a) ** 2 + (1 + 2 * (j + 0.5) / N8 - b) ** 2 > 1 for a, b in cs))
+est = inside * 4 / N8**2
+assert abs(est - (4 - math.pi)) < 0.01, est
+vals8 = [4 - math.pi, 16 - 4 * math.pi, 2 - math.pi / 2, 4 * math.pi - 4, math.pi - 2]
+t.sel("s2q8", [i for i, v in enumerate(vals8) if abs(v - est) < 0.01])
 
-# s2q9: p + 2n + 3f = 26, 3p + 2n + f = 22; p + n + f over the whole solution family (f free)
-sums = set()
-for f in [F(i, 4) for i in range(0, 40)]:
-    # solve the 2x2 system in p, n
-    a1, b1, c1 = 1, 2, 26 - 3 * f
-    a2, b2, c2 = 3, 2, 22 - f
-    det = a1 * b2 - a2 * b1
-    p_, n_ = (c1 * b2 - c2 * b1) / det, (a1 * c2 - a2 * c1) / det
-    sums.add(p_ + n_ + f)
-assert len(sums) == 1
-t.choice("s2q9", sums.pop())
+# s2q9: x + y = 24 = 3(x - y); larger
+t.choice("s2q9", max((24 + d) / 2 for d in (F(24, 3),)))
 
-# s2q10: (0.666... - 0.25) / (0.2 - 0.0333...); repeating decimals as limits of geometric series
-def repeating(prefix_digits, rep, places):
-    """0.<prefix><rep><rep>... where the prefix has `places` digits."""
-    return F(prefix_digits, 10**places) + F(rep, 9 * 10**places)
-t.choice("s2q10", (repeating(0, 6, 0) - F(1, 4)) / (F(1, 5) - repeating(0, 3, 1)))
+# s2q10: terminating decimal: reduced denominator has only 2s and 5s
+def terminates(fr):
+    d = fr.denominator
+    for p in (2, 5):
+        while d % p == 0:
+            d //= p
+    return d == 1
+fr10 = [F(7, 12), F(5, 14), F(11, 24), F(21, 56), F(13, 30)]
+t.sel("s2q10", [i for i, fr in enumerate(fr10) if terminates(fr)])
 
-# s2q11: 3-letter sequences from tiles KKKLLM
-t.choice("s2q11", len(set(permutations("KKKLLM", 3))))
+# s2q11: president, vice president, then a 3-member committee from the other 8
+t.choice("s2q11", sum(1 for p in range(10) for v in range(10) if v != p for _ in combinations([m for m in range(10) if m not in (p, v)], 3)))
 
-# s2q12: rectangle ABCD, AC = 12, angle CAB = 30, E on AB with angle ADE = 45; area of EBCD
-ab, bc = 12 * math.cos(math.radians(30)), 12 * math.sin(math.radians(30))
-Dp = (0, bc)
-ex = next(i / 10**5 * ab for i in range(10**5) if math.degrees(math.atan2(i / 10**5 * ab, bc)) >= 45)
-assert ex < ab
-poly = [(ex, 0), (ab, 0), (ab, bc), Dp]
-area12 = abs(sum(poly[i][0] * poly[(i + 1) % 4][1] - poly[(i + 1) % 4][0] * poly[i][1] for i in range(4))) / 2
-vals12 = [36 * s3 - 18, 36 * s3 - 36, 18 * s3, 18 * s3 + 18, 54 - 18 * s3]
-t.sel("s2q12", [i for i, v in enumerate(vals12) if abs(v - area12) < 1e-3])
+# s2q12: s sqrt2 = s + 1
+s12 = 1 / (math.sqrt(2) - 1)
+vals12 = [math.sqrt(2) - 1, 1, math.sqrt(2), math.sqrt(2) + 1, 2 * math.sqrt(2)]
+t.sel("s2q12", [i for i, v in enumerate(vals12) if math.isclose(v, s12)])
 
-# s2q13: -3 < a < 2, 1 < b < 4; which must be true (dense interior grid)
-grid = [(F(i, 100), F(j, 100)) for i in range(-299, 200, 3) for j in range(101, 400, 3)]
-stmts = [lambda a, b: a - b < 1, lambda a, b: a * b > -8, lambda a, b: a + b > -1,
-         lambda a, b: a * a < 9, lambda a, b: a / b > -1, lambda a, b: b - a < 6]
-t.sel("s2q13", [i for i, s in enumerate(stmts) if all(s(a, b) for a, b in grid)])
+# s2q13: x^2 + kx + 9 < 0 has a real solution: check the vertex value exactly
+t.where("s2q13", lambda k: 9 - k * k / 4 < 0)
 
-# s2q14: p^2 - q^2 = 72 with p, q positive integers; possible q
-qs = {q for q in range(1, 200) if (s := math.isqrt(q * q + 72)) ** 2 == q * q + 72}
-t.where("s2q14", lambda q: q in qs)
+# s2q14: sums of 5 consecutive integers
+sums14 = {sum(range(m, m + 5)) for m in range(-100, 100)}
+t.where("s2q14", lambda v: v in sums14)
 
 # s2q15: pieces 12 (w x h), 18 (shares h), 30 (shares w), all integer sides; least perimeter
 per = [2 * (w + 18 // h + h + 30 // w) for w in range(1, 13) for h in range(1, 13)

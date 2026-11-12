@@ -18,11 +18,6 @@
       "id": "fig1",
       "caption": "Orders shipped by a furniture company's four warehouses in 2025, by shipping method (in thousands). Every order was shipped by exactly one method.",
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 440 330\" width=\"100%\" style=\"max-width:440px\" font-family=\"sans-serif\" font-size=\"12\" fill=\"currentColor\"><defs><pattern id=\"q8hatch\" width=\"6\" height=\"6\" patternUnits=\"userSpaceOnUse\" patternTransform=\"rotate(45)\"><line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"6\" stroke=\"currentColor\" stroke-width=\"2\"/></pattern></defs><line x1=\"60\" y1=\"280.0\" x2=\"430\" y2=\"280.0\" stroke=\"currentColor\" stroke-opacity=\"0.6\"/><text x=\"52\" y=\"284.0\" text-anchor=\"end\">0</text><line x1=\"60\" y1=\"236.0\" x2=\"430\" y2=\"236.0\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"52\" y=\"240.0\" text-anchor=\"end\">10</text><line x1=\"60\" y1=\"192.0\" x2=\"430\" y2=\"192.0\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"52\" y=\"196.0\" text-anchor=\"end\">20</text><line x1=\"60\" y1=\"148.0\" x2=\"430\" y2=\"148.0\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"52\" y=\"152.0\" text-anchor=\"end\">30</text><line x1=\"60\" y1=\"104.0\" x2=\"430\" y2=\"104.0\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"52\" y=\"108.0\" text-anchor=\"end\">40</text><line x1=\"60\" y1=\"60.0\" x2=\"430\" y2=\"60.0\" stroke=\"currentColor\" stroke-opacity=\"0.2\"/><text x=\"52\" y=\"64.0\" text-anchor=\"end\">50</text><text x=\"16\" y=\"170\" text-anchor=\"middle\" transform=\"rotate(-90 16 170)\">Orders (thousands)</text><rect x=\"85\" y=\"174.4\" width=\"44\" height=\"105.6\" fill=\"currentColor\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"134\" y=\"231.2\">24</text><rect x=\"85\" y=\"130.4\" width=\"44\" height=\"44.0\" fill=\"url(#q8hatch)\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"134\" y=\"156.4\">10</text><rect x=\"85\" y=\"104.0\" width=\"44\" height=\"26.4\" fill=\"currentColor\" fill-opacity=\"0.08\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"134\" y=\"121.2\">6</text><text x=\"107.0\" y=\"298\" text-anchor=\"middle\">North</text><rect x=\"177\" y=\"200.8\" width=\"44\" height=\"79.2\" fill=\"currentColor\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"226\" y=\"244.4\">18</text><rect x=\"177\" y=\"134.8\" width=\"44\" height=\"66.0\" fill=\"url(#q8hatch)\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"226\" y=\"171.8\">15</text><rect x=\"177\" y=\"82.0\" width=\"44\" height=\"52.8\" fill=\"currentColor\" fill-opacity=\"0.08\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"226\" y=\"112.4\">12</text><text x=\"199.0\" y=\"298\" text-anchor=\"middle\">South</text><rect x=\"269\" y=\"148.0\" width=\"44\" height=\"132.0\" fill=\"currentColor\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"318\" y=\"218.0\">30</text><rect x=\"269\" y=\"121.6\" width=\"44\" height=\"26.4\" fill=\"url(#q8hatch)\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"318\" y=\"138.8\">6</text><rect x=\"269\" y=\"82.0\" width=\"44\" height=\"39.6\" fill=\"currentColor\" fill-opacity=\"0.08\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"318\" y=\"105.8\">9</text><text x=\"291.0\" y=\"298\" text-anchor=\"middle\">East</text><rect x=\"361\" y=\"227.2\" width=\"44\" height=\"52.8\" fill=\"currentColor\" fill-opacity=\"0.55\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"410\" y=\"257.6\">12</text><rect x=\"361\" y=\"174.4\" width=\"44\" height=\"52.8\" fill=\"url(#q8hatch)\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"410\" y=\"204.8\">12</text><rect x=\"361\" y=\"148.0\" width=\"44\" height=\"26.4\" fill=\"currentColor\" fill-opacity=\"0.08\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"410\" y=\"165.2\">6</text><text x=\"383.0\" y=\"298\" text-anchor=\"middle\">West</text><rect x=\"70\" y=\"8\" width=\"14\" height=\"12\" fill=\"currentColor\" fill-opacity=\"0.55\" stroke=\"currentColor\"/><text x=\"90\" y=\"18\">Ground</text><rect x=\"180\" y=\"8\" width=\"14\" height=\"12\" fill=\"url(#q8hatch)\" stroke=\"currentColor\"/><text x=\"200\" y=\"18\">Freight</text><rect x=\"290\" y=\"8\" width=\"14\" height=\"12\" fill=\"currentColor\" fill-opacity=\"0.08\" stroke=\"currentColor\"/><text x=\"310\" y=\"18\">Express</text></svg>"
-    },
-    {
-      "id": "fig2",
-      "caption": "Note: Figure not drawn to scale.",
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 205\" width=\"100%\" style=\"max-width:330px\" font-family=\"sans-serif\" font-size=\"14\" fill=\"currentColor\"><polygon points=\"70,180 290.0,180 56.6,26.6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"56\" y=\"196\">K</text><text x=\"296.0\" y=\"196\">L</text><text x=\"50.6\" y=\"18.6\">J</text><text x=\"180.0\" y=\"200\" text-anchor=\"middle\">10</text><text x=\"47.3\" y=\"103.3\">7</text></svg>"
     }
   ],
   "questions": [
@@ -57,33 +52,35 @@
           "id": "fractions-decimals",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "repeating decimal x; compare 1/x with a value",
+      "variant": "the k-th digit after the decimal point of a repeating decimal",
+      "revisits": "quant-002:s2q4"
     },
     {
       "id": "s1q2",
       "section": 1,
       "type": "qc",
       "difficulty": 4,
-      "prompt": "$-2 < x < 0$",
+      "prompt": "$2 < x < 3$",
       "qc": {
-        "a": "$x^3 - x$",
-        "b": "$x^2 - x^4$"
+        "a": "$x^2 - 5x$",
+        "b": "$-6$"
       },
       "key": {
         "sel": [
-          3
+          1
         ]
       },
       "explanation": {
-        "key": "$A - B = x^4 + x^3 - x^2 - x = x(x+1)^2(x-1)$. On $-2 < x < 0$ both $x$ and $x-1$ are negative, so the product is positive except at $x = -1$, where it is 0. So A is greater for most values but the two are equal at $x=-1$: cannot be determined.",
+        "key": "A $-$ B $= x^2 - 5x + 6 = (x - 2)(x - 3)$. For $2 < x < 3$ the first factor is positive and the second negative, so the difference is negative: B is greater.",
         "steps": [
-          "1. Subtract: $(x^3 - x) - (x^2 - x^4) = x^4 + x^3 - x^2 - x$.",
-          "2. Factor: $x^3(x+1) - x(x+1) = x(x+1)(x^2-1) = x(x+1)^2(x-1)$.",
-          "3. For $-2<x<0$: $x<0$ and $x-1<0$, so the sign is that of $(x+1)^2 \\ge 0$.",
-          "4. $x = -\\tfrac12$: A $= 0.375$, B $= 0.1875$ (A greater). $x = -1$: A $= 0$, B $= 0$ (equal). Answer D."
+          "1. Compare $x^2 - 5x$ with $-6$ by looking at $x^2 - 5x + 6$.",
+          "2. It factors as $(x - 2)(x - 3)$.",
+          "3. Between 2 and 3: $(+)(-) < 0$, so $x^2 - 5x < -6$."
         ],
-        "fast": "Try the integer inside the interval first: $x=-1$ makes both quantities 0.",
-        "trap": "Testing only $-\\tfrac12$ and $-1.5$ gives A both times; the repeated factor $(x+1)^2$ hides a single point of equality."
+        "fast": "$x = 2.5$: A $= 6.25 - 12.5 = -6.25 < -6$.",
+        "trap": "Testing only $x = 2$ or $x = 3$, where the two are equal, and answering C. No integer lies in the range."
       },
       "tags": [
         {
@@ -93,37 +90,38 @@
         },
         {
           "kind": "concept",
-          "id": "algebraic-expressions",
+          "id": "quadratic-inequalities",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "x strictly between two integers: the sign of (x - 2)(x - 3) decides x^2 - 5x against -6",
+      "variant": "non-integer test values that flip the relationship"
     },
     {
       "id": "s1q3",
       "section": 1,
       "type": "qc",
       "difficulty": 4,
-      "figureId": "fig2",
-      "prompt": "In triangle $JKL$ shown, $JK = 7$, $KL = 10$, and angle $K$ measures more than $90^\\circ$.",
+      "prompt": "In quadrilateral $PQRS$ (not shown), $PQ = QR = 5$ and $RS = SP = 8$.",
       "qc": {
-        "a": "The length of $JL$",
-        "b": "$12$"
+        "a": "The measure of angle $QPS$",
+        "b": "The measure of angle $QRS$"
       },
       "key": {
         "sel": [
-          0
+          2
         ]
       },
       "explanation": {
-        "key": "If angle $K$ were exactly $90^\\circ$, $JL^2 = 7^2 + 10^2 = 149$. Opening the angle beyond $90^\\circ$ lengthens the opposite side, so $JL^2 > 149 > 144 = 12^2$ and $JL > 12$.",
+        "key": "Triangles $PQS$ and $RQS$ have $PQ = RQ$, $PS = RS$ and the common side $QS$, so they are congruent (SSS). The angles at $P$ and $R$ correspond, so they are equal.",
         "steps": [
-          "1. The side opposite an angle grows as the angle grows (the two other sides fixed).",
-          "2. At $90^\\circ$: $JL = \\sqrt{49+100} = \\sqrt{149}$.",
-          "3. Angle $K > 90^\\circ$, so $JL > \\sqrt{149}$.",
-          "4. $\\sqrt{149} > \\sqrt{144} = 12$, so A is greater."
+          "1. Draw diagonal $QS$.",
+          "2. $PQ = RQ = 5$, $PS = RS = 8$, and $QS$ is shared.",
+          "3. By SSS, triangle $PQS \\cong$ triangle $RQS$.",
+          "4. Angle $QPS$ corresponds to angle $QRS$: equal."
         ],
-        "fast": "Obtuse angle at $K$ means $JL^2 > JK^2 + KL^2 = 149 > 144$.",
-        "trap": "The triangle inequality alone gives $3 < JL < 17$, which suggests D; the obtuse angle is the information that settles it, and the drawing (which makes $JL$ look short) cannot be trusted."
+        "fast": "Two pairs of equal adjacent sides make a kite, symmetric about the diagonal through the vertices where the equal pairs meet.",
+        "trap": "Choosing D because no figure is given and the angles could seem free to vary: the side lengths fix the two triangles."
       },
       "tags": [
         {
@@ -133,10 +131,12 @@
         },
         {
           "kind": "concept",
-          "id": "pythagorean-special",
+          "id": "polygons-quadrilaterals",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "kite given only by side lengths: the angles between unequal sides are equal (SSS); no figure",
+      "variant": "only what is given fixes the relationship"
     },
     {
       "id": "s1q4",
@@ -172,7 +172,9 @@
           "id": "std-dev-normal",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "normal: percents above/below two values give the mean and SD; compare two tail percents",
+      "variant": "values within k standard deviations of the mean"
     },
     {
       "id": "s1q5",
@@ -209,43 +211,54 @@
           "id": "ratio-proportion",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "chained ratios a:b and b:c with a difference given; one count",
+      "variant": "combining two ratios that share a term (a:b and b:c)",
+      "revisits": "quant-003:s2q13"
     },
     {
       "id": "s1q6",
       "section": 1,
       "type": "mc",
       "difficulty": 4,
-      "prompt": "Walking at a constant pace in the direction an airport's moving walkway travels, Dana covers the walkway's 120-meter length in 30 seconds. Walking at the same pace against the walkway's motion, she needs 120 seconds to cover the same length. How many seconds would Dana take to travel the length of the walkway if she stood still on it?",
+      "prompt": "Working together, two printers finish a job in 6 hours. Working alone, the slower printer takes 5 hours longer than the faster printer to do the job. How many hours does the faster printer take to do the job alone?",
       "choices": [
-        "48",
-        "60",
-        "75",
-        "80",
-        "90"
+        "5",
+        "8",
+        "10",
+        "12",
+        "15"
       ],
       "key": {
         "sel": [
-          3
+          2
         ]
       },
       "explanation": {
-        "key": "With the walkway: $w + b = 120/30 = 4$ m/s. Against it: $w - b = 120/120 = 1$ m/s. So $b = 1.5$ m/s, and standing still takes $120/1.5 = 80$ seconds.",
+        "key": "With the faster printer taking $b$ hours, $\\frac1b + \\frac1{b + 5} = \\frac16$. So $6(2b + 5) = b(b + 5)$, $b^2 - 7b - 30 = 0$, $(b - 10)(b + 3) = 0$ and $b = 10$.",
         "steps": [
-          "1. Speeds, not times, add: $w + b = 4$, $w - b = 1$.",
-          "2. Subtract: $2b = 3$, $b = 1.5$ m/s.",
-          "3. Standing still: $120 \\div 1.5 = 80$ s."
+          "1. Rates: $\\frac1b$ and $\\frac{1}{b + 5}$ jobs per hour.",
+          "2. Together: $\\frac1b + \\frac{1}{b + 5} = \\frac16$.",
+          "3. Clear denominators: $12b + 30 = b^2 + 5b$, so $b^2 - 7b - 30 = 0$.",
+          "4. $b = 10$ (the other root is negative). Check: $\\frac{1}{10} + \\frac{1}{15} = \\frac16$."
         ],
-        "fast": "The walkway's speed is half the difference of the two speeds: $(4-1)/2$.",
-        "trap": "Averaging the times (75 s) or taking their harmonic mean (48 s, which is her time on a stopped walkway) answers a different question."
+        "fast": "Try the choices: only 10 and 15 give a combined rate of $\\frac16$.",
+        "trap": "Adding times instead of rates, or answering the slower printer's 15 hours."
       },
       "tags": [
         {
           "kind": "concept",
           "id": "word-problems-rate",
           "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "quadratics-factoring",
+          "role": "secondary"
         }
-      ]
+      ],
+      "setup": "combined rate known and one machine slower by a fixed time: the rate equation becomes a quadratic",
+      "variant": "combined work rates"
     },
     {
       "id": "s1q7",
@@ -282,70 +295,76 @@
           "id": "counting-restrictions",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "schedule with one item before another but not adjacent, plus a slot restriction",
+      "variant": "complement counting: total minus the forbidden"
     },
     {
       "id": "s1q8",
       "section": 1,
       "type": "mc_multi",
       "difficulty": 4,
-      "prompt": "Which of the following values of $x$ satisfy $|x-1| + |x-5| \\le 2x$?\n\nIndicate all such values.",
+      "prompt": "The numbers $a$, $b$ and $c$ satisfy $|a - b| = 5$ and $|b - c| = 3$. Which of the following could be the value of $|a - c|$? Indicate all such values.",
       "choices": [
-        "$-3$",
-        "$1$",
-        "$\\dfrac{3}{2}$",
+        "$0$",
         "$2$",
-        "$4$",
-        "$9$"
+        "$3$",
+        "$5$",
+        "$8$",
+        "$15$"
       ],
       "key": {
         "sel": [
-          3,
-          4,
-          5
+          1,
+          4
         ]
       },
       "explanation": {
-        "key": "Split at 1 and 5. For $x \\ge 5$: $2x - 6 \\le 2x$, always true. For $1 \\le x < 5$: $4 \\le 2x$, so $x \\ge 2$. For $x < 1$: $6 - 2x \\le 2x$ gives $x \\ge \\tfrac32$, which contradicts $x<1$. Solution: $x \\ge 2$, so 2, 4 and 9.",
+        "key": "On a number line, $a$ is 5 from $b$ and $c$ is 3 from $b$. If $a$ and $c$ lie on the same side of $b$, they are $5 - 3 = 2$ apart; on opposite sides, $5 + 3 = 8$. Nothing else is possible.",
         "steps": [
-          "1. $x < 1$: left side $= 6 - 2x$; need $x \\ge 1.5$ — impossible here.",
-          "2. $1 \\le x < 5$: left side $= 4$; need $x \\ge 2$.",
-          "3. $x \\ge 5$: left side $= 2x - 6 < 2x$; always true.",
-          "4. Solution set $x \\ge 2$: choices $2$, $4$, $9$."
+          "1. $a = b \\pm 5$ and $c = b \\pm 3$.",
+          "2. $a - c = \\pm 5 \\mp 3$: one of $8, 2, -2, -8$.",
+          "3. $|a - c|$ is 2 or 8."
         ],
-        "fast": "For $1 \\le x \\le 5$ the left side is the constant 4 (the distance between 1 and 5), so the boundary is $2x = 4$.",
-        "trap": "$\\tfrac32$ comes out of the $x<1$ case but is not in that case's range; checking it directly gives $4 \\le 3$, false. Assuming the solution set is bounded above drops 9."
+        "fast": "Two distances from the same point: their sum or their difference.",
+        "trap": "Taking only the sum (8), or the distances themselves (3, 5)."
       },
       "tags": [
         {
           "kind": "concept",
           "id": "abs-value-inequalities",
           "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "number-line-abs",
+          "role": "secondary"
         }
-      ]
+      ],
+      "setup": "two distances from a shared point on the number line: the third distance is their sum or difference",
+      "variant": "|x - a| < b as a distance interval"
     },
     {
       "id": "s1q9",
       "section": 1,
       "type": "numeric",
       "difficulty": 3,
-      "prompt": "A pottery studio set the list price of a mug 60 percent above the mug's cost to the studio. During a sale, the mug was sold for 25 percent less than its list price, and the studio's profit on that sale was 18 dollars. What was the mug's list price, in dollars?",
+      "prompt": "After a 15 percent discount, a jacket costs \\$68. What was the price of the jacket, in dollars, before the discount?",
       "numeric": {
         "kind": "single"
       },
       "key": {
-        "value": "144"
+        "value": "80"
       },
       "explanation": {
-        "key": "Sale price $= 1.6 \\times 0.75 \\times c = 1.2c$, so profit $= 0.2c = 18$ and $c = 90$. List price $= 1.6 \\times 90 = 144$.",
+        "key": "The discounted price is 85 percent of the original: $0.85p = 68$, so $p = 80$.",
         "steps": [
-          "1. List price $= 1.6c$.",
-          "2. Sale price $= 0.75 \\times 1.6c = 1.2c$.",
-          "3. Profit $= 0.2c = 18$, so $c = 90$.",
-          "4. List price $= 144$."
+          "1. After 15% off, the price is $0.85$ of the original.",
+          "2. $0.85p = 68$.",
+          "3. $p = \\frac{68}{0.85} = 80$."
         ],
-        "fast": "Successive changes multiply: $1.6 \\times 0.75 = 1.2$, a 20% net markup.",
-        "trap": "Adding $60\\% - 25\\% = 35\\%$ gives $c = 18/0.35$, not an integer; stopping at the cost (90) or the sale price (108) answers a neighbouring question."
+        "fast": "$68$ is $17 \\times 4$ and $85\\%$ is $\\frac{17}{20}$, so $p = 20 \\times 4$.",
+        "trap": "Adding 15 percent of \\$68 back (\\$78.20): the 15 percent was of the original price, not of \\$68."
       },
       "tags": [
         {
@@ -353,7 +372,9 @@
           "id": "percent",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "a price after one discount is given; find the original (divide by the remaining share)",
+      "variant": "finding the original value after a change"
     },
     {
       "id": "s1q10",
@@ -391,7 +412,9 @@
           "id": "data-interpretation-calc",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "DI: percentage-point difference between two groups' shares",
+      "variant": "a ratio between two categories in different graphs"
     },
     {
       "id": "s1q11",
@@ -435,7 +458,9 @@
           "id": "data-interpretation-calc",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "DI: P(from a qualifying group) among one category",
+      "variant": "conditional probability from a two-way table"
     },
     {
       "id": "s1q12",
@@ -443,31 +468,30 @@
       "type": "mc",
       "setId": "di1",
       "figureId": "fig1",
-      "difficulty": 6,
-      "prompt": "The company plans to open a fifth warehouse and wants the median of the five warehouses' total orders to equal the mean of the five totals. If the four existing warehouses keep their 2025 totals, what is the greatest number of orders the fifth warehouse could ship for this to happen?",
+      "difficulty": 5,
+      "prompt": "Suppose that in 2026 the warehouse with the most Express orders in 2025 ships 6 thousand fewer Express orders than in 2025, and each of the other three warehouses ships 2 thousand more Express orders than in 2025. By how many orders would the mean of the four warehouses' 2026 Express order counts exceed their median?",
       "choices": [
-        "40,000",
-        "45,000",
-        "50,000",
-        "60,000",
-        "65,000"
+        "0",
+        "250",
+        "500",
+        "750",
+        "1,250"
       ],
       "key": {
         "sel": [
-          4
+          1
         ]
       },
       "explanation": {
-        "key": "Totals (thousands): 30, 40, 45, 45, sum 160. With a fifth total $x$, the mean is $(160 + x)/5$. If $x \\le 40$ the median is 40, giving $x = 40$; if $40 \\le x \\le 45$ the median is $x$, again $x = 40$; if $x \\ge 45$ the median is 45, giving $160 + x = 225$, $x = 65$. The greatest is 65,000.",
+        "key": "2025 Express (thousands): North 6, South 12, East 9, West 6. In 2026: South $12 - 6 = 6$, North 8, East 11, West 8. Sorted: 6, 8, 8, 11. Mean $\\frac{33}{4} = 8.25$, median 8, so the mean exceeds the median by 0.25 thousand, 250 orders.",
         "steps": [
-          "1. Totals: North 40, South 45, East 45, West 30 (thousands); sum 160.",
-          "2. Case $x \\le 40$: median 40, $(160+x)/5 = 40 \\Rightarrow x = 40$ ✓.",
-          "3. Case $40 \\le x \\le 45$: median $x$, $160 + x = 5x \\Rightarrow x = 40$ ✓.",
-          "4. Case $x \\ge 45$: median 45, $(160+x)/5 = 45 \\Rightarrow x = 65$ ✓.",
-          "5. Possible values 40 and 65 thousand; the greatest is 65,000."
+          "1. Read Express (thousands): 6, 12, 9, 6; South has the most.",
+          "2. 2026: South 6; North 8; East 11; West 8.",
+          "3. Sorted 6, 8, 8, 11: median $\\frac{8 + 8}{2} = 8$; mean $\\frac{33}{4} = 8.25$.",
+          "4. Difference: 0.25 thousand = 250 orders."
         ],
-        "fast": "The median of five values can only be 40, $x$ or 45; set the mean equal to each and keep the solutions that fall in the right range.",
-        "trap": "Solving only the case where the median stays at 40 gives 40,000; that is a possible value but not the greatest."
+        "fast": "The total is unchanged ($-6 + 3 \\times 2 = 0$), so the mean stays 8.25; only the median moves.",
+        "trap": "Using the 2025 numbers (mean 8.25, median 7.5: 750), or forgetting the counts are in thousands."
       },
       "tags": [
         {
@@ -480,7 +504,9 @@
           "id": "data-interpretation-calc",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "DI: change one category's values, then compare the mean and the median of the new list",
+      "variant": "the mean against the median of a skewed list"
     },
     {
       "id": "s2q1",
@@ -514,34 +540,35 @@
           "id": "exponents-roots",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "5th root of 5 vs cube root of 3 (raise both to the 15th)",
+      "variant": "comparing large powers or roots without a calculator"
     },
     {
       "id": "s2q2",
       "section": 2,
       "type": "qc",
-      "difficulty": 5,
-      "prompt": "A triangle has two sides of lengths 6 and 10, and its area is 24.",
+      "difficulty": 4,
+      "prompt": "In triangle $ABC$, point $D$ lies on side $AB$ and point $E$ lies on side $AC$ so that $DE$ is parallel to $BC$. $AD = 4$ and $DB = 2$.",
       "qc": {
-        "a": "The length of the third side",
-        "b": "$9$"
+        "a": "The area of quadrilateral $DBCE$",
+        "b": "The area of triangle $ADE$"
       },
       "key": {
         "sel": [
-          3
+          0
         ]
       },
       "explanation": {
-        "key": "Take the side of length 10 as the base: the height is $2(24)/10 = 4.8$, so the third vertex is 4.8 above the base and $\\sqrt{36 - 23.04} = 3.6$ along it from the end of the side of length 6. That foot can lie on either side of that endpoint, so the third side is $\\sqrt{6.4^2 + 4.8^2} = 8$ or $\\sqrt{13.6^2 + 4.8^2} = \\sqrt{208} \\approx 14.4$. One is less than 9, the other greater: D.",
+        "key": "Triangle $ADE$ is similar to triangle $ABC$ with ratio $\\frac{AD}{AB} = \\frac46 = \\frac23$, so its area is $\\frac49$ of $ABC$'s. The quadrilateral has the other $\\frac59$, which is more.",
         "steps": [
-          "1. Height to the side of length 10: $h = 48/10 = 4.8$.",
-          "2. The side of length 6 runs 3.6 along the base ($3.6^2 + 4.8^2 = 36$).",
-          "3. Acute case: foot inside, remaining horizontal $10 - 3.6 = 6.4$, third side $= \\sqrt{40.96 + 23.04} = 8$.",
-          "4. Obtuse case: foot outside, horizontal $10 + 3.6 = 13.6$, third side $= \\sqrt{184.96 + 23.04} = \\sqrt{208}$.",
-          "5. $8 < 9 < \\sqrt{208}$: cannot be determined."
+          "1. $DE \\parallel BC$, so triangle $ADE \\sim$ triangle $ABC$.",
+          "2. Side ratio $\\frac{4}{4 + 2} = \\frac23$.",
+          "3. Area ratio $\\left(\\frac23\\right)^2 = \\frac49$.",
+          "4. $DBCE$ is $1 - \\frac49 = \\frac59$ of $ABC$: larger than $\\frac49$."
         ],
-        "fast": "$\\tfrac12 \\cdot 6 \\cdot 10 \\cdot \\sin\\theta = 24$ gives $\\sin\\theta = 0.8$, which fits both an acute and an obtuse angle.",
-        "trap": "Spotting the 6-8-10 right triangle (area 24) and answering B misses the obtuse triangle with the same two sides and the same area."
+        "fast": "Areas scale with the square of the side ratio.",
+        "trap": "Using the side ratio for areas ($\\frac23$ against $\\frac13$, so B), or judging the thin strip $DB = 2$ to be the smaller region."
       },
       "tags": [
         {
@@ -551,10 +578,12 @@
         },
         {
           "kind": "concept",
-          "id": "pythagorean-special",
+          "id": "area-perimeter",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "a line parallel to one side cuts off a similar triangle; compare the trapezoid with the small triangle (areas scale as squares)",
+      "variant": "similar triangles: side and area ratios"
     },
     {
       "id": "s2q3",
@@ -589,40 +618,49 @@
           "id": "remainders-units",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "n + 1 a multiple of 6; remainder of n^2 + n mod 12 vs a value",
+      "variant": "remainder of a sum or product from the remainders of its parts"
     },
     {
       "id": "s2q4",
       "section": 2,
       "type": "qc",
       "difficulty": 4,
-      "prompt": "$x + 2y + 3z = 20$ and $3x + 2y + z = 12$.",
+      "prompt": "$a$, $b$ and $c$ are positive numbers such that $\\dfrac{1}{a} + \\dfrac{1}{b} = \\dfrac{1}{c}$.",
       "qc": {
-        "a": "$x + y + z$",
-        "b": "$2z - 2x$"
+        "a": "$c$",
+        "b": "$a$"
       },
       "key": {
         "sel": [
-          2
+          1
         ]
       },
       "explanation": {
-        "key": "Adding the equations: $4x + 4y + 4z = 32$, so $x + y + z = 8$. Subtracting the second from the first: $2z - 2x = 8$. The quantities are equal even though $x$, $y$ and $z$ are not individually determined.",
+        "key": "$\\frac1c = \\frac1a + \\frac1b > \\frac1a$ because $\\frac1b > 0$. For positive numbers a larger reciprocal means a smaller number, so $c < a$.",
         "steps": [
-          "1. Add: $4(x + y + z) = 32$, so A $= 8$.",
-          "2. Subtract: $(x + 2y + 3z) - (3x + 2y + z) = -2x + 2z = 8$, so B $= 8$.",
-          "3. Equal: C."
+          "1. $\\frac1b > 0$, so $\\frac1c > \\frac1a$.",
+          "2. Both are positive, so taking reciprocals reverses the inequality: $c < a$.",
+          "3. B is greater."
         ],
-        "fast": "Two equations, three unknowns: look for the combinations the quantities ask for, not for $x$, $y$, $z$.",
-        "trap": "Three unknowns and two equations tempts D; both quantities are fixed combinations."
+        "fast": "Solve for $c$: $c = \\frac{ab}{a + b} = a \\cdot \\frac{b}{a + b}$, and $\\frac{b}{a + b} < 1$.",
+        "trap": "Thinking $c$ could be either way because three letters are unknown."
       },
       "tags": [
         {
           "kind": "concept",
           "id": "linear-equations",
           "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "fractions-decimals",
+          "role": "secondary"
         }
-      ]
+      ],
+      "setup": "1/a + 1/b = 1/c with positive values: solve for c and compare it with a",
+      "variant": "a literal equation: solve for one letter in terms of the others"
     },
     {
       "id": "s2q5",
@@ -655,36 +693,37 @@
           "id": "probability-basic",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "P(A) and P(A or B) for independent events; compare P(B) with a value",
+      "variant": "complement: at least one success"
     },
     {
       "id": "s2q6",
       "section": 2,
       "type": "mc",
       "difficulty": 4,
-      "prompt": "In a circle, chord $AB$ has length 16 and is 6 units from the center of the circle. Chord $CD$ is parallel to $AB$ and has length 12. What is the greatest possible distance between $AB$ and $CD$?",
+      "prompt": "The front wheel of a tricycle has a diameter of 50 centimeters, and each rear wheel has a diameter of 30 centimeters. While the front wheel makes 120 complete rotations, how many more rotations does each rear wheel make? (Assume no wheel slips.)",
       "choices": [
-        "2",
-        "6",
-        "8",
-        "10",
-        "14"
+        "48",
+        "72",
+        "80",
+        "120",
+        "200"
       ],
       "key": {
         "sel": [
-          4
+          2
         ]
       },
       "explanation": {
-        "key": "Radius: $\\sqrt{8^2 + 6^2} = 10$. Chord $CD$ (half-length 6) is $\\sqrt{100 - 36} = 8$ from the center. On the same side of the center the chords are $8 - 6 = 2$ apart; on opposite sides, $8 + 6 = 14$. The greatest distance is 14.",
+        "key": "The tricycle travels $120 \\times 50\\pi$ centimeters. A rear wheel covers $30\\pi$ per rotation, so it makes $\\frac{120 \\times 50\\pi}{30\\pi} = 200$ rotations: 80 more.",
         "steps": [
-          "1. Half of $AB$ is 8; $r^2 = 8^2 + 6^2 = 100$, $r = 10$.",
-          "2. Half of $CD$ is 6; its distance from the center is $\\sqrt{100 - 36} = 8$.",
-          "3. Same side: $8 - 6 = 2$. Opposite sides: $8 + 6 = 14$.",
-          "4. Greatest: 14."
+          "1. Distance: $120 \\times \\pi \\times 50 = 6000\\pi$ cm.",
+          "2. Rear wheel: $\\frac{6000\\pi}{30\\pi} = 200$ rotations.",
+          "3. Difference: $200 - 120 = 80$."
         ],
-        "fast": "Both chords form 6-8-10 right triangles with the radius; only the side of the center is free.",
-        "trap": "Placing both chords on the same side of the center gives 2, the least distance, not the greatest."
+        "fast": "Rotations are inversely proportional to diameter: $120 \\times \\frac{50}{30} = 200$.",
+        "trap": "Answering 200 (the rear wheel's count) or using direct proportion ($120 \\times \\frac{30}{50} = 72$)."
       },
       "tags": [
         {
@@ -694,39 +733,42 @@
         },
         {
           "kind": "concept",
-          "id": "pythagorean-special",
+          "id": "ratio-proportion",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "two wheels of different diameters cover the same distance; the difference in rotations",
+      "variant": "circumference, or the number of rotations of a wheel"
     },
     {
       "id": "s2q7",
       "section": 2,
       "type": "mc",
       "difficulty": 5,
-      "prompt": "Of the 240 nurses at a hospital, 130 hold a certification in pediatrics, 110 hold one in critical care, and 90 hold one in oncology. Twenty of the nurses hold none of these three certifications, and 15 hold all three. How many of the nurses hold exactly one of the three certifications?",
+      "prompt": "Of the 200 members of a sports club, 120 play tennis, 90 play golf and 75 swim. Twenty-five members do none of the three, and exactly 40 members do exactly two of the three. How many members do all three?",
       "choices": [
-        "80",
-        "95",
-        "110",
-        "125",
-        "140"
+        "15",
+        "25",
+        "35",
+        "45",
+        "70"
       ],
       "key": {
         "sel": [
-          3
+          2
         ]
       },
       "explanation": {
-        "key": "220 nurses hold at least one. Let $e_1$, $e_2$ be the numbers holding exactly one and exactly two. Head count: $e_1 + e_2 + 15 = 220$. Certification count: $e_1 + 2e_2 + 3(15) = 130 + 110 + 90 = 330$. Subtracting: $e_2 + 30 = 110$, so $e_2 = 80$ and $e_1 = 125$.",
+        "key": "175 members do at least one. Counting each member once per activity: $120 + 90 + 75 = 285 = e_1 + 2e_2 + 3e_3$, and $e_1 + e_2 + e_3 = 175$. With $e_2 = 40$: $e_1 + e_3 = 135$ and $e_1 + 3e_3 = 205$, so $2e_3 = 70$ and $e_3 = 35$.",
         "steps": [
-          "1. At least one: $240 - 20 = 220$.",
-          "2. People: $e_1 + e_2 + 15 = 220 \\Rightarrow e_1 + e_2 = 205$.",
-          "3. Certifications: $e_1 + 2e_2 + 45 = 330 \\Rightarrow e_1 + 2e_2 = 285$.",
-          "4. $e_2 = 80$, $e_1 = 125$."
+          "1. At least one activity: $200 - 25 = 175$.",
+          "2. Exactly one, two, three: $e_1 + e_2 + e_3 = 175$.",
+          "3. Activity count: $e_1 + 2e_2 + 3e_3 = 285$.",
+          "4. Put in $e_2 = 40$: $e_1 + e_3 = 135$ and $e_1 + 3e_3 = 205$.",
+          "5. Subtract: $2e_3 = 70$, so 35 do all three."
         ],
-        "fast": "Count people once and certifications once; the difference of the two equations isolates the exactly-two group.",
-        "trap": "80 is the number holding exactly two; 110 ($330 - 220$) is the excess count, which counts a triple-holder twice."
+        "fast": "$285 - 175 = 110$ is the overcount: $e_2 + 2e_3 = 110$, so $2e_3 = 70$.",
+        "trap": "Treating 40 as the sum of the pairwise overlaps in $A + B + C - (\\text{pairs}) + \\text{all three}$; the 40 counts members, not overlaps."
       },
       "tags": [
         {
@@ -734,7 +776,10 @@
           "id": "overlapping-sets",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "three sets with the exactly-two count and a neither count given; find the number in all three (counting by multiplicity)",
+      "variant": "three-set Venn diagram",
+      "revisits": "quant-005:s2q11"
     },
     {
       "id": "s2q8",
@@ -776,20 +821,22 @@
           "id": "circles",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "circle through two vertices of a square and tangent to the opposite side; radius",
+      "variant": "a square inscribed in a circle, or a circle in a square"
     },
     {
       "id": "s2q9",
       "section": 2,
       "type": "mc",
       "difficulty": 4,
-      "prompt": "In triangle $PQR$, angle $P$ measures $45^\\circ$, angle $Q$ measures $30^\\circ$, and $PR = 6$. What is the length of side $PQ$?",
+      "prompt": "Point $D$ lies on side $AC$ of triangle $ABC$, and segment $BD$ is perpendicular to $AC$. If $AD = BD = 6$ and $DC = 2\\sqrt{3}$, what is the measure of angle $ABC$?",
       "choices": [
-        "$6\\sqrt{2}$",
-        "$3\\sqrt{2} + 3\\sqrt{6}$",
-        "$6 + 3\\sqrt{2}$",
-        "$6\\sqrt{3}$",
-        "$9\\sqrt{2}$"
+        "$60^\\circ$",
+        "$75^\\circ$",
+        "$90^\\circ$",
+        "$105^\\circ$",
+        "$120^\\circ$"
       ],
       "key": {
         "sel": [
@@ -797,23 +844,31 @@
         ]
       },
       "explanation": {
-        "key": "Drop the altitude from $R$ to $PQ$, meeting it at $H$. Triangle $PRH$ is 45-45-90 with hypotenuse 6: $RH = PH = 3\\sqrt2$. Triangle $QRH$ is 30-60-90 with short leg $RH = 3\\sqrt2$: $QH = 3\\sqrt2 \\cdot \\sqrt3 = 3\\sqrt6$. So $PQ = 3\\sqrt2 + 3\\sqrt6$.",
+        "key": "Right triangle $ABD$ has equal legs, so angle $ABD = 45^\\circ$. Right triangle $CBD$ has legs $BD = 6$ and $DC = 2\\sqrt3$, in the ratio $\\sqrt3 : 1$, so it is a 30-60-90 triangle with angle $DBC = 30^\\circ$. Angle $ABC = 45^\\circ + 30^\\circ = 75^\\circ$.",
         "steps": [
-          "1. Angle $R = 105^\\circ$, so the altitude from $R$ falls inside $PQ$.",
-          "2. 45-45-90: $PH = RH = 6/\\sqrt2 = 3\\sqrt2$.",
-          "3. 30-60-90 at $Q$: $QH = \\sqrt3 \\cdot RH = 3\\sqrt6$ (and $QR = 6\\sqrt2$).",
-          "4. $PQ = 3\\sqrt2 + 3\\sqrt6$."
+          "1. Triangle $ABD$: right angle at $D$, $AD = BD$, so it is 45-45-90 and angle $ABD = 45^\\circ$.",
+          "2. Triangle $CBD$: right angle at $D$, $\\frac{BD}{DC} = \\frac{6}{2\\sqrt3} = \\sqrt3$.",
+          "3. The angle opposite the shorter leg $DC$ is $30^\\circ$: angle $DBC = 30^\\circ$.",
+          "4. Angle $ABC = 45^\\circ + 30^\\circ = 75^\\circ$."
         ],
-        "fast": "Split the triangle along the altitude into the two special triangles.",
-        "trap": "$6\\sqrt2$ is side $QR$, not $PQ$; using $\\sqrt3$ for the 45° leg gives $6\\sqrt3$."
+        "fast": "Read each half as a special right triangle from its leg ratio.",
+        "trap": "Putting the $60^\\circ$ angle at $B$ in triangle $CBD$ (giving $105^\\circ$), or reading angle $C$ (60°) as the answer."
       },
       "tags": [
         {
           "kind": "concept",
           "id": "pythagorean-special",
           "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "secondary"
         }
-      ]
+      ],
+      "setup": "a perpendicular splits a triangle into pieces whose leg ratios reveal 45-45-90 and 30-60-90 triangles; add the angles at the vertex (backwards)",
+      "variant": "Pythagorean theorem used twice (a ladder, a path, a shared leg)",
+      "revisits": "quant-003:s2q11"
     },
     {
       "id": "s2q10",
@@ -849,35 +904,38 @@
           "id": "area-perimeter",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "corner cut from a rectangle: perimeter of the remaining L shape",
+      "variant": "the area of an irregular composite figure"
     },
     {
       "id": "s2q11",
       "section": 2,
       "type": "mc",
-      "difficulty": 6,
-      "prompt": "A coach will choose 4 of 7 sprinters, including Xu and Yates, and assign them to the 4 legs of a relay, one sprinter per leg. Yates will run only if Xu also runs, and Xu will not run the first leg. How many different assignments are possible?",
+      "difficulty": 5,
+      "prompt": "How many subsets of the set $\\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\}$ contain more even numbers than odd numbers?",
       "choices": [
-        "480",
-        "540",
-        "600",
-        "720",
-        "840"
+        "252",
+        "386",
+        "512",
+        "638",
+        "772"
       ],
       "key": {
         "sel": [
-          0
+          1
         ]
       },
       "explanation": {
-        "key": "Case 1, Xu runs: choose 3 others from the remaining 6 ($\\binom63 = 20$), then order the 4 with Xu not first ($4! - 3! = 18$): $360$. Case 2, Xu does not run: Yates cannot run either, so choose and order 4 of the other 5: $5 \\cdot 4 \\cdot 3 \\cdot 2 = 120$. Total $480$.",
+        "key": "Swapping each even number with an odd one pairs the subsets with more evens and those with more odds, so the two groups are equal. Subsets with equally many: $\\sum_k \\binom5k^2 = \\binom{10}{5} = 252$. More evens: $\\frac{1024 - 252}{2} = 386$.",
         "steps": [
-          "1. Xu runs: $\\binom{6}{3} = 20$ teams (Yates allowed), $18$ orders each with Xu off leg 1: 360.",
-          "2. Xu sits out: Yates also sits out; $P(5,4) = 120$.",
-          "3. $360 + 120 = 480$."
+          "1. There are $2^{10} = 1024$ subsets.",
+          "2. Five evens and five odds: the map $k \\mapsto k \\pm 1$ swaps them, so 'more evens' and 'more odds' are equally many.",
+          "3. Equal counts: choose $k$ evens and $k$ odds, $\\sum_{k=0}^{5} \\binom5k^2 = \\binom{10}{5} = 252$.",
+          "4. More evens: $\\frac{1024 - 252}{2} = 386$."
         ],
-        "fast": "Split on whether Xu runs; that settles Yates too.",
-        "trap": "600 applies only the Yates rule ($840 - 240$); 840 ignores both rules; 720 applies only the leg rule ($840 - 120$)."
+        "fast": "Half of what is left after removing the ties.",
+        "trap": "Halving 1024 (512) without removing the ties, or answering the ties (252)."
       },
       "tags": [
         {
@@ -890,35 +948,37 @@
           "id": "counting-restrictions",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "subsets with more of one kind than another: symmetry pairs them, then remove the equal case",
+      "variant": "subset counts and the symmetry C(n, k) = C(n, n - k)"
     },
     {
       "id": "s2q12",
       "section": 2,
       "type": "mc",
       "difficulty": 4,
-      "prompt": "If $a - b = 4$ and $a^2 + b^2 = 40$, what is the value of $a^3 - b^3$?",
+      "prompt": "Which of the following is equal to $-(a - b) - [\\,b - (a - c)\\,] - c$ for all numbers $a$, $b$ and $c$?",
       "choices": [
-        "64",
-        "160",
-        "184",
-        "208",
-        "232"
+        "$-2c$",
+        "$0$",
+        "$2a - 2b$",
+        "$2a - 2c$",
+        "$-2b$"
       ],
       "key": {
         "sel": [
-          3
+          0
         ]
       },
       "explanation": {
-        "key": "$(a - b)^2 = a^2 + b^2 - 2ab$ gives $16 = 40 - 2ab$, so $ab = 12$. Then $a^3 - b^3 = (a - b)(a^2 + ab + b^2) = 4(40 + 12) = 208$.",
+        "key": "$-(a - b) = -a + b$ and $-[\\,b - (a - c)\\,] = -b + a - c$. Adding and subtracting $c$: $-a + b - b + a - c - c = -2c$.",
         "steps": [
-          "1. $ab = \\dfrac{40 - 16}{2} = 12$.",
-          "2. $a^3 - b^3 = (a-b)(a^2 + ab + b^2)$.",
-          "3. $4 \\times 52 = 208$."
+          "1. $-(a - b) = -a + b$.",
+          "2. $b - (a - c) = b - a + c$, so its negative is $-b + a - c$.",
+          "3. Sum with $-c$: $(-a + a) + (b - b) + (-c - c) = -2c$."
         ],
-        "fast": "Check with $a = 6$, $b = 2$: $216 - 8 = 208$.",
-        "trap": "Using $a^2 - ab + b^2$ (the sum-of-cubes factor) gives $4 \\times 28 = 112$; $(a-b)^3 = 64$; $4 \\times 40 = 160$ forgets the $ab$ term."
+        "fast": "Try $a = b = 0$, $c = 1$: $0 - [0 + 1] - 1 = -2$.",
+        "trap": "Dropping one sign inside the brackets: $-(a - c)$ becomes $-a - c$, giving $2a - 2c$ or 0."
       },
       "tags": [
         {
@@ -926,80 +986,87 @@
           "id": "algebraic-expressions",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "remove nested brackets with sign changes; the expression collapses to one term",
+      "variant": "expressions with nested parentheses and signs"
     },
     {
       "id": "s2q13",
       "section": 2,
       "type": "mc_multi",
       "difficulty": 4,
-      "prompt": "Which of the following values of $x$ satisfy $\\dfrac{x-2}{x+3} < 1$?\n\nIndicate all such values.",
+      "prompt": "A theater charges \\$12 for each adult ticket and \\$7 for each child ticket. A group with 3 more children than adults spent at least \\$100 and at most \\$150 on tickets. Which of the following could be the number of adults in the group? Indicate all such numbers.",
       "choices": [
-        "$-5$",
-        "$-3$",
-        "$-1$",
-        "$0$",
-        "$2$",
-        "$10$"
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
       ],
       "key": {
         "sel": [
           2,
-          3,
-          4,
-          5
+          3
         ]
       },
       "explanation": {
-        "key": "$\\dfrac{x-2}{x+3} - 1 = \\dfrac{-5}{x+3} < 0$ exactly when $x + 3 > 0$, i.e. $x > -3$. So $-1$, $0$, $2$ and $10$; at $-3$ the expression is undefined and at $-5$ it equals $3.5$.",
+        "key": "With $a$ adults the cost is $12a + 7(a + 3) = 19a + 21$. $100 \\le 19a + 21 \\le 150$ gives $79 \\le 19a \\le 129$, so $4.2 \\le a \\le 6.8$: 5 or 6 adults.",
         "steps": [
-          "1. Move everything to one side: $\\dfrac{x - 2 - (x + 3)}{x+3} = \\dfrac{-5}{x+3}$.",
-          "2. $\\dfrac{-5}{x+3} < 0 \\iff x + 3 > 0 \\iff x > -3$.",
-          "3. Check $-5$: $\\dfrac{-7}{-2} = 3.5$, not less than 1."
+          "1. Children: $a + 3$.",
+          "2. Cost: $19a + 21$.",
+          "3. $100 \\le 19a + 21 \\le 150 \\Rightarrow 4.16 \\le a \\le 6.79$.",
+          "4. Whole numbers: 5 and 6."
         ],
-        "fast": "Never multiply through by $x + 3$ without knowing its sign.",
-        "trap": "Multiplying by $x + 3$ gives $x - 2 < x + 3$, true for every $x$, which wrongly includes $-5$ (and even $-3$)."
+        "fast": "$a = 4$ costs \\$97 (too little); $a = 7$ costs \\$154 (too much).",
+        "trap": "Forgetting the 3 extra children's \\$21, which admits 4 (\\$76) through 7 (\\$133)."
       },
       "tags": [
         {
           "kind": "concept",
           "id": "inequalities",
           "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "linear-equations",
+          "role": "secondary"
         }
-      ]
+      ],
+      "setup": "linear cost with a fixed difference in counts, bounded above and below; select possible counts",
+      "variant": "a word problem with an inequality constraint"
     },
     {
       "id": "s2q14",
       "section": 2,
       "type": "mc_multi",
-      "difficulty": 6,
-      "prompt": "Five beekeepers each harvested a different positive whole number of kilograms of honey this season. The average of the five harvests was 20 kilograms, and the median was 18 kilograms. Which of the following could be the greatest of the five harvests, in kilograms?\n\nIndicate all such amounts.",
+      "difficulty": 5,
+      "prompt": "A rectangle lies inside a right triangle with legs of lengths 6 and 8. Two sides of the rectangle lie along the legs, and the opposite corner of the rectangle lies on the hypotenuse. Which of the following could be the area of the rectangle? Indicate all such areas.",
       "choices": [
-        "22",
-        "24",
-        "25",
-        "40",
-        "60",
-        "61"
+        "$6$",
+        "$10$",
+        "$12$",
+        "$13$",
+        "$16$",
+        "$24$"
       ],
       "key": {
         "sel": [
-          2,
-          3,
-          4
+          0,
+          1,
+          2
         ]
       },
       "explanation": {
-        "key": "The harvests are $a < b < 18 < d < e$ with sum 100, so $a + b + d + e = 82$. Greatest $e$: smallest $a, b, d$ = 1, 2, 19, so $e = 60$. Least $e$: largest $a, b$ = 16, 17, so $d + e = 49$ with $d < e$, giving $e \\ge 25$ (24 and 25). Every whole number from 25 to 60 works, so 25, 40 and 60.",
+        "key": "With the rectangle $x$ wide along the leg of length 8, its height is $6 - \\frac34x$, so the area is $x\\left(6 - \\frac34 x\\right)$ for $0 < x < 8$. This rises to 12 at $x = 4$ and falls back toward 0, so any area in $(0, 12]$ is possible: 6, 10 and 12.",
         "steps": [
-          "1. Sum $= 100$; the middle value is 18, so $a + b + d + e = 82$.",
-          "2. Max $e$: $a = 1$, $b = 2$, $d = 19$ → $e = 60$.",
-          "3. Min $e$: $a + b \\le 16 + 17 = 33$, so $d + e \\ge 49$; with $d < e$, $e \\ge 25$ ($d = 24$).",
-          "4. Between: e.g. $e = 40$ with $a = 1$, $b = 2$, $d = 39$.",
-          "5. Keys: 25, 40, 60."
+          "1. Hypotenuse: $y = 6 - \\frac34 x$.",
+          "2. Area $A(x) = 6x - \\frac34x^2$.",
+          "3. Greatest at $x = 4$: $A = 24 - 12 = 12$, half the triangle's area.",
+          "4. Every area from just above 0 up to 12 occurs: 6, 10, 12 yes; 13, 16, 24 no."
         ],
-        "fast": "Bound $e$ from both sides; the distinctness rule moves each bound by one.",
-        "trap": "Dropping the distinctness rule lets the top two harvests both be 24.5 or the bottom two both be 17, which makes 24 look reachable; allowing a harvest of 0 raises the maximum to 62, so 61 slips in."
+        "fast": "The largest such rectangle has half the triangle's area, 24 ÷ 2.",
+        "trap": "Allowing the whole triangle's area (24) or the 6-by-8 bounding rectangle's area."
       },
       "tags": [
         {
@@ -1009,33 +1076,35 @@
         },
         {
           "kind": "concept",
-          "id": "mean-median-mode",
+          "id": "area-perimeter",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "a rectangle in the corner of a right triangle: its area peaks at half the triangle's area; select attainable areas",
+      "variant": "optimizing a product or a difference under constraints"
     },
     {
       "id": "s2q15",
       "section": 2,
       "type": "numeric",
       "difficulty": 4,
-      "prompt": "How many positive integers less than 200 are divisible by 6 or by 15 but are not divisible by 10?",
+      "prompt": "For how many ordered pairs of integers $(a, b)$ with $1 \\le a \\le 10$ and $1 \\le b \\le 10$ is $ab + a + b$ odd?",
       "numeric": {
         "kind": "single"
       },
       "key": {
-        "value": "34"
+        "value": "75"
       },
       "explanation": {
-        "key": "Multiples of 6 below 200: 33. Of 15: 13. Of both (30): 6. Union: $33 + 13 - 6 = 40$. A number in the union that is also divisible by 10 is divisible by $\\text{lcm}(6,10) = 30$ or $\\text{lcm}(15,10) = 30$, so remove the 6 multiples of 30: $40 - 6 = 34$.",
+        "key": "$ab + a + b = (a + 1)(b + 1) - 1$ is odd exactly when $(a + 1)(b + 1)$ is even, that is, unless $a$ and $b$ are both even. Of the 100 pairs, $5 \\times 5 = 25$ have both even, so 75.",
         "steps": [
-          "1. $\\lfloor 199/6 \\rfloor = 33$, $\\lfloor 199/15 \\rfloor = 13$, $\\lfloor 199/30 \\rfloor = 6$.",
-          "2. Divisible by 6 or 15: $33 + 13 - 6 = 40$.",
-          "3. Of these, divisible by 10 means divisible by 30: 6 numbers.",
-          "4. $40 - 6 = 34$."
+          "1. $ab + a + b + 1 = (a + 1)(b + 1)$.",
+          "2. The expression is odd when $(a + 1)(b + 1)$ is even, so when $a$ or $b$ is odd.",
+          "3. Both even: $5 \\times 5 = 25$ pairs.",
+          "4. $100 - 25 = 75$."
         ],
-        "fast": "Every multiple of 30 is the only overlap and also the only exclusion, so subtract it twice: $33 + 13 - 2(6)$.",
-        "trap": "Removing all 19 multiples of 10 below 200 (rather than only those in the union) gives 21; forgetting the overlap gives 40."
+        "fast": "Check the four parity cases: only even, even gives an even result.",
+        "trap": "Counting only pairs with both odd (25), or thinking odd needs exactly one odd number (50)."
       },
       "tags": [
         {
@@ -1043,7 +1112,9 @@
           "id": "integers-properties",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "parity of ab + a + b through (a + 1)(b + 1) - 1; count pairs",
+      "variant": "even/odd parity of sums and products of unknown integers"
     }
   ]
 }

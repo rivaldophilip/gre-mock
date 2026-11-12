@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { and, eq, inArray } from "drizzle-orm";
+import { and, desc, eq, inArray, isNotNull } from "drizzle-orm";
 import { schema } from "@/lib/db";
 import { userDb } from "@/lib/session";
 import { loadTest } from "@/lib/content";
@@ -122,6 +122,32 @@ export default async function Review({ params }: { params: Promise<{ id: string;
     const at = (t: Question["tags"][number]) => (q.type === "tc" ? q.blanks?.[t.at?.[0] ?? -1]?.[t.at?.[1] ?? -1] : q.choices?.[t.at?.[0] ?? -1]);
     return q.tags.find((t) => t.kind === "word" && t.at && at(t) === text)?.id;
   };
+  // deliberate revisits: where the earlier item lives (its latest finished review) and how it went there
+  const revisitRefs = [...new Set(visible.flatMap((q) => (q.revisits ? [q.revisits] : [])))];
+  const revisitTests = [...new Set(revisitRefs.map((r) => r.split(":")[0]))];
+  const earlierAttempts = revisitTests.length
+    ? await db
+        .select({ id: schema.attempts.id, testId: schema.attempts.testId })
+        .from(schema.attempts)
+        .where(and(inArray(schema.attempts.testId, revisitTests), isNotNull(schema.attempts.finishedAt)))
+        .orderBy(desc(schema.attempts.finishedAt))
+    : [];
+  const latestAttempt = new Map<string, number>();
+  for (const e of earlierAttempts) if (!latestAttempt.has(e.testId)) latestAttempt.set(e.testId, e.id);
+  const earlierRows = latestAttempt.size
+    ? await db
+        .select({ attemptId: schema.responses.attemptId, questionId: schema.responses.questionId, isCorrect: schema.responses.isCorrect, guessed: schema.responses.guessed })
+        .from(schema.responses)
+        .where(and(inArray(schema.responses.attemptId, [...latestAttempt.values()]), inArray(schema.responses.questionId, revisitRefs)))
+    : [];
+  const revisitOf = (ref: string) => {
+    const [tid, qid] = ref.split(":");
+    const t = loadTest(tid);
+    const n = t ? t.questions.findIndex((x) => x.id === qid) + 1 : 0;
+    const aid = latestAttempt.get(tid);
+    const r = earlierRows.find((x) => x.attemptId === aid && x.questionId === ref);
+    return { title: t?.title ?? tid, n, qid, href: aid ? `/test/${tid}/review/${aid}#q-${qid}` : undefined, how: r ? (!r.isCorrect ? "which you missed" : r.guessed ? "which you guessed" : "") : "" };
+  };
   const waitingOn2 = !isClosed(a) && sectionStatus(a, 1).finished && !sectionStatus(a, 2).finished;
   // the clock runs negative past the limit; under a second over is rounding, not overtime
   const overBy = ([1, 2] as const).map((n) => ({ n, ms: sectionStatus(a, n).finished ? sectionOvertimeMs(a, test, n) : 0 })).filter((o) => o.ms >= 1000);
@@ -221,6 +247,18 @@ export default async function Review({ params }: { params: Promise<{ id: string;
                   {Math.round((r?.timeMs ?? 0) / 1000)}s{r?.guessed ? " · guessed" : ""} · <Explain why={levelWhy(q.difficulty)}>level {q.difficulty}</Explain>
                 </span>
               </div>
+              {q.revisits && (() => {
+                const rv = revisitOf(q.revisits);
+                return (
+                  <p className="rounded-xl bg-accent-soft px-3.5 py-2.5 text-sm">
+                    <Explain why="A revisit keeps the idea of an earlier item you missed or guessed and changes how it is asked, so you practise the idea rather than recognise the question.">
+                      <strong>Revisit</strong>
+                    </Explain>{" "}
+                    of {rv.title}, Q{rv.n} ({rv.qid}){rv.how ? `, ${rv.how}` : ""}.{" "}
+                    {rv.href && <Link className="font-medium text-accent underline underline-offset-2" href={rv.href}>See that question</Link>}
+                  </p>
+                );
+              })()}
               {passage && (
                 <details className="group rounded-xl border border-line bg-surface-2/50">
                   <summary className="flex min-h-11 list-none items-center justify-between gap-2 px-3.5 text-sm font-medium [&::-webkit-details-marker]:hidden">

@@ -178,66 +178,39 @@
       "id": "s1q1",
       "section": 1,
       "type": "tc",
-      "difficulty": 4,
-      "prompt": "Guests who dined at the composer's villa took his lavishness for a matter of temperament rather than display, an impression his copyists could have corrected: on the paper for his scores, an expense no guest would ever witness, he was inclined to ___.",
+      "difficulty": 3,
+      "prompt": "The painter's late canvases are remarkable above all for their ___: a single stroke stands for a sleeve, and a bare patch of linen does the work of the glare off water.",
       "blanks": [
         [
-          "splurge",
-          "jettison",
-          "stint",
-          "dissemble",
-          "forestall"
+          "economy",
+          "profusion",
+          "opulence",
+          "bravura",
+          "ambiguity"
         ]
       ],
       "key": {
         "sel": [
-          2
+          0
         ]
       },
       "explanation": {
-        "key": "The copyists could have corrected the guests' impression that his lavishness was temperament, not display. The correction is that where no one could see, on manuscript paper, he was sparing: lavish only for show. 'Stint' (be meager in spending) fits.",
+        "key": "One stroke for a sleeve and bare linen for glare are the fewest possible means doing the most work: economy, in its secondary sense of careful, sparing use of means (not the everyday 'the economy').",
         "distractors": {
-          "splurge": "Spending freely on unseen paper would confirm the guests' impression, not correct it.",
-          "jettison": "Throwing paper away suggests waste, which again confirms the lavishness instead of exposing it as display.",
-          "dissemble": "Concealing motives has nothing to do with how he spent on paper; the clue concerns spending, not deceit.",
-          "forestall": "To prevent or anticipate has no sense here; 'on the paper he was inclined to forestall' is meaningless."
+          "profusion": "Abundance; the examples show the opposite, a minimum of marks.",
+          "opulence": "Lavish richness; bare linen is anything but.",
+          "bravura": "Showy virtuosity; the examples stress restraint, not display.",
+          "ambiguity": "The stroke clearly 'stands for a sleeve'; nothing is left uncertain."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "jettison",
-          "role": "distractor",
-          "at": [
-            0,
-            1
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "stint",
+          "id": "economy",
           "role": "key",
           "at": [
             0,
-            2
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "dissemble",
-          "role": "distractor",
-          "at": [
-            0,
-            3
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "forestall",
-          "role": "distractor",
-          "at": [
-            0,
-            4
+            0
           ]
         }
       ]
@@ -247,39 +220,39 @@
       "section": 1,
       "type": "tc",
       "difficulty": 3,
-      "prompt": "Far from being (i) ___ at the reviewer's charge that his reconstruction of the eruption sequence was speculative, the volcanologist welcomed it, since the gaps in the ash record were (ii) ___ to anyone who had examined the cores, and he had never pretended otherwise.",
+      "prompt": "Jurors who took the witness's (i) ___ manner for indifference were mistaken. Her earlier testimony shows the same flat calm even when she described her own injuries, and her physician later explained that years of illness had taught her to be (ii) ___ about pain.",
       "blanks": [
         [
-          "gratified",
-          "indignant",
-          "complacent"
+          "impassive",
+          "histrionic",
+          "truculent"
         ],
         [
-          "hermetic",
-          "nominal",
-          "patent"
+          "stoic",
+          "querulous",
+          "squeamish"
         ]
       ],
       "key": {
         "sel": [
-          1,
-          2
+          0,
+          0
         ]
       },
       "explanation": {
-        "key": "(i) 'Far from being ___ ... welcomed it' needs the opposite of welcoming: indignant (angered by unfair treatment). (ii) He never pretended the gaps were absent because they were plain to anyone who looked: patent (plainly evident), not the patent of an invention.",
+        "key": "(i) A 'flat calm' that jurors misread as indifference is an emotionless manner: impassive. (ii) Years of illness taught her to bear pain without complaint or display: stoic.",
         "distractors": {
-          "gratified": "Gratified agrees with 'welcomed', so 'far from being gratified' contradicts the sentence.",
-          "complacent": "Self-satisfied is not a reaction one has 'at a charge', and it is not the opposite of welcoming it.",
-          "hermetic": "Obscure or sealed off is the reverse polarity: gaps hidden from those who examined the cores would not explain his candor.",
-          "nominal": "In name only, or trifling; it says nothing about how visible the gaps were."
+          "histrionic": "Theatrical emotion is the opposite of flat calm.",
+          "truculent": "Aggressive defiance would not be mistaken for indifference.",
+          "querulous": "Complaining is the opposite of what the flat calm shows.",
+          "squeamish": "Easily upset; she described her injuries calmly."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "gratify",
-          "role": "distractor",
+          "id": "impassive",
+          "role": "key",
           "at": [
             0,
             0
@@ -287,8 +260,8 @@
         },
         {
           "kind": "word",
-          "id": "indignant",
-          "role": "key",
+          "id": "histrionic",
+          "role": "distractor",
           "at": [
             0,
             1
@@ -296,7 +269,7 @@
         },
         {
           "kind": "word",
-          "id": "complacent",
+          "id": "truculent",
           "role": "distractor",
           "at": [
             0,
@@ -305,8 +278,8 @@
         },
         {
           "kind": "word",
-          "id": "hermetic",
-          "role": "distractor",
+          "id": "stoic",
+          "role": "key",
           "at": [
             1,
             0
@@ -314,20 +287,11 @@
         },
         {
           "kind": "word",
-          "id": "nominal",
+          "id": "querulous",
           "role": "distractor",
           "at": [
             1,
             1
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "patent",
-          "role": "key",
-          "at": [
-            1,
-            2
           ]
         }
       ]
@@ -437,21 +401,22 @@
             2
           ]
         }
-      ]
+      ],
+      "revisits": "verbal-002:s2q2"
     },
     {
       "id": "s1q4",
       "section": 1,
       "type": "se",
       "difficulty": 4,
-      "prompt": "Her critics were right that the treatise was hard going but wrong about why: far from compounding the difficulty of the arguments, the prose was so ___ that it exposed every gap a more forgiving style might have papered over.",
+      "prompt": "Translators who had found the philosopher's German impenetrable were surprised by her English lectures, whose ___ style let undergraduates follow arguments that had defeated specialists in the original.",
       "choices": [
-        "lucid",
-        "abstruse",
         "pellucid",
-        "recondite",
-        "diffuse",
-        "florid"
+        "grandiloquent",
+        "perspicuous",
+        "bombastic",
+        "elliptical",
+        "arcane"
       ],
       "key": {
         "sel": [
@@ -460,18 +425,18 @@
         ]
       },
       "explanation": {
-        "key": "The critics blamed the prose; the author says the difficulty lies in the arguments, and the prose was so clear that it laid their gaps bare. Lucid and pellucid (transparently clear) give the same sentence.",
+        "key": "The surprise is the contrast with 'impenetrable', and the result is that beginners could follow the arguments: the style was transparently clear. Pellucid and perspicuous.",
         "distractors": {
-          "abstruse": "Trap pair with recondite: both mean hard to understand, which is the critics' wrong explanation, and obscure prose would hide gaps, not expose them.",
-          "recondite": "Trap pair with abstruse: obscure, the polarity the sentence rejects.",
-          "diffuse": "Wordy and unfocused prose would blur the arguments' gaps rather than expose them.",
-          "florid": "Ornate prose is the kind of 'forgiving style' that papers over gaps."
+          "grandiloquent": "Trap pair with bombastic: true synonyms for pompous, inflated prose, which would not let undergraduates follow hard arguments.",
+          "bombastic": "Trap pair with grandiloquent: wrong polarity.",
+          "elliptical": "Leaving things out, hard to follow; the opposite of the surprise.",
+          "arcane": "Understood only by a few; that describes the German, not the lectures."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "lucid",
+          "id": "pellucid",
           "role": "key",
           "at": [
             0
@@ -479,7 +444,7 @@
         },
         {
           "kind": "word",
-          "id": "abstruse",
+          "id": "grandiloquent",
           "role": "distractor",
           "at": [
             1
@@ -487,7 +452,7 @@
         },
         {
           "kind": "word",
-          "id": "pellucid",
+          "id": "perspicuous",
           "role": "key",
           "at": [
             2
@@ -495,7 +460,7 @@
         },
         {
           "kind": "word",
-          "id": "recondite",
+          "id": "bombastic",
           "role": "distractor",
           "at": [
             3
@@ -503,35 +468,28 @@
         },
         {
           "kind": "word",
-          "id": "diffuse",
-          "role": "distractor",
-          "at": [
-            4
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "florid",
+          "id": "arcane",
           "role": "distractor",
           "at": [
             5
           ]
         }
-      ]
+      ],
+      "revisits": "verbal-004:s2q7"
     },
     {
       "id": "s1q5",
       "section": 1,
       "type": "se",
       "difficulty": 3,
-      "prompt": "The commander's dispatches were famously ___, a habit his staff traced less to modesty than to a lawyer's caution: what was never written could never be quoted against him.",
+      "prompt": "Reviewers who expected a soldier's memoir to be padded with campaign trivia found it ___ instead: in under two hundred pages it covered four wars, and its one-sentence verdicts on his generals became the most quoted lines of the decade.",
       "choices": [
         "laconic",
-        "prolix",
-        "terse",
-        "verbose",
-        "candid",
-        "strident"
+        "garrulous",
+        "succinct",
+        "loquacious",
+        "lurid",
+        "evasive"
       ],
       "key": {
         "sel": [
@@ -540,12 +498,12 @@
         ]
       },
       "explanation": {
-        "key": "The habit is explained by the wish to write as little as possible, since only what is written can be quoted. Laconic and terse (using very few words) fit.",
+        "key": "'Instead' of padding, the memoir covers four wars in under two hundred pages with one-sentence verdicts: brief and pointed. Laconic and succinct.",
         "distractors": {
-          "prolix": "Trap pair with verbose: long-winded is the opposite of writing little.",
-          "verbose": "Trap pair with prolix: wordiness would give opponents more to quote.",
-          "candid": "Frankness is a matter of honesty, not of length, and caution about quotation argues against it.",
-          "strident": "Loud and harsh; tone has nothing to do with writing little so as not to be quoted."
+          "garrulous": "Trap pair with loquacious: true synonyms for talkative, the padding the reviewers expected.",
+          "loquacious": "Trap pair with garrulous: the expectation the sentence overturns.",
+          "lurid": "Sensational; nothing suggests shocking detail.",
+          "evasive": "His verdicts on the generals were quotable precisely because they were direct."
         }
       },
       "tags": [
@@ -559,7 +517,7 @@
         },
         {
           "kind": "word",
-          "id": "prolix",
+          "id": "garrulous",
           "role": "distractor",
           "at": [
             1
@@ -567,7 +525,7 @@
         },
         {
           "kind": "word",
-          "id": "terse",
+          "id": "succinct",
           "role": "key",
           "at": [
             2
@@ -575,7 +533,7 @@
         },
         {
           "kind": "word",
-          "id": "verbose",
+          "id": "loquacious",
           "role": "distractor",
           "at": [
             3
@@ -583,7 +541,7 @@
         },
         {
           "kind": "word",
-          "id": "candid",
+          "id": "lurid",
           "role": "distractor",
           "at": [
             4
@@ -591,47 +549,48 @@
         },
         {
           "kind": "word",
-          "id": "strident",
+          "id": "evasive",
           "role": "distractor",
           "at": [
             5
           ]
         }
-      ]
+      ],
+      "revisits": "verbal-003:s1q5"
     },
     {
       "id": "s1q6",
       "section": 1,
       "type": "se",
       "difficulty": 5,
-      "prompt": "Scrupulously fair to the books she reviewed, never misrepresenting an argument or overlooking a merit, the critic was nonetheless dreaded: her verdicts were ___, and authors she had praised sometimes felt more bruised than those she had passed over in silence.",
+      "prompt": "Her columns were admired for a wit that was ___ without ever being cruel: she could puncture an argument's pretensions in a sentence while leaving its author's dignity intact.",
       "choices": [
-        "acerbic",
-        "partisan",
-        "effusive",
-        "caustic",
-        "tendentious",
-        "anodyne"
+        "mordant",
+        "saccharine",
+        "astringent",
+        "cloying",
+        "rancorous",
+        "insipid"
       ],
       "key": {
         "sel": [
           0,
-          3
+          2
         ]
       },
       "explanation": {
-        "key": "Two constraints: she was fair (so the dread is not about bias) and even her praise bruised (so the sting is in her tone). Acerbic and caustic (sharp, biting) satisfy both.",
+        "key": "Wit that punctures pretensions but is not cruel is sharp and biting yet controlled: mordant and astringent.",
         "distractors": {
-          "partisan": "Trap pair with tendentious: both mean biased, which the opening ('scrupulously fair') rules out, though they fit 'dreaded'.",
-          "tendentious": "Trap pair with partisan: slanted toward a cause, contradicting her fairness.",
-          "effusive": "Gushing praise would not bruise the authors she praised.",
-          "anodyne": "Inoffensive, bland; the opposite of verdicts that made her dreaded."
+          "saccharine": "Trap pair with cloying: true synonyms for overly sweet, the opposite of wit that punctures.",
+          "cloying": "Trap pair with saccharine: wrong polarity.",
+          "rancorous": "Bitter and spiteful: that is the cruelty the sentence says she avoided.",
+          "insipid": "Bland; bland wit could not puncture anything."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "acerbic",
+          "id": "mordant",
           "role": "key",
           "at": [
             0
@@ -639,31 +598,23 @@
         },
         {
           "kind": "word",
-          "id": "partisan",
-          "role": "distractor",
-          "at": [
-            1
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "effusive",
-          "role": "distractor",
+          "id": "astringent",
+          "role": "key",
           "at": [
             2
           ]
         },
         {
           "kind": "word",
-          "id": "caustic",
-          "role": "key",
+          "id": "cloying",
+          "role": "distractor",
           "at": [
             3
           ]
         },
         {
           "kind": "word",
-          "id": "tendentious",
+          "id": "rancorous",
           "role": "distractor",
           "at": [
             4
@@ -671,7 +622,7 @@
         },
         {
           "kind": "word",
-          "id": "anodyne",
+          "id": "insipid",
           "role": "distractor",
           "at": [
             5
@@ -684,34 +635,34 @@
       "section": 1,
       "type": "se",
       "difficulty": 4,
-      "prompt": "Organizers who seated the two schools' leaders side by side at the banquet took ten years of silence between them as proof that their quarrel had ended; a single intemperate review in the following month's journal showed that it had merely been ___.",
+      "prompt": "The witness who had stonewalled the committee for three days became surprisingly ___ once he was granted immunity, volunteering names and dates the investigators had not even asked for.",
       "choices": [
-        "dormant",
-        "defunct",
-        "acrimonious",
-        "quiescent",
-        "obsolete",
-        "rancorous"
+        "forthcoming",
+        "guarded",
+        "candid",
+        "taciturn",
+        "truculent",
+        "mendacious"
       ],
       "key": {
         "sel": [
           0,
-          3
+          2
         ]
       },
       "explanation": {
-        "key": "The quarrel had not ended, since one review revived it; the silence was only inactivity. Dormant and quiescent (inactive but capable of revival) fit 'merely'.",
+        "key": "After stonewalling, he 'volunteered' more than was asked: he became open and willing to tell. Forthcoming (secondary sense, willing to give information) and candid.",
         "distractors": {
-          "defunct": "Trap pair with obsolete: both say the quarrel was over, the organizers' mistaken view.",
-          "obsolete": "Trap pair with defunct: no longer in use, again the view the review disproved.",
-          "acrimonious": "Pair with rancorous: bitter describes the quarrel's character, not the ten years of silence, and 'merely' needs a weaker state than ended.",
-          "rancorous": "Pair with acrimonious: a bitter quarrel is not what silence 'merely' was."
+          "guarded": "Trap pair with taciturn: both describe the close-mouthed witness before immunity.",
+          "taciturn": "Trap pair with guarded: the state he left behind.",
+          "truculent": "Aggressively defiant; he became cooperative.",
+          "mendacious": "Lying; nothing says his volunteered names were false."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "dormant",
+          "id": "forthcoming",
           "role": "key",
           "at": [
             0
@@ -719,23 +670,23 @@
         },
         {
           "kind": "word",
-          "id": "acrimonious",
-          "role": "distractor",
+          "id": "candid",
+          "role": "key",
           "at": [
             2
           ]
         },
         {
           "kind": "word",
-          "id": "quiescent",
-          "role": "key",
+          "id": "taciturn",
+          "role": "distractor",
           "at": [
             3
           ]
         },
         {
           "kind": "word",
-          "id": "obsolete",
+          "id": "truculent",
           "role": "distractor",
           "at": [
             4
@@ -743,7 +694,7 @@
         },
         {
           "kind": "word",
-          "id": "rancorous",
+          "id": "mendacious",
           "role": "distractor",
           "at": [
             5
@@ -989,40 +940,40 @@
       "id": "s2q2",
       "section": 2,
       "type": "tc",
-      "difficulty": 5,
-      "prompt": "That the council would (i) ___ the veneration of images was, to those who knew its presiding bishop, a foregone conclusion; what surprised them was that the iconoclasts, who had petitioned in vain for his removal on the ground that he was (ii) ___, accepted the verdict without demur.",
+      "difficulty": 4,
+      "prompt": "Because both governments had already carried out the treaty's terms, the vote to (i) ___ it, a formality the treaty's supporters had demanded so that the agreement would at last carry the force of law, was widely regarded as (ii) ___: whatever the legislators decided, the border would not move.",
       "blanks": [
         [
-          "proscribe",
-          "forestall",
-          "sanction"
+          "ratify",
+          "repudiate",
+          "draft"
         ],
         [
-          "lethargic",
-          "partial",
-          "diffident"
+          "moot",
+          "decisive",
+          "premature"
         ]
       ],
       "key": {
         "sel": [
-          2,
-          1
+          0,
+          0
         ]
       },
       "explanation": {
-        "key": "The iconoclasts' acceptance is surprising only if the verdict went against them, so the council approved image veneration: (i) sanction in its sense 'authorize', not 'penalize'. Their petition shows why the outcome was foreseeable: the bishop was (ii) partial, that is, biased toward images, not 'incomplete'.",
+        "key": "(i) A formality that gives an agreement 'the force of law' is formal approval: ratify. (ii) Since the terms were already carried out and 'the border would not move' whatever the outcome, the vote had no practical consequence: moot, in its secondary sense, not 'open to debate'.",
         "distractors": {
-          "proscribe": "A ban would be the iconoclasts' victory, so their accepting it would surprise no one.",
-          "forestall": "Preventing veneration is again the iconoclasts' outcome; the surprise would vanish.",
-          "lethargic": "Sluggishness is a possible ground for removal but would not make the verdict a foregone conclusion.",
-          "diffident": "Timidity gives neither a reason the iconoclasts would fear him nor a reason the outcome was foreseeable."
+          "repudiate": "Supporters would not demand a vote to reject the treaty.",
+          "draft": "The treaty already existed and had been carried out; it needed approval, not drafting.",
+          "decisive": "The colon says the vote decided nothing.",
+          "premature": "The terms had already been carried out, so the vote came late, not early."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "proscribe",
-          "role": "distractor",
+          "id": "ratify",
+          "role": "key",
           "at": [
             0,
             0
@@ -1030,7 +981,7 @@
         },
         {
           "kind": "word",
-          "id": "forestall",
+          "id": "repudiate",
           "role": "distractor",
           "at": [
             0,
@@ -1039,17 +990,8 @@
         },
         {
           "kind": "word",
-          "id": "sanction",
+          "id": "moot",
           "role": "key",
-          "at": [
-            0,
-            2
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "lethargic",
-          "role": "distractor",
           "at": [
             1,
             0
@@ -1057,16 +999,7 @@
         },
         {
           "kind": "word",
-          "id": "partial",
-          "role": "key",
-          "at": [
-            1,
-            1
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "diffident",
+          "id": "premature",
           "role": "distractor",
           "at": [
             1,
@@ -1350,7 +1283,8 @@
             5
           ]
         }
-      ]
+      ],
+      "revisits": "verbal-001:s1q2"
     },
     {
       "id": "s2q6",

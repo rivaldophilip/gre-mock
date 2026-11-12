@@ -31,12 +31,12 @@ export function loadTest(id: string): Test | null {
   return TestSchema.parse(JSON.parse(fs.readFileSync(file, "utf8")));
 }
 
-/** Everything the runner may see: no keys, explanations, tags or difficulty. */
+/** Everything the runner may see: no keys, explanations, tags, difficulty, or the authoring setup, variant and revisit link (they hint at the method). */
 export function publicTest(t: Test): PublicTest {
   return {
     ...t,
     passages: t.passages.map(({ tags: _tags, ...p }) => p),
-    questions: t.questions.map(({ key: _k, explanation: _e, tags: _t, difficulty: _d, ...q }) => q),
+    questions: t.questions.map(({ key: _k, explanation: _e, tags: _t, difficulty: _d, setup: _s, variant: _v, revisits: _r, ...q }) => q),
   };
 }
 

@@ -64,10 +64,10 @@
       "section": 1,
       "type": "qc",
       "difficulty": 3,
-      "prompt": "$x$ is a nonzero number such that $x^3 < x$.",
+      "prompt": "$n$ is an integer such that $n^2 < 5$.",
       "qc": {
-        "a": "$x^2$",
-        "b": "$|x|$"
+        "a": "$n^3$",
+        "b": "$n^2$"
       },
       "key": {
         "sel": [
@@ -75,15 +75,15 @@
         ]
       },
       "explanation": {
-        "key": "$x^3 < x$ holds for $0 < x < 1$ and for $x < -1$. In the first case $x^2 < |x|$; in the second $x^2 > |x|$. So the relationship cannot be determined.",
+        "key": "$n$ can be $-2, -1, 0, 1$ or $2$. At $n = 2$, $n^3 = 8 > 4 = n^2$; at $n = -1$, $n^3 = -1 < 1 = n^2$. Different values give different relationships.",
         "steps": [
-          "1. $x^3 - x = x(x-1)(x+1) < 0$ exactly when $x < -1$ or $0 < x < 1$.",
-          "2. $x^2 = |x|^2$, so $x^2 < |x|$ when $|x| < 1$ and $x^2 > |x|$ when $|x| > 1$.",
-          "3. $x = \\frac12$: A $= \\frac14 <$ B $= \\frac12$. $x = -2$: A $= 4 >$ B $= 2$.",
-          "4. Both cases satisfy the condition, so the answer is D."
+          "1. $n^2 < 5$ with $n$ an integer: $n \\in \\{-2, -1, 0, 1, 2\\}$.",
+          "2. $n = 2$: A $= 8$, B $= 4$, A is greater.",
+          "3. $n = -2$: A $= -8$, B $= 4$, B is greater.",
+          "4. $n = 0$ or $1$: equal. The relationship cannot be determined."
         ],
-        "fast": "Test one value from each interval of $x^3 < x$: $\\frac12$ and $-2$.",
-        "trap": "Dividing $x^3 < x$ by $x$ as if $x$ were positive gives $x^2 < 1$, so only $0 < x < 1$ seems possible and the answer looks like B."
+        "fast": "Try one positive and one negative value: they already disagree.",
+        "trap": "Testing only positive values (A greater) or only $0$ and $1$ (equal)."
       },
       "tags": [
         {
@@ -91,40 +91,49 @@
           "id": "number-sense-qc",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "integer n with n^2 < 5: compare n^3 with n^2 (negative, zero and one cases)",
+      "variant": "sign cases: negatives, zero and fractions between 0 and 1"
     },
     {
       "id": "s1q2",
       "section": 1,
       "type": "qc",
       "difficulty": 4,
-      "prompt": "Compare the two quantities.",
+      "prompt": "$0 < x < 1$",
       "qc": {
-        "a": "$\\dfrac{3^{40}-3^{38}}{3^{39}+3^{37}}$",
-        "b": "$\\dfrac{12}{5}$"
+        "a": "$x^{-1/2}$",
+        "b": "$x^{-1/3}$"
       },
       "key": {
         "sel": [
-          2
+          0
         ]
       },
       "explanation": {
-        "key": "Factoring $3^{38}$ from the numerator and $3^{37}$ from the denominator gives $\\frac{3 \\cdot 8}{10} = \\frac{12}{5}$, so the quantities are equal.",
+        "key": "For $0 < x < 1$, $\\dfrac1x > 1$, and a larger power of a number greater than 1 is larger: $x^{-1/2} = \\left(\\dfrac1x\\right)^{1/2} > \\left(\\dfrac1x\\right)^{1/3} = x^{-1/3}$.",
         "steps": [
-          "1. Numerator: $3^{40} - 3^{38} = 3^{38}(3^2 - 1) = 8 \\cdot 3^{38}$.",
-          "2. Denominator: $3^{39} + 3^{37} = 3^{37}(3^2 + 1) = 10 \\cdot 3^{37}$.",
-          "3. Quotient: $\\frac{8 \\cdot 3^{38}}{10 \\cdot 3^{37}} = \\frac{8 \\cdot 3}{10} = \\frac{24}{10} = \\frac{12}{5}$."
+          "1. Rewrite both with the base $\\dfrac1x$: A $= (1/x)^{1/2}$, B $= (1/x)^{1/3}$.",
+          "2. $\\dfrac1x > 1$ because $0 < x < 1$.",
+          "3. For a base greater than 1, the larger exponent gives the larger value: $\\frac12 > \\frac13$, so A is greater."
         ],
-        "fast": "Factor the smallest power out of each line; the leftover factor is $3$.",
-        "trap": "Cancelling term by term ($\\frac{3^{40}}{3^{39}} = 3$) gives 3 and the answer A; you cannot cancel across a sum or difference."
+        "fast": "$x = \\frac{1}{64}$: A $= 8$, B $= 4$.",
+        "trap": "Thinking $-\\frac12 < -\\frac13$ makes A smaller: that holds for bases above 1, and this base is below 1."
       },
       "tags": [
         {
           "kind": "concept",
           "id": "exponents-roots",
           "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "number-sense-qc",
+          "role": "secondary"
         }
-      ]
+      ],
+      "setup": "0 < x < 1: compare two negative fractional powers of x (the more negative exponent gives the larger value)",
+      "variant": "bases between 0 and 1 or negative bases"
     },
     {
       "id": "s1q3",
@@ -158,7 +167,9 @@
           "id": "figures-not-to-scale",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "points on a line in unknown order with given distances and one betweenness fact; compare a distance with a value",
+      "variant": "an angle or length that can vary: answer D"
     },
     {
       "id": "s1q4",
@@ -192,7 +203,9 @@
           "id": "std-dev-normal",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "normal distribution: P(above +3σ... of those above +1σ) as a conditional fraction vs a value",
+      "variant": "values within k standard deviations of the mean"
     },
     {
       "id": "s1q5",
@@ -229,7 +242,10 @@
           "id": "ratio-proportion",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "three-part budget ratio; one part grows to a given fraction of the total; new total",
+      "variant": "ratio change after adding or removing items",
+      "revisits": "quant-005:s1q5"
     },
     {
       "id": "s1q6",
@@ -270,7 +286,10 @@
           "id": "pythagorean-special",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "chord and radius give the distance to the center; chord to the arc midpoint",
+      "variant": "chord length from the distance to the center",
+      "revisits": "quant-003:s2q6"
     },
     {
       "id": "s1q7",
@@ -306,39 +325,40 @@
           "id": "counting-restrictions",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "row with no two children adjacent and one child next to a given adult",
+      "variant": "two people must sit together, or apart",
+      "revisits": "quant-005:s1q7"
     },
     {
       "id": "s1q8",
       "section": 1,
       "type": "mc_multi",
       "difficulty": 4,
-      "prompt": "Which of the following values of $x$ satisfy $|x - 2| + |x + 3| < 9$? Select all such values.",
+      "prompt": "Which of the following values of $x$ satisfy $|x - 4| = 2x + 1$? Indicate all such values.",
       "choices": [
-        "$-6$",
-        "$-4.5$",
-        "$-2$",
-        "$3.5$",
-        "$4$",
+        "$-5$",
+        "$-1$",
+        "$0$",
+        "$1$",
+        "$3$",
         "$5$"
       ],
       "key": {
         "sel": [
-          1,
-          2,
           3
         ]
       },
       "explanation": {
-        "key": "The sum is the total distance from $x$ to 2 and to $-3$. Between $-3$ and 2 it is always 5; outside, it grows by 2 per unit, reaching 9 at $x = 4$ and $x = -5$. So the solution set is $-5 < x < 4$: $-4.5$, $-2$ and $3.5$.",
+        "key": "Case $x - 4 = 2x + 1$ gives $x = -5$, but then $2x + 1 = -9$ is negative, which an absolute value cannot equal. Case $x - 4 = -(2x + 1)$ gives $x = 1$, and $|1 - 4| = 3 = 2(1) + 1$. Only $x = 1$.",
         "steps": [
-          "1. For $-3 \\le x \\le 2$: $(2 - x) + (x + 3) = 5 < 9$, always true.",
-          "2. For $x > 2$: $(x - 2) + (x + 3) = 2x + 1 < 9 \\Rightarrow x < 4$.",
-          "3. For $x < -3$: $(2 - x) + (-x - 3) = -2x - 1 < 9 \\Rightarrow x > -5$.",
-          "4. Solution: $-5 < x < 4$. Check: $-6$ gives 11, 4 gives 9 (not less than 9), 5 gives 11."
+          "1. $|x - 4| = 2x + 1$ needs $2x + 1 \\ge 0$.",
+          "2. $x - 4 = 2x + 1 \\Rightarrow x = -5$; check: $2(-5) + 1 = -9 < 0$, rejected.",
+          "3. $x - 4 = -2x - 1 \\Rightarrow 3x = 3 \\Rightarrow x = 1$; check: $|{-3}| = 3$ and $2 + 1 = 3$.",
+          "4. The only solution is $1$."
         ],
-        "fast": "Distance picture: the 5-unit gap between $-3$ and 2 uses 5 of the 9; the remaining 4 is split as 2 beyond each endpoint.",
-        "trap": "Treating 4 as a solution (the sum equals 9 there, and the inequality is strict), or solving only one case and losing the left half."
+        "fast": "Plug each choice in: only $1$ makes both sides 3.",
+        "trap": "Keeping $x = -5$ from the first case without checking that the right side is nonnegative."
       },
       "tags": [
         {
@@ -346,29 +366,32 @@
           "id": "abs-value-inequalities",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "|x - a| = bx + c: two cases, one rejected because the right side would be negative",
+      "variant": "an absolute-value equation with two cases, one extraneous"
     },
     {
       "id": "s1q9",
       "section": 1,
       "type": "numeric",
       "difficulty": 3,
-      "prompt": "A bakery raised the price of its signature cake by 20 percent. Later it lowered the new price by $p$ percent, and the final price was 4 percent lower than the original price. What is the value of $p$?",
+      "prompt": "The unemployment rate in a county fell from 8.0 percent to 6.8 percent. By what percent did the unemployment rate decrease?",
       "numeric": {
-        "kind": "single"
+        "kind": "single",
+        "unit": "percent"
       },
       "key": {
-        "value": "20"
+        "value": "15"
       },
       "explanation": {
-        "key": "$1.2\\,(1 - \\frac{p}{100}) = 0.96$, so $1 - \\frac{p}{100} = 0.8$ and $p = 20$.",
+        "key": "The rate fell by $8.0 - 6.8 = 1.2$ percentage points, which is $\\dfrac{1.2}{8.0} = 0.15$, or 15 percent, of the original rate.",
         "steps": [
-          "1. Let the original price be 100. After the raise it is 120.",
-          "2. The final price is $100 - 4 = 96$.",
-          "3. The cut is $120 - 96 = 24$, which is $\\frac{24}{120} = 20\\%$ of 120."
+          "1. Change: $8.0 - 6.8 = 1.2$ percentage points.",
+          "2. Percent change is the change over the original: $\\dfrac{1.2}{8.0} = 0.15$.",
+          "3. The rate decreased by 15 percent."
         ],
-        "fast": "Successive multipliers: $1.2 \\times 0.8 = 0.96$.",
-        "trap": "Adding percents ($20 + 4 = 24$) uses the original price as the base for the cut instead of the raised price."
+        "fast": "$1.2$ is $\\frac{3}{20}$ of $8$.",
+        "trap": "Answering 1.2: that is the drop in percentage points, not the percent decrease."
       },
       "tags": [
         {
@@ -376,7 +399,9 @@
           "id": "percent",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "a rate falls from p% to q%: percent decrease against the percentage-point drop",
+      "variant": "percent change vs percentage-point change"
     },
     {
       "id": "s1q10",
@@ -385,28 +410,28 @@
       "setId": "di1",
       "figureId": "fig1",
       "difficulty": 3,
-      "prompt": "Approximately what percent of the volunteers who logged at least 30 hours were Lakeview volunteers?",
+      "prompt": "Exactly one-third of the Northside volunteers who logged at least 20 hours were students, and none of the Northside volunteers who logged fewer than 20 hours were students. Approximately what percent of all Northside volunteers were students?",
       "choices": [
-        "11%",
-        "24%",
-        "46%",
-        "54%",
-        "85%"
+        "9%",
+        "16%",
+        "18%",
+        "33%",
+        "49%"
       ],
       "key": {
         "sel": [
-          2
+          1
         ]
       },
       "explanation": {
-        "key": "At least 30 hours: Lakeview $15 + 7 = 22$, Northside $16 + 10 = 26$, total 48. $\\frac{22}{48} \\approx 46\\%$.",
+        "key": "Northside volunteers with at least 20 hours: $28 + 16 + 10 = 54$, so $18$ were students. As a share of all 110 Northside volunteers: $\\frac{18}{110} \\approx 16\\%$.",
         "steps": [
-          "1. Lakeview volunteers with at least 30 hours: $15 + 7 = 22$.",
-          "2. All volunteers with at least 30 hours: $22 + 16 + 10 = 48$.",
-          "3. $\\frac{22}{48} \\approx 0.458$, about 46%."
+          "1. Northside, at least 20 hours: $28 + 16 + 10 = 54$.",
+          "2. One-third of 54 is 18 students.",
+          "3. $\\frac{18}{110} \\approx 0.164$, about 16%."
         ],
-        "fast": "22 is a bit less than half of 48.",
-        "trap": "Wrong base: $\\frac{22}{90} \\approx 24\\%$ (all Lakeview volunteers), $\\frac{22}{200} = 11\\%$ (everyone), or $\\frac{22}{26} \\approx 85\\%$ (Lakeview against Northside)."
+        "fast": "18 out of about 110 is a bit over one-sixth.",
+        "trap": "One-third itself (33%), the at-least-20 share of Northside (49%), 18 against all 200 volunteers (9%), or 18 read as a percent."
       },
       "tags": [
         {
@@ -419,7 +444,9 @@
           "id": "percent",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "DI: a stated fraction of one subgroup gives a count; its percent of the whole group",
+      "variant": "a value implied but not shown (derived total)"
     },
     {
       "id": "s1q11",
@@ -428,13 +455,13 @@
       "setId": "di1",
       "figureId": "fig1",
       "difficulty": 4,
-      "prompt": "Two different volunteers are to be selected at random from the volunteers at the two food banks who logged fewer than 10 hours. Given that at least one of the two selected is a Northside volunteer, what is the probability that both are Northside volunteers?",
+      "prompt": "One volunteer is chosen at random from the Northside volunteers and, independently, one from the Lakeview volunteers. Approximately what is the probability that exactly one of the two chosen volunteers logged at least 30 hours?",
       "choices": [
-        "$\\dfrac{4}{9}$",
-        "$\\dfrac{38}{87}$",
-        "$\\dfrac{19}{39}$",
-        "$\\dfrac{1}{2}$",
-        "$\\dfrac{2}{3}$"
+        "0.06",
+        "0.24",
+        "0.37",
+        "0.42",
+        "0.48"
       ],
       "key": {
         "sel": [
@@ -442,23 +469,30 @@
         ]
       },
       "explanation": {
-        "key": "There are 30 such volunteers (20 Northside, 10 Lakeview). Pairs with at least one Northside: $\\binom{30}{2} - \\binom{10}{2} = 435 - 45 = 390$. Pairs with both Northside: $\\binom{20}{2} = 190$. Probability $\\frac{190}{390} = \\frac{19}{39}$.",
+        "key": "$P(N) = \\frac{26}{110}$ and $P(L) = \\frac{22}{90}$ for at least 30 hours. Exactly one: $P(N)(1 - P(L)) + (1 - P(N))P(L) = \\frac{26 \\cdot 68 + 84 \\cdot 22}{9900} = \\frac{3616}{9900} \\approx 0.37$.",
         "steps": [
-          "1. Fewer than 10 hours: Northside 20, Lakeview 10, total 30.",
-          "2. All pairs: $\\binom{30}{2} = 435$. Pairs with no Northside volunteer: $\\binom{10}{2} = 45$. So 390 pairs have at least one.",
-          "3. Pairs with two Northside volunteers: $\\binom{20}{2} = 190$, all of them inside the 390.",
-          "4. Conditional probability: $\\frac{190}{390} = \\frac{19}{39}$."
+          "1. Northside, at least 30 hours: $16 + 10 = 26$ of 110. Lakeview: $15 + 7 = 22$ of 90.",
+          "2. Northside yes and Lakeview no: $\\frac{26}{110} \\cdot \\frac{68}{90}$.",
+          "3. Northside no and Lakeview yes: $\\frac{84}{110} \\cdot \\frac{22}{90}$.",
+          "4. Sum: $\\frac{1768 + 1848}{9900} = \\frac{3616}{9900} \\approx 0.37$."
         ],
-        "fast": "Restrict the sample space first (complement), then count the favourable pairs inside it.",
-        "trap": "$\\frac{38}{87} = \\frac{190}{435}$ ignores the condition; $\\frac49 = (\\frac23)^2$ treats the picks as with replacement and ignores the condition."
+        "fast": "Each chance is about 0.24, so exactly one is about $2(0.24)(0.76) \\approx 0.36$.",
+        "trap": "At least one ($\\approx 0.42$), adding the two chances ($\\approx 0.48$), both ($\\approx 0.06$), or pooling the volunteers ($\\frac{48}{200} = 0.24$)."
       },
       "tags": [
         {
           "kind": "concept",
           "id": "probability-conditional",
           "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "probability-basic",
+          "role": "secondary"
         }
-      ]
+      ],
+      "setup": "DI: one pick from each of two groups, independently; P(exactly one meets a threshold)",
+      "variant": "exactly one of two independent events"
     },
     {
       "id": "s1q12",
@@ -502,33 +536,35 @@
           "id": "data-interpretation-calc",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "DI: possible median of two combined grouped distributions",
+      "variant": "median of two lists combined"
     },
     {
       "id": "s2q1",
       "section": 2,
       "type": "qc",
       "difficulty": 4,
-      "prompt": "$m$ and $n$ are positive integers such that $m^2 - n^2 = 48$.",
+      "prompt": "$n$ is a two-digit positive integer. When the order of the digits of $n$ is reversed, the result is 27 greater than $n$.",
       "qc": {
-        "a": "The number of different possible ordered pairs $(m, n)$",
-        "b": "$4$"
+        "a": "The number of possible values of $n$",
+        "b": "$6$"
       },
       "key": {
         "sel": [
-          1
+          2
         ]
       },
       "explanation": {
-        "key": "$(m - n)(m + n) = 48$ with both factors the same parity (their sum is $2m$) and $m - n < m + n$. Only the even pairs $2 \\times 24$, $4 \\times 12$ and $6 \\times 8$ work, giving 3 ordered pairs, fewer than 4.",
+        "key": "With tens digit $a$ and units digit $b$, reversing gives $(10b + a) - (10a + b) = 9(b - a) = 27$, so $b = a + 3$. Since $n$ has two digits, $a \\ge 1$, and $b \\le 9$ gives $a \\le 6$: $n = 14, 25, 36, 47, 58, 69$. Six values.",
         "steps": [
-          "1. $m^2 - n^2 = (m - n)(m + n) = 48$, with $0 < m - n < m + n$.",
-          "2. $(m + n) + (m - n) = 2m$ is even, so the two factors are both even or both odd; 48 is even, so both are even.",
-          "3. Factor pairs of 48: $1 \\times 48$ and $3 \\times 16$ fail (mixed parity); $2 \\times 24 \\to (13, 11)$; $4 \\times 12 \\to (8, 4)$; $6 \\times 8 \\to (7, 1)$.",
-          "4. Quantity A is 3, so B is greater."
+          "1. $n = 10a + b$; reversed: $10b + a$.",
+          "2. Difference $9(b - a) = 27$, so $b - a = 3$.",
+          "3. $a$ from 1 to 6 (tens digit nonzero, $b \\le 9$).",
+          "4. Six values: 14, 25, 36, 47, 58, 69. The quantities are equal."
         ],
-        "fast": "Write 48 as $4 \\times 12$: pairs of even factors of 48 correspond to factor pairs of 12 with the smaller first: $1 \\times 12$, $2 \\times 6$, $3 \\times 4$.",
-        "trap": "Counting all five factor pairs of 48 gives 5 and the answer A."
+        "fast": "Reversal changes a two-digit number by 9 times the digit gap.",
+        "trap": "Counting $03$ (tens digit 0) to get 7, or stopping at $a = 5$."
       },
       "tags": [
         {
@@ -536,7 +572,9 @@
           "id": "integers-properties",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "reversing a two-digit number changes it by 9 times the digit difference; count the numbers",
+      "variant": "digits and place value of an unknown number"
     },
     {
       "id": "s2q2",
@@ -569,85 +607,61 @@
           "id": "triangles",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "two sides given and an obtuse (or bounded) angle; the third side's range from c^2 against a^2 + b^2",
+      "variant": "larger side opposite the larger angle; obtuse vs acute from c^2 against a^2 + b^2",
+      "revisits": "quant-005:s2q14"
     },
     {
       "id": "s2q3",
       "section": 2,
       "type": "qc",
       "difficulty": 5,
-      "prompt": "$n$ is a positive integer, and the units digit of $3^n$ is 7.",
+      "prompt": "$n$ is a positive integer less than 100. When $n$ is divided by 6 the remainder is 2, and when $n$ is divided by 8 the remainder is 3.",
       "qc": {
-        "a": "The units digit of $7^n$",
-        "b": "The remainder when $n$ is divided by 8"
+        "a": "The number of possible values of $n$",
+        "b": "$1$"
       },
       "key": {
         "sel": [
-          3
+          1
         ]
       },
       "explanation": {
-        "key": "Units digit 7 for $3^n$ means $n \\equiv 3 \\pmod 4$, which makes the units digit of $7^n$ equal to 3. But $n$ divided by 8 leaves 3 (for $n = 3, 11, \\dots$) or 7 (for $n = 7, 15, \\dots$).",
+        "key": "A remainder of 2 on division by 6 makes $n$ even ($n = 6k + 2$). A remainder of 3 on division by 8 makes $n$ odd ($n = 8m + 3$). No integer is both, so there are 0 such values, less than 1.",
         "steps": [
-          "1. Units digits of $3^n$ cycle 3, 9, 7, 1, so a units digit of 7 means $n = 3, 7, 11, 15, \\dots$, i.e. $n$ leaves remainder 3 when divided by 4.",
-          "2. Units digits of $7^n$ cycle 7, 9, 3, 1, so for every such $n$ the units digit of $7^n$ is 3. Quantity A is always 3.",
-          "3. $n = 3$: remainder 3 when divided by 8 (equal to A). $n = 7$: remainder 7 (greater than A).",
-          "4. So the relationship cannot be determined."
+          "1. $n = 6k + 2$ is even.",
+          "2. $n = 8m + 3$ is odd.",
+          "3. No number is both even and odd, so no $n$ works: Quantity A is 0.",
+          "4. B is greater."
         ],
-        "fast": "Knowing $n$ mod 4 does not fix $n$ mod 8: test $n = 3$ and $n = 7$.",
-        "trap": "Testing only the smallest case, $n = 3$, gives remainder 3 and the answer C."
+        "fast": "Check parity before listing candidates.",
+        "trap": "Assuming two remainder conditions always have a solution, as they do when the divisors share no factor."
       },
       "tags": [
         {
           "kind": "concept",
           "id": "remainders-units",
           "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "integers-properties",
+          "role": "secondary"
         }
-      ]
+      ],
+      "setup": "two remainder conditions that conflict in parity: no such number; compare the count with a value",
+      "variant": "two remainder conditions at once: smallest such number"
     },
     {
       "id": "s2q4",
       "section": 2,
       "type": "qc",
       "difficulty": 4,
-      "prompt": "$a - b = 4$ and $ab = 5$.",
+      "prompt": "$x$ is a number other than $0$, $1$ and $-1$.",
       "qc": {
-        "a": "$a^3 - b^3$",
-        "b": "$(a + b)^3$"
-      },
-      "key": {
-        "sel": [
-          3
-        ]
-      },
-      "explanation": {
-        "key": "$a^3 - b^3 = (a - b)(a^2 + ab + b^2) = 4(26 + 5) = 124$ always, but $(a + b)^2 = (a - b)^2 + 4ab = 36$, so $a + b = 6$ or $-6$ and Quantity B is 216 or $-216$.",
-        "steps": [
-          "1. $a^2 + b^2 = (a - b)^2 + 2ab = 16 + 10 = 26$.",
-          "2. $a^3 - b^3 = (a - b)(a^2 + ab + b^2) = 4 \\times 31 = 124$.",
-          "3. $(a + b)^2 = (a - b)^2 + 4ab = 36$, so $a + b = \\pm 6$; both occur: $(a, b) = (5, 1)$ or $(-1, -5)$.",
-          "4. B is 216 (greater than 124) or $-216$ (less than 124)."
-        ],
-        "fast": "Solve directly: $a = 5, b = 1$ or $a = -1, b = -5$. Both give A $= 124$; B flips sign.",
-        "trap": "Taking $a + b = 6$ only (assuming positive numbers) gives B $= 216$ and the answer B."
-      },
-      "tags": [
-        {
-          "kind": "concept",
-          "id": "algebraic-expressions",
-          "role": "primary"
-        }
-      ]
-    },
-    {
-      "id": "s2q5",
-      "section": 2,
-      "type": "qc",
-      "difficulty": 5,
-      "prompt": "Each of the 60 students at a language school studies Spanish, Mandarin, both or neither. Exactly 38 of the students study Spanish, and exactly 41 study Mandarin.",
-      "qc": {
-        "a": "The number of students who study both languages minus the number of students who study neither language",
-        "b": "$19$"
+        "a": "$\\dfrac{x^3 - x}{x^2 - x} - \\dfrac{x^2 - 1}{x + 1}$",
+        "b": "$2$"
       },
       "key": {
         "sel": [
@@ -655,36 +669,79 @@
         ]
       },
       "explanation": {
-        "key": "$60 = 38 + 41 - \\text{both} + \\text{neither}$, so $\\text{both} - \\text{neither} = 79 - 60 = 19$ whatever the individual numbers are.",
+        "key": "$\\dfrac{x^3 - x}{x^2 - x} = \\dfrac{x(x - 1)(x + 1)}{x(x - 1)} = x + 1$ and $\\dfrac{x^2 - 1}{x + 1} = x - 1$, so A $= (x + 1) - (x - 1) = 2$ for every allowed $x$.",
         "steps": [
-          "1. Two-set formula: total $=$ Spanish $+$ Mandarin $-$ both $+$ neither.",
-          "2. $60 = 38 + 41 - \\text{both} + \\text{neither}$.",
-          "3. Rearranged: $\\text{both} - \\text{neither} = 79 - 60 = 19$.",
-          "4. The number studying both can be anywhere from 19 to 38, but the difference is always 19."
+          "1. Factor: $x^3 - x = x(x - 1)(x + 1)$ and $x^2 - x = x(x - 1)$.",
+          "2. First fraction: $x + 1$ (allowed since $x \\ne 0, 1$).",
+          "3. Second fraction: $\\dfrac{(x - 1)(x + 1)}{x + 1} = x - 1$ (allowed since $x \\ne -1$).",
+          "4. Difference: 2. The quantities are equal."
         ],
-        "fast": "Each student studying neither must be balanced by one extra student counted twice.",
-        "trap": "Seeing that 'both' is not fixed (19 to 38) and concluding the difference cannot be determined."
+        "fast": "Try $x = 2$: $\\frac{6}{2} - \\frac{3}{3} = 2$.",
+        "trap": "Choosing D because $x$ is unknown: every allowed $x$ gives 2."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "algebraic-expressions",
+          "role": "primary"
+        }
+      ],
+      "setup": "difference of two rational expressions that both simplify; compare with a constant (the excluded values do not matter)",
+      "variant": "simplifying a rational expression"
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "At a club, 60 percent of the members who play chess also play go, and 40 percent of the members who play go also play chess. At least one member plays both games.",
+      "qc": {
+        "a": "The number of members who play chess",
+        "b": "The number of members who play go"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The members who play both are counted twice: $0.6C = 0.4G$, where $C$ and $G$ are the numbers playing chess and go. So $G = 1.5C$, and since both are positive, more members play go.",
+        "steps": [
+          "1. Both games: 60% of the chess players, $0.6C$.",
+          "2. Both games: 40% of the go players, $0.4G$.",
+          "3. Same group: $0.6C = 0.4G$, so $G = \\frac32 C$.",
+          "4. $C > 0$, so $G > C$: B is greater."
+        ],
+        "fast": "A larger share of a group means the group is smaller, for the same overlap.",
+        "trap": "Reading 60% against 40% as 'more chess players', or deciding that the totals cannot be compared without the club's size."
       },
       "tags": [
         {
           "kind": "concept",
           "id": "overlapping-sets",
           "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "percent",
+          "role": "secondary"
         }
-      ]
+      ],
+      "setup": "the overlap stated as a percent of each set: equate the two expressions to compare the sets' sizes",
+      "variant": "overlap given as percents of different bases"
     },
     {
       "id": "s2q6",
       "section": 2,
       "type": "mc",
       "difficulty": 4,
-      "prompt": "In quadrilateral $ABCD$, diagonal $AC$ divides the quadrilateral into triangles $ABC$ and $ACD$. Angles $ABC$ and $ADC$ are right angles, $AB = BC$, angle $CAD$ measures $30^\\circ$, and $CD = 4$. What is the area of $ABCD$?",
+      "prompt": "A rectangular box has a square base and a height of 7. The distance from one corner of the box to the opposite corner (through the interior of the box) is 9. What is the area of the base of the box?",
       "choices": [
-        "$8+8\\sqrt{3}$",
-        "$16+8\\sqrt{3}$",
-        "$16+16\\sqrt{3}$",
-        "$32+8\\sqrt{3}$",
-        "$24\\sqrt{3}$"
+        "8",
+        "16",
+        "24",
+        "32",
+        "64"
       ],
       "key": {
         "sel": [
@@ -692,15 +749,14 @@
         ]
       },
       "explanation": {
-        "key": "Triangle $ACD$ is 30-60-90 with short leg $CD = 4$, so $AD = 4\\sqrt3$, $AC = 8$ and its area is $8\\sqrt3$. Triangle $ABC$ is an isosceles right triangle with hypotenuse 8, so its legs are $4\\sqrt2$ and its area is 16. Total $16 + 8\\sqrt3$.",
+        "key": "With base side $s$, the space diagonal satisfies $s^2 + s^2 + 7^2 = 9^2$, so $2s^2 = 32$ and the base area $s^2 = 16$.",
         "steps": [
-          "1. In right triangle $ACD$, $CD$ is opposite the $30^\\circ$ angle, so $AC = 2 \\cdot 4 = 8$ and $AD = 4\\sqrt3$.",
-          "2. Area of $ACD = \\frac12 \\cdot 4 \\cdot 4\\sqrt3 = 8\\sqrt3$.",
-          "3. In right isosceles triangle $ABC$ with hypotenuse $AC = 8$: $AB = BC = \\frac{8}{\\sqrt2} = 4\\sqrt2$.",
-          "4. Area of $ABC = \\frac12 (4\\sqrt2)^2 = 16$. Total: $16 + 8\\sqrt3$."
+          "1. Space diagonal: $d^2 = s^2 + s^2 + h^2$.",
+          "2. $81 = 2s^2 + 49$.",
+          "3. $s^2 = 16$, which is the area of the square base."
         ],
-        "fast": "A right isosceles triangle's area is (hypotenuse)$^2/4$: $64/4 = 16$.",
-        "trap": "Treating $AC = 8$ as a leg of triangle $ABC$ gives area 32 and $32 + 8\\sqrt3$; taking $AB = CD = 4$ gives $8 + 8\\sqrt3$."
+        "fast": "$81 - 49 = 32$ is two base edges squared; halve it.",
+        "trap": "Using one base edge: $s^2 + 49 = 81$ gives 32. Or answering the edge length $s = 4$ squared twice (64)."
       },
       "tags": [
         {
@@ -710,47 +766,56 @@
         },
         {
           "kind": "concept",
-          "id": "area-perimeter",
+          "id": "solids-volume",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "box with a square base and a given height; the space diagonal gives the base area",
+      "variant": "space diagonal of a rectangular box"
     },
     {
       "id": "s2q7",
       "section": 2,
       "type": "mc",
       "difficulty": 5,
-      "prompt": "An equilateral triangle is inscribed in a circle, and a second circle is inscribed in the triangle. The region inside the larger circle but outside the smaller circle has area $27\\pi$. What is the perimeter of the triangle?",
+      "prompt": "A right triangle with legs of lengths 6 and 8 is inscribed in a circle. On each leg, a semicircle is drawn outside the triangle, with the leg as its diameter. What is the total area of the two regions that lie inside the semicircles but outside the circle?",
       "choices": [
-        "$6\\sqrt{3}$",
-        "$9\\sqrt{3}$",
-        "$18$",
-        "$18\\sqrt{3}$",
-        "$36$"
+        "$24$",
+        "$48$",
+        "$\\dfrac{25\\pi}{2} - 24$",
+        "$\\dfrac{25\\pi}{2}$",
+        "$25\\pi - 24$"
       ],
       "key": {
         "sel": [
-          3
+          0
         ]
       },
       "explanation": {
-        "key": "For an equilateral triangle the circumradius is twice the inradius: $R = 2r$. Then $\\pi(4r^2 - r^2) = 3\\pi r^2 = 27\\pi$, so $r = 3$, $R = 6$, the side is $R\\sqrt3 = 6\\sqrt3$ and the perimeter is $18\\sqrt3$.",
+        "key": "The hypotenuse, 10, is a diameter of the circle. The two semicircles on the legs plus the triangle cover the two crescents and the half of the circle on the triangle's side. Since $\\frac{\\pi}{2}(3^2 + 4^2) = \\frac{25\\pi}{2}$ equals that half circle, the crescents have the triangle's area, 24.",
         "steps": [
-          "1. The center of an equilateral triangle divides each median in the ratio $2:1$, so $R = 2r$.",
-          "2. Ring area: $\\pi R^2 - \\pi r^2 = 3\\pi r^2 = 27\\pi$, so $r = 3$ and $R = 6$.",
-          "3. The median (height) is $R + r = 9$, and side $= \\frac{2}{\\sqrt3} \\cdot 9 = 6\\sqrt3$.",
-          "4. Perimeter $= 3 \\cdot 6\\sqrt3 = 18\\sqrt3$."
+          "1. The hypotenuse is $\\sqrt{36 + 64} = 10$, a diameter (right angle inscribed in a semicircle).",
+          "2. Semicircles on the legs: $\\frac{\\pi}{2}(9 + 16) = \\frac{25\\pi}{2}$.",
+          "3. Semicircles on legs + triangle = crescents + half of the circle ($\\frac{25\\pi}{2}$).",
+          "4. Crescents $= \\frac{25\\pi}{2} + 24 - \\frac{25\\pi}{2} = 24$."
         ],
-        "fast": "Height $= 3r$; side $=$ height $\\times \\frac{2}{\\sqrt3}$.",
-        "trap": "Stopping at the side length $6\\sqrt3$, or swapping the radii ($R = 3$) and getting a side of $3\\sqrt3$ and a perimeter of $9\\sqrt3$."
+        "fast": "The semicircles on the legs add up to the semicircle on the hypotenuse, so the crescents equal the triangle.",
+        "trap": "Subtracting the triangle instead of adding it ($\\frac{25\\pi}{2} - 24$, the circle's two side segments), or using the whole circle ($25\\pi - 24$)."
       },
       "tags": [
         {
           "kind": "concept",
           "id": "inscribed-figures",
           "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "secondary"
         }
-      ]
+      ],
+      "setup": "crescents on the legs of a right triangle inscribed in a circle: their total area equals the triangle's",
+      "variant": "overlapping circles or semicircles"
     },
     {
       "id": "s2q8",
@@ -787,44 +852,53 @@
           "id": "probability-basic",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "three independent choices among 4 options: P(exactly one option unused)",
+      "variant": "independent events across repeated trials"
     },
     {
       "id": "s2q9",
       "section": 2,
       "type": "mc",
       "difficulty": 4,
-      "prompt": "A delivery drone leaves a depot at 9:00 a.m. and flies along a straight route at a constant 40 kilometers per hour. A second drone leaves the same depot at 9:30 a.m. and flies along the same route at a constant 60 kilometers per hour. At what time will the second drone be 10 kilometers ahead of the first?",
+      "prompt": "A cyclist rides the first 12 kilometers of a 21-kilometer route at an average speed of 18 kilometers per hour and the rest of the route at an average speed of 6 meters per second. How many minutes does the whole ride take?",
       "choices": [
-        "10:30 a.m.",
-        "10:45 a.m.",
-        "11:00 a.m.",
-        "11:15 a.m.",
-        "11:30 a.m."
+        "55",
+        "65",
+        "70",
+        "90",
+        "130"
       ],
       "key": {
         "sel": [
-          2
+          1
         ]
       },
       "explanation": {
-        "key": "At 9:30 the first drone is 20 km ahead. The second gains 20 km per hour, so it must gain $20 + 10 = 30$ km, which takes 1.5 hours: 11:00 a.m.",
+        "key": "First part: $\\frac{12}{18}$ hour $= 40$ minutes. Rest: 9 kilometers $= 9000$ meters at 6 meters per second takes 1500 seconds $= 25$ minutes. Total 65 minutes.",
         "steps": [
-          "1. Head start at 9:30: $40 \\times 0.5 = 20$ km.",
-          "2. Closing speed: $60 - 40 = 20$ km per hour.",
-          "3. To be 10 km ahead, the second drone gains $20 + 10 = 30$ km: $\\frac{30}{20} = 1.5$ hours after 9:30.",
-          "4. Time: 11:00 a.m."
+          "1. 12 km at 18 km/h: $\\frac{2}{3}$ hour = 40 minutes.",
+          "2. Remaining distance: $21 - 12 = 9$ km = 9000 m.",
+          "3. $\\frac{9000}{6} = 1500$ seconds = 25 minutes.",
+          "4. Total: $40 + 25 = 65$ minutes."
         ],
-        "fast": "Positions $40t$ and $60(t - \\frac12)$ with $t$ in hours after 9:00: $20t - 30 = 10 \\Rightarrow t = 2$.",
-        "trap": "10:30 a.m. is when the second drone only draws level (it has made up the 20 km head start); the extra 10 km takes another half hour."
+        "fast": "6 m/s is $6 \\times 3.6 = 21.6$ km/h; 9 km at 21.6 km/h is $\\frac{5}{12}$ hour.",
+        "trap": "Reading 6 m/s as 6 km/h (90 minutes for the second part, 130 in all), or riding all 21 km at 18 km/h (70)."
       },
       "tags": [
         {
           "kind": "concept",
           "id": "word-problems-rate",
           "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "units-conversion",
+          "role": "secondary"
         }
-      ]
+      ],
+      "setup": "two legs with speeds in different units (km/h and m/s); total time",
+      "variant": "rate with a unit change mid-problem"
     },
     {
       "id": "s2q10",
@@ -860,36 +934,38 @@
           "id": "fractions-decimals",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "which fraction lies between two close fractions",
+      "variant": "ordering fractions with unknowns or near-equal values"
     },
     {
       "id": "s2q11",
       "section": 2,
       "type": "mc",
-      "difficulty": 7,
-      "prompt": "A coach will choose 4 of 7 runners, including Xia and Yusuf, and assign them to the first, second, third and fourth legs of a relay, one runner per leg. Yusuf can be chosen only if Xia is also chosen, and Xia cannot run the first leg. How many different assignments are possible?",
+      "difficulty": 5,
+      "prompt": "Eight people, among them two married couples, are to be seated around a circular table with eight seats. Seatings that differ only by a rotation are considered the same. In how many seatings does neither couple sit side by side?",
       "choices": [
-        "360",
-        "420",
-        "480",
-        "540",
-        "600"
+        "2,160",
+        "2,640",
+        "3,600",
+        "4,080",
+        "5,040"
       ],
       "key": {
         "sel": [
-          2
+          1
         ]
       },
       "explanation": {
-        "key": "Split on who runs. Neither: $5 \\cdot 4 \\cdot 3 \\cdot 2 = 120$. Xia without Yusuf: Xia takes leg 2, 3 or 4, and 3 of the other 5 fill the rest in order: $3 \\cdot 60 = 180$. Both: Xia 3 legs, Yusuf 3 remaining legs, the other two legs from 5 runners: $3 \\cdot 3 \\cdot 20 = 180$. Total 480.",
+        "key": "All circular seatings: $7! = 5040$. A given couple together: treat it as one unit, $2 \\cdot 6! = 1440$. Both couples together: $2 \\cdot 2 \\cdot 5! = 480$. Neither: $5040 - 2(1440) + 480 = 2640$.",
         "steps": [
-          "1. Neither Xia nor Yusuf: ordered choice of 4 from the other 5 runners, $5 \\cdot 4 \\cdot 3 \\cdot 2 = 120$.",
-          "2. Xia but not Yusuf: Xia on leg 2, 3 or 4 (3 ways); fill the other 3 legs from the 5 others in order: $5 \\cdot 4 \\cdot 3 = 60$. Subtotal 180.",
-          "3. Both: Xia on leg 2, 3 or 4 (3 ways), Yusuf on one of the 3 remaining legs (3 ways), the last 2 legs from the 5 others: $5 \\cdot 4 = 20$. Subtotal 180.",
-          "4. Yusuf without Xia is not allowed. Total: $120 + 180 + 180 = 480$."
+          "1. Circular seatings of 8 people: $(8 - 1)! = 5040$.",
+          "2. Couple 1 together: glue them into one unit (7 units, $6!$ circular orders) times 2 orders inside: 1440. Same for couple 2.",
+          "3. Both together: 6 units, $5!$ orders, times $2 \\cdot 2$: 480.",
+          "4. Inclusion-exclusion: $5040 - 1440 - 1440 + 480 = 2640$."
         ],
-        "fast": "Complement: $7 \\cdot 6 \\cdot 5 \\cdot 4 = 840$ line-ups, minus $4 \\cdot 60 = 240$ with Yusuf but not Xia, minus $6 \\cdot 5 \\cdot 4 = 120$ with Xia on leg 1: 480.",
-        "trap": "Forgetting that the Yusuf condition still allows the line-ups with neither of them (dropping the 120 gives 360), or restricting Xia's leg in only one of the cases."
+        "fast": "Total minus each couple together, plus back the overlap.",
+        "trap": "Forgetting to add back the overlap (2160), subtracting one couple only (3600), or counting rows instead of circles."
       },
       "tags": [
         {
@@ -902,7 +978,9 @@
           "id": "counting-restrictions",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "circular seating; two pairs must not sit together (inclusion-exclusion)",
+      "variant": "circular arrangements"
     },
     {
       "id": "s2q12",
@@ -938,78 +1016,89 @@
           "id": "linear-equations",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "two linear equations in three unknowns; a third combination is determined",
+      "variant": "three variables, two equations: what can be determined"
     },
     {
       "id": "s2q13",
       "section": 2,
       "type": "mc_multi",
       "difficulty": 4,
-      "prompt": "Which of the following values of $x$ satisfy $\\dfrac{6 - x}{-2} < x + 3 \\le 15 - 2x$? Select all such values.",
+      "prompt": "The numbers $a$, $b$ and $c$ satisfy $a < b < c$ and $a + b + c = 0$. Which of the following must be true? Indicate all such statements.",
       "choices": [
-        "$-13$",
-        "$-12$",
-        "$-6$",
-        "$0$",
-        "$4$",
-        "$4.5$"
+        "$a < 0$",
+        "$b < 0$",
+        "$c > 0$",
+        "$a + c < 0$",
+        "$ac < 0$",
+        "$c > |a|$"
       ],
       "key": {
         "sel": [
+          0,
           2,
-          3,
           4
         ]
       },
       "explanation": {
-        "key": "Left part: multiplying by $-2$ flips the sign, $6 - x > -2x - 6$, so $x > -12$. Right part: $3x \\le 12$, so $x \\le 4$. Solutions: $-12 < x \\le 4$, i.e. $-6$, 0 and 4.",
+        "key": "Three different numbers that sum to 0 cannot all have the same sign, so the least is negative and the greatest is positive: $a < 0 < c$, and $ac < 0$. The middle number $b$ can have either sign, so $a + c = -b$ and the comparison of $c$ with $|a|$ are undetermined.",
         "steps": [
-          "1. $\\frac{6 - x}{-2} < x + 3$. Multiply by $-2$ and reverse: $6 - x > -2x - 6 \\Rightarrow x > -12$.",
-          "2. $x + 3 \\le 15 - 2x \\Rightarrow 3x \\le 12 \\Rightarrow x \\le 4$.",
-          "3. Both: $-12 < x \\le 4$. $-12$ is excluded (strict), 4 is included."
+          "1. If $a \\ge 0$, all three are nonnegative and not all 0, so the sum is positive: impossible. So $a < 0$.",
+          "2. Likewise $c > 0$, so $ac < 0$.",
+          "3. $b$ can be $-1$ ($a = -2$, $c = 3$) or $1$ ($a = -3$, $c = 2$).",
+          "4. Then $a + c = -b$ and $c$ against $|a|$ depend on $b$: not forced."
         ],
-        "fast": "Check the endpoints: at $x = -12$ the left side equals $-9 = x + 3$ (not less); at $x = 4$ both right-hand sides are 7.",
-        "trap": "Not reversing the inequality when multiplying by $-2$ gives $x < -12$, which makes the set seem empty; or including $-12$ or excluding 4."
+        "fast": "Try $(-2, -1, 3)$ and $(-3, 1, 2)$; keep only what holds for both.",
+        "trap": "Assuming the middle number is 0, which would make $a + c = 0$ and $c = |a|$."
       },
       "tags": [
         {
           "kind": "concept",
           "id": "inequalities",
           "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "number-sense-qc",
+          "role": "secondary"
         }
-      ]
+      ],
+      "setup": "three ordered numbers summing to zero; select the sign facts that must hold",
+      "variant": "a chain a < b < c: what must be true of sums or differences"
     },
     {
       "id": "s2q14",
       "section": 2,
       "type": "mc_multi",
-      "difficulty": 6,
-      "prompt": "Seven volunteers sorted a total of 50 donated coats. Each volunteer sorted at least one coat, and no two volunteers sorted the same number of coats. Which of the following could be the median of the seven numbers of coats sorted? Select all such values.",
+      "difficulty": 5,
+      "prompt": "A drawer holds 10 red socks, 8 blue socks and 6 green socks. Socks are drawn one at a time without looking. For which of the following goals is the number shown the least number of draws that guarantees the goal? Indicate all such goals.",
       "choices": [
-        "4",
-        "6",
-        "9",
-        "10",
-        "11",
-        "13"
+        "Two socks of the same color: 4",
+        "Three red socks: 17",
+        "Two green socks: 19",
+        "One blue sock: 17",
+        "Two blue socks: 17"
       ],
       "key": {
         "sel": [
           0,
           1,
-          2
+          3
         ]
       },
       "explanation": {
-        "key": "The median $m$ needs three distinct smaller numbers, so $m \\ge 4$. To make $m$ large, make the others small: $1 + 2 + 3 + m + (m+1) + (m+2) + (m+3) = 4m + 12 \\le 50$, so $m \\le 9$. Every value from 4 to 9 works, so 4, 6 and 9.",
+        "key": "Count the worst case and add one. Same color: one of each color (3) can miss, so 4. Three red: 8 blue + 6 green + 2 red = 16, so 17. Two green: 10 + 8 + 1 = 19, so 20. One blue: 10 + 6 = 16, so 17. Two blue: 10 + 6 + 1 = 17, so 18.",
         "steps": [
-          "1. Order the numbers $a < b < c < m < e < f < g$.",
-          "2. Lower bound: $a, b, c$ are distinct positive integers below $m$, so $m \\ge 4$; $m = 4$ works with $1, 2, 3, 4, 5, 6, 29$.",
-          "3. Upper bound: the smallest total with median $m$ is $1 + 2 + 3 + m + (m+1) + (m+2) + (m+3) = 4m + 12$, which must be at most 50, so $m \\le 9.5$, i.e. $m \\le 9$. $m = 9$ works with $1, 2, 3, 9, 10, 11, 14$.",
-          "4. $m = 6$ works too, for example $1, 2, 3, 6, 7, 8, 23$. 10, 11 and 13 exceed the bound."
+          "1. A guarantee is one more than the largest draw that can still miss the goal.",
+          "2. Same color: 3 can miss, so 4. True.",
+          "3. Three red: 16 can miss, so 17. True.",
+          "4. Two green: 19 can miss, so 20, not 19. False.",
+          "5. One blue: 16 can miss, so 17. True.",
+          "6. Two blue: 17 can miss, so 18, not 17. False."
         ],
-        "fast": "Bound the median from above by pushing the three numbers below it to 1, 2, 3 and the three above it to $m+1, m+2, m+3$.",
-        "trap": "Guessing from the average ($50/7 \\approx 7$), or bounding with the three larger values only somewhat above $m$, lets 10 or 11 in; forgetting that the numbers must be distinct does the same."
+        "fast": "Exhaust the colors that do not help first.",
+        "trap": "Forgetting the last draw, or counting the target color's own extra sock (two green: 19)."
       },
       "tags": [
         {
@@ -1019,32 +1108,35 @@
         },
         {
           "kind": "concept",
-          "id": "mean-median-mode",
+          "id": "counting-restrictions",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "worst-case draws to guarantee a color condition (pigeonhole); select the true counts",
+      "variant": "worst-case count (pigeonhole)"
     },
     {
       "id": "s2q15",
       "section": 2,
       "type": "numeric",
       "difficulty": 4,
-      "prompt": "A rectangular poster has a perimeter of 66 inches. It is mounted on a rectangular board so that a border 3 inches wide surrounds the poster on all sides. What is the area, in square inches, of the border?",
+      "prompt": "A rectangle's length is twice its width. When its length is decreased by 6 and its width is increased by 6, the rectangle becomes a square. By how many square units does the area increase?",
       "numeric": {
         "kind": "single"
       },
       "key": {
-        "value": "234"
+        "value": "36"
       },
       "explanation": {
-        "key": "With poster sides $L$ and $W$ ($L + W = 33$), the board is $(L + 6)(W + 6)$, so the border is $(L + 6)(W + 6) - LW = 6(L + W) + 36 = 198 + 36 = 234$, whatever $L$ and $W$ are.",
+        "key": "$2w - 6 = w + 6$ gives $w = 12$ and length 24, area 288. The square has side 18 and area 324. The increase is 36.",
         "steps": [
-          "1. $2(L + W) = 66$, so $L + W = 33$.",
-          "2. Board area: $(L + 6)(W + 6) = LW + 6(L + W) + 36$.",
-          "3. Border area: $6(L + W) + 36 = 198 + 36 = 234$."
+          "1. Width $w$, length $2w$.",
+          "2. Square: $2w - 6 = w + 6$, so $w = 12$.",
+          "3. Original area $24 \\times 12 = 288$; square $18^2 = 324$.",
+          "4. Increase: $324 - 288 = 36$."
         ],
-        "fast": "Border = (perimeter × width) + four corner squares: $66 \\cdot 3 + 4 \\cdot 9$.",
-        "trap": "Leaving out the four $3 \\times 3$ corners gives 198; thinking the dimensions are needed stalls the solver."
+        "fast": "Same perimeter, and a square of side 18 beats $24 \\times 12$ by $6^2$.",
+        "trap": "Assuming the area cannot change because the perimeter stays the same."
       },
       "tags": [
         {
@@ -1052,7 +1144,9 @@
           "id": "area-perimeter",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "trade length for width at a fixed perimeter until a square; the area gain",
+      "variant": "perimeter fixed, area varies (or the reverse)"
     }
   ]
 }

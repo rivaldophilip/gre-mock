@@ -3,7 +3,8 @@ import katex from "katex";
 /** Tiny inline markup: $math$, **bold**, *italic*, blank lines = paragraphs. */
 function inline(text: string, key: string) {
   const out: React.ReactNode[] = [];
-  const re = /\$([^$]+)\$|\*\*([^*]+)\*\*|\*([^*]+)\*/g;
+  // A math span may contain an escaped dollar sign (`$\$50$`), so `\$` must not close it.
+  const re = /\$((?:\\.|[^$\\])+)\$|\*\*([^*]+)\*\*|\*([^*]+)\*/g;
   let last = 0;
   let m: RegExpExecArray | null;
   let i = 0;

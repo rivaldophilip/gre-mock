@@ -178,7 +178,7 @@
     {
       "id": "a2",
       "paragraphs": [
-        "Orchard owners in the Talgar Valley who rent honeybee hives during the spring bloom have reported larger apple harvests than owners who rely on wild pollinators alone. Some growers have concluded that renting hives is responsible for the difference. The owners who rent hives, however, are disproportionately those with the largest and most heavily irrigated orchards, and irrigation by itself is known to increase the proportion of blossoms that set fruit. The difference in harvests therefore does not, by itself, show that renting hives raises yields."
+        "Transportation analysts have predicted that the new toll on the Harbor Bridge will push commuters onto the free Ferry Street tunnel and badly worsen congestion there. This prediction overlooks the tunnel's height limit, which already bars the delivery trucks that make up most of the bridge's rush-hour traffic. Commuters in private cars, moreover, report that they choose the bridge for its direct route into the business district, an advantage the toll does nothing to change. The toll is therefore unlikely to add much traffic to the tunnel."
       ],
       "tags": []
     }
@@ -356,48 +356,48 @@
       "id": "s1q3",
       "section": 1,
       "type": "tc",
-      "difficulty": 5,
-      "prompt": "Her nineteenth-century editors, who prized concision above every other virtue, held up the letters as (i) ___ of the plain style. The drafts recently found among her papers do not so much overturn that judgment as complicate its premise: they show that she let herself (ii) ___ for pages before cutting each letter to a paragraph, so that the (iii) ___ prose her editors admired was less a habit of mind than the residue of ruthless revision.",
+      "difficulty": 4,
+      "prompt": "Admirers who (i) ___ the conductor as a visionary seldom noticed how (ii) ___ his interpretations actually were. His rehearsal notes show him revising a symphony's tempos to suit each new hall, each new orchestra and, on at least one occasion, a soloist's train schedule, so that what audiences took for (iii) ___ conviction on the podium was in fact a gift for adjustment.",
       "blanks": [
         [
-          "parodies",
-          "exemplars",
-          "repudiations"
+          "lionized",
+          "disparaged",
+          "emulated"
         ],
         [
-          "dissemble",
-          "carp",
-          "maunder"
+          "malleable",
+          "doctrinaire",
+          "immutable"
         ],
         [
-          "pithy",
-          "mellifluous",
-          "opulent"
+          "adamant",
+          "tepid",
+          "feigned"
         ]
       ],
       "key": {
         "sel": [
-          1,
-          2,
+          0,
+          0,
           0
         ]
       },
       "explanation": {
-        "key": "(i) Editors who prized concision 'held up' the letters, and the drafts do not overturn that judgment, so the letters were models: exemplars. (ii) Pages of draft cut to a paragraph means the drafts rambled: maunder. (iii) The admired prose is the concise result of the cutting, what editors who prized concision would praise: pithy.",
+        "key": "(i) Admirers who call him a visionary treat him as a celebrity: lionized. (ii) Tempos revised for every hall, orchestra and even a train schedule show interpretations easily reshaped: malleable. (iii) What audiences saw was the opposite of adjustment, unbending certainty: adamant conviction.",
         "distractors": {
-          "parodies": "Mocking imitations; editors who admired the letters would not hold them up as parodies.",
-          "repudiations": "Rejections of the style; the opposite of the editors' praise.",
-          "dissemble": "To conceal one's motives; the contrast is between length and brevity, not honesty.",
-          "carp": "To complain pettily; nothing suggests the drafts were complaints.",
-          "mellifluous": "Sweet-sounding; topical for admired prose, but the logic (concision, cutting) calls for brevity, not euphony.",
-          "opulent": "Lavish; the opposite of prose produced by ruthless cutting."
+          "disparaged": "Admirers do not belittle the man they call a visionary.",
+          "emulated": "Imitating him is not what calling him a visionary means, and it does not set up the contrast that follows.",
+          "doctrinaire": "Rigidly following a theory; the notes show the opposite.",
+          "immutable": "Unchangeable; contradicted by the constant revisions.",
+          "tepid": "Lukewarm conviction would not be mistaken for vision.",
+          "feigned": "The sentence contrasts what audiences took for conviction with adjustment; 'feigned conviction' is not what they took it for."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "parody",
-          "role": "distractor",
+          "id": "lionize",
+          "role": "key",
           "at": [
             0,
             0
@@ -405,8 +405,8 @@
         },
         {
           "kind": "word",
-          "id": "exemplar",
-          "role": "key",
+          "id": "disparage",
+          "role": "distractor",
           "at": [
             0,
             1
@@ -414,8 +414,17 @@
         },
         {
           "kind": "word",
-          "id": "dissemble",
+          "id": "emulate",
           "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "malleable",
+          "role": "key",
           "at": [
             1,
             0
@@ -423,8 +432,17 @@
         },
         {
           "kind": "word",
-          "id": "maunder",
-          "role": "key",
+          "id": "doctrinaire",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "immutable",
+          "role": "distractor",
           "at": [
             1,
             2
@@ -432,7 +450,7 @@
         },
         {
           "kind": "word",
-          "id": "pithy",
+          "id": "adamant",
           "role": "key",
           "at": [
             2,
@@ -441,7 +459,7 @@
         },
         {
           "kind": "word",
-          "id": "mellifluous",
+          "id": "tepid",
           "role": "distractor",
           "at": [
             2,
@@ -450,7 +468,7 @@
         },
         {
           "kind": "word",
-          "id": "opulent",
+          "id": "feign",
           "role": "distractor",
           "at": [
             2,
@@ -593,7 +611,8 @@
             5
           ]
         }
-      ]
+      ],
+      "revisits": "verbal-006:s1q7"
     },
     {
       "id": "s1q6",
@@ -603,10 +622,10 @@
       "prompt": "Readers who expect the late sequence to yield, as the earlier poems did, to patience and a good library are disappointed: its allusions point only to one another and to a private history the poet never disclosed, so that the poems remain ___ however diligently they are annotated.",
       "choices": [
         "hermetic",
-        "derivative",
-        "pellucid",
+        "banal",
+        "translucent",
         "esoteric",
-        "imitative",
+        "hackneyed",
         "jocose"
       ],
       "key": {
@@ -618,9 +637,9 @@
       "explanation": {
         "key": "Allusions that point only inward and to an undisclosed private history make the poems closed to outsiders, so that no annotation opens them: hermetic in its secondary sense (impenetrable to outside understanding) and esoteric.",
         "distractors": {
-          "derivative": "Trap pair with imitative: allusions suggest borrowing, but these point 'only to one another', and the sentence is about inaccessibility, not originality.",
-          "imitative": "Trap pair with derivative: on topic, wrong logic.",
-          "pellucid": "Clear; the opposite of poems that resist annotation.",
+          "banal": "Trap pair with hackneyed: true synonyms (trite), and 'disappointed' readers tempt them, but the sentence is about poems that resist understanding, not poems that are stale.",
+          "hackneyed": "Trap pair with banal: on the readers' disappointment, wrong logic.",
+          "translucent": "Letting light through, so easy to see into; the opposite of poems no annotation opens.",
           "jocose": "Playful; tone is not at issue."
         }
       },
@@ -635,18 +654,10 @@
         },
         {
           "kind": "word",
-          "id": "derivative",
+          "id": "banal",
           "role": "distractor",
           "at": [
             1
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "pellucid",
-          "role": "distractor",
-          "at": [
-            2
           ]
         },
         {
@@ -659,71 +670,72 @@
         },
         {
           "kind": "word",
-          "id": "jocose",
+          "id": "hackneyed",
           "role": "distractor",
-          "at": [
-            5
-          ]
-        }
-      ]
-    },
-    {
-      "id": "s1q7",
-      "section": 1,
-      "type": "se",
-      "difficulty": 4,
-      "prompt": "Reviewers were right that the novel's momentum seems to ___ in its middle chapters but wrong about the reason: the author's letters show her, far from tiring of the book, deliberately slackening its pace so that the final reversal would land with greater force.",
-      "choices": [
-        "quicken",
-        "flag",
-        "surge",
-        "persist",
-        "wane",
-        "pertain"
-      ],
-      "key": {
-        "sel": [
-          1,
-          4
-        ]
-      },
-      "explanation": {
-        "key": "The reviewers were right about the effect (the pace slackens) but wrong to blame fatigue. So the momentum grows weaker: flag (secondary sense, to lose vigor; not 'to mark') and wane.",
-        "distractors": {
-          "quicken": "Trap pair with surge: true synonyms, both the reverse of the slackening the letters describe.",
-          "surge": "Trap pair with quicken: wrong direction.",
-          "persist": "Continuing unchanged contradicts the slackening.",
-          "pertain": "To relate to; makes no sense here."
-        }
-      },
-      "tags": [
-        {
-          "kind": "word",
-          "id": "quicken",
-          "role": "distractor",
-          "at": [
-            0
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "flag",
-          "role": "key",
-          "at": [
-            1
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "wane",
-          "role": "key",
           "at": [
             4
           ]
         },
         {
           "kind": "word",
-          "id": "pertain",
+          "id": "jocose",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ],
+      "revisits": "verbal-004:s2q2"
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Seasoned negotiators did not ___ at the union's opening demand, however steep, having learned over many contracts that the first figure put on the table was a gambit rather than an ultimatum.",
+      "choices": [
+        "quail",
+        "exult",
+        "blanch",
+        "temporize",
+        "rejoice",
+        "acquiesce"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Experienced negotiators who knew the demand was only an opening move had no reason to be shaken by it: they did not quail or blanch (secondary sense, to recoil or shrink in fear or shock) at its size.",
+        "distractors": {
+          "exult": "Trap pair with rejoice: true synonyms, but a steep demand gives the employer's side nothing to celebrate; the sentence is about not being alarmed.",
+          "rejoice": "Trap pair with exult: wrong reaction to a steep demand.",
+          "temporize": "Stalling is a tactic, not a reaction the steepness of a demand would provoke or that experience would remove.",
+          "acquiesce": "Giving in would not follow from seeing the demand as a mere gambit."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "quail",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "blanch",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "acquiesce",
           "role": "distractor",
           "at": [
             5
@@ -1061,7 +1073,7 @@
         [
           "culmination",
           "precursor",
-          "apogee"
+          "zenith"
         ],
         [
           "austere",
@@ -1082,7 +1094,7 @@
           "tentative": "A hesitant refusal could not be read as absolutism, and 'simply stopped answering' is not hesitant.",
           "conciliatory": "A refusal to treat cannot be conciliatory.",
           "culmination": "The high point would be the grandson's perfected absolutism, which came later.",
-          "apogee": "Like culmination, a peak; the duke's refusal came before the peak.",
+          "zenith": "Like culmination, a peak; the duke's refusal came before the peak.",
           "austere": "Severe or plain; the contrast with 'modest' and unpayable sums calls for excess.",
           "tacit": "Unspoken; the demands were explicit."
         }
@@ -1126,7 +1138,7 @@
         },
         {
           "kind": "word",
-          "id": "apogee",
+          "id": "zenith",
           "role": "distractor",
           "at": [
             1,
@@ -1427,35 +1439,35 @@
       "id": "s2q7",
       "section": 2,
       "type": "se",
-      "difficulty": 5,
-      "prompt": "Ministers schooled under the old king, who rewarded flattery, were slow to grasp that his daughter regarded those who ___ as more dangerous than those who openly opposed her, reasoning that a man who will say anything to please will also say anything to survive.",
+      "difficulty": 4,
+      "prompt": "The senator's habit of reading his opponents' old speeches aloud on the floor was meant less to persuade anyone than to ___ them, and by that measure it worked: two of them walked out before he had finished the first page.",
       "choices": [
-        "fawn",
-        "demur",
-        "kowtow",
-        "dissent",
-        "carp",
-        "temporize"
+        "nettle",
+        "placate",
+        "edify",
+        "gall",
+        "appease",
+        "exculpate"
       ],
       "key": {
         "sel": [
           0,
-          2
+          3
         ]
       },
       "explanation": {
-        "key": "The group is set against 'those who openly opposed her' and described as men who 'will say anything to please', the flatterers the old king rewarded: fawn (secondary sense, to seek favor by servility) and kowtow.",
+        "key": "The aim was 'less to persuade' than to provoke, and it 'worked' because opponents walked out: the readings were meant to irritate them. Nettle and gall (secondary sense, to vex deeply).",
         "distractors": {
-          "demur": "Trap pair with dissent: true synonyms for objecting, but objectors are the other group, 'those who openly opposed her'.",
-          "dissent": "Trap pair with demur: would make the comparison circular.",
-          "carp": "Petty complaining is a form of opposition, not pleasing.",
-          "temporize": "Stalling to gain time; the sentence describes flattery, saying anything to please."
+          "placate": "Trap pair with appease: true synonyms for soothing, the reverse of a tactic that drove opponents out of the room.",
+          "appease": "Trap pair with placate: wrong direction.",
+          "edify": "To instruct or improve; the sentence says the point was not persuasion or instruction.",
+          "exculpate": "To clear of blame; nothing about guilt is at issue."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "fawn",
+          "id": "nettle",
           "role": "key",
           "at": [
             0
@@ -1463,7 +1475,7 @@
         },
         {
           "kind": "word",
-          "id": "demur",
+          "id": "placate",
           "role": "distractor",
           "at": [
             1
@@ -1471,18 +1483,34 @@
         },
         {
           "kind": "word",
-          "id": "kowtow",
-          "role": "key",
+          "id": "edify",
+          "role": "distractor",
           "at": [
             2
           ]
         },
         {
           "kind": "word",
-          "id": "dissent",
-          "role": "distractor",
+          "id": "gall",
+          "role": "key",
           "at": [
             3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "appease",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exculpate",
+          "role": "distractor",
+          "at": [
+            5
           ]
         }
       ]
@@ -1731,26 +1759,26 @@
       "subtype": "arg",
       "difficulty": 3,
       "passageId": "a2",
-      "prompt": "In the argument, the two statements quoted below play which of the following roles? (1) \"Some growers have concluded that renting hives is responsible for the difference.\" (2) \"The difference in harvests therefore does not, by itself, show that renting hives raises yields.\"",
+      "prompt": "In the argument, the two statements quoted below play which of the following roles? (1) \"This prediction overlooks the tunnel's height limit, which already bars the delivery trucks that make up most of the bridge's rush-hour traffic.\" (2) \"The toll is therefore unlikely to add much traffic to the tunnel.\"",
       "choices": [
-        "The first is a conclusion that the argument rejects as false; the second is evidence offered for that rejection.",
-        "The first is evidence on which the argument relies; the second is a conclusion drawn from that evidence.",
-        "The first is a conclusion whose support the argument calls into question; the second is the argument's main conclusion.",
-        "The first is a conclusion whose support the argument calls into question; the second is an intermediate conclusion offered in support of a further claim.",
-        "The first is the argument's main conclusion; the second is a qualification of that conclusion."
+        "The first is a prediction that the argument accepts; the second is evidence offered for it.",
+        "The first is a consideration offered against a prediction; the second is the argument's main conclusion.",
+        "The first is the argument's main conclusion; the second is a consequence of that conclusion.",
+        "The first is a consideration offered against a prediction; the second is a prediction the argument rejects.",
+        "The first is evidence offered for a prediction; the second qualifies that prediction."
       ],
       "key": {
         "sel": [
-          2
+          1
         ]
       },
       "explanation": {
-        "key": "The growers' conclusion (1) is challenged by the irrigation confound, and (2), introduced by 'therefore', is what the argument concludes from that: the harvest gap does not show hives raise yields. The argument does not say hives fail to help, only that the evidence does not establish it.",
+        "key": "The analysts predict that the toll will crowd the tunnel. Statement (1) is one of two reasons the argument gives against that prediction (the height limit keeps the trucks out), and (2), introduced by 'therefore', is what the argument concludes: the toll will add little tunnel traffic.",
         "distractors": {
-          "The first is a conclusion that the argument rejects as false; the second is evidence offered for that rejection.": "Too strong: the argument questions the support, not the truth, of (1), and (2) is the conclusion, not evidence.",
-          "The first is evidence on which the argument relies; the second is a conclusion drawn from that evidence.": "(1) is a view the argument opposes, not its evidence.",
-          "The first is a conclusion whose support the argument calls into question; the second is an intermediate conclusion offered in support of a further claim.": "Nothing follows from (2); it is the final conclusion.",
-          "The first is the argument's main conclusion; the second is a qualification of that conclusion.": "The argument's conclusion is (2); (1) belongs to some growers."
+          "The first is a prediction that the argument accepts; the second is evidence offered for it.": "(1) is not a prediction; it is a reason against one, and (2) is the conclusion.",
+          "The first is the argument's main conclusion; the second is a consequence of that conclusion.": "(1) supports (2), not the other way round.",
+          "The first is a consideration offered against a prediction; the second is a prediction the argument rejects.": "The argument endorses (2); the prediction it rejects is the analysts'.",
+          "The first is evidence offered for a prediction; the second qualifies that prediction.": "(1) counts against the analysts' prediction, and (2) is the conclusion, not a qualification."
         }
       },
       "tags": [

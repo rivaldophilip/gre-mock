@@ -14,6 +14,7 @@
     "check": "tsx scripts/check-test.ts",
     "validate": "tsx scripts/validate-test.ts",
     "blind": "tsx scripts/blind-test.ts",
+    "novelty": "tsx scripts/novelty-test.ts",
     "register": "tsx scripts/register-test.ts",
     "db:generate": "drizzle-kit generate && drizzle-kit generate --config drizzle.registry.config.ts",
     "db:migrate": "tsx scripts/migrate.ts",

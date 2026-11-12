@@ -180,3 +180,15 @@ describe("select-all key counts", () => {
     expect(three / 500).toBeGreaterThan(0.3);
   });
 });
+
+import fs from "node:fs";
+describe("variant lists", () => {
+  const variants = JSON.parse(fs.readFileSync("data/concept_variants.json", "utf8")) as Record<string, string[]>;
+  const ids = ["data/concepts.json", "data/rc_skills.json"].flatMap((f) => (JSON.parse(fs.readFileSync(f, "utf8")) as { id: string }[]).map((c) => c.id));
+  it("cover every quant concept and reading skill, and nothing else", () => {
+    expect(Object.keys(variants).sort()).toEqual([...ids].sort());
+  });
+  it("give each at least two distinct forms", () => {
+    for (const id of ids) expect(new Set(variants[id]).size, id).toBeGreaterThanOrEqual(2);
+  });
+});

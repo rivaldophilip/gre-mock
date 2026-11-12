@@ -74,7 +74,9 @@
   "sign cases: negatives, zero and fractions between 0 and 1",
   "a square or a reciprocal against the original number",
   "non-integer test values that flip the relationship",
-  "both quantities depend on one variable with a restricted range"
+  "both quantities depend on one variable with a restricted range",
+  "the sign of a product or quotient from a condition (ab < 0, a/b > 1)",
+  "x between -1 and 0: powers and reciprocals ordered"
  ],
  "linear-equations": [
   "a system with no solution or infinitely many",
@@ -99,7 +101,9 @@
   "multiplying or dividing by a negative",
   "compound inequality: range of x + y or x - y or xy",
   "a word problem with an inequality constraint",
-  "ordering several expressions under a given range"
+  "ordering several expressions under a given range",
+  "an inequality with a parameter: for which k a solution exists",
+  "a chain a < b < c: what must be true of sums or differences"
  ],
  "quadratic-inequalities": [
   "sign analysis of a factored product (x - a)(x - b) < 0",
@@ -111,7 +115,9 @@
   "|x - a| < b as a distance interval",
   "an absolute-value equation with two cases, one extraneous",
   "nested or summed absolute values",
-  "|x| against x in QC"
+  "|x| against x in QC",
+  "|x - a| = |x - b|: the point midway",
+  "a tolerance stated as an absolute-value inequality"
  ],
  "functions": [
   "a defined operation (x ◊ y = ...) applied twice",
@@ -167,7 +173,10 @@
   "greatest or least value of one item under a sum constraint",
   "extreme values of a mean or median",
   "optimizing a product or a difference under constraints",
-  "worst-case count (pigeonhole)"
+  "worst-case count (pigeonhole)",
+  "the extreme value of an expression over an integer range",
+  "the largest share or longest side under an ordering or triangle constraint",
+  "the least distance from a fixed point to a point moving on a line or circle"
  ],
  "units-conversion": [
   "chained unit conversion",
@@ -187,14 +196,19 @@
   "isosceles or equilateral properties hidden in a figure",
   "exterior angle theorem",
   "area with an altitude outside the triangle",
-  "larger side opposite the larger angle; obtuse vs acute from c^2 against a^2 + b^2"
+  "larger side opposite the larger angle; obtuse vs acute from c^2 against a^2 + b^2",
+  "angle chasing through isosceles triangles in a figure",
+  "triangles sharing a height: area ratio from the base ratio",
+  "a midsegment: parallel to the third side and half as long"
  ],
  "pythagorean-special": [
-  "30-60-90 triangle inside another figure",
+  "30-60-90 triangle inside a hexagon, rhombus or trapezoid",
   "45-45-90 triangle (square diagonal)",
   "Pythagorean triples and their multiples",
   "space diagonal of a rectangular box",
-  "Pythagorean theorem used twice"
+  "Pythagorean theorem used twice (a ladder, a path, a shared leg)",
+  "altitude to the hypotenuse: similar right triangles",
+  "a right triangle from a word problem or coordinates (distance)"
  ],
  "polygons-quadrilaterals": [
   "interior angle sum of an n-gon, and regular polygons",
@@ -213,7 +227,10 @@
   "a square inscribed in a circle, or a circle in a square",
   "an equilateral triangle in a circle",
   "a shaded region: whole minus part",
-  "overlapping circles or semicircles"
+  "overlapping circles or semicircles",
+  "a regular hexagon in a circle",
+  "a rectangle inscribed in a circle or semicircle (diameter as diagonal)",
+  "a circle inscribed in a right triangle"
  ],
  "area-perimeter": [
   "perimeter fixed, area varies (or the reverse)",
@@ -239,7 +256,11 @@
   "an angle or length that can vary: answer D",
   "a figure looks symmetric, but the givens don't force it",
   "only what is given fixes the relationship",
-  "a point looks like a midpoint but is not stated as one"
+  "a point looks like a midpoint but is not stated as one",
+  "angles that only look equal",
+  "a point that looks on a line or circle but is not stated to be",
+  "regions that look equal in area",
+  "lines that look parallel or perpendicular but are not stated to be"
  ],
  "mean-median-mode": [
   "a mean after adding or removing values",
@@ -253,7 +274,10 @@
   "comparing the spread of two lists without computing",
   "the effect of adding a constant or multiplying by one",
   "values within k standard deviations of the mean",
-  "adding a value at the mean, or far from it"
+  "one value added far from the mean, or the extreme values removed",
+  "the standard deviation of two lists combined, when their means differ",
+  "the least or greatest possible standard deviation under a constraint",
+  "spread read from a dot plot or a frequency table"
  ],
  "normal-distribution": [
   "the 68-95-99.7 rule for a probability",
@@ -285,7 +309,9 @@
   "two people must sit together, or apart",
   "complement counting: total minus the forbidden",
   "digits with restrictions (no repeats, even, > 500)",
-  "at least one of a type in a selection"
+  "at least one of a type in a selection",
+  "identical items arranged with a restriction",
+  "selections with a cap per type (at most 2 from one group)"
  ],
  "probability-basic": [
   "complement: at least one success",
@@ -306,7 +332,9 @@
   "three-set Venn diagram",
   "the neither region from a two-set problem",
   "maximum and minimum of the overlap",
-  "a double-matrix (two-way) table"
+  "a double-matrix (two-way) table",
+  "overlap given as percents of different bases",
+  "at least / at most counts from a survey with overlap"
  ],
  "weighted-average": [
   "combining the means of two groups",
@@ -333,5 +361,111 @@
   "mean from a histogram's grouped data",
   "relative frequency and cumulative frequency",
   "which interval contains the median or a percentile"
+ ],
+ "rc-main-idea": [
+  "primary purpose, where the trap is the verb (qualify / refute / reconcile)",
+  "what the passage is primarily concerned with (topic plus stance)",
+  "the central issue or question the passage addresses",
+  "the main point of one paragraph",
+  "the best summary of the passage as a whole"
+ ],
+ "rc-detail": [
+  "a fact stated in a different paragraph from the stem's keywords",
+  "all of the following are stated EXCEPT",
+  "what a study or source the passage cites found",
+  "a cause or sequence of events the passage states",
+  "which question the passage gives enough information to answer"
+ ],
+ "rc-inference": [
+  "a conclusion that needs two sentences combined",
+  "what a scholar or group the passage cites believes or would agree with",
+  "what the author would most likely agree with",
+  "what one highlighted sentence suggests",
+  "which case is NOT an instance of a category the passage defines"
+ ],
+ "rc-function": [
+  "why an example or detail is mentioned (primarily in order to)",
+  "the role of one sentence in the passage as a whole",
+  "what a stated fact is offered as evidence of",
+  "the significance of a study or finding the passage mentions",
+  "the job of a concession or qualification"
+ ],
+ "rc-attitude": [
+  "the author's attitude toward a school or view the passage reports",
+  "how firmly the author commits to a claim (asserted vs speculative)",
+  "a mixed or measured judgment of a work or person",
+  "a cited party's attitude, distinct from the author's"
+ ],
+ "rc-structure": [
+  "the organization of the whole passage",
+  "how one paragraph relates to the one before it",
+  "the organization of a few sentences within a paragraph",
+  "the relationship between two ideas (spells out, applies, or contrasts with the other)"
+ ],
+ "rc-vocab-context": [
+  "a common word used in a secondary sense",
+  "a figurative phrase as used in the passage",
+  "a term the author uses in a special or narrowed sense",
+  "who or what a word or quoted phrase refers to"
+ ],
+ "rc-application": [
+  "a new case that matches the passage's relationship structurally, not on the surface",
+  "a sequence of events that would fit a theory the passage describes",
+  "a finding the author would count as evidence of a phenomenon the passage names",
+  "evidence that would support or weaken a hypothesis the passage describes",
+  "an assumption the author's argument in the passage depends on",
+  "a case the passage's principle would judge"
+ ],
+ "rc-select-verify": [
+  "select-all inference about a claim the passage makes",
+  "select-all detail (which of these the passage mentions)",
+  "select-all about a scholar or group the passage cites",
+  "single-answer EXCEPT item, each choice checked against the text"
+ ],
+ "arg-weaken": [
+  "an alternative cause for a causal conclusion",
+  "a reason a plan or prediction will fail",
+  "a flaw in a statistical comparison (sample, base rate)",
+  "a disanalogy between an earlier case and the new one"
+ ],
+ "arg-strengthen": [
+  "ruling out an alternative cause",
+  "support for a proposed explanation rather than a conclusion",
+  "support for a plan's feasibility",
+  "a fact that closes the gap between premise and conclusion"
+ ],
+ "arg-assumption": [
+  "a necessary assumption (negation test)",
+  "the assumption a plan needs to succeed",
+  "an assumption behind a comparison or analogy"
+ ],
+ "arg-paradox": [
+  "two facts in apparent conflict, both to be explained",
+  "a constrained discrepancy (explain it while leaving a stated theory intact)",
+  "a numbers paradox (a rate vs a count, a percentage vs an absolute number)"
+ ],
+ "arg-evaluate": [
+  "which information would most help judge the argument",
+  "which question's answer would push the argument in opposite directions"
+ ],
+ "arg-flaw": [
+  "the grounds on which the argument is most open to criticism",
+  "the method of reasoning the argument uses"
+ ],
+ "arg-role": [
+  "two boldface portions (conclusion, evidence or counterclaim)",
+  "one boldface portion in a passage that weighs two positions",
+  "a boldface sentence that is an intermediate conclusion"
+ ],
+ "arg-conclusion": [
+  "what the statements most strongly support",
+  "the point the passage emphasizes",
+  "which statement the information directly contradicts",
+  "what can be most reliably inferred from figures"
+ ],
+ "arg-complete": [
+  "the missing premise after since ___ or because ___",
+  "the prediction that follows after therefore ___",
+  "a qualification that completes the reasoning"
  ]
 }

@@ -33,7 +33,7 @@ describe("content/study/quant.json", () => {
   it("renders every formula and every $math$ span in KaTeX without an error", () => {
     const tex = [
       ...guide.quickRef.flatMap((g) => g.items.map((it) => it.tex)),
-      ...lines().flatMap((l) => [...l.matchAll(/\$([^$]+)\$/g)].map((m) => m[1])),
+      ...lines().flatMap((l) => [...l.matchAll(/\$((?:\\.|[^$\\])+)\$/g)].map((m) => m[1])),
     ];
     expect(tex.length).toBeGreaterThan(200);
     const bad = tex.filter((t) => {

@@ -460,14 +460,14 @@
       "section": 1,
       "type": "se",
       "difficulty": 4,
-      "prompt": "The mayor had intended the commission as a gesture that would ___ the striking dockworkers, and it was a measure of how badly he had misjudged them that they took the offer of a study as proof he meant to outlast them.",
+      "prompt": "Antibiotics given early enough can ___ the infection's spread through the bloodstream, but they cannot undo damage already done to the heart valve, which is why the week lost to a misdiagnosis mattered more than the choice of drug.",
       "choices": [
-        "mollify",
-        "embolden",
-        "placate",
-        "hearten",
-        "censure",
-        "disparage"
+        "check",
+        "exacerbate",
+        "arrest",
+        "diagnose",
+        "aggravate",
+        "abet"
       ],
       "key": {
         "sel": [
@@ -476,18 +476,18 @@
         ]
       },
       "explanation": {
-        "key": "The workers' reaction (suspicion, hardened opposition) shows he misjudged them, so he intended the opposite: to soothe their anger. Mollify and placate.",
+        "key": "The drugs can stop the infection from advancing but cannot reverse damage already done: check and arrest, both in the secondary sense of halting a process.",
         "distractors": {
-          "embolden": "Trap pair with hearten: a mayor facing a strike would not aim to encourage the strikers, and their distrust would be no misjudgment of that aim.",
-          "hearten": "Trap pair with embolden: same problem.",
-          "censure": "A commission to study grievances is not a reprimand, and the misjudgment is about conciliation.",
-          "disparage": "Belittling the workers is not a 'gesture' toward them; it does not fit 'misjudged'."
+          "exacerbate": "Trap pair with aggravate: true synonyms for worsening, the opposite of what a timely antibiotic does.",
+          "aggravate": "Trap pair with exacerbate: wrong direction.",
+          "diagnose": "Identifying the disease is the doctors' job, and the misdiagnosis was the problem; drugs do not diagnose.",
+          "abet": "To encourage, usually wrongdoing; drugs do not help an infection along."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "mollify",
+          "id": "check",
           "role": "key",
           "at": [
             0
@@ -495,7 +495,15 @@
         },
         {
           "kind": "word",
-          "id": "placate",
+          "id": "exacerbate",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "arrest",
           "role": "key",
           "at": [
             2
@@ -503,15 +511,7 @@
         },
         {
           "kind": "word",
-          "id": "censure",
-          "role": "distractor",
-          "at": [
-            4
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "disparage",
+          "id": "abet",
           "role": "distractor",
           "at": [
             5
@@ -1357,34 +1357,34 @@
       "section": 2,
       "type": "se",
       "difficulty": 4,
-      "prompt": "Academic historians dismissed the dealer's catalog essays as gossip, but they could not explain away how ___ her judgments had proved: of the forgotten minor masters she bought in the 1970s, nearly all now hang in national collections.",
+      "prompt": "Rather than denounce the minister's plan outright, the ambassador thought it more ___ to praise its aims and question only its timing, leaving the government room to retreat without losing face.",
       "choices": [
-        "astute",
-        "contentious",
-        "caustic",
-        "perspicacious",
-        "controversial",
-        "pithy"
+        "politic",
+        "candid",
+        "judicious",
+        "forthright",
+        "rash",
+        "servile"
       ],
       "key": {
         "sel": [
           0,
-          3
+          2
         ]
       },
       "explanation": {
-        "key": "'But' sets her record against the historians' dismissal, and the evidence is that her purchases were vindicated by the national collections: her judgments proved shrewd. Astute and perspicacious.",
+        "key": "Choosing praise and a mild objection so the other side can back down gracefully is shrewd, tactful prudence: politic (secondary sense, prudent and tactful) and judicious.",
         "distractors": {
-          "contentious": "Trap pair with controversial: the historians' dismissal tempts it, but the evidence after the colon shows her judgments were borne out, not disputed.",
-          "controversial": "Trap pair with contentious: same problem.",
-          "caustic": "Biting in tone; it describes prose, not whether purchases were borne out.",
-          "pithy": "Concise; it fits essays, not a judgment that proved right over decades."
+          "candid": "Trap pair with forthright: true synonyms for frankness, which is what outright denunciation would have been.",
+          "forthright": "Trap pair with candid: describes the approach the ambassador rejected.",
+          "rash": "Hasty and careless; the approach was carefully calculated.",
+          "servile": "Fawning; she still questioned the plan's timing, so she was not simply submitting."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "astute",
+          "id": "politic",
           "role": "key",
           "at": [
             0
@@ -1392,7 +1392,7 @@
         },
         {
           "kind": "word",
-          "id": "contentious",
+          "id": "candid",
           "role": "distractor",
           "at": [
             1
@@ -1400,23 +1400,23 @@
         },
         {
           "kind": "word",
-          "id": "caustic",
-          "role": "distractor",
+          "id": "judicious",
+          "role": "key",
           "at": [
             2
           ]
         },
         {
           "kind": "word",
-          "id": "perspicacious",
-          "role": "key",
+          "id": "rash",
+          "role": "distractor",
           "at": [
-            3
+            4
           ]
         },
         {
           "kind": "word",
-          "id": "pithy",
+          "id": "servile",
           "role": "distractor",
           "at": [
             5

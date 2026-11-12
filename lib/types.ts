@@ -70,6 +70,12 @@ export const QuestionSchema = z.object({
   key: KeySchema,
   explanation: ExplanationSchema,
   tags: z.array(TagSchema).default([]),
+  /** quant authoring: the setup in one abstract line (no numbers or story), so later briefs and checks can avoid reusing it */
+  setup: z.string().min(1).optional(),
+  /** quant authoring: the sub-form of the primary concept, one of data/concept_variants.json */
+  variant: z.string().min(1).optional(),
+  /** a deliberate revisit: the earlier item ("quant-005:s2q14") whose insight this sibling practises again (docs/PRIORITY.md) */
+  revisits: z.string().regex(/^[a-z]+-\d{3}:s\dq\d+$/).optional(),
 });
 export type Question = z.infer<typeof QuestionSchema>;
 
@@ -104,7 +110,7 @@ export const TestSchema = z.object({
 export type Test = z.infer<typeof TestSchema>;
 
 // ---- runner-facing (answers stripped) ----
-export type PublicQuestion = Omit<Question, "key" | "explanation" | "tags" | "difficulty">;
+export type PublicQuestion = Omit<Question, "key" | "explanation" | "tags" | "difficulty" | "setup" | "variant" | "revisits">;
 export type PublicPassage = Omit<Passage, "tags">;
 export type PublicTest = Omit<Test, "questions" | "passages"> & {
   questions: PublicQuestion[];

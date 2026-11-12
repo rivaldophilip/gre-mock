@@ -58,7 +58,9 @@
           "id": "number-sense-qc",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "x < 0 < y with x + y > 0; compare x/y with y/x",
+      "variant": "the sign of a product or quotient from a condition (ab < 0, a/b > 1)"
     },
     {
       "id": "s1q2",
@@ -93,7 +95,9 @@
           "id": "remainders-units",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "remainder of a^n ± b^n mod a small number via power cycles",
+      "variant": "remainder of a sum or product from the remainders of its parts"
     },
     {
       "id": "s1q3",
@@ -134,7 +138,9 @@
           "id": "triangles",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "two sides and the area given (the included angle acute or obtuse); compare the third side with a value",
+      "variant": "an angle or length that can vary: answer D"
     },
     {
       "id": "s1q4",
@@ -169,7 +175,8 @@
           "id": "std-dev-normal",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "two values added at mean ± 1 SD to a list; compare the new SD with the old"
     },
     {
       "id": "s1q5",
@@ -205,7 +212,9 @@
           "id": "percent",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "price up p% then down q% (or back to a reference); find the missing percent or value",
+      "variant": "successive percent changes and reversal (up x%, then down x%)"
     },
     {
       "id": "s1q6",
@@ -242,7 +251,9 @@
           "id": "word-problems-rate",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "upstream and downstream legs with a current; time difference",
+      "variant": "relative speed: meeting or overtaking"
     },
     {
       "id": "s1q7",
@@ -284,7 +295,9 @@
           "id": "counting-permutations",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "count four-digit numbers whose digits have a given product",
+      "variant": "digits with restrictions (no repeats, even, > 500)"
     },
     {
       "id": "s1q8",
@@ -325,7 +338,9 @@
           "id": "inequalities",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "compound linear inequality gives an x interval; select possible x^2",
+      "variant": "compound inequality: range of x + y or x - y or xy"
     },
     {
       "id": "s1q9",
@@ -356,7 +371,9 @@
           "id": "fractions-decimals",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "telescoping product of (1 - 1/k^2)",
+      "variant": "complex (nested) fractions"
     },
     {
       "id": "s1q10",
@@ -399,7 +416,9 @@
           "id": "percent",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "DI: one category's percent increase as a multiple of another's percent decrease",
+      "variant": "a ratio between two categories in different graphs"
     },
     {
       "id": "s1q11",
@@ -442,7 +461,9 @@
           "id": "overlapping-sets",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "DI: conditional probability with a given overlap between categories",
+      "variant": "conditional probability from a two-way table"
     },
     {
       "id": "s1q12",
@@ -482,7 +503,9 @@
           "id": "mean-median-mode",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "add one value so the median equals the mean",
+      "variant": "a mean after adding or removing values"
     },
     {
       "id": "s2q1",
@@ -516,7 +539,9 @@
           "id": "exponents-roots",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "sqrt(a+2) - sqrt(a) vs sqrt(a) - sqrt(a-2) (conjugates)",
+      "variant": "comparing large powers or roots without a calculator"
     },
     {
       "id": "s2q2",
@@ -551,7 +576,9 @@
           "id": "abs-value-inequalities",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "count integers with |x + a| > k|x - b|; compare with a value",
+      "variant": "nested or summed absolute values"
     },
     {
       "id": "s2q3",
@@ -585,7 +612,9 @@
           "id": "probability-basic",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "compare two binomial probabilities with p = 1/2 (at least / more heads than tails)",
+      "variant": "probability from a count of outcomes with dice or coins"
     },
     {
       "id": "s2q4",
@@ -620,7 +649,9 @@
           "id": "integers-properties",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "k^2 divisible by 72: greatest number that must divide k",
+      "variant": "must be / could be an integer from a stated condition"
     },
     {
       "id": "s2q5",
@@ -654,7 +685,9 @@
           "id": "algebraic-expressions",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "value of a symmetric expression (a^3 ± b^3, |a| + |b|, a^2 + b^2) from a ± b, ab or a^2 + b^2",
+      "variant": "identities across QC quantities"
     },
     {
       "id": "s2q6",
@@ -691,7 +724,9 @@
           "id": "ratio-proportion",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "ratio before and after adding or removing items of one or both kinds; a total",
+      "variant": "ratio change after adding or removing items"
     },
     {
       "id": "s2q7",
@@ -733,7 +768,8 @@
           "id": "pythagorean-special",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "two equal circles at a given center distance; area of the overlap (lens)"
     },
     {
       "id": "s2q8",
@@ -776,7 +812,9 @@
           "id": "counting-restrictions",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "split 8 people into unordered pairs with two sibling pairs not together",
+      "variant": "multiplication principle across independent choices"
     },
     {
       "id": "s2q9",
@@ -818,7 +856,9 @@
           "id": "min-max-bounding",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "three item counts, two price lists and totals; greatest possible count of one",
+      "variant": "three variables, two equations: what can be determined"
     },
     {
       "id": "s2q10",
@@ -854,7 +894,9 @@
           "id": "area-perimeter",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "uniform border around a rectangle; border area against the outer dimensions or perimeter",
+      "variant": "a border or path around a rectangle"
     },
     {
       "id": "s2q11",
@@ -892,7 +934,9 @@
           "id": "inscribed-figures",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "square inscribed in a semicircle with one side on the diameter",
+      "variant": "a rectangle inscribed in a circle or semicircle (diameter as diagonal)"
     },
     {
       "id": "s2q12",
@@ -929,7 +973,9 @@
           "id": "pythagorean-special",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "quadrilateral split by a diagonal into a 45-45-90 and a 30-60-90 triangle; a side or the area",
+      "variant": "Pythagorean theorem used twice (a ladder, a path, a shared leg)"
     },
     {
       "id": "s2q13",
@@ -974,7 +1020,9 @@
           "id": "min-max-bounding",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "two-set problem with a neither bound; range of the number in exactly one",
+      "variant": "maximum and minimum of the overlap"
     },
     {
       "id": "s2q14",
@@ -1018,7 +1066,9 @@
           "id": "triangles",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "three distinct integer lengths with a fixed sum that form a triangle; possible longest",
+      "variant": "the largest share or longest side under an ordering or triangle constraint"
     },
     {
       "id": "s2q15",
@@ -1049,7 +1099,9 @@
           "id": "triangles",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "two sides given and an obtuse (or bounded) angle; the third side's range from c^2 against a^2 + b^2",
+      "variant": "larger side opposite the larger angle; obtuse vs acute from c^2 against a^2 + b^2"
     }
   ]
 }

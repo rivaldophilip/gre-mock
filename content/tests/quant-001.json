@@ -89,7 +89,9 @@
    "qc": {
     "a": "$\\dfrac1x$",
     "b": "$1+x$"
-   }
+   },
+   "setup": "x between 0 and 1: compare the reciprocal 1/x with 1 + x",
+   "variant": "a square or a reciprocal against the original number"
   },
   {
    "id": "s1q2",
@@ -126,7 +128,9 @@
    "qc": {
     "a": "$x^2$",
     "b": "$49$"
-   }
+   },
+   "setup": "|x + c| < b gives an interval for x; compare x^2 with a constant (endpoint signs matter)",
+   "variant": "|x - a| < b as a distance interval"
   },
   {
    "id": "s1q3",
@@ -169,7 +173,9 @@
    "qc": {
     "a": "The area of the smaller square",
     "b": "$30$"
-   }
+   },
+   "setup": "square in a circle in a larger square of given area; compare the inner square's area with a value",
+   "variant": "a square inscribed in a circle, or a circle in a square"
   },
   {
    "id": "s1q4",
@@ -207,7 +213,9 @@
    "qc": {
     "a": "$x$",
     "b": "$9$"
-   }
+   },
+   "setup": "x^2 - y^2 = N: count or list integer solutions from same-parity factor pairs",
+   "variant": "GCD / LCM from two products or a word problem"
   },
   {
    "id": "s1q5",
@@ -247,7 +255,9 @@
     "10",
     "12",
     "15"
-   ]
+   ],
+   "setup": "dilute a solution: add water to lower the concentration to a target percent",
+   "variant": "percent of a percent across subgroups"
   },
   {
    "id": "s1q6",
@@ -287,7 +297,9 @@
     "3",
     "4",
     "5"
-   ]
+   ],
+   "setup": "remainder of a^n ± b^n mod a small number via power cycles",
+   "variant": "remainder of a sum or product from the remainders of its parts"
   },
   {
    "id": "s1q7",
@@ -328,7 +340,9 @@
     "12,960",
     "14,400",
     "15,120"
-   ]
+   ],
+   "setup": "row seating: two people not adjacent and neither at an end",
+   "variant": "two people must sit together, or apart"
   },
   {
    "id": "s1q8",
@@ -371,7 +385,9 @@
     "16",
     "18",
     "20"
-   ]
+   ],
+   "setup": "integer ranges for x and y; select all possible values of the product xy",
+   "variant": "optimizing a product or a difference under constraints"
   },
   {
    "id": "s1q9",
@@ -404,7 +420,9 @@
    ],
    "numeric": {
     "kind": "single"
-   }
+   },
+   "setup": "two group means and one group's size; find the other group's size from the overall mean",
+   "variant": "the ratio of group sizes from the means"
   },
   {
    "id": "s1q10",
@@ -445,7 +463,9 @@
     "45%"
    ],
    "setId": "di1",
-   "figureId": "fig-rev"
+   "figureId": "fig-rev",
+   "setup": "DI: percent increase of a combined total (all categories but one) between two years",
+   "variant": "the percent increase between two periods"
   },
   {
    "id": "s1q11",
@@ -488,7 +508,9 @@
     "West"
    ],
    "setId": "di1",
-   "figureId": "fig-rev"
+   "figureId": "fig-rev",
+   "setup": "DI: which categories' share of the total fell between two years",
+   "variant": "percent change vs percentage-point change"
   },
   {
    "id": "s1q12",
@@ -530,7 +552,9 @@
     "kind": "single"
    },
    "setId": "di1",
-   "figureId": "fig-rev"
+   "figureId": "fig-rev",
+   "setup": "DI: two linear growth projections; first year one exceeds the other",
+   "variant": "a word problem with an inequality constraint"
   },
   {
    "id": "s2q1",
@@ -565,7 +589,9 @@
    "qc": {
     "a": "The probability of getting at least 4 heads",
     "b": "The probability of getting exactly 2 heads"
-   }
+   },
+   "setup": "compare two binomial probabilities with p = 1/2 (at least / more heads than tails)",
+   "variant": "probability from a count of outcomes with dice or coins"
   },
   {
    "id": "s2q2",
@@ -602,7 +628,8 @@
    "qc": {
     "a": "The standard deviation of the new data set",
     "b": "$6$"
-   }
+   },
+   "setup": "two values added at mean ± 1 SD to a list; compare the new SD with the old"
   },
   {
    "id": "s2q3",
@@ -639,7 +666,9 @@
    "qc": {
     "a": "The probability that the second card is red",
     "b": "The probability that the second card is red, given that the first card is red"
-   }
+   },
+   "setup": "without replacement: unconditional P(second is red) vs P(second red | first red)",
+   "variant": "drawing without replacement"
   },
   {
    "id": "s2q4",
@@ -680,7 +709,9 @@
    "qc": {
     "a": "$x+y$",
     "b": "$12$"
-   }
+   },
+   "setup": "positive integer factor pairs of a fixed product; compare x + y with a value",
+   "variant": "both quantities depend on one variable with a restricted range"
   },
   {
    "id": "s2q5",
@@ -718,7 +749,9 @@
    "qc": {
     "a": "$d(n^2)$",
     "b": "$3\\cdot d(n)$"
-   }
+   },
+   "setup": "divisor-count function: d(n^2) vs 3·d(n) for an unknown n",
+   "variant": "number of positive divisors from the prime factorization"
   },
   {
    "id": "s2q6",
@@ -758,7 +791,9 @@
     "$\\dfrac4{15}$",
     "$\\dfrac13$",
     "$\\dfrac25$"
-   ]
+   ],
+   "setup": "two draws without replacement: P(both red | at least one red)",
+   "variant": "dependent events in sequence"
   },
   {
    "id": "s2q7",
@@ -802,7 +837,9 @@
     "$25/2$",
     "$25\\sqrt2/2$",
     "25"
-   ]
+   ],
+   "setup": "square inscribed in a semicircle with one side on the diameter",
+   "variant": "a rectangle inscribed in a circle or semicircle (diameter as diagonal)"
   },
   {
    "id": "s2q8",
@@ -842,7 +879,9 @@
     "8",
     "10",
     "12"
-   ]
+   ],
+   "setup": "remainder of a^n ± b^n mod a small number via power cycles",
+   "variant": "remainder of a sum or product from the remainders of its parts"
   },
   {
    "id": "s2q9",
@@ -888,7 +927,9 @@
     "10",
     "11",
     "12"
-   ]
+   ],
+   "setup": "sum of two absolute values |x - a| + |x - b| against a bound",
+   "variant": "nested or summed absolute values"
   },
   {
    "id": "s2q10",
@@ -932,7 +973,9 @@
     "12",
     "13",
     "14"
-   ]
+   ],
+   "setup": "13-14-15 triangle: altitude to one side via Heron or two right triangles",
+   "variant": "area with an altitude outside the triangle"
   },
   {
    "id": "s2q11",
@@ -977,7 +1020,9 @@
     "5",
     "7",
     "10"
-   ]
+   ],
+   "setup": "minimum value of f(f(x)) for a quadratic f",
+   "variant": "composition f(g(x)), or solving f(x) = g(x)"
   },
   {
    "id": "s2q12",
@@ -1017,7 +1062,9 @@
     "42",
     "46",
     "50"
-   ]
+   ],
+   "setup": "two-set problem with a neither bound; range of the number in exactly one",
+   "variant": "maximum and minimum of the overlap"
   },
   {
    "id": "s2q13",
@@ -1064,7 +1111,9 @@
     "$a^2>b^2$",
     "$a^3<a^2b$",
     "$\\dfrac1a<\\dfrac1b$"
-   ]
+   ],
+   "setup": "-1 < a < 0 < b < 1: select all inequalities that must hold",
+   "variant": "ordering several expressions under a given range"
   },
   {
    "id": "s2q14",
@@ -1112,7 +1161,9 @@
     "16",
     "24",
     "45"
-   ]
+   ],
+   "setup": "x < y < z positive integers with fixed product; select possible values of z",
+   "variant": "greatest or least value of one item under a sum constraint"
   },
   {
    "id": "s2q15",
@@ -1151,7 +1202,9 @@
    ],
    "numeric": {
     "kind": "single"
-   }
+   },
+   "setup": "count integers in a range divisible by one number or another but not a third (inclusion-exclusion)",
+   "variant": "complement counting: total minus the forbidden"
   }
  ]
 }

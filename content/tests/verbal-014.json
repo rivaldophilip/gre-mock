@@ -73,7 +73,7 @@
     {
       "id": "a1",
       "paragraphs": [
-        "Two years ago the Mirren Chess League required players in its rated tournaments to record their moves on tablets, which flag an illegal move the moment it is entered, instead of on paper scoresheets. Since then, disputes over illegal moves referred to the league's arbiters have fallen from about one in every forty games to about one in every hundred. The league's directors conclude that the tablets have made players less likely to make illegal moves in the first place."
+        "To cut costs, the Pell County transit authority plans to replace each of its diesel buses with an electric bus as the diesel wears out. An electric bus costs more to buy, but the authority calculates that its lower fuel and maintenance costs will more than make up the difference over the twelve years a bus typically stays in service. The authority concludes that the plan will reduce its costs."
       ],
       "tags": []
     },
@@ -172,7 +172,7 @@
     {
       "id": "a2",
       "paragraphs": [
-        "On Kilnworth, an online marketplace for handmade ceramics, listings illustrated with photographs by professional photographers sell, on average, within nine days of being posted, whereas listings illustrated with the sellers' own photographs take about thirty days. Ines, a potter who sells through Kilnworth, concludes that if she hires a professional photographer for her listings, her pieces will sell roughly three times as fast as they do now."
+        "The average age of the members of the Larkspur Book Club is 61. Teodor, who is 34, concludes that most of the club's members must be much older than he is and that he would almost certainly be its youngest member if he joined."
       ],
       "tags": []
     }
@@ -184,35 +184,44 @@
       "section": 1,
       "type": "tc",
       "difficulty": 4,
-      "prompt": "Guests who knew the duke only through his effusive letters to his clockmaker, or who had watched him display the astronomical clock to every visitor, would hardly have guessed from those performances how readily he could ___ once his admiration had to be paid in coin: the account books record payments that were never late and never generous.",
+      "prompt": "The duke's letters to his clockmaker were brief to the point of rudeness, so the man's heirs were astonished to find from the account books how ___ a patron he had been: every invoice was paid early, and each was doubled at the New Year.",
       "blanks": [
         [
-          "temporize",
-          "stint",
-          "diverge",
-          "dither",
-          "relent"
+          "munificent",
+          "parsimonious",
+          "capricious",
+          "negligent",
+          "exacting"
         ]
       ],
       "key": {
         "sel": [
-          1
+          0
         ]
       },
       "explanation": {
-        "key": "The colon explains what the guests could not guess: payments 'never late' (so no delay) but 'never generous' (meager). Being sparing in giving is to stint, the verb sense of a word more familiar as a noun ('a stint abroad'). The effusive praise is the concession; the reversal is that the money was skimped.",
+        "key": "The heirs' astonishment sets the curt letters against the account books, which show invoices paid early and doubled: an extremely generous patron, munificent.",
         "distractors": {
-          "temporize": "To stall or delay; ruled out by 'never late'. It is the trap for readers who see only 'once ... had to be paid'.",
-          "diverge": "To differ or branch off; the duke's words and payments do diverge, but the blank describes what he did when paying, and 'how readily he could diverge' says nothing about meager sums.",
-          "dither": "To hesitate indecisively; again excluded by payments that were never late.",
-          "relent": "To soften or give way; a relenting payer would be generous, the opposite of the account books."
+          "parsimonious": "Stingy would match the rude letters, so it would not astonish anyone, and doubled invoices contradict it.",
+          "capricious": "Unpredictable; paying early every time and doubling every invoice is consistent, not whimsical.",
+          "negligent": "Careless payers do not pay early.",
+          "exacting": "Demanding is the trap of 'patron' and the brusque letters, but the account books show generosity, not demands."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "stint",
+          "id": "munificent",
           "role": "key",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "parsimonious",
+          "role": "distractor",
           "at": [
             0,
             1
@@ -220,7 +229,7 @@
         },
         {
           "kind": "word",
-          "id": "diverge",
+          "id": "capricious",
           "role": "distractor",
           "at": [
             0,
@@ -229,11 +238,20 @@
         },
         {
           "kind": "word",
-          "id": "dither",
+          "id": "negligent",
           "role": "distractor",
           "at": [
             0,
             3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exact",
+          "role": "distractor",
+          "at": [
+            0,
+            4
           ]
         }
       ]
@@ -334,7 +352,7 @@
         [
           "countermand",
           "sanction",
-          "censure"
+          "rescind"
         ],
         [
           "temper",
@@ -355,9 +373,9 @@
           "mediator": "A go-between; terse, exacting orders would not confirm such a reputation.",
           "maverick": "An unconventional independent; exacting orders confirm strictness, not independence.",
           "countermand": "To revoke an order; what a martinet would do, which is exactly what 'yet' rules out.",
-          "censure": "To condemn formally; the same wrong polarity. Readers who take sanction in its 'penalty' sense lump it with this choice and miss the key.",
           "exact": "To demand and inflict in full; that would make the printed scale the rule, not a ceiling.",
-          "perpetuate": "To keep in existence; it does not explain why the scale came to be seen as an upper limit."
+          "perpetuate": "To keep in existence; it does not explain why the scale came to be seen as an upper limit.",
+          "rescind": "To revoke; like countermand, it is what a martinet would do to unauthorized repairs, which 'yet' rules out."
         }
       },
       "tags": [
@@ -399,7 +417,7 @@
         },
         {
           "kind": "word",
-          "id": "censure",
+          "id": "rescind",
           "role": "distractor",
           "at": [
             1,
@@ -440,66 +458,58 @@
       "section": 1,
       "type": "se",
       "difficulty": 4,
-      "prompt": "Colleagues who mocked the registrar's ledgers as vanity mistook their character: what they took for display was the ___ habit of a man who had once watched a lawsuit turn on a single misdated entry.",
+      "prompt": "Collectors burned by the forgery scandal grew ___ of any painting that surfaced without a documented history, refusing even to inspect works their own dealers swore by.",
       "choices": [
-        "ostentatious",
-        "punctilious",
-        "laconic",
-        "scrupulous",
-        "showy",
-        "didactic"
+        "chary",
+        "covetous",
+        "leery",
+        "credulous",
+        "gullible",
+        "oblivious"
       ],
       "key": {
         "sel": [
-          1,
-          3
+          0,
+          2
         ]
       },
       "explanation": {
-        "key": "'Mistook their character' rejects the vanity reading, and the lawsuit that turned on one misdated entry explains a careful attention to correct detail: punctilious and scrupulous.",
+        "key": "Having been 'burned', the collectors would not even look at undocumented works: they became cautious and suspicious, chary and leery.",
         "distractors": {
-          "ostentatious": "Trap pair with showy: this is what the colleagues 'took' the ledgers for, the reading the sentence rejects.",
-          "showy": "Trap pair with ostentatious: same rejected reading.",
-          "laconic": "Using few words; brevity is not what a misdated entry would teach.",
-          "didactic": "Intended to instruct; the habit protected the records, it did not teach anyone."
+          "credulous": "Trap pair with gullible: true synonyms for too ready to believe, the opposite of refusing works dealers swore by.",
+          "gullible": "Trap pair with credulous: wrong polarity.",
+          "covetous": "Greedy to own; they refused even to inspect the works.",
+          "oblivious": "They were acutely aware of the risk, not unaware."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "ostentatious",
-          "role": "distractor",
+          "id": "chary",
+          "role": "key",
           "at": [
             0
           ]
         },
         {
           "kind": "word",
-          "id": "punctilious",
+          "id": "leery",
           "role": "key",
-          "at": [
-            1
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "laconic",
-          "role": "distractor",
           "at": [
             2
           ]
         },
         {
           "kind": "word",
-          "id": "scrupulous",
-          "role": "key",
+          "id": "credulous",
+          "role": "distractor",
           "at": [
             3
           ]
         },
         {
           "kind": "word",
-          "id": "didactic",
+          "id": "oblivious",
           "role": "distractor",
           "at": [
             5
@@ -842,15 +852,14 @@
       "section": 1,
       "type": "rc",
       "subtype": "arg",
-      "difficulty": 4,
       "passageId": "a1",
-      "prompt": "The directors' conclusion depends on which of the following assumptions?",
+      "prompt": "The transit authority's conclusion depends on which of the following assumptions?",
       "choices": [
-        "Most illegal moves made before the tablets were introduced were made by inexperienced players.",
-        "The tablets flag every illegal move entered on them without error.",
-        "The proportion of illegal moves that end in a dispute referred to an arbiter has not fallen substantially since the tablets were introduced.",
-        "Arbiters now spend less time resolving disputes over illegal moves than they did before the tablets were introduced.",
-        "Players who used paper scoresheets were less likely to notice their opponents' illegal moves than their own."
+        "Most of the county's riders would rather travel on an electric bus than on a diesel bus.",
+        "The price of electricity will not rise at any point during the next twelve years.",
+        "Electric buses will typically stay in service for roughly as long as the diesel buses they replace.",
+        "The authority can afford to buy all of its electric buses at once.",
+        "Diesel buses produce more pollution per mile than electric buses do."
       ],
       "key": {
         "sel": [
@@ -858,14 +867,15 @@
         ]
       },
       "explanation": {
-        "key": "The evidence is about disputes; the conclusion is about illegal moves. Because the tablets flag an illegal move on entry, they may simply let it be caught and corrected at the board, so it never becomes a dispute. Negate C: if a much smaller share of illegal moves now ends in a dispute, the fall in disputes is explained without any fall in illegal moves, and the conclusion collapses.",
+        "key": "The savings are calculated over 'the twelve years a bus typically stays in service', a figure for the diesel buses. If electric buses wore out much sooner, the lower running costs would have less time to make up the higher price. Negated, C breaks the conclusion.",
         "distractors": {
-          "Most illegal moves made before the tablets were introduced were made by inexperienced players.": "Who made the moves is irrelevant to whether the tablets reduced them.",
-          "The tablets flag every illegal move entered on them without error.": "Too strong: the argument survives an occasional missed flag.",
-          "Arbiters now spend less time resolving disputes over illegal moves than they did before the tablets were introduced.": "A likely consequence of fewer disputes, not a premise the conclusion needs.",
-          "Players who used paper scoresheets were less likely to notice their opponents' illegal moves than their own.": "A comparison the argument never relies on; negating it leaves the inference from disputes to moves untouched."
+          "Most of the county's riders would rather travel on an electric bus than on a diesel bus.": "Rider preference is irrelevant to costs.",
+          "The price of electricity will not rise at any point during the next twelve years.": "Too strong: modest rises could still leave the electric buses cheaper to run.",
+          "The authority can afford to buy all of its electric buses at once.": "The plan replaces buses one at a time as they wear out.",
+          "Diesel buses produce more pollution per mile than electric buses do.": "Pollution is not part of a cost argument."
         }
       },
+      "difficulty": 4,
       "tags": [
         {
           "kind": "concept",
@@ -879,65 +889,47 @@
       "section": 2,
       "type": "tc",
       "difficulty": 4,
-      "prompt": "The pamphlet's authors were careful never to ___ the new chronometer's accuracy themselves, preferring to quote the naval officers who had tested it at sea, a modesty that persuaded more buyers than any boast could have.",
+      "prompt": "Engineers who had spent years quietly correcting the bridge's design flaws were dismayed to hear the mayor ___ it at the ribbon-cutting as \"the most advanced span in the nation\", a claim that invited exactly the scrutiny they had hoped to avoid.",
       "blanks": [
         [
-          "gauge",
-          "impugn",
-          "tout",
-          "belie",
-          "pan"
+          "vaunt",
+          "belittle",
+          "inspect",
+          "decommission",
+          "insure"
         ]
       ],
       "key": {
         "sel": [
-          2
+          0
         ]
       },
       "explanation": {
-        "key": "The closing phrase names what the authors avoided: the restraint was 'a modesty' that worked better than 'any boast'. So they avoided promoting the accuracy insistently themselves: tout.",
+        "key": "Calling the bridge 'the most advanced span in the nation' is a boast, and boasting invites the scrutiny the engineers feared: vaunt.",
         "distractors": {
-          "gauge": "To measure; it fits the first half (they quoted the officers who tested it), but declining to measure is not 'modesty' set against 'boast'.",
-          "impugn": "To call into question; sellers have no reason to doubt their own product, and avoiding doubt is not modesty.",
-          "belie": "To contradict or misrepresent; it has no link to boasting.",
-          "pan": "To criticize harshly; the wrong polarity for a boast."
+          "belittle": "The mayor's quoted words are praise, not disparagement.",
+          "inspect": "The mayor made a claim; the scrutiny the claim invites would come from others.",
+          "decommission": "Taking the bridge out of service contradicts a ribbon-cutting.",
+          "insure": "Nothing about insurance follows from the quoted claim."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "impugn",
+          "id": "vaunt",
+          "role": "key",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "belittle",
           "role": "distractor",
           "at": [
             0,
             1
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "tout",
-          "role": "key",
-          "at": [
-            0,
-            2
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "belie",
-          "role": "distractor",
-          "at": [
-            0,
-            3
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "pan",
-          "role": "distractor",
-          "at": [
-            0,
-            4
           ]
         }
       ]
@@ -1242,53 +1234,53 @@
       "section": 2,
       "type": "se",
       "difficulty": 5,
-      "prompt": "The picaro recounts his thefts at leisurely length and in the same ___ tone he uses for the weather, and this is the source of the novel's comedy and of its chill: a reader braced for remorse is denied even the satisfaction of a confession.",
+      "prompt": "The candidate's answers at the hearing were ___: fluent, confident and endlessly quotable, yet so smooth that afterward no one on the committee could say what he had actually committed to.",
       "choices": [
-        "laconic",
-        "nonchalant",
-        "contrite",
-        "terse",
-        "insouciant",
-        "rueful"
+        "glib",
+        "faltering",
+        "facile",
+        "hesitant",
+        "candid",
+        "terse"
       ],
       "key": {
         "sel": [
-          1,
-          4
+          0,
+          2
         ]
       },
       "explanation": {
-        "key": "Telling of thefts in the tone 'he uses for the weather', with no remorse, is casual unconcern: nonchalant and insouciant.",
+        "key": "Fluent and confident but empty, so smooth that they committed him to nothing: glib and facile, superficially easy speech.",
         "distractors": {
-          "laconic": "Trap pair with terse: both mean brief and clipped, and they fit an unemotional narrator, but 'at leisurely length' rules out brevity.",
-          "terse": "Trap pair with laconic.",
-          "contrite": "Trap pair with rueful: remorseful, which is exactly the remorse the reader is 'denied'.",
-          "rueful": "Trap pair with contrite."
+          "faltering": "Trap pair with hesitant: true synonyms for unsure speech, the opposite of 'fluent, confident'.",
+          "hesitant": "Trap pair with faltering: wrong polarity.",
+          "candid": "Frank answers would have made his commitments clear.",
+          "terse": "'Endlessly quotable' fluency is not brevity, and terse answers would not be called smooth."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "laconic",
-          "role": "distractor",
+          "id": "glib",
+          "role": "key",
           "at": [
             0
           ]
         },
         {
           "kind": "word",
-          "id": "nonchalant",
+          "id": "facile",
           "role": "key",
           "at": [
-            1
+            2
           ]
         },
         {
           "kind": "word",
-          "id": "contrite",
+          "id": "candid",
           "role": "distractor",
           "at": [
-            2
+            4
           ]
         },
         {
@@ -1296,15 +1288,7 @@
           "id": "terse",
           "role": "distractor",
           "at": [
-            3
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "insouciant",
-          "role": "key",
-          "at": [
-            4
+            5
           ]
         }
       ]
@@ -1696,30 +1680,30 @@
       "section": 2,
       "type": "rc",
       "subtype": "arg",
-      "difficulty": 3,
       "passageId": "a2",
-      "prompt": "The reasoning in Ines's argument is most vulnerable to criticism on the grounds that it",
+      "prompt": "The reasoning in Teodor's argument is most vulnerable to criticism on the grounds that it",
       "choices": [
-        "relies on figures from a marketplace whose buyers may not be typical of all buyers of handmade ceramics",
-        "takes for granted that a faster sale is always preferable to a sale at a higher price",
-        "overlooks the possibility that sellers who hire professional photographers differ from other sellers in ways that would make their pieces sell faster regardless of the photographs",
-        "confuses the number of pieces a seller lists with the speed at which each piece sells",
-        "fails to consider whether a professional photographer would charge more than Ines could afford"
+        "draws conclusions about the ages of most individual members from their average age alone",
+        "assumes that the club's membership will not change before Teodor joins",
+        "relies on figures about a club that may not be typical of all book clubs",
+        "takes for granted that older members prefer different books from younger ones",
+        "confuses the ages at which members joined the club with their present ages"
       ],
       "key": {
         "sel": [
-          2
+          0
         ]
       },
       "explanation": {
-        "key": "Ines infers cause from a correlation between groups. Sellers who pay for professional photographs may be more established, better known or more skilled, and those traits, not the photographs, could explain the faster sales.",
+        "key": "An average of 61 is compatible with many members younger than 34, provided a few are much older. Teodor treats the average as telling him about most members and about the youngest one.",
         "distractors": {
-          "relies on figures from a marketplace whose buyers may not be typical of all buyers of handmade ceramics": "Her conclusion concerns sales on Kilnworth itself, so other buyers do not matter.",
-          "takes for granted that a faster sale is always preferable to a sale at a higher price": "She predicts speed; she does not claim speed is preferable.",
-          "confuses the number of pieces a seller lists with the speed at which each piece sells": "No figures about the number of listings appear.",
-          "fails to consider whether a professional photographer would charge more than Ines could afford": "That bears on whether the plan is wise, not on whether her prediction follows."
+          "assumes that the club's membership will not change before Teodor joins": "A minor point; the conclusion fails even if the membership stays the same.",
+          "relies on figures about a club that may not be typical of all book clubs": "His conclusion concerns this club only.",
+          "takes for granted that older members prefer different books from younger ones": "The argument says nothing about reading tastes.",
+          "confuses the ages at which members joined the club with their present ages": "The average age is a present figure, and nothing suggests joining ages."
         }
       },
+      "difficulty": 3,
       "tags": [
         {
           "kind": "concept",

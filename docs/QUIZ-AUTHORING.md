@@ -7,8 +7,8 @@ Read this page, the brief and `docs/HARD-PATTERNS.md`; nothing else is needed. E
 ## Steps
 
 1. **Brief.** `npm run -s brief -- <measure>` (add `--user <email>` once there is more than one account). Read `content/briefs/<id>.md`. It has the slot table (type, level and passage of every slot) and what to target:
-   - verbal: key words with their bank synonyms, reading-skill slots, distractor words and passage words;
-   - quant: concept slots, each with a variant (the form of the concept that earlier mocks used least). Write the question as that variant.
+   - verbal: key words with their bank synonyms, the earlier items each was used in (with their distractors: a returning word gets new sentence logic and new distractors, never the same SE pair) and up to 4 **revisits** (write those as siblings and set `revisits`), reading-skill slots (each with a variant: the form of the skill earlier mocks used least; write the question as that variant), distractor words and passage words;
+   - quant: concept slots, each with a variant (the form of the concept that earlier mocks used least) and the setups earlier mocks already used for it. Write the question as that variant, with a setup that is not listed. **Worn** setups (used in 2+ tests) are banned. New numbers, names or a story around a listed setup make the same item, not a new one. A slot marked **revisit** is the exception: write a sibling of that earlier item (you missed or guessed it) with the change the brief names, and set `"revisits": "<test>:<qid>"` on the question.
 
    Skim `content/briefs/<id>.local.md` (official exemplars, one per slot type and level) only for a type you are unsure how to pitch. The `.json` brief is for scripts; don't read it.
 2. **Author** the whole test in one Write, using the shapes below. Write `$...$` for math. Spend the brief as the structure rules say:
@@ -19,10 +19,10 @@ Read this page, the brief and `docs/HARD-PATTERNS.md`; nothing else is needed. E
 
    Write each RC question's skill tag and each quant question's concept tags. Do **not** write word tags; check fills them. An irregular form (`forsworn`) is the one exception: tag that by hand.
 
-   **Quant:** also write `content/verify/<id>.py` with `content/verify/keys.py`, using `content/verify/quant-002.py` as the example. Compute each answer (brute force, or exact arithmetic with `fractions`) and hand it to `t.qc` / `t.choice` / `t.where` / `t.sel` / `t.value`, which compare it with the JSON key. End with `t.done()`. Never restate a key by hand.
+   **Quant:** give every question a `setup` (the setup in one abstract line, no numbers or story, e.g. "two sides and the area given; compare the third side with a value") and a `variant` (the slot's variant, copied exactly). Also write `content/verify/<id>.py` with `content/verify/keys.py`, using `content/verify/quant-002.py` as the example. Compute each answer (brute force, or exact arithmetic with `fractions`) and hand it to `t.qc` / `t.choice` / `t.where` / `t.sel` / `t.value`, which compare it with the JSON key. End with `t.done()`. Never restate a key by hand.
 3. **Check.** `npm run -s check -- <id>` after the Write and after every round of Edits, until it prints `OK`. Fix with Edit, not a rewrite. One run does all of the following:
    - fills the verbal word tags;
-   - validates the test, including the 25% overlap check against earlier tests and the official corpus;
+   - validates the test, including the 25% overlap check against earlier tests and the official corpus. For quant it also compares each item with earlier items of its concept once numbers and names are masked: a match is an error naming the earlier item (rewrite with another setup);
    - runs the quant verify script;
    - prints the difficulty rules and coverage against the brief: unused key words, skill slots, passage words per passage, and quant concepts.
 
@@ -35,7 +35,13 @@ Read this page, the brief and `docs/HARD-PATTERNS.md`; nothing else is needed. E
      - **Too hard (quant):** more than 2 items in a section rated 4+ by the solver. Those calibrate to level 6+ (harder than official hard items), and each section may hold at most 2. Ease the extra ones the check names to official-L5 difficulty: drop one move, keep the trap and the level-5 tag.
      - **Skill mismatch:** make the stem test the tagged skill, or retag it if the brief's skill mix still holds.
    - After fixes, run `npm run -s check -- <id>`, then `npm run -s blind -- <id> --only s1q3,s2q5`. This writes `<id>.only.md`, and the full copy stays. SendMessage that path to the **same** solver, then check its reply with `--check - --only s1q3,s2q5`.
-5. **Register and publish.** `npm run -s register -- <id>` writes to every user's database. It refuses a test that does not validate, and warns if no blind check is on record. Then run `git add content && git commit && git push` (Vercel redeploys).
+4b. **Novelty check with one judge.** The mechanical check catches a setup with new numbers, not a disguised one (a new story around the same mathematics or argument).
+   - `npm run -s novelty -- <id>` writes `content/.blind/<id>.novelty.md`. Each item appears next to the earlier items it could repeat: quant by concept, plus close wording from other concepts; verbal passages and arguments against earlier ones, TC and SE items against earlier ones sharing a key word.
+   - Give the path to the `gre-novelty-judge` agent and pipe its reply to `npm run -s novelty -- <id> --check - <<'EOF'` … `EOF`. **same** means rewrite with a setup the brief does not list; **similar** means rewrite unless the decisive step really differs. A revisit judged **similar** to the item it revisits passes.
+   - After rewrites, run `check`, then `blind --only` for the solver, then `npm run -s novelty -- <id> --only s1q3,s2q5`, and SendMessage that file to the **same** judge (`--check - --only …`).
+5. **Register and publish.** `npm run -s register -- <id>` writes to every user's database. It refuses a test that does not validate, and warns if no blind or novelty check is on record. Then run `git add content && git commit && git push` (Vercel redeploys).
+
+`npm run -s novelty -- --audit quant|verbal [--tests id,id]` writes a novelty copy for each listed test (each against the tests numbered before it), to sweep earlier tests for repeats.
 
 Recalibrate only after changing the solver's model: `npm run -s blind -- --calibrate verbal|quant` builds a local file of official items with known P+. Give it to the solver, then `--calibrate <measure> --check -` with its reply stores the new offset.
 
@@ -100,7 +106,8 @@ Quant question shapes (the test wrapper is the same, with `"measure": "quant"` a
 ```json
 { "id": "s1q1", "section": 1, "type": "qc", "difficulty": 4, "prompt": "$0 < x < 1$.", "qc": { "a": "$\\dfrac1x$", "b": "$1+x$" },
   "key": { "sel": [3] }, "explanation": { "key": "…", "steps": ["…"], "trap": "…" },
-  "tags": [{ "kind": "concept", "id": "number-sense-qc", "role": "primary" }] }
+  "tags": [{ "kind": "concept", "id": "number-sense-qc", "role": "primary" }],
+  "setup": "x between 0 and 1: compare the reciprocal 1/x with 1 + x", "variant": "a square or a reciprocal against the original number" }
 { "id": "s1q5", "section": 1, "type": "mc", "difficulty": 3, "prompt": "…", "choices": ["5", "8", "10", "12", "15"], "key": { "sel": [2] }, "explanation": { "key": "…", "steps": ["…"], "fast": "…", "trap": "…" }, "tags": [ … ] }
 { "id": "s1q8", "section": 1, "type": "mc_multi", "difficulty": 4, "prompt": "… Select all …", "choices": ["…", "…", "…", "…", "…", "…"], "key": { "sel": [1, 3, 5] }, "explanation": { … }, "tags": [ … ] }
 { "id": "s1q9", "section": 1, "type": "numeric", "difficulty": 3, "prompt": "…", "numeric": { "kind": "single" }, "key": { "value": "24" }, "explanation": { … }, "tags": [ … ] }

@@ -95,7 +95,9 @@
           "id": "number-line-abs",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "|x - a| < |x + b|: x is nearer a than -b; compare x with the midpoint",
+      "variant": "distance between two numbers as an absolute value"
     },
     {
       "id": "s1q2",
@@ -128,7 +130,9 @@
           "id": "exponents-roots",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "(b^{n+k} ± b^n) over a similar sum of powers: factor out the common power",
+      "variant": "factoring out a common power: 2^{n+2} - 2^n"
     },
     {
       "id": "s1q3",
@@ -167,7 +171,9 @@
           "id": "lines-angles",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "isosceles triangle, point on the base with one segment given; compare the other segment (D)",
+      "variant": "a point looks like a midpoint but is not stated as one"
     },
     {
       "id": "s1q4",
@@ -200,7 +206,9 @@
           "id": "integers-properties",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "k^2 leaves remainder 1 mod 8; compare k mod 8 with k^3 mod 8",
+      "variant": "must be / could be an integer from a stated condition"
     },
     {
       "id": "s1q5",
@@ -236,7 +244,9 @@
           "id": "units-conversion",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "liters per second to cubic meters over hours",
+      "variant": "area or volume unit conversion (squares and cubes)"
     },
     {
       "id": "s1q6",
@@ -277,7 +287,9 @@
           "id": "pythagorean-special",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "chord length gives the central angle; minor arc length",
+      "variant": "arc length and sector area from the central angle"
     },
     {
       "id": "s1q7",
@@ -314,7 +326,9 @@
           "id": "counting-permutations",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "four-digit even numbers with strictly decreasing digits (choose sets)",
+      "variant": "multiplication principle across independent choices"
     },
     {
       "id": "s1q8",
@@ -356,7 +370,9 @@
           "id": "algebraic-expressions",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "value of a symmetric expression (a^3 ± b^3, |a| + |b|, a^2 + b^2) from a ± b, ab or a^2 + b^2",
+      "variant": "an expression's value from a related expression (x + 1/x given)"
     },
     {
       "id": "s1q9",
@@ -386,7 +402,9 @@
           "id": "ratio-proportion",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "ratio before and after adding or removing items of one or both kinds; a total",
+      "variant": "ratio change after adding or removing items"
     },
     {
       "id": "s1q10",
@@ -424,7 +442,9 @@
           "id": "data-tables-graphs",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "DI: count of students at or above a threshold from a frequency chart",
+      "variant": "a two-way table with totals"
     },
     {
       "id": "s1q11",
@@ -462,7 +482,9 @@
           "id": "data-interpretation-calc",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "DI: percent greater between two groups' counts",
+      "variant": "a ratio between two categories in different graphs"
     },
     {
       "id": "s1q12",
@@ -505,7 +527,9 @@
           "id": "mean-median-mode",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "DI: change in the median after moving one category's values",
+      "variant": "which interval contains the median or a percentile"
     },
     {
       "id": "s2q1",
@@ -539,7 +563,9 @@
           "id": "mean-median-mode",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "five integers with given mean and median; greatest possible least value",
+      "variant": "median of a list with unknowns"
     },
     {
       "id": "s2q2",
@@ -573,7 +599,9 @@
           "id": "quartiles-boxplots",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "add a new minimum and maximum to a list; compare the IQRs",
+      "variant": "quartiles of a list with an even count"
     },
     {
       "id": "s2q3",
@@ -607,7 +635,9 @@
           "id": "polygons-quadrilaterals",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "rhombus with side and one diagonal; area against a value",
+      "variant": "parallelogram, rhombus or trapezoid properties"
     },
     {
       "id": "s2q4",
@@ -639,7 +669,9 @@
           "id": "fractions-decimals",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "sum of two repeating decimals vs 1",
+      "variant": "the k-th digit after the decimal point of a repeating decimal"
     },
     {
       "id": "s2q5",
@@ -677,7 +709,9 @@
           "id": "quadratics-factoring",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "parabola crossing the x-axis on both sides of the y-axis; compare b with c",
+      "variant": "parabola vertex, axis of symmetry and intercepts"
     },
     {
       "id": "s2q6",
@@ -713,7 +747,9 @@
           "id": "pythagorean-special",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "altitude to the hypotenuse splits it into given segments; perimeter",
+      "variant": "altitude to the hypotenuse: similar right triangles"
     },
     {
       "id": "s2q7",
@@ -749,7 +785,9 @@
           "id": "sequences-patterns",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "recursive a_{n+1} = 1/(1 - a_n) cycles with period 3; sum of 100 terms",
+      "variant": "geometric sequence or a repeating cycle of terms"
     },
     {
       "id": "s2q8",
@@ -790,7 +828,9 @@
           "id": "circles",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "horizontal cylinder partly filled: circular-segment area times length",
+      "variant": "cylinder volume or surface area"
     },
     {
       "id": "s2q9",
@@ -826,7 +866,9 @@
           "id": "coordinate-geometry",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "line through a point perpendicular to a given line; its x-intercept",
+      "variant": "parallel and perpendicular lines"
     },
     {
       "id": "s2q10",
@@ -862,7 +904,9 @@
           "id": "word-problems-rate",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "two fill pipes and a drain together; time to fill",
+      "variant": "pipes filling and draining at once"
     },
     {
       "id": "s2q11",
@@ -899,7 +943,9 @@
           "id": "geometry-coordinate",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "opposite vertices of a square given; find another vertex",
+      "variant": "area of a polygon from its vertex coordinates"
     },
     {
       "id": "s2q12",
@@ -934,7 +980,9 @@
           "id": "area-perimeter",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "rectangle from perimeter and diagonal; area via (a+b)^2 - (a^2+b^2)",
+      "variant": "perimeter fixed, area varies (or the reverse)"
     },
     {
       "id": "s2q13",
@@ -972,7 +1020,9 @@
           "id": "lines-angles",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "two angle expressions at a transversal: equal or supplementary; select x",
+      "variant": "parallel lines cut by a transversal"
     },
     {
       "id": "s2q14",
@@ -1017,7 +1067,9 @@
           "id": "integers-properties",
           "role": "secondary"
         }
-      ]
+      ],
+      "setup": "x^2 + kx + c with two distinct positive integer roots; possible k",
+      "variant": "sum and product of the roots"
     },
     {
       "id": "s2q15",
@@ -1048,7 +1100,9 @@
           "id": "linear-equations",
           "role": "primary"
         }
-      ]
+      ],
+      "setup": "for which k a 2x2 linear system has no solution",
+      "variant": "a system with no solution or infinitely many"
     }
   ]
 }

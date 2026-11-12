@@ -519,7 +519,8 @@
             5
           ]
         }
-      ]
+      ],
+      "revisits": "verbal-003:s1q3"
     },
     {
       "id": "s1q5",
@@ -916,56 +917,38 @@
       "section": 2,
       "type": "tc",
       "difficulty": 4,
-      "prompt": "The foundation's grants were famously generous, and its directors ___ only where outsiders least expected: on the salaries of the scientists whose work they paid for, reasoning that instruments would outlast any single career.",
+      "prompt": "Warned that the expedition might have to winter twice rather than once, the quartermaster resolved to ___ the lamp oil from the first night, issuing each tent a single wick and ordering every lamp doused at first light.",
       "blanks": [
         [
-          "lavished",
-          "splurged",
-          "stinted",
-          "temporized",
-          "acceded"
+          "husband",
+          "squander",
+          "requisition",
+          "flaunt",
+          "assay"
         ]
       ],
       "key": {
         "sel": [
-          2
+          0
         ]
       },
       "explanation": {
-        "key": "Generous everywhere 'only' except salaries, with money steered toward instruments instead: they were sparing on salaries, i.e. they stinted (secondary sense: to skimp). The noun 'stint' (a period of service, echoed by 'any single career') is the everyday sense.",
+        "key": "A second winter means the oil must last twice as long, and the single wick and early dousing are ways of using it sparingly: husband, in its secondary sense of conserving carefully. The everyday noun is the trap.",
         "distractors": {
-          "lavished": "Trap pair with 'splurged': the generosity was everywhere else, and the reasoning about instruments shows salaries were where they held back.",
-          "splurged": "Trap pair with 'lavished'.",
-          "temporized": "To stall for time; nothing about delay.",
-          "acceded": "To agree to a demand; the reasoning clause describes a choice to spend elsewhere, not a concession."
+          "squander": "Wasting the oil is the opposite of rationing it.",
+          "requisition": "To demand supplies officially; the quartermaster already has the oil and is deciding how to use it.",
+          "flaunt": "To show off; nothing about display.",
+          "assay": "To test the quality of; the problem is quantity over time."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "lavish",
-          "role": "distractor",
-          "at": [
-            0,
-            0
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "stint",
+          "id": "husband",
           "role": "key",
           "at": [
             0,
-            2
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "accede",
-          "role": "distractor",
-          "at": [
-            0,
-            4
+            0
           ]
         }
       ]
@@ -1147,7 +1130,8 @@
             2
           ]
         }
-      ]
+      ],
+      "revisits": "verbal-003:s1q7"
     },
     {
       "id": "s2q4",
@@ -1260,59 +1244,67 @@
       "id": "s2q5",
       "section": 2,
       "type": "se",
-      "difficulty": 5,
-      "prompt": "The reviewer's praise for the novel's 'remarkably familiar' plot was her way of contriving to ___, without exposing herself to a suit for libel, what she could never have printed in plain words: that the author had lifted the story from an older book.",
+      "difficulty": 4,
+      "prompt": "The inspector's ___ walk-through, ten minutes for a forty-unit building, left every one of the tenants' complaints exactly where it had been, and the city's own auditors later cited it as the reason the repairs were never ordered.",
       "choices": [
-        "proclaim",
-        "intimate",
-        "refute",
-        "declare",
-        "insinuate",
-        "concede"
+        "cursory",
+        "meticulous",
+        "perfunctory",
+        "painstaking",
+        "hostile",
+        "clandestine"
       ],
       "key": {
         "sel": [
-          1,
-          4
+          0,
+          2
         ]
       },
       "explanation": {
-        "key": "Saying something through ambiguous praise rather than 'in plain words' is hinting: intimate (secondary sense, to suggest indirectly) and insinuate. The 'familiar' in the sentence baits the everyday adjective sense of 'intimate'.",
+        "key": "Ten minutes for forty units, with no complaint addressed, is a hasty, going-through-the-motions inspection: cursory and perfunctory.",
         "distractors": {
-          "refute": "She was suggesting the plagiarism, not disproving it.",
-          "concede": "Conceding implies granting a point under pressure; she was the one advancing the charge.",
-          "proclaim": "Trap pair with 'declare': both mean to announce openly, the very thing she 'could never have printed in plain words' and that would expose her to a libel suit.",
-          "declare": "Trap pair with 'proclaim'."
+          "meticulous": "Trap pair with painstaking: true synonyms for thorough, the opposite of a ten-minute look at forty units.",
+          "painstaking": "Trap pair with meticulous: wrong polarity.",
+          "hostile": "Hostility is not suggested; the problem is how little was done.",
+          "clandestine": "Secret; nothing says the walk-through was hidden, and the auditors cite it openly."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "intimate",
+          "id": "cursory",
           "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "meticulous",
+          "role": "distractor",
           "at": [
             1
           ]
         },
         {
           "kind": "word",
-          "id": "refute",
-          "role": "distractor",
+          "id": "perfunctory",
+          "role": "key",
           "at": [
             2
           ]
         },
         {
           "kind": "word",
-          "id": "insinuate",
-          "role": "key",
+          "id": "painstaking",
+          "role": "distractor",
           "at": [
-            4
+            3
           ]
         },
         {
           "kind": "word",
-          "id": "concede",
+          "id": "clandestine",
           "role": "distractor",
           "at": [
             5
@@ -1330,7 +1322,7 @@
         "penalize",
         "sanction",
         "overlook",
-        "censure",
+        "proscribe",
         "endorse",
         "disparage"
       ],
@@ -1343,8 +1335,8 @@
       "explanation": {
         "key": "The vote did not reverse acceptance but 'made it official': formal approval, sanction (secondary sense, to authorize) and endorse.",
         "distractors": {
-          "penalize": "Trap pair with 'censure': a vote against the market would startle, but the sentence says the vote did not reverse the acceptance. 'Penalize' is also the everyday sense of 'sanction'.",
-          "censure": "Trap pair with 'penalize'.",
+          "penalize": "Trap: a vote against the market would startle, but the sentence says the vote did not reverse the acceptance. 'Penalize' is also the everyday sense of 'sanction'.",
+          "proscribe": "To forbid; like 'penalize', it would reverse the acceptance, which the sentence rules out.",
           "overlook": "Ignoring the market is the tacit acceptance that already existed, not an official act.",
           "disparage": "Belittling contradicts making the market official."
         }
@@ -1360,7 +1352,7 @@
         },
         {
           "kind": "word",
-          "id": "censure",
+          "id": "proscribe",
           "role": "distractor",
           "at": [
             3
@@ -1382,65 +1374,66 @@
             5
           ]
         }
-      ]
+      ],
+      "revisits": "verbal-006:s1q6"
     },
     {
       "id": "s2q7",
       "section": 2,
       "type": "se",
-      "difficulty": 5,
-      "prompt": "Historians who dated the town's feud to the riot of 1911 mistook its first eruption for its origin: the grievances behind it had lain ___ for a generation, surfacing only in the dry language of boundary suits before anyone thought to take up arms.",
+      "difficulty": 4,
+      "prompt": "Critics who called the movement's manifesto naive were judging a ___ project as though it were a mature one: when the document appeared, the group had no journal, no gallery and fewer than a dozen members.",
       "choices": [
-        "manifest",
-        "latent",
-        "evanescent",
-        "patent",
-        "dormant",
-        "nominal"
+        "nascent",
+        "entrenched",
+        "incipient",
+        "moribund",
+        "established",
+        "specious"
       ],
       "key": {
         "sel": [
-          1,
-          4
+          0,
+          2
         ]
       },
       "explanation": {
-        "key": "The riot was the 'first eruption', not the 'origin', so the grievances existed long before without breaking out: latent and dormant.",
+        "key": "A group with no journal, no gallery and a dozen members was just beginning, so judging it as 'mature' was unfair: nascent and incipient.",
         "distractors": {
-          "manifest": "Trap pair with 'patent': both mean obvious, but grievances visible only in dry legal language were exactly what the historians missed.",
-          "patent": "Trap pair with 'manifest'.",
-          "evanescent": "Fleeting; contradicts 'for a generation'.",
-          "nominal": "In name only; the grievances were real enough to cause a feud."
+          "entrenched": "Trap pair with established: true synonyms for long-settled, the very status the critics wrongly assumed.",
+          "established": "Trap pair with entrenched: describes the mature project the movement was not.",
+          "moribund": "Dying; a movement that had barely started was not near its end.",
+          "specious": "Plausible but false; the sentence is about the project's stage, not its truth."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "manifest",
-          "role": "distractor",
+          "id": "nascent",
+          "role": "key",
           "at": [
             0
           ]
         },
         {
           "kind": "word",
-          "id": "latent",
-          "role": "key",
+          "id": "entrenched",
+          "role": "distractor",
           "at": [
             1
           ]
         },
         {
           "kind": "word",
-          "id": "evanescent",
-          "role": "distractor",
+          "id": "incipient",
+          "role": "key",
           "at": [
             2
           ]
         },
         {
           "kind": "word",
-          "id": "patent",
+          "id": "moribund",
           "role": "distractor",
           "at": [
             3
@@ -1448,15 +1441,7 @@
         },
         {
           "kind": "word",
-          "id": "dormant",
-          "role": "key",
-          "at": [
-            4
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "nominal",
+          "id": "specious",
           "role": "distractor",
           "at": [
             5

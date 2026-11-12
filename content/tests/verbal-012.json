@@ -166,14 +166,14 @@
     {
       "id": "a1",
       "paragraphs": [
-        "Two years ago Kestrel Air began requiring its maintenance crews to photograph each completed repair and upload the image before signing the job off. Since then, the proportion of signed-off repairs that the airline's inspectors later find to be incomplete has fallen by 40 percent. The airline's operations director concludes that the photograph requirement has made crews more thorough in carrying out repairs."
+        "Since the city added bicycle lanes along Harbor Avenue two years ago, the share of the avenue's reported traffic accidents that involve cyclists has risen from 8 percent to 14 percent. A council member concludes that the lanes have made Harbor Avenue more dangerous for the cyclists who use it."
       ],
       "tags": []
     },
     {
       "id": "a2",
       "paragraphs": [
-        "Last year 70 percent of the hikers rescued in the Carrow Range were carrying satellite messengers, although only about 30 percent of all hikers in the range carry them. Evidently, carrying a satellite messenger leads hikers to take risks they would otherwise avoid, and so makes them more likely to get into trouble."
+        "Each of the forty musicians in the Halden Chamber Orchestra has won at least one international competition as a soloist. The Halden Chamber Orchestra must therefore be one of the finest orchestras performing today."
       ],
       "tags": []
     }
@@ -185,35 +185,35 @@
       "section": 1,
       "type": "tc",
       "difficulty": 4,
-      "prompt": "Critics who complained that the reform had stripped the smaller provinces of their influence on the council were wrong about the reform but right about the provinces: the influence the reform abolished had been ___ for decades, since the council could act only on proposals drafted by its three largest members.",
+      "prompt": "Party leaders who had chosen the new governor because they expected her to be ___ learned within a month that she had an agenda of her own: she vetoed the first two bills they sent her and appointed none of their candidates.",
       "blanks": [
         [
-          "robust",
-          "latent",
-          "manifest",
-          "nominal",
-          "pernicious"
+          "tractable",
+          "obstinate",
+          "venal",
+          "mercurial",
+          "erudite"
         ]
       ],
       "key": {
         "sel": [
-          3
+          0
         ]
       },
       "explanation": {
-        "key": "“Wrong about the reform but right about the provinces”: the provinces really lack influence, but the reform did not take it away, because the influence it abolished existed only on paper. The cause clause (the council acted only on the big members' drafts) says why. Nominal = in name only.",
+        "key": "The leaders picked her expecting what the vetoes then disproved: that she would be easy to manage. Tractable.",
         "distractors": {
-          "robust": "Trap: something “stripped” sounds as if it was strong, but then the critics would be right about the reform too.",
-          "latent": "Latent influence is real but unused, so abolishing it would be a real loss, and the critics would be right about the reform.",
-          "manifest": "Openly evident influence contradicts the council's structure.",
-          "pernicious": "Harmful influence has nothing to do with the clause about who drafts proposals."
+          "obstinate": "Stubbornness is what she turned out to show, not what the leaders expected when they chose her.",
+          "venal": "Expecting her to take bribes is not contradicted by vetoes and refused appointments specifically.",
+          "mercurial": "Unpredictable moods would not be a reason to choose her.",
+          "erudite": "Learning is not what an independent agenda contradicts."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "robust",
-          "role": "distractor",
+          "id": "tractable",
+          "role": "key",
           "at": [
             0,
             0
@@ -221,7 +221,7 @@
         },
         {
           "kind": "word",
-          "id": "latent",
+          "id": "obstinate",
           "role": "distractor",
           "at": [
             0,
@@ -230,7 +230,7 @@
         },
         {
           "kind": "word",
-          "id": "manifest",
+          "id": "venal",
           "role": "distractor",
           "at": [
             0,
@@ -239,8 +239,8 @@
         },
         {
           "kind": "word",
-          "id": "nominal",
-          "role": "key",
+          "id": "mercurial",
+          "role": "distractor",
           "at": [
             0,
             3
@@ -248,7 +248,7 @@
         },
         {
           "kind": "word",
-          "id": "pernicious",
+          "id": "erudite",
           "role": "distractor",
           "at": [
             0,
@@ -262,39 +262,48 @@
       "section": 1,
       "type": "tc",
       "difficulty": 3,
-      "prompt": "Mourners who knew the shipowner only by his (i) ___ funeral, with its hired choir and its procession of plumed horses, would scarcely have guessed how (ii) ___ a life it closed; the display was his widow's doing, and he would have counted it a waste of the money he had spent forty years not spending.",
+      "prompt": "The committee's (i) ___ response to the first reports of contamination, a single paragraph promising to \"monitor the situation\", looked worse in hindsight than even a (ii) ___ one would have: had it acted before all the facts were in, it might have closed the wells before the leak reached three of them.",
       "blanks": [
         [
-          "somber",
-          "opulent",
-          "decorous"
+          "cursory",
+          "exhaustive",
+          "belligerent"
         ],
         [
-          "dissolute",
-          "convivial",
-          "austere"
+          "rash",
+          "measured",
+          "tardy"
         ]
       ],
       "key": {
         "sel": [
-          1,
-          2
+          0,
+          0
         ]
       },
       "explanation": {
-        "key": "(i) The hired choir, the plumed horses and “the display”, which he would have counted a waste of money, make the funeral lavish: opulent. (ii) “Would scarcely have guessed” sets the life against the funeral, and the forty years of not spending make it severely plain: austere.",
+        "key": "(i) A single paragraph promising only to watch is hasty and superficial: cursory. (ii) 'Even' and 'had it acted before all the facts were in' describe a response made without careful thought, which would still have beaten the actual one: rash.",
         "distractors": {
-          "somber": "Topic trap: funerals are somber, but the blank has to carry the extravagance that the rest of the sentence calls a display and a waste.",
-          "decorous": "Also suits a funeral, but propriety is not what he would have counted a waste of money.",
-          "dissolute": "Trap for readers who take “would scarcely have guessed” as a hint of scandal; forty years of not spending point to thrift, not vice.",
-          "convivial": "A sociable life is not the contrast with a costly display; the clue is money."
+          "exhaustive": "A single paragraph is the opposite of thorough.",
+          "belligerent": "Nothing about the response was hostile; it did too little.",
+          "measured": "A careful response is what the committee claimed to be giving; 'even' calls for a worse kind of response that would still have been better.",
+          "tardy": "The actual response was the late one; the contrast is with acting early."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "opulent",
+          "id": "cursory",
           "role": "key",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exhaustive",
+          "role": "distractor",
           "at": [
             0,
             1
@@ -302,7 +311,7 @@
         },
         {
           "kind": "word",
-          "id": "decorous",
+          "id": "belligerent",
           "role": "distractor",
           "at": [
             0,
@@ -311,20 +320,11 @@
         },
         {
           "kind": "word",
-          "id": "convivial",
-          "role": "distractor",
-          "at": [
-            1,
-            1
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "austere",
+          "id": "rash",
           "role": "key",
           "at": [
             1,
-            2
+            0
           ]
         }
       ]
@@ -334,7 +334,7 @@
       "section": 1,
       "type": "tc",
       "difficulty": 5,
-      "prompt": "Visiting restorers mistook the villagers' refusal to clean the shrine's carvings for indifference, when it was the opposite: a scruple so (i) ___ that no one would lay a hand on the stone. The prohibition was never written down or even stated aloud; it was (ii) ___, but no less binding for that, and it became (iii) ___ only when lichen began to eat the carvings and the village had to choose between custom and the carvings' survival.",
+      "prompt": "Visiting restorers mistook the villagers' refusal to clean the shrine's carvings for indifference, when it was the opposite: a scruple so (i) ___ that no one would lay a hand on the stone. The prohibition had remained (ii) ___ for generations only because nothing had ever tested it, and it became (iii) ___ the moment lichen began to eat the carvings and the village had to choose between custom and the carvings' survival.",
       "blanks": [
         [
           "perfunctory",
@@ -342,32 +342,32 @@
           "irreverent"
         ],
         [
-          "nominal",
-          "explicit",
-          "tacit"
+          "inviolate",
+          "obsolete",
+          "provisional"
         ],
         [
-          "inviolate",
           "contentious",
+          "unanimous",
           "dormant"
         ]
       ],
       "key": {
         "sel": [
           1,
-          2,
-          1
+          0,
+          0
         ]
       },
       "explanation": {
-        "key": "(i) The opposite of indifference, so strong that no one would touch the stone: reverent. (ii) Never written down or stated aloud, yet “no less binding”: understood without being stated, which is tacit. (iii) A forced choice between custom and survival turns an unquestioned rule into a disputed one: contentious.",
+        "key": "(i) The opposite of indifference, so strong that no one would touch the stone: reverent. (ii) A rule that survived 'only because nothing had ever tested it' was kept intact, unbroken: inviolate. (iii) A forced choice between custom and survival turns an unquestioned rule into a disputed one: contentious.",
         "distractors": {
           "perfunctory": "Going through the motions is close to the indifference the restorers wrongly saw.",
           "irreverent": "Wrong polarity: the villagers' scruple is the opposite of indifference.",
-          "nominal": "Trap: an unwritten rule suggests a rule in name only, but “no less binding for that” says everyone observed it.",
-          "explicit": "An unwritten, unspoken rule is not explicit.",
-          "inviolate": "The rule was already untouchable; the lichen crisis is what put it in question.",
-          "dormant": "Nothing suggests the rule lay inactive and then woke; it was observed throughout."
+          "obsolete": "An obsolete rule would not still be keeping hands off the stone.",
+          "provisional": "Temporary; the rule had held for generations.",
+          "unanimous": "A forced choice between custom and survival divides the village rather than uniting it.",
+          "dormant": "The rule was active all along; the lichen made it disputed, not newly active."
         }
       },
       "tags": [
@@ -400,8 +400,8 @@
         },
         {
           "kind": "word",
-          "id": "nominal",
-          "role": "distractor",
+          "id": "inviolate",
+          "role": "key",
           "at": [
             1,
             0
@@ -409,29 +409,11 @@
         },
         {
           "kind": "word",
-          "id": "explicit",
+          "id": "obsolete",
           "role": "distractor",
           "at": [
             1,
             1
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "tacit",
-          "role": "key",
-          "at": [
-            1,
-            2
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "inviolate",
-          "role": "distractor",
-          "at": [
-            2,
-            0
           ]
         },
         {
@@ -440,7 +422,7 @@
           "role": "key",
           "at": [
             2,
-            1
+            0
           ]
         },
         {
@@ -668,7 +650,8 @@
             5
           ]
         }
-      ]
+      ],
+      "revisits": "verbal-005:s1q3"
     },
     {
       "id": "s1q7",
@@ -875,30 +858,30 @@
       "section": 1,
       "type": "rc",
       "subtype": "arg",
-      "difficulty": 4,
       "passageId": "a1",
-      "prompt": "Which of the following is an assumption on which the operations director's argument relies?",
+      "prompt": "Which of the following is an assumption on which the council member's argument relies?",
       "choices": [
-        "Before the requirement was introduced, most repairs that inspectors found incomplete had been performed by inexperienced crew members.",
-        "The photograph requirement has not significantly increased the time crews need to complete a repair.",
-        "Every incomplete repair that inspectors failed to detect before the requirement would have been revealed by a photograph.",
-        "Since the requirement was introduced, inspectors have not begun to examine signed-off repairs less closely on the strength of the uploaded photographs.",
-        "The number of repairs performed by Kestrel's crews has not increased since the requirement was introduced."
+        "Most cyclists who travel on Harbor Avenue now ride in the new bicycle lanes.",
+        "The number of people cycling on Harbor Avenue has not risen enough since the lanes were added to account for the larger share of accidents involving cyclists.",
+        "Accidents involving cyclists on Harbor Avenue tend to be more serious than other accidents there.",
+        "Streets in the city that have no bicycle lanes have seen no change in the share of accidents involving cyclists.",
+        "Before the lanes were added, very few cyclists used Harbor Avenue at all."
       ],
       "key": {
         "sel": [
-          3
+          1
         ]
       },
       "explanation": {
-        "key": "The evidence is what inspectors find. If inspectors now relied on the photos and looked less closely, fewer incomplete repairs would be found even if crews were no more thorough. Negated, D breaks the argument.",
+        "key": "'More dangerous for the cyclists who use it' is a claim about each cyclist's risk. If many more people now cycle on the avenue, cyclists could make up more of the accidents while each one is safer. The argument needs the rise not to be explained by more cyclists; negated, B breaks it.",
         "distractors": {
-          "Before the requirement was introduced, most repairs that inspectors found incomplete had been performed by inexperienced crew members.": "Who did the bad repairs earlier is irrelevant to whether the drop reflects thoroughness.",
-          "The photograph requirement has not significantly increased the time crews need to complete a repair.": "A cost of the policy, not a link in the reasoning.",
-          "Every incomplete repair that inspectors failed to detect before the requirement would have been revealed by a photograph.": "Far too strong, and the argument does not need it.",
-          "The number of repairs performed by Kestrel's crews has not increased since the requirement was introduced.": "The figure is a proportion, so a change in the number of repairs does not matter."
+          "Most cyclists who travel on Harbor Avenue now ride in the new bicycle lanes.": "The argument does not depend on where on the avenue the cyclists ride.",
+          "Accidents involving cyclists on Harbor Avenue tend to be more serious than other accidents there.": "Severity is not part of the reasoning about shares.",
+          "Streets in the city that have no bicycle lanes have seen no change in the share of accidents involving cyclists.": "A comparison with other streets might strengthen the argument, but it is not required.",
+          "Before the lanes were added, very few cyclists used Harbor Avenue at all.": "This would undercut the argument (more cyclists now), not support it."
         }
       },
+      "difficulty": 4,
       "tags": [
         {
           "kind": "concept",
@@ -912,38 +895,74 @@
       "section": 2,
       "type": "tc",
       "difficulty": 4,
-      "prompt": "That the director, so lavish with the festival's opening galas, should ___ on the visiting artists' fees struck observers as inconsistent until they learned that the galas were paid for by sponsors who would fund nothing else.",
+      "prompt": "Biographers who call the publisher ___ rely on his letters to authors, in which he haggled over every advance; his account books tell a different story, recording anonymous gifts to the same authors in their leanest years.",
       "blanks": [
         [
-          "splurge",
-          "dwell",
-          "stint",
-          "insist",
-          "capitalize"
+          "parsimonious",
+          "munificent",
+          "mercurial",
+          "punctilious",
+          "venal"
         ]
       ],
       "key": {
         "sel": [
-          2
+          0
         ]
       },
       "explanation": {
-        "key": "Observers saw an inconsistency with her lavishness, so she was sparing with the fees. The explanation (sponsors pay only for galas) resolves it: the festival's own money was thin. Stint on = skimp on, the secondary sense. The everyday noun (a spell of work) is no help here.",
+        "key": "Haggling over every advance is what the biographers rely on, so their label means stingy; the account books' secret gifts are what contradict it: parsimonious.",
         "distractors": {
-          "splurge": "Consistent with her lavishness, so there would be nothing inconsistent to explain.",
-          "dwell": "Dwelling on the fees is not something the sponsor fact would explain.",
-          "insist": "Insisting on fees does not contrast with lavishness.",
-          "capitalize": "Profiting from the fees does not fit, and the sponsor fact would not explain it."
+          "munificent": "Generous is what the account books show, not what the letters suggest.",
+          "mercurial": "Changeable moods are not what haggling shows.",
+          "punctilious": "Attention to correct form does not follow from haggling and is not contradicted by gifts.",
+          "venal": "Open to bribes; haggling over advances is not corruption."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "stint",
+          "id": "parsimonious",
           "role": "key",
           "at": [
             0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "munificent",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mercurial",
+          "role": "distractor",
+          "at": [
+            0,
             2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "punctilious",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "venal",
+          "role": "distractor",
+          "at": [
+            0,
+            4
           ]
         }
       ]
@@ -1006,65 +1025,65 @@
       "id": "s2q3",
       "section": 2,
       "type": "tc",
-      "difficulty": 5,
-      "prompt": "Readers who remember the review as a tirade have confused its verdict with its tone. The verdict was (i) ___, leaving nothing of the novel standing; but the prose was so (ii) ___ that the novelist's friends, combing it for evidence of malice, found nothing to quote, and it never stooped to (iii) ___ the novelist herself, whose gifts it took for granted throughout.",
+      "difficulty": 4,
+      "prompt": "The minister's (i) ___ public statements about the dam, praising its promise of cheap power in one speech and fretting over the displaced villages in the next, reflected genuine uncertainty rather than calculation. Her advisers, (ii) ___ of committing her before the engineers' report arrived, urged silence. When the report finally appeared, it bore out neither side wholesale: it (iii) ___ some of each side's claims and refuted others.",
       "blanks": [
         [
-          "tepid",
-          "scathing",
-          "ambivalent"
+          "ambivalent",
+          "unequivocal",
+          "sanguine"
         ],
         [
-          "histrionic",
-          "vitriolic",
-          "dispassionate"
+          "wary",
+          "oblivious",
+          "contemptuous"
         ],
         [
-          "disparage",
-          "extol",
-          "emulate"
+          "corroborated",
+          "fabricated",
+          "suppressed"
         ]
       ],
       "key": {
         "sel": [
-          1,
-          2,
+          0,
+          0,
           0
         ]
       },
       "explanation": {
-        "key": "Verdict and tone are separated. (i) The verdict left nothing standing: scathing. (ii) The tone was not a tirade; friends looking for malice found none: dispassionate. (iii) “Stooped” marks something low, and it took her gifts for granted, so it did not belittle her: disparage.",
+        "key": "(i) Praise one day and worry the next, from 'genuine uncertainty': mixed feelings, ambivalent. (ii) Advisers who urge silence until the report arrives are cautious about committing her: wary. (iii) The report confirmed some claims and refuted others: it corroborated some.",
         "distractors": {
-          "tepid": "A lukewarm verdict would not leave nothing standing.",
-          "ambivalent": "Mixed feelings contradict a total demolition.",
-          "histrionic": "Theatrical prose would supply the tirade the readers remember.",
-          "vitriolic": "Venomous prose would hand the friends plenty of malice to quote.",
-          "extol": "One does not “stoop” to praise, and praise is not what the contrast with destroying the novel needs.",
-          "emulate": "Imitating the novelist has nothing to do with the verdict–tone contrast."
+          "unequivocal": "Statements that swing between praise and worry are anything but clear-cut.",
+          "sanguine": "Cheerfully optimistic; she fretted over the villages.",
+          "oblivious": "Advisers who time her silence to the report are not unaware.",
+          "contemptuous": "Scorn for committing her makes no sense with 'urged silence'.",
+          "fabricated": "An engineers' report that invented claims would not 'bear out' anything.",
+          "suppressed": "Suppressing claims is not the opposite of refuting them; the contrast needs confirming."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "tepid",
-          "role": "distractor",
-          "at": [
-            0,
-            0
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "scathing",
-          "role": "key",
-          "at": [
-            0,
-            1
-          ]
-        },
-        {
-          "kind": "word",
           "id": "ambivalent",
+          "role": "key",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "unequivocal",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sanguine",
           "role": "distractor",
           "at": [
             0,
@@ -1073,8 +1092,8 @@
         },
         {
           "kind": "word",
-          "id": "histrionic",
-          "role": "distractor",
+          "id": "wary",
+          "role": "key",
           "at": [
             1,
             0
@@ -1082,7 +1101,7 @@
         },
         {
           "kind": "word",
-          "id": "vitriolic",
+          "id": "oblivious",
           "role": "distractor",
           "at": [
             1,
@@ -1091,8 +1110,8 @@
         },
         {
           "kind": "word",
-          "id": "dispassionate",
-          "role": "key",
+          "id": "contemptuous",
+          "role": "distractor",
           "at": [
             1,
             2
@@ -1100,7 +1119,7 @@
         },
         {
           "kind": "word",
-          "id": "disparage",
+          "id": "corroborate",
           "role": "key",
           "at": [
             2,
@@ -1109,20 +1128,11 @@
         },
         {
           "kind": "word",
-          "id": "extol",
+          "id": "fabricate",
           "role": "distractor",
           "at": [
             2,
             1
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "emulate",
-          "role": "distractor",
-          "at": [
-            2,
-            2
           ]
         }
       ]
@@ -1132,56 +1142,65 @@
       "section": 2,
       "type": "tc",
       "difficulty": 4,
-      "prompt": "The board's decision to (i) ___ the old curriculum's emphasis on memorization was less radical than it appeared. The habit was so (ii) ___ among the school's teachers that its survival had long been (iii) ___ not on any rule but on the way the teachers themselves had been trained, and the rule's disappearance changed little in their classrooms.",
+      "prompt": "After years of (i) ___ research, squeezed into odd months between teaching terms, the historian produced an (ii) ___ study, one that left later scholars little to add. Yet its conclusions were strikingly (iii) ___, as if the author, having read everything, trusted no single source enough to commit to it.",
       "blanks": [
         [
-          "codify",
-          "jettison",
-          "reinstate"
+          "desultory",
+          "unflagging",
+          "clandestine"
         ],
         [
-          "dormant",
-          "discreet",
-          "pervasive"
+          "exhaustive",
+          "cursory",
+          "polemical"
         ],
         [
-          "incumbent",
-          "contingent",
-          "lavished"
+          "tentative",
+          "dogmatic",
+          "derivative"
         ]
       ],
       "key": {
         "sel": [
-          1,
-          2,
-          1
+          0,
+          0,
+          0
         ]
       },
       "explanation": {
-        "key": "(i) “The rule's disappearance” shows the board got rid of it: jettison (discard as unneeded, the secondary sense). It looked radical but changed little, because (ii) the habit was everywhere among the teachers (pervasive), and (iii) its survival depended on their training, not on the rule: contingent on.",
+        "key": "(i) Research done in odd months between terms was intermittent and unplanned: desultory. (ii) A study that left 'little to add' covered everything: exhaustive. (iii) 'Yet' and an author who 'trusted no single source enough to commit' point to hedged, uncommitted conclusions: tentative.",
         "distractors": {
-          "codify": "Writing the emphasis into rules contradicts “the rule's disappearance”.",
-          "reinstate": "Same: the rule disappeared, it was not restored.",
-          "dormant": "An inactive habit would not need to survive the rule's removal.",
-          "discreet": "Discretion says nothing about how widespread the habit was.",
-          "incumbent": "Fluent trap with “on”: incumbent on means obligatory for, not dependent on.",
-          "lavished": "Lavished on makes no sense with “survival”."
+          "unflagging": "Tireless and continuous; contradicted by 'odd months between teaching terms'.",
+          "clandestine": "Secret research is not what the odd months describe.",
+          "cursory": "A hasty study would leave much to add.",
+          "polemical": "An argumentative study clashes with conclusions too cautious to commit.",
+          "dogmatic": "Asserting opinions as certain is the opposite of refusing to commit.",
+          "derivative": "Unoriginal does not fit a study that left later scholars little to add."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "jettison",
+          "id": "desultory",
           "role": "key",
           "at": [
             0,
-            1
+            0
           ]
         },
         {
           "kind": "word",
-          "id": "dormant",
+          "id": "clandestine",
           "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exhaustive",
+          "role": "key",
           "at": [
             1,
             0
@@ -1189,7 +1208,7 @@
         },
         {
           "kind": "word",
-          "id": "discreet",
+          "id": "cursory",
           "role": "distractor",
           "at": [
             1,
@@ -1198,8 +1217,8 @@
         },
         {
           "kind": "word",
-          "id": "pervasive",
-          "role": "key",
+          "id": "polemical",
+          "role": "distractor",
           "at": [
             1,
             2
@@ -1207,8 +1226,8 @@
         },
         {
           "kind": "word",
-          "id": "incumbent",
-          "role": "distractor",
+          "id": "tentative",
+          "role": "key",
           "at": [
             2,
             0
@@ -1216,8 +1235,8 @@
         },
         {
           "kind": "word",
-          "id": "contingent",
-          "role": "key",
+          "id": "dogmatic",
+          "role": "distractor",
           "at": [
             2,
             1
@@ -1225,7 +1244,7 @@
         },
         {
           "kind": "word",
-          "id": "lavish",
+          "id": "derivative",
           "role": "distractor",
           "at": [
             2,
@@ -1238,62 +1257,38 @@
       "id": "s2q5",
       "section": 2,
       "type": "se",
-      "difficulty": 5,
-      "prompt": "Although it had been commissioned by the engineers' fiercest critics and was written in a tone of unrelieved reproach, the inquiry's report did more to ___ the engineers than any of their defenders had managed, for the flaw it identified in the steel was one that no inspection then in use could have detected.",
+      "difficulty": 4,
+      "prompt": "Fifty years after the trial, a laboratory test of the preserved samples did what no appeal had managed: it ___ the dead chemist, showing that the poison could not have come from any compound his shop had ever stocked.",
       "choices": [
-        "implicate",
-        "exculpate",
-        "lambaste",
-        "incriminate",
-        "mollify",
-        "exonerate"
+        "vindicated",
+        "condemned",
+        "exonerated",
+        "convicted",
+        "eulogized",
+        "exhumed"
       ],
       "key": {
         "sel": [
-          1,
-          5
+          0,
+          2
         ]
       },
       "explanation": {
-        "key": "“Although” sets the critics and the tone against the effect, and “than any of their defenders” says the effect is a defense. An undetectable flaw clears the engineers of blame: exculpate = exonerate.",
+        "key": "Showing the poison could not have come from his shop clears him of the crime that appeals had failed to overturn: vindicated and exonerated.",
         "distractors": {
-          "implicate": "Trap pair with incriminate: they match the critics and the reproachful tone, but the “for” clause shows the report cleared the engineers.",
-          "incriminate": "Trap pair with implicate.",
-          "lambaste": "Matches the tone, but a defense is what defenders attempt.",
-          "mollify": "Soothing the engineers is not what an undetectable flaw does, and it has no partner."
+          "condemned": "Trap pair with convicted: true synonyms for finding guilty, which the trial had already done; the test did the opposite.",
+          "convicted": "Trap pair with condemned: wrong direction.",
+          "eulogized": "Praising the dead is the bait of 'dead chemist'; a lab test clears, it does not praise.",
+          "exhumed": "Digging up is the bait of 'preserved samples'; the samples were tested, not the chemist."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "implicate",
-          "role": "distractor",
-          "at": [
-            0
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "exculpate",
+          "id": "vindicate",
           "role": "key",
           "at": [
-            1
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "lambaste",
-          "role": "distractor",
-          "at": [
-            2
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "mollify",
-          "role": "distractor",
-          "at": [
-            4
+            0
           ]
         },
         {
@@ -1301,10 +1296,11 @@
           "id": "exonerate",
           "role": "key",
           "at": [
-            5
+            2
           ]
         }
-      ]
+      ],
+      "revisits": "verbal-005:s2q6"
     },
     {
       "id": "s2q6",
@@ -1367,58 +1363,50 @@
       "section": 2,
       "type": "se",
       "difficulty": 5,
-      "prompt": "Colleagues who had braced themselves for her verdict on the proposal found it ___ rather than wounding: she named at once the flaw the committee had circled for months, and she said nothing at all about the people who had missed it.",
+      "prompt": "Diplomats who prized the envoy did so not for his candor, which was considerable in private, but for public statements so ___ that each side could read them as the other's concession.",
       "choices": [
-        "caustic",
-        "trenchant",
-        "terse",
-        "vitriolic",
-        "incisive",
-        "diffident"
+        "equivocal",
+        "forthright",
+        "oblique",
+        "candid",
+        "inflammatory",
+        "verbose"
       ],
       "key": {
         "sel": [
-          1,
-          4
+          0,
+          2
         ]
       },
       "explanation": {
-        "key": "“Rather than wounding” rules out harshness; naming at once a flaw others had circled for months is sharp perception: trenchant = incisive.",
+        "key": "'Not for his candor' sets the public statements against frankness, and statements each side reads as the other's concession are deliberately indirect and open to two readings: equivocal and oblique.",
         "distractors": {
-          "caustic": "Trap pair with vitriolic: they fit the colleagues' bracing, but “rather than wounding” excludes them.",
-          "vitriolic": "Trap pair with caustic.",
-          "terse": "Near decoy: she was quick, but brevity is not the point of the contrast with “wounding”, and terse has no partner.",
-          "diffident": "Naming the flaw at once is not timid."
+          "forthright": "Trap pair with candid: true synonyms for frankness, the private quality the sentence sets aside.",
+          "candid": "Trap pair with forthright: 'not for his candor'.",
+          "inflammatory": "Statements both sides could read as gains would calm, not inflame.",
+          "verbose": "Length is not what lets each side read a concession into them."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "caustic",
-          "role": "distractor",
+          "id": "equivocal",
+          "role": "key",
           "at": [
             0
           ]
         },
         {
           "kind": "word",
-          "id": "trenchant",
+          "id": "oblique",
           "role": "key",
-          "at": [
-            1
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "terse",
-          "role": "distractor",
           "at": [
             2
           ]
         },
         {
           "kind": "word",
-          "id": "vitriolic",
+          "id": "candid",
           "role": "distractor",
           "at": [
             3
@@ -1426,15 +1414,7 @@
         },
         {
           "kind": "word",
-          "id": "incisive",
-          "role": "key",
-          "at": [
-            4
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "diffident",
+          "id": "verbose",
           "role": "distractor",
           "at": [
             5
@@ -1693,24 +1673,24 @@
       "passageId": "a2",
       "prompt": "The reasoning in the argument is most vulnerable to criticism on the grounds that it",
       "choices": [
-        "takes for granted that hikers who carry satellite messengers are more experienced than those who do not",
-        "infers from the fact that most rescued hikers carried messengers that most hikers who carry messengers are rescued",
-        "fails to consider that hikers in trouble who carry a satellite messenger are more likely than other hikers in trouble to be located and rescued",
-        "ignores the possibility that some hikers carry devices other than satellite messengers",
-        "assumes that the proportion of hikers who carry messengers will continue to rise"
+        "assumes that what is true of each member of a group must be true of the group as a whole",
+        "relies on the judgment of critics who may be biased in the orchestra's favor",
+        "takes for granted that soloists are more accomplished than other musicians",
+        "fails to consider that the orchestra may have recently replaced some of its musicians",
+        "confuses the size of an orchestra with the quality of its playing"
       ],
       "key": {
         "sel": [
-          2
+          0
         ]
       },
       "explanation": {
-        "key": "The data count rescues, not troubles. A messenger summons help, so hikers who carry one are over-represented among the rescued even if they get into trouble no more often. The argument treats rescue as a measure of trouble (a sampling flaw).",
+        "key": "That every player is a fine soloist does not show that they play well together; ensemble playing needs things (blend, discipline, a shared conception) that no individual's skill guarantees. The argument moves from the parts to the whole.",
         "distractors": {
-          "takes for granted that hikers who carry satellite messengers are more experienced than those who do not": "The argument assumes nothing about experience; if anything, more experience would cut against its conclusion.",
-          "infers from the fact that most rescued hikers carried messengers that most hikers who carry messengers are rescued": "Describes a reversal the argument never makes.",
-          "ignores the possibility that some hikers carry devices other than satellite messengers": "Other devices would not explain the 70-versus-30 gap.",
-          "assumes that the proportion of hikers who carry messengers will continue to rise": "The argument makes no prediction about the future."
+          "relies on the judgment of critics who may be biased in the orchestra's favor": "No critics are cited; the premise is about the players' own accomplishments.",
+          "takes for granted that soloists are more accomplished than other musicians": "The argument needs no ranking of soloists against other players.",
+          "fails to consider that the orchestra may have recently replaced some of its musicians": "The premise is about the current musicians, so turnover does not matter.",
+          "confuses the size of an orchestra with the quality of its playing": "Size is never mentioned."
         }
       },
       "tags": [

@@ -5,7 +5,9 @@ import path from "node:path";
 import { TestSchema, type Question, type Test } from "../lib/types";
 import { passageSentences, splitSentences } from "../lib/sentences";
 import { parseNumber } from "../lib/scoring";
-import { containment, MIN_SHINGLES, shingles } from "../lib/ngram";
+import { containment, MIN_SHINGLES, SETUP_TH, shingles } from "../lib/ngram";
+import { measureTests, pastItems, primaryOf, setupOverlap, setupText } from "../lib/setup-history";
+import { REVISIT_MAX } from "../lib/priority/revisit";
 import { choiceIsWord } from "../lib/vocab-match";
 import { readTestFile } from "./lib/test-file";
 
@@ -16,6 +18,10 @@ export const TOP_CAP = 2;
 
 /** Verbal tests from this number on follow the official-format rules in verbalFormatRules (earlier tests predate them). */
 export const VERBAL_FORMAT_FROM = 15;
+/** Quant tests from this number on carry a `setup` and `variant` on every question (earlier ones were backfilled). */
+export const QUANT_SETUP_FROM = 11;
+/** Tests from these numbers on must not reuse an earlier setup (quant) or an earlier item's company (verbal); earlier ones were taken first. */
+export const NOVELTY_FROM = { quant: 7, verbal: 8 } as const;
 /** Minimum 3-blank TCs of 3-5 sentences, and minimum blanks whose choices are all phrases, per verbal test. */
 export const LONG_TC3_MIN = 2;
 export const PHRASE_BLANKS_MIN = 3;
@@ -96,6 +102,82 @@ function schemaWhere(raw: unknown, p: PropertyKey[]): string {
   return p.join(".") || "(test)";
 }
 
+/**
+ * Setup reuse against earlier tests of the measure (lower numbers, so the first use of a setup stays and later copies
+ * are flagged): an item whose masked stem matches an earlier item of the same primary concept is an error, and a
+ * variant already used twice for that concept is a warning.
+ */
+export function sameSetups(test: Test, dir = "content/tests"): { error: boolean; message: string }[] {
+  if (test.measure !== "quant" || Number(/-(\d+)$/.exec(test.id)?.[1] ?? 0) < NOVELTY_FROM.quant) return [];
+  const earlier = pastItems(test.measure, test.id, dir);
+  const out: { error: boolean; message: string }[] = [];
+  for (const q of test.questions) {
+    const c = primaryOf(q);
+    if (!c) continue;
+    const same = earlier.filter((e) => e.concept === c);
+    for (const e of same) {
+      const share = setupOverlap(setupText(q), e.text);
+      if (share >= SETUP_TH)
+        out.push({
+          error: true,
+          message: q.revisits === `${e.testId}:${e.qid}`
+            ? `${q.id}: revisits ${e.testId} ${e.qid} but keeps its setup (${Math.round(share * 100)}% skeleton overlap); a sibling keeps the insight and changes the structure (the brief names the change)`
+            : `${q.id}: same setup as ${e.testId} ${e.qid} (${c}, ${Math.round(share * 100)}% skeleton overlap); new numbers or names are not a new item, use a setup the brief does not list`,
+        });
+    }
+    // a revisit shares its earlier item's form on purpose
+    const reused = q.variant && !q.revisits ? same.filter((e) => e.variant === q.variant).length : 0;
+    if (reused >= 2) out.push({ error: false, message: `${q.id}: variant "${q.variant}" of ${c} is already in ${reused} earlier items; prefer the brief's variant` });
+  }
+  return out;
+}
+
+/**
+ * Revisit links (docs/PRIORITY.md): each names an item of an earlier test of the measure that shares the question's
+ * primary concept (quant) or a key word (verbal), and a test holds at most REVISIT_MAX of them.
+ */
+export function revisitRules(test: Test, dir = "content/tests"): string[] {
+  const out: string[] = [];
+  const no = (tid: string) => Number(/-(\d+)$/.exec(tid)?.[1] ?? 0);
+  const earlier = new Map(measureTests(test.measure, dir).filter((t) => no(t.id) < no(test.id)).flatMap((t) => t.questions.map((q): [string, Question] => [`${t.id}:${q.id}`, q])));
+  const keys = (q: Question) => q.tags.filter((t) => t.kind === "word" && t.role === "key").map((t) => t.id);
+  const links = test.questions.filter((q) => q.revisits);
+  if (links.length > REVISIT_MAX) out.push(`${links.length} revisits; at most ${REVISIT_MAX} per test, every other item must be new`);
+  for (const q of links) {
+    const e = earlier.get(q.revisits!);
+    if (!e) out.push(`${q.id}: revisits ${q.revisits}, which is not an item of an earlier ${test.measure} test`);
+    else if (test.measure === "quant" && primaryOf(e) !== primaryOf(q)) out.push(`${q.id}: revisits ${q.revisits} (${primaryOf(e)}) but tests ${primaryOf(q)}; a revisit keeps the concept`);
+    else if (test.measure === "verbal" && !keys(q).some((k) => keys(e).includes(k))) out.push(`${q.id}: revisits ${q.revisits} but shares no key word with it`);
+  }
+  return out;
+}
+
+/**
+ * Verbal: a key word may come back, its company may not. A TC or SE item that shares a key word with an earlier TC or
+ * SE item must not reuse any of that item's distractor words, and an SE item must not repeat its key pair.
+ */
+export function wordReuse(test: Test, dir = "content/tests"): string[] {
+  if (test.measure !== "verbal" || Number(/-(\d+)$/.exec(test.id)?.[1] ?? 0) < NOVELTY_FROM.verbal) return [];
+  const no = (tid: string) => Number(/-(\d+)$/.exec(tid)?.[1] ?? 0);
+  const words = (q: Question, role: string) => q.tags.filter((t) => t.kind === "word" && t.role === role).map((t) => t.id);
+  const earlier = measureTests("verbal", dir)
+    .filter((t) => no(t.id) < no(test.id))
+    .flatMap((t) => t.questions.filter((q) => q.type === "tc" || q.type === "se").map((q) => ({ ref: `${t.id} ${q.id}`, q })));
+  const out: string[] = [];
+  for (const q of test.questions.filter((x) => x.type === "tc" || x.type === "se")) {
+    const mine = words(q, "key");
+    for (const e of earlier) {
+      const shared = mine.filter((k) => words(e.q, "key").includes(k));
+      if (!shared.length) continue;
+      const sameD = words(q, "distractor").filter((d) => words(e.q, "distractor").includes(d));
+      if (sameD.length) out.push(`${q.id}: shares key ${shared.join(", ")} with ${e.ref} and also its distractor${sameD.length > 1 ? "s" : ""} ${sameD.join(", ")}; give the returning word new distractors`);
+      if (q.type === "se" && e.q.type === "se" && mine.length === 2 && mine.every((k) => words(e.q, "key").includes(k)))
+        out.push(`${q.id}: repeats the SE key pair ${mine.join(" / ")} of ${e.ref}; pair the word with a different synonym`);
+    }
+  }
+  return out;
+}
+
 export type Validation = { errors: string[]; warns: string[]; test?: Test; schemaFailed?: boolean };
 
 export function validateTest(raw: unknown, id: string): Validation {
@@ -116,7 +198,10 @@ export function validateTest(raw: unknown, id: string): Validation {
   const concepts = new Set((JSON.parse(fs.readFileSync("data/concepts.json", "utf8")) as { id: string }[]).map((c) => c.id));
   const skills = new Map((JSON.parse(fs.readFileSync("data/rc_skills.json", "utf8")) as { id: string; area: string }[]).map((c) => [c.id, c.area]));
 
-  const formatRules = test.measure === "verbal" && Number(/-(\d+)$/.exec(test.id)?.[1] ?? 0) >= VERBAL_FORMAT_FROM;
+  const testNo = (tid: string) => Number(/-(\d+)$/.exec(tid)?.[1] ?? 0);
+  const formatRules = test.measure === "verbal" && testNo(test.id) >= VERBAL_FORMAT_FROM;
+  const setupRules = test.measure === "quant" && testNo(test.id) >= QUANT_SETUP_FROM;
+  const variants = JSON.parse(fs.readFileSync("data/concept_variants.json", "utf8")) as Record<string, string[]>;
   const slotType = (q: Question) => (q.type === "tc" ? `tc${q.blanks?.length}` : q.subtype === "arg" ? "arg" : q.type === "numeric" || q.type === "mc" || q.type === "mc_multi" || q.type === "qc" ? q.type : q.setId ? "di" : q.type);
   const typeOf = (q: Question) => (q.setId ? "di" : slotType(q));
 
@@ -250,6 +335,13 @@ export function validateTest(raw: unknown, id: string): Validation {
       for (const ka of keyAts) if (!q.tags.some((t) => t.role === "key" && t.at?.join(",") === ka)) err(`${where}: key choice [${ka}] has no word tag (npm run -s check tags it)`);
     }
     if (test.measure === "quant" && !q.tags.some((t) => t.kind === "concept" && t.role === "primary")) err(`${where}: needs a primary concept tag`);
+    if (test.measure === "quant") {
+      const primary = q.tags.find((t) => t.kind === "concept" && t.role === "primary")?.id;
+      const options = primary ? variants[primary] ?? [] : [];
+      if (setupRules && !q.setup) err(`${where}: needs "setup", the setup in one abstract line (no numbers or story)`);
+      if (setupRules && options.length && !q.variant) err(`${where}: needs "variant", one of ${primary}'s variants in data/concept_variants.json (the brief names the slot's)`);
+      if (q.variant && !options.includes(q.variant)) err(`${where}: variant "${q.variant}" is not one of ${primary}'s in data/concept_variants.json`);
+    }
     if (q.type.startsWith("rc")) {
       // every reading question names the skill it tests; argument items test an argument skill
       const primaries = q.tags.filter((t) => t.kind === "concept" && t.role === "primary");
@@ -295,6 +387,9 @@ export function validateTest(raw: unknown, id: string): Validation {
     }
   } else warns.push("official reference corpus not found; skipped overlap check against it");
   for (const [source, where] of overlaps) err(`${[...where].join(", ")}: >${TH * 100}% 6-gram overlap with ${source}; rewrite from scratch`);
+  for (const m of sameSetups(test)) (m.error ? err : (x: string) => warns.push(x))(m.message);
+  for (const m of revisitRules(test)) err(`revisit: ${m}`);
+  for (const m of wordReuse(test)) err(m);
 
   return { errors, warns, test };
 }
