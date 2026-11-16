@@ -72,6 +72,12 @@ export function setupOverlap(a: string, b: string): number {
   return Math.max(containment(x, y), containment(y, x));
 }
 
+/** A few skeleton phrases two stems share, so a setup-overlap message shows what to reword. */
+export function sharedSkeleton(a: string, b: string, max = 3): string[] {
+  const y = skeletonShingles(b);
+  return [...skeletonShingles(a)].filter((g) => y.has(g)).slice(0, max);
+}
+
 /**
  * Earlier items grouped by setup across all concepts (a repeat can carry a different primary tag), then listed under
  * every concept that one of a group's items has as its primary. Most-used groups first; a group's label is its most

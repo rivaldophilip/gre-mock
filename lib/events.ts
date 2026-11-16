@@ -1,6 +1,6 @@
-import type { Answer, Question, Tag } from "./types";
+import type { Answer, Question, Tag, Test } from "./types";
 import { isAnswered, scoreAnswer } from "./scoring";
-import { WORD_W, CONCEPT_W, SLOW_MS } from "./priority/config";
+import { WORD_W, CONCEPT_W, READING_WPM, SLOW_MS } from "./priority/config";
 
 export type ItemKind = "word" | "concept";
 export type EventKind =
@@ -61,12 +61,23 @@ function wordEvent(q: Question, a: Answer | undefined, t: Tag, correct: boolean,
   return null;
 }
 
+/**
+ * Extra time before a question counts as slow: the first read of a passage that two or more questions share,
+ * granted to the question opened first on it (the rest only look back at it). 0 for every other question.
+ */
+export function readingAllowanceMs(test: Pick<Test, "questions" | "passages">, q: Question, openedFirst: boolean): number {
+  if (!q.passageId || !openedFirst) return 0;
+  if (test.questions.filter((x) => x.passageId === q.passageId).length < 2) return 0;
+  const p = test.passages.find((x) => x.id === q.passageId);
+  const words = p ? p.paragraphs.join(" ").split(/\s+/).filter(Boolean).length : 0;
+  return Math.round((words / READING_WPM) * 60_000);
+}
+
 function conceptEvents(
   t: Tag,
   correct: boolean,
   guessed: boolean,
-  timeMs: number,
-  measure: "verbal" | "quant",
+  slow: boolean,
 ): ItemEvent[] {
   const primary = t.role === "primary";
   const base = { kind: "concept" as const, itemId: t.id };
@@ -88,7 +99,7 @@ function conceptEvents(
         : { ...base, event: "concept_right_secondary", weight: CONCEPT_W.right_secondary },
     );
   }
-  if (timeMs > SLOW_MS[measure]) out.push({ ...base, event: "concept_slow", weight: CONCEPT_W.slow });
+  if (slow) out.push({ ...base, event: "concept_slow", weight: CONCEPT_W.slow });
   return out;
 }
 
@@ -97,20 +108,22 @@ export function eventsForResponse(
   q: Question,
   measure: "verbal" | "quant",
   a: Answer | undefined,
-  opts: { guessed: boolean; timeMs: number },
+  /** readingMs: the passage-reading allowance for this question (readingAllowanceMs) */
+  opts: { guessed: boolean; timeMs: number; readingMs?: number },
   passageTags: Tag[] = [],
 ): ItemEvent[] {
   // a blank (or partly filled) question says nothing about the words or concepts in it, so it records nothing
   if (!isAnswered(q, a)) return [];
   const correct = scoreAnswer(q, a);
+  const slow = opts.timeMs > SLOW_MS[measure] + (opts.readingMs ?? 0);
   const out: ItemEvent[] = [];
   for (const t of [...q.tags, ...passageTags]) {
     if (t.kind === "word") {
       const e = wordEvent(q, a, t, correct, opts.guessed);
       if (e) out.push(e);
-      if (e?.event === "key_correct" && opts.timeMs > SLOW_MS.verbal) out.push({ ...e, event: "key_slow", weight: WORD_W.key_slow });
+      if ((e?.event === "key_correct" || e?.event === "key_guessed") && slow) out.push({ ...e, event: "key_slow", weight: WORD_W.key_slow });
     } else {
-      out.push(...conceptEvents(t, correct, opts.guessed, opts.timeMs, measure));
+      out.push(...conceptEvents(t, correct, opts.guessed, slow));
     }
   }
   return out;

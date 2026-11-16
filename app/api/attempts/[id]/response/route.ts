@@ -3,7 +3,7 @@ import { z } from "zod";
 import { schema } from "@/lib/db";
 import { userDb } from "@/lib/session";
 import { eq } from "drizzle-orm";
-import { canReveal, finalizeResponse, isClosed, loadAttemptTest, pairKey, responseFor, sectionStatus, secondsLeft, setClockPaused } from "@/lib/attempts";
+import { canReveal, finalizeResponse, revealWords, isClosed, loadAttemptTest, pairKey, responseFor, sectionStatus, secondsLeft, setClockPaused } from "@/lib/attempts";
 import { AnswerSchema } from "@/lib/types";
 import { scoreAnswer } from "@/lib/scoring";
 
@@ -71,7 +71,7 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
     const fresh = await responseFor(a.id, qkey);
     return NextResponse.json({
       ok: true,
-      reveal: canReveal(a, test, q, fresh) ? { key: q.key, explanation: q.explanation, isCorrect: fresh.isCorrect } : null,
+      reveal: canReveal(a, test, q, fresh) ? { key: q.key, explanation: q.explanation, isCorrect: fresh.isCorrect, words: await revealWords(q) } : null,
       ...clock(),
     });
   }

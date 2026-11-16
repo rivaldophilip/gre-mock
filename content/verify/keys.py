@@ -9,7 +9,7 @@ Use in content/verify/<id>.py (run by `npm run -s check -- <id>`; example: quant
     t.where("s2q13", lambda x: x in ok) # MC multi: every choice whose number satisfies the predicate
     t.sel("s1q8", [0, 2, 3, 5])        # any choice type: computed indices, or letters ("C", "A C")
     t.value("s1q9", 8 * k)             # numeric entry: int, Fraction or float
-    t.choices("s2q11")                 # the choice texts, $ stripped, to parse yourself
+    t.choices("s2q11")                 # the choice texts, math $ stripped (\\$ kept as $), to parse yourself
     t.done()                           # lists unchecked questions; prints "27/27 keys verified"
 """
 import json
@@ -24,8 +24,8 @@ QC = "ABCD"  # A greater, B greater, equal, cannot be determined
 
 
 def number(text):
-    """A choice's value as a Fraction, or None: 10.8, -37, 36%, 3/8, \\dfrac{23}{4}, \\dfrac74."""
-    s = re.sub(r"\\[,!;]|\$|\s|\\left|\\right", "", str(text)).replace("−", "-").rstrip("%")
+    """A choice's value as a Fraction, or None: 10.8, -37, 36%, $20\\%$, \\$1{,}500, 85^\\circ, 3/8, \\dfrac{23}{4}, \\dfrac74."""
+    s = re.sub(r"\\[,!;$%]|\$|\s|\\left|\\right|\{,\}|\^\{?\\circ\}?", "", str(text)).replace("−", "-").rstrip("%")
     m = re.fullmatch(r"(-?)\\[dt]?frac\{?(-?\d+)\}?\{?(\d+)\}?", s)
     if m:
         return Fraction(int(m[2]), int(m[3])) * (-1 if m[1] else 1)
@@ -52,7 +52,7 @@ class Keys:
         return self.q[qid]
 
     def choices(self, qid):
-        return [c.replace("$", "").strip() for c in self._q(qid).get("choices") or []]
+        return [re.sub(r"(?<!\\)\$", "", c).replace("\\$", "$").strip() for c in self._q(qid).get("choices") or []]
 
     def _record(self, qid, ok, computed, key):
         self.checked.add(qid)

@@ -6,7 +6,7 @@ import { TestSchema, type Question, type Test } from "../lib/types";
 import { passageSentences, splitSentences } from "../lib/sentences";
 import { parseNumber } from "../lib/scoring";
 import { containment, MIN_SHINGLES, SETUP_TH, shingles } from "../lib/ngram";
-import { measureTests, pastItems, primaryOf, setupOverlap, setupText } from "../lib/setup-history";
+import { measureTests, pastItems, primaryOf, setupOverlap, setupText, sharedSkeleton } from "../lib/setup-history";
 import { REVISIT_MAX } from "../lib/priority/revisit";
 import { choiceIsWord } from "../lib/vocab-match";
 import { readTestFile } from "./lib/test-file";
@@ -117,13 +117,15 @@ export function sameSetups(test: Test, dir = "content/tests"): { error: boolean;
     const same = earlier.filter((e) => e.concept === c);
     for (const e of same) {
       const share = setupOverlap(setupText(q), e.text);
-      if (share >= SETUP_TH)
+      if (share >= SETUP_TH) {
+        const shared = sharedSkeleton(setupText(q), e.text).map((g) => `"${g}"`).join(", ");
         out.push({
           error: true,
           message: q.revisits === `${e.testId}:${e.qid}`
-            ? `${q.id}: revisits ${e.testId} ${e.qid} but keeps its setup (${Math.round(share * 100)}% skeleton overlap); a sibling keeps the insight and changes the structure (the brief names the change)`
-            : `${q.id}: same setup as ${e.testId} ${e.qid} (${c}, ${Math.round(share * 100)}% skeleton overlap); new numbers or names are not a new item, use a setup the brief does not list`,
+            ? `${q.id}: revisits ${e.testId} ${e.qid} but keeps its setup (${Math.round(share * 100)}% skeleton overlap); a sibling keeps the insight and changes the structure (the brief names the change); reword the stem too, shared wording: ${shared}`
+            : `${q.id}: same setup as ${e.testId} ${e.qid} (${c}, ${Math.round(share * 100)}% skeleton overlap); new numbers or names are not a new item, use a setup the brief does not list (shared wording: ${shared})`,
         });
+      }
     }
     // a revisit shares its earlier item's form on purpose
     const reused = q.variant && !q.revisits ? same.filter((e) => e.variant === q.variant).length : 0;

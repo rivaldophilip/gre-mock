@@ -46,7 +46,7 @@ export default async function Stats({ searchParams }: { searchParams: Promise<{ 
   ]);
   const vmap = new Map(vocab.map((v) => [v.id, v]));
   const now = new Date();
-  const ev = (kind: string): LoggedEvent[] => events.filter((e) => e.kind === kind).map((e) => ({ itemId: e.itemId, event: e.event, weight: e.weight, createdAt: e.createdAt }));
+  const ev = (kind: string): LoggedEvent[] => events.filter((e) => e.kind === kind).map((e) => ({ itemId: e.itemId, event: e.event, weight: e.weight, createdAt: e.createdAt, attemptId: e.attemptId }));
   const ws = scoreAll(vocab.map((v) => ({ id: v.id, yield: v.yield })), ev("word"), now);
   // quant concepts and reading/argument skills share the concepts table
   const isSkill = (area?: string) => area === "reading" || area === "argument";

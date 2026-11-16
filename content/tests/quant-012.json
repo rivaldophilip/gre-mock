@@ -1,0 +1,432 @@
+{
+  "id": "quant-012",
+  "measure": "quant",
+  "title": "Quant Hard Mock 12",
+  "sections": [{ "n": 1, "minutes": 21 }, { "n": 2, "minutes": 26 }],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Company Q has 400 employees, each in exactly one of four departments. Each employee either works remotely (no on-site days) or works on site the number of days per week shown for that department.",
+      "table": {
+        "head": ["Department", "Percent of the 400 employees", "Percent of the department working remotely", "On-site days per week for each non-remote employee"],
+        "rows": [
+          ["Engineering", "40%", "50%", "3"],
+          ["Sales", "25%", "20%", "4"],
+          ["Support", "20%", "75%", "4"],
+          ["Finance", "15%", "20%", "5"]
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1", "section": 1, "type": "qc", "difficulty": 3,
+      "prompt": "$a$ and $b$ are numbers such that $ab < 0$.",
+      "qc": { "a": "$|a-b|$", "b": "$|a|+|b|$" },
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Opposite signs: subtracting a number of the other sign adds the two sizes, so the quantities are equal.",
+        "steps": ["1. $ab < 0$ means $a$ and $b$ have opposite signs; say $a > 0 > b$.", "2. Then $a - b = a + |b| > 0$, so $|a-b| = |a| + |b|$.", "3. With $a < 0 < b$, $a - b = -(|a| + |b|)$, and the absolute value is again $|a|+|b|$."],
+        "fast": "Try $a = 2$, $b = -3$: $|5| = 5 = 2 + 3$; then $a = -2$, $b = 3$: $|-5| = 5$.",
+        "trap": "Carrying over the habit $|a+b| < |a|+|b|$ for opposite signs and choosing B; this is a difference, which is where opposite signs add."
+      },
+      "tags": [{ "kind": "concept", "id": "number-line-abs", "role": "primary" }],
+      "setup": "opposite signs: the absolute difference equals the sum of the absolute values",
+      "variant": "|a| + |b| against |a + b| for signed values"
+    },
+    {
+      "id": "s1q2", "section": 1, "type": "qc", "difficulty": 4,
+      "prompt": "$x$ and $y$ are different numbers, and $|x-4| = |y-4|$.",
+      "qc": { "a": "$x+y$", "b": "$8$" },
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Two different numbers at the same distance from 4 sit on opposite sides of it, so 4 is their midpoint and $x + y = 8$.",
+        "steps": ["1. $|x-4| = |y-4|$ means $x - 4 = y - 4$ or $x - 4 = -(y - 4)$.", "2. The first gives $x = y$, which the stem rules out.", "3. So $x - 4 = 4 - y$, that is $x + y = 8$."],
+        "fast": "Equal distances from 4 with $x \\ne y$: 4 is the midpoint, so the sum is $2 \\cdot 4$.",
+        "trap": "Choosing D because $x$ and $y$ can each take many values; their sum is fixed once $x = y$ is excluded."
+      },
+      "tags": [{ "kind": "concept", "id": "abs-value-inequalities", "role": "primary" }],
+      "setup": "two different numbers equidistant from a fixed point: their sum is twice that point",
+      "variant": "|x - a| = |x - b|: the point midway"
+    },
+    {
+      "id": "s1q3", "section": 1, "type": "qc", "difficulty": 4,
+      "prompt": "In triangle $ABC$, angle $BAC$ measures $50^\\circ$, and $AB \\ne AC$. The bisectors of angles $ABC$ and $ACB$ meet at point $P$.",
+      "qc": { "a": "The measure of angle $BPC$", "b": "$115^\\circ$" },
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Angles $B$ and $C$ add to $130^\\circ$, so their halves add to $65^\\circ$ and angle $BPC = 180 - 65 = 115^\\circ$, whatever the separate values of $B$ and $C$.",
+        "steps": ["1. Angle $ABC$ + angle $ACB = 180 - 50 = 130^\\circ$.", "2. In triangle $BPC$, angle $PBC$ + angle $PCB = \\tfrac12(130) = 65^\\circ$.", "3. Angle $BPC = 180 - 65 = 115^\\circ$ (in general, $90 + \\tfrac12$ angle $A$)."],
+        "fast": "Try any split of $130^\\circ$, such as $B = 100$, $C = 30$: $180 - 50 - 15 = 115$.",
+        "trap": "Choosing D because $AB \\ne AC$ leaves angles $B$ and $C$ unknown; only their sum matters."
+      },
+      "tags": [{ "kind": "concept", "id": "lines-angles", "role": "primary" }],
+      "setup": "two internal angle bisectors of a triangle meet: the angle between them is 90 plus half the third angle, whatever the other two",
+      "variant": "angle bisectors"
+    },
+    {
+      "id": "s1q4", "section": 1, "type": "qc", "difficulty": 4,
+      "prompt": "$0 < x < 1$",
+      "qc": { "a": "The average (arithmetic mean) of $x$ and $\\dfrac1x$", "b": "$1+x$" },
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "The mean of $x$ and $1/x$ is huge for small $x$ but falls below $1 + x$ once $x$ passes $\\sqrt2 - 1$, so the relationship cannot be determined.",
+        "steps": ["1. A minus B is $\\dfrac{x + 1/x}{2} - 1 - x = \\dfrac{1 - 2x - x^2}{2x}$.", "2. The denominator is positive, and $1 - 2x - x^2 = 0$ at $x = \\sqrt2 - 1 \\approx 0.41$.", "3. For $x = 0.1$: A $= 5.05 >$ B $= 1.1$. For $x = 0.5$: A $= 1.25 <$ B $= 1.5$."],
+        "fast": "Test a tiny fraction and one near 1: $x = 0.1$ makes A larger, $x = 0.9$ makes B larger.",
+        "trap": "Testing only $x = \\tfrac12$ and choosing B, forgetting how fast $1/x$ grows near 0."
+      },
+      "tags": [{ "kind": "concept", "id": "number-sense-qc", "role": "primary" }],
+      "setup": "x between 0 and 1: the mean of x and its reciprocal against 1 + x",
+      "variant": "sign cases: negatives, zero and fractions between 0 and 1",
+      "revisits": "quant-001:s1q1"
+    },
+    {
+      "id": "s1q5", "section": 1, "type": "mc", "difficulty": 3,
+      "prompt": "A traveler exchanges $\\$500$ for euros at a rate of 0.90 euro per dollar, spends 300 euros during a trip, and then exchanges all the remaining euros back into dollars at a rate of $\\$1.08$ per euro. How many dollars does the traveler receive?",
+      "choices": ["$\\$135$", "$\\$150$", "$\\$162$", "$\\$167$", "$\\$180$"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "$500 \\times 0.90 = 450$ euros; $450 - 300 = 150$ euros left; $150 \\times 1.08 = \\$162$.",
+        "steps": ["1. Dollars to euros: $500 \\times 0.90 = 450$ euros.", "2. After spending: $450 - 300 = 150$ euros.", "3. Back to dollars at $\\$1.08$ per euro: $150 \\times 1.08 = 162$."],
+        "fast": "Euros left are 150; each is worth a bit more than a dollar, so the answer is just above 150.",
+        "trap": "Dividing by 0.90 on the way back ($150/0.9 \\approx 167$) instead of using the stated return rate."
+      },
+      "tags": [{ "kind": "concept", "id": "units-conversion", "role": "primary" }],
+      "setup": "money converted out, part spent abroad, the remainder converted back at a different rate",
+      "variant": "currency or exchange rates"
+    },
+    {
+      "id": "s1q6", "section": 1, "type": "mc", "difficulty": 4,
+      "prompt": "A jar holds only nickels and dimes, worth $\\$4.10$ in all. If each nickel were replaced by a dime and each dime were replaced by a nickel, the coins in the jar would be worth $\\$3.40$. How many coins are in the jar?",
+      "choices": ["14", "32", "46", "50", "64"],
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "Adding the two values counts every coin once as a nickel and once as a dime: $15(n + d) = 410 + 340 = 750$ cents, so $n + d = 50$.",
+        "steps": ["1. With $n$ nickels and $d$ dimes: $5n + 10d = 410$ and $10n + 5d = 340$.", "2. Add: $15n + 15d = 750$, so $n + d = 50$.", "3. (Subtracting gives $d - n = 14$, so $d = 32$, $n = 18$; check $90 + 320 = 410$.)"],
+        "fast": "Add the equations; the question asks for the total, which falls out without solving for each coin.",
+        "trap": "Solving for the dimes (32) or the difference (14) and stopping there."
+      },
+      "tags": [{ "kind": "concept", "id": "word-problems-age-sum", "role": "primary" }],
+      "setup": "the value of two coin types and the value if their counts were swapped; the total count from adding the two equations",
+      "variant": "coins or tickets of two denominations"
+    },
+    {
+      "id": "s1q7", "section": 1, "type": "mc", "difficulty": 5,
+      "prompt": "A park is a triangle whose three straight edges are 10, 17 and 21 meters long. The 10-meter edge runs along a straight road that extends past both ends of that edge. A gardener walks from the corner opposite the 10-meter edge straight to the road by the shortest route. How many meters does the gardener walk?",
+      "choices": ["$8$", "$\\dfrac{42}{5}$", "$\\dfrac{168}{17}$", "$12$", "$\\dfrac{84}{5}$"],
+      "key": { "sel": [4] },
+      "explanation": {
+        "key": "The area is 84 (Heron, or the altitude 8 to the side 21). The altitude to side 10 is $2 \\cdot 84 / 10 = 84/5$; it falls outside the triangle, since the angle opposite 21 is obtuse.",
+        "steps": ["1. $s = 24$, area $= \\sqrt{24 \\cdot 14 \\cdot 7 \\cdot 3} = \\sqrt{7056} = 84$.", "2. Altitude to the side of length 10: $h = 2 \\cdot 84 / 10 = 84/5$.", "3. Check: $10^2 + 17^2 = 389 < 21^2$, so the triangle is obtuse and this altitude's foot lies on the extension of the side of length 10."],
+        "fast": "Split side 21 into 6 and 15 with the altitude 8 ($6$-$8$-$10$ and $8$-$15$-$17$), so the area is $\\tfrac12 \\cdot 21 \\cdot 8 = 84$; then divide $2 \\cdot 84$ by 10.",
+        "trap": "Answering 8, the clean altitude to the longest side, or trying to split side 10 into two pieces inside the triangle (the foot is outside it)."
+      },
+      "tags": [{ "kind": "concept", "id": "triangles", "role": "primary" }],
+      "setup": "obtuse triangle with three integer sides: the altitude to the shortest side falls outside it; find it from the area",
+      "variant": "triangles sharing a height: area ratio from the base ratio",
+      "revisits": "quant-001:s2q10"
+    },
+    {
+      "id": "s1q8", "section": 1, "type": "mc_multi", "difficulty": 4,
+      "prompt": "$r$ is a nonzero rational number and $s$ is an irrational number. Which of the following must be irrational? Indicate all such numbers.",
+      "choices": ["$r+s$", "$rs$", "$s^2$", "$\\dfrac{s}{r}$", "$s+\\dfrac{1}{s}$", "$(r+s)^2$"],
+      "key": { "sel": [0, 1, 3] },
+      "explanation": {
+        "key": "A rational number cannot be added to, or (when nonzero) multiply or divide, an irrational one and give a rational result. Squaring or adding a reciprocal can cancel the irrational part.",
+        "steps": ["1. If $r + s$ were rational, $s = (r + s) - r$ would be rational: so $r + s$ is irrational.", "2. If $rs$ or $s/r$ were rational, dividing or multiplying by the nonzero rational $r$ would make $s$ rational: both irrational.", "3. $s = \\sqrt2$ gives $s^2 = 2$, rational.", "4. $s = \\dfrac{3+\\sqrt5}{2}$ has $\\dfrac1s = \\dfrac{3-\\sqrt5}{2}$, so $s + \\dfrac1s = 3$, rational.", "5. $r = 1$, $s = \\sqrt2 - 1$ gives $(r+s)^2 = 2$, rational."],
+        "fast": "Prove the three closure cases by solving back for $s$; break each other choice with one conjugate example.",
+        "trap": "Calling $(r+s)^2$ irrational because $r + s$ is, or $s + \\tfrac1s$ irrational because $s = \\sqrt2$ makes it so: \"must\" needs every $s$, and one rational example is enough to reject."
+      },
+      "tags": [{ "kind": "concept", "id": "fractions-decimals", "role": "primary" }],
+      "setup": "a nonzero rational combined with an irrational: closure under sum, product and quotient against squares and reciprocal sums that can cancel",
+      "variant": "rational vs irrational: which expressions must be rational"
+    },
+    {
+      "id": "s1q9", "section": 1, "type": "numeric", "difficulty": 3,
+      "prompt": "The first term of a list of numbers is 3, and each later term is 1 less than twice the term just before it. Counting the first term as term 1, what is the number of the first term in the list that is greater than $1{,}000$?",
+      "numeric": { "kind": "single" },
+      "key": { "value": "10" },
+      "explanation": {
+        "key": "The terms are $3, 5, 9, 17, \\dots$, that is $a_n = 2^n + 1$; $a_9 = 513$ and $a_{10} = 1{,}025$.",
+        "steps": ["1. $a_{n+1} - 1 = 2(a_n - 1)$, so $a_n - 1$ doubles each time, starting from $a_1 - 1 = 2$.", "2. Hence $a_n = 2^n + 1$.", "3. $2^9 + 1 = 513 \\le 1{,}000 < 1{,}025 = 2^{10} + 1$, so $n = 10$."],
+        "fast": "Write a few terms: 3, 5, 9, 17, 33: each is one more than a power of 2.",
+        "trap": "Off by one: answering 9 by matching $2^{n-1}$ instead of $2^n$, or stopping at the first term above 500."
+      },
+      "tags": [{ "kind": "concept", "id": "sequences-patterns", "role": "primary" }],
+      "setup": "linear recursion doubling minus one: shift by 1 to get powers of 2; first term past a bound",
+      "variant": "recursive sequence: find a term or a sum"
+    },
+    {
+      "id": "s1q10", "section": 1, "type": "mc", "setId": "di1", "figureId": "fig1", "difficulty": 3,
+      "prompt": "The number of Finance employees who do not work remotely is how many times the number of Support employees who do not work remotely?",
+      "choices": ["0.2", "0.75", "1.6", "2.4", "3.2"],
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "Non-remote Finance: $0.15 \\cdot 0.80 = 12\\%$ of 400 = 48. Non-remote Support: $0.20 \\cdot 0.25 = 5\\%$ of 400 = 20. Ratio $48/20 = 2.4$.",
+        "steps": ["1. Non-remote share of each department is 100% minus its remote percent: Finance 80%, Support 25%.", "2. Finance: $0.80 \\cdot 60 = 48$; Support: $0.25 \\cdot 80 = 20$.", "3. $48 / 20 = 2.4$."],
+        "fast": "Compare $0.15 \\cdot 0.8 = 0.12$ with $0.20 \\cdot 0.25 = 0.05$: the 400 cancels.",
+        "trap": "0.2 uses the remote percents instead of their complements ($12/60$); 0.75 compares department sizes only; 3.2 compares the non-remote percents (80/25) without the department sizes."
+      },
+      "tags": [{ "kind": "concept", "id": "data-interpretation-calc", "role": "primary" }],
+      "setup": "DI: compare two departments' non-remote counts, each the complement of a within-department percent applied to a percent of the whole",
+      "variant": "percent of a percent across two charts"
+    },
+    {
+      "id": "s1q11", "section": 1, "type": "mc", "setId": "di1", "figureId": "fig1", "difficulty": 4,
+      "prompt": "An employee of Company Q is selected at random. Let $X$ be the number of days per week that the selected employee works on site, where $X = 0$ for a remote employee. What is the expected value of $X$?",
+      "choices": ["2.20", "2.43", "3.75", "3.86", "4.00"],
+      "key": { "sel": [0] },
+      "explanation": {
+        "key": "$E(X) = 0.40(0.50)(3) + 0.25(0.80)(4) + 0.20(0.25)(4) + 0.15(0.80)(5) = 0.6 + 0.8 + 0.2 + 0.6 = 2.2$.",
+        "steps": ["1. P(an on-site employee of a department) = department share times its non-remote share.", "2. Engineering: $0.4 \\cdot 0.5 = 0.20$ at 3 days; Sales: $0.25 \\cdot 0.8 = 0.20$ at 4; Support: $0.2 \\cdot 0.25 = 0.05$ at 4; Finance: $0.15 \\cdot 0.8 = 0.12$ at 5; remote (0 days) the rest.", "3. $E(X) = 0.6 + 0.8 + 0.2 + 0.6 = 2.2$."],
+        "fast": "Total on-site days: $80 \\cdot 3 + 80 \\cdot 4 + 20 \\cdot 4 + 48 \\cdot 5 = 880$; divide by 400.",
+        "trap": "3.75 ignores the remote employees; 3.86 averages over on-site employees only (880/228); 2.43 averages the four departments without weighting them."
+      },
+      "tags": [{ "kind": "concept", "id": "random-variables", "role": "primary" }],
+      "setup": "DI: expected days on site per employee, weighting by department share and the non-remote share, remote counted as 0",
+      "variant": "expected value from a probability table"
+    },
+    {
+      "id": "s1q12", "section": 1, "type": "mc", "setId": "di1", "figureId": "fig1", "difficulty": 5,
+      "prompt": "Finance employees of Company Q are selected one at a time, at random and without replacement. Approximately what is the probability that the first remote employee selected is the third employee selected?",
+      "choices": ["0.031", "0.128", "0.132", "0.207", "0.396"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Finance has 60 employees, 12 remote and 48 on site. The first two picks must be on site and the third remote: $\\dfrac{48}{60} \\cdot \\dfrac{47}{59} \\cdot \\dfrac{12}{58} \\approx 0.132$.",
+        "steps": ["1. Finance: $0.15 \\cdot 400 = 60$ employees; remote $0.2 \\cdot 60 = 12$; on site 48.", "2. P(first on site) $= 48/60$; then P(second on site) $= 47/59$; then P(third remote) $= 12/58$.", "3. Product $= 27{,}072/205{,}320 \\approx 0.1319$."],
+        "fast": "Multiply the three conditional probabilities in order; each denominator drops by one.",
+        "trap": "0.128 treats the picks as independent ($0.8^2 \\cdot 0.2$); 0.396 multiplies by 3 as if the remote pick could come in any of the three positions; 0.207 is only the last factor."
+      },
+      "tags": [{ "kind": "concept", "id": "probability-conditional", "role": "primary" }],
+      "setup": "DI: draws without replacement from one group until the first of a category appears; probability it is the k-th draw",
+      "variant": "dependent events in sequence"
+    },
+    {
+      "id": "s2q1", "section": 2, "type": "qc", "difficulty": 4,
+      "prompt": "For every number $x$, the function $f$ satisfies $f(-x) = -f(x)$ and $f(x+4) = f(x)$. Also, $f(1) = 3$.",
+      "qc": { "a": "$f(3)$", "b": "$f(2)$" },
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "$f(3) = f(-1) = -3$, and $f(2) = f(-2) = -f(2)$ forces $f(2) = 0$.",
+        "steps": ["1. Period 4: $f(3) = f(3 - 4) = f(-1)$.", "2. Odd: $f(-1) = -f(1) = -3$.", "3. $f(2) = f(2 - 4) = f(-2) = -f(2)$, so $f(2) = 0$.", "4. $-3 < 0$."],
+        "fast": "Shift 3 and 2 down by the period to $-1$ and $-2$, then use oddness.",
+        "trap": "Choosing D because only $f(1)$ is given; the two properties together pin down both values."
+      },
+      "tags": [{ "kind": "concept", "id": "functions", "role": "primary" }],
+      "setup": "odd function with a period: one value fixes the value two units away and forces a zero at half the period",
+      "variant": "a function property such as f(-x) = -f(x) or f(x + 1) = f(x)"
+    },
+    {
+      "id": "s2q2", "section": 2, "type": "qc", "difficulty": 5,
+      "prompt": "Eight people, including Ann and Bob, are seated at random in a row of eight seats, every seating being equally likely.",
+      "qc": { "a": "The probability that Ann and Bob are not seated next to each other and neither of them sits in an end seat", "b": "$\\dfrac{3}{8}$" },
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "Only Ann's and Bob's seats matter: both must be among the 6 middle seats and not adjacent, which is 10 of the 28 equally likely pairs of seats: $\\dfrac{10}{28} = \\dfrac{5}{14} < \\dfrac38$.",
+        "steps": ["1. The pair of seats Ann and Bob occupy is equally likely to be any of $\\binom82 = 28$ pairs.", "2. Pairs inside the 6 middle seats: $\\binom62 = 15$; adjacent ones among them: 5.", "3. Favorable: $15 - 5 = 10$, so A $= 10/28 = 5/14 \\approx 0.357 < 0.375$."],
+        "fast": "Compare $5/14$ with $3/8$: $5 \\cdot 8 = 40 < 42 = 3 \\cdot 14$.",
+        "trap": "Multiplying P(neither at an end) $= 15/28$ by P(not adjacent) $= 3/4$ as if the events were independent gives $45/112 \\approx 0.40$ and choice A."
+      },
+      "tags": [{ "kind": "concept", "id": "counting-restrictions", "role": "primary" }],
+      "setup": "row seating as a probability: two people non-adjacent with neither at an end, against a fraction",
+      "variant": "identical items arranged with a restriction",
+      "revisits": "quant-001:s1q7"
+    },
+    {
+      "id": "s2q3", "section": 2, "type": "qc", "difficulty": 5,
+      "prompt": "The graph of the function $f$ in the $xy$-plane is symmetric about the $y$-axis, and $g(x) = f(x-3)$ for every number $x$.",
+      "qc": { "a": "$g(-2)$", "b": "$g(8)$" },
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "$g(-2) = f(-5)$ and $g(8) = f(5)$, and symmetry about the $y$-axis gives $f(-5) = f(5)$.",
+        "steps": ["1. $g(-2) = f(-2 - 3) = f(-5)$.", "2. $g(8) = f(8 - 3) = f(5)$.", "3. The graph of $f$ is symmetric about the $y$-axis, so $f(-x) = f(x)$; the quantities are equal."],
+        "fast": "The graph of $g$ is the graph of $f$ moved 3 to the right, so it is symmetric about $x = 3$; $-2$ and $8$ are both 5 from 3.",
+        "trap": "Moving the axis the wrong way (to $x = -3$), which pairs $-2$ with $-4$ and suggests D."
+      },
+      "tags": [{ "kind": "concept", "id": "graphs-of-functions", "role": "primary" }],
+      "setup": "a graph symmetric about the y-axis shifted horizontally: compare values at two points equidistant from the new axis",
+      "variant": "symmetry about an axis, the origin or y = x"
+    },
+    {
+      "id": "s2q4", "section": 2, "type": "qc", "difficulty": 4,
+      "prompt": "The weights of the bags filled by a machine are approximately normally distributed with mean 50 kilograms and standard deviation 4 kilograms. One bag is chosen at random.",
+      "qc": { "a": "The probability that the bag weighs between 54 kilograms and 62 kilograms", "b": "$0.20$" },
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "54 is one standard deviation above the mean and 62 is three above: about $\\dfrac{99.7\\% - 68\\%}{2} \\approx 16\\% < 20\\%$.",
+        "steps": ["1. $54 = 50 + 4$ (one SD above); $62 = 50 + 3 \\cdot 4$ (three SDs above).", "2. Within three SDs: about 99.7%; within one SD: about 68%. Between them, on both sides together: about 31.7%.", "3. Only the upper side counts: about $31.7\\%/2 \\approx 15.9\\%$, less than 20%."],
+        "fast": "Beyond one SD above the mean is about 16%, and the interval is part of that, so it is under 0.16.",
+        "trap": "Taking $99.7\\% - 68\\% \\approx 32\\%$ without halving, which counts both tails and gives A."
+      },
+      "tags": [{ "kind": "concept", "id": "normal-distribution", "role": "primary" }],
+      "setup": "an interval from one to three standard deviations above the mean: one tail band only, against a value",
+      "variant": "the 68-95-99.7 rule for a probability"
+    },
+    {
+      "id": "s2q5", "section": 2, "type": "qc", "difficulty": 5,
+      "prompt": "A container shaped like a right circular cone, with its vertex pointing down, has a base radius of 6 inches and a height of 12 inches. It holds water to a depth of 6 inches. All of this water is poured into an empty right circular cylinder with a base radius of 3 inches.",
+      "qc": { "a": "The depth of the water in the cylinder, in inches", "b": "$3$" },
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "At depth 6 the water is a cone of radius 3 and height 6, volume $\\tfrac13\\pi \\cdot 9 \\cdot 6 = 18\\pi$; in the cylinder, $9\\pi h = 18\\pi$ gives $h = 2 < 3$.",
+        "steps": ["1. The water forms a smaller cone similar to the container; half the height means half the radius: 3.", "2. Water volume $= \\tfrac13 \\pi (3^2)(6) = 18\\pi$, one-eighth of the full $144\\pi$.", "3. Cylinder: $\\pi (3^2) h = 18\\pi$, so $h = 2$."],
+        "fast": "Half the depth holds $(1/2)^3 = 1/8$ of the cone: $144\\pi/8 = 18\\pi$.",
+        "trap": "Taking a half-depth cone to be half full ($72\\pi$), which gives a depth of 8 and choice A."
+      },
+      "tags": [{ "kind": "concept", "id": "solids-volume", "role": "primary" }],
+      "setup": "a cone filled to half its height poured into a cylinder: the water's volume scales with the cube of the depth",
+      "variant": "liquid poured between containers"
+    },
+    {
+      "id": "s2q6", "section": 2, "type": "mc", "difficulty": 4,
+      "prompt": "In the $xy$-plane, line $\\ell$ has negative slope and passes through the point $(2, 3)$. Line $\\ell$ and the two coordinate axes form a triangle with area 12. What is the slope of $\\ell$?",
+      "choices": ["$-3$", "$-2$", "$-\\dfrac{3}{2}$", "$-1$", "$-\\dfrac{2}{3}$"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "With intercepts $p$ and $q$: $\\dfrac2p + \\dfrac3q = 1$ and $pq = 24$, so $3p + 2q = 24$, which gives $p = 4$, $q = 6$ and slope $-6/4 = -3/2$.",
+        "steps": ["1. The line is $\\dfrac xp + \\dfrac yq = 1$ with $p, q > 0$; through $(2,3)$: $\\dfrac2p + \\dfrac3q = 1$, so $2q + 3p = pq$.", "2. Area: $\\tfrac12 pq = 12$, so $pq = 24$ and $3p + 2q = 24$.", "3. $q = 24/p$: $3p + 48/p = 24$, so $p^2 - 8p + 16 = 0$ and $p = 4$, $q = 6$.", "4. Slope $= -q/p = -3/2$."],
+        "fast": "Test the choices: slope $-3/2$ through $(2,3)$ hits the axes at $(4,0)$ and $(0,6)$, area $\\tfrac12 \\cdot 4 \\cdot 6 = 12$.",
+        "trap": "$-2/3$ swaps rise and run (intercepts read as $x = 6$, $y = 4$)."
+      },
+      "tags": [{ "kind": "concept", "id": "geometry-coordinate", "role": "primary" }],
+      "setup": "a line through a fixed first-quadrant point cuts off a triangle of given area with the axes; the slope from the two intercepts",
+      "variant": "a triangle's vertices on the axes"
+    },
+    {
+      "id": "s2q7", "section": 2, "type": "mc", "difficulty": 4,
+      "prompt": "How many ordered pairs $(x, y)$ of positive integers satisfy both $4x + 6y = 90$ and $6x + 9y = 135$?",
+      "choices": ["0", "1", "7", "8", "15"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Both equations reduce to $2x + 3y = 45$, so the system is one line; its positive integer points have $x = 3, 6, \\dots, 21$: 7 pairs.",
+        "steps": ["1. Divide the first equation by 2 and the second by 3: both become $2x + 3y = 45$.", "2. $3y = 45 - 2x$ needs $x$ to be a multiple of 3, and $y > 0$ needs $x < 22.5$.", "3. $x = 3, 6, 9, 12, 15, 18, 21$ give $y = 13, 11, 9, 7, 5, 3, 1$: 7 pairs."],
+        "fast": "Spot the common equation, then count multiples of 3 from 3 to 21.",
+        "trap": "Solving as if the lines crossed once (1), or counting $x = 0$ (8)."
+      },
+      "tags": [{ "kind": "concept", "id": "linear-equations", "role": "primary" }],
+      "setup": "two equations that are multiples of one line: count the positive integer solutions of that line",
+      "variant": "a system with no solution or infinitely many"
+    },
+    {
+      "id": "s2q8", "section": 2, "type": "mc", "difficulty": 5,
+      "prompt": "Points $A$, $B$ and $C$ lie on a circle with center $O$, and $C$ and $O$ lie on opposite sides of chord $AB$. If the measure of angle $OAB$ is $25^\\circ$, what is the measure of angle $ACB$?",
+      "choices": ["$25^\\circ$", "$50^\\circ$", "$65^\\circ$", "$115^\\circ$", "$130^\\circ$"],
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "$OA = OB$, so angle $AOB = 180 - 2 \\cdot 25 = 130^\\circ$. $C$ is on the minor arc, so angle $ACB$ subtends the major arc of $230^\\circ$: half is $115^\\circ$.",
+        "steps": ["1. Triangle $OAB$ is isosceles: angle $OBA = 25^\\circ$, so angle $AOB = 130^\\circ$.", "2. $C$ lies on the far side of $AB$ from $O$, on the minor arc $AB$.", "3. An inscribed angle is half the arc it intercepts; angle $ACB$ intercepts the major arc, $360 - 130 = 230^\\circ$, so it is $115^\\circ$."],
+        "fast": "Half the central angle is $65^\\circ$ for a point on the major arc; a point on the minor arc gets the supplement, $180 - 65 = 115$.",
+        "trap": "Halving the $130^\\circ$ central angle (65) without noticing that $C$ is on the minor arc."
+      },
+      "tags": [{ "kind": "concept", "id": "circles", "role": "primary" }],
+      "setup": "a radius-radius isosceles triangle gives the central angle; the inscribed angle from a point on the minor arc uses the reflex arc",
+      "variant": "inscribed angle vs central angle"
+    },
+    {
+      "id": "s2q9", "section": 2, "type": "mc", "difficulty": 4,
+      "prompt": "A salesperson can choose between two monthly pay plans. Plan A pays $\\$1{,}500$ plus 4 percent of the month's total sales. Plan B pays 10 percent of the part of the month's sales above $\\$15{,}000$ and nothing on the first $\\$15{,}000$. For what amount of monthly sales do the two plans pay the same?",
+      "choices": ["$\\$25{,}000$", "$\\$37{,}500$", "$\\$40{,}000$", "$\\$50{,}000$", "$\\$75{,}000$"],
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "$1{,}500 + 0.04S = 0.10(S - 15{,}000)$ gives $3{,}000 = 0.06S$, so $S = 50{,}000$.",
+        "steps": ["1. Below $\\$15{,}000$ Plan B pays nothing, so equality needs $S > 15{,}000$.", "2. $1{,}500 + 0.04S = 0.10S - 1{,}500$.", "3. $0.06S = 3{,}000$, so $S = 50{,}000$."],
+        "fast": "Check $50{,}000$: Plan A $= 1{,}500 + 2{,}000 = 3{,}500$; Plan B $= 0.10 \\cdot 35{,}000 = 3{,}500$.",
+        "trap": "Dropping the threshold ($1{,}500 = 0.06S$ gives $25{,}000$)."
+      },
+      "tags": [{ "kind": "concept", "id": "word-problems-interest", "role": "primary" }],
+      "setup": "salary plus a flat commission against commission only above a threshold: the break-even sales",
+      "variant": "tiered pricing or commission"
+    },
+    {
+      "id": "s2q10", "section": 2, "type": "mc", "difficulty": 3,
+      "prompt": "The value of $(9.95)^2 - (9.05)^2$ is closest to which of the following?",
+      "choices": ["1", "9", "17", "19", "81"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Factor before estimating: $(9.95 - 9.05)(9.95 + 9.05) = 0.9 \\times 19 = 17.1$.",
+        "steps": ["1. $a^2 - b^2 = (a - b)(a + b)$.", "2. $a - b = 0.90$ and $a + b = 19.00$.", "3. $0.9 \\times 19 = 17.1$, closest to 17."],
+        "fast": "The difference of squares turns it into one product of two exact numbers.",
+        "trap": "Rounding each number first ($10^2 - 9^2 = 19$): the small rounding errors go in opposite directions and add up after squaring."
+      },
+      "tags": [{ "kind": "concept", "id": "estimation-sigfig", "role": "primary" }],
+      "setup": "a difference of squares of two decimals near consecutive whole numbers: rounding each term misleads, factoring gives the product",
+      "variant": "estimating a product or quotient to pick the closest choice"
+    },
+    {
+      "id": "s2q11", "section": 2, "type": "mc", "difficulty": 5,
+      "prompt": "An amount of $\\$15{,}000$ is invested for 2 years at $r$ percent annual interest, compounded annually. The interest it earns is $\\$54$ more than the interest that $\\$15{,}000$ would earn in 2 years at $r$ percent simple annual interest. How much interest would the simple-interest investment earn in the 2 years?",
+      "choices": ["$\\$900$", "$\\$1{,}800$", "$\\$1{,}854$", "$\\$1{,}908$", "$\\$3{,}600$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "Over 2 years compound interest exceeds simple interest by $P\\left(\\tfrac{r}{100}\\right)^2$: $15{,}000 (r/100)^2 = 54$ gives $r = 6$, so the simple interest is $15{,}000 \\cdot 0.06 \\cdot 2 = \\$1{,}800$.",
+        "steps": ["1. Compound: $P(1 + i)^2 - P = 2Pi + Pi^2$; simple: $2Pi$, with $i = r/100$.", "2. Difference $Pi^2 = 54$: $i^2 = 54/15{,}000 = 0.0036$, so $i = 0.06$.", "3. Simple interest $= 2 \\cdot 15{,}000 \\cdot 0.06 = 1{,}800$."],
+        "fast": "The extra is the interest on the first year's interest: $900 \\cdot i = 54$ with $900 = 15{,}000\\,i$ gives $i = 0.06$.",
+        "trap": "Answering $\\$1{,}854$, the compound interest, instead of the simple interest asked for."
+      },
+      "tags": [{ "kind": "concept", "id": "exponential-growth", "role": "primary" }],
+      "setup": "the two-year gap between compound and simple interest is the principal times the rate squared: recover the rate, then the simple interest",
+      "variant": "compound interest against simple interest"
+    },
+    {
+      "id": "s2q12", "section": 2, "type": "mc", "difficulty": 4,
+      "prompt": "The regular hexagon $ABCDEF$ has area 36. What is the area of triangle $ABD$?",
+      "choices": ["6", "9", "12", "16", "18"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Triangle $ABD$ is right-angled at $B$ ($AD$ is a diameter of the circumscribed circle) with legs $s$ and $s\\sqrt3$: area $\\tfrac{\\sqrt3}{2}s^2$, one-third of the hexagon's $\\tfrac{3\\sqrt3}{2}s^2$, so 12.",
+        "steps": ["1. Split the hexagon into 6 equilateral triangles of side $s$ around the center $O$; each has area 6.", "2. $AD$ passes through $O$ and has length $2s$; $BD = s\\sqrt3$ and angle $ABD = 90^\\circ$.", "3. Area of $ABD = \\tfrac12 \\cdot s \\cdot s\\sqrt3$, which is 2 of the equilateral triangles: $2 \\cdot 6 = 12$."],
+        "fast": "Triangle $ABD$ has base $AD$ (a full diameter) and the same height from $B$ as the equilateral triangle $AOB$ on half that base, so it equals two of the six pieces.",
+        "trap": "Taking $ABD$ to be half the hexagon (18) because $AD$ cuts the hexagon in half, or one of the six pieces (6)."
+      },
+      "tags": [{ "kind": "concept", "id": "polygons-quadrilaterals", "role": "primary" }],
+      "setup": "the triangle on two adjacent vertices and an opposite vertex of a regular hexagon: its fraction of the hexagon's area",
+      "variant": "a regular hexagon split into triangles"
+    },
+    {
+      "id": "s2q13", "section": 2, "type": "mc_multi", "difficulty": 4,
+      "prompt": "In a survey of 100 households, 90 own a car, 80 own a bicycle and 70 own a scooter. Which of the following could be the number of households that own all three? Indicate all such numbers.",
+      "choices": ["15", "25", "35", "45", "55"],
+      "key": { "sel": [3, 4] },
+      "explanation": {
+        "key": "10, 20 and 30 households lack a car, a bicycle and a scooter, so at most 60 households lack any of them, and at least $100 - 60 = 40$ own all three. Every whole number from 40 up to 70 (the scooter owners) works.",
+        "steps": ["1. Households missing a car, a bicycle or a scooter number at most $10 + 20 + 30 = 60$.", "2. So at least $100 - 60 = 40$ own all three; 40 is reached when 60 households each lack exactly one item, and larger values up to 70 come from shifting households between cases.", "3. So 45 and 55 are possible; 15, 25 and 35 are not."],
+        "fast": "Count the households missing something: at most $10 + 20 + 30 = 60$, so at least 40 have everything.",
+        "trap": "Assuming the triple overlap can be anything up to the smallest group (70) and selecting every choice."
+      },
+      "tags": [{ "kind": "concept", "id": "overlapping-sets", "role": "primary" }],
+      "setup": "three overlapping groups in a fixed population: the feasible range of the triple overlap (complement bound below, smallest group above)",
+      "variant": "at least / at most counts from a survey with overlap"
+    },
+    {
+      "id": "s2q14", "section": 2, "type": "mc_multi", "difficulty": 5,
+      "prompt": "$k$ is a positive integer such that $12^k$ is a factor of $9!$, the product of the integers from 1 to 9. Which of the following could be the value of $k$? Indicate all such values.",
+      "choices": ["1", "2", "3", "4", "6", "7"],
+      "key": { "sel": [0, 1, 2] },
+      "explanation": {
+        "key": "$12^k = 2^{2k} 3^k$. $9! = 2^7 \\cdot 3^4 \\cdot 5 \\cdot 7$, so $2k \\le 7$ and $k \\le 4$: the factor 2 limits $k$ to at most 3.",
+        "steps": ["1. 2s in $9!$: from 2, 4, 6, 8: $1 + 2 + 1 + 3 = 7$. 3s: from 3, 6, 9: $1 + 1 + 2 = 4$.", "2. $12^k = 2^{2k} 3^k$ needs $2k \\le 7$, so $k \\le 3$ (the 3s would allow 4).", "3. So $k$ can be 1, 2 or 3."],
+        "fast": "Each 12 uses two 2s; seven 2s cover only three 12s.",
+        "trap": "Counting only the 3s and allowing $k = 4$, or using the seven 2s without halving and allowing 6 or 7."
+      },
+      "tags": [{ "kind": "concept", "id": "primes-factors", "role": "primary" }],
+      "setup": "a power of a composite dividing a factorial: the squared small prime limits, not the larger prime",
+      "variant": "highest power of a prime dividing n! or a product"
+    },
+    {
+      "id": "s2q15", "section": 2, "type": "numeric", "difficulty": 4,
+      "prompt": "A list of 60 different numbers includes the number $v$, and exactly 75 percent of the numbers in the list are less than $v$. Twenty new numbers, all different from one another and from the numbers already in the list, are added to it. In the new list of 80 numbers, exactly 60 percent of the numbers are less than $v$. How many of the 20 new numbers are less than $v$?",
+      "numeric": { "kind": "single" },
+      "key": { "value": "3" },
+      "explanation": {
+        "key": "Before: $0.75 \\cdot 60 = 45$ numbers below $v$. After: $0.60 \\cdot 80 = 48$. So 3 of the new numbers are below $v$.",
+        "steps": ["1. Numbers below $v$ in the original list: $0.75 \\times 60 = 45$.", "2. Numbers below $v$ in the new list: $0.60 \\times 80 = 48$.", "3. New numbers below $v$: $48 - 45 = 3$."],
+        "fast": "Count, don't compare percents: 45 below before, 48 below after.",
+        "trap": "Working with the percents directly, such as taking 60 percent of the 20 new numbers (12)."
+      },
+      "tags": [{ "kind": "concept", "id": "quartiles-boxplots", "role": "primary" }],
+      "setup": "a value's percentile rank before and after a batch of numbers is added: how many of the batch fall below it",
+      "variant": "the percentile rank of a value in a list"
+    }
+  ]
+}

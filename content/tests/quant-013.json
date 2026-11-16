@@ -1,0 +1,1111 @@
+{
+  "id": "quant-013",
+  "measure": "quant",
+  "title": "Quant Hard Mock 13",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 21
+    },
+    {
+      "n": 2,
+      "minutes": 26
+    }
+  ],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Days absent last term for the 240 students at a high school",
+      "table": {
+        "head": [
+          "Days absent",
+          "Number of students"
+        ],
+        "rows": [
+          [
+            "0",
+            "36"
+          ],
+          [
+            "1",
+            "54"
+          ],
+          [
+            "2",
+            "48"
+          ],
+          [
+            "3",
+            "42"
+          ],
+          [
+            "4",
+            "24"
+          ],
+          [
+            "5 or more",
+            "36"
+          ]
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "$x^3 < x$",
+      "qc": {
+        "a": "$x^2$",
+        "b": "$x$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "$x^3 < x$ means $x(x-1)(x+1) < 0$, which holds for $x < -1$ or $0 < x < 1$. On $0 < x < 1$, $x^2 < x$; on $x < -1$, $x^2$ is positive and $x$ negative, so $x^2 > x$. The relationship cannot be determined.",
+        "steps": [
+          "1. Factor: $x^3 - x = x(x-1)(x+1) < 0$.",
+          "2. Sign chart: negative on $x < -1$ and on $0 < x < 1$.",
+          "3. $x = \\tfrac12$: $x^2 = \\tfrac14 < \\tfrac12$ (B greater).",
+          "4. $x = -2$: $x^2 = 4 > -2$ (A greater). Answer D."
+        ],
+        "fast": "Try one fraction and one number below $-1$; both satisfy $x^3 < x$ and give opposite answers.",
+        "trap": "Reading $x^3 < x$ as '$x$ is between 0 and 1' and answering B, missing the interval $x < -1$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quadratic-inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "x^3 < x with no sign given; compare x^2 with x across the two solution intervals",
+      "variant": "powers against the number: where x^2 > x or x^3 < x"
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "$N = 9 \\times 10^{-5}$",
+      "qc": {
+        "a": "$\\sqrt{N}$",
+        "b": "$0.01$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Make the power of ten even before taking the root: $9 \\times 10^{-5} = 90 \\times 10^{-6}$, so $\\sqrt N = \\sqrt{90} \\times 10^{-3} \\approx 9.5 \\times 10^{-3}$, just under $10^{-2} = 0.01$. B is greater.",
+        "steps": [
+          "1. Rewrite $N = 90 \\times 10^{-6}$.",
+          "2. $\\sqrt N = \\sqrt{90} \\times 10^{-3}$, and $\\sqrt{90} < \\sqrt{100} = 10$.",
+          "3. So $\\sqrt N < 10 \\times 10^{-3} = 0.01$."
+        ],
+        "fast": "Square both: $A^2 = 9 \\times 10^{-5}$ and $B^2 = 10^{-4} = 10 \\times 10^{-5}$. B is greater.",
+        "trap": "Taking $\\sqrt{9} = 3$ and halving the exponent loosely to $10^{-2}$, which gives $0.03$ and the answer A."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "estimation-sigfig",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "exponents-roots",
+          "role": "secondary"
+        }
+      ],
+      "setup": "square root of a number in scientific notation with an odd power of ten; compare with a power of ten",
+      "variant": "order of magnitude comparison in QC"
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "Last year the enrollment at School R rose by 15 percent and the enrollment at School S rose by 24 percent. The two schools gained the same number of students.",
+      "qc": {
+        "a": "The enrollment at School R after the increase",
+        "b": "1.8 times the enrollment at School S before the increase"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Equal gains: $0.15R = 0.24S$, so $R = 1.6S$. After the increase R has $1.15 \\times 1.6S = 1.84S$, which is more than $1.8S$. A is greater.",
+        "steps": [
+          "1. Let $R$ and $S$ be the enrollments before the increase.",
+          "2. Same gain: $0.15R = 0.24S \\Rightarrow R = \\dfrac{0.24}{0.15}S = 1.6S$.",
+          "3. R after: $1.15 \\times 1.6S = 1.84S$.",
+          "4. Compare with $1.8S$: A is greater."
+        ],
+        "fast": "The smaller percent must sit on the larger base: $R/S = 24/15 = 1.6$; then $1.6 \\times 1.15 = 1.84 > 1.8$.",
+        "trap": "Assuming the school with the larger percent increase must be the larger school, or stopping at $R = 1.6S$ and comparing $1.6S$ with $1.8S$ (forgetting R's own increase)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "percent",
+          "role": "primary"
+        }
+      ],
+      "setup": "two quantities rise by different percents but by the same absolute amount; compare one new value with a multiple of the other's old value",
+      "variant": "percent comparisons in QC with unknown bases"
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "List $L$ consists of nine numbers equal to 10 and one number equal to 0. List $M$ consists of the ten numbers in $L$ together with the number 11.",
+      "qc": {
+        "a": "The standard deviation of the numbers in $M$",
+        "b": "The standard deviation of the numbers in $L$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "L has mean 9 and standard deviation 3 (squared deviations: nine 1s and one 81, total 90, over 10 is 9). The new number 11 is only 2 from the mean, less than one standard deviation, so adding it lowers the typical distance from the mean. B is greater, even though 11 is a new maximum.",
+        "steps": [
+          "1. Mean of $L$: $90/10 = 9$.",
+          "2. Squared deviations: $9 \\times 1 + 81 = 90$; variance $9$, SD $3$.",
+          "3. $11$ lies $2$ from the mean, less than the SD $3$.",
+          "4. M: mean $101/11 \\approx 9.18$; squared deviations total about $93.6$ over 11 values, variance about $8.5 < 9$. B is greater."
+        ],
+        "fast": "A new value pulls the SD up only if it lies farther from the mean than about one SD. Here the mean is 9 and the SD is 3, and 11 is only 2 away.",
+        "trap": "Thinking that a new largest value always spreads the list out: the range grows, but the standard deviation shrinks."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "std-dev-normal",
+          "role": "primary"
+        }
+      ],
+      "setup": "a list with one low outlier gets a new maximum that sits close to the mean; compare the new SD with the old",
+      "variant": "one value added far from the mean, or the extreme values removed"
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "A 20-liter tank is full of a solution that is 40 percent antifreeze. How many liters of the solution must be drained and replaced with pure antifreeze so that the full tank is 55 percent antifreeze?",
+      "choices": [
+        "3",
+        "4",
+        "5",
+        "$6\\tfrac23$",
+        "7.5"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Draining $x$ liters removes $0.4x$ liters of antifreeze, and the $x$ liters of pure antifreeze put back add $x$. So $0.4(20) - 0.4x + x = 0.55(20)$, giving $8 + 0.6x = 11$ and $x = 5$.",
+        "steps": [
+          "1. Antifreeze at the start: $0.4 \\times 20 = 8$ liters.",
+          "2. After draining $x$: $8 - 0.4x$; after refilling with pure: $8 - 0.4x + x = 8 + 0.6x$.",
+          "3. The tank is full again, so the target is $0.55 \\times 20 = 11$.",
+          "4. $0.6x = 3$, so $x = 5$."
+        ],
+        "fast": "Each liter swapped raises the antifreeze by $1 - 0.4 = 0.6$ liters; the tank needs $11 - 8 = 3$ more, so $3/0.6 = 5$.",
+        "trap": "Forgetting that the drained liters carried antifreeze out (answer 3, from $3/1$), or adding pure antifreeze without draining ($8 + y = 0.55(20 + y)$ gives $6\\tfrac23$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-rate",
+          "role": "primary"
+        }
+      ],
+      "setup": "drain part of a solution and replace it with the pure substance to reach a target concentration; amount drained",
+      "variant": "mixing two solutions to a target concentration"
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "In the $xy$-plane, a circle has its center at $(3, -2)$ and passes through the point $(7, 1)$. What is the distance between the two points at which the circle intersects the $y$-axis?",
+      "choices": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "$2\\sqrt{21}$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Radius: $\\sqrt{4^2 + 3^2} = 5$. On the $y$-axis $x = 0$: $3^2 + (y+2)^2 = 25$, so $y + 2 = \\pm 4$, giving $y = 2$ and $y = -6$. The points are 8 apart.",
+        "steps": [
+          "1. $r^2 = (7-3)^2 + (1+2)^2 = 25$.",
+          "2. Circle: $(x-3)^2 + (y+2)^2 = 25$.",
+          "3. Set $x = 0$: $(y+2)^2 = 16$, so $y = 2$ or $y = -6$.",
+          "4. Distance: $2 - (-6) = 8$."
+        ],
+        "fast": "The center is 3 from the $y$-axis; a 3-4-5 right triangle gives a half-chord of 4, so the chord is 8.",
+        "trap": "Using the $x$-axis instead (center 2 away gives half-chord $\\sqrt{21}$ and the choice $2\\sqrt{21}$), or answering the diameter 10."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "geometry-coordinate",
+          "role": "primary"
+        }
+      ],
+      "setup": "circle from its center and one point on it; length of the chord it cuts on an axis",
+      "variant": "a circle in the coordinate plane"
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "Lines $p$ and $q$ are parallel. Five distinct points are marked on line $p$, and six distinct points are marked on line $q$. How many different triangles have all three of their vertices among these eleven points?",
+      "choices": [
+        "135",
+        "150",
+        "165",
+        "270",
+        "990"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Three points on one line are collinear, so a triangle takes two vertices on one line and one on the other: $\\binom52 \\cdot 6 + 5 \\cdot \\binom62 = 60 + 75 = 135$.",
+        "steps": [
+          "1. A triangle needs its vertices off a single line, so it cannot use three points of $p$ or three of $q$.",
+          "2. Two on $p$, one on $q$: $\\binom52 \\times 6 = 60$.",
+          "3. One on $p$, two on $q$: $5 \\times \\binom62 = 75$.",
+          "4. Total $135$."
+        ],
+        "fast": "All triples minus collinear ones: $\\binom{11}{3} - \\binom53 - \\binom63 = 165 - 10 - 20 = 135$.",
+        "trap": "Counting every triple, $\\binom{11}{3} = 165$, or counting ordered choices of vertices ($165 \\times 6 = 990$); a triangle is an unordered set of vertices."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-permutations",
+          "role": "primary"
+        }
+      ],
+      "setup": "points on two parallel lines; count triangles by which line holds two vertices",
+      "variant": "choosing a group (combinations) vs ordering it"
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "For which of the following values of $x$ is $x < \\dfrac1x < x^2$? Indicate all such values.",
+      "choices": [
+        "$-3$",
+        "$-\\dfrac32$",
+        "$-1$",
+        "$-\\dfrac12$",
+        "$\\dfrac12$",
+        "$2$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$x < \\dfrac1x$ holds for $0 < x < 1$ or $x < -1$. $\\dfrac1x < x^2$ holds for every negative $x$ (a negative is below a positive) and, for positive $x$, only when $x^3 > 1$, that is $x > 1$. Both hold only for $x < -1$: $-3$ and $-\\tfrac32$.",
+        "steps": [
+          "1. $x < \\tfrac1x$: for $x > 0$, $x^2 < 1$, so $0 < x < 1$; for $x < 0$, multiplying by $x$ flips it, $x^2 > 1$, so $x < -1$.",
+          "2. $\\tfrac1x < x^2$: true for all $x < 0$; for $x > 0$ it needs $x^3 > 1$, so $x > 1$.",
+          "3. Overlap: $x < -1$ only (the positive pieces $0 < x < 1$ and $x > 1$ never meet).",
+          "4. $-3$: $-3 < -\\tfrac13 < 9$ ✓. $-\\tfrac32$: $-\\tfrac32 < -\\tfrac23 < \\tfrac94$ ✓. $-1$: $x = \\tfrac1x$ ✗. $-\\tfrac12$: $\\tfrac1x = -2 < x$ ✗. $\\tfrac12$: $x^2 = \\tfrac14 < 2$ ✗. $2$: $\\tfrac12 < 2$ ✗."
+        ],
+        "fast": "Plug each value into the chain; only the two numbers below $-1$ survive.",
+        "trap": "Treating $x < \\tfrac1x$ as true for every fraction and keeping $-\\tfrac12$, or keeping $-1$ where the first inequality is an equality."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "a chained ordering of x, 1/x and x^2 is given; select the values of x that satisfy it (sign cases)",
+      "variant": "ordering several expressions under a given range"
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 3,
+      "prompt": "Rectangle $R$ is an enlargement of rectangle $S$: each side of $R$ is the same multiple of the corresponding side of $S$. The perimeter of $S$ is 20 and the perimeter of $R$ is 50. If the area of $R$ is 150, what is the area of $S$?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "24"
+      },
+      "explanation": {
+        "key": "The scale factor is $50/20 = 2.5$, so areas scale by $2.5^2 = 6.25$. Area of $S = 150 / 6.25 = 24$.",
+        "steps": [
+          "1. Linear ratio $R : S = 50 : 20 = 2.5$.",
+          "2. Area ratio $2.5^2 = 6.25$.",
+          "3. $150 / 6.25 = 24$."
+        ],
+        "fast": "Areas go with the square of the perimeter ratio: $150 \\times (2/5)^2 = 24$.",
+        "trap": "Dividing by the linear ratio only ($150/2.5 = 60$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "area-perimeter",
+          "role": "primary"
+        }
+      ],
+      "setup": "similar rectangles: the perimeter ratio and the larger area give the smaller area",
+      "variant": "the effect of scaling a side on the area"
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 3,
+      "prompt": "What is the least number $d$ such that at least 75 percent of the 240 students were absent on $d$ or fewer days?",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "75 percent of 240 is 180. Cumulative counts: through 0 days 36, through 1 day 90, through 2 days 138, through 3 days 180. The running total first reaches 180 at $d = 3$.",
+        "steps": [
+          "1. Target: $0.75 \\times 240 = 180$ students.",
+          "2. Running totals: $36$, $36 + 54 = 90$, $90 + 48 = 138$, $138 + 42 = 180$.",
+          "3. At $d = 2$ only $138/240 = 57.5\\%$; at $d = 3$ exactly $75\\%$. So $d = 3$."
+        ],
+        "fast": "Count down from the top instead: 25 percent is 60, and the '5 or more' and '4' rows hold exactly $36 + 24 = 60$, so 3 or fewer is exactly 75 percent.",
+        "trap": "Reading 'at least 75 percent' as 'more than 75 percent' and answering 4, or stopping at the row with the largest count (1)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "frequency-distributions",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: cumulative frequency table; least value at which the cumulative share reaches a given percent (a percentile)",
+      "variant": "relative frequency and cumulative frequency"
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 4,
+      "prompt": "Suppose that only the students who were absent on at least 1 day are shown in a circle graph, with one sector for each category of days absent in the table. The central angle of the sector for 2 days is closest to which of the following?",
+      "choices": [
+        "$72^\\circ$",
+        "$78^\\circ$",
+        "$85^\\circ$",
+        "$90^\\circ$",
+        "$96^\\circ$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The graph covers $240 - 36 = 204$ students. The 2-day sector is $\\dfrac{48}{204} \\times 360^\\circ \\approx 84.7^\\circ$, closest to $85^\\circ$.",
+        "steps": [
+          "1. New whole: $240 - 36 = 204$.",
+          "2. Share of the 2-day group: $48/204 \\approx 0.235$.",
+          "3. Angle: $0.235 \\times 360^\\circ \\approx 84.7^\\circ$."
+        ],
+        "fast": "$48/204 = 4/17$, and $360 \\times 4/17 \\approx 85$.",
+        "trap": "Keeping all 240 students as the whole ($48/240 \\times 360 = 72^\\circ$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-tables-graphs",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: circle graph of a subgroup only: central angle of one category on the reduced base",
+      "variant": "a circle graph: central angle and percent"
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 5,
+      "prompt": "The mean number of days absent for all 240 students was 2.6. What was the mean number of days absent for the students in the category \"5 or more\"?",
+      "choices": [
+        "5",
+        "6",
+        "6.5",
+        "7",
+        "7.5"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Total days $= 2.6 \\times 240 = 624$. The other categories account for $0 + 54 + 96 + 126 + 96 = 372$, so the 36 students in '5 or more' were absent $252$ days in all, a mean of $7$.",
+        "steps": [
+          "1. Sum from the mean: $2.6 \\times 240 = 624$ days.",
+          "2. Known categories: $1(54) + 2(48) + 3(42) + 4(24) = 54 + 96 + 126 + 96 = 372$.",
+          "3. Left for '5 or more': $624 - 372 = 252$.",
+          "4. Mean: $252 / 36 = 7$."
+        ],
+        "fast": "Total minus the known part, divided by the group's count: $(624 - 372)/36 = 7$.",
+        "trap": "Treating '5 or more' as exactly 5, or dividing the leftover by the whole 240."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: overall mean and count give the total; subtract known categories to get the mean of an open-ended category",
+      "variant": "a sum from the mean and the count"
+    },
+    {
+      "id": "s2q1",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "The random variable $X$ is normally distributed with mean 50, and the probability that $X > 62$ is 0.2.",
+      "qc": {
+        "a": "The probability that $X < 40$",
+        "b": "0.2"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "By symmetry about 50, $P(X < 38) = P(X > 62) = 0.2$. The cutoff 40 is closer to the mean than 38, so $P(X < 40)$ includes $P(X < 38)$ plus the extra slice between 38 and 40. A is greater.",
+        "steps": [
+          "1. 62 is 12 above the mean, so its mirror image is $50 - 12 = 38$.",
+          "2. Symmetry: $P(X < 38) = 0.2$.",
+          "3. $P(X < 40) = P(X < 38) + P(38 < X < 40) > 0.2$."
+        ],
+        "fast": "Mirror 62 to 38; 40 lies to the right of 38, so the left tail at 40 is bigger.",
+        "trap": "Mirroring by eye to 40 (both 'about 10 to 12 away') and answering C, or thinking the SD must be known."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "normal-distribution",
+          "role": "primary"
+        }
+      ],
+      "setup": "normal with known mean and one upper-tail probability; lower-tail probability at a nearer cutoff vs that probability",
+      "variant": "symmetry: P(X > m + a) = P(X < m - a)"
+    },
+    {
+      "id": "s2q2",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "$N = 3600$",
+      "qc": {
+        "a": "The number of positive divisors of $N$ that are less than 60",
+        "b": "22"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "$3600 = 2^4 \\cdot 3^2 \\cdot 5^2$ has $5 \\cdot 3 \\cdot 3 = 45$ divisors. They pair off as $d$ and $3600/d$, one below 60 and one above, except $60 = \\sqrt{3600}$, which pairs with itself. So $(45 - 1)/2 = 22$ divisors are less than 60. Equal.",
+        "steps": [
+          "1. Factor: $3600 = 2^4 \\cdot 3^2 \\cdot 5^2$.",
+          "2. Divisor count: $(4+1)(2+1)(2+1) = 45$.",
+          "3. Pair $d$ with $3600/d$: if $d < 60$ then $3600/d > 60$.",
+          "4. Only $d = 60$ is its own partner, so $44$ divisors split $22$ below and $22$ above 60."
+        ],
+        "fast": "A perfect square has an odd divisor count; drop the root and halve: $(45 - 1)/2 = 22$.",
+        "trap": "Halving 45 directly ($22.5$, then rounding to 23 and answering B), or counting 60 among the divisors less than 60."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "primes-factors",
+          "role": "primary"
+        }
+      ],
+      "setup": "divisors of a perfect square below its square root: pair d with N/d and set the root aside; compare the count with a value",
+      "variant": "count of primes or factors in a stated range"
+    },
+    {
+      "id": "s2q3",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "The probability density of the random variable $X$ is 0 outside the interval $0 \\le x \\le 2$. On that interval its graph consists of the line segment from $(0, 0)$ to $(1, 1)$ and the line segment from $(1, 1)$ to $(2, 0)$.",
+      "qc": {
+        "a": "The probability that $X > \\dfrac32$",
+        "b": "$\\dfrac14$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Probability is area under the density. To the right of $\\tfrac32$ the region is a triangle with base $\\tfrac12$ and height $\\tfrac12$ (the density halfway down the falling segment), so its area is $\\tfrac12 \\cdot \\tfrac12 \\cdot \\tfrac12 = \\tfrac18 < \\tfrac14$. B is greater.",
+        "steps": [
+          "1. The density at $x = \\tfrac32$ is $\\tfrac12$ (midpoint of the segment from $(1, 1)$ to $(2, 0)$).",
+          "2. $P(X > \\tfrac32) = \\tfrac12 \\cdot \\tfrac12 \\cdot \\tfrac12 = \\tfrac18$.",
+          "3. $\\tfrac18 < \\tfrac14$."
+        ],
+        "fast": "The tail triangle is the right half of the right side scaled by $\\tfrac12$: area $\\tfrac12 \\cdot (\\tfrac12)^2 = \\tfrac18$.",
+        "trap": "Treating probability as length: $\\tfrac12$ of the interval's width 2 is $\\tfrac14$, which gives C."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "random-variables",
+          "role": "primary"
+        }
+      ],
+      "setup": "triangular density on an interval: find the peak height, then the area of a tail; compare with a value",
+      "variant": "probability from areas under a density curve"
+    },
+    {
+      "id": "s2q4",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "Class $P$ has more students than class $Q$. On the same test, the mean score of the students in $P$ was 75 and the mean score of the students in $Q$ was 81.",
+      "qc": {
+        "a": "The mean score of all the students in $P$ and $Q$ together",
+        "b": "78"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "78 is the plain average of 75 and 81, which would be the combined mean only with equal class sizes. Class $P$, with the lower mean, has more students, so the combined mean is pulled below 78. B is greater.",
+        "steps": [
+          "1. Combined mean $= \\dfrac{75p + 81q}{p + q} = 78 + \\dfrac{3(q - p)}{p + q}$.",
+          "2. $p > q$, so the fraction is negative.",
+          "3. The combined mean is less than 78."
+        ],
+        "fast": "The combined mean leans toward the bigger group's mean, 75.",
+        "trap": "Averaging the two means and answering C, ignoring the class sizes."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "weighted-average",
+          "role": "primary"
+        }
+      ],
+      "setup": "two group means and which group is larger; combined mean vs the midpoint of the means",
+      "variant": "combining the means of two groups"
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "In triangle $ABC$, $AB = 8$ and $AC = 11$. Points $D$, $E$ and $F$ are the midpoints of sides $AB$, $BC$ and $CA$, respectively.",
+      "qc": {
+        "a": "The perimeter of triangle $DEF$",
+        "b": "11"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Each side of $DEF$ is a midsegment, half the side of $ABC$ it is parallel to, so the perimeter of $DEF$ is half the perimeter of $ABC$: $\\tfrac12(8 + 11 + BC)$. The triangle inequality gives $BC > 11 - 8 = 3$, so the perimeter of $DEF$ is greater than $\\tfrac12(22) = 11$. A is greater.",
+        "steps": [
+          "1. Midsegments: $DE = \\tfrac12 AC$, $EF = \\tfrac12 AB$, $FD = \\tfrac12 BC$.",
+          "2. Perimeter of $DEF = \\tfrac12(19 + BC)$.",
+          "3. Triangle inequality: $3 < BC < 19$.",
+          "4. So the perimeter of $DEF$ is strictly between 11 and 19: A is greater."
+        ],
+        "fast": "Half of $8 + 11 + BC$ with $BC > 3$: more than 11.",
+        "trap": "Answering D because $BC$ is unknown, without bounding it, or letting $BC = 3$ (a flat triangle) and answering C."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "area-perimeter",
+          "role": "secondary"
+        }
+      ],
+      "setup": "two sides of a triangle given; perimeter of the midpoint triangle against the value at the triangle-inequality bound",
+      "variant": "a midsegment: parallel to the third side and half as long"
+    },
+    {
+      "id": "s2q6",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "In the $xy$-plane, line $\\ell$ passes through the point $P(2, 6)$ and crosses the $x$-axis at a point $Q$ with a positive $x$-coordinate, where $PQ = 10$. If $\\ell$ is perpendicular to the line $4x + ky = 12$, what is the value of $k$?",
+      "choices": [
+        "$-\\dfrac{16}{3}$",
+        "$-3$",
+        "$-\\dfrac34$",
+        "$3$",
+        "$\\dfrac{16}{3}$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$Q = (q, 0)$: $(q - 2)^2 + 36 = 100$, so $q = 10$ (the root $q = -6$ is negative). Slope of $\\ell$: $\\dfrac{0 - 6}{10 - 2} = -\\dfrac34$, so the other line has slope $\\dfrac43$. The slope of $4x + ky = 12$ is $-\\dfrac4k$, and $-\\dfrac4k = \\dfrac43$ gives $k = -3$.",
+        "steps": [
+          "1. Distance: $(q-2)^2 = 64$, $q = 10$ or $-6$; keep $q = 10$.",
+          "2. Slope of $\\ell$: $-6/8 = -3/4$.",
+          "3. Perpendicular slope: $4/3$.",
+          "4. $4x + ky = 12$ has slope $-4/k$; $-4/k = 4/3 \\Rightarrow k = -3$."
+        ],
+        "fast": "A 6-8-10 right triangle: from $P$ go down 6 and right 8, slope $-\\tfrac34$; the perpendicular has slope $\\tfrac43$, so the line is $4x - 3y = 12$.",
+        "trap": "Taking $q = -6$ (slope $\\tfrac34$) gives $k = 3$; setting the given line's slope equal to $\\ell$'s slope instead of its negative reciprocal gives $\\tfrac{16}{3}$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "coordinate-geometry",
+          "role": "primary"
+        }
+      ],
+      "setup": "line through a point meets the x-axis at a given distance; it is perpendicular to a line with an unknown coefficient; find the coefficient",
+      "variant": "distance and midpoint",
+      "revisits": "quant-002:s2q9"
+    },
+    {
+      "id": "s2q7",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A drawer holds 5 pairs of gloves, each pair a different color, and nothing else. If 4 gloves are drawn at random, what is the probability that the 4 gloves contain exactly one complete pair?",
+      "choices": [
+        "$\\dfrac17$",
+        "$\\dfrac{8}{21}$",
+        "$\\dfrac47$",
+        "$\\dfrac{13}{21}$",
+        "$\\dfrac23$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "There are $\\binom{10}{4} = 210$ draws. Exactly one pair: choose its color (5 ways), then 2 of the other 4 colors ($\\binom42 = 6$) and one glove of each ($2 \\cdot 2 = 4$): $5 \\cdot 6 \\cdot 4 = 120$. Probability $120/210 = 4/7$.",
+        "steps": [
+          "1. Total: $\\binom{10}{4} = 210$.",
+          "2. Pair color: 5 ways.",
+          "3. The other two gloves must be of two different remaining colors: $\\binom42 \\times 2^2 = 24$.",
+          "4. $5 \\times 24 = 120$; $120/210 = 4/7$."
+        ],
+        "fast": "Complement check: no pair $\\binom54 2^4 = 80$, two pairs $\\binom52 = 10$, so exactly one pair is $210 - 80 - 10 = 120$.",
+        "trap": "Choosing the pair and then any 2 of the remaining 8 gloves ($5 \\cdot \\binom82 = 140$, giving $\\tfrac23$): that counts two-pair draws, twice each."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-basic",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "counting-permutations",
+          "role": "secondary"
+        }
+      ],
+      "setup": "random draw of several items from matched pairs; probability of exactly one complete pair (combinations ratio)",
+      "variant": "probability as a ratio of combinations (choose k of n)"
+    },
+    {
+      "id": "s2q8",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "If $x + \\dfrac1x = 3$, what is the value of $x^3 - 2x^2 - 2x$?",
+      "choices": [
+        "$-3$",
+        "$-1$",
+        "$0$",
+        "$1$",
+        "$3$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Multiply the condition by $x$: $x^2 = 3x - 1$. Then $x^3 = 3x^2 - x = 3(3x - 1) - x = 8x - 3$. So $x^3 - 2x^2 - 2x = (8x - 3) - 2(3x - 1) - 2x = -1$; the $x$ terms cancel.",
+        "steps": [
+          "1. $x \\ne 0$; $x^2 + 1 = 3x$, so $x^2 = 3x - 1$.",
+          "2. $x^3 = x \\cdot x^2 = 3x^2 - x = 8x - 3$.",
+          "3. Substitute: $8x - 3 - 6x + 2 - 2x = -1$."
+        ],
+        "fast": "Divide $x^3 - 2x^2 - 2x$ by $x^2 - 3x + 1$: the quotient is $x + 1$ and the remainder is $-1$.",
+        "trap": "Hunting for a symmetric form like $x^2 + \\tfrac1{x^2}$ that is not there, or solving $x = \\tfrac{3 \\pm \\sqrt5}{2}$ and making an arithmetic slip under time pressure."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "algebraic-expressions",
+          "role": "primary"
+        }
+      ],
+      "setup": "x + 1/x given; a non-symmetric polynomial in x reduces to a constant by repeatedly replacing x^2 with a linear expression",
+      "variant": "an expression's value from a related expression (x + 1/x given)"
+    },
+    {
+      "id": "s2q9",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "In trapezoid $ABCD$, side $AB$ is parallel to side $DC$, and diagonals $AC$ and $BD$ intersect at point $E$. The area of triangle $ABE$ is 36 and the area of triangle $CDE$ is 9. What is the area of trapezoid $ABCD$?",
+      "choices": [
+        "45",
+        "63",
+        "72",
+        "81",
+        "90"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Triangles $ABE$ and $CDE$ are similar (parallel sides), with area ratio $36 : 9$, so the side ratio is $2 : 1$ and $AE = 2EC$. Triangle $BCE$ shares the height from $B$ with $ABE$ and has base $EC = \\tfrac12 AE$, so its area is 18; likewise $ADE$ is 18. Total $36 + 9 + 18 + 18 = 81$.",
+        "steps": [
+          "1. $\\triangle ABE \\sim \\triangle CDE$; area ratio 4, side ratio 2.",
+          "2. So $AE : EC = 2 : 1$.",
+          "3. $\\triangle ABE$ and $\\triangle CBE$ share the vertex $B$ and bases on $AC$: areas in ratio $2 : 1$, so $[BCE] = 18$.",
+          "4. Similarly $[ADE] = 18$; total 81."
+        ],
+        "fast": "The two side triangles each equal $\\sqrt{36 \\cdot 9} = 18$; total $(\\sqrt{36} + \\sqrt9)^2 = 81$.",
+        "trap": "Adding only the two given triangles (45), or assuming the side triangles match one of the given ones."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "polygons-quadrilaterals",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "secondary"
+        }
+      ],
+      "setup": "trapezoid diagonals cut it into four triangles; two triangle areas give the trapezoid's area",
+      "variant": "parallelogram, rhombus or trapezoid properties"
+    },
+    {
+      "id": "s2q10",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "Starting from her campsite, a hiker walks 5 kilometers due north, then 8 kilometers due east, then 11 kilometers due south. How many kilometers is she then from her campsite, measured in a straight line?",
+      "choices": [
+        "8",
+        "10",
+        "12",
+        "14",
+        "24"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Net displacement: 8 km east and $11 - 5 = 6$ km south. The straight-line distance is $\\sqrt{8^2 + 6^2} = 10$.",
+        "steps": [
+          "1. North-south: $5$ north, $11$ south, net $6$ south.",
+          "2. East-west: $8$ east.",
+          "3. $\\sqrt{64 + 36} = 10$."
+        ],
+        "fast": "6-8-10 right triangle.",
+        "trap": "Adding the net legs (14) or the whole path (24)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "primary"
+        }
+      ],
+      "setup": "walk with legs along compass directions; straight-line distance from the net legs",
+      "variant": "a right triangle from a word problem or coordinates (distance)"
+    },
+    {
+      "id": "s2q11",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "What is the sum of all real numbers $x$ that satisfy $3x - 5\\sqrt{x} - 2 = 0$?",
+      "choices": [
+        "$\\dfrac19$",
+        "$\\dfrac53$",
+        "$\\dfrac{25}{9}$",
+        "$4$",
+        "$\\dfrac{37}{9}$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Let $u = \\sqrt x \\ge 0$: $3u^2 - 5u - 2 = (3u + 1)(u - 2) = 0$, so $u = 2$ or $u = -\\tfrac13$. A square root cannot be negative, so only $u = 2$ works and $x = 4$. The sum of all solutions is 4.",
+        "steps": [
+          "1. Substitute $u = \\sqrt x$: $3u^2 - 5u - 2 = 0$.",
+          "2. Factor: $(3u + 1)(u - 2) = 0$.",
+          "3. Reject $u = -\\tfrac13$ since $\\sqrt x \\ge 0$.",
+          "4. $x = 2^2 = 4$; check: $12 - 10 - 2 = 0$."
+        ],
+        "fast": "Factor in $\\sqrt x$, keep the nonnegative root, square it.",
+        "trap": "Squaring both roots ($4 + \\tfrac19 = \\tfrac{37}{9}$), or using Vieta's sum $\\tfrac53$ of the $u$-roots (or its square $\\tfrac{25}{9}$) as if it were about $x$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quadratics-factoring",
+          "role": "primary"
+        }
+      ],
+      "setup": "equation linear in x and sqrt x: substitute, reject the negative root; sum of solutions",
+      "variant": "a quadratic in disguise (x^4, sqrt x or 1/x as the variable)"
+    },
+    {
+      "id": "s2q12",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "$a$, $b$ and $c$ are integers such that $a + b$ is odd and $ab + c$ is odd. Which of the following must be odd?",
+      "choices": [
+        "$a + c$",
+        "$bc$",
+        "$a + b + c$",
+        "$ab + bc$",
+        "$c^2 + ab$"
+      ],
+      "key": {
+        "sel": [
+          4
+        ]
+      },
+      "explanation": {
+        "key": "$a + b$ odd means one of $a, b$ is even and the other odd, so $ab$ is even. Then $ab + c$ odd forces $c$ odd. So $c^2 + ab$ = odd + even = odd. The others depend on which of $a, b$ is even, or are even.",
+        "steps": [
+          "1. $a + b$ odd: exactly one of $a, b$ is even, so $ab$ is even.",
+          "2. $ab + c$ odd with $ab$ even: $c$ is odd.",
+          "3. $c^2 + ab$: odd + even = odd, always.",
+          "4. $a + c$ and $bc$ change with which of $a, b$ is even; $a + b + c$ = odd + odd = even; $ab + bc$ is odd if $b$ is odd and even if $b$ is even."
+        ],
+        "fast": "Try $(a, b, c) = (2, 1, 1)$ and $(1, 2, 1)$; only $c^2 + ab$ is odd in both.",
+        "trap": "Fixing $a$ as the even one and checking just that case, which makes $a + c$ and $ab + bc$ look always odd."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "integers-properties",
+          "role": "primary"
+        }
+      ],
+      "setup": "two parity conditions on three unknown integers (one leaves open which of two is even); which expression must be odd",
+      "variant": "even/odd parity of sums and products of unknown integers"
+    },
+    {
+      "id": "s2q13",
+      "section": 2,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "Five students each received an integer score from 0 to 10, inclusive, on a quiz, and the median of the five scores was 5. Which of the following could be the mean of the five scores? Indicate all such values.",
+      "choices": [
+        "2",
+        "3",
+        "5",
+        "7",
+        "8"
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "In order, the third score is 5, the two below are between 0 and 5 and the two above are between 5 and 10. The total runs from $0 + 0 + 5 + 5 + 5 = 15$ to $5 + 5 + 5 + 10 + 10 = 35$, so the mean runs from 3 to 7. 3, 5 and 7 are possible; 2 and 8 are not.",
+        "steps": [
+          "1. Least total: $0, 0, 5, 5, 5$ gives 15, mean 3.",
+          "2. Greatest total: $5, 5, 5, 10, 10$ gives 35, mean 7.",
+          "3. Mean 5: for example $0, 5, 5, 5, 10$.",
+          "4. 2 and 8 lie outside $[3, 7]$."
+        ],
+        "fast": "The two scores above the median are at least 5 and the two below are at most 5, so the mean is between 3 and 7.",
+        "trap": "Letting the scores above the median drop below 5 (or those below rise above it), which makes 2 or 8 look possible."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "min-max-bounding",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "secondary"
+        }
+      ],
+      "setup": "integer scores in a fixed range with a given median; select possible means (extremes and integer totals)",
+      "variant": "extreme values of a mean or median"
+    },
+    {
+      "id": "s2q14",
+      "section": 2,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "For each positive integer $n$, let $S_n = \\dfrac{1}{\\sqrt1 + \\sqrt2} + \\dfrac{1}{\\sqrt2 + \\sqrt3} + \\cdots + \\dfrac{1}{\\sqrt n + \\sqrt{n+1}}$. For which of the following values of $n$ is $S_n$ an integer? Indicate all such values.",
+      "choices": [
+        "3",
+        "9",
+        "16",
+        "24",
+        "49",
+        "99"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "Rationalize each term: $\\dfrac{1}{\\sqrt k + \\sqrt{k+1}} = \\sqrt{k+1} - \\sqrt k$. The sum telescopes to $S_n = \\sqrt{n+1} - 1$, an integer exactly when $n + 1$ is a perfect square: $n = 3, 24, 99$ (giving 1, 4, 9).",
+        "steps": [
+          "1. Multiply by the conjugate: $\\dfrac{\\sqrt{k+1} - \\sqrt k}{(k+1) - k} = \\sqrt{k+1} - \\sqrt k$.",
+          "2. Sum: $(\\sqrt2 - 1) + (\\sqrt3 - \\sqrt2) + \\cdots + (\\sqrt{n+1} - \\sqrt n) = \\sqrt{n+1} - 1$.",
+          "3. Integer iff $n + 1$ is a perfect square.",
+          "4. $n + 1 = 4, 10, 17, 25, 50, 100$: squares for $n = 3, 24, 99$."
+        ],
+        "fast": "$S_1 = \\sqrt2 - 1$ shows the pattern $\\sqrt{n+1} - 1$.",
+        "trap": "Ending the telescoping at $\\sqrt n$ instead of $\\sqrt{n+1}$ and picking the perfect squares 9, 16 and 49."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponents-roots",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "sequences-patterns",
+          "role": "secondary"
+        }
+      ],
+      "setup": "sum of reciprocals of consecutive root sums telescopes after rationalizing; select n making it an integer",
+      "variant": "nested and conjugate radicals (rationalizing a denominator)"
+    },
+    {
+      "id": "s2q15",
+      "section": 2,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "The terms of a list $t_1, t_2, t_3, \\dots$ satisfy $t_{k+1} = \\dfrac{t_k - 1}{t_k + 1}$ for every positive integer $k$, starting from $t_1 = 3$. Find the value of $t_3 + t_6 + t_9 + \\cdots + t_{24}$.",
+      "numeric": {
+        "kind": "fraction"
+      },
+      "key": {
+        "value": "7/3"
+      },
+      "explanation": {
+        "key": "The terms are $3, \\tfrac12, -\\tfrac13, -2, 3, \\dots$: period 4, with cycle sum $\\tfrac76$. The indices $3, 6, 9, 12$ land on $t_3, t_2, t_1, t_4$, one full cycle, and $15, 18, 21, 24$ repeat it. The sum is $2 \\cdot \\tfrac76 = \\tfrac73$.",
+        "steps": [
+          "1. $t_2 = \\tfrac12$, $t_3 = -\\tfrac13$, $t_4 = -2$, $t_5 = 3$: period 4.",
+          "2. $t_3, t_6, t_9, t_{12} = -\\tfrac13, \\tfrac12, 3, -2$, sum $\\tfrac76$.",
+          "3. $t_{15}, \\dots, t_{24}$ are the same four values again.",
+          "4. Total $\\tfrac73$."
+        ],
+        "fast": "Eight terms, two full cycles of $\\tfrac76$.",
+        "trap": "Assuming every third term is the same ($8 \\times (-\\tfrac13) = -\\tfrac83$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "sequences-patterns",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "integers-properties",
+          "role": "secondary"
+        }
+      ],
+      "setup": "a recursion with period four; sum of the terms whose index is a multiple of three up to a bound",
+      "variant": "sum of integers in a range with a condition (multiples of 3)",
+      "revisits": "quant-002:s2q7"
+    }
+  ]
+}

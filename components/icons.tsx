@@ -24,6 +24,13 @@ export const IconBack = (p: P) => <Svg {...p}><path d="M15 18l-6-6 6-6" /></Svg>
 export const IconNext = (p: P) => <Svg {...p}><path d="M9 18l6-6-6-6" /></Svg>;
 export const IconCheck = (p: P) => <Svg {...p}><path d="M5 12.5l4.5 4.5L19 7.5" /></Svg>;
 export const IconX = (p: P) => <Svg {...p}><path d="M6 6l12 12M18 6L6 18" /></Svg>;
+export const IconArchive = (p: P) => (
+  <Svg {...p}><rect x="3" y="4" width="18" height="5" rx="1" /><path d="M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9M10 13h4" /></Svg>
+);
+export const IconTrash = (p: P) => (
+  <Svg {...p}><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1l1-12M9 7V4h6v3" /></Svg>
+);
+export const IconUndo = (p: P) => <Svg {...p}><path d="M9 14L4 9l5-5" /><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" /></Svg>;
 export const IconFlag = ({ on, ...p }: P & { on?: boolean }) => (
   <Svg {...p}>
     <path d="M5 21V4" />

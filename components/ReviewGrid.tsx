@@ -6,6 +6,8 @@ export interface GridItem {
   n: number; // display number within section
   answered: boolean;
   marked: boolean;
+  /** set once the answer has been revealed (practice mode) */
+  correct?: boolean;
 }
 
 /** Section overview: bottom sheet on phones, centered dialog on larger screens. */
@@ -26,6 +28,7 @@ export function ReviewGrid({
 }) {
   const unanswered = items.filter((i) => !i.answered).length;
   const marked = items.filter((i) => i.marked).length;
+  const graded = items.some((i) => i.correct !== undefined);
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onKey);
@@ -53,9 +56,15 @@ export function ReviewGrid({
               key={i}
               type="button"
               onClick={() => onGo(i)}
-              aria-label={`Question ${it.n}${it.answered ? "" : ", unanswered"}${it.marked ? ", marked" : ""}`}
+              aria-label={`Question ${it.n}${it.correct === undefined ? (it.answered ? "" : ", unanswered") : it.correct ? ", correct" : ", incorrect"}${it.marked ? ", marked" : ""}`}
               className={`relative grid aspect-square place-items-center rounded-xl text-[15px] font-semibold tabular-nums transition-colors ${
-                it.answered ? "bg-accent-soft text-accent hover:bg-accent/20" : "border-[1.5px] border-dashed border-line text-muted hover:border-muted"
+                it.correct === true
+                  ? "bg-ok-soft text-ok hover:bg-ok/20"
+                  : it.correct === false
+                    ? "bg-bad-soft text-bad hover:bg-bad/20"
+                    : it.answered
+                      ? "bg-accent-soft text-accent hover:bg-accent/20"
+                      : "border-[1.5px] border-dashed border-line text-muted hover:border-muted"
               } ${i === current ? "ring-2 ring-accent ring-offset-2 ring-offset-surface" : ""}`}
             >
               {it.n}
@@ -66,6 +75,12 @@ export function ReviewGrid({
         <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted">
           <span className="inline-flex items-center gap-1.5"><i className="size-3 rounded border-[1.5px] border-accent bg-accent-soft" />Answered</span>
           <span className="inline-flex items-center gap-1.5"><i className="size-3 rounded border-[1.5px] border-dashed border-muted" />Unanswered</span>
+          {graded && (
+            <>
+              <span className="inline-flex items-center gap-1.5"><i className="size-3 rounded border-[1.5px] border-ok bg-ok-soft" />Correct</span>
+              <span className="inline-flex items-center gap-1.5"><i className="size-3 rounded border-[1.5px] border-bad bg-bad-soft" />Incorrect</span>
+            </>
+          )}
           <span className="inline-flex items-center gap-1.5"><i className="size-2 rounded-full bg-mark" />Marked</span>
         </div>
         {footer}

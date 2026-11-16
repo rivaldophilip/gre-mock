@@ -2,7 +2,7 @@ import fs from "node:fs";
 import { describe, expect, it } from "vitest";
 import katex from "katex";
 import concepts from "@/data/concepts.json";
-import { orderSections, StudySchema, studyStats, type Study } from "@/lib/study";
+import { applyMarks, cardId, markIds, orderSections, StudySchema, studyStats, type Mark, type Study } from "@/lib/study";
 import type { Test } from "@/lib/types";
 
 describe("content/study/quant.json", () => {
@@ -13,7 +13,9 @@ describe("content/study/quant.json", () => {
     ...guide.quickRef.flatMap((g) => g.items.flatMap((it) => [it.name, it.note ?? ""])),
     ...guide.formats.flatMap((f) => f.rules),
     ...guide.pacing,
-    ...guide.sections.flatMap((s) => [s.idea, s.example.q, ...s.example.steps, ...s.facts, ...s.tricks, ...s.traps]),
+    ...guide.sections.flatMap((s) => [s.idea, s.example.q, ...s.example.steps, ...s.facts, ...s.tricks, ...s.traps,
+      ...(s.tips ?? []).flatMap((t) => [t.title, t.text, t.example ?? ""]),
+      ...(s.patterns ?? []).flatMap((p) => [p.idea, ...p.cases.flatMap((c) => [c.name, c.q, c.spot, ...c.steps]), ...(p.notWhen ?? [])])]),
   ];
 
   it("puts every quant concept in exactly one section, and names no unknown one", () => {
@@ -28,6 +30,22 @@ describe("content/study/quant.json", () => {
     const ids = guide.sections.map((s) => s.id);
     expect(new Set(ids).size).toBe(ids.length);
     expect(lines().filter((l) => (l.match(/\$/g) ?? []).length % 2 !== 0)).toEqual([]);
+  });
+
+  it("draws every tip figure as one clean, theme-colored SVG", () => {
+    const svgs = guide.sections.flatMap((s) => (s.tips ?? []).flatMap((t) => (t.svg ? [t.svg] : [])));
+    expect(svgs.length).toBeGreaterThan(0);
+    const bad = svgs.filter((svg) => {
+      const tags = svg.match(/<[a-z][^>]*>/g) ?? [];
+      const dupAttr = tags.some((t) => {
+        const names = [...t.matchAll(/\s([a-z-]+)=/g)].map((m) => m[1]);
+        return new Set(names).size !== names.length;
+      });
+      // one root, an accessible label, colors only from currentColor / theme vars (so dark mode works), nothing executable
+      return !/^<svg [^>]*viewBox="[^"]+"[^>]*aria-label="[^"]+"/.test(svg) || !svg.endsWith("</svg>") || svg.indexOf("<svg", 1) !== -1
+        || dupAttr || /#[0-9a-f]{3,6}\b|rgb\(|<script|\son[a-z]+=/i.test(svg);
+    });
+    expect(bad).toEqual([]);
   });
 
   it("renders every formula and every $math$ span in KaTeX without an error", () => {
@@ -102,7 +120,7 @@ describe("studyStats", () => {
   });
 
   it("builds the miss with what the review link and trap line need", () => {
-    expect(s.sections.get("geo")!.misses).toEqual([{ testId: "quant-001", attemptId: 1, qid: "s1q1", type: "mc", difficulty: 4, timeMs: 200_000, guessed: true, trap: "used the radius" }]);
+    expect(s.sections.get("geo")!.misses).toEqual([{ testId: "quant-001", attemptId: 1, qid: "s1q1", type: "mc", difficulty: 4, timeMs: 200_000, guessed: true, trap: "used the radius", finishedAt: day }]);
   });
 
   it("splits by format and summarizes pacing", () => {
@@ -122,5 +140,39 @@ describe("orderSections", () => {
 
   it("breaks accuracy ties by more misses, then guide order", () => {
     expect(ids(new Map([["geo", t(2, 1)], ["count", t(6, 3)], ["sets", t(2, 1)]]))).toEqual(["count", "geo", "sets"]);
+  });
+});
+
+describe("applyMarks", () => {
+  const items = ["a", "b", "c", "d"];
+  const at = (iso: string) => new Date(iso);
+  const marks = new Map<string, Mark>([
+    ["b", { state: "archived", updatedAt: at("2026-01-10") }],
+    ["c", { state: "deleted", updatedAt: at("2026-01-10") }],
+    ["d", { state: "archived", updatedAt: at("2026-01-10") }],
+  ]);
+  const lastMiss: Record<string, Date> = { b: at("2026-01-05"), c: at("2026-02-01"), d: at("2026-02-01") };
+  const missedSince = (t: string, since: Date) => (lastMiss[t] ?? at("2000-01-01")) > since;
+
+  it("keeps unmarked items shown and splits the rest by state, in order", () => {
+    const r = applyMarks(items, (t) => t, marks);
+    expect(r).toEqual({ shown: ["a"], archived: ["b", "d"], deleted: ["c"], back: new Set() });
+  });
+
+  it("brings an archived item back on a miss after archiving, never a deleted one", () => {
+    const r = applyMarks(items, (t) => t, marks, missedSince);
+    expect(r.shown).toEqual(["a", "d"]);
+    expect(r.archived).toEqual(["b"]);
+    expect(r.deleted).toEqual(["c"]);
+    expect([...r.back]).toEqual(["d"]);
+  });
+});
+
+describe("markIds", () => {
+  const guide = StudySchema.parse(JSON.parse(fs.readFileSync("content/study/quant.json", "utf8")));
+  it("gives every formula card a unique id", () => {
+    const n = guide.quickRef.reduce((t, g) => t + g.items.length, 0);
+    expect(markIds(guide).card.size).toBe(n);
+    expect(markIds(guide).card.has(cardId(guide.quickRef[0].title, guide.quickRef[0].items[0].name))).toBe(true);
   });
 });

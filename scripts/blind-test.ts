@@ -275,7 +275,11 @@ function main() {
   }
   const cal = calibration(test.measure);
   if (!cal) console.warn(`warn: no ${test.measure} calibration in ${CAL}; difficulty compared with offset 0`);
-  const { right, total, issues, act } = checkAnswers(test, parseAnswers(readReply(args, `${base}.answers.txt`)), cal?.offset ?? 0, only);
+  let reply = readReply(args, `${base}.answers.txt`);
+  // an --only reply updates the full record (later lines win), so the per-section 4+ cap counts every item's latest rating
+  const full = `${DIR}/${id}.answers.txt`;
+  if (only && fs.existsSync(full)) fs.writeFileSync(full, (reply = fs.readFileSync(full, "utf8").trimEnd() + "\n" + reply.trim() + "\n"));
+  const { right, total, issues, act } = checkAnswers(test, parseAnswers(reply), cal?.offset ?? 0, only);
   fs.writeFileSync(checkRecord(id), JSON.stringify({ at: new Date().toISOString(), only: only ? [...only] : null, right, total, toFix: act }) + "\n");
   console.log(`${id}: ${right}/${total} match the key${issues.length ? "" : "; nothing to fix"}`);
   for (const i of issues) console.log("  " + i);

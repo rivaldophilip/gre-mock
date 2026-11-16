@@ -32,6 +32,24 @@ describe("priority math", () => {
     const recent = scoreItem("w", [e("key_missed", 0.8, 1)], 0.5, now);
     expect(recent.P).toBeLessThan(old.P * 0.5);
   });
+  it("a 'didn't know' tag and a wrong answer in one attempt count once, at the larger weight", () => {
+    const at = (x: LoggedEvent, attemptId: number) => ({ ...x, attemptId });
+    const both = scoreItem("w", [at(e("distractor_chosen", 0.6, 5), 1), at(e("dont_know", 1.0, 5), 1)], 0.5, now);
+    const tagOnly = scoreItem("w", [at(e("dont_know", 1.0, 5), 1)], 0.5, now);
+    expect(both.weakEvidence).toBeCloseTo(tagOnly.weakEvidence);
+    expect(both.S).toBeCloseTo(tagOnly.S);
+    expect(both.evidence.map((x) => x.event)).toEqual(["dont_know"]);
+    // in different attempts they are separate evidence
+    const apart = scoreItem("w", [at(e("key_missed", 0.8, 5), 1), at(e("dont_know", 1.0, 5), 2)], 0.5, now);
+    expect(apart.weakEvidence).toBeCloseTo(1.8 * decay(5));
+  });
+  it("passage exposure counts once per attempt for coverage", () => {
+    const at = (x: LoggedEvent, attemptId: number) => ({ ...x, attemptId });
+    const one = scoreItem("w", [1, 1, 1, 1].map((a) => at(e("exposure", 0, 5), a)), 0.5, now);
+    expect(one.C).toBeCloseTo(0.15);
+    const two = scoreItem("w", [1, 1, 2].map((a) => at(e("exposure", 0, 5), a)), 0.5, now);
+    expect(two.C).toBeCloseTo(0.3);
+  });
   it("intervals follow the streak", () => {
     expect([0, 1, 2, 3, 4, 9].map(intervalFor)).toEqual([1, 3, 7, 14, 30, 30]);
     const s = scoreItem("w", [e("key_correct", -0.6, 6), e("key_correct", -0.6, 12)], 0.5, now);

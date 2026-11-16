@@ -8,17 +8,19 @@ Positive weight = evidence of weakness, negative = mastery.
 
 | Word event | Trigger | w |
 |---|---|---|
-| `dont_know` | tapped in review | +1.0 |
+| `dont_know` | tapped in review, or in Practice once the answer is shown (passage, TC/SE sentence or choice chips) | +1.0 |
 | `key_missed` | answer word you did not select | +0.8 |
 | `distractor_chosen` | wrong word you selected | +0.6 |
 | `key_guessed` | key selected, question flagged "guessed" | +0.3 |
 | `key_partial` | key selected but the question was wrong (other types; not TC or SE, see below) | −0.3 |
 | `key_correct` | key selected, question right, not guessed | −0.6 |
-| `key_slow` | as `key_correct`, but the question took > 90 s (logged in addition) | +0.2 |
+| `key_slow` | key right (`key_correct` or `key_guessed`), but the question took > 90 s (logged in addition) | +0.2 |
 | `distractor_rejected` | distractor not picked on a question you got right | −0.15 |
-| `exposure` | word in a passage/stem | 0 (coverage only) |
+| `exposure` | word in a passage/stem | 0 (coverage only; once per attempt, however many questions share the passage) |
 
 Text completion and SE are judged per word: on a wrong question, a right blank (TC) or a right pick (SE) logs `key_correct` (or `key_guessed`), and the distractors of a right blank `distractor_rejected`; only the wrong blank's or pick's words log `key_missed` / `distractor_chosen`. `npm run rebuild:words [-- --apply]` re-derives the word events that older TC/SE answers logged.
+
+A word tagged `dont_know` in an attempt where its answer also logged a weakness event (`key_missed`, `distractor_chosen`, `key_guessed`, `key_slow`) counts once toward S, at the largest of those weights (so a wrong pick tagged "didn't know" adds +1.0, not +1.6). Both events stay logged and still count for coverage.
 
 Concepts: primary wrong +0.8, secondary wrong +0.4, right-but-guessed +0.3, right-but-slow +0.2 (>105 s quant, >90 s verbal), primary right −0.6, secondary right −0.3.
 
@@ -52,7 +54,7 @@ A setup you answered right stays in the history and is not asked again. A missed
 
 ## Reading skills
 
-Each RC question has one primary skill tag (`kind: "concept"`; areas `reading` / `argument`, stored in the concepts table) and optionally a secondary one. A skill gets the concept events and weights above. The "slow" threshold is the verbal pace (90 s per question), so the first question on a long passage, which includes reading time, can register as slow. The skills' `yield` comes from how often each skill is tested in medium/hard official reading items (`scripts/concept_yields.py`). The official items' skills were assigned from their question stems (`reference/rc_skills.jsonl`, local only). After tagging questions a user has already answered, run `npm run backfill:concepts`.
+Each RC question has one primary skill tag (`kind: "concept"`; areas `reading` / `argument`, stored in the concepts table) and optionally a secondary one. A skill gets the concept events and weights above. The "slow" threshold is the verbal pace (90 s per question). The first question opened on a passage that two or more questions share also carries the passage's first read, so its threshold is raised by the passage length at `READING_WPM` (250 words a minute; about +60 s for 260 words). That question is the attempt's lowest response id among the passage's questions, since leaving a question always saves it. Later questions get no allowance: looking back at the passage is part of answering them. `npm run rebuild:slow [-- --apply]` drops the older slow events the allowance excuses. The skills' `yield` comes from how often each skill is tested in medium/hard official reading items (`scripts/concept_yields.py`). The official items' skills were assigned from their question stems (`reference/rc_skills.jsonl`, local only). After tagging questions a user has already answered, run `npm run backfill:concepts`.
 
 ## On /stats
 

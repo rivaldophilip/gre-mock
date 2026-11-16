@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import { IconX } from "./icons";
 import { btn } from "./ui";
 
@@ -18,6 +18,14 @@ function Btn({ label, onClick, kind = "num", aria }: { label: string; onClick: (
   );
 }
 
+// Desktop position, kept across questions and close/reopen within the page session (null = default corner).
+let savedPos: { x: number; y: number } | null = null;
+const DESKTOP = "(min-width: 768px)";
+const clamp = (p: { x: number; y: number }, el: HTMLElement) => ({
+  x: Math.min(Math.max(0, p.x), Math.max(0, window.innerWidth - el.offsetWidth)),
+  y: Math.min(Math.max(0, p.y), Math.max(0, window.innerHeight - el.offsetHeight)),
+});
+
 /** ETS-style on-screen calculator: + - × ÷ ± √ ( ) MR MC M+ C CE, Transfer Display, 8-digit display. */
 export function Calculator({ onTransfer, onClose }: { onTransfer?: (v: string) => void; onClose: () => void }) {
   const [display, setDisplay] = useState("0");
@@ -25,6 +33,37 @@ export function Calculator({ onTransfer, onClose }: { onTransfer?: (v: string) =
   const [fresh, setFresh] = useState(true);
   const [mem, setMem] = useState(0);
   const [err, setErr] = useState(false);
+  const [pos, setPos] = useState(savedPos);
+  const [desktop, setDesktop] = useState(false);
+  const panel = useRef<HTMLDivElement>(null);
+  const grab = useRef<{ dx: number; dy: number } | null>(null);
+
+  useEffect(() => {
+    const mq = window.matchMedia(DESKTOP);
+    const sync = () => setDesktop(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
+  useEffect(() => {
+    // keep the panel on screen when the window shrinks
+    const onResize = () => setPos((p) => (p && panel.current ? (savedPos = clamp(p, panel.current)) : p));
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  const dragStart = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (!desktop || e.button !== 0 || (e.target as HTMLElement).closest("button") || !panel.current) return;
+    const r = panel.current.getBoundingClientRect();
+    grab.current = { dx: e.clientX - r.left, dy: e.clientY - r.top };
+    e.currentTarget.setPointerCapture(e.pointerId);
+    e.preventDefault();
+  };
+  const dragMove = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (!grab.current || !panel.current) return;
+    setPos((savedPos = clamp({ x: e.clientX - grab.current.dx, y: e.clientY - grab.current.dy }, panel.current)));
+  };
+  const dragEnd = () => { grab.current = null; };
 
   const show = (n: number) => {
     if (!Number.isFinite(n)) {
@@ -133,12 +172,21 @@ export function Calculator({ onTransfer, onClose }: { onTransfer?: (v: string) =
   return (
     // phone: bottom sheet over the action bar; desktop: floating panel
     <div
+      ref={panel}
+      style={desktop && pos ? { left: pos.x, top: pos.y, right: "auto", bottom: "auto" } : undefined}
       className="fixed inset-x-0 bottom-0 z-50 rounded-t-3xl border border-line bg-surface p-4 pb-[max(1rem,env(safe-area-inset-bottom))] shadow-[0_-12px_40px_rgb(0_0_0/0.2)] md:inset-x-auto md:bottom-5 md:right-5 md:w-80 md:rounded-2xl md:pb-4 md:shadow-xl"
       role="dialog"
       aria-label="Calculator"
     >
       <div className="mx-auto mb-3 h-1.5 w-10 rounded-full bg-line md:hidden" aria-hidden />
-      <div className="mb-3 flex items-center justify-between">
+      <div
+        className="mb-3 flex items-center justify-between md:-mx-2 md:-mt-2 md:touch-none md:cursor-move md:select-none md:rounded-xl md:px-2 md:pt-2"
+        onPointerDown={dragStart}
+        onPointerMove={dragMove}
+        onPointerUp={dragEnd}
+        onPointerCancel={dragEnd}
+        title={desktop ? "Drag to move" : undefined}
+      >
         <span className="text-sm font-semibold">Calculator{mem !== 0 && <span className="ml-2 rounded-md bg-surface-2 px-1.5 py-0.5 text-xs text-muted">M</span>}</span>
         <button type="button" onClick={onClose} aria-label="Close calculator" className="grid size-9 place-items-center rounded-xl text-muted hover:bg-surface-2 hover:text-fg">
           <IconX size={18} />

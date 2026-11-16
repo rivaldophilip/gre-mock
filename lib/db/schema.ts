@@ -116,3 +116,16 @@ export const itemEvents = pgTable(
   },
   (t) => [index("ie_item_idx").on(t.kind, t.itemId), index("ie_resp_idx").on(t.responseId)],
 );
+
+/** The reader's own trims of a study guide; no row means shown. */
+export const studyMarks = pgTable(
+  "study_marks",
+  {
+    measure: text("measure").notNull(), // verbal|quant
+    kind: text("kind").notNull(), // card (formula sheet) | topic (guide section)
+    itemId: text("item_id").notNull(), // cardId() or the section id
+    state: text("state").notNull(), // archived (studied; folded away) | deleted (not wanted in the guide)
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+  },
+  (t) => [primaryKey({ columns: [t.measure, t.kind, t.itemId] })],
+);

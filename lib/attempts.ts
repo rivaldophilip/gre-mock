@@ -1,10 +1,11 @@
 import "server-only";
-import { and, eq } from "drizzle-orm";
+import { and, eq, inArray } from "drizzle-orm";
 import { schema } from "./db";
 import { userDb } from "./session";
 import { loadTest, orderedQuestions } from "./content";
-import { eventsForResponse } from "./events";
+import { eventsForResponse, readingAllowanceMs } from "./events";
 import { scoreAnswer } from "./scoring";
+import { choiceWords, wordIdFor } from "./choice-words";
 import type { Answer, Question, Test } from "./types";
 import { clockSecondsLeft, elapsedMs, overtimeMs, paused, resumed, type PauseReason, type SectionState } from "./clock";
 
@@ -79,6 +80,21 @@ export function canReveal(a: Attempt, test: Test, q: Question, resp?: { finalize
 }
 
 /**
+ * Whether this response is the first one saved among the questions sharing its passage in this attempt. Leaving a
+ * question always saves it, so the lowest response id is the question opened first, the one that carried the reading.
+ */
+async function openedFirst(attemptId: number, test: Test, q: Question, respId: number): Promise<boolean> {
+  if (!q.passageId) return false;
+  const keys = test.questions.filter((x) => x.passageId === q.passageId).map((x) => pairKey(test.id, x.id));
+  const db = await userDb();
+  const rows = await db
+    .select({ id: responses.id })
+    .from(responses)
+    .where(and(eq(responses.attemptId, attemptId), inArray(responses.questionId, keys)));
+  return rows.every((x) => x.id >= respId);
+}
+
+/**
  * Emit item events for one response. Idempotent: the response is claimed by flipping `finalized`
  * first, so a double click or a timer racing the Finish button cannot log the events twice.
  */
@@ -92,7 +108,8 @@ export async function finalizeResponse(a: Attempt, test: Test, q: Question, resp
   if (!r) return;
   const ans = (r.answer ?? undefined) as Answer | undefined;
   const passageTags = q.passageId ? (test.passages.find((p) => p.id === q.passageId)?.tags ?? []) : [];
-  const evs = eventsForResponse(q, test.measure, ans, { guessed: r.guessed, timeMs: r.timeMs }, passageTags);
+  const readingMs = readingAllowanceMs(test, q, await openedFirst(a.id, test, q, r.id));
+  const evs = eventsForResponse(q, test.measure, ans, { guessed: r.guessed, timeMs: r.timeMs, readingMs }, passageTags);
   if (evs.length) {
     await db
       .insert(itemEvents)
@@ -132,4 +149,31 @@ export async function responseFor(attemptId: number, qkey: string) {
     .from(responses)
     .where(and(eq(responses.attemptId, attemptId), eq(responses.questionId, qkey)));
   return r;
+}
+
+export type RevealWord = { word: string; id?: string; senses?: unknown };
+
+/** A TC / SE question's choice words with their bank definitions, shown as "didn't know" chips once the answer is revealed. */
+export async function revealWords(q: Question): Promise<RevealWord[]> {
+  const words = [...new Set(choiceWords(q))];
+  if (!words.length) return [];
+  const ids = words.map((w) => wordIdFor(q, w)).filter((x): x is string => !!x);
+  const rows = ids.length
+    ? await (await userDb()).select({ id: schema.vocab.id, senses: schema.vocab.senses }).from(schema.vocab).where(inArray(schema.vocab.id, ids))
+    : [];
+  const sensesOf = new Map(rows.map((r) => [r.id, r.senses]));
+  return words.map((word) => {
+    const id = wordIdFor(q, word);
+    return { word, id, senses: id ? (sensesOf.get(id) ?? null) : undefined };
+  });
+}
+
+/** This attempt's "didn't know" word tags, with definitions. */
+export async function taggedWords(attemptId: number): Promise<{ id: string; senses: unknown }[]> {
+  const db = await userDb();
+  return db
+    .selectDistinct({ id: itemEvents.itemId, senses: schema.vocab.senses })
+    .from(itemEvents)
+    .leftJoin(schema.vocab, eq(schema.vocab.id, itemEvents.itemId))
+    .where(and(eq(itemEvents.attemptId, attemptId), eq(itemEvents.kind, "word"), eq(itemEvents.event, "dont_know")));
 }

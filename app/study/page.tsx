@@ -3,7 +3,8 @@ import { schema } from "@/lib/db";
 import { userDb } from "@/lib/session";
 import { listTestIds, loadStudy, loadTest } from "@/lib/content";
 import { attemptNumbers } from "@/lib/attempt-summary";
-import { LONG_MS, orderSections, studyStats, type Miss, type Tally } from "@/lib/study";
+import { eq } from "drizzle-orm";
+import { applyMarks, cardId, LONG_MS, orderSections, studyStats, type Mark, type MarkKind, type Miss, type Study, type StudySection, type Tally } from "@/lib/study";
 import { TYPE_INFO } from "@/lib/qtypes";
 import type { Test } from "@/lib/types";
 import { AppHeader } from "@/components/AppHeader";
@@ -11,6 +12,7 @@ import { RichInline, Tex } from "@/components/Rich";
 import { IconNext } from "@/components/icons";
 import { PrintOpen } from "@/components/PrintOpen";
 import { OpenOnHash } from "@/components/OpenOnHash";
+import { StudyMark } from "@/components/StudyMark";
 import { badge, card, eyebrow, seg, segItem } from "@/components/ui";
 
 export const dynamic = "force-dynamic";
@@ -71,14 +73,24 @@ export default async function Study({ searchParams }: { searchParams: Promise<{ 
 
 async function Guide({ guide }: { guide: NonNullable<ReturnType<typeof loadStudy>> }) {
   const db = await userDb();
-  const [attempts, responses] = await Promise.all([db.select().from(schema.attempts), db.select().from(schema.responses)]);
+  const [attempts, responses, markRows] = await Promise.all([
+    db.select().from(schema.attempts),
+    db.select().from(schema.responses),
+    db.select().from(schema.studyMarks).where(eq(schema.studyMarks.measure, guide.measure)),
+  ]);
   const tests = new Map(listTestIds().flatMap((id): [string, Test][] => {
     const t = loadTest(id);
     return t && t.measure === guide.measure ? [[id, t]] : [];
   }));
   const stats = studyStats(guide, attempts, responses, tests);
   const numberOf = attemptNumbers(attempts);
-  const sections = orderSections(guide.sections, stats.sections);
+  const marks = (kind: MarkKind) => new Map(markRows.filter((r) => r.kind === kind).map((r): [string, Mark] => [r.itemId, { state: r.state as Mark["state"], updatedAt: r.updatedAt }]));
+  const cards = applyMarks(guide.quickRef.flatMap((g) => g.items.map((it) => ({ ...it, group: g.title, id: cardId(g.title, it.name) }))), (c) => c.id, marks("card"));
+  const groups = guide.quickRef.map((g) => ({ title: g.title, items: cards.shown.filter((c) => c.group === g.title) })).filter((g) => g.items.length);
+  const topics = applyMarks(orderSections(guide.sections, stats.sections), (s) => s.id, marks("topic"), (s, since) =>
+    stats.sections.get(s.id)!.misses.some((x) => x.finishedAt > since));
+  const sections = topics.shown;
+  const topicProps = { measure: guide.measure, stats: stats.sections, numberOf };
   const { overall, pacing } = stats;
   const formats = guide.formats.map((f) => ({ ...f, t: stats.formats.get(f.type) }));
 
@@ -134,25 +146,27 @@ async function Guide({ guide }: { guide: NonNullable<ReturnType<typeof loadStudy
             <p className="text-sm text-muted">Every formula you need, one per card.</p>
           </div>
           <nav aria-label="Formula groups" className="flex flex-wrap gap-1.5 print:hidden">
-            {guide.quickRef.map((g) => (
+            {groups.map((g) => (
               <a key={g.title} href={`#f-${slug(g.title)}`} className={chip}>{g.title}</a>
             ))}
           </nav>
         </div>
-        {guide.quickRef.map((g) => (
+        {groups.length === 0 && <p className="text-sm text-muted">Every card is archived or removed.</p>}
+        {groups.map((g) => (
           <div key={g.title} id={`f-${slug(g.title)}`} className="scroll-mt-20 space-y-2">
             <h3 className={eyebrow}>{g.title}</h3>
             <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-              {g.items.map((it) => (
-                <div key={it.name} className={`${card} flex flex-col gap-1.5 p-3.5 break-inside-avoid`}>
-                  <div className="text-xs font-medium text-muted"><RichInline text={it.name} /></div>
-                  <div className="overflow-x-auto overflow-y-hidden py-0.5 text-[1.15rem] leading-snug"><Tex tex={it.tex} /></div>
-                  {it.note && <div className="text-xs leading-relaxed text-muted"><RichInline text={it.note} /></div>}
-                </div>
-              ))}
+              {g.items.map((it) => <FormulaCard key={it.id} measure={guide.measure} card={it} />)}
             </div>
           </div>
         ))}
+        {cards.archived.length > 0 && (
+          <Shelf label={`Archived cards · ${cards.archived.length}`}>
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+              {cards.archived.map((it) => <FormulaCard key={it.id} measure={guide.measure} card={it} state="archived" />)}
+            </div>
+          </Shelf>
+        )}
       </section>
 
       <section id="topics" className="scroll-mt-20 space-y-3">
@@ -174,33 +188,19 @@ async function Guide({ guide }: { guide: NonNullable<ReturnType<typeof loadStudy
           </nav>
         </div>
         <div className="space-y-2">
-          {sections.map((s, i) => {
-            const t = stats.sections.get(s.id)!;
-            return (
-              <details key={s.id} id={`t-${s.id}`} className={`${card} group scroll-mt-20`} open={i < OPEN && t.n > 0}>
-                <summary className="flex min-h-14 list-none items-center gap-3 px-4 py-2 [&::-webkit-details-marker]:hidden">
-                  <IconNext size={16} className="shrink-0 text-muted transition-transform group-open:rotate-90 print:hidden" />
-                  <span className="flex-1 font-semibold">{s.title}</span>
-                  {t.misses.length > 0 && <span className="hidden text-xs tabular-nums text-muted sm:inline">{t.misses.length} missed</span>}
-                  <span className={badge(tone(t))}>{t.n ? `${t.correct}/${t.n} right` : "not tested yet"}</span>
-                </summary>
-                <div className="space-y-5 border-t border-line p-4 sm:p-5">
-                  <p className="rounded-xl bg-accent-soft px-4 py-3 text-[15px] leading-relaxed">
-                    <span className="font-semibold text-accent">Big idea: </span>
-                    <RichInline text={s.idea} />
-                  </p>
-                  <Example q={s.example.q} steps={s.example.steps} />
-                  <Block label="Rules to remember" lines={s.facts} />
-                  <div className="grid gap-5 sm:grid-cols-2">
-                    <Block label="Shortcuts" lines={s.tricks} tone="ok" />
-                    <Block label="Watch out" lines={s.traps} tone="bad" />
-                  </div>
-                  {t.misses.length > 0 && <Misses misses={t.misses} numberOf={numberOf} />}
-                </div>
-              </details>
-            );
-          })}
+          {sections.length === 0 && <p className="text-sm text-muted">Every topic is archived or removed.</p>}
+          {sections.map((s, i) => (
+            <Topic key={s.id} s={s} {...topicProps} open={i < OPEN && stats.sections.get(s.id)!.n > 0} back={topics.back.has(s.id)} />
+          ))}
         </div>
+        {topics.archived.length > 0 && (
+          <Shelf label={`Archived topics · ${topics.archived.length}`}>
+            <p className="text-sm text-muted">Studied and folded away. One comes back up top if a later mock misses it.</p>
+            <div className="space-y-2">
+              {topics.archived.map((s) => <Topic key={s.id} s={s} {...topicProps} state="archived" />)}
+            </div>
+          </Shelf>
+        )}
       </section>
 
       <section id="formats" className="scroll-mt-20 space-y-3">
@@ -233,7 +233,95 @@ async function Guide({ guide }: { guide: NonNullable<ReturnType<typeof loadStudy
           </ul>
         </div>
       </section>
+
+      {cards.deleted.length + topics.deleted.length > 0 && (
+        <Shelf label={`Removed · ${cards.deleted.length + topics.deleted.length}`}>
+          <ul className="divide-y divide-line overflow-hidden rounded-xl border border-line">
+            {topics.deleted.map((s) => (
+              <li key={s.id} className="flex items-center gap-3 px-3.5 py-2 text-sm">
+                <span className="flex-1"><span className="text-muted">Topic · </span>{s.title}</span>
+                <StudyMark measure={guide.measure} kind="topic" id={s.id} state="deleted" compact />
+              </li>
+            ))}
+            {cards.deleted.map((c) => (
+              <li key={c.id} className="flex items-center gap-3 px-3.5 py-2 text-sm">
+                <span className="flex-1"><span className="text-muted">{c.group} · </span><RichInline text={c.name} /></span>
+                <StudyMark measure={guide.measure} kind="card" id={c.id} state="deleted" compact />
+              </li>
+            ))}
+          </ul>
+        </Shelf>
+      )}
     </>
+  );
+}
+
+/** A folded group at the end of a section: archived or removed items, kept out of the way and out of print. */
+function Shelf({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <details className="group space-y-3 print:hidden">
+      <summary className="flex min-h-10 cursor-pointer list-none items-center gap-2 text-sm font-medium text-muted hover:text-fg [&::-webkit-details-marker]:hidden">
+        <IconNext size={14} className="transition-transform group-open:rotate-90" />
+        {label}
+      </summary>
+      <div className="space-y-3 pt-1">{children}</div>
+    </details>
+  );
+}
+
+type Card = Study["quickRef"][number]["items"][number] & { id: string };
+
+function FormulaCard({ measure, card: it, state }: { measure: Study["measure"]; card: Card; state?: Mark["state"] }) {
+  return (
+    <div className={`${card} flex flex-col gap-1.5 p-3.5 break-inside-avoid ${state ? "opacity-70" : ""}`}>
+      <div className="-mr-1.5 -mt-1.5 flex items-start gap-2">
+        <div className="flex-1 pt-1.5 text-xs font-medium text-muted"><RichInline text={it.name} /></div>
+        <StudyMark measure={measure} kind="card" id={it.id} state={state} compact />
+      </div>
+      <div className="overflow-x-auto overflow-y-hidden py-0.5 text-[1.15rem] leading-snug"><Tex tex={it.tex} /></div>
+      {it.note && <div className="text-xs leading-relaxed text-muted"><RichInline text={it.note} /></div>}
+    </div>
+  );
+}
+
+function Topic({ s, measure, stats, numberOf, open, back, state }: {
+  s: StudySection;
+  measure: Study["measure"];
+  stats: Map<string, Tally & { misses: Miss[] }>;
+  numberOf: Map<number, number>;
+  open?: boolean;
+  back?: boolean;
+  state?: Mark["state"];
+}) {
+  const t = stats.get(s.id)!;
+  return (
+    <details id={`t-${s.id}`} className={`${card} group scroll-mt-20`} open={open}>
+      <summary className="flex min-h-14 list-none items-center gap-3 px-4 py-2 [&::-webkit-details-marker]:hidden">
+        <IconNext size={16} className="shrink-0 text-muted transition-transform group-open:rotate-90 print:hidden" />
+        <span className="flex-1 font-semibold">{s.title}</span>
+        {back && <span className={badge("warn")} title="You archived this topic, then a later mock missed it">missed since archived</span>}
+        {t.misses.length > 0 && <span className="hidden text-xs tabular-nums text-muted sm:inline">{t.misses.length} missed</span>}
+        <span className={badge(tone(t))}>{t.n ? `${t.correct}/${t.n} right` : "not tested yet"}</span>
+      </summary>
+      <div className="space-y-5 border-t border-line p-4 sm:p-5">
+        <p className="rounded-xl bg-accent-soft px-4 py-3 text-[15px] leading-relaxed">
+          <span className="font-semibold text-accent">Big idea: </span>
+          <RichInline text={s.idea} />
+        </p>
+        <Example q={s.example.q} steps={s.example.steps} />
+        <Block label="Rules to remember" lines={s.facts} />
+        <div className="grid gap-5 sm:grid-cols-2">
+          <Block label="Shortcuts" lines={s.tricks} tone="ok" />
+          <Block label="Watch out" lines={s.traps} tone="bad" />
+        </div>
+        {s.tips && <Tips tips={s.tips} />}
+        {s.patterns?.map((p) => <Pattern key={p.title} pattern={p} />)}
+        {t.misses.length > 0 && <Misses misses={t.misses} numberOf={numberOf} />}
+        <div className="flex justify-end border-t border-line pt-4">
+          <StudyMark measure={measure} kind="topic" id={s.id} state={state} />
+        </div>
+      </div>
+    </details>
   );
 }
 
@@ -265,6 +353,51 @@ function Example({ q, steps }: { q: string; steps: string[] }) {
           </li>
         ))}
       </ol>
+    </div>
+  );
+}
+
+function Tips({ tips }: { tips: NonNullable<StudySection["tips"]> }) {
+  return (
+    <div className="space-y-2">
+      <h3 className={eyebrow}>Tips &amp; tricks</h3>
+      <ul className="grid gap-2 sm:grid-cols-2">
+        {tips.map((t) => (
+          <li key={t.title} className="flex flex-col gap-2 rounded-xl border border-line p-3.5 break-inside-avoid">
+            <span className="font-semibold leading-snug"><RichInline text={t.title} /></span>
+            {t.svg && <div className="flex justify-center rounded-lg bg-surface-2 p-2 text-fg [&>svg]:h-auto [&>svg]:max-h-44 [&>svg]:max-w-full" dangerouslySetInnerHTML={{ __html: t.svg }} />}
+            <p className="text-[15px] leading-relaxed"><RichInline text={t.text} /></p>
+            {t.example && <p className="text-sm leading-relaxed"><span className="font-semibold text-accent">Example: </span><RichInline text={t.example} /></p>}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function Pattern({ pattern }: { pattern: NonNullable<StudySection["patterns"]>[number] }) {
+  return (
+    <div className="space-y-3">
+      <div className="space-y-1">
+        <h3 className={eyebrow}>{pattern.title}</h3>
+        <p className="text-[15px] leading-relaxed"><RichInline text={pattern.idea} /></p>
+      </div>
+      <ol className="grid gap-2 sm:grid-cols-2">
+        {pattern.cases.map((c, i) => (
+          <li key={c.name} className="space-y-2 rounded-xl border border-line p-3.5 break-inside-avoid">
+            <div className="flex gap-2.5">
+              <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-accent-soft text-xs font-semibold text-accent">{i + 1}</span>
+              <span className="font-semibold leading-snug">{c.name}</span>
+            </div>
+            <p className="text-[15px] font-medium leading-relaxed"><RichInline text={c.q} /></p>
+            <p className="text-sm leading-relaxed"><span className="font-semibold text-accent">Spot it: </span><RichInline text={c.spot} /></p>
+            <ul className="list-disc space-y-1 pl-5 text-sm leading-relaxed marker:text-muted">
+              {c.steps.map((st, j) => <li key={j}><RichInline text={st} /></li>)}
+            </ul>
+          </li>
+        ))}
+      </ol>
+      {pattern.notWhen && <Block label="Not this method" lines={pattern.notWhen} tone="bad" />}
     </div>
   );
 }

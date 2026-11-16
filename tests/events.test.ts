@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { eventsForResponse } from "@/lib/events";
+import { eventsForResponse, readingAllowanceMs } from "@/lib/events";
 import type { Question } from "@/lib/types";
 
 const se: Question = {
@@ -36,7 +36,8 @@ describe("eventsForResponse", () => {
   it("slow correct key adds key_slow", () => {
     const es = eventsForResponse(se, "verbal", { sel: [0, 2] }, { guessed: false, timeMs: 120_000 });
     expect(es.filter((e) => e.event === "key_slow").map((e) => e.itemId)).toEqual(["abate", "mitigate"]);
-    expect(eventsForResponse(se, "verbal", { sel: [0, 2] }, { guessed: true, timeMs: 120_000 }).some((e) => e.event === "key_slow")).toBe(false);
+    // guessed and slow stack, as they do for concepts
+    expect(eventsForResponse(se, "verbal", { sel: [0, 2] }, { guessed: true, timeMs: 120_000 }).filter((e) => e.event === "key_slow").map((e) => e.itemId)).toEqual(["abate", "mitigate"]);
   });
   it("tc uses blank positions", () => {
     const tc: Question = {
@@ -99,6 +100,18 @@ describe("reading skill events", () => {
   it("a right but slow RC answer is mastery plus a slowness signal", () => {
     const e = eventsForResponse(rc, "verbal", { sel: [2] }, { guessed: false, timeMs: 120_000 });
     expect(e.filter((x) => x.itemId === "rc-function").map((x) => x.event)).toEqual(["concept_right_primary", "concept_slow"]);
+  });
+
+  it("the first question opened on a shared passage gets the passage's reading time before it counts as slow", () => {
+    const paragraphs = [Array(250).fill("word").join(" ")];
+    const q = { ...rc, passageId: "p1" };
+    const two = { questions: [q, { ...q, id: "q2" }], passages: [{ id: "p1", paragraphs, tags: [] }] };
+    expect(readingAllowanceMs(two, q, true)).toBe(60_000); // 250 words at 250 wpm
+    expect(readingAllowanceMs(two, q, false)).toBe(0);
+    expect(readingAllowanceMs({ ...two, questions: [q] }, q, true)).toBe(0); // one question: no shared read
+    const slow = (readingMs: number) => eventsForResponse(q, "verbal", { sel: [2] }, { guessed: false, timeMs: 120_000, readingMs }).some((x) => x.event === "concept_slow");
+    expect(slow(0)).toBe(true);
+    expect(slow(60_000)).toBe(false);
   });
 });
 

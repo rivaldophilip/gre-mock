@@ -16,6 +16,8 @@ export interface LoggedEvent {
   event: string;
   weight: number;
   createdAt: Date;
+  /** the attempt it was logged in, so a "didn't know" tag and a wrong answer on the same word count once */
+  attemptId?: number | null;
 }
 
 export interface ItemScore {
@@ -74,6 +76,28 @@ export const REASONS: Record<string, string> = {
   concept_slow: "right but slow",
 };
 
+/**
+ * Positive events that must not add to S: in an attempt where the word was also tagged "didn't know",
+ * the tag and the answer's own weakness events (key_missed, distractor_chosen, ...) are one piece of
+ * evidence, so only the largest of them counts. They still count for coverage and streak.
+ */
+function overlapping(events: LoggedEvent[]): Set<LoggedEvent> {
+  const byAttempt = new Map<number, LoggedEvent[]>();
+  for (const e of events) {
+    if (e.weight <= 0 || e.attemptId == null) continue;
+    const arr = byAttempt.get(e.attemptId);
+    if (arr) arr.push(e);
+    else byAttempt.set(e.attemptId, [e]);
+  }
+  const skip = new Set<LoggedEvent>();
+  for (const es of byAttempt.values()) {
+    if (es.length < 2 || !es.some((e) => e.event === "dont_know")) continue;
+    const top = es.reduce((m, e) => (e.weight > m.weight ? e : m));
+    for (const e of es) if (e !== top) skip.add(e);
+  }
+  return skip;
+}
+
 export function scoreItem(itemId: string, events: LoggedEvent[], yieldWeight: number, now: Date): ItemScore {
   let pos = 0;
   let neg = 0;
@@ -85,16 +109,22 @@ export function scoreItem(itemId: string, events: LoggedEvent[], yieldWeight: nu
   const reasonMass = new Map<string, number>();
 
   const sorted = [...events].sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime());
+  const skip = overlapping(sorted);
+  // a passage's words are tagged on every question that shares it: one reading is one exposure per attempt
+  const seenPassage = new Set<number>();
   for (const e of sorted) {
     const d = decay((now.getTime() - e.createdAt.getTime()) / DAY);
-    if (e.weight > 0) {
+    if (e.weight > 0 && !skip.has(e)) {
       pos += e.weight * d;
       reasonMass.set(e.event, (reasonMass.get(e.event) ?? 0) + e.weight * d);
     } else if (e.weight < 0) neg += Math.abs(e.weight) * d;
     const r = roleOf(e.event);
     if (r === "key") nKey++;
     else if (r === "distractor") nDis++;
-    else if (r === "passage") nPas++;
+    else if (r === "passage" && (e.attemptId == null || !seenPassage.has(e.attemptId))) {
+      nPas++;
+      if (e.attemptId != null) seenPassage.add(e.attemptId);
+    }
     if (r !== "other" && r !== "passage" && (!last || e.createdAt > last)) last = e.createdAt;
     if (!lastAny || e.createdAt > lastAny) lastAny = e.createdAt;
   }

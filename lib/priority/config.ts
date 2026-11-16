@@ -7,7 +7,7 @@ export const WORD_W = {
   key_guessed: 0.3,
   key_partial: -0.3,
   key_correct: -0.6,
-  key_slow: 0.2, // key right (not guessed) but slower than SLOW_MS.verbal
+  key_slow: 0.2, // key right (guessed or not) but slower than SLOW_MS.verbal
   distractor_rejected: -0.15,
   exposure: 0,
 } as const;
@@ -23,6 +23,11 @@ export const CONCEPT_W = {
 
 /** "slow" = more than 1.5x pace (1:10 quant, 1:00 verbal per question). */
 export const SLOW_MS = { quant: 105_000, verbal: 90_000 } as const;
+/**
+ * The first question opened on a shared passage also carries the passage's first read, so its "slow" limit is
+ * raised by the passage's length at this reading speed (words per minute).
+ */
+export const READING_WPM = 250;
 
 export const HALF_LIFE_DAYS = 21;
 export const SMOOTH = { prior: 0.5, total: 1.5 } as const;

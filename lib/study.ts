@@ -33,6 +33,22 @@ export const StudySchema = z.object({
         facts: Lines,
         tricks: Lines,
         traps: Lines,
+        /** tips & tricks: a named move, when it applies, a quick worked case, and an optional drawing (inline SVG drawn with currentColor and theme vars) */
+        tips: z
+          .array(z.object({ title: z.string().min(1), text: z.string().min(1), example: z.string().min(1).optional(), svg: z.string().startsWith("<svg").optional() }))
+          .optional(),
+        /** pattern drills: one method in every disguise it shows up in, each with how to spot it and a worked case */
+        patterns: z
+          .array(
+            z.object({
+              title: z.string().min(1),
+              idea: z.string().min(1),
+              cases: z.array(z.object({ name: z.string().min(1), q: z.string().min(1), spot: z.string().min(1), steps: Lines })).min(1),
+              /** look-alikes the method does not fit */
+              notWhen: Lines.optional(),
+            }),
+          )
+          .optional(),
       }),
     )
     .min(1),
@@ -52,6 +68,7 @@ export interface Miss {
   timeMs: number;
   guessed: boolean;
   trap?: string;
+  finishedAt: Date;
 }
 
 export interface Tally {
@@ -97,7 +114,7 @@ export function studyStats(guide: Study, attempts: AttemptRow[], responses: Resp
     const mine = rows.filter((x) => s.concepts.some((c) => x.concepts.has(c)));
     const misses = mine
       .filter((x) => !x.ok)
-      .map((x) => ({ testId: x.a.testId, attemptId: x.a.id, qid: x.q.id, type: slotType(x.q), difficulty: x.q.difficulty, timeMs: x.ms, guessed: x.r.guessed, trap: x.q.explanation.trap || undefined }));
+      .map((x) => ({ testId: x.a.testId, attemptId: x.a.id, qid: x.q.id, type: slotType(x.q), difficulty: x.q.difficulty, timeMs: x.ms, guessed: x.r.guessed, trap: x.q.explanation.trap || undefined, finishedAt: x.a.finishedAt! }));
     sections.set(s.id, { ...tally(mine), misses });
   }
 
@@ -135,4 +152,41 @@ export function orderSections<S extends { id: string }>(sections: S[], stats: Ma
     .map((s, i) => ({ s, i }))
     .sort((x, y) => acc(x.s) - acc(y.s) || missed(y.s) - missed(x.s) || x.i - y.i)
     .map((x) => x.s);
+}
+
+export const MARK_KINDS = ["card", "topic"] as const;
+export type MarkKind = (typeof MARK_KINDS)[number];
+export type MarkState = "archived" | "deleted";
+export interface Mark {
+  state: MarkState;
+  updatedAt: Date;
+}
+
+/** A formula card's mark id: its group and name, which are unique within a guide. */
+export const cardId = (group: string, name: string) => `${group} / ${name}`;
+
+/** Every id a guide can mark, by kind. */
+export function markIds(guide: Study): Record<MarkKind, Set<string>> {
+  return {
+    card: new Set(guide.quickRef.flatMap((g) => g.items.map((it) => cardId(g.title, it.name)))),
+    topic: new Set(guide.sections.map((s) => s.id)),
+  };
+}
+
+/**
+ * Splits items by the reader's marks, keeping their order. `missedSince` brings an archived item back to the
+ * shown list when a mock finished after it was archived misses it (`back` names those); deleted items stay out.
+ */
+export function applyMarks<T>(items: T[], id: (t: T) => string, marks: Map<string, Mark>, missedSince?: (t: T, since: Date) => boolean) {
+  const out = { shown: [] as T[], archived: [] as T[], deleted: [] as T[], back: new Set<string>() };
+  for (const t of items) {
+    const m = marks.get(id(t));
+    if (!m) out.shown.push(t);
+    else if (m.state === "deleted") out.deleted.push(t);
+    else if (missedSince?.(t, m.updatedAt)) {
+      out.shown.push(t);
+      out.back.add(id(t));
+    } else out.archived.push(t);
+  }
+  return out;
 }

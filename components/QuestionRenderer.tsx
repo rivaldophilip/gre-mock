@@ -1,6 +1,7 @@
 "use client";
 import type { Answer, PublicQuestion } from "@/lib/types";
 import { Rich, RichInline } from "./Rich";
+import { tapWord, type WordTags } from "./WordTagger";
 import { IconCheck, IconX } from "./icons";
 
 const L = "ABCDEFGHIJ";
@@ -85,6 +86,7 @@ export function QuestionRenderer({
   disabled,
   keySel,
   keyValue,
+  tags,
 }: {
   q: PublicQuestion;
   answer: Answer | undefined;
@@ -92,8 +94,11 @@ export function QuestionRenderer({
   disabled?: boolean;
   keySel?: number[];
   keyValue?: string;
+  /** TC / SE: the sentence's words are tappable as "didn't know" (practice, after the answer is shown) */
+  tags?: WordTags;
 }) {
   const sel = answer?.sel ?? [];
+  const word = tags && tapWord(tags);
   switch (q.type) {
     case "tc": {
       const blanks = q.blanks ?? [];
@@ -103,7 +108,7 @@ export function QuestionRenderer({
           <p className="text-[17px] leading-relaxed">
             {parts.map((p, i) => (
               <span key={i}>
-                <RichInline text={p} />
+                <RichInline text={p} word={word} />
                 {i < parts.length - 1 && (
                   <span className="mx-1 inline-block min-w-16 border-b-2 border-accent px-1 text-center font-semibold text-accent">
                     {sel[i] !== undefined && sel[i] >= 0 ? blanks[i]?.[sel[i]] : <span className="font-normal text-muted">({blanks.length > 1 ? L[i].toLowerCase() : i + 1})</span>}
@@ -137,7 +142,7 @@ export function QuestionRenderer({
     case "se":
       return (
         <div className="space-y-4">
-          <Rich text={q.prompt} className="text-[17px] leading-relaxed" />
+          <Rich text={q.prompt} className="text-[17px] leading-relaxed" word={word} />
           <Hint>Select the two answer choices that, when used to complete the sentence, fit the meaning of the sentence as a whole and produce completed sentences that are alike in meaning.</Hint>
           <ChoiceList choices={q.choices ?? []} type="check" sel={sel} disabled={disabled} keySel={keySel} onChange={(s) => onChange({ sel: s.slice(-2) })} />
         </div>

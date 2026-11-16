@@ -7,6 +7,7 @@ import { loadTest } from "@/lib/content";
 import { canReveal, getAttempt, isClosed, pairKey, responsesFor, sectionOvertimeMs, sectionStatus } from "@/lib/attempts";
 import { bandText, bandWhy, estimateBand, scoreAnswer } from "@/lib/scoring";
 import { TYPE_INFO, slotType } from "@/lib/qtypes";
+import { choiceWords, wordIdFor } from "@/lib/choice-words";
 import type { Answer, Question, Test } from "@/lib/types";
 import { Rich, RichInline } from "@/components/Rich";
 import { Figure } from "@/components/Figure";
@@ -48,12 +49,6 @@ const mss = (ms: number) => {
   const s = Math.round(ms / 1000);
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
 };
-
-function choiceWords(q: Question): string[] {
-  if (q.type === "tc") return q.blanks?.flat() ?? [];
-  if (q.type === "se") return q.choices ?? [];
-  return [];
-}
 
 /** One blank or pick of an answer; `ok` is set where a multi-part answer is right in some parts and wrong in others. */
 type Part = { text: string; ok?: boolean };
@@ -117,11 +112,6 @@ export default async function Review({ params }: { params: Promise<{ id: string;
     .from(schema.itemEvents)
     .where(and(eq(schema.itemEvents.attemptId, a.id), eq(schema.itemEvents.event, "dont_know")));
   const taggedIds = new Set(taggedRows.map((r) => r.itemId));
-  /** choice text -> vocab id, via the tag that sits on that choice */
-  const wordIdFor = (q: Question, text: string) => {
-    const at = (t: Question["tags"][number]) => (q.type === "tc" ? q.blanks?.[t.at?.[0] ?? -1]?.[t.at?.[1] ?? -1] : q.choices?.[t.at?.[0] ?? -1]);
-    return q.tags.find((t) => t.kind === "word" && t.at && at(t) === text)?.id;
-  };
   // deliberate revisits: where the earlier item lives (its latest finished review) and how it went there
   const revisitRefs = [...new Set(visible.flatMap((q) => (q.revisits ? [q.revisits] : [])))];
   const revisitTests = [...new Set(revisitRefs.map((r) => r.split(":")[0]))];

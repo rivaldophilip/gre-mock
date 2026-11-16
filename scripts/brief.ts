@@ -50,6 +50,18 @@ function inFlightBriefs(registered: Set<string>) {
   return out;
 }
 
+/** Revisit refs promised by other briefs whose test is not written yet, so parallel briefs don't sibling one item twice. */
+function inFlightRevisits(current: string) {
+  const dir = "content/briefs";
+  const refs = new Set<string>();
+  for (const f of fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => new RegExp(`^${measure}-\\d+\\.json$`).test(f)) : []) {
+    const b = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
+    if (b.testId === current || fs.existsSync(path.join("content/tests", `${b.testId}.json`))) continue;
+    for (const s of [...(b.keyWords ?? []), ...(b.conceptSlots ?? [])] as { revisit?: { ref: string } }[]) if (s.revisit) refs.add(s.revisit.ref);
+  }
+  return refs;
+}
+
 /**
  * Variants used so far (concept -> variant -> times). A test that records its variants (quant `variant` fields)
  * counts from its questions; a brief counts only while its test is unwritten or records none (verbal skill slots).
@@ -238,12 +250,14 @@ async function main() {
   const now = new Date();
   const allEvents = await db.select().from(schema.itemEvents);
   const eventsOf = (kind: "word" | "concept"): LoggedEvent[] =>
-    allEvents.filter((e) => e.kind === kind).map((e) => ({ itemId: e.itemId, event: e.event, weight: e.weight, createdAt: e.createdAt }));
+    allEvents.filter((e) => e.kind === kind).map((e) => ({ itemId: e.itemId, event: e.event, weight: e.weight, createdAt: e.createdAt, attemptId: e.attemptId }));
   const logged = eventsOf(measure === "verbal" ? "word" : "concept");
   // quant concepts and reading skills share the concepts table; areas tell them apart
   const SKILL_AREAS = ["reading", "argument"];
   const conceptRows = await db.select().from(schema.concepts);
   const id = nextId();
+  const heldRevisits = inFlightRevisits(id);
+  const notHeld = (r: Revisit) => !heldRevisits.has(r.ref);
   const refs = refItems();
   const pending = await pendingItems(db);
   if (pending.untaken.length) console.log(`untaken tests: ${pending.untaken.join(", ")}; ${pending.items.size} of their targets are damped`);
@@ -277,7 +291,7 @@ async function main() {
       return { word: v.lemma, id: v.id, tier: v.tier, secondary: v.isSecondary, sense: sense ? `${sense.pos ?? ""} ${sense.def}`.trim() : null, bucket, reason: s.reason, P: +s.P.toFixed(2) };
     };
     const answers = await finishedAnswers(db);
-    const revisits = matchRevisits(keys.map((k) => k.itemId), revisitQueue(answers, measureTests(measure), now), keyWordsOf);
+    const revisits = matchRevisits(keys.map((k) => k.itemId), revisitQueue(answers, measureTests(measure), now).filter(notHeld), keyWordsOf);
     const history = wordHistory();
     let nth = 0;
     const keySlots = keys.map((k, i) => ({
@@ -322,7 +336,7 @@ async function main() {
     const picks = allocateConcepts(withArea, 27, ["arithmetic", "algebra", "geometry", "data"], random);
     const variants = assignVariants(picks.map((p) => p.itemId), JSON.parse(fs.readFileSync("data/concept_variants.json", "utf8")), variantsUsed(id), random);
     const history = conceptHistory(measure);
-    const revisits = matchRevisits(picks.map((p) => p.itemId), revisitQueue(await finishedAnswers(db), measureTests(measure), now), (q) => [primaryOf(q) ?? ""]);
+    const revisits = matchRevisits(picks.map((p) => p.itemId), revisitQueue(await finishedAnswers(db), measureTests(measure), now).filter(notHeld), (q) => [primaryOf(q) ?? ""]);
     let nth = 0;
     brief.conceptSlots = picks.map((p, i) => ({
       slot: i + 1,

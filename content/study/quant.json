@@ -21,7 +21,8 @@
     },
     {
      "name": "Slice (sector)",
-     "tex": "\\tfrac{\\text{angle}}{360}\\times \\pi r^2"
+     "tex": "\\tfrac{\\text{angle}}{360}\\times \\pi r^2",
+     "note": "a pizza slice cut from the center"
     },
     {
      "name": "Square inside a circle",
@@ -30,7 +31,8 @@
     },
     {
      "name": "Circle inside a square",
-     "tex": "\\text{side}=2r"
+     "tex": "\\text{side}=2r",
+     "note": "the circle touches all four sides"
     },
     {
      "name": "Square in a half-circle",
@@ -69,12 +71,63 @@
     },
     {
      "name": "Equilateral area",
-     "tex": "\\tfrac{\\sqrt3}{4}s^2"
+     "tex": "\\tfrac{\\sqrt3}{4}s^2",
+     "note": "$s$ = the side"
     },
     {
      "name": "Third side",
      "tex": "a-b < c < a+b",
      "note": "two sides always beat the third"
+    }
+   ]
+  },
+  {
+   "title": "Triangles & circles",
+   "items": [
+    {
+     "name": "Circle inside a triangle",
+     "tex": "r=\\dfrac{\\text{Area}}{s}",
+     "note": "$s$ = half the perimeter, $\\frac{a+b+c}{2}$"
+    },
+    {
+     "name": "Circle inside a right triangle",
+     "tex": "r=\\dfrac{a+b-c}{2}",
+     "note": "$c$ = the hypotenuse; also $r=s-c$"
+    },
+    {
+     "name": "Circle inside an equilateral triangle",
+     "tex": "r=\\dfrac{\\sqrt3}{6}a",
+     "note": "side $a$; one third of the height"
+    },
+    {
+     "name": "Triangle inside a circle",
+     "tex": "R=\\dfrac{abc}{4\\times\\text{Area}}",
+     "note": "all three corners on the circle"
+    },
+    {
+     "name": "Right triangle inside a circle",
+     "tex": "R=\\dfrac{c}{2}",
+     "note": "the hypotenuse is a diameter"
+    },
+    {
+     "name": "Equilateral triangle inside a circle",
+     "tex": "R=\\dfrac{\\sqrt3}{3}a",
+     "note": "twice the inside radius; two thirds of the height"
+    },
+    {
+     "name": "Excircle (outside one side)",
+     "tex": "r_a=\\dfrac{\\text{Area}}{s-a}",
+     "note": "touches side $a$ and the other two sides extended"
+    },
+    {
+     "name": "Excircle of a right triangle",
+     "tex": "r_c=s,\\quad r_a=s-b",
+     "note": "$r_c$: beyond the hypotenuse; $r_a$: beyond leg $a$ ($b$ = the other leg)"
+    },
+    {
+     "name": "Excircle of an equilateral triangle",
+     "tex": "r_a=\\dfrac{\\sqrt3}{2}a",
+     "note": "equals the height, 3 times the inside radius"
     }
    ]
   },
@@ -93,7 +146,8 @@
     },
     {
      "name": "Diagonals",
-     "tex": "\\tfrac{n(n-3)}{2}"
+     "tex": "\\tfrac{n(n-3)}{2}",
+     "note": "how many diagonals a polygon with $n$ sides has"
     },
     {
      "name": "Box volume",
@@ -117,7 +171,12 @@
     {
      "name": "Distance",
      "tex": "\\sqrt{(\\Delta x)^2+(\\Delta y)^2}",
-     "note": "Pythagoras on the grid"
+     "note": "between two points: Pythagoras on the grid"
+    },
+    {
+     "name": "Point to a line",
+     "tex": "d=\\dfrac{|Ax_0+By_0+C|}{\\sqrt{A^2+B^2}}",
+     "note": "from $(x_0,y_0)$ to the line $Ax+By+C=0$"
     }
    ]
   },
@@ -140,17 +199,24 @@
      "note": "AABB has $\\frac{4!}{2!\\,2!}=6$ orders"
     },
     {
+     "name": "$n$ identical things into $k$ groups",
+     "tex": "\\tbinom{n+k-1}{k-1}",
+     "note": "stars and bars; zero allowed"
+    },
+    {
      "name": "At least one",
-     "tex": "1-P(\\text{none})"
+     "tex": "1-P(\\text{none})",
+     "note": "$P(\\text{none})$ = the chance it never happens"
     },
     {
      "name": "Two groups",
      "tex": "A+B-\\text{both}+\\text{neither}",
-     "note": "= the total"
+     "note": "two overlapping groups (Venn): this = the total"
     },
     {
      "name": "Exactly one group",
-     "tex": "A+B-2\\times\\text{both}"
+     "tex": "A+B-2\\times\\text{both}",
+     "note": "in one of the two groups but not both"
     }
    ]
   },
@@ -160,16 +226,17 @@
     {
      "name": "Number of factors",
      "tex": "(a+1)(b+1)",
-     "note": "for $n = 2^a\\times3^b$"
+     "note": "for $n = 2^a\\times3^b$ (any primes); counts 1 and $n$"
     },
     {
      "name": "Last digits repeat",
      "tex": "2,3,7,8:\\ \\text{every }4",
-     "note": "4 and 9 every 2; 0, 1, 5, 6 never change"
+     "note": "units digit of powers; 4 and 9 every 2; 0, 1, 5, 6 never change"
     },
     {
      "name": "Odd number squared ÷ 8",
-     "tex": "\\text{remainder } 1"
+     "tex": "\\text{remainder } 1",
+     "note": "$7^2=49=6\\times8+1$"
     },
     {
      "name": "If $x+\\frac1x=s$",
@@ -178,7 +245,8 @@
     },
     {
      "name": "Roots of $x^2+bx+c$",
-     "tex": "\\text{add to } {-b},\\ \\text{multiply to } c"
+     "tex": "\\text{add to } {-b},\\ \\text{multiply to } c",
+     "note": "the two solutions; $x^2-5x+6$: $2+3=5$, $2\\times3=6$"
     },
     {
      "name": "Inequality rule",
@@ -212,11 +280,13 @@
     },
     {
      "name": "Above +1 SD",
-     "tex": "\\approx 16\\%"
+     "tex": "\\approx 16\\%",
+     "note": "on a bell curve; same share below $-1$ SD"
     },
     {
      "name": "Above +2 SD",
-     "tex": "\\approx 2.5\\%"
+     "tex": "\\approx 2.5\\%",
+     "note": "on a bell curve; same share below $-2$ SD"
     }
    ]
   }
@@ -239,7 +309,7 @@
     "Look at the answers first. They tell you how exact you need to be.",
     "Stuck setting it up? Try the middle answer in the question and see if it's too big or too small.",
     "No numbers given? Make some up (like 100 for percents).",
-    "The wrong answers are the usual mistakes. Getting one of them doesn't prove you're right."
+    "The wrong answers are built from common mistakes, so finding your number among the choices doesn't prove it's right."
    ]
   },
   {
@@ -298,20 +368,51 @@
     "**Square inside a circle:** the diagonal = the circle's width ($2r$). Area $=2r^2$.",
     "**Circle inside a square:** the circle touches all four sides, so the side $=2r$. Area $=4r^2$.",
     "Square in a circle in a square: each square is exactly **half** the one around it.",
-    "**Square in a half-circle** (sitting on the flat side): area $=\\frac45r^2$. Its top corners are half a side across and one full side up from the center, so $\\left(\\frac s2\\right)^2+s^2=r^2$.",
+    "**Square in a half-circle** (standing on the flat edge): area $=\\frac45r^2$. Why: a top corner is $\\frac s2$ across and $s$ up from the center, so $\\left(\\frac s2\\right)^2+s^2=r^2$.",
     "**Chord** = a straight line across the circle. A line from the center that meets it at a right angle cuts it exactly **in half**.",
     "**Arc** = part of the edge. Arc $=\\frac{\\text{center angle}}{360}\\times2\\pi r$.",
-    "A line that just touches the circle (a tangent) makes a right angle with the radius."
+    "A line that just touches the circle (a tangent) makes a right angle with the radius.",
+    "**Circle inside a triangle** (touches all three sides): $r=\\frac{\\text{Area}}{s}$, where $s$ is half the perimeter. Right triangle: $r=\\frac{a+b-c}{2}$. Equilateral with side $a$: $r=\\frac{\\sqrt3}{6}a$.",
+    "**Triangle inside a circle** (all three corners on it): $R=\\frac{abc}{4\\times\\text{Area}}$. Right triangle: $R=\\frac c2$, half the hypotenuse. Equilateral: $R=\\frac{\\sqrt3}{3}a$, exactly **twice** $r$.",
+    "**Excircle** (outside the triangle, touching one side and the other two sides extended): $r_a=\\frac{\\text{Area}}{s-a}$. Right triangle: the one beyond the hypotenuse has radius $s$; the one beyond leg $a$ has $s-b$. Equilateral: $r_a=\\frac{\\sqrt3}{2}a$, the height itself."
    ],
    "tricks": [
     "Stuck? Draw the radius to every point that's on the circle and look for the right triangle.",
-    "Two chords on **opposite sides** of the center: their distances from the center **add up** to the gap between them.",
-    "If half the chord ÷ radius $=\\frac{\\sqrt3}{2}$, the half-angle is $60^\\circ$, so the full center angle is $120^\\circ$."
+    "Two chords on **opposite sides** of the center: the gap between them is their two distances from the center **added together**.",
+    "If half the chord is $\\frac{\\sqrt3}{2}$ times the radius, you have a 30-60-90 triangle. The angle at the center in that triangle is $60^\\circ$, so the full center angle is $120^\\circ$.",
+    "Equilateral triangle: inside radius, outside radius and height are $1:2:3$. The center sits one third of the way up the height."
    ],
    "traps": [
     "Using the diameter as the square's **side**. It's the square's **diagonal** that equals the diameter.",
-    "Using the half-angle as the center angle. Your arc comes out half as long as it should.",
-    "Using the whole chord in the triangle. Always use **half** the chord."
+    "Using the angle from your right triangle (half the center angle) as the full center angle. Double it first, or your arc comes out half as long.",
+    "Using the whole chord in the triangle. Always use **half** the chord.",
+    "Using the whole perimeter in $r=\\frac{\\text{Area}}{s}$. The $s$ is **half** the perimeter."
+   ],
+   "tips": [
+    {
+     "title": "A diameter side means a right angle",
+     "text": "**When:** a triangle has all three corners on a circle, and one of its sides goes straight through the center (a diameter). **Then:** the corner across from that side is $90^\\circ$. The diameter is the longest side of a right triangle, so Pythagoras works.",
+     "example": "$AB$ is a diameter of length $10$, $AC=6$, and $C$ is on the circle. Angle $C=90^\\circ$, so $BC=\\sqrt{10^2-6^2}=\\sqrt{64}=8$.",
+     "svg": "<svg viewBox=\"0 0 240 160\" width=\"240\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Triangle ACB inside a circle with AB a diameter; the angle at C is a right angle\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"120\" cy=\"85\" r=\"62\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><polygon points=\"58,85 151,31.3 182,85\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" style=\"stroke:var(--accent)\"/><circle cx=\"120\" cy=\"85\" r=\"2.5\" stroke=\"none\"/><polyline points=\"142.3,36.3 147.3,45 156,40\" fill=\"none\" stroke-width=\"1.8\" style=\"stroke:var(--accent)\"/><text x=\"46\" y=\"90\" text-anchor=\"middle\" stroke=\"none\" ><tspan font-style=\"italic\">A</tspan></text><text x=\"194\" y=\"90\" text-anchor=\"middle\" stroke=\"none\" ><tspan font-style=\"italic\">B</tspan></text><text x=\"155\" y=\"24\" text-anchor=\"middle\" stroke=\"none\" ><tspan font-style=\"italic\">C</tspan></text><text x=\"120\" y=\"102\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--muted)\"><tspan font-style=\"italic\">O</tspan></text><text x=\"120\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" stroke=\"none\" style=\"fill:var(--muted)\">diameter</text></svg>"
+    },
+    {
+     "title": "Corner on the circle = half the center angle",
+     "text": "**When:** an angle has its corner on the circle itself, not at the center. **Then:** it is **half** the center angle that opens onto the same arc. Move the corner anywhere else on the far side of the circle and the angle doesn't change.",
+     "example": "The center angle is $120^\\circ$. Every angle with its corner on the circle that opens onto the same arc is $\\frac{120}{2}=60^\\circ$.",
+     "svg": "<svg viewBox=\"0 0 240 165\" width=\"240\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A center angle of 120 degrees and two inscribed angles on the same arc, each 60 degrees\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"120\" cy=\"80\" r=\"62\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M66.3,111 A62,62 0 0 0 173.7,111\" fill=\"none\" style=\"stroke:var(--accent)\" stroke-width=\"4\"/><line x1=\"120\" y1=\"80\" x2=\"66.3\" y2=\"111\" stroke=\"currentColor\" stroke-width=\"2\" style=\"stroke:var(--muted)\"/><line x1=\"120\" y1=\"80\" x2=\"173.7\" y2=\"111\" stroke=\"currentColor\" stroke-width=\"2\" style=\"stroke:var(--muted)\"/><line x1=\"109.2\" y1=\"18.9\" x2=\"66.3\" y2=\"111\" stroke=\"currentColor\" stroke-width=\"2\" style=\"stroke:var(--accent)\"/><line x1=\"109.2\" y1=\"18.9\" x2=\"173.7\" y2=\"111\" stroke=\"currentColor\" stroke-width=\"2\" style=\"stroke:var(--accent)\"/><line x1=\"163.8\" y1=\"36.2\" x2=\"66.3\" y2=\"111\" stroke=\"currentColor\" stroke-width=\"2\" style=\"stroke:var(--accent)\" stroke-dasharray=\"5 5\"/><line x1=\"163.8\" y1=\"36.2\" x2=\"173.7\" y2=\"111\" stroke=\"currentColor\" stroke-width=\"2\" style=\"stroke:var(--accent)\" stroke-dasharray=\"5 5\"/><circle cx=\"120\" cy=\"80\" r=\"2.5\" stroke=\"none\"/><text x=\"108\" y=\"50\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--accent)\">60°</text><text x=\"156\" y=\"66\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--accent)\">60°</text><text x=\"120\" y=\"104\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--muted)\">120°</text><text x=\"120\" y=\"160\" text-anchor=\"middle\" font-size=\"12\" stroke=\"none\" style=\"fill:var(--accent)\">same arc</text></svg>"
+    },
+    {
+     "title": "Circle inside vs. circle around a triangle",
+     "text": "**Circle inside** (it touches all three sides): $r=\\frac{\\text{Area}}{s}$, with $s$ = half the perimeter. **Circle around** (all three corners on it): $R=\\frac{abc}{4\\times\\text{Area}}$. **Right triangle:** $r=\\frac{a+b-c}{2}$ and $R=\\frac c2$. **Equilateral, side $a$:** $r=\\frac{\\sqrt3}{6}a$ and $R=\\frac{\\sqrt3}{3}a=2r$.",
+     "example": "Sides $3,4,5$: Area $=6$, $s=6$. So $r=\\frac66=1$ (check: $\\frac{3+4-5}{2}=1$) and $R=\\frac{3\\cdot4\\cdot5}{4\\cdot6}=2.5$ (check: $\\frac52$).",
+     "svg": "<svg viewBox=\"0 0 260 175\" width=\"260\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A 3-4-5 right triangle with its inside circle of radius 1 and its outside circle of radius 2.5 centered on the middle of the hypotenuse\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"128\" cy=\"94\" r=\"60\" fill=\"none\" stroke-width=\"2\" style=\"stroke:var(--muted)\"/><polygon points=\"80,130 176,130 80,58\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><polyline points=\"80,120 90,120 90,130\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"104\" cy=\"106\" r=\"24\" fill=\"none\" stroke-width=\"2\" style=\"stroke:var(--accent)\"/><circle cx=\"104\" cy=\"106\" r=\"2.5\" stroke=\"none\" style=\"fill:var(--accent)\"/><line x1=\"104\" y1=\"106\" x2=\"104\" y2=\"130\" stroke-width=\"1.5\" style=\"stroke:var(--accent)\"/><circle cx=\"128\" cy=\"94\" r=\"2.5\" stroke=\"none\"/><line x1=\"128\" y1=\"94\" x2=\"188\" y2=\"94\" stroke-width=\"1.5\" style=\"stroke:var(--muted)\" stroke-dasharray=\"4 4\"/><text x=\"110\" y=\"124\" text-anchor=\"start\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--accent)\"><tspan font-style=\"italic\">r</tspan></text><text x=\"166\" y=\"88\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--muted)\"><tspan font-style=\"italic\">R</tspan></text><text x=\"70\" y=\"98\" text-anchor=\"middle\" stroke=\"none\">3</text><text x=\"128\" y=\"148\" text-anchor=\"middle\" stroke=\"none\">4</text><text x=\"134\" y=\"84\" text-anchor=\"middle\" stroke=\"none\">5</text></svg>"
+    },
+    {
+     "title": "Excircle: outside one side",
+     "text": "**When:** a circle sits outside the triangle, touching one side and the **other two sides extended**. **Then:** $r_a=\\frac{\\text{Area}}{s-a}$, where $a$ is the side it touches. **Right triangle:** beyond the hypotenuse the radius is $s$ itself; beyond leg $a$ it is $s-b$. **Equilateral:** $r_a=\\frac{\\sqrt3}{2}a$, the height, so 3 times the inside radius.",
+     "example": "Sides $3,4,5$, circle outside the side $3$: $r=\\frac{6}{6-3}=2$ (check: $s-b=6-4=2$). Outside the hypotenuse: $\\frac{6}{6-5}=6=s$.",
+     "svg": "<svg viewBox=\"0 0 240 165\" width=\"240\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A 3-4-5 right triangle with an excircle of radius 2 outside the leg of length 3, touching that leg and the other two sides extended\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"120\" y1=\"130\" x2=\"36\" y2=\"130\" stroke-width=\"1.5\" style=\"stroke:var(--muted)\" stroke-dasharray=\"5 5\"/><line x1=\"120\" y1=\"58\" x2=\"81.6\" y2=\"29.2\" stroke-width=\"1.5\" style=\"stroke:var(--muted)\" stroke-dasharray=\"5 5\"/><polygon points=\"120,130 216,130 120,58\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><polyline points=\"120,120 130,120 130,130\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"72\" cy=\"82\" r=\"48\" fill=\"none\" stroke-width=\"2\" style=\"stroke:var(--accent)\"/><circle cx=\"72\" cy=\"82\" r=\"2.5\" stroke=\"none\" style=\"fill:var(--accent)\"/><line x1=\"72\" y1=\"82\" x2=\"120\" y2=\"82\" stroke-width=\"1.5\" style=\"stroke:var(--accent)\"/><text x=\"96\" y=\"76\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--accent)\"><tspan font-style=\"italic\">r</tspan></text><text x=\"132\" y=\"100\" text-anchor=\"middle\" stroke=\"none\">3</text><text x=\"168\" y=\"148\" text-anchor=\"middle\" stroke=\"none\">4</text><text x=\"176\" y=\"86\" text-anchor=\"middle\" stroke=\"none\">5</text></svg>"
+    }
    ]
   },
   {
@@ -348,6 +449,26 @@
     "Assuming an angle is $90^\\circ$ just because it looks like one.",
     "Assuming a line hits the middle, or is a height, when the question never says so.",
     "Forgetting the $\\frac12$ in the area."
+   ],
+   "tips": [
+    {
+     "title": "Slide the top corner: the area stays the same",
+     "text": "**When:** triangles share a base, and their top corners all sit on a line **parallel** to that base. **Then:** they all have the same height, so the same area. Slide the top corner along the line until you get a right triangle, which is easier to work with.",
+     "example": "Base $8$, top corner on a line $5$ above the base. Area $=\\frac12\\times8\\times5=20$, however slanted the triangle is.",
+     "svg": "<svg viewBox=\"0 0 300 150\" width=\"300\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Three triangles on the same base AB with tops on a parallel line; all have the same height h and the same area\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"10\" y1=\"30\" x2=\"270\" y2=\"30\" stroke=\"currentColor\" stroke-width=\"2\" style=\"stroke:var(--muted)\"/><line x1=\"10\" y1=\"120\" x2=\"270\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" style=\"stroke:var(--muted)\"/><polygon points=\"100,120 170,120 35,30\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 5\"/><polygon points=\"100,120 170,120 240,30\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 5\"/><polygon points=\"100,120 170,120 100,30\" stroke=\"currentColor\" stroke-width=\"2\" style=\"fill:var(--accent);fill-opacity:.16;stroke:var(--accent)\"/><polyline points=\"100,110 110,110 110,120\" fill=\"none\" stroke-width=\"1.8\" style=\"stroke:var(--accent)\"/><line x1=\"286\" y1=\"34\" x2=\"286\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\" style=\"stroke:var(--muted)\"/><line x1=\"281\" y1=\"30\" x2=\"291\" y2=\"30\" stroke=\"currentColor\" stroke-width=\"2\" style=\"stroke:var(--muted)\"/><line x1=\"281\" y1=\"120\" x2=\"291\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" style=\"stroke:var(--muted)\"/><text x=\"286\" y=\"80\" text-anchor=\"start\" font-size=\"16\" stroke=\"none\" dx=\"-16\"><tspan font-style=\"italic\">h</tspan></text><text x=\"96\" y=\"138\" text-anchor=\"middle\" stroke=\"none\" ><tspan font-style=\"italic\">A</tspan></text><text x=\"174\" y=\"138\" text-anchor=\"middle\" stroke=\"none\" ><tspan font-style=\"italic\">B</tspan></text><text x=\"40\" y=\"22\" text-anchor=\"start\" font-size=\"12\" stroke=\"none\" style=\"fill:var(--muted)\">slide the top along the line</text></svg>"
+    },
+    {
+     "title": "Two sides known: the most area is at $90^\\circ$",
+     "text": "**When:** you know two sides, $a$ and $b$, but not the angle between them. **Then:** the area is biggest when that angle is $90^\\circ$, and that biggest area is $\\frac12ab$. Any other angle squashes the triangle flatter and gives less.",
+     "example": "Sides $6$ and $8$: the area is above $0$ and at most $\\frac12\\times6\\times8=24$. Comparing the area with $24$? If a right angle is possible, the area could equal $24$ or be less, so the answer is (D). If it isn't possible, $24$ is bigger.",
+     "svg": "<svg viewBox=\"0 0 260 150\" width=\"260\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Side b swings around a hinge on side a; the height is largest, equal to b, when the angle is 90 degrees\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"60,130 230,130 105,52.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" style=\"stroke:var(--muted)\" stroke-dasharray=\"5 5\"/><polygon points=\"60,130 230,130 15,52.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" style=\"stroke:var(--muted)\" stroke-dasharray=\"5 5\"/><polygon points=\"60,130 230,130 60,40\" stroke=\"currentColor\" stroke-width=\"2\" style=\"fill:var(--accent);fill-opacity:.16;stroke:var(--accent)\"/><polyline points=\"60,120 70,120 70,130\" fill=\"none\" stroke-width=\"1.8\" style=\"stroke:var(--accent)\"/><text x=\"145\" y=\"146\" text-anchor=\"middle\" stroke=\"none\" ><tspan font-style=\"italic\">a</tspan></text><text x=\"50\" y=\"82\" text-anchor=\"end\" stroke=\"none\" ><tspan font-style=\"italic\">b</tspan></text><text x=\"120\" y=\"40\" text-anchor=\"start\" font-size=\"12\" stroke=\"none\" style=\"fill:var(--accent)\">tallest at 90°</text></svg>"
+    },
+    {
+     "title": "Sides $\\times k$ means area $\\times k^2$",
+     "text": "**When:** one shape is a scaled copy of another (same angles, different size). **Then:** if the sides are $k$ times as long, the area is $k^2$ times as big and the volume $k^3$ times. Common case: a line joining the midpoints of two sides of a triangle cuts off a small copy with half the sides, so a **quarter** of the area.",
+     "example": "A triangle has area $36$. The small triangle above the midpoint line has $\\frac14\\times36=9$, and the strip below it has $36-9=27$.",
+     "svg": "<svg viewBox=\"0 0 260 150\" width=\"260\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A triangle split by its midpoint lines into four equal copies, each a quarter of the area\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"80,75 180,75 130,20\" stroke=\"currentColor\" stroke-width=\"2\" style=\"fill:var(--accent);fill-opacity:.16;stroke:var(--accent)\"/><polygon points=\"30,130 230,130 130,20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"80,75 180,75 130,130\" stroke=\"currentColor\" stroke-width=\"2\" style=\"stroke:var(--muted)\" fill=\"none\" stroke-dasharray=\"5 5\"/><text x=\"130\" y=\"62\" text-anchor=\"middle\" font-size=\"16\" stroke=\"none\" style=\"fill:var(--accent)\">¼</text><text x=\"80\" y=\"118\" text-anchor=\"middle\" font-size=\"14\" stroke=\"none\" style=\"fill:var(--muted)\">¼</text><text x=\"180\" y=\"118\" text-anchor=\"middle\" font-size=\"14\" stroke=\"none\" style=\"fill:var(--muted)\">¼</text><text x=\"130\" y=\"98\" text-anchor=\"middle\" font-size=\"14\" stroke=\"none\" style=\"fill:var(--muted)\">¼</text><text x=\"196\" y=\"52\" text-anchor=\"start\" font-size=\"12\" stroke=\"none\" style=\"fill:var(--accent)\">half the sides</text></svg>"
+    }
    ]
   },
   {
@@ -374,16 +495,26 @@
     "**Perpendicular** lines (meeting at a right angle): flip the fraction **and** change the sign.",
     "**Parallel** lines have the **same** slope.",
     "Crossing the $x$-axis means $y=0$. Crossing the $y$-axis means $x=0$.",
-    "Midpoint: average the $x$'s, average the $y$'s."
+    "Midpoint: average the $x$'s, average the $y$'s.",
+    "**Distance from a point to a line:** for the point $(x_0,y_0)$ and the line $Ax+By+C=0$, $d=\\frac{|Ax_0+By_0+C|}{\\sqrt{A^2+B^2}}$. Example: from $(1,2)$ to $3x+4y-1=0$ is $\\frac{|3+8-1|}{5}=2$."
    ],
    "tricks": [
     "Sketch it quickly. Answers on the wrong side of an axis can be crossed off right away.",
-    "Square from two opposite corners: find the middle point. Walk from the middle to one corner (say 3 right, 2 up). Turn that walk a quarter turn (2 left, 3 up) to find another corner."
+    "Square from two opposite corners: find the midpoint. Walk from it to one corner (say 3 right, 2 up). Turn that walk a quarter turn (2 left, 3 up) and walk it from the midpoint to reach another corner."
    ],
    "traps": [
     "Changing the sign but forgetting to flip the fraction, or flipping it without changing the sign.",
     "Answering where the line crosses the $y$-axis when they asked about the $x$-axis.",
-    "Calling a rectangle a square without checking that its sides are equal."
+    "Calling a rectangle a square without checking that its sides are equal.",
+    "Plugging into the point-to-line formula before moving everything to one side. $3x+4y=1$ must become $3x+4y-1=0$, so $C=-1$, not $1$."
+   ],
+   "tips": [
+    {
+     "title": "Find where the line crosses each axis",
+     "text": "**When:** a line and the two axes make a triangle. **Do:** set $y=0$ to find where it crosses the $x$-axis (call it $a$), and set $x=0$ to find where it crosses the $y$-axis (call it $b$). The triangle has a right angle at the origin, so its area is $\\frac12ab$ (use the lengths, ignore minus signs). Going the other way, the line through those two points is $\\frac xa+\\frac yb=1$.",
+     "example": "$3x+4y=24$. Set $y=0$: $x=8$. Set $x=0$: $y=6$. Triangle area $=\\frac12\\times8\\times6=24$.",
+     "svg": "<svg viewBox=\"0 0 270 160\" width=\"270\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A line crossing the x-axis at a and the y-axis at b, cutting off a right triangle with the axes\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M40,148 V12 M22,130 H258\" stroke-width=\"1.5\" style=\"stroke:var(--muted)\"/><path d=\"M40,130 L210,130 L40,40 Z\" stroke=\"none\" style=\"fill:var(--accent);fill-opacity:.16\"/><line x1=\"16\" y1=\"27.3\" x2=\"240\" y2=\"145.9\" stroke=\"currentColor\" stroke-width=\"2\" style=\"stroke:var(--accent)\"/><circle cx=\"210\" cy=\"130\" r=\"3.5\" stroke=\"none\" style=\"fill:var(--accent)\"/><circle cx=\"40\" cy=\"40\" r=\"3.5\" stroke=\"none\" style=\"fill:var(--accent)\"/><text x=\"210\" y=\"150\" text-anchor=\"middle\" stroke=\"none\" ><tspan font-style=\"italic\">a</tspan></text><text x=\"30\" y=\"45\" text-anchor=\"end\" stroke=\"none\" ><tspan font-style=\"italic\">b</tspan></text><text x=\"80\" y=\"115\" text-anchor=\"start\" font-size=\"13\" stroke=\"none\" >area ½<tspan font-style=\"italic\">ab</tspan></text><text x=\"252\" y=\"125\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--muted)\"><tspan font-style=\"italic\">x</tspan></text><text x=\"48\" y=\"18\" text-anchor=\"start\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--muted)\"><tspan font-style=\"italic\">y</tspan></text></svg>"
+    }
    ]
   },
   {
@@ -419,6 +550,20 @@
     "Assuming the sides are whole numbers when the question never says so.",
     "Giving the number of sides when they asked for diagonals.",
     "Forgetting to divide $n(n-3)$ by 2."
+   ],
+   "tips": [
+    {
+     "title": "The closer to a square, the better",
+     "text": "**Same perimeter:** the more square-like the rectangle, the **bigger** its area. **Same area:** the square has the **smallest** perimeter. Long, thin rectangles are the other extreme.",
+     "example": "Area $36$: a $6\\times6$ square has perimeter $24$, a $9\\times4$ rectangle has $26$, and a $12\\times3$ one has $30$.",
+     "svg": "<svg viewBox=\"0 0 300 140\" width=\"300\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Three rectangles each with perimeter 20: 9 by 1 has area 9, 7 by 3 has area 21, 5 by 5 has area 25\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"10\" y=\"100\" width=\"90\" height=\"10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"130\" y=\"80\" width=\"70\" height=\"30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><rect x=\"230\" y=\"60\" width=\"50\" height=\"50\" stroke-width=\"2\" style=\"fill:var(--accent);fill-opacity:.16;stroke:var(--accent)\"/><text x=\"55\" y=\"130\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" >9 × 1 = 9</text><text x=\"165\" y=\"130\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" >7 × 3 = 21</text><text x=\"255\" y=\"130\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--accent)\">5 × 5 = 25</text><text x=\"10\" y=\"30\" text-anchor=\"start\" font-size=\"12\" stroke=\"none\" style=\"fill:var(--muted)\">all have perimeter 20</text></svg>"
+    },
+    {
+     "title": "The longest stick that fits in a box",
+     "text": "**When:** they ask for the distance from one corner of a box, through the inside, to the opposite corner (the longest stick that fits). **Do:** use Pythagoras with all three sides: $d=\\sqrt{l^2+w^2+h^2}$. For a cube with side $s$, that's $s\\sqrt3$.",
+     "example": "A $3\\times4\\times12$ box: $d=\\sqrt{9+16+144}=\\sqrt{169}=13$.",
+     "svg": "<svg viewBox=\"0 0 260 155\" width=\"260\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A box with length l, width w and height h, and the diagonal d from a bottom front corner to the opposite top back corner\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"40\" y=\"60\" width=\"140\" height=\"70\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M40,60 L90,25 L230,25 L230,95 L180,130 M180,60 L230,25\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M40,130 L90,95 L230,95 M90,95 L90,25\" fill=\"none\" stroke-width=\"1.5\" style=\"stroke:var(--muted)\" stroke-dasharray=\"5 5\"/><line x1=\"40\" y1=\"130\" x2=\"230\" y2=\"25\" stroke=\"currentColor\" style=\"stroke:var(--accent)\" stroke-width=\"2.5\"/><circle cx=\"40\" cy=\"130\" r=\"3\" stroke=\"none\" style=\"fill:var(--accent)\"/><circle cx=\"230\" cy=\"25\" r=\"3\" stroke=\"none\" style=\"fill:var(--accent)\"/><text x=\"110\" y=\"148\" text-anchor=\"middle\" stroke=\"none\" ><tspan font-style=\"italic\">l</tspan></text><text x=\"214\" y=\"124\" text-anchor=\"middle\" stroke=\"none\" ><tspan font-style=\"italic\">w</tspan></text><text x=\"242\" y=\"64\" text-anchor=\"middle\" stroke=\"none\" ><tspan font-style=\"italic\">h</tspan></text><text x=\"122\" y=\"102\" text-anchor=\"middle\" font-size=\"16\" stroke=\"none\" style=\"fill:var(--accent)\"><tspan font-style=\"italic\">d</tspan></text></svg>"
+    }
    ]
   },
   {
@@ -457,6 +602,112 @@
     "Multiplying as if the choices don't affect each other when they do.",
     "Forgetting the $\\times2$ for the two people in a block swapping places.",
     "In 'none of A, B or C' problems, subtracting the overlaps but forgetting to add the triple overlap back."
+   ],
+   "tips": [
+    {
+     "title": "Every order is equally likely",
+     "text": "**When:** people line up at random and the question is about the order of a few named people. **Then:** skip the counting. Every order of those people is equally likely, so A is ahead of B in exactly **half** of all line-ups. Three named people can come in $3!=6$ orders, so any one order (A, then B, then C) has chance $\\frac16$.",
+     "example": "6 people line up at random. P(Ann is somewhere ahead of Bo) $=\\frac12$."
+    },
+    {
+     "title": "Every pair once: $\\binom n2$",
+     "text": "**When:** each thing is paired with every other thing exactly once: handshakes, every team playing every other team once, lines through $n$ points (no three on one line). **Do:** count the pairs, $\\binom n2=\\frac{n(n-1)}2$.",
+     "example": "10 teams, each playing every other team once: $\\frac{10\\times9}{2}=45$ games. If they play each other twice: $90$."
+    },
+    {
+     "title": "The 4th draw is just like the 1st",
+     "text": "**When:** items are drawn one at a time without being put back, and you are **not told** what came out earlier. **Then:** any single draw (the 2nd, the 4th, the last) has the same chance as the first draw. No probability tree needed.",
+     "example": "A box has 3 gold and 7 silver coins, drawn one at a time without putting them back. P(the 4th coin is gold) = P(the 1st coin is gold) $=\\frac3{10}$. This only works because you know nothing about draws 1 to 3."
+    }
+   ],
+   "patterns": [
+    {
+     "title": "Stars and bars: identical things into groups",
+     "idea": "To share $n$ **identical** things among $k$ groups (a group may get none), picture $n$ stars in a row and $k-1$ dividers placed among them. Each arrangement is one way to share, so there are $\\binom{n+k-1}{k-1}$ ways. The cases below are this same method in different disguises.",
+     "cases": [
+      {
+       "name": "Identical items to people, zero allowed",
+       "q": "In how many ways can 10 identical cookies go to 4 children if a child may get none?",
+       "spot": "'identical' or 'indistinguishable' items, and 'may receive none'.",
+       "steps": [
+        "$n=10$ cookies (stars), $k=4$ children (groups).",
+        "$\\binom{10+4-1}{4-1}=\\binom{13}{3}=\\mathbf{286}$."
+       ]
+      },
+      {
+       "name": "At least one each",
+       "q": "Same 10 cookies and 4 children, but each child gets at least one.",
+       "spot": "'at least one', 'no group is empty', 'positive integers'.",
+       "steps": [
+        "Hand 1 cookie to each child first: $10-4=6$ left.",
+        "Now $n=6$, $k=4$: $\\binom{9}{3}=\\mathbf{84}$."
+       ]
+      },
+      {
+       "name": "Different minimums",
+       "q": "How many integer solutions does $x+y+z=15$ have with $x\\ge2$, $y\\ge3$, $z\\ge0$?",
+       "spot": "an equation adding up to a total, with $\\ge$ limits under it.",
+       "steps": [
+        "Pay the minimums first: $15-2-3-0=10$ left.",
+        "Now $n=10$, $k=3$: $\\binom{12}{2}=\\mathbf{66}$."
+       ]
+      },
+      {
+       "name": "Menu or store choice (repeats allowed)",
+       "q": "A shop sells 4 kinds of flower. How many different bouquets of 7 flowers can you make?",
+       "spot": "picking $n$ things from $k$ kinds, order doesn't matter, repeats allowed.",
+       "steps": [
+        "The kinds are the groups ($k=4$); the picks are the stars ($n=7$).",
+        "$\\binom{10}{3}=\\mathbf{120}$."
+       ]
+      },
+      {
+       "name": "Digit sum of 9 or less",
+       "q": "How many 4-digit positive integers have digits that add up to 7?",
+       "spot": "'sum of the digits' with a target of 9 or less, so no digit can go over 9.",
+       "steps": [
+        "Put 1 in the thousands place so it can't be 0: $7-1=6$ left.",
+        "Now $n=6$, $k=4$ digit slots: $\\binom{9}{3}=\\mathbf{84}$."
+       ]
+      },
+      {
+       "name": "Ordered factorization",
+       "q": "How many ordered triples $(a,b,c)$ of positive integers have $abc=72$?",
+       "spot": "'ordered' triples (or pairs, quadruples) multiplying to a number.",
+       "steps": [
+        "$72=2^3\\times3^2$. Each prime's copies are identical stars; $a$, $b$, $c$ are the 3 groups.",
+        "Three 2s into 3 groups: $\\binom{5}{2}=10$. Two 3s into 3 groups: $\\binom{4}{2}=6$.",
+        "Multiply: $10\\times6=\\mathbf{60}$."
+       ]
+      },
+      {
+       "name": "Digit sum just over 9: subtract the overflows",
+       "q": "How many 3-digit numbers have digits that add up to 11?",
+       "spot": "a digit sum of 10 or more, so one digit could wrongly reach 10.",
+       "steps": [
+        "Give the hundreds digit 1 first (it can't be 0). That leaves 10 to share over 3 digits: $\\binom{12}{2}=66$ ways.",
+        "Some of those give one digit 10 or more, which isn't a digit. Take them out.",
+        "Hundreds too big: it already has 1, so give it 9 more, leaving 1: $\\binom{3}{2}=3$ bad ways. Tens too big: give it 10, leaving 0: $1$ bad way. Ones: also $1$.",
+        "$66-3-1-1=\\mathbf{61}$."
+       ]
+      },
+      {
+       "name": "Digit sum near the max: count down from 999",
+       "q": "How many 3-digit numbers have digits that add up to 24?",
+       "spot": "a digit sum close to the largest possible ($27$ for 3 digits).",
+       "steps": [
+        "Start at 999 (digit sum 27) and take away $27-24=3$ in total, spread over the digits.",
+        "Taking away only 3 can't push any digit below 0 or turn the first digit into 0, so nothing needs to be ruled out.",
+        "Share 3 'take-aways' among 3 digits: $\\binom{5}{2}=\\mathbf{10}$."
+       ]
+      }
+     ],
+     "notWhen": [
+      "**Different** items: 10 different books to 4 children is $4^{10}$ (each book picks a child).",
+      "**Unordered** factorizations ('sets of 3 integers whose product is 72'): list them by hand.",
+      "**Product** of digits ('4-digit numbers whose digits multiply to 24'): list the digit sets, then count each set's orders with $\\frac{4!}{\\text{repeats}!}$."
+     ]
+    }
    ]
   },
   {
@@ -489,6 +740,19 @@
     "Assuming nobody is in both groups when the numbers don't allow it.",
     "Assuming everyone is in at least one group.",
     "In 'which could be' questions, checking odd/even but forgetting the smallest and largest limits."
+   ],
+   "tips": [
+    {
+     "title": "Three groups: undo the double counting",
+     "text": "**Why it's tricky:** adding $A+B+C$ counts a person in two groups **twice** and a person in all three **three times**. **If you know how many are in exactly two:** Total $=A+B+C-(\\text{exactly two})-2(\\text{all three})+\\text{neither}$. **If you know the pair overlaps** $AB$, $AC$, $BC$ (each already includes the all-three people): Total $=A+B+C-(AB+AC+BC)+ABC+\\text{neither}$.",
+     "example": "Clubs of 20, 25 and 30; 60 students, each in at least one club; 9 in exactly two. Call the all-three count $x$: $75-9-2x=60$, so $x=3$.",
+     "svg": "<svg viewBox=\"0 0 260 180\" width=\"260\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Three overlapping circles A, B and C; A + B + C counts each region once, twice or three times\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"100\" cy=\"70\" r=\"52\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"160\" cy=\"70\" r=\"52\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><circle cx=\"130\" cy=\"120\" r=\"52\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"52\" y=\"24\" text-anchor=\"middle\" stroke=\"none\" ><tspan font-style=\"italic\">A</tspan></text><text x=\"208\" y=\"24\" text-anchor=\"middle\" stroke=\"none\" ><tspan font-style=\"italic\">B</tspan></text><text x=\"186\" y=\"172\" text-anchor=\"middle\" stroke=\"none\" ><tspan font-style=\"italic\">C</tspan></text><text x=\"76\" y=\"62\" text-anchor=\"middle\" stroke=\"none\" >1</text><text x=\"184\" y=\"62\" text-anchor=\"middle\" stroke=\"none\" >1</text><text x=\"130\" y=\"158\" text-anchor=\"middle\" stroke=\"none\" >1</text><text x=\"130\" y=\"50\" text-anchor=\"middle\" stroke=\"none\" style=\"fill:var(--accent)\">2</text><text x=\"99\" y=\"112\" text-anchor=\"middle\" stroke=\"none\" style=\"fill:var(--accent)\">2</text><text x=\"161\" y=\"112\" text-anchor=\"middle\" stroke=\"none\" style=\"fill:var(--accent)\">2</text><text x=\"130\" y=\"92\" text-anchor=\"middle\" font-size=\"17\" stroke=\"none\" style=\"fill:var(--accent)\" font-weight=\"bold\">3</text></svg>"
+    },
+    {
+     "title": "'Guarantee' means plan for the worst luck",
+     "text": "**When:** they ask for the fewest picks that **guarantee** something. **Do:** imagine the unluckiest picks possible: take as many as you can *without* getting what you want. Then add **1**. To guarantee $k$ of the same kind when there are $n$ kinds: $n(k-1)+1$. If a kind has fewer than $k-1$ items, you can only take what it has.",
+     "example": "A drawer has 10 red, 8 blue and 6 green socks, and you pick in the dark. Fewest socks to guarantee 3 of one colour? Worst luck: 2 red, 2 blue, 2 green, which is 6 socks and no three alike. The **7th** sock must make a three, so the answer is $7$."
+    }
    ]
   },
   {
@@ -511,7 +775,7 @@
     ]
    },
    "facts": [
-    "You can swap a number for its remainder. 17 leaves 1 when divided by 8, so $17^{50}$ leaves $1^{50}=1$.",
+    "When you want a remainder, you can swap any number for its own remainder first. $17\\div8$ leaves 1, so $17^{50}\\div8$ leaves $1^{50}=1$.",
     "Last digits repeat: 2, 3, 7, 8 every 4 powers; 4 and 9 every 2; 0, 1, 5, 6 never change.",
     "**Each number has its own pattern length.** Don't assume two bases repeat at the same speed.",
     "Any odd number squared leaves remainder 1 when divided by 8 ($9$, $25$, $49$…).",
@@ -526,6 +790,23 @@
    "traps": [
     "Assuming two different bases repeat at the same speed.",
     "Testing only primes and missing the case that flips the answer."
+   ],
+   "tips": [
+    {
+     "title": "How many times a prime goes into $n!$ (and zeros at the end)",
+     "text": "**Do:** divide $n$ by $p$, then by $p^2$, then by $p^3$, and so on. Drop the decimals each time and add up the results. **Zeros at the end** of $n!$ each come from a $2\\times5$ pair. There are always fewer 5s than 2s, so just count the 5s.",
+     "example": "Zeros at the end of $50!$: $\\frac{50}{5}=10$ and $\\frac{50}{25}=2$, so $12$ zeros. Largest $k$ with $3^k$ dividing $20!$: $\\frac{20}{3}\\to6$ and $\\frac{20}{9}\\to2$, so $k=8$."
+    },
+    {
+     "title": "Same remainder, or the same amount short",
+     "text": "**Same remainder every time:** if $n$ leaves remainder $r$ for several divisors, then $n$ = a multiple of their LCM (the smallest number they all divide into), plus $r$. **Same amount short every time:** if each remainder is the same amount less than its divisor, then $n$ = a multiple of the LCM, minus that amount.",
+     "example": "Remainder 2 when divided by 3, 4 and 5: the LCM is 60, so $n=60k+2$, giving $2, 62, 122, \\ldots$ Remainder 2 when divided by 3 and 3 when divided by 4: each is 1 short, the LCM is 12, so $n=12k-1$, giving $11, 23, 35, \\ldots$"
+    },
+    {
+     "title": "Adding powers: pull out the smallest",
+     "text": "**Rule:** you can't combine exponents across a $+$ or $-$ ($2^3+2^4$ is **not** $2^7$). **Do:** factor out the smallest power, then work out what's left. Equal powers just stack: $2^n+2^n=2\\times2^n=2^{n+1}$.",
+     "example": "$3^{10}-3^8=3^8(3^2-1)=8\\cdot3^8$. Five copies of $5^{12}$ is $5\\times5^{12}=5^{13}$."
+    }
    ]
   },
   {
@@ -569,6 +850,28 @@
     "Using an endpoint that isn't allowed. With $<$, the endpoint itself is out.",
     "Choosing the value that makes the two lines the **same** when they asked for 'no solution'.",
     "Sign mix-up: the answers add to $-b$, not $b$."
+   ],
+   "tips": [
+    {
+     "title": "Don't solve for each letter",
+     "text": "**When:** they ask for a combination like $x+y$ or $4x+4y$, not $x$ and $y$ on their own. **Do:** add or subtract the whole equations first. Often the combination appears right away.",
+     "example": "$3x+2y=14$ and $x+2y=6$. Add them: $4x+4y=20$, so $x+y=5$. You never needed $x$ or $y$."
+    },
+    {
+     "title": "Spot $a^2-b^2$ in disguise",
+     "text": "$a^2-b^2=(a+b)(a-b)$. **Look for it** when one square is subtracted from another, or when two numbers being multiplied sit the same distance either side of a round number.",
+     "example": "$103^2-97^2=(103+97)(103-97)=200\\times6=1200$. $49\\times51=(50-1)(50+1)=50^2-1=2499$."
+    },
+    {
+     "title": "Given $a+b$ and $ab$? Don't find $a$ and $b$",
+     "text": "**When:** the question gives you $a+b$ and $ab$. **Do:** use these two lines instead of solving: $a^2+b^2=(a+b)^2-2ab$ and $(a-b)^2=(a+b)^2-4ab$.",
+     "example": "$a+b=7$ and $ab=10$: $a^2+b^2=49-20=29$, and $(a-b)^2=49-40=9$."
+    },
+    {
+     "title": "Sum and product of the solutions, without solving",
+     "text": "**When:** they ask about the two solutions (roots) of $ax^2+bx+c=0$, but don't need the roots themselves. **Do:** read them off the equation. The roots **add** to $-\\frac ba$ and **multiply** to $\\frac ca$. Then rewrite what they ask for using the sum and product, like $\\frac1p+\\frac1q=\\frac{p+q}{pq}$.",
+     "example": "$p$ and $q$ solve $2x^2-7x+4=0$. Find $\\frac1p+\\frac1q$. Here $a=2$, $b=-7$, $c=4$, so $p+q=\\frac72$ and $pq=\\frac42=2$. Then $\\frac{p+q}{pq}=\\frac{7/2}{2}=\\frac74$. No messy square roots."
+    }
    ]
   },
   {
@@ -609,6 +912,18 @@
     "Giving a middle step (one person's share) instead of what they asked for (the total).",
     "Splitting growth evenly: up 700% over 3 periods is **not** 233% each time.",
     "Dividing by the wrong number in 'percent more than' questions."
+   ],
+   "tips": [
+    {
+     "title": "$x\\%$ of $y$ = $y\\%$ of $x$",
+     "text": "A percent works either way round, so swap the two numbers when the other way is easier.",
+     "example": "$16\\%$ of $25$ is hard; $25\\%$ of $16$ is a quarter of 16, which is $4$."
+    },
+    {
+     "title": "Average speed isn't the average of the speeds",
+     "text": "**Rule:** average speed = total distance ÷ total time. **Shortcut:** for the same distance at speeds $a$ and $b$, the average speed is $\\frac{2ab}{a+b}$. It's always below the plain average $\\frac{a+b}2$, because you spend more time at the slower speed.",
+     "example": "60 mph there and 40 mph back: $\\frac{2\\times60\\times40}{60+40}=\\frac{4800}{100}=48$ mph, not 50."
+    }
    ]
   },
   {
@@ -645,13 +960,26 @@
     "Q1 = middle of the lower half, Q3 = middle of the upper half. IQR = Q3 − Q1."
    ],
    "tricks": [
-    "Groups with different spreads? Work out how many SDs the cutoff is **for each group separately**.",
+    "Two groups with different SDs? For each group, count how many of *its own* SDs the cutoff is from its mean.",
     "Charts: read the title, labels and units first. Estimate before you calculate."
    ],
    "traps": [
     "Averaging the averages.",
     "Using 32% (both tails of the curve) when they only asked about one side.",
-    "Thinking new numbers at the far ends can't change the quartiles. They change which numbers sit in the middle of each half."
+    "Thinking that adding very big or very small numbers can't move the quartiles. They change how many numbers are in each half, so the middle of each half moves."
+   ],
+   "tips": [
+    {
+     "title": "What changes the SD (the spread)",
+     "text": "**Add or subtract** the same number from every value: the SD stays the same (everything just slides along). **Multiply** every value by $k$: the SD and the range are multiplied by $k$ (ignore any minus sign, because spread is never negative). **Add a new value equal to the mean:** the mean stays the same, but the SD gets **smaller**.",
+     "example": "$\\{2,4,6\\}$ and $\\{102,104,106\\}$ have the same SD. $\\{6,12,18\\}$ is $\\{2,4,6\\}$ times 3, so its SD is 3 times as big."
+    },
+    {
+     "title": "A weighted average is a see-saw",
+     "text": "The combined average lands between the two group averages, **closer to the bigger group**. To find the group sizes: measure how far each group's average is from the combined average, then **swap** those distances. The group farther away is the smaller one.",
+     "example": "Boys average 60, girls 90, the whole class 80. Boys are 20 away and girls 10 away. Swap them: boys : girls $=10:20=1:2$.",
+     "svg": "<svg viewBox=\"0 0 300 135\" width=\"300\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A number line with boys at 60, girls at 90 and the class average at 80; the distances 20 and 10 give a group ratio of 1 to 2\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"20\" y1=\"70\" x2=\"280\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" /><polygon points=\"176,74 166,92 186,92\" stroke=\"none\" style=\"fill:var(--accent)\"/><circle cx=\"72\" cy=\"70\" r=\"7\" stroke=\"none\"/><circle cx=\"228\" cy=\"70\" r=\"10\" stroke=\"none\"/><path d=\"M72,48 V42 H176 V48 M176,48 V42 H228 V48\" fill=\"none\" stroke-width=\"1.5\" style=\"stroke:var(--muted)\"/><text x=\"124\" y=\"36\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" >20</text><text x=\"202\" y=\"36\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" >10</text><text x=\"72\" y=\"112\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" >boys 60</text><text x=\"176\" y=\"112\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--accent)\">class 80</text><text x=\"228\" y=\"112\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" >girls 90</text><text x=\"150\" y=\"130\" text-anchor=\"middle\" font-size=\"12\" stroke=\"none\" style=\"fill:var(--muted)\">farther side = smaller group</text></svg>"
+    }
    ]
   },
   {
@@ -675,16 +1003,61 @@
     "Between 0 and 1, squaring makes a number **smaller**: $\\left(\\frac12\\right)^2=\\frac14$. Above 1, it makes it bigger.",
     "For a number between 0 and 1, $\\frac1x$ is bigger than 1.",
     "$0.999\\ldots$ (repeating forever) is **exactly** 1.",
-    "A repeating decimal like $0.\\overline{27}$ equals $\\frac{27}{99}$."
+    "A repeating decimal is the repeating block over that many 9s: $0.\\overline{7}=\\frac79$, $0.\\overline{36}=\\frac{36}{99}$, $0.\\overline{123}=\\frac{123}{999}$."
    ],
    "tricks": [
     "Always try at least two numbers: $0$, $1$, $-1$, $\\frac12$, a negative, a big number, and both ends of the allowed range.",
     "Only numbers, no letters? Then it can't be (D). Just work it out.",
-    "Simplify by doing the same thing to both sides, but only multiply by numbers you know are positive."
+    "Simplify by doing the same thing to both sides, but only multiply or divide by numbers you know are positive. A negative would swap which side is bigger."
    ],
    "traps": [
     "Trying only one number and stopping.",
     "Answering in 20 seconds without trying a second number."
+   ],
+   "tips": [
+    {
+     "title": "Huge powers: make the exponents match",
+     "text": "**When:** you compare powers too big to work out, like $2^{30}$ and $3^{20}$. **Do:** rewrite both with the same exponent (or the same base), then just compare what's left.",
+     "example": "$2^{30}=(2^3)^{10}=8^{10}$ and $3^{20}=(3^2)^{10}=9^{10}$. $9>8$, so $3^{20}$ is bigger."
+    }
+   ],
+   "patterns": [
+    {
+     "title": "Repeating decimal to fraction",
+     "idea": "Call the decimal $x$. Multiply by $10$ once for each repeating digit (so by 10, 100 or 1,000), then subtract $x$. The endless tail cancels, leaving the repeating block over that many 9s.",
+     "cases": [
+      {
+       "name": "1 repeating digit",
+       "q": "Write $0.\\overline{7}$ as a fraction.",
+       "spot": "one digit repeats, so multiply by $10$.",
+       "steps": [
+        "$10x=7.\\overline{7}$ and $x=0.\\overline{7}$.",
+        "$10x-x=9x=7$, so $x=\\mathbf{\\frac79}$."
+       ]
+      },
+      {
+       "name": "2 repeating digits",
+       "q": "Write $0.\\overline{36}$ as a fraction.",
+       "spot": "two digits repeat, so multiply by $100$.",
+       "steps": [
+        "$100x=36.\\overline{36}$ and $x=0.\\overline{36}$.",
+        "$100x-x=99x=36$, so $x=\\frac{36}{99}=\\mathbf{\\frac{4}{11}}$."
+       ]
+      },
+      {
+       "name": "3 repeating digits",
+       "q": "Write $0.\\overline{123}$ as a fraction.",
+       "spot": "three digits repeat, so multiply by $1{,}000$.",
+       "steps": [
+        "$1000x=123.\\overline{123}$ and $x=0.\\overline{123}$.",
+        "$1000x-x=999x=123$, so $x=\\frac{123}{999}=\\mathbf{\\frac{41}{333}}$."
+       ]
+      }
+     ],
+     "notWhen": [
+      "Digits before the repeat starts, like $0.1\\overline{6}$: shift the decimal past them first ($10x=1.\\overline{6}$), then use the 9s rule ($x=\\frac{1}{10}\\cdot\\frac{15}{9}=\\frac16$)."
+     ]
+    }
    ]
   }
  ]

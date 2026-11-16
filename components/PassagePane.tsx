@@ -2,6 +2,7 @@
 import { passageSentences } from "@/lib/sentences";
 import type { PublicPassage } from "@/lib/types";
 import { RichInline } from "./Rich";
+import { TaggedList, tapWord, type WordTags } from "./WordTagger";
 
 export function PassagePane({
   passage,
@@ -10,6 +11,7 @@ export function PassagePane({
   onSelect,
   highlight,
   scope,
+  tags,
 }: {
   passage: PublicPassage;
   selectable?: boolean;
@@ -17,7 +19,10 @@ export function PassagePane({
   onSelect?: (i: number) => void;
   highlight?: number; // sentence index to highlight in review
   scope?: number[]; // paragraphs a sentence may be picked from (marked with an arrow, as on the real test); all when unset
+  tags?: WordTags; // words are tappable as "didn't know" (practice, after the answer is shown)
 }) {
+  const word = tags && tapWord(tags);
+  const list = tags && <TaggedList texts={passage.paragraphs} tags={tags} />;
   const body = "max-w-[68ch] space-y-4 text-[16.5px] leading-[1.75]";
   const title = passage.title && <h3 className="text-xs font-semibold uppercase tracking-[0.08em] text-muted">{passage.title}</h3>;
   if (!selectable) {
@@ -26,9 +31,10 @@ export function PassagePane({
         {title}
         {passage.paragraphs.map((p, i) => (
           <p key={i}>
-            <RichInline text={p} />
+            <RichInline text={p} word={word} />
           </p>
         ))}
+        {list}
       </div>
     );
   }
@@ -57,21 +63,22 @@ export function PassagePane({
                   aria-pressed={selected === s.idx}
                   onClick={() => onSelect?.(s.idx)}
                   onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && onSelect?.(s.idx)}
-                  className={`cursor-pointer rounded-md px-0.5 py-0.5 decoration-clone transition-colors [box-decoration-break:clone] ${
+                  className={`cursor-pointer rounded-md -mx-0.5 px-0.5 py-0.5 decoration-clone transition-colors [box-decoration-break:clone] ${
                     selected === s.idx ? "bg-accent/25 text-fg" : "hover:bg-accent-soft"
                   } ${highlight === s.idx ? "bg-ok-soft outline-2 outline-ok" : ""}`}
                 >
-                  <RichInline text={s.text} />{" "}
+                  <RichInline text={s.text} word={word} />{" "}
                 </span>
               ) : (
-                <span key={s.idx} className="px-0.5">
-                  <RichInline text={s.text} />{" "}
+                <span key={s.idx} className="-mx-0.5 px-0.5">
+                  <RichInline text={s.text} word={word} />{" "}
                 </span>
               ),
             )}
           </p>
         );
       })}
+      {list}
     </div>
   );
 }

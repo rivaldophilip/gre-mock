@@ -11,11 +11,12 @@ import { PassagePane } from "./PassagePane";
 import { QuestionRenderer } from "./QuestionRenderer";
 import { Rich, RichInline } from "./Rich";
 import { ReviewGrid } from "./ReviewGrid";
+import { TaggableText, TaggedList, useWordTags, type Sense } from "./WordTagger";
 import { IconBack, IconCalc, IconCheck, IconClock, IconFlag, IconGrid, IconNext, IconPause, IconPlay, IconX } from "./icons";
 import { btn, card, iconBtn, seg, segItem } from "./ui";
 
 type Meta = { guessed: boolean; marked: boolean; timeMs: number; finalized: boolean };
-type Reveal = { key: Key; explanation: Explanation; isCorrect: boolean };
+type Reveal = { key: Key; explanation: Explanation; isCorrect: boolean; words?: { word: string; id?: string; senses?: Sense[] | null }[] };
 
 export interface RunnerProps {
   test: PublicTest;
@@ -27,6 +28,8 @@ export interface RunnerProps {
   initial: Record<string, { answer: Answer | null; guessed: boolean; marked: boolean; timeMs: number; finalized: boolean }>;
   reveals: Record<string, Reveal>;
   position: number;
+  /** this attempt's "didn't know" word tags (practice mode) */
+  taggedWords: { id: string; senses?: Sense[] | null }[];
 }
 
 /** "4:05"; past zero the clock reads "−1:20" (time over the limit). */
@@ -55,6 +58,8 @@ export function Runner(p: RunnerProps) {
     Object.fromEntries(Object.entries(p.initial).map(([k, v]) => [k, { guessed: v.guessed, marked: v.marked, timeMs: v.timeMs, finalized: v.finalized }])),
   );
   const [reveals, setReveals] = useState<Record<string, Reveal>>(p.reveals);
+  // practice mode, verbal: once an answer is shown, words in the passage, sentence and choices can be tapped as "didn't know"
+  const wordTags = useWordTags(attemptId, p.taggedWords);
   const [left, setLeft] = useState<number | null>(p.secondsLeft[String(section)] ?? null);
   // practice mode: the clock stops while a revealed answer is read, and restarts on the next navigation
   const [paused, setPaused] = useState(() => {
@@ -453,8 +458,10 @@ export function Runner(p: RunnerProps) {
       setMeta((m) => ({ ...m, [q.id]: { ...(m[q.id] ?? { guessed: false, marked: false, timeMs: 0 }), finalized: true } as Meta }));
     }
   };
-  const gridItems = qs.map((x, i) => ({ n: i + 1, answered: isAnswered(x, answers[x.id]), marked: !!meta[x.id]?.marked }));
+  const gridItems = qs.map((x, i) => ({ n: i + 1, answered: isAnswered(x, answers[x.id]), marked: !!meta[x.id]?.marked, correct: reveals[x.id]?.isCorrect }));
   const isQuant = test.measure === "quant";
+  const tags = mode === "practice" && !!reveal && !isQuant ? wordTags : undefined;
+  const chips = tags && (q.type === "tc" || q.type === "se") ? (reveal?.words ?? []) : [];
   const keySel = reveal && "sel" in reveal.key ? reveal.key.sel : undefined;
   const keyValue = reveal && "value" in reveal.key ? reveal.key.value : undefined;
 
@@ -571,6 +578,7 @@ export function Runner(p: RunnerProps) {
             className={`${showPassage ? "block" : "hidden"} border-line px-4 pb-28 pt-5 sm:px-6 md:block md:bg-surface md:overflow-y-auto md:border-r md:pb-10 md:pt-7 lg:px-10`}
           >
             <div className="mx-auto max-w-[68ch] space-y-4">
+              {passage && tags && <p className="text-xs text-muted">Tap any word you didn’t know. It will come up more in later tests.</p>}
               {passage && (
                 <PassagePane
                   passage={passage}
@@ -579,6 +587,7 @@ export function Runner(p: RunnerProps) {
                   highlight={q.type === "rc_select" && keySel ? keySel[0] : undefined}
                   scope={q.type === "rc_select" ? q.paras : undefined}
                   onSelect={(i) => setAnswer({ sel: [i] })}
+                  tags={tags}
                 />
               )}
               {figure && <Figure fig={figure} />}
@@ -592,7 +601,7 @@ export function Runner(p: RunnerProps) {
                 <Figure fig={figure} />
               </div>
             )}
-            <QuestionRenderer q={q} answer={a} onChange={setAnswer} disabled={locked} keySel={keySel} keyValue={keyValue} />
+            <QuestionRenderer q={q} answer={a} onChange={setAnswer} disabled={locked} keySel={keySel} keyValue={keyValue} tags={tags} />
             <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line pt-4">
               <label className="flex min-h-11 cursor-pointer items-center gap-2.5 text-sm text-muted">
                 <input type="checkbox" className="size-5" checked={!!cur?.guessed} disabled={locked} onChange={(e) => setFlag("guessed", e.target.checked)} /> I guessed
@@ -617,6 +626,17 @@ export function Runner(p: RunnerProps) {
                 )}
                 {reveal.explanation.fast && <p className="rounded-xl bg-surface/70 px-3.5 py-2.5"><strong>Faster:</strong> <RichInline text={reveal.explanation.fast} /></p>}
                 {reveal.explanation.trap && <p className="rounded-xl bg-surface/70 px-3.5 py-2.5"><strong>Trap:</strong> <RichInline text={reveal.explanation.trap} /></p>}
+                {tags && (q.type === "tc" || q.type === "se") && (
+                  <div className="space-y-3 border-t border-line/60 pt-3">
+                    <p className="text-xs text-muted">Tap any word you didn’t know, here or in the sentence. It will come up more in later tests.</p>
+                    {chips.length > 0 && (
+                      <p className="flex flex-wrap gap-x-4 gap-y-1 text-[15px]">
+                        {chips.map((w) => <span key={w.word}><TaggableText text={w.word} tags={tags} senses={w.senses} inline /></span>)}
+                      </p>
+                    )}
+                    <TaggedList texts={[q.prompt, ...chips.map((w) => w.word)]} tags={tags} />
+                  </div>
+                )}
                 {paused && <p className="flex items-center gap-1.5 text-xs text-muted"><IconPause size={11} /> Timer paused. It resumes when you move to another question.</p>}
               </div>
             )}
