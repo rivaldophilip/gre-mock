@@ -157,12 +157,14 @@ const revisitNote = (r: Revisit, n: number) => ({
 });
 
 /** Verbal: earlier TC / SE items per key word, with their distractor words, so a returning word gets new company. */
-function wordHistory(): Map<string, { ref: string; distractors: string[] }[]> {
-  const out = new Map<string, { ref: string; distractors: string[] }[]>();
+function wordHistory(): Map<string, UsedBefore[]> {
+  const out = new Map<string, UsedBefore[]>();
   for (const t of measureTests("verbal"))
     for (const q of t.questions.filter((x) => x.type === "tc" || x.type === "se")) {
       const distractors = q.tags.filter((x) => x.kind === "word" && x.role === "distractor").map((x) => x.id);
-      for (const k of keyWordsOf(q)) out.set(k, [...(out.get(k) ?? []), { ref: `${t.id}:${q.id}`, distractors }]);
+      const keys = keyWordsOf(q);
+      // the stem too, so a returning word's earlier frame is visible: without it, authors reach for the word's textbook frame, which the earlier item usually used
+      for (const k of keys) out.set(k, [...(out.get(k) ?? []), { ref: `${t.id}:${q.id}`, stem: clip(q.prompt, 200), keys, distractors }]);
     }
   return out;
 }
@@ -364,7 +366,8 @@ async function main() {
 
 type Slot = { section: number; slot: number; type: string; level: number; exemplars: string[]; keys?: number };
 type RevisitNote = { ref: string; result: string; item: string; setup?: string; change: string };
-type Word = { word: string; id: string; secondary: boolean; sense: string | null; bucket?: string; reason?: string; usedBefore?: { ref: string; distractors: string[] }[]; revisit?: RevisitNote };
+type UsedBefore = { ref: string; stem?: string; keys?: string[]; distractors: string[] };
+type Word = { word: string; id: string; secondary: boolean; sense: string | null; bucket?: string; reason?: string; usedBefore?: UsedBefore[]; revisit?: RevisitNote };
 const revisitLine = (r: RevisitNote) => `  - **revisit ${r.ref}** (you ${r.result} it): ${r.item}${r.setup ? ` [setup: ${r.setup}]` : ""}. Write a sibling, not a copy: ${r.change}. Set \`"revisits": "${r.ref}"\`.`;
 
 /**
@@ -439,7 +442,13 @@ function briefMarkdown(b: Record<string, unknown>): string {
     for (const k of keys) {
       const partners = [...(syn.get(k.id) ?? [])].sort((x, y) => Number(keyIds.has(y)) - Number(keyIds.has(x))).slice(0, 6);
       lines.push(`- **${k.word}**${k.secondary ? " [secondary: everyday sense is the trap]" : ""}: ${k.sense ?? ""} (${k.bucket}, ${k.reason}). Synonyms: ${partners.map((x) => (keyIds.has(x) ? x + "*" : x)).join(", ") || "none in bank"}`);
-      if (k.usedBefore?.length) lines.push(`  - used before: ${k.usedBefore.map((u) => `${u.ref.replace(/^\D+-/, "")}${u.distractors.length ? ` (distractors ${u.distractors.join(", ")})` : ""}`).join("; ")}. New sentence logic, no distractor from these.`);
+      if (k.usedBefore?.length) {
+        lines.push(`  - used before (write a new situation and contrast, not these frames; no distractor or SE pair from them):`);
+        for (const u of k.usedBefore) {
+          const extra = [u.keys && u.keys.length > 1 ? `keys ${u.keys.join("/")}` : "", u.distractors.length ? `distractors ${u.distractors.join(", ")}` : ""].filter(Boolean).join("; ");
+          lines.push(`    - ${u.ref.replace(/^\D+-/, "")}${u.stem ? `: "${u.stem}"` : ""}${extra ? ` (${extra})` : ""}`);
+        }
+      }
       if (k.revisit) lines.push(revisitLine(k.revisit));
     }
     // one line per distinct skill: a skill drawn for several slots is described once, with its count and one variant per slot
