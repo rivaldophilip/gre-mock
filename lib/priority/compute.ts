@@ -31,6 +31,8 @@ export interface ItemScore {
   reason: string;
   weakEvidence: number; // decayed positive weight; > 0 means "has weakness evidence"
   mastery: number; // decayed |negative| weight
+  /** tested as a key (word) or as a question's concept / skill at least once */
+  tested: boolean;
   /** decayed positive weight per event, largest first (for explaining S) */
   evidence: { event: string; mass: number }[];
   streak: number;
@@ -154,7 +156,7 @@ export function scoreItem(itemId: string, events: LoggedEvent[], yieldWeight: nu
     reason = top ? REASONS[top[0]] ?? top[0] : C >= 1 ? "covered, no weakness" : "partly covered";
   }
   const evidence = [...reasonMass.entries()].map(([event, mass]) => ({ event, mass })).sort((a, b) => b.mass - a.mass);
-  return { itemId, S, C, N, D, Y: yieldWeight, P, reason, weakEvidence: pos, mastery: neg, evidence, streak, recent, lastTestedAt: last };
+  return { itemId, S, C, N, D, Y: yieldWeight, P, reason, weakEvidence: pos, mastery: neg, tested: nKey > 0, evidence, streak, recent, lastTestedAt: last };
 }
 
 export function scoreAll(

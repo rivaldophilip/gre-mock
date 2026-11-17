@@ -490,6 +490,7 @@
     ]
    },
    "facts": [
+    "**Quadrants** are numbered I to IV **counterclockwise**, starting top right: I is $(+,+)$, II is $(-,+)$, III is $(-,-)$, IV is $(+,-)$. A point on an axis is in no quadrant.",
     "Slope $=\\frac{\\text{rise}}{\\text{run}}=\\frac{y_2-y_1}{x_2-x_1}$.",
     "For a line written as $Ax+By=C$, the slope is $-\\frac AB$.",
     "**Perpendicular** lines (meeting at a right angle): flip the fraction **and** change the sign.",
@@ -506,9 +507,16 @@
     "Changing the sign but forgetting to flip the fraction, or flipping it without changing the sign.",
     "Answering where the line crosses the $y$-axis when they asked about the $x$-axis.",
     "Calling a rectangle a square without checking that its sides are equal.",
-    "Plugging into the point-to-line formula before moving everything to one side. $3x+4y=1$ must become $3x+4y-1=0$, so $C=-1$, not $1$."
+    "Plugging into the point-to-line formula before moving everything to one side. $3x+4y=1$ must become $3x+4y-1=0$, so $C=-1$, not $1$.",
+    "Numbering the quadrants clockwise. II is top **left** and IV is bottom **right**."
    ],
    "tips": [
+    {
+     "title": "Name the quadrant from the signs",
+     "text": "**When:** a question says a point or a line is in, or passes through, a quadrant. **Do:** start at the top right (I) and go **counterclockwise**, the way the arrow turns: I $(+,+)$, II $(-,+)$, III $(-,-)$, IV $(+,-)$. The $x$ sign is the side (right is $+$), the $y$ sign is up or down (up is $+$).",
+     "example": "$(-3, 5)$: $x$ is negative (left), $y$ is positive (up), so quadrant II. $(4,-1)$ is quadrant IV.",
+     "svg": "<svg viewBox=\"0 0 260 180\" width=\"260\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"The x and y axes split the plane into four quadrants, numbered I to IV counterclockwise from the top right, with their signs\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"130\" y=\"10\" width=\"110\" height=\"80\" stroke=\"none\" style=\"fill:var(--accent);fill-opacity:.12\"/><path d=\"M130,170 V10 M20,90 H240\" stroke-width=\"1.5\" style=\"stroke:var(--muted)\"/><path d=\"M154.2,76 A28,28 0 1 0 144,114.2\" fill=\"none\" stroke-width=\"2\" style=\"stroke:var(--accent)\"/><polygon points=\"149.2,111.2 146,117.7 142,110.7\" stroke=\"none\" style=\"fill:var(--accent)\"/><text x=\"185\" y=\"50\" text-anchor=\"middle\" font-size=\"18\" stroke=\"none\" style=\"fill:var(--accent)\">I</text><text x=\"75\" y=\"50\" text-anchor=\"middle\" font-size=\"18\" stroke=\"none\">II</text><text x=\"75\" y=\"130\" text-anchor=\"middle\" font-size=\"18\" stroke=\"none\">III</text><text x=\"185\" y=\"130\" text-anchor=\"middle\" font-size=\"18\" stroke=\"none\">IV</text><text x=\"185\" y=\"67\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--muted)\">(+, +)</text><text x=\"75\" y=\"67\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--muted)\">(−, +)</text><text x=\"75\" y=\"147\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--muted)\">(−, −)</text><text x=\"185\" y=\"147\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--muted)\">(+, −)</text><text x=\"236\" y=\"84\" text-anchor=\"end\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--muted)\"><tspan font-style=\"italic\">x</tspan></text><text x=\"137\" y=\"20\" text-anchor=\"start\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--muted)\"><tspan font-style=\"italic\">y</tspan></text></svg>"
+    },
     {
      "title": "Find where the line crosses each axis",
      "text": "**When:** a line and the two axes make a triangle. **Do:** set $y=0$ to find where it crosses the $x$-axis (call it $a$), and set $x=0$ to find where it crosses the $y$-axis (call it $b$). The triangle has a right angle at the origin, so its area is $\\frac12ab$ (use the lengths, ignore minus signs). Going the other way, the line through those two points is $\\frac xa+\\frac yb=1$.",
@@ -911,7 +919,8 @@
    "traps": [
     "Giving a middle step (one person's share) instead of what they asked for (the total).",
     "Splitting growth evenly: up 700% over 3 periods is **not** 233% each time.",
-    "Dividing by the wrong number in 'percent more than' questions."
+    "Dividing by the wrong number in 'percent more than' questions.",
+    "In a 'when I was your age' puzzle, splitting the two given ages into **2** gaps. There are four ages on the line, so **3** gaps."
    ],
    "tips": [
     {
@@ -923,6 +932,49 @@
      "title": "Average speed isn't the average of the speeds",
      "text": "**Rule:** average speed = total distance ÷ total time. **Shortcut:** for the same distance at speeds $a$ and $b$, the average speed is $\\frac{2ab}{a+b}$. It's always below the plain average $\\frac{a+b}2$, because you spend more time at the slower speed.",
      "example": "60 mph there and 40 mph back: $\\frac{2\\times60\\times40}{60+40}=\\frac{4800}{100}=48$ mph, not 50."
+    },
+    {
+     "title": "\"When I was your age\": four ages, three equal gaps",
+     "text": "**When:** a puzzle says 'when A was as old as B is now…' and 'when B is as old as A is now…'. **Do:** skip the equations. The age gap between two people never changes, and each jump back or forward in the story is exactly that gap. So the four ages in the story sit **equally spaced** on one line: younger then, younger now (= older then), older now (= younger later), older later. The first and last are given, so split the distance between them into **3** equal gaps, not 2.",
+     "example": "When Ana was as old as Ben is now, Ben was 6. When Ben is as old as Ana is now, Ana will be 33. Gap: $\\frac{33-6}{3}=9$. So Ben is $6+9=$ **15** and Ana is $15+9=$ **24**. Check: 9 years ago Ana was 15 and Ben was 6; in 9 years Ben is 24 and Ana is 33.",
+     "svg": "<svg viewBox=\"0 0 300 140\" width=\"300\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A number line with four equally spaced ages, 6, 15, 24 and 33, each 9 apart: Ben then, Ben now which is Ana then, Ana now which is Ben later, and Ana later\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"20\" y1=\"60\" x2=\"280\" y2=\"60\" stroke=\"currentColor\" stroke-width=\"2\" /><path d=\"M40,46 V40 H113 V46 M113,46 V40 H187 V46 M187,46 V40 H260 V46\" fill=\"none\" stroke-width=\"1.5\" style=\"stroke:var(--muted)\"/><text x=\"76\" y=\"33\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--accent)\">+9</text><text x=\"150\" y=\"33\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--accent)\">+9</text><text x=\"223\" y=\"33\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--accent)\">+9</text><circle cx=\"40\" cy=\"60\" r=\"6\" stroke=\"none\"/><circle cx=\"113\" cy=\"60\" r=\"6\" stroke=\"none\" style=\"fill:var(--accent)\"/><circle cx=\"187\" cy=\"60\" r=\"6\" stroke=\"none\" style=\"fill:var(--accent)\"/><circle cx=\"260\" cy=\"60\" r=\"6\" stroke=\"none\"/><text x=\"40\" y=\"86\" text-anchor=\"middle\" stroke=\"none\">6</text><text x=\"113\" y=\"86\" text-anchor=\"middle\" stroke=\"none\" style=\"fill:var(--accent)\">15</text><text x=\"187\" y=\"86\" text-anchor=\"middle\" stroke=\"none\" style=\"fill:var(--accent)\">24</text><text x=\"260\" y=\"86\" text-anchor=\"middle\" stroke=\"none\">33</text><text x=\"40\" y=\"106\" text-anchor=\"middle\" font-size=\"12\" stroke=\"none\" style=\"fill:var(--muted)\">Ben then</text><text x=\"113\" y=\"106\" text-anchor=\"middle\" font-size=\"12\" stroke=\"none\" style=\"fill:var(--muted)\">Ben now</text><text x=\"113\" y=\"121\" text-anchor=\"middle\" font-size=\"12\" stroke=\"none\" style=\"fill:var(--muted)\">= Ana then</text><text x=\"187\" y=\"106\" text-anchor=\"middle\" font-size=\"12\" stroke=\"none\" style=\"fill:var(--muted)\">Ana now</text><text x=\"187\" y=\"121\" text-anchor=\"middle\" font-size=\"12\" stroke=\"none\" style=\"fill:var(--muted)\">= Ben later</text><text x=\"260\" y=\"106\" text-anchor=\"middle\" font-size=\"12\" stroke=\"none\" style=\"fill:var(--muted)\">Ana later</text></svg>"
+    }
+   ],
+   "patterns": [
+    {
+     "title": "Two swimmers, second meeting",
+     "idea": "Two swimmers start at the same moment from opposite ends of a $50$ m pool and turn at each wall. The **first** meeting is always head-on, at $t=\\frac{50}{v_f+v_s}$. For the **second** meeting, divide the faster speed by the slower one **before anything else**. Under 2: they cross head-on again, after covering $150$ m between them. Exactly 2: they arrive at the same wall together. Over 2: the fast swimmer turns and catches the slow one from behind, once it is $50$ m further along than the slow one.",
+     "cases": [
+      {
+       "name": "Ratio under 2: second head-on crossing",
+       "q": "A swims at $1.25$ m/s from the 0 m wall, B at $1$ m/s from the 50 m wall. When do they meet for the second time?",
+       "spot": "$\\frac{v_f}{v_s}<2$: both swimmers turn before they meet again.",
+       "steps": [
+        "Ratio $1.25<2$, so they meet head-on, with $150$ m covered between them (one length to the first meeting, two more to the second).",
+        "$t=\\frac{150}{1.25+1}=\\frac{150}{2.25}=\\mathbf{66.67}$ **s**. Check: A has swum $83.3$ m and B $66.7$ m, so both are at the $16.7$ m mark."
+       ]
+      },
+      {
+       "name": "Ratio exactly 2: tie at the wall",
+       "q": "A swims at $2$ m/s from the 0 m wall, B at $1$ m/s from the 50 m wall. When and where do they meet for the second time?",
+       "spot": "$\\frac{v_f}{v_s}=2$: both formulas give the same time.",
+       "steps": [
+        "First meeting: $t=\\frac{50}{3}=16.67$ s, at the $33.3$ m mark.",
+        "Second: $t=\\frac{50}{v_s}=\\mathbf{50}$ **s**. A has swum $100$ m (there and back) and B $50$ m (one length), so both reach the **0 m wall** at the same instant.",
+        "$\\frac{150}{2+1}=50$ and $\\frac{50}{2-1}=50$: the two rules agree."
+       ]
+      },
+      {
+       "name": "Ratio over 2: overtake from behind",
+       "q": "A swims at $3$ m/s from the 0 m wall, B at $1$ m/s from the 50 m wall. When and where do they meet for the second time?",
+       "spot": "$\\frac{v_f}{v_s}>2$: the fast swimmer turns and laps the slow one before the slow one reaches a wall.",
+       "steps": [
+        "First meeting: $t=\\frac{50}{4}=12.5$ s, at the $37.5$ m mark.",
+        "A turns at the 50 m wall at $t=16.67$ s. B is still heading for 0 m, at the $33.3$ m mark.",
+        "A catches B once A has swum $50$ m more than B: $t=\\frac{50}{3-1}=\\mathbf{25}$ **s**. A has swum $75$ m and B $25$ m, so they meet at the **25 m mark**."
+       ]
+      }
+     ]
     }
    ]
   },

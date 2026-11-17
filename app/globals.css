@@ -149,3 +149,11 @@
     text-wrap: balance;
   }
 }
+
+/* scrolls without a visible scrollbar (touch swipes, trackpads and drag-to-scroll still work) */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

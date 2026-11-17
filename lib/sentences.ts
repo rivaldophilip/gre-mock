@@ -1,7 +1,8 @@
 /** Sentence splitting shared by the runner (select-in-passage) and the validator. Index runs across paragraphs. */
 export function splitSentences(paragraph: string): string[] {
   return paragraph
-    .split(/(?<=[.!?]["”')\]]?)\s+(?=["“(]?[A-Z0-9])/)
+    // **bold** may open or close a sentence (boldface argument portions), so allow its markers at the boundary
+    .split(/(?<=[.!?]["”')\]]?\*{0,2})\s+(?=\*{0,2}["“(]?[A-Z0-9])/)
     .map((s) => s.trim())
     .filter(Boolean);
 }

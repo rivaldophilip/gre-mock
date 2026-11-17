@@ -394,7 +394,7 @@
           "Capacity $= 18 \\div \\dfrac{3}{20} = 120$ liters.",
           "It now holds $30$ liters, so $120 - 30 = 90$ liters are needed."
         ],
-        "fast": "3/20 of capacity is 18, so 1/20 is 6 and the missing 15/20 is 90.",
+        "fast": "$\\tfrac{3}{20}$ of capacity is 18, so $\\tfrac{1}{20}$ is 6 and the missing $\\tfrac{15}{20}$ is 90.",
         "trap": "Answering the capacity, 120, instead of the amount still needed."
       },
       "tags": [

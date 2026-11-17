@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { attemptNumbers, finishedOrdinals } from "../lib/attempt-summary";
+import { attemptNumbers, mockNumbers, summarizePoints } from "../lib/attempt-summary";
 
 const T0 = Date.parse("2026-11-01T10:00:00Z");
 const day = (d: number) => new Date(T0 + d * 86_400_000);
@@ -30,8 +30,24 @@ describe("attempt numbering", () => {
     expect(n.has(3)).toBe(false);
   });
 
-  it("numbers finished attempts per measure by finish time, across tests and retakes", () => {
-    const n = finishedOrdinals(list, measureOf);
-    expect([...n.entries()]).toEqual([[1, 1], [2, 1], [5, 2], [4, 3]]);
+  it("numbers tests per measure by first finish, so retakes share their test's number", () => {
+    const n = mockNumbers([...list, att(7, "verbal-001", 7, 8)], measureOf);
+    expect([...n.entries()]).toEqual([["verbal-001", 1], ["quant-001", 1], ["verbal-002", 2]]);
+  });
+});
+
+describe("summarizePoints", () => {
+  const pt = (measure: string, attemptNo: number, mid: number, min: number) => ({ measure, attemptNo, timeMs: min * 60_000, score: { mid } });
+
+  it("counts retakes and their time, but scores first attempts only", () => {
+    const s = summarizePoints([pt("verbal", 1, 150, 40), pt("verbal", 2, 165, 30), pt("verbal", 1, 154, 50), pt("quant", 1, 160, 60)]);
+    expect([s.n, s.verbal, s.quant, s.retakes]).toEqual([4, 3, 1, 1]);
+    expect(s.avgTimeMs).toBe(45 * 60_000);
+    expect(s.vScore).toEqual({ n: 2, avg: 152, best: 154 });
+    expect(s.qScore).toEqual({ n: 1, avg: 160, best: 160 });
+  });
+
+  it("has no scores when nothing is in view", () => {
+    expect(summarizePoints([])).toMatchObject({ n: 0, avgTimeMs: null, vScore: { n: 0, avg: null, best: null } });
   });
 });

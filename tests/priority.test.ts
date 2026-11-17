@@ -210,3 +210,66 @@ describe("variant lists", () => {
     for (const id of ids) expect(new Set(variants[id]).size, id).toBeGreaterThanOrEqual(2);
   });
 });
+
+describe("new first while untested items remain", () => {
+  // 4 weak words, 4 words seen only in passages, 12 never seen
+  const weak = ["a", "b", "c", "d"];
+  const seen = ["s0", "s1", "s2", "s3"];
+  const events: LoggedEvent[] = [
+    ...weak.map((id) => ({ itemId: id, event: "key_missed", weight: 0.8, createdAt: daysAgo(10) })),
+    ...seen.map((id, i) => ({ itemId: id, event: "exposure", weight: 0, createdAt: daysAgo(10), attemptId: i })),
+  ];
+  const items = [...weak, ...seen, ...Array.from({ length: 12 }, (_, i) => `n${i}`)].map((id) => ({ id, yield: 0.5 }));
+  const base = scoreAll(items, events, now);
+
+  it("gives half the slots to unexposed words, the rest to tested ones by P", () => {
+    const picks = allocateWords(base, 8, rng(1));
+    expect(picks.slice(0, 4).every((p) => p.bucket === "new" && p.itemId.startsWith("n"))).toBe(true);
+    expect(picks.slice(4).map((p) => p.itemId).sort()).toEqual(weak);
+  });
+
+  it("takes exposed-but-untested words once the unexposed run out, and fills with new when tested ones run dry", () => {
+    const picks = allocateWords(base, 20, rng(2)).map((p) => p.itemId);
+    expect(new Set(picks).size).toBe(20);
+    expect(picks).toEqual(expect.arrayContaining([...weak, ...seen]));
+  });
+
+  it("keeps the usual rule once every item is tested", () => {
+    const tested = scoreAll(items.slice(0, 4), events, now);
+    expect(allocateWords(tested, 4, rng(3)).every((p) => p.bucket === "review")).toBe(true);
+  });
+
+  it("puts an untested concept first and spreads new ones over areas", () => {
+    const areas = ["arithmetic", "algebra", "geometry", "data"];
+    const cs = Array.from({ length: 12 }, (_, i) => ({ id: `c${i}`, yield: 0.5 }));
+    // c0..c7 tested; c8..c11 untested, one per area
+    const ev: LoggedEvent[] = cs.slice(0, 8).map((c) => ({ itemId: c.id, event: "concept_right_primary", weight: -0.6, createdAt: daysAgo(10) }));
+    const scored = scoreAll(cs, ev, now).map((s, i) => ({ ...s, area: areas[i % 4] }));
+    const picks = allocateConcepts(scored, 8, areas, rng(4));
+    expect(picks.slice(0, 4).map((p) => p.itemId).sort()).toEqual(["c10", "c11", "c8", "c9"]);
+    expect(picks.slice(4).every((p) => p.bucket === "review")).toBe(true);
+  });
+});
+
+import { pairSeKeys, type Pick } from "@/lib/priority/allocate";
+describe("SE pairs among key words", () => {
+  const ids = ["a", "b", "c", "d", "e", "f", "s1", "s2", "x"];
+  const scores = scoreAll(ids.map((id) => ({ id, yield: 0.5 })), [], now).map((s) => ({ ...s, P: { a: 0.9, b: 0.8, c: 0.7, d: 0.2, e: 0.1, f: 0.6, s1: 0.5, s2: 0.4, x: 0.3 }[s.itemId]! }));
+  const syn: Record<string, string[]> = { a: ["s1"], s1: ["a"], b: ["s2", "c"], s2: ["b"], c: ["b"], f: ["x"], x: ["f"] };
+  const picks = (list: string[], bucket: Pick["bucket"] = "new"): Pick[] => list.map((itemId) => ({ itemId, bucket, reason: "" }));
+
+  it("pairs synonyms already picked, then swaps a partner in for the lowest-priority pick", () => {
+    const { keys, pairs } = pairSeKeys(picks(["a", "b", "c", "d", "e"]), scores, (id) => syn[id] ?? [], { pairs: 2 });
+    expect(pairs).toEqual([["b", "c"], ["a", "s1"]]);
+    expect(keys.map((k) => k.itemId).sort()).toEqual(["a", "b", "c", "d", "s1"]); // e (lowest P) made way
+    expect(keys.find((k) => k.itemId === "s1")!.reason).toMatch(/^SE partner for a/);
+  });
+
+  it("keeps review picks and protected ones, and skips a pair an earlier SE item keyed", () => {
+    const list = [...picks(["a", "f"]), ...picks(["d"], "review"), ...picks(["e"])];
+    const { keys, pairs } = pairSeKeys(list, scores, (id) => syn[id] ?? [], { pairs: 2, keep: (id) => id === "e", usedPair: (p, q) => [p, q].sort().join() === "a,s1" });
+    // a's only partner was keyed before; f's partner x would have to replace a (d is review, e kept), which ranks higher
+    expect(pairs).toEqual([]);
+    expect(keys.map((k) => k.itemId)).toEqual(["a", "f", "d", "e"]);
+  });
+});

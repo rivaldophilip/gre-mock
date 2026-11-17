@@ -409,7 +409,7 @@
           "2. Sides: $3 \\times 6 = 18$ km and $2 \\times 6 = 12$ km.",
           "3. Area: $18 \\times 12 = 216$ km²."
         ],
-        "fast": "Map area 6 cm² times $6^2 = 36$.",
+        "fast": "Map area $6\\text{ cm}^2$ times $6^2 = 36$.",
         "trap": "Scaling the area by 6 instead of $6^2$ (36), or using 15 km per cm (1,350)."
       },
       "tags": [

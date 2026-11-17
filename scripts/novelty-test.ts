@@ -2,10 +2,12 @@
 //   npm run -s novelty -- <id>                      write content/.blind/<id>.novelty.md (each item beside the earlier items it could repeat)
 //   npm run -s novelty -- <id> --only s1q3,p2       just those items (or verbal passages), in <id>.novelty.only.md
 //   npm run -s novelty -- <id> --check [file|-] [--only ids]
-//       read the judge's lines, print what to rewrite, then the next step. "-" reads stdin and saves it beside the copy.
+//       read the judge's lines, print what to rewrite, then the next step. No file: the reply file the copy names
+//       (<id>.novelty[.only].txt, which the judge writes); "-" reads stdin and saves it there.
 //   npm run -s novelty -- --audit quant|verbal [--tests id,id]   a novelty copy for every listed test (default: all)
 // Earlier means a lower test number, so the first use of a setup stays and later copies are the ones to rewrite.
 import fs from "node:fs";
+import path from "node:path";
 import { TestSchema, type Question, type Test } from "../lib/types";
 import { itemText, measureTests, pastItems, primaryOf, setupOverlap, setupText, type PastItem } from "../lib/setup-history";
 import { containment, shingles } from "../lib/ngram";
@@ -49,16 +51,21 @@ function verbalSections(test: Test, earlierTests: Test[], only?: Set<string>): s
   const out: string[] = [];
   const isArg = (t: Test, pid: string) => t.questions.some((q) => q.passageId === pid && q.subtype === "arg");
   const pText = (t: Test, pid: string) => oneLine(t.passages.find((p) => p.id === pid)!.paragraphs.join(" "));
-  // passages: reading passages against earlier reading passages (opening), arguments against earlier arguments (whole)
-  for (const p of test.passages) {
-    if (only && !only.has(p.id)) continue;
-    const arg = isArg(test, p.id);
-    out.push(`### ${test.id} ${p.id} (${arg ? "argument" : "reading passage"})`, arg ? pText(test, p.id) : pText(test, p.id).slice(0, 600), "", "Earlier items:");
+  // passages: reading passages against earlier reading passages (opening), arguments against earlier arguments (whole).
+  // Each pool is listed once and every new passage points to it: repeated per passage it was ~85% of the file.
+  const mine = test.passages.filter((p) => !only || only.has(p.id));
+  for (const arg of [false, true]) {
+    const news = mine.filter((p) => isArg(test, p.id) === arg);
+    if (!news.length) continue;
+    const kind = arg ? "argument" : "reading passage";
+    out.push(`## Earlier ${kind}s${arg ? "" : " (openings)"}: judge every new ${kind} below against all of these`, "");
     for (const t of earlierTests)
       for (const e of t.passages.filter((x) => isArg(t, x.id) === arg))
         out.push(`- ${t.id} ${e.id}: ${arg ? pText(t, e.id) : `${e.title ? e.title + ": " : ""}${pText(t, e.id).slice(0, 220)}…`}`);
     out.push("");
+    for (const p of news) out.push(`### ${test.id} ${p.id} (${kind})`, arg ? pText(test, p.id) : pText(test, p.id).slice(0, 600), "", `Earlier items: every earlier ${kind} in the list above.`, "");
   }
+  if (out.length) out.push("## Completions (text completion and sentence equivalence)", "");
   // TC and SE: earlier items that share a key word, then the closest wording
   const pool = earlierTests.flatMap((t) => t.questions.filter((q) => q.type === "tc" || q.type === "se").map((q) => ({ t, q })));
   for (const q of test.questions.filter((x) => x.type === "tc" || x.type === "se")) {
@@ -83,12 +90,14 @@ function verbalSections(test: Test, earlierTests: Test[], only?: Set<string>): s
 const revisitNote = (ref: string) =>
   `Deliberate revisit of ${ref.replace(":", " ")}: a sibling of that item is intended. Judge it **similar** if it keeps the insight but makes a real structural change, **same** if it does not. Judge it against the other earlier items as usual.`;
 
-export function noveltyCopy(test: Test, dir = "content/tests", only?: Set<string>): string {
+export function noveltyCopy(test: Test, dir = "content/tests", only?: Set<string>, replyTo?: string): string {
   const head = [
     `# Novelty check: ${test.id}`,
     "",
     "Each item below is followed by earlier items it could repeat. Judge each item against them only.",
     "",
+    // the judge writes its verdicts there and `--check` (no file) reads them, so the coordinator never retypes them
+    ...(replyTo ? [`Reply file: ${replyTo}. Write your reply there (the lines only), then answer with just \`wrote <path>\`.`, ""] : []),
   ];
   const body =
     test.measure === "quant"
@@ -125,7 +134,7 @@ function readReply(args: string[], fallback: string, again: string): string {
     return text;
   }
   const file = !v || v.startsWith("--") ? fallback : v;
-  if (!fs.existsSync(file)) die(`no ${file}. Pipe the judge's reply instead: ${again} --check - <<'EOF' … EOF`);
+  if (!fs.existsSync(file)) die(`no ${file} (the judge writes it; check its answer). Or pipe the judge's reply: ${again} --check - <<'EOF' … EOF`);
   return fs.readFileSync(file, "utf8");
 }
 
@@ -155,9 +164,11 @@ function main() {
   const base = `${DIR}/${id}.novelty${only ? ".only" : ""}`;
   const again = `npm run -s novelty -- ${id}${only ? ` --only ${[...only].join(",")}` : ""}`;
   if (!args.includes("--check")) {
-    fs.writeFileSync(`${base}.md`, noveltyCopy(test, "content/tests", only));
+    const reply = path.resolve(`${base}.txt`);
+    fs.rmSync(reply, { force: true }); // a stale reply must not pass for the new one
+    fs.writeFileSync(`${base}.md`, noveltyCopy(test, "content/tests", only, reply));
     console.log(`wrote ${base}.md`);
-    console.log(`next: ${only ? "SendMessage the same gre-novelty-judge agent" : "give the gre-novelty-judge agent"} the path ${base}.md, then ${again} --check - <<'EOF' with its reply`);
+    console.log(`next: ${only ? "SendMessage the same gre-novelty-judge agent" : "give the gre-novelty-judge agent"} the path ${base}.md; it writes its verdicts to ${base}.txt. Then ${again} --check`);
     return;
   }
   const verdicts = parseVerdicts(readReply(args, `${base}.txt`, again));

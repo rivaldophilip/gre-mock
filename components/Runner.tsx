@@ -61,7 +61,7 @@ export function Runner(p: RunnerProps) {
   // practice mode, verbal: once an answer is shown, words in the passage, sentence and choices can be tapped as "didn't know"
   const wordTags = useWordTags(attemptId, p.taggedWords);
   const [left, setLeft] = useState<number | null>(p.secondsLeft[String(section)] ?? null);
-  // practice mode: the clock stops while a revealed answer is read, and restarts on the next navigation
+  // practice mode: the clock stops while a revealed answer is read, and restarts on moving to an open question
   const [paused, setPaused] = useState(() => {
     const st = p.sectionState[String(section)];
     return mode === "practice" && !!st?.pausedAt && (st.pausedFor ?? "reveal") === "reveal";
@@ -85,11 +85,20 @@ export function Runner(p: RunnerProps) {
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   // questions whose latest state has not reached the server yet (failed or pending saves)
   const dirty = useRef<Set<string>>(new Set());
+  // Requests that change the section clock run one after another. The server rewrites the whole clock state on each,
+  // so two in flight together (a navigation and a heartbeat, or two quick navigations) can land out of order and an
+  // older one undo a newer pause. Keepalive requests on leaving skip the queue so they are sent before the page goes.
+  const clockQueue = useRef<Promise<unknown>>(Promise.resolve());
+  const inOrder = useCallback(<T,>(f: () => Promise<T>): Promise<T> => {
+    const r = clockQueue.current.then(f, f);
+    clockQueue.current = r.catch(() => undefined);
+    return r;
+  }, []);
 
   const post = useCallback(
-    async (qid: string, extra: { commit?: boolean; position?: number; resume?: boolean } = {}, spent = 0, keepalive = false) => {
+    async (qid: string, extra: { commit?: boolean; position?: number; review?: boolean } = {}, spent = 0, keepalive = false) => {
       const m = latest.current.meta[qid] ?? { guessed: false, marked: false, timeMs: 0, finalized: false };
-      try {
+      const send = async () => {
         const r = await fetch(`/api/attempts/${attemptId}/response`, {
           method: "POST",
           headers: { "content-type": "application/json" },
@@ -107,12 +116,16 @@ export function Runner(p: RunnerProps) {
         if (r.ok || r.status === 409) dirty.current.delete(qid);
         setSaveErr(dirty.current.size > 0);
         return r.ok ? await r.json() : null;
+      };
+      const touchesClock = extra.commit !== undefined || extra.review !== undefined;
+      try {
+        return await (touchesClock && !keepalive ? inOrder(send) : send());
       } catch {
         setSaveErr(true);
         return null;
       }
     },
-    [attemptId],
+    [attemptId, inOrder],
   );
 
   /** Re-send every question whose last save failed. */
@@ -149,16 +162,20 @@ export function Runner(p: RunnerProps) {
       if (!q) return;
       settle();
       if (timer.current) clearTimeout(timer.current);
-      const resume = paused;
-      if (resume) setPaused(false);
-      void post(q.id, resume ? { position: to, resume: true } : { position: to }).then((j) => {
+      // practice mode: arriving at a question whose answer is already shown is more reading time, so the clock
+      // stays (or goes) stopped; arriving at an open question restarts it. Every move states which, so a lost or
+      // reordered request is corrected by the next one.
+      const target = qs[to];
+      const review = !!target && (!!reveals[target.id] || !!meta[target.id]?.finalized);
+      if (mode === "practice") setPaused(review);
+      void post(q.id, mode === "practice" ? { position: to, review } : { position: to }).then((j) => {
         // resync with the server clock, which excluded the reading time
-        if (resume && typeof j?.secondsLeft === "number") setLeft(j.secondsLeft);
+        if (mode === "practice" && typeof j?.secondsLeft === "number") setLeft(j.secondsLeft);
         return flush();
       });
       setIdx(to);
     },
-    [q, settle, post, flush, paused],
+    [q, qs, mode, reveals, meta, settle, post, flush],
   );
 
   const finishSection = useCallback(async () => {
@@ -217,7 +234,7 @@ export function Runner(p: RunnerProps) {
   const running = timerOn && active;
   const clock = useCallback(
     async (action: "pause" | "resume" | "heartbeat" | "hold" | "release", keepalive = false) => {
-      try {
+      const send = async () => {
         const r = await fetch(`/api/attempts/${attemptId}/clock`, {
           method: "POST",
           headers: { "content-type": "application/json" },
@@ -225,11 +242,14 @@ export function Runner(p: RunnerProps) {
           keepalive,
         });
         return r.ok ? ((await r.json()) as { secondsLeft: number | null }) : null;
+      };
+      try {
+        return await (keepalive ? send() : inOrder(send));
       } catch {
         return null;
       }
     },
-    [attemptId, section],
+    [attemptId, section, inOrder],
   );
   const leave = useCallback(() => {
     if (!sectionStarted || sectionDone) return;

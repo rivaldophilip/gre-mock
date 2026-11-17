@@ -18,6 +18,8 @@ export const TOP_CAP = 2;
 
 /** Verbal tests from this number on follow the official-format rules in verbalFormatRules (earlier tests predate them). */
 export const VERBAL_FORMAT_FROM = 15;
+/** Verbal tests from this number on set an arg-role item's portions in **bold**, as the real test does (earlier ones quote them in the stem). */
+export const ARG_BOLD_FROM = 18;
 /** Quant tests from this number on carry a `setup` and `variant` on every question (earlier ones were backfilled). */
 export const QUANT_SETUP_FROM = 11;
 /** Tests from these numbers on must not reuse an earlier setup (quant) or an earlier item's company (verbal); earlier ones were taken first. */
@@ -63,6 +65,16 @@ export function verbalFormatRules(test: Test, blueprint: { passages?: Record<str
   if (phrase < PHRASE_BLANKS_MIN) out.push(`${phrase} TC blank(s) with phrase choices; at least ${PHRASE_BLANKS_MIN} of the 15 blanks need all-phrase choices ("at odds with", "a perfunctory", noun phrases), each holding its key word`);
   const multiKeys = test.questions.filter((q) => q.type === "rc_multi").map((q) => ("sel" in q.key ? q.key.sel.length : 0));
   if (multiKeys.length && multiKeys.every((k) => k === 2)) out.push(`every rc_multi has 2 keys; official select-all items have 1, 2 or 3 correct answers about 40/40/20: use the key counts the brief's slot table gives`);
+  if (Number(/-(\d+)$/.exec(test.id)?.[1] ?? 0) >= ARG_BOLD_FROM)
+    for (const q of test.questions.filter((x) => x.tags.some((t) => t.kind === "concept" && t.id === "arg-role" && t.role === "primary"))) {
+      const text = test.passages.find((p) => p.id === q.passageId)?.paragraphs.join(" ") ?? "";
+      const spans = text.match(/\*\*[^*]+\*\*/g) ?? [];
+      // a bold span split across two sentences would lose its markers when the runner renders sentence by sentence
+      const split = spans.filter((b) => splitSentences(b.slice(2, -2)).length > 1);
+      if (spans.length < 1 || spans.length > 2 || !/boldface/i.test(q.prompt))
+        out.push(`${q.id} (arg-role): set the 1-2 portions in **bold** in the argument and ask about "the portions in boldface", as on the real test (found ${spans.length} bold span(s))`);
+      else if (split.length) out.push(`${q.id} (arg-role): a bold portion spans two sentences; bold one sentence or clause at a time`);
+    }
   return out;
 }
 
@@ -89,6 +101,13 @@ export function difficultyRules(questions: Rated[]) {
 
 /** One line for the author: `S1 avg 3.83 (>=3.75) ✓ · S2 avg 4.27 (>=4.2) ✓ · ...` */
 export const difficultyLine = (questions: Rated[]) => difficultyRules(questions).map((r) => `${r.rule} ${r.ok ? "✓" : "✗"}`).join(" · ");
+
+/** The first bit of TeX-like or slash-fraction math left outside `$...$` (it would show raw, e.g. `a_50`, `Σ_{n=1}^{49}`, `1/50`), or "". */
+export function plainMath(s: string): string {
+  const out = s.replace(/\\\$/g, "").replace(/\$(?:\\.|[^$\\])+\$/g, " ");
+  const m = /[_^\\Σ∑√]|\d\s*\/\s*\d/.exec(out);
+  return m ? out.slice(Math.max(0, m.index - 12), m.index + 12).trim() : "";
+}
 
 /** A zod path like questions.3.blanks, named by the question the author wrote: `s1q4 (tc).blanks`. */
 function schemaWhere(raw: unknown, p: PropertyKey[]): string {
@@ -302,6 +321,13 @@ export function validateTest(raw: unknown, id: string): Validation {
     if (q.figureId && !test.figures.some((f) => f.id === q.figureId)) err(`${where}: unknown figure ${q.figureId}`);
     if (q.type.startsWith("rc") && !q.passageId) err(`${where}: rc needs a passageId`);
     if (test.measure === "quant" && !(q.explanation.steps?.length)) err(`${where}: quant needs explanation.steps`);
+    if (test.measure === "quant") {
+      const e = q.explanation;
+      for (const [field, s] of [["key", e.key], ["fast", e.fast], ["trap", e.trap], ...(e.steps ?? []).map((x, i) => [`steps[${i}]`, x])] as [string, string | undefined][]) {
+        const bare = plainMath(s ?? "");
+        if (bare) err(`${where}: explanation.${field} has math outside $...$ ("${bare}"); write it as $...$ so it renders`);
+      }
+    }
     if (test.measure === "verbal" && q.type !== "rc_select") {
       const wrong = (q.type === "tc" ? q.blanks!.flatMap((b, i) => b.filter((_, j) => j !== sel[i])) : (q.choices ?? []).filter((_, j) => !sel.includes(j)));
       const missing = wrong.filter((c) => !(q.explanation.distractors && c in q.explanation.distractors));

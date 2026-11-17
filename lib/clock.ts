@@ -6,7 +6,7 @@ export interface SectionClock {
   pausedMs?: number;
   /** set while paused */
   pausedAt?: string;
-  /** why it is paused: a revealed practice answer (until the next navigation), the test-taker left the page, or they pressed Pause (practice) */
+  /** why it is paused: a revealed practice answer (until the test-taker moves to an open question), the test-taker left the page, or they pressed Pause (practice) */
   pausedFor?: PauseReason;
   /** last heartbeat from an open page; a running clock that has not heard one for STALE_MS counts as paused since then */
   lastSeenAt?: string;

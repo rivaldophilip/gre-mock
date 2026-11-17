@@ -16,8 +16,12 @@ const Body = z.object({
   position: z.number().int().min(0).optional(),
   /** practice mode: lock the answer and reveal the key (pauses the section clock) */
   commit: z.boolean().optional(),
-  /** practice mode: the test-taker moved on from a revealed answer (restarts the section clock) */
-  resume: z.boolean().optional(),
+  /**
+   * practice mode, sent on every move: whether the question moved to has its answer shown (the section clock stops
+   * while it is read) or is still open (the clock restarts). Stating the wanted state, not a change, keeps the clock
+   * right even if an earlier request was lost.
+   */
+  review: z.boolean().optional(),
 });
 
 export async function POST(req: Request, ctx: { params: Promise<{ id: string }> }) {
@@ -32,7 +36,7 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
   if (!q) return NextResponse.json({ error: "unknown question" }, { status: 400 });
   if (isClosed(a) || sectionStatus(a, q.section).finished) return NextResponse.json({ error: "section closed" }, { status: 409 });
   // past the limit the clock runs negative and answers are still taken; the review shows the overtime
-  if (body.data.resume && a.mode === "practice") a = await setClockPaused(a, q.section, false, "reveal");
+  if (body.data.review !== undefined && a.mode === "practice") a = await setClockPaused(a, q.section, body.data.review, "reveal");
   const clock = () => ({ secondsLeft: secondsLeft(a, test, q.section) });
 
   const qkey = pairKey(test.id, q.id);

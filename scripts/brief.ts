@@ -7,7 +7,7 @@ import path from "node:path";
 import { schema } from "../lib/db";
 import { oneTarget } from "./lib/accounts";
 import { markPending, scoreAll, type ItemScore, type LoggedEvent } from "../lib/priority/compute";
-import { allocateConcepts, allocateVerbalKeys, assignVariants, drawMultiKeys, rng } from "../lib/priority/allocate";
+import { allocateConcepts, allocateVerbalKeys, assignVariants, drawMultiKeys, pairSeKeys, rng, SE_PAIRS } from "../lib/priority/allocate";
 import { slotType, typeStats, TYPE_INFO, type SlotType } from "../lib/qtypes";
 import { conceptHistory, itemText, measureTests, primaryOf, testVariants, type SetupGroup } from "../lib/setup-history";
 import { matchRevisits, revisitQueue, REVISIT_CHANGES, type Answered, type Revisit } from "../lib/priority/revisit";
@@ -275,7 +275,14 @@ async function main() {
     const vocab = (await db.select().from(schema.vocab)).filter((v) => !v.pink);
     const byId = new Map(vocab.map((v) => [v.id, v]));
     const scores = markPending(scoreAll(vocab.map((v) => ({ id: v.id, yield: v.yield })), logged, now), pending.items);
-    const keys = allocateVerbalKeys(scores, (wid) => !!byId.get(wid)?.isSecondary, 29, random);
+    const drawn = allocateVerbalKeys(scores, (wid) => !!byId.get(wid)?.isSecondary, 29, random);
+    // SE keys two words: pair key words with bank synonyms up front, so all 29 can be keys (never an SE pair keyed before)
+    const synonyms = bankSynonyms();
+    const seKeyed = new Set(measureTests("verbal").flatMap((t) => t.questions.filter((q) => q.type === "se").map((q) => keyWordsOf(q).sort().join("|"))));
+    const { keys, pairs: sePairs } = pairSeKeys(drawn, scores, (wid) => synonyms.get(wid) ?? [], {
+      keep: (wid) => !!byId.get(wid)?.isSecondary,
+      usedPair: (a, b) => seKeyed.has([a, b].sort().join("|")),
+    });
     const used = new Set(keys.map((k) => k.itemId));
     const rest = scores.filter((s) => !used.has(s.itemId));
     const weakD = rest.filter((s) => s.weakEvidence > 0).sort((a, b) => b.P - a.P).slice(0, 25);
@@ -324,11 +331,12 @@ async function main() {
     }));
     Object.assign(brief, {
       keyWords: keySlots,
+      sePairs,
       skillSlots,
       distractorWords: { weak: weakD.map((s) => show(s)), untested: freshD.map((s) => show(s)) },
       passageWords: passPool.map((s) => show(s)),
       instructions:
-        "Use keyWords as the answers/keys across TC blanks and SE pairs (29 slots, order free); pair key words with each other in SE where the brief marks a partner with *, otherwise with a listed bank synonym. Fill distractors from distractorWords (about 40% weak). Weave 3-6 passageWords into each RC passage. Do not write word tags: `npm run tag` fills them from the choice and passage text (regular inflections match; tag an irregular form such as `forsworn` by hand). Each key word's `sense` is the GRE-tested sense: write the sentence so THAT sense is the one that fits (for secondary=true words, the everyday sense must be the trap). Give each RC question one primary skill tag {kind:'concept', role:'primary'} from skillSlots (argument skills on the arg items, rc-select-verify suits rc_multi), optionally a secondary one; the reading skills can repeat. Write each skill slot's question as its `variant`. A key word that was used before comes back in a new sentence logic, with a new SE partner where possible, and with no distractor from its earlier items (the validator rejects a shared distractor or a repeated SE pair). A key word with a `revisit` is a deliberate sibling of that earlier item, made with the change named: set `revisits` to its ref on the question." + focusNote,
+        "Use keyWords as the answers/keys across TC blanks and SE pairs (29 slots, order free); key each of the sePairs (two key words that are bank synonyms) as one SE item; any other SE item pairs a key word with a listed bank synonym. Fill distractors from distractorWords (about 40% weak). Weave 3-6 passageWords into each RC passage. Do not write word tags: `npm run tag` fills them from the choice and passage text (regular inflections match; tag an irregular form such as `forsworn` by hand). Each key word's `sense` is the GRE-tested sense: write the sentence so THAT sense is the one that fits (for secondary=true words, the everyday sense must be the trap). Give each RC question one primary skill tag {kind:'concept', role:'primary'} from skillSlots (argument skills on the arg items, rc-select-verify suits rc_multi), optionally a secondary one; the reading skills can repeat. Write each skill slot's question as its `variant`. A key word that was used before comes back in a new sentence logic, with a new SE partner where possible, and with no distractor from its earlier items (the validator rejects a shared distractor or a repeated SE pair). A key word with a `revisit` is a deliberate sibling of that earlier item, made with the change named: set `revisits` to its ref on the question." + focusNote,
     });
   } else {
     const concepts = conceptRows.filter((c) => !SKILL_AREAS.includes(c.area));
@@ -438,7 +446,12 @@ function briefMarkdown(b: Record<string, unknown>): string {
     const keys = b.keyWords as Word[];
     const keyIds = new Set(keys.map((k) => k.id));
     const syn = bankSynonyms();
-    lines.push("", "## Key words (29 keys across TC blanks and SE pairs)", "", "SE partners: * = also a key word (best pair); otherwise a bank synonym may be the second key.", "");
+    const sePairs = (b.sePairs ?? []) as [string, string][];
+    const lemma = new Map(keys.map((k) => [k.id, k.word]));
+    lines.push("", "## Key words (29 keys across TC blanks and SE pairs)", "");
+    if (sePairs.length)
+      lines.push(`SE pairs (key both words of each pair in one SE item): ${sePairs.map(([x, y]) => `${lemma.get(x) ?? x} / ${lemma.get(y) ?? y}`).join("; ")}.${sePairs.length < SE_PAIRS ? ` The other ${SE_PAIRS - sePairs.length} SE item(s) pair a key word with a listed bank synonym.` : ""} The remaining key words are the 15 TC keys.`, "");
+    lines.push("Synonyms: * = also a key word.", "");
     for (const k of keys) {
       const partners = [...(syn.get(k.id) ?? [])].sort((x, y) => Number(keyIds.has(y)) - Number(keyIds.has(x))).slice(0, 6);
       lines.push(`- **${k.word}**${k.secondary ? " [secondary: everyday sense is the trap]" : ""}: ${k.sense ?? ""} (${k.bucket}, ${k.reason}). Synonyms: ${partners.map((x) => (keyIds.has(x) ? x + "*" : x)).join(", ") || "none in bank"}`);

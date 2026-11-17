@@ -3,7 +3,8 @@
 //   npm run -s blind -- <id> --only s1q3,s2q5     write content/.blind/<id>.only.md with just those items (the full copy stays)
 //   npm run -s blind -- <id> --check [file|-] [--only ids]
 //       compare the solver's lines with the key and print only what needs action, then the next step.
-//       The file defaults to content/.blind/<id>.answers.txt (<id>.only.answers.txt with --only); "-" reads stdin and saves it there.
+//       The file defaults to content/.blind/<id>.answers.txt (<id>.only.answers.txt with --only), which the copy names and the
+//       solver writes; "-" reads stdin and saves it there.
 //   npm run -s blind -- --calibrate verbal|quant [--check file|-]   official items of known P+, to measure the solver's rating offset
 import fs from "node:fs";
 import path from "node:path";
@@ -18,9 +19,11 @@ const DIR = "content/.blind";
 const CAL = "data/solver-calibration.json";
 const QC_CHOICES = ["Quantity A is greater.", "Quantity B is greater.", "The two quantities are equal.", "The relationship cannot be determined from the information given."];
 
-export function blindCopy(test: Test, only?: Set<string>): string {
+export function blindCopy(test: Test, only?: Set<string>, replyTo?: string): string {
   const qs = test.questions.filter((q) => !only || only.has(q.id));
   let out = `# ${test.measure} items (blind copy)\n`;
+  // the solver writes its reply there and `--check` (no file) reads it, so the coordinator never retypes it
+  if (replyTo) out += `\nReply file: ${replyTo}. Write your reply there (the lines only), then answer with just \`wrote <path>\`.\n`;
   const used = new Set<string>();
   for (const sec of [1, 2]) {
     const inSec = qs.filter((q) => q.section === sec);
@@ -116,6 +119,17 @@ function matches(q: Question, got: number[] | number): boolean {
   return got.length === want.length && [...got].sort().every((g, i) => g === [...want].sort()[i]);
 }
 
+/**
+ * A skill the item's format names whatever it tests, so a solver who names it instead of the tag agrees: select-all
+ * and EXCEPT items read as rc-select-verify (and a tagged rc-select-verify as the content skill each choice checks),
+ * and picking a sentence reads as rc-detail. Flagging these only looped: rewrites never moved the solver's label.
+ */
+export function formatSkill(q: Question, said: string, tagged: string): boolean {
+  const verifyFormat = q.type === "rc_multi" || /\b(EXCEPT|NOT)\b/.test(q.prompt);
+  if (verifyFormat && (said === "rc-select-verify" || tagged === "rc-select-verify")) return true;
+  return q.type === "rc_select" && said === "rc-detail";
+}
+
 const NO_PROBLEM = /^(none|no|n\/a|ok|-|–|—)?$/i;
 function calibration(measure: string): { offset: number; model?: string } | null {
   if (!fs.existsSync(CAL)) return null;
@@ -161,7 +175,7 @@ export function checkAnswers(test: Test, answers: Map<string, SolverLine>, offse
     }
     const primary = q.tags.find((t) => t.kind === "concept" && t.role === "primary")?.id;
     const secondary = q.tags.filter((t) => t.kind === "concept" && t.role === "secondary").map((t) => t.id);
-    if (q.type.startsWith("rc") && a.skill && primary && a.skill !== primary && !secondary.includes(a.skill))
+    if (q.type.startsWith("rc") && a.skill && primary && a.skill !== primary && !secondary.includes(a.skill) && !formatSkill(q, a.skill, primary))
       mine.push(`${q.id}  skill: solver says ${a.skill}, tagged ${primary}; make the stem test ${primary}, or retag it if the brief's skill mix still holds`);
     const prob = a.problems.trim();
     if (!NO_PROBLEM.test(prob.replace(/\([^)]*\)/g, "").split(/[.;:,]/)[0].trim())) mine.push(`${q.id}  flagged: ${prob}`);
@@ -228,7 +242,7 @@ function readReply(args: string[], fallback: string): string {
     return text;
   }
   const file = !v || v.startsWith("--") ? fallback : v;
-  if (!fs.existsSync(file)) die(`no ${file}. Pipe the solver's reply instead: npm run -s blind -- ${args[0] === "--calibrate" ? `--calibrate ${args[1]}` : args[0]} --check - <<'EOF' … EOF`);
+  if (!fs.existsSync(file)) die(`no ${file} (the solver writes it; check its answer). Or pipe the solver's reply: npm run -s blind -- ${args[0] === "--calibrate" ? `--calibrate ${args[1]}` : args[0]} --check - <<'EOF' … EOF`);
   return fs.readFileSync(file, "utf8");
 }
 
@@ -268,9 +282,11 @@ function main() {
   if (unknown.length) die(`--only names ids not in ${id}: ${unknown.join(", ")} (ids look like s1q3, s2q15)`);
   const base = `${DIR}/${id}${only ? ".only" : ""}`;
   if (!args.includes("--check")) {
-    fs.writeFileSync(`${base}.md`, blindCopy(test, only));
+    const reply = path.resolve(`${base}.answers.txt`);
+    fs.rmSync(reply, { force: true }); // a stale reply must not pass for the new one
+    fs.writeFileSync(`${base}.md`, blindCopy(test, only, reply));
     console.log(`wrote ${base}.md (${only ? only.size : test.questions.length} items)`);
-    console.log(`next: ${only ? "SendMessage the same gre-blind-solver agent" : "give the gre-blind-solver agent"} the path ${base}.md, then npm run -s blind -- ${id}${only ? ` --only ${[...only].join(",")}` : ""} --check - <<'EOF' with its reply`);
+    console.log(`next: ${only ? "SendMessage the same gre-blind-solver agent" : "give the gre-blind-solver agent"} the path ${base}.md; it writes its reply to ${base}.answers.txt. Then npm run -s blind -- ${id}${only ? ` --only ${[...only].join(",")}` : ""} --check`);
     return;
   }
   const cal = calibration(test.measure);
@@ -286,7 +302,7 @@ function main() {
   const ids = act.join(",");
   console.log(
     act.length
-      ? `next: fix ${act.join(", ")} with Edit, npm run -s check -- ${id}, then npm run -s blind -- ${id} --only ${ids} and SendMessage the same solver the new file`
+      ? `next: fix ${act.join(", ")} with Edit, npm run -s check -- ${id}, then npm run -s blind -- ${id} --only ${ids}, SendMessage the same solver the new file, and --check --only ${ids} once it has written its reply`
       : `next: npm run -s register -- ${id}, then commit and push`,
   );
 }

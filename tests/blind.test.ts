@@ -88,3 +88,24 @@ describe("validateTest", () => {
     expect(errors[0]).toMatch(/^s1q4 \(se\)\.key: /);
   });
 });
+
+import { formatSkill } from "@/scripts/blind-test";
+describe("format skills", () => {
+  const v16 = TestSchema.parse(JSON.parse(fs.readFileSync("content/tests/verbal-016.json", "utf8")));
+  const q = (id: string) => v16.questions.find((x) => x.id === id)!;
+  it("accepts rc-select-verify on select-all and EXCEPT items, and rc-detail on a sentence pick", () => {
+    expect(formatSkill(q("s2q10"), "rc-select-verify", "rc-inference")).toBe(true); // rc_multi
+    expect(formatSkill(q("s2q12"), "rc-select-verify", "rc-detail")).toBe(true); // "… EXCEPT"
+    const pick = v16.questions.find((x) => x.type === "rc_select")!;
+    expect(formatSkill(pick, "rc-detail", "rc-function")).toBe(true);
+  });
+  it("still flags a real mismatch", () => {
+    expect(formatSkill(q("s2q13"), "rc-inference", "rc-application")).toBe(false);
+    const pick = v16.questions.find((x) => x.type === "rc_select")!;
+    expect(formatSkill(pick, "rc-attitude", "rc-function")).toBe(false);
+  });
+  it("names the reply file in the copy when asked", () => {
+    expect(blindCopy(test, undefined, "/x/verbal-002.answers.txt")).toContain("Reply file: /x/verbal-002.answers.txt");
+    expect(blindCopy(test)).not.toContain("Reply file");
+  });
+});

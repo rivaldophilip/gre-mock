@@ -166,7 +166,7 @@
         "key": "Non-remote Finance: $0.15 \\cdot 0.80 = 12\\%$ of 400 = 48. Non-remote Support: $0.20 \\cdot 0.25 = 5\\%$ of 400 = 20. Ratio $48/20 = 2.4$.",
         "steps": ["1. Non-remote share of each department is 100% minus its remote percent: Finance 80%, Support 25%.", "2. Finance: $0.80 \\cdot 60 = 48$; Support: $0.25 \\cdot 80 = 20$.", "3. $48 / 20 = 2.4$."],
         "fast": "Compare $0.15 \\cdot 0.8 = 0.12$ with $0.20 \\cdot 0.25 = 0.05$: the 400 cancels.",
-        "trap": "0.2 uses the remote percents instead of their complements ($12/60$); 0.75 compares department sizes only; 3.2 compares the non-remote percents (80/25) without the department sizes."
+        "trap": "0.2 uses the remote percents instead of their complements ($12/60$); 0.75 compares department sizes only; 3.2 compares the non-remote percents ($80/25$) without the department sizes."
       },
       "tags": [{ "kind": "concept", "id": "data-interpretation-calc", "role": "primary" }],
       "setup": "DI: compare two departments' non-remote counts, each the complement of a within-department percent applied to a percent of the whole",
@@ -181,7 +181,7 @@
         "key": "$E(X) = 0.40(0.50)(3) + 0.25(0.80)(4) + 0.20(0.25)(4) + 0.15(0.80)(5) = 0.6 + 0.8 + 0.2 + 0.6 = 2.2$.",
         "steps": ["1. P(an on-site employee of a department) = department share times its non-remote share.", "2. Engineering: $0.4 \\cdot 0.5 = 0.20$ at 3 days; Sales: $0.25 \\cdot 0.8 = 0.20$ at 4; Support: $0.2 \\cdot 0.25 = 0.05$ at 4; Finance: $0.15 \\cdot 0.8 = 0.12$ at 5; remote (0 days) the rest.", "3. $E(X) = 0.6 + 0.8 + 0.2 + 0.6 = 2.2$."],
         "fast": "Total on-site days: $80 \\cdot 3 + 80 \\cdot 4 + 20 \\cdot 4 + 48 \\cdot 5 = 880$; divide by 400.",
-        "trap": "3.75 ignores the remote employees; 3.86 averages over on-site employees only (880/228); 2.43 averages the four departments without weighting them."
+        "trap": "3.75 ignores the remote employees; 3.86 averages over on-site employees only ($880/228$); 2.43 averages the four departments without weighting them."
       },
       "tags": [{ "kind": "concept", "id": "random-variables", "role": "primary" }],
       "setup": "DI: expected days on site per employee, weighting by department share and the non-remote share, remote counted as 0",
