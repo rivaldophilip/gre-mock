@@ -12,7 +12,7 @@ The file lists each new item (a quant question, or for verbal a passage, an argu
 - **similar**: same setup family and the same decisive insight, with one step added, dropped or asked differently (for example a range instead of a single value, or the same trap in a new figure).
 - **new**: the decisive insight or the setup differs, even if the topic is the same. Sharing a concept is not a repeat.
 
-Be strict: a disguised copy (new context, same mathematics or reasoning) is **same**. When several earlier items match, name the closest one.
+Be strict: a disguised copy (new context, same mathematics or reasoning) is **same**. For text completion and sentence equivalence, the key word's own meaning is not a setup: two items keyed with the same word or with synonyms necessarily describe the same quality. Judge the sentence logic, the kind of clue that decides the blank, and the distractors; if those differ, the item is **new**. When several earlier items match, name the closest one.
 
 Some items are marked as a **deliberate revisit** of one earlier item: the test practises an insight the student missed. Such an item should be a sibling: the same decisive insight with a real structural change (run backwards, a new format, a second concept, a moved trap; for verbal, new sentence logic, a new partner or new distractors). Judge it **similar** to that item when the change is real, and **same** when it is a copy with new surface. Still check it against the other earlier items, and name the revisited item as `earlier` when it is the closest.
 

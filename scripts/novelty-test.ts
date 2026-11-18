@@ -25,6 +25,25 @@ const oneLine = (s: string) => s.replace(/\s+/g, " ").trim();
 
 const keyWords = (q: Question) => new Set(q.tags.filter((t) => t.kind === "word" && t.role === "key").map((t) => t.id));
 
+/** Bank synonyms per word id (data/vocab.json senses), both directions. */
+let synCache: Map<string, Set<string>> | undefined;
+function bankSynonyms() {
+  if (synCache) return synCache;
+  const vocab = JSON.parse(fs.readFileSync("data/vocab.json", "utf8")) as { id: string; lemma: string; senses?: { synonyms?: string[] }[] }[];
+  const idOf = new Map(vocab.map((v) => [v.lemma.toLowerCase(), v.id]));
+  synCache = new Map();
+  const link = (a: string, b: string) => synCache!.set(a, (synCache!.get(a) ?? new Set()).add(b));
+  for (const v of vocab)
+    for (const w of (v.senses ?? []).flatMap((x) => x.synonyms ?? [])) {
+      const o = idOf.get(w.toLowerCase());
+      if (o && o !== v.id) {
+        link(v.id, o);
+        link(o, v.id);
+      }
+    }
+  return synCache;
+}
+
 function quantSections(test: Test, earlier: PastItem[], only?: Set<string>): string[] {
   const out: string[] = [];
   for (const q of test.questions) {
@@ -66,21 +85,27 @@ function verbalSections(test: Test, earlierTests: Test[], only?: Set<string>): s
     for (const p of news) out.push(`### ${test.id} ${p.id} (${kind})`, arg ? pText(test, p.id) : pText(test, p.id).slice(0, 600), "", `Earlier items: every earlier ${kind} in the list above.`, "");
   }
   if (out.length) out.push("## Completions (text completion and sentence equivalence)", "");
-  // TC and SE: earlier items that share a key word, then the closest wording
+  // TC and SE: earlier items that share a key word, then a synonym of one, then the closest wording
   const pool = earlierTests.flatMap((t) => t.questions.filter((q) => q.type === "tc" || q.type === "se").map((q) => ({ t, q })));
   for (const q of test.questions.filter((x) => x.type === "tc" || x.type === "se")) {
     if (only && !only.has(q.id)) continue;
     const keys = keyWords(q);
+    // an earlier item keyed with a synonym of a key here is the likeliest disguised repeat: same meaning, same frame
+    const near = new Set([...keys].flatMap((k) => [...(bankSynonyms().get(k) ?? [])]).filter((k) => !keys.has(k)));
     const mine = shingles(q.prompt, 3);
     const ranked = pool
-      .map((x) => ({ ...x, shared: [...keyWords(x.q)].filter((k) => keys.has(k)).length, s: containment(mine, shingles(x.q.prompt, 3)) }))
-      .filter((x) => x.shared > 0 || x.s >= 0.15)
-      .sort((a, b) => b.shared - a.shared || b.s - a.s)
+      .map((x) => {
+        const theirs = [...keyWords(x.q)];
+        return { ...x, shared: theirs.filter((k) => keys.has(k)).length, syn: theirs.filter((k) => near.has(k)).length, s: containment(mine, shingles(x.q.prompt, 3)) };
+      })
+      .filter((x) => x.shared > 0 || x.syn > 0 || x.s >= 0.15)
+      .sort((a, b) => b.shared - a.shared || b.syn - a.syn || b.s - a.s)
       .slice(0, VERBAL_MAX);
     const revisited = q.revisits ? pool.find((x) => `${x.t.id}:${x.q.id}` === q.revisits) : undefined;
-    if (revisited && !ranked.some((x) => x.t.id === revisited.t.id && x.q.id === revisited.q.id)) ranked.unshift({ ...revisited, shared: 0, s: 0 });
+    if (revisited && !ranked.some((x) => x.t.id === revisited.t.id && x.q.id === revisited.q.id)) ranked.unshift({ ...revisited, shared: 0, syn: 0, s: 0 });
     out.push(`### ${test.id} ${q.id} (${q.type})`, itemText(q), "", ...(q.revisits ? [revisitNote(q.revisits), ""] : []), ranked.length ? "Earlier items:" : "Earlier items: none");
-    for (const x of ranked) out.push(`- ${x.t.id} ${x.q.id}: ${itemText(x.q)}`);
+    // a synonym match shares the key's meaning by construction; only a shared frame or logic makes it a repeat
+    for (const x of ranked) out.push(`- ${x.t.id} ${x.q.id}${x.syn && !x.shared ? " (keyed with a synonym: the shared meaning alone is not a repeat)" : ""}: ${itemText(x.q)}`);
     out.push("");
   }
   return out;

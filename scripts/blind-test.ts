@@ -212,16 +212,26 @@ const levelOfP = (p: number) => (p < 30 ? 5 : p < 45 ? 4 : p < 60 ? 3 : 2);
 function calibrationSet(measure: string) {
   const all = fs.readFileSync(REF, "utf8").split("\n").filter(Boolean).map((l) => JSON.parse(l));
   const byId = new Map(all.map((x) => [x.id, x]));
-  const types = measure === "verbal" ? ["tc1", "tc2", "tc3", "se", "arg"] : ["qc", "mc", "numeric"];
+  // reading items too: they are half of a verbal mock, and an offset measured on completions alone missed them
+  const types = measure === "verbal" ? ["tc1", "tc2", "tc3", "se", "arg", "rc", "rc_multi"] : ["qc", "mc", "numeric"];
   // boldface items lose their bold in the text corpus, so they cannot be solved from it
   const pool = all.filter((x) => types.includes(x.type) && typeof x.pplus === "number" && !/boldface/i.test(String(x.stem))).sort((a, b) => a.id.localeCompare(b.id));
-  // three items each at levels 5 and 4, two at level 3
-  const items = ([[5, 3], [4, 3], [3, 2]] as const).flatMap(([lv, n]) => pool.filter((x) => levelOfP(x.pplus) === lv).slice(0, n));
+  // weighted to the hard levels the mocks are written at; round-robin over types so no type dominates a level
+  // (the first 8 by id were 8 completions; one off rating then moved the offset by 1/8 of a level)
+  const quota = measure === "verbal" ? ([[5, 13], [4, 10], [3, 6]] as const) : ([[5, 3], [4, 3], [3, 2]] as const);
+  const items = quota.flatMap(([lv, n]) => {
+    const byType = types.map((t) => pool.filter((x) => x.type === t && levelOfP(x.pplus) === lv));
+    const out: typeof pool = [];
+    for (let i = 0; out.length < n && byType.some((l) => l.length > i); i++) for (const l of byType) if (l[i] && out.length < n) out.push(l[i]);
+    return out;
+  });
   let md = `# Calibration items (${measure})\n`;
   const key: Record<string, number> = {};
+  const typeOf: Record<string, string> = {};
   items.forEach((x, n) => {
     const id = `c${n + 1}`;
     key[id] = levelOfP(x.pplus);
+    typeOf[id] = x.type;
     md += `\n### ${id}\n`;
     if (x.passage_id) md += `Passage: ${byId.get(x.passage_id)?.text ?? ""}\n`;
     md += `${x.stem}\n`;
@@ -230,7 +240,7 @@ function calibrationSet(measure: string) {
     if (Array.isArray(ch) && Array.isArray(ch[0])) md += ch.map((b: string[], i: number) => `Blank ${i + 1}: ${b.map((c, j) => `${L[j]}. ${c}`).join("   ")}`).join("\n") + "\n";
     else if (Array.isArray(ch)) md += ch.map((c: string, j: number) => `${L[j]}. ${c}`).join("\n") + "\n";
   });
-  return { md, key };
+  return { md, key, typeOf };
 }
 
 /** The solver's reply: `--check -` reads stdin (saved to `fallback` for the record), `--check <file>` a file, bare `--check` the fallback. */
@@ -256,7 +266,7 @@ function main() {
   if (args[0] === "--calibrate") {
     const measure = args[1];
     if (measure !== "verbal" && measure !== "quant") die("usage: npm run -s blind -- --calibrate verbal|quant [--check file|-]");
-    const { md, key } = calibrationSet(measure);
+    const { md, key, typeOf } = calibrationSet(measure);
     if (!args.includes("--check")) {
       fs.writeFileSync(`${DIR}/calibration-${measure}.md`, md);
       console.log(`wrote ${DIR}/calibration-${measure}.md (${Object.keys(key).length} items)\nnext: give it to the gre-blind-solver agent, then npm run -s blind -- --calibrate ${measure} --check - with its reply`);
@@ -270,6 +280,9 @@ function main() {
     cal[measure] = { model: opt("--model") ?? cal[measure]?.model ?? "sonnet", offset, measuredAt: new Date().toISOString().slice(0, 10), items: gaps.length };
     fs.writeFileSync(CAL, JSON.stringify(cal, null, 1) + "\n");
     console.log(`solver rates ${offset} levels below official difficulty on average (${gaps.length} items); saved to ${CAL}`);
+    const byType = new Map<string, number[]>();
+    for (const [id, lv] of Object.entries(key)) if (ans.get(id)?.difficulty) byType.set(typeOf[id], [...(byType.get(typeOf[id]) ?? []), lv - ans.get(id)!.difficulty!]);
+    console.log("by type (mean gap, items): " + [...byType].map(([t, g]) => `${t} ${(g.reduce((a, b) => a + b, 0) / g.length).toFixed(1)} (${g.length})`).join(", "));
     return;
   }
   const id = args[0];

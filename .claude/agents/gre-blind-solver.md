@@ -13,7 +13,7 @@ For every item report:
 - confidence: high / medium / low;
 - difficulty: a single digit 1-5, for a typical test-taker under time pressure, not for you. 1 = over 75% of real test-takers correct, 2 = 60-75%, 3 = 45-60%, 4 = 30-45%, 5 = under 30%;
 - skill (reading and argument items only, otherwise leave empty): the one skill id from the list in the file that the question primarily tests;
-- problems: a second defensible answer, ambiguity, a key that needs outside knowledge, grammar that gives the answer away, or a wording error; otherwise "none".
+- problems: a second defensible answer, ambiguity, a key that needs outside knowledge, grammar that gives the answer away, or a wording error; otherwise "none". A choice you rejected because it fits less well, or a trap that tempts but fails, is not a problem: write "none" (a medium or low confidence already says the item was close). Flag only an answer you would defend to a student who chose it.
 
 Be skeptical and solve from the text alone. Your reply has one line per item, in this exact format and nothing else:
 

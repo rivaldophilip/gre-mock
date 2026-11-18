@@ -1,0 +1,2622 @@
+{
+ "testId": "verbal-019",
+ "measure": "verbal",
+ "seed": 22099,
+ "generatedAt": "2026-11-18T15:52:02.099Z",
+ "untakenTests": [
+  "quant-012",
+  "quant-013",
+  "verbal-016",
+  "verbal-017",
+  "verbal-018"
+ ],
+ "blueprint": {
+  "measure": "verbal",
+  "sections": [
+   {
+    "n": 1,
+    "minutes": 18,
+    "slots": [
+     {
+      "type": "tc1",
+      "level": 4
+     },
+     {
+      "type": "tc2",
+      "level": 3
+     },
+     {
+      "type": "tc3",
+      "level": 5
+     },
+     {
+      "type": "se",
+      "level": 4
+     },
+     {
+      "type": "se",
+      "level": 3
+     },
+     {
+      "type": "se",
+      "level": 5
+     },
+     {
+      "type": "se",
+      "level": 4
+     },
+     {
+      "type": "rc",
+      "level": 4
+     },
+     {
+      "type": "rc_multi",
+      "level": 5
+     },
+     {
+      "type": "rc",
+      "level": 3
+     },
+     {
+      "type": "rc_select",
+      "level": 3
+     },
+     {
+      "type": "arg",
+      "level": 4
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "minutes": 23,
+    "slots": [
+     {
+      "type": "tc1",
+      "level": 4
+     },
+     {
+      "type": "tc2",
+      "level": 5
+     },
+     {
+      "type": "tc3",
+      "level": 5
+     },
+     {
+      "type": "tc3",
+      "level": 4
+     },
+     {
+      "type": "se",
+      "level": 5
+     },
+     {
+      "type": "se",
+      "level": 4
+     },
+     {
+      "type": "se",
+      "level": 5
+     },
+     {
+      "type": "rc",
+      "level": 4
+     },
+     {
+      "type": "rc",
+      "level": 5
+     },
+     {
+      "type": "rc_multi",
+      "level": 4
+     },
+     {
+      "type": "rc_select",
+      "level": 5
+     },
+     {
+      "type": "rc",
+      "level": 4
+     },
+     {
+      "type": "rc",
+      "level": 5
+     },
+     {
+      "type": "rc",
+      "level": 4
+     },
+     {
+      "type": "arg",
+      "level": 3
+     }
+    ]
+   }
+  ],
+  "passages": {
+   "1": [
+    {
+     "questions": 2,
+     "paragraphs": "1-2"
+    },
+    {
+     "questions": 2,
+     "paragraphs": "1"
+    }
+   ],
+   "2": [
+    {
+     "questions": 4,
+     "paragraphs": "2-4"
+    },
+    {
+     "questions": 2,
+     "paragraphs": "1"
+    },
+    {
+     "questions": 1,
+     "paragraphs": "1"
+    }
+   ]
+  },
+  "notes": "S1: 12 questions, S2: 15. Passage questions are the rc/rc_multi/rc_select slots in order; 'paragraphs' is each passage's paragraph count (the S2 4-question passage is the test's long one; at most 2 passages per test may run past one paragraph). 'arg' is a short single-paragraph argument item. Every section opens with the TC block; order inside each type block is mixed, not easy-to-hard. 29 key-word slots."
+ },
+ "previous": [
+  {
+   "id": "verbal-001",
+   "passageTopics": [
+    "For decades, ecologists described forests as arenas of competition:…",
+    "Historians of Dutch painting have long treated the seventeenth-century…",
+    "A city's transit authority reports that after it replaced a downtown…",
+    "Linguists who study creoles, full languages that arise when speakers…",
+    "Students who reread a text feel that they have learned it: the words…",
+    "Critics have tended to read the late novels of a certain author as a…",
+    "A council member argues: 'Since the town banned plastic grocery bags…"
+   ]
+  },
+  {
+   "id": "verbal-002",
+   "passageTopics": [
+    "Biologists have long treated cryptic coloration (the mottled browns of…",
+    "Accounts of postwar painting often present the decade's abstract…",
+    "A regional health agency began mailing reminder postcards to patients…",
+    "For much of the twentieth century, historians of geology told the…",
+    "Judges asked to enforce the judgment of a foreign court commonly say…",
+    "The abandonment of the Norse settlements in Greenland in the fifteenth…",
+    "Over the past decade, reported cases of a tick-borne illness in…"
+   ]
+  },
+  {
+   "id": "verbal-003",
+   "passageTopics": [
+    "Economic historians long assumed that the rise in household…",
+    "The first planets found orbiting other stars were peculiar by the…",
+    "After the city of Harlow replaced its paper parking permits with a…",
+    "When the leaves of the sensitive plant Mimosa pudica are disturbed,…",
+    "The movement to perform eighteenth-century music on period instruments…",
+    "Historians of public health once told the story of the Victorian…",
+    "Opponents of a proposed tax on sugary drinks argue that it would drive…"
+   ]
+  },
+  {
+   "id": "verbal-004",
+   "passageTopics": [
+    "Zircon, a mineral that crystallizes from cooling magma, is prized by…",
+    "In the 1570s and 1580s a circle of English poets set out to write…",
+    "The young women who staffed the silk-reeling mills of central Japan in…",
+    "Asked to describe what they see, most people report a visual field…",
+    "Roman harbor walls built of concrete two thousand years ago still…",
+    "Three years ago the fisheries board of a coastal province required…",
+    "Since a coastal province began requiring storm shutters on all new…"
+   ]
+  },
+  {
+   "id": "verbal-005",
+   "passageTopics": [
+    "When a nineteenth-century naturalist called the lake a microcosm, he…",
+    "The portolan charts of the late Middle Ages, drawn on sheepskin for…",
+    "Until two years ago, Wexmoor College gave letter grades in all of its…",
+    "Few findings in behavioral economics have been more widely publicized…",
+    "To the reformers who campaigned against it, benefit of clergy was the…",
+    "For most of the nineteenth and early twentieth centuries, the…",
+    "At auctions of rare wines, bottles whose labels are stained or torn…"
+   ]
+  },
+  {
+   "id": "verbal-006",
+   "passageTopics": [
+    "For most of the twentieth century, textbooks demarcated the immune…",
+    "Around 1900 the pictorialists, determined to win for photography the…",
+    "Protestant reformers of the sixteenth century commonly taught that…",
+    "When sociologists began tracking individual households through…",
+    "Champions of the long take have tended to write in a hortatory mood,…",
+    "Two years ago the Calder Valley growers' cooperative began encouraging…",
+    "Director of the Hollis Municipal Museum: Visitors who rent our audio…"
+   ]
+  },
+  {
+   "id": "verbal-007",
+   "passageTopics": [
+    "For more than a century, paleontologists have repeated as a rule of…",
+    "Historians of mathematics have sometimes treated the European…",
+    "In the Kessel valley, apple growers who have put up nest boxes for…",
+    "In the classic anthropological account, a gift differs from a…",
+    "It has long been a commonplace that the boulevards cut through Paris…",
+    "For much of the twentieth century, comparative anatomists treated the…",
+    "Bookshops in Velden that moved their poetry sections from the back of…"
+   ]
+  },
+  {
+   "id": "verbal-008",
+   "passageTopics": [
+    "That sleep benefits memory is no longer seriously disputed; how it…",
+    "Critics who dismissed the realist novel's lists of furniture and…",
+    "Last year the public libraries of Brennan County stopped charging…",
+    "Histories of commercial credit in the nineteenth-century United States…",
+    "For a long time the anatomical theaters of early-modern Europe were…",
+    "When the bark of the cinchona tree reached Europe in the seventeenth…",
+    "Transportation analysts have predicted that the new toll on the Harbor…"
+   ]
+  },
+  {
+   "id": "verbal-009",
+   "passageTopics": [
+    "For most of the eighteenth century, chemists who wished to predict the…",
+    "Historians of pronunciation cannot hear medieval speakers, so they…",
+    "When the first detailed records from Antarctic ice cores were…",
+    "The margins of Gothic manuscripts teem with figures that seem to have…",
+    "Because a glacier's front advances when snowfall outpaces melting and…",
+    "Since the Hartwell Museum began requiring visitors to reserve a timed…",
+    "Planners in the Varden Valley expect that subsidizing drip irrigation,…"
+   ]
+  },
+  {
+   "id": "verbal-010",
+   "passageTopics": [
+    "For most of the twentieth century, the suppression of side shoots by a…",
+    "Critics have long been embarrassed by apostrophe, the ode's habit of…",
+    "Eighteen months ago the Corvan hotel chain replaced the paper comment…",
+    "It was long a commonplace that the printing press, by multiplying…",
+    "Offered \\$100 today or \\$110 in a week, many people take the \\$100;…",
+    "In the head of a sunflower, the florets lie along two families of…",
+    "In the province of Vastra, restaurants are inspected at unannounced…"
+   ]
+  },
+  {
+   "id": "verbal-011",
+   "passageTopics": [
+    "For much of the twentieth century, anthropologists treated kinship as…",
+    "Of the signals that precede an eruption, the swelling of a volcano's…",
+    "Because Bach's last contrapuntal cycle was printed in open score, each…",
+    "Few features of Byzantine icons have invited more theorizing than…",
+    "When a volcano erupts after its warnings have gone unheeded, the…",
+    "Two years ago the town of Brask began requiring every restaurant that…",
+    "Last year the municipal pool in Corwin extended its hours, staying…"
+   ]
+  },
+  {
+   "id": "verbal-012",
+   "passageTopics": [
+    "Many bacteria regulate certain genes according to the abundance of…",
+    "When the polymath Francis Galton compared the heights of parents with…",
+    "For economists from Adam Smith onward, the craft guilds of early…",
+    "Western collectors who began buying Japanese woodblock prints in the…",
+    "When a population of bacteria is exposed to a lethal dose of an…",
+    "Since the city added bicycle lanes along Harbor Avenue two years ago,…",
+    "Each of the forty musicians in the Halden Chamber Orchestra has won at…"
+   ]
+  },
+  {
+   "id": "verbal-013",
+   "passageTopics": [
+    "Sailing among the atolls of the Indian Ocean in the 1830s, Charles…",
+    "The white walls of the early modernist house are usually read as a…",
+    "Karl Popper proposed that a theory counts as scientific only if some…",
+    "The classic theory of the demographic transition holds that birth…",
+    "Why so many species of small fish can live together on a single patch…",
+    "To reduce the amount of paper it uses, the Ostrow insurance company…",
+    "Every film that has won the Corvara Festival's top prize in the past…"
+   ]
+  },
+  {
+   "id": "verbal-014",
+   "passageTopics": [
+    "Defenders of federal constitutions have usually rested their case on a…",
+    "The lightest elements are primordial: hydrogen, helium and a trace of…",
+    "To cut costs, the Pell County transit authority plans to replace each…",
+    "For much of the twentieth century, literary historians treated the…",
+    "It was once a commonplace that the mechanical clock was a monastic…",
+    "In a celebrated essay, a historian of the English working class argued…",
+    "The average age of the members of the Larkspur Book Club is 61.…"
+   ]
+  },
+  {
+   "id": "verbal-015",
+   "passageTopics": [
+    "A Weddell seal can remain under water for more than an hour, far…",
+    "By the 1870s the philologists who had traced the sound changes…",
+    "Growers in the Marral district have begun replacing maize with a…",
+    "Anyone who reads accounts of eighteenth-century opera houses is struck…",
+    "Gresham's law, the maxim that bad money drives out good, is among the…",
+    "When a gazelle spots a stalking predator, it sometimes springs…",
+    "The Corlan grocery chain charges the same price for its house-brand…"
+   ]
+  },
+  {
+   "id": "verbal-016",
+   "passageTopics": [
+    "To the design reformers of the later nineteenth century, few household…",
+    "During the Second World War, radar operators watching for the faint…",
+    "To reduce summer water use, the Brindle water utility will double the…",
+    "When orbiting cameras first recorded narrow dark streaks that lengthen…",
+    "Lawyers trained in the common law tend to assume that the rule…",
+    "Because the master masons of the Gothic cathedrals left no…",
+    "At the Kestrel textile mill last month, every machine that was…"
+   ]
+  },
+  {
+   "id": "verbal-017",
+   "passageTopics": [
+    "When the earthquake of 1929 off the Grand Banks of Newfoundland…",
+    "The great Russian novels of the 1860s and 1870s reached their first…",
+    "Ecologists studying the Brannock Range attribute the recovery of…",
+    "In the standard history of scurvy, the decisive moment comes in 1747,…",
+    "Archaeologists call an object a skeuomorph when it reproduces, in a…",
+    "European readers who met the Persian ghazal in translation in the late…",
+    "Last year the Ashby school district moved recess at its elementary…"
+   ],
+   "stems": [
+    "Admirers of the dyers' guild have long cited its support for…",
+    "The curators hoped that a case of medieval surgical…",
+    "The sanitary committee's early pamphlets were unabashedly…",
+    "Those who still cite the hoard as proof that the harbor town…",
+    "Within a year of the bridge's opening, the same newspapers…",
+    "Because the serum could be given only after the bite, its…",
+    "The shuttered sickrooms that physicians prescribed to keep…",
+    "The primary purpose of the passage is to",
+    "Consider each of the choices separately and select all that…",
+    "In the context in which it appears, “wanting” most nearly…",
+    "Select the sentence in which the author concedes a limit to…",
+    "Which of the following, if true, most helps to explain the…",
+    "For two centuries the parish remembered the ferryman as the…",
+    "Those who assume that a profession will (i) ___ a principle…",
+    "His contemporaries found the court poet's verses (i) ___, so…",
+    "The inspectors never troubled to (i) ___ whether the pupils'…",
+    "Her colleagues never thought the cataloguer quick, and still…",
+    "Within a month of the epidemic's end the council voted to…",
+    "The more warmly her colleagues praised the pavilion, the…",
+    "Which of the following best describes the organization of…",
+    "The revisionist historians described in the passage would…",
+    "Consider each of the choices separately and select all that…",
+    "Select the sentence that best shows that the author's…",
+    "The passage suggests that the author would most likely agree…",
+    "Which of the following findings would the author most likely…",
+    "The passage provides information to answer which of the…",
+    "Which of the following, if true, most strengthens the…"
+   ]
+  }
+ ],
+ "slots": [
+  {
+   "section": 1,
+   "slot": 1,
+   "type": "tc1",
+   "level": 4,
+   "exemplars": [
+    "ogt-t1s4-12",
+    "bb-t2s1-7",
+    "bb-t3s5-6"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 2,
+   "type": "tc2",
+   "level": 3,
+   "exemplars": [
+    "bb-t3s5-5",
+    "ogt-t2s4-5",
+    "bb-t3s5-7"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 3,
+   "type": "tc3",
+   "level": 5,
+   "exemplars": [
+    "ogt-t1s3-17",
+    "ogt-t1s4-20",
+    "ogt-t2s3-7"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 4,
+   "type": "se",
+   "level": 4,
+   "exemplars": [
+    "ogt-t1s3-22",
+    "ogt-t2s3-16",
+    "ogv-set5-7"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 5,
+   "type": "se",
+   "level": 3,
+   "exemplars": [
+    "ogt-t2s3-18",
+    "ogt-t1s4-3",
+    "ogv-set3-6"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 6,
+   "type": "se",
+   "level": 5,
+   "exemplars": [
+    "ogt-t1s3-21",
+    "ogt-t2s3-17",
+    "bb-t1s1-7"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 7,
+   "type": "se",
+   "level": 4,
+   "exemplars": [
+    "ogv-set5-8",
+    "ogv-set5-9",
+    "ogv-set3-7"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 8,
+   "type": "rc",
+   "level": 4,
+   "exemplars": [
+    "bb-t2s1-25",
+    "bb-t1s4-22",
+    "bb-t2s4-17"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 9,
+   "type": "rc_multi",
+   "level": 5,
+   "exemplars": [
+    "ogt-t1s3-12",
+    "ogt-t1s4-8",
+    "ogt-t1s4-5"
+   ],
+   "keys": 3
+  },
+  {
+   "section": 1,
+   "slot": 10,
+   "type": "rc",
+   "level": 3,
+   "exemplars": [
+    "bb-t2s4-19",
+    "bb-t1s1-22",
+    "bb-t2s1-21"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 11,
+   "type": "rc_select",
+   "level": 3,
+   "exemplars": [
+    "ogt-t1s3-2",
+    "ogt-t1s3-11",
+    "ogt-t1s4-9"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 12,
+   "type": "arg",
+   "level": 4,
+   "exemplars": [
+    "ogt-t1s4-7",
+    "ogt-t2s3-21",
+    "ogt-t2s3-20"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 1,
+   "type": "tc1",
+   "level": 4,
+   "exemplars": [
+    "ogt-t1s4-13",
+    "ogv-set5-1",
+    "ogt-t1s3-15"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 2,
+   "type": "tc2",
+   "level": 5,
+   "exemplars": [
+    "ogt-t1s4-18",
+    "ogt-t1s3-7",
+    "ogv-set5-2"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 3,
+   "type": "tc3",
+   "level": 5,
+   "exemplars": [
+    "ogv-set5-4",
+    "ogv-set5-5",
+    "ogv-set5-6"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 4,
+   "type": "tc3",
+   "level": 4,
+   "exemplars": [
+    "ogt-t1s4-11",
+    "ogt-t2s4-8",
+    "ogt-t2s4-7"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 5,
+   "type": "se",
+   "level": 5,
+   "exemplars": [
+    "ogt-t1s3-21",
+    "ogt-t2s3-17",
+    "bb-t1s1-7"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 6,
+   "type": "se",
+   "level": 4,
+   "exemplars": [
+    "ogv-set3-8",
+    "bb-t2s4-7",
+    "ogt-t2s4-17"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 7,
+   "type": "se",
+   "level": 5,
+   "exemplars": [
+    "ogv-set5-7",
+    "ogv-set5-8",
+    "ogv-set5-9"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 8,
+   "type": "rc",
+   "level": 4,
+   "exemplars": [
+    "bb-t2s4-20",
+    "ogt-t2s3-24",
+    "bb-t2s4-25"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 9,
+   "type": "rc",
+   "level": 5,
+   "exemplars": [
+    "bb-t3s3-17",
+    "ogt-t1s4-6",
+    "ogv-set6-5"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 10,
+   "type": "rc_multi",
+   "level": 4,
+   "exemplars": [
+    "ogt-t1s4-23",
+    "ogt-t1s3-19",
+    "ogt-t1s3-1"
+   ],
+   "keys": 2
+  },
+  {
+   "section": 2,
+   "slot": 11,
+   "type": "rc_select",
+   "level": 5,
+   "exemplars": [
+    "ogt-t1s4-24",
+    "ogt-t1s3-2",
+    "ogt-t1s3-11"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 12,
+   "type": "rc",
+   "level": 4,
+   "exemplars": [
+    "bb-t3s3-26",
+    "ogt-t2s4-24",
+    "ogt-t2s4-23"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 13,
+   "type": "rc",
+   "level": 5,
+   "exemplars": [
+    "ogv-set6-6",
+    "ogv-set6-7",
+    "bb-t3s5-27"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 14,
+   "type": "rc",
+   "level": 4,
+   "exemplars": [
+    "ogt-t2s4-20",
+    "ogt-t2s4-22",
+    "bb-t2s1-24"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 15,
+   "type": "arg",
+   "level": 3,
+   "exemplars": [
+    "ogt-t1s3-4",
+    "ogv-set4-3",
+    "ogt-t2s4-21"
+   ]
+  }
+ ],
+ "typeFocus": [
+  {
+   "type": "rc",
+   "label": "Reading, one answer",
+   "answered": 112,
+   "accuracy": 0.83,
+   "avgSec": 128,
+   "paceSec": 80,
+   "need": 0.42
+  },
+  {
+   "type": "rc_multi",
+   "label": "Reading, select all that apply",
+   "answered": 32,
+   "accuracy": 0.59,
+   "avgSec": 73,
+   "paceSec": 90,
+   "need": 0.3
+  },
+  {
+   "type": "tc2",
+   "label": "Text Completion, 2 blanks",
+   "answered": 32,
+   "accuracy": 0.63,
+   "avgSec": 42,
+   "paceSec": 70,
+   "need": 0.27
+  },
+  {
+   "type": "arg",
+   "label": "Argument (critical reasoning)",
+   "answered": 32,
+   "accuracy": 0.69,
+   "avgSec": 62,
+   "paceSec": 90,
+   "need": 0.23
+  },
+  {
+   "type": "tc3",
+   "label": "Text Completion, 3 blanks",
+   "answered": 48,
+   "accuracy": 0.69,
+   "avgSec": 52,
+   "paceSec": 90,
+   "need": 0.22
+  },
+  {
+   "type": "se",
+   "label": "Sentence Equivalence",
+   "answered": 112,
+   "accuracy": 0.75,
+   "avgSec": 31,
+   "paceSec": 50,
+   "need": 0.18
+  },
+  {
+   "type": "tc1",
+   "label": "Text Completion, 1 blank",
+   "answered": 32,
+   "accuracy": 0.78,
+   "avgSec": 37,
+   "paceSec": 45,
+   "need": 0.17
+  },
+  {
+   "type": "rc_select",
+   "label": "Reading, select a sentence",
+   "answered": 32,
+   "accuracy": 0.84,
+   "avgSec": 55,
+   "paceSec": 80,
+   "need": 0.12
+  }
+ ],
+ "keyWords": [
+  {
+   "word": "diatribe",
+   "id": "diatribe",
+   "tier": "core",
+   "secondary": false,
+   "sense": "noun a bitter, prolonged verbal attack or harsh denunciation",
+   "bucket": "new",
+   "reason": "never tested",
+   "P": 0.58,
+   "usedBefore": []
+  },
+  {
+   "word": "apocryphal",
+   "id": "apocryphal",
+   "tier": "core",
+   "secondary": false,
+   "sense": "adjective of doubtful authenticity, though widely circulated as true",
+   "bucket": "new",
+   "reason": "never tested",
+   "P": 0.58,
+   "usedBefore": []
+  },
+  {
+   "word": "dubious",
+   "id": "dubious",
+   "tier": "core",
+   "secondary": false,
+   "sense": "adjective doubtful or uncertain; of questionable value or honesty",
+   "bucket": "new",
+   "reason": "SE partner for apocryphal (partly covered)",
+   "P": 0.63,
+   "usedBefore": []
+  },
+  {
+   "word": "endemic",
+   "id": "endemic",
+   "tier": "core",
+   "secondary": false,
+   "sense": "adjective regularly found in a particular place or group; native or prevalent there",
+   "bucket": "new",
+   "reason": "SE partner for indigenous (partly covered)",
+   "P": 0.6,
+   "usedBefore": []
+  },
+  {
+   "word": "scathing",
+   "id": "scathing",
+   "tier": "core",
+   "secondary": false,
+   "sense": "adjective harshly critical; severely damaging in its criticism",
+   "bucket": "new",
+   "reason": "SE partner for mordant (never tested)",
+   "P": 0.58,
+   "usedBefore": []
+  },
+  {
+   "word": "discredit",
+   "id": "discredit",
+   "tier": "ets",
+   "secondary": false,
+   "sense": "verb to damage the reputation of or cause to be doubted",
+   "bucket": "new",
+   "reason": "SE partner for impugn (partly covered)",
+   "P": 0.59,
+   "usedBefore": []
+  },
+  {
+   "word": "benign",
+   "id": "benign",
+   "tier": "core",
+   "secondary": false,
+   "sense": "adjective gentle and kindly; not harmful in effect",
+   "bucket": "new",
+   "reason": "SE partner for innocuous (never tested)",
+   "P": 0.58,
+   "usedBefore": []
+  },
+  {
+   "word": "audacious",
+   "id": "audacious",
+   "tier": "core",
+   "secondary": false,
+   "sense": "adjective showing a willingness to take bold risks; also impudent",
+   "bucket": "new",
+   "reason": "never tested",
+   "P": 0.58,
+   "usedBefore": []
+  },
+  {
+   "word": "subjective",
+   "id": "subjective",
+   "tier": "core",
+   "secondary": false,
+   "sense": "adjective based on personal feelings or opinion rather than external facts; not objectively verifiable",
+   "bucket": "new",
+   "reason": "never tested",
+   "P": 0.58,
+   "usedBefore": []
+  },
+  {
+   "word": "avaricious",
+   "id": "avaricious",
+   "tier": "core",
+   "secondary": false,
+   "sense": "adjective extremely greedy for wealth",
+   "bucket": "new",
+   "reason": "never tested",
+   "P": 0.58,
+   "usedBefore": []
+  },
+  {
+   "word": "stringent",
+   "id": "stringent",
+   "tier": "core",
+   "secondary": false,
+   "sense": "adjective strict, rigorous and demanding in requirements",
+   "bucket": "new",
+   "reason": "never tested",
+   "P": 0.58,
+   "usedBefore": []
+  },
+  {
+   "word": "indigenous",
+   "id": "indigenous",
+   "tier": "core",
+   "secondary": false,
+   "sense": "adjective originating in and naturally living in a particular place; native",
+   "bucket": "new",
+   "reason": "never tested",
+   "P": 0.58,
+   "usedBefore": []
+  },
+  {
+   "word": "harangue",
+   "id": "harangue",
+   "tier": "core",
+   "secondary": false,
+   "sense": "noun a long, forceful and often scolding speech",
+   "bucket": "new",
+   "reason": "never tested",
+   "P": 0.58,
+   "usedBefore": []
+  },
+  {
+   "word": "rhetoric",
+   "id": "rhetoric",
+   "tier": "core",
+   "secondary": false,
+   "sense": "noun the art of persuasive speaking or writing; often, pretentious language lacking real substance",
+   "bucket": "new",
+   "reason": "never tested",
+   "P": 0.58,
+   "usedBefore": []
+  },
+  {
+   "word": "impair",
+   "id": "impair",
+   "tier": "core",
+   "secondary": false,
+   "sense": "verb to damage or weaken, reducing quality or function",
+   "bucket": "new",
+   "reason": "never tested",
+   "P": 0.58,
+   "usedBefore": []
+  },
+  {
+   "word": "subtle",
+   "id": "subtle",
+   "tier": "core",
+   "secondary": false,
+   "sense": "adjective delicate or understated and hard to detect or analyze; not obvious",
+   "bucket": "new",
+   "reason": "never tested",
+   "P": 0.58,
+   "usedBefore": []
+  },
+  {
+   "word": "virtual",
+   "id": "virtual",
+   "tier": "ets",
+   "secondary": true,
+   "sense": "adjective almost or nearly so, though not strictly; existing via computer simulation",
+   "bucket": "new",
+   "reason": "secondary sense (never tested)",
+   "P": 0.54,
+   "usedBefore": []
+  },
+  {
+   "word": "involved",
+   "id": "involved",
+   "tier": "ets",
+   "secondary": true,
+   "sense": "adjective intricate and complicated; difficult to follow",
+   "bucket": "new",
+   "reason": "secondary sense (never tested)",
+   "P": 0.54,
+   "usedBefore": []
+  },
+  {
+   "word": "cloak",
+   "id": "cloak",
+   "tier": "ets",
+   "secondary": true,
+   "sense": "verb to conceal or disguise by covering",
+   "bucket": "new",
+   "reason": "secondary sense (never tested)",
+   "P": 0.54,
+   "usedBefore": []
+  },
+  {
+   "word": "squelch",
+   "id": "squelch",
+   "tier": "core",
+   "secondary": true,
+   "sense": "verb to suppress or silence forcefully",
+   "bucket": "new",
+   "reason": "secondary sense (never tested)",
+   "P": 0.55,
+   "usedBefore": []
+  },
+  {
+   "word": "pernicious",
+   "id": "pernicious",
+   "tier": "core",
+   "secondary": false,
+   "sense": "adjective causing serious, often gradual harm in a subtle way",
+   "bucket": "review",
+   "reason": "missed as the answer",
+   "P": 0.44,
+   "usedBefore": [
+    {
+     "ref": "verbal-003:s1q3",
+     "stem": "The director, who would (i) ___ no interference with her scripts, nonetheless accepted the studio's demand for a cheerful ending, one so (ii) ___ with the bleak two hours preceding it that critics…",
+     "keys": [
+      "brook",
+      "incongruous",
+      "pernicious"
+     ],
+     "distractors": [
+      "decry",
+      "elicit",
+      "contemporaneous",
+      "salutary"
+     ]
+    },
+    {
+     "ref": "verbal-010:s1q4",
+     "stem": "Auditors had flagged each of the clerk's shortcuts and dismissed each as trivial, which was precisely what made the practice so ___: no single entry ever looked worth correcting, and by the time the…",
+     "keys": [
+      "pernicious",
+      "insidious"
+     ],
+     "distractors": [
+      "venial",
+      "inconsequential",
+      "egregious"
+     ]
+    }
+   ]
+  },
+  {
+   "word": "flippant",
+   "id": "flippant",
+   "tier": "core",
+   "secondary": false,
+   "sense": "adjective showing disrespectful lack of seriousness about something grave",
+   "bucket": "review",
+   "reason": "missed as the answer",
+   "P": 0.43,
+   "usedBefore": [
+    {
+     "ref": "verbal-007:s1q4",
+     "stem": "The memoir's account of the shipwreck is accurate in every particular, which only makes its ___ tone the more jarring: the author recounts the drowning of half the crew in the same chatty register he…",
+     "keys": [
+      "cavalier",
+      "flippant"
+     ],
+     "distractors": [
+      "punctilious",
+      "acerbic",
+      "meticulous",
+      "laconic"
+     ]
+    }
+   ],
+   "revisit": {
+    "ref": "verbal-007:s1q4",
+    "result": "missed",
+    "item": "The memoir's account of the shipwreck is accurate in every particular, which only makes its ___ tone the more jarring: the author recounts the drowning of half the crew in the same chatty register he elsewhere reserves for the merits of the ship's marmalade. · choices: cavalier / punctilious / acerbic / flippant / meticulous / laconic",
+    "change": "new sentence logic: a contrast instead of a cause, or a concession instead of a restatement"
+   }
+  },
+  {
+   "word": "mordant",
+   "id": "mordant",
+   "tier": "core",
+   "secondary": false,
+   "sense": "adjective biting and caustic, especially in humor or criticism",
+   "bucket": "review",
+   "reason": "tagged 'didn't know'",
+   "P": 0.43,
+   "usedBefore": [
+    {
+     "ref": "verbal-011:s1q6",
+     "stem": "Her columns were admired for a wit that was ___ without ever being cruel: she could puncture an argument's pretensions in a sentence while leaving its author's dignity intact.",
+     "keys": [
+      "mordant",
+      "astringent"
+     ],
+     "distractors": [
+      "cloying",
+      "rancorous",
+      "insipid"
+     ]
+    }
+   ]
+  },
+  {
+   "word": "lurid",
+   "id": "lurid",
+   "tier": "core",
+   "secondary": false,
+   "sense": "adjective shockingly vivid or sensational; gruesome",
+   "bucket": "review",
+   "reason": "tagged 'didn't know'",
+   "P": 0.43,
+   "usedBefore": [
+    {
+     "ref": "verbal-008:s1q2",
+     "stem": "Readers who knew the diarist only from the (i) ___ excerpts the newspapers chose to reprint (the duel, the debts, the midnight elopement) are surprised to find that most of the journal chronicles…",
+     "keys": [
+      "lurid",
+      "gregarious"
+     ],
+     "distractors": [
+      "austere",
+      "laconic",
+      "taciturn",
+      "itinerant"
+     ]
+    }
+   ]
+  },
+  {
+   "word": "didactic",
+   "id": "didactic",
+   "tier": "core",
+   "secondary": false,
+   "sense": "adjective intended to instruct, often in an excessively moralizing or preachy way",
+   "bucket": "review",
+   "reason": "missed as the answer",
+   "P": 0.41,
+   "usedBefore": [
+    {
+     "ref": "verbal-005:s1q3",
+     "stem": "The editor's preface boasts that no single sensibility governs the anthology, and the table of contents, which sets pulp serials beside sermons and laboratory notebooks, appears to bear out her claim…",
+     "keys": [
+      "eclectic",
+      "nominal",
+      "didactic"
+     ],
+     "distractors": [
+      "monotonous",
+      "hortatory",
+      "pronounced",
+      "patent",
+      "laconic",
+      "discreet"
+     ]
+    },
+    {
+     "ref": "verbal-011:s2q4",
+     "stem": "Critics who found the poet's late verse (i) ___, forever lecturing its readers on virtue, also complained of its (ii) ___ diction, crowded with words that had dropped out of speech a century earlier;…",
+     "keys": [
+      "didactic",
+      "archaic",
+      "anomaly"
+     ],
+     "distractors": [
+      "derivative",
+      "flippant",
+      "florid",
+      "asset"
+     ]
+    }
+   ]
+  },
+  {
+   "word": "impugn",
+   "id": "impugn",
+   "tier": "core",
+   "secondary": false,
+   "sense": "verb to challenge the truth, validity or honesty of; to attack verbally",
+   "bucket": "review",
+   "reason": "covered, no weakness",
+   "P": 0.41,
+   "usedBefore": [
+    {
+     "ref": "verbal-001:s1q3",
+     "stem": "Reformers who were quick to (i) ___ the board's integrity assumed that its rules concealed (ii) ___ ; a closer reading showed the procedures to be merely (iii) ___ , needlessly elaborate in their…",
+     "keys": [
+      "impugn",
+      "chicanery",
+      "byzantine"
+     ],
+     "distractors": [
+      "overshadow",
+      "kowtow",
+      "paucity",
+      "equanimity",
+      "mundane",
+      "lucid"
+     ]
+    }
+   ]
+  },
+  {
+   "word": "byzantine",
+   "id": "byzantine",
+   "tier": "core",
+   "secondary": false,
+   "sense": "adjective excessively complicated, devious and difficult to navigate",
+   "bucket": "review",
+   "reason": "covered, no weakness",
+   "P": 0.41,
+   "usedBefore": [
+    {
+     "ref": "verbal-001:s1q3",
+     "stem": "Reformers who were quick to (i) ___ the board's integrity assumed that its rules concealed (ii) ___ ; a closer reading showed the procedures to be merely (iii) ___ , needlessly elaborate in their…",
+     "keys": [
+      "impugn",
+      "chicanery",
+      "byzantine"
+     ],
+     "distractors": [
+      "overshadow",
+      "kowtow",
+      "paucity",
+      "equanimity",
+      "mundane",
+      "lucid"
+     ]
+    }
+   ]
+  },
+  {
+   "word": "chicanery",
+   "id": "chicanery",
+   "tier": "core",
+   "secondary": false,
+   "sense": "noun trickery or deception, especially legalistic or political",
+   "bucket": "review",
+   "reason": "covered, no weakness",
+   "P": 0.41,
+   "usedBefore": [
+    {
+     "ref": "verbal-001:s1q3",
+     "stem": "Reformers who were quick to (i) ___ the board's integrity assumed that its rules concealed (ii) ___ ; a closer reading showed the procedures to be merely (iii) ___ , needlessly elaborate in their…",
+     "keys": [
+      "impugn",
+      "chicanery",
+      "byzantine"
+     ],
+     "distractors": [
+      "overshadow",
+      "kowtow",
+      "paucity",
+      "equanimity",
+      "mundane",
+      "lucid"
+     ]
+    }
+   ]
+  },
+  {
+   "word": "innocuous",
+   "id": "innocuous",
+   "tier": "core",
+   "secondary": false,
+   "sense": "adjective harmless and unlikely to offend or injure",
+   "bucket": "review",
+   "reason": "covered, no weakness",
+   "P": 0.41,
+   "usedBefore": [
+    {
+     "ref": "verbal-001:s1q5",
+     "stem": "Revised by three committees, the speech was so ___ that not even the most sensitive listener could take offense.",
+     "keys": [
+      "anodyne",
+      "innocuous"
+     ],
+     "distractors": [
+      "pernicious",
+      "odious",
+      "lurid",
+      "ominous"
+     ]
+    }
+   ]
+  }
+ ],
+ "sePairs": [
+  [
+   "diatribe",
+   "harangue"
+  ],
+  [
+   "apocryphal",
+   "dubious"
+  ],
+  [
+   "indigenous",
+   "endemic"
+  ],
+  [
+   "mordant",
+   "scathing"
+  ],
+  [
+   "impugn",
+   "discredit"
+  ],
+  [
+   "innocuous",
+   "benign"
+  ]
+ ],
+ "skillSlots": [
+  {
+   "skill": "rc-select-verify",
+   "name": "Select-all / EXCEPT verification",
+   "variant": "select-all detail (which of these the passage mentions)",
+   "area": "reading",
+   "bucket": "review",
+   "reason": "wrong on a question testing it; already in untaken verbal-017, verbal-016, verbal-018",
+   "exemplars": [
+    "ogt-t1s3-12",
+    "ogt-t1s4-5"
+   ]
+  },
+  {
+   "skill": "rc-function",
+   "name": "Function / purpose of a part",
+   "variant": "the role of one sentence in the passage as a whole",
+   "area": "reading",
+   "bucket": "review",
+   "reason": "wrong on a question testing it; already in untaken verbal-017, verbal-016, verbal-018",
+   "exemplars": [
+    "ogt-t1s4-6",
+    "bb-t1s4-23"
+   ]
+  },
+  {
+   "skill": "rc-inference",
+   "name": "Inference (supported, unstated)",
+   "variant": "a conclusion that needs two sentences combined",
+   "area": "reading",
+   "bucket": "review",
+   "reason": "wrong on a question touching it; already in untaken verbal-017, verbal-016, verbal-018",
+   "exemplars": [
+    "bb-t3s3-17",
+    "ogv-set6-6"
+   ]
+  },
+  {
+   "skill": "rc-vocab-context",
+   "name": "Word or phrase in context",
+   "variant": "a common word used in a secondary sense",
+   "area": "reading",
+   "bucket": "review",
+   "reason": "wrong on a question testing it; already in untaken verbal-017, verbal-016, verbal-018",
+   "exemplars": [
+    "ogt-t2s3-24",
+    "ogt-t2s4-20"
+   ]
+  },
+  {
+   "skill": "rc-structure",
+   "name": "Structure / organization",
+   "variant": "how one paragraph relates to the one before it",
+   "area": "reading",
+   "bucket": "review",
+   "reason": "wrong on a question testing it; already in untaken verbal-017, verbal-016, verbal-018",
+   "exemplars": [
+    "bb-t3s3-26"
+   ]
+  },
+  {
+   "skill": "rc-main-idea",
+   "name": "Main idea / primary purpose",
+   "variant": "what the passage is primarily concerned with (topic plus stance)",
+   "area": "reading",
+   "bucket": "review",
+   "reason": "wrong on a question testing it; already in untaken verbal-017, verbal-016, verbal-018",
+   "exemplars": [
+    "bb-t2s4-17",
+    "bb-t1s4-17"
+   ]
+  },
+  {
+   "skill": "rc-application",
+   "name": "Application / analogy",
+   "variant": "a case the passage's principle would judge",
+   "area": "reading",
+   "bucket": "new",
+   "reason": "right but slow; already in untaken verbal-017, verbal-016, verbal-018",
+   "exemplars": [
+    "bb-t1s4-27"
+   ]
+  },
+  {
+   "skill": "rc-attitude",
+   "name": "Author's attitude / tone",
+   "variant": "the author's attitude toward a school or view the passage reports",
+   "area": "reading",
+   "bucket": "new",
+   "reason": "wrong on a question touching it; already in untaken verbal-017, verbal-016, verbal-018",
+   "exemplars": [
+    "bb-t1s4-20",
+    "bb-t2s1-20"
+   ]
+  },
+  {
+   "skill": "rc-detail",
+   "name": "Detail (stated information)",
+   "variant": "a fact stated in a different paragraph from the stem's keywords",
+   "area": "reading",
+   "bucket": "new",
+   "reason": "right but slow; already in untaken verbal-017, verbal-016, verbal-018",
+   "exemplars": [
+    "ogv-set6-5",
+    "bb-t2s1-25"
+   ]
+  },
+  {
+   "skill": "rc-application",
+   "name": "Application / analogy",
+   "variant": "evidence that would support or weaken a hypothesis the passage describes",
+   "area": "reading",
+   "bucket": "new",
+   "reason": "right but slow; already in untaken verbal-017, verbal-016, verbal-018",
+   "exemplars": [
+    "bb-t1s4-27"
+   ]
+  },
+  {
+   "skill": "rc-select-verify",
+   "name": "Select-all / EXCEPT verification",
+   "variant": "select-all inference about a claim the passage makes",
+   "area": "reading",
+   "bucket": "wildcard",
+   "reason": "wrong on a question testing it; already in untaken verbal-017, verbal-016, verbal-018",
+   "exemplars": [
+    "ogt-t1s3-12",
+    "ogt-t1s4-5"
+   ]
+  },
+  {
+   "skill": "arg-complete",
+   "name": "Argument: complete the passage",
+   "variant": "the missing premise after since ___ or because ___",
+   "area": "argument",
+   "bucket": "review",
+   "reason": "covered, no weakness",
+   "exemplars": [
+    "ogt-t1s4-22"
+   ]
+  },
+  {
+   "skill": "arg-flaw",
+   "name": "Argument: flaw / method",
+   "variant": "the method of reasoning the argument uses",
+   "area": "argument",
+   "bucket": "new",
+   "reason": "covered, no weakness",
+   "exemplars": []
+  }
+ ],
+ "distractorWords": {
+  "weak": [
+   {
+    "word": "pellucid",
+    "id": "pellucid",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective transparently clear, whether in water or in style of expression",
+    "reason": "missed as the answer",
+    "P": 0.4
+   },
+   {
+    "word": "esoteric",
+    "id": "esoteric",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective understood by or intended for only a small, specialized group; obscure",
+    "reason": "missed as the answer",
+    "P": 0.4
+   },
+   {
+    "word": "pithy",
+    "id": "pithy",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective concise and forcefully meaningful in expression",
+    "reason": "right but slow",
+    "P": 0.4
+   },
+   {
+    "word": "incumbent",
+    "id": "incumbent",
+    "tier": "core",
+    "secondary": true,
+    "sense": "adjective obligatory as a duty or responsibility",
+    "reason": "missed as the answer",
+    "P": 0.4
+   },
+   {
+    "word": "tacit",
+    "id": "tacit",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective understood or implied without being stated aloud",
+    "reason": "chosen as a wrong answer",
+    "P": 0.4
+   },
+   {
+    "word": "blanch",
+    "id": "blanch",
+    "tier": "secondary",
+    "secondary": true,
+    "sense": "verb to turn pale from fear or shock; to recoil from",
+    "reason": "missed as the answer",
+    "P": 0.4
+   },
+   {
+    "word": "acerbic",
+    "id": "acerbic",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective sharp and biting in tone or taste",
+    "reason": "missed as the answer",
+    "P": 0.39
+   },
+   {
+    "word": "repudiate",
+    "id": "repudiate",
+    "tier": "core",
+    "secondary": false,
+    "sense": "verb to reject as untrue, invalid or unworthy; to disown",
+    "reason": "chosen as a wrong answer",
+    "P": 0.38
+   },
+   {
+    "word": "incisive",
+    "id": "incisive",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective sharply perceptive and clear in thought or expression",
+    "reason": "chosen as a wrong answer",
+    "P": 0.38
+   },
+   {
+    "word": "laud",
+    "id": "laud",
+    "tier": "core",
+    "secondary": false,
+    "sense": "verb to praise highly",
+    "reason": "chosen as a wrong answer",
+    "P": 0.38
+   },
+   {
+    "word": "shelve",
+    "id": "shelve",
+    "tier": "secondary",
+    "secondary": true,
+    "sense": "verb to set aside a plan or project, postponing it indefinitely",
+    "reason": "chosen as a wrong answer",
+    "P": 0.37
+   },
+   {
+    "word": "caustic",
+    "id": "caustic",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective bitingly sarcastic; also able to corrode",
+    "reason": "missed as the answer",
+    "P": 0.37
+   },
+   {
+    "word": "censure",
+    "id": "censure",
+    "tier": "core",
+    "secondary": false,
+    "sense": "noun formal strong disapproval or reprimand",
+    "reason": "missed as the answer",
+    "P": 0.37
+   },
+   {
+    "word": "contingent",
+    "id": "contingent",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective dependent on something uncertain; possible but not assured",
+    "reason": "chosen as a wrong answer",
+    "P": 0.37
+   },
+   {
+    "word": "precursor",
+    "id": "precursor",
+    "tier": "core",
+    "secondary": false,
+    "sense": "noun something that comes before and indicates or leads to what follows",
+    "reason": "missed as the answer",
+    "P": 0.36
+   },
+   {
+    "word": "apogee",
+    "id": "apogee",
+    "tier": "core",
+    "secondary": false,
+    "sense": "noun the highest point or culmination of a career or process; the point in orbit farthest from the earth",
+    "reason": "chosen as a wrong answer",
+    "P": 0.35
+   },
+   {
+    "word": "implicate",
+    "id": "implicate",
+    "tier": "core",
+    "secondary": false,
+    "sense": "verb to show or suggest that someone is involved in a crime or wrongdoing",
+    "reason": "chosen as a wrong answer",
+    "P": 0.32
+   },
+   {
+    "word": "trenchant",
+    "id": "trenchant",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective sharply perceptive and forceful in expression",
+    "reason": "chosen as a wrong answer",
+    "P": 0.32
+   },
+   {
+    "word": "implicit",
+    "id": "implicit",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective implied or understood though not directly stated; also absolute",
+    "reason": "missed as the answer",
+    "P": 0.29
+   },
+   {
+    "word": "opulent",
+    "id": "opulent",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective displaying great wealth; lavish and luxurious",
+    "reason": "chosen as a wrong answer",
+    "P": 0.22
+   },
+   {
+    "word": "erudite",
+    "id": "erudite",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective having or showing great learning; scholarly",
+    "reason": "chosen as a wrong answer",
+    "P": 0.22
+   },
+   {
+    "word": "stanch",
+    "id": "stanch",
+    "tier": "core",
+    "secondary": true,
+    "sense": "verb to stop or check the flow of, especially blood",
+    "reason": "chosen as a wrong answer",
+    "P": 0.21
+   },
+   {
+    "word": "fulminate",
+    "id": "fulminate",
+    "tier": "core",
+    "secondary": false,
+    "sense": "verb to protest or denounce loudly and angrily",
+    "reason": "chosen as a wrong answer",
+    "P": 0.2
+   },
+   {
+    "word": "insipid",
+    "id": "insipid",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective lacking flavor, interest or spirit; dull",
+    "reason": "tagged 'didn't know'; already in untaken verbal-018",
+    "P": 0.2
+   },
+   {
+    "word": "denounce",
+    "id": "denounce",
+    "tier": "core",
+    "secondary": false,
+    "sense": "verb to publicly condemn or accuse",
+    "reason": "chosen as a wrong answer; already in untaken verbal-018",
+    "P": 0.19
+   }
+  ],
+  "untested": [
+   {
+    "word": "verisimilar",
+    "id": "verisimilar",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective appearing to be true or real; plausible",
+    "reason": "never tested",
+    "P": 0.49
+   },
+   {
+    "word": "hubris",
+    "id": "hubris",
+    "tier": "core",
+    "secondary": false,
+    "sense": "noun excessive pride or self-confidence, often leading to downfall",
+    "reason": "never tested",
+    "P": 0.55
+   },
+   {
+    "word": "chronological",
+    "id": "chronological",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective arranged in the order in which events occurred",
+    "reason": "never tested",
+    "P": 0.52
+   },
+   {
+    "word": "coinage",
+    "id": "coinage",
+    "tier": "ets",
+    "secondary": false,
+    "sense": "noun a newly invented word or phrase; the system of money in use",
+    "reason": "never tested",
+    "P": 0.51
+   },
+   {
+    "word": "tautological",
+    "id": "tautological",
+    "tier": "passage",
+    "secondary": false,
+    "sense": "adjective saying the same thing twice in different words, so that it is trivially true and uninformative",
+    "reason": "never tested",
+    "P": 0.43
+   },
+   {
+    "word": "bygone",
+    "id": "bygone",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective belonging to the past; former",
+    "reason": "never tested",
+    "P": 0.49
+   },
+   {
+    "word": "redress",
+    "id": "redress",
+    "tier": "core",
+    "secondary": false,
+    "sense": "verb to set right or make amends for a wrong or imbalance",
+    "reason": "never tested",
+    "P": 0.55
+   },
+   {
+    "word": "presumption",
+    "id": "presumption",
+    "tier": "core",
+    "secondary": false,
+    "sense": "noun arrogant overstepping of proper bounds; also an assumption taken as true",
+    "reason": "never tested",
+    "P": 0.49
+   },
+   {
+    "word": "restitution",
+    "id": "restitution",
+    "tier": "core",
+    "secondary": false,
+    "sense": "noun the act of making good a loss or injury; return of something to its owner",
+    "reason": "never tested",
+    "P": 0.49
+   },
+   {
+    "word": "temporal",
+    "id": "temporal",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective relating to worldly or secular matters rather than spiritual; relating to time",
+    "reason": "never tested",
+    "P": 0.49
+   },
+   {
+    "word": "erstwhile",
+    "id": "erstwhile",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective former; of an earlier time",
+    "reason": "never tested",
+    "P": 0.49
+   },
+   {
+    "word": "neologism",
+    "id": "neologism",
+    "tier": "core",
+    "secondary": false,
+    "sense": "noun a newly coined word or expression",
+    "reason": "never tested",
+    "P": 0.52
+   },
+   {
+    "word": "plausible",
+    "id": "plausible",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective seeming reasonable and likely to be true, though not proven",
+    "reason": "never tested",
+    "P": 0.52
+   },
+   {
+    "word": "redundant",
+    "id": "redundant",
+    "tier": "ets",
+    "secondary": false,
+    "sense": "adjective superfluous; no longer needed or repeating what is already present",
+    "reason": "never tested",
+    "P": 0.54
+   },
+   {
+    "word": "dither",
+    "id": "dither",
+    "tier": "core",
+    "secondary": false,
+    "sense": "verb to be indecisive; hesitate nervously between choices",
+    "reason": "never tested",
+    "P": 0.52
+   },
+   {
+    "word": "figurehead",
+    "id": "figurehead",
+    "tier": "ets",
+    "secondary": false,
+    "sense": "noun a leader with a title but no real power or authority",
+    "reason": "never tested",
+    "P": 0.51
+   },
+   {
+    "word": "coda",
+    "id": "coda",
+    "tier": "core",
+    "secondary": false,
+    "sense": "noun a concluding passage or section that rounds off a work",
+    "reason": "never tested",
+    "P": 0.49
+   },
+   {
+    "word": "discordant",
+    "id": "discordant",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective harsh-sounding or clashing; in disagreement",
+    "reason": "never tested",
+    "P": 0.49
+   },
+   {
+    "word": "boon",
+    "id": "boon",
+    "tier": "core",
+    "secondary": false,
+    "sense": "noun a timely benefit or blessing",
+    "reason": "never tested",
+    "P": 0.49
+   },
+   {
+    "word": "rumination",
+    "id": "rumination",
+    "tier": "ets",
+    "secondary": false,
+    "sense": "noun deep, prolonged thought or reflection",
+    "reason": "never tested",
+    "P": 0.51
+   },
+   {
+    "word": "supercilious",
+    "id": "supercilious",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective behaving as though one is superior; disdainful and haughty",
+    "reason": "never tested",
+    "P": 0.52
+   },
+   {
+    "word": "distaff",
+    "id": "distaff",
+    "tier": "core",
+    "secondary": true,
+    "sense": "adjective relating to the female side of a family or to women's work",
+    "reason": "never tested",
+    "P": 0.52
+   },
+   {
+    "word": "structuralism",
+    "id": "structuralism",
+    "tier": "passage",
+    "secondary": false,
+    "sense": "noun an approach that explains language, myth, or culture through underlying systems of relationships",
+    "reason": "never tested",
+    "P": 0.43
+   },
+   {
+    "word": "annul",
+    "id": "annul",
+    "tier": "core",
+    "secondary": false,
+    "sense": "verb to declare legally invalid; to cancel",
+    "reason": "never tested; already in untaken verbal-017",
+    "P": 0.15
+   },
+   {
+    "word": "distinction",
+    "id": "distinction",
+    "tier": "ets",
+    "secondary": false,
+    "sense": "noun a difference or contrast; also excellence or honor",
+    "reason": "never tested",
+    "P": 0.51
+   },
+   {
+    "word": "manumission",
+    "id": "manumission",
+    "tier": "passage",
+    "secondary": false,
+    "sense": "noun the formal act of freeing a person from slavery",
+    "reason": "never tested",
+    "P": 0.43
+   },
+   {
+    "word": "synoptic",
+    "id": "synoptic",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective giving a general summary or overview of the whole",
+    "reason": "never tested",
+    "P": 0.58
+   },
+   {
+    "word": "essentialist",
+    "id": "essentialist",
+    "tier": "passage",
+    "secondary": false,
+    "sense": "adjective assuming that groups or categories have fixed, innate natures that define all members",
+    "reason": "never tested",
+    "P": 0.43
+   },
+   {
+    "word": "stasis",
+    "id": "stasis",
+    "tier": "core",
+    "secondary": false,
+    "sense": "noun a state of inactivity, equilibrium or stagnation in which nothing changes",
+    "reason": "never tested",
+    "P": 0.49
+   },
+   {
+    "word": "talon",
+    "id": "talon",
+    "tier": "ets",
+    "secondary": false,
+    "sense": "noun a sharp claw, especially of a bird of prey",
+    "reason": "never tested",
+    "P": 0.51
+   },
+   {
+    "word": "subversion",
+    "id": "subversion",
+    "tier": "ets",
+    "secondary": false,
+    "sense": "noun an attempt to undermine or overthrow an established authority or system, often covertly",
+    "reason": "never tested",
+    "P": 0.51
+   },
+   {
+    "word": "skulduggery",
+    "id": "skulduggery",
+    "tier": "core",
+    "secondary": false,
+    "sense": "noun underhanded or dishonest behavior",
+    "reason": "never tested",
+    "P": 0.46
+   },
+   {
+    "word": "syntactic",
+    "id": "syntactic",
+    "tier": "ets",
+    "secondary": false,
+    "sense": "adjective relating to the arrangement of words and phrases in sentences",
+    "reason": "never tested",
+    "P": 0.51
+   },
+   {
+    "word": "supererogatory",
+    "id": "supererogatory",
+    "tier": "extended",
+    "secondary": false,
+    "sense": "adj beyond what is required or needed; superfluous",
+    "reason": "never tested",
+    "P": 0.43
+   },
+   {
+    "word": "ponderous",
+    "id": "ponderous",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective heavy and clumsy; dull and laborious in style",
+    "reason": "never tested",
+    "P": 0.52
+   },
+   {
+    "word": "exponentially",
+    "id": "exponentially",
+    "tier": "ets",
+    "secondary": false,
+    "sense": "adverb at a rapidly increasing rate, as in repeated multiplication",
+    "reason": "never tested",
+    "P": 0.51
+   },
+   {
+    "word": "determinism",
+    "id": "determinism",
+    "tier": "passage",
+    "secondary": false,
+    "sense": "noun the view that every event, including human choice, is fixed by prior causes",
+    "reason": "never tested",
+    "P": 0.43
+   },
+   {
+    "word": "sardonic",
+    "id": "sardonic",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective grimly mocking or bitterly sarcastic",
+    "reason": "never tested",
+    "P": 0.55
+   },
+   {
+    "word": "profuse",
+    "id": "profuse",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective given or occurring in great abundance; lavish",
+    "reason": "never tested",
+    "P": 0.58
+   },
+   {
+    "word": "attainment",
+    "id": "attainment",
+    "tier": "ets",
+    "secondary": false,
+    "sense": "noun the act of achieving something, or something achieved",
+    "reason": "never tested",
+    "P": 0.51
+   },
+   {
+    "word": "stultify",
+    "id": "stultify",
+    "tier": "core",
+    "secondary": false,
+    "sense": "verb to make futile or ineffective; to dull and stifle through monotony or restriction",
+    "reason": "never tested",
+    "P": 0.52
+   },
+   {
+    "word": "predominant",
+    "id": "predominant",
+    "tier": "ets",
+    "secondary": false,
+    "sense": "adjective most common or influential; having greater power or presence than others",
+    "reason": "never tested",
+    "P": 0.51
+   },
+   {
+    "word": "ardent",
+    "id": "ardent",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective enthusiastic and passionate; fervent",
+    "reason": "never tested",
+    "P": 0.49
+   },
+   {
+    "word": "pine",
+    "id": "pine",
+    "tier": "core",
+    "secondary": true,
+    "sense": "verb to long intensely for someone or something, often growing weak from yearning",
+    "reason": "never tested",
+    "P": 0.52
+   },
+   {
+    "word": "fast",
+    "id": "fast",
+    "tier": "secondary",
+    "secondary": true,
+    "sense": "adj firmly fixed or attached; steadfastly loyal",
+    "reason": "never tested",
+    "P": 0.46
+   },
+   {
+    "word": "polarize",
+    "id": "polarize",
+    "tier": "core",
+    "secondary": false,
+    "sense": "verb to divide into two sharply opposed groups or extremes",
+    "reason": "never tested",
+    "P": 0.55
+   },
+   {
+    "word": "lavish",
+    "id": "lavish",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective extravagantly abundant or luxurious",
+    "reason": "never tested",
+    "P": 0.57
+   },
+   {
+    "word": "opprobrious",
+    "id": "opprobrious",
+    "tier": "ets",
+    "secondary": false,
+    "sense": "adjective expressing harsh scorn or reproach; bringing disgrace",
+    "reason": "never tested",
+    "P": 0.51
+   },
+   {
+    "word": "plume",
+    "id": "plume",
+    "tier": "secondary",
+    "secondary": true,
+    "sense": "verb to congratulate oneself smugly on something",
+    "reason": "never tested",
+    "P": 0.46
+   },
+   {
+    "word": "ribald",
+    "id": "ribald",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective crudely humorous or coarsely joking, especially about sex",
+    "reason": "never tested",
+    "P": 0.55
+   },
+   {
+    "word": "problematic",
+    "id": "problematic",
+    "tier": "ets",
+    "secondary": false,
+    "sense": "adjective presenting difficulty or doubt; open to question",
+    "reason": "never tested",
+    "P": 0.51
+   },
+   {
+    "word": "matrilineal",
+    "id": "matrilineal",
+    "tier": "passage",
+    "secondary": false,
+    "sense": "adjective tracing descent and inheritance through the female line",
+    "reason": "never tested",
+    "P": 0.43
+   },
+   {
+    "word": "dissent",
+    "id": "dissent",
+    "tier": "core",
+    "secondary": false,
+    "sense": "noun public disagreement with an official or majority opinion",
+    "reason": "never tested",
+    "P": 0.57
+   },
+   {
+    "word": "bonhomie",
+    "id": "bonhomie",
+    "tier": "core",
+    "secondary": false,
+    "sense": "noun cheerful friendliness and good-natured geniality",
+    "reason": "never tested",
+    "P": 0.52
+   },
+   {
+    "word": "dissolution",
+    "id": "dissolution",
+    "tier": "core",
+    "secondary": false,
+    "sense": "noun the breaking up or formal ending of a union, assembly or relationship; disintegration",
+    "reason": "never tested",
+    "P": 0.58
+   },
+   {
+    "word": "draconian",
+    "id": "draconian",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective excessively harsh and severe, as of laws or punishments",
+    "reason": "never tested",
+    "P": 0.49
+   },
+   {
+    "word": "shibboleth",
+    "id": "shibboleth",
+    "tier": "extended",
+    "secondary": false,
+    "sense": "noun a custom or principle long held but now regarded as outmoded; a word marking group membership",
+    "reason": "never tested",
+    "P": 0.43
+   },
+   {
+    "word": "callow",
+    "id": "callow",
+    "tier": "core",
+    "secondary": false,
+    "sense": "adjective young and inexperienced; immature",
+    "reason": "never tested",
+    "P": 0.49
+   },
+   {
+    "word": "enmity",
+    "id": "enmity",
+    "tier": "core",
+    "secondary": false,
+    "sense": "noun deep-seated hatred or hostility",
+    "reason": "never tested",
+    "P": 0.49
+   },
+   {
+    "word": "postulate",
+    "id": "postulate",
+    "tier": "passage",
+    "secondary": false,
+    "sense": "verb to suggest or assume something as the basis for a theory or argument",
+    "reason": "never tested",
+    "P": 0.43
+   }
+  ],
+  "trapPairs": [
+   [
+    "verisimilar",
+    "plausible"
+   ],
+   [
+    "hubris",
+    "presumption"
+   ],
+   [
+    "chronological",
+    "temporal"
+   ],
+   [
+    "coinage",
+    "neologism"
+   ],
+   [
+    "tautological",
+    "redundant"
+   ],
+   [
+    "bygone",
+    "erstwhile"
+   ],
+   [
+    "redress",
+    "restitution"
+   ]
+  ]
+ },
+ "passageWords": [
+  {
+   "word": "syncretic",
+   "id": "syncretic",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "adjective blending elements of different religions, cultures, or schools of thought",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "trope",
+   "id": "trope",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "noun a recurring theme, image, or convention in a body of writing or art",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "sessile",
+   "id": "sessile",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "adjective permanently attached to one spot rather than free-moving",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "uniformitarianism",
+   "id": "uniformitarianism",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "noun the principle that the earth was shaped by the same slow processes still operating today",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "subaltern",
+   "id": "subaltern",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "adjective belonging to a group excluded from power and from dominant historical accounts",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "kitsch",
+   "id": "kitsch",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "noun art or objects considered cheaply sentimental, gaudy, or in poor taste, often mass-produced",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "sensibility",
+   "id": "sensibility",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "noun a distinctive way of feeling and responding, especially to art or moral questions",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "hinterland",
+   "id": "hinterland",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "noun the less developed region lying behind a coast, port, or city and economically tied to it",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "falsifiable",
+   "id": "falsifiable",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "adjective capable in principle of being proved false by some possible observation or test",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "reciprocity",
+   "id": "reciprocity",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "noun the practice of exchanging favors, goods, or obligations for mutual benefit",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "heretofore",
+   "id": "heretofore",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "adverb before this time; up to now",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "irrefragable",
+   "id": "irrefragable",
+   "tier": "extended",
+   "secondary": false,
+   "sense": "adj impossible to refute or deny",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "laissez-faire",
+   "id": "laissez-faire",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "adjective favoring minimal government interference in economic affairs",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "deracinate",
+   "id": "deracinate",
+   "tier": "extended",
+   "secondary": false,
+   "sense": "verb to uproot; to remove from one's native culture or environment",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "animism",
+   "id": "animism",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "noun the belief that animals, plants, places, and objects possess souls or spirits",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "commodify",
+   "id": "commodify",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "verb to turn something not previously sold, such as culture or care, into a marketable product",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "hermeneutic",
+   "id": "hermeneutic",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "adjective relating to the theory or method of interpreting texts and meanings",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "jeremiad",
+   "id": "jeremiad",
+   "tier": "extended",
+   "secondary": false,
+   "sense": "noun a long, mournful complaint or lament about society's decline",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "facultative",
+   "id": "facultative",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "adjective optional; able to live or act in more than one way depending on conditions",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "rentier",
+   "id": "rentier",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "noun a person or class living on income from property, interest, or investments rather than labor",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "entrepot",
+   "id": "entrepot",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "noun a port or trading center where goods are imported, stored, and re-exported",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "manichaean",
+   "id": "manichaean",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "adjective viewing the world as a stark struggle between pure good and pure evil",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "fealty",
+   "id": "fealty",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "noun sworn loyalty owed by a vassal to a lord; more broadly, faithful allegiance",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "communitarian",
+   "id": "communitarian",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "adjective stressing the responsibilities and bonds of community over individual rights",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "positivist",
+   "id": "positivist",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "adjective holding that only claims verifiable by observation or experiment count as genuine knowledge",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "ontogeny",
+   "id": "ontogeny",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "noun the development of an individual organism from embryo to adult",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "specie",
+   "id": "specie",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "noun money in the form of coins, especially gold or silver, rather than paper",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "putative",
+   "id": "putative",
+   "tier": "extended",
+   "secondary": false,
+   "sense": "adj generally considered or reputed to be; supposed",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "historicism",
+   "id": "historicism",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "noun the view that ideas, values, and events can be understood only within their own historical context",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "sibylline",
+   "id": "sibylline",
+   "tier": "extended",
+   "secondary": false,
+   "sense": "adj prophetic and mysterious; cryptically oracular",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "gravamen",
+   "id": "gravamen",
+   "tier": "extended",
+   "secondary": false,
+   "sense": "noun the essence or most serious part of a complaint or accusation",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "prefigure",
+   "id": "prefigure",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "verb to show or suggest in advance something that comes later",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "clientelism",
+   "id": "clientelism",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "noun a political system in which patrons trade favors, jobs, or goods for loyalty and votes",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "disaggregate",
+   "id": "disaggregate",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "verb to separate an aggregate into its component parts, especially data",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "prescriptive",
+   "id": "prescriptive",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "adjective stating rules about how things should be done rather than describing how they are",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "proviso",
+   "id": "proviso",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "noun a condition or qualification attached to an agreement or statement",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "fluvial",
+   "id": "fluvial",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "adjective relating to or formed by rivers and streams",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "pharisaical",
+   "id": "pharisaical",
+   "tier": "extended",
+   "secondary": false,
+   "sense": "adj hypocritically self-righteous; stressing outward observance over spirit",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "magniloquent",
+   "id": "magniloquent",
+   "tier": "extended",
+   "secondary": false,
+   "sense": "adj using high-flown or pompous language",
+   "reason": "never tested",
+   "P": 0.43
+  },
+  {
+   "word": "polity",
+   "id": "polity",
+   "tier": "passage",
+   "secondary": false,
+   "sense": "noun an organized society with its own government; a political entity",
+   "reason": "never tested",
+   "P": 0.43
+  }
+ ],
+ "wordTargets": {
+  "untestedDistractorShare": 0.75,
+  "passageWordsMin": 5
+ },
+ "instructions": "Use keyWords as the answers/keys across TC blanks and SE pairs (29 slots, order free); key each of the sePairs (two key words that are bank synonyms) as one SE item; any other SE item pairs a key word with a listed bank synonym. Draw at least 75% of the distractor words from distractorWords.untested, the rest from distractorWords.weak. Weave 5-6 passageWords into each RC passage (not the arguments). check enforces both. Do not write word tags: `npm run tag` fills them from the choice and passage text (regular inflections match; tag an irregular form such as `forsworn` by hand). Each key word's `sense` is the GRE-tested sense: write the sentence so THAT sense is the one that fits (for secondary=true words, the everyday sense must be the trap). Give each RC question one primary skill tag {kind:'concept', role:'primary'} from skillSlots (argument skills on the arg items, rc-select-verify suits rc_multi), optionally a secondary one; the reading skills can repeat. Write each skill slot's question as its `variant`. A key word that was used before comes back in a new sentence logic, with a new SE partner where possible, and with no distractor from its earlier items (the validator rejects a shared distractor or a repeated SE pair). A key word with a `revisit` is a deliberate sibling of that earlier item, made with the change named: set `revisits` to its ref on the question. typeFocus ranks question types by practice need (miss rate plus slowness against pace): put the weakest review words / skills / concepts on the slots of the top two types (need >= 0.4), so the practice lands where it is needed."
+}

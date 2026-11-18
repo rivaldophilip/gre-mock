@@ -1,0 +1,2083 @@
+{
+  "id": "verbal-019",
+  "measure": "verbal",
+  "title": "Verbal Hard Mock 19",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 18
+    },
+    {
+      "n": 2,
+      "minutes": 23
+    }
+  ],
+  "passages": [
+    {
+      "id": "p1",
+      "paragraphs": [
+        "For most of the twentieth century, sedimentologists held that rivers could not meander before land plants spread across the continents. A meandering channel migrates by eroding its outer bank while building up its inner one, and without roots to bind the bank, the reasoning went, a channel would widen and split instead, leaving the broad sheets of sand that braided streams lay down. The rock record seemed to agree: fluvial deposits older than about 420 million years are overwhelmingly sheet sands, and the curved, stacked deposits that mark a migrating bend, known as point bars, become common only after vascular plants colonized river margins. The case was often cited as a model of uniformitarianism well applied: processes observed today, run backward into a changed world, predicted a pattern that the rocks then confirmed.",
+        "That confirmation, once treated as irrefragable, now looks less tidy. Flume experiments show that cohesive mud alone can stiffen a bank enough to sustain a modest bend, and a handful of putative pre-plant point bars, heretofore dismissed as misidentified, have been confirmed in fine-grained deposits on several continents. None of this suggests that meandering rivers were common on a barren earth; braiding still dominates the early record. What it changes is what that record is evidence of. If mud could hold a bank, then the rarity of early meanders may reflect the scarcity of mud on land, where, without plants to break rock down into clay and to trap fine particles, sand would have prevailed. That is a claim about sediment rather than about roots, one that fits where the exceptions have actually been found, and it is falsifiable in its own right: early point bars should turn up where, and only where, the deposits are muddy."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "fluvial",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "uniformitarianism",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "irrefragable",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "cohesive",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "modest",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "putative",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "heretofore",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "break",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "prevail",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "falsifiable",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "paragraphs": [
+        "Nineteenth-century editors of monastic chronicles treated the miracles that crowd their pages as an embarrassment, to be cut away before the real history could begin. Their positivist program asked of each sentence only whether it was true, and a putative healing at a saint's tomb plainly was not. Later historians have been slower to discard such passages, though not because they credit the healings. A chronicler who dates a cure to the hour, names its witnesses and notes which of them was a stranger to the abbey betrays a sensibility his editors shared more than they knew: he too wanted his reports to survive the scrutiny of a doubting reader. Read in this hermeneutic spirit, the miracle stories become evidence not of what happened at the tomb but of what a twelfth-century monk thought would count as proof. The approach has its own hazard, which its practitioners do not always escape. Once every implausible report is a window onto a mentality, nothing in a chronicle can any longer be simply mistaken, and a historicism that set out to take the past on its own terms risks crediting it with designs it never had, reading as a deliberate trope what was only a copyist's slip."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "monastic",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "positivist",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "putative",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "sensibility",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "hermeneutic",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "historicism",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "deliberate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "trope",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "a1",
+      "paragraphs": [
+        "Brevan County requires that manure lagoons on dairy farms lie at least 300 meters from any drinking-water well. Farmers on the county's clay uplands have asked to be exempted, arguing that the upland clay is so impermeable that seepage from a lagoon advances through it less than a meter a year, so that it would need a century to reach a well even 100 meters away. The county hydrologist is nonetheless right to oppose the exemption, since ___"
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "impermeable",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "paragraphs": [
+        "The evolutionary theory of aging begins from an asymmetry. Because even an organism that never deteriorated would eventually die of predation, accident or disease, fewer individuals survive to each successive age, and a gene whose harmful effects appear only late in life is exposed to correspondingly weak selection. Mutations with late-acting costs should therefore accumulate, and genes that buy early vigor at the price of late decline should be favored outright. In the 1960s this reasoning was given a mathematical form that seemed to make senescence not merely common but inevitable: in any population in which individuals reproduce at more than one age, the force of selection must fall with age once reproduction has begun.",
+        "The inevitability claim has fared poorly in the field. Demographic surveys that disaggregate mortality and fertility by age across dozens of species have found that in some, among them certain tortoises, many perennial plants and the freshwater polyp Hydra, the risk of death does not climb with age and in a few actually falls, while fertility holds steady or rises. Such organisms are not curiosities confined to the laboratory; several are long-studied wild populations.",
+        "Defenders of the theory have replied that the putative exceptions violate its assumptions rather than its logic. The mathematics presumed an organism whose ontogeny ends at maturity, after which its body is fixed and its output constant. A tortoise that keeps growing lays more eggs each decade, so that a gene's late effects are weighed against a rising rather than a falling stream of offspring; a sessile polyp that buds off clones and continually replaces its cells has no clean line between the body that ages and the lineage that persists. Under those conditions, the defenders argue, the theory itself predicts that selection need not weaken with age.",
+        "This defense is, I think, correct, and it is more than a rescue. The proviso it adds, that senescence is expected only where growth stops and the body is distinct from the line of cells that founds the next generation, converts a claim heretofore stated as a law of all life into one that specifies the conditions under which aging should and should not appear, and so exposes the theory to tests it previously escaped. What the defense cannot do is restore the original claim. Those who still teach that aging is a universal consequence of natural selection are teaching a result that its own authors' assumptions never licensed, and the exceptions, far from being anomalies to be explained away, are what the theory, properly stated, should have led us to look for."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "deteriorate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "senescence",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "disaggregate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "perennial",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "putative",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "ontogeny",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "sessile",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "proviso",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "heretofore",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "anomaly",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "paragraphs": [
+        "When tickets to a sought-after concert sell out in minutes and then change hands at triple their face value, the textbook diagnosis is simple: the promoter priced too low and handed the difference to resellers, each of whom collects it as a rentier collects rent, adding nothing to the performance. Why a promoter would accept that putative loss has long puzzled economists of a laissez-faire bent, for whom a price that fails to clear the market is merely a mistake. One answer holds that the promoter is selling two things at once, a seat and a crowd. A hall full of young fans who could not afford the market price supplies the noise, the recordings and the word of mouth on which the next tour's sales depend, and the wealthier buyers whom a market price would admit supply less of all three. On this account the low price is not a failure to commodify the seat but the purchase of something its occupant provides, and the account predicts that underpricing should be most marked where the audience is itself part of the product. A rival account, which holds that buyers resent a price that seems to violate a norm of reciprocity between performer and fan, predicts no such pattern: its gravamen is that buyers punish any seller who appears to exploit them, wherever they sit."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "rentier",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "putative",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "laissez-faire",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "bent",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "commodify",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "reciprocity",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "gravamen",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "paragraphs": [
+        "Readers have long been puzzled by the epithets of Homeric verse. Why should Achilles be “swift-footed” while he sulks in his tent, or the sea “wine-dark” on a morning the poet elsewhere calls bright? Critics of a literary sensibility found in each such phrase a deliberate trope, and some built an elaborate hermeneutic on the putative ironies of a swift-footed hero at rest, as if his idleness were meant to prefigure his return to battle. The oral-formulaic hypothesis proposes a humbler explanation. A poet composing aloud before an audience, it holds, draws on a stock of ready-made phrases, each shaped to fit a particular position in the line, and chooses among them by meter rather than by sense: the magniloquent epithet appears not because the moment calls for it but because the line has a gap of exactly its shape."
+      ],
+      "tags": [
+        {
+          "kind": "word",
+          "id": "sensibility",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "deliberate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "trope",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "elaborate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "hermeneutic",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "putative",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "prefigure",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "magniloquent",
+          "role": "passage"
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "paragraphs": [
+        "School board member: Opponents of moving our high schools' opening bell from 7:30 to 8:30 say that teenagers would simply go to bed an hour later and so would gain no sleep. If that were so, students at Fenwick High, which made exactly this change four years ago, should report sleeping no more than Fenwick students did before it. Yet on the district's annual health survey, Fenwick students have reported, in every year since the change, about forty minutes more sleep per night than in any year before it. The opponents' prediction, then, is mistaken."
+      ],
+      "tags": []
+    }
+  ],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The statute barred no one from the faculty by name, yet its requirement that every lecturer hold a degree that only two women in the kingdom then possessed amounted to a ___ exclusion of women, and for decades the two exceptions were cited as proof that the university was open to all.",
+      "blanks": [
+        [
+          "temporal",
+          "draconian",
+          "problematic",
+          "virtual",
+          "supererogatory"
+        ]
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The statute excluded no one formally (\"by name\"), yet in effect it shut out all but two women: an exclusion that is complete in practice though not in law, with the two exceptions doing the propaganda work. That is virtual in its secondary sense, almost or in effect though not strictly. A reader who knows only the computer sense (simulated, unreal) rejects it and reaches for a word about harshness.",
+        "distractors": {
+          "temporal": "Relating to time; a reader who confuses it with \"temporary\" is contradicted by \"for decades\".",
+          "draconian": "Harsh, of a law; the sentence's contrast is between formal and effective exclusion, not about severity, and the rule was never framed as a ban at all.",
+          "problematic": "Vaguely negative but says nothing about the exclusion being near-total in effect while absent in name.",
+          "supererogatory": "Beyond what is required; nothing says the requirement was superfluous."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "temporal",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "draconian",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "problematic",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "virtual",
+          "role": "key",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "supererogatory",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 3,
+      "prompt": "Because the field trials counted only dead bees, the pesticide's effect on the hives was too (i) ___ to register in them; it was (ii) ___ nonetheless, for foragers exposed to field doses gradually lost the knack of finding their way home, and colonies dwindled over a single season.",
+      "blanks": [
+        [
+          "fast",
+          "subtle",
+          "pellucid"
+        ],
+        [
+          "ponderous",
+          "callow",
+          "pernicious"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) Trials that count only corpses miss an effect that kills nobody outright: the effect was subtle, hard to detect. (ii) \"Nonetheless\" turns from \"undetected\" to \"harmful\": colonies dwindling gradually through lost foragers is the slow, hidden damage that pernicious names.",
+        "distractors": {
+          "fast": "A fast-acting effect would kill bees and so would show up in a count of dead bees; the trap is reading \"too ___ to register\" as \"too quick\".",
+          "pellucid": "Transparently clear; the opposite of what escaped the trials.",
+          "ponderous": "Heavy, laborious; describes style or movement, not damage.",
+          "callow": "Immature, inexperienced; a quality of people, not of a pesticide's effect."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "fast",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "subtle",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pellucid",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ponderous",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "callow",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pernicious",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Pamphlets of the famine years painted the grain dealers as (i) ___, and historians repeated the charge for two centuries. A dealer who hoarded in order to profit from scarcity, however, ought to show his fattest margins in the leanest years, and the dealers' surviving ledgers show the reverse. If there was (ii) ___ in the grain trade, the ledgers point instead to the magistrates, whose price ceilings had emptied the markets before any dealer could hoard, and who had every reason to encourage pamphlets that would (iii) ___ their own failure.",
+      "blanks": [
+        [
+          "avaricious",
+          "supercilious",
+          "lavish"
+        ],
+        [
+          "bonhomie",
+          "enmity",
+          "chicanery"
+        ],
+        [
+          "make restitution for",
+          "cloak from scrutiny",
+          "polarize opinion about"
+        ]
+      ],
+      "key": {
+        "sel": [
+          0,
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) is open until the second sentence names the charge being tested: hoarding \"to profit from scarcity\", that is, greed, so avaricious. (ii) The third sentence shifts the blame to officials who had \"every reason to encourage\" misleading pamphlets: deception, chicanery. (iii) Pamphlets blaming the dealers draw attention away from the magistrates' price ceilings, so they cloak that failure from scrutiny.",
+        "distractors": {
+          "supercilious": "Haughty; a plausible insult until the ledgers test a charge about profit, which haughtiness is not.",
+          "lavish": "Extravagant in spending; the opposite of hoarding for gain.",
+          "bonhomie": "Good-natured friendliness; the wrong polarity for what the ledgers expose.",
+          "enmity": "Hostility; the magistrates' fault is concealment, not ill will toward anyone.",
+          "make restitution for": "Pamphlets that blamed others did nothing to repair the magistrates' failure.",
+          "polarize opinion about": "The pamphlets aimed opinion at the dealers; the magistrates' motive was to keep their own failure out of view, not to divide opinion about it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "avaricious",
+          "role": "key",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "supercilious",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lavish",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bonhomie",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "enmity",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "chicanery",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "restitution",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cloak",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "polarize",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "revisits": "verbal-007:s1q4",
+      "prompt": "However ___ the coroner's report may sound to modern ears, with its jokes about the dead man's fondness for gin, it was no lapse of feeling: inquest reports of the period routinely adopted that register, and the same coroner's letters to the widow are grave and tender.",
+      "choices": [
+        "bygone",
+        "flippant",
+        "ribald",
+        "erstwhile",
+        "facetious",
+        "sardonic"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The concession (\"However ___ ... it was no lapse of feeling\") needs a word for a tone that seems to treat a death too lightly: flippant and facetious both name joking where gravity is due, which the rest of the sentence then excuses.",
+        "distractors": {
+          "bygone": "Trap pair with erstwhile: both mean \"of the past\", tempting after \"modern ears\" and \"of the period\", but the sentence concedes how the report's tone sounds, not that it is old.",
+          "erstwhile": "Trap pair with bygone: \"former\"; an attributive word that cannot describe how a report sounds.",
+          "ribald": "Coarse, bawdy humor; jokes about gin are not indecent, and the concession is about a lack of seriousness, not vulgarity. No partner among the choices.",
+          "sardonic": "Grimly mocking; the coroner is not scorning the dead man, and nothing else here means the same."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "bygone",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "flippant",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ribald",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "erstwhile",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "facetious",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sardonic",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "se",
+      "difficulty": 3,
+      "prompt": "Scarce as it now is, surviving in a few hedgerows, the shrub is no garden escape: pollen in lake muds laid down millennia before the first settlers' gardens shows it to be ___ there.",
+      "choices": [
+        "profuse",
+        "endemic",
+        "predominant",
+        "lavish",
+        "indigenous",
+        "discordant"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "\"No garden escape\" plus pollen older than any garden means the shrub was native to the valley before settlement: indigenous and endemic.",
+        "distractors": {
+          "profuse": "Trap pair with lavish: both mean abundant, which \"Scarce as it now is\" rules out.",
+          "lavish": "Trap pair with profuse: abundant, contradicted by the scarcity the sentence opens with.",
+          "predominant": "Most common; contradicted by \"a few hedgerows\" and silent on origin.",
+          "discordant": "Out of place; the opposite of the conclusion the pollen supports."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "profuse",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "endemic",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "predominant",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lavish",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "indigenous",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "discordant",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The reviewer dispatched the treatise in a single sentence (its four hundred pages, she wrote, made one point four hundred times), a verdict so ___ that the author, who had shrugged off a decade of complaints about his prose, never published again.",
+      "choices": [
+        "synoptic",
+        "tautological",
+        "mordant",
+        "ponderous",
+        "redundant",
+        "scathing"
+      ],
+      "key": {
+        "sel": [
+          2,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "A verdict that silenced an author impervious to ten years of complaint must have cut deep, and its wit (one point four hundred times) gives it a biting edge: mordant and scathing, harshly and woundingly critical.",
+        "distractors": {
+          "tautological": "Trap pair with redundant: needlessly repetitive. That is the reviewer's charge against the treatise, not a quality of her verdict.",
+          "redundant": "Trap pair with tautological: it describes the book being judged, not the judgment.",
+          "ponderous": "Heavy and laborious; again a quality of the treatise, the opposite of a one-line verdict.",
+          "synoptic": "Lone near-fit: summarizing at a glance, tempting because the verdict compresses the whole book into one sentence, but a summary's brevity is not what ended a career, and no other choice means the same."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "synoptic",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tautological",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mordant",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ponderous",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "redundant",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "scathing",
+          "role": "key",
+          "at": [
+            5
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dispatch",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Those who knew the surgeon only from her case notes, terse to the point of rudeness, were unprepared for the ___ with which she greeted the hospital board: forty minutes, without notes, on every economy the board had made at the patients' expense.",
+      "choices": [
+        "diatribe",
+        "hubris",
+        "rumination",
+        "presumption",
+        "harangue",
+        "coda"
+      ],
+      "key": {
+        "sel": [
+          0,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The colon explains the blank: forty minutes of angry accusation aimed at the board, in contrast to her terse notes. That is a long, forceful denunciation, a diatribe or harangue.",
+        "distractors": {
+          "hubris": "Trap pair with presumption: overweening arrogance. Lecturing one's superiors can look presumptuous, but the colon describes a long attack, not an attitude of pride.",
+          "presumption": "Trap pair with hubris: the arrogance of overstepping one's place, which says nothing of length or anger.",
+          "rumination": "Long, but reflective and inward; a speech \"on every economy the board had made at the patients' expense\" is an accusation.",
+          "coda": "A concluding passage; nothing here ends anything."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "diatribe",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hubris",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rumination",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "presumption",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "harangue",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "coda",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "terse",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p1",
+      "prompt": "Which of the following best describes the relationship of the second paragraph to the first?",
+      "choices": [
+        "It presents findings that overturn the pattern of the record described in the first paragraph and concludes that early rivers commonly meandered.",
+        "It accepts the broad pattern of the record described in the first paragraph but argues that the pattern may have been credited to the wrong mechanism.",
+        "It applies the method praised in the first paragraph to a period of the record that the first paragraph leaves unexamined.",
+        "It defends the conclusion of the first paragraph against an objection drawn from laboratory experiments.",
+        "It rejects the principle of uniformitarianism invoked in the first paragraph on the ground that present-day processes are a poor guide to a world without plants."
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Paragraph 2 keeps the pattern (\"braiding still dominates the early record\") and changes what it is evidence of: scarce mud rather than absent roots (\"a claim about sediment rather than about roots\").",
+        "distractors": {
+          "It presents findings that overturn the pattern of the record described in the first paragraph and concludes that early rivers commonly meandered.": "Too strong: \"None of this suggests that meandering rivers were common.\"",
+          "It applies the method praised in the first paragraph to a period of the record that the first paragraph leaves unexamined.": "Same period throughout; the second paragraph reinterprets the same record.",
+          "It defends the conclusion of the first paragraph against an objection drawn from laboratory experiments.": "Reversed: the flume experiments are part of the case against the root explanation, not an objection the paragraph rebuts.",
+          "It rejects the principle of uniformitarianism invoked in the first paragraph on the ground that present-day processes are a poor guide to a world without plants.": "The new account also reasons from present processes (flume experiments, mud stiffening banks); it questions one application, not the principle."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-structure",
+          "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "uniformitarianism",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "rc_multi",
+      "difficulty": 5,
+      "passageId": "p1",
+      "prompt": "Consider each of the choices separately and select all that apply. The passage suggests which of the following about the view that rivers could not meander before the spread of land plants?",
+      "choices": [
+        "Its acceptance rested partly on the agreement between a pattern it predicted and the pattern the rocks display.",
+        "Unlike the sediment account, it gives no reason to expect the confirmed pre-plant point bars to occur in fine-grained deposits rather than in sandy ones.",
+        "The flume experiments weaken the inference that drew it from the scarcity of early point bars, even though they leave that scarcity in place."
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "A: the first paragraph says the case was cited because present processes \"predicted a pattern that the rocks then confirmed\". B: the root view predicts no point bars before plants at all, so it cannot say why the few confirmed ones are muddy; the passage credits the sediment account with fitting \"where the exceptions have actually been found\" and predicting point bars \"where, and only where, the deposits are muddy\". C: if mud alone can hold a bank, the scarcity of early meanders has a second possible cause, so it no longer points to roots, yet \"braiding still dominates\". All three are supported."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "rc",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "As used in the passage, “betrays” most nearly means",
+      "choices": [
+        "abandons",
+        "weakens",
+        "deceives",
+        "reveals",
+        "exaggerates"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The chronicler's dating, naming of witnesses and noting of strangers show, without his meaning to, a concern for proof that his editors shared: \"betrays\" in its secondary sense, reveals unintentionally.",
+        "distractors": {
+          "abandons": "The everyday sense (to be disloyal to, to give up); the chronicler displays the sensibility rather than forsaking it.",
+          "weakens": "Nothing in the sentence undermines his sensibility; his care demonstrates it.",
+          "deceives": "Another everyday sense of betray; there is no one being misled here.",
+          "exaggerates": "The details show the sensibility; they do not overstate it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-vocab-context",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "rc_select",
+      "difficulty": 3,
+      "passageId": "p2",
+      "prompt": "Select the sentence that serves as the passage's concrete illustration of how material the nineteenth-century editors discarded can be read as historical evidence.",
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The fourth sentence (\"A chronicler who dates a cure to the hour ...\") gives the specific case: the details of a miracle report reveal the chronicler's standards of proof. The fifth sentence states the general conclusion drawn from it, and the sixth and seventh turn to the approach's hazard."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-function",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 4,
+      "passageId": "a1",
+      "prompt": "Which of the following most logically completes the argument?",
+      "choices": [
+        "an exemption for farms on the uplands would weaken the protection that the setback rule now gives to the county's wells",
+        "several wells in the county's sandy lowlands have been contaminated by seepage from manure lagoons",
+        "bacteria carried in lagoon seepage can survive in groundwater for several years",
+        "the upland clay is crossed by root channels and shrinkage cracks through which liquid moves many times faster than through the clay itself",
+        "most of the county's dairy farms are on the clay uplands rather than in the lowlands"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The farmers' case rests on the slow rate of seepage through the clay itself. If liquid bypasses the clay through cracks and root channels, that rate does not govern how fast seepage reaches a well, so the case for exemption collapses and opposing it follows.",
+        "distractors": {
+          "an exemption for farms on the uplands would weaken the protection that the setback rule now gives to the county's wells": "Restates the conclusion; it is exactly what the farmers deny, so it cannot be the reason against them.",
+          "several wells in the county's sandy lowlands have been contaminated by seepage from manure lagoons": "Sand is not clay; the farmers concede the rule for the lowlands.",
+          "bacteria carried in lagoon seepage can survive in groundwater for several years": "Several years is far shorter than the century the farmers' figure implies, so this does not answer them.",
+          "most of the county's dairy farms are on the clay uplands rather than in the lowlands": "Raises the stakes of the exemption without showing that the uplands' wells are at risk."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-complete",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q1",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Every one of its measures had been tried somewhere before, yet the reform was ___ all the same, for no government had thought it prudent to attempt them all at once, in a single season, with an election months away.",
+      "blanks": [
+        [
+          "redundant",
+          "ardent",
+          "audacious",
+          "callow",
+          "essentialist"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "\"Yet ... all the same\" concedes that nothing was new in the parts; the \"for\" clause names the risk of doing everything at once that no prudent government would take: bold, risk-taking, audacious.",
+        "distractors": {
+          "redundant": "Echoes \"tried somewhere before\", the concession, but \"yet\" turns away from it.",
+          "ardent": "Passionate; a quality of people, and nothing in the sentence concerns zeal.",
+          "callow": "Inexperienced, immature; the sentence's point is risk, not naivety.",
+          "essentialist": "A philosophical position about fixed natures; irrelevant to a reform's boldness."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "redundant",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ardent",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "audacious",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "callow",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "essentialist",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "prudent",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s2q2",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "That the judging of the competition was (i) ___ had long been conceded, and each rulebook the federation issued was meant to remedy it. The rulebooks made the technical criteria steadily more (ii) ___, yet the judges' disagreements, squeezed out of the categories the rules now governed, reappeared undiminished in the one category still left to taste.",
+      "blanks": [
+        [
+          "contingent",
+          "subjective",
+          "esoteric"
+        ],
+        [
+          "stringent",
+          "syntactic",
+          "chronological"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) Contingent, subjective and esoteric all describe a fault in judging until the last clause: disagreement survives wherever scoring is \"left to taste\", so the fault being remedied was that judging rested on personal opinion, subjective. (ii) Rules that \"squeezed\" disagreement out of the categories they governed were tightened: stringent.",
+        "distractors": {
+          "contingent": "Dependent on circumstances; plausible for the first sentence, but the remedy and the leftover \"taste\" show the problem was personal judgment, not circumstance.",
+          "esoteric": "Understood by few; rulebooks would not cure obscurity by squeezing out disagreement, and \"taste\" points to opinion.",
+          "syntactic": "Relating to sentence structure; irrelevant to criteria that constrain judges.",
+          "chronological": "Arranged in time order; nothing about squeezing out disagreement."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "contingent",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "subjective",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "esoteric",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "stringent",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "syntactic",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "chronological",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "undiminished",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s2q3",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Readers new to Halloran's late novels tend to blame her translators for prose so (i) ___, its sentences deferring their verbs through clause after clause. But the manuscripts show that her editors had already (ii) ___ the habit, and that every sentence they straightened lost something: the delay, it turns out, was where the irony lived. Simplified, the novels are not easier so much as (iii) ___, their jokes arriving before the reader knows there is anything to laugh at.",
+      "blanks": [
+        [
+          "pellucid",
+          "pithy",
+          "involved"
+        ],
+        [
+          "dithered over",
+          "moved to squelch",
+          "chosen to laud"
+        ],
+        [
+          "opulent",
+          "impaired",
+          "ponderous"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) Sentences that defer their verbs through clause after clause are intricate: involved in its secondary sense (complicated), not \"taking part\". (ii) The editors \"straightened\" every sentence, so they tried to suppress the habit: moved to squelch. (iii) Straightening \"lost something\", the irony, so simplification damaged the novels: impaired.",
+        "distractors": {
+          "pellucid": "Transparently clear; nobody blames a translator for clarity.",
+          "pithy": "Concise; the opposite of clause after clause.",
+          "dithered over": "Hesitated about; but the editors did straighten the sentences.",
+          "chosen to laud": "Praising the habit contradicts straightening it.",
+          "opulent": "Rich, luxurious; simplification strips the novels, it does not enrich them.",
+          "ponderous": "Heavy and slow; simplified sentences arrive too quickly, the opposite fault."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "pellucid",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pithy",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "involved",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dither",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "squelch",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "laud",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "opulent",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "impair",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ponderous",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q4",
+      "section": 2,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The temperance societies' tracts are remembered chiefly for their (i) ___: the drunkard's deathbed and his starving children, described in loving detail. Read in sequence, though, they show a shift. By the 1880s the deathbeds have given way to tables of mortality figures, as (ii) ___ as any schoolbook, and the licensing schemes the tracts urge have grown so (iii) ___, with their exemptions, graduated fees and appeals, that only a lawyer could follow them.",
+      "blanks": [
+        [
+          "ponderous statistics",
+          "lurid rhetoric",
+          "ribald humor"
+        ],
+        [
+          "didactic",
+          "sardonic",
+          "profuse"
+        ],
+        [
+          "draconian",
+          "synoptic",
+          "byzantine"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) Deathbeds and starving children \"described in loving detail\" are sensational persuasion: lurid rhetoric. (ii) Mortality tables \"as ___ as any schoolbook\" are instructive in a lecturing way: didactic. (iii) Exemptions, graduated fees and appeals that \"only a lawyer could follow\" make the schemes excessively complicated: byzantine.",
+        "distractors": {
+          "ponderous statistics": "Describes the later tracts, after the shift; the colon describes the early ones.",
+          "ribald humor": "Deathbeds and starving children are not jokes.",
+          "sardonic": "Mocking; tables of figures are not scornful.",
+          "profuse": "Abundant; \"as profuse as any schoolbook\" makes no comparison the sentence supports.",
+          "draconian": "Harsh; but exemptions and appeals soften a scheme, and the clue (\"only a lawyer could follow\") concerns complexity, not severity.",
+          "synoptic": "Giving a summary overview; the opposite of a scheme too intricate to follow."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "ponderous",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lurid",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ribald",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "didactic",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sardonic",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "profuse",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "draconian",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "synoptic",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "byzantine",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "temperance",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Opponents had read sinister designs into the ordinance's vaguer clauses, but those clauses proved, in the event, ___: in five years the inspectors never once invoked them, and the market stalls they were supposed to threaten traded exactly as before.",
+      "choices": [
+        "draconian",
+        "tacit",
+        "benign",
+        "supererogatory",
+        "implicit",
+        "innocuous"
+      ],
+      "key": {
+        "sel": [
+          2,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "\"But\" sets the outcome against the \"sinister designs\" opponents feared: the clauses did no harm at all, so innocuous and benign.",
+        "distractors": {
+          "draconian": "The opponents' fear, which \"but ... in the event\" reverses.",
+          "tacit": "Trap pair with implicit: unstated, tempting after \"vaguer clauses\" and \"read ... into\", but written clauses are not unstated, and the contrast is with \"sinister\", not with \"explicit\".",
+          "implicit": "Trap pair with tacit: the same \"unspoken\" meaning, ruled out for the same reason.",
+          "supererogatory": "Superfluous; never-invoked clauses might seem so, but the sentence contrasts harm with harmlessness, and no other choice means \"unnecessary\"."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "draconian",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tacit",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "benign",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "supererogatory",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "implicit",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "innocuous",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q6",
+      "section": 2,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The story that the general wept over the casualty lists appears in every biography, and historians concede that it is just the kind of thing he might have done; but since its only source is a memoir written forty years later by a man who was not present, they now regard it as ___.",
+      "choices": [
+        "verisimilar",
+        "dubious",
+        "opprobrious",
+        "plausible",
+        "apocryphal",
+        "synoptic"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "\"But since\" turns from what historians concede (the story fits his character) to a single late, secondhand source: a widely repeated story of doubtful authenticity, apocryphal and dubious.",
+        "distractors": {
+          "verisimilar": "Trap pair with plausible: having the appearance of truth, which is exactly what historians concede before \"but\" turns against it.",
+          "plausible": "Trap pair with verisimilar: believable; the conceded point, not the conclusion.",
+          "opprobrious": "Disgraceful or abusive; weeping over the dead is not shameful, and the issue is the story's sourcing.",
+          "synoptic": "Summarizing; says nothing about whether the story is authentic."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "verisimilar",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dubious",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "opprobrious",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "plausible",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "apocryphal",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "synoptic",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s2q7",
+      "section": 2,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The defence never needed to ___ the witness's honesty; it was enough to show that from where she stood that night, the far side of the square was hidden by the fountain.",
+      "choices": [
+        "censure",
+        "laud",
+        "impugn",
+        "denounce",
+        "discredit",
+        "annul"
+      ],
+      "key": {
+        "sel": [
+          2,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "\"It was enough to\" names a lesser move that achieved the defence's aim, undermining her testimony, without the stronger one: calling her honesty into question. Impugn and discredit both mean to challenge or cast doubt on it.",
+        "distractors": {
+          "censure": "Trap pair with denounce: to condemn formally. One condemns conduct, not a quality; and the defence's aim was to raise doubt, not pass judgment.",
+          "denounce": "Trap pair with censure: to condemn publicly, again a moral verdict, not the casting of doubt the sentence requires.",
+          "laud": "To praise; praising her honesty would not be a stronger version of showing she could not see.",
+          "annul": "To declare void; one annuls a marriage or contract, not a person's honesty."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "censure",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "laud",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "impugn",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "denounce",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "discredit",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "annul",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2q8",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "According to the passage, the mathematical treatment of aging developed in the 1960s presumed which of the following?",
+      "choices": [
+        "That individuals reproduce at only a single age",
+        "That deaths from predation, accident and disease become more frequent as an organism ages",
+        "That an organism's body stops changing once it reaches maturity",
+        "That organisms which reproduce by budding age more slowly than those which reproduce sexually",
+        "That genes with late-acting costs are less common than genes with early-acting benefits"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The 1960s mathematics is introduced in the first paragraph, but its assumption is stated in the third: it \"presumed an organism whose ontogeny ends at maturity, after which its body is fixed and its output constant.\"",
+        "distractors": {
+          "That individuals reproduce at only a single age": "Reversed: the result applies to populations that \"reproduce at more than one age\".",
+          "That deaths from predation, accident and disease become more frequent as an organism ages": "The first paragraph says such deaths thin each age class; it does not say they become more frequent with age.",
+          "That organisms which reproduce by budding age more slowly than those which reproduce sexually": "Budding appears only in the defenders' reply, as a condition the mathematics did not consider.",
+          "That genes with late-acting costs are less common than genes with early-acting benefits": "The theory predicts that late-acting costs accumulate; it assumes nothing about relative frequency."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-detail",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q9",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 5,
+      "passageId": "p3",
+      "prompt": "The passage is primarily concerned with",
+      "choices": [
+        "defending an evolutionary theory of aging by showing that the reported exceptions to it rest on unreliable demographic data",
+        "arguing that organisms that do not senesce refute the view that aging is a product of natural selection",
+        "explaining why certain organisms continue to grow and to reproduce throughout their lives",
+        "endorsing a reply to apparent exceptions to a theory of aging while arguing that the reply undercuts a claim often made in the theory's name",
+        "tracing an evolutionary theory of aging from its mathematical formulation to its general acceptance among field biologists"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The author calls the defenders' reply \"correct\" and \"more than a rescue\", then insists that it \"cannot ... restore the original claim\" of universality, which is still taught. Topic (a reply to exceptions) plus stance (endorse, with a cost to the universality claim).",
+        "distractors": {
+          "defending an evolutionary theory of aging by showing that the reported exceptions to it rest on unreliable demographic data": "The data are accepted (\"not curiosities ... long-studied wild populations\"); the defense rests on assumptions, not on doubting the data.",
+          "arguing that organisms that do not senesce refute the view that aging is a product of natural selection": "Wrong verb: the author holds that the theory, properly stated, predicts the exceptions.",
+          "explaining why certain organisms continue to grow and to reproduce throughout their lives": "Too narrow, and the passage does not explain why they keep growing, only what follows if they do.",
+          "tracing an evolutionary theory of aging from its mathematical formulation to its general acceptance among field biologists": "The field evidence is against the inevitability claim; no story of acceptance is told."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-main-idea",
+          "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "refute",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "endorse",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s2q10",
+      "section": 2,
+      "type": "rc_multi",
+      "difficulty": 4,
+      "passageId": "p3",
+      "prompt": "Consider each of the choices separately and select all that apply. The passage mentions which of the following as characteristic of at least some of the organisms that do not appear to senesce?",
+      "choices": [
+        "Fertility that holds steady or rises with age",
+        "A lower risk of death from predation and accident than other organisms face",
+        "The continual replacement of the cells that make up the body"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "A: the second paragraph says \"fertility holds steady or rises\". B: the passage says the risk of death does not climb with age in these organisms; it never compares their exposure to predation or accident with other species', however plausible that sounds. C: the third paragraph's polyp \"continually replaces its cells\"."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-select-verify",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "rc-detail",
+          "role": "secondary"
+        }
+      ]
+    },
+    {
+      "id": "s2q11",
+      "section": 2,
+      "type": "rc_select",
+      "difficulty": 5,
+      "passageId": "p3",
+      "paras": [
+        3
+      ],
+      "prompt": "Select the sentence in the final paragraph in which the author's endorsement of the defenders' reply is qualified.",
+      "key": {
+        "sel": [
+          13
+        ]
+      },
+      "explanation": {
+        "key": "\"What the defense cannot do is restore the original claim.\" The two sentences before it approve the reply without reservation (\"correct\", \"more than a rescue\", it exposes the theory to new tests). The last sentence criticizes those who still teach universality, a different party from the defenders, so it marks no limit to the author's agreement with the defenders."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-attitude",
+          "role": "primary"
+        }
+      ]
+    },
+    {
+      "id": "s2q12",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p4",
+      "prompt": "Which of the following sellers would the first account of underpricing described in the passage lead one to expect to set its prices furthest below what buyers would pay?",
+      "choices": [
+        "A football club whose televised home matches draw much of their appeal from a full and noisy stadium",
+        "A publisher of a limited edition of prints bought chiefly by collectors who keep them in storage",
+        "A theater whose patrons have in the past protested publicly against price increases",
+        "An airline selling seats on a popular holiday route during the peak season",
+        "A gallery selling the work of a celebrated painter to wealthy buyers"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "The first account predicts underpricing \"most marked where the audience is itself part of the product\". A crowd that makes the televised matches appealing is exactly such an audience.",
+        "distractors": {
+          "A publisher of a limited edition of prints bought chiefly by collectors who keep them in storage": "The buyers contribute nothing to the product; the account predicts little underpricing.",
+          "A theater whose patrons have in the past protested publicly against price increases": "Matches the rival, reciprocity account (buyers punish apparent exploitation), not the first one.",
+          "An airline selling seats on a popular holiday route during the peak season": "Passengers are not part of what the airline sells to others.",
+          "A gallery selling the work of a celebrated painter to wealthy buyers": "Scarcity and fame, but the buyers supply nothing the seller needs."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-application",
+          "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "celebrated",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s2q13",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 5,
+      "passageId": "p4",
+      "prompt": "Which of the following can be inferred from the passage?",
+      "choices": [
+        "Promoters who underprice tickets do so chiefly to avoid appearing to exploit their fans.",
+        "Economists of a laissez-faire bent regard resellers as adding to the value of a performance.",
+        "Underpricing is more pronounced for concerts than for any other kind of event.",
+        "The two accounts of underpricing agree about which performers can be expected to underprice.",
+        "The resale of underpriced tickets at market prices tends to erode the benefit that, on the first account, a promoter gains by underpricing."
+      ],
+      "key": {
+        "sel": [
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Combine the first sentence (resold tickets go at triple face value, a market price) with the fourth (the wealthier buyers a market price admits supply less noise, recordings and word of mouth). Seats resold at market prices therefore go to buyers who supply less of the crowd the promoter underpriced to buy.",
+        "distractors": {
+          "Promoters who underprice tickets do so chiefly to avoid appearing to exploit their fans.": "That is the rival account, which the passage reports but does not endorse; \"chiefly\" is unsupported.",
+          "Economists of a laissez-faire bent regard resellers as adding to the value of a performance.": "The textbook diagnosis says resellers add \"nothing to the performance\"; nothing credits these economists with the opposite view.",
+          "Underpricing is more pronounced for concerts than for any other kind of event.": "Extreme and unsupported; the passage compares no kinds of event.",
+          "The two accounts of underpricing agree about which performers can be expected to underprice.": "Contradicted: the rival account \"predicts no such pattern\"."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-inference",
+          "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "laissez-faire",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "bent",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s2q14",
+      "section": 2,
+      "type": "rc",
+      "difficulty": 4,
+      "passageId": "p5",
+      "prompt": "Which of the following findings, if established, would most strongly support the oral-formulaic hypothesis as the passage describes it?",
+      "choices": [
+        "Achilles is called “swift-footed” more often in scenes of battle than in scenes of rest.",
+        "Ancient audiences are reported to have admired poets who chose their epithets to suit each scene.",
+        "Poets of later, written traditions use fixed epithets far more sparingly than Homer does.",
+        "The epithet that accompanies a hero's name can be predicted more reliably from the number and pattern of syllables left to fill in the line than from what the hero is doing in the scene.",
+        "Several of Homer's epithets were already obscure in meaning to ancient commentators on the poems."
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The hypothesis says the poet chooses epithets \"by meter rather than by sense\". So the choice of epithet should track the metrical gap, not the situation; a finding that meter predicts the epithet better than the scene does is exactly that.",
+        "distractors": {
+          "Achilles is called “swift-footed” more often in scenes of battle than in scenes of rest.": "Epithets tracking the scene would favor the critics' reading by sense and weaken the hypothesis.",
+          "Ancient audiences are reported to have admired poets who chose their epithets to suit each scene.": "Points toward choice by sense, if anything.",
+          "Poets of later, written traditions use fixed epithets far more sparingly than Homer does.": "Fits a general link between orality and epithets, but says nothing about whether Homer's choices follow meter rather than sense.",
+          "Several of Homer's epithets were already obscure in meaning to ancient commentators on the poems.": "Obscurity bears on neither meter nor sense as the basis of choice."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "rc-application",
+          "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "obscure",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s2q15",
+      "section": 2,
+      "type": "rc",
+      "subtype": "arg",
+      "difficulty": 3,
+      "passageId": "a2",
+      "prompt": "The school board member's argument proceeds by",
+      "choices": [
+        "questioning the motives of those who oppose the change in start time",
+        "showing that a consequence that would follow from the opponents' claim does not occur in a case to which that claim applies",
+        "arguing that because a change has succeeded at one school it will succeed at every school in the district",
+        "proposing an alternative explanation for the evidence on which the opponents rely",
+        "treating the lack of evidence for the opponents' claim as proof that the claim is false"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The member derives a consequence from the opponents' claim (Fenwick students should report no more sleep), notes that the consequence fails (they report forty minutes more), and rejects the claim.",
+        "distractors": {
+          "questioning the motives of those who oppose the change in start time": "No motives are mentioned.",
+          "arguing that because a change has succeeded at one school it will succeed at every school in the district": "The conclusion is only that the opponents' prediction is mistaken, not that the change will succeed everywhere.",
+          "proposing an alternative explanation for the evidence on which the opponents rely": "The opponents cite no evidence; they make a prediction.",
+          "treating the lack of evidence for the opponents' claim as proof that the claim is false": "The member offers positive counterevidence, the survey results, not an absence of evidence."
+        }
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "arg-flaw",
+          "role": "primary"
+        }
+      ]
+    }
+  ]
+}
