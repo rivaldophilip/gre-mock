@@ -1,0 +1,1130 @@
+{
+  "id": "quant-014",
+  "measure": "quant",
+  "title": "Quant Hard Mock 14",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 21
+    },
+    {
+      "n": 2,
+      "minutes": 26
+    }
+  ],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Number of items in each of the 40 orders a warehouse shipped on Monday",
+      "table": {
+        "head": [
+          "Items in the order",
+          "Number of orders"
+        ],
+        "rows": [
+          [
+            "1",
+            "10"
+          ],
+          [
+            "2",
+            "12"
+          ],
+          [
+            "3",
+            "8"
+          ],
+          [
+            "4",
+            "6"
+          ],
+          [
+            "5",
+            "4"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fig2",
+      "caption": "Note: Figure not drawn to scale.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200' width='320' height='200' font-family='sans-serif' font-size='14'><polygon points='50,160 50,50 272,44 266,160' fill='none' stroke='currentColor' stroke-width='2'/><line x1='50' y1='160' x2='272' y2='44' stroke='currentColor' stroke-width='1.5' stroke-dasharray='5 4'/><path d='M50,148 L62,148 L62,160' fill='none' stroke='currentColor' stroke-width='1.5'/><text x='34' y='176' fill='currentColor'>A</text><text x='34' y='48' fill='currentColor'>B</text><text x='278' y='42' fill='currentColor'>C</text><text x='272' y='176' fill='currentColor'>D</text><text x='34' y='110' fill='currentColor'>5</text><text x='154' y='38' fill='currentColor'>12</text><text x='276' y='106' fill='currentColor'>5</text><text x='150' y='180' fill='currentColor'>12</text></svg>"
+    },
+    {
+      "id": "fig3",
+      "caption": "Note: Figure not drawn to scale.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 260' width='320' height='260' font-family='sans-serif' font-size='14'><line x1='40' y1='130' x2='280' y2='130' stroke='currentColor' stroke-width='2'/><line x1='128.9' y1='245.9' x2='191.1' y2='14.1' stroke='currentColor' stroke-width='2'/><line x1='180.8' y1='248.2' x2='139.2' y2='11.8' stroke='currentColor' stroke-width='2'/><text x='288' y='135' fill='currentColor' font-style='italic'>ℓ</text><text x='196' y='22' fill='currentColor' font-style='italic'>m</text><text x='122' y='20' fill='currentColor' font-style='italic'>n</text><text x='200' y='104' text-anchor='middle' fill='currentColor'>3x°</text><text x='108' y='98' text-anchor='middle' fill='currentColor'>(2x + 30)°</text><text x='158' y='196' text-anchor='middle' fill='currentColor'>x°</text><text x='140' y='150' fill='currentColor'>O</text></svg>"
+    },
+    {
+      "id": "fig4",
+      "caption": "Purchases at a store (50 purchases in all)",
+      "table": {
+        "head": [
+          "",
+          "Paid by card",
+          "Did not pay by card",
+          "Total"
+        ],
+        "rows": [
+          [
+            "Used a coupon",
+            "",
+            "",
+            "30"
+          ],
+          [
+            "Did not use a coupon",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Total",
+            "28",
+            "",
+            "50"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fig5",
+      "caption": "Delivery times of 200 orders",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 160' width='440' height='160' font-family='sans-serif' font-size='12'><line x1='40' y1='110' x2='400' y2='110' stroke='currentColor' stroke-width='1.5'/><line x1='40' y1='110' x2='40' y2='118' stroke='currentColor' stroke-width='1'/><text x='40' y='132' text-anchor='middle' fill='currentColor'>0</text><line x1='62.5' y1='110' x2='62.5' y2='115' stroke='currentColor' stroke-width='1'/><line x1='85' y1='110' x2='85' y2='118' stroke='currentColor' stroke-width='1'/><text x='85' y='132' text-anchor='middle' fill='currentColor'>10</text><line x1='107.5' y1='110' x2='107.5' y2='115' stroke='currentColor' stroke-width='1'/><line x1='130' y1='110' x2='130' y2='118' stroke='currentColor' stroke-width='1'/><text x='130' y='132' text-anchor='middle' fill='currentColor'>20</text><line x1='152.5' y1='110' x2='152.5' y2='115' stroke='currentColor' stroke-width='1'/><line x1='175' y1='110' x2='175' y2='118' stroke='currentColor' stroke-width='1'/><text x='175' y='132' text-anchor='middle' fill='currentColor'>30</text><line x1='197.5' y1='110' x2='197.5' y2='115' stroke='currentColor' stroke-width='1'/><line x1='220' y1='110' x2='220' y2='118' stroke='currentColor' stroke-width='1'/><text x='220' y='132' text-anchor='middle' fill='currentColor'>40</text><line x1='242.5' y1='110' x2='242.5' y2='115' stroke='currentColor' stroke-width='1'/><line x1='265' y1='110' x2='265' y2='118' stroke='currentColor' stroke-width='1'/><text x='265' y='132' text-anchor='middle' fill='currentColor'>50</text><line x1='287.5' y1='110' x2='287.5' y2='115' stroke='currentColor' stroke-width='1'/><line x1='310' y1='110' x2='310' y2='118' stroke='currentColor' stroke-width='1'/><text x='310' y='132' text-anchor='middle' fill='currentColor'>60</text><line x1='332.5' y1='110' x2='332.5' y2='115' stroke='currentColor' stroke-width='1'/><line x1='355' y1='110' x2='355' y2='118' stroke='currentColor' stroke-width='1'/><text x='355' y='132' text-anchor='middle' fill='currentColor'>70</text><line x1='377.5' y1='110' x2='377.5' y2='115' stroke='currentColor' stroke-width='1'/><line x1='400' y1='110' x2='400' y2='118' stroke='currentColor' stroke-width='1'/><text x='400' y='132' text-anchor='middle' fill='currentColor'>80</text><rect x='152.5' y='40' width='67.5' height='40' fill='none' stroke='currentColor' stroke-width='2'/><line x1='175' y1='40' x2='175' y2='80' stroke='currentColor' stroke-width='2'/><line x1='107.5' y1='60' x2='152.5' y2='60' stroke='currentColor' stroke-width='1.5'/><line x1='220' y1='60' x2='310' y2='60' stroke='currentColor' stroke-width='1.5'/><line x1='107.5' y1='50' x2='107.5' y2='70' stroke='currentColor' stroke-width='1.5'/><line x1='310' y1='50' x2='310' y2='70' stroke='currentColor' stroke-width='1.5'/><text x='220' y='152' text-anchor='middle' fill='currentColor'>Delivery time (minutes)</text></svg>"
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "When the number $x$ is rounded to the nearest integer, the result is 4.",
+      "qc": {
+        "a": "The result of rounding $x^2$ to the nearest integer",
+        "b": "$16$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "$x$ can be any number with $3.5 \\le x < 4.5$, so $x^2$ runs from $12.25$ up to almost $20.25$. At $x = 4$, $x^2 = 16$ (equal). At $x = 4.2$, $x^2 = 17.64$, which rounds to 18 (A greater). At $x = 3.8$, $x^2 = 14.44$, which rounds to 14 (B greater). The relationship cannot be determined.",
+        "steps": [
+          "1. Rounding to 4 means $3.5 \\le x < 4.5$.",
+          "2. $x = 4$: $x^2 = 16$, equal to B.",
+          "3. $x = 4.2$: $x^2 = 17.64 \\to 18 > 16$.",
+          "4. Two outcomes, so the answer is D."
+        ],
+        "fast": "Try one non-integer next to 4, such as $4.2$: its square already rounds to 18.",
+        "trap": "Testing only $x = 4$, the integer the rounding names, and answering C."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-sense-qc",
+          "role": "primary"
+        }
+      ],
+      "setup": "x rounds to a given integer; compare its square, rounded, with the square of that integer",
+      "variant": "non-integer test values that flip the relationship"
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "On a number line, the point $x$ lies between the marks for $-1$ and $-\\tfrac12$.",
+      "qc": {
+        "a": "$x^2$",
+        "b": "$x + 1$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "$x^2 - (x + 1) = x^2 - x - 1$, which is zero at $x = \\tfrac{1 - \\sqrt5}{2} \\approx -0.618$, a point inside the interval. Near $-1$ the square is larger ($x = -0.9$: $0.81$ against $0.1$); near $-\\tfrac12$ it is smaller ($x = -0.55$: $0.3025$ against $0.45$). The relationship cannot be determined.",
+        "steps": [
+          "1. Compare by the difference $x^2 - x - 1$.",
+          "2. Its roots are $\\tfrac{1 \\pm \\sqrt5}{2}$; the negative root $\\approx -0.618$ lies between $-1$ and $-\\tfrac12$.",
+          "3. $x = -0.9$: A greater. $x = -0.55$: B greater. Answer D."
+        ],
+        "fast": "Check both ends: at $x = -1$, A is 1 and B is 0; at $x = -\\tfrac12$, A is $\\tfrac14$ and B is $\\tfrac12$. The order flips inside the interval.",
+        "trap": "Testing only the midpoint $x = -\\tfrac34$ ($0.5625$ against $0.25$) and answering A."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-line-abs",
+          "role": "primary"
+        }
+      ],
+      "setup": "x between two negative marks; compare x^2 with x + 1 (the crossover lies inside the interval)",
+      "variant": "ordering expressions of a number located between two marks"
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "figureId": "fig2",
+      "prompt": "In quadrilateral $ABCD$, $AB = CD = 5$, $BC = AD = 12$, and angle $A$ is a right angle.",
+      "qc": {
+        "a": "$AC$",
+        "b": "$13$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "A quadrilateral like the one shown whose opposite sides are equal in pairs is a parallelogram, so $BC \\parallel AD$ and $AB \\parallel CD$ even though the figure does not say so. A parallelogram with one right angle has four right angles, so $ABCD$ is a rectangle and $AC = \\sqrt{5^2 + 12^2} = 13$. The quantities are equal.",
+        "steps": [
+          "1. Both pairs of opposite sides are equal, so $ABCD$ is a parallelogram.",
+          "2. Consecutive angles of a parallelogram are supplementary, so angle $B = 180^\\circ - 90^\\circ = 90^\\circ$.",
+          "3. Right triangle $ABC$: $AC = \\sqrt{5^2 + 12^2} = 13$. Answer C."
+        ],
+        "fast": "Equal opposite sides force a parallelogram; one right angle then forces a rectangle, whose diagonal is 13.",
+        "trap": "Seeing that only angle $A$ is marked and no sides are stated parallel, and answering D. (Diagonal $BD = 13$ follows from angle $A$ alone; $AC$ needs the forced parallelism.)"
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "figures-not-to-scale",
+          "role": "primary"
+        }
+      ],
+      "setup": "quadrilateral with both pairs of opposite sides equal and one right angle marked: forced rectangle; compare the diagonal not through the marked angle's triangle with a value",
+      "variant": "lines that look parallel or perpendicular but are not stated to be"
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "$N$ is the product of all the odd integers from 1 to 99, inclusive.",
+      "qc": {
+        "a": "The tens digit of $N$",
+        "b": "$5$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "$N$ is odd and has 25 as a factor, so its last two digits are 25 or 75 (the odd multiples of 25 below 100). To choose, look at $N$ modulo 4: the factors $3, 7, 11, \\ldots, 99$ are each $\\equiv -1 \\pmod 4$, and there are 25 of them, so $N \\equiv (-1)^{25} \\equiv 3 \\pmod 4$. Since $25 \\equiv 1$ and $75 \\equiv 3 \\pmod 4$, $N$ ends in 75. The tens digit is $7 > 5$.",
+        "steps": [
+          "1. $N$ is odd and divisible by 25, so $N$ ends in 25 or 75.",
+          "2. Odd factors that are $3 \\pmod 4$: $3, 7, \\ldots, 99$, which is 25 numbers.",
+          "3. $N \\equiv (-1)^{25} = -1 \\equiv 3 \\pmod 4$.",
+          "4. $75 \\equiv 3 \\pmod 4$, so the last two digits are 75; tens digit 7. Answer A."
+        ],
+        "fast": "Ending must be 25 or 75; an odd count of $3 \\pmod 4$ factors makes the product $3 \\pmod 4$, which picks 75.",
+        "trap": "Assuming every odd multiple of 25 ends in 25 (as $5 \\times 5$, $5 \\times 15$, … suggest) and answering B with tens digit 2."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "remainders-units",
+          "role": "primary"
+        }
+      ],
+      "setup": "product of a long run of odd integers: an odd multiple of 25 ends in 25 or 75; the residue mod 4 decides",
+      "variant": "last two digits of a product too large for the calculator"
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "A delivery van travels at a constant 80 kilometers per hour and gets 16 kilometers per liter of fuel. If fuel costs $\\$1.80$ per liter, what is the cost of the fuel the van uses in 45 minutes of driving?",
+      "choices": [
+        "$\\$5.40$",
+        "$\\$6.00$",
+        "$\\$6.75$",
+        "$\\$7.20$",
+        "$\\$9.00$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "In 45 minutes, which is $\\tfrac34$ hour, the van covers $80 \\times \\tfrac34 = 60$ km, using $\\tfrac{60}{16} = 3.75$ liters, which costs $3.75 \\times \\$1.80 = \\$6.75$.",
+        "steps": [
+          "1. Time: $45$ min $= 0.75$ h.",
+          "2. Distance: $80 \\times 0.75 = 60$ km.",
+          "3. Fuel: $60 \\div 16 = 3.75$ L.",
+          "4. Cost: $3.75 \\times 1.80 = \\$6.75$."
+        ],
+        "fast": "One hour costs $\\tfrac{80}{16} \\times 1.80 = \\$9.00$; take $\\tfrac34$ of it.",
+        "trap": "Stopping at the cost for a full hour ($\\$9.00$), or treating 45 minutes as $0.45$ hour."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "units-conversion",
+          "role": "primary"
+        }
+      ],
+      "setup": "speed, fuel economy and fuel price; the fuel cost for a time given in minutes",
+      "variant": "rates with mixed units"
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A manufacturer builds a scale model of one of its storage tanks. Covering the model's outer surface takes $\\tfrac{1}{400}$ as much paint as covering the full-size tank's outer surface. If the model holds 0.03 liter, how many liters does the full-size tank hold?",
+      "choices": [
+        "0.6",
+        "12",
+        "120",
+        "240",
+        "4,800"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Paint measures surface area, which scales with the square of the linear scale factor: $k^2 = 400$, so $k = 20$. Capacity is a volume, which scales with the cube: $20^3 = 8{,}000$. The tank holds $0.03 \\times 8{,}000 = 240$ liters.",
+        "steps": [
+          "1. Area ratio $400 = k^2$, so the length ratio is $k = 20$.",
+          "2. Volume ratio $= k^3 = 8{,}000$.",
+          "3. $0.03 \\times 8{,}000 = 240$ liters."
+        ],
+        "fast": "Area ratio 400 means length ratio 20, so volume ratio $20^3$.",
+        "trap": "Applying the paint ratio to the volume ($0.03 \\times 400 = 12$), or the linear ratio ($0.6$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "ratio-proportion",
+          "role": "primary"
+        }
+      ],
+      "setup": "a model's surface-area ratio gives the linear scale; capacity scales by its cube",
+      "variant": "scale maps and models"
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A gift basket will hold 4 different items chosen from 5 different candles, 4 different soaps and 3 different teas. If the basket must contain at least one candle, at least one soap and at least one tea, how many different baskets are possible?",
+      "choices": [
+        "231",
+        "264",
+        "270",
+        "495",
+        "540"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Count all baskets and remove those missing a kind, adding back the baskets removed twice. All: $\\binom{12}{4} = 495$. No candle: $\\binom74 = 35$; no soap: $\\binom84 = 70$; no tea: $\\binom94 = 126$; total $231$. A basket missing two kinds is all one kind, and each was subtracted twice: all candles $\\binom54 = 5$, all soaps $\\binom44 = 1$, all teas $0$. So $495 - 231 + 6 = 270$.",
+        "steps": [
+          "1. Total: $\\binom{12}{4} = 495$.",
+          "2. Missing one kind: $35 + 70 + 126 = 231$.",
+          "3. Single-kind baskets lie in two of those groups: $5 + 1 + 0 = 6$; add them back.",
+          "4. $495 - 231 + 6 = 270$. (Check by cases (2,1,1), (1,2,1), (1,1,2): $10 \\cdot 4 \\cdot 3 + 5 \\cdot 6 \\cdot 3 + 5 \\cdot 4 \\cdot 3 = 120 + 90 + 60 = 270$.)"
+        ],
+        "fast": "With 4 items and 3 required kinds, exactly one kind is doubled: three cases, 120 + 90 + 60.",
+        "trap": "Subtracting the three 'missing a kind' counts without adding back the single-kind baskets ($495 - 231 = 264$), or picking one of each kind first and then any fourth item ($5 \\cdot 4 \\cdot 3 \\cdot 9 = 540$), which counts each basket twice."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-restrictions",
+          "role": "primary"
+        }
+      ],
+      "setup": "choose a set with at least one of each of three kinds: total minus sets missing one kind, plus the single-kind sets counted twice",
+      "variant": "at least one of a type in a selection"
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "$x$ and $y$ are positive numbers such that $x + y$ and $xy$ are both rational. Which of the following must be rational? Indicate all such expressions.",
+      "choices": [
+        "$x^2 + y^2$",
+        "$x - y$",
+        "$(x - y)^2$",
+        "$\\dfrac1x + \\dfrac1y$",
+        "$x^2 - y^2$",
+        "$\\sqrt{xy}$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Write each expression with $s = x + y$ and $p = xy$ where possible: $x^2 + y^2 = s^2 - 2p$, $(x - y)^2 = s^2 - 4p$ and $\\tfrac1x + \\tfrac1y = \\tfrac{s}{p}$ are rational. The others are not forced: $x = 2 + \\sqrt3$, $y = 2 - \\sqrt3$ give $s = 4$, $p = 1$ but $x - y = 2\\sqrt3$ and $x^2 - y^2 = s(x - y) = 8\\sqrt3$; $x = 1$, $y = 2$ give $\\sqrt{xy} = \\sqrt2$.",
+        "steps": [
+          "1. $x^2 + y^2 = (x + y)^2 - 2xy$: rational.",
+          "2. $(x - y)^2 = (x + y)^2 - 4xy$: rational.",
+          "3. $\\tfrac1x + \\tfrac1y = \\tfrac{x + y}{xy}$: rational.",
+          "4. $x = 2 \\pm \\sqrt3$: $x - y = 2\\sqrt3$ and $x^2 - y^2 = 8\\sqrt3$ are irrational.",
+          "5. $x = 1$, $y = 2$: $\\sqrt{xy} = \\sqrt2$ is irrational. Answer A, C, D."
+        ],
+        "fast": "Only expressions symmetric in $x$ and $y$ can be built from the sum and product; $x - y$ and $x^2 - y^2$ change sign when $x$ and $y$ swap.",
+        "trap": "Choosing $x - y$ because its square is rational, or $\\sqrt{xy}$ because $xy$ is rational."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "fractions-decimals",
+          "role": "primary"
+        }
+      ],
+      "setup": "sum and product of two numbers rational; select the symmetric expressions forced rational, with conjugate counterexamples for the rest",
+      "variant": "rational vs irrational: which expressions must be rational"
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 3,
+      "prompt": "An online store numbers its orders consecutively. A customer placed 8 orders that received 8 consecutive order numbers, and the sum of those 8 numbers is 10,100. What is the greatest of the 8 order numbers?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "1266"
+      },
+      "explanation": {
+        "key": "If the least number is $n$, the sum is $8n + (0 + 1 + \\cdots + 7) = 8n + 28 = 10{,}100$, so $n = 1{,}259$ and the greatest is $n + 7 = 1{,}266$.",
+        "steps": [
+          "1. Sum $= 8n + 28$.",
+          "2. $8n = 10{,}072$, so $n = 1{,}259$.",
+          "3. Greatest $= 1{,}259 + 7 = 1{,}266$."
+        ],
+        "fast": "The average, $10{,}100 \\div 8 = 1{,}262.5$, sits halfway between the 4th and 5th numbers; the 8th is $3.5$ above it: $1{,}266$.",
+        "trap": "Taking the average as the answer (1,262 or 1,263), or adding 8 instead of 7 to the least number (1,267)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-age-sum",
+          "role": "primary"
+        }
+      ],
+      "setup": "sum of an even-length run of consecutive integers given; the greatest from the half-integer average",
+      "variant": "consecutive-number sums"
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 3,
+      "prompt": "Of all the items the warehouse shipped on Monday, approximately what percent were in orders containing 4 or more items?",
+      "choices": [
+        "$25\\%$",
+        "$33\\%$",
+        "$43\\%$",
+        "$50\\%$",
+        "$57\\%$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Total items: $10(1) + 12(2) + 8(3) + 6(4) + 4(5) = 10 + 24 + 24 + 24 + 20 = 102$. Items in orders of 4 or more: $24 + 20 = 44$. $\\tfrac{44}{102} \\approx 43\\%$.",
+        "steps": [
+          "1. Multiply each row: 10, 24, 24, 24, 20 items.",
+          "2. Total 102 items; orders of 4 or 5 items hold 44.",
+          "3. $44 \\div 102 \\approx 0.43$."
+        ],
+        "fast": "44 is a little less than half of 102, and well above a third.",
+        "trap": "Counting orders instead of items: $\\tfrac{10}{40} = 25\\%$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: share of all units (not of orders) that sit in the larger-order rows of a frequency table",
+      "variant": "estimation to pick the closest value"
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 4,
+      "prompt": "Two of Monday's 40 orders are selected at random, one after the other, without replacement. What is the probability that the two orders contain the same number of items?",
+      "choices": [
+        "$\\dfrac{1}{5}$",
+        "$\\dfrac{8}{39}$",
+        "$\\dfrac{9}{40}$",
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{8}{15}$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Ordered pairs of different orders: $40 \\times 39 = 1{,}560$. Pairs from the same row: $10 \\cdot 9 + 12 \\cdot 11 + 8 \\cdot 7 + 6 \\cdot 5 + 4 \\cdot 3 = 90 + 132 + 56 + 30 + 12 = 320$. Probability $\\tfrac{320}{1{,}560} = \\tfrac{8}{39}$.",
+        "steps": [
+          "1. For each row, P(both from it) $= \\tfrac{c}{40} \\cdot \\tfrac{c - 1}{39}$.",
+          "2. Sum of $c(c - 1)$: $90 + 132 + 56 + 30 + 12 = 320$.",
+          "3. $\\tfrac{320}{1{,}560} = \\tfrac{8}{39}$."
+        ],
+        "fast": "Sum $c(c - 1)$ over the rows and divide by $40 \\cdot 39$.",
+        "trap": "Drawing with replacement: $\\tfrac{100 + 144 + 64 + 36 + 16}{1{,}600} = \\tfrac{9}{40}$; or $\\tfrac15$ for 'one of five rows'."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-conditional",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: two draws without replacement from a frequency table; the probability both come from the same row",
+      "variant": "drawing without replacement"
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 5,
+      "prompt": "Suppose $k$ more orders, each containing 5 items, are added to Monday's 40 orders. What is the least value of $k$ for which the median number of items per order is 3?",
+      "choices": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "8"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The 22 smallest values are 1s and 2s; values 23 through 30 are 3s. With $40 + k$ orders the median is 3 only when every middle position is past the 22nd. For 44 orders the middle values are the 22nd (2) and 23rd (3), so the median is $2.5$. For 45 orders the single middle value is the 23rd, which is 3. So $k = 5$.",
+        "steps": [
+          "1. Cumulative counts: 10 ones, 22 through twos, 30 through threes.",
+          "2. $k = 4$: $n = 44$, median $= \\tfrac{2 + 3}{2} = 2.5$.",
+          "3. $k = 5$: $n = 45$, median is the 23rd value, 3.",
+          "4. Least $k$ is 5."
+        ],
+        "fast": "Need the 23rd value to be the (lower) middle: $n$ odd at 45, or even at 46. The smaller is 45.",
+        "trap": "Stopping at $k = 4$ because the 23rd value is 3, forgetting that 44 values have two middle values (median $2.5$); or jumping to 6 to make the count even."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: least number of added top values that moves the median of a frequency table to a target (odd against even count)",
+      "variant": "median of a list with unknowns"
+    },
+    {
+      "id": "s2q1",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "The function $f$ is defined by $f(x) = 3x - 2$ for all numbers $x$, and $a$ and $b$ are numbers.",
+      "qc": {
+        "a": "$f(a + b)$",
+        "b": "$f(a) + f(b)$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "$f(a + b) = 3a + 3b - 2$, while $f(a) + f(b) = (3a - 2) + (3b - 2) = 3a + 3b - 4$. Quantity A is always 2 greater.",
+        "steps": [
+          "1. $f(a + b) = 3(a + b) - 2$.",
+          "2. $f(a) + f(b) = 3a + 3b - 4$: the $-2$ appears twice.",
+          "3. A $-$ B $= 2 > 0$ for all $a$, $b$. Answer A."
+        ],
+        "fast": "Plug in $a = b = 0$: $f(0) = -2$ against $-4$.",
+        "trap": "Assuming any linear function splits over a sum and answering C; only a line through the origin does."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "functions",
+          "role": "primary"
+        }
+      ],
+      "setup": "linear function with a nonzero constant term: compare f(a + b) with f(a) + f(b) (the constant counts twice)",
+      "variant": "f(a + b) against f(a) + f(b)"
+    },
+    {
+      "id": "s2q2",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A machine cuts square tiles whose side length $s$, in centimeters, satisfies $|s - 20| \\le 0.5$. $T$ is the area, in square centimeters, of one such tile.",
+      "qc": {
+        "a": "The greatest possible value of $|T - 400|$",
+        "b": "$20$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "$19.5 \\le s \\le 20.5$, so $380.25 \\le T \\le 420.25$. The area can miss 400 by $20.25$ on the high side (and $19.75$ on the low side). $20.25 > 20$.",
+        "steps": [
+          "1. Tolerance: $19.5 \\le s \\le 20.5$.",
+          "2. $T$ ranges from $19.5^2 = 380.25$ to $20.5^2 = 420.25$.",
+          "3. Greatest $|T - 400| = 20.25$. Answer A."
+        ],
+        "fast": "$(20 + 0.5)^2 = 400 + 20 + 0.25$: the $0.25$ breaks the tie.",
+        "trap": "Estimating the area's tolerance as $2 \\times 20 \\times 0.5 = 20$ and answering C, or using the low side ($19.75$) and answering B."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "abs-value-inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "a side length within a tolerance; the area's greatest deviation from nominal against the linear estimate (the square term breaks the tie)",
+      "variant": "a tolerance stated as an absolute-value inequality"
+    },
+    {
+      "id": "s2q3",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "figureId": "fig3",
+      "prompt": "In the figure, three straight lines, $\\ell$, $m$ and $n$, all pass through point $O$.",
+      "qc": {
+        "a": "The greater of the two angle measures, in degrees, made where $m$ crosses $n$",
+        "b": "$150$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "The angle marked $x^\\circ$ lies between $m$ and $n$ below $\\ell$; its vertical angle is the unmarked angle between $m$ and $n$ above $\\ell$. The three angles above $\\ell$ make a straight angle: $3x + x + (2x + 30) = 180$, so $x = 25$. Lines $m$ and $n$ form angles of $25^\\circ$ and $155^\\circ$, and $155 > 150$.",
+        "steps": [
+          "1. Vertical angles: the unmarked angle between $m$ and $n$ above $\\ell$ is $x^\\circ$.",
+          "2. Along $\\ell$: $3x + x + 2x + 30 = 180$, so $6x = 150$ and $x = 25$.",
+          "3. Obtuse angle between $m$ and $n$: $180 - 25 = 155$. Answer A."
+        ],
+        "fast": "Move $x$ up to its vertical partner; the three angles on one side of $\\ell$ sum to 180.",
+        "trap": "Treating the $3x^\\circ$ and $(2x + 30)^\\circ$ angles as vertical angles ($x = 30$, giving exactly 150 and C), or setting the three marked angles' sum to 360 ($x = 55$, giving 125 and B)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "lines-angles",
+          "role": "primary"
+        }
+      ],
+      "setup": "three concurrent lines with three marked angles, one across from an unmarked angle; solve along one line, then the obtuse angle between the other two lines",
+      "variant": "angles formed by several intersecting lines"
+    },
+    {
+      "id": "s2q4",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "The function $f$ is defined for all numbers $x$, and its greatest value, 7, occurs only at $x = 3$. The function $g$ is defined by $g(x) = -2f(x + 1)$ for all $x$.",
+      "qc": {
+        "a": "The value of $x$ at which $g$ attains its least value",
+        "b": "$4$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Multiplying by $-2$ turns $f$'s greatest value into $g$'s least value ($-14$). It occurs where the input to $f$ is 3: $x + 1 = 3$, so $x = 2$. The graph of $g$ is shifted 1 unit to the left, not the right. $2 < 4$.",
+        "steps": [
+          "1. $-2f$ is least where $f$ is greatest.",
+          "2. $f(x + 1)$ is greatest when $x + 1 = 3$, so $x = 2$.",
+          "3. $2 < 4$. Answer B."
+        ],
+        "fast": "Solve 'inside of $f$ equals 3': $x + 1 = 3$.",
+        "trap": "Shifting the graph right for $x + 1$ and answering C with $x = 4$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "graphs-of-functions",
+          "role": "primary"
+        }
+      ],
+      "setup": "a function's unique maximum point; a reflected, stretched and shifted copy: compare where the copy's extreme value occurs with a value",
+      "variant": "a shift, a stretch or a reflection of a graph"
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "$N$ is a three-digit integer whose tens digit is equal to the sum of its hundreds digit and its units digit.",
+      "qc": {
+        "a": "The remainder when $N$ is divided by 11",
+        "b": "The units digit of $N$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "With hundreds digit $a$ and units digit $c$, $N = 100a + 10(a + c) + c = 110a + 11c = 11(10a + c)$, so the remainder is always 0. The units digit $c$ can be 0 ($N = 110$: equal) or positive ($N = 121$: B greater). The relationship cannot be determined.",
+        "steps": [
+          "1. $N = 100a + 10b + c$ with $b = a + c$.",
+          "2. $N = 110a + 11c$, a multiple of 11: A $= 0$.",
+          "3. $N = 110$: B $= 0$, equal. $N = 253$: B $= 3$, greater. Answer D."
+        ],
+        "fast": "Examples 121 and 253 are multiples of 11; then ask whether the units digit can be 0 (110).",
+        "trap": "Checking only numbers like 121 and 253, where the units digit is positive, and answering B."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "integers-properties",
+          "role": "primary"
+        }
+      ],
+      "setup": "a digit condition makes a three-digit number a multiple of 11; compare the remainder with the units digit, which can be zero",
+      "variant": "digits and place value of an unknown number"
+    },
+    {
+      "id": "s2q6",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "An online store charges a customer $P$ dollars for an item with list price $L$ dollars, where $P = (1 - d)L + s$, $d$ is the discount rate written as a decimal, and $s$ is a flat shipping fee in dollars. Which of the following expresses $d$ in terms of $P$, $L$ and $s$?",
+      "choices": [
+        "$\\dfrac{P - s}{L}$",
+        "$\\dfrac{L - P - s}{L}$",
+        "$\\dfrac{L - P + s}{L}$",
+        "$1 - \\dfrac{P}{L} + s$",
+        "$\\dfrac{L + P - s}{L}$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Move the fee first: $P - s = (1 - d)L$. Divide by $L$: $1 - d = \\tfrac{P - s}{L}$. So $d = 1 - \\tfrac{P - s}{L} = \\tfrac{L - P + s}{L}$.",
+        "steps": [
+          "1. Subtract $s$: $P - s = (1 - d)L$.",
+          "2. Divide by $L$: $1 - d = \\tfrac{P - s}{L}$.",
+          "3. $d = \\tfrac{L - (P - s)}{L} = \\tfrac{L - P + s}{L}$."
+        ],
+        "fast": "Test $L = 100$, $d = 0.2$, $s = 5$: $P = 85$, and only $\\tfrac{100 - 85 + 5}{100} = 0.2$ returns the discount.",
+        "trap": "Distributing the minus sign wrongly when clearing $1 - \\tfrac{P - s}{L}$ (giving $\\tfrac{L - P - s}{L}$), dividing $P$ by $L$ before moving the fee ($1 - \\tfrac{P}{L} + s$), or stopping at $1 - d$ ($\\tfrac{P - s}{L}$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "linear-equations",
+          "role": "primary"
+        }
+      ],
+      "setup": "a price after a percent discount plus a flat fee, solved for the discount rate (move the fee before dividing; the fee's sign flips)",
+      "variant": "a literal equation: solve for one letter in terms of the others"
+    },
+    {
+      "id": "s2q7",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "revisits": "quant-001:s2q7",
+      "prompt": "A semicircular region contains a square of area 16. The square's base rests on the diameter, and its two upper corners touch the curved boundary. What is the area of the portion of the semicircular region outside the square?",
+      "choices": [
+        "$8\\pi - 16$",
+        "$10\\pi - 16$",
+        "$\\dfrac{25\\pi}{2} - 16$",
+        "$16\\pi - 16$",
+        "$20\\pi - 16$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The square has side 4. By symmetry the center of the diameter is under the middle of the base, so an upper corner is 2 across and 4 up from the center: $r^2 = 2^2 + 4^2 = 20$. The semicircle's area is $\\tfrac12 \\pi r^2 = 10\\pi$, and the region outside the square is $10\\pi - 16$.",
+        "steps": [
+          "1. Side $= \\sqrt{16} = 4$.",
+          "2. Corner at $(2, 4)$ from the center: $r^2 = 4 + 16 = 20$.",
+          "3. Semicircle $= 10\\pi$; minus the square: $10\\pi - 16$."
+        ],
+        "fast": "Radius squared $=$ (half-side)$^2$ + side$^2$ $= 20$.",
+        "trap": "Measuring from a corner of the base ($r^2 = 4^2 + 4^2 = 32$, giving $16\\pi - 16$), taking $r$ as the side ($8\\pi - 16$), or using the full circle ($20\\pi - 16$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inscribed-figures",
+          "role": "primary"
+        }
+      ],
+      "setup": "square on the diameter of a semicircle with its area given; the radius from the half-side, then semicircle minus square",
+      "variant": "a shaded region: whole minus part"
+    },
+    {
+      "id": "s2q8",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "revisits": "quant-002:s1q6",
+      "prompt": "Triangle $ABC$ is inscribed in a circle whose radius is 4. Side $AB$ is $4\\sqrt3$ long, $CA = CB$, and $C$ and the center of the circle are on the same side of line $AB$. What is the area of triangle $ABC$?",
+      "choices": [
+        "$4\\sqrt3$",
+        "$8\\sqrt3$",
+        "$12\\sqrt3$",
+        "$16\\sqrt3$",
+        "$24\\sqrt3$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Half the chord is $2\\sqrt3$, so the chord is $\\sqrt{16 - 12} = 2$ from the center and the central angle $AOB$ is $120^\\circ$. Since $C$ is on the major arc, angle $ACB$ is half of that, $60^\\circ$. An isosceles triangle with a $60^\\circ$ apex is equilateral, so the area is $\\tfrac{\\sqrt3}{4}(4\\sqrt3)^2 = 12\\sqrt3$. (Check: the height from $C$ is $4 + 2 = 6$, and $\\tfrac12 \\cdot 4\\sqrt3 \\cdot 6 = 12\\sqrt3$.)",
+        "steps": [
+          "1. Distance from center to $AB$: $\\sqrt{4^2 - (2\\sqrt3)^2} = 2$; central angle $120^\\circ$.",
+          "2. Inscribed angle from the major arc: $60^\\circ$.",
+          "3. $CA = CB$ with a $60^\\circ$ apex: equilateral, side $4\\sqrt3$.",
+          "4. Area $= \\tfrac{\\sqrt3}{4} \\cdot 48 = 12\\sqrt3$."
+        ],
+        "fast": "$C$ is the far end of the diameter perpendicular to $AB$: height $= r + 2 = 6$.",
+        "trap": "Putting $C$ on the minor arc (angle $120^\\circ$, height $4 - 2 = 2$), which gives $4\\sqrt3$, the same as triangle $AOB$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "circles",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "secondary"
+        }
+      ],
+      "setup": "chord and radius give the central angle; the inscribed angle from the major arc makes an isosceles inscribed triangle equilateral; its area",
+      "variant": "inscribed angle vs central angle"
+    },
+    {
+      "id": "s2q9",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A craft store sells ribbon only in whole meters, at $\\$1.40$ per meter. Orders totaling $\\$10.00$ or less are charged $\\$4.00$ for shipping; larger orders ship free. A customer needs 6.3 meters of ribbon. What is the least total amount, including shipping, the customer can pay to get at least the ribbon needed?",
+      "choices": [
+        "$\\$8.82$",
+        "$\\$9.80$",
+        "$\\$11.20$",
+        "$\\$12.82$",
+        "$\\$13.80$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "6.3 meters means buying at least 7 whole meters. Seven meters cost $\\$9.80$, which is $\\$10.00$ or less, so shipping makes it $\\$13.80$. Eight meters cost $\\$11.20$ and ship free. The least total is $\\$11.20$.",
+        "steps": [
+          "1. Round up: at least 7 m.",
+          "2. 7 m: $\\$9.80 + \\$4.00 = \\$13.80$.",
+          "3. 8 m: $\\$11.20$, over $\\$10.00$, free shipping.",
+          "4. Least: $\\$11.20$."
+        ],
+        "fast": "Seven meters falls just under the free-shipping line; one more meter costs $\\$1.40$ and saves $\\$4.00$.",
+        "trap": "Paying for a fractional 6.3 m ($\\$8.82$), or stopping at the fewest whole meters ($\\$13.80$ with shipping)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-interest",
+          "role": "primary"
+        }
+      ],
+      "setup": "goods sold only in whole units with a non-whole need, then a fee on orders at or below a threshold: buying one more unit is cheaper",
+      "variant": "whole-unit pricing and boundary cases (sold only by the full yard; \"or less\")"
+    },
+    {
+      "id": "s2q10",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "A store is replacing a rectangular sign with a larger rectangular sign. The new sign is 20 percent longer than the old one, and its area is 50 percent greater. By what percent is the new sign's width greater than the old sign's width?",
+      "choices": [
+        "$20\\%$",
+        "$25\\%$",
+        "$30\\%$",
+        "$35\\%$",
+        "$50\\%$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Area factors multiply: $1.2 \\times k = 1.5$, so the width factor is $k = 1.25$, a $25\\%$ increase.",
+        "steps": [
+          "1. New area $= (1.2\\ell)(kw) = 1.2k \\cdot \\ell w$.",
+          "2. $1.2k = 1.5$, so $k = 1.25$.",
+          "3. Width increase: $25\\%$."
+        ],
+        "fast": "$\\tfrac{1.5}{1.2} = \\tfrac54$.",
+        "trap": "Subtracting the percents ($50 - 20 = 30\\%$), as if area changes added rather than multiplied."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "area-perimeter",
+          "role": "primary"
+        }
+      ],
+      "setup": "one side scaled by a percent; the other side's percent change that gives a target area increase (factors multiply, not add)",
+      "variant": "the effect of scaling a side on the area"
+    },
+    {
+      "id": "s2q11",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "revisits": "quant-002:s2q8",
+      "prompt": "A fuel truck carries its fuel in a tank shaped like a cylinder 6 meters long whose circular ends have radius 2 meters, mounted with its axis horizontal. The fuel is 3 meters deep, and at each end of the tank the radii drawn to the two edges of the fuel's surface form a $120^\\circ$ angle. What is the volume of the fuel, in cubic meters?",
+      "choices": [
+        "$8\\pi - 6\\sqrt3$",
+        "$16\\pi - 6\\sqrt3$",
+        "$16\\pi$",
+        "$16\\pi + 6\\sqrt3$",
+        "$18\\pi$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "A depth of 3 is more than the radius, so the tank is more than half full: the fuel's cross section is the whole circle minus the empty segment on top. That segment is a $120^\\circ$ sector minus the triangle formed by the two radii: $\\tfrac13 \\pi (2^2) - \\tfrac12 (2)(2)\\sin 120^\\circ = \\tfrac{4\\pi}{3} - \\sqrt3$. Fuel cross section $= 4\\pi - \\tfrac{4\\pi}{3} + \\sqrt3 = \\tfrac{8\\pi}{3} + \\sqrt3$; times 6 m gives $16\\pi + 6\\sqrt3$.",
+        "steps": [
+          "1. Depth 3 > radius 2: more than half full; work with the empty segment on top.",
+          "2. Empty segment $= \\tfrac{4\\pi}{3} - \\sqrt3$.",
+          "3. Fuel cross section $= 4\\pi - \\left(\\tfrac{4\\pi}{3} - \\sqrt3\\right) = \\tfrac{8\\pi}{3} + \\sqrt3$.",
+          "4. Volume $= 6 \\times$ that $= 16\\pi + 6\\sqrt3$."
+        ],
+        "fast": "Subtracting a segment adds its triangle back: the answer is $\\tfrac23$ of $24\\pi$ plus $6\\sqrt3$.",
+        "trap": "Scaling the full volume by depth ($\\tfrac34 \\times 24\\pi = 18\\pi$), which ignores the round cross section; or treating the $120^\\circ$ region as the fuel and subtracting the triangle ($16\\pi - 6\\sqrt3$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "solids-volume",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "circles",
+          "role": "secondary"
+        }
+      ],
+      "setup": "horizontal cylinder more than half full, the empty segment's central angle given: whole cross section minus the empty segment, times the length",
+      "variant": "scaling a dimension: the effect on volume"
+    },
+    {
+      "id": "s2q12",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "For $t \\ge 0$, the values, in dollars, of two investments $t$ years after they were made are modeled by $A(t) = 500(1.21)^t$ and $B(t) = 500(1.1)^{2t + 2}$. Which of the following statements is true?",
+      "choices": [
+        "$B(t)$ is 10 percent greater than $A(t)$ for every $t$.",
+        "$B(t)$ is 21 percent greater than $A(t)$ for every $t$.",
+        "$B(t) - A(t)$ is the same for every $t$.",
+        "The percent by which $B(t)$ exceeds $A(t)$ increases as $t$ increases.",
+        "$A(t)$ is greater than $B(t)$ for all sufficiently large $t$."
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$(1.1)^{2t + 2} = \\left((1.1)^2\\right)^{t + 1} = (1.21)^{t + 1}$, so $B(t) = 1.21 \\cdot A(t)$ for every $t$. Both grow by the same factor each year, so $B$ stays $21\\%$ above $A$; the dollar gap, $0.21 A(t)$, grows.",
+        "steps": [
+          "1. $(1.1)^2 = 1.21$.",
+          "2. $B(t) = 500(1.21)^{t + 1} = 1.21 \\cdot 500(1.21)^t$.",
+          "3. $\\tfrac{B}{A} = 1.21$ for all $t$: B is $21\\%$ greater."
+        ],
+        "fast": "Compare at $t = 0$ ($605$ against $500$) and note both have yearly factor $1.21$.",
+        "trap": "Reading the $2t$ in the exponent as faster growth (D), or taking the base $1.1$ as a $10\\%$ edge (A)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponential-growth",
+          "role": "primary"
+        }
+      ],
+      "setup": "two exponential models whose different-looking bases and exponents rewrite to the same yearly factor; a constant ratio",
+      "variant": "comparing two exponential models"
+    },
+    {
+      "id": "s2q13",
+      "section": 2,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "figureId": "fig4",
+      "revisits": "quant-001:s2q12",
+      "prompt": "The table gives partial information about 50 purchases at a store. Which of the following could be the number of purchases made with a coupon but not paid by card? Indicate all such numbers.",
+      "choices": [
+        "1",
+        "10",
+        "16",
+        "22",
+        "24",
+        "28"
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Let $b$ be the coupon-and-card cell. The no-coupon, no-card cell is $50 - (30 + 28 - b) = b - 8$, which cannot be negative, so $b \\ge 8$ and the coupon-without-card cell, $30 - b$, is at most 22. The card-without-coupon cell, $28 - b$, cannot be negative either, so $b \\le 28$ and $30 - b$ is at least 2. So 10, 16 and 22 are possible; 1, 24 and 28 are not.",
+        "steps": [
+          "1. Fill the table with $b$: coupon without card $30 - b$, card without coupon $28 - b$, neither $b - 8$.",
+          "2. Neither $\\ge 0$: $b \\ge 8$, so $30 - b \\le 22$.",
+          "3. Card without coupon $\\ge 0$: $b \\le 28$, so $30 - b \\ge 2$.",
+          "4. The cell runs from 2 to 22: choices 10, 16, 22."
+        ],
+        "fast": "The empty bottom-right cell is $b - 8$; it forces at least 8 purchases with both, so at most 22 with a coupon only.",
+        "trap": "Bounding the cell only by its row total of 30 (allowing 24 and 28), which leaves the no-coupon, no-card cell negative; or forgetting that the card column caps the coupon-and-card cell at 28, which lets 1 in."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "overlapping-sets",
+          "role": "primary"
+        }
+      ],
+      "setup": "two-way table with only margins given; one cell's range from keeping every other cell nonnegative",
+      "variant": "a double-matrix (two-way) table"
+    },
+    {
+      "id": "s2q14",
+      "section": 2,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "In triangle $PQR$, $PQ = 10$, and the altitude from $R$ to line $PQ$ has length 6. Which of the following could be the length of side $QR$? Indicate all such lengths.",
+      "choices": [
+        "4",
+        "7.5",
+        "11",
+        "12",
+        "30"
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "$R$ lies on a line parallel to $PQ$ at distance 6, so $QR \\ge 6$. Nothing keeps the foot of the altitude between $P$ and $Q$: with the foot a distance $d$ from $Q$ on either side, $QR = \\sqrt{36 + d^2}$ takes every value above 6. So 7.5, 11, 12 and 30 all work; 4 is shorter than the altitude.",
+        "steps": [
+          "1. $QR$ is at least the distance from $R$ to line $PQ$: $QR \\ge 6$, so 4 fails.",
+          "2. Foot inside $PQ$ ($d \\le 10$): $QR$ up to $\\sqrt{136} \\approx 11.7$, giving 7.5 and 11.",
+          "3. Foot beyond $Q$ (obtuse angle at $Q$): $d = \\sqrt{108}$ gives 12, $d = \\sqrt{864}$ gives 30."
+        ],
+        "fast": "Slide $R$ along the line 6 above $PQ$: $QR$ takes every value from 6 up.",
+        "trap": "Keeping the foot of the altitude on segment $PQ$, which caps $QR$ at $\\sqrt{136} \\approx 11.7$ and drops 12 and 30."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "primary"
+        }
+      ],
+      "setup": "one side and the altitude to it given; select possible lengths of another side (the foot may fall outside the base)",
+      "variant": "area with an altitude outside the triangle"
+    },
+    {
+      "id": "s2q15",
+      "section": 2,
+      "type": "numeric",
+      "difficulty": 4,
+      "figureId": "fig5",
+      "prompt": "The boxplot summarizes the delivery times, in minutes, of 200 orders from a restaurant. A delivery time is classified as an outlier if it is more than 1.5 times the interquartile range above the third quartile. If the longest delivery time were changed and all the other times stayed the same, what is the least whole number of minutes it could be changed to so that it would be an outlier?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "63"
+      },
+      "explanation": {
+        "key": "From the box, $Q_1 = 25$ and $Q_3 = 40$, so the interquartile range is 15. The outlier cutoff is $40 + 1.5(15) = 62.5$, and a time must be more than that. Changing only the longest time leaves the quartiles where they are, so the least whole number is 63.",
+        "steps": [
+          "1. Read $Q_1 = 25$ (left edge of the box) and $Q_3 = 40$ (right edge).",
+          "2. IQR $= 15$; $1.5 \\times 15 = 22.5$.",
+          "3. Cutoff $= 62.5$; least whole number above it: 63."
+        ],
+        "fast": "$40 + 22.5 = 62.5$, so 63.",
+        "trap": "Using the median (30) or the whisker ends in place of the box edges, or answering 62 by rounding the cutoff down."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quartiles-boxplots",
+          "role": "primary"
+        }
+      ],
+      "setup": "read Q1 and Q3 off a boxplot; the outlier fence above Q3 and the least whole value past it",
+      "variant": "reading quartiles and the IQR from a boxplot"
+    }
+  ]
+}

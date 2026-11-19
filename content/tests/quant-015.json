@@ -1,0 +1,555 @@
+{
+  "id": "quant-015",
+  "measure": "quant",
+  "title": "Quant Hard Mock 15",
+  "sections": [{ "n": 1, "minutes": 21 }, { "n": 2, "minutes": 26 }],
+  "passages": [],
+  "figures": [
+    { "id": "fig1", "caption": "Scores on a five-point lab practical in two sections of a biology course", "table": { "head": ["Score", "Number of students, Section P", "Number of students, Section Q"], "rows": [["1", "2", "4"], ["2", "3", "6"], ["3", "5", "5"], ["4", "6", "3"], ["5", "4", "2"]] } },
+    { "id": "fig2", "caption": "Note: Figure not drawn to scale.", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 230' width='260' height='230' font-family='serif' font-size='14'><line x1='126' y1='7' x2='184' y2='209' stroke='currentColor' stroke-width='1.5'/><line x1='191' y1='204' x2='30' y2='74' stroke='currentColor' stroke-width='1.5'/><line x1='27' y1='82' x2='236' y2='93' stroke='currentColor' stroke-width='1.5'/><line x1='234' y1='84' x2='60' y2='197' stroke='currentColor' stroke-width='1.5'/><line x1='67' y1='203' x2='135' y2='7' stroke='currentColor' stroke-width='1.5'/><text x='121' y='51' fill='currentColor'>x°</text><text x='188' y='103' fill='currentColor'>28°</text><text x='158' y='179' fill='currentColor'>36°</text><text x='79' y='174' fill='currentColor'>40°</text><text x='56' y='96' fill='currentColor'>44°</text></svg>" },
+    { "id": "fig3", "caption": "Note: Figure not drawn to scale.", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200' width='300' height='200' font-family='serif' font-size='15'><path d='M 20 170 A 130 130 0 0 1 280 170 A 90 90 0 0 0 100 170 A 40 40 0 0 0 20 170 Z' fill='currentColor' fill-opacity='0.2' stroke='currentColor' stroke-width='1.5'/><line x1='20' y1='170' x2='280' y2='170' stroke='currentColor' stroke-width='1.5'/><line x1='100' y1='170' x2='100' y2='50' stroke='currentColor' stroke-width='1.5'/><polyline points='100,160 110,160 110,170' fill='none' stroke='currentColor' stroke-width='1'/><text x='8' y='188' fill='currentColor'>A</text><text x='95' y='188' fill='currentColor'>C</text><text x='280' y='188' fill='currentColor'>B</text><text x='94' y='42' fill='currentColor'>D</text></svg>" }
+  ],
+  "questions": [
+    {
+      "id": "s1q1", "section": 1, "type": "qc", "difficulty": 3,
+      "prompt": "$|3 - x| = |x + 11|$",
+      "qc": { "a": "$x$", "b": "$-4$" },
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "$|3 - x|$ is the distance from $x$ to $3$, and $|x + 11|$ is the distance from $x$ to $-11$. A number equally far from two different numbers is their midpoint, $x = \\tfrac{3 + (-11)}{2} = -4$. The quantities are equal.",
+        "steps": [
+          "1. Rewrite $|3 - x|$ as $|x - 3|$ and $|x + 11|$ as $|x - (-11)|$: two distances on the number line.",
+          "2. Equal distances to $3$ and $-11$ put $x$ at the midpoint, $\\tfrac{3 - 11}{2} = -4$.",
+          "3. Check: $|3 - (-4)| = 7$ and $|-4 + 11| = 7$. Answer C."
+        ],
+        "fast": "Square both sides: $(x - 3)^2 = (x + 11)^2$ gives $-6x + 9 = 22x + 121$, so $x = -4$.",
+        "trap": "Averaging $3$ and $11$ while ignoring the sign inside $|x + 11|$ gives $7$ and answer A."
+      },
+      "tags": [{ "kind": "concept", "id": "abs-value-inequalities", "role": "primary" }],
+      "setup": "one unknown equidistant from two fixed numbers written as equal absolute values; compare it with a value",
+      "variant": "|x - a| = |x - b|: the point midway"
+    },
+    {
+      "id": "s1q2", "section": 1, "type": "qc", "difficulty": 4,
+      "prompt": "A school's swim team has 25 percent more members than its track team. Of the swim team's members, 16 percent are first-year students; of the track team's members, 20 percent are first-year students.",
+      "qc": { "a": "The number of first-year students on the swim team", "b": "The number of first-year students on the track team" },
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Let the track team have $t$ members. The swim team has $1.25t$, so its first-year students number $0.16 \\times 1.25t = 0.2t$, the same as the track team's $0.2t$. The quantities are equal for every team size.",
+        "steps": [
+          "1. Track team: $t$ members; swim team: $1.25t$.",
+          "2. Swim first-years: $0.16(1.25t) = 0.20t$.",
+          "3. Track first-years: $0.20t$. Equal for every $t$. Answer C."
+        ],
+        "fast": "$16\\% \\times 1.25 = 20\\%$: the larger base exactly offsets the smaller rate.",
+        "trap": "Comparing the rates alone ($16\\% < 20\\%$) gives B; comparing the team sizes alone gives A. The two percents apply to different bases."
+      },
+      "tags": [{ "kind": "concept", "id": "percent", "role": "primary" }],
+      "setup": "one group a percent larger than another, a different percent of each group taken; compare the two parts (the base offsets the rate)",
+      "variant": "percent comparisons in QC with unknown bases"
+    },
+    {
+      "id": "s1q3", "section": 1, "type": "qc", "difficulty": 4,
+      "prompt": "Triangle $ABC$ has $AB = 13$ and $AC = 15$. Point $D$ lies in the plane of the triangle, with $AD = 12$, $BD = 5$ and $CD = 9$.",
+      "qc": { "a": "$BC$", "b": "$14$" },
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "Since $5^2 + 12^2 = 13^2$, angle $ADB$ is a right angle; since $9^2 + 12^2 = 15^2$, angle $ADC$ is a right angle. So $B$ and $C$ both lie on the line through $D$ perpendicular to $AD$, but nothing says $D$ is between them. If it is, $BC = 5 + 9 = 14$; if $B$ and $C$ are on the same side of $D$, $BC = 9 - 5 = 4$, and $13$, $15$, $4$ still form a triangle. The relationship cannot be determined.",
+        "steps": [
+          "1. $5^2 + 12^2 = 13^2$, so $AD \\perp BD$.",
+          "2. $9^2 + 12^2 = 15^2$, so $AD \\perp CD$.",
+          "3. Both $B$ and $C$ lie on the one line through $D$ perpendicular to $AD$.",
+          "4. $D$ between $B$ and $C$: $BC = 14$ (equal). $B$ and $C$ on the same side of $D$: $BC = 4$ (B greater). Answer D."
+        ],
+        "fast": "The numbers suggest the 13-14-15 triangle with $D$ the foot of the altitude, but $D$ is never placed on side $BC$; put $B$ between $D$ and $C$ and $BC$ shrinks to $4$.",
+        "trap": "Treating $D$ as the foot of the altitude on side $BC$ (the familiar split of $14$ into $5$ and $9$) and answering C."
+      },
+      "tags": [{ "kind": "concept", "id": "figures-not-to-scale", "role": "primary" }, { "kind": "concept", "id": "pythagorean-special", "role": "secondary" }],
+      "setup": "a point at given distances from three vertices looks like the foot of an altitude; two right angles put it on the line through two vertices but not between them; compare that side with a value",
+      "variant": "a point that looks on a line or circle but is not stated to be"
+    },
+    {
+      "id": "s1q4", "section": 1, "type": "qc", "difficulty": 5,
+      "prompt": "The counting number $m$ is a multiple of 3, and $m - 5$ is a multiple of 14.",
+      "qc": { "a": "What is left over after dividing $\\dfrac{m}{3}$ by 14", "b": "What is left over after dividing $m$ by 14" },
+      "key": { "sel": [0] },
+      "explanation": {
+        "key": "The candidates for $m$ are $5, 19, 33, 47, \\dots$; the first multiple of 3 among them is 33, and since 3 and 14 share no factor, the multiples of 3 in the list repeat every 42: $m = 33 + 42k$. Then $\\tfrac{m}{3} = 11 + 14k$, which leaves 11 on division by 14 every time. Quantity B is 5, so Quantity A is greater.",
+        "steps": [
+          "1. $m = 14j + 5$: try 5, 19, 33. The first multiple of 3 is $m = 33$.",
+          "2. The multiples of 3 in this list repeat every $3 \\cdot 14 = 42$, so $m = 33 + 42k$.",
+          "3. $\\tfrac{m}{3} = 11 + 14k$: remainder 11 on division by 14.",
+          "4. Quantity B is 5. $11 > 5$: answer A."
+        ],
+        "fast": "Dividing by 3 keeps the modulus 14 because 3 and 14 are coprime: solve $3x \\equiv 5 \\pmod{14}$; $3 \\cdot 11 = 33 = 2 \\cdot 14 + 5$, so $x = 11$.",
+        "trap": "Answering D because 5 is not divisible by 3 (so the remainder seems unknowable), or C by assuming dividing $m$ by 3 leaves its remainder unchanged; dividing by a factor that shares no prime with the divisor leaves the remainder fully determined."
+      },
+      "tags": [{ "kind": "concept", "id": "remainders-units", "role": "primary" }],
+      "setup": "a multiple of 3 with a known remainder mod 14; the remainder of the number divided by 3 is fixed because 3 and 14 are coprime; compare it with the original remainder",
+      "variant": "remainder of a negative or fractional expression of n"
+    },
+    {
+      "id": "s1q5", "section": 1, "type": "mc", "difficulty": 3,
+      "prompt": "A lab's stock solution contains 0.0198 gram of salt per milliliter. A technician uses 61.2 liters of the solution to prepare doses that contain 0.398 gram of salt each. Which of the following is closest to the number of doses the technician can prepare?",
+      "choices": ["300", "2,700", "3,000", "3,300", "30,000"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Salt: $0.0198 \\times 61{,}200 \\approx 0.02 \\times 61{,}200 = 1{,}224$ grams. Doses: $1{,}224 \\div 0.4 \\approx 3{,}060$. Both roundings push the estimate up slightly; the exact value is about $3{,}045$, closest to $3{,}000$.",
+        "steps": [
+          "1. Convert: $61.2$ liters $= 61{,}200$ milliliters.",
+          "2. Salt: $0.0198 \\times 61{,}200 \\approx 0.02 \\times 61{,}200 = 1{,}224$ grams (about 1 percent high).",
+          "3. Doses: $1{,}224 \\div 0.4 = 3{,}060$; dividing by $0.4$ instead of $0.398$ lowers it about half a percent, so the true value is near $3{,}045$.",
+          "4. Closest choice: $3{,}000$."
+        ],
+        "fast": "$\\tfrac{0.02 \\times 61{,}200}{0.4} = 0.05 \\times 61{,}200 = 3{,}060$, comfortably nearer $3{,}000$ than $3{,}300$.",
+        "trap": "Skipping the liter-to-milliliter conversion or misplacing a decimal point lands on 300 or 30,000."
+      },
+      "tags": [{ "kind": "concept", "id": "estimation-sigfig", "role": "primary" }],
+      "setup": "concentration times volume over a per-dose amount, with a unit conversion; round each factor and pick the nearest of closely spaced choices",
+      "variant": "estimating a product or quotient to pick the closest choice"
+    },
+    {
+      "id": "s1q6", "section": 1, "type": "mc", "difficulty": 4,
+      "prompt": "A school club sells T-shirts at a price set so that the profit on each shirt is 25 percent of the shirt's selling price. If the club raises the selling price by 10 percent and its cost per shirt does not change, the profit on each shirt will be what percent of the cost?",
+      "choices": ["$33\\tfrac{1}{3}\\%$", "$35\\%$", "$37\\tfrac{1}{2}\\%$", "$46\\tfrac{2}{3}\\%$", "$50\\%$"],
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "Take the old price as $\\$100$. The profit is $\\$25$, so the cost is $\\$75$. The new price is $\\$110$ and the new profit $\\$35$, which is $\\tfrac{35}{75} = 46\\tfrac{2}{3}\\%$ of the cost.",
+        "steps": [
+          "1. Old price $\\$100$, profit $\\$25$, so cost $\\$75$.",
+          "2. New price $\\$110$; new profit $110 - 75 = 35$ dollars.",
+          "3. As a percent of the cost: $\\tfrac{35}{75} = \\tfrac{7}{15} = 46\\tfrac{2}{3}\\%$."
+        ],
+        "fast": "The cost is $0.75$ of the old price; the new profit is $1.10 - 0.75 = 0.35$ of the old price; $\\tfrac{0.35}{0.75} = 46\\tfrac23\\%$.",
+        "trap": "Reading 25 percent of the selling price as 25 percent of the cost (cost 100, price 125, new price 137.5) gives $37\\tfrac12\\%$; adding 10 points to 25 gives $35\\%$, the new profit as a percent of the old price, not of the cost."
+      },
+      "tags": [{ "kind": "concept", "id": "word-problems-interest", "role": "primary" }, { "kind": "concept", "id": "percent", "role": "secondary" }],
+      "setup": "profit given as a percent of the selling price; the price rises by a percent with the cost fixed; the new profit as a percent of cost",
+      "variant": "profit as a percent of cost vs of price"
+    },
+    {
+      "id": "s1q7", "section": 1, "type": "mc", "difficulty": 5,
+      "prompt": "Each sample in a lab is labeled with an even integer that is greater than 500 and less than 1,000 and whose three digits are all different. How many different labels are possible?",
+      "choices": ["160", "184", "200", "216", "230"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "Split by the hundreds digit, because an even hundreds digit uses up one of the even digits the units place needs. Hundreds digit 5, 7 or 9: 5 even units digits and then 8 tens digits, $3 \\times 5 \\times 8 = 120$. Hundreds digit 6 or 8: 4 even units digits remain, then 8 tens digits, $2 \\times 4 \\times 8 = 64$. Total $184$.",
+        "steps": [
+          "1. Hundreds digit: 5, 6, 7, 8 or 9 (500 itself repeats a digit).",
+          "2. Odd hundreds digit (5, 7, 9): units digit from $\\{0, 2, 4, 6, 8\\}$, 5 ways; tens digit from the 8 unused digits: $3 \\cdot 5 \\cdot 8 = 120$.",
+          "3. Even hundreds digit (6, 8): units digit from the other 4 even digits; tens digit 8 ways: $2 \\cdot 4 \\cdot 8 = 64$.",
+          "4. $120 + 64 = 184$."
+        ],
+        "fast": "Fill the hundreds digit, then the units digit, and the tens digit last: the tens digit always has 8 choices, so only the units count depends on the case.",
+        "trap": "Multiplying $5 \\times 5 \\times 8 = 200$ as if every hundreds digit left all five even units digits free."
+      },
+      "tags": [{ "kind": "concept", "id": "counting-restrictions", "role": "primary" }],
+      "setup": "three-digit even numbers above a bound with distinct digits: the leading digit's parity changes the units count, so split into two cases",
+      "variant": "digits with restrictions (no repeats, even, > 500)"
+    },
+    {
+      "id": "s1q8", "section": 1, "type": "mc_multi", "difficulty": 4,
+      "prompt": "Call a positive integer descending if each of its digits is less than the digit to its left; for example, 8,530 is descending, but 8,550 and 8,503 are not. For a certain positive integer $k$, there are exactly 120 descending integers that have $k$ digits. Which of the following could be the value of $k$?\n\nIndicate all such values.",
+      "choices": ["2", "3", "4", "6", "7", "8"],
+      "key": { "sel": [1, 4] },
+      "explanation": {
+        "key": "A descending integer is fixed by its set of digits: any $k$ different digits, listed from greatest to least, give exactly one, and 0 can only land last, so the leading digit is never 0. So for $k \\ge 2$ there are $\\binom{10}{k}$ descending $k$-digit integers. $\\binom{10}{k} = 120$ for $k = 3$ and, because $\\binom{10}{k} = \\binom{10}{10 - k}$, also for $k = 7$.",
+        "steps": [
+          "1. Choose the set of $k$ digits; the order is forced (greatest first).",
+          "2. If 0 is chosen it goes last, so every set gives a valid $k$-digit integer: $\\binom{10}{k}$ of them.",
+          "3. $\\binom{10}{2} = 45$, $\\binom{10}{3} = 120$, $\\binom{10}{4} = 210$, $\\binom{10}{6} = 210$, $\\binom{10}{7} = 120$, $\\binom{10}{8} = 45$.",
+          "4. $k = 3$ or $k = 7$."
+        ],
+        "fast": "$\\binom{10}{3} = 120$, and choosing 7 digits is the same as choosing the 3 left out.",
+        "trap": "Stopping at $k = 3$ and missing the symmetric $k = 7$; or leaving out the digit 0 and using $\\binom{9}{k}$, which never equals 120."
+      },
+      "tags": [{ "kind": "concept", "id": "counting-permutations", "role": "primary" }],
+      "setup": "the count of numbers with strictly decreasing digits is given; find the possible digit lengths (choosing sets, with the symmetric choose count)",
+      "variant": "committees with roles: chair plus members",
+      "revisits": "quant-002:s1q7"
+    },
+    {
+      "id": "s1q9", "section": 1, "type": "numeric", "difficulty": 3,
+      "prompt": "An inlet pipe can fill an empty water trough on a farm in 6 hours, and the trough's drain can empty a full trough in 10 hours. The trough starts empty and the inlet is opened. For the first 5 hours the drain is also open by mistake; then the drain is closed. How many hours after the inlet is opened is the trough full?",
+      "numeric": { "kind": "single" },
+      "key": { "value": "9" },
+      "explanation": {
+        "key": "With both open, the net rate is $\\tfrac16 - \\tfrac1{10} = \\tfrac1{15}$ trough per hour, so the first 5 hours fill $\\tfrac13$ of the trough. The inlet alone fills the remaining $\\tfrac23$ in $\\tfrac23 \\times 6 = 4$ hours. Total: $5 + 4 = 9$ hours.",
+        "steps": [
+          "1. Net rate with the drain open: $\\tfrac16 - \\tfrac1{10} = \\tfrac1{15}$ per hour.",
+          "2. After 5 hours: $\\tfrac5{15} = \\tfrac13$ full.",
+          "3. Inlet alone: $\\tfrac23 \\div \\tfrac16 = 4$ more hours. Total 9."
+        ],
+        "fast": "In 5 hours the inlet adds $\\tfrac56$ and the drain removes $\\tfrac12$, leaving $\\tfrac13$; the other $\\tfrac23$ takes 4 hours.",
+        "trap": "Answering 4, the time after the drain closes, instead of the time since the inlet opened."
+      },
+      "tags": [{ "kind": "concept", "id": "word-problems-rate", "role": "primary" }],
+      "setup": "inlet and drain open together for a stretch, then the drain closes; total time to fill",
+      "variant": "pipes filling and draining at once"
+    },
+    {
+      "id": "s1q10", "section": 1, "type": "mc", "setId": "di1", "figureId": "fig1", "difficulty": 3,
+      "prompt": "Four students in Section P who missed the practical take it later, and each of them scores 5. When their scores are included, by how much does the mean score for Section P increase?",
+      "choices": ["$0.25$", "$0.275$", "$0.33$", "$0.4125$", "$1.65$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "Section P's 20 scores total $2 + 6 + 15 + 24 + 20 = 67$, a mean of $3.35$. Adding four 5s gives $\\tfrac{87}{24} = 3.625$, an increase of $0.275$. Equivalently, the new group sits $5 - 3.35 = 1.65$ above the old mean and makes up $\\tfrac{4}{24}$ of the new total, so the mean rises $1.65 \\times \\tfrac{4}{24} = 0.275$.",
+        "steps": [
+          "1. Section P: $1 \\cdot 2 + 2 \\cdot 3 + 3 \\cdot 5 + 4 \\cdot 6 + 5 \\cdot 4 = 67$ over 20 students; mean $3.35$.",
+          "2. New total $67 + 20 = 87$ over 24 students; mean $3.625$.",
+          "3. Increase: $3.625 - 3.35 = 0.275$."
+        ],
+        "fast": "Change in mean $=$ (new group's size $\\times$ its distance above the old mean) $\\div$ new size $= \\tfrac{4 \\times 1.65}{24} = 0.275$.",
+        "trap": "Dividing the excess $4 \\times 1.65$ by the old 20 students instead of all 24 gives $0.33$."
+      },
+      "tags": [{ "kind": "concept", "id": "weighted-average", "role": "primary" }],
+      "setup": "a frequency table gives a group's mean; a few new members with one equal score join; the rise in the mean",
+      "variant": "the change in the mean when a group joins"
+    },
+    {
+      "id": "s1q11", "section": 1, "type": "mc", "setId": "di1", "figureId": "fig1", "difficulty": 4,
+      "prompt": "Which of the following statements about the scores in the two sections is true?",
+      "choices": [
+        "The mean for Section P is greater, and the standard deviation for Section P is greater.",
+        "The mean for Section P is greater, and the two standard deviations are equal.",
+        "The mean for Section P is greater, and the standard deviation for Section Q is greater.",
+        "The two means are equal, and the two standard deviations are equal.",
+        "The mean for Section Q is greater, and the standard deviation for Section Q is greater."
+      ],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "Section Q's counts are Section P's counts in reverse order: Q has as many 1s as P has 5s, as many 2s as P has 4s, and so on. So Q's list is P's list with each score $s$ replaced by $6 - s$, a reflection about 3. The reflection moves the mean from $3.35$ to $6 - 3.35 = 2.65$ but leaves every distance from the mean unchanged, so the standard deviations are equal.",
+        "steps": [
+          "1. Read the columns: P has $2, 3, 5, 6, 4$ students at scores 1 to 5; Q has $4, 6, 5, 3, 2$, the same counts reversed.",
+          "2. Q's scores are $6 - s$ for P's scores $s$: multiplying by $-1$ and adding 6.",
+          "3. Adding a constant does not change the standard deviation, and multiplying by $-1$ does not either.",
+          "4. P's mean is $3.35$ and Q's is $2.65$. P's mean is greater; the standard deviations are equal."
+        ],
+        "fast": "Mirror image: same spread, means on opposite sides of 3. P has more high scores, so P's mean is the greater.",
+        "trap": "Assuming the section whose scores lean high must also be more spread out, or spotting the mirror and concluding the means are equal too."
+      },
+      "tags": [{ "kind": "concept", "id": "std-dev-normal", "role": "primary" }],
+      "setup": "two frequency columns that are mirror images of each other: equal standard deviations, means reflected about the middle score",
+      "variant": "comparing the spread of two lists without computing"
+    },
+    {
+      "id": "s1q12", "section": 1, "type": "mc", "setId": "di1", "figureId": "fig1", "difficulty": 5,
+      "prompt": "Each student in the two sections was also asked whether he or she had attended an optional review session before the practical; 15 students in Section P and 6 students in Section Q said yes. What is the least possible number of students in the two sections combined who scored 4 or 5 on the practical and said yes?",
+      "choices": ["0", "4", "5", "9", "15"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Bound each section separately, because a student belongs to only one section. Section P: 10 of its 20 students scored 4 or 5 and 15 said yes, so at least $10 + 15 - 20 = 5$ did both. Section Q: 5 scored 4 or 5 and 6 said yes, and $5 + 6 < 20$, so the overlap there can be 0. The least combined number is $5 + 0 = 5$.",
+        "steps": [
+          "1. Section P: scored 4 or 5: $6 + 4 = 10$; said yes: 15; overlap at least $10 + 15 - 20 = 5$.",
+          "2. Section Q: scored 4 or 5: $3 + 2 = 5$; said yes: 6; $5 + 6 - 20 < 0$, so the overlap can be 0.",
+          "3. Combined: at least $5 + 0 = 5$, and 5 is attainable."
+        ],
+        "fast": "Only Section P is crowded enough to force an overlap: $10 + 15$ exceeds 20 by 5.",
+        "trap": "Pooling the sections: $15 + 21 - 40 < 0$ suggests 0, but Section Q's spare room cannot absorb Section P's yes answers."
+      },
+      "tags": [{ "kind": "concept", "id": "overlapping-sets", "role": "primary" }],
+      "setup": "least overlap of two survey answers across two separate groups: bound each group separately; pooling the totals understates it",
+      "variant": "at least / at most counts from a survey with overlap"
+    },
+    {
+      "id": "s2q1", "section": 2, "type": "qc", "difficulty": 4,
+      "prompt": "Two-sevenths of the members of a rowing club are juniors, and all the other members are seniors. The club then signs up 15 more juniors and no other members, which makes the ratio of juniors to seniors $1:2$.",
+      "qc": { "a": "The number of seniors in the club", "b": "$120$" },
+      "key": { "sel": [0] },
+      "explanation": {
+        "key": "Two-sevenths of the members means juniors to all members is $2:7$, so juniors to seniors is $2:5$. With $2m$ juniors and $5m$ seniors, $\\tfrac{2m + 15}{5m} = \\tfrac12$ gives $4m + 30 = 5m$, so $m = 30$: 150 seniors, more than 120.",
+        "steps": [
+          "1. Part to whole $2:7$ means part to part $2:5$.",
+          "2. $2(2m + 15) = 5m$, so $m = 30$.",
+          "3. Seniors $= 5m = 150 > 120$. Answer A."
+        ],
+        "fast": "The seniors never change: the juniors end at half of $5m$, so $\\tfrac{5m}{2} - 2m = 15$ and $m = 30$.",
+        "trap": "Reading two-sevenths as a juniors-to-seniors ratio of $2:7$: $\\tfrac{2m + 15}{7m} = \\tfrac12$ gives $m = 10$ and only 70 seniors (B). Reading $1:2$ as juniors being half of all members gives $m = 5$ and 25 seniors."
+      },
+      "tags": [{ "kind": "concept", "id": "ratio-proportion", "role": "primary" }],
+      "setup": "a part-to-whole fraction before and a part-to-part ratio after adding members of one kind; compare the unchanged kind's count with a value",
+      "variant": "part-to-part vs part-to-whole confusion",
+      "revisits": "quant-002:s1q9"
+    },
+    {
+      "id": "s2q2", "section": 2, "type": "qc", "difficulty": 5,
+      "prompt": "The function $f$ is defined by $f(x) = \\dfrac{\\sqrt{6 - x}}{\\sqrt{x + 3} - 2}$ for every real number $x$ at which the expression is defined.",
+      "qc": { "a": "The number of integers $x$ for which $f(x)$ is defined", "b": "$9$" },
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "$\\sqrt{6 - x}$ needs $x \\le 6$; $\\sqrt{x + 3}$ needs $x \\ge -3$; and the denominator is 0 when $\\sqrt{x + 3} = 2$, that is, at $x = 1$. The integers from $-3$ to $6$ number 10; removing $x = 1$ leaves 9. At $x = -3$ the denominator is $0 - 2 = -2$, so $-3$ stays in. Equal.",
+        "steps": [
+          "1. Numerator: $6 - x \\ge 0$, so $x \\le 6$.",
+          "2. Square root in the denominator: $x + 3 \\ge 0$, so $x \\ge -3$.",
+          "3. Denominator not zero: $\\sqrt{x + 3} \\ne 2$, so $x \\ne 1$.",
+          "4. Integers $-3, -2, \\ldots, 6$ (10 of them) minus $x = 1$: 9. Answer C."
+        ],
+        "fast": "Interval $[-3, 6]$ holds 10 integers; the only hole is where $x + 3 = 4$.",
+        "trap": "Forgetting that the denominator vanishes at $x = 1$ gives 10 (A); dropping $x = -3$ because a square root sits in the denominator gives 8 (B). The root there is $0$, but the denominator is $-2$."
+      },
+      "tags": [{ "kind": "concept", "id": "functions", "role": "primary" }],
+      "setup": "count the integers in the domain of a quotient of square roots whose denominator subtracts a constant from a root (one hidden excluded point)",
+      "variant": "domain restrictions (square roots, denominators)"
+    },
+    {
+      "id": "s2q3", "section": 2, "type": "qc", "difficulty": 5,
+      "prompt": "In the $xy$-plane, consider the graphs of $y = x^2 - 4x$ and $y = |x|$.",
+      "qc": { "a": "The number of points at which the two graphs intersect", "b": "$3$" },
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "For $x \\ge 0$, $x^2 - 4x = x$ gives $x = 0$ or $x = 5$. For $x < 0$, $x^2 - 4x = -x$ gives $x^2 - 3x = 0$, so $x = 0$ or $x = 3$, but neither is negative, so this piece adds no new point. The graphs meet only at $(0, 0)$ and $(5, 5)$: 2 points, fewer than 3.",
+        "steps": [
+          "1. Right piece ($x \\ge 0$): $x^2 - 5x = 0$, so $x = 0$ or $5$; both allowed.",
+          "2. Left piece ($x < 0$): $x^2 - 3x = 0$, so $x = 0$ or $3$; neither is negative, so reject both.",
+          "3. Intersections: $(0, 0)$ and $(5, 5)$. Two points. Answer B."
+        ],
+        "fast": "For $x < 0$ the parabola $x^2 - 4x$ is positive and grows faster than $-x$ ($x^2 - 4x > -x$ there), so the left branch of $|x|$ never meets it.",
+        "trap": "Collecting $x = 0, 5, 3$ from the two cases without checking each against its own condition gives 3 points (C); at $x = 3$ the parabola is at $-3$, not $3$."
+      },
+      "tags": [{ "kind": "concept", "id": "graphs-of-functions", "role": "primary" }, { "kind": "concept", "id": "abs-value-inequalities", "role": "secondary" }],
+      "setup": "a parabola against an absolute-value graph: solve on each piece and reject the roots outside that piece's domain; compare the count with a value",
+      "variant": "intersections of two graphs"
+    },
+    {
+      "id": "s2q4", "section": 2, "type": "qc", "difficulty": 4,
+      "prompt": "Consider the integers that have exactly two positive divisors.",
+      "qc": { "a": "The number of such integers that are greater than 80 and less than 100", "b": "The number of such integers that are greater than 100 and less than 110" },
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "Exactly two positive divisors means prime. Between 80 and 100 the primes are 83, 89 and 97: 81 is $9^2$, 87 is $3 \\cdot 29$, 91 is $7 \\cdot 13$, 93 is $3 \\cdot 31$, and the rest are even or multiples of 5. So A is 3. Between 100 and 110 the primes are 101, 103, 107 and 109 (105 is $3 \\cdot 5 \\cdot 7$), so B is 4.",
+        "steps": [
+          "1. Two positive divisors: the integer is prime.",
+          "2. Odd candidates from 81 to 99 not ending in 5: 81, 83, 87, 89, 91, 93, 97, 99. Remove $81 = 9^2$, $87 = 3 \\cdot 29$, $91 = 7 \\cdot 13$, $93 = 3 \\cdot 31$, $99 = 9 \\cdot 11$: 3 primes.",
+          "3. From 101 to 109: 101, 103, 107, 109 are prime; 105 is not: 4 primes.",
+          "4. $3 < 4$. Answer B."
+        ],
+        "fast": "Test the odd candidates for divisibility by 3 (digit sum) and by 7; only 91 slips past the digit-sum test.",
+        "trap": "Counting 91 or 87 as prime makes A 4 or 5."
+      },
+      "tags": [{ "kind": "concept", "id": "primes-factors", "role": "primary" }],
+      "setup": "count the primes in two short ranges stated as integers with exactly two divisors; one range hides composites that look prime",
+      "variant": "count of primes or factors in a stated range"
+    },
+    {
+      "id": "s2q5", "section": 2, "type": "qc", "difficulty": 5,
+      "prompt": "Two members of a track team each arrive at the track at a random time between 6:00 a.m. and 7:00 a.m., independently, with all arrival times in that hour equally likely. Each member stays at the track for exactly 15 minutes after arriving and then leaves.",
+      "qc": { "a": "The probability that the two members are at the track at the same time", "b": "$\\dfrac{1}{2}$" },
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "Let the arrival times be $s$ and $t$ minutes after 6:00; the pair is a random point in a $60 \\times 60$ square. They are at the track together when $|s - t| < 15$. The rest of the square is two corner triangles with legs 45, of total area $45^2 = 2{,}025$, so the probability is $1 - \\tfrac{2{,}025}{3{,}600} = 1 - \\tfrac{9}{16} = \\tfrac{7}{16}$, less than $\\tfrac12$.",
+        "steps": [
+          "1. Model: point $(s, t)$ in the square $0 \\le s, t \\le 60$, area $3{,}600$.",
+          "2. Together exactly when the arrivals differ by less than 15 minutes: the band $|s - t| < 15$.",
+          "3. Outside the band: two right triangles with legs $60 - 15 = 45$, total area $2 \\cdot \\tfrac12 \\cdot 45^2 = 2{,}025$.",
+          "4. Probability $= 1 - \\tfrac{2{,}025}{3{,}600} = \\tfrac{7}{16} < \\tfrac12$. Answer B."
+        ],
+        "fast": "Each member misses the other with probability $\\left(\\tfrac{45}{60}\\right)^2$ in total, i.e. $\\tfrac{9}{16}$; $\\tfrac{7}{16}$ is just under one half.",
+        "trap": "Reasoning that a 15-minute window on each side of the first arrival covers 30 of the 60 minutes, so the chance is $\\tfrac12$ (C); the window is cut off near 6:00 and 7:00."
+      },
+      "tags": [{ "kind": "concept", "id": "probability-basic", "role": "primary" }],
+      "setup": "two independent uniform arrival times in one interval with a fixed stay: the meeting region is a band in a square; compare with a fraction",
+      "variant": "geometric probability (a point in a region)"
+    },
+    {
+      "id": "s2q6", "section": 2, "type": "mc", "figureId": "fig2", "difficulty": 4,
+      "prompt": "In the figure, five lines intersect to form a five-pointed star. The measures of the angles at four of the points of the star are shown. What is the value of $x$?",
+      "choices": ["$32$", "$36$", "$72$", "$108$", "$212$"],
+      "key": { "sel": [0] },
+      "explanation": {
+        "key": "The five point angles of such a star always sum to $180^\\circ$. Take the triangle formed by the two lines through the top point and the line that crosses below it. Each of that triangle's two lower angles is an exterior angle of a small triangle with two of the other points as vertices, so it equals the sum of those two point angles. The triangle's angle sum then reads $x + (28 + 40) + (36 + 44) = 180$, so $x = 32$.",
+        "steps": [
+          "1. The two lines through the top point and the line crossing beneath it form a triangle with angles $x$ and two angles at the crossings.",
+          "2. Each of those two angles is an exterior angle of a small triangle whose remote interior angles are two point angles, one pair $28$ and $40$, the other $36$ and $44$.",
+          "3. $x + 68 + 80 = 180$, so $x = 32$."
+        ],
+        "fast": "Points of a five-pointed star sum to $180^\\circ$: $180 - (28 + 36 + 40 + 44) = 32$.",
+        "trap": "Using $360^\\circ$ (as for a polygon's exterior angles) gives 212; assuming a regular star gives 36."
+      },
+      "tags": [{ "kind": "concept", "id": "lines-angles", "role": "primary" }],
+      "setup": "five lines with no three concurrent form a star; four point angles given; the fifth from the angle sum through exterior angles of small triangles",
+      "variant": "angles formed by several intersecting lines"
+    },
+    {
+      "id": "s2q7", "section": 2, "type": "mc", "figureId": "fig3", "difficulty": 5,
+      "prompt": "In the figure, $C$ is a point on segment $AB$, and $AB$, $AC$ and $CB$ are diameters of the three semicircles. Segment $CD$ is perpendicular to $AB$, with $D$ on the largest semicircle. If $AB = 13$ and $CD = 6$, what is the area of the shaded region?",
+      "choices": ["$6\\pi$", "$9\\pi$", "$12\\pi$", "$18\\pi$", "$36\\pi$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "Angle $ADB$ is inscribed in a semicircle, so it is a right angle, and $CD$ is the altitude to the hypotenuse: $AC \\cdot CB = CD^2 = 36$. With $AC + CB = 13$, the parts are 4 and 9. A semicircle with diameter $d$ has area $\\tfrac{\\pi d^2}{8}$, so the shaded area is $\\tfrac{\\pi}{8}(13^2 - 4^2 - 9^2) = \\tfrac{\\pi}{8} \\cdot 72 = 9\\pi$.",
+        "steps": [
+          "1. $\\angle ADB = 90^\\circ$ (inscribed in a semicircle); triangles $ACD$ and $DCB$ are similar, so $AC \\cdot CB = CD^2 = 36$.",
+          "2. $AC + CB = 13$ and $AC \\cdot CB = 36$: the parts are 4 and 9.",
+          "3. Shaded area $= \\tfrac{\\pi}{8}(169 - 16 - 81) = 9\\pi$."
+        ],
+        "fast": "$\\tfrac{\\pi}{8}\\left((a + b)^2 - a^2 - b^2\\right) = \\tfrac{\\pi}{8} \\cdot 2ab = \\tfrac{\\pi}{4} CD^2 = 9\\pi$: the region has the area of the circle with diameter $CD$.",
+        "trap": "Using $\\tfrac{\\pi d^2}{4}$, a whole circle's area, for each semicircle gives $18\\pi$; treating the diameters as radii gives $36\\pi$."
+      },
+      "tags": [{ "kind": "concept", "id": "inscribed-figures", "role": "primary" }, { "kind": "concept", "id": "pythagorean-special", "role": "secondary" }],
+      "setup": "three semicircles on one segment (two inside the large one); a perpendicular half-chord at the split point gives the product of the parts; area of the region between them",
+      "variant": "overlapping circles or semicircles"
+    },
+    {
+      "id": "s2q8", "section": 2, "type": "mc", "difficulty": 5,
+      "prompt": "Square $PQRS$ has vertex $P$ at $(6, 0)$ on the $x$-axis, and the adjacent vertex $Q$ is at $(0, 4)$ on the $y$-axis. Which of the following points is one of the other two vertices of the square?",
+      "choices": ["$(2, -6)$", "$(4, 6)$", "$(5, 5)$", "$(6, 4)$", "$(10, -6)$"],
+      "key": { "sel": [0] },
+      "explanation": {
+        "key": "$P$ and $Q$ are adjacent, so $PQ$ is a side. The side vector from $P$ to $Q$ is $(-6, 4)$; the next side is this vector turned $90^\\circ$, $(4, 6)$ or $(-4, -6)$. Adding it to $P$ and $Q$ gives the square $(6, 0), (0, 4), (4, 10), (10, 6)$ on one side of $PQ$ and $(6, 0), (0, 4), (-4, -2), (2, -6)$ on the other. Only $(2, -6)$ is listed.",
+        "steps": [
+          "1. Side vector $Q - P = (-6, 4)$.",
+          "2. Turn it $90^\\circ$: $(a, b) \\to (-b, a)$ gives $(-4, -6)$; the other way gives $(4, 6)$.",
+          "3. Add to both $P$ and $Q$: $(2, -6)$ and $(-4, -2)$, or $(10, 6)$ and $(4, 10)$.",
+          "4. Check $(2, -6)$: from $P$ it is $(-4, -6)$, length $\\sqrt{52} = PQ$, and $(-4)(-6) + (-6)(4) = 0$, a right angle. Answer $(2, -6)$."
+        ],
+        "fast": "From $P$, step perpendicular to $PQ = (-6, 4)$ by the same length: $(6, 0) + (-4, -6) = (2, -6)$.",
+        "trap": "Treating $P$ and $Q$ as opposite vertices and using the center $(3, 2)$ gives $(5, 5)$; completing the axis rectangle gives $(6, 4)$; reporting the turned vector itself without adding it to a vertex gives $(4, 6)$; turning with the wrong sign on one coordinate gives $(10, -6)$."
+      },
+      "tags": [{ "kind": "concept", "id": "geometry-coordinate", "role": "primary" }],
+      "setup": "adjacent vertices of a square on the two axes; find another vertex by turning the side vector 90 degrees (the center method for opposite vertices is the trap)",
+      "variant": "a triangle's vertices on the axes",
+      "revisits": "quant-002:s2q11"
+    },
+    {
+      "id": "s2q9", "section": 2, "type": "mc", "difficulty": 4,
+      "prompt": "To measure a circular irrigated field, a farmer pushes a measuring wheel with a diameter of 0.5 meter once around the edge of the field, and the wheel turns exactly 400 times. What is the area of the field, in square meters?",
+      "choices": ["$2{,}500\\pi$", "$10{,}000\\pi$", "$20{,}000\\pi$", "$40{,}000\\pi$", "$160{,}000\\pi$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "Each turn covers the wheel's circumference, $0.5\\pi$ meters, so the edge of the field is $400 \\times 0.5\\pi = 200\\pi$ meters. Then $2\\pi r = 200\\pi$ gives $r = 100$, and the area is $\\pi \\cdot 100^2 = 10{,}000\\pi$.",
+        "steps": [
+          "1. One turn: $\\pi \\times 0.5 = 0.5\\pi$ meters.",
+          "2. Edge of the field: $400 \\times 0.5\\pi = 200\\pi$ meters.",
+          "3. $2\\pi r = 200\\pi$, so $r = 100$; area $= 10{,}000\\pi$."
+        ],
+        "fast": "The field's diameter is 400 times the wheel's: $400 \\times 0.5 = 200$, radius 100.",
+        "trap": "Treating 0.5 meter as the wheel's radius doubles everything linear: radius 200 and area $40{,}000\\pi$."
+      },
+      "tags": [{ "kind": "concept", "id": "circles", "role": "primary" }],
+      "setup": "a measuring wheel's turns around a circle's edge give that circle's circumference; the enclosed area",
+      "variant": "circumference, or the number of rotations of a wheel"
+    },
+    {
+      "id": "s2q10", "section": 2, "type": "mc", "difficulty": 3,
+      "prompt": "In the $xy$-plane, line $\\ell$ passes through the points $(-2, 7)$ and $(4, -2)$. What is the sum of the $x$-intercept and the $y$-intercept of $\\ell$?",
+      "choices": ["$\\tfrac{8}{3}$", "$\\tfrac{10}{3}$", "$4$", "$\\tfrac{20}{3}$", "$\\tfrac{22}{3}$"],
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "Slope $= \\tfrac{-2 - 7}{4 - (-2)} = -\\tfrac32$. Through $(4, -2)$: $y = -2 - \\tfrac32(x - 4) = -\\tfrac32 x + 4$. The $y$-intercept is 4; setting $y = 0$ gives $x = \\tfrac83$. The sum is $\\tfrac{20}{3}$.",
+        "steps": [
+          "1. Slope: $\\tfrac{-9}{6} = -\\tfrac32$.",
+          "2. Equation: $y = -\\tfrac32 x + 4$, so the $y$-intercept is 4.",
+          "3. $x$-intercept: $0 = -\\tfrac32 x + 4$, so $x = \\tfrac83$.",
+          "4. Sum: $4 + \\tfrac83 = \\tfrac{20}{3}$."
+        ],
+        "fast": "From $(-2, 7)$, moving 2 to the right drops $y$ by 3, so $(0, 4)$ is on the line; then $4 \\div \\tfrac32 = \\tfrac83$.",
+        "trap": "Flipping the sign of the slope gives $y = \\tfrac32 x + 10$, with intercepts $-\\tfrac{20}{3}$ and 10 and sum $\\tfrac{10}{3}$; reporting only one intercept gives 4 or $\\tfrac83$."
+      },
+      "tags": [{ "kind": "concept", "id": "coordinate-geometry", "role": "primary" }],
+      "setup": "a line through two given points; the sum of its two intercepts",
+      "variant": "slope and intercepts from two points"
+    },
+    {
+      "id": "s2q11", "section": 2, "type": "mc", "difficulty": 5,
+      "prompt": "The integer $x$ lies between $-4$ and $1$, inclusive, and the integer $y$ satisfies $|y| \\le 5$. What is the least possible value of $x^2 - 7x + y^2 + 3y$?",
+      "choices": ["$-14.5$", "$-14$", "$-10$", "$-8$", "$-6$"],
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "The expression splits into $x^2 - 7x$ and $y^2 + 3y$, which can be minimized separately. $x^2 - 7x$ has its vertex at $x = 3.5$, outside the allowed range, and it decreases all the way to $x = 1$, giving $1 - 7 = -6$. $y^2 + 3y$ has its vertex at $y = -1.5$, between integers; $y = -1$ and $y = -2$ both give $-2$. Least value: $-6 + (-2) = -8$.",
+        "steps": [
+          "1. Separate: $x^2 - 7x$ depends only on $x$, $y^2 + 3y$ only on $y$.",
+          "2. $x^2 - 7x = (x - 3.5)^2 - 12.25$; on $-4 \\le x \\le 1$ the nearest allowed value to $3.5$ is $x = 1$: $-6$.",
+          "3. $y^2 + 3y = (y + 1.5)^2 - 2.25$; the nearest integers are $-1$ and $-2$: $-2$.",
+          "4. Least value: $-8$."
+        ],
+        "fast": "Push $x$ as close to $3.5$ as allowed ($x = 1$) and $y$ as close to $-1.5$ as allowed ($y = -1$): $1 - 7 + 1 - 3 = -8$.",
+        "trap": "Using the vertices without the constraints gives $-12.25 - 2.25 = -14.5$, and rounding them to integers ($x = 3$ or $4$) gives $-14$; dropping the $y$ terms gives $-6$."
+      },
+      "tags": [{ "kind": "concept", "id": "min-max-bounding", "role": "primary" }, { "kind": "concept", "id": "quadratics-factoring", "role": "secondary" }],
+      "setup": "sum of a quadratic in x and a quadratic in y over integer ranges: one vertex outside its range, the other between integers",
+      "variant": "the extreme value of an expression over an integer range"
+    },
+    {
+      "id": "s2q12", "section": 2, "type": "mc", "difficulty": 4,
+      "prompt": "A farmer's sheep pen is a regular hexagon with sides 6 meters long. A triangular feeding area is fenced off inside the pen by joining three corners of the pen, no two of which are adjacent. What is the area of the feeding area, in square meters?",
+      "choices": ["$9\\sqrt{3}$", "$18\\sqrt{3}$", "$27\\sqrt{3}$", "$36\\sqrt{3}$", "$54\\sqrt{3}$"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Joining every other corner gives an equilateral triangle. Each of its sides closes an isosceles triangle with two hexagon sides of 6 meeting at $120^\\circ$. The perpendicular from that $120^\\circ$ corner splits it into two 30-60-90 triangles with hypotenuse 6, so the long leg is $3\\sqrt3$ and the feeding area's side is $6\\sqrt3$. Area $= \\tfrac{\\sqrt3}{4}(6\\sqrt3)^2 = \\tfrac{\\sqrt3}{4} \\cdot 108 = 27\\sqrt3$.",
+        "steps": [
+          "1. Each interior angle of a regular hexagon is $120^\\circ$.",
+          "2. Isosceles triangle with sides 6, 6 and angle $120^\\circ$: halve it into 30-60-90 triangles with hypotenuse 6, short leg 3, long leg $3\\sqrt3$.",
+          "3. The equilateral triangle's side is $2 \\cdot 3\\sqrt3 = 6\\sqrt3$.",
+          "4. Area $= \\tfrac{\\sqrt3}{4} \\cdot 108 = 27\\sqrt3$."
+        ],
+        "fast": "The three corner triangles cut off have the same total area as the inner triangle, so it is half the hexagon: $\\tfrac12 \\cdot \\tfrac{3\\sqrt3}{2} \\cdot 36 = 27\\sqrt3$.",
+        "trap": "Taking the triangle's side as 12, the long diagonal of the hexagon, gives $36\\sqrt3$; using the whole hexagon gives $54\\sqrt3$; using the short leg 3 for the half-side gives side 6 and $9\\sqrt3$."
+      },
+      "tags": [{ "kind": "concept", "id": "pythagorean-special", "role": "primary" }],
+      "setup": "regular hexagon with a given side; the triangle on alternate vertices, its side from a 30-60-90 half of a 120-degree isosceles triangle; its area",
+      "variant": "30-60-90 triangle inside a hexagon, rhombus or trapezoid"
+    },
+    {
+      "id": "s2q13", "section": 2, "type": "mc_multi", "difficulty": 4,
+      "prompt": "The equation $x^3 + 30x = kx^2$, where $k$ is a constant, has exactly three different solutions, and each solution is a nonnegative integer. Which of the following could be the value of $k$?\n\nIndicate all such values.",
+      "choices": ["$-13$", "$11$", "$13$", "$17$", "$30$", "$31$"],
+      "key": { "sel": [1, 2, 3, 5] },
+      "explanation": {
+        "key": "Don't divide by $x$: that discards the solution $x = 0$. Factor instead: $x(x^2 - kx + 30) = 0$. So 0 is one solution, and the other two are the roots of $x^2 - kx + 30 = 0$: two different positive integers with product 30 and sum $k$. The pairs $(1, 30)$, $(2, 15)$, $(3, 10)$ and $(5, 6)$ give $k = 31, 17, 13, 11$.",
+        "steps": [
+          "1. $x^3 - kx^2 + 30x = x(x^2 - kx + 30) = 0$, so $x = 0$ is a solution.",
+          "2. The quadratic's roots have product 30, so neither is 0; they are the other two solutions, different positive integers.",
+          "3. Factor pairs of 30 with different members: $(1, 30)$, $(2, 15)$, $(3, 10)$, $(5, 6)$.",
+          "4. $k$ is the sum: 31, 17, 13, 11. From the list: 11, 13, 17, 31."
+        ],
+        "fast": "Three solutions from a cubic with no constant term: 0 plus two roots whose product is 30; $k$ is their sum.",
+        "trap": "Dividing by $x$ and hunting for three solutions of a quadratic; taking the sum with the wrong sign ($-13$); or confusing the product 30 with $k$."
+      },
+      "tags": [{ "kind": "concept", "id": "quadratics-factoring", "role": "primary" }, { "kind": "concept", "id": "primes-factors", "role": "secondary" }],
+      "setup": "a cubic with no constant term has three distinct nonnegative integer solutions: factor out x (zero is one root), then factor pairs of the constant give the coefficient",
+      "variant": "dividing by a variable that may be zero",
+      "revisits": "quant-002:s2q14"
+    },
+    {
+      "id": "s2q14", "section": 2, "type": "mc_multi", "difficulty": 5,
+      "prompt": "If $a < b < c$, which of the following must be true?\n\nIndicate all such statements.",
+      "choices": ["$a + b < 2c$", "$a + c > b$", "$c - b < c - a$", "$b - a < c - b$", "$ab < bc$", "$c - a$ is greater than both $c - b$ and $b - a$"],
+      "key": { "sel": [0, 2, 5] },
+      "explanation": {
+        "key": "A: $a < c$ and $b < c$; add them. C: $c - b < c - a$ is $-b < -a$, that is $a < b$. F: $c - a = (c - b) + (b - a)$, a sum of two positive numbers, so it exceeds each. B fails for negatives: $a = -3$, $b = -2$, $c = -1$ gives $a + c = -4$, less than $b$. D depends on the gaps: $a = 0$, $b = 5$, $c = 6$. E says $b(c - a) > 0$, which fails when $b \\le 0$.",
+        "steps": [
+          "1. A: add $a < c$ and $b < c$. Must be true.",
+          "2. B: $a = -3, b = -2, c = -1$ gives $-4 > -2$, false. Not necessarily.",
+          "3. C: subtract $c$ from both sides: $-b < -a$, i.e. $a < b$. Must be true.",
+          "4. D: $a = 0, b = 5, c = 6$ gives $5 < 1$, false. Not necessarily.",
+          "5. E: $bc - ab = b(c - a)$; with $b = 0$ both sides are 0. Not necessarily.",
+          "6. F: $c - a = (c - b) + (b - a)$ with both parts positive. Must be true."
+        ],
+        "fast": "Test one all-negative triple and one with a big first gap; A, C and F survive, and each is a rearranged form of the chain.",
+        "trap": "Testing only positive numbers makes B ($a + c > b$) and E ($ab < bc$) look certain."
+      },
+      "tags": [{ "kind": "concept", "id": "inequalities", "role": "primary" }],
+      "setup": "a < b < c with no signs given; select the sum, difference and product inequalities that must hold",
+      "variant": "a chain a < b < c: what must be true of sums or differences"
+    },
+    {
+      "id": "s2q15", "section": 2, "type": "numeric", "difficulty": 4,
+      "prompt": "The $n$th term of a list is $(-1)^n n^2$ for each positive integer $n$, so the list begins $-1, 4, -9, 16, \\ldots$. What is the sum of the first 25 terms of the list?",
+      "numeric": { "kind": "single" },
+      "key": { "value": "-325" },
+      "explanation": {
+        "key": "Pair the terms: $-(2m - 1)^2 + (2m)^2 = 4m - 1 = (2m - 1) + 2m$. The first 24 terms form 12 pairs whose total is $1 + 2 + \\cdots + 24 = 300$. The 25th term is $-625$. Sum: $300 - 625 = -325$.",
+        "steps": [
+          "1. Each pair (odd term, next even term) is a difference of squares: $(2m)^2 - (2m - 1)^2 = 4m - 1$.",
+          "2. Pairs 1 through 12 cover terms 1 to 24: $\\sum_{m=1}^{12}(4m - 1) = 4 \\cdot 78 - 12 = 300$.",
+          "3. The 25th term is unpaired: $(-1)^{25} \\cdot 625 = -625$.",
+          "4. Total: $300 - 625 = -325$."
+        ],
+        "fast": "Each pair equals the sum of its two indices, so 24 terms give $\\tfrac{24 \\cdot 25}{2} = 300$; then subtract $25^2$.",
+        "trap": "Stopping at the 12 pairs (300) and forgetting the unpaired 25th term, or treating 25 terms as if they paired off evenly."
+      },
+      "tags": [{ "kind": "concept", "id": "sequences-patterns", "role": "primary" }],
+      "setup": "a list of squares with alternating signs: pair consecutive terms into differences of squares; an odd number of terms leaves one unpaired",
+      "variant": "pattern in a defined list (terms that alternate or repeat)"
+    }
+  ]
+}
