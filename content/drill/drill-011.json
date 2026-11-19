@@ -1,0 +1,1938 @@
+{
+  "id": "drill-011",
+  "measure": "verbal",
+  "title": "Endless vocab batch 11",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Visitors assume that Venice's ___ over Adriatic trade was forged in its Arsenal, yet the shipyards were less the source of that mastery than its monument: long before the first great fleet was launched, charters and tolls had already made every rival's cargo pass through Venetian hands.",
+      "choices": [
+        "hegemony",
+        "nostrum",
+        "ascendancy",
+        "panacea",
+        "propinquity",
+        "dissolution"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The sentence reverses cause and effect: the shipyards did not create Venice's position, they displayed it, because charters and tolls had already put rivals' cargo under Venetian control. The blank needs a noun for dominance over others. Hegemony and ascendancy both give that sense.",
+        "distractors": {
+          "nostrum": "Trap pair with panacea: a quack remedy, or a cure-all. Nothing in the sentence concerns cures.",
+          "panacea": "Trap pair with nostrum: a universal remedy. Trade dominance is not a remedy for anything here.",
+          "propinquity": "Nearness. Venice's closeness to the Adriatic is true but is not what charters and tolls demonstrate.",
+          "dissolution": "Breakup or collapse, the opposite of a position strong enough to control rivals' cargo."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "hegemony",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nostrum",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ascendancy",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "panacea",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "propinquity",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dissolution",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The architect lectured with an air of offhand calm, yet her tone was ___ enough that students in the back rows began to wince, as though she minded very much whether anyone was listening.",
+      "choices": [
+        "strident",
+        "nonchalant",
+        "grating",
+        "indifferent",
+        "limpid",
+        "churlish"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "'Yet' sets her calm manner against how her voice actually sounded: students wince. A tone that makes listeners wince is harsh and irritating, which strident and grating both say.",
+        "distractors": {
+          "nonchalant": "Trap pair with indifferent: casually unconcerned. The sentence has just granted her offhand calm and then contrasts it; 'as though she minded very much' rules this out.",
+          "indifferent": "Trap pair with nonchalant: not caring. It repeats the manner the sentence contrasts with the tone, and listeners do not wince at indifference.",
+          "limpid": "Clear and transparent, a pleasant quality that would not make students wince.",
+          "churlish": "Rude and surly describes manners, not the sound of a voice, and nothing in the sentence is about rudeness."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "strident",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nonchalant",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "grating",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "indifferent",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "limpid",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "churlish",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The headmaster, braced for evasion, found the six-year-old's account of the broken window so ___ that he kept searching for the agenda behind it and found only a plain wish to be believed.",
+      "choices": [
+        "ingenuous",
+        "oblique",
+        "artless",
+        "evasive",
+        "facile",
+        "tenuous"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The headmaster expected a hidden angle and found none, only a child's plain wish to be believed. The account is therefore open and without guile. Ingenuous and artless both mean that.",
+        "distractors": {
+          "oblique": "Trap pair with evasive: indirect, not straightforward. That is exactly what the headmaster expected and failed to find.",
+          "evasive": "Trap pair with oblique: dodging the question. The account hid no agenda.",
+          "facile": "Too easy or glib; it describes superficial ease, not innocent openness, and the headmaster's search for an agenda points elsewhere.",
+          "tenuous": "Flimsy or weakly supported. The sentence says nothing about the account's strength of evidence."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "ingenuous",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "oblique",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "artless",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "evasive",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "facile",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tenuous",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "On television the poet was the gentlest of judges, finding something to praise in every entrant; her letters to the young writers she mentored, published after her death, show that in private she would ___ a protégé for a single slack line, in terms so savage that several of them never wrote to her again.",
+      "choices": [
+        "castigate",
+        "reprove",
+        "berate",
+        "remonstrate",
+        "vindicate",
+        "feign"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The contrast is between her public gentleness and her private letters, whose effect (protégés who 'never wrote to her again' over 'a single slack line') and 'terms so savage' show harsh, angry criticism: castigate, berate.",
+        "distractors": {
+          "reprove": "Trap pair with remonstrate: to rebuke mildly. 'Terms so savage' rule out a mild rebuke.",
+          "remonstrate": "Trap pair with reprove: to protest or reason with someone. It is too mild, and it takes 'with' a person rather than a direct object.",
+          "vindicate": "To clear of blame. The letters attack the protégés.",
+          "feign": "To pretend. The private harshness is the real her; it is the television gentleness that might be a show."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "castigate",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "reprove",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "berate",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "remonstrate",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "vindicate",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "feign",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The dean's reputation as a ___ host, never happier than with forty people at his table, sat oddly with his notebooks, in which, as it turned out, he recorded after each dinner who had spoken to whom, a precision no mere taste for company would explain.",
+      "choices": [
+        "gregarious",
+        "fastidious",
+        "convivial",
+        "meticulous",
+        "ascetic",
+        "wary"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The reputation is for a host who is happiest in a crowd. The notebooks 'sat oddly' with it, so the late detail about precision must be what the blank does not describe. The blank wants sociable: gregarious and convivial.",
+        "distractors": {
+          "fastidious": "Trap pair with meticulous: exacting about detail. It is the quality the notebooks show, which is exactly what 'sat oddly' with his reputation, so it cannot be the reputation.",
+          "meticulous": "Trap pair with fastidious: careful about detail. Same problem: the notebooks, not the reputation, show it.",
+          "ascetic": "Austere and self-denying, opposed to a happy host at a table of forty.",
+          "wary": "Cautious and watchful, which contradicts 'never happier than with forty people at his table'."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "gregarious",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fastidious",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "convivial",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "meticulous",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ascetic",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "wary",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Seventeenth-century speculators would ___ gullible villagers into signing over their land, hiding the fraud behind handsome maps, and never needed to blacken anyone's name to do it.",
+      "choices": [
+        "hoodwink",
+        "traduce",
+        "cozen",
+        "vilify",
+        "propitiate",
+        "exorcise"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The speculators used handsome maps to hide a fraud, so the verb means to deceive someone into something. Hoodwink and cozen both take 'into signing'.",
+        "distractors": {
+          "traduce": "Trap pair with vilify: to slander. The sentence says they 'never needed to blacken anyone's name'.",
+          "vilify": "Trap pair with traduce: to defame. Ruled out by the same clause.",
+          "propitiate": "To appease; the speculators were not soothing villagers into anything.",
+          "exorcise": "To drive out an evil spirit, which does not fit 'gullible villagers into signing'."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "hoodwink",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "traduce",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cozen",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "vilify",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "propitiate",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exorcise",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Opponents of the height limit, despite years of attacks on it in the press and at public hearings, never managed to ___ it; only a court ruling, which struck the law from the books, finally did.",
+      "choices": [
+        "nullify",
+        "assail",
+        "abrogate",
+        "besiege",
+        "perturb",
+        "inundate"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The opponents did attack the law for years, yet 'never managed to' do something that only the court finally did: strike it from the books. The verb means to make void or repeal. Nullify and abrogate fit.",
+        "distractors": {
+          "assail": "Trap pair with besiege: to attack. The first clause says they did attack it for years, so 'never managed to assail it' contradicts the sentence.",
+          "besiege": "Trap pair with assail: to surround and harass. Same problem: they did harass it and the court, not they, ended it.",
+          "perturb": "To make uneasy; a law cannot be 'struck from the books' by being perturbed, and the court did not unsettle it.",
+          "inundate": "To flood with, usually of volume; it does not describe what striking a law from the books accomplishes."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "nullify",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "assail",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "abrogate",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "besiege",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "perturb",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inundate",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Colleagues called her ___, for she would fill every pause in a staff meeting with talk of her bus route or her cat, though the habit was no deep-rooted one, since a single word from the director ended it for good.",
+      "choices": [
+        "garrulous",
+        "inveterate",
+        "loquacious",
+        "incorrigible",
+        "plodding",
+        "wary"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "She fills every pause with trivial talk, so the blank means talkative. The habit is not deep-rooted and a single word ended it, which rules out words for fixed habit. Garrulous and loquacious fit.",
+        "distractors": {
+          "inveterate": "Trap pair with incorrigible: long-established and unlikely to change. The sentence says the habit was not deep-rooted and ended at once.",
+          "incorrigible": "Trap pair with inveterate: beyond reform. One word from the director reformed her.",
+          "plodding": "Slow and dull in movement or thought; it does not describe filling pauses with talk.",
+          "wary": "Cautious and watchful, the opposite of a woman who talks freely."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "garrulous",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inveterate",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "loquacious",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "incorrigible",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "plodding",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "wary",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The anthology's editor had (i) ___ tastes, setting street ballads beside sonnets and folk riddles beside sermons, but he would not (ii) ___ translations: every foreign poem appears in the original, on the theory that a reader's slow (iii) ___ to another literature's habits, earned by struggling with its words, was itself part of the education.",
+      "blanks": [
+        [
+          "fastidious",
+          "ascetic",
+          "catholic"
+        ],
+        [
+          "vindicate",
+          "countenance",
+          "portend"
+        ],
+        [
+          "propinquity",
+          "acculturation",
+          "aberration"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) Ballads beside sonnets and riddles beside sermons is a wide range of taste: catholic (all-embracing). (ii) Since every foreign poem appears only in the original, he refused to permit translations: countenance. (iii) A slow adjustment to another literature's habits is acculturation.",
+        "distractors": {
+          "fastidious": "Hard to please, very particular. His one strict rule baits it, but his taste in poems is famously broad.",
+          "ascetic": "Self-denying, austere. Nothing about his range of taste is austere.",
+          "vindicate": "To justify. Refusing translations is the opposite of defending them.",
+          "portend": "To foreshadow. It makes no sense with translations as its object here.",
+          "propinquity": "Nearness. Struggling with another language's words is a process of adjustment, not mere closeness.",
+          "aberration": "A departure from the normal. The adjustment he wants is the education itself, not a deviation."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "fastidious",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ascetic",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "catholic",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "vindicate",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "countenance",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "portend",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "propinquity",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "acculturation",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "aberration",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The young architect's plan for the civic hall showed real (i) ___: she proposed to tear down the beloved clock tower. Her rivals' entries were (ii) ___ by contrast, the same dull blocks seen in every provincial capital. Yet even her admirers on the jury found her facade too (iii) ___, ornate to the point of fussiness.",
+      "blanks": [
+        [
+          "decorum",
+          "temerity",
+          "avarice"
+        ],
+        [
+          "ebullient",
+          "luminous",
+          "lackluster"
+        ],
+        [
+          "limpid",
+          "florid",
+          "cursory"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) Proposing to demolish a beloved tower is reckless boldness: temerity. (ii) 'By contrast' with her daring, rivals' entries are 'the same dull blocks': lackluster. (iii) 'Ornate to the point of fussiness' defines florid.",
+        "distractors": {
+          "decorum": "Propriety; tearing down a beloved landmark is the opposite of decorous.",
+          "avarice": "Greed; nothing in the sentence concerns money.",
+          "ebullient": "Bubbling with enthusiasm, the opposite of 'the same dull blocks'.",
+          "luminous": "Radiant or brilliant, which contradicts 'dull'.",
+          "limpid": "Clear and plain, the opposite of ornate.",
+          "cursory": "Hasty and superficial; it says nothing about ornament."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "decorum",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "temerity",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "avarice",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ebullient",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "luminous",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lackluster",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "limpid",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "florid",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cursory",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "provincial",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "ornate",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Teachers do not simply hand children a culture; they (i) ___ it, shaping each lesson through their own habits and emphases. A good one will (ii) ___ a child's frustration with encouragement, never denying it. Even the Greek word behind 'school' is said to (iii) ___ leisure, not labor.",
+      "blanks": [
+        [
+          "interrogate",
+          "mediate",
+          "preempt"
+        ],
+        [
+          "invigorate",
+          "engender",
+          "temper"
+        ],
+        [
+          "portend",
+          "exorcise",
+          "denote"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Not simply hand ... they ___ it, shaping each lesson' wants the sense of passing an idea through an intermediary: mediate, not the negotiating sense. (ii) Encouragement that softens frustration without denying it tempers it. (iii) The word is 'said to' have literally meant leisure: denote.",
+        "distractors": {
+          "interrogate": "In its secondary sense, to examine critically. Teachers might do that, but the clause is about shaping a culture as it is passed on.",
+          "preempt": "To forestall; teachers are not heading off a culture.",
+          "invigorate": "To energize; encouragement is not meant to energize the frustration itself.",
+          "engender": "To produce; encouragement is not offered to create frustration.",
+          "portend": "To foretell; a word does not foretell leisure.",
+          "exorcise": "To drive out, which makes 'originally exorcise leisure' the reverse of the sentence."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "interrogate",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mediate",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "preempt",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "invigorate",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "engender",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "temper",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "portend",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exorcise",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "denote",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Visitors to the choir school remarked on how (i) ___ the boys were in chapel, heads bowed and voices hushed. The masters were less impressed: the same boys were (ii) ___ in the classroom, yielding to neither argument nor punishment, and the chaplain suspected that the hush was not piety at all but an (iii) ___ habit of going quiet before any authority they could not outlast, drilled into them since the nursery.",
+      "blanks": [
+        [
+          "restive",
+          "gauche",
+          "reverent"
+        ],
+        [
+          "malleable",
+          "obstinate",
+          "magnanimous"
+        ],
+        [
+          "covert",
+          "ingrained",
+          "arcane"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) Bowed heads and hushed voices in chapel look like devotion: reverent. (ii) 'Yielding to neither argument nor punishment' is stubbornness: obstinate. (iii) A habit 'drilled into them since the nursery' is deeply rooted: ingrained.",
+        "distractors": {
+          "restive": "Restless, impatient of control. That is how the boys behave in class, not what the visitors saw in chapel.",
+          "gauche": "Socially awkward. Nothing about their chapel manners is clumsy.",
+          "malleable": "Easily shaped or influenced. The opposite of boys who yield to nothing.",
+          "magnanimous": "Generous, forgiving. Refusing to yield is not generosity.",
+          "covert": "Hidden, secret. The habit is on open display in chapel; what the chaplain stresses is how deep it runs.",
+          "arcane": "Obscure, understood by few. Going quiet before authority is common, not esoteric."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "restive",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "gauche",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "reverent",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "malleable",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obstinate",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "magnanimous",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "covert",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ingrained",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "arcane",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The mayor was (i) ___ about the new school district, predicting that attendance would climb within a year, though the evidence gave him little ground for the prediction. His aims were (ii) ___, no one doubted, though a goal can deserve praise without being met. His deputy, by contrast, was (iii) ___ about the whole business, neither cheered by the projections nor troubled by the delays.",
+      "blanks": [
+        [
+          "dubious",
+          "sanguine",
+          "chary"
+        ],
+        [
+          "onerous",
+          "egregious",
+          "laudable"
+        ],
+        [
+          "ebullient",
+          "wary",
+          "phlegmatic"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) Optimistic despite thin evidence: sanguine. (ii) 'Deserve praise without being met': laudable. (iii) 'Neither cheered ... nor troubled' describes someone calm and unexcited: phlegmatic.",
+        "distractors": {
+          "dubious": "Doubtful, opposite of predicting a climb.",
+          "chary": "Cautious, also opposite of predicting a climb.",
+          "onerous": "Burdensome; it does not say the aims deserve praise.",
+          "egregious": "Flagrantly bad, the opposite of praise.",
+          "ebullient": "Exuberant; the deputy is 'neither cheered' by projections.",
+          "wary": "Watchful and guarded; the deputy is also 'neither ... troubled' by delays, so wariness over-reads him."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "dubious",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sanguine",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "chary",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "onerous",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "egregious",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "laudable",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ebullient",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "wary",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "phlegmatic",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The new headmaster was (i) ___ to a fault: asked about a failing pupil, he would answer in a single word. Unlike his predecessor, who had made a career of nitpicking blotted copybooks and untucked shirts, he did not (ii) ___ at small faults, and the school he ran on so few words became (iii) ___: inspectors held it up to the county as the model of what a well-run school could be.",
+      "blanks": [
+        [
+          "histrionic",
+          "ebullient",
+          "laconic"
+        ],
+        [
+          "vaunt",
+          "cavil",
+          "propitiate"
+        ],
+        [
+          "unprecedented",
+          "dubious",
+          "paradigmatic"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) Answering in a single word is terseness: laconic. (ii) 'Unlike his predecessor', who nitpicked small things, he did not raise petty objections: cavil (at). (iii) Held up 'as the model' is exemplary: paradigmatic.",
+        "distractors": {
+          "histrionic": "Theatrical, overdramatic. A man of single-word answers is the opposite.",
+          "ebullient": "Bubbling with enthusiasm. It does not fit a man who barely speaks.",
+          "vaunt": "To boast of. One does not boast 'at' small faults, and boasting is not the predecessor's habit the sentence contrasts.",
+          "propitiate": "To appease or win over. Nothing here concerns placating anyone.",
+          "unprecedented": "Never done before. A model held up for others to copy need not be the first of its kind; the clue is 'model', not novelty.",
+          "dubious": "Doubtful, questionable. The inspectors praise the school."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "histrionic",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ebullient",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "laconic",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "vaunt",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cavil",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "propitiate",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "unprecedented",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dubious",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "paradigmatic",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Because the two hill villages were (i) ___, founded within a few years of each other by settlers from the same valley, the archaeologist felt entitled to (ii) ___ from the well-preserved one to its ruined twin, reconstructing the lost village's layout street by street.",
+      "blanks": [
+        [
+          "inert",
+          "trite",
+          "coeval"
+        ],
+        [
+          "hedge",
+          "extrapolate",
+          "preempt"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) Founded within a few years of each other means of the same age: coeval. (ii) Reconstructing the ruined village from its well-preserved twin is reasoning beyond the evidence one has: extrapolate.",
+        "distractors": {
+          "inert": "Inactive, motionless. It says nothing about the villages' age.",
+          "trite": "Overused, unoriginal. A village is not a cliché.",
+          "hedge": "To avoid committing oneself. The archaeologist commits fully, reconstructing street by street.",
+          "preempt": "To act first to forestall something. Nothing is being forestalled."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "inert",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "trite",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "coeval",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hedge",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "extrapolate",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "preempt",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "entitled",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The patron, ordinarily (i) ___ toward the university and giving millions unasked, was (ii) ___ that not a cent go to the new stadium.",
+      "blanks": [
+        [
+          "avaricious",
+          "churlish",
+          "munificent"
+        ],
+        [
+          "leery",
+          "equivocal",
+          "adamant"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) Giving millions unasked: munificent. (ii) 'Not a cent' stated flatly shows an unyielding position: adamant.",
+        "distractors": {
+          "avaricious": "Greedy, opposite of giving millions.",
+          "churlish": "Rude; the giving says nothing of manners.",
+          "leery": "Wary; it does not take 'that not a cent go' and is weaker than a flat refusal.",
+          "equivocal": "Ambiguous; 'not a cent' is not ambiguous."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "avaricious",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "churlish",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "munificent",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "leery",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "equivocal",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "adamant",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Purists accused the translator of having (i) ___ the epic, mixing in idioms of her own century until its ancient voice was hard to hear; her defenders replied that the literal versions had left the poem in so (ii) ___ a state, unread outside a few seminars, that only a bolder rendering could have saved it.",
+      "blanks": [
+        [
+          "adulterate",
+          "enhance",
+          "attenuate"
+        ],
+        [
+          "remedial",
+          "covert",
+          "parlous"
+        ]
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Mixing in' modern idioms until the original is hard to hear is to corrupt something by adding foreign matter: adulterate. (ii) A poem unread outside a few seminars, which needed saving, was in a precarious state: parlous.",
+        "distractors": {
+          "enhance": "To improve. The purists are accusing her, not praising her.",
+          "attenuate": "To weaken or thin out. The original's voice was weakened, but 'mixing in' names the act of adding something, which is adulteration.",
+          "remedial": "Meant to remedy. Her rendering was the remedy; the poem's state was the problem.",
+          "covert": "Hidden. A neglected poem is not hidden, merely little read."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "adulterate",
+          "role": "key",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "enhance",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "attenuate",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "remedial",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "covert",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "parlous",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The mayor supposed that if she (i) ___ in the zoning vote she would offend neither faction; instead each concluded that a neutral mayor was a hostile one, and her silence earned her not the gratitude of both but their shared (ii) ___.",
+      "blanks": [
+        [
+          "vindicate",
+          "abstain",
+          "preempt"
+        ],
+        [
+          "dissolution",
+          "ire",
+          "altruism"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) Staying neutral 'in the zoning vote' and the 'silence' that followed is declining to vote: abstain. (ii) 'Not the gratitude ... but' sets up the opposite, and both factions think her hostile: anger, ire.",
+        "distractors": {
+          "vindicate": "To justify or clear of blame. It needs an object, and neutrality justifies no one.",
+          "preempt": "To act first to forestall. She did nothing; that was the problem.",
+          "dissolution": "Breaking up, or debauchery. The factions are united against her, not broken up.",
+          "altruism": "Selfless concern for others. It is a quality, not something the factions could feel toward her."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "vindicate",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "abstain",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "preempt",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dissolution",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ire",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "altruism",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Nursery attendants assumed the toddlers merely ___ as they played, but recordings showed that their sounds followed the grammar of the home language more closely than anyone had expected.",
+      "blanks": [
+        [
+          "prattle",
+          "inflect",
+          "hedge",
+          "vaunt",
+          "feign"
+        ]
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "'Merely' and the surprise that the sounds had grammar mean the attendants thought of the talk as foolish chatter: prattle.",
+        "distractors": {
+          "inflect": "In its secondary sense, to modify the tone of; toddlers' play is not described this way, and it does not mean idle talk.",
+          "hedge": "To avoid committing oneself; toddlers are not doing that.",
+          "vaunt": "To boast; it does not fit the contrast with grammar.",
+          "feign": "To pretend; the recordings are about the sounds' grammar, not about pretense."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "prattle",
+          "role": "key",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inflect",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hedge",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "vaunt",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "feign",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The committee's second report was not wrong so much as ___: every one of its recommendations had been adopted, and most of them carried out, months before it was printed.",
+      "blanks": [
+        [
+          "lethargic",
+          "otiose",
+          "copious",
+          "covert",
+          "intrepid"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "'Not wrong so much as' sets up a different fault, and the reason is that everything it recommends was already done: the report served no purpose, otiose.",
+        "distractors": {
+          "lethargic": "Sluggish. A late report might suggest slowness, but the fault named is that the report was pointless, not that the committee was slow.",
+          "copious": "Plentiful, abundant. Nothing is said about the report's length.",
+          "covert": "Secret. The report was printed.",
+          "intrepid": "Fearless. Recommending what was already done takes no courage."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "lethargic",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "otiose",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "copious",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "covert",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "intrepid",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    }
+  ]
+}

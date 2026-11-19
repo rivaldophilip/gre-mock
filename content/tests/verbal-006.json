@@ -44,6 +44,16 @@
           "kind": "word",
           "id": "elasticity",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "avert",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "distinction",
+          "role": "passage"
         }
       ]
     },
@@ -76,6 +86,21 @@
         {
           "kind": "word",
           "id": "hauteur",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "aberration",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "fidelity",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "candid",
           "role": "passage"
         }
       ]
@@ -112,6 +137,26 @@
           "kind": "word",
           "id": "factious",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "apostle",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "cessation",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "mock",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "distinction",
+          "role": "passage"
         }
       ]
     },
@@ -146,6 +191,11 @@
           "kind": "word",
           "id": "dogged",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "offset",
+          "role": "passage"
         }
       ]
     },
@@ -173,6 +223,11 @@
         {
           "kind": "word",
           "id": "baroque",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "break",
           "role": "passage"
         }
       ]
@@ -259,6 +314,11 @@
             0,
             4
           ]
+        },
+        {
+          "kind": "word",
+          "id": "novel",
+          "role": "stem"
         }
       ]
     },
@@ -340,6 +400,11 @@
             1,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "break",
+          "role": "stem"
         }
       ]
     },
@@ -501,6 +566,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "partial",
+          "role": "stem"
         }
       ]
     },
@@ -581,6 +651,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "allusion",
+          "role": "stem"
         }
       ]
     },
@@ -761,6 +836,16 @@
           "kind": "concept",
           "id": "rc-main-idea",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "distinction",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "reconcile",
+          "role": "stem"
         }
       ]
     },
@@ -795,6 +880,11 @@
           "kind": "concept",
           "id": "rc-inference",
           "role": "secondary"
+        },
+        {
+          "kind": "word",
+          "id": "precursor",
+          "role": "stem"
         }
       ]
     },
@@ -831,6 +921,21 @@
           "kind": "concept",
           "id": "rc-vocab-context",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "candid",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "impartial",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "ingenuous",
+          "role": "stem"
         }
       ]
     },
@@ -1040,6 +1145,11 @@
             1,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "frugal",
+          "role": "stem"
         }
       ]
     },
@@ -1263,6 +1373,11 @@
             2,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "expurgate",
+          "role": "stem"
         }
       ]
     },
@@ -1423,6 +1538,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "genial",
+          "role": "stem"
         }
       ]
     },
@@ -1495,6 +1615,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "tact",
+          "role": "stem"
         }
       ]
     },
@@ -1531,6 +1656,16 @@
           "kind": "concept",
           "id": "rc-structure",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "vindicate",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "polemical",
+          "role": "stem"
         }
       ]
     },
@@ -1567,6 +1702,26 @@
           "kind": "concept",
           "id": "rc-function",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "providential",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "banish",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "cessation",
+          "role": "stem"
         }
       ]
     },
@@ -1637,6 +1792,16 @@
           "kind": "concept",
           "id": "rc-attitude",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "refute",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "decry",
+          "role": "stem"
         }
       ]
     },
@@ -1673,6 +1838,11 @@
           "kind": "concept",
           "id": "rc-application",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "analogous",
+          "role": "stem"
         }
       ]
     },
@@ -1732,6 +1902,16 @@
           "kind": "concept",
           "id": "rc-structure",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "refute",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
         }
       ]
     },
@@ -1769,6 +1949,11 @@
           "kind": "concept",
           "id": "arg-flaw",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "inclined",
+          "role": "stem"
         }
       ]
     }

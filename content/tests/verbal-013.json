@@ -39,6 +39,26 @@
           "kind": "word",
           "id": "elasticity",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "symbiosis",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "marginal",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "paradox",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "resolve",
+          "role": "passage"
         }
       ]
     },
@@ -92,6 +112,31 @@
           "kind": "word",
           "id": "interrogate",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "refute",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "postulate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "anomaly",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "falsifiable",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "evasive",
+          "role": "passage"
         }
       ]
     },
@@ -115,6 +160,11 @@
         {
           "kind": "word",
           "id": "propinquity",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "refute",
           "role": "passage"
         }
       ]
@@ -238,6 +288,11 @@
             0,
             4
           ]
+        },
+        {
+          "kind": "word",
+          "id": "exhaustive",
+          "role": "stem"
         }
       ]
     },
@@ -643,6 +698,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "clemency",
+          "role": "stem"
         }
       ]
     },
@@ -735,6 +795,31 @@
           "kind": "concept",
           "id": "rc-main-idea",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "symbiosis",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "resolve",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "paradox",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "reconcile",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "assess",
+          "role": "stem"
         }
       ]
     },
@@ -768,6 +853,11 @@
           "kind": "concept",
           "id": "rc-inference",
           "role": "secondary"
+        },
+        {
+          "kind": "word",
+          "id": "symbiosis",
+          "role": "stem"
         }
       ]
     },
@@ -941,6 +1031,11 @@
             0,
             4
           ]
+        },
+        {
+          "kind": "word",
+          "id": "mock",
+          "role": "stem"
         }
       ]
     },
@@ -1156,6 +1251,26 @@
             2,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "consensus",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "ample",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "discredit",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
         }
       ]
     },
@@ -1272,6 +1387,11 @@
             2,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "resolve",
+          "role": "stem"
         }
       ]
     },
@@ -1417,6 +1537,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "artless",
+          "role": "stem"
         }
       ]
     },
@@ -1517,6 +1642,16 @@
           "kind": "concept",
           "id": "rc-main-idea",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "misconstrue",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "refute",
+          "role": "stem"
         }
       ]
     },
@@ -1553,6 +1688,16 @@
           "kind": "concept",
           "id": "rc-application",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "evasive",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "postulate",
+          "role": "stem"
         }
       ]
     },
@@ -1587,6 +1732,16 @@
           "kind": "concept",
           "id": "rc-detail",
           "role": "secondary"
+        },
+        {
+          "kind": "word",
+          "id": "postulate",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "anomaly",
+          "role": "stem"
         }
       ]
     },
@@ -1623,6 +1778,21 @@
           "kind": "concept",
           "id": "rc-attitude",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "refute",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "assess",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "ambivalent",
+          "role": "stem"
         }
       ]
     },
@@ -1682,6 +1852,11 @@
           "kind": "concept",
           "id": "rc-function",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "concession",
+          "role": "stem"
         }
       ]
     },

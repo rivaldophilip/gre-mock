@@ -6,7 +6,8 @@ import { TestSchema, type Question, type Test } from "../lib/types";
 import { passageSentences, splitSentences } from "../lib/sentences";
 import { parseNumber } from "../lib/scoring";
 import { containment, MIN_SHINGLES, SETUP_TH, shingles } from "../lib/ngram";
-import { measureTests, pastItems, primaryOf, setupOverlap, setupText, sharedSkeleton } from "../lib/setup-history";
+import { earlierTests, pastItems, primaryOf, setupOverlap, setupText, sharedSkeleton } from "../lib/setup-history";
+import { DRILL_DIR, isDrillId, TESTS_DIR } from "../lib/test-path";
 import { REVISIT_MAX } from "../lib/priority/revisit";
 import { choiceIsWord } from "../lib/vocab-match";
 import { readTestFile } from "./lib/test-file";
@@ -20,6 +21,10 @@ export const TOP_CAP = 2;
 export const VERBAL_FORMAT_FROM = 15;
 /** Verbal tests from this number on set an arg-role item's portions in **bold**, as the real test does (earlier ones quote them in the stem). */
 export const ARG_BOLD_FROM = 18;
+/** Verbal tests from this number on may not open an RC choice with a summary label and a colon ("qualified approval: …"); the real test never does. */
+export const NO_LABEL_CHOICES_FROM = 18;
+/** A reading choice that opens with a short label and a colon. */
+export const LABEL_CHOICE = /^[A-Za-z][\w'-]*(?:,? [\w'-]+){0,4}:\s/;
 /** Quant tests from this number on carry a `setup` and `variant` on every question (earlier ones were backfilled). */
 export const QUANT_SETUP_FROM = 11;
 /** Tests from these numbers on must not reuse an earlier setup (quant) or an earlier item's company (verbal); earlier ones were taken first. */
@@ -75,6 +80,11 @@ export function verbalFormatRules(test: Test, blueprint: { passages?: Record<str
         out.push(`${q.id} (arg-role): set the 1-2 portions in **bold** in the argument and ask about "the portions in boldface", as on the real test (found ${spans.length} bold span(s))`);
       else if (split.length) out.push(`${q.id} (arg-role): a bold portion spans two sentences; bold one sentence or clause at a time`);
     }
+  if (Number(/-(\d+)$/.exec(test.id)?.[1] ?? 0) >= NO_LABEL_CHOICES_FROM)
+    for (const q of test.questions.filter((x) => x.type.startsWith("rc"))) {
+      const labelled = (q.choices ?? []).filter((c) => LABEL_CHOICE.test(c));
+      if (labelled.length) out.push(`${q.id}: ${labelled.length} choice(s) open with a summary label ("${labelled[0].split(":")[0]}: …"); write each choice as a bare phrase or a full sentence, as the real test does`);
+    }
   return out;
 }
 
@@ -121,6 +131,14 @@ function schemaWhere(raw: unknown, p: PropertyKey[]): string {
   return p.join(".") || "(test)";
 }
 
+/** The concept-variant pairs ("concept\nvariant") the test's brief assigned to its slots; empty without a brief. */
+function briefVariants(id: string, dir: string): Set<string> {
+  const file = path.join(dir, `${id}.json`);
+  if (!fs.existsSync(file)) return new Set();
+  const b = JSON.parse(fs.readFileSync(file, "utf8")) as { conceptSlots?: { concept: string; variant?: string }[] };
+  return new Set((b.conceptSlots ?? []).filter((s) => s.variant).map((s) => `${s.concept}\n${s.variant}`));
+}
+
 /**
  * Setup reuse against earlier tests of the measure (lower numbers, so the first use of a setup stays and later copies
  * are flagged): an item whose masked stem matches an earlier item of the same primary concept is an error, and a
@@ -129,6 +147,7 @@ function schemaWhere(raw: unknown, p: PropertyKey[]): string {
 export function sameSetups(test: Test, dir = "content/tests"): { error: boolean; message: string }[] {
   if (test.measure !== "quant" || Number(/-(\d+)$/.exec(test.id)?.[1] ?? 0) < NOVELTY_FROM.quant) return [];
   const earlier = pastItems(test.measure, test.id, dir);
+  const assigned = briefVariants(test.id, path.join(dir, "..", "briefs"));
   const out: { error: boolean; message: string }[] = [];
   for (const q of test.questions) {
     const c = primaryOf(q);
@@ -146,8 +165,8 @@ export function sameSetups(test: Test, dir = "content/tests"): { error: boolean;
         });
       }
     }
-    // a revisit shares its earlier item's form on purpose
-    const reused = q.variant && !q.revisits ? same.filter((e) => e.variant === q.variant).length : 0;
+    // a revisit shares its earlier item's form on purpose, and the brief's own variant is the least-used one on offer
+    const reused = q.variant && !q.revisits && !assigned.has(`${c}\n${q.variant}`) ? same.filter((e) => e.variant === q.variant).length : 0;
     if (reused >= 2) out.push({ error: false, message: `${q.id}: variant "${q.variant}" of ${c} is already in ${reused} earlier items; prefer the brief's variant` });
   }
   return out;
@@ -159,14 +178,13 @@ export function sameSetups(test: Test, dir = "content/tests"): { error: boolean;
  */
 export function revisitRules(test: Test, dir = "content/tests"): string[] {
   const out: string[] = [];
-  const no = (tid: string) => Number(/-(\d+)$/.exec(tid)?.[1] ?? 0);
-  const earlier = new Map(measureTests(test.measure, dir).filter((t) => no(t.id) < no(test.id)).flatMap((t) => t.questions.map((q): [string, Question] => [`${t.id}:${q.id}`, q])));
+  const earlier = new Map(earlierTests(test, dir).flatMap((t) => t.questions.map((q): [string, Question] => [`${t.id}:${q.id}`, q])));
   const keys = (q: Question) => q.tags.filter((t) => t.kind === "word" && t.role === "key").map((t) => t.id);
   const links = test.questions.filter((q) => q.revisits);
   if (links.length > REVISIT_MAX) out.push(`${links.length} revisits; at most ${REVISIT_MAX} per test, every other item must be new`);
   for (const q of links) {
     const e = earlier.get(q.revisits!);
-    if (!e) out.push(`${q.id}: revisits ${q.revisits}, which is not an item of an earlier ${test.measure} test`);
+    if (!e) out.push(`${q.id}: revisits ${q.revisits}, which is not an item of an earlier ${test.measure} test${isDrillId(test.id) ? " or drill batch" : ""}`);
     else if (test.measure === "quant" && primaryOf(e) !== primaryOf(q)) out.push(`${q.id}: revisits ${q.revisits} (${primaryOf(e)}) but tests ${primaryOf(q)}; a revisit keeps the concept`);
     else if (test.measure === "verbal" && !keys(q).some((k) => keys(e).includes(k))) out.push(`${q.id}: revisits ${q.revisits} but shares no key word with it`);
   }
@@ -178,11 +196,9 @@ export function revisitRules(test: Test, dir = "content/tests"): string[] {
  * SE item must not reuse any of that item's distractor words, and an SE item must not repeat its key pair.
  */
 export function wordReuse(test: Test, dir = "content/tests"): string[] {
-  if (test.measure !== "verbal" || Number(/-(\d+)$/.exec(test.id)?.[1] ?? 0) < NOVELTY_FROM.verbal) return [];
-  const no = (tid: string) => Number(/-(\d+)$/.exec(tid)?.[1] ?? 0);
+  if (test.measure !== "verbal" || (!isDrillId(test.id) && Number(/-(\d+)$/.exec(test.id)?.[1] ?? 0) < NOVELTY_FROM.verbal)) return [];
   const words = (q: Question, role: string) => q.tags.filter((t) => t.kind === "word" && t.role === role).map((t) => t.id);
-  const earlier = measureTests("verbal", dir)
-    .filter((t) => no(t.id) < no(test.id))
+  const earlier = earlierTests(test, dir)
     .flatMap((t) => t.questions.filter((q) => q.type === "tc" || q.type === "se").map((q) => ({ ref: `${t.id} ${q.id}`, q })));
   const out: string[] = [];
   for (const q of test.questions.filter((x) => x.type === "tc" || x.type === "se")) {
@@ -196,6 +212,29 @@ export function wordReuse(test: Test, dir = "content/tests"): string[] {
         out.push(`${q.id}: repeats the SE key pair ${mine.join(" / ")} of ${e.ref}; pair the word with a different synonym`);
     }
   }
+  return out;
+}
+
+/** Questions per drill batch, and the levels its items sit at: the hard end of a mock (verbal tops out at 5). */
+export const DRILL_MAX = 30;
+export const DRILL_LEVELS = [4, 5];
+
+/**
+ * A drill batch (content/drill): standalone TC / SE items for the endless vocab mode, all in section 1, each at level
+ * 4-5 with at least half at 5, so a spare-minute question is as hard as the hard end of a mock.
+ */
+export function drillRules(test: Test): string[] {
+  const out: string[] = [];
+  if (test.measure !== "verbal") out.push(`measure must be verbal`);
+  if (test.questions.length > DRILL_MAX) out.push(`${test.questions.length} questions; at most ${DRILL_MAX} per batch`);
+  if (test.passages.length || test.figures.length) out.push("no passages or figures: every item stands alone");
+  for (const q of test.questions) {
+    if (q.type !== "tc" && q.type !== "se") out.push(`${q.id}: type ${q.type}; a drill item is tc or se`);
+    if (q.section !== 1) out.push(`${q.id}: section ${q.section}; every drill item is in section 1`);
+    if (!DRILL_LEVELS.includes(q.difficulty)) out.push(`${q.id}: difficulty ${q.difficulty}; drill items are level ${DRILL_LEVELS.join(" or ")} (docs/HARD-PATTERNS.md)`);
+  }
+  const l5 = test.questions.filter((q) => q.difficulty >= 5).length;
+  if (l5 < test.questions.length / 2) out.push(`only ${l5} of ${test.questions.length} items at level 5; at least half must be`);
   return out;
 }
 
@@ -232,7 +271,9 @@ export function validateTest(raw: unknown, id: string): Validation {
     if (ids.has(q.id)) err(`duplicate question id ${q.id}`);
     ids.add(q.id);
   }
-  for (const sec of blueprint.sections as { n: 1 | 2; slots: { type: string; level: number }[] }[]) {
+  const drill = isDrillId(test.id);
+  if (drill) for (const m of drillRules(test)) err(`drill: ${m}`);
+  for (const sec of drill ? [] : (blueprint.sections as { n: 1 | 2; slots: { type: string; level: number }[] }[])) {
     const qs = test.questions.filter((q) => q.section === sec.n);
     if (qs.length !== sec.slots.length) err(`section ${sec.n}: ${qs.length} questions, blueprint wants ${sec.slots.length}`);
     const want: Record<string, number> = {};
@@ -241,11 +282,11 @@ export function validateTest(raw: unknown, id: string): Validation {
     qs.forEach((q) => (got[typeOf(q)] = (got[typeOf(q)] ?? 0) + 1));
     for (const t of new Set([...Object.keys(want), ...Object.keys(got)])) if ((want[t] ?? 0) !== (got[t] ?? 0)) err(`section ${sec.n}: type ${t} x${got[t] ?? 0}, blueprint wants x${want[t] ?? 0}`);
   }
-  for (const r of difficultyRules(test.questions))
+  for (const r of drill ? [] : difficultyRules(test.questions))
     if (!r.ok)
       err(`difficulty: ${r.rule} fails; ${r.rule.includes("L6+") ? "ease the extra items to official-L5 difficulty and re-rate them, see docs/CALIBRATION.md" : "raise levels honestly (harder items), see docs/HARD-PATTERNS.md"}`);
   // block order: TC (verbal) / QC (quant) must open each section
-  for (const n of [1, 2] as const) {
+  for (const n of drill ? [] : ([1, 2] as const)) {
     const qs = test.questions.filter((q) => q.section === n);
     const lead = test.measure === "verbal" ? "tc" : "qc";
     const firstNon = qs.findIndex((q) => q.type !== lead);
@@ -396,12 +437,13 @@ export function validateTest(raw: unknown, id: string): Validation {
   // one error per overlapping source, listing our items: questions on one passage all overlap together
   const overlaps = new Map<string, Set<string>>();
   const overlap = (source: string, where: string) => overlaps.set(source, (overlaps.get(source) ?? new Set()).add(where));
-  for (const f of fs.readdirSync("content/tests").filter((f) => f.endsWith(".json") && f !== `${id}.json`)) {
-    const other = TestSchema.safeParse(JSON.parse(fs.readFileSync(path.join("content/tests", f), "utf8")));
+  const others = [TESTS_DIR, DRILL_DIR].flatMap((dir) => (fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith(".json") && f !== `${id}.json`).map((f) => path.join(dir, f)) : []));
+  for (const f of others) {
+    const other = TestSchema.safeParse(JSON.parse(fs.readFileSync(f, "utf8")));
     if (!other.success) continue;
     for (const oq of other.data.questions) {
       const osh = shingles([oq.prompt, oq.passageId ? other.data.passages.find((p) => p.id === oq.passageId)?.paragraphs.join(" ") : "", (oq.choices ?? []).join(" ")].join(" "));
-      for (const m of mine) if (m.sh.size >= MIN_SHINGLES && containment(m.sh, osh) > TH) overlap(`earlier test ${f}`, m.q.id);
+      for (const m of mine) if (m.sh.size >= MIN_SHINGLES && containment(m.sh, osh) > TH) overlap(`earlier test ${path.basename(f)}`, m.q.id);
     }
   }
   const REF = path.resolve("../books/extracted/reference/items.jsonl");

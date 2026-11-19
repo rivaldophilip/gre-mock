@@ -33,6 +33,8 @@ const RETAKE: Record<Measure, string> = {
   quant: "color-mix(in oklab, var(--series-quant) 35%, var(--muted))",
 };
 const colorOf = (p: ProgressPoint) => (p.attemptNo > 1 ? RETAKE : COLOR)[p.measure];
+/** Target scaled score per measure, drawn as a dashed line on the score chart. */
+const GOAL: Record<Measure, number> = { verbal: 164, quant: 164 };
 const H = 240;
 const M = { top: 14, right: 40, bottom: 28, left: 36 };
 const DAY = 86_400_000;
@@ -94,7 +96,7 @@ export function ProgressChart({ points, now, limitMs, onView }: { points: Progre
       </div>
       <p className="text-xs text-muted">
         {yMode === "score"
-          ? "Score is the strict estimate; the whisker is its ±1 standard-error range. A retake (grey) re-uses questions you have seen, so it reads high."
+          ? `Score is the strict estimate; the whisker is its ±1 standard-error range. A retake (grey) re-uses questions you have seen, so it reads high. Dashed lines are the goals (${present.map((m) => `${LABEL[m].toLowerCase()} ${GOAL[m]}`).join(", ")}).`
           : `Time on the section clocks, pauses excluded. Dashed lines are the time limits for both sections (${present.map((m) => `${LABEL[m].toLowerCase()} ${Math.round(limitMs[m] / 60_000)}m`).join(", ")}).`}{" "}
         Drag or scroll sideways for earlier mocks; tap a point to open its review.
       </p>
@@ -121,6 +123,7 @@ const fmtDay = (t: number) => new Date(t).toLocaleDateString(undefined, { month:
 function Plot({ w, points, now, xMode, yMode, limitMs, present, onView }: { w: number; points: ProgressPoint[]; now: number; xMode: XMode; yMode: YMode; limitMs: Record<Measure, number>; present: Measure[]; onView?: (v: ChartView) => void }) {
   const router = useRouter();
   const [hover, setHover] = useState<number | null>(null); // mock number, or a point id in date mode
+  const [refHover, setRefHover] = useState<number | null>(null); // index of the hovered goal / limit label
   const scroller = useRef<HTMLDivElement>(null);
   const [scrollX, setScrollX] = useState(0);
   const frame = useRef(0);
@@ -213,6 +216,10 @@ function Plot({ w, points, now, xMode, yMode, limitMs, present, onView }: { w: n
   if (yMode === "score") {
     y0 = Math.max(130, Math.floor((Math.min(...points.map((p) => p.score.low)) - 1) / 5) * 5);
     y1 = Math.min(170, Math.ceil((Math.max(...points.map((p) => p.score.high)) + 1) / 5) * 5);
+    // keep the goal lines in view
+    const goals = present.map((m) => GOAL[m]);
+    y0 = Math.min(y0, Math.floor((Math.min(...goals) - 1) / 5) * 5);
+    y1 = Math.max(y1, Math.ceil((Math.max(...goals) + 1) / 5) * 5);
     if (y1 - y0 < 10) [y0, y1] = y0 + 10 <= 170 ? [y0, y0 + 10] : [160, 170];
     step = y1 - y0 > 25 ? 10 : 5;
   } else {
@@ -269,6 +276,19 @@ function Plot({ w, points, now, xMode, yMode, limitMs, present, onView }: { w: n
   const endsClash = ends.length === 2 && Math.abs(sy(yOf(ends[0].p, yMode)) - sy(yOf(ends[1].p, yMode))) < 14 && Math.abs(sx(xv(ends[0].p)) - sx(xv(ends[1].p))) < 40;
   const fmtY = (v: number) => (yMode === "score" ? String(Math.round(v)) : `${Math.round(v)}m`);
 
+  // dashed reference lines: the goal on scores, the section limit on time; lines that sit together share one label
+  const refs = present.map((m) => ({ m, v: yMode === "score" ? GOAL[m] : limitMs[m] / 60_000 }));
+  const refLabels: { y: number; refs: typeof refs }[] = [];
+  for (const r of [...refs].sort((a, b) => a.v - b.v)) {
+    const last = refLabels[refLabels.length - 1];
+    if (last && Math.abs(last.y - sy(r.v)) < 12) last.refs.push(r);
+    else refLabels.push({ y: sy(r.v), refs: [r] });
+  }
+  const refX = total - M.right + 6;
+  // step a label off its line when a line's end value sits there too
+  const refY = (y: number) => (ends.some(({ p }) => sx(xv(p)) + 30 > refX && Math.abs(sy(yOf(p, yMode)) - y) < 12) ? y - 12 : y);
+  const refWord = yMode === "score" ? "Goal" : "Limit";
+
   return (
     <>
       <div
@@ -279,15 +299,14 @@ function Plot({ w, points, now, xMode, yMode, limitMs, present, onView }: { w: n
         className={`no-scrollbar h-full overflow-x-auto overflow-y-hidden overscroll-x-contain ${total > w ? (grabbing ? "cursor-grabbing" : "cursor-grab") : ""}`}
       >
         <div className="relative" style={{ width: total }}>
-          <svg width={total} height={H} className="block select-none" onPointerMove={(e) => !drag.current?.moved && onMove(e)} onPointerLeave={() => setHover(null)} role="img" aria-label={`${yMode === "score" ? "Score" : "Time"} of each finished attempt by ${xMode === "n" ? "mock number" : "date"}`}>
+          <svg width={total} height={H} className="block select-none" onPointerMove={(e) => !drag.current?.moved && refHover === null && onMove(e)} onPointerLeave={() => setHover(null)} role="img" aria-label={`${yMode === "score" ? "Score" : "Time"} of each finished attempt by ${xMode === "n" ? "mock number" : "date"}`}>
             {yTicks.map((v) => <line key={v} x1={M.left} x2={total - M.right} y1={sy(v)} y2={sy(v)} stroke="var(--line)" strokeWidth="1" />)}
             {xTicks.map((t) => (
               <text key={t.v} x={sx(t.v)} y={H - 8} textAnchor="middle" className="fill-muted text-[11px] tabular-nums">{t.text}</text>
             ))}
-            {yMode === "time" &&
-              present.map((m) => (
-                <line key={m} x1={M.left} x2={total - M.right} y1={sy(limitMs[m] / 60_000)} y2={sy(limitMs[m] / 60_000)} stroke={COLOR[m]} strokeOpacity="0.55" strokeWidth="1" strokeDasharray="4 4" />
-              ))}
+            {refs.map(({ m, v }) => (
+              <line key={m} x1={M.left} x2={total - M.right} y1={sy(v)} y2={sy(v)} stroke={COLOR[m]} strokeOpacity="0.55" strokeWidth="1" strokeDasharray="4 4" />
+            ))}
             {crossX !== null && <line x1={crossX} x2={crossX} y1={M.top} y2={M.top + ih} stroke="var(--muted)" strokeOpacity="0.5" strokeWidth="1" />}
             {series.map(({ m, pts }) => (
               <g key={m}>
@@ -319,7 +338,34 @@ function Plot({ w, points, now, xMode, yMode, limitMs, present, onView }: { w: n
               ends.map(({ m, p }) => (
                 <text key={m} x={sx(xv(p)) + 9} y={sy(yOf(p, yMode))} dy="0.32em" className="fill-fg text-[11px] font-semibold tabular-nums">{fmtY(yOf(p, yMode))}</text>
               ))}
+            {refLabels.map((l, i) => (
+              <text
+                key={i}
+                x={refX}
+                y={refY(l.y)}
+                dy="0.32em"
+                className="cursor-default fill-muted text-[10px] font-medium"
+                onPointerEnter={() => { setRefHover(i); setHover(null); }}
+                onPointerLeave={() => setRefHover(null)}
+              >
+                {refWord}
+              </text>
+            ))}
           </svg>
+          {refHover !== null && refLabels[refHover] && (
+            <div
+              className="pointer-events-none absolute z-10 space-y-0.5 whitespace-nowrap rounded-lg border border-line bg-surface px-2 py-1 text-xs shadow-lg"
+              style={{ right: M.right - 2, top: refY(refLabels[refHover].y) + 10 }}
+            >
+              {refLabels[refHover].refs.map(({ m, v }) => (
+                <div key={m} className="flex items-center gap-1.5 tabular-nums">
+                  <svg width="12" height="6" aria-hidden><line x1="0" x2="12" y1="3" y2="3" stroke={COLOR[m]} strokeWidth="1.5" strokeDasharray="3 2" /></svg>
+                  <span className="text-muted">{LABEL[m]} {yMode === "score" ? "goal" : "time limit"}</span>
+                  <span className="font-semibold text-fg">{yMode === "score" ? v : fmtMin(v)}</span>
+                </div>
+              ))}
+            </div>
+          )}
           {active.length > 0 && crossX !== null && <Tip x={crossX} total={total} right={crossX - scrollX > w / 2} pts={active} xMode={xMode} />}
         </div>
       </div>

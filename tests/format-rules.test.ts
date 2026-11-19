@@ -73,3 +73,12 @@ describe("boldface argument portions", () => {
     ]);
   });
 });
+
+describe("label-colon reading choices", () => {
+  it("flags a label-colon choice from verbal-018 on, not before", () => {
+    const raw = load("verbal-014");
+    const q = raw.questions.find((x: { choices?: string[] }) => x.choices?.some((c) => c.startsWith("unreserved:")));
+    expect(verbalFormatRules(TestSchema.parse(raw), blueprint).join("\n")).not.toMatch(/summary label/);
+    expect(verbalFormatRules(TestSchema.parse({ ...raw, id: "verbal-018" }), blueprint).join("\n")).toMatch(new RegExp(`${q.id}: \\d choice\\(s\\) open with a summary label`));
+  });
+});

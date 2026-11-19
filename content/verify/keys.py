@@ -13,6 +13,7 @@ Use in content/verify/<id>.py (run by `npm run -s check -- <id>`; example: quant
     t.done()                           # lists unchecked questions; prints "27/27 keys verified"
 """
 import json
+import math
 import re
 import sys
 from fractions import Fraction
@@ -24,7 +25,8 @@ QC = "ABCD"  # A greater, B greater, equal, cannot be determined
 
 
 def number(text):
-    """A choice's value as a Fraction, or None: 10.8, -37, 36%, $20\\%$, \\$1{,}500, 85^\\circ, 3/8, \\dfrac{23}{4}, \\dfrac74."""
+    """A choice's value as a Fraction, or None: 10.8, -37, 36%, $20\\%$, \\$1{,}500, 85^\\circ, 3/8, \\dfrac{23}{4}, \\dfrac74.
+    A choice with \\pi or \\sqrt is a float (compared with a tolerance): 2{,}500\\pi, 13+5\\sqrt{13}, \\dfrac{25\\sqrt{3}}{2} - \\dfrac{25\\pi}{6}."""
     s = re.sub(r"\\[,!;$%]|\$|\s|\\left|\\right|\{,\}|\^\{?\\circ\}?", "", str(text)).replace("−", "-").rstrip("%")
     m = re.fullmatch(r"(-?)\\[dt]?frac\{?(-?\d+)\}?\{?(\d+)\}?", s)
     if m:
@@ -32,6 +34,24 @@ def number(text):
     try:
         return Fraction(s.replace(",", ""))
     except (ValueError, ZeroDivisionError):
+        return irrational(s) if "\\pi" in s or "\\sqrt" in s else None
+
+
+def irrational(s):
+    """A sum of terms in \\pi, \\sqrt and \\dfrac as a float, or None (a letter other than these, or a malformed form)."""
+    e = re.sub(r"\\sqrt\{([^{}]*)\}", r"sqrt(\1)", s.replace(",", ""))
+    e = re.sub(r"\\sqrt(\d)", r"sqrt(\1)", e).replace("\\pi", "pi")
+    while True:  # innermost fractions first: \dfrac{a}{b} or \dfrac ab
+        f = re.sub(r"\\[dt]?frac(?:\{([^{}]*)\}|(\d))(?:\{([^{}]*)\}|(\d))", lambda m: f"(({m[1] or m[2]})/({m[3] or m[4]}))", e)
+        if f == e:
+            break
+        e = f
+    e = re.sub(r"(\d|\)|pi)(?=sqrt|pi|\()", r"\1*", e)  # implicit products: 3pi, 5sqrt(13), 2(pi)
+    if re.sub(r"sqrt|pi", "", e).strip("0123456789.+-*/()") or not re.fullmatch(r"[\d.+\-*/()a-z]+", e):
+        return None
+    try:
+        return float(eval(e, {"__builtins__": {}, "sqrt": math.sqrt, "pi": math.pi}))
+    except (SyntaxError, ValueError, ZeroDivisionError, TypeError):
         return None
 
 

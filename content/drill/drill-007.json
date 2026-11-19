@@ -1,0 +1,1963 @@
+{
+  "id": "drill-007",
+  "measure": "verbal",
+  "title": "Endless vocab batch 7",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Admirers praised the orrery as the heavens in miniature; its critics replied that it was nothing of the kind. A figure of speech that names a whole by one of its parts, they said, at least shares something real with what it names, whereas these gears, which reproduced every planet's period exactly, shared nothing at all with the gravitation that actually moves the planets. What the machine offered was, in their view, a ___ of celestial order and no more.",
+      "choices": [
+        "metonymy",
+        "semblance",
+        "distinction",
+        "synecdoche",
+        "simulacrum",
+        "prodigality"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The critics deny that the orrery is a figure that 'shares something real' with what it stands for: its gears copy the periods but have nothing in common with the cause. What is left is an outward likeness with no substance behind it, and 'and no more' confirms the slight. Semblance and simulacrum both name such a merely surface imitation.",
+        "distractors": {
+          "metonymy": "Trap pair with synecdoche: a figure of speech in which one thing is named by something associated with it. The critics' whole point is that the orrery is not such a figure, because a figure shares something real with its referent and the gears share nothing.",
+          "synecdoche": "Trap pair with metonymy: naming a whole by one of its parts. The sentence describes this figure only to say the orrery falls short of it.",
+          "distinction": "Excellence or honour, or a difference drawn between things. 'A distinction of celestial order and no more' gives no sense, and the critics are not praising the machine.",
+          "prodigality": "Reckless extravagance. Nothing in the critique concerns waste; it concerns a likeness without substance."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "metonymy",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "semblance",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "distinction",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "synecdoche",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "simulacrum",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "prodigality",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Those who knew the purser only from his letters to the Admiralty, curt and commanding, expected him to bully the Inuit hunters he traded with. The hunters remembered instead a man who priced his iron goods to exactly what they would bear and never once paid more for a pelt than he had to; he was, in their telling, neither a tyrant nor a benefactor but simply ___.",
+      "choices": [
+        "imperious",
+        "avuncular",
+        "canny",
+        "peremptory",
+        "magnanimous",
+        "savvy"
+      ],
+      "key": {
+        "sel": [
+          2,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "The hunters' memory corrects the expectation formed from the letters: the purser was a careful, shrewd dealer who knew exactly what the market would bear and never overpaid. 'Neither a tyrant nor a benefactor' rules out both the domineering and the generous readings. Canny and savvy both mean shrewd in practical dealings.",
+        "distractors": {
+          "imperious": "Trap pair with peremptory: domineering, expecting obedience. It fits the 'curt and commanding' letters, but the hunters' memory corrects that expectation and 'neither a tyrant' rules it out.",
+          "peremptory": "Trap pair with imperious: insisting on immediate obedience, allowing no discussion. Same problem: this is the bully the hunters did not meet.",
+          "avuncular": "Kind and indulgent, like an uncle. A man who never paid a penny more than he had to is not indulgent, and 'nor a benefactor' excludes kindly generosity.",
+          "magnanimous": "Generous, especially toward a rival or the weaker party. 'Never once paid more than he had to' and 'nor a benefactor' rule it out."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "imperious",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "avuncular",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "canny",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "peremptory",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "magnanimous",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "savvy",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Lavoisier's circle presented the new chemical names as though they merely made explicit kinships already latent in the old ones, so that 'sulfate' and 'sulfite' seemed words that had always been related. Their opponents saw the reform as ___ through and through: the kinships it claimed to discover among the names were ones it had itself decreed, and within a decade journals were returning papers that used the older terms.",
+      "choices": [
+        "cognate",
+        "normative",
+        "seminal",
+        "homologous",
+        "utilitarian",
+        "prescriptive"
+      ],
+      "key": {
+        "sel": [
+          1,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "The reformers claimed to describe relations already present in the language; the opponents say the relations were 'decreed', and the journals then enforced them by rejecting the old terms. A reform that lays down how chemists must speak, while posing as a record of how they do speak, is one that sets a standard rather than describing usage. Normative and prescriptive both say that.",
+        "distractors": {
+          "cognate": "Trap pair with homologous: related by common origin, as words descended from one root. It is baited by 'kinships' and 'always been related', but that is the reformers' claim, which the opponents reject.",
+          "homologous": "Trap pair with cognate: corresponding in structure or origin. Same bait; the opponents deny that the correspondences were found rather than made.",
+          "seminal": "Highly influential, the seed of later developments. The reform was influential, but the opponents' charge is about decree versus description, and 'seminal through and through' does not express it.",
+          "utilitarian": "Designed for usefulness rather than beauty. The opponents complain about imposed rules, not about mere practicality."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "cognate",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "normative",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "seminal",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "homologous",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "utilitarian",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "prescriptive",
+          "role": "key",
+          "at": [
+            5
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "explicit",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "latent",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Huxley's lectures on the Origin were full of a ___ that audiences mistook for devotion to its author. His letters tell otherwise: he doubted natural selection, found Darwin's prose tedious, and threw himself into the fight chiefly because it was the best weapon yet offered against clerical authority over science.",
+      "choices": [
+        "eulogy",
+        "zeal",
+        "hedonism",
+        "fervor",
+        "encomium",
+        "obloquy"
+      ],
+      "key": {
+        "sel": [
+          1,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Audiences were wrong about the object of Huxley's energy, not about the energy itself: the letters show a man fighting hard for a cause (freeing science from clerical authority) while privately cool on Darwin and his theory. The blank names intense enthusiasm in pursuit of a cause, which is zeal and fervor.",
+        "distractors": {
+          "eulogy": "Trap pair with encomium: a speech of high praise. If the lectures had been full of praise of Darwin, the audiences would not have been mistaken; the letters show he did not admire the prose or the theory.",
+          "encomium": "Trap pair with eulogy: a formal expression of warm praise. Same problem: the sentence says the impression of devotion to the author was a mistake.",
+          "hedonism": "The pursuit of pleasure as life's chief good. Nothing about pleasure is at issue; Huxley's motive was a campaign.",
+          "obloquy": "Strong public abuse, or the disgrace that follows it. Huxley did abuse his clerical opponents, but abuse could not be mistaken for devotion to Darwin."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "eulogy",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "zeal",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hedonism",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fervor",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "encomium",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obloquy",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Treating the plague year of 1666 as the single decisive turn in Newton's thought, historians long read his later decades as an epilogue and left his alchemical and theological manuscripts to antiquarians. The new edition denies that any one turn explains him: its editors insist that his ___, the prophecies and the optics alike, be read as a single body of work.",
+      "choices": [
+        "juncture",
+        "canon",
+        "palimpsest",
+        "potentiality",
+        "oeuvre",
+        "moment"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The editors reject the old focus on one decisive turn and ask that everything Newton wrote, 'the prophecies and the optics alike', be taken together. The blank is the whole body of his writings: oeuvre, or canon in its sense of the accepted body of an author's works.",
+        "distractors": {
+          "juncture": "Trap pair with moment: a critical point in time. It is baited by 'single decisive turn', but that is the view the edition rejects, and a point in time cannot contain the prophecies and the optics.",
+          "moment": "Trap pair with juncture, read as a turning point; in its second sense it means importance. Neither fits 'his ___, the prophecies and the optics alike', which lists writings.",
+          "palimpsest": "A manuscript written over an erased earlier text. It is baited by 'manuscripts', but nothing suggests that Newton's papers overwrite one another, and the editors' point is about the whole of his work.",
+          "potentiality": "Latent capacity not yet realized. The edition concerns writings that exist, not what Newton might have done."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "juncture",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "canon",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "palimpsest",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "potentiality",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "oeuvre",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "moment",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "antiquarian",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The loss of the Franklin expedition is still often told as the consequence of a single blunder, tinned food sealed with lead. The Inuit testimony, read together with the relics, describes not one disaster and its long train of effects but a ___ of small failures, none fatal alone: scurvy here, a wrong turn there, a heavy boat dragged far past the point of sense.",
+      "choices": [
+        "repercussion",
+        "enormity",
+        "aggregate",
+        "stasis",
+        "ramification",
+        "conglomerate"
+      ],
+      "key": {
+        "sel": [
+          2,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "The testimony replaces one cause with many: small, unlike failures, none fatal alone, that together sank the expedition. The blank is a mass made up of many separate items, which aggregate and conglomerate both name.",
+        "distractors": {
+          "repercussion": "Trap pair with ramification: a consequence, often an unintended one. It is baited by 'the consequence of a single blunder', but the sentence explicitly sets aside 'one disaster and its long train of effects'; the small failures are causes, not consequences.",
+          "ramification": "Trap pair with repercussion: a further consequence branching from an action. Same problem.",
+          "enormity": "Great wickedness, or loosely great size. It clashes with 'small failures, none fatal alone'.",
+          "stasis": "A state of inactivity or equilibrium. The failures were a varied sequence of events, not a standstill."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "repercussion",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "enormity",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "aggregate",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "stasis",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ramification",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "conglomerate",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Earlier visitors to the headland admired how sharply its cliffs stood out from the shore, and painters made much of it; Hutton cared nothing for that. It was the ___ of the rock that held him, upright beds of grey schist capped by nearly level red sandstone, which told him that the land had been raised, worn down and drowned more than once.",
+      "choices": [
+        "succor",
+        "stratification",
+        "declivity",
+        "relief",
+        "stratigraphy",
+        "palimpsest"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Hutton set aside the cliffs' visual prominence and attended to how the rock was layered: upright beds beneath level ones, read in sequence as a history. That is the arrangement and order of the layers, which stratification and stratigraphy both name here (stratigraphy in its common sense of a site's sequence of layers).",
+        "distractors": {
+          "succor": "Trap pair with relief: help or comfort in distress. Nothing in the sentence is about aid.",
+          "relief": "Trap pair with succor in its sense of help; in its second sense it means prominence produced by contrast, which is exactly what the earlier visitors admired and what Hutton 'cared nothing for'.",
+          "declivity": "A downward slope. It fits the cliff setting, but the sentence describes beds of rock stacked one over another, not a slope.",
+          "palimpsest": "A manuscript reused after its first text was scraped away. As a figure it can suggest layers of history, but no other choice means the same, and the sentence names the rock's layering itself, not a metaphor for it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "succor",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "stratification",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "declivity",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "relief",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "stratigraphy",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "palimpsest",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The Royal Society's 1713 report on the calculus dispute was presented to Europe as the finding of an ___ committee, and for a century readers took its cool ledger of dates as proof of that claim. Only when Newton's drafts surfaced was it plain that the ledger was his own, written by the one party with the most to gain from its verdict.",
+      "choices": [
+        "whiggish",
+        "impartial",
+        "prospective",
+        "triumphalist",
+        "conversant",
+        "objective"
+      ],
+      "key": {
+        "sel": [
+          1,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "The report claimed neutrality, its 'cool ledger' seemed to confirm it, and the drafts exposed it: an interested party wrote it. The claim was that the committee was unbiased, which is impartial or objective.",
+        "distractors": {
+          "whiggish": "Trap pair with triumphalist: (of history) judging the past by how far it led to the present. It is baited by the historiographical setting, but the blank describes a committee's claimed neutrality, not a way of writing history.",
+          "triumphalist": "Trap pair with whiggish: gloating over a victory. The report was presented as cool and neutral, and the sentence says it took a century to see whose victory it served, so it was not presented as gloating.",
+          "prospective": "Expected or likely in the future. The committee existed and issued its report; nothing is prospective.",
+          "conversant": "Familiar with or knowledgeable about. The claim being exposed is neutrality, and Newton's authorship would not undercut a claim of knowledge."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "whiggish",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "impartial",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "prospective",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "triumphalist",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "conversant",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "objective",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The expedition's commander, a peer chosen chiefly for the subscriptions his name would draw, was on the ice, by every firsthand account, little more than a (i) ___. That the published narrative never says so was long put down to the tact expected of a junior officer. The sailing master's letters tell a different story: the silence was a (ii) ___ arranged by the sponsors, who wanted the book not so much to record the voyage as to (iii) ___ a reputation for leadership they had already paid for, since every decision that brought the party home had in fact been the sailing master's.",
+      "blanks": [
+        [
+          "ingrate",
+          "figurehead",
+          "cabal"
+        ],
+        [
+          "attribution",
+          "apothegm",
+          "subterfuge"
+        ],
+        [
+          "relinquish",
+          "inflate",
+          "stem"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) The last clause settles it: every decision was the sailing master's, so the commander held the title without the power, a figurehead, and he was chosen for his name, not his judgment. (ii) The silence was not the tact it seemed but something 'arranged by the sponsors' to mislead readers: a subterfuge. (iii) The sponsors wanted the book to make a purchased reputation look bigger than the facts allowed, since the commander made no decisions: inflate, in its sense of exaggerate.",
+        "distractors": {
+          "ingrate": "An ungrateful person. 'Little more than an ingrate' can stand alone, but nothing says the commander was ungrateful; the point is that he made no decisions.",
+          "cabal": "A small secret group of plotters. One man cannot be a cabal, and the plotting was the sponsors', not his.",
+          "attribution": "The assigning of credit or authorship. It is baited by the credit the book gives the commander, but the blank names the silence, and a silence attributes nothing; it conceals.",
+          "apothegm": "A short, pithy saying. A silence cannot be one.",
+          "relinquish": "To give up. The sponsors wanted to protect and enlarge the reputation they had paid for, not surrender it.",
+          "stem": "In its second sense, to stop or hold back a flow. The sponsors needed the reputation to grow so that the next subscription would fill, not to check it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "ingrate",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "figurehead",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cabal",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "attribution",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "apothegm",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "subterfuge",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "relinquish",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inflate",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "stem",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tact",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Helmholtz hoped to rescue musical taste from the charge that it was mere custom. What listeners hear as (i) ___ in certain intervals was, he argued, a physical fact: when the (ii) ___ of one tone is slightly mismatched in frequency with that of another, the two interfere, and the ear registers the resulting beats as roughness. Critics granted the acoustics but not the conclusion. If Javanese and European listeners disagree about which intervals are rough, they asked, what is left of the (iii) ___ he had claimed for the Western scale, as against the merely local habits of other traditions?",
+      "blanks": [
+        [
+          "monotony",
+          "relief",
+          "dissonance"
+        ],
+        [
+          "vibration",
+          "connotation",
+          "stasis"
+        ],
+        [
+          "anarchy",
+          "rationality",
+          "vernacular"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          0,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) What the ear hears is 'roughness' from interfering tones: a clash, dissonance. (ii) Something in a tone that has a frequency and can interfere with another's is its vibration. (iii) Helmholtz's aim was to rescue taste from 'mere custom', so what he claimed for the Western scale is that it was grounded in reason and physics, in contrast to 'merely local habits': rationality.",
+        "distractors": {
+          "monotony": "Tedious sameness. Interference between mismatched tones produces roughness, not sameness.",
+          "relief": "In its second sense, vividness produced by contrast. Two tones do contrast, but what the ear registers is 'roughness', which is a clash, not vividness.",
+          "connotation": "An implied or associated meaning. It is baited by the custom theme, but a connotation has no frequency and cannot beat against another.",
+          "stasis": "Stillness, equilibrium. The opposite of what a sounding tone has.",
+          "anarchy": "Absence of order or government. Helmholtz claimed the Western scale was especially well ordered, the opposite of anarchy.",
+          "vernacular": "The everyday local language or idiom. The local is what Helmholtz set the Western scale against ('as against the merely local habits'), so it cannot be what he claimed for it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "monotony",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "relief",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dissonance",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "vibration",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "connotation",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "stasis",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "anarchy",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rationality",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "vernacular",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Darwin's reputation for (i) ___ owes more to his readers than to his manner. The Origin is a conspicuously (ii) ___ book: it devotes a single sentence to human descent, defers to the Creator in its closing pages, and leaves to others the polemics that made it notorious. What its first clerical reviewers found hardest to forgive was not any assertion it made but an assumption it never stated, namely that natural history could be pursued as a wholly (iii) ___ inquiry; it attacks no article of faith, yet nowhere supposes that a complete account of species needs anything from theology.",
+      "blanks": [
+        [
+          "venality",
+          "insurrection",
+          "iconoclasm"
+        ],
+        [
+          "vehement",
+          "understated",
+          "treacly"
+        ],
+        [
+          "impious",
+          "plebeian",
+          "secular"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) The reputation is one his readers gave him for overturning cherished beliefs, the 'notorious' polemics: iconoclasm. (ii) 'Owes more to his readers than to his manner' sets the book's manner against that reputation, and the evidence (a single sentence on human descent, deference to the Creator, polemics left to others) is restraint: understated. (iii) The final clause gives the content: natural history that 'needs nothing from theology' but attacks no faith is non-religious, not anti-religious: secular.",
+        "distractors": {
+          "venality": "Openness to bribery. No one charged Darwin with corruption; the notoriety concerned his challenge to belief.",
+          "insurrection": "An armed or violent uprising against authority. It is too literal and too violent; the reputation is for attacking ideas, which iconoclasm names.",
+          "vehement": "Forceful and passionate. It matches the reputation, but the sentence sets the book's manner against the reputation, and the examples show restraint.",
+          "treacly": "Cloyingly sentimental. Deference to the Creator might suggest piety, but nothing in the list is sentimental; the point is that the book is restrained.",
+          "impious": "Lacking reverence for God. It is what the clergy might have called the book, but the sentence says it 'attacks no article of faith'; the offence was an unstated assumption that theology was unnecessary, which is secular, not irreverent.",
+          "plebeian": "Of the common people, unrefined. Nothing concerns social class or refinement."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "venality",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "insurrection",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "iconoclasm",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "vehement",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "understated",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "treacly",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "impious",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "plebeian",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "secular",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "polemic",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "notorious",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "For decades the claim that dinosaurs, like mammals, kept their bodies warm by their own metabolism rested on arguments from posture and gait, and its critics could fairly call it speculation: given the (i) ___ of anything more direct (soft tissue rarely fossilizes), a skeleton seemed to say little about (ii) ___. When (iii) ___ finally came, it came from an unexpected quarter: thin sections of bone, which in fast-growing, warm-bodied animals are riddled with channels for blood vessels.",
+      "blanks": [
+        [
+          "morass",
+          "dearth",
+          "interregnum"
+        ],
+        [
+          "monotony",
+          "potentiality",
+          "thermoregulation"
+        ],
+        [
+          "corroboration",
+          "obloquy",
+          "anarchy"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) The claim leaned on indirect arguments and could be called speculation, and the parenthesis gives the reason: soft tissue rarely survives. Direct evidence was scarce: a dearth. (ii) What a skeleton seemingly cannot show is how the animal kept its body warm: thermoregulation. (iii) Bone sections finally supplied support for the warm-blooded claim: corroboration.",
+        "distractors": {
+          "morass": "A swamp, or a confusing tangle. A tangle of direct evidence would be too much of it, but the claim had to rest on posture and gait because soft tissue 'rarely fossilizes': the problem was too little.",
+          "interregnum": "A gap between two reigns or regimes. It suggests absence, but evidence has no reigns, and the sentence describes a lasting shortage, not an interval between two bodies of evidence.",
+          "monotony": "Tedious sameness. It has nothing to do with body heat.",
+          "potentiality": "Latent capacity. A skeleton's silence concerns how the animal regulated its temperature, not its unrealized capacities.",
+          "obloquy": "Public abuse or disgrace. What arrived from bone sections was supporting evidence, not abuse.",
+          "anarchy": "Lawless disorder. It makes no sense as what 'finally came' from microscopic bone structure."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "morass",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dearth",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "interregnum",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "monotony",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "potentiality",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "thermoregulation",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "corroboration",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obloquy",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "anarchy",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Nightingale's order to (i) ___ the wards day and night, even in a Crimean winter, is now often told as a lucky accident: her theory that disease rose from foul air was wrong, yet the open windows saved lives. The irony is overstated. She never claimed to know why moving air was (ii) ___, only that patients in such wards died less often, a regularity her tables established whatever its cause. Nor did the reform wait on converting the army surgeons, who mostly resisted her; it depended on orderlies (iii) ___ enough to open the windows each morning whether or not they believed a word of her theory.",
+      "blanks": [
+        [
+          "desecrate",
+          "aerate",
+          "revamp"
+        ],
+        [
+          "salubrious",
+          "turbid",
+          "reprehensible"
+        ],
+        [
+          "conversant",
+          "bereft",
+          "compliant"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) The order is later called 'the open windows' and 'moving air': she had the wards supplied with fresh air, aerate. (ii) Patients in airy wards 'died less often', so she claimed only that moving air was good for health, without knowing why: salubrious. (iii) The reform worked without belief: orderlies had only to obey, 'whether or not they believed a word': compliant.",
+        "distractors": {
+          "desecrate": "To violate something sacred. Wards are not sacred, and the later clues describe opening windows.",
+          "revamp": "To renovate or overhaul. It fits a reform of wards, but the sentence describes a daily routine of opening windows, not a renovation.",
+          "turbid": "Cloudy or muddy, or confused. The tables showed that moving air helped patients, the opposite of what a word for murk suggests.",
+          "reprehensible": "Deserving blame. Her finding was that moving air did good, so it cannot be blameworthy.",
+          "conversant": "Familiar with, knowledgeable about. The point is that orderlies need not understand or believe the theory, only carry out the order.",
+          "bereft": "Deprived of something, or left desolate. 'Bereft enough to open the windows' gives no sense; the needed quality is willingness to obey."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "desecrate",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "aerate",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "revamp",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "salubrious",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "turbid",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "reprehensible",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "conversant",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bereft",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "compliant",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The officers of the chartered companies that financed so much early exploration are often remembered as uniformly (i) ___, men who sailed out to strip a coast and came home rich. Their letters complicate the picture without overturning it. Many were sincere, at first, in their horror at the plunder around them; what is striking is how quickly that horror settled into a (ii) ___ shrug, as though no one, themselves included, could be expected to act from any motive but gain. Their (iii) ___ toward the companies grew in step, for men who no longer believed in anyone's good faith had little reason to stay loyal to their employers.",
+      "blanks": [
+        [
+          "raffish",
+          "rapacious",
+          "itinerant"
+        ],
+        [
+          "cynical",
+          "penitential",
+          "jocose"
+        ],
+        [
+          "venality",
+          "hedonism",
+          "disaffection"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) Men who 'strip a coast and came home rich' are greedy plunderers: rapacious. (ii) The shrug comes with the belief that nobody acts 'from any motive but gain', which is distrust of all sincerity: cynical. (iii) What 'grew in step' is explained by 'little reason to stay loyal': a loss of loyalty toward their employers, disaffection.",
+        "distractors": {
+          "raffish": "Disreputable in a rakish, rather attractive way. It suits the swaggering nabob image, but the memory described is of plunder, which is greed, not rakish charm.",
+          "itinerant": "Travelling from place to place. These men did travel, but 'strip a coast' describes greed, not wandering.",
+          "penitential": "Expressing repentance. It is baited by their early horror, but the horror 'settled into' indifference; a penitent would not assume that everyone, himself included, acts only for gain.",
+          "jocose": "Playful, jesting. A shrug may look offhand, but what it expresses is distrust, not humour.",
+          "venality": "Openness to bribery. It might grow among such men, but it is not something one has 'toward' an employer, and the explanation offered is about loyalty.",
+          "hedonism": "The pursuit of pleasure. The reason given, lost faith and so no loyalty, says nothing about pleasure."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "raffish",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rapacious",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "itinerant",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cynical",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "penitential",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "jocose",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "venality",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hedonism",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "disaffection",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The first party to attempt the canyon expected the rock to be its chief danger and was half right. The river's channel proved so (i) ___ that every few hundred yards the crews had to line the boats by hand around another bend, and the walls, though sound enough never to threaten collapse, had been polished so smooth by floods that they gave the men bracing against them no (ii) ___ at all.",
+      "blanks": [
+        [
+          "turbid",
+          "intermittent",
+          "sinuous"
+        ],
+        [
+          "morass",
+          "purchase",
+          "declivity"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) A channel that sends the crews around 'another bend' every few hundred yards is winding: sinuous. (ii) The rock was half the danger, not by collapsing but by being too smooth to brace against, so the walls gave no grip or foothold: purchase, in its sense of a firm hold. The everyday sense, buying, is the trap that makes it look wrong.",
+        "distractors": {
+          "turbid": "Muddy and cloudy. It is the river word a reader reaches for, but murky water does not force the crews around bend after bend.",
+          "intermittent": "Stopping and starting at intervals. A river that flowed only at intervals would not need lining around bends; the problem is the channel's shape.",
+          "morass": "A swamp or bog. Polished rock walls are the opposite of a bog, and a morass is not something a wall gives a climber.",
+          "declivity": "A downward slope. The point is that smooth walls gave no grip; a slope is not what men bracing against a wall need."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "turbid",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "intermittent",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sinuous",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "morass",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "purchase",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "declivity",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Eight-hour shifts of copying routine press traffic left the young Edison so (i) ___ that he once dozed through a call from the next station. Only equipment could rouse him, and since he could not leave another operator's apparatus alone without cataloguing its defects, colleagues, not always grateful for the inventory, came to regard him as a (ii) ___.",
+      "blanks": [
+        [
+          "voluble",
+          "listless",
+          "vehement"
+        ],
+        [
+          "misogynist",
+          "ingrate",
+          "faultfinder"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) Long shifts of routine copying are the cause, and dozing through a call is the effect: he was drained of energy and interest, listless. (ii) A man who catalogues the defects of everyone else's apparatus, to colleagues who resent it, is a habitual critic: faultfinder.",
+        "distractors": {
+          "voluble": "Talkative. Monotony and dozing at the key point to lack of energy, not to talk.",
+          "vehement": "Forceful, passionate. That is the opposite of a man who dozes through a call.",
+          "misogynist": "A person who hates women. Nothing in the sentence concerns women.",
+          "ingrate": "An ungrateful person. It is baited by 'not always grateful', but it is the colleagues who withhold gratitude; Edison is the one cataloguing defects."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "voluble",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "listless",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "vehement",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "misogynist",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ingrate",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "faultfinder",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Fraunhofer's optical glass was prized less for its hardness than for its (i) ___. Rivals who copied his recipe without his patient stirring produced what the trade came to call (ii) ___ crown: it matched his glass in weight and hardness and passed for it on the shelf, but through a telescope the brighter stars arrived as smears.",
+      "blanks": [
+        [
+          "enormity",
+          "pellucidity",
+          "monotony"
+        ],
+        [
+          "ingenious",
+          "unadorned",
+          "ersatz"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) Both glasses matched in hardness, so the quality that set Fraunhofer's apart is what the rivals' glass lacked: through it 'the brighter stars arrived as smears'. His glass was prized for its perfect clarity, pellucidity. (ii) The rivals' glass imitated his on the shelf and failed in use, an inferior substitute: ersatz.",
+        "distractors": {
+          "enormity": "Great wickedness, or loosely great size. Fraunhofer did cast large blanks, but size is not what the smeared stars show his rivals lacked.",
+          "monotony": "Tedious sameness. It may suggest an even, uniform glass, but the word means tedium, and the quality at issue is clarity.",
+          "ingenious": "Cleverly devised. The copy fooled buyers, but the trade's name for it marks it as an inferior fake; it failed at the eyepiece.",
+          "unadorned": "Plain, without decoration. Optical glass is not decorated, and the trade name marks the glass as a failed imitation, not as plain."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "enormity",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pellucidity",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "monotony",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ingenious",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "unadorned",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ersatz",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The early fellows of the Royal Society debated the (i) ___ of printing tradesmen's reports beside gentlemen's, but the instrument makers' letters were seldom as (ii) ___ as the fellows feared. Most asked only to be named in the Transactions, and even those who mocked the Society's manners plainly wished to be admitted to it.",
+      "blanks": [
+        [
+          "potentiality",
+          "propriety",
+          "prodigality"
+        ],
+        [
+          "diabolical",
+          "subversive",
+          "treacly"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) Gentlemen worrying about printing tradesmen beside themselves are debating whether it is fitting: its propriety. (ii) What the fellows feared, and the letters did not show, is a challenge to the Society's order; the evidence is that the writers wanted recognition and admission, not to overturn it: subversive.",
+        "distractors": {
+          "potentiality": "Latent capacity. The fellows debated whether the mixing was fitting, not what it might become.",
+          "prodigality": "Reckless extravagance. Printing a few more reports raised a question of social fitness, not of waste.",
+          "diabolical": "Fiendishly wicked. The fear was of a challenge to the hierarchy, and the reply (they wanted to join it) answers subversion, not wickedness.",
+          "treacly": "Cloyingly sentimental. Fellows would not fear sentiment, and the reply about wanting admission does not address it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "potentiality",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "propriety",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "prodigality",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "diabolical",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "subversive",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "treacly",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mock",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The cable company's directors were not, as the lavish banquet for the first transatlantic message led observers to suppose, ___; nor, however, were they the swindlers their creditors later called them, for every borrowed pound had gone into the wire, which simply failed within weeks.",
+      "blanks": [
+        [
+          "beneficent",
+          "duplicitous",
+          "bereft",
+          "flush",
+          "abreast"
+        ]
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Two denials run in parallel. The second says the money was 'borrowed' and all of it went into the wire, which tells us the first: the banquet made the directors look rich, and they were not. Flush means abundantly supplied with money (its other sense, level with a surface, is the decoy for a cable laid on the sea floor).",
+        "distractors": {
+          "beneficent": "Doing good, generous. A lavish banquet suggests generous hosts, but the correction that follows is about borrowed money, not about kindness.",
+          "duplicitous": "Deceitful. That is the creditors' charge, and the 'nor' clause denies it separately; the first denial must concern what the banquet suggested, which is wealth.",
+          "bereft": "Deprived, without resources. A lavish banquet would not lead observers to suppose poverty, and the directors were in fact short of money, so 'not bereft' gets the facts backwards.",
+          "abreast": "Up to date, informed. A banquet says nothing about being informed, and 'every borrowed pound' points to money."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "beneficent",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "duplicitous",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bereft",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "flush",
+          "role": "key",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "abreast",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lavish",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Because the colonial charters had been drawn from maps no one had checked against the ground, the two provinces did not merely ___ but overlapped by several miles, leaving a strip that each claimed and neither governed.",
+      "blanks": [
+        [
+          "cleave",
+          "list",
+          "abut",
+          "grate",
+          "besiege"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "'Did not merely … but overlapped' needs the lesser relation that overlapping goes beyond: two territories that share a border and just touch. Abut means exactly that.",
+        "distractors": {
+          "cleave": "In its second sense, to cling firmly; in its other, to split. Provinces do not cling to each other, and splitting is the opposite of overlapping.",
+          "list": "In its second sense, of a ship, to lean to one side. Provinces cannot tilt.",
+          "grate": "In its second sense, to irritate or rasp. The rival claims may have grated, but grating is not a lesser form of overlapping.",
+          "besiege": "To surround with armed forces. It needs an object, and siege is not a lesser form of overlapping."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "cleave",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "list",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "abut",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "grate",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "besiege",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    }
+  ]
+}

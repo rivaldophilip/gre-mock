@@ -54,6 +54,16 @@
           "kind": "word",
           "id": "recapitulate",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "reconcile",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "lure",
+          "role": "passage"
         }
       ]
     },
@@ -109,6 +119,21 @@
           "kind": "word",
           "id": "divorced",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "rudimentary",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "wan",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "rejoinder",
+          "role": "passage"
         }
       ]
     },
@@ -143,6 +168,21 @@
           "kind": "word",
           "id": "contravene",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "rebuke",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "counterpoint",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "eccentric",
+          "role": "passage"
         }
       ]
     },
@@ -155,6 +195,21 @@
         {
           "kind": "word",
           "id": "declension",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "banish",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "rhetoric",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "concede",
           "role": "passage"
         }
       ]
@@ -243,6 +298,16 @@
             0,
             4
           ]
+        },
+        {
+          "kind": "word",
+          "id": "aesthetic",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "partisan",
+          "role": "stem"
         }
       ]
     },
@@ -440,6 +505,16 @@
             2,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "concession",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "conspicuous",
+          "role": "stem"
         }
       ]
     },
@@ -520,6 +595,16 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "provenance",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "elaborate",
+          "role": "stem"
         }
       ]
     },
@@ -600,6 +685,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "dispatch",
+          "role": "stem"
         }
       ]
     },
@@ -672,6 +762,21 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "modest",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "lavish",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "resolve",
+          "role": "stem"
         }
       ]
     },
@@ -772,6 +877,11 @@
           "kind": "concept",
           "id": "rc-main-idea",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "reconcile",
+          "role": "stem"
         }
       ]
     },
@@ -1330,6 +1440,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "reluctance",
+          "role": "stem"
         }
       ]
     },
@@ -1410,6 +1525,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "concession",
+          "role": "stem"
         }
       ]
     },
@@ -1526,6 +1646,21 @@
           "kind": "concept",
           "id": "rc-main-idea",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "rudimentary",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "assess",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "refute",
+          "role": "stem"
         }
       ]
     },
@@ -1632,6 +1767,31 @@
           "kind": "concept",
           "id": "rc-main-idea",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "prevail",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "discredit",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "antiquarian",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "vindicate",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "scant",
+          "role": "stem"
         }
       ]
     },
@@ -1668,6 +1828,11 @@
           "kind": "concept",
           "id": "rc-attitude",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "endorse",
+          "role": "stem"
         }
       ]
     },
@@ -1727,6 +1892,11 @@
           "kind": "concept",
           "id": "rc-vocab-context",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "digression",
+          "role": "stem"
         }
       ]
     },

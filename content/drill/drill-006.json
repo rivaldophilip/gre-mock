@@ -1,0 +1,1953 @@
+{
+ "id": "drill-006",
+ "measure": "verbal",
+ "title": "Endless vocab batch 6",
+ "sections": [
+  {
+   "n": 1,
+   "minutes": 60
+  },
+  {
+   "n": 2,
+   "minutes": 1
+  }
+ ],
+ "passages": [],
+ "figures": [],
+ "questions": [
+  {
+   "id": "s1q1",
+   "section": 1,
+   "type": "se",
+   "difficulty": 4,
+   "prompt": "Readers who know the philosopher only from his treatise condemning appetite as the enemy of thought assume he merely put up with the long dinners his college required of its fellows; his letters suggest otherwise. He did not so much endure those dinners as ___ them, and he confessed to a friend that he had written the treatise partly to shame himself into attending fewer.",
+   "choices": [
+    "abstemious",
+    "relish",
+    "berate",
+    "temperate",
+    "savor",
+    "irk"
+   ],
+   "key": {
+    "sel": [
+     1,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "'His letters suggest otherwise' sets the truth against the readers' guess that he only put up with the dinners. The confession settles it: a man who has to shame himself into going less often enjoys going too much. 'Not so much endure as ___' therefore asks for the opposite of putting up with something, and relish and savor both mean to take full pleasure in it.",
+    "distractors": {
+     "abstemious": "Trap pair with temperate: sparing in food and drink. The treatise invites it, but the letters and the confession show the reverse, and it is an adjective where 'as ___ them' needs a verb.",
+     "temperate": "Trap pair with abstemious: moderate, self-restrained. It is the reading the treatise suggests and the confession overturns.",
+     "berate": "To scold angrily. It suits the author of a treatise against appetite and the local 'not so much endure as', but he needed to shame himself into going less, which means he wanted to go, not that he railed at the dinners.",
+     "irk": "To annoy. It would leave him merely tolerating the dinners, which is the readers' guess that the letters overturn, and the confession shows he did not find them tiresome."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "abstemious",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "relish",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "berate",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "temperate",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "savor",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "irk",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q2",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "The committee did not fault the lobbyist for being persistent, since persistence is the whole job; it faulted him for tactics so ___ that even his own clients disowned him once they learned he had forged letters from constituents.",
+   "choices": [
+    "pertinacious",
+    "unconscionable",
+    "boorish",
+    "tenacious",
+    "salacious",
+    "unscrupulous"
+   ],
+   "key": {
+    "sel": [
+     1,
+     5
+    ]
+   },
+   "explanation": {
+    "key": "The committee explicitly excuses persistence and objects to something else, and the forged letters name it: dishonesty that shocks the conscience. Unconscionable and unscrupulous both say that.",
+    "distractors": {
+     "pertinacious": "Trap pair with tenacious: stubbornly persistent. The sentence rules persistence out in so many words: 'did not fault the lobbyist for being persistent'.",
+     "tenacious": "Trap pair with pertinacious: holding on firmly, persistent. Same problem; persistence is the part the committee accepts.",
+     "boorish": "Rude and ill-mannered. Forging letters is a moral fault, not a lapse in manners.",
+     "salacious": "Lewd, having undue interest in sex. Nothing in the sentence is sexual."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "pertinacious",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "unconscionable",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "boorish",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "tenacious",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "salacious",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "unscrupulous",
+     "role": "key",
+     "at": [
+      5
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "constituent",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q3",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "Although her letters to the town paper were ___, signed with a name no one could trace to any resident, their calm, unhurried cadences gave her away to anyone who had sat through one of her measured dinner-party monologues.",
+   "choices": [
+    "overwrought",
+    "anonymous",
+    "expansive",
+    "harried",
+    "pseudonymous",
+    "macabre"
+   ],
+   "key": {
+    "sel": [
+     1,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "'Although' sets the blank against 'gave her away', so the blank must describe letters that hid who wrote them, and the appositive says how: a name no one could trace. Pseudonymous (under an assumed name) and anonymous (of unknown authorship) both make the letters' author hidden.",
+    "distractors": {
+     "overwrought": "Trap pair with harried: agitated, too worked up. The sentence calls the letters 'calm, unhurried', and the concession needs a word about concealment, not tone.",
+     "harried": "Trap pair with overwrought: harassed, rushed. Contradicted by 'unhurried'.",
+     "expansive": "In its second sense, genial and talkative. That says nothing about hiding a name, so it gives 'although' nothing to concede.",
+     "macabre": "Gruesome, dwelling on death. Nothing in the sentence is grim, and it is not about concealment."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "overwrought",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "anonymous",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "expansive",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "harried",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "pseudonymous",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "macabre",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q4",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "The term that made the psychologist famous was, she later admitted, far from the summit of her thinking: it was a ___ she had hit upon to fill a gap in a lecture, and she was mildly embarrassed that it had outlived the theory it was invented to label.",
+   "choices": [
+    "pinnacle",
+    "neologism",
+    "sobriquet",
+    "apex",
+    "coinage",
+    "axiom"
+   ],
+   "key": {
+    "sel": [
+     1,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "The colon explains what the term was: something she made up on the spot to name a theory. A newly invented word is a neologism or a coinage.",
+    "distractors": {
+     "pinnacle": "Trap pair with apex: the highest point. The sentence says the term was 'far from the summit of her thinking'.",
+     "apex": "Trap pair with pinnacle: the peak. Ruled out by the same phrase.",
+     "sobriquet": "A nickname, usually for a person. The term is a technical label invented for a theory, and nothing among the choices pairs with sobriquet.",
+     "axiom": "A self-evident principle taken as true. A word hit upon to fill a gap is not a principle at all."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "pinnacle",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "neologism",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "sobriquet",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "apex",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "coinage",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "axiom",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "summit",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q5",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "Opponents who expected the old wrestler's famous nervousness in interviews, where he stammered and fumbled with his notes, to follow him onto the mat soon learned otherwise: whatever he lacked in poise, he more than made up for in sheer ___.",
+   "choices": [
+    "aplomb",
+    "gravitas",
+    "prowess",
+    "composure",
+    "raiment",
+    "puissance"
+   ],
+   "key": {
+    "sel": [
+     2,
+     5
+    ]
+   },
+   "explanation": {
+    "key": "'Whatever he lacked in poise, he made up for in' asks for a different quality, the one his opponents met on the mat: strength and skill. Prowess (exceptional ability) and puissance (great power) both make him formidable in the bout.",
+    "distractors": {
+     "aplomb": "Trap pair with composure: self-assurance under pressure. That is the poise the sentence says he lacked.",
+     "composure": "Trap pair with aplomb: calm self-control. Also ruled out by 'whatever he lacked in poise'.",
+     "gravitas": "Dignified seriousness of manner. It is a cousin of poise, the very thing he lacked, and it would not trouble an opponent on the mat.",
+     "raiment": "Clothing. It has nothing to do with winning a bout."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "aplomb",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "gravitas",
+     "role": "distractor",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "prowess",
+     "role": "key",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "composure",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "raiment",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "puissance",
+     "role": "key",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q6",
+   "section": 1,
+   "type": "se",
+   "difficulty": 4,
+   "prompt": "What finally convinced the town that the traveling healer was a ___ was not his silence about his methods, which they had taken for modesty, but the speed with which he left once a patient asked for her money back.",
+   "choices": [
+    "taciturnity",
+    "charlatan",
+    "virtuoso",
+    "reserve",
+    "mountebank",
+    "potentate"
+   ],
+   "key": {
+    "sel": [
+     1,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "Bolting when a patient wants a refund shows that he was a fraud who had taken money for skills he did not have. Charlatan and mountebank both name such a person.",
+    "distractors": {
+     "taciturnity": "Trap pair with reserve: habitual silence. The sentence says his silence was not what convinced them, and a person cannot be 'a taciturnity'.",
+     "reserve": "Trap pair with taciturnity: in its second sense, restraint in speech and manner. Ruled out the same way.",
+     "virtuoso": "A person of outstanding skill. The town is convinced of the reverse.",
+     "potentate": "A powerful ruler. A traveling healer who runs from a refund is no monarch."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "taciturnity",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "charlatan",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "virtuoso",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "reserve",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "mountebank",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "potentate",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q7",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "Readers who take the two philosophers' famously icy dinners as evidence of a doctrinal feud have it backward: it was because their positions on free will stood in such near-total ___ that each found the other's company unbearable, every conversation turning into a contest over who had said it first.",
+   "choices": [
+    "convivial",
+    "accord",
+    "truculence",
+    "companionable",
+    "comity",
+    "concord"
+   ],
+   "key": {
+    "sel": [
+     1,
+     5
+    ]
+   },
+   "explanation": {
+    "key": "'Have it backward' denies that the iciness came from a feud, and the last clause says what did: an argument over 'who had said it first', which only arises when two people say the same thing. So their positions agreed, and accord and concord both name that agreement.",
+    "distractors": {
+     "truculence": "Aggressive defiance. It fits the feud the icy dinners suggest, but the sentence says that reading has it backward; the quarrel was over priority, because their positions agreed.",
+     "comity": "Courteous civility between parties. It is a word for their personal relations, which were icy, and the blank describes their positions.",
+     "convivial": "Trap pair with companionable: sociable, fond of company. Each found the other unbearable, and the blank needs a noun after 'near-total'.",
+     "companionable": "Trap pair with convivial: friendly and pleasant to be with. Contradicted by 'unbearable', and the wrong part of speech."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "convivial",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "accord",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "truculence",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "companionable",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "comity",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "concord",
+     "role": "key",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q8",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "Accused by his siblings of scheming to cheat them out of their shares in the family firm, the founder's son answered the charge in the most decisive way open to him: rather than argue, he chose to ___ the chairmanship itself, and the controlling votes that came with it.",
+   "choices": [
+    "bilk",
+    "renounce",
+    "chastise",
+    "fleece",
+    "endow",
+    "abdicate"
+   ],
+   "key": {
+    "sel": [
+     1,
+     5
+    ]
+   },
+   "explanation": {
+    "key": "The best answer to a charge of grabbing the firm is to let go of the power he was accused of wanting. Renounce and abdicate both mean to give up a position formally.",
+    "distractors": {
+     "bilk": "Trap pair with fleece: to cheat someone out of money. That is the charge he is answering, not his answer, and one does not cheat a chairmanship.",
+     "fleece": "Trap pair with bilk: in its second sense, to swindle. Ruled out the same way.",
+     "chastise": "To rebuke severely. He chose not to argue, and a chairmanship cannot be scolded.",
+     "endow": "To provide with money or a quality. Giving something to the chairmanship is the opposite of giving it up."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "bilk",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "renounce",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "chastise",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "fleece",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "endow",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "abdicate",
+     "role": "key",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q9",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "Newcomers who knew the logician only from department parties were unprepared for her seminars. It was not that her (i) ___ manner vanished there, for she still spoke softly and seldom looked up from her notes, but that her arguments were (ii) ___, so brilliant and so fiercely pressed that students forgot the quiet voice delivering them. To the stir they caused she remained curiously (iii) ___, as though the argument, and not its effect on anyone, were all that interested her.",
+   "blanks": [
+    [
+     "pretentious",
+     "retiring",
+     "entitled"
+    ],
+    [
+     "pedestrian",
+     "tangential",
+     "incandescent"
+    ],
+    [
+     "insensible",
+     "querulous",
+     "amenable"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2,
+     0
+    ]
+   },
+   "explanation": {
+    "key": "(i) 'It was not that her ___ manner vanished' is glossed by what stayed: she still spoke softly and seldom looked up. That is a shy, unassertive manner, retiring in its secondary sense. The everyday sense, leaving one's job, does not apply. (ii) 'But' turns to what did surprise the newcomers, and the appositive defines it: so brilliant and fiercely pressed that students forgot her voice. That is incandescent. (iii) 'As though the argument, and not its effect on anyone, were all that interested her' means she did not notice or care about the stir: insensible.",
+    "distractors": {
+     "pretentious": "Showy, claiming more importance than one has. 'Unprepared for her seminars' might suggest a manner the parties hid, but the manner that persisted is soft-spoken and downcast.",
+     "entitled": "Believing oneself owed special treatment. Speaking softly and not looking up is self-effacing.",
+     "pedestrian": "In its second sense, dull and uninspired. It matches the quiet delivery, but 'but' turns away from the delivery, and the appositive calls the arguments brilliant.",
+     "tangential": "Only loosely related to the point. Arguments pressed so fiercely that students forgot the voice are anything but off the point.",
+     "querulous": "Complaining, peevish. Nothing suggests she grumbled at the stir; she seemed not to register it.",
+     "amenable": "Open and responsive. It reads naturally with 'to the stir', but the clause after it says only the argument interested her, not its effect on anyone."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "pretentious",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "retiring",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "entitled",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "pedestrian",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "tangential",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "incandescent",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "insensible",
+     "role": "key",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "querulous",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "amenable",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q10",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "Neighbors who gossiped about the widow's (i) ___ (she served tea without biscuits and put nothing in the church collection) were chastened to learn after her death that she had quietly paid the school fees of a dozen local children. Their (ii) ___ turned overnight into praise that was, if anything, too (iii) ___: no one would now admit that her thrift had ever struck them as odd.",
+   "blanks": [
+    [
+     "truculence",
+     "stinginess",
+     "ennui"
+    ],
+    [
+     "prescience",
+     "comity",
+     "disapprobation"
+    ],
+    [
+     "unqualified",
+     "protean",
+     "incipient"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2,
+     0
+    ]
+   },
+   "explanation": {
+    "key": "(i) The parenthesis lists the evidence: no biscuits, nothing in the collection. That is stinginess. (ii) What 'turned overnight into praise' must be its opposite, their moral disapproval: disapprobation. (iii) The colon explains 'too ___': no one will admit to any earlier reservation, so the praise had no reservations at all. That is unqualified in its secondary sense (complete, without limits), not the everyday 'lacking credentials'.",
+    "distractors": {
+     "truculence": "Aggressive defiance. Serving tea without biscuits is tight-fisted, not belligerent.",
+     "ennui": "Listless boredom. The evidence is about not spending, not about weariness.",
+     "prescience": "Foreknowledge of events. The neighbors foresaw nothing; they were surprised.",
+     "comity": "Courteous civility between parties. Gossip about her meanness was not civility, and civility turning into praise is no reversal.",
+     "protean": "Constantly changing form. The colon says the praise was sweeping, not changeable.",
+     "incipient": "Just beginning. 'Too incipient' makes no sense, and the colon is about how complete the praise was."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "truculence",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "stinginess",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "ennui",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "prescience",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "comity",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "disapprobation",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "unqualified",
+     "role": "key",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "protean",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "incipient",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "thrift",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q11",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "The diplomat's memoir attributes his early withdrawal from public life to failing health, and for decades that (i) ___ reason went unquestioned. His recently opened letters tell another story: a patient campaign of (ii) ___ against a younger rival, dropped only when it threatened to come to light. Biographers who once praised his scruple now face the awkward task of explaining how a man so (iii) ___ in private could have written so movingly about honor.",
+   "blanks": [
+    [
+     "telling",
+     "ostensible",
+     "abject"
+    ],
+    [
+     "repose",
+     "circumlocution",
+     "machination"
+    ],
+    [
+     "unprincipled",
+     "ossified",
+     "effete"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2,
+     0
+    ]
+   },
+   "explanation": {
+    "key": "(i) 'The letters tell another story' means the stated reason was not the real one: ostensible. (ii) A campaign against a rival that had to be dropped before it 'came to light' is a secret scheme: machination. (iii) The man is set against the 'scruple' and 'honor' he was praised for, so in private he lacked moral principle: unprincipled.",
+    "distractors": {
+     "telling": "In its second sense, revealing or significant. The health excuse revealed nothing; it concealed the real story.",
+     "abject": "Wretched, or shamefully humble. That describes a state of misery, not a reason that was given but was not the real one.",
+     "repose": "Rest, calm. A campaign against a rival is the opposite of rest.",
+     "circumlocution": "Roundabout speech. The fault the letters reveal is plotting, not wordiness.",
+     "ossified": "Rigid, set in its ways. The contrast is with honor and scruple, so the blank needs a moral failing, not rigidity.",
+     "effete": "Weak, decadent, worn out. A patient campaign against a rival is not weak, and the contrast with honor needs a moral word."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "telling",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "ostensible",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "abject",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "repose",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "circumlocution",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "machination",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "unprincipled",
+     "role": "key",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "ossified",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "effete",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q12",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "The moralist's (i) ___ was thoroughgoing: every kindness, he argued, is bait, offered only to (ii) ___ its recipient into a debt that can later be called in. His admirers found it awkward, then, that his own giving showed a (iii) ___ his theory could not account for, since he gave to strangers, never signed his name, and asked for nothing back.",
+   "blanks": [
+    [
+     "didacticism",
+     "cynicism",
+     "gumption"
+    ],
+    [
+     "lure",
+     "goad",
+     "proselytize"
+    ],
+    [
+     "guile",
+     "hauteur",
+     "disinterestedness"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     0,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) The colon gives the content of his view: every kindness is a self-interested trap. That is doubt of the sincerity of human motives, cynicism. (ii) Bait tempts someone in, so the kindness serves to lure the recipient into debt. (iii) Giving to strangers, unsigned and asking nothing back, shows no personal stake at all: disinterestedness, which his theory says cannot exist.",
+    "distractors": {
+     "didacticism": "A habit of moralizing or instructing. A moralist may well be didactic, but the colon describes a distrust of motives, not a teaching manner.",
+     "gumption": "Shrewd initiative, spirit. That says nothing about how he views human motives.",
+     "goad": "To prod or provoke into action. Bait draws its victim in with a promise; a goad drives with a jab.",
+     "proselytize": "To try to convert someone to a belief. Kindness as bait is about creating a debt, not winning a convert.",
+     "guile": "Cunning deceit. That is exactly what his theory predicts, so it would not be awkward for him, and anonymous giving shows the reverse.",
+     "hauteur": "Haughty arrogance. Nothing about anonymous gifts to strangers is haughty, and his theory accounts for vanity easily."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "didacticism",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "cynicism",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "gumption",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "lure",
+     "role": "key",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "goad",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "proselytize",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "guile",
+     "role": "distractor",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "hauteur",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "disinterestedness",
+     "role": "key",
+     "at": [
+      2,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "thoroughgoing",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q13",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "Popular accounts picture the condition as one of wild (i) ___ in mood, a swing from elation to despair and back within an afternoon. Clinicians describe nearly the opposite: the changes are (ii) ___, unfolding over months, so that a patient may not notice the slide until it is far advanced. Patients who have read the popular accounts often conclude that nothing is wrong with them, since their inner lives feel nothing like the (iii) ___ one the accounts describe.",
+   "blanks": [
+    [
+     "crescendo",
+     "fluctuation",
+     "catastrophism"
+    ],
+    [
+     "volatile",
+     "kinetic",
+     "glacial"
+    ],
+    [
+     "static",
+     "tumultuous",
+     "rustic"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2,
+     1
+    ]
+   },
+   "explanation": {
+    "key": "(i) 'A swing from elation to despair and back' is a rising and falling: fluctuation. (ii) 'Nearly the opposite' of rapid swings, 'unfolding over months', means extremely slow: glacial in its secondary sense. The everyday sense, icy, has nothing to do here. (iii) The popular picture is the one of wild swings, so the inner life it describes is disorderly and stormy: tumultuous.",
+    "distractors": {
+     "crescendo": "A steady build to a peak. The swing goes up and back down again, not in one direction.",
+     "catastrophism": "The theory that change comes through sudden violent events, a term from geology. It is not a word for mood going up and down.",
+     "volatile": "Liable to change rapidly. That is the popular picture the clinicians contradict.",
+     "kinetic": "Relating to motion; energetic. The clinicians stress how slow the changes are.",
+     "static": "Unchanging. It describes neither picture: the clinicians' patients do change, only slowly, and the popular one swings wildly.",
+     "rustic": "Rural, simple. It has nothing to do with the wild swings the popular accounts describe."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "crescendo",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "fluctuation",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "catastrophism",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "volatile",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "kinetic",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "glacial",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "static",
+     "role": "distractor",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "tumultuous",
+     "role": "key",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "rustic",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q14",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "In its (i) ___ in the 1960s, the movement packed lecture halls with audiences for whom the (ii) ___ of the talks was part of the appeal: few listeners claimed to follow the arguments, and many seemed to take the difficulty itself as proof of depth. Its decline came when a younger generation demanded instead the (iii) ___ of plain examples, ideas one could almost hold in the hand.",
+   "blanks": [
+    [
+     "duress",
+     "heyday",
+     "repast"
+    ],
+    [
+     "brevity",
+     "impenetrability",
+     "acumen"
+    ],
+    [
+     "latitude",
+     "cant",
+     "palpability"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     1,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) Packed halls before a later 'decline' mark the movement's period of greatest popularity: heyday. (ii) The colon explains the appeal: few could follow the arguments, and the difficulty itself impressed. That quality is impenetrability. (iii) 'Ideas one could almost hold in the hand' is tangibility: palpability, which the younger generation wanted 'instead'.",
+    "distractors": {
+     "duress": "Compulsion by threat. Crowds packing the halls came by choice.",
+     "repast": "A meal. 'In its repast' does not describe a period of a movement's life.",
+     "brevity": "Shortness. The colon is about how hard the talks were to follow, not how long they were.",
+     "acumen": "Keen insight. Nothing says the talks were shrewd; the listeners could not tell, since they could not follow them.",
+     "latitude": "In its second sense, freedom of action or scope. Hand-holdable plain examples call for concreteness, not freedom.",
+     "cant": "In its second sense, hypocritical or jargon-laden talk. That is closer to what the younger generation rejected than to what it demanded."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "duress",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "heyday",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "repast",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "brevity",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "impenetrability",
+     "role": "key",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "acumen",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "latitude",
+     "role": "distractor",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "cant",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "palpability",
+     "role": "key",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q15",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "The headmaster's reputation for leniency was only half deserved: he was anything but (i) ___ about the rules he did make, enforcing each to the letter, but he believed that a boy who is (ii) ___ at every turn never learns to govern himself, and so outside lessons he let the boys run nearly loose.",
+   "blanks": [
+    [
+     "dilatory",
+     "lax",
+     "intransigent"
+    ],
+    [
+     "husbanded",
+     "buttressed",
+     "reined"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) 'Anything but ___' followed by 'enforcing each to the letter' needs the opposite of strict: lax. That is the half of the reputation that is undeserved. (ii) His belief explains why he 'let the boys run nearly loose', so the boy who never learns self-government is the one held back at every turn: reined, the verb's secondary sense of restraining as one does a horse.",
+    "distractors": {
+     "dilatory": "Slow to act, given to delay. Enforcing rules to the letter is about strictness, not speed, so 'anything but dilatory' misses the point of the contrast.",
+     "intransigent": "Refusing to compromise. 'Anything but intransigent' would contradict 'enforcing each to the letter'.",
+     "husbanded": "In its second sense, managed thriftily or conserved. Boys are not used sparingly, and the contrast with running loose calls for restraint.",
+     "buttressed": "Supported, propped up. Support is not the opposite of letting boys run loose; restraint is."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "dilatory",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "lax",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "intransigent",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "husband",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "buttress",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "rein",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q16",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "Her (i) ___ figure (she stood barely five feet tall) and (ii) ___ manner at readings led reviewers to expect gentle comedies of village life; the novels themselves were savage.",
+   "blanks": [
+    [
+     "diminutive",
+     "becoming",
+     "portentous"
+    ],
+    [
+     "scurrilous",
+     "demure",
+     "vindictive"
+    ]
+   ],
+   "key": {
+    "sel": [
+     0,
+     1
+    ]
+   },
+   "explanation": {
+    "key": "(i) The parenthesis defines the figure: barely five feet tall, so diminutive. (ii) Her manner led reviewers to expect gentle comedies, and the semicolon contrasts that with savage novels, so the manner was modest and reserved: demure.",
+    "distractors": {
+     "becoming": "In its second sense, attractive or flattering. The parenthesis is about her height, not her looks.",
+     "portentous": "Ominous, or pompously solemn. That says nothing about her size, and it would not suggest gentle comedies.",
+     "scurrilous": "Scandalously abusive. That fits the savage novels, not the manner that made reviewers expect gentleness.",
+     "vindictive": "Vengeful. Again the savage side, not the manner the semicolon sets against it."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "diminutive",
+     "role": "key",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "becoming",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "portentous",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "scurrilous",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "demure",
+     "role": "key",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "vindictive",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q17",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "Members who joined in the commune's prosperous later decades remembered the founder's harvest 'invitations' as charming rituals of fellowship. The first settlers knew better. Living then at the edge of (i) ___, a household that declined an invitation could not count on being fed, so that what was framed as hospitality worked, in practice, as a form of (ii) ___.",
+   "blanks": [
+    [
+     "efflorescence",
+     "subsistence",
+     "polyglot"
+    ],
+    [
+     "affability",
+     "foil",
+     "duress"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "'The first settlers knew better' sets the early years against the later members' fond memory. (i) Settlers who could not count on being fed lived at the bare minimum needed to stay alive: subsistence. (ii) The scare quotes on 'invitations' and 'framed as hospitality ... in practice' mean the asks were really demands backed by a threat of going hungry. Compulsion by threat is duress.",
+    "distractors": {
+     "efflorescence": "In its second sense, a flowering or peak of development. It fits the 'prosperous later decades', but the blank describes the first settlers, who could not count on being fed.",
+     "polyglot": "A person who speaks many languages. It names a person, not a condition one lives at the edge of.",
+     "affability": "Friendliness, easy charm. It is what the invitations were framed as, and 'in practice' turns against that framing.",
+     "foil": "In its second sense, a person or thing that sets off another by contrast. The sentence says what the invitations really worked as, and that was a coerced demand, not a contrast."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "efflorescence",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "subsistence",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "polyglot",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "affability",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "foil",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "duress",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q18",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "Friends admired the couple as hosts without ever asking how the evenings were paid for; in truth the weekly dinners were (i) ___ on two teachers' salaries, and the debts they ran up proved (ii) ___, costing them the house within three years.",
+   "blanks": [
+    [
+     "incessant",
+     "unsustainable",
+     "astute"
+    ],
+    [
+     "specious",
+     "synchronized",
+     "ruinous"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) 'In truth', after friends never asked how the evenings were paid for, introduces the answer: the dinners could not be kept up 'on two teachers' salaries'. That is unsustainable. (ii) Debts that cost them the house were disastrous: ruinous.",
+    "distractors": {
+     "incessant": "Unceasing. Weekly dinners are regular, and 'on two teachers' salaries' asks whether the money could cover them, not how often they came.",
+     "astute": "Shrewd. Spending beyond one's means is the opposite.",
+     "specious": "Plausible on the surface but false. Debts that took the house were all too real.",
+     "synchronized": "Occurring at the same time. It says nothing about the debts' effect."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "incessant",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "unsustainable",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "astute",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "specious",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "synchronized",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "ruinous",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q19",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "Acquaintances took the two old friends' new civility for a reconciliation, but it was closer to the care one takes around the ___ of something once whole: neither mentioned the old intimacy, not because it had ceased to matter, but because each had learned what came of handling it carelessly.",
+   "blanks": [
+    [
+     "pittance",
+     "malediction",
+     "shard",
+     "felicity",
+     "panoply"
+    ]
+   ],
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "'But' denies that the civility was a reconciliation, and the colon explains the care: the intimacy still matters, and handling it carelessly has cost them before. The remnant of 'something once whole' that is dangerous to handle is a sharp broken piece, a shard.",
+    "distractors": {
+     "pittance": "A tiny, inadequate amount. It fits 'what is left of something once whole' locally, but a small leftover is not something one has to take care around; the colon says careless handling did harm.",
+     "malediction": "A curse. It suits a subject they avoid mentioning, but a curse is not a remnant of 'something once whole', and one does not handle it.",
+     "felicity": "Happiness. It would back the acquaintances' reading of a reconciliation, which 'but' denies.",
+     "panoply": "A complete or impressive array. A remnant of something once whole is not a full display."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "pittance",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "malediction",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "shard",
+     "role": "key",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "felicity",
+     "role": "distractor",
+     "at": [
+      0,
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "panoply",
+     "role": "distractor",
+     "at": [
+      0,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q20",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "Her grandmother's etiquette manual, with its rules for leaving calling cards and receiving visitors only on fixed afternoons, makes delightful reading, though its author herself conceded in a late preface that few of its strictures still ___ to the way anyone actually lives.",
+   "blanks": [
+    [
+     "equivocate",
+     "undulate",
+     "pertain",
+     "espouse",
+     "quail"
+    ]
+   ],
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "'Though' sets the manual's charm against its usefulness: the old rules about calling cards no longer apply to modern life. 'Pertain to' means to relate or apply to.",
+    "distractors": {
+     "equivocate": "To speak vaguely so as to avoid committing oneself. Rules do not hedge, and the concession is about whether they still apply.",
+     "undulate": "To move in waves. It makes no sense for rules of etiquette.",
+     "espouse": "To adopt or support a cause. Strictures do not take up causes, and the verb does not take 'to'.",
+     "quail": "In its second sense, to shrink back in fear. Rules cannot be afraid; the point is that they are out of date."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "equivocate",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "undulate",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "pertain",
+     "role": "key",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "espouse",
+     "role": "distractor",
+     "at": [
+      0,
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "quail",
+     "role": "distractor",
+     "at": [
+      0,
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "concede",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "stricture",
+     "role": "stem"
+    }
+   ]
+  }
+ ]
+}

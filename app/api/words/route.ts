@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
+import { serverTiming } from "@/lib/timing";
 import { z } from "zod";
-import { and, eq, inArray, isNull, sql } from "drizzle-orm";
+import { and, eq, inArray, isNull, or, sql } from "drizzle-orm";
 import { schema } from "@/lib/db";
 import { userDb } from "@/lib/session";
 import { WORD_W } from "@/lib/priority/config";
@@ -23,21 +24,17 @@ function candidates(lemma: string): string[] {
   return [...new Set(out.map(slug))];
 }
 
-/** Resolve a tapped word to a bank entry: exact id, then a known variant, then an inflection. */
+/** Resolve a tapped word to a bank entry: exact id, then an inflection, then a known variant (one query). */
 async function resolve(lemma: string) {
   const db = await userDb();
   const ids = candidates(lemma);
   const rows = await db
     .select({ id: schema.vocab.id, lemma: schema.vocab.lemma, senses: schema.vocab.senses })
     .from(schema.vocab)
-    .where(inArray(schema.vocab.id, ids));
+    .where(or(inArray(schema.vocab.id, ids), sql`${lemma} = any(${schema.vocab.variants})`));
   const byId = new Map(rows.map((r) => [r.id, r]));
   for (const id of ids) if (byId.has(id)) return byId.get(id)!;
-  const [v] = await db
-    .select({ id: schema.vocab.id, lemma: schema.vocab.lemma, senses: schema.vocab.senses })
-    .from(schema.vocab)
-    .where(sql`${lemma} = any(${schema.vocab.variants})`);
-  return v ?? null;
+  return rows[0] ?? null;
 }
 
 function parse(raw: unknown) {
@@ -58,22 +55,23 @@ const sameTag = (id: string, attemptId: number | null) =>
 
 /** Tag a word as "didn't know" (once per attempt). Unknown words join the bank as tier=user_added. */
 export async function POST(req: Request) {
+  const t0 = Date.now();
   const db = await userDb();
   const p = parse(await req.json().catch(() => null));
-  if (!p) return NextResponse.json({ error: "bad request" }, { status: 400 });
-  let v = await resolve(p.lemma);
-  let added = false;
-  if (!v) {
-    const id = slug(p.lemma);
-    await db.insert(schema.vocab).values({ id, lemma: p.lemma, tier: "user_added", yield: 0.6, sources: ["user"], sourceCount: 0 }).onConflictDoNothing();
-    v = { id, lemma: p.lemma, senses: null };
-    added = true;
-  }
-  const [dup] = await db.select({ id: schema.itemEvents.id }).from(schema.itemEvents).where(sameTag(v.id, p.attemptId)).limit(1);
-  if (!dup) {
-    await db.insert(schema.itemEvents).values({ kind: "word", itemId: v.id, event: "dont_know", weight: WORD_W.dont_know, attemptId: p.attemptId });
-  }
-  return NextResponse.json({ ok: true, id: v.id, lemma: v.lemma, added, senses: v.senses });
+  if (!p) return NextResponse.json({ error: "bad request" }, { status: 400, headers: serverTiming(t0) });
+  const found = await resolve(p.lemma);
+  const v = found ?? { id: slug(p.lemma), lemma: p.lemma, senses: null };
+  const ev = schema.itemEvents;
+  await Promise.all([
+    // an unknown word joins the bank
+    found ? null : db.insert(schema.vocab).values({ id: v.id, lemma: p.lemma, tier: "user_added", yield: 0.6, sources: ["user"], sourceCount: 0 }).onConflictDoNothing(),
+    // once per attempt, in one statement rather than a lookup and then a write
+    db.execute(sql`
+      insert into ${ev} (${sql.identifier(ev.kind.name)}, ${sql.identifier(ev.itemId.name)}, ${sql.identifier(ev.event.name)}, ${sql.identifier(ev.weight.name)}, ${sql.identifier(ev.attemptId.name)})
+      select 'word', ${v.id}::text, 'dont_know', ${WORD_W.dont_know}::real, ${p.attemptId}::integer
+      where not exists (select 1 from ${ev} where ${sameTag(v.id, p.attemptId)})`),
+  ]);
+  return NextResponse.json({ ok: true, id: v.id, lemma: v.lemma, added: !found, senses: v.senses }, { headers: serverTiming(t0) });
 }
 
 /** Undo a "didn't know" tag made in this attempt (a mis-tap). */

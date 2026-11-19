@@ -45,6 +45,11 @@
           "kind": "word",
           "id": "dogged",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "transient",
+          "role": "passage"
         }
       ]
     },
@@ -72,6 +77,16 @@
         {
           "kind": "word",
           "id": "factitious",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "prosody",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "reverence",
           "role": "passage"
         }
       ]
@@ -108,6 +123,26 @@
           "kind": "word",
           "id": "contravene",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "recourse",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "break",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "benign",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "concession",
+          "role": "passage"
         }
       ]
     },
@@ -138,6 +173,11 @@
           "kind": "word",
           "id": "divorced",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "sparse",
+          "role": "passage"
         }
       ]
     },
@@ -166,6 +206,31 @@
         {
           "kind": "word",
           "id": "gratify",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "inert",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "cohesive",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "contentious",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "deliberate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "slake",
           "role": "passage"
         }
       ]
@@ -252,6 +317,11 @@
             0,
             4
           ]
+        },
+        {
+          "kind": "word",
+          "id": "advocate",
+          "role": "stem"
         }
       ]
     },
@@ -324,6 +394,11 @@
             1,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "din",
+          "role": "stem"
         }
       ]
     },
@@ -512,6 +587,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
         }
       ]
     },
@@ -664,6 +744,16 @@
           "at": [
             4
           ]
+        },
+        {
+          "kind": "word",
+          "id": "ardor",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "conspicuous",
+          "role": "stem"
         }
       ]
     },
@@ -772,6 +862,16 @@
           "kind": "concept",
           "id": "rc-main-idea",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "refute",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "reconcile",
+          "role": "stem"
         }
       ]
     },
@@ -805,6 +905,11 @@
           "kind": "concept",
           "id": "rc-inference",
           "role": "secondary"
+        },
+        {
+          "kind": "word",
+          "id": "transient",
+          "role": "stem"
         }
       ]
     },
@@ -1050,6 +1155,11 @@
             1,
             1
           ]
+        },
+        {
+          "kind": "word",
+          "id": "demotic",
+          "role": "stem"
         }
       ]
     },
@@ -1157,6 +1267,11 @@
             2,
             1
           ]
+        },
+        {
+          "kind": "word",
+          "id": "implacable",
+          "role": "stem"
         }
       ]
     },
@@ -1522,6 +1637,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "obscure",
+          "role": "stem"
         }
       ]
     },
@@ -1558,6 +1678,21 @@
           "kind": "concept",
           "id": "rc-structure",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "prevail",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "implication",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "benign",
+          "role": "stem"
         }
       ]
     },
@@ -1594,6 +1729,11 @@
           "kind": "concept",
           "id": "rc-application",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "forbidding",
+          "role": "stem"
         }
       ]
     },
@@ -1700,6 +1840,11 @@
           "kind": "concept",
           "id": "rc-application",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "analogous",
+          "role": "stem"
         }
       ]
     },
@@ -1723,6 +1868,11 @@
           "kind": "concept",
           "id": "rc-function",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "implication",
+          "role": "stem"
         }
       ]
     },
@@ -1759,6 +1909,16 @@
           "kind": "concept",
           "id": "rc-application",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "inert",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "deliberate",
+          "role": "stem"
         }
       ]
     },
@@ -1796,6 +1956,16 @@
           "kind": "concept",
           "id": "arg-paradox",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "resolve",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "discrepancy",
+          "role": "stem"
         }
       ]
     }

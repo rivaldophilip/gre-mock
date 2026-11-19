@@ -39,6 +39,16 @@
           "kind": "word",
           "id": "fulcrum",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "fluctuation",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "respire",
+          "role": "passage"
         }
       ]
     },
@@ -67,6 +77,16 @@
           "kind": "word",
           "id": "demotic",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "reconcile",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "posit",
+          "role": "passage"
         }
       ]
     },
@@ -75,7 +95,13 @@
       "paragraphs": [
         "Until two years ago, Wexmoor College gave letter grades in all of its courses. It then began grading every first-year course on a pass/fail basis. Since the change, the proportion of first-year students who enroll in the college's advanced mathematics electives has nearly doubled. The dean concludes that, under letter grading, concern about receiving a low grade had been deterring capable first-year students from attempting demanding courses."
       ],
-      "tags": []
+      "tags": [
+        {
+          "kind": "word",
+          "id": "deter",
+          "role": "passage"
+        }
+      ]
     },
     {
       "id": "p3",
@@ -108,6 +134,11 @@
         {
           "kind": "word",
           "id": "indiscriminate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "tacit",
           "role": "passage"
         }
       ]
@@ -143,6 +174,11 @@
           "kind": "word",
           "id": "execrable",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "sparing",
+          "role": "passage"
         }
       ]
     },
@@ -171,6 +207,16 @@
         {
           "kind": "word",
           "id": "factitious",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "artless",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "impute",
           "role": "passage"
         }
       ]
@@ -465,6 +511,16 @@
             2,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "sensibility",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "converge",
+          "role": "stem"
         }
       ]
     },
@@ -705,6 +761,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "marginal",
+          "role": "stem"
         }
       ]
     },
@@ -821,6 +882,16 @@
           "kind": "concept",
           "id": "rc-main-idea",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "respire",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "refute",
+          "role": "stem"
         }
       ]
     },
@@ -855,6 +926,11 @@
           "kind": "concept",
           "id": "rc-inference",
           "role": "secondary"
+        },
+        {
+          "kind": "word",
+          "id": "undermine",
+          "role": "stem"
         }
       ]
     },
@@ -1028,6 +1104,11 @@
             0,
             4
           ]
+        },
+        {
+          "kind": "word",
+          "id": "forestall",
+          "role": "stem"
         }
       ]
     },
@@ -1706,6 +1787,16 @@
           "kind": "concept",
           "id": "rc-attitude",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "indifferent",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "antiquarian",
+          "role": "stem"
         }
       ]
     },
@@ -1742,6 +1833,11 @@
           "kind": "concept",
           "id": "rc-application",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "analogous",
+          "role": "stem"
         }
       ]
     },
@@ -1801,6 +1897,11 @@
           "kind": "concept",
           "id": "rc-inference",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "erratic",
+          "role": "stem"
         }
       ]
     },

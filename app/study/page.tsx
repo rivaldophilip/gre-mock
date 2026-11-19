@@ -93,13 +93,16 @@ async function Guide({ guide }: { guide: NonNullable<ReturnType<typeof loadStudy
   const topicProps = { measure: guide.measure, stats: stats.sections, numberOf };
   const { overall, pacing } = stats;
   const formats = guide.formats.map((f) => ({ ...f, t: stats.formats.get(f.type) }));
+  const sheet = guide.measure === "quant"
+    ? { title: "Formula sheet", sub: "Every formula you need, one per card." }
+    : { title: "Cheat sheet", sub: "Every move you need, one per card." };
 
   return (
     <>
       <div className="space-y-3">
         <p className="max-w-2xl text-[15px] leading-relaxed"><RichInline text={guide.intro} /></p>
         <nav aria-label="On this page" className="flex flex-wrap gap-1.5 print:hidden">
-          {[["formulas", "Formula sheet"], ["topics", "Topics"], ["formats", "Question types"], ["pacing", "Pacing"]].map(([id, label]) => (
+          {[["formulas", sheet.title], ["topics", "Topics"], ["formats", "Question types"], ["pacing", "Pacing"]].map(([id, label]) => (
             <a key={id} href={`#${id}`} className={chip}>{label}</a>
           ))}
         </nav>
@@ -142,10 +145,10 @@ async function Guide({ guide }: { guide: NonNullable<ReturnType<typeof loadStudy
       <section id="formulas" className="scroll-mt-20 space-y-4">
         <div className="space-y-2">
           <div>
-            <h2 className="font-semibold">Formula sheet</h2>
-            <p className="text-sm text-muted">Every formula you need, one per card.</p>
+            <h2 className="font-semibold">{sheet.title}</h2>
+            <p className="text-sm text-muted">{sheet.sub}</p>
           </div>
-          <nav aria-label="Formula groups" className="flex flex-wrap gap-1.5 print:hidden">
+          <nav aria-label={`${sheet.title} groups`} className="flex flex-wrap gap-1.5 print:hidden">
             {groups.map((g) => (
               <a key={g.title} href={`#f-${slug(g.title)}`} className={chip}>{g.title}</a>
             ))}
@@ -278,7 +281,9 @@ function FormulaCard({ measure, card: it, state }: { measure: Study["measure"]; 
         <div className="flex-1 pt-1.5 text-xs font-medium text-muted"><RichInline text={it.name} /></div>
         <StudyMark measure={measure} kind="card" id={it.id} state={state} compact />
       </div>
-      <div className="overflow-x-auto overflow-y-hidden py-0.5 text-[1.15rem] leading-snug"><Tex tex={it.tex} /></div>
+      {it.tex
+        ? <div className="overflow-x-auto overflow-y-hidden py-0.5 text-[1.15rem] leading-snug"><Tex tex={it.tex} /></div>
+        : <div className="text-[15px] font-medium leading-snug"><RichInline text={it.text!} /></div>}
       {it.note && <div className="text-xs leading-relaxed text-muted"><RichInline text={it.note} /></div>}
     </div>
   );

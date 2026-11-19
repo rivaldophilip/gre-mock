@@ -1,0 +1,2014 @@
+{
+ "id": "drill-004",
+ "measure": "verbal",
+ "title": "Endless vocab batch 4",
+ "sections": [
+  {
+   "n": 1,
+   "minutes": 60
+  },
+  {
+   "n": 2,
+   "minutes": 1
+  }
+ ],
+ "passages": [],
+ "figures": [],
+ "questions": [
+  {
+   "id": "s1q1",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "Asked only to read a few pages at the launch of her novel, the author chose instead to ___ on its sources for forty minutes, aloud and without notes, so that an audience that had come to hear fiction went home having heard a lecture about it.",
+   "choices": [
+    "ruminate",
+    "dilate",
+    "stint",
+    "expatiate",
+    "cogitate",
+    "recapitulate"
+   ],
+   "key": {
+    "sel": [
+     1,
+     3
+    ]
+   },
+   "explanation": {
+    "key": "'Forty minutes, aloud' and 'heard a lecture' say she talked at great length. Dilate in its secondary sense (to speak at length on a topic) and expatiate both mean exactly that, and both take 'on'.",
+    "distractors": {
+     "ruminate": "Trap pair with cogitate: to think something over at length. The sentence is about what the audience heard, 'aloud', so quiet mulling is ruled out.",
+     "cogitate": "Trap pair with ruminate: to think deeply. Thinking makes no lecture; the blank needs speech.",
+     "stint": "To be sparing with ('stint on'). It fits the grammar but reverses the sense: forty minutes is the opposite of stinting.",
+     "recapitulate": "To sum up the main points briefly. A brief summary is not forty minutes of unplanned talk, and it does not take 'on'."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "ruminate",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "dilate",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "stint",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "expatiate",
+     "role": "key",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "cogitate",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "recapitulate",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "novel",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q2",
+   "section": 1,
+   "type": "se",
+   "difficulty": 4,
+   "prompt": "What made the director's rehearsals notorious was not that they annoyed his actors, who were used to tyrants and mostly shrugged, but that they seemed designed to ___ them: a performer who missed a cue had to kneel and apologize to the whole company.",
+   "choices": [
+    "exasperate",
+    "degrade",
+    "appease",
+    "vex",
+    "abase",
+    "exhort"
+   ],
+   "key": {
+    "sel": [
+     1,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "'Not that they annoyed ... but that' sets the blank apart from irritation, and the colon gives the example: kneeling to apologize before everyone. That is humiliation, lowering a person's dignity. Degrade and abase both mean that.",
+    "distractors": {
+     "exasperate": "Trap pair with vex: to irritate intensely. The sentence denies that annoyance was the point ('not that they annoyed').",
+     "vex": "Trap pair with exasperate: to annoy or trouble. Ruled out by the same 'not that they annoyed his actors'.",
+     "appease": "To pacify by giving in to demands. Forcing actors to kneel is the reverse of placating them.",
+     "exhort": "To urge earnestly. The example shows humiliation, not encouragement."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "exasperate",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "degrade",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "appease",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "vex",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "abase",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "exhort",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "notorious",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q3",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "On paper the revival was entirely workable, with a willing cast and a theater offered rent-free; what sank it was the fee the playwright's estate demanded for the rights, a sum so ___ for a company of that size that the production never opened.",
+   "choices": [
+    "viable",
+    "prohibitive",
+    "ignominious",
+    "feasible",
+    "exorbitant",
+    "cumbersome"
+   ],
+   "key": {
+    "sel": [
+     1,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "The fee 'sank' the revival and kept it from opening, so it was too high to pay. Prohibitive (so high it prevents purchase) and exorbitant (unreasonably high, of a price) both give that sense.",
+    "distractors": {
+     "viable": "Trap pair with feasible: workable, practicable. The sentence grants that the plan was workable and blames the fee, so a 'viable' fee that kept the show from opening contradicts itself.",
+     "feasible": "Trap pair with viable: possible to carry out. Same contradiction: a feasible sum would not have sunk the production.",
+     "ignominious": "Shameful, humiliating. The fee's fault is its size, not disgrace.",
+     "cumbersome": "Unwieldy, awkward to carry or manage. It is about clumsy bulk, not cost, so it misses why the sum was a problem."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "viable",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "prohibitive",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "ignominious",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "feasible",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "exorbitant",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "cumbersome",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q4",
+   "section": 1,
+   "type": "se",
+   "difficulty": 4,
+   "prompt": "The cello line in the elegy is ___ yet curiously impersonal: it mourns without seeming to address anyone, offering the bereaved neither comfort nor fellow feeling, only a long, sighing lament that never resolves.",
+   "choices": [
+    "consoling",
+    "dolorous",
+    "tempestuous",
+    "commiserating",
+    "plaintive",
+    "baleful"
+   ],
+   "key": {
+    "sel": [
+     1,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "The line 'mourns' and is 'a long, sighing lament', so the blank means sorrowful, mournful. Dolorous (marked by great sorrow) and plaintive (sad and mournful in sound) both fit.",
+    "distractors": {
+     "consoling": "Trap pair with commiserating: comforting, sympathizing. The sentence says it offers 'neither comfort nor fellow feeling', ruling out both.",
+     "commiserating": "Trap pair with consoling: expressing sympathy with someone's grief. Excluded by 'without seeming to address anyone' and 'nor fellow feeling'.",
+     "tempestuous": "Stormy, turbulent. A long sighing lament is the opposite of a storm.",
+     "baleful": "Menacing, threatening harm. Nothing in the line is threatening; it only grieves."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "console",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "dolorous",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "tempestuous",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "commiserate",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "plaintive",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "baleful",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "elegy",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "lament",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "resolve",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q5",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "Readers did not prize her theater column for close reading, since she seldom looked hard at a script at all, but for the ___ wit of her asides, which stung even the productions she praised and kept readers coming back for more.",
+   "choices": [
+    "scrutinizing",
+    "piquant",
+    "jejune",
+    "peering",
+    "pungent",
+    "anodyne"
+   ],
+   "key": {
+    "sel": [
+     1,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "The wit 'stung' yet readers came back for more: it was sharp and stimulating. Pungent (sharply biting, of wit) and piquant (pleasantly sharp, provocative) both give that sense.",
+    "distractors": {
+     "scrutinizing": "Trap pair with peering: examining closely. The sentence says she 'seldom looked hard at a script at all', so close examination is exactly what her column lacked.",
+     "peering": "Trap pair with scrutinizing: looking closely and searchingly. Ruled out by the same clause.",
+     "jejune": "Dull, insipid, or naive. Wit that stings and draws readers back is not dull.",
+     "anodyne": "Bland, inoffensive. Wit that 'stung' is not inoffensive."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "scrutinize",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "piquant",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "jejune",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "peer",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "pungent",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "anodyne",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q6",
+   "section": 1,
+   "type": "se",
+   "difficulty": 4,
+   "prompt": "Lavishly funded and designed with no expense spared, the revival was nonetheless a ___ affair: the actors seemed drained of color and conviction, as if reciting the play from memory at the end of a long illness.",
+   "choices": [
+    "penurious",
+    "pallid",
+    "palatial",
+    "destitute",
+    "wan",
+    "refulgent"
+   ],
+   "key": {
+    "sel": [
+     1,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "'Nonetheless' turns from the money to the result, and the colon explains it: 'drained of color and conviction', as after 'a long illness'. Pallid (lacking color or vitality) and wan (pale and weak, as from illness) both fit.",
+    "distractors": {
+     "penurious": "Trap pair with destitute: poverty-stricken. The production was 'lavishly funded', so poverty is ruled out.",
+     "destitute": "Trap pair with penurious: lacking the basic necessities. Excluded by 'no expense spared'.",
+     "palatial": "Splendid, like a palace. It matches the lavish funding, but 'nonetheless' and the colon call for a word about lifelessness.",
+     "refulgent": "Shining brilliantly. The opposite of 'drained of color'."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "penurious",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "pallid",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "palatial",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "destitute",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "wan",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "refulgent",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q7",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "The biographer refuses to inflate the composer's habit of rewriting other people's program notes into either a moral scandal or an aesthetic creed; it was, she argues, a ___, minor and almost endearing, in a man who could never leave anyone's sentence alone.",
+   "choices": [
+    "dogma",
+    "foible",
+    "iniquity",
+    "shibboleth",
+    "peccadillo",
+    "accolade"
+   ],
+   "key": {
+    "sel": [
+     1,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "The biographer shrinks the habit: neither scandal nor creed, but 'minor and almost endearing'. Foible (a small weakness or quirk of character) and peccadillo (a minor, forgivable fault) both say that.",
+    "distractors": {
+     "dogma": "Trap pair with shibboleth: a doctrine held as beyond question. The sentence refuses to make the habit 'an aesthetic creed'.",
+     "shibboleth": "Trap pair with dogma: a slogan or belief that marks members of a group. Same problem: a creed is what she says it was not.",
+     "iniquity": "Gross wickedness. That is the 'moral scandal' she refuses to make of it, and it is far too strong for 'minor'.",
+     "accolade": "An award or expression of praise. A habit is not an honor."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "dogma",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "foible",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "iniquity",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "shibboleth",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "peccadillo",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "accolade",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "aesthetic",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q8",
+   "section": 1,
+   "type": "se",
+   "difficulty": 4,
+   "prompt": "Historians of the novel now treat cheap serial publication as a ___ change rather than a marginal one, and not because it left writers at a loss, since most adapted at once: it shifted the very ground on which Victorian fiction stood, altering plot, length and readership together.",
+   "choices": [
+    "quandary",
+    "profound",
+    "peripheral",
+    "aporia",
+    "tectonic",
+    "modish"
+   ],
+   "key": {
+    "sel": [
+     1,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "'Rather than a marginal one' and 'shifted the very ground' call for a word meaning deep and fundamental. Profound (deep, intense) and tectonic (figuratively, a shift in the ground itself) give the same sentence.",
+    "distractors": {
+     "quandary": "Trap pair with aporia: a state of perplexity. The sentence says the change did not leave writers 'at a loss', and a noun for a puzzle cannot describe a 'change' anyway.",
+     "aporia": "Trap pair with quandary: an impasse or puzzlement. Ruled out by 'not because it left writers at a loss'.",
+     "peripheral": "On the edge, of minor importance. That is the 'marginal' reading the sentence rejects.",
+     "modish": "Fashionable, in vogue. Nothing in the sentence is about fashion; the point is depth."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "quandary",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "profound",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "peripheral",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "aporia",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "tectonic",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "modish",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "novel",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "marginal",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q9",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "For decades the poet's late sequence was shelved as (i) ___, its allusions to medieval logic and Byzantine liturgy too recondite for all but a handful of specialists. The new edition does not pretend the poems are easy; its claim is subtler: that they are difficult without being (ii) ___, and that a reader who follows the notes patiently can (iii) ___ the single argument running beneath their surface obscurity.",
+   "blanks": [
+    [
+     "turgid",
+     "abstruse",
+     "eloquent"
+    ],
+    [
+     "verifiable",
+     "homogeneous",
+     "impenetrable"
+    ],
+    [
+     "divine",
+     "ascribe",
+     "burnish"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2,
+     0
+    ]
+   },
+   "explanation": {
+    "key": "(i) The explanation after the comma, allusions 'too recondite for all but a handful of specialists', means hard to understand because deep and obscure: abstruse. (ii) 'Difficult without being ___' is then explained by what a patient reader can do, so the blank must be the thing a reader cannot get through: impenetrable, in its secondary sense of impossible to understand (not the everyday sense of impassable). (iii) The patient reader works out a hidden argument 'beneath' the surface: divine, in its secondary sense of to discover by insight.",
+    "distractors": {
+     "turgid": "Swollen, pompous in style. It faults inflated language, not learned allusions too obscure for non-specialists.",
+     "eloquent": "Fluent and persuasive. It is praise, and the poems were 'shelved'.",
+     "verifiable": "Able to be proved true. Provability has nothing to do with whether the poems can be understood.",
+     "homogeneous": "All of one kind, uniform. The contrast with 'difficult' and the patient reader concerns understanding, not uniformity.",
+     "ascribe": "To attribute something to a cause or author; it needs a 'to' and does not mean to find or work out.",
+     "burnish": "To polish to a shine. The reader uncovers the argument; nobody polishes it."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "turgid",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "abstruse",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "eloquent",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "verifiable",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "homogeneous",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "impenetrable",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "divine",
+     "role": "key",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "ascribe",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "burnish",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "allusion",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "byzantine",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "recondite",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "obscurity",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q10",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "The drama critic cultivated the persona of a (i) ___, grumbling in print about intermissions, ushers and nearly every play he saw. Yet his complaints were never (ii) ___: he left moral lessons to the playwrights and confined himself to what worked on stage, and many young dramatists came to regard his bluntness as (iii) ___, the bitter medicine that cured their worst habits.",
+   "blanks": [
+    [
+     "gaucherie",
+     "curmudgeon",
+     "myriad"
+    ],
+    [
+     "sententious",
+     "grandiloquent",
+     "deferential"
+    ],
+    [
+     "staunch",
+     "subcutaneous",
+     "salutary"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     0,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) A persona that grumbles about everything is a bad-tempered, difficult person: curmudgeon. (ii) The colon explains the blank: he 'left moral lessons to the playwrights', so his complaints were never preachy and moralizing: sententious. (iii) 'Bitter medicine that cured' means unpleasant but beneficial: salutary.",
+    "distractors": {
+     "gaucherie": "Tactless or awkward behavior, a social clumsiness. It names an act, not the kind of person a persona is.",
+     "myriad": "A countless number. It cannot describe a single grumbling critic.",
+     "grandiloquent": "Pompous and lofty in language. It is the near miss: the colon specifies moral lessons, which is sententiousness, not grand diction.",
+     "deferential": "Respectful, yielding to others. The colon explains the blank with moralizing, which deference does not touch.",
+     "staunch": "Loyal, firm in support. Bluntness is not loyalty, and it does not match 'medicine that cured'.",
+     "subcutaneous": "Under the skin, as of an injection. It plays on 'medicine', but is a literal anatomical term."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "gaucherie",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "curmudgeon",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "myriad",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "sententious",
+     "role": "key",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "grandiloquent",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "deferential",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "staunch",
+     "role": "distractor",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "subcutaneous",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "salutary",
+     "role": "key",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q11",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "Rather than courting (i) ___, the poet sets clotted consonants against her long vowels, so that each line's harshness acts as a (ii) ___ to its sweetness rather than a flaw in it. Her reasoning, given in a late essay, is that unbroken sweetness does not delight the ear for long but comes to (iii) ___ it, lulling the reader into hearing sound without sense.",
+   "blanks": [
+    [
+     "tranquillity",
+     "jargon",
+     "euphony"
+    ],
+    [
+     "welter",
+     "counterpoint",
+     "equivocation"
+    ],
+    [
+     "stultify",
+     "champion",
+     "tender"
+    ]
+   ],
+   "key": {
+    "sel": [
+     2,
+     1,
+     0
+    ]
+   },
+   "explanation": {
+    "key": "(i) What she declines to court is pure pleasing sound, since she deliberately adds harshness: euphony. (ii) The harshness sets off the sweetness 'rather than' spoiling it, a contrasting element that complements another: counterpoint. (iii) 'Does not delight ... but comes to ___ it, lulling' means to dull through monotony: stultify. The last sentence confirms the first: she avoids euphony because unbroken sweetness stultifies.",
+    "distractors": {
+     "tranquillity": "Calm, peace. It is a mood, not a quality of sound, and the passage is about how lines sound.",
+     "jargon": "Specialized vocabulary of a trade. Harsh consonants are about sound, not technical terms.",
+     "welter": "A confused jumble. The harshness is a deliberate complement 'rather than a flaw', not a mess.",
+     "equivocation": "Deliberately ambiguous speech to avoid committing oneself. It has nothing to do with sound set against sound.",
+     "champion": "To defend or support a cause. Lulling the ear is the opposite of supporting it.",
+     "tender": "To offer formally, as a resignation or payment. It does not mean to dull."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "tranquillity",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "jargon",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "euphony",
+     "role": "key",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "welter",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "counterpoint",
+     "role": "key",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "equivocation",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "stultify",
+     "role": "key",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "champion",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "tender",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "lull",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q12",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "In the 1920s the painter was abstraction's most ardent advocate; by 1935 he was its most notorious (i) ___, painting portraits and pastoral scenes. His former allies accused him of becoming a (ii) ___ of the academy, flattering its professors for commissions, but his letters tell a different story: he found the academy just as (iii) ___ as the avant-garde he had left, equally quick to punish a painter who strayed from its doctrine.",
+   "blanks": [
+    [
+     "quarry",
+     "apostate",
+     "unconventionality"
+    ],
+    [
+     "animosity",
+     "usury",
+     "toady"
+    ],
+    [
+     "illiberal",
+     "congenial",
+     "hapless"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2,
+     0
+    ]
+   },
+   "explanation": {
+    "key": "(i) The advocate who abandons the cause he once championed is its apostate. (ii) 'Flattering its professors for commissions' defines a person who fawns to gain favor: toady. (iii) 'Different story' turns away from the flattery charge, and 'quick to punish a painter who strayed from its doctrine' means intolerant: illiberal.",
+    "distractors": {
+     "quarry": "Prey, the thing hunted. He left abstraction; it was not hunting him.",
+     "unconventionality": "Departure from accepted norms. Returning to portraits is the reverse, and the blank needs a person.",
+     "animosity": "Strong hostility. The charge is flattery, not hostility, and the blank needs a person.",
+     "usury": "Lending money at excessive interest. Nothing about loans.",
+     "congenial": "Pleasant, agreeable. That is the allies' view (he liked the academy), which 'a different story' rejects.",
+     "hapless": "Unlucky. It does not match 'quick to punish a painter who strayed from its doctrine'."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "quarry",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "apostate",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "unconventionality",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "animosity",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "usury",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "toady",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "illiberal",
+     "role": "key",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "congenial",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "hapless",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "ardent",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "advocate",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "notorious",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q13",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "Reviewers of her first novels complained that they were (i) ___, sprawling plots without a spine. Oddly, the shapelessness vanished not when she slowed down but when she sped up: after 1950 her work began to (ii) ___ into two distinct lines, taut detective stories and slim lyrical novellas, and for twenty years she was so (iii) ___ that her publisher issued a book of each kind every year.",
+   "blanks": [
+    [
+     "synchronous",
+     "redoubtable",
+     "amorphous"
+    ],
+    [
+     "meld",
+     "bifurcate",
+     "capitulate"
+    ],
+    [
+     "concomitant",
+     "prolific",
+     "voracious"
+    ]
+   ],
+   "key": {
+    "sel": [
+     2,
+     1,
+     1
+    ]
+   },
+   "explanation": {
+    "key": "(i) 'Sprawling plots without a spine', restated as 'the shapelessness', means lacking definite form: amorphous. (ii) The work splits 'into two distinct lines': bifurcate. (iii) 'Sped up' and a book of each kind every year mean she produced a great deal: prolific.",
+    "distractors": {
+     "synchronous": "Happening at the same time. It says nothing about shape.",
+     "redoubtable": "Formidable, worthy of respect. The reviewers are complaining.",
+     "meld": "To blend into one. It reverses the sense: two distinct lines come from splitting, not merging.",
+     "capitulate": "To surrender. Work does not surrender 'into two distinct lines'.",
+     "concomitant": "Naturally accompanying something else. It does not mean productive.",
+     "voracious": "Very eager in eating or consuming, as a voracious reader. The point is how much she produced, not how much she took in."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "synchronous",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "redoubtable",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "amorphous",
+     "role": "key",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "meld",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "bifurcate",
+     "role": "key",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "capitulate",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "concomitant",
+     "role": "distractor",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "prolific",
+     "role": "key",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "voracious",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q14",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "The impresario first arrived at the duke's court as a (i) ___, begging on his knees for a license to stage opera. Ten years later, at the height of his fame, he would (ii) ___ with the season's receipts, leaving the company unpaid, and the duke's guard was sent to (iii) ___ the riot that the stranded singers had started outside the theater.",
+   "blanks": [
+    [
+     "trackway",
+     "supplicant",
+     "profundity"
+    ],
+    [
+     "abscond",
+     "flounder",
+     "immure"
+    ],
+    [
+     "precipitate",
+     "condone",
+     "quell"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     0,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) 'Begging on his knees' to someone in power is the mark of a supplicant. (ii) Leaving with the receipts and the company unpaid means departing secretly with the money: abscond. (iii) Guards sent to a riot that has already started are sent to suppress it: quell.",
+    "distractors": {
+     "trackway": "An ancient path or track. Not a person.",
+     "profundity": "Depth of insight. Not a person, and nothing deep about begging for a license.",
+     "flounder": "To struggle clumsily. It takes no 'with the season's receipts' and does not explain why the company went unpaid.",
+     "immure": "To confine within walls. It needs an object and does not mean to run off.",
+     "precipitate": "To cause something to happen suddenly. The singers 'had started' the riot already, so the guard could not bring it on.",
+     "condone": "To accept or overlook wrongdoing. Guards are not sent to approve a riot."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "trackway",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "supplicant",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "profundity",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "abscond",
+     "role": "key",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "flounder",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "immure",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "precipitate",
+     "role": "distractor",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "condone",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "quell",
+     "role": "key",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q15",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "No one who heard the pianist's debut doubted her (i) ___; what the critics questioned was her judgment. Yet even that complaint, looked at closely, proved (ii) ___: the reviewers had nothing to cite but a pedal held a beat too long and one slightly hurried cadenza.",
+   "blanks": [
+    [
+     "modicum",
+     "dexterity",
+     "thrift"
+    ],
+    [
+     "providential",
+     "picayune",
+     "invidious"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     1
+    ]
+   },
+   "explanation": {
+    "key": "(i) The thing not in doubt is set against 'judgment', so it is the technical side of playing: dexterity, skill with the hands. (ii) The colon shows the complaint rests on two tiny lapses, so it was petty, of little importance: picayune.",
+    "distractors": {
+     "modicum": "A small amount. 'Doubted her modicum' is meaningless; the contrast with judgment calls for a skill.",
+     "thrift": "Careful use of money or resources. Nothing about economy in a debut recital.",
+     "providential": "Lucky, as if arranged by fate. The colon shows the complaint was trivial, not fortunate.",
+     "invidious": "Unfair or likely to cause resentment. The colon faults the complaint for its smallness, not its unfairness."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "modicum",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "dexterity",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "thrift",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "providential",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "picayune",
+     "role": "key",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "invidious",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q16",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "The composer wrote the cycle for a hospital ward, intending its slow, unvarying pulse to (i) ___ sleep among patients too anxious to rest; one nurse called it the only (ii) ___ on the ward that required no prescription.",
+   "blanks": [
+    [
+     "eschew",
+     "facilitate",
+     "flout"
+    ],
+    [
+     "gaffe",
+     "boycott",
+     "sedative"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) Music written for patients 'too anxious to rest' is meant to make sleep easier: facilitate. (ii) 'Required no prescription' compares it to a drug that calms or induces sleep: sedative.",
+    "distractors": {
+     "eschew": "To avoid deliberately. The composer wants the patients to sleep, not avoid it.",
+     "flout": "To openly defy a rule. Sleep is not a rule.",
+     "gaffe": "An embarrassing social blunder. A gaffe needs no prescription, but neither does it calm anyone.",
+     "boycott": "A refusal to deal with something as a protest. It is not something a nurse could give a patient."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "eschew",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "facilitate",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "flout",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "gaffe",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "boycott",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "sedative",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q17",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "The libretto is, by common consent, (i) ___: its characters trade platitudes and its plot turns on nothing. What keeps the opera in the repertoire is that the score does more than decorate this emptiness; it (ii) ___ it, supplying in the orchestra the depth of feeling that the words never reach.",
+   "blanks": [
+    [
+     "occult",
+     "vacuous",
+     "deterministic"
+    ],
+    [
+     "offset",
+     "assay",
+     "distill"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     0
+    ]
+   },
+   "explanation": {
+    "key": "(i) Platitudes and a plot that 'turns on nothing', then called 'this emptiness', mean empty of thought: vacuous. (ii) The score supplies the depth the words lack, so it compensates for the emptiness by an opposing quality: offset.",
+    "distractors": {
+     "occult": "Hidden, secret, or esoteric. Platitudes are the opposite of hidden meaning.",
+     "deterministic": "Holding that events are fixed by prior causes. A plot that 'turns on nothing' is not about causation.",
+     "assay": "To test or analyze, as a metal for purity. The score does not test the emptiness; it makes up for it.",
+     "distill": "To purify or extract the essence. Distilling emptiness would concentrate it, the reverse of supplying depth."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "occult",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "vacuous",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "deterministic",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "offset",
+     "role": "key",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "distill",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "platitude",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q18",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "For a century few scholars bothered to (i) ___ the playwright's notebooks, which lay (ii) ___ in a provincial archive until a graduate student, looking for something else entirely, opened the box and found three unknown plays.",
+   "blanks": [
+    [
+     "rebuke",
+     "peruse",
+     "curb"
+    ],
+    [
+     "indistinct",
+     "fractious",
+     "dormant"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) What scholars failed to do, and the student finally did by opening the box, is read them through with care: peruse. (ii) Untouched for a century, the notebooks lay inactive, as if asleep: dormant.",
+    "distractors": {
+     "rebuke": "To scold sharply. One scolds a person, not a box of notebooks.",
+     "curb": "To restrain or limit. There is nothing in the notebooks to hold back.",
+     "indistinct": "Unclear, faint. The point is that the notebooks went unread, not that they were hard to read; the student read them at once.",
+     "fractious": "Unruly, quarrelsome. Notebooks in an archive cannot be unruly."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "rebuke",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "peruse",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "curb",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "indistinct",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "fractious",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "dormant",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "provincial",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q19",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "The painter's late autumn canvases are usually read as elegies for decay, but she insisted they depicted not dying but ___: the tree's deliberate letting go of its leaves so that it could survive the winter.",
+   "blanks": [
+    [
+     "vicissitude",
+     "derision",
+     "abscission",
+     "complacency",
+     "grouse"
+    ]
+   ],
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "The colon defines the blank: a tree shedding its leaves on its own, to survive. That is abscission, the natural shedding of leaves, flowers or fruit. 'Not dying but' sets it against decay.",
+    "distractors": {
+     "vicissitude": "A change of circumstances or fortune, usually unwelcome. The colon names a deliberate act by the tree, not a turn of luck.",
+     "derision": "Contemptuous ridicule. Nothing mocks anything here.",
+     "complacency": "Smug self-satisfaction. A tree letting go to survive is acting, not resting content.",
+     "grouse": "A complaint, a grumble (also the game bird). The canvases show no complaint."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "vicissitude",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "derision",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "abscission",
+     "role": "key",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "complacency",
+     "role": "distractor",
+     "at": [
+      0,
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "grouse",
+     "role": "distractor",
+     "at": [
+      0,
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "elegy",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "deliberate",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q20",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "Critics who knew the actor's habit of playing to the gallery expected him to ___ at the memorial; instead he read a single short poem in a low voice and sat down.",
+   "blanks": [
+    [
+     "ossify",
+     "question",
+     "grandstand",
+     "overshadow",
+     "slight"
+    ]
+   ],
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "'Playing to the gallery' is the habit, and 'instead ... a low voice and sat down' is its opposite, so the critics expected him to show off for onlookers: grandstand, in its verb sense, not the everyday noun for a stand of seats.",
+    "distractors": {
+     "ossify": "To harden or become rigid in habit. Rigidity is not showing off.",
+     "question": "To ask questions of, or to doubt. It needs an object and has nothing to do with playing to the gallery.",
+     "overshadow": "To make something seem less important by comparison. It needs an object, and the habit named is showiness, not outshining others.",
+     "slight": "To insult by neglect. A showy performer is not neglecting anyone; 'instead' contrasts with display, not with rudeness."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "ossify",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "question",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "grandstand",
+     "role": "key",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "overshadow",
+     "role": "distractor",
+     "at": [
+      0,
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "slight",
+     "role": "distractor",
+     "at": [
+      0,
+      4
+     ]
+    }
+   ]
+  }
+ ]
+}

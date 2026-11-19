@@ -13,6 +13,7 @@ export type EventKind =
   | "key_slow"
   | "distractor_rejected"
   | "exposure"
+  | "seen_known"
   | "concept_wrong_primary"
   | "concept_wrong_secondary"
   | "concept_guessed"
@@ -121,6 +122,8 @@ export function eventsForResponse(
     if (t.kind === "word") {
       const e = wordEvent(q, a, t, correct, opts.guessed);
       if (e) out.push(e);
+      // shown but not judged by the answer: not tagging it "didn't know" is the evidence (scoring keeps one per attempt)
+      if (!e || e.event === "exposure") out.push({ kind: "word", itemId: t.id, event: "seen_known", weight: WORD_W.seen_known });
       if ((e?.event === "key_correct" || e?.event === "key_guessed") && slow) out.push({ ...e, event: "key_slow", weight: WORD_W.key_slow });
     } else {
       out.push(...conceptEvents(t, correct, opts.guessed, slow));

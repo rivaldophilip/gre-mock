@@ -39,6 +39,16 @@
           "kind": "word",
           "id": "portend",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "apex",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "inhibit",
+          "role": "passage"
         }
       ]
     },
@@ -113,6 +123,16 @@
           "kind": "word",
           "id": "propinquity",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "commonplace",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "vernacular",
+          "role": "passage"
         }
       ]
     },
@@ -143,6 +163,26 @@
           "kind": "word",
           "id": "jeopardize",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "resolve",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "fungible",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "rationality",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "confound",
+          "role": "passage"
         }
       ]
     },
@@ -170,6 +210,16 @@
         {
           "kind": "word",
           "id": "nonpareil",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "divergence",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "indifferent",
           "role": "passage"
         }
       ]
@@ -339,6 +389,11 @@
             1,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "jeer",
+          "role": "stem"
         }
       ]
     },
@@ -446,6 +501,11 @@
             2,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "erratic",
+          "role": "stem"
         }
       ]
     },
@@ -518,6 +578,16 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "trivial",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "reconcile",
+          "role": "stem"
         }
       ],
       "revisits": "verbal-003:s1q3"
@@ -599,6 +669,16 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "tirade",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "rebuke",
+          "role": "stem"
         }
       ]
     },
@@ -743,6 +823,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "dispatch",
+          "role": "stem"
         }
       ]
     },
@@ -779,6 +864,16 @@
           "kind": "concept",
           "id": "rc-structure",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "refute",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "reconcile",
+          "role": "stem"
         }
       ]
     },
@@ -950,6 +1045,11 @@
             0,
             0
           ]
+        },
+        {
+          "kind": "word",
+          "id": "resolve",
+          "role": "stem"
         }
       ]
     },
@@ -1129,6 +1229,11 @@
             2,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "begrudge",
+          "role": "stem"
         }
       ],
       "revisits": "verbal-003:s1q7"
@@ -1373,6 +1478,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "tacit",
+          "role": "stem"
         }
       ],
       "revisits": "verbal-006:s1q6"
@@ -1446,6 +1556,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "naive",
+          "role": "stem"
         }
       ]
     },
@@ -1482,6 +1597,11 @@
           "kind": "concept",
           "id": "rc-main-idea",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "reconcile",
+          "role": "stem"
         }
       ]
     },
@@ -1518,6 +1638,11 @@
           "kind": "concept",
           "id": "rc-inference",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "vernacular",
+          "role": "stem"
         }
       ]
     },
@@ -1588,6 +1713,11 @@
           "kind": "concept",
           "id": "rc-vocab-context",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "gratify",
+          "role": "stem"
         }
       ]
     },
@@ -1683,6 +1813,11 @@
           "kind": "concept",
           "id": "rc-structure",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "implication",
+          "role": "stem"
         }
       ]
     },

@@ -1,0 +1,340 @@
+{
+  "measure": "verbal",
+  "intro": "This guide covers the **argument** questions (critical reasoning): the one-paragraph arguments in each verbal section. Your weakest family is at the top, based on your own mocks, and the order updates after every mock you finish. Start each topic with its **big idea** and the worked example, then read the rules and the traps.",
+  "quickRef": [
+    {
+      "title": "Every argument",
+      "items": [
+        { "name": "Read the question first", "text": "Know the job (weaken? assume? explain?) **before** you read the argument.", "note": "and spot EXCEPT or *least* early" },
+        { "name": "Find the conclusion", "text": "*so, therefore, thus, hence, clearly, should, concludes*", "note": "a plan or a prediction counts too" },
+        { "name": "Name the gap", "text": "What does the conclusion talk about that the evidence never showed?", "note": "a new word, a new group, a bigger scale, a cause" },
+        { "name": "Guess the answer first", "text": "Say in your own words what the right answer must do, then read the choices.", "note": "stops you from being steered by the choices" },
+        { "name": "\"If true\"", "text": "Accept every choice as fact. Ask only what it **does** to the conclusion.", "note": "whether it's realistic doesn't matter" }
+      ]
+    },
+    {
+      "title": "Assumption",
+      "items": [
+        { "name": "Negation test", "text": "Flip the choice to its opposite. If the argument **collapses**, it's the assumption.", "note": "only the needed one survives this" },
+        { "name": "Negate exactly", "text": "*all* → *not all* · *some* → *none* · *will not rise at any point* → *will rise at some point*", "note": "the opposite of \"all\" is \"not all\", not \"none\"" },
+        { "name": "Needed, not enough", "text": "The right answer is often small and defensive: it rules out one thing that would wreck the argument.", "note": "it doesn't have to prove the conclusion" },
+        { "name": "Old figure, new thing", "text": "A number measured on the old thing (diesel buses, last year's town) quietly applied to the new one.", "note": "the assumption: the two are comparable" }
+      ]
+    },
+    {
+      "title": "Weaken & strengthen",
+      "items": [
+        { "name": "Hit the link", "text": "Leave the facts alone; attack or support the step from the facts to the conclusion.", "note": "premises stay true" },
+        { "name": "What else changed?", "text": "A rival cause, a change in how it's measured, a different mix of people.", "note": "the classic weakener" },
+        { "name": "Rule out the rival", "text": "A strengthener often shows the other explanation **didn't** happen.", "note": "e.g. a comparison group that didn't change" },
+        { "name": "Same exact conclusion", "text": "Check the choice is about **this** cause, **this** effect, **this** group.", "note": "not a later outcome, a nearby group or a different benefit" }
+      ]
+    },
+    {
+      "title": "Paradox, flaw & structure",
+      "items": [
+        { "name": "Both facts stay true", "text": "The answer explains how A and B can **both** happen. Never pick one that denies either.", "note": "explaining only one side isn't enough" },
+        { "name": "Two-way question", "text": "For *evaluate*: a yes should help the argument and a no should hurt it (or the reverse).", "note": "if only one answer matters, it's wrong" },
+        { "name": "Flaw = assumption, named", "text": "The flaw is the gap, described as the author's mistake.", "note": "\"takes for granted that…\", \"fails to consider…\"" },
+        { "name": "Boldface: label first", "text": "Find the main conclusion, then call each bold part *for it*, *against it*, or *the conclusion*.", "note": "both halves of a choice must be right" }
+      ]
+    },
+    {
+      "title": "Red-flag choices",
+      "items": [
+        { "name": "Too strong (assumption)", "text": "*all, every, none, never, always, only, at any point, must*", "note": "the argument rarely needs that much" },
+        { "name": "Out of scope", "text": "Riders' preferences, pollution, fairness in a **cost** argument.", "note": "a new topic the conclusion never mentions" },
+        { "name": "Different conclusion", "text": "True and helpful, but it supports a nearby claim, not the one stated.", "note": "the shell game" },
+        { "name": "Restates a premise", "text": "Repeats the evidence and bridges nothing.", "note": "it adds nothing new" },
+        { "name": "Strong words are fine here", "text": "On **weaken** and **strengthen**, strong wording usually means more effect.", "note": "only assumption and inference punish it" }
+      ]
+    }
+  ],
+  "formats": [
+    {
+      "type": "arg",
+      "title": "Argument (critical reasoning)",
+      "rules": [
+        "Read the **question first**, then the argument. Underline the conclusion as you read.",
+        "Before the choices, say what the gap is in your own words: **\"they're assuming that…\"**.",
+        "Cut out-of-scope and wrong-direction choices first, then compare the two that are left against the gap.",
+        "Assumption choices with *all, none, every, at any point* are almost always too strong. Negate them: if the opposite barely hurts, they aren't needed.",
+        "A select-all argument question has no partial credit: judge each of the three choices on its own."
+      ]
+    }
+  ],
+  "pacing": [
+    "About **1:30 per argument**. Going faster than that isn't a win if you skip naming the gap: use the time.",
+    "The harder argument (usually the first section's) is where points go. Give it the extra 30 seconds: run the negation test on the last two choices.",
+    "If you're at **2:30** with two choices left, pick the one that touches the gap, mark it, and move on.",
+    "Boldface and role questions take you longest. Find the conclusion first; most of the work is done once you have it.",
+    "Practice with the timer on (exam mode), so your score is real."
+  ],
+  "sections": [
+    {
+      "id": "assumption",
+      "title": "Assumptions (what the argument needs)",
+      "concepts": ["arg-assumption"],
+      "idea": "An assumption is the **missing bridge** between the evidence and the conclusion. Find the word or idea that shows up in the conclusion but was never proved, and ask: *what must be true for this step to work?*",
+      "example": {
+        "q": "To cut costs, a county transit authority plans to replace each diesel bus with an electric bus as the diesel wears out. Electric buses cost more to buy, but the authority calculates that lower fuel and maintenance costs will more than make up the difference over the **twelve years a bus typically stays in service**. Which assumption does the plan depend on? (B) *The price of electricity will not rise at any point in the next twelve years.* (C) *Electric buses will typically stay in service about as long as the diesel buses they replace.*",
+        "steps": [
+          "Conclusion: the plan will **reduce costs**. Evidence: the savings add up over twelve years.",
+          "Where does \"twelve years\" come from? From the buses the authority runs **now**, which are all diesel. Nothing says an electric bus lasts that long. That's the gap: the new thing is assumed to behave like the old thing.",
+          "Negate (C): *electric buses wear out much sooner*, say after six years. Now the authority buys two electric buses for each diesel one, and the savings disappear. The argument **collapses**, so (C) is needed.",
+          "Negate (B): *electricity rises at some point*. A small rise in year eleven still leaves electric buses cheaper to run, so the argument **survives**. (B) asks for far more than the argument needs: it's **too strong**.",
+          "Lesson: \"a bus\" in the evidence meant the buses they had measured. When a figure from the old thing is applied to a new thing, their **comparability** is the assumption."
+        ]
+      },
+      "facts": [
+        "A **necessary** assumption must be true for the argument to work. It doesn't have to prove the conclusion; it only has to keep it from falling apart.",
+        "**Negation test:** flip the choice. If the argument falls apart, that's the answer. If it survives, the choice was a helper, not a need.",
+        "Negate carefully: the opposite of *all* is *not all*; of *some* is *none*; of *will never rise* is *will rise at some point*. A weak negation that barely hurts means the original was **too strong**.",
+        "Common gaps: the old figure fits the new case; the measure really tracks the thing (citations ↔ actual lapses); nothing else changed at the same time; the sample is typical; what works small works big; the plan has what it needs to start.",
+        "The right answer is often **mild and defensive**: *roughly as long*, *not substantially more*, *at least some*. It closes one escape route.",
+        "Words in the premises carry hidden limits: *a bus* (the ones measured), *opens or remodels* (not every restaurant), *on the farms studied* (not every farm). Ask whether the finding carries over."
+      ],
+      "tricks": [
+        "Spot the **new term**: the word in the conclusion that the evidence never mentioned. The assumption almost always links that word to the evidence.",
+        "Only negate the last two or three choices; cut the obvious out-of-scope ones first.",
+        "Ask *\"what would wreck this?\"*. The answer is usually the opposite of the assumption.",
+        "Mild beats strong: between *roughly as long* and *will never*, the mild one is almost always the needed one."
+      ],
+      "traps": [
+        "**Too strong** (your most common miss): *none use other methods*, *every visitor kept the slot*, *will not rise at any point*. These would be enough to prove the conclusion, but they aren't needed. Negate them and the argument survives.",
+        "**Helpful, not needed**: a choice that makes the argument more convincing but whose opposite doesn't hurt it. Strengthening and assuming aren't the same job.",
+        "**Taking a premise's scope for granted**: reading \"a bus lasts twelve years\" as true of every kind of bus. Ask *which* buses the figure came from.",
+        "**Out of scope**: rider preference or pollution in a cost argument. If the conclusion is about cost, the assumption is about cost."
+      ],
+      "tips": [
+        {
+          "title": "The negation test, step by step",
+          "text": "**When:** two choices are left and both sound needed. **Then:** write the opposite of each in a few words and put it back into the argument. Keep the one whose opposite breaks the conclusion.",
+          "example": "A café's sales rose after it added oat milk, so the owner concludes oat milk caused the rise. Choice: *nothing else that boosts sales, like a new office next door, started at the same time.* Negated: *a new office opened that month.* Now the rise has another cause, so the argument breaks. Needed."
+        },
+        {
+          "title": "Old figure, new thing",
+          "text": "**When:** the evidence quotes a number (a lifespan, a rate, a cost) measured on what exists now, and the plan swaps in something new. **Then:** the assumption is that the new thing matches the old figure closely enough.",
+          "example": "\"Our warehouse forklifts last ten years, so leasing new electric ones for ten years is safe.\" Assumed: electric forklifts last about as long as the old ones."
+        },
+        {
+          "title": "Does the measure track the thing?",
+          "text": "**When:** the conclusion is about something real (crime, safety, lapses, health) but the evidence counts reports, citations or tickets. **Then:** the assumption is that the count rises and falls with the real thing, for example that it's just as easy to detect before and after.",
+          "example": "\"Fewer speeding tickets since the new signs, so the signs slowed drivers.\" Assumed: police weren't writing fewer tickets for some other reason, like fewer patrols."
+        }
+      ],
+      "patterns": [
+        {
+          "title": "The five gaps you'll keep meeting",
+          "idea": "Most hard assumption questions hide one of a handful of gaps. Learn to spot each one, and the answer is usually the choice that closes it.",
+          "cases": [
+            {
+              "name": "The old figure applied to a new thing",
+              "q": "A school replaces paper textbooks with tablets, saying the cost evens out because a textbook is used for five years.",
+              "spot": "a number measured on the old item, used to plan for a different item",
+              "steps": ["Gap: does a tablet last about five years too?", "Answer: tablets will typically stay usable about as long as the textbooks they replace."]
+            },
+            {
+              "name": "The measure stands in for the real thing",
+              "q": "Since the town added cameras, reported shoplifting fell by half, so the cameras deterred thieves.",
+              "spot": "the conclusion is about behavior, the evidence counts reports",
+              "steps": ["Gap: is shoplifting still reported as often as before?", "Answer: store owners did not become less likely to report thefts once the cameras went up."]
+            },
+            {
+              "name": "Something else came with the change",
+              "q": "A clinic began texting patients before appointments, which also listed new evening hours, and missed appointments dropped. The clinic credits the texts' reminders.",
+              "spot": "the change came bundled with a second change",
+              "steps": ["Gap: was it the reminder, or the new hours the message announced?", "Answer: the drop is not mostly due to patients moving to the evening slots."]
+            },
+            {
+              "name": "What works small works big",
+              "q": "Two farms that put up hawk perches had fewer mice, so if every farm in the region put up perches, mice would fall everywhere.",
+              "spot": "the conclusion scales a small result up to everyone",
+              "steps": ["Gap: are there enough hawks to cover every farm?", "Answer: the region can support more hawks than it has now. Not \"every farm will see the same drop\", which is too strong."]
+            },
+            {
+              "name": "The fix needs a problem to fix",
+              "q": "A museum started timed entry to cut crowding at opening, so crowds should thin out across the day.",
+              "spot": "a plan that only works if the problem it targets is really there",
+              "steps": ["Gap: were visitors bunching up before? If arrivals were already spread out, timed entry changes nothing.", "Answer: before the change, many visitors arrived in the first hour."]
+            }
+          ],
+          "notWhen": [
+            "The question asks what **strengthens** the argument: then a strong, sufficient choice can be right, and the negation test doesn't apply.",
+            "The question asks what **must be true** from the passage (an inference): then you're reasoning from the facts, not filling a gap."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weaken-strengthen",
+      "title": "Weaken & strengthen",
+      "concepts": ["arg-weaken", "arg-strengthen"],
+      "idea": "Accept the facts and attack or support the **step** from the facts to the conclusion. In a cause-and-effect argument, the step is almost always \"and nothing else explains it\", so ask **what else changed?**",
+      "example": {
+        "q": "After a city replaced its old buses on Route 9 with new, quieter ones, ridership on the route rose 30 percent. The transit office concludes that riders prefer the new buses. Which most weakens the conclusion? (A) *Most new riders had previously driven to work.* (B) *At the same time, Route 9 began running twice as often.*",
+        "steps": [
+          "Conclusion: the **new buses** caused the rise. Evidence: ridership rose after they arrived.",
+          "What else changed? If service frequency doubled at the same moment, that alone could explain more riders: an **alternative cause**. (B) weakens.",
+          "(A) tells you where riders came from, not **why** they came. It leaves the bus-type explanation untouched: relevant-sounding, but neutral.",
+          "Lesson: for a causal claim, the best weakener names another cause that changed at the same time. Look for it before reading the choices."
+        ]
+      },
+      "facts": [
+        "The premises are **true**. You weaken the conclusion by showing the facts don't lead there, never by denying the facts.",
+        "You only need to make the conclusion **more or less likely**, not prove or disprove it.",
+        "Ways to weaken a cause: another cause; the cause runs backward (B causes A); a third thing causes both; the cause appears without the effect; the measure changed, not the thing.",
+        "Ways to strengthen a cause: rule out those rivals, for example a comparison group without the change that **didn't** improve.",
+        "Ways to weaken a plan: an obstacle, a side effect that cancels the gain, or the plan doesn't reach enough of the problem. Strengthen by removing the obstacle or showing it reaches most cases.",
+        "Results from a sample or survey: weaken by showing the sample isn't typical; strengthen by showing it is."
+      ],
+      "tricks": [
+        "Before the choices, list two rivals: *what else changed?* and *does the measure track the real thing?* Then scan for a choice that names one.",
+        "Restate the exact conclusion as **cause → effect, for whom**. Reject any choice about a different effect, a later outcome or another group.",
+        "For a rule that applies only to some cases (\"restaurants that open or remodel\"), the best strengthener often shows it **covers most cases**.",
+        "On \"weaken EXCEPT\", mark each choice W, S or 0. The answer is the S or the 0."
+      ],
+      "traps": [
+        "**Different conclusion** (the shell game): *inspected restaurants have fewer plumbing problems* supports \"inspections help\", not \"the grease-trap rule cut sewer blockages\". True and nearby, but it supports a different claim.",
+        "**A later outcome**: *students who passed went on to take more math* is about what happened afterward, not whether the policy caused the original result.",
+        "**Background that sounds related**: a fact about the fish's life cycle, or where new riders came from, that doesn't touch the link.",
+        "**Wrong direction**: a strengthener on a weaken question, or the reverse. Reread the question once you have your answer."
+      ],
+      "tips": [
+        {
+          "title": "Changed the net, not the fish",
+          "text": "**When:** a change in how something is caught, counted or tested comes with a change in the numbers. **Then:** suspect the measurement. The new method may simply pick up different cases.",
+          "example": "\"After the fishery required wider net mesh, the average cod caught got longer, so the cod population is recovering.\" Weakener: the jump in length came within two months, too fast for growth; wider mesh just lets small cod escape."
+        },
+        {
+          "title": "A comparison group that didn't change",
+          "text": "**When:** the argument credits a policy for a change. **Then:** the strongest support shows a similar group **without** the policy stayed the same. That rules out a general trend.",
+          "example": "\"After the college made first-year math pass/fail, more first-years stayed in math.\" Strengthener: in the same years, retention in letter-graded upper-level math courses didn't change."
+        }
+      ],
+      "patterns": [
+        {
+          "title": "Rival explanations for a cause",
+          "idea": "Most causal weakeners are one of four rivals. Name the one that fits before you read the choices.",
+          "cases": [
+            {
+              "name": "Another cause",
+              "q": "Test scores rose the year the school switched to a four-day week, so the four-day week helped.",
+              "spot": "two changes in the same year",
+              "steps": ["Weakener: that year the state also made the test shorter and easier."]
+            },
+            {
+              "name": "Backward cause",
+              "q": "People who own exercise bikes are fitter, so owning one makes you fit.",
+              "spot": "the effect could just as well be the cause",
+              "steps": ["Weakener: people tend to buy exercise bikes after they've started getting fit."]
+            },
+            {
+              "name": "A third thing causes both",
+              "q": "Towns with more coffee shops have higher incomes, so coffee shops raise incomes.",
+              "spot": "two things that rise together",
+              "steps": ["Weakener: shops open where wealthy commuters already live."]
+            },
+            {
+              "name": "The count changed, not the thing",
+              "q": "Reported bike thefts doubled after the city launched an online report form, so theft is rising.",
+              "spot": "a new way to report or measure",
+              "steps": ["Weakener: before the form, most thefts went unreported."]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flaw-evaluate",
+      "title": "Flaws & evaluate questions",
+      "concepts": ["arg-flaw", "arg-evaluate"],
+      "idea": "A **flaw** is just the assumption described as the author's mistake. An **evaluate** question asks for the fact that would tell you whether the gap is real: a yes should help and a no should hurt.",
+      "example": {
+        "q": "Remote employees at a firm closed 20 percent more support tickets than office staff last year, so the manager concludes that working remotely makes staff more productive. Which would be most useful to know in judging the conclusion? (A) *Whether remote employees were assigned easier tickets.* (B) *Whether office staff also prefer to work from home.*",
+        "steps": [
+          "Gap: closing more tickets means more productive only if the tickets were **comparable**.",
+          "Test (A) both ways. Yes, easier tickets: the gap is explained by the tickets, so the argument is weakened. No: the comparison holds, so it's strengthened. A two-way effect makes it the answer.",
+          "Test (B): yes or no, staff preferences say nothing about productivity. It has no effect either way, so it's out.",
+          "Lesson: name the gap, then pick the question whose answer would close it or blow it open."
+        ]
+      },
+      "facts": [
+        "Common flaws: treating a link as a cause; generalizing from an unusual sample; mixing up percent and number; mixing up \"needed\" and \"enough\"; attacking the person instead of the claim; taking a lack of evidence as proof; a word that changes meaning partway through.",
+        "Flaw choices are written abstractly: *takes for granted that…*, *fails to consider that…*, *treats a … as a …*. Match **every** part to the argument.",
+        "Method questions ask **how** the argument works (by analogy, by ruling out an alternative, by a counterexample), not whether it works."
+      ],
+      "tricks": [
+        "Can't name the flaw? Ask how you'd weaken the argument. The weakener points straight at the flaw.",
+        "For evaluate, read each choice as a yes/no question and answer it both ways. If only one answer matters, cut it.",
+        "Translate the abstract choice into the argument's own words before you judge it."
+      ],
+      "traps": [
+        "**Right flaw words, wrong argument**: *confuses necessary with sufficient* when the argument has no if-then at all.",
+        "**Something the author never did**: a choice that says the argument *relies on an expert* when it doesn't.",
+        "**Half right**: the first half of the description fits, the second half doesn't. One wrong word kills it."
+      ]
+    },
+    {
+      "id": "paradox",
+      "title": "Paradoxes (explain the surprise)",
+      "concepts": ["arg-paradox"],
+      "idea": "There's no conclusion here, just two facts that seem to clash. The answer adds one new fact that lets **both** be true at once.",
+      "example": {
+        "q": "After a city added more police patrols, the number of reported crimes went **up**. Which best explains this? (A) *Many residents doubt that patrols reduce crime.* (B) *Officers on patrol record many minor crimes that used to go unreported.*",
+        "steps": [
+          "The clash: more police should mean less crime, yet reports rose.",
+          "(B): patrols catch and record more crimes, so **reports** can rise even if crime itself didn't. Both facts stand, so it resolves the clash.",
+          "(A): residents' opinions don't explain why the numbers went up. Cut it.",
+          "Lesson: look for the difference between the thing and its count, between groups, or between percentages and totals."
+        ]
+      },
+      "facts": [
+        "Both facts are fixed. A choice that says one of them is wrong never resolves the paradox.",
+        "Common resolutions: an offsetting force; a change in who is counted; a hidden difference between the two groups; percent versus total; people changing their behavior in response.",
+        "On \"EXCEPT\" versions, four choices explain the clash; the answer is the one that doesn't."
+      ],
+      "tricks": [
+        "Say the clash in one sentence: *\"X should cause Y, but Z happened.\"* Then look for the fact that breaks the *should*.",
+        "Put the chosen answer back in and check that both facts now sit comfortably together."
+      ],
+      "traps": [
+        "**One side only**: explains why patrols increased but not why reports rose.",
+        "**Makes it worse**: a choice that deepens the surprise.",
+        "**Restates the surprise**: says the same thing in new words without explaining it."
+      ]
+    },
+    {
+      "id": "structure",
+      "title": "Boldface, main point & completing the argument",
+      "concepts": ["arg-role", "arg-conclusion", "arg-complete"],
+      "idea": "Everything turns on the **main conclusion**. Find it first, then every other sentence is either for it, against it, or background.",
+      "example": {
+        "q": "Some analysts predict that a new bridge toll will push drivers onto side streets. **But most trips on the bridge are commutes with no practical detour.** Therefore, **the toll is unlikely to shift much traffic.** What roles do the two bold parts play?",
+        "steps": [
+          "Find the conclusion: *therefore* marks the second bold part. It's the **main conclusion**, the author's own position.",
+          "The first bold part follows *but* and answers the analysts: it's **evidence for** the conclusion and **against** the analysts' prediction.",
+          "The analysts' prediction is the view the argument **opposes**.",
+          "Matching choice: *the first is a consideration offered against a prediction; the second is the argument's main conclusion.* Check both halves before choosing."
+        ]
+      },
+      "facts": [
+        "Roles you'll see: **main conclusion** (the author's point); **intermediate conclusion** (supported, then used to support the main one); **evidence**; **the opposing view**; **a concession** (granted, then outweighed); **background**.",
+        "Choice wording: *the position the argument seeks to establish* = main conclusion; *a consideration offered in support* = evidence; *a position the argument opposes* = the other side; *a finding the argument seeks to explain* = the fact at issue.",
+        "*But, however, yet* usually turn from the opposing view to the author's own view.",
+        "**Complete the passage:** a blank after *because* or *since* wants evidence that closes the gap; a blank after *therefore* wants a conclusion that goes no further than the evidence."
+      ],
+      "tricks": [
+        "Use the **why test**: the main conclusion is the claim that every other sentence answers *why?* for.",
+        "Label each bold part in your own words before you read the choices.",
+        "Judge the first half of every choice and cut, then judge the second half of what's left."
+      ],
+      "traps": [
+        "**Intermediate vs. main conclusion**: a supported claim that then supports something further is not the main conclusion.",
+        "**Swapped roles**: the right labels attached to the wrong bold parts.",
+        "**Fact vs. position**: calling something the author states as given *a claim the argument argues for*, or the reverse.",
+        "**Overreaching blank**: a completion that goes further than the passage supports."
+      ]
+    }
+  ]
+}

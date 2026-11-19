@@ -12,7 +12,7 @@ export function weaknessWhy(s: ItemScore): string {
     `Weakness = (weak + ${SMOOTH.prior}) / (weak + mastery + ${SMOOTH.total})`,
     `= (${f2(s.weakEvidence)} + ${SMOOTH.prior}) / (${f2(s.weakEvidence)} + ${f2(s.mastery)} + ${SMOOTH.total}) = ${pct(s.S)}.`,
     ev ? `Weak evidence: ${ev}.` : "No weak evidence.",
-    `Mastery comes from right, unguessed answers. Each event's weight halves every ${HALF_LIFE_DAYS} days. A rough chance you'd miss it next time; untested starts at 33%.`,
+    `Mastery comes from right, unguessed answers, and from words you were shown and did not tag "didn't know" (once per test). Each event's weight halves every ${HALF_LIFE_DAYS} days. A rough chance you'd miss it next time; untested starts at 33%.`,
   ].join("\n");
 }
 

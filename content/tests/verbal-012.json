@@ -39,6 +39,16 @@
           "kind": "word",
           "id": "propinquity",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "futile",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "diffuse",
+          "role": "passage"
         }
       ]
     },
@@ -107,6 +117,21 @@
           "kind": "word",
           "id": "pecuniary",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "revisionist",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "boycott",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "contend",
+          "role": "passage"
         }
       ]
     },
@@ -136,6 +161,11 @@
           "kind": "word",
           "id": "irreverent",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "gradation",
+          "role": "passage"
         }
       ]
     },
@@ -159,6 +189,11 @@
         {
           "kind": "word",
           "id": "jeopardize",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "dormant",
           "role": "passage"
         }
       ]
@@ -758,6 +793,11 @@
           "kind": "concept",
           "id": "rc-structure",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "supersede",
+          "role": "stem"
         }
       ]
     },
@@ -827,6 +867,11 @@
           "kind": "concept",
           "id": "rc-vocab-context",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "obscurity",
+          "role": "stem"
         }
       ]
     },
@@ -964,6 +1009,11 @@
             0,
             4
           ]
+        },
+        {
+          "kind": "word",
+          "id": "anonymous",
+          "role": "stem"
         }
       ]
     },
@@ -1018,6 +1068,11 @@
             1,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "lavish",
+          "role": "stem"
         }
       ]
     },
@@ -1134,6 +1189,11 @@
             2,
             1
           ]
+        },
+        {
+          "kind": "word",
+          "id": "refute",
+          "role": "stem"
         }
       ]
     },
@@ -1419,6 +1479,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "concession",
+          "role": "stem"
         }
       ]
     },
@@ -1455,6 +1520,26 @@
           "kind": "concept",
           "id": "rc-main-idea",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "refute",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "revisionist",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "obscure",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "reconcile",
+          "role": "stem"
         }
       ]
     },
@@ -1491,6 +1576,16 @@
           "kind": "concept",
           "id": "rc-attitude",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "revisionist",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "scathing",
+          "role": "stem"
         }
       ]
     },
@@ -1561,6 +1656,11 @@
           "kind": "concept",
           "id": "rc-application",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "analogous",
+          "role": "stem"
         }
       ]
     },

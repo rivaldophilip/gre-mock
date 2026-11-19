@@ -9,7 +9,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { TestSchema, type Question, type Test } from "../lib/types";
-import { itemText, measureTests, pastItems, primaryOf, setupOverlap, setupText, type PastItem } from "../lib/setup-history";
+import { earlierTests, itemText, measureTests, pastItems, primaryOf, setupOverlap, setupText, type PastItem } from "../lib/setup-history";
 import { containment, shingles } from "../lib/ngram";
 import { die, readTestFile } from "./lib/test-file";
 
@@ -127,7 +127,7 @@ export function noveltyCopy(test: Test, dir = "content/tests", only?: Set<string
   const body =
     test.measure === "quant"
       ? quantSections(test, pastItems("quant", test.id, dir), only)
-      : verbalSections(test, measureTests("verbal", dir).filter((t) => testNo(t.id) < testNo(test.id)), only);
+      : verbalSections(test, earlierTests(test, dir, true), only);
   return [...head, ...body].join("\n");
 }
 

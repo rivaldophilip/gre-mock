@@ -1,0 +1,1993 @@
+{
+  "id": "drill-008",
+  "measure": "verbal",
+  "title": "Endless vocab batch 8",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "A ___ investor, she spread her savings across a dozen funds and never staked more on a single venture than she could afford to lose; yet when the market broke and her neighbors sold in a panic, she was buying.",
+      "choices": [
+        "judicious",
+        "pusillanimous",
+        "vainglorious",
+        "circumspect",
+        "timorous",
+        "cognizant"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Spreading risk and never staking more than she could afford to lose is careful, sensible management: judicious and circumspect. The 'yet' clause, buying while others panicked, shows the care was judgment, not fear.",
+        "distractors": {
+          "pusillanimous": "Trap pair with timorous: lacking courage. Her caution might look timid, but buying in a crash while others panic is the reverse of cowardice.",
+          "timorous": "Trap pair with pusillanimous: fearful. Ruled out by the same 'yet' clause.",
+          "vainglorious": "Boastfully proud. Nothing she does is a display.",
+          "cognizant": "Aware. Awareness alone does not describe the way she managed her money."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "judicious",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pusillanimous",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "vainglorious",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "circumspect",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "timorous",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cognizant",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Though she confessed in letters home that the funeral rite repelled her, the ethnographer kept her published account of it scrupulously (i) ___, setting down each stage in prose so (ii) ___ that a reader would search in vain for an adjective, let alone a word of approval or distaste.",
+      "key": {
+        "sel": [
+          1,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Though' sets her private revulsion against the published account, which shows no feeling at all: dispassionate. (ii) Prose without a single adjective, plain and unadorned, is bald (blunt, without embellishment).",
+        "distractors": {
+          "morose": "Gloomy and sullen. It describes how the rite may have left her feeling, but 'though' says the account hid her feelings.",
+          "dyspeptic": "Irritable, sour-tempered. It is baited by 'repelled her', but the account shows no distaste at all.",
+          "palatable": "Agreeable, acceptable. Whether the prose is pleasant to read is not the point; it lacks every ornament.",
+          "nettlesome": "Irritating. It suits her feelings about the rite, not prose with no word of distaste."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "morose",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dispassionate",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dyspeptic",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "palatable",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bald",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nettlesome",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ],
+      "blanks": [
+        [
+          "morose",
+          "dispassionate",
+          "dyspeptic"
+        ],
+        [
+          "palatable",
+          "bald",
+          "nettlesome"
+        ]
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Although the remedies recorded at the coastal and the highland shrines differ in nearly every particular, the anthropologist argues that the variety reflects not many separate healing traditions but a few ___ practitioners who adjusted their cures to each market they reached; the same dozen names, she notes, recur at both ends of the route within a single season.",
+      "choices": [
+        "disparate",
+        "peripatetic",
+        "slothful",
+        "itinerant",
+        "divergent",
+        "embryonic"
+      ],
+      "key": {
+        "sel": [
+          1,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The variety of remedies invites the reading 'many separate traditions', and the sentence rejects it: 'not many separate traditions but a few ___ practitioners'. The final clue, far from the blank, is that the same names turn up at both ends of the route in one season. The healers travel, so peripatetic and itinerant.",
+        "distractors": {
+          "disparate": "Trap pair with divergent: fundamentally different from one another. It fits the variety of the remedies, but the sentence denies that the variety comes from many distinct groups; the practitioners are a few, and the same ones.",
+          "divergent": "Trap pair with disparate: differing, moving apart. The obvious local reading of 'differ in nearly every particular', ruled out by 'not many separate traditions'.",
+          "embryonic": "In an early, undeveloped stage. Nothing in the sentence concerns how developed the practitioners' craft was.",
+          "slothful": "Lazy, averse to effort. Practitioners who cover both ends of the route in one season are anything but; and laziness would not explain how a few healers account for the remedies at every shrine."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "disparate",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "peripatetic",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "slothful",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "itinerant",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "divergent",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "embryonic",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Most of the oracle's pronouncements were riddles that could be read to fit any outcome, which is precisely why historians linger over the one inscribed on the temple's east wall: naming the king, the city and the season of his defeat, it was so ___ that when the season passed without a battle, the priests could find no reading to rescue it, and quietly plastered it over.",
+      "choices": [
+        "enigmatic",
+        "explicit",
+        "artful",
+        "ominous",
+        "unequivocal",
+        "disingenuous"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The inscription is set against the riddles 'that could be read to fit any outcome': it named king, city and season, and 'so ___ that' the priests could find no saving reading. It left no room for interpretation, so explicit and unequivocal.",
+        "distractors": {
+          "artful": "Trap pair with disingenuous: crafty, cunning. These suit the riddles, built to fit any outcome, but the inscription is the exception to them.",
+          "disingenuous": "Trap pair with artful: insincere, falsely candid. Craft would have left the priests a way out, and they found none.",
+          "enigmatic": "Mysterious, hard to interpret. That describes the other pronouncements, not this one.",
+          "ominous": "Threatening, foreshadowing evil. A prophecy of defeat is ominous, but menace does not explain why no reading could rescue it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "enigmatic",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "explicit",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "artful",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ominous",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "unequivocal",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "disingenuous",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Gout had made the old judge so ___ that barristers learned to bring their applications in the first hour of the morning, before the pain, and with it his readiness to fly into a rage at a mislaid document, had time to rise.",
+      "choices": [
+        "choleric",
+        "acerbic",
+        "lugubrious",
+        "trenchant",
+        "splenetic",
+        "sonorous"
+      ],
+      "key": {
+        "sel": [
+          0,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The trait rises with his pain and shows as a readiness to 'fly into a rage' over trifles: bad-tempered, quick to anger. Choleric and splenetic.",
+        "distractors": {
+          "acerbic": "Sharp and biting in speech. A gouty judge may well be sharp-tongued, but the sentence names rage at a mislaid document, a temper rather than a way with words.",
+          "trenchant": "Incisive, cutting in argument. It praises the force of what someone says; the barristers fear his temper, not his reasoning.",
+          "lugubrious": "Mournful. Pain might make a man gloomy, but the sentence describes rages.",
+          "sonorous": "Deep and resonant. It describes a voice, not a disposition."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "choleric",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "acerbic",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lugubrious",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "trenchant",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "splenetic",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sonorous",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "After six weeks of fever the novel's heroine is not tragic but merely (i) ___, drifting from sofa to window and leaving her letters unanswered, and the critics who called the book's last chapter (ii) ___ meant that it dissolves rather than resolves: the plot is as enervated as its invalid.",
+      "key": {
+        "sel": [
+          1,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) Drifting from sofa to window and leaving letters unanswered after a long fever is weakness and lack of energy: languid. (ii) A last chapter that 'dissolves rather than resolves', as enervated as the heroine, lacks force or excitement: tame.",
+        "distractors": {
+          "petulant": "Childishly sulky. Nothing she does is a show of temper; she simply lacks energy.",
+          "sportive": "Playful, frolicsome. The opposite of a woman drifting listlessly after a fever.",
+          "precipitous": "Steep, or done too hastily. An abrupt ending is a common complaint, but this one 'dissolves', the opposite of a sudden drop.",
+          "peevish": "Irritable. It is a word for a person's temper, and the critics are describing a chapter that lacks force."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "petulant",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "languid",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sportive",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tame",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "precipitous",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "peevish",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "novel",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "resolve",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "enervate",
+          "role": "stem"
+        }
+      ],
+      "blanks": [
+        [
+          "petulant",
+          "languid",
+          "sportive"
+        ],
+        [
+          "tame",
+          "precipitous",
+          "peevish"
+        ]
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Though the carved figures are dreaded, and a child who touches one is scrubbed with ash, the villagers insist that nothing in the wood itself is to be feared: a figure's power is not ___ but lent to it by the ancestor whose name it bears, and it lapses once that name is no longer spoken.",
+      "choices": [
+        "malevolent",
+        "inherent",
+        "plastic",
+        "baleful",
+        "intrinsic",
+        "insidious"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The dread invites a word for harmful power, but the frame is 'not ___ but lent to it', so the blank must be the opposite of borrowed: belonging to the figure itself. The last clause confirms it, since the power lapses when the name is forgotten. Inherent and intrinsic both mean that.",
+        "distractors": {
+          "malevolent": "Trap pair with baleful: wishing or threatening harm. It fits the dread and the ash, but 'not malevolent but lent' sets up no contrast; the sentence is about where the power comes from, not whether it harms.",
+          "baleful": "Trap pair with malevolent: menacing, deadly. The same local lure from 'dreaded', ruled out by the 'not ... but lent' frame.",
+          "plastic": "Easily shaped, adaptable. Borrowed power is not the opposite of adaptable power.",
+          "insidious": "Harmful in a gradual, hidden way. Another reading of the dread, with no contrast to 'lent'."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "malevolent",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inherent",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "plastic",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "baleful",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "intrinsic",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "insidious",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The new dynasty chiseled the storm god's name from every public monument, but the offerings left in household shrines show that devotion to him was not erased by the decree; it merely began to ___, thinning over two centuries until only a few upland families still kept his feast.",
+      "choices": [
+        "expunge",
+        "wane",
+        "culminate",
+        "abate",
+        "strike",
+        "balk"
+      ],
+      "key": {
+        "sel": [
+          1,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Devotion was 'not erased', 'merely' did something slower, then thinned over two centuries. The blank means to decline gradually, so wane and abate.",
+        "distractors": {
+          "expunge": "Trap pair with strike: to erase or delete from a record. That is what the dynasty attempted and what the sentence says did not happen to devotion; it is also something done to a thing, not something devotion does.",
+          "strike": "Trap pair with expunge, in its sense of removing from a record. The chiseling struck the name, but devotion was 'not erased'.",
+          "culminate": "To reach a climax. Devotion thinned rather than peaking.",
+          "balk": "To refuse to go on, to hesitate. It implies stopping, not a slow two-century decline."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "expunge",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "wane",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "culminate",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "abate",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "strike",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "balk",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Excavators long blamed the plundering of the valley's royal tombs on raiders from the desert, reasoning that the custodial priests, whose hymns praised their own (i) ___, could hardly have been the ones to (ii) ___ the very graves they had sworn to keep. A cache of temple receipts has unsettled that verdict. In famine years the custodians sold grave goods through intermediaries, leaving the chambers emptied but structurally untouched, as men would who meant to go on serving there; what the receipts record is thus less an assault from outside than a (iii) ___ breach of trust, all the worse for having been carried out so quietly.",
+      "blanks": [
+        [
+          "sangfroid",
+          "rectitude",
+          "mirth"
+        ],
+        [
+          "raze",
+          "depredate",
+          "supplicate"
+        ],
+        [
+          "incendiary",
+          "fleeting",
+          "grievous"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) The excavators' reasoning is that the priests 'could hardly' have robbed the graves, so the hymns must have praised a quality that rules out theft: moral uprightness, rectitude. (ii) The act in question is the plundering of the first clause, so depredate. Raze is the trap, and its clue is a sentence away: the chambers were left structurally untouched. (iii) 'Less an assault from outside than a ___ breach of trust, all the worse' wants a word for serious harm: grievous.",
+        "distractors": {
+          "sangfroid": "Composure under pressure. Calm priests could still rob a tomb, so it does not support 'could hardly have been the ones'.",
+          "mirth": "Merriment. It gives no reason to think the priests honest.",
+          "raze": "To demolish completely. It fits 'plundering' on a quick read, but the chambers were left structurally untouched.",
+          "supplicate": "To beg humbly. One does not supplicate graves, and the sentence is about robbing them.",
+          "incendiary": "Inflammatory, tending to stir up violence. It suits 'assault', which the sentence sets aside; the breach was carried out quietly.",
+          "fleeting": "Brief, passing. The selling recurred in famine years, and 'all the worse' calls for gravity, not brevity."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "sangfroid",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rectitude",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mirth",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "raze",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "depredate",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "supplicate",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "incendiary",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fleeting",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "grievous",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "In the island societies she studied, the ethnographer found that a lavish gift was seldom an act of pure (i) ___: a recipient who failed to (ii) ___ it within the season lost standing, and the giver gained a lasting claim on him. Yet she warned against reading the custom as rivalry and nothing more, for the same debts that humbled particular households bound the villages into a (iii) ___ that outlasted any one exchange.",
+      "blanks": [
+        [
+          "economy",
+          "magnanimity",
+          "serendipity"
+        ],
+        [
+          "requite",
+          "expound",
+          "forswear"
+        ],
+        [
+          "plutocracy",
+          "cacophony",
+          "solidarity"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) The colon shows the gift creates a claim, so it is seldom pure generosity: magnanimity. (ii) A recipient who fails to repay it loses standing: requite. (iii) 'Yet ... not rivalry and nothing more': the debts bound the villages together, a unity and mutual support, solidarity.",
+        "distractors": {
+          "economy": "Thrift, careful use of resources. A lavish gift is plainly not thrifty, so 'seldom an act of pure economy' says nothing; the colon contrasts the gift with selflessness.",
+          "serendipity": "A happy accident. The gift is deliberate and calculated.",
+          "expound": "To explain in detail. Nothing about the custom requires explaining a gift.",
+          "forswear": "To renounce or give up. The obligation is to repay, not to refuse.",
+          "plutocracy": "Rule by the wealthy. It is baited by standing and claims, but debts that 'bound the villages' describe unity, not a ruling class.",
+          "cacophony": "A harsh mix of sounds or a jarring discord. The sentence describes a bond, the opposite of discord."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "economy",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "magnanimity",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "serendipity",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "requite",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "expound",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "forswear",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "plutocracy",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cacophony",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "solidarity",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lavish",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Nearly every farming people tells of a lost age when harvests came unbidden and no one quarreled over boundaries, and folklorists once read such tales as memories, however blurred, of a past that had really been (i) ___. The newer reading does not call the tales empty; it holds that what they describe never lay behind their tellers at all. The golden age, on this view, is a (ii) ___ cast backward in time, assembled from whatever the tellers' own (iii) ___ most conspicuously denied them: leisure for the overworked, plenty for the hungry, peace for those who lived by the boundary stone.",
+      "blanks": [
+        [
+          "plutocratic",
+          "idyllic",
+          "dilapidated"
+        ],
+        [
+          "corollary",
+          "denouement",
+          "chimera"
+        ],
+        [
+          "milieu",
+          "coffer",
+          "aerie"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) The tales describe effortless harvests and no quarrels, and the old reading took them as memories of a past that truly was so: peaceful and charming, idyllic. (ii) The newer reading says the age never lay behind the tellers, so it is an imagined, unreal hope projected backward: a chimera. 'Not empty' blocks reading it as mere nonsense; it has an object, just not a real one. (iii) What denied them leisure, plenty and peace was their own social surroundings: milieu.",
+        "distractors": {
+          "plutocratic": "Ruled by the wealthy. A world without quarrels over boundaries is the opposite of a stratified one.",
+          "dilapidated": "Fallen into disrepair. The tales praise the lost age; they do not describe it as ruined.",
+          "corollary": "A proposition that follows from another. The golden age is an imagined ideal, not a deduction.",
+          "denouement": "The final resolution of a plot. It is baited by 'cast backward in time', but a golden age stands at the start of the story, and the point is that it is unreal.",
+          "coffer": "A strongbox, or a store of funds. It suits 'plenty for the hungry' alone; leisure and peace are not kept in coffers.",
+          "aerie": "A lofty nest or dwelling. It has nothing to do with the hardships the tellers lived in."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "plutocratic",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "idyllic",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dilapidated",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "corollary",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "denouement",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "chimera",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "milieu",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "coffer",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "aerie",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "At the temple court every petitioner was required to make an elaborate (i) ___ to the high priest, touching his forehead to the floor three times before he could speak. Chroniclers hostile to the priest described the hall as a stage for (ii) ___ flatterers, each outdoing the last in honeyed praise. The ledger of grants, however, tells a different story: petitioners who bowed lowest received no more than the rest, since relief was apportioned by need, and a petitioner's need was held to establish (iii) ___, not merely to plead for a favor that flattery might win.",
+      "blanks": [
+        [
+          "investiture",
+          "obeisance",
+          "effigy"
+        ],
+        [
+          "sullen",
+          "incredulous",
+          "unctuous"
+        ],
+        [
+          "entitlement",
+          "adulation",
+          "missive"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) Touching the forehead to the floor is a gesture of deference: obeisance. (ii) Flatterers outdoing one another in honeyed praise are ingratiating and insincere: unctuous. (iii) Need is set against 'a favor that flattery might win', so it established a right or claim: entitlement.",
+        "distractors": {
+          "investiture": "A ceremony conferring office or rank. The petitioners bow to ask for relief; no one is being installed.",
+          "effigy": "A sculpted or crude likeness of a person. One makes a bow, not an effigy, by touching the floor.",
+          "sullen": "Gloomy and resentful. Flatterers offering honeyed praise are the opposite.",
+          "incredulous": "Unwilling to believe. Nothing suggests the flatterers doubted anything.",
+          "adulation": "Excessive admiration. That is what the flatterers offered; the ledger shows that need, not adulation, earned relief.",
+          "missive": "A letter. Need does not establish a letter, and the contrast is with a favor."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "investiture",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obeisance",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "effigy",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sullen",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "incredulous",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "unctuous",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "entitlement",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "adulation",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "missive",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "elaborate",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Critics of the doctrine that every soul has been (i) ___ for salvation or damnation predicted that it would make believers careless of conduct. The congregations that embraced it behaved otherwise. Far from growing lax, they examined their daily habits with an anxious (ii) ___, searching each one for signs of the election that no deed of theirs could earn or forfeit, and their preachers (iii) ___ less against open sinners, whom they pitied, than against the complacent who took their own salvation for granted.",
+      "blanks": [
+        [
+          "devolved",
+          "predestined",
+          "disenfranchised"
+        ],
+        [
+          "equanimity",
+          "fastidiousness",
+          "alchemy"
+        ],
+        [
+          "rhapsodized",
+          "digressed",
+          "railed"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) The critics' worry (why bother about conduct?) and the later clause, 'election that no deed of theirs could earn or forfeit', show a fate settled beforehand: predestined. (ii) 'Far from growing lax' plus 'anxious' and the searching of every habit call for exacting attention to detail: fastidiousness. (iii) 'Less against ... than against' needs a verb of protest: railed, in its secondary sense of complaining bitterly.",
+        "distractors": {
+          "devolved": "Passed down to a lower level or a successor. A soul is not devolved for salvation; the doctrine is about a fate fixed in advance.",
+          "disenfranchised": "Deprived of a right, especially the vote. It fits damnation alone, not 'salvation or damnation'.",
+          "equanimity": "Calm composure. It is the opposite of the 'anxious' scrutiny described.",
+          "alchemy": "A seemingly magical transformation. Nothing is transformed; the believers are scrutinizing themselves.",
+          "rhapsodized": "Spoke with great enthusiasm. One rhapsodizes over, not against, and the preachers are attacking the complacent.",
+          "digressed": "Wandered from the subject. It cannot take 'against' and says nothing about the preachers' bitterness."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "devolve",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "predestine",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "disenfranchise",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "equanimity",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fastidiousness",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "alchemy",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rhapsodize",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "digress",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rail",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lax",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "forfeit",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "complacent",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "To the palynologists, the farming village that the shoreline digs had seemed to promise was (i) ___: neither the pollen nor the charcoal in the lake's sediment cores changed in the layers where it should have appeared. The decisive record came instead from the (ii) ___, tiny grazers of the open water whose numbers crash whenever runoff from cleared fields clouds the lake; their shells thin out in exactly the layers that match the stone hoes found on shore, hoes whose edges had been (iii) ___ by years of work in gritty soil.",
+      "blanks": [
+        [
+          "impregnable",
+          "repugnant",
+          "indiscernible"
+        ],
+        [
+          "synergy",
+          "zooplankton",
+          "tome"
+        ],
+        [
+          "abraded",
+          "putrefied",
+          "quickened"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) The colon says the pollen and charcoal showed no change, so to the palynologists the village could not be detected: indiscernible. (ii) Tiny grazers of open water whose shells survive in the cores are zooplankton. (iii) Years of work in gritty soil wear an edge away by friction: abraded.",
+        "distractors": {
+          "impregnable": "Unable to be captured or broken into. The issue is that the village left no trace, not that it resisted attack.",
+          "repugnant": "Offensive, distasteful. The palynologists could not find the village; they did not dislike it.",
+          "synergy": "Combined effect greater than the sum of parts. 'Tiny grazers' with shells are living things.",
+          "tome": "A large, heavy book. The record comes from creatures in the lake, not from a text.",
+          "putrefied": "Rotted. Stone does not rot.",
+          "quickened": "Stimulated or brought to life. Use dulls and wears a stone edge; it does not quicken it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "impregnable",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "repugnant",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "indiscernible",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "synergy",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "zooplankton",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tome",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "abrade",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "putrefy",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "quicken",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Listeners who know only the saga's opening episodes take its hero for a merely (i) ___ figure, and not without reason, since each alliance he forges is quietly set against another. The poet, though, saves for the last episode a scene that unsettles that judgment: alone and outnumbered on the ice, the hero shows a (ii) ___ that no amount of scheming could have supplied.",
+      "blanks": [
+        [
+          "indomitable",
+          "conniving",
+          "stolid"
+        ],
+        [
+          "declension",
+          "ferment",
+          "mettle"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) The first-episode judgment rests on alliances quietly set against one another, which is secret scheming: conniving. 'Merely' and 'scheming' in the next sentence confirm that the early view is of a schemer and nothing more. (ii) What the final scene adds, alone and outnumbered, is something scheming cannot supply: courage, mettle.",
+        "distractors": {
+          "indomitable": "Impossible to subdue. It fits the final scene, but blank (i) is the opening-episode judgment that the final scene unsettles, and it rests on double-dealing.",
+          "stolid": "Calm and unemotional, showing little feeling. Nothing in the forging of secret alliances suggests impassivity.",
+          "declension": "A falling-off from a better state. The last scene raises the hero in the listener's eyes rather than showing his decline.",
+          "ferment": "A state of agitation or unrest. Agitation is not what scheming fails to supply; the contrast is with courage."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "indomitable",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "conniving",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "stolid",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "declension",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ferment",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mettle",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "When the temple court sentenced the heretic to exile instead of death, the magistrates presented their (i) ___ as a mark of the court's confidence. The record of the hearing suggests another motive: proceedings were broken off again and again by a crowd that hurled stones and shouted down the judges, and a harsher sentence might well have turned that (ii) ___ into open revolt.",
+      "blanks": [
+        [
+          "cataclysm",
+          "clemency",
+          "paucity"
+        ],
+        [
+          "bedlam",
+          "humility",
+          "empiricism"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) Exile instead of death is a lenient sentence: clemency. (ii) A crowd hurling stones and shouting down the judges is a scene of uproar, bedlam, which a harsher sentence might turn into revolt.",
+        "distractors": {
+          "cataclysm": "A violent upheaval or disaster. The magistrates are presenting a lighter sentence, not a disaster.",
+          "paucity": "Scarcity. It has nothing to do with sparing the heretic's life.",
+          "humility": "Modesty. A stone-throwing crowd is not humble.",
+          "empiricism": "Reliance on observation and experiment. It does not describe a riot in a courtroom."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "cataclysm",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "clemency",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "paucity",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bedlam",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "humility",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "empiricism",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The missionary's account of the highland villages was long set aside as (i) ___, written as it was to show converts the darkness from which faith had delivered them. It is, ironically, his very hostility that commends the account to anthropologists today: a writer so eager to condemn would hardly have invented the elaborate kin obligations he records with such evident distaste, and on those details, at least, he is probably (ii) ___.",
+      "blanks": [
+        [
+          "reticent",
+          "benevolent",
+          "ideological"
+        ],
+        [
+          "quixotic",
+          "veracious",
+          "penitent"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) An account written to serve a doctrine, to show converts their former darkness, was dismissed as driven by belief rather than fact: ideological. (ii) The irony: a hostile writer would not invent customs he dislikes, so on those details he is likely truthful, veracious.",
+        "distractors": {
+          "reticent": "Reserved, unwilling to say much. He records elaborate details at length.",
+          "quixotic": "Idealistic to the point of impracticality. The argument is about his accuracy, not his ideals.",
+          "penitent": "Sorry for wrongdoing. Nothing suggests he regretted his account; the point is that his distaste makes it credible.",
+          "benevolent": "Kindly, well-meaning. An account written to show the converts' former darkness, by a writer eager to condemn, is hostile, not kindly."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "reticent",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "benevolent",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ideological",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "quixotic",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "veracious",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "penitent",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "elaborate",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Pilgrims who could never have endured the hermit's fasts themselves took a (i) ___ pleasure in hearing them recounted, as though some share of his privation had become theirs. The chroniclers took equal care to call the pilgrims' attachment to him (ii) ___: women made up most of the crowd at his cave, but the scandal his enemies tried to raise found nothing to feed on.",
+      "blanks": [
+        [
+          "odious",
+          "evanescent",
+          "vicarious"
+        ],
+        [
+          "platonic",
+          "licentious",
+          "mundane"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) A pleasure taken in another's privation, as though it were one's own, is vicarious. (ii) The scandal 'found nothing to feed on', so the attachment, though devoted and largely from women, was without romance: platonic.",
+        "distractors": {
+          "odious": "Hateful, repugnant. The pilgrims' pleasure is sympathetic sharing, not something the sentence condemns.",
+          "evanescent": "Quickly fading. Nothing says the pleasure was brief; the point is that it was experienced through the hermit.",
+          "licentious": "Sexually unrestrained. That is the scandal his enemies tried to raise, which found nothing to feed on.",
+          "mundane": "Ordinary, worldly. The chroniclers are answering a charge of scandal, not of ordinariness."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "odious",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "evanescent",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "vicarious",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "platonic",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "licentious",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mundane",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The report's critics complained of its length and its swollen rhetoric, but no one could call its timing anything but ___: it reached the minister on the morning the spillway began to crack, which is to say precisely when its warnings could still be acted on.",
+      "blanks": [
+        [
+          "prolix",
+          "tumid",
+          "apropos",
+          "unpropitious",
+          "malignant"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "'But' turns from the report's faults to its timing, which was exactly right: it arrived when its warnings could still be acted on. Opportune, well-timed: apropos.",
+        "distractors": {
+          "prolix": "Wordy, too long. It is what the critics said of the report, but the blank describes its timing.",
+          "tumid": "Swollen, bombastic. It matches 'swollen rhetoric', again a charge against the prose, not the timing.",
+          "unpropitious": "Unfavorable, ill-timed. Arriving when warnings 'could still be acted on' is the opposite.",
+          "malignant": "Harmful, malevolent. Nothing about the report's arrival did harm."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "prolix",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tumid",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "apropos",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "unpropitious",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "malignant",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rhetoric",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The rival sect's charge that the cult sacrificed infants, repeated in its pamphlets for a generation, has been exposed by excavation, and the excavators judge it no honest mistake but ___: the sect's own leaders had dug at the shrine decades earlier, and could only have found what the trenches yield today, goat bones and the ash of grain offerings.",
+      "blanks": [
+        [
+          "slander",
+          "subpoena",
+          "doggerel",
+          "juggernaut",
+          "apologist"
+        ]
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "'No honest mistake but ___': the leaders knew the truth from their own dig and spread the charge anyway, so it was a deliberately false statement meant to damage the cult's name: slander.",
+        "distractors": {
+          "subpoena": "A writ ordering someone to appear in court. The charge was a pamphlet accusation, not a court order.",
+          "doggerel": "Crude, trivial verse. It is baited by 'pamphlets', but the contrast is honest error against deliberate falsehood.",
+          "juggernaut": "A massive, unstoppable force. Nothing makes the charge an overwhelming force.",
+          "apologist": "A person who defends a cause. The charge is a statement, not a person, and it attacks rather than defends."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "slander",
+          "role": "key",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "subpoena",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "doggerel",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "juggernaut",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "apologist",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    }
+  ]
+}

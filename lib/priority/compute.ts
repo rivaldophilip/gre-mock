@@ -49,7 +49,7 @@ function roleOf(event: string): Role {
   if (event.startsWith("key_") || event.startsWith("concept_")) return "key";
   if (event.startsWith("distractor_")) return "distractor";
   if (event === "exposure") return "passage";
-  return "other"; // dont_know
+  return "other"; // dont_know, seen_known
 }
 
 const MASTERY = new Set(["key_correct", "concept_right_primary", "concept_right_secondary"]);
@@ -100,6 +100,25 @@ function overlapping(events: LoggedEvent[]): Set<LoggedEvent> {
   return skip;
 }
 
+/**
+ * `seen_known` events that must not add to mastery. It is logged on every question that shows the word, but counts at
+ * most once per attempt, and not at all in an attempt that tagged the word "didn't know" or judged it through an
+ * answer (key_* / distractor_*): the answer's own event is the evidence there.
+ */
+function ignoredSeen(events: LoggedEvent[]): Set<LoggedEvent> {
+  const judged = new Set<number>();
+  for (const e of events)
+    if (e.attemptId != null && (e.event === "dont_know" || e.event.startsWith("key_") || e.event.startsWith("distractor_"))) judged.add(e.attemptId);
+  const counted = new Set<number>();
+  const skip = new Set<LoggedEvent>();
+  for (const e of events) {
+    if (e.event !== "seen_known" || e.attemptId == null) continue;
+    if (judged.has(e.attemptId) || counted.has(e.attemptId)) skip.add(e);
+    else counted.add(e.attemptId);
+  }
+  return skip;
+}
+
 export function scoreItem(itemId: string, events: LoggedEvent[], yieldWeight: number, now: Date): ItemScore {
   let pos = 0;
   let neg = 0;
@@ -112,6 +131,7 @@ export function scoreItem(itemId: string, events: LoggedEvent[], yieldWeight: nu
 
   const sorted = [...events].sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime());
   const skip = overlapping(sorted);
+  const skipSeen = ignoredSeen(sorted);
   // a passage's words are tagged on every question that shares it: one reading is one exposure per attempt
   const seenPassage = new Set<number>();
   for (const e of sorted) {
@@ -119,7 +139,7 @@ export function scoreItem(itemId: string, events: LoggedEvent[], yieldWeight: nu
     if (e.weight > 0 && !skip.has(e)) {
       pos += e.weight * d;
       reasonMass.set(e.event, (reasonMass.get(e.event) ?? 0) + e.weight * d);
-    } else if (e.weight < 0) neg += Math.abs(e.weight) * d;
+    } else if (e.weight < 0 && !skipSeen.has(e)) neg += Math.abs(e.weight) * d;
     const r = roleOf(e.event);
     if (r === "key") nKey++;
     else if (r === "distractor") nDis++;

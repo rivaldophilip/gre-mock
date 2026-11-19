@@ -4,6 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { TestSchema, type Question, type Test } from "./types";
 import { containment, MIN_SKELETON, SETUP_TH, skeletonShingles } from "./ngram";
+import { DRILL_DIR, isDrillId } from "./test-path";
 
 /** `text` is the stem plus QC quantities (for comparison); `shown` adds labels and choices (for a reader). */
 export type PastItem = { testId: string; qid: string; concept: string; variant?: string; setup: string; text: string; shown: string };
@@ -33,6 +34,17 @@ export function measureTests(measure: string, dir = "content/tests"): Test[] {
     .map((f) => TestSchema.safeParse(JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"))))
     .flatMap((r) => (r.success ? [r.data] : []))
     .sort((a, b) => testNo(a.id) - testNo(b.id));
+}
+
+/**
+ * The tests a new one is compared with: lower-numbered tests of its measure. Drill batches (content/drill) are their
+ * own series, verbal in measure: a batch is compared with every verbal mock and the earlier batches, and a verbal mock
+ * with `withDrills` also with every batch (the novelty judge only; the validator's rules stay mock-to-mock).
+ */
+export function earlierTests(test: Pick<Test, "id" | "measure">, dir = "content/tests", withDrills = false): Test[] {
+  const below = (t: Test) => testNo(t.id) < testNo(test.id);
+  if (isDrillId(test.id)) return [...measureTests("verbal", dir), ...measureTests("drill", DRILL_DIR).filter(below)];
+  return [...measureTests(test.measure, dir).filter(below), ...(withDrills && test.measure === "verbal" ? measureTests("drill", DRILL_DIR) : [])];
 }
 
 /** Items of tests numbered below `before` (all tests when omitted), with their primary concept. */

@@ -1,0 +1,1953 @@
+{
+ "id": "drill-003",
+ "measure": "verbal",
+ "title": "Endless vocab batch 3",
+ "sections": [
+  {
+   "n": 1,
+   "minutes": 60
+  },
+  {
+   "n": 2,
+   "minutes": 1
+  }
+ ],
+ "passages": [],
+ "figures": [],
+ "questions": [
+  {
+   "id": "s1q1",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "The young envoy's memorandum on the rival court was not rash, since it urged caution at every turn, but it was ___ all the same: it treated the court's public assurances as binding and lectured veteran diplomats with the confidence of a student who has just discovered logic.",
+   "choices": [
+    "imprudent",
+    "naive",
+    "plucky",
+    "sophomoric",
+    "injudicious",
+    "dyspeptic"
+   ],
+   "key": {
+    "sel": [
+     1,
+     3
+    ]
+   },
+   "explanation": {
+    "key": "'Not rash ... but' removes recklessness, and the colon names the real fault: trusting public assurances and lecturing veterans with a beginner's confidence. That is inexperience paired with overconfidence. Naive (innocently trusting, lacking worldly judgment) and sophomoric (immature and overconfident while poorly informed) both give that sense.",
+    "distractors": {
+     "imprudent": "Trap pair with injudicious: both mean unwise or rash. The sentence rules out rashness first ('not rash, since it urged caution at every turn').",
+     "injudicious": "Trap pair with imprudent: showing poor judgment in action, ill-advised. The memo's advice was cautious; its flaw lies in its trust and tone, not in reckless counsel.",
+     "plucky": "Brave and spirited in the face of difficulty. Nothing in the memo is courageous, and the sentence is criticizing it.",
+     "dyspeptic": "Irritable and gloomy, as if from indigestion. The envoy is overconfident and trusting, not sour."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "imprudent",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "naive",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "plucky",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "sophomoric",
+     "role": "key",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "injudicious",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "dyspeptic",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "rash",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q2",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "Far from greeting the general's sudden march on the capital with the awe his partisans had predicted, the assembly received the news with ___, many deputies fearing that the next column of troops would be sent to arrest them.",
+   "choices": [
+    "chagrin",
+    "veneration",
+    "consternation",
+    "diffidence",
+    "reverence",
+    "trepidation"
+   ],
+   "key": {
+    "sel": [
+     2,
+     5
+    ]
+   },
+   "explanation": {
+    "key": "'Far from ... awe' reverses the predicted reaction, and the participle clause supplies the replacement: fear for their own safety. Consternation (sudden alarm and dismay) and trepidation (fearful anxiety about what may happen) both fit.",
+    "distractors": {
+     "veneration": "Trap pair with reverence: deep respect or awe. That is exactly the reaction the sentence says did not happen ('far from ... the awe his partisans had predicted').",
+     "reverence": "Trap pair with veneration: profound respect. Ruled out by 'far from', and the deputies' fear of arrest is no kind of respect.",
+     "chagrin": "Annoyance or distress at having been humiliated or disappointed. The deputies are afraid of what comes next, not embarrassed by what has happened.",
+     "diffidence": "Shyness, a lack of self-confidence. The clue is fear of arrest, not timidity of manner."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "chagrin",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "veneration",
+     "role": "distractor",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "consternation",
+     "role": "key",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "diffidence",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "reverence",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "trepidation",
+     "role": "key",
+     "at": [
+      5
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "partisan",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q3",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "The minister's case for annexation was in no way deceptive, for every premise was laid out plainly for the chamber to inspect; it was ___ all the same, since the conclusion that the province must be seized simply did not follow from those premises.",
+   "choices": [
+    "thoroughgoing",
+    "illusory",
+    "fallacious",
+    "decorous",
+    "deceptive",
+    "unsound"
+   ],
+   "key": {
+    "sel": [
+     2,
+     5
+    ]
+   },
+   "explanation": {
+    "key": "The sentence grants honesty and then faults the logic: the conclusion 'did not follow' from the premises. The blank wants faulty reasoning. Fallacious (based on faulty reasoning) and unsound (not based on valid reasoning) both say that.",
+    "distractors": {
+     "deceptive": "Trap pair with illusory: misleading, giving a false impression. The sentence says outright that the case was 'in no way deceptive'.",
+     "illusory": "Trap pair with deceptive: based on illusion, not real. Nothing was hidden or imaginary; the premises were real and open to inspection, and the flaw is in the inference.",
+     "thoroughgoing": "Complete, done in every detail. A case whose conclusion does not follow is the opposite of a sound, complete one; 'all the same' needs a fault.",
+     "decorous": "In keeping with good taste and propriety. The objection is to the argument's logic, not its manners."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "thoroughgoing",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "illusory",
+     "role": "distractor",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "fallacious",
+     "role": "key",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "decorous",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "deceptive",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "unsound",
+     "role": "key",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q4",
+   "section": 1,
+   "type": "se",
+   "difficulty": 4,
+   "prompt": "Where his predecessors had wavered between economic and dynastic explanations, the historian chose to ___ a single cause for the war, the collapse of the Baltic grain trade, and then to test every later event against that assumption.",
+   "choices": [
+    "oscillate",
+    "posit",
+    "construe",
+    "fluctuate",
+    "postulate",
+    "vituperate"
+   ],
+   "key": {
+    "sel": [
+     1,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "'Where his predecessors had wavered' sets up a contrast, and 'that assumption' tells us what the historian did: he put forward one cause as the basis of his argument. Posit and postulate both mean to assume something as a basis for reasoning.",
+    "distractors": {
+     "oscillate": "Trap pair with fluctuate: to swing back and forth. That is what the predecessors did ('wavered'); the historian is set against them. It also cannot take 'a single cause' as an object.",
+     "fluctuate": "Trap pair with oscillate: to vary irregularly. The historian commits to one cause, the opposite of wavering.",
+     "construe": "To interpret in a particular way. One construes an event or a text; 'construe a single cause ... and test every event against that assumption' misses the sense of assuming a premise.",
+     "vituperate": "To abuse with harsh language. The historian is building an argument, not berating anyone."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "oscillate",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "posit",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "construe",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "fluctuate",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "postulate",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "vituperate",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q5",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "Far from being the apotheosis of the revolution's ideals that its framers proclaimed, the new constitution was a ___ of borrowed parts, a British cabinet here and an American senate there, assembled without any principle to unify them.",
+   "choices": [
+    "perquisite",
+    "hodgepodge",
+    "apotheosis",
+    "multifarious",
+    "epitome",
+    "pastiche"
+   ],
+   "key": {
+    "sel": [
+     1,
+     5
+    ]
+   },
+   "explanation": {
+    "key": "'Far from' rejects the framers' claim, and the appositive describes what the document really was: parts borrowed from several sources, joined without a unifying principle. Hodgepodge (a jumble of dissimilar things) and pastiche (a work combining elements from various sources) both fit.",
+    "distractors": {
+     "apotheosis": "Trap pair with epitome: the perfect or highest example. That is the framers' claim, which 'far from' rejects.",
+     "epitome": "Trap pair with apotheosis: a perfect example of a quality. The sentence says the constitution lacked any unifying principle, so it was no model of the revolution's ideals.",
+     "perquisite": "A privilege or benefit that comes with a position (a perk). A constitution made 'of borrowed parts' is not a perk.",
+     "multifarious": "Many and varied. The idea of diversity is close, but it is an adjective, and 'a multifarious of borrowed parts' does not parse; the blank needs a noun."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "perquisite",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "hodgepodge",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "apotheosis",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "multifarious",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "epitome",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "pastiche",
+     "role": "key",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q6",
+   "section": 1,
+   "type": "se",
+   "difficulty": 4,
+   "prompt": "Censorship did not deter the pamphleteers so much as relocate them: within a decade the bureaucracy itself, from the ministries down to the provincial courts, had become ___ with the very republican sentiment the censors had been hired to stamp out.",
+   "choices": [
+    "permeated",
+    "slaked",
+    "inhibited",
+    "imbued",
+    "forded",
+    "deterred"
+   ],
+   "key": {
+    "sel": [
+     0,
+     3
+    ]
+   },
+   "explanation": {
+    "key": "The sentiment that was meant to be suppressed ended up everywhere in the state, 'from the ministries down to the provincial courts'. The blank means filled throughout with that sentiment. Permeated and imbued both fit '___ with'.",
+    "distractors": {
+     "inhibited": "Trap pair with deterred: restrained or held back. The sentence says the opposite happened, as the sentiment spread through the very offices meant to stop it.",
+     "deterred": "Trap pair with inhibited: discouraged from acting. 'Did not deter' already denies it, and the bureaucracy came to share the sentiment rather than being kept from it.",
+     "slaked": "Satisfied (a thirst) or quenched. A bureaucracy 'slaked with' sentiment does not mean filled with it, and the sense is wrong.",
+     "forded": "Crossed (a river) at a shallow place. It has no sense of being filled with a feeling."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "permeate",
+     "role": "key",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "slake",
+     "role": "distractor",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "inhibit",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "imbue",
+     "role": "key",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "ford",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "deter",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "provincial",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q7",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "The opposition never doubted that the governor was an unwavering patriot; what alarmed them was the ___ of his war speeches, which mocked the neighboring peoples as inferior and called for war at the least provocation.",
+   "choices": [
+    "stalwart",
+    "jingoism",
+    "penury",
+    "chauvinism",
+    "steadfast",
+    "abeyance"
+   ],
+   "key": {
+    "sel": [
+     1,
+     3
+    ]
+   },
+   "explanation": {
+    "key": "The semicolon sets what was granted (steady patriotism) against what alarmed: speeches that scorned other peoples as inferior and called for war. Jingoism (aggressive nationalism eager for war) and chauvinism (excessive devotion to one's own nation with contempt for others) both describe that.",
+    "distractors": {
+     "stalwart": "Trap pair with steadfast: loyal and unwavering. That loyalty is what the opposition 'never doubted'; the blank names what alarmed them.",
+     "steadfast": "Trap pair with stalwart: firm in loyalty. Again the conceded quality, not the alarming one, and an adjective where a noun is needed.",
+     "penury": "Extreme poverty. The speeches are bellicose; nothing concerns want.",
+     "abeyance": "Temporary suspension. Speeches that call for war 'at the least provocation' are the opposite of a suspension."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "stalwart",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "jingoism",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "penury",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "chauvinism",
+     "role": "key",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "steadfast",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "abeyance",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "mock",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q8",
+   "section": 1,
+   "type": "se",
+   "difficulty": 4,
+   "prompt": "Those who expected the old general's farewell to his troops to be ___ were surprised: he named the dead in a level, carrying voice, shed no tears, and ended by asking only that the survivors go home and plant their fields.",
+   "choices": [
+    "avid",
+    "stentorian",
+    "maudlin",
+    "keen",
+    "mawkish",
+    "magisterial"
+   ],
+   "key": {
+    "sel": [
+     2,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "'Expected ... were surprised' means the blank is the opposite of what happened, and what happened was a dry-eyed, plain speech: no tears, a level voice, a practical request. So people expected excessive sentiment. Maudlin (tearfully sentimental) and mawkish (sickly sentimental) both fit.",
+    "distractors": {
+     "avid": "Trap pair with keen: eager, enthusiastic. Nothing in the account of the speech is set against eagerness, so expecting it to be 'avid' gives no surprise.",
+     "keen": "Trap pair with avid: eager. As with avid, the details (no tears, a level voice) answer a question about sentiment, not about enthusiasm.",
+     "stentorian": "Very loud and powerful in voice. He did speak in a 'carrying voice', so expecting loudness would not lead to surprise.",
+     "magisterial": "Authoritative, commanding. A level voice and a plain closing request fit a commanding manner, so there is no surprise."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "avid",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "stentorian",
+     "role": "distractor",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "maudlin",
+     "role": "key",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "keen",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "mawkish",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "magisterial",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q9",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "The so-called Perpetual Peace of 1532 was, historians agree, a (i) ___: it lasted barely four years. Yet to dismiss it as a mere (ii) ___, a chivalric gesture already out of date in its own century, would be a mistake, since its arbitration clause survived as a (iii) ___ in treaties signed three hundred years later.",
+   "blanks": [
+    [
+     "solecism",
+     "misnomer",
+     "inerrancy"
+    ],
+    [
+     "exemplar",
+     "propensity",
+     "anachronism"
+    ],
+    [
+     "vestige",
+     "conflagration",
+     "encomium"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2,
+     0
+    ]
+   },
+   "explanation": {
+    "key": "(i) 'So-called Perpetual' plus 'it lasted barely four years' says the name was wrong: misnomer. (ii) The appositive defines the blank: 'a gesture already out of date in its own century' is an anachronism. (iii) 'Yet ... would be a mistake, since ... survived' answers that charge: a trace of the clause remained in much later treaties, a vestige.",
+    "distractors": {
+     "solecism": "A grammatical mistake or a breach of etiquette. The fault is that the name 'Perpetual' was inaccurate, not that anyone broke a rule of grammar or manners.",
+     "inerrancy": "Freedom from error. A peace called perpetual that lasted four years is the opposite.",
+     "exemplar": "A model or typical example to imitate. 'Dismiss it as a mere model' makes no sense, and the appositive defines the blank as out of date.",
+     "conflagration": "A large, destructive fire, or a war. A clause cannot survive 'as a conflagration' in later treaties.",
+     "encomium": "A speech or piece of writing that praises someone highly. The clause lived on as a remnant in treaties, not as praise.",
+     "propensity": "A natural tendency or inclination. 'Dismiss it as a mere tendency' makes no sense, and the appositive asks for something outdated."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "solecism",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "misnomer",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "inerrancy",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "exemplar",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "propensity",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "anachronism",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "vestige",
+     "role": "key",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "conflagration",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "encomium",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q10",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "The regent began by trying to (i) ___ to himself powers that the charter had reserved for the council, and he then moved to (ii) ___ the councillors who objected, stripping them of their committee seats. Only a generation later did a reforming parliament attempt to (iii) ___ the imbalance, restoring the council's lost prerogatives.",
+   "blanks": [
+    [
+     "proscribe",
+     "explicate",
+     "arrogate"
+    ],
+    [
+     "galvanize",
+     "marginalize",
+     "conciliate"
+    ],
+    [
+     "scuttle",
+     "table",
+     "redress"
+    ]
+   ],
+   "key": {
+    "sel": [
+     2,
+     1,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) Taking 'to himself' powers reserved for another body is claiming them without right: arrogate. (ii) 'Stripping them of their committee seats' pushes the objectors to the edge of power: marginalize. (iii) 'Restoring the council's lost prerogatives' sets the wrong right: redress.",
+    "distractors": {
+     "proscribe": "To forbid or outlaw. One cannot 'proscribe to himself' powers; he is taking them, not banning them.",
+     "explicate": "To explain in detail. The regent is grabbing powers, not explaining them.",
+     "galvanize": "To rouse into action. Stripping objectors of their seats weakens them; it does not stir them up.",
+     "conciliate": "To win over or placate. Taking away their seats is the opposite of appeasing them.",
+     "scuttle": "To sink or deliberately wreck (a plan or ship). The parliament repaired the imbalance by restoring prerogatives; it did not wreck anything.",
+     "table": "To postpone a matter (US) or put it forward for discussion (UK). Either way it falls short of 'restoring' the lost powers."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "proscribe",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "explicate",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "arrogate",
+     "role": "key",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "galvanize",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "marginalize",
+     "role": "key",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "conciliate",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "scuttle",
+     "role": "distractor",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "table",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "redress",
+     "role": "key",
+     "at": [
+      2,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "prerogative",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q11",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "The delegates from the frontier provinces were not merely (i) ___, shouting down speakers and banging the benches as other factions had done before them, but (ii) ___, refusing outright the speaker's lawful order to withdraw. The speaker's reply, a (iii) ___ address on the dignity of the house, delivered in rolling periods and studded with references to his own long service, only made them laugh.",
+   "blanks": [
+    [
+     "docile",
+     "obstreperous",
+     "variegated"
+    ],
+    [
+     "evasive",
+     "presumptive",
+     "contumacious"
+    ],
+    [
+     "tepid",
+     "pompous",
+     "disquieting"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2,
+     1
+    ]
+   },
+   "explanation": {
+    "key": "(i) The gloss 'shouting down speakers and banging the benches' is noisy unruliness: obstreperous. (ii) 'Not merely ... but' raises the charge, and the gloss names it: open refusal of a lawful order, which is contumacious. (iii) Rolling periods and references to his own long service make the address self-important: pompous. Its being laughed at fits too.",
+    "distractors": {
+     "docile": "Ready to accept control, submissive. It is the opposite of shouting down speakers.",
+     "variegated": "Marked with patches of different colors, or varied. It does not describe banging benches.",
+     "evasive": "Avoiding a direct answer or commitment. 'Refusing outright' is the opposite of dodging.",
+     "presumptive": "Presumed, or giving grounds for a presumption (an heir presumptive). It names no kind of behavior toward authority.",
+     "disquieting": "Causing worry. An address that 'only made them laugh' did not unsettle them.",
+     "tepid": "Lukewarm, lacking enthusiasm. An address 'delivered in rolling periods' is grand and florid, not half-hearted."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "docile",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "obstreperous",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "variegated",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "evasive",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "presumptive",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "contumacious",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "tepid",
+     "role": "distractor",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "pompous",
+     "role": "key",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "disquieting",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q12",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "The prince's critics accused him of nearly every vice, yet the charge of (i) ___ never stuck, for he had no interest in amassing wealth. He was, rather, a (ii) ___ who scattered the treasury on festivals and favorites, and a (iii) ___ whose mistresses were the scandal of three capitals.",
+   "blanks": [
+    [
+     "collusion",
+     "cupidity",
+     "paternalism"
+    ],
+    [
+     "misanthrope",
+     "demagogue",
+     "spendthrift"
+    ],
+    [
+     "libertine",
+     "despot",
+     "pundit"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2,
+     0
+    ]
+   },
+   "explanation": {
+    "key": "(i) The 'for' clause gives the reason the charge failed: no interest in amassing wealth, so the charge was greed, cupidity. (ii) 'Rather' turns from hoarding to its opposite, and 'scattered the treasury' is reckless spending: spendthrift. (iii) A man known for his mistresses lives without moral restraint: libertine.",
+    "distractors": {
+     "collusion": "Secret cooperation to cheat or deceive. It is a plausible charge against a prince, but having no interest in wealth does not answer it.",
+     "paternalism": "Limiting people's freedom for their supposed good. Indifference to wealth is beside the point.",
+     "misanthrope": "Someone who dislikes humankind. A ruler who spends on festivals and favorites likes company.",
+     "demagogue": "A leader who stirs up the crowd with appeals to emotion and prejudice. Spending the treasury on favorites is about waste, not rabble-rousing.",
+     "despot": "A tyrant with absolute power. It fits a prince in general, but the clue (mistresses) points to moral license, not tyranny.",
+     "pundit": "An expert who gives opinions in public. Nothing about mistresses suggests commentary."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "collusion",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "cupidity",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "paternalism",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "misanthrope",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "demagogue",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "spendthrift",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "libertine",
+     "role": "key",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "despot",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "pundit",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q13",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "Historians long framed the revolt through a tidy (i) ___ between loyal towns and a rebellious countryside. Recent work suggests that the split was less a cause than a consequence: the real (ii) ___ was a grain levy that fell on town and village alike, and the closest (iii) ___ to the revolt is therefore not the peasant risings of the previous century but the urban tax riots of the next.",
+   "blanks": [
+    [
+     "imbroglio",
+     "dichotomy",
+     "fracas"
+    ],
+    [
+     "catalyst",
+     "stigma",
+     "excrescence"
+    ],
+    [
+     "distaff",
+     "travesty",
+     "analogue"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     0,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) 'Tidy ... between loyal towns and a rebellious countryside', later called 'the split', is a sharp division into two opposed parts: dichotomy. (ii) The split was a consequence, not the cause; 'the real ___' is what set the revolt off, the levy: catalyst. (iii) 'Therefore' follows from a levy that hit towns too: the revolt's nearest parallel is urban tax riots, an analogue.",
+    "distractors": {
+     "imbroglio": "A confused, embarrassing entanglement. 'Tidy' contradicts it, and 'between ... and ...' wants a two-way division.",
+     "fracas": "A noisy brawl. Historians frame a revolt through an interpretive division, not a fight, and 'tidy' rules it out.",
+     "stigma": "A mark of disgrace. 'The real ___ was a grain levy' needs a cause, and the levy is not called shameful.",
+     "excrescence": "An abnormal outgrowth, an ugly addition. The sentence needs what triggered the revolt, not a growth on it.",
+     "distaff": "The female side of a family (its second sense), or the staff for spinning. It has no sense of a parallel case.",
+     "travesty": "An absurd or grotesque distortion. The riots are offered as the closest comparison to the revolt, not a mockery of it."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "imbroglio",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "dichotomy",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "fracas",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "catalyst",
+     "role": "key",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "stigma",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "excrescence",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "distaff",
+     "role": "distractor",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "travesty",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "analogue",
+     "role": "key",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q14",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "The treaty's drafters took care to (i) ___ every border fortress the defeated kingdom was to surrender, naming them one by one so that no ambiguity could later (ii) ___ the handover. A kingdom that had not yielded all of them by spring would (iii) ___ the indemnity payments it had been promised.",
+   "blanks": [
+    [
+     "skirt",
+     "enumerate",
+     "inveigle"
+    ],
+    [
+     "impede",
+     "whet",
+     "dissipate"
+    ],
+    [
+     "heed",
+     "decry",
+     "forfeit"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     0,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) 'Naming them one by one' glosses the blank: enumerate. (ii) The point of removing ambiguity is that nothing should obstruct the handover: impede. (iii) Failing to yield is a breach, and the penalty is losing the promised payments: forfeit.",
+    "distractors": {
+     "skirt": "To avoid or go around (its second sense). Naming every fortress is the reverse of skirting the issue.",
+     "whet": "To sharpen or stimulate (an appetite). Ambiguity would hinder a handover, not stimulate it.",
+     "dissipate": "To scatter or squander. 'Dissipate the handover' does not express obstruction.",
+     "heed": "To pay attention to. A kingdom in breach does not 'heed' payments; the sentence names a penalty.",
+     "decry": "To condemn publicly. The kingdom's failure leads to a loss, not to its condemning the payments.",
+     "inveigle": "To entice or persuade by flattery or trickery. The drafters list the fortresses; they are not coaxing anyone."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "skirt",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "enumerate",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "inveigle",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "impede",
+     "role": "key",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "whet",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "dissipate",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "heed",
+     "role": "distractor",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "decry",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "forfeit",
+     "role": "key",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q15",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "The ambassador's boast that the alliance would end all war within a decade was merely (i) ___, foolish rather than wicked; far more (ii) ___ was his quiet sale of the alliance's secrets to the highest bidder.",
+   "blanks": [
+    [
+     "sordid",
+     "perfidious",
+     "fatuous"
+    ],
+    [
+     "interchangeable",
+     "venial",
+     "ignoble"
+    ]
+   ],
+   "key": {
+    "sel": [
+     2,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) The gloss 'foolish rather than wicked' defines the blank: fatuous, silly and thoughtless. (ii) 'Far more' sets the sale against the boast on the wicked side of that line, so the blank wants base, shameful conduct: ignoble.",
+    "distractors": {
+     "sordid": "Morally vile or squalid. That is the 'wicked' the sentence says the boast was not.",
+     "perfidious": "Treacherous, faithless. It describes the sale of secrets, not the boast, which was 'foolish rather than wicked'.",
+     "interchangeable": "Able to be swapped one for another. It has no moral sense to contrast with foolishness.",
+     "venial": "Pardonable, minor (of a sin). 'Far more venial' would make the betrayal the lesser fault, the reverse of the sentence."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "sordid",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "perfidious",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "fatuous",
+     "role": "key",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "interchangeable",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "venial",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "ignoble",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q16",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "The old field marshal, (i) ___ and stooped at ninety, still presided each year over the (ii) ___ victory parade, a procession so vast that it took six hours to pass the reviewing stand.",
+   "blanks": [
+    [
+     "precocious",
+     "wizened",
+     "sentient"
+    ],
+    [
+     "gargantuan",
+     "gossamer",
+     "ethereal"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     0
+    ]
+   },
+   "explanation": {
+    "key": "(i) 'And stooped at ninety' pairs the blank with signs of great age: wizened, shrunken and wrinkled. (ii) The appositive 'so vast that it took six hours' defines the parade's size: gargantuan.",
+    "distractors": {
+     "precocious": "Developed unusually early, as a gifted child is. A ninety-year-old is the opposite.",
+     "sentient": "Able to perceive and feel. True of anyone, so it adds nothing beside 'stooped at ninety', which points to the effects of age.",
+     "gossamer": "Light, thin and delicate. A six-hour procession is anything but flimsy.",
+     "ethereal": "Extremely light and delicate, seemingly not of this world. A six-hour procession is massive, not airy."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "precocious",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "wizened",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "sentient",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "gargantuan",
+     "role": "key",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "gossamer",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "ethereal",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q17",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "The debate over whether the incursion was an \"invasion\" or a \"police action\" struck some observers as merely (i) ___, yet the label decided whether the treaty obliged the allies to fight. The foreign minister's (ii) ___ remark that he would happily call it a picnic if that kept the allies out drew laughter even from his opponents.",
+   "blanks": [
+    [
+     "ineffable",
+     "preternatural",
+     "semantic"
+    ],
+    [
+     "sanctimonious",
+     "droll",
+     "truculent"
+    ]
+   ],
+   "key": {
+    "sel": [
+     2,
+     1
+    ]
+   },
+   "explanation": {
+    "key": "(i) The dispute is over which word applies, and 'merely ... yet the label decided' sets an apparently trivial quarrel about words against its real stakes: semantic, concerning meaning. (ii) A remark about calling an incursion a picnic that 'drew laughter even from his opponents' is wryly funny: droll.",
+    "distractors": {
+     "ineffable": "Too great or extreme to be put into words. The debate is entirely about words, and 'merely' calls it trivial, not sublime.",
+     "preternatural": "Beyond what is normal or natural. 'Merely' needs something that seems trivial, not something extraordinary.",
+     "sanctimonious": "Making a show of being morally superior. Self-righteousness would not draw laughter from opponents.",
+     "truculent": "Eager to fight, aggressively defiant. A belligerent remark would not amuse his opponents."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "ineffable",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "preternatural",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "semantic",
+     "role": "key",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "sanctimonious",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "droll",
+     "role": "key",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "truculent",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q18",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "Rather than (i) ___ the threat of sanctions at every summit, as his predecessor had done, the new envoy sought to (ii) ___ himself with the rival court, flattering its ministers and turning up at all its festivals.",
+   "blanks": [
+    [
+     "expurgate",
+     "brandish",
+     "rarefy"
+    ],
+    [
+     "aggrandize",
+     "daunt",
+     "ingratiate"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) A threat flourished at every summit is brandished, waved about for show. (ii) 'Rather than' turns to the opposite approach, and the gloss 'flattering its ministers' gives it: winning favor deliberately, ingratiate (himself with).",
+    "distractors": {
+     "expurgate": "To remove objectionable parts from a text. One does not expurgate a threat at a summit.",
+     "rarefy": "To make thinner or more refined. It has no sense of flourishing a threat.",
+     "aggrandize": "To increase one's power or standing. Flattering ministers seeks favor, not self-enlargement, and 'aggrandize himself with the court' does not parse.",
+     "daunt": "To intimidate. Flattery and attending festivals are the opposite, and 'daunt himself' makes no sense."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "expurgate",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "brandish",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "rarefy",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "aggrandize",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "daunt",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "ingratiate",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "summit",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q19",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "Had the chancellor met news of the armistice with mere ___, his colleagues would have excused it as the release of a man who had carried the war for four years; what they could not excuse was that the same note had run through every report he had given on the campaign, which made it look less like relief at the war's end than like proof that he had never thought its dead worth his gravity.",
+   "blanks": [
+    [
+     "ardor",
+     "imprecation",
+     "levity",
+     "parley",
+     "gambol"
+    ]
+   ],
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "The sentence turns on a concession: the reaction would have been forgivable at the armistice alone, but the same note ran through every wartime report, and that makes it proof that he never gave the dead his gravity. So the blank must be a mood that is pardonable as release at a war's end, yet damning when it is constant, because it is the absence of gravity. Lighthearted humor at the wrong moment, levity, is the only choice that fits both halves.",
+    "distractors": {
+     "ardor": "Great enthusiasm or passion. It fits the local clue (greeting an armistice eagerly, a man's release), but ardor running through every campaign report would show zeal for the war, the reverse of failing to take its dead seriously.",
+     "imprecation": "A spoken curse. A curse fits 'release' after four years of strain, but cursing in every report shows anger, not a lack of gravity; it is no proof of thinking the dead unimportant.",
+     "parley": "A conference between enemies to discuss terms. It sits next to 'armistice' on topic, but it names a negotiation, not a manner of meeting news, and it cannot be a 'note' running through his reports.",
+     "gambol": "A playful skip or frolic. The playfulness is close in tone, but it is physical capering, which cannot run through written or spoken reports as a note."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "ardor",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "imprecation",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "levity",
+     "role": "key",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "parley",
+     "role": "distractor",
+     "at": [
+      0,
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "gambol",
+     "role": "distractor",
+     "at": [
+      0,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q20",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "Commissioned to deliver the official ___ at the dead king's funeral, the court poet found himself in difficulty: custom demanded unbroken praise, and the king's reign had offered little to praise.",
+   "blanks": [
+    [
+     "apologia",
+     "pejorative",
+     "panegyric",
+     "bromide",
+     "expedient"
+    ]
+   ],
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "The colon explains the difficulty: 'custom demanded unbroken praise'. The official funeral speech is a formal speech of elaborate praise, a panegyric.",
+    "distractors": {
+     "apologia": "A formal defense of one's views or conduct. The custom demands praise, not a defense, and a defense would be the easier task for a poor reign.",
+     "pejorative": "A word or phrase expressing contempt. It is the opposite of the praise custom demands.",
+     "bromide": "A trite, unoriginal remark. One might fear producing one, but no one is commissioned to deliver it.",
+     "expedient": "A means to an end, often a makeshift one. It is not a kind of speech."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "apologia",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "pejorative",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "panegyric",
+     "role": "key",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "bromide",
+     "role": "distractor",
+     "at": [
+      0,
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "expedient",
+     "role": "distractor",
+     "at": [
+      0,
+      4
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -34,6 +34,26 @@
           "kind": "word",
           "id": "delimit",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "saturate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "prune",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "modest",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "concession",
+          "role": "passage"
         }
       ]
     },
@@ -61,6 +81,11 @@
         {
           "kind": "word",
           "id": "decadent",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "novel",
           "role": "passage"
         }
       ]
@@ -104,6 +129,16 @@
           "kind": "word",
           "id": "exploitative",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "slander",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "anonymous",
+          "role": "passage"
         }
       ]
     },
@@ -138,6 +173,21 @@
           "kind": "word",
           "id": "execrable",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "revisionist",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "anachronism",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "trivial",
+          "role": "passage"
         }
       ]
     },
@@ -171,6 +221,26 @@
         {
           "kind": "word",
           "id": "dogged",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "efficacy",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "intermittent",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "vindicate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "nostrum",
           "role": "passage"
         }
       ]
@@ -259,6 +329,11 @@
             0,
             4
           ]
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
         }
       ]
     },
@@ -349,6 +424,11 @@
             1,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "reprobate",
+          "role": "stem"
         }
       ]
     },
@@ -474,6 +554,11 @@
             2,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "visionary",
+          "role": "stem"
         }
       ]
     },
@@ -538,6 +623,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "mock",
+          "role": "stem"
         }
       ]
     },
@@ -610,6 +700,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "rebuke",
+          "role": "stem"
         }
       ],
       "revisits": "verbal-006:s1q7"
@@ -683,6 +778,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "allusion",
+          "role": "stem"
         }
       ],
       "revisits": "verbal-004:s2q2"
@@ -740,6 +840,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "gambit",
+          "role": "stem"
         }
       ]
     },
@@ -776,6 +881,26 @@
           "kind": "concept",
           "id": "rc-function",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "modest",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "sparing",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "prune",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
         }
       ]
     },
@@ -810,6 +935,11 @@
           "kind": "concept",
           "id": "rc-inference",
           "role": "secondary"
+        },
+        {
+          "kind": "word",
+          "id": "prune",
+          "role": "stem"
         }
       ]
     },
@@ -1171,6 +1301,11 @@
             2,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "modest",
+          "role": "stem"
         }
       ]
     },
@@ -1360,6 +1495,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "acquiesce",
+          "role": "stem"
         }
       ]
     },
@@ -1432,6 +1572,11 @@
           "at": [
             4
           ]
+        },
+        {
+          "kind": "word",
+          "id": "relish",
+          "role": "stem"
         }
       ]
     },
@@ -1548,6 +1693,21 @@
           "kind": "concept",
           "id": "rc-main-idea",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "refute",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "reconcile",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "prevail",
+          "role": "stem"
         }
       ]
     },
@@ -1584,6 +1744,11 @@
           "kind": "concept",
           "id": "rc-inference",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "deliberate",
+          "role": "stem"
         }
       ]
     },
@@ -1654,6 +1819,11 @@
           "kind": "concept",
           "id": "rc-attitude",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "wary",
+          "role": "stem"
         }
       ]
     },
@@ -1690,6 +1860,21 @@
           "kind": "concept",
           "id": "rc-function",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "hortatory",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "revisionist",
+          "role": "stem"
         }
       ]
     },
@@ -1749,6 +1934,21 @@
           "kind": "concept",
           "id": "rc-structure",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "hidebound",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "vindicate",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "endorse",
+          "role": "stem"
         }
       ]
     },

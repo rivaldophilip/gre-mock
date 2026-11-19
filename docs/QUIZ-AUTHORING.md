@@ -13,8 +13,8 @@ Read this page, the brief and `docs/HARD-PATTERNS.md`; nothing else is needed. E
    Skim `content/briefs/<id>.local.md` (official exemplars, one per slot type and level) only for a type you are unsure how to pitch. The `.json` brief is for scripts; don't read it.
 2. **Author** the whole test in one Write, using the shapes below. Write `$...$` for math, in explanations too (key, steps, fast, trap): `$a_{50}$`, `$\tfrac{1}{50}$`, not `a_50` or `1/50`, which show raw; `check` rejects them. Spend the brief as the structure rules say:
    - key words as keys;
-   - distractor words for about 40% of distractors, with the weak ones first;
-   - 3-6 passage words woven into each reading passage;
+   - distractor words: at least 75% of distractors from its untested list, the rest from its weak list (`check` enforces it when the brief has `wordTargets`). The brief's **SE trap pairs** line names untested bank synonym pairs already on that list: use them as SE items' wrong synonym pairs, so a trap pair needs neither a non-bank word nor the weak list's few pairs;
+   - 5-6 passage words woven into each reading passage, arguments excluded (`check` enforces the 5);
    - the weakest review items on the slots of the brief's type-focus line, if it names any.
 
    Write each RC question's skill tag and each quant question's concept tags. Do **not** write word tags; check fills them. An irregular form (`forsworn`) is the one exception: tag that by hand.
@@ -26,7 +26,7 @@ Read this page, the brief and `docs/HARD-PATTERNS.md`; nothing else is needed. E
    - fills the verbal word tags;
    - validates the test, including the 25% overlap check against earlier tests and the official corpus. For quant it also compares each item with earlier items of its concept once numbers and names are masked: a match is an error naming the earlier item (rewrite with another setup);
    - runs the quant verify script;
-   - prints the difficulty rules and coverage against the brief: unused key words, skill slots, passage words per passage, and quant concepts.
+   - prints the difficulty rules and coverage against the brief: unused key words, skill slots, passage words per passage, distractor words from the untested list, and quant concepts.
 
    A key choice that is not a bank word fails here, and the message names bank words with that sense. Treat coverage gaps as things to fix where the brief allows; they are not errors.
 4. **Blind-solve with one solver.**
@@ -38,7 +38,7 @@ Read this page, the brief and `docs/HARD-PATTERNS.md`; nothing else is needed. E
      - **Skill mismatch:** make the stem test the tagged skill, or retag it if the brief's skill mix still holds. A label the format implies is not a mismatch and is not reported: rc-select-verify on a select-all or EXCEPT item, rc-detail on a sentence pick.
    - After fixes, run `npm run -s check -- <id>`, then `npm run -s blind -- <id> --only s1q3,s2q5`. This writes `<id>.only.md`, and the full copy stays. SendMessage that path to the **same** solver; it writes `<id>.only.answers.txt`. Then `--check --only s1q3,s2q5`.
 4b. **Novelty check with one judge.** The mechanical check catches a setup with new numbers, not a disguised one (a new story around the same mathematics or argument).
-   - `npm run -s novelty -- <id>` writes `content/.blind/<id>.novelty.md`. Each item appears next to the earlier items it could repeat: quant by concept, plus close wording from other concepts; verbal passages and arguments against earlier ones (each pool listed once, at the head of its section), TC and SE items against earlier ones sharing a key word.
+   - `npm run -s novelty -- <id>` writes `content/.blind/<id>.novelty.md`. Each item appears next to the earlier items it could repeat: quant by concept, plus close wording from other concepts; verbal passages and arguments against earlier ones (each pool listed once, at the head of its section), TC and SE items against earlier ones sharing a key word, then a bank synonym of one (the likeliest disguised repeat), then close wording.
    - Give the path to the `gre-novelty-judge` agent. It writes its verdicts to the reply file the copy names (`<id>.novelty.txt`); then run `npm run -s novelty -- <id> --check`. **same** means rewrite with a setup the brief does not list; **similar** means rewrite unless the decisive step really differs. A revisit judged **similar** to the item it revisits passes.
    - After rewrites, run `check`, then `blind --only` for the solver, then `npm run -s novelty -- <id> --only s1q3,s2q5`, and SendMessage that file to the **same** judge (`--check --only …` once it has written its reply).
 5. **Register and publish.** `npm run -s register -- <id>` writes to every user's database. It refuses a test that does not validate, and warns if no blind or novelty check is on record. Then run `git add content && git commit && git push` (Vercel redeploys).
@@ -48,6 +48,16 @@ Read this page, the brief and `docs/HARD-PATTERNS.md`; nothing else is needed. E
 Recalibrate only after changing the solver's model: `npm run -s blind -- --calibrate verbal|quant` builds a local file of official items with known P+. Give it to the solver, then `--calibrate <measure> --check -` with its reply stores the new offset.
 
 **Improving the pipeline.** After a run, `python3 scripts/session_stats.py` (add `--commands` for the command list) summarizes the newest transcript: tool calls, errors, how many check and blind rounds ran, and tokens. When a step keeps looping or erroring, fix its script's message or this page, not the next test.
+
+## Drill batches (endless vocab)
+
+A drill batch is a set of standalone TC / SE items (`/new-drill`, 20 by default) for the Endless vocab mode. Its job is to put untested bank words in front of the user, at the hard end of a mock. The pipeline is the one above, with these differences:
+
+1. **Brief.** `npm run -s brief:drill [-- --count N]` writes `content/briefs/drill-NNN.{json,md}`. It has a slot table (about 40% SE, 30% 3-blank TC, 20% 2-blank, 10% 1-blank), key words (all untested, with SE pairs), any revisits of missed drill items, a long list of untested distractor words and SE trap pairs. Read only the `.md`.
+2. **Author** `content/drill/drill-NNN.json` in one Write. It uses the same shapes as a verbal mock, with ids `s1q1`…, every item in `"section": 1`, `"sections": [{ "n": 1, "minutes": 60 }, { "n": 2, "minutes": 1 }]` and no passages. Spend every key word as a key, and take every distractor from the brief. Each item stands alone, so a short single-sentence TC is fine, but the 3-blank TCs should still be 2–3 sentence passages with a pivot. Give every wrong choice a `distractors` explanation: the drill shows them on the reveal, since each word's meaning is the point.
+3. **Check** enforces the drill rules instead of the blueprint: TC / SE only, at most 30 items, every level 4 or 5 with at least half at 5, and at least 90% of choice words drawn from the brief.
+4. **Blind** and **novelty** run unchanged. Novelty pairs a drill item with every verbal mock and earlier batch. When the solver rates an item off its level, retag it to the rating while the half-at-5 rule still holds; otherwise rewrite.
+5. **Register** as usual. The card on the dashboard picks the batch up at once. Until then the batch is a draft: `/drill` serves only registered batches, so a file in `content/drill/` that has not passed its checks never reaches the user.
 
 ## Structure rules (the validator enforces most)
 
@@ -60,6 +70,7 @@ Recalibrate only after changing the solver's model: `npm run -s blind -- --calib
   - `rc_select` on a multi-paragraph passage sets `paras`, the 1–2 paragraphs (0-based) the sentence is picked from. The runner marks them with an arrow and the rest can't be clicked; the stem may say "in the second paragraph". The key must lie inside `paras`.
   - Each `rc_multi` has the key count the slot table gives (1, 2 or 3). Never all 2.
   - At least 2 of the 3-blank TCs are short passages of 3–5 sentences.
+  - RC and argument choices never open with a summary label and a colon ("qualified approval: the author credits …", "dismissive: …"). The GRE writes an attitude choice either as a bare phrase ("qualified admiration", "measured skepticism") or as a full sentence ("The author credits the view with … but argues that …"), never both. A label in front lets the solver match on the label and skip the clause. Keep all five choices in one form.
   - At least 3 of the 15 TC blanks have all-phrase choices ("at odds with", "wary of", "a perfunctory", "the fragility of the consensus"). All three choices in a blank share one form. A phrase key still holds its key word, which check tags.
 - **Verbal key words.** Spend the brief's 29 key words (each in the GRE sense the brief gives) as the keys of the 15 TC blanks and 7 SE pairs. For an SE pair, use two key words the brief marks with `*`. If there aren't enough such pairs, pair a key word with one of its listed bank synonyms, and use any leftover key words as distractors. For words marked `[secondary]`, build the sentence so the everyday sense is the trap.
 - **Verbal skill tags.** Every RC question gets exactly one `{"kind":"concept","id":<skill>,"role":"primary"}` from the brief, plus an optional `secondary`. Argument items need an `arg-*` skill; `rc-select-verify` suits `rc_multi`. Write the stem so the skill is unambiguous (function: "…primarily in order to").

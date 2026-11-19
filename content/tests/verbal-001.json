@@ -92,6 +92,11 @@
      "kind": "word",
      "id": "question",
      "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "substrate",
+     "role": "passage"
     }
    ]
   },
@@ -109,6 +114,11 @@
     {
      "kind": "word",
      "id": "exhort",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "corollary",
      "role": "passage"
     }
    ]
@@ -231,6 +241,16 @@
       0,
       4
      ]
+    },
+    {
+     "kind": "word",
+     "id": "ambiguous",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "resolve",
+     "role": "stem"
     }
    ]
   },
@@ -437,6 +457,11 @@
       2,
       2
      ]
+    },
+    {
+     "kind": "word",
+     "id": "elaborate",
+     "role": "stem"
     }
    ]
   },
@@ -816,6 +841,11 @@
      "kind": "concept",
      "id": "rc-inference",
      "role": "secondary"
+    },
+    {
+     "kind": "word",
+     "id": "refute",
+     "role": "stem"
     }
    ],
    "choices": [
@@ -844,6 +874,11 @@
      "kind": "concept",
      "id": "rc-structure",
      "role": "primary"
+    },
+    {
+     "kind": "word",
+     "id": "emblematic",
+     "role": "stem"
     }
    ],
    "choices": [
@@ -874,6 +909,11 @@
      "kind": "concept",
      "id": "rc-function",
      "role": "primary"
+    },
+    {
+     "kind": "word",
+     "id": "base",
+     "role": "stem"
     }
    ]
   },
@@ -1197,6 +1237,11 @@
       2,
       2
      ]
+    },
+    {
+     "kind": "word",
+     "id": "ornate",
+     "role": "stem"
     }
    ]
   },
@@ -1322,6 +1367,11 @@
       2,
       2
      ]
+    },
+    {
+     "kind": "word",
+     "id": "notorious",
+     "role": "stem"
     }
    ]
   },
@@ -1577,6 +1627,31 @@
      "kind": "concept",
      "id": "rc-detail",
      "role": "primary"
+    },
+    {
+     "kind": "word",
+     "id": "accord",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "sparse",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "substrate",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "elaborate",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "posit",
+     "role": "stem"
     }
    ],
    "choices": [
@@ -1607,6 +1682,26 @@
      "kind": "concept",
      "id": "rc-inference",
      "role": "primary"
+    },
+    {
+     "kind": "word",
+     "id": "derive",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "substrate",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "elaborate",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "reconcile",
+     "role": "stem"
     }
    ],
    "choices": [
@@ -1643,6 +1738,11 @@
      "kind": "concept",
      "id": "rc-inference",
      "role": "secondary"
+    },
+    {
+     "kind": "word",
+     "id": "derive",
+     "role": "stem"
     }
    ],
    "choices": [
@@ -1671,6 +1771,11 @@
      "kind": "concept",
      "id": "rc-attitude",
      "role": "primary"
+    },
+    {
+     "kind": "word",
+     "id": "exhort",
+     "role": "stem"
     }
    ],
    "choices": [
@@ -1759,6 +1864,11 @@
      "kind": "concept",
      "id": "rc-function",
      "role": "primary"
+    },
+    {
+     "kind": "word",
+     "id": "concede",
+     "role": "stem"
     }
    ],
    "choices": [

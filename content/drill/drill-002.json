@@ -1,0 +1,1968 @@
+{
+ "id": "drill-002",
+ "measure": "verbal",
+ "title": "Endless vocab batch 2",
+ "sections": [
+  {
+   "n": 1,
+   "minutes": 60
+  },
+  {
+   "n": 2,
+   "minutes": 1
+  }
+ ],
+ "passages": [],
+ "figures": [],
+ "questions": [
+  {
+   "id": "s1q1",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "Had anyone thought to compare the ages of the two groups, the reviewers argued, the correlation the paper celebrated would have been exposed as not so much tenuous as ___; they took care, however, never to suggest that the authors had been anything other than scrupulous.",
+   "choices": [
+    "tenuous",
+    "duplicity",
+    "spurious",
+    "efficacious",
+    "insincerity",
+    "bogus"
+   ],
+   "key": {
+    "sel": [
+     2,
+     5
+    ]
+   },
+   "explanation": {
+    "key": "'Not so much tenuous as ___' asks for something stronger than weak, and the opening clause says a simple age comparison would have made the correlation disappear: it only looked real. Spurious and bogus both mean false despite seeming genuine. The last clause, set a full sentence away from the blank, says the falseness lies in the finding and not in the authors' honesty.",
+    "distractors": {
+     "tenuous": "Near-fit trap: weak, flimsy. It suits 'correlation' and the reviewers' doubts, but the 'not so much tenuous as' frame rules it out by name. The blank must go beyond weakness.",
+     "duplicity": "Trap pair with insincerity: deceitfulness. 'Exposed as' invites a word for fraud, but the final clause says the reviewers never questioned the authors' scruples. It is also a noun where an adjective is needed.",
+     "insincerity": "Trap pair with duplicity: not meaning what one says. Again a fault in people, which the last clause rules out. The flaw is in the data.",
+     "efficacious": "Effective, producing the intended result. A correlation that would vanish under a simple check is the opposite of a demonstrated effect."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "tenuous",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "duplicity",
+     "role": "distractor",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "spurious",
+     "role": "key",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "efficacious",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "insincerity",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "bogus",
+     "role": "key",
+     "at": [
+      5
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "celebrated",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "scrupulous",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q2",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "The young surgeon's bedside manner was ___ rather than malicious: she meant every patient well, but she announced grim prognoses in crowded hallways and joked during consent conversations, never sensing how her words landed.",
+   "choices": [
+    "gauche",
+    "miscreant",
+    "urbane",
+    "reprobate",
+    "adroit",
+    "unsophisticated"
+   ],
+   "key": {
+    "sel": [
+     0,
+     5
+    ]
+   },
+   "explanation": {
+    "key": "'Rather than malicious' plus the examples (well meant, but tactless, oblivious to effect) call for social awkwardness without ill will. Gauche and unsophisticated both describe a lack of social polish.",
+    "distractors": {
+     "miscreant": "Trap pair with reprobate: a wrongdoer, a villain. 'Rather than malicious' and 'meant every patient well' rule out wickedness, and both are nouns where an adjective is needed.",
+     "reprobate": "Trap pair with miscreant: an unprincipled, depraved person. The surgeon's fault is clumsiness, not depravity.",
+     "urbane": "Suave, courteous and refined: the opposite of a doctor who jokes during consent conversations.",
+     "adroit": "Skillful, especially in handling people or situations. She never senses how her words land, so she is anything but adroit."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "gauche",
+     "role": "key",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "miscreant",
+     "role": "distractor",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "urbane",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "reprobate",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "adroit",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "unsophisticated",
+     "role": "key",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q3",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "The strain did nothing to slow the laboratory's work, since cultures grew on schedule and the assays ran as planned, but it continued to ___ the microbiologists, thriving in acid that should have killed it while dying in the very broth designed to nourish it.",
+   "choices": [
+    "stymie",
+    "confound",
+    "pith",
+    "vitiate",
+    "flummox",
+    "crux"
+   ],
+   "key": {
+    "sel": [
+     1,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "The strain's behavior contradicts expectation in both directions, so it baffles the scientists. Confound (perplex) and flummox (bewilder completely) give the same sense. 'Did nothing to slow the laboratory's work' separates bewilderment from obstruction.",
+    "distractors": {
+     "pith": "Trap pair with crux: the essential core of a matter. The strain may be the crux of the puzzle, but the blank needs a verb, and nothing here is about the central point of an argument.",
+     "crux": "Trap pair with pith: the decisive or essential point. Same problem: a noun naming the heart of a problem, not something done to the scientists.",
+     "stymie": "To block or thwart progress. The sentence rules this out at the start: the work went on as planned, so the strain baffled the team without halting it.",
+     "vitiate": "To impair or invalidate, as of a contract or a result. It takes a thing (an argument, an experiment) as its object, not the people puzzled by it."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "stymie",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "confound",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "pith",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "vitiate",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "flummox",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "crux",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q4",
+   "section": 1,
+   "type": "se",
+   "difficulty": 4,
+   "prompt": "Within two years of its approval, demand for the inexpensive malaria test had come to ___ the manufacturer's capacity to produce it, and clinics in three countries began rationing the kits.",
+   "choices": [
+    "torpor",
+    "outstrip",
+    "antedate",
+    "lassitude",
+    "forsake",
+    "surpass"
+   ],
+   "key": {
+    "sel": [
+     1,
+     5
+    ]
+   },
+   "explanation": {
+    "key": "Rationing shows that demand grew larger than supply, so demand exceeded capacity. Outstrip and surpass both mean to go beyond.",
+    "distractors": {
+     "torpor": "Trap pair with lassitude: sluggishness, inactivity. Demand that forces rationing is the reverse of sluggish, and a noun cannot follow 'come to'.",
+     "lassitude": "Trap pair with torpor: weariness, lack of energy. Nothing in a surge of demand is listless.",
+     "antedate": "To come before in time. Demand did not precede capacity; it exceeded it, which is what produced the shortage.",
+     "forsake": "To abandon. Demand cannot abandon a production capacity, and abandoning would not cause rationing."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "torpor",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "outstrip",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "antedate",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "lassitude",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "forsake",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "surpass",
+     "role": "key",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q5",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "The spring rains, though ___, never approached a glut: they refilled the reservoir and carried the valley's farms through the summer without once forcing the engineers to open the spillways.",
+   "choices": [
+    "plethora",
+    "scant",
+    "copious",
+    "surfeit",
+    "ample",
+    "pervasive"
+   ],
+   "key": {
+    "sel": [
+     2,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "'Though ___, never approached a glut' concedes plenty while denying excess, and refilling a reservoir confirms there was plenty. Copious and ample both mean abundant, more than enough, without implying too much.",
+    "distractors": {
+     "plethora": "Trap pair with surfeit: an excess, an overabundance. 'Never approached a glut' and the unopened spillways rule out their shared sense of too much.",
+     "surfeit": "Trap pair with plethora: an excessive amount. The sentence carefully stops short of excess.",
+     "scant": "Barely sufficient or too little. Rains that refill a reservoir and carry farms through summer were not scant, and 'though scant, never approached a glut' makes no concession.",
+     "pervasive": "Spreading through every part. It describes extent, not amount, so 'though' has nothing to concede against 'glut'."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "plethora",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "scant",
+     "role": "distractor",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "copious",
+     "role": "key",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "surfeit",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "ample",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "pervasive",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "glut",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q6",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "Veterinarians at the sanctuary describe the old bull elephant as ___: he refuses medication however it is disguised, shoves aside keepers who try to guide him into the treatment stall, and has learned to undo every latch meant to hold him.",
+   "choices": [
+    "invective",
+    "recalcitrant",
+    "complaisant",
+    "froward",
+    "philippic",
+    "august"
+   ],
+   "key": {
+    "sel": [
+     1,
+     3
+    ]
+   },
+   "explanation": {
+    "key": "Every example after the colon is stubborn resistance to control: refusing medicine, pushing keepers aside, escaping latches. Recalcitrant and froward both mean obstinately resistant and hard to manage.",
+    "distractors": {
+     "invective": "Trap pair with philippic: abusive, denunciatory language. The elephant's resistance is physical, not verbal, and a noun does not fit 'describe ... as ___' for a temperament.",
+     "philippic": "Trap pair with invective: a bitter verbal attack. Nothing in the sentence involves speech.",
+     "complaisant": "Eager to please, obliging: the opposite of an animal that refuses every treatment.",
+     "august": "Majestic, inspiring reverence. It suits 'old bull elephant' but not the list of acts of defiance that defines the blank."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "invective",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "recalcitrant",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "complaisant",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "froward",
+     "role": "key",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "philippic",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "august",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q7",
+   "section": 1,
+   "type": "se",
+   "difficulty": 4,
+   "prompt": "Critics who read the ornithologist's account of the bowerbird's ___ for blue objects as a slight on the species missed her point: what they took for mockery was admiration for a taste so exacting that a male will discard a bottle cap one shade too pale.",
+   "choices": [
+    "calumny",
+    "predilection",
+    "avarice",
+    "aspersion",
+    "notoriety",
+    "penchant"
+   ],
+   "key": {
+    "sel": [
+     1,
+     5
+    ]
+   },
+   "explanation": {
+    "key": "The blank names a trait of the bird, the 'taste' the second clause praises, and the critics wrongly heard a slight in her word for it. So her word was a neutral or warm one for a liking. Predilection and penchant both mean a habitual fondness, and both take 'for'.",
+    "distractors": {
+     "calumny": "Trap pair with aspersion: a damaging, false statement. 'Slight' and 'mockery' bait them, but those describe the critics' misreading. The blank is the bird's own trait in her account.",
+     "aspersion": "Trap pair with calumny: a disparaging remark. The bird cannot have an aspersion 'for blue objects', and the sentence says no disparagement was meant.",
+     "avarice": "Near-fit trap: greed for possessions. Hoarding blue objects makes it tempting, but a pejorative word would prove the critics right, and the sentence says they 'missed her point'.",
+     "notoriety": "Fame for something bad. 'Notoriety for' parses, but it is pejorative like avarice, and the passage is about a taste she admires, not a reputation."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "calumny",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "predilection",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "avarice",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "aspersion",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "notoriety",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "penchant",
+     "role": "key",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q8",
+   "section": 1,
+   "type": "se",
+   "difficulty": 4,
+   "prompt": "When the probe's first signal reached mission control after the seven-year flight, the engineers, who had spent the final hour convinced the craft was lost, were ___, hugging one another and weeping at their consoles.",
+   "choices": [
+    "auspicious",
+    "futile",
+    "elated",
+    "propitious",
+    "euphoric",
+    "irksome"
+   ],
+   "key": {
+    "sel": [
+     2,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "Relief after despair, hugging and weeping: the engineers are overjoyed. Elated and euphoric both describe intense joy in a person.",
+    "distractors": {
+     "auspicious": "Trap pair with propitious: favorable, promising good fortune. A signal can be auspicious, but the blank describes how the engineers felt, and these words describe circumstances or omens, not emotions.",
+     "propitious": "Trap pair with auspicious: favorable, well suited to success. Again a quality of conditions, not a feeling.",
+     "futile": "Pointless, ineffective. Nothing about their reaction to a successful signal is futile.",
+     "irksome": "Annoying, tiresome. It describes what bothers someone, and the engineers are delighted."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "auspicious",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "futile",
+     "role": "distractor",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "elated",
+     "role": "key",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "propitious",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "euphoric",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "irksome",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "console",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q9",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "Agronomists of the last century had little patience with the region's custom of leaving a third of the land (i) ___ each year; to them it was acreage squandered. Their successors are less sure. The weeds that colonized those resting fields gave partridges and hares somewhere to (ii) ___ through the lean months and sheltered the insects that pollinated the crops nearby, so the campaign meant to (iii) ___ yields by planting every field every season may quietly have eroded them.",
+   "blanks": [
+    [
+     "moribund",
+     "fallow",
+     "contiguous"
+    ],
+    [
+     "malinger",
+     "forage",
+     "grovel"
+    ],
+    [
+     "prune",
+     "palliate",
+     "augment"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     1,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) 'Acreage squandered' fits several words, and the first sentence does not settle it. The clue comes two sentences later: 'those resting fields', land deliberately left unplanted, which makes it fallow. (ii) Animals that get through the lean months in a weedy field are finding food there: forage. (iii) The campaign planted every field 'every season', and 'may quietly have eroded them' is the irony, so its aim was the opposite of eroding: augment.",
+    "distractors": {
+     "moribund": "Near-fit trap: dying, stagnating. Read alone, 'acreage squandered' seems to allow it, but the later 'resting fields' crowded with weeds and wildlife are anything but dying.",
+     "contiguous": "Adjoining, sharing a border. Land can be contiguous, but that is not something one leaves it each year, and it does not explain why the land looked squandered.",
+     "malinger": "To feign illness to dodge work. 'Somewhere to ___' baits a word for lying low, but the animals are feeding, which is why the insects and the crops come into it.",
+     "grovel": "To crawl abjectly. It suits ground-dwelling animals on the surface, not animals living off the field through the lean months.",
+     "prune": "Near-fit trap: to cut back. It matches 'eroded', but the sentence's irony needs an aim opposite to the result, and planting every field every season aims at more, not less.",
+     "palliate": "To ease without curing, or to excuse. Yields are not a symptom to be relieved."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "moribund",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "fallow",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "contiguous",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "malinger",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "forage",
+     "role": "key",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "grovel",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "prune",
+     "role": "distractor",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "palliate",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "augment",
+     "role": "key",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q10",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "In the trial, the drug did (i) ___ the tremors of most patients, but the relief was (ii) ___, fading within hours of each dose and returning in full by morning. The manufacturer's confident claims about the drug's long-term (iii) ___ were therefore premature.",
+   "blanks": [
+    [
+     "propagate",
+     "ameliorate",
+     "stigmatize"
+    ],
+    [
+     "prodigious",
+     "incorrigible",
+     "transient"
+    ],
+    [
+     "efficacy",
+     "verisimilitude",
+     "decorum"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2,
+     0
+    ]
+   },
+   "explanation": {
+    "key": "(i) The next clause speaks of 'the relief', so the drug improved the tremors: ameliorate. (ii) 'But' and 'fading within hours' make the relief short-lived: transient. (iii) Short-lived relief undercuts claims that the drug keeps working: long-term efficacy.",
+    "distractors": {
+     "propagate": "To spread or multiply. Spreading the tremors would bring no 'relief'.",
+     "stigmatize": "To brand as shameful. A drug acts on symptoms, not on their social standing.",
+     "prodigious": "Enormous, remarkable. 'But' sets up a limitation, and relief that fades in hours is not prodigious.",
+     "incorrigible": "Incapable of being reformed, used of people and habits. It does not describe relief that fades.",
+     "verisimilitude": "The appearance of being true or real. It is baited by 'claims', but the claims concern whether the drug works, not how lifelike something seems.",
+     "decorum": "Proper, dignified behavior. A drug has no long-term manners."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "propagate",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "ameliorate",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "stigmatize",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "prodigious",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "incorrigible",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "transient",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "efficacy",
+     "role": "key",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "verisimilitude",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "decorum",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "premature",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q11",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "When the geologist first proposed that the continents had once been joined, his (i) ___ theory, which asked the profession to abandon a century of settled doctrine, made him less a colleague than a (ii) ___: journals returned his papers unread, and learned societies stopped inviting him to speak. Only after seafloor surveys decades later confirmed the (iii) ___ of his central claim did the field that had shunned him begin calling him a founder.",
+   "blanks": [
+    [
+     "hackneyed",
+     "estimable",
+     "iconoclastic"
+    ],
+    [
+     "luminary",
+     "pariah",
+     "paragon"
+    ],
+    [
+     "prolixity",
+     "veracity",
+     "illiberality"
+    ]
+   ],
+   "key": {
+    "sel": [
+     2,
+     1,
+     1
+    ]
+   },
+   "explanation": {
+    "key": "(i) A theory that asks a field to abandon settled doctrine attacks cherished beliefs: iconoclastic. (ii) 'Less a colleague than' plus rejected papers and lost invitations describe an outcast: pariah. (iii) The later surveys vindicated him, so they confirmed the truth of his claim: veracity. The trap in (i) and (ii) is the final clause: 'founder' baits words of esteem, but 'Only after ... decades later' places that honor long after the shunning the first sentence describes.",
+    "distractors": {
+     "hackneyed": "Overused, trite. A theory that overturns a century of doctrine is the opposite of stale.",
+     "estimable": "Worthy of esteem. It anticipates the later honor, but the first sentence describes why he was shunned at the time.",
+     "luminary": "A person who inspires or leads in a field. That is what he became decades later, not what the rejected papers made him.",
+     "paragon": "A model of excellence. Same reversal: the 'founder' clause baits it, but at first he was shunned.",
+     "prolixity": "Tedious wordiness. Seafloor surveys test a claim's truth, not its length.",
+     "illiberality": "Narrow-mindedness or stinginess. The narrow-mindedness belonged to his colleagues, and surveys cannot confirm it of a claim."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "hackneyed",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "estimable",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "iconoclastic",
+     "role": "key",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "luminary",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "pariah",
+     "role": "key",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "paragon",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "prolixity",
+     "role": "distractor",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "veracity",
+     "role": "key",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "illiberality",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q12",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "The strain gauges on the old railway bridge produced readings so (i) ___, leaping and plunging from one minute to the next, that the engineers at first blamed the instruments rather than the structure. One (ii) ___ graduate student, who spent six weeks logging every reading by hand against train timetables and wind records, finally helped (iii) ___ the pattern: the swings tracked freight trains crossing in high crosswinds.",
+   "blanks": [
+    [
+     "immutable",
+     "notorious",
+     "erratic"
+    ],
+    [
+     "brazen",
+     "industrious",
+     "gawky"
+    ],
+    [
+     "occlude",
+     "converge",
+     "elucidate"
+    ]
+   ],
+   "key": {
+    "sel": [
+     2,
+     1,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) 'Leaping and plunging from one minute to the next' is irregular, unpredictable behavior: erratic. (ii) Six weeks of hand-logging is steady hard work: industrious. (iii) After the colon the pattern is explained, so the student made it clear: elucidate.",
+    "distractors": {
+     "immutable": "Unchanging. Readings that leap and plunge are the reverse.",
+     "notorious": "Famous for something bad. Nothing says the readings were widely known; the point is their irregularity, which made the instruments suspect.",
+     "brazen": "Boldly shameless. The student's distinguishing trait is patient labor, not audacity.",
+     "gawky": "Awkward and ungainly. It says nothing about six weeks of careful logging.",
+     "occlude": "To block or obstruct. The student's work revealed the pattern rather than hiding it.",
+     "converge": "To come together at a point. It is intransitive in this sense and cannot take 'the pattern' as what the student helped do."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "immutable",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "notorious",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "erratic",
+     "role": "key",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "brazen",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "industrious",
+     "role": "key",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "gawky",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "occlude",
+     "role": "distractor",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "converge",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "elucidate",
+     "role": "key",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q13",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "Advertisements for the new appetite suppressant promise that a single capsule will (i) ___ even the most voracious eater until evening. Taken alone, such a promise could be shrugged off as (ii) ___, the routine inflation of marketing copy that no physician reads literally. What is troubling is that the company's summary of its trial data is so (iii) ___ that doctors who ignore advertising have begun prescribing the drug, although the raw numbers show only a modest effect on appetite.",
+   "blanks": [
+    [
+     "invigorate",
+     "satiate",
+     "connote"
+    ],
+    [
+     "euphemism",
+     "dirge",
+     "hyperbole"
+    ],
+    [
+     "tenuous",
+     "compelling",
+     "trite"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2,
+     1
+    ]
+   },
+   "explanation": {
+    "key": "(i) An appetite suppressant promises to leave even a big eater full: satiate. (ii) 'The routine inflation of marketing copy' defines the blank as exaggeration: hyperbole. (iii) The summary must be persuasive enough to win over doctors who ignore ads, although the real effect is modest: compelling. The concession 'although the raw numbers show only a modest effect' baits tenuous, but the 'so ___ that doctors ... have begun prescribing' structure needs a word for persuasiveness.",
+    "distractors": {
+     "invigorate": "To give energy. A suppressant is sold on curbing hunger, not on making eaters lively.",
+     "connote": "To imply or suggest a meaning. It takes an idea as its object, not an eater.",
+     "euphemism": "A mild word substituted for a harsh one. Marketing copy that inflates is the opposite of softening.",
+     "dirge": "A mournful song for the dead. Nothing in an upbeat advertisement is a lament.",
+     "tenuous": "Weak, flimsy. That describes the raw numbers, but a tenuous summary would not convert skeptical doctors.",
+     "trite": "Stale, overused. Triteness would not persuade doctors who already discount advertising."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "invigorate",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "satiate",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "connote",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "euphemism",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "dirge",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "hyperbole",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "tenuous",
+     "role": "distractor",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "compelling",
+     "role": "key",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "trite",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "voracious",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "modest",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q14",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "Before the cannery opened, the estuary was a (i) ___ place, its still water disturbed only by wading herons. Within a decade, effluent had left its shallows (ii) ___, choked with rotting offal and grey foam. The residents' complaints, muted at first, grew so (iii) ___ that the state finally ordered the plant closed.",
+   "blanks": [
+    [
+     "bellicose",
+     "tranquil",
+     "viscous"
+    ],
+    [
+     "limpid",
+     "squalid",
+     "diaphanous"
+    ],
+    [
+     "covert",
+     "genial",
+     "vociferous"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     1,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) 'Still water disturbed only by wading herons' is a picture of calm: tranquil. (ii) 'Choked with rotting offal and grey foam' is filth from neglect: squalid. (iii) 'Muted at first' sets up the opposite, loud and forceful enough to force a closure: vociferous.",
+    "distractors": {
+     "bellicose": "Eager to fight. Nothing in the estuary's former state is hostile.",
+     "viscous": "Thick and sticky, as a liquid. It might suit the later, polluted water, but not the 'still water' of the earlier, peaceful scene, and it does not describe a place.",
+     "limpid": "Clear and transparent. Shallows choked with offal and foam are the opposite.",
+     "diaphanous": "Delicate and translucent. Again the wrong polarity for fouled water.",
+     "covert": "Hidden, secret. 'Muted at first, grew so ___' needs a move toward loudness, not concealment.",
+     "genial": "Friendly, cheerful. Complaints that close a plant grew forceful, not friendly."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "bellicose",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "tranquil",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "viscous",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "limpid",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "squalid",
+     "role": "key",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "diaphanous",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "covert",
+     "role": "distractor",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "genial",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "vociferous",
+     "role": "key",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q15",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "The minister's address at the dam's opening was hardly short on (i) ___: phrases about taming the river rolled out for forty minutes, and the crowd applauded each one. What the engineers in the front rows minded was not the eloquence itself, which they would have forgiven, nor any obscurity, since every sentence was plain enough, but that the whole was so (ii) ___ that when it ended they could not say whether the government had promised the irrigation canals or quietly abandoned them.",
+   "blanks": [
+    [
+     "prolixity",
+     "probity",
+     "rhetoric"
+    ],
+    [
+     "arcane",
+     "vapid",
+     "prescient"
+    ]
+   ],
+   "key": {
+    "sel": [
+     2,
+     1
+    ]
+   },
+   "explanation": {
+    "key": "(i) The next sentence calls the speech's quality 'the eloquence itself', and the phrases about taming the river are persuasive flourish: rhetoric. (ii) The engineers' complaint comes after two denials: not the eloquence, and not obscurity. What is left is emptiness: plain sentences that commit to nothing, so no one can tell what was promised. That makes the whole vapid.",
+    "distractors": {
+     "prolixity": "Near-fit trap: tedious wordiness. Forty minutes of phrases invites it, but the crowd applauded each one and the next sentence calls the quality eloquence, which prolixity is not.",
+     "probity": "Integrity, honesty. 'Hardly short on' a virtue fits the frame, but the colon explains the blank with phrases and applause, which are matters of style, not character.",
+     "arcane": "Near-fit trap: understood by few, obscure. Not knowing what was promised suggests it, but the sentence rules it out: 'nor any obscurity, since every sentence was plain enough'.",
+     "prescient": "Having foresight. A speech that leaves the canals' fate unclear foresees nothing."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "prolixity",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "probity",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "rhetoric",
+     "role": "key",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "arcane",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "vapid",
+     "role": "key",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "prescient",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "obscurity",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q16",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "After the stroke, the patient's (i) ___ was undiminished, and he would talk for an hour to anyone who sat by his bed; but the neurologist noted that he was no longer (ii) ___: his sentences ran on and on without ever arriving at a clear thought.",
+   "blanks": [
+    [
+     "frugality",
+     "volubility",
+     "asperity"
+    ],
+    [
+     "loquacious",
+     "zealous",
+     "articulate"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) 'He would talk for an hour' shows the quality that survived: fluent, abundant talk, volubility. (ii) 'But' turns to a loss, and the colon defines it: sentences that never reach a clear thought. He is no longer able to express himself clearly: articulate.",
+    "distractors": {
+     "frugality": "Thrift, sparing use. Talking for an hour is anything but sparing.",
+     "asperity": "Harshness of tone or manner. Nothing suggests he speaks harshly; the point is how much he talks.",
+     "loquacious": "Very talkative. He still talks for an hour, so saying he is 'no longer' loquacious contradicts the first clause. This is the trap: it echoes the topic of talk but reverses the logic.",
+     "zealous": "Fervent, passionately devoted. The colon describes a loss of clarity, not of enthusiasm."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "frugality",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "volubility",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "asperity",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "loquacious",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "zealous",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "articulate",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "undiminished",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q17",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "Ranchers tend to explain the pack's repeated raids as a sort of (i) ___ toward their herds, as if the wolves bore a grudge against the cattle themselves; biologists see nothing so personal, only a (ii) ___ to a home range so strong that the animals keep returning to the valley even after their dens have been destroyed.",
+   "blanks": [
+    [
+     "avarice",
+     "alacrity",
+     "antipathy"
+    ],
+    [
+     "fidelity",
+     "aberration",
+     "egress"
+    ]
+   ],
+   "key": {
+    "sel": [
+     2,
+     0
+    ]
+   },
+   "explanation": {
+    "key": "(i) 'As if the wolves bore a grudge' glosses the ranchers' view as a deep-seated dislike: antipathy. (ii) 'Nothing so personal, only' replaces the grudge with something else, and 'keep returning ... even after their dens have been destroyed' is steadfast loyalty to a place: fidelity.",
+    "distractors": {
+     "avarice": "Greed for wealth. Raids might suggest greed, but the gloss 'bore a grudge' names hostility, not greed.",
+     "alacrity": "Cheerful eagerness. It might describe how quickly the wolves raid, but the gloss 'bore a grudge' asks for hostility.",
+     "aberration": "A departure from the normal. Returning year after year is a steady pattern, not a deviation, and 'an aberration to a home range' does not parse.",
+     "egress": "A way out, an exit. The wolves keep coming back, the reverse of leaving."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "avarice",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "alacrity",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "antipathy",
+     "role": "key",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "fidelity",
+     "role": "key",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "aberration",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "egress",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q18",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "The renovated natural-history hall traded its careful dioramas for (i) ___ displays, all blinking lights, plastic dinosaurs and glitter borrowed from the gift shop, and reduced a (ii) ___ subject, evolution, which draws on genetics, geology and ecology at once, to a single cartoon timeline.",
+   "blanks": [
+    [
+     "painstaking",
+     "tawdry",
+     "sartorial"
+    ],
+    [
+     "imminent",
+     "trivial",
+     "multifaceted"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) 'Traded its careful dioramas for' sets the new displays against care, and the list (blinking lights, plastic, glitter) is cheap showiness: tawdry. (ii) 'Reduced' needs a subject richer than the timeline, and the clause listing three sciences gives it many sides: multifaceted.",
+    "distractors": {
+     "painstaking": "Done with great care. That describes the dioramas the hall gave up, not the glitter that replaced them.",
+     "sartorial": "Relating to clothing or tailoring. The displays are lights and plastic models, not garments.",
+     "imminent": "About to happen. Evolution is not an impending event, and the word gives 'reduced' nothing to shrink.",
+     "trivial": "Unimportant, slight. 'Reduced' implies the subject was richer than the cartoon, and the clause listing three sciences says the same."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "painstaking",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "tawdry",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "sartorial",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "imminent",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "trivial",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "multifaceted",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q19",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "The hull standards were written as safeguards after a string of shipwrecks, and for a generation they served that purpose; but to the naval architects who inherited them, rules that forbade any departure from riveted steel had become less a protection than a ___, holding back the very welded designs that would have made ships safer.",
+   "blanks": [
+    [
+     "paean",
+     "manacle",
+     "prodigy",
+     "magnate",
+     "philistine"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1
+    ]
+   },
+   "explanation": {
+    "key": "'Less a protection than' contrasts the rules' original purpose with what they became, and 'holding back the very ... designs' defines that: a restraint. Manacle, a shackle, in its figurative sense of anything that restrains.",
+    "distractors": {
+     "paean": "A song or tribute of praise. The architects resent the rules, so the word reverses the sentence's attitude.",
+     "prodigy": "A person of exceptional talent, or a marvel. Rules that hold back better designs are no marvel.",
+     "magnate": "A wealthy, powerful businessperson. The blank names what the rules became, and rules are not people.",
+     "philistine": "A person hostile to culture or the arts. It names a person, and the sentence concerns a restriction, not taste."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "paean",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "manacle",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "prodigy",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "magnate",
+     "role": "distractor",
+     "at": [
+      0,
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "philistine",
+     "role": "distractor",
+     "at": [
+      0,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q20",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "The keepers' worry was never that the otter would come out of surgery anything less than ___, since its high spirits were the talk of the aquarium, but that, chattering and somersaulting through its pool as usual, it would tear its stitches before they had healed.",
+   "blanks": [
+    [
+     "moribund",
+     "vitriolic",
+     "vivacious",
+     "prodigal",
+     "plodding"
+    ]
+   ],
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "'Never that it would be anything less than ___' is a double negative: the keepers fully expected the blank to be true. The reason clause ('its high spirits were the talk of the aquarium') and the danger they did fear (chattering and somersaulting, tearing stitches) both describe liveliness: vivacious.",
+    "distractors": {
+     "moribund": "Near-fit trap: near death. 'Come out of surgery' baits a word for a weak patient, but that reading flips the double negative. The keepers expected high spirits, not decline.",
+     "plodding": "Slow and laborious. Like moribund, it fits a convalescent and fails the double negative, and nothing slow could tear its stitches by somersaulting.",
+     "vitriolic": "Bitterly caustic. 'Chattering' baits it, but high spirits are playful, not hostile.",
+     "prodigal": "Wastefully extravagant. It can suggest excess, but nothing here involves squandering anything."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "moribund",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "vitriolic",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "vivacious",
+     "role": "key",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "prodigal",
+     "role": "distractor",
+     "at": [
+      0,
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "plodding",
+     "role": "distractor",
+     "at": [
+      0,
+      4
+     ]
+    }
+   ]
+  }
+ ]
+}

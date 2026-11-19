@@ -11,7 +11,8 @@ import path from "node:path";
 import { TestSchema, type Question, type Test } from "../lib/types";
 import { passageSentences } from "../lib/sentences";
 import { parseNumber } from "../lib/scoring";
-import { difficultyRules, TOP_CAP } from "./validate-test";
+import { difficultyRules, drillRules, TOP_CAP } from "./validate-test";
+import { isDrillId } from "../lib/test-path";
 import { die, readTestFile } from "./lib/test-file";
 
 const L = "ABCDEFGHI";
@@ -139,7 +140,7 @@ function calibration(measure: string): { offset: number; model?: string } | null
 /**
  * Compare the solver's lines with the key. Each issue is one line per item (plus the solver's note), worded as the
  * action to take; `act` lists the items to fix and re-solve. A too-easy item is offered a retag to its honest level
- * when the section difficulty rules still pass with it (and with the retags offered before it).
+ * when the section difficulty rules (a drill batch's own rules) still pass with it and with the retags offered before it.
  */
 export function checkAnswers(test: Test, answers: Map<string, SolverLine>, offset: number, only?: Set<string>) {
   const issues: string[] = [];
@@ -164,7 +165,9 @@ export function checkAnswers(test: Test, answers: Map<string, SolverLine>, offse
       const est = a.difficulty + offset;
       const honest = Math.max(1, Math.min(5, Math.round(est)));
       const trial = levels.map((x) => (x.id === q.id ? { ...x, difficulty: honest } : x));
-      const broken = difficultyRules(trial).filter((r) => !r.ok);
+      const broken = isDrillId(test.id)
+        ? drillRules({ ...test, questions: test.questions.map((x) => ({ ...x, difficulty: trial.find((t) => t.id === x.id)!.difficulty })) }).map((rule) => ({ rule }))
+        : difficultyRules(trial).filter((r) => !r.ok);
       const head = `${q.id}  too easy: rated ${a.difficulty} (+${offset} = ${est}) vs target ${target}; rewrite it harder`;
       if (broken.length) mine.push(`${head} (retagging it ${honest} would break ${broken.map((r) => r.rule).join(", ")})`);
       else {

@@ -54,4 +54,24 @@ describe("tagTest", () => {
       expect(norm(copy.questions)).toEqual(norm(orig.questions));
     });
   }
+  it("tags the GRE words in question text and passages, leaving out choice words, secondary-sense words and misfires", () => {
+    const raw = {
+      id: "t", measure: "verbal", title: "t",
+      questions: [
+        { id: "q1", section: 1, type: "se", difficulty: 4, prompt: "The critic would not concede the ___ point, still sure of it, according to the species list.", choices: ["obdurate", "candid", "a", "b", "c", "d"], key: { sel: [0, 1] }, explanation: { key: "k" }, tags: [] },
+        { id: "q2", section: 1, type: "rc", difficulty: 4, prompt: "The author mentions the digression in order to", passageId: "p1", choices: ["refute a claim", "b", "c", "d", "e"], key: { sel: [0] }, explanation: { key: "k" }, tags: [] },
+      ],
+      passages: [{ id: "p1", paragraphs: ["A provincial reading of the late novels."], tags: [] }],
+    };
+    tagTest(raw as never, vocab);
+    const stem = (i: number) => raw.questions[i].tags.filter((t: { role: string }) => t.role === "stem").map((t: { id: string }) => t.id);
+    // "still" is secondary-sense, "according"/"species" are not those bank words; choices carry their own tags
+    expect(stem(0)).toEqual(["concede"]);
+    expect(stem(1)).toEqual(["digression", "refute"]);
+    expect(raw.passages[0].tags.map((t: { id: string }) => t.id)).toEqual(["provincial"]);
+    // safe to re-run
+    tagTest(raw as never, vocab);
+    expect(stem(0)).toEqual(["concede"]);
+    expect(raw.passages[0].tags).toHaveLength(1);
+  });
 });

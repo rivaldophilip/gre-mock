@@ -22,7 +22,8 @@ async function send(method: "POST" | "DELETE", word: string, attemptId: number) 
 export interface WordTags {
   has(raw: string): boolean;
   senses(raw: string): Sense[] | null | undefined;
-  toggle(raw: string): Promise<boolean>;
+  /** `senses`, when the page already has the word's definition, shows it at once instead of after the save. */
+  toggle(raw: string, senses?: Sense[] | null): Promise<boolean>;
   /** The key a word is tagged under (its bank id), or null when it is not tagged. */
   keyOf(raw: string): string | null;
   entries: [string, Sense[] | null][];
@@ -49,7 +50,7 @@ export function useWordTags(attemptId: number, initial: { id: string; senses?: S
     [tags],
   );
   const toggle = useCallback(
-    async (raw: string) => {
+    async (raw: string, known?: Sense[] | null) => {
       const w = norm(raw);
       if (w.length < MIN_LEN || busy.current.has(w)) return false;
       busy.current.add(w);
@@ -63,13 +64,13 @@ export function useWordTags(attemptId: number, initial: { id: string; senses?: S
           return false;
         }
         const tmp = slug(w);
-        setTags((m) => new Map(m).set(tmp, null));
+        setTags((m) => new Map(m).set(tmp, known ?? null));
         const r = await send("POST", w, attemptId);
         setTags((m) => {
           const n = new Map(m);
           n.delete(tmp);
           if (r) {
-            n.set(r.id ?? tmp, r.senses ?? null);
+            n.set(r.id ?? tmp, r.senses ?? known ?? null);
             surface.current.set(w, r.id ?? tmp);
           }
           return n;
@@ -122,7 +123,7 @@ export function WordChip({ word, attemptId, senses, tagged: initial = false, tag
   async function toggle() {
     if (busy) return;
     setBusy(true);
-    const ok = tags ? await tags.toggle(word) : !!(await send(own ? "DELETE" : "POST", word, attemptId));
+    const ok = tags ? await tags.toggle(word, senses) : !!(await send(own ? "DELETE" : "POST", word, attemptId));
     setBusy(false);
     setErr(!ok);
     if (ok && !tags) setOwn(!own);
@@ -161,7 +162,7 @@ export function tapWord(tags: WordTags, senses?: Sense[] | null): WordRender {
         title={sense ? undefined : hint}
         onClick={(e) => {
           e.stopPropagation();
-          void tags.toggle(tok);
+          void tags.toggle(tok, senses);
         }}
         className={`group relative cursor-pointer rounded -mx-px px-px transition-colors ${on ? "bg-warn-soft font-medium text-warn" : "hover:bg-surface-2"}`}
       >

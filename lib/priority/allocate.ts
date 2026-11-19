@@ -1,4 +1,5 @@
 import { heldBy, type ItemScore } from "./compute";
+import { NEW_KEY_SHARE } from "./config";
 
 export interface Pick {
   itemId: string;
@@ -22,7 +23,7 @@ export function rng(seed: number) {
 export const isNew = (s: ItemScore) => !s.tested && s.weakEvidence === 0;
 
 /**
- * While an item no untaken test holds is still untested: half the slots go to untested items first (unexposed
+ * While an item no untaken test holds is still untested: `newShare` of the slots (half by default) go to untested items first (unexposed
  * before merely seen, then by yield, ties random; spread over `groupOf` when given), the rest to the tested items
  * by P. Either side fills in when the other runs dry, and held items come last, fewest holders first. Returns
  * null once nothing untested is left, so the caller keeps its usual rule.
@@ -32,6 +33,7 @@ export function allocateNewFirst<T extends ItemScore>(
   slots: number,
   random: () => number,
   groupOf?: (s: T) => string,
+  newShare = 0.5,
 ): Pick[] | null {
   const live = scores.filter((s) => !s.pending);
   const shuffled = [...live].sort(() => random() - 0.5);
@@ -61,7 +63,7 @@ export function allocateNewFirst<T extends ItemScore>(
       n--;
     }
   };
-  take(fresh, Math.round(slots * 0.5), "new");
+  take(fresh, Math.round(slots * newShare), "new");
   take(tested, slots, "review");
   take(fresh, slots, "new");
   take(held, slots, "review");
@@ -71,11 +73,11 @@ export function allocateNewFirst<T extends ItemScore>(
 }
 
 /**
- * Verbal key-word slots: new-first while untested words remain (allocateNewFirst); after that 50% review
+ * Verbal key-word slots: new-first while untested words remain (allocateNewFirst, NEW_KEY_SHARE new); after that 50% review
  * (weakness evidence, by P), 40% new (by N*Y), 10% wildcard. Falls back to the other buckets when one runs dry.
  */
 export function allocateWords(scores: ItemScore[], slots: number, random: () => number): Pick[] {
-  const newFirst = allocateNewFirst(scores, slots, random);
+  const newFirst = allocateNewFirst(scores, slots, random, undefined, NEW_KEY_SHARE);
   if (newFirst) return newFirst;
   const nReview = Math.round(slots * 0.5);
   const nNew = Math.round(slots * 0.4);
@@ -242,15 +244,24 @@ export function pairSeKeys(
  * One variant (sub-form) per picked concept: the one used least so far, counting earlier briefs (`used`:
  * concept -> variant -> times used) and the earlier slots of this brief, ties random. So a concept that comes
  * back in mock after mock is tested a different way each time. A concept with no variants listed gets none.
+ * `fixed` (slot index -> variant) pins a slot, such as a revisit that keeps its earlier item's form; a pin counts as a
+ * use before any other slot picks, and one that is not among the concept's variants is ignored.
  */
 export function assignVariants(
   concepts: string[],
   variants: Record<string, string[]>,
   used: Map<string, Map<string, number>>,
   random: () => number,
+  fixed = new Map<number, string>(),
 ): (string | undefined)[] {
   const count = new Map([...used].map(([c, m]) => [c, new Map(m)]));
-  return concepts.map((c) => {
+  const pinned = new Map([...fixed].filter(([i, v]) => i < concepts.length && (variants[concepts[i]] ?? []).includes(v)));
+  for (const [i, v] of pinned) {
+    const seen = count.get(concepts[i]) ?? new Map<string, number>();
+    count.set(concepts[i], seen.set(v, (seen.get(v) ?? 0) + 1));
+  }
+  return concepts.map((c, i) => {
+    if (pinned.has(i)) return pinned.get(i);
     const options = variants[c] ?? [];
     if (!options.length) return undefined;
     const seen = count.get(c) ?? new Map<string, number>();

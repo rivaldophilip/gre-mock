@@ -8,9 +8,20 @@ const Lines = z.array(z.string().min(1)).min(1);
 export const StudySchema = z.object({
   measure: z.enum(["verbal", "quant"]),
   intro: z.string().min(1),
-  /** formula tiles: a plain name, the formula (bare TeX, no $), and an optional one-line note (Rich) */
+  /** quick-reference tiles: a plain name, then either the formula (bare TeX, no $) or a short rule (Rich), and an optional one-line note (Rich) */
   quickRef: z
-    .array(z.object({ title: z.string().min(1), items: z.array(z.object({ name: z.string().min(1), tex: z.string().min(1), note: z.string().optional() })).min(1) }))
+    .array(
+      z.object({
+        title: z.string().min(1),
+        items: z
+          .array(
+            z
+              .object({ name: z.string().min(1), tex: z.string().min(1).optional(), text: z.string().min(1).optional(), note: z.string().optional() })
+              .refine((it) => (it.tex === undefined) !== (it.text === undefined), "a tile has exactly one of tex or text"),
+          )
+          .min(1),
+      }),
+    )
     .min(1),
   formats: z.array(
     z.object({

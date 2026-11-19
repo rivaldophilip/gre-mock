@@ -2,21 +2,20 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import type { Answer, Explanation, Key, PublicTest } from "@/lib/types";
+import type { Answer, PublicTest } from "@/lib/types";
 import { isAnswered } from "@/lib/scoring";
 import type { SectionState } from "@/lib/clock";
 import { Calculator } from "./Calculator";
 import { Figure } from "./Figure";
 import { PassagePane } from "./PassagePane";
 import { QuestionRenderer } from "./QuestionRenderer";
-import { Rich, RichInline } from "./Rich";
+import { RevealPanel, type Reveal } from "./RevealPanel";
 import { ReviewGrid } from "./ReviewGrid";
-import { TaggableText, TaggedList, useWordTags, type Sense } from "./WordTagger";
-import { IconBack, IconCalc, IconCheck, IconClock, IconFlag, IconGrid, IconNext, IconPause, IconPlay, IconX } from "./icons";
+import { useWordTags, type Sense } from "./WordTagger";
+import { IconBack, IconCalc, IconCheck, IconClock, IconFlag, IconGrid, IconNext, IconPause, IconPlay } from "./icons";
 import { btn, card, iconBtn, seg, segItem } from "./ui";
 
 type Meta = { guessed: boolean; marked: boolean; timeMs: number; finalized: boolean };
-type Reveal = { key: Key; explanation: Explanation; isCorrect: boolean; words?: { word: string; id?: string; senses?: Sense[] | null }[] };
 
 export interface RunnerProps {
   test: PublicTest;
@@ -481,7 +480,6 @@ export function Runner(p: RunnerProps) {
   const gridItems = qs.map((x, i) => ({ n: i + 1, answered: isAnswered(x, answers[x.id]), marked: !!meta[x.id]?.marked, correct: reveals[x.id]?.isCorrect }));
   const isQuant = test.measure === "quant";
   const tags = mode === "practice" && !!reveal && !isQuant ? wordTags : undefined;
-  const chips = tags && (q.type === "tc" || q.type === "se") ? (reveal?.words ?? []) : [];
   const keySel = reveal && "sel" in reveal.key ? reveal.key.sel : undefined;
   const keyValue = reveal && "value" in reveal.key ? reveal.key.value : undefined;
 
@@ -633,32 +631,9 @@ export function Runner(p: RunnerProps) {
               )}
             </div>
             {reveal && (
-              <div className={`space-y-3 rounded-2xl border p-4 leading-relaxed sm:p-5 ${reveal.isCorrect ? "border-ok/35 bg-ok-soft" : "border-bad/35 bg-bad-soft"}`}>
-                <p className={`flex items-center gap-2 text-base font-semibold ${reveal.isCorrect ? "text-ok" : "text-bad"}`}>
-                  {reveal.isCorrect ? <IconCheck size={20} /> : <IconX size={20} />}
-                  {reveal.isCorrect ? "Correct" : "Incorrect"}
-                </p>
-                <Rich text={reveal.explanation.key} />
-                {reveal.explanation.steps && (
-                  <ol className="list-decimal space-y-1.5 pl-5 marker:text-muted">
-                    {reveal.explanation.steps.map((s, i) => <li key={i}><Rich text={s} /></li>)}
-                  </ol>
-                )}
-                {reveal.explanation.fast && <p className="rounded-xl bg-surface/70 px-3.5 py-2.5"><strong>Faster:</strong> <RichInline text={reveal.explanation.fast} /></p>}
-                {reveal.explanation.trap && <p className="rounded-xl bg-surface/70 px-3.5 py-2.5"><strong>Trap:</strong> <RichInline text={reveal.explanation.trap} /></p>}
-                {tags && (q.type === "tc" || q.type === "se") && (
-                  <div className="space-y-3 border-t border-line/60 pt-3">
-                    <p className="text-xs text-muted">Tap any word you didn’t know, here or in the sentence. It will come up more in later tests.</p>
-                    {chips.length > 0 && (
-                      <p className="flex flex-wrap gap-x-4 gap-y-1 text-[15px]">
-                        {chips.map((w) => <span key={w.word}><TaggableText text={w.word} tags={tags} senses={w.senses} inline /></span>)}
-                      </p>
-                    )}
-                    <TaggedList texts={[q.prompt, ...chips.map((w) => w.word)]} tags={tags} />
-                  </div>
-                )}
+              <RevealPanel reveal={reveal} q={q} tags={tags} inPassage={!!passage}>
                 {paused && <p className="flex items-center gap-1.5 text-xs text-muted"><IconPause size={11} /> Timer paused. It resumes when you move to another question.</p>}
-              </div>
+              </RevealPanel>
             )}
           </div>
         </section>

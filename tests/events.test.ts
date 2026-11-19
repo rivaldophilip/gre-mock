@@ -18,7 +18,9 @@ const se: Question = {
     { kind: "word", id: "lessen", role: "distractor", at: [4] },
   ],
 };
-const ev = (es: ReturnType<typeof eventsForResponse>) => Object.fromEntries(es.map((e) => [e.itemId, e.event]));
+/** The answer's own events, by item; seen_known is checked on its own below. */
+const ev = (es: ReturnType<typeof eventsForResponse>) => Object.fromEntries(es.filter((e) => e.event !== "seen_known").map((e) => [e.itemId, e.event]));
+const seen = (es: ReturnType<typeof eventsForResponse>) => es.filter((e) => e.event === "seen_known").map((e) => e.itemId);
 
 describe("eventsForResponse", () => {
   it("correct answer", () => {
@@ -28,6 +30,19 @@ describe("eventsForResponse", () => {
   it("one key right, one distractor chosen", () => {
     const e = ev(eventsForResponse(se, "verbal", { sel: [0, 1] }, { guessed: false, timeMs: 1000 }));
     expect(e).toEqual({ abate: "key_correct", mitigate: "key_missed", abase: "distractor_chosen" });
+  });
+  it("seen_known only for words the answer did not judge", () => {
+    // right question: every word is judged
+    expect(seen(eventsForResponse(se, "verbal", { sel: [0, 2] }, { guessed: false, timeMs: 1000 }))).toEqual([]);
+    // wrong question: the unpicked distractor says nothing about the answer, so it is shown-and-known unless tagged
+    const es = eventsForResponse(se, "verbal", { sel: [0, 1] }, { guessed: false, timeMs: 1000 });
+    expect(seen(es)).toEqual(["lessen"]);
+    expect(es.find((e) => e.event === "seen_known")!.weight).toBe(-0.3);
+    // stem words are exposure plus seen_known; a blank question logs nothing
+    const stem: Question = { ...se, tags: [...se.tags, { kind: "word", id: "obdurate", role: "stem" }] };
+    const es2 = eventsForResponse(stem, "verbal", { sel: [0, 2] }, { guessed: false, timeMs: 1000 });
+    expect(es2.filter((e) => e.itemId === "obdurate").map((e) => e.event)).toEqual(["exposure", "seen_known"]);
+    expect(eventsForResponse(stem, "verbal", undefined, { guessed: false, timeMs: 1000 })).toEqual([]);
   });
   it("guessed key", () => {
     const e = ev(eventsForResponse(se, "verbal", { sel: [0, 2] }, { guessed: true, timeMs: 1000 }));
@@ -88,9 +103,10 @@ describe("reading skill events", () => {
   };
   const passage = [{ kind: "word" as const, id: "hegemony", role: "passage" as const }];
 
-  it("a wrong RC answer counts against its skills; passage words are exposure only", () => {
+  it("a wrong RC answer counts against its skills; passage words are exposure plus seen_known", () => {
     const e = eventsForResponse(rc, "verbal", { sel: [0] }, { guessed: false, timeMs: 30_000 }, passage);
-    expect(Object.fromEntries(e.map((x) => [x.itemId, x.event]))).toEqual({
+    expect(seen(e)).toEqual(["hegemony"]);
+    expect(ev(e)).toEqual({
       "rc-function": "concept_wrong_primary",
       "rc-inference": "concept_wrong_secondary",
       hegemony: "exposure",

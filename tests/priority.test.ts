@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { decay, intervalFor, scoreItem, wordYield, type LoggedEvent } from "@/lib/priority/compute";
 import { allocateWords, assignVariants, rng } from "@/lib/priority/allocate";
 import { markPending, scoreAll } from "@/lib/priority/compute";
+import { NEW_KEY_SHARE, WORD_W } from "@/lib/priority/config";
 
 const now = new Date("2026-11-06T00:00:00Z");
 const daysAgo = (d: number) => new Date(now.getTime() - d * 86_400_000);
@@ -43,12 +44,43 @@ describe("priority math", () => {
     const apart = scoreItem("w", [at(e("key_missed", 0.8, 5), 1), at(e("dont_know", 1.0, 5), 2)], 0.5, now);
     expect(apart.weakEvidence).toBeCloseTo(1.8 * decay(5));
   });
+  it("a missed key outweighs a 'didn't know' tag, and tagging it too adds nothing", () => {
+    const at = (x: LoggedEvent, attemptId: number) => ({ ...x, attemptId });
+    expect(WORD_W.key_missed).toBeGreaterThan(WORD_W.dont_know);
+    const missed = scoreItem("w", [at(e("key_missed", WORD_W.key_missed, 5), 1)], 0.5, now);
+    const tagged = scoreItem("w", [at(e("dont_know", WORD_W.dont_know, 5), 1)], 0.5, now);
+    const both = scoreItem("w", [at(e("key_missed", WORD_W.key_missed, 5), 1), at(e("dont_know", WORD_W.dont_know, 5), 1)], 0.5, now);
+    expect(missed.S).toBeGreaterThan(tagged.S);
+    expect(both.S).toBeCloseTo(missed.S);
+  });
   it("passage exposure counts once per attempt for coverage", () => {
     const at = (x: LoggedEvent, attemptId: number) => ({ ...x, attemptId });
     const one = scoreItem("w", [1, 1, 1, 1].map((a) => at(e("exposure", 0, 5), a)), 0.5, now);
     expect(one.C).toBeCloseTo(0.15);
     const two = scoreItem("w", [1, 1, 2].map((a) => at(e("exposure", 0, 5), a)), 0.5, now);
     expect(two.C).toBeCloseTo(0.3);
+  });
+  it("seen_known counts once per attempt, and not where the word was tagged or judged", () => {
+    const at = (x: LoggedEvent, attemptId: number) => ({ ...x, attemptId });
+    const seen = (a: number) => at(e("seen_known", -0.3, 0), a);
+    const tag = at(e("dont_know", 1.0, 0), 1);
+    // shown on three questions of one test: one credit
+    const once = scoreItem("w", [tag, seen(2), seen(2), seen(2)], 0.5, now);
+    expect(once.mastery).toBeCloseTo(0.3);
+    expect(once.S).toBeCloseTo(1.5 / 2.8);
+    expect(scoreItem("w", [tag], 0.5, now).S).toBeCloseTo(1.5 / 2.5);
+    // two tests: two credits
+    expect(scoreItem("w", [tag, seen(2), seen(3)], 0.5, now).mastery).toBeCloseTo(0.6);
+    // tagged "didn't know" in that test: no credit
+    expect(scoreItem("w", [tag, seen(1)], 0.5, now).mastery).toBe(0);
+    // judged by an answer in that test: the answer's own event stands alone
+    expect(scoreItem("w", [at(e("key_correct", -0.6, 0), 2), seen(2)], 0.5, now).mastery).toBeCloseTo(0.6);
+    expect(scoreItem("w", [at(e("key_missed", 0.8, 0), 2), seen(2)], 0.5, now).mastery).toBe(0);
+    // no coverage, no streak
+    const plain = scoreItem("w", [seen(2)], 0.5, now);
+    expect(plain.C).toBe(0);
+    expect(plain.streak).toBe(0);
+    expect(plain.tested).toBe(false);
   });
   it("intervals follow the streak", () => {
     expect([0, 1, 2, 3, 4, 9].map(intervalFor)).toEqual([1, 3, 7, 14, 30, 30]);
@@ -176,6 +208,20 @@ describe("concept variants", () => {
     for (let seed = 1; seed <= 20; seed++) expect(new Set(assignVariants(["a", "a", "a"], variants, new Map(), rng(seed))).size).toBe(3);
   });
 
+  it("pins a revisit slot to its earlier item's variant, counted before the other slots pick", () => {
+    const used = new Map([["a", new Map([["a1", 3]])]]);
+    for (let seed = 1; seed <= 20; seed++) {
+      const out = assignVariants(["a", "a", "a"], variants, used, rng(seed), new Map([[2, "a1"]]));
+      expect(out[2]).toBe("a1");
+      expect(new Set(out.slice(0, 2))).toEqual(new Set(["a2", "a3"]));
+    }
+  });
+
+  it("ignores a pin that is not among the concept's variants", () => {
+    const used = new Map([["a", new Map([["a1", 2], ["a2", 1]])]]);
+    expect(assignVariants(["a"], variants, used, rng(1), new Map([[0, "retired form"]]))).toEqual(["a3"]);
+  });
+
   it("does not change the history it is given", () => {
     const used = new Map([["a", new Map([["a1", 1]])]]);
     assignVariants(["a"], variants, used, rng(1));
@@ -222,10 +268,11 @@ describe("new first while untested items remain", () => {
   const items = [...weak, ...seen, ...Array.from({ length: 12 }, (_, i) => `n${i}`)].map((id) => ({ id, yield: 0.5 }));
   const base = scoreAll(items, events, now);
 
-  it("gives half the slots to unexposed words, the rest to tested ones by P", () => {
+  it("gives NEW_KEY_SHARE of the slots to unexposed words, the rest to tested ones by P", () => {
+    const nNew = Math.round(8 * NEW_KEY_SHARE);
     const picks = allocateWords(base, 8, rng(1));
-    expect(picks.slice(0, 4).every((p) => p.bucket === "new" && p.itemId.startsWith("n"))).toBe(true);
-    expect(picks.slice(4).map((p) => p.itemId).sort()).toEqual(weak);
+    expect(picks.slice(0, nNew).every((p) => p.bucket === "new" && p.itemId.startsWith("n"))).toBe(true);
+    expect(picks.slice(nNew).every((p) => weak.includes(p.itemId))).toBe(true);
   });
 
   it("takes exposed-but-untested words once the unexposed run out, and fills with new when tested ones run dry", () => {

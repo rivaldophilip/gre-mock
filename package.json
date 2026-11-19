@@ -10,6 +10,7 @@
     "test": "vitest run",
     "seed": "tsx scripts/seed.ts",
     "brief": "tsx scripts/brief.ts",
+    "brief:drill": "tsx scripts/drill-brief.ts",
     "tag": "tsx scripts/tag-test.ts",
     "check": "tsx scripts/check-test.ts",
     "validate": "tsx scripts/validate-test.ts",
@@ -25,7 +26,8 @@
     "backfill:concepts": "tsx scripts/backfill-concept-events.ts",
     "cleanup:unanswered": "tsx scripts/cleanup-unanswered-events.ts",
     "rebuild:words": "tsx scripts/rebuild-word-events.ts",
-    "rebuild:slow": "tsx scripts/rebuild-slow-events.ts"
+    "rebuild:slow": "tsx scripts/rebuild-slow-events.ts",
+    "reweight": "tsx scripts/reweight-events.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",

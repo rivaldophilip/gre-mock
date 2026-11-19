@@ -1,0 +1,2003 @@
+{
+  "id": "drill-010",
+  "measure": "verbal",
+  "title": "Endless vocab batch 10",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "It would be easy to dismiss the amateur crew's bid for the channel record as trifling, given the shoestring budget, the pirate costumes and the brass band playing on deck. But a crew that sets out into a gale that has already sent the professional boats back to harbor is not merely playing, and the word its rivals settled on afterward, grudgingly, was ___.",
+      "choices": [
+        "trifling",
+        "mettlesome",
+        "credulous",
+        "nominal",
+        "plucky",
+        "mercurial"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The passage concedes the unserious surface (a tiny budget, costumes, a band) and then overrides it: sailing into a gale the professionals fled is 'not merely playing'. 'Grudgingly' says the rivals' word is praise they did not want to give, so the blank wants courage in the face of danger. Mettlesome and plucky both mean spirited and brave.",
+        "distractors": {
+          "trifling": "Trap pair with nominal: small, insignificant. The budget and costumes bait it, but the passage sets that reading aside ('not merely playing'), and 'grudgingly' marks the rivals' word as praise.",
+          "nominal": "Trap pair with trifling: in its sense of very small, existing in name only. Same bait, ruled out the same way: sailing into a gale is no token effort.",
+          "credulous": "Too ready to believe things. A rival might call the crew naive, but nothing here concerns belief, and 'grudgingly' marks the word as praise.",
+          "mercurial": "Volatile, changing mood quickly. Nothing in the passage describes the crew as erratic; their act is one steady, risky choice."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "trifling",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mettlesome",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "credulous",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nominal",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "plucky",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mercurial",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Reviewers read the general's memoir as genial (i) ___, full of the teasing he aimed at old rivals. Officers who had served under him knew better: the teasing was only the mildest form of a (ii) ___ disposition that had sought out quarrels all his life.",
+      "key": {
+        "sel": [
+          1,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Genial' and 'full of the teasing' describe good-humored ridicule: raillery. (ii) A disposition that 'sought out quarrels all his life' is combative: belligerent.",
+        "distractors": {
+          "logorrhea": "Excessive, rambling talk. A long memoir might invite it, but 'genial' and 'teasing' describe its humor, not its length.",
+          "dudgeon": "Deep resentment, as in 'high dudgeon'. That is closer to what the officers saw beneath the teasing, not what the reviewers read as genial.",
+          "glib": "Fluent but shallow. It suits a smooth memoirist, not a man who 'sought out quarrels'.",
+          "lachrymose": "Tearful, given to weeping. Nothing in his quarrelsomeness is sad."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "logorrhea",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "raillery",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dudgeon",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "glib",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "belligerent",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lachrymose",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "genial",
+          "role": "stem"
+        }
+      ],
+      "blanks": [
+        [
+          "logorrhea",
+          "raillery",
+          "dudgeon"
+        ],
+        [
+          "glib",
+          "belligerent",
+          "lachrymose"
+        ]
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The composer's notebooks show the symphony's great theme in ___ form years before the symphony itself: a four-note figure that she wrote down, worried at and abandoned a dozen times before it grew into the melody audiences know.",
+      "choices": [
+        "primordial",
+        "nebulous",
+        "inchoate",
+        "archetypal",
+        "sparse",
+        "rudimentary"
+      ],
+      "key": {
+        "sel": [
+          2,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "A four-note figure that later 'grew into the melody' is the theme at an early, undeveloped stage. Inchoate and rudimentary (just begun, not yet developed) both fit.",
+        "distractors": {
+          "primordial": "Trap pair with archetypal: existing from the very beginning, primeval. 'Years before' baits it, but the point is that the theme was unfinished, not that it was primeval.",
+          "archetypal": "Trap pair with primordial: being the original model of its kind. The figure was not a model others copied; it was an unfinished version of one melody.",
+          "nebulous": "Vague, hazy. A definite four-note figure is not hazy; it is merely undeveloped.",
+          "sparse": "Thinly scattered. Four notes are few, but 'sparse' says nothing about a theme that later grew."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "primordial",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nebulous",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inchoate",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "archetypal",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sparse",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rudimentary",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The engineers called the flood a disaster that no levee could have withstood, but the inquiry found the obstacle far from (i) ___: a levee two miles upstream, built to the same standard and properly kept, had held. What had failed were the county's inspections, so (ii) ___ that cracks reported in March were still unrepaired in October.",
+      "key": {
+        "sel": [
+          1,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) The engineers claimed the flood could not have been withstood; the inquiry's proof otherwise is a levee of the same standard that held. The obstacle was not impossible to overcome: insuperable. (ii) Cracks reported in March and left unrepaired until October show a failure of duty: negligent.",
+        "distractors": {
+          "aleatory": "Dependent on chance. The upstream levee shows the flood could be withstood, which answers 'impossible', not 'random'.",
+          "otiose": "Serving no purpose. The engineers' claim is about the flood's force, not about anything being pointless.",
+          "puerile": "Childish, silly. Leaving cracks unrepaired is neglect of duty, not immaturity.",
+          "officious": "Meddlesome, too eager to interfere. The inspectors did too little, not too much."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "aleatory",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "insuperable",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "otiose",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "negligent",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "puerile",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "officious",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ],
+      "blanks": [
+        [
+          "aleatory",
+          "insuperable",
+          "otiose"
+        ],
+        [
+          "negligent",
+          "puerile",
+          "officious"
+        ]
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "My grandmother's sourdough starter spent a year hidden behind the pickles, where no one thought to look for it. But its hiding place is not what surprised us; what surprised us was that it was not dead, only ___, and that a single feeding of flour and warm water had it bubbling by morning.",
+      "choices": [
+        "surreptitious",
+        "latent",
+        "obdurate",
+        "clandestine",
+        "quiescent",
+        "frugal"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "'Not dead, only ___' wants a state between life and death that one feeding can end: dormant, inactive but alive. Latent (present but not yet active) and quiescent (at rest, temporarily inactive) both give that sense.",
+        "distractors": {
+          "surreptitious": "Trap pair with clandestine: done secretly. 'Hidden behind the pickles' baits it, but the sentence sets the hiding place aside ('is not what surprised us'), and a starter does nothing on purpose.",
+          "clandestine": "Trap pair with surreptitious: kept secret, usually for an illicit purpose. Same bait, ruled out the same way.",
+          "obdurate": "Stubbornly refusing to change. It quickly responded to a single feeding.",
+          "frugal": "Sparing with money or resources. It describes thrift, not a dormant culture."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "surreptitious",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "latent",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obdurate",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "clandestine",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "quiescent",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "frugal",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "What began as a quarrel over a single line in the founders' cookbook, whether a sourdough may ever be hurried, has hardened within the town's baking guild into a ___, complete with two rival harvest festivals and members who no longer greet one another in the street.",
+      "choices": [
+        "schism",
+        "maxim",
+        "polemic",
+        "rift",
+        "apothegm",
+        "din"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The quarrel 'hardened' into something with two rival festivals and members who will not greet each other: a lasting split in the group. Schism (a split within an organization) and rift (a break in relations) both fit.",
+        "distractors": {
+          "maxim": "Trap pair with apothegm: a short, pithy saying. 'A single line in the founders' cookbook' baits it, but the line is what the quarrel was about, not what the quarrel became.",
+          "apothegm": "Trap pair with maxim: a terse saying of general truth. Same bait.",
+          "polemic": "A forceful written or spoken attack on a position. A quarrel can produce polemics, but two festivals and silent members describe a division, not an argument.",
+          "din": "A loud, continuing noise. The result described is silence between members."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "schism",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "maxim",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "polemic",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rift",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "apothegm",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "din",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "It would be wrong to call the neighbors' twenty-year dispute over the shared hedge threatening; neither has ever hinted at lawyers, let alone at anything worse. Nor, though, would anyone who has read the notes they still tape to each other's doors, notes their grown children cannot read without wincing, call the dispute anything short of ___.",
+      "choices": [
+        "minatory",
+        "conciliatory",
+        "acrimonious",
+        "ominous",
+        "perfunctory",
+        "rancorous"
+      ],
+      "key": {
+        "sel": [
+          2,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "Two negations frame the blank. The first sentence denies threat; 'Nor ... anything short of ___' then insists on a different quality, proved by notes that make the children wince over twenty years. That is long, deep bitterness. Acrimonious and rancorous both mean bitter and resentful.",
+        "distractors": {
+          "minatory": "Trap pair with ominous: threatening. The first sentence rules it out directly ('wrong to call ... threatening').",
+          "ominous": "Trap pair with minatory: menacing, suggesting harm to come. Ruled out by the same sentence.",
+          "conciliatory": "Intended to make peace. The no-lawyers clause baits it, but notes that make readers wince are not peace offerings.",
+          "perfunctory": "Done with minimal effort, as routine. Twenty years of wince-inducing notes show far too much feeling."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "minatory",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "conciliatory",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "acrimonious",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ominous",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "perfunctory",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rancorous",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Guests expect the ice hotel to be a fairy-tale caprice, and with its carved chandeliers it looks the part; but it takes forty workers six weeks and a small fortune in refrigeration to build, and what unsettles them in the end is not how playful it seems but how ___ it is, each April returning its vaulted suites to the river they were cut from.",
+      "choices": [
+        "transitory",
+        "fanciful",
+        "ornate",
+        "ephemeral",
+        "whimsical",
+        "acquisitive"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "'Not how playful it seems but how ___ it is' turns away from the hotel's look, and the participle phrase says what unsettles: every April it melts back into the river. The blank is about short duration. Transitory and ephemeral both mean lasting only briefly.",
+        "distractors": {
+          "fanciful": "Trap pair with whimsical: playfully imaginative. 'Fairy-tale caprice' baits it, but the sentence sets playfulness aside ('not how playful it seems') and the cost of building it shows it is no idle fancy.",
+          "whimsical": "Trap pair with fanciful: odd and playful, driven by whim. Ruled out by the same 'not ... but' turn.",
+          "ornate": "Elaborately decorated. The carved chandeliers bait it, but the April clause is about the hotel's melting, not its decoration.",
+          "acquisitive": "Eager to gain possessions. A hotel that gives itself back to the river is the opposite."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "transitory",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fanciful",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ornate",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ephemeral",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "whimsical",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "acquisitive",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "caprice",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "vaulted",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "For decades the national federation held a kind of (i) ___ over the regional football leagues: they drew up their own fixtures and hired their own referees, but any dealing with a foreign club had to pass through the capital. The new charter, far from dismantling this arrangement, merely redrew its borders, moving player transfers into the leagues' (ii) ___ while leaving broadcast rights where they had always been. Few club owners protested; their (iii) ___ to the federation had always rested on convenience rather than conviction, and convenience still argued for staying.",
+      "blanks": [
+        [
+          "clientelism",
+          "suzerainty",
+          "obscurantism"
+        ],
+        [
+          "hinterland",
+          "locus",
+          "purview"
+        ],
+        [
+          "fealty",
+          "nativism",
+          "badinage"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) The colon describes the arrangement: home affairs left to the leagues, foreign dealings controlled from the capital. That is suzerainty, dominion that runs another body's outside relations while leaving it internal self-rule. (ii) Transfers are moved into the leagues' range of authority: purview. (iii) What the owners owe the federation is allegiance, and the twist is that it rests on convenience: fealty, loyalty sworn to a superior.",
+        "distractors": {
+          "clientelism": "A system of trading favors for political support. The colon describes a division of powers, not an exchange of favors.",
+          "obscurantism": "Deliberately keeping things obscure or preventing knowledge. Nothing about the arrangement is concealed.",
+          "hinterland": "The remote region behind a coast or city. It names a place, not a range of authority that transfers can be moved into.",
+          "locus": "The place where something happens or is situated. It suggests a site, not jurisdiction, and 'the leagues' locus' says nothing about who decides.",
+          "nativism": "A policy of favoring native-born people over immigrants. It is not something one has 'to' a federation.",
+          "badinage": "Light, playful banter. Owners do not have banter to a federation, and the sentence is about why they stay loyal."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "clientelism",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "suzerainty",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obscurantism",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hinterland",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "locus",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "purview",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fealty",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nativism",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "badinage",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "When we tracked mud across her kitchen, my grandmother would (i) ___ us at length, in a voice the neighbors could hear. Worse was being made to apologize to whatever guests were present, which could (ii) ___ a child far more than any scolding. Her anger never lasted long, though: she seemed to (iii) ___ it into her baking, so that the worse our behavior, the more elaborate the cake that followed.",
+      "blanks": [
+        [
+          "mollify",
+          "exonerate",
+          "objurgate"
+        ],
+        [
+          "mortify",
+          "lambaste",
+          "gainsay"
+        ],
+        [
+          "dissemble",
+          "sublimate",
+          "perpetuate"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          0,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) Scolding 'at length, in a voice the neighbors could hear' is to rebuke sharply: objurgate. (ii) A forced apology in front of guests humiliates more than a scolding: mortify. (iii) Anger turned into elaborate cakes is redirected into something constructive: sublimate.",
+        "distractors": {
+          "mollify": "To soothe. A loud, long scolding is the opposite.",
+          "exonerate": "To clear of blame. She is blaming them.",
+          "lambaste": "To scold harshly. It is baited by the scolding, but the apology hurts 'far more than any scolding', so the blank cannot be another scolding.",
+          "gainsay": "To deny or contradict. Apologizing to guests contradicts no one.",
+          "dissemble": "To hide one's feelings behind a false show. Her anger was open; it was redirected, not disguised.",
+          "perpetuate": "To make last. 'Her anger never lasted long'."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "mollify",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exonerate",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "objurgate",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mortify",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lambaste",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "gainsay",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dissemble",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sublimate",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "perpetuate",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "elaborate",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Visitors who dismiss the harbor town's fish stew as a tourist concoction assume that only (i) ___ dishes deserve to be called traditional. Yet the stew's tomatoes and peppers came ashore with traders three centuries ago, and no one in the town thinks it any less their own for that. What the visitors offer as a test of authenticity is a standard carried from their own kitchens and applied to everyone else's: a judgment that is (ii) ___ at bottom, however much it passes for connoisseurship. The irony is that the plastic-lobster decor they sneer at as (iii) ___ is the one thing in the restaurant copied wholesale from the seaside resorts back home.",
+      "blanks": [
+        [
+          "syncretic",
+          "autochthonous",
+          "exogenous"
+        ],
+        [
+          "anthropocentric",
+          "manichaean",
+          "ethnocentric"
+        ],
+        [
+          "kitsch",
+          "obscurantism",
+          "exceptionalism"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) The rebuttal comes a sentence later: the stew's ingredients were introduced by traders. So the visitors' test is that a dish must be native to the place, nothing introduced: autochthonous. (ii) A standard from one's own kitchens imposed on everyone else's is judging another culture by one's own: ethnocentric. (iii) Plastic-lobster decor that people sneer at is cheap, gaudy taste: kitsch.",
+        "distractors": {
+          "syncretic": "Blending elements from different sources. It describes the stew the visitors reject, the reverse of what they demand.",
+          "exogenous": "Coming from outside. That is the very quality the visitors hold against the stew.",
+          "anthropocentric": "Treating humans as the center of everything. The bias here is of one culture against others, not of humans against nature.",
+          "manichaean": "Seeing things as a stark battle of good and evil. The visitors' fault is applying their own culture's yardstick, not dualism.",
+          "obscurantism": "Deliberately making things obscure. Decor is not sneered at as concealment.",
+          "exceptionalism": "The belief that one's nation or group is uniquely exempt from general rules. A word for an attitude, not for tacky decor."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "syncretic",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "autochthonous",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exogenous",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "anthropocentric",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "manichaean",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ethnocentric",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "kitsch",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obscurantism",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exceptionalism",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The valley's peach growers have learned to dread a heavy harvest. When the trees are full, the cannery, the only buyer within a day's drive, simply lowers its offer, and the growers, having nowhere else to sell, take it; the economists who study the valley call the arrangement (i) ___, though the growers have blunter words for it. One grower has found a partial hedge in preserves, whose sales are (ii) ___: flat or sagging in good years, when families eat out, they climbed through the lean years of the last decade, and it was the jam rather than the fresh fruit that paid her mortgage. And the orchard she nearly sold for a pittance during those years, never having valued it much, has done nothing since but (iii) ___, now that the new highway runs past its gate.",
+      "blanks": [
+        [
+          "clientelism",
+          "monopsony",
+          "entrepot"
+        ],
+        [
+          "buoyant",
+          "countercyclical",
+          "endogenous"
+        ],
+        [
+          "coruscate",
+          "appreciate",
+          "relegate"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          1,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) One buyer, many sellers with nowhere else to go, and the buyer sets the price: monopsony. (ii) Sales that sag in good years and climb in bad ones move against the economic cycle: countercyclical. (iii) Land nearly sold for a pittance, now beside a new highway, has gone up in value: appreciate, in its sense of increasing in value. 'Never having valued it much' baits the everyday sense of valuing something, but the land is the subject, and land does not admire anything.",
+        "distractors": {
+          "clientelism": "A system of exchanging favors for political loyalty. The arrangement is a market with one buyer, not patronage.",
+          "entrepot": "A port or trading center where goods are imported and re-exported. It names a place, not a market condition.",
+          "buoyant": "Strong and rising, as of sales or prices. The colon says the sales sag in good years, so they are not buoyant in general; what matters is that they run opposite to the cycle.",
+          "endogenous": "Arising from within a system. Nothing describes where the sales originate; the point is their timing against the economy.",
+          "coruscate": "To sparkle or flash. Land does not sparkle because a highway arrives.",
+          "relegate": "To assign to a lower rank or place. It needs an object and points the wrong way: the land rose."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "clientelism",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "monopsony",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "entrepot",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "buoyant",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "countercyclical",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "endogenous",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "coruscate",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "appreciate",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "relegate",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "partial",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "pittance",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The old backpackers' rule, eat where the locals eat, was only ever a (i) ___ device: a quick way of narrowing the choices in a strange city, not a promise of a good meal. A recent essay sets out to (ii) ___ it, observing that locals crowd plenty of mediocre places out of habit or thrift. Yet the essay's deeper quarrel is (iii) ___ rather than culinary, since what it really asks is how a traveler with no palate for the cuisine could tell whose judgment to trust in the first place.",
+      "blanks": [
+        [
+          "illusionistic",
+          "heuristic",
+          "formalist"
+        ],
+        [
+          "substantiate",
+          "emulate",
+          "problematize"
+        ],
+        [
+          "phenomenological",
+          "epistemological",
+          "intertextual"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) A rule of thumb that narrows choices without guaranteeing the result is heuristic: an aid to discovery that claims no rigor. (ii) The essay shows the rule is more doubtful than it looks (locals crowd mediocre places too): problematize. (iii) The final question is how a traveler could know whose judgment to trust, a question about knowledge and justification: epistemological.",
+        "distractors": {
+          "illusionistic": "Creating an illusion, as in painting. 'Not a promise of a good meal' baits it, but the rule is not described as deceptive; it is a shortcut.",
+          "formalist": "Concerned with form or rules over content. It does not describe a quick practical shortcut.",
+          "substantiate": "To support with evidence. The essay's observation undercuts the rule rather than supporting it.",
+          "emulate": "To imitate in order to match. The essay questions the rule; it does not copy it.",
+          "phenomenological": "Concerned with how things are experienced. The question is not what the meal feels like but how one could know whom to trust.",
+          "intertextual": "Concerned with how texts refer to other texts. Nothing here concerns texts referring to one another."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "illusionistic",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "heuristic",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "formalist",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "substantiate",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "emulate",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "problematize",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "phenomenological",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "epistemological",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "intertextual",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "thrift",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Hikers who reach the bare summit ridge often assume a fire stripped it, but no fire was needed: ten thousand years of wind and frost have worked a slow (i) ___, carrying the soil downhill grain by grain until only the granite was left. That granite is now the sole (ii) ___ on which the orange lichens grow, and they draw nothing from it but a place to hold on. The gray jays that haunt the summit cairn are often called pests, but the word overstates the case; their tie to the hikers is merely (iii) ___, a matter of living off dropped crumbs that no hiker misses.",
+      "blanks": [
+        [
+          "precession",
+          "denudation",
+          "speciation"
+        ],
+        [
+          "locus",
+          "hinterland",
+          "substrate"
+        ],
+        [
+          "commensal",
+          "maladaptive",
+          "conspecific"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) Wind and frost wearing the soil away until bare rock shows is denudation. (ii) The layer on which the lichens grow is their substrate. (iii) 'Pests' overstates it: the jays benefit from the hikers' crumbs while the hikers lose nothing they miss, so the relation is commensal, one side gaining and the other unaffected.",
+        "distractors": {
+          "precession": "The slow wobble of a spinning body's axis, as of the earth's. It is slow, but it moves no soil.",
+          "speciation": "The formation of new species. Erosion of a ridge is not a biological process.",
+          "locus": "The place where something happens. It does not take 'on which ... grow' as substrate does, and it names a site rather than an underlying layer.",
+          "hinterland": "The remote area behind a coast or city. A rock surface is not a hinterland.",
+          "maladaptive": "Harmful to the organism's survival. The jays thrive on the crumbs.",
+          "conspecific": "Belonging to the same species. Jays and hikers are not."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "precession",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "denudation",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "speciation",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "locus",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hinterland",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "substrate",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "commensal",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "maladaptive",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "conspecific",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "summit",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Commentators like to tell the history of tennis tactics as (i) ___, each style provoking its opposite: the serve-and-volleyer bred the counterpunching baseliner, who bred in turn the power baseliner. The account is tidy, but it hides how change actually arrived, which was less through any steady exchange of counters than through (ii) ___, as when a new racket material added a third to the speed of the ball within two seasons and stranded a generation of styles overnight.",
+      "blanks": [
+        [
+          "polyphonic",
+          "dialectical",
+          "syncretic"
+        ],
+        [
+          "saltation",
+          "coevolution",
+          "exaptation"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) Each style provoking its opposite, which in turn provokes a new style, is development through the clash of opposites: dialectical. (ii) 'Less through any steady exchange of counters than through ___' sets the blank against the first account, and the example decides it: a sudden jump in ball speed that stranded styles overnight. That is saltation, an abrupt leap.",
+        "distractors": {
+          "polyphonic": "Made of many independent voices. The account is a chain of opposites, not many parallel lines.",
+          "syncretic": "Blending different traditions together. Each style is said to provoke its opposite, not merge with it.",
+          "coevolution": "Two parties evolving in response to each other. It fits the first sentence's exchange of counters, which is exactly what the 'less ... than' frame sets aside in favor of an abrupt change.",
+          "exaptation": "A trait that evolved for one use being taken over for another. The racket material did not change function; it changed speeds suddenly."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "polyphonic",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dialectical",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "syncretic",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "saltation",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "coevolution",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exaptation",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "At the temple, the guides recite the priestly (i) ___ in which the world hatches from a golden egg; few visitors ever hear the fishing villages' version, in which a cormorant dredges the first land up from the sea. That second account survives only because one folklorist took the trouble to record the (ii) ___ voices that the temple chronicles, written by and for the court, had never deigned to include.",
+      "blanks": [
+        [
+          "animism",
+          "typology",
+          "cosmogony"
+        ],
+        [
+          "millenarian",
+          "subaltern",
+          "matrilineal"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) A story of how the world came to be (hatching from an egg, land dredged from the sea) is a cosmogony. (ii) Voices left out of chronicles 'written by and for the court' belong to people outside power and outside official history: subaltern.",
+        "distractors": {
+          "animism": "The belief that natural objects have souls. It is a religious outlook, not an account of the world's origin.",
+          "typology": "A classification by types. The guides recite a story, not a classification.",
+          "millenarian": "Expecting a coming age of radical change or the end of the world. The villagers' story is about the beginning, not the end.",
+          "matrilineal": "Tracing descent through the mother. Nothing concerns lineage; the contrast is court versus villagers."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "animism",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "typology",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cosmogony",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "millenarian",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "subaltern",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "matrilineal",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "deign",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Nobody in my mother's house ever stated a rule outright; she governed by (i) ___, so that 'I wonder whether the dishes plan to wash themselves' did the work of a command. Visitors took the household for one with no discipline at all, when in fact its order was (ii) ___, built into the rhythm of the day rather than handed down from any list on the refrigerator.",
+      "blanks": [
+        [
+          "badinage",
+          "periphrasis",
+          "polemic"
+        ],
+        [
+          "exogenous",
+          "nominal",
+          "immanent"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) Rules never stated outright, and a roundabout remark doing the work of a command, describe governing by indirect language: periphrasis. (ii) 'In fact' overturns the visitors' view, and the order is located inside the day's rhythm rather than imposed from a posted list: immanent, operating from within.",
+        "distractors": {
+          "badinage": "Light, teasing banter between people. The remark sounds playful, but the point is that it was a command put indirectly, and banter is an exchange, not a way of giving orders.",
+          "polemic": "A forceful attack on a position. The mother's method is the opposite of forceful.",
+          "exogenous": "Coming from outside. The sentence says the order did not come from outside (no list was handed down).",
+          "nominal": "Existing in name only. That is the visitors' mistaken view, which 'in fact' reverses."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "badinage",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "periphrasis",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "polemic",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exogenous",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nominal",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "immanent",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The club prides itself on (i) ___: it fields players from its own academy, grows the grass for its pitch on its own turf farm, and has not bought a player or borrowed a cent in forty years. The irony is that its founders built the team in an era when players were mere (ii) ___, bought and sold between owners with no say in where they would play.",
+      "blanks": [
+        [
+          "nativism",
+          "autarky",
+          "exceptionalism"
+        ],
+        [
+          "chattel",
+          "specie",
+          "congener"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) Its own players, its own grass, no purchases and no loans: self-sufficiency, avoiding dependence on outside trade, which is autarky. (ii) Players bought and sold with no say were treated as movable property: chattel.",
+        "distractors": {
+          "nativism": "Favoring native-born people over immigrants. The academy detail baits it, but the turf farm and the refusal to borrow show the pride is in self-sufficiency, not in birthplace.",
+          "exceptionalism": "The belief that one is uniquely exempt from general rules. The colon lists self-reliant practices, not a claim to special status.",
+          "specie": "Money in the form of coins. 'Bought and sold' baits it, but players were the goods traded, not the money paid.",
+          "congener": "A member of the same genus or kind. It says nothing about being owned or traded."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "nativism",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "autarky",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exceptionalism",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "chattel",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "specie",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "congener",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The league's suspension of the striker was denounced by his club as draconian and by his critics as a slap on the wrist; but that both camps are furious is not, as the commissioner insisted, proof that the punishment was ___, since a penalty can draw fire from every side simply by being arbitrary.",
+      "blanks": [
+        [
+          "perfunctory",
+          "facultative",
+          "condign",
+          "obdurate",
+          "profligate"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The commissioner reasons that anger from both sides shows the penalty was neither too harsh nor too lenient, that is, exactly what was deserved. The writer denies the inference, not its conclusion's meaning. The word for a punishment that fits and is deserved is condign.",
+        "distractors": {
+          "perfunctory": "Done routinely, with minimal effort. 'Slap on the wrist' baits it, but that is the critics' view, and the commissioner would not offer both camps' fury as proof of it.",
+          "facultative": "Optional, permitted but not required. Whether the penalty was optional is not at issue.",
+          "obdurate": "Stubbornly unyielding. It describes a person, and the question is whether the penalty fit the offense.",
+          "profligate": "Recklessly wasteful or extravagant. Nothing about the penalty concerns waste."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "perfunctory",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "facultative",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "condign",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obdurate",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "profligate",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "denounce",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "draconian",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "arbitrary",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Nutritionists once credited the hill village's famous longevity to its red wine, but the wine now looks ___: the most active villagers drank the most because a day on the terraces left them thirsty, and it was the climbing, not the drinking, that kept them alive.",
+      "blanks": [
+        [
+          "endogenous",
+          "epiphenomenal",
+          "maladaptive",
+          "conspicuous",
+          "littoral"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The drinking turns out to be a by-product of the climbing (a day on the terraces made them thirsty), and the climbing did the causal work. A side effect that causes nothing is epiphenomenal.",
+        "distractors": {
+          "endogenous": "Arising from within a system. It does not capture the point that the wine was a side effect with no causal role.",
+          "maladaptive": "Harmful to survival. The sentence says the wine did not cause long life, not that it shortened it.",
+          "conspicuous": "Easily noticed. The wine was noticed, which is why it got the credit, but the colon explains a lack of causal role, not visibility.",
+          "littoral": "Relating to a shore. A hill village's wine has nothing to do with coasts."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "endogenous",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "epiphenomenal",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "maladaptive",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "conspicuous",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "littoral",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    }
+  ]
+}

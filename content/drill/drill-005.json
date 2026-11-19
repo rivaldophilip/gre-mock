@@ -1,0 +1,1978 @@
+{
+ "id": "drill-005",
+ "measure": "verbal",
+ "title": "Endless vocab batch 5",
+ "sections": [
+  {
+   "n": 1,
+   "minutes": 60
+  },
+  {
+   "n": 2,
+   "minutes": 1
+  }
+ ],
+ "passages": [],
+ "figures": [],
+ "questions": [
+  {
+   "id": "s1q1",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "The new comptroller never once raised his voice in a meeting, and colleagues who judged him by his manner took him for a placid man; his memos told another story, so ___ that a single misplaced decimal could draw three paragraphs of petty, wounded grievance, all set down in the same flat, measured prose.",
+   "choices": [
+    "undemonstrative",
+    "splenetic",
+    "raucous",
+    "imperturbable",
+    "peevish",
+    "boisterous"
+   ],
+   "key": {
+    "sel": [
+     1,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "'Told another story' sets the memos against the placid manner, and the result clause names what they show: petty, wounded grievance over a trivial error. The blank wants irritable spite. Splenetic and peevish both say it; splenetic is the more bitter of the two, but each gives the sentence the same sense.",
+    "distractors": {
+     "raucous": "Trap pair with boisterous: loud and harsh. The memos are written in 'flat, measured prose', so their fault is spite, not noise.",
+     "boisterous": "Trap pair with raucous: noisy and rowdy. Nothing in the memos is loud; the closing phrase rules out their shared meaning.",
+     "undemonstrative": "Reserved, not showing feeling. It describes the comptroller's manner, which is exactly what the memos contradict.",
+     "imperturbable": "Unshakably calm. That is how colleagues misread him; the memos show a man thrown by a single decimal."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "undemonstrative",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "splenetic",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "raucous",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "imperturbable",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "peevish",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "boisterous",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "placid",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q2",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "When the young economist argued that the central bank's own rate rises were feeding inflation, senior colleagues dismissed the claim as ___; no one suspected her of trying to undermine the bank or stir up unrest against it, only of straying too far from what every textbook taught.",
+   "choices": [
+    "subversion",
+    "orthodox",
+    "heterodox",
+    "sedition",
+    "dogmatism",
+    "heretical"
+   ],
+   "key": {
+    "sel": [
+     2,
+     5
+    ]
+   },
+   "explanation": {
+    "key": "The last clause defines the charge: straying from what every textbook teaches. The claim departs from accepted doctrine, so heterodox and heretical both fit.",
+    "distractors": {
+     "subversion": "Trap pair with sedition: an attempt to undermine an established authority. The sentence says no one suspected her of trying to undermine the bank.",
+     "sedition": "Trap pair with subversion: incitement to rebellion against authority. 'Stir up unrest against it' is ruled out in so many words.",
+     "orthodox": "Conforming to accepted belief, the opposite of a claim that strays from the textbooks.",
+     "dogmatism": "Rigid insistence on a fixed doctrine. Her fault was departing from doctrine, not clinging to it."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "subversion",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "orthodox",
+     "role": "distractor",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "heterodox",
+     "role": "key",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "sedition",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "dogmatism",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "heretical",
+     "role": "key",
+     "at": [
+      5
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "undermine",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q3",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "The warehouse union drive that alarmed the logistics firm's directors was not new at all but ___: the same organizing had thrived in those depots decades earlier, gone dormant through the long boom, and returned now with its once-feuding factions united behind a single slate.",
+   "choices": [
+    "recrudescent",
+    "nascent",
+    "rift",
+    "resurgent",
+    "estranged",
+    "rent"
+   ],
+   "key": {
+    "sel": [
+     0,
+     3
+    ]
+   },
+   "explanation": {
+    "key": "'Not new at all but ___' and the colon spell out the history: it thrived, went dormant, and returned. The blank wants a word for breaking out again after inactivity. Recrudescent (the clinical word, used of a disease that flares up after remission) and resurgent (rising again) give the same sense.",
+    "distractors": {
+     "rift": "Trap pair with rent: a split or breach. The factions are now 'united', which rules out their shared meaning, and a bare noun cannot follow 'not new at all but'.",
+     "rent": "Trap pair with rift: a tear, a breach in relations. Same problem: the drive returned unified, not divided.",
+     "nascent": "Just coming into being. It is the decoy for a reader who sees 'new' and misses 'not new at all'.",
+     "estranged": "Alienated from someone once close. It suits the old feuding factions at most, and they are now reconciled; it says nothing about the drive returning."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "recrudescent",
+     "role": "key",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "nascent",
+     "role": "distractor",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "rift",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "resurgent",
+     "role": "key",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "estranged",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "rent",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "dormant",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q4",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "The judge took care to say that the directors had deceived no one and pocketed nothing; their failing was that they had approved three years of accounts without reading them. She found them ___ in their duty of oversight, and nothing worse.",
+   "choices": [
+    "remiss",
+    "legerdemain",
+    "derelict",
+    "provident",
+    "artifice",
+    "malfeasance"
+   ],
+   "key": {
+    "sel": [
+     0,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "The failing is neglect: signing accounts unread. 'Remiss in' and 'derelict in their duty' both mean negligent in performing it, and 'nothing worse' keeps the charge at carelessness.",
+    "distractors": {
+     "legerdemain": "Trap pair with artifice: sleight of hand, trickery. The judge said the directors deceived no one.",
+     "artifice": "Trap pair with legerdemain: clever deception. Ruled out by 'deceived no one'.",
+     "provident": "Prudent in providing for the future, a compliment; the sentence is assigning a fault.",
+     "malfeasance": "Wrongdoing, especially by an official. That is the 'something worse' the judge declined to find, and as a noun it cannot follow 'found them'."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "remiss",
+     "role": "key",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "legerdemain",
+     "role": "distractor",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "derelict",
+     "role": "key",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "provident",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "artifice",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "malfeasance",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q5",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "Admirers put the bargain down to the chief executive's insight into the target's business, and he never troubled to correct them; but the target's directors, who learned only after the signing where the reports of a rival bidder had come from, came to think him less perceptive than ___.",
+   "choices": [
+    "perspicacious",
+    "subsume",
+    "wily",
+    "incorporate",
+    "unguided",
+    "artful"
+   ],
+   "key": {
+    "sel": [
+     2,
+     5
+    ]
+   },
+   "explanation": {
+    "key": "The directors learn afterward where the rumors of a rival bid came from, and the implication is that he planted them to hurry the sale. 'Less perceptive than ___' puts the blank against insight: what he really had was cunning. Wily and artful both mean crafty in getting an advantage.",
+    "distractors": {
+     "perspicacious": "Acutely perceptive. It fits the admirers' story, the nearest reading, but 'less perceptive than perspicacious' contrasts the word with itself; the directors' view replaces insight with something else.",
+     "subsume": "Trap pair with incorporate: to absorb into a larger whole, the word the takeover suggests. The blank needs a description of the man, and a verb cannot be one.",
+     "incorporate": "Trap pair with subsume: to take in as part of something. It names what an acquirer does to a target, not what this chief executive is.",
+     "unguided": "Lacking direction. A rumor timed to push a sale through is anything but aimless."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "perspicacious",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "subsume",
+     "role": "distractor",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "wily",
+     "role": "key",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "incorporate",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "unguided",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "artful",
+     "role": "key",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q6",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "The courtship between the two retailers was ___ from the start, all breathless joint announcements and talk of a merger within weeks, yet it brought neither firm the slightest benefit, and it was over within a year.",
+   "choices": [
+    "symbiosis",
+    "fervid",
+    "abrasive",
+    "torrid",
+    "practicable",
+    "mutualism"
+   ],
+   "key": {
+    "sel": [
+     1,
+     3
+    ]
+   },
+   "explanation": {
+    "key": "The apposition ('breathless joint announcements', 'a merger within weeks') describes intense, feverish passion. Fervid and torrid (in its figurative sense) both mean that.",
+    "distractors": {
+     "symbiosis": "Trap pair with mutualism: a relationship that benefits both parties. The sentence says it brought neither firm the slightest benefit.",
+     "mutualism": "Trap pair with symbiosis: an association in which each side gains. Ruled out by the same clause.",
+     "abrasive": "Harsh and grating. The firms were courting eagerly, not rubbing each other the wrong way.",
+     "practicable": "Able to be done, feasible. It describes a plan, not the heat of a courtship."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "symbiosis",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "fervid",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "abrasive",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "torrid",
+     "role": "key",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "practicable",
+     "role": "distractor",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "mutualism",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q7",
+   "section": 1,
+   "type": "se",
+   "difficulty": 5,
+   "prompt": "Consumer advocates had denounced mandatory arbitration clauses at every hearing for a decade, so the agency's plan to require such clauses in all card agreements became the ___ of the very groups it claimed to have consulted; no one could seriously suggest they had devised it as a ploy of their own.",
+   "choices": [
+    "gambit",
+    "exponent",
+    "anathema",
+    "precursor",
+    "bane",
+    "stratagem"
+   ],
+   "key": {
+    "sel": [
+     2,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "A decade of denouncing such clauses means the advocates loathe the plan. Anathema (a thing intensely loathed) and bane (a source of misery) both fit.",
+    "distractors": {
+     "gambit": "Trap pair with stratagem: a calculated opening move. 'The gambit of the groups' would make it their scheme, which the last clause rules out.",
+     "stratagem": "Trap pair with gambit: a ruse or scheme. 'No one could seriously suggest they had devised it as a ploy' rules out their shared meaning.",
+     "exponent": "An advocate or champion. The groups opposed the clauses rather than promoting them.",
+     "precursor": "Something that comes before and leads to another. The plan did not come before the groups; it offended them."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "gambit",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "exponent",
+     "role": "distractor",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "anathema",
+     "role": "key",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "precursor",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "bane",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "stratagem",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "advocate",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "denounce",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q8",
+   "section": 1,
+   "type": "se",
+   "difficulty": 4,
+   "prompt": "The founder had resisted for weeks, but in the end she chose to ___ to the investors' demand for an independent chair, signing the revised terms without another word of protest.",
+   "choices": [
+    "hector",
+    "assent",
+    "abhor",
+    "badger",
+    "accede",
+    "disentangle"
+   ],
+   "key": {
+    "sel": [
+     1,
+     4
+    ]
+   },
+   "explanation": {
+    "key": "'Resisted for weeks, but in the end' and 'signing ... without another word of protest' mean she agreed. 'Assent to' and 'accede to' both say she agreed; accede also carries the earlier resistance.",
+    "distractors": {
+     "hector": "Trap pair with badger: to bully or harass. The investors may have pressed her, but she is the one yielding here, and neither verb takes 'to the demand'.",
+     "badger": "Trap pair with hector: to pester persistently. That describes the investors' side, not her final act of agreeing.",
+     "abhor": "To loathe. She signs without protest, so whatever she felt, the act is agreement.",
+     "disentangle": "To free from a tangle. She binds herself to the terms rather than freeing herself from anything."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "hector",
+     "role": "distractor",
+     "at": [
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "assent",
+     "role": "key",
+     "at": [
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "abhor",
+     "role": "distractor",
+     "at": [
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "badger",
+     "role": "distractor",
+     "at": [
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "accede",
+     "role": "key",
+     "at": [
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "disentangle",
+     "role": "distractor",
+     "at": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q9",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "The majority opinion offered a painstaking (i) ___ of the 1934 securities statute, parsing each clause against the drafting history. The dissent, however, gave that reading little (ii) ___: a text amended so often, it argued, could not yield a single original meaning, and the majority's conclusion was therefore anything but (iii) ___.",
+   "blanks": [
+    [
+     "adulteration",
+     "exegesis",
+     "attenuation"
+    ],
+    [
+     "animus",
+     "remuneration",
+     "credence"
+    ],
+    [
+     "ineluctable",
+     "conjectural",
+     "convoluted"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2,
+     0
+    ]
+   },
+   "explanation": {
+    "key": "(i) Parsing each clause against its history is critical interpretation of a text: exegesis. (ii) 'However' sets the dissent against the reading, and the colon gives its reason for doubting it, so it gave the reading little credence (belief). (iii) If the text cannot yield one meaning, the conclusion is not forced on anyone: 'anything but ineluctable' (anything but inevitable). The double negative is the trap: a reader who keys on the doubt picks conjectural, which reverses the sense.",
+    "distractors": {
+     "adulteration": "Making something impure by adding inferior matter. The majority interpreted the statute; it did not corrupt it.",
+     "attenuation": "A weakening or thinning. Parsing clauses against history is explanation, not dilution.",
+     "animus": "Hostility. 'Gave that reading little animus' would mean the dissent was not hostile, the reverse of its argument.",
+     "remuneration": "Payment for work. A reading cannot be given pay.",
+     "conjectural": "Based on guesswork. 'Anything but conjectural' would mean the conclusion is certain, which is the opposite of the dissent's point.",
+     "convoluted": "Intricate and hard to follow. The dissent attacks the conclusion's certainty, not its complexity, and 'anything but convoluted' would praise it as simple."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "adulteration",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "exegesis",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "attenuation",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "animus",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "remuneration",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "credence",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "ineluctable",
+     "role": "key",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "conjectural",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "convoluted",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "painstaking",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "dissent",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q10",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "After it managed to (i) ___ its two main rivals in the regional market, the company grew not just rich but (ii) ___, cutting its research budget and treating each quarter's profits as proof that nothing could touch it. When a small startup arrived with a cheaper product, the firm took eighteen months to answer, showing none of the (iii) ___ with which it had once matched a competitor's every move within weeks.",
+   "blanks": [
+    [
+     "cosset",
+     "vanquish",
+     "anoint"
+    ],
+    [
+     "solvent",
+     "idolatrous",
+     "complacent"
+    ],
+    [
+     "celerity",
+     "idiosyncrasy",
+     "proclivity"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2,
+     0
+    ]
+   },
+   "explanation": {
+    "key": "(i) Winning the market from two rivals means defeating them thoroughly: vanquish. (ii) The participle clause describes smug self-satisfaction blind to danger ('proof that nothing could touch it'): complacent. (iii) 'Eighteen months' is set against matching every move 'within weeks', so the lost quality is swiftness: celerity.",
+    "distractors": {
+     "cosset": "To pamper. Nobody pampers the rivals it drove out of the market.",
+     "anoint": "To designate formally for a role, or consecrate. It does not describe beating competitors.",
+     "solvent": "Able to pay all debts. 'Not just rich but' asks for something beyond financial health, and the following clause is about attitude.",
+     "idolatrous": "Blindly devoted to someone or something. The firm is smug about itself, not worshipful of anything.",
+     "idiosyncrasy": "A peculiar habit. What the firm lost is speed, measured in weeks against months.",
+     "proclivity": "A natural tendency. 'Showing none of the proclivity with which it matched' has no object, and the contrast is about speed."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "cosset",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "vanquish",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "anoint",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "solvent",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "idolatrous",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "complacent",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "celerity",
+     "role": "key",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "idiosyncrasy",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "proclivity",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q11",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "Development economists who (i) ___ on why villagers in the region save so little seldom set foot there, and their models read the shortfall as a lapse of foresight; whatever else may be said of the models, they are never tentative about it. Fieldwork suggests that what looks like improvidence is in fact fidelity to the region's (ii) ___, under which a surplus withheld from needy kin counts as a kind of theft. By local lights, then, the thrifty household the models hold up as exemplary is the (iii) ___ of a good neighbor.",
+   "blanks": [
+    [
+     "waffle",
+     "inculcate",
+     "opine"
+    ],
+    [
+     "mores",
+     "idiosyncrasy",
+     "proclivity"
+    ],
+    [
+     "zenith",
+     "antithesis",
+     "exponent"
+    ]
+   ],
+   "key": {
+    "sel": [
+     2,
+     0,
+     1
+    ]
+   },
+   "explanation": {
+    "key": "(i) The clue arrives a clause later: the models are 'never tentative', so the economists state firm views: opine. (ii) 'Fidelity to' and 'under which ... counts as a kind of theft' describe a binding moral code shared by the region: mores. (iii) 'By local lights, then' draws the conclusion from the second sentence. If withholding a surplus is theft, the saver the models admire is the opposite of a good neighbor: antithesis. The models' praise ('exemplary') points the careless reader to the top of the scale.",
+    "distractors": {
+     "waffle": "To equivocate. 'Who waffle on why villagers save so little' reads smoothly, but the next clause says the models are never tentative.",
+     "inculcate": "To instill by repetition. It needs an object and a target ('inculcate thrift in'), and the economists are explaining, not teaching.",
+     "idiosyncrasy": "A peculiarity of one person or thing. What the villagers are faithful to is a shared rule that defines theft, not a quirk.",
+     "proclivity": "A natural tendency. A leaning cannot make something count as theft; only a moral code can, and 'fidelity to' wants one.",
+     "zenith": "The highest point. It matches the models' 'exemplary', but the sentence gives the local view, under which the saver is a thief.",
+     "exponent": "An advocate or leading example. Same problem as zenith: it repeats the models' praise, which local custom reverses."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "waffle",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "inculcate",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "opine",
+     "role": "key",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "mores",
+     "role": "key",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "idiosyncrasy",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "proclivity",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "zenith",
+     "role": "distractor",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "antithesis",
+     "role": "key",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "exponent",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "tentative",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "fidelity",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q12",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "The contractor had promised prosecutors that he would (i) ___ on the officials who had taken his bribes, in exchange for a lighter sentence. When the trial opened, however, he chose to (ii) ___ on that promise, and without his testimony city hall's long tradition of (iii) ___ went unpunished once again.",
+   "blanks": [
+    [
+     "abet",
+     "inform",
+     "pillory"
+    ],
+    [
+     "renege",
+     "dovetail",
+     "abound"
+    ],
+    [
+     "tact",
+     "frivolity",
+     "graft"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     0,
+     2
+    ]
+   },
+   "explanation": {
+    "key": "(i) A promise to prosecutors traded for leniency is a promise to betray the officials to the authorities: 'inform on', not inform in its everyday sense of telling. (ii) 'However' and 'without his testimony' show he went back on the deal: renege on. (iii) Officials taking bribes is dishonest gain through public office: graft, not graft in its everyday sense of hard work or a grafted shoot.",
+    "distractors": {
+     "abet": "To help someone commit a wrong. He already did that by paying the bribes; what he promised prosecutors was the reverse.",
+     "pillory": "To ridicule publicly. A witness gives testimony; mocking the officials would earn him no lighter sentence, and it takes no 'on'.",
+     "dovetail": "To fit together neatly. 'Without his testimony' shows the promise was broken, not fulfilled.",
+     "abound": "To exist in great numbers. A person cannot abound on a promise.",
+     "tact": "Skill in handling people delicately. It is not something that goes unpunished.",
+     "frivolity": "Lack of seriousness. Taking bribes is a crime, not levity."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "abet",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "inform",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "pillory",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "renege",
+     "role": "key",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "dovetail",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "abound",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "tact",
+     "role": "distractor",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "frivolity",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "graft",
+     "role": "key",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q13",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "The consultants promised that the new floor, with its low couches and lamps dimmed to rest the eyes, would leave the analysts more alert; by mid-afternoon, however, the room was so (i) ___ that the only sounds were the hum of the vents and an occasional snore. The manager who had paid for the redesign could hardly reprimand staff for using the furniture exactly as intended, so he could only (ii) ___ from the doorway at the half-dozen figures (iii) ___ on the couches.",
+   "blanks": [
+    [
+     "vocal",
+     "undemonstrative",
+     "somnolent"
+    ],
+    [
+     "hector",
+     "glower",
+     "respire"
+    ],
+    [
+     "recumbent",
+     "lissome",
+     "convalescent"
+    ]
+   ],
+   "key": {
+    "sel": [
+     2,
+     1,
+     0
+    ]
+   },
+   "explanation": {
+    "key": "(i) 'More alert; ... however' reverses the promise, and the snore settles which quiet it was: drowsy, somnolent. (ii) He 'could hardly reprimand' them, so his displeasure has to stay wordless: glower, a sullen angry stare. (iii) Figures on couches in a room where people snore are lying down: recumbent.",
+    "distractors": {
+     "vocal": "Outspoken and loud. It is the lively room the consultants promised, and 'however' and the near silence rule it out.",
+     "undemonstrative": "Reserved, not showing feeling. It fits the quiet locally, but it describes a temperament, and the snore shows the staff were asleep, not merely restrained.",
+     "hector": "To bully or harangue. It fits his anger, but he 'could hardly reprimand' them, so whatever he did was silent.",
+     "respire": "To breathe. Breathing at someone from a doorway expresses nothing.",
+     "lissome": "Supple and graceful. It describes how a body moves, not that it is lying still.",
+     "convalescent": "Recovering from illness. It suits people lying about, but the couches, not a sickness, put them there."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "vocal",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "undemonstrative",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "somnolent",
+     "role": "key",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "hector",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "glower",
+     "role": "key",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "respire",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "recumbent",
+     "role": "key",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "lissome",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "convalescent",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q14",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 5,
+   "prompt": "Executives moved from the company's (i) ___ suburban campus, with its lawns and wooded trails, to a cramped downtown tower, and many of them often (ii) ___ for the old grounds. Few of them, however, missed the (iii) ___ atmosphere of the campus's research wing, where talk was so specialized that a visitor from sales could follow none of it.",
+   "blanks": [
+    [
+     "vaulted",
+     "verdant",
+     "poignant"
+    ],
+    [
+     "attune",
+     "transcend",
+     "pine"
+    ],
+    [
+     "rarefied",
+     "gracious",
+     "incisive"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     2,
+     0
+    ]
+   },
+   "explanation": {
+    "key": "(i) 'Lawns and wooded trails' describe a green, lush place: verdant. (ii) Cramped executives longing for the old grounds 'pine for' them, the yearning sense rather than the tree. (iii) Talk so specialized that an outsider can follow none of it is esoteric: rarefied. 'However' marks the one thing they did not miss.",
+    "distractors": {
+     "vaulted": "Having an arched roof. It describes a building's ceiling, not lawns and trails.",
+     "poignant": "Keenly moving or sad. It could describe their memory of the campus, not the campus itself as the lawns describe it.",
+     "attune": "To bring into harmony or make receptive. It takes an object and 'to', and it is not longing.",
+     "transcend": "To go beyond the limits of. The executives miss the grounds; they are not rising above them.",
+     "gracious": "Courteous and kind. The point of the clause is that the talk excluded outsiders.",
+     "incisive": "Sharp and penetrating. Sharp talk can still be followed; the clause stresses its obscurity to a visitor."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "vaulted",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "verdant",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "poignant",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "attune",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "transcend",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "pine",
+     "role": "key",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "rarefied",
+     "role": "key",
+     "at": [
+      2,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "gracious",
+     "role": "distractor",
+     "at": [
+      2,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "incisive",
+     "role": "distractor",
+     "at": [
+      2,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q15",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "Regulators have learned not to take a fined company's apology at face value, and the bank's statement proved no exception: its (i) ___ contrition, issued on the very morning its lawyers filed an appeal against the fine, was easy to see through for anyone who had learned to (ii) ___ between what firms say to the press and what they argue in court.",
+   "blanks": [
+    [
+     "poignant",
+     "counterfeit",
+     "ephemeral"
+    ],
+    [
+     "waffle",
+     "differentiate",
+     "amalgamate"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     1
+    ]
+   },
+   "explanation": {
+    "key": "(i) An apology issued while the lawyers contest the fine, and 'easy to see through', is a fake: counterfeit, in its figurative sense of feigned. (ii) Seeing through it depends on noticing that the press statement and the court filing say opposite things, that is, on telling the two apart: differentiate between them.",
+    "distractors": {
+     "poignant": "Deeply moving. An apology might be moving, but this one was 'easy to see through', so it moved no one.",
+     "ephemeral": "Short-lived. It is the tempting reading of 'the very morning', but the fault named is that the contrition could be seen through. It was never real, not merely brief.",
+     "waffle": "To vacillate. 'Waffle between' two positions is good English, but someone who wavers between the press line and the court line is the one who gets fooled.",
+     "amalgamate": "To merge into one. Merging the two statements is what the bank hoped readers would do."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "poignant",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "counterfeit",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "ephemeral",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "waffle",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "differentiate",
+     "role": "key",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "amalgamate",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q16",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "The annual report's (i) ___ tribute to the departing chief executive, three pages of superlatives about a tenure in which the share price had halved, struck even his most (ii) ___ admirers as less a farewell than an attempt to dress up failure.",
+   "blanks": [
+    [
+     "effusive",
+     "withering",
+     "wanting"
+    ],
+    [
+     "perspicacious",
+     "idolatrous",
+     "estranged"
+    ]
+   ],
+   "key": {
+    "sel": [
+     0,
+     1
+    ]
+   },
+   "explanation": {
+    "key": "(i) Three pages of superlatives is gushing, unrestrained praise: effusive. (ii) 'Even' asks for the admirers least likely to see through the praise, the ones most blindly devoted: idolatrous. If even they found it excessive, it was excessive indeed.",
+    "distractors": {
+     "withering": "Scornful, meant to humiliate. Superlatives are praise, not scorn.",
+     "wanting": "Lacking, deficient. The tribute errs by excess, not by falling short.",
+     "perspicacious": "Acutely perceptive. Perceptive admirers are the first to see through flattery, so 'even' points the wrong way.",
+     "estranged": "Alienated from someone once close. Estranged people are no longer admirers, and they would need no 'even' to doubt the tribute."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "effusive",
+     "role": "key",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "withering",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "wanting",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "perspicacious",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "idolatrous",
+     "role": "key",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "estranged",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q17",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "For months the two founders conducted their disagreement over the dividend in courteous memos, so the shareholders were unprepared when it erupted into a public (i) ___ at the annual meeting, each shouting over the other. Nor was the chairman, who prided himself on his diplomacy, any help: though he issued no demands and gave no orders, his speech, drawn almost entirely from the vocabulary of a general staff, was more (ii) ___ than conciliatory.",
+   "blanks": [
+    [
+     "knell",
+     "row",
+     "maelstrom"
+    ],
+    [
+     "peremptory",
+     "martial",
+     "pedantic"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     1
+    ]
+   },
+   "explanation": {
+    "key": "(i) A quarrel between two parties, 'each shouting over the other', is a noisy dispute: row (the quarrel sense, not a line of seats). (ii) 'Nor ... any help' and 'prided himself on his diplomacy' set up an irony, and the clue is indirect: a speech drawn from the vocabulary of a general staff is military in tone, martial, and since he gave no orders, the point is its warlike diction rather than any imperiousness.",
+    "distractors": {
+     "knell": "A bell tolled for a death, an omen of the end. A disagreement erupts into a fight, not into an omen.",
+     "maelstrom": "A turbulent, swirling situation. It suits 'erupted', but the blank is a dispute 'between' the two founders, and a maelstrom engulfs people rather than running between them.",
+     "peremptory": "Imperious, brooking no refusal. It fits 'more ___ than conciliatory' on its own, but the chairman 'issued no demands and gave no orders'; what made the speech unconciliatory was its battlefield vocabulary, not a commanding tone.",
+     "pedantic": "Fussy about fine points of learning. Borrowed jargon might suggest it, but the jargon is soldiers', not scholars'."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "knell",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "row",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "maelstrom",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "peremptory",
+     "role": "distractor",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "martial",
+     "role": "key",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "pedantic",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "conciliatory",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q18",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "Settling the dockworkers' strike brought the shipping firm only a brief (i) ___; within a month it faced a (ii) ___ that no negotiator could solve, since any wage rise large enough to satisfy the union would breach the loan covenants its lenders had imposed.",
+   "blanks": [
+    [
+     "vexation",
+     "respite",
+     "perfidy"
+    ],
+    [
+     "conundrum",
+     "platitude",
+     "complaisance"
+    ]
+   ],
+   "key": {
+    "sel": [
+     1,
+     0
+    ]
+   },
+   "explanation": {
+    "key": "(i) Ending a strike gives relief, and 'only a brief' plus 'within a month' shows the relief did not last: respite. (ii) The 'since' clause sets up a trap with no way out (satisfy the union and break the covenants, or not), a problem 'no negotiator could solve': conundrum.",
+    "distractors": {
+     "vexation": "Annoyance or worry. Settling a strike removes a worry; the trouble comes after the brief relief.",
+     "perfidy": "Treachery. Nobody betrays the firm; the settlement simply buys it time.",
+     "platitude": "A trite remark. A remark is not something a negotiator solves.",
+     "complaisance": "Willingness to please others. It is the opposite of an insoluble problem, and 'solve' cannot take it."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "vexation",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "respite",
+     "role": "key",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "perfidy",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "conundrum",
+     "role": "key",
+     "at": [
+      1,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "platitude",
+     "role": "distractor",
+     "at": [
+      1,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "complaisance",
+     "role": "distractor",
+     "at": [
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1q19",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "The chief executive had promised that the turnaround would be complete by spring, and the board, though uneasy, chose not to press him; the quarterly results, far from vindicating that patience, seemed almost to ___ it, the losses widening in precisely the divisions he had singled out as recovered.",
+   "blanks": [
+    [
+     "abet",
+     "obviate",
+     "mock",
+     "circumscribe",
+     "disarm"
+    ]
+   ],
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "'Far from vindicating' asks for the opposite of proving the patience right, and 'almost' plus 'precisely the divisions he had singled out' adds irony: the results make the board's patience look foolish. Mock, used figuratively (as in 'the results mock his promise'), says exactly that.",
+    "distractors": {
+     "abet": "To encourage or assist. Results that encouraged the patience would vindicate it, which the sentence denies.",
+     "obviate": "To make unnecessary. It is tempting, since bad results end the need for waiting, but 'far from vindicating' and the irony of the widening losses want ridicule, not mere removal.",
+     "circumscribe": "To limit. The results do not narrow the patience; they make a fool of it.",
+     "disarm": "To win over by charm. Widening losses charm no one."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "abet",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "obviate",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "mock",
+     "role": "key",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "circumscribe",
+     "role": "distractor",
+     "at": [
+      0,
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "disarm",
+     "role": "distractor",
+     "at": [
+      0,
+      4
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "vindicate",
+     "role": "stem"
+    }
+   ]
+  },
+  {
+   "id": "s1q20",
+   "section": 1,
+   "type": "tc",
+   "difficulty": 4,
+   "prompt": "The retailer presented its exclusive supply contracts as a partnership, but the small growers who signed them soon found that the friendly hand on the shoulder had become a ___, closing tighter each time they tried to sell to anyone else.",
+   "blanks": [
+    [
+     "symbiosis",
+     "frontispiece",
+     "knell",
+     "talon",
+     "accretion"
+    ]
+   ],
+   "key": {
+    "sel": [
+     3
+    ]
+   },
+   "explanation": {
+    "key": "'Presented as a partnership, but' reverses the friendly image, and the hand that 'closes tighter' on its catch becomes a claw: talon, used figuratively for a predator's grip.",
+    "distractors": {
+     "symbiosis": "A relationship that benefits both sides. It is what 'partnership' promised, and 'but' says the growers found the reverse.",
+     "frontispiece": "An illustration facing a book's title page. A hand cannot become one, and it cannot close.",
+     "knell": "A bell tolled for a death, an omen of the end. It may suit the growers' fate, but a sound cannot close tighter.",
+     "accretion": "Gradual growth by accumulation. The image is of a grip tightening, not of something building up."
+    }
+   },
+   "tags": [
+    {
+     "kind": "word",
+     "id": "symbiosis",
+     "role": "distractor",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "frontispiece",
+     "role": "distractor",
+     "at": [
+      0,
+      1
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "knell",
+     "role": "distractor",
+     "at": [
+      0,
+      2
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "talon",
+     "role": "key",
+     "at": [
+      0,
+      3
+     ]
+    },
+    {
+     "kind": "word",
+     "id": "accretion",
+     "role": "distractor",
+     "at": [
+      0,
+      4
+     ]
+    }
+   ]
+  }
+ ]
+}

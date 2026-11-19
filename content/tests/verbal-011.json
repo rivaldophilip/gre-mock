@@ -39,6 +39,16 @@
           "kind": "word",
           "id": "demarcate",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "salutary",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "ethnography",
+          "role": "passage"
         }
       ]
     },
@@ -61,6 +71,11 @@
         {
           "kind": "word",
           "id": "palpable",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "summit",
           "role": "passage"
         }
       ]
@@ -97,6 +112,21 @@
           "kind": "word",
           "id": "inflect",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "disentangle",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "counterpoint",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "revisionist",
+          "role": "passage"
         }
       ]
     },
@@ -124,6 +154,16 @@
         {
           "kind": "word",
           "id": "limn",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "byzantine",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "deliberate",
           "role": "passage"
         }
       ]
@@ -933,6 +973,11 @@
             0,
             3
           ]
+        },
+        {
+          "kind": "word",
+          "id": "pittance",
+          "role": "stem"
         }
       ]
     },
@@ -1103,6 +1148,11 @@
             2,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "deceptive",
+          "role": "stem"
         }
       ]
     },
@@ -1471,6 +1521,11 @@
           "kind": "concept",
           "id": "rc-structure",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "inconclusive",
+          "role": "stem"
         }
       ]
     },
@@ -1507,6 +1562,21 @@
           "kind": "concept",
           "id": "rc-inference",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "deliberate",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "incur",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "exposition",
+          "role": "stem"
         }
       ]
     },
@@ -1577,6 +1647,11 @@
           "kind": "concept",
           "id": "rc-attitude",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "deliberate",
+          "role": "stem"
         }
       ]
     },
@@ -1613,6 +1688,16 @@
           "kind": "concept",
           "id": "rc-application",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "analogous",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "converge",
+          "role": "stem"
         }
       ]
     },
@@ -1709,6 +1794,11 @@
           "kind": "concept",
           "id": "arg-paradox",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "discrepancy",
+          "role": "stem"
         }
       ]
     }

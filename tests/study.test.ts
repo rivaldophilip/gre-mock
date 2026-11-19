@@ -3,38 +3,54 @@ import { describe, expect, it } from "vitest";
 import katex from "katex";
 import concepts from "@/data/concepts.json";
 import { applyMarks, cardId, markIds, orderSections, StudySchema, studyStats, type Mark, type Study } from "@/lib/study";
+import rcSkills from "@/data/rc_skills.json";
 import type { Test } from "@/lib/types";
 
-describe("content/study/quant.json", () => {
-  const guide = StudySchema.parse(JSON.parse(fs.readFileSync("content/study/quant.json", "utf8")));
-  /** every Rich string in the guide (formula tiles' tex is bare TeX, checked separately) */
-  const lines = () => [
-    guide.intro,
-    ...guide.quickRef.flatMap((g) => g.items.flatMap((it) => [it.name, it.note ?? ""])),
-    ...guide.formats.flatMap((f) => f.rules),
-    ...guide.pacing,
-    ...guide.sections.flatMap((s) => [s.idea, s.example.q, ...s.example.steps, ...s.facts, ...s.tricks, ...s.traps,
-      ...(s.tips ?? []).flatMap((t) => [t.title, t.text, t.example ?? ""]),
-      ...(s.patterns ?? []).flatMap((p) => [p.idea, ...p.cases.flatMap((c) => [c.name, c.q, c.spot, ...c.steps]), ...(p.notWhen ?? [])])]),
-  ];
+const loadGuide = (measure: string) => StudySchema.parse(JSON.parse(fs.readFileSync(`content/study/${measure}.json`, "utf8")));
 
-  it("puts every quant concept in exactly one section, and names no unknown one", () => {
-    const known = new Set(concepts.map((c) => c.id));
+/** every Rich string in a guide (formula tiles' tex is bare TeX, checked separately) */
+const richLines = (guide: Study) => [
+  guide.intro,
+  ...guide.quickRef.flatMap((g) => g.items.flatMap((it) => [it.name, it.text ?? "", it.note ?? ""])),
+  ...guide.formats.flatMap((f) => f.rules),
+  ...guide.pacing,
+  ...guide.sections.flatMap((s) => [s.idea, s.example.q, ...s.example.steps, ...s.facts, ...s.tricks, ...s.traps,
+    ...(s.tips ?? []).flatMap((t) => [t.title, t.text, t.example ?? ""]),
+    ...(s.patterns ?? []).flatMap((p) => [p.idea, ...p.cases.flatMap((c) => [c.name, c.q, c.spot, ...c.steps]), ...(p.notWhen ?? [])])]),
+];
+
+/** Each guide's sections cover its concept ids exactly once, and name no unknown one. */
+const KNOWN: Record<string, string[]> = {
+  quant: concepts.map((c) => c.id),
+  verbal: rcSkills.filter((c) => c.area === "argument").map((c) => c.id),
+};
+
+describe.each(["quant", "verbal"])("content/study/%s.json", (measure) => {
+  const guide = loadGuide(measure);
+  const lines = () => richLines(guide);
+
+  it("is the guide for its measure", () => {
+    expect(guide.measure).toBe(measure);
+  });
+
+  it(`puts every ${measure} concept in exactly one section, and names no unknown one`, () => {
+    const known = new Set(KNOWN[measure]);
     const seen = guide.sections.flatMap((s) => s.concepts);
     expect(seen.filter((c) => !known.has(c))).toEqual([]);
     expect(seen.filter((c, i) => seen.indexOf(c) !== i)).toEqual([]);
     expect([...known].filter((c) => !seen.includes(c))).toEqual([]);
   });
 
-  it("has unique section ids and balanced $math$ in every line", () => {
+  it("has unique section ids, unique card names per group and balanced $math$ in every line", () => {
     const ids = guide.sections.map((s) => s.id);
     expect(new Set(ids).size).toBe(ids.length);
+    expect(markIds(guide).card.size).toBe(guide.quickRef.reduce((t, g) => t + g.items.length, 0));
     expect(lines().filter((l) => (l.match(/\$/g) ?? []).length % 2 !== 0)).toEqual([]);
   });
 
   it("draws every tip figure as one clean, theme-colored SVG", () => {
     const svgs = guide.sections.flatMap((s) => (s.tips ?? []).flatMap((t) => (t.svg ? [t.svg] : [])));
-    expect(svgs.length).toBeGreaterThan(0);
+    if (measure === "quant") expect(svgs.length).toBeGreaterThan(0);
     const bad = svgs.filter((svg) => {
       const tags = svg.match(/<[a-z][^>]*>/g) ?? [];
       const dupAttr = tags.some((t) => {
@@ -50,10 +66,10 @@ describe("content/study/quant.json", () => {
 
   it("renders every formula and every $math$ span in KaTeX without an error", () => {
     const tex = [
-      ...guide.quickRef.flatMap((g) => g.items.map((it) => it.tex)),
+      ...guide.quickRef.flatMap((g) => g.items.flatMap((it) => (it.tex ? [it.tex] : []))),
       ...lines().flatMap((l) => [...l.matchAll(/\$((?:\\.|[^$\\])+)\$/g)].map((m) => m[1])),
     ];
-    expect(tex.length).toBeGreaterThan(200);
+    if (measure === "quant") expect(tex.length).toBeGreaterThan(200);
     const bad = tex.filter((t) => {
       try {
         katex.renderToString(t, { throwOnError: true });
@@ -63,6 +79,17 @@ describe("content/study/quant.json", () => {
       }
     });
     expect(bad).toEqual([]);
+  });
+});
+
+describe("StudySchema quick-reference tiles", () => {
+  const base = { measure: "verbal", intro: "x", formats: [], pacing: ["x"], sections: [{ id: "x", title: "x", concepts: ["x"], idea: "x", example: { q: "x", steps: ["x"] }, facts: ["x"], tricks: ["x"], traps: ["x"] }] };
+  const tiles = (item: object) => ({ ...base, quickRef: [{ title: "x", items: [{ name: "x", ...item }] }] });
+  it("takes a formula or a text rule, but not both or neither", () => {
+    expect(StudySchema.safeParse(tiles({ tex: "x" })).success).toBe(true);
+    expect(StudySchema.safeParse(tiles({ text: "x" })).success).toBe(true);
+    expect(StudySchema.safeParse(tiles({ tex: "x", text: "x" })).success).toBe(false);
+    expect(StudySchema.safeParse(tiles({})).success).toBe(false);
   });
 });
 

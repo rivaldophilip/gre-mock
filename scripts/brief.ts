@@ -6,7 +6,10 @@ import fs from "node:fs";
 import path from "node:path";
 import { schema } from "../lib/db";
 import { oneTarget } from "./lib/accounts";
+import { bankSynonyms } from "./lib/bank";
+import { DRILL_DIR, isDrillId } from "../lib/test-path";
 import { markPending, scoreAll, type ItemScore, type LoggedEvent } from "../lib/priority/compute";
+import { PASSAGE_WORDS_MIN, SE_TRAP_PAIRS, UNTESTED_DISTRACTOR_SHARE } from "../lib/priority/config";
 import { allocateConcepts, allocateVerbalKeys, assignVariants, drawMultiKeys, pairSeKeys, rng, SE_PAIRS } from "../lib/priority/allocate";
 import { slotType, typeStats, TYPE_INFO, type SlotType } from "../lib/qtypes";
 import { conceptHistory, itemText, measureTests, primaryOf, testVariants, type SetupGroup } from "../lib/setup-history";
@@ -46,6 +49,25 @@ function inFlightBriefs(registered: Set<string>) {
       ...(b.conceptSlots ?? []).map((k: { concept: string }) => k.concept),
     ];
     for (const id of ids) out.push([id, b.testId]);
+  }
+  return out;
+}
+
+type DrillBrief = { testId: string; keyWords?: { id: string }[]; distractorWords?: { untested?: { id: string }[]; review?: { id: string }[] } };
+/** Drill batch briefs on disk (content/briefs/drill-NNN.json). */
+function drillBriefs(): DrillBrief[] {
+  const dir = "content/briefs";
+  return fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => /^drill-\d+\.json$/.test(f)).sort().map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"))) : [];
+}
+
+/** Never-seen words that briefs still being authored offer as distractors or passage words, so sibling briefs offer others. */
+function inFlightFreshWords(registered: Set<string>) {
+  const dir = "content/briefs";
+  const out = new Set<string>();
+  for (const f of fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => new RegExp(`^${measure}-\\d+\\.json$`).test(f)) : []) {
+    const b = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
+    if (registered.has(b.testId)) continue;
+    for (const w of [...(b.distractorWords?.untested ?? []), ...(b.distractorWords?.review ?? []), ...(b.passageWords ?? [])] as { id: string }[]) out.add(w.id);
   }
   return out;
 }
@@ -125,16 +147,39 @@ async function pendingItems(db: Awaited<ReturnType<typeof oneTarget>>["db"]) {
     const held = out.get(item) ?? [];
     if (!held.includes(test)) out.set(item, [...held, test]);
   };
+  // words an untaken test will show anyway (distractors, passage words): not offered again as never-seen
+  const shown = new Set<string>();
+  // a drill batch is taken one question at a time: only its unanswered questions still hold their words
+  const drillRuns = new Set((await db.select({ id: schema.attempts.id, mode: schema.attempts.mode }).from(schema.attempts)).filter((a) => a.mode === "drill").map((a) => a.id));
+  const drillAnswered = new Set((await db.select().from(schema.responses)).filter((r) => r.finalized && drillRuns.has(r.attemptId)).map((r) => r.questionId));
   for (const r of await db.select().from(schema.questionItems)) {
     const test = r.questionId.split(":")[0];
-    if (untaken.has(test) && (r.role === "key" || r.role === "primary")) hold(r.itemId, test);
+    if (isDrillId(test)) {
+      if (drillAnswered.has(r.questionId) || r.kind !== "word") continue;
+      if (r.role === "key") hold(r.itemId, test);
+      else shown.add(r.itemId);
+      continue;
+    }
+    if (!untaken.has(test)) continue;
+    if (r.role === "key" || r.role === "primary") hold(r.itemId, test);
+    else if (r.kind === "word") shown.add(r.itemId);
   }
   // briefs still being authored count as untaken tests too
-  for (const [item, test] of inFlightBriefs(new Set(tests.map((t) => t.id)))) {
+  const registered = new Set(tests.map((t) => t.id));
+  for (const [item, test] of inFlightBriefs(registered)) {
     untaken.add(test);
     hold(item, test);
   }
-  return { untaken: [...untaken].sort(), items: out };
+  for (const item of inFlightFreshWords(registered)) shown.add(item);
+  // drill briefs still being authored: their keys are held and their distractors will be shown
+  if (measure === "verbal")
+    for (const b of drillBriefs().filter((b) => !registered.has(b.testId))) {
+      for (const k of b.keyWords ?? []) hold(k.id, b.testId);
+      for (const w of b.distractorWords?.untested ?? []) shown.add(w.id);
+    }
+  // only drill batches with questions left count as untaken
+  const listed = [...untaken].filter((t) => !isDrillId(t) || [...out.values()].some((ts) => ts.includes(t)));
+  return { untaken: listed.sort(), items: out, shown };
 }
 
 /** Every finalized answer of a finished attempt, timed at the attempt's finish: what the revisit queue reads. */
@@ -159,7 +204,7 @@ const revisitNote = (r: Revisit, n: number) => ({
 /** Verbal: earlier TC / SE items per key word, with their distractor words, so a returning word gets new company. */
 function wordHistory(): Map<string, UsedBefore[]> {
   const out = new Map<string, UsedBefore[]>();
-  for (const t of measureTests("verbal"))
+  for (const t of [...measureTests("verbal"), ...measureTests("drill", DRILL_DIR)])
     for (const q of t.questions.filter((x) => x.type === "tc" || x.type === "se")) {
       const distractors = q.tags.filter((x) => x.kind === "word" && x.role === "distractor").map((x) => x.id);
       const keys = keyWordsOf(q);
@@ -177,8 +222,10 @@ async function typeFocus(db: Awaited<ReturnType<typeof oneTarget>>["db"]) {
     const t = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
     for (const q of t.questions ?? []) typeOf.set(`${t.id}:${q.id}`, slotType(q));
   }
+  // miss replays re-ask questions already seen, so they would flatter the format's accuracy
+  const replays = new Set((await db.select({ id: schema.attempts.id, mode: schema.attempts.mode }).from(schema.attempts)).filter((a) => a.mode === "replay").map((a) => a.id));
   const rows = (await db.select().from(schema.responses))
-    .filter((r) => r.finalized && typeOf.has(r.questionId))
+    .filter((r) => r.finalized && typeOf.has(r.questionId) && !replays.has(r.attemptId))
     .map((r) => ({ type: typeOf.get(r.questionId)!, isCorrect: r.isCorrect, guessed: r.guessed, timeMs: r.timeMs }));
   return typeStats(rows).map((s) => ({
     type: s.type,
@@ -278,7 +325,7 @@ async function main() {
     const drawn = allocateVerbalKeys(scores, (wid) => !!byId.get(wid)?.isSecondary, 29, random);
     // SE keys two words: pair key words with bank synonyms up front, so all 29 can be keys (never an SE pair keyed before)
     const synonyms = bankSynonyms();
-    const seKeyed = new Set(measureTests("verbal").flatMap((t) => t.questions.filter((q) => q.type === "se").map((q) => keyWordsOf(q).sort().join("|"))));
+    const seKeyed = new Set([...measureTests("verbal"), ...measureTests("drill", DRILL_DIR)].flatMap((t) => t.questions.filter((q) => q.type === "se").map((q) => keyWordsOf(q).sort().join("|"))));
     const { keys, pairs: sePairs } = pairSeKeys(drawn, scores, (wid) => synonyms.get(wid) ?? [], {
       keep: (wid) => !!byId.get(wid)?.isSecondary,
       usedPair: (a, b) => seKeyed.has([a, b].sort().join("|")),
@@ -287,10 +334,33 @@ async function main() {
     const rest = scores.filter((s) => !used.has(s.itemId));
     const weakD = rest.filter((s) => s.weakEvidence > 0).sort((a, b) => b.P - a.P).slice(0, 25);
     const weakIds = new Set(weakD.map((s) => s.itemId));
-    const freshD = rest.filter((s) => !weakIds.has(s.itemId) && s.N === 1).sort(() => random() - 0.5).slice(0, 60 - weakD.length);
-    const free = scores.filter((s) => !used.has(s.itemId) && !weakIds.has(s.itemId) && s.N === 1);
-    const byNY = (a: ItemScore, b: ItemScore) => b.N * b.Y - a.N * a.Y;
-    const tiered = free.filter((s) => ["passage", "extended"].includes(byId.get(s.itemId)!.tier)).sort(byNY);
+    // untested distractors: never-seen words, a deep enough list that UNTESTED_DISTRACTOR_SHARE of ~40 distractors fits;
+    // words an untaken test or sibling brief already shows go last, so parallel mocks spend different words
+    const unshown = (s: ItemScore) => (pending.shown.has(s.itemId) ? 1 : 0);
+    const freshAll = rest.filter((s) => !weakIds.has(s.itemId) && s.N === 1).sort(() => random() - 0.5).sort((a, b) => unshown(a) - unshown(b));
+    // SE trap pairs: two never-seen bank synonyms that suit each other but not the sentence. Left to chance the list
+    // held 1-2 such pairs, so authors filled SE traps with non-bank words or the same weak pairs in every sibling
+    // same part of speech as each other and as some key word, or no SE item can carry the pair (nouns with no noun key)
+    const posOf = (wid: string) => (byId.get(wid)?.senses as { pos?: string }[] | null)?.[0]?.pos;
+    const keyPos = new Set(keys.map((k) => posOf(k.itemId)).filter(Boolean));
+    const pairable = new Set(freshAll.filter((s) => !pending.shown.has(s.itemId) && !byId.get(s.itemId)?.isSecondary && keyPos.has(posOf(s.itemId))).map((s) => s.itemId));
+    const trapPairs: [string, string][] = [];
+    const inPair = new Set<string>();
+    for (const s of freshAll) {
+      if (trapPairs.length >= SE_TRAP_PAIRS) break;
+      if (!pairable.has(s.itemId) || inPair.has(s.itemId)) continue;
+      const mate = [...(synonyms.get(s.itemId) ?? [])].find((o) => pairable.has(o) && !inPair.has(o) && posOf(o) === posOf(s.itemId));
+      if (!mate) continue;
+      trapPairs.push([s.itemId, mate]);
+      inPair.add(s.itemId).add(mate);
+    }
+    const freshD = [...freshAll.filter((s) => inPair.has(s.itemId)), ...freshAll.filter((s) => !inPair.has(s.itemId))].slice(0, 60);
+    const freshIds = new Set(freshD.map((s) => s.itemId));
+    // passage words never repeat a distractor-list word, so each one is a further word seen
+    const free = scores.filter((s) => !used.has(s.itemId) && !weakIds.has(s.itemId) && !freshIds.has(s.itemId) && s.N === 1);
+    const byNY = (a: ItemScore, b: ItemScore) => unshown(a) - unshown(b) || b.N * b.Y - a.N * a.Y;
+    // shuffled first: equal N·Y would otherwise keep table order, so every brief drew the same a-c words
+    const tiered = free.filter((s) => ["passage", "extended"].includes(byId.get(s.itemId)!.tier)).sort(() => random() - 0.5).sort(byNY);
     // until the passage/extended tiers are populated, fall back to untested bank words
     const filler = free.filter((s) => !tiered.includes(s)).sort(() => random() - 0.5).sort(byNY);
     const passPool = [...tiered, ...filler].slice(0, 40);
@@ -333,10 +403,11 @@ async function main() {
       keyWords: keySlots,
       sePairs,
       skillSlots,
-      distractorWords: { weak: weakD.map((s) => show(s)), untested: freshD.map((s) => show(s)) },
+      distractorWords: { weak: weakD.map((s) => show(s)), untested: freshD.map((s) => show(s)), trapPairs: trapPairs.map((p) => p.map((w) => byId.get(w)!.lemma)) },
       passageWords: passPool.map((s) => show(s)),
+      wordTargets: { untestedDistractorShare: UNTESTED_DISTRACTOR_SHARE, passageWordsMin: PASSAGE_WORDS_MIN },
       instructions:
-        "Use keyWords as the answers/keys across TC blanks and SE pairs (29 slots, order free); key each of the sePairs (two key words that are bank synonyms) as one SE item; any other SE item pairs a key word with a listed bank synonym. Fill distractors from distractorWords (about 40% weak). Weave 3-6 passageWords into each RC passage. Do not write word tags: `npm run tag` fills them from the choice and passage text (regular inflections match; tag an irregular form such as `forsworn` by hand). Each key word's `sense` is the GRE-tested sense: write the sentence so THAT sense is the one that fits (for secondary=true words, the everyday sense must be the trap). Give each RC question one primary skill tag {kind:'concept', role:'primary'} from skillSlots (argument skills on the arg items, rc-select-verify suits rc_multi), optionally a secondary one; the reading skills can repeat. Write each skill slot's question as its `variant`. A key word that was used before comes back in a new sentence logic, with a new SE partner where possible, and with no distractor from its earlier items (the validator rejects a shared distractor or a repeated SE pair). A key word with a `revisit` is a deliberate sibling of that earlier item, made with the change named: set `revisits` to its ref on the question." + focusNote,
+        "Use keyWords as the answers/keys across TC blanks and SE pairs (29 slots, order free); key each of the sePairs (two key words that are bank synonyms) as one SE item; any other SE item pairs a key word with a listed bank synonym. Draw at least " + Math.round(UNTESTED_DISTRACTOR_SHARE * 100) + "% of the distractor words from distractorWords.untested, the rest from distractorWords.weak. Weave " + PASSAGE_WORDS_MIN + "-6 passageWords into each RC passage (not the arguments). check enforces both. Do not write word tags: `npm run tag` fills them from the choice and passage text (regular inflections match; tag an irregular form such as `forsworn` by hand). Each key word's `sense` is the GRE-tested sense: write the sentence so THAT sense is the one that fits (for secondary=true words, the everyday sense must be the trap). Give each RC question one primary skill tag {kind:'concept', role:'primary'} from skillSlots (argument skills on the arg items, rc-select-verify suits rc_multi), optionally a secondary one; the reading skills can repeat. Write each skill slot's question as its `variant`. A key word that was used before comes back in a new sentence logic, with a new SE partner where possible, and with no distractor from its earlier items (the validator rejects a shared distractor or a repeated SE pair). A key word with a `revisit` is a deliberate sibling of that earlier item, made with the change named: set `revisits` to its ref on the question." + focusNote,
     });
   } else {
     const concepts = conceptRows.filter((c) => !SKILL_AREAS.includes(c.area));
@@ -344,9 +415,11 @@ async function main() {
     const areaOf = new Map(concepts.map((c) => [c.id, c.area]));
     const withArea = scores.map((s) => ({ ...s, area: areaOf.get(s.itemId)! }));
     const picks = allocateConcepts(withArea, 27, ["arithmetic", "algebra", "geometry", "data"], random);
-    const variants = assignVariants(picks.map((p) => p.itemId), JSON.parse(fs.readFileSync("data/concept_variants.json", "utf8")), variantsUsed(id), random);
-    const history = conceptHistory(measure);
     const revisits = matchRevisits(picks.map((p) => p.itemId), revisitQueue(await finishedAnswers(db), measureTests(measure), now).filter(notHeld), (q) => [primaryOf(q) ?? ""]);
+    // a revisit keeps its earlier item's form (the change it names is structural), so its slot takes that variant
+    const siblingForms = new Map([...revisits].flatMap(([i, r]) => (r.question.variant ? [[i, r.question.variant] as const] : [])));
+    const variants = assignVariants(picks.map((p) => p.itemId), JSON.parse(fs.readFileSync("data/concept_variants.json", "utf8")), variantsUsed(id), random, siblingForms);
+    const history = conceptHistory(measure);
     let nth = 0;
     brief.conceptSlots = picks.map((p, i) => ({
       slot: i + 1,
@@ -361,7 +434,7 @@ async function main() {
       ...(revisits.has(i) ? { revisit: revisitNote(revisits.get(i)!, nth++) } : {}),
     }));
     brief.instructions =
-      "Assign the 27 concept slots to the 27 blueprint slots (any order, but a DI set of 3 should share a concept area). Each question: one primary concept (the slot) and optional secondary tags. Write each question as its slot's variant, the form of the concept earlier mocks used least, with a setup that is not in the slot's history (worn setups are banned). Record `setup` (one abstract line, no numbers or story) and `variant` on every question. A slot with a `revisit` is the exception: write a sibling of that earlier item (the user missed or guessed it), keeping its decisive insight and making the change named, and set `revisits` to its ref. Provide a python verification script." + focusNote;
+      "Assign the 27 concept slots to the 27 blueprint slots (any order, but a DI set of 3 should share a concept area). Each question: one primary concept (the slot) and optional secondary tags. Write each question as its slot's variant, the form of the concept earlier mocks used least, with a setup that is not in the slot's history (worn setups are banned). Record `setup` (one abstract line, no numbers or story) and `variant` on every question. A slot with a `revisit` is the exception: its variant is that earlier item's form, and you write a sibling of the item (the user missed or guessed it), keeping its decisive insight and making the change named, and set `revisits` to its ref. Provide a python verification script." + focusNote;
   }
 
   fs.mkdirSync("content/briefs", { recursive: true });
@@ -376,7 +449,7 @@ type Slot = { section: number; slot: number; type: string; level: number; exempl
 type RevisitNote = { ref: string; result: string; item: string; setup?: string; change: string };
 type UsedBefore = { ref: string; stem?: string; keys?: string[]; distractors: string[] };
 type Word = { word: string; id: string; secondary: boolean; sense: string | null; bucket?: string; reason?: string; usedBefore?: UsedBefore[]; revisit?: RevisitNote };
-const revisitLine = (r: RevisitNote) => `  - **revisit ${r.ref}** (you ${r.result} it): ${r.item}${r.setup ? ` [setup: ${r.setup}]` : ""}. Write a sibling, not a copy: ${r.change}. Set \`"revisits": "${r.ref}"\`.`;
+const revisitLine = (r: RevisitNote) => `  - **revisit ${r.ref}** (you ${r.result} it): ${r.item}${r.setup ? ` [setup: ${r.setup}]` : ""}. Write a sibling, not a copy: ${r.change}. Set \`"revisits": "${r.ref}"\`.${measure === "verbal" ? " Check still rejects its distractors and its SE key pair, so give it new ones." : ""}`;
 
 /**
  * Which passage each reading slot belongs to: blueprint passages in order (p1, p2, ...), arguments a1, a2. The first
@@ -406,28 +479,6 @@ function passageOfSlots(slots: Slot[]): Map<string, string> {
   return out;
 }
 
-/** Bank synonyms of a word in either direction (a word lists X, or X lists the word), for SE pairs. */
-function bankSynonyms() {
-  const vocab = JSON.parse(fs.readFileSync("data/vocab.json", "utf8")) as { id: string; lemma: string; senses?: { synonyms?: string[] }[] }[];
-  const idOf = new Map(vocab.map((v) => [v.lemma.toLowerCase(), v.id]));
-  const syn = new Map<string, Set<string>>();
-  const link = (a: string, b: string) => {
-    if (a === b) return;
-    if (!syn.has(a)) syn.set(a, new Set());
-    syn.get(a)!.add(b);
-  };
-  for (const v of vocab)
-    for (const s of v.senses ?? [])
-      for (const w of s.synonyms ?? []) {
-        const other = idOf.get(w.toLowerCase());
-        if (other) {
-          link(v.id, other);
-          link(other, v.id);
-        }
-      }
-  return syn;
-}
-
 function briefMarkdown(b: Record<string, unknown>): string {
   const slots = b.slots as Slot[];
   const where = passageOfSlots(slots);
@@ -448,9 +499,14 @@ function briefMarkdown(b: Record<string, unknown>): string {
     const syn = bankSynonyms();
     const sePairs = (b.sePairs ?? []) as [string, string][];
     const lemma = new Map(keys.map((k) => [k.id, k.word]));
-    lines.push("", "## Key words (29 keys across TC blanks and SE pairs)", "");
+    // 15 TC blanks + 7 SE items, one extra key per SE item keyed with two key words; the rest cannot all be keys
+    const keySlots = 15 + SE_PAIRS + sePairs.length;
+    const spare = keys.length - keySlots;
+    lines.push("", `## Key words (${Math.min(keys.length, keySlots)} keys across TC blanks and SE pairs)`, "");
     if (sePairs.length)
       lines.push(`SE pairs (key both words of each pair in one SE item): ${sePairs.map(([x, y]) => `${lemma.get(x) ?? x} / ${lemma.get(y) ?? y}`).join("; ")}.${sePairs.length < SE_PAIRS ? ` The other ${SE_PAIRS - sePairs.length} SE item(s) pair a key word with a listed bank synonym.` : ""} The remaining key words are the 15 TC keys.`, "");
+    if (spare > 0)
+      lines.push(`Only ${keySlots} of the ${keys.length} key words fit as keys (15 TC blanks + 7 SE items, ${sePairs.length} of them keyed with two key words). Key every review word; use the ${spare} spare new word(s) as distractors (they count as untested).`, "");
     lines.push("Synonyms: * = also a key word.", "");
     for (const k of keys) {
       const partners = [...(syn.get(k.id) ?? [])].sort((x, y) => Number(keyIds.has(y)) - Number(keyIds.has(x))).slice(0, 6);
@@ -477,9 +533,11 @@ function briefMarkdown(b: Record<string, unknown>): string {
       lines.push(
         `- **${skill}**${whys.length > 1 ? ` ×${whys.length}` : ""} (${[...new Set(whys)].join("; ")}): ${skills.find((x) => x.id === skill)?.description ?? ""}${variants.length ? ` Variant${variants.length > 1 ? "s" : ""}: ${variants.join("; ")}.` : ""}`,
       );
-    const d = b.distractorWords as { weak: Word[]; untested: Word[] };
-    lines.push("", "## Distractor words (about 40% of distractors)", "", `Weak: ${d.weak.map((w) => w.word).join(", ") || "none"}`, "", `Untested: ${d.untested.map((w) => w.word).join(", ")}`);
-    lines.push("", "## Passage words (weave 3-6 into each passage)", "", (b.passageWords as Word[]).map((w) => `${w.word}${w.secondary ? " (2nd sense)" : ""}`).join(", "));
+    const d = b.distractorWords as { weak: Word[]; untested: Word[]; trapPairs?: string[][] };
+    lines.push("", `## Distractor words (at least ${Math.round(UNTESTED_DISTRACTOR_SHARE * 100)}% of distractors from Untested, the rest from Weak)`, "", `Weak: ${d.weak.map((w) => w.word).join(", ") || "none"}`, "", `Untested: ${d.untested.map((w) => w.word).join(", ")}`);
+    if (d.trapPairs?.length)
+      lines.push("", `SE trap pairs (both words untested bank synonyms, already in the list above): ${d.trapPairs.map((p) => p.join(" / ")).join("; ")}. Use one as the wrong synonym pair of an SE item: the sentence must rule out their shared meaning.`);
+    lines.push("", `## Passage words (weave ${PASSAGE_WORDS_MIN}-6 into each reading passage)`, "", (b.passageWords as Word[]).map((w) => `${w.word}${w.secondary ? " (2nd sense)" : ""}`).join(", "));
   } else {
     lines.push(
       "",

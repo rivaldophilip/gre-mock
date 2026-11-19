@@ -1,10 +1,12 @@
 import { NextResponse } from "next/server";
+import { serverTiming } from "@/lib/timing";
 import { z } from "zod";
 import { schema } from "@/lib/db";
 import { userDb } from "@/lib/session";
-import { eq } from "drizzle-orm";
-import { canReveal, finalizeResponse, revealWords, isClosed, loadAttemptTest, pairKey, responseFor, sectionStatus, secondsLeft, setClockPaused } from "@/lib/attempts";
-import { AnswerSchema } from "@/lib/types";
+import { and, eq, inArray } from "drizzle-orm";
+import { canReveal, logResponseEvents, revealWords, isClosed, isDrill, isReplay, loadAttemptTest, pairKey, sectionStatus, secondsLeft, setClockPaused } from "@/lib/attempts";
+import { AnswerSchema, type Test } from "@/lib/types";
+import type { Attempt } from "@/lib/attempts";
 import { scoreAnswer } from "@/lib/scoring";
 
 const Body = z.object({
@@ -14,7 +16,7 @@ const Body = z.object({
   guessed: z.boolean(),
   marked: z.boolean(),
   position: z.number().int().min(0).optional(),
-  /** practice mode: lock the answer and reveal the key (pauses the section clock) */
+  /** practice, drill and replay: lock the answer and reveal the key (in practice it also pauses the section clock) */
   commit: z.boolean().optional(),
   /**
    * practice mode, sent on every move: whether the question moved to has its answer shown (the section clock stops
@@ -25,59 +27,81 @@ const Body = z.object({
 });
 
 export async function POST(req: Request, ctx: { params: Promise<{ id: string }> }) {
+  const t0 = Date.now();
   const db = await userDb();
   const { id } = await ctx.params;
   const body = Body.safeParse(await req.json().catch(() => null));
   const loaded = await loadAttemptTest(Number(id));
-  if (!body.success || !loaded) return NextResponse.json({ error: "bad request" }, { status: 400 });
+  if (!body.success || !loaded) return NextResponse.json({ error: "bad request" }, { status: 400, headers: serverTiming(t0) });
   const { test } = loaded;
   let { a } = loaded;
   const q = test.questions.find((x) => x.id === body.data.questionId);
-  if (!q) return NextResponse.json({ error: "unknown question" }, { status: 400 });
-  if (isClosed(a) || sectionStatus(a, q.section).finished) return NextResponse.json({ error: "section closed" }, { status: 409 });
+  if (!q) return NextResponse.json({ error: "unknown question" }, { status: 400, headers: serverTiming(t0) });
+  if (isClosed(a) || sectionStatus(a, q.section).finished) return NextResponse.json({ error: "section closed" }, { status: 409, headers: serverTiming(t0) });
   // past the limit the clock runs negative and answers are still taken; the review shows the overtime
   if (body.data.review !== undefined && a.mode === "practice") a = await setClockPaused(a, q.section, body.data.review, "reveal");
   const clock = () => ({ secondsLeft: secondsLeft(a, test, q.section) });
 
-  const qkey = pairKey(test.id, q.id);
-  const existing = await responseFor(a.id, qkey);
-  if (existing?.finalized) {
-    // answer is locked; still remember where the test-taker is
-    if (body.data.position !== undefined) {
-      await db.update(schema.attempts).set({ currentPosition: body.data.position }).where(eq(schema.attempts.id, a.id));
-    }
-    return NextResponse.json({ ok: true, locked: true, ...clock() });
-  }
+  // Every query is a round trip to the database, so the ones that don't depend on each other run in parallel: a
+  // Check waits on the attempt, one upsert and then one parallel step.
+  const commit = !!body.data.commit && (a.mode === "practice" || isDrill(a) || isReplay(a));
+  const savePosition = () =>
+    body.data.position === undefined ? null : db.update(schema.attempts).set({ currentPosition: body.data.position }).where(eq(schema.attempts.id, a.id));
 
   const ans = body.data.answer ?? undefined;
   const values = {
     attemptId: a.id,
-    questionId: qkey,
+    questionId: pairKey(test.id, q.id),
     answer: body.data.answer,
     isCorrect: scoreAnswer(q, ans),
     timeMs: body.data.timeMs,
     guessed: body.data.guessed,
     marked: body.data.marked,
     updatedAt: new Date(),
+    // a Check claims the response in the same write (finalizeResponse's claim), so its events are logged once
+    ...(commit ? { finalized: true } : {}),
   };
+  // a locked (finalized) answer is never overwritten: the upsert then returns no row
   const [row] = await db
     .insert(schema.responses)
     .values(values)
-    .onConflictDoUpdate({ target: [schema.responses.attemptId, schema.responses.questionId], set: values })
-    .returning({ id: schema.responses.id });
-  if (body.data.position !== undefined) {
-    await db.update(schema.attempts).set({ currentPosition: body.data.position }).where(eq(schema.attempts.id, a.id));
+    .onConflictDoUpdate({ target: [schema.responses.attemptId, schema.responses.questionId], set: values, setWhere: eq(schema.responses.finalized, false) })
+    .returning();
+  if (!row) {
+    // answer is locked; still remember where the test-taker is
+    await savePosition();
+    return NextResponse.json({ ok: true, locked: true, ...clock() }, { headers: serverTiming(t0) });
   }
 
-  if (body.data.commit && a.mode === "practice") {
-    a = await setClockPaused(a, q.section, true, "reveal");
-    await finalizeResponse(a, test, q, row.id);
-    const fresh = await responseFor(a.id, qkey);
+  if (commit) {
+    const [paused, closed, reveal] = await Promise.all([
+      a.mode === "practice" ? setClockPaused(a, q.section, true, "reveal") : a,
+      isDrill(a) ? closeDrillBatch(a, test) : a,
+      revealWords(q, test),
+      logResponseEvents(a, test, q, row),
+      savePosition(),
+    ]);
+    a = { ...paused, finishedAt: closed.finishedAt };
     return NextResponse.json({
       ok: true,
-      reveal: canReveal(a, test, q, fresh) ? { key: q.key, explanation: q.explanation, isCorrect: fresh.isCorrect, words: await revealWords(q) } : null,
+      reveal: canReveal(a, test, q, row) ? { key: q.key, explanation: q.explanation, isCorrect: row.isCorrect, words: reveal } : null,
       ...clock(),
-    });
+    }, { headers: serverTiming(t0) });
   }
-  return NextResponse.json({ ok: true, ...clock() });
+  await savePosition();
+  return NextResponse.json({ ok: true, ...clock() }, { headers: serverTiming(t0) });
+}
+
+/** A drill batch is finished once every one of its questions has a locked answer, so later briefs count it as taken. */
+async function closeDrillBatch(a: Attempt, test: Test): Promise<Attempt> {
+  const db = await userDb();
+  const keys = test.questions.map((x) => pairKey(test.id, x.id));
+  const done = await db
+    .select({ id: schema.responses.id })
+    .from(schema.responses)
+    .where(and(eq(schema.responses.attemptId, a.id), eq(schema.responses.finalized, true), inArray(schema.responses.questionId, keys)));
+  if (done.length < keys.length || a.finishedAt) return a;
+  const finishedAt = new Date();
+  await db.update(schema.attempts).set({ finishedAt }).where(eq(schema.attempts.id, a.id));
+  return { ...a, finishedAt };
 }

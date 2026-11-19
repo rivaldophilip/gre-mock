@@ -114,6 +114,26 @@
           "kind": "word",
           "id": "animadversion",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "prevail",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "transgression",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "aesthetic",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "deference",
+          "role": "passage"
         }
       ]
     },
@@ -137,6 +157,21 @@
           "kind": "word",
           "id": "arbitrage",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "maxim",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "debase",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "prevail",
+          "role": "passage"
         }
       ]
     },
@@ -159,6 +194,11 @@
         {
           "kind": "word",
           "id": "doughty",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "inclined",
           "role": "passage"
         }
       ]
@@ -337,6 +377,11 @@
             1,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "obscurity",
+          "role": "stem"
         }
       ]
     },
@@ -572,6 +617,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "connoisseur",
+          "role": "stem"
         }
       ]
     },
@@ -717,6 +767,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "deride",
+          "role": "stem"
         }
       ]
     },
@@ -824,6 +879,11 @@
           "kind": "concept",
           "id": "rc-vocab-context",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "antiquarian",
+          "role": "stem"
         }
       ]
     },
@@ -884,6 +944,11 @@
           "kind": "concept",
           "id": "arg-role",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
         }
       ]
     },
@@ -962,6 +1027,11 @@
             0,
             4
           ]
+        },
+        {
+          "kind": "word",
+          "id": "embellish",
+          "role": "stem"
         }
       ]
     },
@@ -1132,6 +1202,11 @@
             2,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "adduce",
+          "role": "stem"
         }
       ]
     },
@@ -1292,6 +1367,16 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "clangor",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "din",
+          "role": "stem"
         }
       ]
     },
@@ -1464,6 +1549,16 @@
           "kind": "concept",
           "id": "rc-main-idea",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "base",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "aesthetic",
+          "role": "stem"
         }
       ]
     },
@@ -1500,6 +1595,11 @@
           "kind": "concept",
           "id": "rc-attitude",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "aesthetic",
+          "role": "stem"
         }
       ]
     },
@@ -1632,6 +1732,11 @@
           "kind": "concept",
           "id": "rc-inference",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "debase",
+          "role": "stem"
         }
       ]
     },
@@ -1668,6 +1773,21 @@
           "kind": "concept",
           "id": "rc-structure",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "undermine",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "anthropocentric",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "derive",
+          "role": "stem"
         }
       ]
     },

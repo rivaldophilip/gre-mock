@@ -1,0 +1,1963 @@
+{
+  "id": "drill-009",
+  "measure": "verbal",
+  "title": "Endless vocab batch 9",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Purists hoped the usage panel would denounce the slang creeping into broadcast English, but its report did not so much condemn the new words as ___ the territory in which they would be tolerated: acceptable in sports commentary and weather chat, still barred from the evening news.",
+      "choices": [
+        "fulminate",
+        "delimit",
+        "air",
+        "rail",
+        "circumscribe",
+        "entertain"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "'Did not so much condemn ... as ___' sets the blank against condemnation, and the colon spells out what the panel actually did: it drew a boundary, slang allowed here, barred there. Delimit (fix the limits of) and circumscribe (restrict within limits) both describe marking out that territory.",
+        "distractors": {
+          "fulminate": "Trap pair with rail: to denounce loudly. That is the condemnation the purists hoped for and the 'not so much' frame sets aside; it also takes 'against', not a direct object.",
+          "rail": "Trap pair with fulminate: to protest bitterly against. Same failure: the report did not condemn, it drew limits.",
+          "air": "To express a grievance or opinion publicly. One airs a view, not a territory, and the report's work was to bound usage, not to voice a complaint.",
+          "entertain": "To hold an idea in mind and consider it. 'Entertain the territory' makes no sense, and the panel decided the boundary rather than merely considering it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "fulminate",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "delimit",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "air",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rail",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "circumscribe",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "entertain",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "denounce",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The same knight who had held the bridge alone at nineteen grew so ___ in old age that he paid a squire to taste his wine before him and would not ride out to his own fields without four armed men at his back.",
+      "choices": [
+        "callous",
+        "autocratic",
+        "craven",
+        "insensible",
+        "overt",
+        "recreant"
+      ],
+      "key": {
+        "sel": [
+          2,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "'The same knight ... grew so' sets up a change from youthful courage, and the evidence is fear: a taster for his wine and a guard to visit his own fields. Craven and recreant (cowardly) both fit.",
+        "distractors": {
+          "callous": "Trap pair with insensible: unfeeling toward others. Nothing in the sentence concerns how he treats anyone.",
+          "insensible": "Trap pair with callous: unfeeling, or unaware. His fear shows he is all too aware of danger.",
+          "autocratic": "Domineering. Paying a taster and hiring guards is fear, not tyranny.",
+          "overt": "Open, not hidden. It names no change in the knight."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "callous",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "autocratic",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "craven",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "insensible",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "overt",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "recreant",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The county paper's editors were neither smug about their own work nor uninterested in the wider world, whose news they followed avidly; what made their coverage ___ was a habit of presenting every distant event, a war or a famine alike, solely as a question of what it would mean for local property values.",
+      "choices": [
+        "indifferent",
+        "parochial",
+        "communitarian",
+        "complacent",
+        "insular",
+        "liminal"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Two faults are cleared first (smugness, lack of interest), and the fault that remains is seeing everything through a local lens. Parochial and insular both name that narrow, local outlook.",
+        "distractors": {
+          "indifferent": "Trap pair with complacent. Indifferent means uninterested, and the editors 'followed avidly' the wider world's news.",
+          "complacent": "Trap pair with indifferent: self-satisfied, uncritically content. The sentence clears them of smugness at the start.",
+          "communitarian": "Stressing the community over the individual, as a social philosophy. It fits the local theme, but it is not a fault of narrowness and does not describe reducing a war to property values.",
+          "liminal": "On a threshold, transitional. Nothing in the coverage is in between two states."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "indifferent",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "parochial",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "communitarian",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "complacent",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "insular",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "liminal",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The new producer's quiet first months misled her editors, who took her for a cautious hand; her real failing, it turned out, was that she was ___, as she showed by airing a leaked memo within minutes of receiving it, before anyone had confirmed it was genuine.",
+      "choices": [
+        "quiescent",
+        "impetuous",
+        "conscientious",
+        "dormant",
+        "besotted",
+        "rash"
+      ],
+      "key": {
+        "sel": [
+          1,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "The quiet months 'misled' the editors, so the truth runs the other way, and the evidence is airing an unconfirmed memo within minutes. Impetuous and rash both mean acting suddenly without thought.",
+        "distractors": {
+          "quiescent": "Trap pair with dormant: inactive, at rest. It matches 'quiet first months', but those months are exactly what misled the editors.",
+          "dormant": "Trap pair with quiescent: inactive, as if asleep. Same failure: the real failing showed in hasty action.",
+          "conscientious": "Careful and diligent. That is the 'cautious hand' the editors wrongly assumed.",
+          "besotted": "Infatuated, or muddled by drink. Nothing points to infatuation; the fault is haste."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "quiescent",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "impetuous",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "conscientious",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dormant",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "besotted",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rash",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The lexicographer lived so quietly, answering every admiring letter with a single line asking not to be written to again, that the press took him for a timid conservative; in his work, though, he was a thoroughgoing ___, the first to admit slang, to record pronunciations as people spoke them rather than as schoolmasters prescribed, and to drop every definition he could not trace to actual use.",
+      "choices": [
+        "maverick",
+        "recluse",
+        "poseur",
+        "iconoclast",
+        "hedonist",
+        "misanthrope"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "'In his work, though' turns from his retiring life to his dictionary, which broke every convention of the trade: slang admitted, pronunciation recorded as spoken, inherited definitions dropped. An independent breaker of conventions: maverick, iconoclast.",
+        "distractors": {
+          "recluse": "Trap pair with misanthrope: a person who lives apart. It fits his private life, but the blank is about his work, after 'though'.",
+          "misanthrope": "Trap pair with recluse: a hater of people. His shunning of letters baits it, but again the blank describes his work.",
+          "poseur": "One who adopts an affected manner to impress. He shuns attention, the opposite of posing.",
+          "hedonist": "A pleasure-seeker. Nothing in the sentence concerns pleasure."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "maverick",
+          "role": "key",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "recluse",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "poseur",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "iconoclast",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hedonist",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "misanthrope",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "thoroughgoing",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The host never looked down on his guests or treated their views as beneath notice; still, viewers tuned in less for his courtesy than for his ___ manner, which turned every interview, however mild its subject, into a brawl.",
+      "choices": [
+        "contemptuous",
+        "pugnacious",
+        "frivolous",
+        "supercilious",
+        "bellicose",
+        "servile"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The first clause rules out disdain; 'still' and 'less for his courtesy than' point to a quality other than courtesy, and the end names it: every interview became a brawl. Pugnacious and bellicose both mean eager to fight.",
+        "distractors": {
+          "contemptuous": "Trap pair with supercilious: scornful. The first clause says he never looked down on his guests.",
+          "supercilious": "Trap pair with contemptuous: haughtily disdainful. Ruled out by 'never ... treated their views as beneath notice'.",
+          "frivolous": "Lacking seriousness. A manner that turns mild interviews into brawls is combative, not silly.",
+          "servile": "Excessively eager to please. That is the opposite of starting fights."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "contemptuous",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pugnacious",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "frivolous",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "supercilious",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bellicose",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "servile",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "No reviewer questioned the breadth of the old grammarian's learning, and several took pains to praise it; what they objected to was his habit of forcing every language he studied into his favored theory of syntax, whatever its speakers actually said, a habit that made even his most learned chapters ___.",
+      "choices": [
+        "erudite",
+        "dogmatic",
+        "belletristic",
+        "profound",
+        "ontological",
+        "doctrinaire"
+      ],
+      "key": {
+        "sel": [
+          1,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "The learning is granted, so the blank is the objection: forcing each language into one theory regardless of the evidence. Doctrinaire (rigidly applying a theory without regard to practice) and dogmatic (asserting opinions as beyond question) both name it. 'Even his most learned chapters' says the fault survives the learning.",
+        "distractors": {
+          "erudite": "Trap pair with profound: learned, scholarly. That is the quality the reviewers granted, not the one they objected to; 'even his most learned chapters erudite' says nothing.",
+          "profound": "Trap pair with erudite: showing deep insight. It is praise, and the blank must be the objection.",
+          "belletristic": "Literary, written for its style. The complaint is about method, not literary manner.",
+          "ontological": "Concerning the nature of being. It fits the scholarly topic, but it is not a fault and has nothing to do with forcing data into a theory."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "erudite",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dogmatic",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "belletristic",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "profound",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ontological",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "doctrinaire",
+          "role": "key",
+          "at": [
+            5
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "syntax",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Whatever one thinks of the blogger's motives, the effects of posting the unverified rumor were anything but trivial, since it wiped a fifth off the company's value in an afternoon; and posting it was, as even his defenders admit, ___, given that a single phone call would have exposed it as false.",
+      "choices": [
+        "nugatory",
+        "foolhardy",
+        "sedulous",
+        "inconsequential",
+        "crepuscular",
+        "imprudent"
+      ],
+      "key": {
+        "sel": [
+          1,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "The blank judges the act of posting, and the 'given that' clause gives the reason: one phone call would have shown the rumor false, so posting it was reckless. Foolhardy and imprudent both say so; foolhardy is the stronger.",
+        "distractors": {
+          "nugatory": "Trap pair with inconsequential: of no importance. The sentence says the effects were 'anything but trivial'.",
+          "inconsequential": "Trap pair with nugatory: unimportant. Ruled out the same way: it erased a fifth of the company's value.",
+          "sedulous": "Diligent and painstaking. That is the opposite of skipping the one phone call.",
+          "crepuscular": "Relating to twilight, dim. It has no sense that fits judging an act."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "nugatory",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "foolhardy",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sedulous",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inconsequential",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "crepuscular",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "imprudent",
+          "role": "key",
+          "at": [
+            5
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "trivial",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Field linguists long assumed that the rule dropping final consonants (i) ___ only among the oldest speakers of the dialect, and that its (ii) ___ would shrink with each generation until the rule disappeared. Recordings of schoolchildren complicate that story. The rule has not retreated so much as migrated, fading from careful speech while spreading through casual talk, so that the range of words and settings it governs is, if anything, wider than before. Some researchers now suspect that the older speakers' occasional slips in formal interviews had (iii) ___ this shift decades before anyone thought to record the children.",
+      "blanks": [
+        [
+          "regressed",
+          "obtained",
+          "jibed"
+        ],
+        [
+          "periodicity",
+          "compass",
+          "historiography"
+        ],
+        [
+          "concocted",
+          "valorized",
+          "adumbrated"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) The assumption is about where the rule held: only among the oldest speakers. Obtained, in its sense of 'was in force, prevailed', says that; the everyday sense 'acquired' is the trap that makes it look wrong. (ii) What would shrink is something the third sentence measures, 'the range of words and settings it governs', so the blank is the rule's scope: compass. (iii) The slips came 'decades before', and the researchers think they hinted at the later shift: adumbrated, foreshadowed faintly.",
+        "distractors": {
+          "regressed": "Reverted to an earlier state. The assumption is that the rule was current among the elders, not that it went backward there.",
+          "jibed": "Was in accord with something. It needs a 'with' and does not say where a rule held.",
+          "periodicity": "The tendency to recur at regular intervals. Nothing about the rule recurs; what grows or shrinks is its range.",
+          "historiography": "The writing of history, or the study of how it is written. A sound rule does not have one that could shrink.",
+          "concocted": "Made up, invented. Slips cannot invent a later shift; they can only hint at it.",
+          "valorized": "Gave value to, praised. The slips signaled the shift; they did not endorse it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "regress",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obtain",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "jibe",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "periodicity",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "compass",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "historiography",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "concoct",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "valorize",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "adumbrate",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "When the network (i) ___ its new rules for on-air corrections, most of the staff treated the memo as one more directive that would be quietly ignored. The town-hall meeting that followed was anything but quiet, however: it was so (ii) ___, with anchors shouting over producers, that veterans read the uproar as a (iii) ___ of a deeper fight over who would control the newsroom.",
+      "blanks": [
+        [
+          "conferred",
+          "promulgated",
+          "confiscated"
+        ],
+        [
+          "communitarian",
+          "crepuscular",
+          "unruly"
+        ],
+        [
+          "harbinger",
+          "cordon",
+          "structuralism"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) Rules issued by memo as a directive are proclaimed officially: promulgated. (ii) 'Anything but quiet', with anchors shouting over producers, is disorderly: unruly. (iii) Veterans read the uproar as a sign of a fight still to come: harbinger.",
+        "distractors": {
+          "conferred": "Granted (an honor or title), or consulted together. One does not confer rules on a newsroom by memo, and the staff were not consulted.",
+          "confiscated": "Seized by authority. The network issued its rules; it did not seize them.",
+          "communitarian": "Favoring community over the individual. Shouting over colleagues is the opposite of a show of shared purpose.",
+          "crepuscular": "Of or like twilight. It has no sense that describes a shouting match.",
+          "cordon": "A line of guards or police enclosing an area. An uproar cannot be a cordon of a fight.",
+          "structuralism": "A theory that explains culture or language through underlying structures. It cannot be read as a sign of a fight."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "conferred",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "promulgate",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "confiscate",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "communitarian",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "crepuscular",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "unruly",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "harbinger",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cordon",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "structuralism",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The translator's preface promises a complete text, yet readers who set it beside the original will find that every coarse joke has been quietly (i) ___. The cuts are not simple prudishness: the publisher, already defending a lawsuit over an earlier title, had no wish to (ii) ___ a second by printing the kind of jokes that had provoked the first. Even so, the critics who call the edition dishonest grant the translator considerable (iii) ___ elsewhere, praising the very departures from literal sense that a stricter rendering would have ruled out.",
+      "blanks": [
+        [
+          "colored",
+          "bowdlerized",
+          "relayed"
+        ],
+        [
+          "harbor",
+          "muster",
+          "court"
+        ],
+        [
+          "servitude",
+          "license",
+          "compunction"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Yet' sets the jokes against the promised completeness, and the next sentence calls the change 'cuts': the jokes were removed as offensive, bowdlerized. (ii) Printing such jokes would invite a second lawsuit, so the publisher did not want to risk bringing one about: court, in its sense of inviting trouble, not wooing. (iii) 'Even so' turns to the critics' concession: they praise departures from literal sense, which is the translator's freedom to depart from the rules: license.",
+        "distractors": {
+          "colored": "Distorted or slanted. It fits 'quietly' in the first sentence, but the second calls the changes 'cuts', so the jokes are gone, not slanted.",
+          "relayed": "Passed on, transmitted. That would deliver the jokes, the reverse of what 'yet' and 'the cuts' require.",
+          "harbor": "To keep a feeling, usually a negative one, in mind. One harbors a grudge, not a lawsuit, and the worry is about provoking one.",
+          "muster": "To summon up a feeling or quality, such as courage. A lawsuit is not a quality the publisher summons in himself.",
+          "servitude": "Bondage, subjection. It is baited by 'stricter rendering', but the critics praise the translator's departures, the opposite of slavish fidelity.",
+          "compunction": "A guilty feeling, a scruple. 'Grant considerable compunction' does not fit praise for free renderings."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "color",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bowdlerize",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "relay",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "harbor",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "muster",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "court",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "servitude",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "license",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "compunction",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The old grammarian's (i) ___ that no sentence may end with a preposition was repeated for a century by teachers who never asked where it came from. Its most zealous (ii) ___ was a newspaper style editor who rewrote reporters' copy to obey it, however strained the result. Ironically, the reporters' mocking compliance, which buried prepositions in ever more tortured clauses, did more to (iii) ___ the rule than any linguist's critique: readers who had never questioned it began to find it ridiculous.",
+      "blanks": [
+        [
+          "jeremiad",
+          "rodomontade",
+          "dictum"
+        ],
+        [
+          "hedonist",
+          "apostle",
+          "boor"
+        ],
+        [
+          "second",
+          "subvert",
+          "saturate"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) A short rule handed down with authority and repeated unexamined is a dictum. (ii) The editor who enforced it zealously was its ardent champion: apostle. (iii) 'Ironically' says compliance had the opposite of its surface effect, and the colon confirms it: readers began to find the rule ridiculous, so the compliance undermined it: subvert.",
+        "distractors": {
+          "jeremiad": "A long lament about decline. A one-line grammatical rule is not a mournful complaint.",
+          "rodomontade": "Boastful, inflated talk. The rule is a terse command, not bragging.",
+          "hedonist": "A seeker of pleasure. Zealous rule enforcement has nothing to do with pleasure.",
+          "boor": "A rude, ill-mannered person. Rudeness is not the point; the editor is a devoted champion of the rule.",
+          "second": "To formally support a proposal. 'Compliance' baits it, but 'ironically' and readers finding the rule ridiculous show the compliance worked against the rule.",
+          "saturate": "To soak or fill completely. Filling the rule makes no sense; the effect described is that the rule lost its authority."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "jeremiad",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rodomontade",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dictum",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hedonist",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "apostle",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "boor",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "second",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "subvert",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "saturate",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "zealous",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "mock",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The paper's readers were never (i) ___ the reporter's financial ties to the company she covered, and the ombudsman's report traced that failure to a newsroom custom by which editors (ii) ___ a reporter's own judgment about her conflicts. Some readers took this history to be (iii) ___. The ombudsman did not: her final paragraph insists that an account of how a lapse came about is no reason to think it any less grave.",
+      "blanks": [
+        [
+          "divested of",
+          "apprised of",
+          "weaned off"
+        ],
+        [
+          "remonstrated against",
+          "pored over",
+          "deferred to"
+        ],
+        [
+          "extenuating",
+          "emblematic",
+          "overt"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) The 'failure' is one of disclosure: readers were never told of the ties, never apprised of them. (ii) A custom that explains why no one disclosed the conflict is one in which editors left the matter to the reporter: they deferred to her judgment. (iii) The ombudsman disagrees with these readers, and her reason is that the history does not make the lapse 'any less grave'; so the readers thought it did, which is what extenuating means.",
+        "distractors": {
+          "divested of": "Stripped of. Readers had no ties to lose; the failure was that they were not told.",
+          "weaned off": "Made to give up a habit gradually. Readers were not dependent on the reporter's ties.",
+          "remonstrated against": "Protested against. Editors who routinely challenged reporters' judgment would have caught the conflict, so the custom could not explain the failure.",
+          "pored over": "Studied with close attention. Close scrutiny of the reporter's judgment would likewise have exposed the ties, not explained why they went undisclosed.",
+          "emblematic": "Serving as a symbol of something. It fits the custom loosely, but the ombudsman's rebuttal is about whether the history makes the lapse less grave, so the readers' view must be that it did.",
+          "overt": "Open, not hidden. Whether the history was open is not what the ombudsman disputes."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "divest",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "apprise",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "wean",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "remonstrate",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pore",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "defer",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "extenuating",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "emblematic",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "overt",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "A (i) ___ of photographers had gathered outside the courthouse by dawn, and when the defendant appeared, their (ii) ___ for a statement drowned out her lawyer. Viewers watching at home were (iii) ___, though less at the crowd, which behaved as crowds do, than at the network that broadcast the scene for an hour without a word of comment.",
+      "blanks": [
+        [
+          "polity",
+          "bevy",
+          "revanchism"
+        ],
+        [
+          "concupiscence",
+          "abandon",
+          "baying"
+        ],
+        [
+          "besotted",
+          "aghast",
+          "ontological"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) A gathered crowd of people is a bevy. (ii) Their demand was loud enough to drown out the lawyer: baying, a clamorous outcry, as of hounds. (iii) 'Less at the crowd ... than at the network' needs a reaction aimed at someone's conduct, and the scene was disturbing: aghast, shocked and appalled.",
+        "distractors": {
+          "polity": "An organized society or state. Photographers outside a courthouse are a crowd, not a body politic.",
+          "revanchism": "A policy of seeking to recover lost territory. It has no sense that names a group of people.",
+          "concupiscence": "Strong sexual desire. Its register is wrong, and the sentence needs a noise loud enough to drown out a lawyer.",
+          "abandon": "Complete lack of restraint. 'Their abandon for a statement' does not parse, and it names no sound.",
+          "besotted": "Infatuated. One is besotted with something, not at a network, and the scene gives no cause for infatuation.",
+          "ontological": "Relating to the nature of being. It describes no emotional reaction."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "polity",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bevy",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "revanchism",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "concupiscence",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "abandon",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "baying",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "besotted",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "aghast",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ontological",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "In the newsroom the columnist was known less as a (i) ___ than as a scold, the man who circulated memos on split infinitives, so colleagues were startled when his (ii) ___ to the publisher's memo on decorum, a single line proposing that the memo itself be sent to the fact-checkers, had the whole floor laughing.",
+      "blanks": [
+        [
+          "poseur",
+          "wag",
+          "sybarite"
+        ],
+        [
+          "tract",
+          "exploit",
+          "rejoinder"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) Colleagues were 'startled' when he made the floor laugh, so his reputation was the opposite: he was not known as a joker. The blank is what he was not known as, a wag (a wit), set against 'scold'. The everyday sense of wag, a dog's tail, is the trap. (ii) A single witty line answering a memo is a rejoinder.",
+        "distractors": {
+          "poseur": "One who puts on airs. It fits 'less ... than as a scold' read alone, but only a reputation as a joker would make the colleagues' surprise at his joke make sense.",
+          "sybarite": "A lover of luxury. Nothing about luxury bears on being startled by his joke.",
+          "tract": "A pamphlet or treatise. His answer was 'a single line', and one does not write a tract 'to' a memo.",
+          "exploit": "A daring, notable deed. It cannot take 'to the publisher's memo', and a one-line reply is not a heroic feat."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "poseur",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "wag",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sybarite",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tract",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exploit",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rejoinder",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "decorum",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The anchor's diction was (i) ___, every consonant crisp and every vowel in place, which made her admission, in a memoir published after she retired, that she had spent her childhood fighting a speech (ii) ___ all the more surprising.",
+      "blanks": [
+        [
+          "belletristic",
+          "impeccable",
+          "liminal"
+        ],
+        [
+          "prosody",
+          "skulduggery",
+          "impediment"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) Every consonant crisp, every vowel in place: flawless, impeccable. (ii) The admission is 'surprising' only if what she fought was a flaw in speech, the opposite of her later diction: a speech impediment.",
+        "distractors": {
+          "belletristic": "Literary, concerned with fine writing. Diction can mean word choice, but 'consonant' and 'vowel' make it pronunciation.",
+          "liminal": "On a threshold, in between. Nothing about her pronunciation is transitional.",
+          "prosody": "The rhythm and intonation of speech. Everyone's speech has a prosody, so it is not something one fights as a childhood obstacle.",
+          "skulduggery": "Underhanded dealing, trickery. It makes no sense attached to 'speech' as a thing to overcome."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "belletristic",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "impeccable",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "liminal",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "prosody",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "skulduggery",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "impediment",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The author's preface dismisses her reviewers as (i) ___, and of most of their complaints, which concern spelling conventions and the placement of footnotes, the verdict seems fair. One charge, though, cannot be waved away so easily: to say, as two reviewers did, that her informants had been coached by the interviewers is (ii) ___ an accusation of fraud.",
+      "blanks": [
+        [
+          "conscientious",
+          "autocratic",
+          "captious"
+        ],
+        [
+          "emblematic of",
+          "tantamount to",
+          "complementary to"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Dismisses' calls for a pejorative, and the complaints the verdict fits are petty ones (spelling, footnotes); 'cannot be waved away so easily' confirms the label meant 'petty fault-finders': captious. (ii) Claiming the informants were coached comes to the same thing as calling the data faked: tantamount to an accusation of fraud.",
+        "distractors": {
+          "conscientious": "Careful, thorough. Complaints about footnotes could be called conscientious, but one does not 'dismiss' reviewers by praising them.",
+          "autocratic": "Domineering, ruling alone. The reviewers have no power over her and are faulted for pettiness, not tyranny.",
+          "emblematic of": "Symbolic of. The charge does not symbolize an accusation of fraud; it is equivalent to one.",
+          "complementary to": "Completing or adding to. The coaching charge does not supplement a fraud charge; in effect it is one."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "conscientious",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "autocratic",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "captious",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "emblematic",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tantamount",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "complementary",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The editorial drew such (i) ___ from readers that the paper shut its comments section within the hour, yet the writer was not left to face the storm alone: by the next morning a (ii) ___ of the paper's own columnists had signed a letter defending her right to publish it.",
+      "blanks": [
+        [
+          "manumission",
+          "vitriol",
+          "skulduggery"
+        ],
+        [
+          "jeremiad",
+          "polity",
+          "phalanx"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) Reader reaction bad enough to close the comments within the hour is bitter abuse: vitriol. (ii) 'Not left to face the storm alone' and 'defending' call for a massed group united in defense: phalanx.",
+        "distractors": {
+          "manumission": "The freeing of a slave. Readers cannot direct that at an editorial.",
+          "skulduggery": "Underhanded scheming. The 'storm' is open abuse in the comments, not secret trickery.",
+          "jeremiad": "A long lament. A letter can be a jeremiad, but columnists cannot be 'a jeremiad of' anything.",
+          "polity": "A state or organized society. A group of columnists signing a letter is not a political body."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "manumission",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "vitriol",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "skulduggery",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "jeremiad",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "polity",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "phalanx",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Investigators assumed the reporter's notebooks had been burned, since a search of every drawer and cabinet in the newsroom turned up nothing. In fact a sympathetic editor had ___ them weeks before the warrant was issued, and they surfaced intact a year later in a cabin two states away.",
+      "blanks": [
+        [
+          "rifled through",
+          "glossed over",
+          "spirited away",
+          "pored over",
+          "shored up"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "'In fact' corrects the assumption: the notebooks were not burned, they were missing from the newsroom and turned up intact far away. That requires someone to have carried them off secretly: spirited away.",
+        "distractors": {
+          "rifled through": "Searched hurriedly, often to steal. It echoes the investigators' search, but searching the notebooks would not explain why they vanished from the newsroom and reappeared two states away.",
+          "glossed over": "Treated briefly to hide importance. One glosses over a topic, not a physical notebook, and doing so would not remove it.",
+          "pored over": "Read with close attention. Studying the notebooks leaves them where they were.",
+          "shored up": "Supported, strengthened. Nothing about strengthening explains their disappearance."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "rifle",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "gloss",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "spirit",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pore",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "shore",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Obituary writers who had spent two decades mocking the publisher's pronouncements all but ___ him in the week after his death, an about-face that his surviving rivals found harder to bear than any of the old insults.",
+      "blanks": [
+        [
+          "lampooned",
+          "docked",
+          "beatified",
+          "begrudged",
+          "stomached"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "'About-face' reverses two decades of mocking, and rivals found it harder to bear than insults, so the writers praised him extravagantly. 'All but beatified' means treated him nearly as a saint.",
+        "distractors": {
+          "lampooned": "Ridiculed publicly. That is the old mocking the 'about-face' reverses.",
+          "docked": "Deducted an amount, as from wages. It has no sense that applies to how obituaries treat a dead man.",
+          "begrudged": "Envied or resented. Resentment is not a reversal of mockery, and rivals would not find it hard to bear.",
+          "stomached": "Tolerated something unpleasant. Grudging tolerance is too weak for a reversal that rivals found harder to bear than insults; the about-face is to lavish praise."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "lampoon",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dock",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "beatify",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "begrudge",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "stomach",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mock",
+          "role": "stem"
+        }
+      ]
+    }
+  ]
+}

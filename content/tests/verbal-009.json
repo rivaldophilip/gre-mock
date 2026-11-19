@@ -44,6 +44,11 @@
           "kind": "word",
           "id": "fulcrum",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "refute",
+          "role": "passage"
         }
       ]
     },
@@ -107,6 +112,21 @@
           "kind": "word",
           "id": "abet",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "vindicate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "elaborate",
+          "role": "passage"
         }
       ]
     },
@@ -140,6 +160,26 @@
         {
           "kind": "word",
           "id": "gratify",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "deliberate",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "mock",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "irreverent",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "marginal",
           "role": "passage"
         }
       ]
@@ -185,7 +225,13 @@
       "paragraphs": [
         "Planners in the Varden Valley expect that subsidizing drip irrigation, which delivers water directly to the roots of crops and loses far less to evaporation than flood irrigation does, will reduce the valley's total agricultural water use. This expectation is probably mistaken. Farmers in the valley are limited not by their water rights, which are generous, but by the cost of pumping, and drip systems lower that cost per acre irrigated. Farmers who adopt drip systems are therefore likely to bring dry, marginal land under cultivation, so that the water saved on each old acre is spent on new ones."
       ],
-      "tags": []
+      "tags": [
+        {
+          "kind": "word",
+          "id": "marginal",
+          "role": "passage"
+        }
+      ]
     }
   ],
   "figures": [],
@@ -644,6 +690,16 @@
           "at": [
             4
           ]
+        },
+        {
+          "kind": "word",
+          "id": "distinction",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "candid",
+          "role": "stem"
         }
       ]
     },
@@ -744,6 +800,21 @@
           "kind": "concept",
           "id": "rc-function",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "encyclopedic",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "hidebound",
+          "role": "stem"
         }
       ]
     },
@@ -945,6 +1016,16 @@
             0,
             4
           ]
+        },
+        {
+          "kind": "word",
+          "id": "doctrinaire",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "discern",
+          "role": "stem"
         }
       ]
     },
@@ -1035,6 +1116,11 @@
             1,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "juncture",
+          "role": "stem"
         }
       ]
     },
@@ -1160,6 +1246,11 @@
             2,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "fanciful",
+          "role": "stem"
         }
       ]
     },
@@ -1421,6 +1512,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "denounce",
+          "role": "stem"
         }
       ]
     },
@@ -1529,6 +1625,16 @@
           "kind": "concept",
           "id": "rc-main-idea",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "refute",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "dissident",
+          "role": "stem"
         }
       ]
     },
@@ -1602,6 +1708,16 @@
           "kind": "concept",
           "id": "rc-attitude",
           "role": "secondary"
+        },
+        {
+          "kind": "word",
+          "id": "dissident",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
         }
       ]
     },
@@ -1674,6 +1790,16 @@
           "kind": "concept",
           "id": "rc-application",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "banish",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "mock",
+          "role": "stem"
         }
       ]
     },
@@ -1738,6 +1864,21 @@
           "kind": "concept",
           "id": "rc-structure",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "endorse",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "confound",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "anomalous",
+          "role": "stem"
         }
       ]
     },

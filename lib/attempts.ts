@@ -72,10 +72,20 @@ export function pairKey(testId: string, qid: string) {
   return `${testId}:${qid}`;
 }
 
+/** An endless-vocab drill batch's attempt: untimed, one question at a time, each answer revealed and logged on Check. */
+export const isDrill = (a: Pick<Attempt, "mode">) => a.mode === "drill";
+
+/**
+ * A replay of missed TC / SE items (one attempt per source test): answered like a drill item, but it logs no item
+ * events, since a question already seen once proves little about its words. It only moves the item in or out of the
+ * miss pool (lib/drill-pick.ts, latestMisses).
+ */
+export const isReplay = (a: Pick<Attempt, "mode">) => a.mode === "replay";
+
 /** Can the key/explanation for this question be shown right now? */
 export function canReveal(a: Attempt, test: Test, q: Question, resp?: { finalized: boolean }): boolean {
   if (isClosed(a)) return true;
-  if (a.mode === "practice") return !!resp?.finalized;
+  if (a.mode === "practice" || isDrill(a) || isReplay(a)) return !!resp?.finalized;
   return sectionStatus(a, q.section).finished;
 }
 
@@ -107,15 +117,25 @@ export async function finalizeResponse(a: Attempt, test: Test, q: Question, resp
     .returning();
   if (!r) return;
   const ans = (r.answer ?? undefined) as Answer | undefined;
+  await Promise.all([logResponseEvents(a, test, q, r), db.update(responses).set({ isCorrect: scoreAnswer(q, ans) }).where(eq(responses.id, r.id))]);
+}
+
+/**
+ * The item events of a response the caller has just claimed (flipped `finalized` on). Replays log none. Split from
+ * finalizeResponse so a Check, which claims and scores the response in its own upsert, needs no further round trips.
+ */
+export async function logResponseEvents(a: Attempt, test: Test, q: Question, r: Pick<typeof responses.$inferSelect, "id" | "answer" | "guessed" | "timeMs">) {
+  if (isReplay(a)) return;
+  const ans = (r.answer ?? undefined) as Answer | undefined;
   const passageTags = q.passageId ? (test.passages.find((p) => p.id === q.passageId)?.tags ?? []) : [];
   const readingMs = readingAllowanceMs(test, q, await openedFirst(a.id, test, q, r.id));
   const evs = eventsForResponse(q, test.measure, ans, { guessed: r.guessed, timeMs: r.timeMs, readingMs }, passageTags);
   if (evs.length) {
+    const db = await userDb();
     await db
       .insert(itemEvents)
       .values(evs.map((e) => ({ kind: e.kind, itemId: e.itemId, event: e.event, weight: e.weight, responseId: r.id, attemptId: a.id })));
   }
-  await db.update(responses).set({ isCorrect: scoreAnswer(q, ans) }).where(eq(responses.id, r.id));
 }
 
 export async function finalizeSection(a: Attempt, test: Test, n: 1 | 2) {
@@ -153,19 +173,31 @@ export async function responseFor(attemptId: number, qkey: string) {
 
 export type RevealWord = { word: string; id?: string; senses?: unknown };
 
-/** A TC / SE question's choice words with their bank definitions, shown as "didn't know" chips once the answer is revealed. */
-export async function revealWords(q: Question): Promise<RevealWord[]> {
+/**
+ * A question's bank words with their definitions, shown as "didn't know" chips once the answer is revealed: a TC / SE
+ * question's choices, then the words tagged in its stem or passage. Leaving one of those untapped logs it as known.
+ */
+export async function revealWords(q: Question, test: Pick<Test, "passages">): Promise<RevealWord[]> {
   const words = [...new Set(choiceWords(q))];
-  if (!words.length) return [];
   const ids = words.map((w) => wordIdFor(q, w)).filter((x): x is string => !!x);
-  const rows = ids.length
-    ? await (await userDb()).select({ id: schema.vocab.id, senses: schema.vocab.senses }).from(schema.vocab).where(inArray(schema.vocab.id, ids))
+  const passageTags = q.passageId ? (test.passages.find((p) => p.id === q.passageId)?.tags ?? []) : [];
+  const shown = [...new Set([...q.tags, ...passageTags].filter((t) => t.kind === "word" && (t.role === "stem" || t.role === "passage")).map((t) => t.id))].filter((id) => !ids.includes(id));
+  const all = [...ids, ...shown];
+  if (!words.length && !shown.length) return [];
+  const rows = all.length
+    ? await (await userDb()).select({ id: schema.vocab.id, lemma: schema.vocab.lemma, senses: schema.vocab.senses }).from(schema.vocab).where(inArray(schema.vocab.id, all))
     : [];
-  const sensesOf = new Map(rows.map((r) => [r.id, r.senses]));
-  return words.map((word) => {
-    const id = wordIdFor(q, word);
-    return { word, id, senses: id ? (sensesOf.get(id) ?? null) : undefined };
-  });
+  const byId = new Map(rows.map((r) => [r.id, r]));
+  return [
+    ...words.map((word) => {
+      const id = wordIdFor(q, word);
+      return { word, id, senses: id ? (byId.get(id)?.senses ?? null) : undefined };
+    }),
+    ...shown.flatMap((id) => {
+      const v = byId.get(id);
+      return v ? [{ word: v.lemma, id, senses: v.senses ?? null }] : [];
+    }),
+  ];
 }
 
 /** This attempt's "didn't know" word tags, with definitions. */

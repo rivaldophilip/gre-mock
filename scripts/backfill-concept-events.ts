@@ -37,6 +37,8 @@ async function main() {
     for (const r of responses) {
       if (done.has(r.id)) continue;
       const a = attemptOf.get(r.attemptId);
+      // miss replays log no item events (lib/attempts.ts, isReplay)
+      if (a?.mode === "replay") continue;
       const test = a && testOf(a.testId);
       const q = test?.questions.find((x) => `${test.id}:${x.id}` === r.questionId);
       if (!test || !q || !q.tags.some((t) => t.kind === "concept")) continue;

@@ -1,9 +1,9 @@
 import { elapsedMs, type SectionState } from "./clock";
 
-type AttemptLike = { id: number; testId: string; startedAt: Date; abandonedAt: Date | null; sectionState: unknown };
+type AttemptLike = { id: number; testId: string; startedAt: Date; abandonedAt: Date | null; sectionState: unknown; mode?: string };
 
-/** Abandoned attempts are hidden from every list and take no number. */
-export const isListed = (a: AttemptLike) => !a.abandonedAt;
+/** Abandoned attempts are hidden from every list and take no number; so are endless-vocab drill batches and miss replays, which are not mocks. */
+export const isListed = (a: AttemptLike) => !a.abandonedAt && a.mode !== "drill" && a.mode !== "replay";
 
 /** Attempt number within its own test (1, 2, …), counting only attempts that were not abandoned, oldest first. */
 export function attemptNumbers(attempts: AttemptLike[]): Map<number, number> {

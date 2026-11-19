@@ -1,10 +1,11 @@
 // Re-derive the word events of answered text-completion and SE questions. Before each blank (and each SE pick) was
 // judged on its own, a right blank on a wrong question logged only key_partial, and its rejected distractors nothing.
 // Events keep the time they were first logged, so their decay is unchanged. Dry run by default; pass --apply to rewrite.
+// seen_known is left alone: it is not backfilled onto answers logged before it existed, and kept where it was logged.
 // usage: npm run rebuild:words [-- --apply] [--user <email>]
 import { config } from "dotenv";
 config({ path: ".env.local" });
-import { and, eq, inArray, ne } from "drizzle-orm";
+import { and, eq, inArray, notInArray } from "drizzle-orm";
 import { schema } from "../lib/db";
 import { eventsForResponse } from "../lib/events";
 import { loadTestFile } from "./lib/sync";
@@ -32,10 +33,10 @@ async function main() {
       const old = await db
         .select()
         .from(schema.itemEvents)
-        .where(and(eq(schema.itemEvents.responseId, r.id), eq(schema.itemEvents.kind, "word"), ne(schema.itemEvents.event, "dont_know")));
+        .where(and(eq(schema.itemEvents.responseId, r.id), eq(schema.itemEvents.kind, "word"), notInArray(schema.itemEvents.event, ["dont_know", "seen_known"])));
       if (!old.length) continue;
       const passageTags = q.passageId ? (test.passages.find((p) => p.id === q.passageId)?.tags ?? []) : [];
-      const next = eventsForResponse(q, test.measure, (r.answer ?? undefined) as Answer | undefined, { guessed: r.guessed, timeMs: r.timeMs }, passageTags).filter((e) => e.kind === "word");
+      const next = eventsForResponse(q, test.measure, (r.answer ?? undefined) as Answer | undefined, { guessed: r.guessed, timeMs: r.timeMs }, passageTags).filter((e) => e.kind === "word" && e.event !== "seen_known");
       if (sig(old) === sig(next)) continue;
       changed++;
       console.log(`  ${r.questionId} (attempt ${a.id})\n    was ${sig(old)}\n    now ${sig(next)}`);

@@ -72,7 +72,7 @@ export const attempts = pgTable(
   {
     id: serial("id").primaryKey(),
     testId: text("test_id").notNull(),
-    mode: text("mode").notNull(), // exam|practice
+    mode: text("mode").notNull(), // exam|practice|drill|replay
     timerOn: boolean("timer_on").notNull().default(true),
     startedAt: timestamp("started_at").notNull().defaultNow(),
     finishedAt: timestamp("finished_at"),

@@ -1,0 +1,1021 @@
+{
+  "id": "drill-001",
+  "measure": "verbal",
+  "title": "Endless vocab batch 1",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The senator insisted that her campaign had raised its money entirely in the open, but her critics replied that openness was never the issue: soliciting donations at a memorial service for the very victims her bill claimed to honor struck them as ___, however transparently it was done.",
+      "choices": [
+        "surreptitious",
+        "unseemly",
+        "commensurate",
+        "furtive",
+        "indecorous",
+        "officious"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The critics concede the openness and object to something else: asking for money at a memorial for the victims. That is a breach of propriety, so the blank wants a word for conduct out of keeping with the occasion. Unseemly and indecorous both say exactly that.",
+        "distractors": {
+          "surreptitious": "Trap pair with furtive: both mean done in secret. The sentence rules out their shared meaning twice, in 'openness was never the issue' and 'however transparently it was done'.",
+          "furtive": "Trap pair with surreptitious: stealthy, secret. The critics grant that nothing was hidden.",
+          "commensurate": "Proportionate, matching in size or degree; it needs a 'with' and says nothing about propriety.",
+          "officious": "Meddlesome, pressing unwanted help or authority on others. The fault named is bad taste at a memorial, not interference."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "surreptitious",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "unseemly",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "commensurate",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "furtive",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "indecorous",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "officious",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The coach did not so much ___ his players for their lapse in the final minutes as point out, in a level voice, what each of them had failed to see; a team that is shouted at, he believed, is a team that stops listening.",
+      "choices": [
+        "descry",
+        "upbraid",
+        "juxtapose",
+        "reproach",
+        "discern",
+        "parry"
+      ],
+      "key": {
+        "sel": [
+          1,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "'Did not so much X as point out, in a level voice' sets X against calm explanation, and the last clause names it: being shouted at. X takes a person plus 'for' a fault, so it means to scold. Upbraid and reproach both fit; upbraid is the harsher of the two, but either gives the sentence the same sense.",
+        "distractors": {
+          "descry": "Trap pair with discern: to catch sight of, to detect. It is baited by 'what each of them had failed to see', but 'descry his players for their lapse' does not parse, and seeing is what the coach did instead.",
+          "discern": "Trap pair with descry: to perceive or make out. Same problem: perceiving is the alternative the sentence offers, not the thing he avoided.",
+          "juxtapose": "To place side by side for comparison; it cannot take 'for their lapse'.",
+          "parry": "To ward off a blow or a question. The coach is the one doing the correcting, so he has nothing to deflect."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "descry",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "upbraid",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "juxtapose",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "reproach",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "discern",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "parry",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Critics who dismissed the architect's early houses as ___ had, it emerged, judged them only from the pavement: the rooms inside were of an almost monastic plainness, and the gilded porticoes that had so offended them turned out to be the additions of a speculator who bought the houses after they were finished.",
+      "choices": [
+        "inchoate",
+        "ostentatious",
+        "bucolic",
+        "rudimentary",
+        "flamboyant",
+        "pristine"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The critics judged from the pavement, and what offended them was the gilded porticoes, so they took the houses for showy display. The plain interiors and the speculator show that the judgment was wrong, not that it was a judgment of plainness. Ostentatious and flamboyant both name showiness meant to impress.",
+        "distractors": {
+          "inchoate": "Trap pair with rudimentary: only begun, undeveloped. It is baited by 'early houses', but what offended the critics was gilding, not immaturity.",
+          "rudimentary": "Trap pair with inchoate: basic, elementary. That describes the plain interiors, which the critics never saw; they judged from the street.",
+          "bucolic": "Rustic, of country life. Gilded porticoes are the opposite of rustic.",
+          "pristine": "Unspoiled, in original condition. That is no ground for dismissal, and the porticoes were later additions, so the houses were not pristine anyway."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "inchoate",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ostentatious",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bucolic",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rudimentary",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "flamboyant",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pristine",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "monastic",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "In a report crowded with marginal findings, the result that ought to have been the most ___ (that the drug's benefit vanished entirely in patients over sixty) was relegated to a footnote, as though its authors hoped no one would weigh how badly it undercut their conclusion.",
+      "choices": [
+        "futile",
+        "conspicuous",
+        "spurious",
+        "nugatory",
+        "salient",
+        "estimable"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "'Ought to have been' and 'relegated to a footnote' contrast where the result belonged with where it was put. Because it undercut the conclusion it deserved to stand out, set against the 'marginal' findings around it. Conspicuous and salient both mean prominent, standing out.",
+        "distractors": {
+          "futile": "Trap pair with nugatory: useless, of no effect. It is baited by 'the benefit vanished', but the sentence says the result mattered a great deal.",
+          "nugatory": "Trap pair with futile: worthless, trifling. That describes the marginal findings, not the one result that should have been prominent.",
+          "spurious": "False or not genuine. The authors buried the result because it was true and damaging; nothing suggests it was bogus.",
+          "estimable": "Worthy of esteem. It is a word of praise for people or work, not for a damaging finding that should have stood out."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "futile",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "conspicuous",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "spurious",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nugatory",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "salient",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "estimable",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "marginal",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "relegate",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Those who expected the older ensemble's players to soften once the merger raised their salaries had misjudged the source of the grievance. The players remained (i) ___, treating each conciliatory gesture from management as one more proof of the original slight. Far from forging a common identity, joint rehearsals seemed only to (ii) ___ new quarrels, and within three seasons the board conceded what the players had predicted from the start, voting for the (iii) ___ of the combined orchestra.",
+      "blanks": [
+        [
+          "pugnacious",
+          "compliant",
+          "implacable"
+        ],
+        [
+          "substantiate",
+          "engender",
+          "supersede"
+        ],
+        [
+          "schism",
+          "hegemony",
+          "dissolution"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) The players did not soften, and conciliatory gestures only confirmed the slight to them: no peace offering could appease them, which is exactly implacable. (ii) 'Far from forging a common identity' turns negative, so rehearsals produced quarrels: engender. (iii) What the players had predicted from the start of a failing merger is its end, and that is something a board can vote for: dissolution.",
+        "distractors": {
+          "pugnacious": "Eager to fight. It is close, but the sentence describes people who cannot be placated (they reject conciliation), not people who start fights; implacable names that precisely.",
+          "compliant": "Willing to go along. That is the softening the first sentence says people wrongly expected.",
+          "substantiate": "To prove or support with evidence. It is baited by 'proof of the original slight', but rehearsals produced quarrels; they did not prove them.",
+          "supersede": "To replace something older. The rehearsals added quarrels rather than replacing the old grievance, which the players still nursed.",
+          "schism": "A split within a group. That is the state the orchestra was in, not something a board votes for; one votes for a dissolution.",
+          "hegemony": "Dominance of one group over others. The players predicted collapse, not supremacy, and a board does not vote for the dominance of the combined orchestra."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "pugnacious",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "compliant",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "implacable",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "substantiate",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "engender",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "supersede",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "schism",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hegemony",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dissolution",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "conciliatory",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The (i) ___ chemist's endorsement lent the tonic an authority its ingredients never could: the advertisements quoted him promising relief from gout, melancholy and indigestion alike, as though the bottle were a (ii) ___. That a man of his standing should put his name to such claims struck colleagues not as a passing lapse of judgment but as a (iii) ___ betrayal of the discipline.",
+      "blanks": [
+        [
+          "eminent",
+          "sedulous",
+          "maladroit"
+        ],
+        [
+          "panacea",
+          "canard",
+          "paradox"
+        ],
+        [
+          "veritable",
+          "transitory",
+          "complementary"
+        ]
+      ],
+      "key": {
+        "sel": [
+          0,
+          0,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) The endorsement carried authority, and he is called 'a man of his standing', so he was famous and respected: eminent. (ii) One bottle relieving gout, melancholy and indigestion alike is a cure for everything: panacea. (iii) 'Not as a passing lapse … but as a ___ betrayal': the colleagues call it a betrayal in the full sense, so the word affirms that the label is earned: veritable.",
+        "distractors": {
+          "sedulous": "Diligent, painstaking. Diligence does not lend an endorsement authority; standing does, as the third sentence says.",
+          "maladroit": "Clumsy, inept. A clumsy chemist's name would carry no authority.",
+          "canard": "A false rumor or story. It is baited by the false claims, but a canard is a report, not a bottle, and 'as though the bottle were' calls for a cure-all.",
+          "paradox": "A seemingly self-contradictory truth. Nothing about the remedy is contradictory; it claims to cure everything.",
+          "transitory": "Passing, short-lived. That is the 'passing lapse' reading the sentence rejects with 'not as … but as'.",
+          "complementary": "Completing or going well with something else. A betrayal cannot be complementary to the discipline it betrays."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "eminent",
+          "role": "key",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sedulous",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "maladroit",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "panacea",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "canard",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "paradox",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "veritable",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "transitory",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "complementary",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "By the time the chair finished her interminable opening remarks, the delegates had grown (i) ___, shifting in their seats and muttering to their neighbors. So when a junior delegate answered a pointed question with a joke about the chair's tie, the reply struck the room as (ii) ___ enough that two senior members walked out. He later insisted that he had meant only to lighten the mood, but even his allies conceded that, whatever its intent, the jest had been (iii) ___: the moment called for gravity, and he had offered a prank.",
+      "blanks": [
+        [
+          "crestfallen",
+          "restive",
+          "aloof"
+        ],
+        [
+          "untoward",
+          "fanciful",
+          "arduous"
+        ],
+        [
+          "puerile",
+          "philistine",
+          "artless"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          0,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) Shifting in their seats and muttering after a long speech means impatient and fidgety: restive. (ii) A reply bad enough that senior members walk out was unexpected and improper: untoward. (iii) 'Whatever its intent' sets aside what he meant and judges the act. Answering a grave moment with a prank is childish: puerile.",
+        "distractors": {
+          "crestfallen": "Dejected after a setback. Nothing has disappointed the delegates; they are bored and impatient.",
+          "aloof": "Distant and reserved. Muttering to one's neighbors is the opposite of holding oneself apart.",
+          "fanciful": "Imaginative or whimsical. A joke can be whimsical, but whimsy does not drive senior members out of the room; impropriety does.",
+          "arduous": "Requiring great effort. It does not describe a reply.",
+          "philistine": "Hostile or indifferent to culture. The fault is immaturity at a grave moment, not contempt for the arts.",
+          "artless": "Without guile, innocent. It matches his defense ('meant only to lighten the mood'), but 'whatever its intent' sets intent aside, so the allies are judging the jest itself, not his motive."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "crestfallen",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "restive",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "aloof",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "untoward",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fanciful",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "arduous",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "puerile",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "philistine",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "artless",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mutter",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Far from the (i) ___ her opponents had predicted, the minister's reply was a model of restraint for its first ten minutes. Only when a heckler accused her of lying did she abandon her notes, and even then her anger read less as calculation than as the reaction of someone (ii) ___ at being charged with the very dishonesty she had spent her career exposing.",
+      "blanks": [
+        [
+          "qualm",
+          "tirade",
+          "paradigm"
+        ],
+        [
+          "surly",
+          "halcyon",
+          "indignant"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Far from' sets the predicted reply against restraint, and the anger that comes later shows what the opponents expected: a long, angry denunciation, a tirade. (ii) The anger comes from being accused of the dishonesty she fought, so it is anger at unjust treatment: indignant.",
+        "distractors": {
+          "qualm": "A pang of doubt or conscience. Opponents predicting a qualm is no contrast with restraint.",
+          "paradigm": "A model or pattern. It is baited by 'a model of restraint', but the sentence contrasts the reply with what was predicted, so the blank must be the opposite of restraint.",
+          "surly": "Bad-tempered and rude. It names a sullen temper, but this anger is a reaction to a specific injustice, which is what indignant means.",
+          "halcyon": "Calm and idyllic, of a past golden time. It contradicts the anger the sentence describes."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "qualm",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tirade",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "paradigm",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "surly",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "halcyon",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "indignant",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "That the settlement passed with so little dissent says less about its terms than about how few of the shareholders had (i) ___ them: anyone who read past the two-page summary would have found that the division of assets, (ii) ___ in the summary's telling, in fact left the founders with nearly all of the voting power.",
+      "blanks": [
+        [
+          "misconstrued",
+          "perused",
+          "supplanted"
+        ],
+        [
+          "ersatz",
+          "replete",
+          "equitable"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) The lack of dissent is put down to how few read the terms, since anyone who read past the summary would have objected: few had perused them, peruse in its strict sense of reading carefully and in full. A reader who takes peruse to mean skim gets the logic backwards. (ii) The summary's label is contradicted by 'in fact left the founders with nearly all of the voting power', so the summary presented the division as fair: equitable.",
+        "distractors": {
+          "misconstrued": "Misunderstood. 'How few had misunderstood them' would mean most understood the terms, so the vote would say something about the terms after all, which the sentence denies.",
+          "supplanted": "Took the place of. Shareholders cannot replace a settlement's terms by voting on it.",
+          "ersatz": "Artificial, an inferior substitute. A summary would not describe its own deal that way; the 'in fact' contrast needs a flattering label.",
+          "replete": "Abundantly filled. It needs a 'with' and is not a claim the 'in fact' clause could contradict."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "misconstrue",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "peruse",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "supplant",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ersatz",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "replete",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "equitable",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dissent",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "asset",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Even the critic's admirers conceded that his reviews had grown steadily more ___ over the decade, until a mild reservation from him would have read, by comparison, as praise.",
+      "blanks": [
+        [
+          "scintillating",
+          "lackluster",
+          "virulent",
+          "acquisitive",
+          "mettlesome"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "If a mild reservation would read as praise 'by comparison', his usual reviews must have become fiercely hostile. 'Even … admirers conceded' marks this as a fault his supporters had to admit. Virulent means bitterly hostile.",
+        "distractors": {
+          "scintillating": "Brilliantly lively. It is baited by 'admirers', but brilliance would not make a mild reservation read as praise.",
+          "lackluster": "Dull. Dull reviews would make a reservation stand out as harsh, not as praise.",
+          "acquisitive": "Eager to gain possessions. It does not describe the tone of reviews.",
+          "mettlesome": "Spirited, courageous. Courage is not the fault admirers concede, and it would not turn a reservation into praise."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "scintillating",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lackluster",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "virulent",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "acquisitive",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mettlesome",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
+        }
+      ]
+    }
+  ]
+}

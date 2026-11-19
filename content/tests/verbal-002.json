@@ -43,6 +43,11 @@
      "kind": "word",
      "id": "corollary",
      "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "modest",
+     "role": "passage"
     }
    ]
   },
@@ -117,6 +122,31 @@
      "kind": "word",
      "id": "declension",
      "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "revisionist",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "break",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "consensus",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "dogma",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "vindicate",
+     "role": "passage"
     }
    ]
   },
@@ -144,6 +174,16 @@
     {
      "kind": "word",
      "id": "circumlocution",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "deference",
+     "role": "passage"
+    },
+    {
+     "kind": "word",
+     "id": "reciprocity",
      "role": "passage"
     }
    ]
@@ -256,6 +296,11 @@
       0,
       4
      ]
+    },
+    {
+     "kind": "word",
+     "id": "concede",
+     "role": "stem"
     }
    ]
   },
@@ -471,6 +516,16 @@
       2,
       2
      ]
+    },
+    {
+     "kind": "word",
+     "id": "obscurity",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "provincial",
+     "role": "stem"
     }
    ]
   },
@@ -631,6 +686,11 @@
      "at": [
       5
      ]
+    },
+    {
+     "kind": "word",
+     "id": "censure",
+     "role": "stem"
     }
    ]
   },
@@ -827,6 +887,16 @@
      "kind": "concept",
      "id": "rc-main-idea",
      "role": "primary"
+    },
+    {
+     "kind": "word",
+     "id": "refute",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "reconcile",
+     "role": "stem"
     }
    ]
   },
@@ -1034,6 +1104,11 @@
       0,
       4
      ]
+    },
+    {
+     "kind": "word",
+     "id": "temperance",
+     "role": "stem"
     }
    ]
   },
@@ -1124,6 +1199,11 @@
       1,
       2
      ]
+    },
+    {
+     "kind": "word",
+     "id": "zeal",
+     "role": "stem"
     }
    ]
   },
@@ -1454,6 +1534,11 @@
      "at": [
       5
      ]
+    },
+    {
+     "kind": "word",
+     "id": "novel",
+     "role": "stem"
     }
    ]
   },
@@ -1634,6 +1719,26 @@
      "kind": "concept",
      "id": "rc-main-idea",
      "role": "primary"
+    },
+    {
+     "kind": "word",
+     "id": "assess",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "revisionist",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "implication",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "reconcile",
+     "role": "stem"
     }
    ]
   },
@@ -1670,6 +1775,26 @@
      "kind": "concept",
      "id": "rc-function",
      "role": "primary"
+    },
+    {
+     "kind": "word",
+     "id": "exemplify",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "revisionist",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "posit",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "concede",
+     "role": "stem"
     }
    ]
   },
@@ -1704,6 +1829,11 @@
      "kind": "concept",
      "id": "rc-select-verify",
      "role": "secondary"
+    },
+    {
+     "kind": "word",
+     "id": "apologist",
+     "role": "stem"
     }
    ]
   },
@@ -1740,6 +1870,21 @@
      "kind": "concept",
      "id": "rc-attitude",
      "role": "primary"
+    },
+    {
+     "kind": "word",
+     "id": "comity",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "contemptuous",
+     "role": "stem"
+    },
+    {
+     "kind": "word",
+     "id": "deference",
+     "role": "stem"
     }
    ]
   },
@@ -1776,6 +1921,11 @@
      "kind": "concept",
      "id": "rc-application",
      "role": "primary"
+    },
+    {
+     "kind": "word",
+     "id": "comity",
+     "role": "stem"
     }
    ]
   },
@@ -1835,6 +1985,11 @@
      "kind": "concept",
      "id": "rc-structure",
      "role": "primary"
+    },
+    {
+     "kind": "word",
+     "id": "reconcile",
+     "role": "stem"
     }
    ]
   },

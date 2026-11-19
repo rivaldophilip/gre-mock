@@ -45,6 +45,11 @@
           "kind": "word",
           "id": "dogged",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "pervasive",
+          "role": "passage"
         }
       ]
     },
@@ -67,6 +72,11 @@
         {
           "kind": "word",
           "id": "exorcise",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "reluctance",
           "role": "passage"
         }
       ]
@@ -110,6 +120,21 @@
           "kind": "word",
           "id": "gratify",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "interchangeable",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "barter",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "reciprocity",
+          "role": "passage"
         }
       ]
     },
@@ -138,6 +163,31 @@
         {
           "kind": "word",
           "id": "baroque",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "commonplace",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "restive",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "insurrection",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "celebrated",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "balk",
           "role": "passage"
         }
       ]
@@ -171,7 +221,13 @@
       "paragraphs": [
         "Bookshops in Velden that moved their poetry sections from the back of the store to the front have seen poetry sales rise sharply. Some booksellers conclude that poetry has simply been hidden from customers who would buy it if they saw it. But this conclusion is premature. The shops that moved their poetry sections were, almost without exception, those that had recently hired staff who read and recommend poetry, and customers in those shops report that a recommendation, not a display, prompted their purchase. The rise in sales, then, may owe more to who works in the shop than to where the shelves stand."
       ],
-      "tags": []
+      "tags": [
+        {
+          "kind": "word",
+          "id": "premature",
+          "role": "passage"
+        }
+      ]
     }
   ],
   "figures": [],
@@ -250,6 +306,11 @@
             0,
             4
           ]
+        },
+        {
+          "kind": "word",
+          "id": "remedial",
+          "role": "stem"
         }
       ]
     },
@@ -447,6 +508,11 @@
             2,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "apologist",
+          "role": "stem"
         }
       ]
     },
@@ -663,6 +729,16 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "relish",
+          "role": "stem"
         }
       ]
     },
@@ -763,6 +839,11 @@
           "kind": "concept",
           "id": "rc-main-idea",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "refute",
+          "role": "stem"
         }
       ]
     },
@@ -833,6 +914,16 @@
           "kind": "concept",
           "id": "rc-attitude",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "reluctance",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "indifferent",
+          "role": "stem"
         }
       ]
     },
@@ -856,6 +947,11 @@
           "kind": "concept",
           "id": "rc-detail",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "reluctance",
+          "role": "stem"
         }
       ]
     },
@@ -1051,6 +1147,16 @@
             1,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "resolve",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "mediator",
+          "role": "stem"
         }
       ]
     },
@@ -1158,6 +1264,11 @@
             2,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "magnate",
+          "role": "stem"
         }
       ]
     },
@@ -1247,6 +1358,21 @@
             2,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "expedient",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "coinage",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "reluctance",
+          "role": "stem"
         }
       ]
     },
@@ -1319,6 +1445,21 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "partisan",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "attribution",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "asset",
+          "role": "stem"
         }
       ]
     },
@@ -1499,6 +1640,21 @@
           "kind": "concept",
           "id": "rc-structure",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "endorse",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "reconcile",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "undermine",
+          "role": "stem"
         }
       ]
     },
@@ -1535,6 +1691,16 @@
           "kind": "concept",
           "id": "rc-function",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "barter",
+          "role": "stem"
         }
       ]
     },
@@ -1568,6 +1734,11 @@
           "kind": "concept",
           "id": "rc-select-verify",
           "role": "secondary"
+        },
+        {
+          "kind": "word",
+          "id": "reciprocity",
+          "role": "stem"
         }
       ]
     },
@@ -1604,6 +1775,16 @@
           "kind": "concept",
           "id": "rc-vocab-context",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "baroque",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "deceptive",
+          "role": "stem"
         }
       ]
     },
@@ -1640,6 +1821,11 @@
           "kind": "concept",
           "id": "rc-attitude",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "wary",
+          "role": "stem"
         }
       ]
     },
@@ -1699,6 +1885,11 @@
           "kind": "concept",
           "id": "rc-application",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "analogous",
+          "role": "stem"
         }
       ]
     },

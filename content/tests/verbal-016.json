@@ -16,7 +16,7 @@
     {
       "id": "p1",
       "paragraphs": [
-        "To the design reformers of the later nineteenth century, few household practices were more objectionable than graining and marbling, the painting of cheap pine and plaster to resemble oak, walnut or stone. Their animadversions were moral as much as aesthetic: a door painted to look like oak was, in a favorite phrase of theirs, a lie told in the hallway, and a house full of such surfaces was redolent of a society that preferred seeming to being. Later historians, antiquarian collectors among them, discarded the moralizing but kept the premise beneath it, treating painted imitation as the economy of households that wanted the look of costly materials without paying for them.",
+        "To the design reformers of the later nineteenth century, few household practices were more objectionable than graining and marbling, the painting of cheap pine and plaster to resemble oak, walnut or stone. Their animadversions were moral as much as aesthetic: a door painted to look like oak was, in a favorite phrase of theirs, a lie told in the hallway, and a house full of such surfaces was redolent of a society that preferred seeming to being. Later historians, antiquarian collectors among them, discarded the fervent moralizing but kept the premise beneath it, treating painted imitation as the economy of households that wanted the look of costly materials without paying for them.",
         "That premise does not survive a reading of the decorators' own accounts. In the ledgers of several provincial firms, a grained door is priced above a door of plain varnished oak, and painted marble in an entrance hall above the stone it imitated, because a convincing imitation took many days of a skilled painter's time and the most accomplished grainers commanded wages close to a carver's. Clients who chose imitation were often not saving money at all; what they bought was a display of skill, and contemporaries seem to have admired a well-grained door much as they admired a painted ceiling that opened onto a false sky, knowing perfectly well that it was paint. None of this makes the reformers' objection incoherent, but it does make the account they bequeathed reductive: imitation was sometimes a substitute for luxury and sometimes a luxury in its own right."
       ],
       "tags": [
@@ -39,13 +39,28 @@
           "kind": "word",
           "id": "reductive",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "aesthetic",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "provincial",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "fervent",
+          "role": "passage"
         }
       ]
     },
     {
       "id": "p2",
       "paragraphs": [
-        "During the Second World War, radar operators watching for the faint return of a submarine were found to miss more targets with every half hour they spent at the screen, and the decline, soon reproduced in laboratory tasks, came to be called the vigilance decrement. The first explanation offered was a kind of fatigue: a watch that asks little of the eye but much of the attention was thought to drain some limited mental resource, so that by the second hour too little remained to register a scintilla of light on the screen. A rival account inverts this, holding that the task demands too little rather than too much, and that an underused mind drifts toward wayward thoughts of its own until a target slips by unseen. The two accounts recommend different remedies: if attention is depleted, rest should help and added duties should hurt, whereas if it is merely idle, giving the observer something more to do should help. The evidence so far favors neither cleanly, since observers report more mind-wandering as a watch wears on but also rate long watches as effortful and draining, a combination that neither account can accommodate without strain. It may be that both are partly right and that boredom is itself a form of work, keeping one's mind on a task it would rather leave being perhaps the most tiring thing a vigilant observer is asked to do. Whatever its cause, the decrement has left the designers of monitoring systems little recourse but to rotate observers before the decline sets in."
+        "During the Second World War, radar operators watching for the faint return of a submarine, however resolute, were found to miss more targets with every half hour they spent at the screen, and the decline, soon reproduced in laboratory tasks, came to be called the vigilance decrement. The first explanation offered was a kind of fatigue: a watch that asks little of the eye but much of the attention was thought to drain some limited mental resource, so that by the second hour too little remained to register a scintilla of light on the screen. A rival account inverts this, holding that the task demands too little rather than too much, and that an underused mind drifts toward wayward thoughts of its own until a target slips by unseen. The two accounts recommend different remedies: if attention is depleted, rest should help and added duties should hurt, whereas if it is merely idle, giving the observer something more to do should help. The evidence so far favors neither cleanly, since observers report more mind-wandering as a watch wears on but also rate long watches as effortful and draining, two simultaneous complaints that neither account can accommodate without strain. It may be that both are partly right and that boredom is itself a form of work, keeping one's mind on a task it would rather leave being perhaps the most tiring thing a vigilant observer is asked to do. Whatever its cause, the decrement has left the designers of monitoring systems little recourse but to rotate observers before the decline sets in."
       ],
       "tags": [
         {
@@ -62,6 +77,26 @@
           "kind": "word",
           "id": "recourse",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "vigilance",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "vigilant",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "resolute",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "simultaneous",
+          "role": "passage"
         }
       ]
     },
@@ -77,7 +112,7 @@
       "paragraphs": [
         "When orbiting cameras first recorded narrow dark streaks that lengthen down certain Martian slopes in the warmest months, fade in the cold season and return the following year in nearly the same places, the pattern seemed to admit of only one reading. Darkening that tracked the seasons looked like the work of liquid water, most plausibly a brine whose dissolved salts lowered its freezing point enough to let it seep through the soil for a few weeks each summer, darkening the ground as wet sand is darker than dry. The reading gained weight when a spectrometer on one orbiter reported the signature of hydrated salts at several streak sites, a result widely adduced as all but proving that water flows on the surface of Mars today.",
         "Streaks were later found to end, with striking consistency, on slopes close to the angle at which loose dry sand comes to rest, which is just where a dry granular flow would stop but has no special significance for a seep, whose water should follow the terrain wherever it leads. Estimates of how much water the streaks would require, set against the minute amounts the thin atmosphere could supply, left their source hard to explain. And the salt signature, on reexamination, proved strongest where the instrument's detectors had been operating near their limits, raising the possibility that some of it was an artifact of processing rather than a property of the ground. Together these findings do not refute the water interpretation so much as strip it of the support that once made it seem inevitable.",
-        "None of this has yet produced a settled alternative. Dry flows set off by the seasonal warming of the surface, perhaps aided by aeolian winnowing that strips away bright dust and lowers the slope's albedo, now account for the streaks' shape and stopping points better than water does, but they do not yet explain why the darkening should recur so faithfully at the same sites, year after year. What has changed is less the answer than the standard of proof. A dark, lengthening tongue on a slope resembles a wet one so closely that the resemblance was allowed to do the work of evidence, and the episode has made planetary scientists warier of reading terrestrial processes, alluvial or otherwise, into forms that merely look familiar."
+        "None of this has yet produced a settled alternative. Dry flows set off by the seasonal warming of the surface, perhaps aided by aeolian winnowing that strips away bright dust and lowers the slope's albedo, now account for the streaks' shape and stopping points better than water does, but they do not yet explain why the darkening should recur so faithfully at the same sites, year after year. What has changed is less the answer than the standard of proof. A dark, lengthening tongue on a slope resembles a wet one so closely that the resemblance, by an old fallacy, was allowed to do the work of evidence, and the episode has made planetary scientists warier of reading terrestrial processes, alluvial or otherwise, into forms that merely look familiar."
       ],
       "tags": [
         {
@@ -99,13 +134,28 @@
           "kind": "word",
           "id": "alluvial",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "mar",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "refute",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "fallacy",
+          "role": "passage"
         }
       ]
     },
     {
       "id": "p4",
       "paragraphs": [
-        "Lawyers trained in the common law tend to assume that the rule obliging a court to follow an earlier decision on the same point is as old as the common law itself, and the assumption is understandable, since English judges were citing earlier cases by the fourteenth century. Citation, however, is not obligation. Medieval and early modern judges treated reported cases as evidence of what the custom of the realm was, and evidence can be outweighed: a decision that seemed to depart from the settled practice of the courts could simply be set aside as a mistaken statement of the law rather than an instance of it. Only in the nineteenth century, when reliable printed reports made it possible to know with confidence what a court had actually held, and when a reorganized hierarchy of courts fixed the ambit within which each court's decisions bound the others, did the doctrine that a single precedent binds of its own force take its familiar shape. The archetypal common-law judge, reasoning from case to case under the discipline of precedent, is thus a fairly recent figure in the strict form in which he is usually imagined, and to treat departures from precedent in earlier centuries as a kind of apostasy is to judge those courts by a rule they did not yet recognize."
+        "Lawyers trained in the common law tend to assume that the rule obliging a court to follow an earlier decision on the same point is as old as the common law itself, and the assumption is understandable, since English judges were citing earlier cases by the fourteenth century. Citation, however, is not obligation. Medieval and early modern judges treated reported cases as evidence of what the custom of the realm was, and evidence can be outweighed: a decision that seemed to depart from the settled practice of the courts could simply be set aside as an erroneous statement of the law rather than an instance of it. Only in the nineteenth century, when reliable printed reports made it possible to know with confidence what a court had actually held, and when a reorganized hierarchy of courts fixed the ambit within which each court's decisions bound the others, did the doctrine that a single precedent binds of its own force win primacy and take its familiar shape. The archetypal common-law judge, reasoning from case to case under the discipline of precedent, is thus a fairly recent figure in the strict form in which he is usually imagined, and to treat departures from precedent in earlier centuries as a kind of apostasy is to judge those courts by a rule they did not yet recognize."
       ],
       "tags": [
         {
@@ -122,13 +172,23 @@
           "kind": "word",
           "id": "apostasy",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "erroneous",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "primacy",
+          "role": "passage"
         }
       ]
     },
     {
       "id": "p5",
       "paragraphs": [
-        "Because the master masons of the Gothic cathedrals left no calculations, only drawings and a handful of rules of proportion, historians long pictured them as visionary but unscientific builders who raised their vaults by intuition and learned the limits of their methods from collapses such as the fall of the choir at Beauvais. Engineers who have analyzed the rules with modern methods have revised that picture, finding that for masonry, geometry is a surprisingly versatile guide to stability: because stone structures fail by tipping and sliding long before the stone itself is crushed, a buttress that stands at one size will stand when every dimension is doubled, so a rule stated as a proportion carries over from a parish church to a cathedral in a way that a rule about loads would not. The rules were thus less a substitute for theory than a compressed record of what had stood, and they misled only when builders pushed them past the forms from which they had been learned, as at Beauvais, where the vault rose higher than any precedent could vouch for. To call the masons unscientific is accurate only in the narrow sense that they did not reason from forces, and it overlooks how much a doughty empirical tradition can encode without ever stating its grounds."
+        "Because the master masons of the Gothic cathedrals left no calculations, only drawings and a handful of rules of proportion, historians long pictured them as visionary but unscientific builders who raised their vaults by intuition and learned the limits of their methods from collapses such as the fall of the choir at Beauvais, a failure that has tarnished their reputation ever since. Engineers who have analyzed the rules with modern methods have revised that picture, finding that for masonry, geometry is a surprisingly versatile guide to stability: because stone structures fail by tipping and sliding long before the stone itself is crushed, a buttress that stands at one size will stand when every dimension is doubled, so a rule stated as a proportion carries over from a parish church to a cathedral in a way that a rule about loads would not. The rules were thus less a substitute for theory than a compressed record of what had stood, and they misled only when builders pushed them past the forms from which they had been learned, as at Beauvais, the acme of Gothic ambition, where the vault rose higher than any precedent could vouch for. To call the masons unscientific is accurate only in the narrow sense that they did not reason from forces, and it overlooks how much a doughty empirical tradition can encode without ever stating its grounds."
       ],
       "tags": [
         {
@@ -144,6 +204,21 @@
         {
           "kind": "word",
           "id": "doughty",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "empirical",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "tarnish",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "acme",
           "role": "passage"
         }
       ]
@@ -167,9 +242,9 @@
       "blanks": [
         [
           "pragmatism",
-          "venality",
+          "turpitude",
           "mendacity",
-          "temerity",
+          "panache",
           "obstinacy"
         ]
       ],
@@ -182,8 +257,8 @@
         "key": "The fault biographers are slow to concede is shown in the colon clause: he gave each party assurances he knew could not all be kept, that is, promises he knew to be false. Mendacity, untruthfulness, is that fault; 'served his country so well' explains the reluctance to admit it.",
         "distractors": {
           "pragmatism": "Practicality is not a fault biographers would be slow to concede, and it does not capture knowingly false assurances.",
-          "venality": "Corruptibility for money; nothing suggests he was bribed or acted for gain.",
-          "temerity": "Incompatible assurances were risky, but the clue is that he knew they could not be honored, which is deceit, not mere rashness.",
+          "turpitude": "Base wickedness overstates and blurs the fault; the clue is assurances he knew could not all be honored, which is lying, not depravity at large.",
+          "panache": "Flair might well serve a diplomat, but no biographer would be slow to concede it, and it says nothing about false assurances.",
           "obstinacy": "Stubbornness is the opposite of telling each side what it wanted to hear."
         }
       },
@@ -199,7 +274,7 @@
         },
         {
           "kind": "word",
-          "id": "venality",
+          "id": "turpitude",
           "role": "distractor",
           "at": [
             0,
@@ -217,12 +292,22 @@
         },
         {
           "kind": "word",
-          "id": "temerity",
+          "id": "panache",
           "role": "distractor",
           "at": [
             0,
             3
           ]
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "celebrated",
+          "role": "stem"
         }
       ]
     },
@@ -241,7 +326,7 @@
         [
           "mitigate",
           "gratify",
-          "jettison"
+          "impair"
         ]
       ],
       "key": {
@@ -256,7 +341,7 @@
           "pedant": "A pedant would be expected to be rigorous, so there would be no surprise.",
           "expatriate": "Where the banker lives has nothing to do with expecting a lack of rigor.",
           "mitigate": "Sending chapters to specialists is itself a way of checking one's vanity, so 'far from writing to mitigate' it contradicts what he did.",
-          "jettison": "Same problem as mitigate: discarding vanity is what he did, not what 'far from' denies."
+          "impair": "Same problem as mitigate: weakening his vanity is what checking with specialists did, not what “far from” denies."
         }
       },
       "tags": [
@@ -298,7 +383,7 @@
         },
         {
           "kind": "word",
-          "id": "jettison",
+          "id": "impair",
           "role": "distractor",
           "at": [
             1,
@@ -315,8 +400,8 @@
       "prompt": "Her colleagues had long mistaken the envoy's (i) ___ for timidity. She seldom (ii) ___ a superior's instruction, and she never raised her voice in council. Only when the archives were opened did it emerge that this same habit of apparent compliance had allowed her to (iii) ___ the very revolt her superiors believed she was too meek even to join.",
       "blanks": [
         [
-          "diffidence",
-          "hauteur",
+          "apathy",
+          "bombast",
           "deference"
         ],
         [
@@ -327,7 +412,7 @@
         [
           "foment",
           "forestall",
-          "belittle"
+          "deflect"
         ]
       ],
       "key": {
@@ -340,18 +425,18 @@
       "explanation": {
         "key": "Solve from the third sentence: 'this same habit of apparent compliance' names what blanks (i) and (ii) describe. (ii) Seldom objecting to instructions is compliance: demurred at. (i) The trait mistaken for timidity is that compliance, deference, which is not itself timidity. (iii) The superiors thought her too meek even to join the revolt; the reversal is that she instigated it: foment.",
         "distractors": {
-          "diffidence": "Diffidence is timidity, so colleagues could not have 'mistaken' it for timidity; it also is not compliance.",
-          "hauteur": "Haughtiness is neither compliance nor anything one would mistake for timidity.",
+          "apathy": "Seldom demurring and never raising her voice might look like not caring, but someone who fomented a revolt was anything but indifferent, and what the passage describes is compliance, not apathy.",
+          "bombast": "Inflated talk is neither compliance nor anything one would mistake for timidity, and she never raised her voice.",
           "acquiesced in": "Seldom acquiescing is the opposite of the 'habit of apparent compliance'.",
           "blanched at": "Seldom blanching describes composure, not compliance, so 'this same habit of apparent compliance' has nothing to refer to.",
-          "forestall": "Preventing the revolt makes no contrast with being thought too meek to join it.",
-          "belittle": "Disparaging the revolt is not something compliance would let her do covertly, and it creates no reversal."
+          "forestall": "Trap pair with deflect: preventing the revolt makes no contrast with being thought too meek to join it.",
+          "deflect": "Trap pair with forestall: turning the revolt aside makes no contrast with being thought too meek to join it."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "diffidence",
+          "id": "apathy",
           "role": "distractor",
           "at": [
             0,
@@ -360,7 +445,7 @@
         },
         {
           "kind": "word",
-          "id": "hauteur",
+          "id": "bombast",
           "role": "distractor",
           "at": [
             0,
@@ -423,7 +508,7 @@
         },
         {
           "kind": "word",
-          "id": "belittle",
+          "id": "deflect",
           "role": "distractor",
           "at": [
             2,
@@ -440,8 +525,8 @@
       "prompt": "Investors who had once admired the founder's ___ indifference to quarterly forecasts as the mark of a long-term thinker were less charmed when the same indifference extended to the auditors' questions about where the money had gone.",
       "choices": [
         "cavalier",
-        "feigned",
-        "tacit",
+        "pretended",
+        "sporadic",
         "blithe",
         "affected",
         "inert"
@@ -455,9 +540,9 @@
       "explanation": {
         "key": "The indifference is real (it 'extended' to the auditors) and offhand: admired as vision when it concerned forecasts, alarming when it concerned missing money. Cavalier and blithe both describe that careless, untroubled disregard.",
         "distractors": {
-          "feigned": "Trap pair with affected: both mean pretended, but an indifference that later 'extended' to the auditors was genuine.",
-          "affected": "Trap pair with feigned.",
-          "tacit": "Unspoken; the sentence is about the quality of his indifference, not whether it was stated.",
+          "pretended": "Trap pair with affected: both mean put on, but an indifference that later “extended” to the auditors was genuine.",
+          "affected": "Trap pair with pretended.",
+          "sporadic": "Indifference that came and went could not be “the same indifference” that later extended to the auditors.",
           "inert": "Inactive or sluggish does not describe a disregard investors could admire as vision."
         }
       },
@@ -472,15 +557,7 @@
         },
         {
           "kind": "word",
-          "id": "feign",
-          "role": "distractor",
-          "at": [
-            1
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "tacit",
+          "id": "sporadic",
           "role": "distractor",
           "at": [
             2
@@ -511,7 +588,7 @@
       "difficulty": 3,
       "prompt": "The new maintenance manual is ___ where its predecessor rambled: each procedure that once filled a page now takes a single numbered line, and the technicians, who seldom read past the first paragraph of anything, say it is the first manual they have actually used.",
       "choices": [
-        "discursive",
+        "wordy",
         "terse",
         "cryptic",
         "digressive",
@@ -527,21 +604,13 @@
       "explanation": {
         "key": "'Where its predecessor rambled' and 'a single numbered line' call for brevity: terse and succinct.",
         "distractors": {
-          "discursive": "Trap pair with digressive: both describe the rambling predecessor, not the new manual.",
-          "digressive": "Trap pair with discursive.",
+          "wordy": "Trap pair with digressive: both describe the rambling predecessor, not the new manual.",
+          "digressive": "Trap pair with wordy.",
           "cryptic": "A manual that technicians finally use is not obscure; the contrast is length, not clarity.",
           "mellifluous": "Sweet-sounding has nothing to do with replacing pages by single lines."
         }
       },
       "tags": [
-        {
-          "kind": "word",
-          "id": "discursive",
-          "role": "distractor",
-          "at": [
-            0
-          ]
-        },
         {
           "kind": "word",
           "id": "terse",
@@ -587,8 +656,8 @@
         "rigorous",
         "transparent",
         "recondite",
-        "exacting",
-        "facile"
+        "stringent",
+        "abysmal"
       ],
       "key": {
         "sel": [
@@ -599,10 +668,10 @@
       "explanation": {
         "key": "'Sealed in another way' turns from the literal sense (leaky chambers) to the figurative: the papers were closed to outsiders, who could not tell even what question they addressed. Hermetic in its secondary sense (impenetrable to outsiders) and recondite (obscure, hard to grasp) fit.",
         "distractors": {
-          "rigorous": "Trap pair with exacting: both mean demanding and precise, which a reader expecting hard mathematics might pick, but outsiders 'well versed in the mathematics' would cope with rigor; what defeats them is not knowing what question a paper asks.",
-          "exacting": "Trap pair with rigorous.",
+          "rigorous": "Trap pair with stringent: both mean demanding and precise, which a reader expecting hard mathematics might pick, but outsiders “well versed in the mathematics” would cope with rigor; what defeats them is not knowing what question a paper asks.",
+          "stringent": "Trap pair with rigorous.",
           "transparent": "Clear is the opposite of papers outsiders cannot follow.",
-          "facile": "Superficial or too easy contradicts papers that experts cannot penetrate."
+          "abysmal": "Very poor work might also baffle readers, but the sentence calls the papers “sealed,” closed to outsiders, not bad; and it has no partner."
         }
       },
       "tags": [
@@ -624,7 +693,7 @@
         },
         {
           "kind": "word",
-          "id": "exact",
+          "id": "stringent",
           "role": "distractor",
           "at": [
             4
@@ -632,7 +701,7 @@
         },
         {
           "kind": "word",
-          "id": "facile",
+          "id": "abysmal",
           "role": "distractor",
           "at": [
             5
@@ -647,10 +716,10 @@
       "difficulty": 4,
       "prompt": "The museum's new galleries are ___ almost to a fault: with the labels reduced to numbers and the benches removed, the paintings have the walls to themselves, but visitors who need to sit down or to know what they are looking at have been given no thought.",
       "choices": [
-        "ornate",
+        "showy",
         "spartan",
         "haphazard",
-        "florid",
+        "meretricious",
         "austere",
         "hospitable"
       ],
@@ -663,21 +732,13 @@
       "explanation": {
         "key": "Labels cut to numbers and benches removed: a deliberate, severe plainness, praised ('the paintings have the walls to themselves') but taken 'almost to a fault'. Spartan and austere both fit.",
         "distractors": {
-          "ornate": "Trap pair with florid: both mean heavily decorated, the opposite of stripped-down galleries.",
-          "florid": "Trap pair with ornate.",
+          "showy": "Trap pair with meretricious: both mean flashy, the opposite of stripped-down galleries.",
+          "meretricious": "Trap pair with showy.",
           "haphazard": "The plainness is a deliberate design choice, not a careless arrangement.",
           "hospitable": "The galleries give visitors who need a seat or a label no thought; that is the reverse of hospitable."
         }
       },
       "tags": [
-        {
-          "kind": "word",
-          "id": "ornate",
-          "role": "distractor",
-          "at": [
-            0
-          ]
-        },
         {
           "kind": "word",
           "id": "spartan",
@@ -696,7 +757,7 @@
         },
         {
           "kind": "word",
-          "id": "florid",
+          "id": "meretricious",
           "role": "distractor",
           "at": [
             3
@@ -739,6 +800,11 @@
           "kind": "concept",
           "id": "rc-function",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "provincial",
+          "role": "stem"
         }
       ]
     },
@@ -869,11 +935,11 @@
       "prompt": "The relief agency's guidelines took for granted that field officers would always have time to consult headquarters before spending, an assumption that the first hours after the flood, with their ___ demands, exposed as a luxury of ordinary times.",
       "blanks": [
         [
-          "nominal",
+          "quotidian",
           "exigent",
           "contingent",
           "contradictory",
-          "propitious"
+          "fortuitous"
         ]
       ],
       "key": {
@@ -884,16 +950,16 @@
       "explanation": {
         "key": "The assumption that there is always time to consult was 'a luxury of ordinary times', so the flood's demands left no time: they were urgent and pressing. Exigent.",
         "distractors": {
-          "nominal": "Trifling demands would leave plenty of time to consult.",
+          "quotidian": "Everyday demands are exactly what the guidelines were written for; the flood exposed them as “a luxury of ordinary times.”",
           "contingent": "Demands dependent on circumstances do not, as such, rule out waiting for a reply.",
           "contradictory": "Demands that conflict with each other make choices hard, not time short; the sentence turns on time.",
-          "propitious": "Favorable is the wrong polarity for demands that exposed the guidelines."
+          "fortuitous": "Happening by lucky chance is the wrong polarity for demands that exposed the guidelines."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "nominal",
+          "id": "quotidian",
           "role": "distractor",
           "at": [
             0,
@@ -920,7 +986,7 @@
         },
         {
           "kind": "word",
-          "id": "propitious",
+          "id": "fortuitous",
           "role": "distractor",
           "at": [
             0,
@@ -939,7 +1005,7 @@
         [
           "austerity",
           "affectation",
-          "diffidence"
+          "diatribe"
         ],
         [
           "amply flattered",
@@ -957,7 +1023,7 @@
         "key": "(i) 'Borrowed' Latin and 'studied' cadence are put-on manners meant to impress, set against plainness: affectation. (ii) The 'since' clause gives the reason: admiring listeners are not attending to what is taught, so a dazzled congregation is one that has not been instructed: not edified.",
         "distractors": {
           "austerity": "Austerity is the plainness the readers find, not what they expected instead of it.",
-          "diffidence": "Shyness does not describe borrowed Latin and studied cadence.",
+          "diatribe": "A bitter tirade does not describe borrowed Latin and studied cadence, and court preachers flattered rather than railed.",
           "already won": "A familiar idea about rhetoric, but the reason given concerns what listeners learn, not whether they are persuaded.",
           "amply flattered": "A dazzled congregation may well feel flattered, but the 'since' clause is about teaching, and flattery would not make plainness a principle."
         }
@@ -983,7 +1049,7 @@
         },
         {
           "kind": "word",
-          "id": "diffidence",
+          "id": "diatribe",
           "role": "distractor",
           "at": [
             0,
@@ -1011,17 +1077,17 @@
         [
           "trumpeted",
           "hedged",
-          "embellished"
+          "underscored"
         ],
         [
-          "a facile evasion",
-          "a pedantic habit",
+          "a feckless evasion",
+          "a finicky habit",
           "a sound method"
         ],
         [
-          "superseded",
+          "untenable",
           "warranted",
-          "fanciful"
+          "apocryphal"
         ]
       ],
       "key": {
@@ -1035,11 +1101,11 @@
         "key": "(i) is decided by the second sentence: the 'habit' is her refusal to assert more than the evidence could bear, which is to qualify every claim: hedged (secondary sense, not the garden hedge). (ii) 'Not timidity but…' needs the author's positive reading of the habit: a sound method, in the sense of reliable and well reasoned. (iii) 'If… modest, they are also…' concedes modesty and claims a strength: later evidence has shown them justified: warranted.",
         "distractors": {
           "trumpeted": "Proclaiming loudly is the opposite of refusing to assert more than the records allow.",
-          "embellished": "Embroidering claims is also the opposite of her restraint.",
-          "a facile evasion": "Negative, like the reviewers' complaint; 'not timidity but' requires a defense.",
-          "a pedantic habit": "Also negative, and the author is defending the habit, not renaming the fault.",
-          "superseded": "Overturned is what happened to the confident pronouncements, not to her conclusions.",
-          "fanciful": "Imaginary or unfounded contradicts the claim that her conclusions held up."
+          "underscored": "Emphasizing every claim is the opposite of her refusal to assert more than the records allow.",
+          "a feckless evasion": "Negative, like the reviewers' complaint; “not timidity but” requires a defense.",
+          "a finicky habit": "Also negative, and the author is defending the habit, not renaming the fault.",
+          "untenable": "Indefensible is what later evidence made of the confident pronouncements, not of her conclusions.",
+          "apocryphal": "Of doubtful authenticity contradicts the claim that her conclusions held up."
         }
       },
       "tags": [
@@ -1054,7 +1120,7 @@
         },
         {
           "kind": "word",
-          "id": "embellish",
+          "id": "underscore",
           "role": "distractor",
           "at": [
             0,
@@ -1063,7 +1129,7 @@
         },
         {
           "kind": "word",
-          "id": "facile",
+          "id": "feckless",
           "role": "distractor",
           "at": [
             1,
@@ -1072,7 +1138,7 @@
         },
         {
           "kind": "word",
-          "id": "pedantic",
+          "id": "finicky",
           "role": "distractor",
           "at": [
             1,
@@ -1090,7 +1156,7 @@
         },
         {
           "kind": "word",
-          "id": "supersede",
+          "id": "untenable",
           "role": "distractor",
           "at": [
             2,
@@ -1108,12 +1174,17 @@
         },
         {
           "kind": "word",
-          "id": "fanciful",
+          "id": "apocryphal",
           "role": "distractor",
           "at": [
             2,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "modest",
+          "role": "stem"
         }
       ]
     },
@@ -1126,14 +1197,14 @@
       "prompt": "The surveyor's notebooks give no sign that he suspected the error in his baseline; page after page records the same (i) ___ checking of angles that had made his reputation. That diligence is exactly what makes the mistake instructive. Because each new triangle was computed from the last, a discrepancy too small to notice at the first station was left to (ii) ___ with every station after it, until at the far edge of the province it was (iii) ___ anyone who laid the map beside the ground.",
       "blanks": [
         [
-          "desultory",
+          "sporadic",
           "assiduous",
-          "perfunctory"
+          "superficial"
         ],
         [
-          "abate",
+          "plummet",
           "burgeon",
-          "dissipate"
+          "vacillate"
         ],
         [
           "patent to",
@@ -1151,10 +1222,10 @@
       "explanation": {
         "key": "(i) The next sentence calls it 'that diligence': assiduous. (ii) Each triangle built on the last, so a tiny error grows at every station: burgeon. (iii) Too small to notice at the start, the grown error is by the far edge plainly evident: patent to anyone comparing map and ground.",
         "distractors": {
-          "desultory": "Aimless and unsystematic contradicts 'that diligence'.",
-          "perfunctory": "Checking done as a mere routine is not diligence.",
-          "abate": "A compounding error grows; it does not lessen.",
-          "dissipate": "Same direction problem as abate.",
+          "sporadic": "Checking at irregular intervals contradicts “that diligence” and “page after page.”",
+          "superficial": "Checking that stays on the surface is not diligence.",
+          "plummet": "A compounding error grows; it does not drop.",
+          "vacillate": "An error carried from station to station grows steadily; it does not waver back and forth.",
           "lost on": "The point is that the error became obvious, not that it went unnoticed.",
           "hidden from": "Same reversal as lost on."
         }
@@ -1162,7 +1233,7 @@
       "tags": [
         {
           "kind": "word",
-          "id": "desultory",
+          "id": "sporadic",
           "role": "distractor",
           "at": [
             0,
@@ -1180,7 +1251,7 @@
         },
         {
           "kind": "word",
-          "id": "perfunctory",
+          "id": "superficial",
           "role": "distractor",
           "at": [
             0,
@@ -1189,7 +1260,7 @@
         },
         {
           "kind": "word",
-          "id": "abate",
+          "id": "plummet",
           "role": "distractor",
           "at": [
             1,
@@ -1207,7 +1278,7 @@
         },
         {
           "kind": "word",
-          "id": "dissipate",
+          "id": "vacillate",
           "role": "distractor",
           "at": [
             1,
@@ -1222,6 +1293,11 @@
             2,
             0
           ]
+        },
+        {
+          "kind": "word",
+          "id": "discrepancy",
+          "role": "stem"
         }
       ]
     },
@@ -1234,11 +1310,11 @@
       "prompt": "What reviewers hailed as the novelist's ___ device, telling the story backward from the funeral, would have seemed far less so to readers of the provincial serials she grew up on, which used it so routinely that it had become their signature.",
       "choices": [
         "novel",
-        "hackneyed",
-        "audacious",
+        "prosaic",
+        "subtle",
         "stale",
         "unprecedented",
-        "pernicious"
+        "facetious"
       ],
       "key": {
         "sel": [
@@ -1249,10 +1325,10 @@
       "explanation": {
         "key": "The blank is what the reviewers praised and what the device would have seemed 'far less' to readers who knew it as routine: new and original. Novel (the adjective, not the book) and unprecedented both fit.",
         "distractors": {
-          "hackneyed": "Trap pair with stale: this is what the device really was to serial readers, but the blank is what the reviewers hailed it as.",
-          "stale": "Trap pair with hackneyed.",
-          "audacious": "Bold could be praised, but it has no partner among the choices, and the sentence turns on newness versus routine use.",
-          "pernicious": "Harmful is not praise, and nothing in the sentence concerns harm."
+          "prosaic": "Trap pair with stale: this is what the device really was to serial readers, but the blank is what the reviewers hailed it as.",
+          "stale": "Trap pair with prosaic.",
+          "subtle": "Understated could be praise, but it has no partner among the choices, and the sentence turns on newness versus routine use.",
+          "facetious": "Flippancy is not praise, and nothing in the sentence concerns humor."
         }
       },
       "tags": [
@@ -1266,7 +1342,7 @@
         },
         {
           "kind": "word",
-          "id": "hackneyed",
+          "id": "prosaic",
           "role": "distractor",
           "at": [
             1
@@ -1274,7 +1350,7 @@
         },
         {
           "kind": "word",
-          "id": "audacious",
+          "id": "subtle",
           "role": "distractor",
           "at": [
             2
@@ -1290,11 +1366,16 @@
         },
         {
           "kind": "word",
-          "id": "pernicious",
+          "id": "facetious",
           "role": "distractor",
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "provincial",
+          "role": "stem"
         }
       ]
     },
@@ -1307,10 +1388,10 @@
       "prompt": "The lecturer's long detour through the history of shipbuilding struck the students as a digression until the final ten minutes, when it proved ___ to the very question the course had been circling all term: why the empire's navy outgrew its harbors.",
       "choices": [
         "pertinent",
-        "tangential",
+        "incidental",
         "contingent",
         "germane",
-        "peripheral",
+        "irrelevant",
         "inimical"
       ],
       "key": {
@@ -1322,8 +1403,8 @@
       "explanation": {
         "key": "'Until' reverses the students' first impression: the apparent digression turned out to bear directly on the course's central question. Pertinent and germane, directly relevant.",
         "distractors": {
-          "tangential": "Trap pair with peripheral: both describe how the detour first struck the students, which 'until' overturns.",
-          "peripheral": "Trap pair with tangential.",
+          "incidental": "Trap pair with irrelevant: both describe how the detour first struck the students, which “until” overturns.",
+          "irrelevant": "Trap pair with incidental.",
           "contingent": "Dependent on something does not express the reversal from digression to relevance.",
           "inimical": "Hostile or harmful to the question makes no sense of a detour that answers it."
         }
@@ -1335,14 +1416,6 @@
           "role": "key",
           "at": [
             0
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "tangential",
-          "role": "distractor",
-          "at": [
-            1
           ]
         },
         {
@@ -1363,19 +1436,16 @@
         },
         {
           "kind": "word",
-          "id": "peripheral",
-          "role": "distractor",
-          "at": [
-            4
-          ]
-        },
-        {
-          "kind": "word",
           "id": "inimical",
           "role": "distractor",
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "digression",
+          "role": "stem"
         }
       ]
     },
@@ -1471,6 +1541,26 @@
           "kind": "concept",
           "id": "rc-structure",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "fabricate",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "reconcile",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "assess",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "unresolved",
+          "role": "stem"
         }
       ]
     },
@@ -1501,6 +1591,11 @@
           "kind": "concept",
           "id": "rc-vocab-context",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "consensus",
+          "role": "stem"
         }
       ]
     },
@@ -1616,6 +1711,16 @@
           "kind": "concept",
           "id": "rc-application",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "analogous",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "apostasy",
+          "role": "stem"
         }
       ]
     },

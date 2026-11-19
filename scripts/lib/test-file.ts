@@ -1,8 +1,8 @@
-// Reading content/tests/<id>.json for the authoring scripts, with errors that say what to do instead of a stack trace.
+// Reading content/tests/<id>.json (content/drill/ for drill batches) for the authoring scripts, with errors that say what to do instead of a stack trace.
 import fs from "node:fs";
+import { testDir, testPath } from "../../lib/test-path";
 
-export const TESTS_DIR = "content/tests";
-export const testPath = (id: string) => `${TESTS_DIR}/${id}.json`;
+export { TESTS_DIR, testPath } from "../../lib/test-path";
 
 /** Print a message for the author and stop. Scripts call this for every expected failure. */
 export function die(message: string): never {
@@ -14,8 +14,9 @@ export function readTestFile(id: string | undefined, usage: string): unknown {
   if (!id || id.startsWith("-")) die(`usage: ${usage}`);
   const file = testPath(id);
   if (!fs.existsSync(file)) {
-    const have = fs.existsSync(TESTS_DIR) ? fs.readdirSync(TESTS_DIR).filter((f) => f.endsWith(".json")).map((f) => f.slice(0, -5)).sort() : [];
-    die(`no ${file}. Tests on disk: ${have.join(", ") || "none"}. A new test starts with: npm run -s brief -- verbal|quant`);
+    const dir = testDir(id);
+    const have = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith(".json")).map((f) => f.slice(0, -5)).sort() : [];
+    die(`no ${file}. Tests on disk: ${have.join(", ") || "none"}. A new test starts with: npm run -s brief -- verbal|quant (a drill batch: npm run -s brief:drill)`);
   }
   const text = fs.readFileSync(file, "utf8");
   try {

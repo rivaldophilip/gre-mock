@@ -102,11 +102,16 @@ export default async function Review({ params }: { params: Promise<{ id: string;
   const visible = test.questions.filter((q) => canReveal(a, test, q, rows.get(pairKey(id, q.id))));
   const correct = visible.filter((q) => scoreAnswer(q, (rows.get(pairKey(id, q.id))?.answer ?? undefined) as Answer | undefined)).length;
   // definitions for every tagged word on the visible questions, and this attempt's "didn't know" tags
-  const wordIds = [...new Set(visible.flatMap((q) => q.tags.filter((t) => t.kind === "word").map((t) => t.id)))];
+  const passageTagsOf = (q: Question) => (q.passageId ? (test.passages.find((p) => p.id === q.passageId)?.tags ?? []) : []);
+  const wordIds = [...new Set(visible.flatMap((q) => [...q.tags, ...passageTagsOf(q)].filter((t) => t.kind === "word").map((t) => t.id)))];
   const vocabRows = wordIds.length
-    ? await db.select({ id: schema.vocab.id, senses: schema.vocab.senses }).from(schema.vocab).where(inArray(schema.vocab.id, wordIds))
+    ? await db.select({ id: schema.vocab.id, lemma: schema.vocab.lemma, senses: schema.vocab.senses }).from(schema.vocab).where(inArray(schema.vocab.id, wordIds))
     : [];
   const sensesOf = new Map(vocabRows.map((v) => [v.id, v.senses as Sense[] | null]));
+  const lemmaOf = new Map(vocabRows.map((v) => [v.id, v.lemma]));
+  /** Bank words tagged in these tags with this role, as chips: leaving one untapped logs it as known. */
+  const shownWords = (tags: Question["tags"], role: "stem" | "passage") =>
+    [...new Set(tags.filter((t) => t.kind === "word" && t.role === role && lemmaOf.has(t.id)).map((t) => t.id))];
   const taggedRows = await db
     .select({ itemId: schema.itemEvents.itemId })
     .from(schema.itemEvents)
@@ -220,6 +225,8 @@ export default async function Review({ params }: { params: Promise<{ id: string;
           const passage = q.passageId ? test.passages.find((p) => p.id === q.passageId) : undefined;
           const figure = q.figureId ? test.figures.find((f) => f.id === q.figureId) : undefined;
           const words = [...new Set(choiceWords(q))];
+          const choiceIds = new Set(words.map((w) => wordIdFor(q, w)));
+          const stemWords = shownWords(q.tags, "stem").filter((id) => !choiceIds.has(id));
           const ex = q.explanation;
           return (
             <section key={q.id} id={`q-${q.id}`} className={`${card} scroll-mt-20 space-y-4 p-4 sm:p-5`}>
@@ -255,7 +262,14 @@ export default async function Review({ params }: { params: Promise<{ id: string;
                     Passage (tap words you didn’t know)
                     <IconNext size={16} className="text-muted transition-transform group-open:rotate-90" />
                   </summary>
-                  <div className="px-3.5 pb-3.5"><TaggablePassage paragraphs={passage.paragraphs} attemptId={a.id} initial={passage.tags.filter((t) => t.kind === "word" && taggedIds.has(t.id)).map((t) => t.id)} /></div>
+                  <div className="space-y-3 px-3.5 pb-3.5">
+                    <TaggablePassage paragraphs={passage.paragraphs} attemptId={a.id} initial={passage.tags.filter((t) => t.kind === "word" && taggedIds.has(t.id)).map((t) => t.id)} />
+                    {shownWords(passage.tags, "passage").length > 0 && (
+                      <div className="grid gap-3 border-t border-line pt-3 sm:grid-cols-2">
+                        {shownWords(passage.tags, "passage").map((id) => <WordChip key={id} word={lemmaOf.get(id)!} attemptId={a.id} senses={sensesOf.get(id)} tagged={taggedIds.has(id)} />)}
+                      </div>
+                    )}
+                  </div>
                 </details>
               )}
               {figure && <Figure fig={figure} />}
@@ -297,12 +311,13 @@ export default async function Review({ params }: { params: Promise<{ id: string;
                   ))}
                 </ul>
               )}
-              {words.length > 0 && (
+              {(words.length > 0 || stemWords.length > 0) && (
                 <div className="grid gap-3 border-t border-line pt-4 sm:grid-cols-2">
                   {words.map((w) => {
                     const wid = wordIdFor(q, w);
                     return <WordChip key={w} word={w} attemptId={a.id} senses={wid ? sensesOf.get(wid) : undefined} tagged={!!wid && taggedIds.has(wid)} />;
                   })}
+                  {stemWords.map((id) => <WordChip key={id} word={lemmaOf.get(id)!} attemptId={a.id} senses={sensesOf.get(id)} tagged={taggedIds.has(id)} />)}
                 </div>
               )}
             </section>

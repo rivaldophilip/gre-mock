@@ -1,0 +1,1326 @@
+{
+ "testId": "drill-009",
+ "measure": "drill",
+ "seed": 22211,
+ "generatedAt": "2026-11-19T01:38:42.211Z",
+ "count": 20,
+ "slots": [
+  {
+   "slot": 1,
+   "type": "se",
+   "level": 5
+  },
+  {
+   "slot": 2,
+   "type": "se",
+   "level": 4
+  },
+  {
+   "slot": 3,
+   "type": "se",
+   "level": 5
+  },
+  {
+   "slot": 4,
+   "type": "se",
+   "level": 4
+  },
+  {
+   "slot": 5,
+   "type": "se",
+   "level": 5
+  },
+  {
+   "slot": 6,
+   "type": "se",
+   "level": 4
+  },
+  {
+   "slot": 7,
+   "type": "se",
+   "level": 5
+  },
+  {
+   "slot": 8,
+   "type": "se",
+   "level": 4
+  },
+  {
+   "slot": 9,
+   "type": "tc3",
+   "level": 5
+  },
+  {
+   "slot": 10,
+   "type": "tc3",
+   "level": 4
+  },
+  {
+   "slot": 11,
+   "type": "tc3",
+   "level": 5
+  },
+  {
+   "slot": 12,
+   "type": "tc3",
+   "level": 4
+  },
+  {
+   "slot": 13,
+   "type": "tc3",
+   "level": 5
+  },
+  {
+   "slot": 14,
+   "type": "tc3",
+   "level": 4
+  },
+  {
+   "slot": 15,
+   "type": "tc2",
+   "level": 5
+  },
+  {
+   "slot": 16,
+   "type": "tc2",
+   "level": 4
+  },
+  {
+   "slot": 17,
+   "type": "tc2",
+   "level": 5
+  },
+  {
+   "slot": 18,
+   "type": "tc2",
+   "level": 4
+  },
+  {
+   "slot": 19,
+   "type": "tc1",
+   "level": 5
+  },
+  {
+   "slot": 20,
+   "type": "tc1",
+   "level": 4
+  }
+ ],
+ "keyWords": [
+  {
+   "id": "craven",
+   "word": "craven",
+   "secondary": false,
+   "sense": "adjective contemptibly cowardly",
+   "bucket": "review"
+  },
+  {
+   "id": "timorous",
+   "word": "timorous",
+   "secondary": false,
+   "sense": "adjective easily frightened; lacking courage",
+   "bucket": "review"
+  },
+  {
+   "id": "delimit",
+   "word": "delimit",
+   "secondary": false,
+   "sense": "verb to fix or define the limits or boundaries of something",
+   "bucket": "review"
+  },
+  {
+   "id": "circumscribe",
+   "word": "circumscribe",
+   "secondary": false,
+   "sense": "verb to restrict within limits; to define the boundaries of",
+   "bucket": "review"
+  },
+  {
+   "id": "impetuous",
+   "word": "impetuous",
+   "secondary": false,
+   "sense": "adjective acting suddenly with little thought; impulsive",
+   "bucket": "review"
+  },
+  {
+   "id": "rash",
+   "word": "rash",
+   "secondary": false,
+   "sense": "adjective acting or done without careful thought about consequences",
+   "bucket": "review"
+  },
+  {
+   "id": "pugnacious",
+   "word": "pugnacious",
+   "secondary": false,
+   "sense": "adjective eager to fight or argue; combative by temperament",
+   "bucket": "review"
+  },
+  {
+   "id": "bellicose",
+   "word": "bellicose",
+   "secondary": false,
+   "sense": "adjective eager to fight; aggressive and warlike",
+   "bucket": "review"
+  },
+  {
+   "id": "foolhardy",
+   "word": "foolhardy",
+   "secondary": false,
+   "sense": "adjective recklessly bold; taking unwise risks without thought",
+   "bucket": "review"
+  },
+  {
+   "id": "imprudent",
+   "word": "imprudent",
+   "secondary": false,
+   "sense": "adjective acting without care for consequences; unwise",
+   "bucket": "review"
+  },
+  {
+   "id": "parochial",
+   "word": "parochial",
+   "secondary": false,
+   "sense": "adjective narrow in outlook, concerned only with local matters",
+   "bucket": "review"
+  },
+  {
+   "id": "insular",
+   "word": "insular",
+   "secondary": false,
+   "sense": "adjective narrow-minded; isolated from outside ideas or cultures",
+   "bucket": "review"
+  },
+  {
+   "id": "recluse",
+   "word": "recluse",
+   "secondary": false,
+   "sense": "noun a person who lives in seclusion and avoids society",
+   "bucket": "review"
+  },
+  {
+   "id": "misanthrope",
+   "word": "misanthrope",
+   "secondary": false,
+   "sense": "noun a person who hates or distrusts humankind",
+   "bucket": "review"
+  },
+  {
+   "id": "dogmatic",
+   "word": "dogmatic",
+   "secondary": false,
+   "sense": "adjective asserting opinions as undeniable truth; stubbornly opinionated",
+   "bucket": "review"
+  },
+  {
+   "id": "doctrinaire",
+   "word": "doctrinaire",
+   "secondary": false,
+   "sense": "adjective rigidly applying a theory or doctrine without regard to practicality",
+   "bucket": "review"
+  },
+  {
+   "id": "dictum",
+   "word": "dictum",
+   "secondary": false,
+   "sense": "noun a formal, authoritative pronouncement; also a brief saying expressing a general truth",
+   "bucket": "new"
+  },
+  {
+   "id": "tantamount",
+   "word": "tantamount",
+   "secondary": false,
+   "sense": "adjective equivalent in effect or seriousness to something else",
+   "bucket": "new"
+  },
+  {
+   "id": "aghast",
+   "word": "aghast",
+   "secondary": false,
+   "sense": "adjective filled with shock and horror",
+   "bucket": "new"
+  },
+  {
+   "id": "extenuating",
+   "word": "extenuating",
+   "secondary": false,
+   "sense": "adjective making a fault or offense seem less serious by providing partial excuse",
+   "bucket": "new"
+  },
+  {
+   "id": "harbinger",
+   "word": "harbinger",
+   "secondary": false,
+   "sense": "noun a person or thing that signals the approach of something to come",
+   "bucket": "new"
+  },
+  {
+   "id": "unruly",
+   "word": "unruly",
+   "secondary": false,
+   "sense": "adjective disorderly and hard to control",
+   "bucket": "new"
+  },
+  {
+   "id": "wag",
+   "word": "wag",
+   "secondary": true,
+   "sense": "noun a person fond of making jokes; a wit",
+   "bucket": "new"
+  },
+  {
+   "id": "obtain",
+   "word": "obtain",
+   "secondary": true,
+   "sense": "verb to be established, prevalent, or in force",
+   "bucket": "new"
+  },
+  {
+   "id": "captious",
+   "word": "captious",
+   "secondary": false,
+   "sense": "adjective inclined to find fault and raise petty objections",
+   "bucket": "new"
+  },
+  {
+   "id": "apostle",
+   "word": "apostle",
+   "secondary": false,
+   "sense": "noun an ardent early champion or advocate of a cause or belief; one of Christ's twelve disciples",
+   "bucket": "new"
+  },
+  {
+   "id": "rejoinder",
+   "word": "rejoinder",
+   "secondary": false,
+   "sense": "noun a sharp or witty reply, especially to a criticism or retort",
+   "bucket": "new"
+  },
+  {
+   "id": "baying",
+   "word": "baying",
+   "secondary": false,
+   "sense": "noun a deep, prolonged howl, as of hounds; clamorous outcry",
+   "bucket": "new"
+  },
+  {
+   "id": "apprise",
+   "word": "apprise",
+   "secondary": false,
+   "sense": "verb to inform or tell someone about something",
+   "bucket": "new"
+  },
+  {
+   "id": "phalanx",
+   "word": "phalanx",
+   "secondary": false,
+   "sense": "noun a tightly massed group of people or things, especially one united for defense or attack",
+   "bucket": "new"
+  },
+  {
+   "id": "adumbrate",
+   "word": "adumbrate",
+   "secondary": false,
+   "sense": "verb to outline or foreshadow indistinctly",
+   "bucket": "new"
+  },
+  {
+   "id": "promulgate",
+   "word": "promulgate",
+   "secondary": false,
+   "sense": "verb to make widely known, especially a law or doctrine; to proclaim officially",
+   "bucket": "new"
+  },
+  {
+   "id": "beatify",
+   "word": "beatify",
+   "secondary": false,
+   "sense": "verb to make supremely happy; to declare someone blessed by the church",
+   "bucket": "new"
+  },
+  {
+   "id": "subvert",
+   "word": "subvert",
+   "secondary": false,
+   "sense": "verb to undermine or overthrow the power or authority of an established system",
+   "bucket": "new"
+  },
+  {
+   "id": "vitriol",
+   "word": "vitriol",
+   "secondary": false,
+   "sense": "noun bitter, scathing criticism or hatred",
+   "bucket": "new"
+  },
+  {
+   "id": "bevy",
+   "word": "bevy",
+   "secondary": false,
+   "sense": "noun a large group of people or things gathered together",
+   "bucket": "new"
+  },
+  {
+   "id": "defer",
+   "word": "defer",
+   "secondary": true,
+   "sense": "verb to submit humbly to another's opinion or authority",
+   "bucket": "new"
+  },
+  {
+   "id": "court",
+   "word": "court",
+   "secondary": true,
+   "sense": "verb to behave so as to risk bringing about something bad",
+   "bucket": "new"
+  },
+  {
+   "id": "bowdlerize",
+   "word": "bowdlerize",
+   "secondary": false,
+   "sense": "verb to remove passages considered offensive from a text; to censor prudishly",
+   "bucket": "new"
+  },
+  {
+   "id": "impediment",
+   "word": "impediment",
+   "secondary": false,
+   "sense": "noun something that hinders progress; an obstacle",
+   "bucket": "new"
+  },
+  {
+   "id": "compass",
+   "word": "compass",
+   "secondary": true,
+   "sense": "noun the range or scope of something",
+   "bucket": "new"
+  },
+  {
+   "id": "spirit",
+   "word": "spirit",
+   "secondary": true,
+   "sense": "verb spirit away: to carry off quickly and secretly",
+   "bucket": "new"
+  },
+  {
+   "id": "license",
+   "word": "license",
+   "secondary": true,
+   "sense": "noun freedom that is used irresponsibly; or deliberate departure from rules",
+   "bucket": "new"
+  },
+  {
+   "id": "impeccable",
+   "word": "impeccable",
+   "secondary": false,
+   "sense": "adjective faultless; without flaw or error",
+   "bucket": "new"
+  }
+ ],
+ "sePairs": [
+  [
+   "craven",
+   "timorous"
+  ],
+  [
+   "delimit",
+   "circumscribe"
+  ],
+  [
+   "impetuous",
+   "rash"
+  ],
+  [
+   "pugnacious",
+   "bellicose"
+  ],
+  [
+   "foolhardy",
+   "imprudent"
+  ],
+  [
+   "parochial",
+   "insular"
+  ],
+  [
+   "recluse",
+   "misanthrope"
+  ],
+  [
+   "dogmatic",
+   "doctrinaire"
+  ]
+ ],
+ "revisits": [],
+ "distractorWords": {
+  "untested": [
+   {
+    "id": "color",
+    "word": "color",
+    "secondary": true,
+    "sense": "verb to influence or distort a judgment or account"
+   },
+   {
+    "id": "relay",
+    "word": "relay",
+    "secondary": true,
+    "sense": "verb to receive and pass on information or a message"
+   },
+   {
+    "id": "overt",
+    "word": "overt",
+    "secondary": false,
+    "sense": "adjective done or shown openly, not concealed"
+   },
+   {
+    "id": "harbor",
+    "word": "harbor",
+    "secondary": true,
+    "sense": "verb to keep a thought or feeling, usually a negative one, in one's mind"
+   },
+   {
+    "id": "hedonist",
+    "word": "hedonist",
+    "secondary": false,
+    "sense": "noun a person who lives to pursue pleasure and sensual enjoyment"
+   },
+   {
+    "id": "tract",
+    "word": "tract",
+    "secondary": true,
+    "sense": "noun a short treatise or pamphlet, often on a political or religious topic"
+   },
+   {
+    "id": "plume",
+    "word": "plume",
+    "secondary": true,
+    "sense": "verb to congratulate oneself smugly on something"
+   },
+   {
+    "id": "remonstrate",
+    "word": "remonstrate",
+    "secondary": false,
+    "sense": "verb to argue or plead in protest or objection"
+   },
+   {
+    "id": "shore",
+    "word": "shore",
+    "secondary": true,
+    "sense": "verb shore up: to support or strengthen something weak"
+   },
+   {
+    "id": "rifle",
+    "word": "rifle",
+    "secondary": true,
+    "sense": "verb to search through hurriedly, often in order to steal"
+   },
+   {
+    "id": "gloss",
+    "word": "gloss",
+    "secondary": true,
+    "sense": "verb gloss over: to treat something briefly so as to hide its importance"
+   },
+   {
+    "id": "divest",
+    "word": "divest",
+    "secondary": false,
+    "sense": "verb to strip of possessions, rights or titles; to get rid of an asset"
+   },
+   {
+    "id": "compunction",
+    "word": "compunction",
+    "secondary": false,
+    "sense": "noun a feeling of guilt or uneasiness about doing wrong"
+   },
+   {
+    "id": "conferred",
+    "word": "conferred",
+    "secondary": false,
+    "sense": "verb bestowed (an honor or right); consulted together"
+   },
+   {
+    "id": "conscientious",
+    "word": "conscientious",
+    "secondary": false,
+    "sense": "adjective careful, thorough and guided by a sense of duty"
+   },
+   {
+    "id": "saturate",
+    "word": "saturate",
+    "secondary": false,
+    "sense": "verb to soak thoroughly or fill to capacity so nothing more can be absorbed"
+   },
+   {
+    "id": "concoct",
+    "word": "concoct",
+    "secondary": false,
+    "sense": "verb to devise or fabricate, often a story or plan, by combining elements"
+   },
+   {
+    "id": "cordon",
+    "word": "cordon",
+    "secondary": false,
+    "sense": "noun a line of people or barriers surrounding an area to guard or isolate it"
+   },
+   {
+    "id": "chafe",
+    "word": "chafe",
+    "secondary": true,
+    "sense": "verb to feel irritation or impatience, especially at restrictions"
+   },
+   {
+    "id": "autocratic",
+    "word": "autocratic",
+    "secondary": false,
+    "sense": "adjective ruling with absolute power; domineering and unwilling to consult others"
+   },
+   {
+    "id": "crepuscular",
+    "word": "crepuscular",
+    "secondary": false,
+    "sense": "adjective relating to twilight; dim"
+   },
+   {
+    "id": "poseur",
+    "word": "poseur",
+    "secondary": false,
+    "sense": "noun a person who affects attitudes or manners to impress others; a pretender"
+   },
+   {
+    "id": "begrudge",
+    "word": "begrudge",
+    "secondary": false,
+    "sense": "verb to resent someone's possession or enjoyment of something"
+   },
+   {
+    "id": "stomach",
+    "word": "stomach",
+    "secondary": true,
+    "sense": "verb to tolerate or endure something unpleasant (usually negative)"
+   },
+   {
+    "id": "regress",
+    "word": "regress",
+    "secondary": false,
+    "sense": "verb to return to an earlier or less developed state"
+   },
+   {
+    "id": "jibe",
+    "word": "jibe",
+    "secondary": true,
+    "sense": "verb to be in accord; to match"
+   },
+   {
+    "id": "skulduggery",
+    "word": "skulduggery",
+    "secondary": false,
+    "sense": "noun underhanded or dishonest behavior"
+   },
+   {
+    "id": "wean",
+    "word": "wean",
+    "secondary": true,
+    "sense": "verb to cause someone to give up a habit or dependence gradually"
+   },
+   {
+    "id": "air",
+    "word": "air",
+    "secondary": true,
+    "sense": "verb to express an opinion or grievance publicly"
+   },
+   {
+    "id": "muster",
+    "word": "muster",
+    "secondary": true,
+    "sense": "verb to summon up a feeling or quality, such as courage or support"
+   },
+   {
+    "id": "confiscate",
+    "word": "confiscate",
+    "secondary": false,
+    "sense": "verb to seize by authority, as a penalty"
+   },
+   {
+    "id": "second",
+    "word": "second",
+    "secondary": true,
+    "sense": "verb to formally support a proposal or motion"
+   },
+   {
+    "id": "besotted",
+    "word": "besotted",
+    "secondary": false,
+    "sense": "adjective strongly infatuated; stupefied with drink"
+   },
+   {
+    "id": "servitude",
+    "word": "servitude",
+    "secondary": false,
+    "sense": "noun the state of being under the control of another, as a slave or bound servant"
+   },
+   {
+    "id": "ontological",
+    "word": "ontological",
+    "secondary": false,
+    "sense": "adjective relating to the nature of existence or to what kinds of things really exist"
+   },
+   {
+    "id": "periodicity",
+    "word": "periodicity",
+    "secondary": false,
+    "sense": "noun the tendency of something to recur at regular intervals"
+   },
+   {
+    "id": "skullduggery",
+    "word": "skullduggery",
+    "secondary": false,
+    "sense": "noun underhanded or dishonest behavior"
+   },
+   {
+    "id": "emblematic",
+    "word": "emblematic",
+    "secondary": false,
+    "sense": "adjective serving as a symbol or representative example of something"
+   },
+   {
+    "id": "abandon",
+    "word": "abandon",
+    "secondary": true,
+    "sense": "noun complete lack of inhibition or restraint"
+   },
+   {
+    "id": "structuralism",
+    "word": "structuralism",
+    "secondary": false,
+    "sense": "noun an approach that explains language, myth, or culture through underlying systems of relationships"
+   },
+   {
+    "id": "valorize",
+    "word": "valorize",
+    "secondary": false,
+    "sense": "verb to assign high value or prestige to something, often selectively"
+   },
+   {
+    "id": "communitarian",
+    "word": "communitarian",
+    "secondary": false,
+    "sense": "adjective stressing the responsibilities and bonds of community over individual rights"
+   },
+   {
+    "id": "entertain",
+    "word": "entertain",
+    "secondary": true,
+    "sense": "verb to hold an idea or possibility in mind and give it consideration"
+   },
+   {
+    "id": "settle",
+    "word": "settle",
+    "secondary": true,
+    "sense": "verb to resolve a dispute or decide something conclusively"
+   },
+   {
+    "id": "manumission",
+    "word": "manumission",
+    "secondary": false,
+    "sense": "noun the formal act of freeing a person from slavery"
+   },
+   {
+    "id": "historiography",
+    "word": "historiography",
+    "secondary": false,
+    "sense": "noun the study of how history has been written, or the body of historical writing on a topic"
+   },
+   {
+    "id": "exploit",
+    "word": "exploit",
+    "secondary": true,
+    "sense": "noun a daring, notable, or heroic act"
+   },
+   {
+    "id": "concupiscence",
+    "word": "concupiscence",
+    "secondary": false,
+    "sense": "noun strong sexual desire; lust"
+   },
+   {
+    "id": "jeremiad",
+    "word": "jeremiad",
+    "secondary": false,
+    "sense": "noun a long, mournful complaint or lament about society's decline"
+   },
+   {
+    "id": "presentism",
+    "word": "presentism",
+    "secondary": false,
+    "sense": "noun the practice of interpreting past events or people by today's values and concepts"
+   },
+   {
+    "id": "gradualism",
+    "word": "gradualism",
+    "secondary": false,
+    "sense": "noun the view or policy that change occurs, or should occur, slowly and by small degrees"
+   },
+   {
+    "id": "rodomontade",
+    "word": "rodomontade",
+    "secondary": false,
+    "sense": "noun boastful or inflated talk"
+   },
+   {
+    "id": "belletristic",
+    "word": "belletristic",
+    "secondary": false,
+    "sense": "adjective relating to writing valued chiefly for its style and elegance rather than its content"
+   },
+   {
+    "id": "polity",
+    "word": "polity",
+    "secondary": false,
+    "sense": "noun an organized society with its own government; a political entity"
+   },
+   {
+    "id": "liminal",
+    "word": "liminal",
+    "secondary": false,
+    "sense": "adjective occupying a transitional threshold between two states, stages, or identities"
+   },
+   {
+    "id": "dock",
+    "word": "dock",
+    "secondary": true,
+    "sense": "verb to deduct an amount, especially from wages"
+   },
+   {
+    "id": "hamstring",
+    "word": "hamstring",
+    "secondary": true,
+    "sense": "verb to severely restrict the ability of someone or something to act"
+   },
+   {
+    "id": "pore",
+    "word": "pore",
+    "secondary": true,
+    "sense": "verb pore over: to read or study with intense attention"
+   },
+   {
+    "id": "truck",
+    "word": "truck",
+    "secondary": true,
+    "sense": "noun have no truck with: to refuse dealings or association with"
+   },
+   {
+    "id": "revanchism",
+    "word": "revanchism",
+    "secondary": false,
+    "sense": "noun a policy of seeking to regain territory or standing lost in an earlier defeat"
+   },
+   {
+    "id": "prosody",
+    "word": "prosody",
+    "secondary": false,
+    "sense": "noun the patterns of rhythm, stress, and sound in verse or speech"
+   }
+  ],
+  "review": [
+   {
+    "id": "quiescent",
+    "word": "quiescent",
+    "secondary": false,
+    "sense": "adjective inactive or at rest; temporarily dormant"
+   },
+   {
+    "id": "dormant",
+    "word": "dormant",
+    "secondary": false,
+    "sense": "adjective temporarily inactive or suspended, but capable of becoming active"
+   },
+   {
+    "id": "fulminate",
+    "word": "fulminate",
+    "secondary": false,
+    "sense": "verb to protest or denounce loudly and angrily"
+   },
+   {
+    "id": "rail",
+    "word": "rail",
+    "secondary": true,
+    "sense": "verb to protest angrily or bitterly against"
+   },
+   {
+    "id": "erudite",
+    "word": "erudite",
+    "secondary": false,
+    "sense": "adjective having or showing great learning; scholarly"
+   },
+   {
+    "id": "profound",
+    "word": "profound",
+    "secondary": false,
+    "sense": "adjective showing great depth of insight or knowledge; intense"
+   },
+   {
+    "id": "callous",
+    "word": "callous",
+    "secondary": false,
+    "sense": "adjective emotionally hardened; indifferent to the suffering of others"
+   },
+   {
+    "id": "insensible",
+    "word": "insensible",
+    "secondary": false,
+    "sense": "adjective unaware or indifferent; not responsive to feelings"
+   },
+   {
+    "id": "nugatory",
+    "word": "nugatory",
+    "secondary": false,
+    "sense": "adjective of no real value or importance; futile"
+   },
+   {
+    "id": "inconsequential",
+    "word": "inconsequential",
+    "secondary": false,
+    "sense": "adjective not important; trivial"
+   },
+   {
+    "id": "contemptuous",
+    "word": "contemptuous",
+    "secondary": false,
+    "sense": "adjective showing scorn or disdain"
+   },
+   {
+    "id": "supercilious",
+    "word": "supercilious",
+    "secondary": false,
+    "sense": "adjective behaving as though one is superior; disdainful and haughty"
+   },
+   {
+    "id": "maverick",
+    "word": "maverick",
+    "secondary": false,
+    "sense": "noun an independent-minded person who refuses to follow the group"
+   },
+   {
+    "id": "iconoclast",
+    "word": "iconoclast",
+    "secondary": false,
+    "sense": "noun a person who attacks cherished beliefs or institutions"
+   },
+   {
+    "id": "indifferent",
+    "word": "indifferent",
+    "secondary": false,
+    "sense": "adjective having no particular interest or concern; unmoved"
+   },
+   {
+    "id": "complacent",
+    "word": "complacent",
+    "secondary": false,
+    "sense": "adjective smugly self-satisfied and unaware of possible dangers or deficiencies"
+   },
+   {
+    "id": "deify",
+    "word": "deify",
+    "secondary": false,
+    "sense": "verb to treat or worship as a god; to idolize"
+   },
+   {
+    "id": "lionize",
+    "word": "lionize",
+    "secondary": false,
+    "sense": "verb to treat as a celebrity; to give great public attention and praise"
+   },
+   {
+    "id": "check",
+    "word": "check",
+    "secondary": true,
+    "sense": "verb to hold back, restrain or curb"
+   },
+   {
+    "id": "clear",
+    "word": "clear",
+    "secondary": true,
+    "sense": "verb to prove or declare someone innocent of blame"
+   },
+   {
+    "id": "fulcrum",
+    "word": "fulcrum",
+    "secondary": true,
+    "sense": "noun something that plays a central, pivotal role, around which events turn"
+   },
+   {
+    "id": "expiate",
+    "word": "expiate",
+    "secondary": false,
+    "sense": "verb to make amends or atone for guilt or wrongdoing"
+   },
+   {
+    "id": "ratify",
+    "word": "ratify",
+    "secondary": true,
+    "sense": "verb to give formal consent to and thereby make valid; to confirm"
+   },
+   {
+    "id": "robust",
+    "word": "robust",
+    "secondary": false,
+    "sense": "adjective strong, healthy and vigorous; sturdy in construction"
+   },
+   {
+    "id": "replete",
+    "word": "replete",
+    "secondary": false,
+    "sense": "adjective abundantly supplied or filled; stuffed full"
+   },
+   {
+    "id": "stanch",
+    "word": "stanch",
+    "secondary": true,
+    "sense": "verb to stop or check the flow of, especially blood"
+   },
+   {
+    "id": "frenetic",
+    "word": "frenetic",
+    "secondary": false,
+    "sense": "adjective wildly excited or active in a frantic, disorderly way"
+   },
+   {
+    "id": "inure",
+    "word": "inure",
+    "secondary": false,
+    "sense": "verb to accustom to something unpleasant through prolonged exposure"
+   },
+   {
+    "id": "skittish",
+    "word": "skittish",
+    "secondary": false,
+    "sense": "adjective easily frightened or nervous; unpredictable and jumpy"
+   },
+   {
+    "id": "caprice",
+    "word": "caprice",
+    "secondary": false,
+    "sense": "noun a sudden unpredictable change of mind or behavior; whim"
+   },
+   {
+    "id": "lampoon",
+    "word": "lampoon",
+    "secondary": false,
+    "sense": "verb to mock or ridicule publicly through satire"
+   },
+   {
+    "id": "abridge",
+    "word": "abridge",
+    "secondary": false,
+    "sense": "verb to shorten a text by omitting parts while keeping its substance"
+   },
+   {
+    "id": "commensurate",
+    "word": "commensurate",
+    "secondary": false,
+    "sense": "adjective corresponding in size, degree or amount; proportionate"
+   },
+   {
+    "id": "cosmopolitan",
+    "word": "cosmopolitan",
+    "secondary": false,
+    "sense": "adjective worldly and sophisticated; at home in many parts of the world"
+   },
+   {
+    "id": "supersede",
+    "word": "supersede",
+    "secondary": false,
+    "sense": "verb to take the place of something older or less valid; to replace"
+   },
+   {
+    "id": "servile",
+    "word": "servile",
+    "secondary": false,
+    "sense": "adjective excessively submissive; fawning and slavish"
+   },
+   {
+    "id": "solipsistic",
+    "word": "solipsistic",
+    "secondary": false,
+    "sense": "adjective extremely self-absorbed, treating one's own mind or experience as the only thing that matters"
+   },
+   {
+    "id": "boor",
+    "word": "boor",
+    "secondary": false,
+    "sense": "noun a rude, insensitive and ill-mannered person"
+   },
+   {
+    "id": "arduous",
+    "word": "arduous",
+    "secondary": false,
+    "sense": "adjective requiring great effort; difficult and tiring"
+   },
+   {
+    "id": "transgression",
+    "word": "transgression",
+    "secondary": false,
+    "sense": "noun a violation of a law, rule or moral duty; a sin"
+   },
+   {
+    "id": "paradox",
+    "word": "paradox",
+    "secondary": false,
+    "sense": "noun a seemingly self-contradictory statement or situation that may nonetheless be true"
+   },
+   {
+    "id": "juxtapose",
+    "word": "juxtapose",
+    "secondary": false,
+    "sense": "verb to place side by side for contrast or comparison"
+   },
+   {
+    "id": "noisome",
+    "word": "noisome",
+    "secondary": false,
+    "sense": "adjective having an extremely offensive smell; also, harmful"
+   },
+   {
+    "id": "mutter",
+    "word": "mutter",
+    "secondary": false,
+    "sense": "verb to speak in a low, indistinct voice, especially in complaint"
+   },
+   {
+    "id": "diverge",
+    "word": "diverge",
+    "secondary": false,
+    "sense": "verb to move or extend in different directions from a common point; to differ"
+   },
+   {
+    "id": "abjure",
+    "word": "abjure",
+    "secondary": false,
+    "sense": "verb to solemnly renounce or give up under oath"
+   },
+   {
+    "id": "ingenuity",
+    "word": "ingenuity",
+    "secondary": false,
+    "sense": "noun cleverness and originality in solving problems"
+   },
+   {
+    "id": "complementary",
+    "word": "complementary",
+    "secondary": false,
+    "sense": "adjective completing or enhancing each other; mutually supplying what is lacking"
+   },
+   {
+    "id": "frivolous",
+    "word": "frivolous",
+    "secondary": false,
+    "sense": "adjective lacking seriousness or importance; silly or trivial"
+   },
+   {
+    "id": "sedulous",
+    "word": "sedulous",
+    "secondary": false,
+    "sense": "adjective diligent and persistent in effort; hardworking"
+   },
+   {
+    "id": "belie",
+    "word": "belie",
+    "secondary": false,
+    "sense": "verb to give a false impression of; to contradict"
+   },
+   {
+    "id": "rudimentary",
+    "word": "rudimentary",
+    "secondary": false,
+    "sense": "adjective basic or undeveloped; at an elementary stage"
+   },
+   {
+    "id": "tractable",
+    "word": "tractable",
+    "secondary": false,
+    "sense": "adjective easily managed, led or controlled; docile"
+   },
+   {
+    "id": "obsolete",
+    "word": "obsolete",
+    "secondary": false,
+    "sense": "adjective no longer in use or useful because replaced by something newer"
+   },
+   {
+    "id": "base",
+    "word": "base",
+    "secondary": false,
+    "sense": "adjective morally low; lacking honor or worth"
+   },
+   {
+    "id": "desultory",
+    "word": "desultory",
+    "secondary": false,
+    "sense": "adjective lacking a plan, purpose or enthusiasm; jumping from one thing to another"
+   },
+   {
+    "id": "canard",
+    "word": "canard",
+    "secondary": false,
+    "sense": "noun a false rumor or story deliberately spread"
+   },
+   {
+    "id": "arbitrage",
+    "word": "arbitrage",
+    "secondary": false,
+    "sense": "noun buying in one market and selling in another to profit from a price difference"
+   },
+   {
+    "id": "supplant",
+    "word": "supplant",
+    "secondary": false,
+    "sense": "verb to take the place of, often by force or scheming"
+   },
+   {
+    "id": "crestfallen",
+    "word": "crestfallen",
+    "secondary": false,
+    "sense": "adjective dejected and disappointed"
+   },
+   {
+    "id": "bucolic",
+    "word": "bucolic",
+    "secondary": false,
+    "sense": "adjective relating to the pleasant aspects of country or rural life"
+   },
+   {
+    "id": "compound",
+    "word": "compound",
+    "secondary": true,
+    "sense": "verb to make a problem or difficulty worse"
+   },
+   {
+    "id": "obsequious",
+    "word": "obsequious",
+    "secondary": false,
+    "sense": "adjective excessively eager to please or obey; fawning"
+   },
+   {
+    "id": "polemical",
+    "word": "polemical",
+    "secondary": false,
+    "sense": "adjective aggressively argumentative, attacking or defending a position"
+   },
+   {
+    "id": "nexus",
+    "word": "nexus",
+    "secondary": false,
+    "sense": "noun a connection or the central point where several things meet"
+   },
+   {
+    "id": "pliant",
+    "word": "pliant",
+    "secondary": false,
+    "sense": "adjective easily bent; easily influenced or yielding"
+   },
+   {
+    "id": "pious",
+    "word": "pious",
+    "secondary": false,
+    "sense": "adjective deeply reverent and devoted to religion; or hypocritically virtuous"
+   },
+   {
+    "id": "cow",
+    "word": "cow",
+    "secondary": true,
+    "sense": "verb to intimidate into submission"
+   },
+   {
+    "id": "anachronistic",
+    "word": "anachronistic",
+    "secondary": false,
+    "sense": "adjective belonging to a period other than the one in which it exists; outdated"
+   },
+   {
+    "id": "elicit",
+    "word": "elicit",
+    "secondary": false,
+    "sense": "verb to draw out a response, reaction or fact"
+   },
+   {
+    "id": "aloof",
+    "word": "aloof",
+    "secondary": false,
+    "sense": "adjective emotionally distant; not involved or friendly"
+   },
+   {
+    "id": "commonplace",
+    "word": "commonplace",
+    "secondary": false,
+    "sense": "adjective ordinary and unremarkable; lacking originality"
+   },
+   {
+    "id": "picaresque",
+    "word": "picaresque",
+    "secondary": false,
+    "sense": "adjective describing fiction that follows the adventures of a roguish hero through episodic, often satirical incidents"
+   },
+   {
+    "id": "umbrage",
+    "word": "umbrage",
+    "secondary": false,
+    "sense": "noun offense or resentment at a slight"
+   },
+   {
+    "id": "sybarite",
+    "word": "sybarite",
+    "secondary": false,
+    "sense": "noun a person devoted to luxury and sensual pleasure"
+   },
+   {
+    "id": "parry",
+    "word": "parry",
+    "secondary": false,
+    "sense": "verb to ward off or deflect, as a blow or a question, especially skillfully"
+   },
+   {
+    "id": "extraneous",
+    "word": "extraneous",
+    "secondary": false,
+    "sense": "adjective irrelevant or unrelated to the subject at hand; coming from outside"
+   }
+  ],
+  "trapPairs": [
+   [
+    "quiescent",
+    "dormant"
+   ],
+   [
+    "fulminate",
+    "rail"
+   ],
+   [
+    "erudite",
+    "profound"
+   ],
+   [
+    "callous",
+    "insensible"
+   ],
+   [
+    "nugatory",
+    "inconsequential"
+   ],
+   [
+    "contemptuous",
+    "supercilious"
+   ],
+   [
+    "maverick",
+    "iconoclast"
+   ],
+   [
+    "indifferent",
+    "complacent"
+   ]
+  ]
+ },
+ "drillTargets": {
+  "untestedChoiceShare": 0.9
+ },
+ "freshLeft": 159
+}

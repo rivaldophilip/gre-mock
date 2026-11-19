@@ -3,6 +3,7 @@ import fs from "node:fs";
 import { and, eq, ne, notInArray, sql } from "drizzle-orm";
 import { schema, type DB } from "../../lib/db";
 import { TestSchema } from "../../lib/types";
+import { DRILL_DIR, TESTS_DIR, testPath } from "../../lib/test-path";
 
 /** Upsert data/vocab.json, data/concepts.json and data/rc_skills.json; prune words dropped from the bank (never user_added). */
 export async function seedDb(db: DB) {
@@ -51,13 +52,15 @@ export async function seedDb(db: DB) {
   return { words: vocab.length, concepts: concepts.length, pruned: pruned.length };
 }
 
+/** Mocks, then drill batches: everything a new account registers. */
 export function testIds(): string[] {
-  return fs.readdirSync("content/tests").filter((f) => f.endsWith(".json")).map((f) => f.replace(/\.json$/, "")).sort();
+  const ids = (dir: string) => (fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith(".json")).map((f) => f.replace(/\.json$/, "")).sort() : []);
+  return [...ids(TESTS_DIR), ...ids(DRILL_DIR)];
 }
 
 /** A test file, or null if it is missing or invalid. */
 export function loadTestFile(id: string) {
-  const file = `content/tests/${id}.json`;
+  const file = testPath(id);
   if (!fs.existsSync(file)) return null;
   const parsed = TestSchema.safeParse(JSON.parse(fs.readFileSync(file, "utf8")));
   return parsed.success ? parsed.data : null;
@@ -65,7 +68,7 @@ export function loadTestFile(id: string) {
 
 /** Upsert one test (tests, questions, question_items). */
 export async function registerTest(db: DB, id: string) {
-  const test = TestSchema.parse(JSON.parse(fs.readFileSync(`content/tests/${id}.json`, "utf8")));
+  const test = TestSchema.parse(JSON.parse(fs.readFileSync(testPath(id), "utf8")));
   const briefFile = `content/briefs/${id}.json`;
   const brief = fs.existsSync(briefFile) ? JSON.parse(fs.readFileSync(briefFile, "utf8")) : null;
 

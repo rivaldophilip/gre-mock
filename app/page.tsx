@@ -4,6 +4,7 @@ import { schema } from "@/lib/db";
 import { userDb } from "@/lib/session";
 import { conceptNames, listTestIds, loadTest } from "@/lib/content";
 import { matchCount } from "@/lib/search";
+import { drillSummary } from "@/lib/drill";
 import { isClosed, pairKey, sectionStatus, type SectionState } from "@/lib/attempts";
 import { isAway } from "@/lib/clock";
 import { attemptNumbers, attemptTimeMs, fmtDuration, isListed } from "@/lib/attempt-summary";
@@ -13,7 +14,7 @@ import { StartForm } from "@/components/StartForm";
 import { TestSearch } from "@/components/TestSearch";
 import { DiscardButton } from "@/components/DiscardButton";
 import { AppHeader } from "@/components/AppHeader";
-import { IconNext } from "@/components/icons";
+import { IconNext, IconPlay, IconUndo } from "@/components/icons";
 import { badge, btn, card, eyebrow, seg, segItem } from "@/components/ui";
 
 /** Rows are short and grouped by state, so a long run of mocks stays one screen: Done folds away. */
@@ -60,6 +61,9 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
     correct.set(r.a, (correct.get(r.a) ?? 0) + 1);
     if (r.g) guessed.set(r.a, (guessed.get(r.a) ?? 0) + 1);
   }
+
+  // endless vocab sits on the verbal tab, above the mocks; a search is about mocks, so it hides
+  const drill = measure === "verbal" && !query ? await drillSummary() : null;
 
   type Attempt = typeof schema.attempts.$inferSelect;
   const views = tests.map((t) => {
@@ -184,6 +188,45 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
             ))}
           </nav>
         </div>
+        {drill && (drill.total > 0 || drill.misses > 0) && (
+          <section className={`${row} flex flex-col gap-2.5 border-accent/40 bg-accent-soft sm:flex-row sm:items-center sm:gap-3`}>
+            <div className="min-w-0 flex-1">
+              <h2 className="font-semibold leading-snug">Endless vocab</h2>
+              <p className="text-sm text-muted">
+                {drill.left > 0 ? (
+                  <>
+                    One question at a time, aimed at words you have not met
+                    <br />
+                    <span className="tabular-nums">{drill.left}</span> {drill.left === 1 ? "question" : "questions"} ·{" "}
+                    <span className="tabular-nums">{drill.untested}</span> untested words
+                  </>
+                ) : (
+                  <>
+                    All caught up · <span className="tabular-nums">{drill.untested}</span> untested words
+                  </>
+                )}
+                {drill.misses > 0 && (
+                  <>
+                    {" "}
+                    · <span className="tabular-nums">{drill.misses}</span> missed to replay
+                  </>
+                )}
+              </p>
+            </div>
+            <div className="flex gap-2 sm:flex-none">
+              {drill.misses > 0 && (
+                <Link className={`${btn(drill.left > 0 ? "secondary" : "primary", "sm")} max-sm:flex-1`} href="/drill?replay=1">
+                  <IconUndo size={14} /> Replay misses
+                </Link>
+              )}
+              {drill.left > 0 && (
+                <Link className={`${btn("primary", "sm")} max-sm:flex-1`} href="/drill">
+                  <IconPlay size={14} /> Play
+                </Link>
+              )}
+            </div>
+          </section>
+        )}
         {all.length > 0 && <TestSearch tab={measure} q={query} />}
         {tests.length === 0 &&
           (query ? (

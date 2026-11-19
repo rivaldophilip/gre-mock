@@ -78,6 +78,11 @@
      "name": "Third side",
      "tex": "a-b < c < a+b",
      "note": "two sides always beat the third"
+    },
+    {
+     "name": "Longest side",
+     "tex": "\\text{big side} \\leftrightarrow \\text{big angle}",
+     "note": "smallest angle faces the shortest side"
     }
    ]
   },
@@ -169,6 +174,16 @@
      "note": "flip it and change the sign"
     },
     {
+     "name": "Line from slope + point",
+     "tex": "y-y_0=m(x-x_0)",
+     "note": "perpendicular to $Ax+By+C=0$: $m=\\tfrac BA$"
+    },
+    {
+     "name": "Line from its intercepts",
+     "tex": "\\tfrac xp+\\tfrac yq=1",
+     "note": "crosses the axes at $(p,0)$ and $(0,q)$; slope $-\\tfrac qp$"
+    },
+    {
      "name": "Distance",
      "tex": "\\sqrt{(\\Delta x)^2+(\\Delta y)^2}",
      "note": "between two points: Pythagoras on the grid"
@@ -244,9 +259,14 @@
      "note": "square both sides"
     },
     {
-     "name": "Roots of $x^2+bx+c$",
-     "tex": "\\text{add to } {-b},\\ \\text{multiply to } c",
-     "note": "the two solutions; $x^2-5x+6$: $2+3=5$, $2\\times3=6$"
+     "name": "Roots of $ax^2+bx+c$",
+     "tex": "\\begin{gathered}r_1+r_2=-\\tfrac{b}{a}\\\\ r_1r_2=\\tfrac{c}{a}\\end{gathered}",
+     "note": "$x^2-5x+6$: $2+3=5$, $2\\times3=6$"
+    },
+    {
+     "name": "Roots of $ax^3+bx^2+cx+d$",
+     "tex": "\\begin{gathered}r_1+r_2+r_3=-\\tfrac{b}{a}\\\\ r_1r_2+r_1r_3+r_2r_3=\\tfrac{c}{a}\\\\ r_1r_2r_3=-\\tfrac{d}{a}\\end{gathered}",
+     "note": "$x^3-6x^2+11x-6$: roots $1,2,3$; $1+2+3=6$, $2+3+6=11$, $1\\times2\\times3=6$"
     },
     {
      "name": "Inequality rule",
@@ -438,7 +458,7 @@
     "**30-60-90** (half an equilateral triangle): sides $1:\\sqrt3:2$. The shortest side is across from $30^\\circ$, and the longest is twice that.",
     "**Area** $=\\frac12\\times$ base $\\times$ height, and **any** side can be the base. So the height to a side $=\\frac{2\\times\\text{area}}{\\text{that side}}$.",
     "Any two sides add up to **more** than the third side.",
-    "The biggest angle is across from the longest side.",
+    "**Longest side theorem** (angle-side rule): the **biggest angle** is across from the **longest side**, and the **smallest angle** is across from the **shortest side**. It works both ways, and equal sides face equal angles.",
     "Whole-number right triangles to know: 3-4-5, 5-12-13, 8-15-17, 7-24-25, and their multiples like 6-8-10."
    ],
    "tricks": [
@@ -448,7 +468,9 @@
    "traps": [
     "Assuming an angle is $90^\\circ$ just because it looks like one.",
     "Assuming a line hits the middle, or is a height, when the question never says so.",
-    "Forgetting the $\\frac12$ in the area."
+    "Forgetting the $\\frac12$ in the area.",
+    "Treating the angle-side rule as a ratio. It only puts sides and angles in the **same order**: twice the angle does not mean twice the side.",
+    "Overhanging triangle (an angle over $90^\\circ$ at the base): using the slanted side as the height, or adding the overhang to the base. The height drops onto the **extended** base line; the base stays the original side."
    ],
    "tips": [
     {
@@ -468,6 +490,18 @@
      "text": "**When:** one shape is a scaled copy of another (same angles, different size). **Then:** if the sides are $k$ times as long, the area is $k^2$ times as big and the volume $k^3$ times. Common case: a line joining the midpoints of two sides of a triangle cuts off a small copy with half the sides, so a **quarter** of the area.",
      "example": "A triangle has area $36$. The small triangle above the midpoint line has $\\frac14\\times36=9$, and the strip below it has $36-9=27$.",
      "svg": "<svg viewBox=\"0 0 260 150\" width=\"260\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A triangle split by its midpoint lines into four equal copies, each a quarter of the area\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"80,75 180,75 130,20\" stroke=\"currentColor\" stroke-width=\"2\" style=\"fill:var(--accent);fill-opacity:.16;stroke:var(--accent)\"/><polygon points=\"30,130 230,130 130,20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"80,75 180,75 130,130\" stroke=\"currentColor\" stroke-width=\"2\" style=\"stroke:var(--muted)\" fill=\"none\" stroke-dasharray=\"5 5\"/><text x=\"130\" y=\"62\" text-anchor=\"middle\" font-size=\"16\" stroke=\"none\" style=\"fill:var(--accent)\">¼</text><text x=\"80\" y=\"118\" text-anchor=\"middle\" font-size=\"14\" stroke=\"none\" style=\"fill:var(--muted)\">¼</text><text x=\"180\" y=\"118\" text-anchor=\"middle\" font-size=\"14\" stroke=\"none\" style=\"fill:var(--muted)\">¼</text><text x=\"130\" y=\"98\" text-anchor=\"middle\" font-size=\"14\" stroke=\"none\" style=\"fill:var(--muted)\">¼</text><text x=\"196\" y=\"52\" text-anchor=\"start\" font-size=\"12\" stroke=\"none\" style=\"fill:var(--accent)\">half the sides</text></svg>"
+    },
+    {
+     "title": "Longest side faces the biggest angle",
+     "text": "**When:** a question asks you to order a triangle's sides or angles, or to compare two of them. **Then:** sides and angles line up in the **same order**: the longest side is across from the biggest angle, the shortest side across from the smallest, and equal sides across from equal angles. It runs both ways, so you can order the sides from the angles too.",
+     "example": "Sides $AB=5$, $BC=7$, $AC=9$: $AC$ is longest, so $\\angle B$ (across from it) is the biggest angle, and $\\angle C$ (across from $AB$) is the smallest. Backwards: if $\\angle A=50^\\circ$ and $\\angle B=60^\\circ$, then $\\angle C=70^\\circ$, so $BC<AC<AB$.",
+     "svg": "<svg viewBox=\"0 0 260 160\" width=\"260\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Triangle ABC with sides AB=5, BC=7 and AC=9; the longest side AC faces angle B, the biggest angle\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"40,130 220,130 103.3,52.6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"40\" y1=\"130\" x2=\"220\" y2=\"130\" stroke-width=\"2.5\" style=\"stroke:var(--accent)\"/><path d=\"M93.2,65 A16,16 0 0 0 116.6,61.4\" fill=\"none\" stroke-width=\"2\" style=\"stroke:var(--accent)\"/><text x=\"30\" y=\"144\" text-anchor=\"middle\" stroke=\"none\"><tspan font-style=\"italic\">A</tspan></text><text x=\"230\" y=\"144\" text-anchor=\"middle\" stroke=\"none\"><tspan font-style=\"italic\">C</tspan></text><text x=\"103\" y=\"44\" text-anchor=\"middle\" stroke=\"none\"><tspan font-style=\"italic\">B</tspan></text><text x=\"62\" y=\"88\" text-anchor=\"middle\" stroke=\"none\">5</text><text x=\"172\" y=\"88\" text-anchor=\"middle\" stroke=\"none\">7</text><text x=\"130\" y=\"150\" text-anchor=\"middle\" stroke=\"none\" style=\"fill:var(--accent)\">9</text><text x=\"112\" y=\"86\" text-anchor=\"middle\" font-size=\"12\" stroke=\"none\" style=\"fill:var(--accent)\">biggest</text></svg>"
+    },
+    {
+     "title": "Top corner hangs past the base: extend the base",
+     "text": "**When:** one angle at the end of the base is over $90^\\circ$, so the top corner hangs out **past** that end. **Then:** the height must still meet the base at a right angle, so **extend the base line** past that end and drop the height onto the extension. The height lands **outside** the triangle. The area is still $\\frac12\\times$ base $\\times$ height, using the original base, not the extended one.",
+     "example": "Base from $(0,0)$ to $(10,0)$, top corner at $(-2.6,\\,16.8)$. Extend the base left to $(-2.6,\\,0)$: the height is $16.8$, so the area is $\\frac12\\times10\\times16.8=84$. The extra $2.6$ is not part of the base.",
+     "svg": "<svg viewBox=\"0 0 260 160\" width=\"260\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Triangle ABC with an obtuse angle at A; its top corner C hangs past A, so the base AB is extended to the left and the height h drops onto the extension, outside the triangle\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"100\" y1=\"130\" x2=\"40\" y2=\"130\" stroke-width=\"1.5\" style=\"stroke:var(--muted)\" stroke-dasharray=\"5 5\"/><polygon points=\"100,130 220,130 64,34\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"64\" y1=\"34\" x2=\"64\" y2=\"130\" stroke-width=\"2\" style=\"stroke:var(--accent)\" stroke-dasharray=\"5 4\"/><polyline points=\"64,120 74,120 74,130\" fill=\"none\" stroke-width=\"1.5\" style=\"stroke:var(--accent)\"/><text x=\"54\" y=\"88\" text-anchor=\"middle\" stroke=\"none\" style=\"fill:var(--accent)\"><tspan font-style=\"italic\">h</tspan></text><text x=\"104\" y=\"148\" text-anchor=\"middle\" stroke=\"none\"><tspan font-style=\"italic\">A</tspan></text><text x=\"224\" y=\"148\" text-anchor=\"middle\" stroke=\"none\"><tspan font-style=\"italic\">B</tspan></text><text x=\"64\" y=\"26\" text-anchor=\"middle\" stroke=\"none\"><tspan font-style=\"italic\">C</tspan></text><text x=\"160\" y=\"148\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\">base</text><text x=\"52\" y=\"148\" text-anchor=\"middle\" font-size=\"12\" stroke=\"none\" style=\"fill:var(--muted)\">extended</text></svg>"
     }
    ]
   },
@@ -495,7 +529,9 @@
     "For a line written as $Ax+By=C$, the slope is $-\\frac AB$.",
     "**Perpendicular** lines (meeting at a right angle): flip the fraction **and** change the sign.",
     "**Parallel** lines have the **same** slope.",
+    "**Line from a slope and a point:** if you know the slope $m$ and one point $(x_0,y_0)$, the line is $y-y_0=m(x-x_0)$. So a line through $(x_0,y_0)$ **perpendicular** to $Ax+By+C=0$ (slope $-\\frac AB$) is $y-y_0=\\frac BA(x-x_0)$. Example: through $(1,6)$, perpendicular to $2x-3y=5$: slope $-\\frac32$, so $y-6=-\\frac32(x-1)$.",
     "Crossing the $x$-axis means $y=0$. Crossing the $y$-axis means $x=0$.",
+    "**Line from its two intercepts:** a line crossing the $x$-axis at $(p,0)$ and the $y$-axis at $(0,q)$ is $\\frac xp+\\frac yq=1$, with slope $-\\frac qp$. Read the intercepts straight off: $\\frac x4+\\frac y6=1$ crosses at $(4,0)$ and $(0,6)$. To get this form from $Ax+By=C$, divide both sides by $C$: $3x+2y=12$ becomes $\\frac x4+\\frac y6=1$. The triangle it cuts off with the axes has area $\\frac12|pq|$.",
     "Midpoint: average the $x$'s, average the $y$'s.",
     "**Distance from a point to a line:** for the point $(x_0,y_0)$ and the line $Ax+By+C=0$, $d=\\frac{|Ax_0+By_0+C|}{\\sqrt{A^2+B^2}}$. Example: from $(1,2)$ to $3x+4y-1=0$ is $\\frac{|3+8-1|}{5}=2$."
    ],
@@ -787,7 +823,6 @@
     "Last digits repeat: 2, 3, 7, 8 every 4 powers; 4 and 9 every 2; 0, 1, 5, 6 never change.",
     "**Each number has its own pattern length.** Don't assume two bases repeat at the same speed.",
     "Any odd number squared leaves remainder 1 when divided by 8 ($9$, $25$, $49$…).",
-    "Counting factors: write $n=2^a\\times3^b\\times\\ldots$, then the count is $(a+1)(b+1)\\cdots$. $12=2^2\\times3$ has $3\\times2=6$ factors.",
     "Only perfect squares have an odd number of factors."
    ],
    "tricks": [
@@ -800,6 +835,11 @@
     "Testing only primes and missing the case that flips the answer."
    ],
    "tips": [
+    {
+     "title": "Counting positive divisors",
+     "text": "**Do:** break $n$ into primes, $n=p^a\\times q^b\\times\\ldots$ Add 1 to each exponent and multiply: the count is $(a+1)(b+1)\\cdots$ It counts 1 and $n$ too. Each divisor picks how many of each prime to use, from 0 up to its exponent, which is why every exponent gets $+1$.",
+     "example": "$36=2^2\\times3^2$, so $(2+1)\\times(2+1)=3\\times3=\\mathbf{9}$ divisors: 1, 2, 3, 4, 6, 9, 12, 18, 36. $12=2^2\\times3^1$ has $3\\times2=6$. A prime $p$ alone has $1+1=2$."
+    },
     {
      "title": "How many times a prime goes into $n!$ (and zeros at the end)",
      "text": "**Do:** divide $n$ by $p$, then by $p^2$, then by $p^3$, and so on. Drop the decimals each time and add up the results. **Zeros at the end** of $n!$ each come from a $2\\times5$ pair. There are always fewer 5s than 2s, so just count the 5s.",
@@ -1071,6 +1111,57 @@
      "title": "Huge powers: make the exponents match",
      "text": "**When:** you compare powers too big to work out, like $2^{30}$ and $3^{20}$. **Do:** rewrite both with the same exponent (or the same base), then just compare what's left.",
      "example": "$2^{30}=(2^3)^{10}=8^{10}$ and $3^{20}=(3^2)^{10}=9^{10}$. $9>8$, so $3^{20}$ is bigger."
+    },
+    {
+     "title": "Powers and reciprocals: know the four zones",
+     "text": "**When:** the quantities are the same letter raised to different powers ($x$, $x^2$, $x^3$, $\\frac1x$), or the condition is something like $x^3<x$. **Then:** the order depends on which zone $x$ is in, so find the zone first. Fractions between 0 and 1 are the usual trap: they **shrink** as the power goes up, which is backwards from whole numbers.",
+     "example": "$x>1$: $\\frac1x<x<x^2<x^3$. $0<x<1$: $x^3<x^2<x<\\frac1x$. $-1<x<0$: $\\frac1x<x<x^3<x^2$. $x<-1$: $x^3<x<\\frac1x<x^2$. Check any zone with one number: $2$, $\\frac12$, $-\\frac12$ or $-2$."
+    },
+    {
+     "title": "The ZONEF checklist: test the condition first",
+     "text": "**When:** a letter has no clear limits. **Do:** run through **Z**ero, **O**ne ($1$ and $-1$), **N**egatives ($-2$), **E**xtremes ($100$, $-100$) and **F**ractions ($\\frac12$, $-\\frac12$). First throw out every number that breaks the given condition. Then plug the **survivors** into A and B. Two survivors with different winners means (D).",
+     "example": "$x^3<x$. Compare A: $x^2$, B: $x$. Condition: $0$, $1$, $-1$ fail ($0<0$ is false); $-2$ works ($-8<-2$); $\\frac12$ works ($\\frac18<\\frac12$); $-\\frac12$ fails ($-\\frac18$ is not less than $-\\frac12$). Survivors: $x=-2$ gives A $=4$, B $=-2$, so A wins. $x=\\frac12$ gives A $=\\frac14$, B $=\\frac12$, so B wins. Answer **(D)**."
+    },
+    {
+     "title": "Move everything to one side and factor",
+     "text": "**When:** testing numbers feels like guessing, or the condition is a power inequality. **Do:** get $0$ on one side, factor, and mark where each factor is $0$. Those points cut the number line into pieces, and the sign stays the same inside each piece. Test one number per piece (or start with $+$ on the far right and flip at each point). Now you know **every** allowed $x$, not just the ones you thought of.",
+     "example": "$x^3<x \\Rightarrow x^3-x<0 \\Rightarrow x(x-1)(x+1)<0$. The points are $-1$, $0$, $1$. Signs from right to left: $+,-,+,-$. So $x<-1$ or $0<x<1$: one piece of negatives and one piece of fractions, which is exactly why the comparison above is (D).",
+     "svg": "<svg viewBox=\"0 0 300 120\" width=\"300\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A number line with marks at -1, 0 and 1; the signs of x(x-1)(x+1) go minus, plus, minus, plus from left to right, and the parts left of -1 and between 0 and 1, where x cubed is less than x, are highlighted\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"20\" y1=\"70\" x2=\"280\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"20\" y1=\"70\" x2=\"90\" y2=\"70\" stroke-width=\"5\" style=\"stroke:var(--accent)\"/><line x1=\"150\" y1=\"70\" x2=\"210\" y2=\"70\" stroke-width=\"5\" style=\"stroke:var(--accent)\"/><circle cx=\"90\" cy=\"70\" r=\"5\" stroke=\"currentColor\" stroke-width=\"2\" style=\"fill:var(--surface)\"/><circle cx=\"150\" cy=\"70\" r=\"5\" stroke=\"currentColor\" stroke-width=\"2\" style=\"fill:var(--surface)\"/><circle cx=\"210\" cy=\"70\" r=\"5\" stroke=\"currentColor\" stroke-width=\"2\" style=\"fill:var(--surface)\"/><text x=\"55\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" stroke=\"none\" style=\"fill:var(--accent)\">−</text><text x=\"120\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" stroke=\"none\" style=\"fill:var(--muted)\">+</text><text x=\"180\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" stroke=\"none\" style=\"fill:var(--accent)\">−</text><text x=\"245\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" stroke=\"none\" style=\"fill:var(--muted)\">+</text><text x=\"90\" y=\"95\" text-anchor=\"middle\" stroke=\"none\">−1</text><text x=\"150\" y=\"95\" text-anchor=\"middle\" stroke=\"none\">0</text><text x=\"210\" y=\"95\" text-anchor=\"middle\" stroke=\"none\">1</text><text x=\"150\" y=\"20\" text-anchor=\"middle\" font-size=\"12\" stroke=\"none\" style=\"fill:var(--muted)\">sign of <tspan font-style=\"italic\">x</tspan>(<tspan font-style=\"italic\">x</tspan>−1)(<tspan font-style=\"italic\">x</tspan>+1)</text><text x=\"150\" y=\"114\" text-anchor=\"middle\" font-size=\"12\" stroke=\"none\" style=\"fill:var(--accent)\">highlighted: <tspan font-style=\"italic\">x</tspan>³ &lt; <tspan font-style=\"italic\">x</tspan></text></svg>"
+    },
+    {
+     "title": "Read the condition for what it really allows",
+     "text": "**When:** the facts look like they pin down one number. **Check:** does $x^2=16$ allow $-4$ too? Is $x$ said to be a whole number, or could it be $2.5$? Is it positive, or just 'not zero'? The square root sign means the positive root only, but solving $x^2=k$ gives two answers.",
+     "example": "$x^2=16$. Compare A: $x$, B: $4$. $x$ can be $4$ (equal) or $-4$ (B wins), so **(D)**. But A: $\\sqrt{16}$, B: $4$ is always equal, so **(C)**."
+    },
+    {
+     "title": "Pull out the shared piece",
+     "text": "**When:** both quantities contain the same big chunk, like a power or a long product. **Do:** divide both by it (only if it's positive) or subtract it from both, and compare what's left. You can also compare $A-B$ to $0$: positive means A, negative means B.",
+     "example": "A: $3^{11}$, B: $4\\times3^{10}$. Divide both by $3^{10}$: A becomes $3$, B becomes $4$, so **B**. Same idea: A: $\\frac{n}{n+1}$, B: $\\frac{n+1}{n+2}$ for a positive $n$. $B-A=\\frac{1}{(n+1)(n+2)}>0$, so **B**."
+    },
+    {
+     "title": "Square both sides to clear roots",
+     "text": "**When:** both quantities are sums of square roots and **both are positive**. **Do:** square each one. The bigger square belongs to the bigger number. Use $(a+b)^2=a^2+2ab+b^2$: often the plain parts match and only the middle term decides.",
+     "example": "A: $\\sqrt5+\\sqrt7$, B: $\\sqrt3+3$. A$^2=12+2\\sqrt{35}$, B$^2=3+9+2\\sqrt{27}=12+2\\sqrt{27}$. $\\sqrt{35}>\\sqrt{27}$, so **A**. Don't square if a side could be negative: $-3<2$ but $9>4$."
+    },
+    {
+     "title": "Fractions: benchmark, then cross-multiply",
+     "text": "**When:** you compare two fractions. **Do:** first compare each to an easy number like $\\frac12$ or $1$. If they land on different sides, you're done. If not, cross-multiply (the bottoms must be positive). **Shortcut:** adding the same positive number to the top and bottom pulls a fraction **toward 1**, so $\\frac79<\\frac{8}{10}$ but $\\frac97>\\frac{10}{8}$.",
+     "example": "A: $\\frac{13}{27}$, B: $\\frac{15}{29}$. Half of 27 is $13.5$, so A is under $\\frac12$; half of 29 is $14.5$, so B is over. **B**. For $\\frac{17}{35}$ vs $\\frac{19}{40}$ (both under $\\frac12$): $17\\times40=680$ and $19\\times35=665$, so $\\frac{17}{35}$ is bigger."
+    },
+    {
+     "title": "Long sums: pair the terms",
+     "text": "**When:** each quantity is a long sum, like all the evens against all the odds. **Do:** don't add anything up. Line the terms up one-to-one, see how much each pair differs, then multiply by the number of pairs.",
+     "example": "A: $2+4+\\cdots+100$, B: $1+3+\\cdots+99$. Pair $2$ with $1$, $4$ with $3$, and so on: 50 pairs, each A term $1$ bigger. A is $50$ more, so **A**."
+    },
+    {
+     "title": "Same total: closer numbers give a bigger product",
+     "text": "**When:** two numbers have a fixed sum and you compare their product (or the area of rectangles with a fixed perimeter). **Then:** the product is biggest when the numbers are **equal**, and shrinks as they spread apart. Watch for 'different numbers' or 'whole numbers' in the facts, which can stop you from reaching the top.",
+     "example": "$x+y=10$. Compare A: $xy$, B: $25$. At $x=y=5$, $xy=25$; any other pair gives less ($6\\times4=24$). So A can equal B or be smaller: **(D)**. Add '$x\\ne y$' and it becomes **B**."
+    },
+    {
+     "title": "Percents of unknown amounts",
+     "text": "**When:** the question gives percents but not what they're percents **of**. **Then:** a bigger percent doesn't mean a bigger amount. Unless the two starting amounts are linked, the answer is usually (D). Try one case with equal starting amounts and one with very different ones.",
+     "example": "Ann's pay went up $10\\%$ and Ben's $20\\%$. Compare A: the size of Ann's raise, B: the size of Ben's. If both earn 100, B wins (10 vs 20). If Ann earns 1,000 and Ben 100, A wins (100 vs 20). **(D)**."
     }
    ],
    "patterns": [

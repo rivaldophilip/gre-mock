@@ -16,8 +16,8 @@
     {
       "id": "p1",
       "paragraphs": [
-        "When the earthquake of 1929 off the Grand Banks of Newfoundland severed a dozen transatlantic telegraph cables, the damage was at first blamed on the shaking itself. Only in 1952 did two geologists notice what the repair logs had recorded all along: the cables nearest the epicenter had parted at the moment of the shock, but those farther down the continental slope had failed one after another over the following thirteen hours, in strict order of distance. A flow of sediment-laden water, they argued, had poured down the slope like an avalanche, and from the timing of the breaks they computed its speed. The ramifications reached well beyond the cables. The turbidity current, until then a laboratory curiosity, became the favored explanation for much that had puzzled students of the deep seafloor, from beds of graded sand lying hundreds of kilometers from any shore to the canyons notched into the continental margins.",
-        "The cable evidence has worn better than some of what was built on it. The sequence of breaks is hard to explain any other way, and the evidence adduced since, including cables cut in order down the slopes off Taiwan in 2006, has only confirmed it. What the cables cannot reveal is how typical the 1929 flow was. Because the logs record only the moments at which cables parted, the speeds computed from them describe the current's leading edge, the fastest part of a flow whose body may have moved far more slowly; and a reading drawn from a single catastrophic event says nothing about whether the canyons were cut by rare flows of that size or by many smaller ones that no cable would have registered. To treat the Grand Banks flow as the archetypal turbidity current, as textbooks long did, is to assume that the one flow that happened to be measured is the kind that does most of the work."
+        "When the earthquake of 1929 off the Grand Banks of Newfoundland severed a dozen transatlantic telegraph cables, the damage was at first blamed on the shaking itself. Only in 1952 did two geologists notice what the repair logs had recorded all along: the cables nearest the epicenter had parted at the moment of the shock, but those farther down the continental slope had failed one after another over the following thirteen hours, in strict order of distance. A flow of sediment-laden water, they argued, had poured down the slope like an avalanche, and from the timing of the breaks they computed its speed. The ramifications reached well beyond the cables. The turbidity current, until then a laboratory curiosity, became the favored explanation for much that had long been an enigma to students of the deep seafloor, from beds of graded sand lying hundreds of kilometers from any shore to the canyons notched into the continental margins.",
+        "The cable evidence has worn better than some of what was built on it. The sequence of breaks is hard to explain any other way, and the evidence adduced since, including cables cut in order down the slopes off Taiwan in 2006, has only confirmed it. What the cables cannot reveal is how typical the 1929 flow was. Because the logs record only the moments at which cables parted, the speeds computed from them describe the current's leading edge, the fastest part of a flow whose body may have moved far more slowly; and a reading drawn from a single catastrophic event says nothing about whether the canyons were cut by rare flows of that size or by many smaller ones that no cable would have registered. To treat the Grand Banks flow as the archetypal turbidity current, as textbooks long did, is to give inordinate weight to the one flow that happened to be measured, assuming it is the kind that does most of the work."
       ],
       "tags": [
         {
@@ -34,13 +34,33 @@
           "kind": "word",
           "id": "archetypal",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "sever",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "break",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "enigma",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "inordinate",
+          "role": "passage"
         }
       ]
     },
     {
       "id": "p2",
       "paragraphs": [
-        "The great Russian novels of the 1860s and 1870s reached their first readers not as books but in monthly installments of the “thick journals,” periodicals whose ambit ran from agronomy and statistics to the reform of the courts. Critics who fault these novels for their wayward digressions, the chapters on threshing machines or ecclesiastical law that seem to halt the story, have usually read them in bound editions, where such chapters interrupt scenes of mounting suspense. In the journals they kept different company: a subscriber who turned from an article on provincial budgets to the month's installment found the novel's essayistic chapters continuous with the pages around them, and editors expected a novelist to address the same questions as the economists who preceded him. None of this makes every digression a success; some were plainly padding, written to fill out an installment when the novelist had fallen behind with his plot, and payment by the printed sheet left him little recourse but to pad. It does suggest, however, that the standard of unity by which the novels have so often been found wanting was one their first readers had little reason to apply, and that to judge them by it alone is reductive."
+        "The great Russian novels of the 1860s and 1870s reached their first readers not as books but in monthly installments of the “thick journals,” periodicals whose ambit ran from agronomy and statistics to the reform of the courts. Critics who fault these novels for their wayward digressions, the chapters on threshing machines or ecclesiastical law that seem to halt the story, have usually read them in bound editions, where such chapters interrupt scenes of mounting suspense. In the journals they kept different company: a subscriber who turned from an article on provincial budgets to the month's installment found the novel's essayistic chapters continuous with the pages around them, and editors, true to the journals' encyclopedic ethos, expected a novelist to address the same questions as the economists who preceded him. None of this makes every digression a success; some were plainly padding, written to fill out an installment when the novelist had fallen behind with his plot, and payment by the printed sheet left him little recourse but to pad. It does suggest, however, that the standard of unity by which the novels have so often been found wanting was one their first readers had little reason to apply, and that to judge them by it alone is reductive."
       ],
       "tags": [
         {
@@ -62,6 +82,31 @@
           "kind": "word",
           "id": "reductive",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "digression",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "provincial",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "novel",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "encyclopedic",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "ethos",
+          "role": "passage"
         }
       ]
     },
@@ -75,8 +120,8 @@
     {
       "id": "p3",
       "paragraphs": [
-        "In the standard history of scurvy, the decisive moment comes in 1747, when James Lind, a surgeon aboard a British warship, divided twelve stricken sailors into pairs, gave each pair a different remedy, and found that the two who received oranges and lemons recovered within days. The story has the shape of a parable: a lone visionary, a controlled comparison, an unambiguous result, and then a scandalous delay of nearly half a century before the Admiralty issued lemon juice to the fleet. Historians who tell it this way treat the delay as institutional inertia, the failure of a hidebound navy to act on what one of its own surgeons had shown.",
-        "A revisionist account, now dominant among historians of medicine, begins with Lind's own treatise and finds in it scarcely a scintilla of the parable. Lind described the trial in a few paragraphs of a book running to several hundred pages, and he did not conclude from it that scurvy was a disease of deficiency. He held, with most physicians of his day, that it arose when damp sea air clogged the pores, and he valued citrus as one of several agents that might restore perspiration; he even recommended a boiled concentrate of lemon juice whose preparation, it is now known, destroyed most of the vitamin it contained. On this reading the delay was not inertia at all: no one, Lind included, had reason to regard the trial as decisive, and the navy's eventual adoption of lemon juice owed more to the advocacy of a later physician, Gilbert Blane, than to anything Lind had shown.",
+        "In the standard history of scurvy, the decisive moment comes in 1747, when James Lind, a surgeon aboard a British warship, divided twelve stricken sailors into pairs, gave each pair a different remedy, and found that the two who received oranges and lemons recovered within days. The story has the shape of a parable: a lone visionary, a controlled comparison, an unambiguous result, and then a scandalous delay of nearly half a century before the Admiralty issued lemon juice to the fleet. Historians who tell it this way treat the delay as institutional inertia and hold a hidebound navy culpable for failing to act on what one of its own surgeons had shown.",
+        "A revisionist account, now dominant among historians of medicine, begins with Lind's own treatise and finds in it scarcely a scintilla of the parable on which his posthumous fame rests. Lind described the trial in a few paragraphs of a book running to several hundred pages, and he did not conclude from it that scurvy was a disease of deficiency. He held, with most physicians of his day, that it arose when damp sea air clogged the pores, and he valued citrus as one of several agents that might restore perspiration; he even recommended a boiled concentrate of lemon juice whose preparation, it is now known, destroyed most of the vitamin it contained. On this reading the delay was not inertia at all: no one, Lind included, had reason to regard the trial as decisive, and the navy's eventual adoption of lemon juice owed more to the advocacy of a later physician, Gilbert Blane, than to anything Lind had shown.",
         "The revisionists are right about Lind's theory, and right that the trial meant less to him than it does to us. But their account often slides from the claim that Lind misunderstood his result to the claim that the result was unavailable to his contemporaries, and the second does not follow from the first. Naval surgeons did not need a theory of vitamins to notice that crews supplied with fresh citrus stayed well, and several recorded as much in their journals before Blane had written a word on the subject. What they lacked was not evidence but any means of making evidence surmount the authority of a received theory, and that lack, unlike Lind's error, belongs to the institution rather than to the man. The older story misplaced the scandal; it did not invent it."
       ],
       "tags": [
@@ -94,13 +139,33 @@
           "kind": "word",
           "id": "surmount",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "hidebound",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "revisionist",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "culpable",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "posthumous",
+          "role": "passage"
         }
       ]
     },
     {
       "id": "p4",
       "paragraphs": [
-        "Archaeologists call an object a skeuomorph when it reproduces, in a new material, a feature that was functional only in the old one: the clay cup with molded “rivets” copied from a hammered bronze original, or the stone ax whose ridged butt imitates the casting seam of a metal one. The term, coined by a Victorian antiquarian, is often used as if it explained something, but it merely names a pattern, and at least two quite different processes produce it. In the first, the copy is a cheap substitute for a prized original, and the useless feature is kept precisely because it advertises the costlier material; potters who could not afford bronze were, on this view, borrowing its prestige, and a grave assemblage full of such cups records an aspiration as much as a poverty. In the second, the feature survives because no one thought to drop it: craftspeople reproducing a familiar form carry its details over by habit, as atavistic traces of the form's history, much as the builders of the first iron bridges joined their castings with the dovetails and wedges of carpentry. The two processes can be told apart, at least in principle. Emulation should be most faithful where the original was most admired and should lapse once the original ceases to be rare, whereas habit should erode slowly and with no regard to the standing of the model."
+        "Archaeologists call an object a skeuomorph when it reproduces, in a new material, a feature that was functional only in the old one: the clay cup with molded “rivets” copied from a hammered bronze original, or the stone ax whose ridged butt imitates the casting seam of a metal one. The term, coined by a Victorian antiquarian, is often used as if it explained something, but it merely names a pattern, and at least two divergent processes produce it. In the first, the copy is a cheap substitute for a prized original, and the useless feature is kept precisely because it advertises the costlier material; potters who could not afford bronze were, on this view, hoping to reap a share of its prestige, and a grave assemblage full of such cups records an aspiration as much as a poverty. In the second, the feature survives because no one thought to drop it: craftspeople reproducing a familiar form carry its details over by habit, as atavistic traces of the form's history, much as the builders of the first iron bridges joined their castings with the dovetails and wedges of carpentry. The two processes can be told apart, at least in principle. Emulation should be most faithful where the original was most admired and should lapse once the original ceases to be rare, whereas habit should erode slowly and with no regard to the standing of the model."
       ],
       "tags": [
         {
@@ -117,13 +182,23 @@
           "kind": "word",
           "id": "atavistic",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "divergent",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "reap",
+          "role": "passage"
         }
       ]
     },
     {
       "id": "p5",
       "paragraphs": [
-        "European readers who met the Persian ghazal in translation in the late eighteenth century tended to admire its couplets one at a time and to despair of the poem as a whole; the line “like orient pearls at random strung,” which an English translator of Hafez put into the poet's own mouth, became a catchword for a form supposed to have no principle of order beyond its rhyme. The charge rested partly on a misreading of convention. Each couplet of a ghazal was expected to be complete in itself, and a reader steeped in the tradition took pleasure in watching a stock image, the moth and the candle or the nightingale and the rose, refract into a new meaning within two lines, its valence shifting from the erotic to the allegorical and back; to demand of such a poem the sustained argument of an ode is to fault it for declining an undertaking it never made. Yet the defense can be pressed too far. Persian commentators ranked ghazals partly by the subtlety of the threads that ran between their couplets, and the compilers of manuscript anthologies sometimes reordered a poem's couplets, a liberty that suggests they found its sequence meaningful enough to improve, though a skeptic might take it as proof that they found the sequence negotiable."
+        "European readers who met the Persian ghazal in translation in the late eighteenth century tended to admire its couplets one at a time and to despair of the poem as a whole; the line “like orient pearls at random strung,” which an English translator of Hafez put into the poet's own mouth, became a catchword for a form supposed to have no principle of order beyond its rhyme. The charge rested partly on a misreading of convention. Each couplet of a ghazal was expected to be complete in itself, and a reader steeped in the tradition took pleasure in watching a stock image, the moth and the candle or the nightingale and the rose, refract into a new and felicitous meaning within two lines, its valence shifting from the erotic to the allegorical and back; to demand of such a poem the sustained argument of an ode is to fault it for declining an undertaking it never made. Yet the defense can be pressed too far. Persian commentators ranked ghazals partly by the subtlety of the threads of image and syntax that ran between their couplets, and the compilers of manuscript anthologies sometimes reordered a poem's couplets, a liberty that suggests they found its sequence meaningful enough to improve, though a skeptic might take it as proof that they found the sequence negotiable."
       ],
       "tags": [
         {
@@ -139,6 +214,16 @@
         {
           "kind": "word",
           "id": "allegorical",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "felicitous",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "syntax",
           "role": "passage"
         }
       ]
@@ -166,7 +251,7 @@
           "inadvertent",
           "mercenary",
           "rancorous",
-          "callous"
+          "timorous"
         ]
       ],
       "key": {
@@ -180,7 +265,7 @@
           "altruistic": "Means public-minded; reading “less … than” backwards gives the admirers' view.",
           "inadvertent": "The timing is the evidence, not an accident, and an accident is not a motive set against public-mindedness.",
           "rancorous": "Nothing suggests a grudge; the clue is the contract, not bitterness.",
-          "callous": "Indifference to suffering is a different fault; the evidence is about gain."
+          "timorous": "Fear plays no part in the record: the guild held out through three readings and turned the week the contracts came, which points to gain, not nerves."
         }
       },
       "tags": [
@@ -222,7 +307,7 @@
         },
         {
           "kind": "word",
-          "id": "callous",
+          "id": "timorous",
           "role": "distractor",
           "at": [
             0,
@@ -240,13 +325,13 @@
       "blanks": [
         [
           "disabuse",
-          "apprise",
+          "remind",
           "persuade"
         ],
         [
           "allayed",
           "kindled",
-          "feigned"
+          "alleviated"
         ]
       ],
       "key": {
@@ -258,10 +343,10 @@
       "explanation": {
         "key": "(i) Instruments finer than modern tools contradict the butcher stereotype, so the curators wanted to free visitors of it: disabuse. (ii) “Did more than that” and an interest “they had never expected to feel” mean the display aroused one: kindled, in its sense of stirring a feeling, not lighting a fire.",
         "distractors": {
-          "apprise": "To inform someone of something; the curators meant to correct the belief, not report it.",
+          "remind": "To bring the belief back to mind; the curators meant to clear it away, not recall it.",
           "persuade": "“Persuade visitors of the belief” would confirm the stereotype the instruments contradict.",
           "allayed": "One allays a fear or a doubt, not a new interest.",
-          "feigned": "The visitors, not the display, could feign an interest, and their notes say it was real."
+          "alleviated": "To ease a pain or a worry; like allayed, it lessens something already there, and the visitors report an interest that is new."
         }
       },
       "tags": [
@@ -276,15 +361,6 @@
         },
         {
           "kind": "word",
-          "id": "apprise",
-          "role": "distractor",
-          "at": [
-            0,
-            1
-          ]
-        },
-        {
-          "kind": "word",
           "id": "kindle",
           "role": "key",
           "at": [
@@ -294,7 +370,7 @@
         },
         {
           "kind": "word",
-          "id": "feign",
+          "id": "alleviate",
           "role": "distractor",
           "at": [
             1,
@@ -311,13 +387,13 @@
       "prompt": "The sanitary committee's early pamphlets were unabashedly (i) ___, crowded with capital letters, verses of scripture and the names of children lost to the summer fevers. Its later pamphlets read as flat inventories of drains and cisterns, and historians have taken the change of tone for a loss of nerve. It was nearer the reverse: an authority that had remained (ii) ___ for as long as the vestry, without opposing the committee's rules, merely (iii) ___ them became a real one once the vestry began to fine householders who broke them, and a body whose rules carry fines has no further need to plead.",
       "blanks": [
         [
-          "pithy",
+          "prophetic",
           "hortatory",
           "discursive"
         ],
         [
           "tacit",
-          "manifest",
+          "ubiquitous",
           "nominal"
         ],
         [
@@ -336,10 +412,10 @@
       "explanation": {
         "key": "(i) Undecidable from the first sentence alone; the last clause settles it: a body with fines “has no further need to plead,” so the early pamphlets pleaded and urged: hortatory. (ii) Set against “became a real one”: nominal, existing in name only. (iii) “Without opposing … merely” describes passive acceptance without enforcement: acquiesced in.",
         "distractors": {
-          "pithy": "“Crowded with” capitals, scripture and names runs against concision, and the contrast drawn is pleading versus flat inventory.",
+          "prophetic": "The scripture invites it, but the last clause sets pleading, not prediction, against the flat inventories: the pamphlets urged householders rather than foretold.",
           "discursive": "Rambling fits “crowded,” but the passage's turn is from pleading to stating, not from digressive to focused.",
           "tacit": "Unspoken, not the opposite of real.",
-          "manifest": "The reverse of the sense needed: the authority was not yet real.",
+          "ubiquitous": "Reach is not the issue: the authority could be everywhere and still unenforced. The contrast drawn is with “a real one.”",
           "lobbied against": "Contradicts “without opposing the committee's rules.”",
           "insisted on": "A vestry insisting on the rules would already have given them force, so the authority would not have stayed nominal; it also clashes with “merely.”"
         }
@@ -347,7 +423,7 @@
       "tags": [
         {
           "kind": "word",
-          "id": "pithy",
+          "id": "prophetic",
           "role": "distractor",
           "at": [
             0,
@@ -383,7 +459,7 @@
         },
         {
           "kind": "word",
-          "id": "manifest",
+          "id": "ubiquitous",
           "role": "distractor",
           "at": [
             1,
@@ -419,10 +495,10 @@
       "choices": [
         "corroborate",
         "refute",
-        "embellish",
-        "substantiate",
+        "refract",
+        "confirm",
         "debunk",
-        "implicate"
+        "sully"
       ],
       "key": {
         "sel": [
@@ -433,10 +509,10 @@
       "explanation": {
         "key": "Coins struck over sixty years and worn to every degree cannot have gone into the ground in one panic, and “suggest instead” marks a contradiction: the coins prove the single-raid story false. Refute and debunk.",
         "distractors": {
-          "corroborate": "Trap pair with substantiate: true synonyms, but “must reckon with” and “suggest instead” call for the opposite polarity.",
-          "substantiate": "Trap pair with corroborate.",
-          "embellish": "To add detail to a picture, not to overturn it.",
-          "implicate": "To involve someone in wrongdoing; it does not take “the picture” as its object in this sense."
+          "corroborate": "Trap pair with confirm: true synonyms, but “must reckon with” and “suggest instead” call for the opposite polarity.",
+          "confirm": "Trap pair with corroborate.",
+          "refract": "To present through a particular perspective; the coins do not recast the story, they overturn it.",
+          "sully": "To stain a reputation; the coins do not taint the story, they show it to be false."
         }
       },
       "tags": [
@@ -458,18 +534,10 @@
         },
         {
           "kind": "word",
-          "id": "embellish",
+          "id": "refract",
           "role": "distractor",
           "at": [
             2
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "substantiate",
-          "role": "distractor",
-          "at": [
-            3
           ]
         },
         {
@@ -482,7 +550,7 @@
         },
         {
           "kind": "word",
-          "id": "implicate",
+          "id": "sully",
           "role": "distractor",
           "at": [
             5
@@ -500,7 +568,7 @@
         "denounce",
         "extol",
         "impute",
-        "decry",
+        "vilify",
         "hail",
         "importune"
       ],
@@ -513,8 +581,8 @@
       "explanation": {
         "key": "“The same newspapers that had ___ it” sets their earlier verdict against the complaints they now print, a reversal over time; the pointed “same” only makes sense if they had once praised it as a marvel: extol and hail (“hail it as” = acclaim it as).",
         "distractors": {
-          "denounce": "Trap pair with decry: papers that had condemned the bridge printing complaints would be no reversal, and “the same” would be pointless.",
-          "decry": "Trap pair with denounce.",
+          "denounce": "Trap pair with vilify: papers that had condemned the bridge printing complaints would be no reversal, and “the same” would be pointless.",
+          "vilify": "Trap pair with denounce.",
           "impute": "To attribute a quality or fault; it does not take “it as the engineering marvel.”",
           "importune": "To beg persistently."
         }
@@ -546,7 +614,7 @@
         },
         {
           "kind": "word",
-          "id": "decry",
+          "id": "vilify",
           "role": "distractor",
           "at": [
             3
@@ -578,12 +646,12 @@
       "revisits": "verbal-004:s2q3",
       "prompt": "Because the serum could be given only after the bite, its makers never pretended that it could prevent infection; the trial asked instead whether, in patients already infected, it could ___ the disease, shortening the fever and sparing the nerves the damage that had left earlier survivors lame.",
       "choices": [
-        "augment",
+        "intensify",
         "mitigate",
         "avert",
-        "bolster",
+        "aggravate",
         "attenuate",
-        "presage"
+        "incur"
       ],
       "key": {
         "sel": [
@@ -595,20 +663,12 @@
         "key": "The serum works on patients already infected, and its hoped-for effect is spelled out after the comma: a shorter fever and less damage. It lessens the disease's severity: mitigate and attenuate.",
         "distractors": {
           "avert": "To stop from happening; the disease is already under way in these patients (“shortening the fever”), and prevention is what the makers disclaimed.",
-          "augment": "Trap pair with bolster: true synonyms meaning to strengthen, the wrong direction.",
-          "bolster": "Trap pair with augment.",
-          "presage": "To foretell; a treatment does not announce a disease."
+          "intensify": "Trap pair with aggravate: true synonyms for making the disease worse, the wrong direction.",
+          "aggravate": "Trap pair with intensify.",
+          "incur": "To bring something unpleasant on oneself; a patient incurs a disease, a serum does not."
         }
       },
       "tags": [
-        {
-          "kind": "word",
-          "id": "augment",
-          "role": "distractor",
-          "at": [
-            0
-          ]
-        },
         {
           "kind": "word",
           "id": "mitigate",
@@ -627,14 +687,6 @@
         },
         {
           "kind": "word",
-          "id": "bolster",
-          "role": "distractor",
-          "at": [
-            3
-          ]
-        },
-        {
-          "kind": "word",
           "id": "attenuate",
           "role": "key",
           "at": [
@@ -643,11 +695,16 @@
         },
         {
           "kind": "word",
-          "id": "presage",
+          "id": "incur",
           "role": "distractor",
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "sparing",
+          "role": "stem"
         }
       ]
     },
@@ -658,12 +715,12 @@
       "difficulty": 4,
       "prompt": "The shuttered sickrooms that physicians prescribed to keep out the night air, which they held to carry fever, were themselves ___: patients lay for weeks breathing their own exhalations and the smoke of tallow lamps.",
       "choices": [
-        "salutary",
+        "healthful",
         "deleterious",
-        "sterile",
-        "salubrious",
+        "soporific",
+        "wholesome",
         "noxious",
-        "opulent"
+        "superfluous"
       ],
       "key": {
         "sel": [
@@ -674,21 +731,13 @@
       "explanation": {
         "key": "“Themselves” puts the sickrooms alongside the night air they were meant to shut out, and the colon explains how: stale breath and lamp smoke for weeks. The rooms were harmful: deleterious and noxious.",
         "distractors": {
-          "sterile": "Fits the physicians' aim of a clean, sealed room, but the colon describes stale breath and lamp smoke, the opposite of sterile, and it has no partner.",
-          "salutary": "Trap pair with salubrious: true synonyms (healthful), the physicians' intention rather than the result.",
-          "salubrious": "Trap pair with salutary.",
-          "opulent": "Luxurious; nothing about the rooms' richness."
+          "soporific": "Stale air and lamp smoke might make patients drowsy, but “themselves” sets the rooms beside the fever-carrying air as a source of harm, and nothing pairs with it.",
+          "healthful": "Trap pair with wholesome: true synonyms, the physicians' intention rather than the result.",
+          "wholesome": "Trap pair with healthful.",
+          "superfluous": "Needless is not harmful; the colon describes damage done to the patients, not wasted effort."
         }
       },
       "tags": [
-        {
-          "kind": "word",
-          "id": "salutary",
-          "role": "distractor",
-          "at": [
-            0
-          ]
-        },
         {
           "kind": "word",
           "id": "deleterious",
@@ -699,10 +748,10 @@
         },
         {
           "kind": "word",
-          "id": "salubrious",
+          "id": "soporific",
           "role": "distractor",
           "at": [
-            3
+            2
           ]
         },
         {
@@ -715,7 +764,7 @@
         },
         {
           "kind": "word",
-          "id": "opulent",
+          "id": "superfluous",
           "role": "distractor",
           "at": [
             5
@@ -750,6 +799,26 @@
           "kind": "concept",
           "id": "rc-main-idea",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "refute",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "break",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "endorse",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "reconcile",
+          "role": "stem"
         }
       ]
     },
@@ -784,6 +853,11 @@
           "kind": "concept",
           "id": "rc-inference",
           "role": "secondary"
+        },
+        {
+          "kind": "word",
+          "id": "break",
+          "role": "stem"
         }
       ]
     },
@@ -814,6 +888,11 @@
           "kind": "concept",
           "id": "rc-vocab-context",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "covet",
+          "role": "stem"
         }
       ]
     },
@@ -837,6 +916,16 @@
           "kind": "concept",
           "id": "rc-function",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "digression",
+          "role": "stem"
         }
       ]
     },
@@ -927,6 +1016,11 @@
             0,
             4
           ]
+        },
+        {
+          "kind": "word",
+          "id": "advocate",
+          "role": "stem"
         }
       ]
     },
@@ -940,7 +1034,7 @@
       "blanks": [
         [
           "readily jettison",
-          "steadfastly uphold",
+          "steadfastly adhere to",
           "quietly codify"
         ],
         [
@@ -958,7 +1052,7 @@
       "explanation": {
         "key": "(i) The engravers are offered as a counterexample to the assumption (“should consider”): they kept the ban through twenty costly years. So the assumption is that a profession drops a principle as soon as it costs something: readily jettison. (ii) “Even then” says the members kept the belief behind the ban after giving the ban up, and a ban on machine work rests on the belief that it lowered the craft: debased.",
         "distractors": {
-          "steadfastly uphold": "Turns the assumption into what the engravers actually did, so they would confirm it rather than be a case to “consider” against it.",
+          "steadfastly adhere to": "Turns the assumption into what the engravers actually did, so they would confirm it rather than be a case to “consider” against it.",
           "quietly codify": "Writing a principle down when it becomes costly is no assumption the engravers' story could test.",
           "dignified": "Opposite polarity; no one bans what dignifies the craft.",
           "safeguarded": "Same problem: the ban would be pointless."
@@ -972,6 +1066,15 @@
           "at": [
             0,
             0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "adhere",
+          "role": "distractor",
+          "at": [
+            0,
+            1
           ]
         },
         {
@@ -994,19 +1097,19 @@
       "prompt": "His contemporaries found the court poet's verses (i) ___, so smooth in their vowels that listeners claimed they could be sung without a tune. That smoothness is precisely what earned him (ii) ___ the next generation, who heard in it the sound of a man with nothing to say and every reason to please. Yet drafts found last century, folded into the bindings of books he had given away, show that he (iii) ___ his sharpest lines where no patron would ever read them.",
       "blanks": [
         [
-          "incisive",
+          "cerebral",
           "mellifluous",
           "insipid"
         ],
         [
           "the opprobrium of",
-          "the emulation of",
+          "the approbation of",
           "the indulgence of"
         ],
         [
           "declaimed",
           "secreted",
-          "dedicated"
+          "divulged"
         ]
       ],
       "key": {
@@ -1019,18 +1122,18 @@
       "explanation": {
         "key": "(i) Vowels so smooth the verses could be sung without a tune describe sweetness of sound, and “that smoothness is precisely what earned him” sets up a later reversal of a contemporary verdict: mellifluous. (ii) Hearing “a man with nothing to say and every reason to please” is scorn: the opprobrium of. (iii) “Yet” turns on the charge of emptiness; drafts folded into bindings where no patron would read them were hidden: secreted, in its sense of concealed, not discharged.",
         "distractors": {
-          "incisive": "Sharpness is what the drafts reveal and contemporaries never saw.",
+          "cerebral": "Intellectual rather than sensuous; the clue is the sound of the vowels, not the thought behind them.",
           "insipid": "The next generation's verdict, not his contemporaries'; it would leave no reversal for “precisely.”",
-          "the emulation of": "Imitation contradicts their contempt.",
+          "the approbation of": "Approval contradicts hearing in him “nothing to say.”",
           "the indulgence of": "Tolerance does not fit hearing in him “nothing to say.”",
           "declaimed": "Reciting aloud contradicts placing lines where no one would read them.",
-          "dedicated": "Dedications address patrons, the readers he was avoiding."
+          "divulged": "To make known; lines placed where no patron would read them were kept back, not revealed."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "incisive",
+          "id": "cerebral",
           "role": "distractor",
           "at": [
             0,
@@ -1066,11 +1169,29 @@
         },
         {
           "kind": "word",
+          "id": "approbation",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
           "id": "secrete",
           "role": "key",
           "at": [
             2,
             1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "divulge",
+          "role": "distractor",
+          "at": [
+            2,
+            2
           ]
         }
       ]
@@ -1089,13 +1210,13 @@
         ],
         [
           "an incontrovertible fact",
-          "a tentative hypothesis",
+          "a subjective judgment",
           "a matter of opinion"
         ],
         [
           "remedial",
           "accelerated",
-          "extracurricular"
+          "egalitarian"
         ]
       ],
       "key": {
@@ -1110,10 +1231,10 @@
         "distractors": {
           "divulge": "Failing to tell others would not make their own finding a guess.",
           "dispute": "Nothing in the sentence was there to dispute; the failure is one of finding out.",
-          "a tentative hypothesis": "A guess presented as tentative leaves “though” with no contrast.",
+          "a subjective judgment": "A guess presented as a personal judgment leaves “though” with no contrast.",
           "a matter of opinion": "Same problem: no contrast with resting on a guess.",
           "accelerated": "A program for faster progress, not for a deficiency.",
-          "extracurricular": "Outside the curriculum; says nothing about correcting a deficiency."
+          "egalitarian": "Equal treatment of all pupils is a different aim; the program is meant to fix a deficiency."
         }
       },
       "tags": [
@@ -1146,7 +1267,7 @@
         },
         {
           "kind": "word",
-          "id": "tentative",
+          "id": "subjective",
           "role": "distractor",
           "at": [
             1,
@@ -1161,6 +1282,15 @@
             2,
             0
           ]
+        },
+        {
+          "kind": "word",
+          "id": "egalitarian",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
         }
       ]
     },
@@ -1173,10 +1303,10 @@
       "choices": [
         "indefatigable",
         "meticulous",
-        "erudite",
-        "dogged",
+        "whimsical",
+        "untiring",
         "punctilious",
-        "trenchant"
+        "pragmatic"
       ],
       "key": {
         "sel": [
@@ -1187,10 +1317,10 @@
       "explanation": {
         "key": "“But” turns from what she lacked (speed, stamina) to what explains her flawless record; “in her habits of work” points to care over detail: meticulous and punctilious.",
         "distractors": {
-          "indefatigable": "Trap pair with dogged: true synonyms for tireless persistence, which “still less tireless” and setting problems aside rule out.",
-          "dogged": "Trap pair with indefatigable.",
-          "erudite": "Learning could avoid errors, but it is not a habit of work and has no partner here.",
-          "trenchant": "Incisive in expression; about style, not accuracy."
+          "indefatigable": "Trap pair with untiring: true synonyms for tireless persistence, which “still less tireless” and setting problems aside rule out.",
+          "untiring": "Trap pair with indefatigable.",
+          "whimsical": "Her short hours and long holidays tempt it, but caprice would not explain forty years without an error, and nothing pairs with it.",
+          "pragmatic": "Practical sense is not care over detail; it explains no flawless record and nothing pairs with it."
         }
       },
       "tags": [
@@ -1212,18 +1342,10 @@
         },
         {
           "kind": "word",
-          "id": "erudite",
+          "id": "whimsical",
           "role": "distractor",
           "at": [
             2
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "dogged",
-          "role": "distractor",
-          "at": [
-            3
           ]
         },
         {
@@ -1236,7 +1358,7 @@
         },
         {
           "kind": "word",
-          "id": "trenchant",
+          "id": "pragmatic",
           "role": "distractor",
           "at": [
             5
@@ -1253,10 +1375,10 @@
       "choices": [
         "codify",
         "rescind",
-        "ratify",
+        "affirm",
         "curtail",
         "annul",
-        "endorse"
+        "uphold"
       ],
       "key": {
         "sel": [
@@ -1269,8 +1391,8 @@
         "distractors": {
           "codify": "To set down systematically in law; a council wishing to “restore” the ordinance implies it was removed, not written up.",
           "curtail": "To cut back, not to cancel; there would be nothing to restore.",
-          "ratify": "Trap pair with endorse: approval, the wrong direction.",
-          "endorse": "Trap pair with ratify."
+          "affirm": "Trap pair with uphold: both keep the ordinance in force, the wrong direction.",
+          "uphold": "Trap pair with affirm."
         }
       },
       "tags": [
@@ -1280,14 +1402,6 @@
           "role": "key",
           "at": [
             1
-          ]
-        },
-        {
-          "kind": "word",
-          "id": "ratify",
-          "role": "distractor",
-          "at": [
-            2
           ]
         },
         {
@@ -1305,14 +1419,6 @@
           "at": [
             4
           ]
-        },
-        {
-          "kind": "word",
-          "id": "endorse",
-          "role": "distractor",
-          "at": [
-            5
-          ]
         }
       ]
     },
@@ -1320,15 +1426,15 @@
       "id": "s2q7",
       "section": 2,
       "type": "se",
-      "difficulty": 5,
+      "difficulty": 4,
       "prompt": "The more warmly her colleagues praised the pavilion, the more insistently its architect seemed to ___ it, reminding anyone who would listen that its plan was borrowed from a Kyoto teahouse and that its one novelty, the cantilevered roof, had leaked in the first autumn storm.",
       "choices": [
         "exalt",
         "belittle",
-        "explicate",
+        "delineate",
         "disparage",
-        "aggrandize",
-        "defend"
+        "glorify",
+        "parody"
       ],
       "key": {
         "sel": [
@@ -1339,10 +1445,10 @@
       "explanation": {
         "key": "The proportional frame sets her response against the praise, and the reminders (a borrowed design, a novelty that failed) all lower the pavilion's merit: she belittles and disparages her own work.",
         "distractors": {
-          "exalt": "Trap pair with aggrandize: true synonyms, the colleagues' attitude rather than hers.",
-          "aggrandize": "Trap pair with exalt.",
-          "explicate": "Pointing out sources is a kind of explanation, but the reminders are chosen to diminish, and nothing pairs with it.",
-          "defend": "Praise needs no defense, and recalling a leaking roof does not defend the pavilion."
+          "exalt": "Trap pair with glorify: true synonyms, the colleagues' attitude rather than hers.",
+          "glorify": "Trap pair with exalt.",
+          "delineate": "To describe precisely; recounting the plan's source is description, but the reminders are chosen to diminish, and nothing pairs with it.",
+          "parody": "Mockery by imitation would be self-deprecating too, but the reminders are plain facts (a borrowed plan, a leaking roof), not an imitation of the pavilion's style."
         }
       },
       "tags": [
@@ -1356,7 +1462,7 @@
         },
         {
           "kind": "word",
-          "id": "explicate",
+          "id": "delineate",
           "role": "distractor",
           "at": [
             2
@@ -1372,10 +1478,10 @@
         },
         {
           "kind": "word",
-          "id": "aggrandize",
+          "id": "parody",
           "role": "distractor",
           "at": [
-            4
+            5
           ]
         }
       ]
@@ -1407,6 +1513,26 @@
           "kind": "concept",
           "id": "rc-structure",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "endorse",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "concession",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "premature",
+          "role": "stem"
         }
       ]
     },
@@ -1442,6 +1568,16 @@
           "kind": "concept",
           "id": "rc-inference",
           "role": "secondary"
+        },
+        {
+          "kind": "word",
+          "id": "revisionist",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "reluctance",
+          "role": "stem"
         }
       ]
     },
@@ -1477,6 +1613,11 @@
           "kind": "concept",
           "id": "rc-detail",
           "role": "secondary"
+        },
+        {
+          "kind": "word",
+          "id": "undermine",
+          "role": "stem"
         }
       ]
     },
@@ -1504,6 +1645,11 @@
           "kind": "concept",
           "id": "rc-attitude",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "revisionist",
+          "role": "stem"
         }
       ]
     },

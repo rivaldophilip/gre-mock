@@ -44,6 +44,21 @@
           "kind": "word",
           "id": "factious",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "provincial",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "polity",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "prerogative",
+          "role": "passage"
         }
       ]
     },
@@ -108,6 +123,26 @@
           "kind": "word",
           "id": "mimetic",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "picaresque",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "novel",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "revisionist",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "contend",
+          "role": "passage"
         }
       ]
     },
@@ -137,6 +172,21 @@
           "kind": "word",
           "id": "metaphysical",
           "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "commonplace",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "monastic",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "indifferent",
+          "role": "passage"
         }
       ]
     },
@@ -165,6 +215,11 @@
         {
           "kind": "word",
           "id": "inflect",
+          "role": "passage"
+        },
+        {
+          "kind": "word",
+          "id": "celebrated",
           "role": "passage"
         }
       ]
@@ -450,6 +505,11 @@
             2,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "terse",
+          "role": "stem"
         }
       ]
     },
@@ -642,6 +702,11 @@
           "at": [
             4
           ]
+        },
+        {
+          "kind": "word",
+          "id": "relish",
+          "role": "stem"
         }
       ]
     },
@@ -750,6 +815,16 @@
           "kind": "concept",
           "id": "rc-attitude",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "reluctance",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "provincial",
+          "role": "stem"
         }
       ]
     },
@@ -785,6 +860,21 @@
           "kind": "concept",
           "id": "rc-inference",
           "role": "secondary"
+        },
+        {
+          "kind": "word",
+          "id": "provincial",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "prerogative",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "propinquity",
+          "role": "stem"
         }
       ]
     },
@@ -821,6 +911,11 @@
           "kind": "concept",
           "id": "rc-vocab-context",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "resolve",
+          "role": "stem"
         }
       ]
     },
@@ -1003,6 +1098,11 @@
             1,
             0
           ]
+        },
+        {
+          "kind": "word",
+          "id": "brevity",
+          "role": "stem"
         }
       ]
     },
@@ -1128,6 +1228,11 @@
             2,
             2
           ]
+        },
+        {
+          "kind": "word",
+          "id": "renounce",
+          "role": "stem"
         }
       ]
     },
@@ -1370,6 +1475,11 @@
           "at": [
             5
           ]
+        },
+        {
+          "kind": "word",
+          "id": "concession",
+          "role": "stem"
         }
       ]
     },
@@ -1470,6 +1580,31 @@
           "kind": "concept",
           "id": "rc-main-idea",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "picaresque",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "novel",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "revisionist",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "reconcile",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "deposition",
+          "role": "stem"
         }
       ]
     },
@@ -1506,6 +1641,26 @@
           "kind": "concept",
           "id": "rc-inference",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "revisionist",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "picaresque",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "novel",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "deliberate",
+          "role": "stem"
         }
       ]
     },
@@ -1541,6 +1696,16 @@
           "kind": "concept",
           "id": "rc-detail",
           "role": "secondary"
+        },
+        {
+          "kind": "word",
+          "id": "picaresque",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "cunning",
+          "role": "stem"
         }
       ]
     },
@@ -1577,6 +1742,21 @@
           "kind": "concept",
           "id": "rc-structure",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "concession",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "monastic",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
         }
       ]
     },
@@ -1613,6 +1793,16 @@
           "kind": "concept",
           "id": "rc-application",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "analogous",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "monastic",
+          "role": "stem"
         }
       ]
     },
@@ -1636,6 +1826,11 @@
           "kind": "concept",
           "id": "rc-function",
           "role": "primary"
+        },
+        {
+          "kind": "word",
+          "id": "celebrated",
+          "role": "stem"
         }
       ]
     },
