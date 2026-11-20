@@ -58,6 +58,7 @@ function quantSections(test: Test, earlier: PastItem[], only?: Set<string>): str
       .slice(0, CROSS_MAX)
       .map((x) => x.e);
     out.push(`### ${test.id} ${q.id} (${q.type}, ${c})`, itemText(q), "");
+    if (q.variant) out.push(variantNote(q.variant), "");
     if (q.revisits) out.push(revisitNote(q.revisits), "");
     out.push(same.length || cross.length ? "Earlier items:" : "Earlier items: none");
     for (const e of [...same, ...cross]) out.push(`- ${e.testId} ${e.qid}${e.concept !== c ? ` (${e.concept})` : ""}: ${e.shown}${e.setup !== e.text ? ` [setup: ${e.setup}]` : ""}`);
@@ -110,6 +111,10 @@ function verbalSections(test: Test, earlierTests: Test[], only?: Set<string>): s
   }
   return out;
 }
+
+/** The form of the concept the brief told the author to test; sharing only that fact with an earlier item is not a repeat. */
+const variantNote = (v: string) =>
+  `Assigned variant: ${v}. The brief required this form, so an earlier item that shares only its defining fact is not a repeat; judge the step that comes after it.`;
 
 /** A revisit is meant to be close to its earlier item: the judge is told which one, so `similar` to it passes. */
 const revisitNote = (ref: string) =>
