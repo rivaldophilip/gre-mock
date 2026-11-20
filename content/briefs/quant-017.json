@@ -1,0 +1,3400 @@
+{
+ "testId": "quant-017",
+ "measure": "quant",
+ "seed": 41318,
+ "generatedAt": "2026-11-20T14:07:21.318Z",
+ "untakenTests": [
+  "drill-002",
+  "drill-003",
+  "drill-004",
+  "drill-005",
+  "drill-006",
+  "drill-007",
+  "drill-008",
+  "drill-009",
+  "drill-010",
+  "drill-011",
+  "quant-015",
+  "quant-016",
+  "verbal-017",
+  "verbal-018",
+  "verbal-019"
+ ],
+ "blueprint": {
+  "measure": "quant",
+  "sections": [
+   {
+    "n": 1,
+    "minutes": 21,
+    "slots": [
+     {
+      "type": "qc",
+      "level": 3
+     },
+     {
+      "type": "qc",
+      "level": 4
+     },
+     {
+      "type": "qc",
+      "level": 4
+     },
+     {
+      "type": "qc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 3
+     },
+     {
+      "type": "mc",
+      "level": 4
+     },
+     {
+      "type": "mc",
+      "level": 5
+     },
+     {
+      "type": "mc_multi",
+      "level": 4
+     },
+     {
+      "type": "numeric",
+      "level": 3
+     },
+     {
+      "type": "di",
+      "level": 3
+     },
+     {
+      "type": "di",
+      "level": 4
+     },
+     {
+      "type": "di",
+      "level": 5
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "minutes": 26,
+    "slots": [
+     {
+      "type": "qc",
+      "level": 4
+     },
+     {
+      "type": "qc",
+      "level": 5
+     },
+     {
+      "type": "qc",
+      "level": 5
+     },
+     {
+      "type": "qc",
+      "level": 4
+     },
+     {
+      "type": "qc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 4
+     },
+     {
+      "type": "mc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 4
+     },
+     {
+      "type": "mc",
+      "level": 3
+     },
+     {
+      "type": "mc",
+      "level": 5
+     },
+     {
+      "type": "mc",
+      "level": 4
+     },
+     {
+      "type": "mc_multi",
+      "level": 4
+     },
+     {
+      "type": "mc_multi",
+      "level": 5
+     },
+     {
+      "type": "numeric",
+      "level": 4
+     }
+    ]
+   }
+  ],
+  "notes": "S1: QC as Q1-4, then 3 MC, 1 multi, 1 numeric, 3-question data-interpretation set (shared figure/table; same figureId and setId). S2: 5 QC, 7 MC, 2 multi, 1 numeric. 27 concept slots."
+ },
+ "slots": [
+  {
+   "section": 1,
+   "slot": 1,
+   "type": "qc",
+   "level": 3,
+   "exemplars": [
+    "bb-t3s6-11",
+    "ogq-t2-s5-4",
+    "ogq-t1-s5-9"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 2,
+   "type": "qc",
+   "level": 4,
+   "exemplars": [
+    "bb-t2s5-15",
+    "ogq-t1-s6-9",
+    "bb-t3s2-15"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 3,
+   "type": "qc",
+   "level": 4,
+   "exemplars": [
+    "bb-t3s6-14",
+    "ogq-t1-s6-6",
+    "bb-t1s7-9"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 4,
+   "type": "qc",
+   "level": 5,
+   "exemplars": [
+    "bb-t3s2-13",
+    "bb-t1s7-11",
+    "bb-t2s2-15"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 5,
+   "type": "mc",
+   "level": 3,
+   "exemplars": [
+    "ogq-t2-s6-22",
+    "bb-t3s2-28",
+    "bb-t3s6-26"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 6,
+   "type": "mc",
+   "level": 4,
+   "exemplars": [
+    "ogq-t1-s6-25",
+    "bb-t1s3-27",
+    "bb-t1s7-28"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 7,
+   "type": "mc",
+   "level": 5,
+   "exemplars": [
+    "ogq-t1-s6-21",
+    "bb-t1s3-29",
+    "ogq-t1-s5-16"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 8,
+   "type": "mc_multi",
+   "level": 4,
+   "exemplars": [
+    "ogq-set3-14",
+    "ogq-set3-15",
+    "ogq-t1-s6-11"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 9,
+   "type": "numeric",
+   "level": 3,
+   "exemplars": [
+    "ogq-set2-11",
+    "ogq-set2-12",
+    "ogq-t1-s5-12"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 10,
+   "type": "di",
+   "level": 3,
+   "exemplars": [
+    "bb-t3s2-25",
+    "bb-t3s6-25",
+    "ogq-t2-s5-20"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 11,
+   "type": "di",
+   "level": 4,
+   "exemplars": [
+    "ogq-t1-s6-20",
+    "bb-t1s7-25",
+    "bb-t2s2-25"
+   ]
+  },
+  {
+   "section": 1,
+   "slot": 12,
+   "type": "di",
+   "level": 5,
+   "exemplars": [
+    "bb-t2s5-24",
+    "ogq-set4-3",
+    "ogq-set4-7"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 1,
+   "type": "qc",
+   "level": 4,
+   "exemplars": [
+    "bb-t2s2-13",
+    "ogq-t1-s5-8",
+    "bb-t1s3-15"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 2,
+   "type": "qc",
+   "level": 5,
+   "exemplars": [
+    "bb-t1s3-12",
+    "ogq-t1-s5-7",
+    "ogq-t1-s6-8"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 3,
+   "type": "qc",
+   "level": 5,
+   "exemplars": [
+    "bb-t2s2-14",
+    "bb-t1s7-14",
+    "ogq-t2-s6-8"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 4,
+   "type": "qc",
+   "level": 4,
+   "exemplars": [
+    "ogq-t2-s5-9",
+    "bb-t2s2-11",
+    "ogq-t1-s5-6"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 5,
+   "type": "qc",
+   "level": 5,
+   "exemplars": [
+    "bb-t3s6-15",
+    "ogq-set3-1",
+    "ogq-set3-2"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 6,
+   "type": "mc",
+   "level": 4,
+   "exemplars": [
+    "ogq-t2-s6-25",
+    "ogq-t1-s5-25",
+    "bb-t2s5-29"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 7,
+   "type": "mc",
+   "level": 5,
+   "exemplars": [
+    "bb-t2s5-30",
+    "bb-t3s2-30",
+    "ogq-t1-s6-23"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 8,
+   "type": "mc",
+   "level": 5,
+   "exemplars": [
+    "ogq-t1-s5-11",
+    "bb-t2s5-28",
+    "ogq-t1-s6-13"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 9,
+   "type": "mc",
+   "level": 4,
+   "exemplars": [
+    "bb-t3s6-30",
+    "ogq-t1-s5-22",
+    "ogq-t2-s6-23"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 10,
+   "type": "mc",
+   "level": 3,
+   "exemplars": [
+    "ogq-t2-s6-16",
+    "bb-t1s3-26",
+    "bb-t1s3-30"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 11,
+   "type": "mc",
+   "level": 5,
+   "exemplars": [
+    "ogq-set3-7",
+    "ogq-set3-8",
+    "ogq-set3-9"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 12,
+   "type": "mc",
+   "level": 4,
+   "exemplars": [
+    "bb-t2s2-30",
+    "bb-t2s2-29",
+    "ogq-t1-s6-15"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 13,
+   "type": "mc_multi",
+   "level": 4,
+   "exemplars": [
+    "ogq-t1-s5-23",
+    "ogq-t1-s5-15",
+    "ogq-t1-s6-16"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 14,
+   "type": "mc_multi",
+   "level": 5,
+   "exemplars": [
+    "ogq-t1-s6-11",
+    "ogq-t1-s5-23",
+    "ogq-t1-s5-15"
+   ]
+  },
+  {
+   "section": 2,
+   "slot": 15,
+   "type": "numeric",
+   "level": 4,
+   "exemplars": [
+    "ogq-t1-s6-14",
+    "ogq-set3-13",
+    "ogq-t1-s6-24"
+   ]
+  }
+ ],
+ "typeFocus": [
+  {
+   "type": "mc",
+   "label": "Multiple choice, one answer",
+   "answered": 140,
+   "accuracy": 0.59,
+   "avgSec": 171,
+   "paceSec": 100,
+   "need": 0.62
+  },
+  {
+   "type": "mc_multi",
+   "label": "Multiple choice, select all that apply",
+   "answered": 40,
+   "accuracy": 0.4,
+   "avgSec": 125,
+   "paceSec": 115,
+   "need": 0.54
+  },
+  {
+   "type": "qc",
+   "label": "Quantitative Comparison",
+   "answered": 126,
+   "accuracy": 0.59,
+   "avgSec": 86,
+   "paceSec": 75,
+   "need": 0.44
+  },
+  {
+   "type": "numeric",
+   "label": "Numeric Entry",
+   "answered": 27,
+   "accuracy": 0.56,
+   "avgSec": 118,
+   "paceSec": 110,
+   "need": 0.43
+  },
+  {
+   "type": "di",
+   "label": "Data Interpretation",
+   "answered": 42,
+   "accuracy": 0.67,
+   "avgSec": 113,
+   "paceSec": 115,
+   "need": 0.32
+  }
+ ],
+ "conceptSlots": [
+  {
+   "slot": 1,
+   "concept": "counting-permutations",
+   "name": "Counting: permutations and combinations",
+   "variant": "arrangements of letters with repeated items",
+   "area": "data",
+   "bucket": "review",
+   "reason": "wrong on a question testing it; already in untaken quant-015",
+   "exemplars": [
+    "ogq-t2-s6-8",
+    "ogq-set3-7"
+   ],
+   "history": [
+    {
+     "setup": "four-digit even numbers with strictly decreasing digits (choose sets)",
+     "variant": "multiplication principle across independent choices",
+     "items": [
+      {
+       "testId": "quant-002",
+       "qid": "s1q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "arrange pairs of identical items with no two alike adjacent",
+     "variant": "arrangements of letters with repeated items",
+     "items": [
+      {
+       "testId": "quant-003",
+       "qid": "s2q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "arrange flags with repeated colors, two identical ones not adjacent (complement)",
+     "variant": "arrangements of letters with repeated items",
+     "items": [
+      {
+       "testId": "quant-004",
+       "qid": "s2q15"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "choose and order relay runners with a pairing condition between two runners",
+     "variant": "committees with roles: chair plus members",
+     "items": [
+      {
+       "testId": "quant-005",
+       "qid": "s2q8"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "split 8 people into unordered pairs with two sibling pairs not together",
+     "variant": "multiplication principle across independent choices",
+     "items": [
+      {
+       "testId": "quant-006",
+       "qid": "s2q8"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "circular seating; two pairs must not sit together (inclusion-exclusion)",
+     "variant": "circular arrangements",
+     "items": [
+      {
+       "testId": "quant-007",
+       "qid": "s2q11"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "subsets with more of one kind than another: symmetry pairs them, then remove the equal case",
+     "variant": "subset counts and the symmetry C(n, k) = C(n, n - k)",
+     "items": [
+      {
+       "testId": "quant-008",
+       "qid": "s2q11"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "four-digit numbers from tiles with one repeated digit (cases by count of the repeat)",
+     "variant": "arrangements of letters with repeated items",
+     "items": [
+      {
+       "testId": "quant-009",
+       "qid": "s2q11"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two distinct offices (ordered) followed by an unordered committee from the rest",
+     "variant": "choosing a group (combinations) vs ordering it",
+     "items": [
+      {
+       "testId": "quant-010",
+       "qid": "s2q11"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "points on two parallel lines; count triangles by which line holds two vertices",
+     "variant": "choosing a group (combinations) vs ordering it",
+     "items": [
+      {
+       "testId": "quant-013",
+       "qid": "s1q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "the count of numbers with strictly decreasing digits is given; find the possible digit lengths (choosing sets, with the symmetric choose count)",
+     "variant": "committees with roles: chair plus members",
+     "items": [
+      {
+       "testId": "quant-015",
+       "qid": "s1q8"
+      }
+     ],
+     "worn": false
+    }
+   ],
+   "revisit": {
+    "ref": "quant-003:s2q7",
+    "result": "missed",
+    "item": "A gardener will plant 6 shrubs in a row along a fence: 2 identical boxwoods, 2 identical hollies and 2 identical junipers. How many different orders of the shrubs have no two shrubs of the same kind next to each other? · choices: 6 / 24 / 30 / 36 / 54",
+    "setup": "arrange pairs of identical items with no two alike adjacent",
+    "change": "run it backwards: give what the earlier item asked for, and ask for one of its givens"
+   }
+  },
+  {
+   "slot": 2,
+   "concept": "min-max-bounding",
+   "name": "Bounding: minimum/maximum values under constraints",
+   "variant": "the extreme value of an expression over an integer range",
+   "area": "algebra",
+   "bucket": "review",
+   "reason": "wrong on a question testing it; already in untaken quant-015",
+   "exemplars": [],
+   "history": [
+    {
+     "setup": "integer ranges for x and y; select all possible values of the product xy",
+     "variant": "optimizing a product or a difference under constraints",
+     "items": [
+      {
+       "testId": "quant-001",
+       "qid": "s1q8"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "x < y < z positive integers with fixed product; select possible values of z",
+     "variant": "greatest or least value of one item under a sum constraint",
+     "items": [
+      {
+       "testId": "quant-001",
+       "qid": "s2q14"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "x/y over interval ranges with y ≠ 0; select possible values",
+     "variant": "optimizing a product or a difference under constraints",
+     "items": [
+      {
+       "testId": "quant-004",
+       "qid": "s2q14"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "distinct integer weights with a sum and a cap; least possible second-largest",
+     "variant": "greatest or least value of one item under a sum constraint",
+     "items": [
+      {
+       "testId": "quant-005",
+       "qid": "s2q3"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "three distinct integer lengths with a fixed sum that form a triangle; possible longest",
+     "variant": "the largest share or longest side under an ordering or triangle constraint",
+     "items": [
+      {
+       "testId": "quant-006",
+       "qid": "s2q14"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "worst-case draws to guarantee a color condition (pigeonhole); select the true counts",
+     "variant": "worst-case count (pigeonhole)",
+     "items": [
+      {
+       "testId": "quant-007",
+       "qid": "s2q14"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a rectangle in the corner of a right triangle: its area peaks at half the triangle's area; select attainable areas",
+     "variant": "optimizing a product or a difference under constraints",
+     "items": [
+      {
+       "testId": "quant-008",
+       "qid": "s2q14"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a point moving on a line: its distance to a fixed point is at least the perpendicular distance; select attainable distances",
+     "variant": "the least distance from a fixed point to a point moving on a line or circle",
+     "items": [
+      {
+       "testId": "quant-009",
+       "qid": "s2q14"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "interval ranges: greatest x^2 - y^2 vs greatest xy",
+     "variant": "optimizing a product or a difference under constraints",
+     "items": [
+      {
+       "testId": "quant-010",
+       "qid": "s2q5"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "integer scores in a fixed range with a given median; select possible means (extremes and integer totals)",
+     "variant": "extreme values of a mean or median",
+     "items": [
+      {
+       "testId": "quant-013",
+       "qid": "s2q13"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "sum of a quadratic in x and a quadratic in y over integer ranges: one vertex outside its range, the other between integers",
+     "variant": "the extreme value of an expression over an integer range",
+     "items": [
+      {
+       "testId": "quant-015",
+       "qid": "s2q11"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 3,
+   "concept": "probability-basic",
+   "name": "Probability: independent events, complement",
+   "variant": "probability as a ratio of combinations (choose k of n)",
+   "area": "data",
+   "bucket": "review",
+   "reason": "wrong on a question testing it; already in untaken quant-015",
+   "exemplars": [
+    "ogq-t1-s6-24",
+    "ogq-t1-s5-6"
+   ],
+   "history": [
+    {
+     "setup": "compare two binomial probabilities with p = 1/2 (at least / more heads than tails)",
+     "variant": "probability from a count of outcomes with dice or coins",
+     "items": [
+      {
+       "testId": "quant-001",
+       "qid": "s2q1"
+      },
+      {
+       "testId": "quant-006",
+       "qid": "s2q3"
+      }
+     ],
+     "worn": true
+    },
+    {
+     "setup": "three dice: P(product divisible by 4) via complement cases",
+     "variant": "probability from a count of outcomes with dice or coins",
+     "items": [
+      {
+       "testId": "quant-004",
+       "qid": "s2q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two independent draws from different-sized boxes; P(first > second) vs a value",
+     "variant": "probability from a count of outcomes with dice or coins",
+     "items": [
+      {
+       "testId": "quant-005",
+       "qid": "s2q5"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "three independent choices among 4 options: P(exactly one option unused)",
+     "variant": "independent events across repeated trials",
+     "items": [
+      {
+       "testId": "quant-007",
+       "qid": "s2q8"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "P(A) and P(A or B) for independent events; compare P(B) with a value",
+     "variant": "complement: at least one success",
+     "items": [
+      {
+       "testId": "quant-008",
+       "qid": "s2q5"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "random point in a square: the probability of landing in the inscribed disk (pi/4) against a fraction",
+     "variant": "geometric probability (a point in a region)",
+     "items": [
+      {
+       "testId": "quant-009",
+       "qid": "s2q5"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "P(at least one success) with vs without replacement",
+     "variant": "complement: at least one success",
+     "items": [
+      {
+       "testId": "quant-010",
+       "qid": "s2q3"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "random draw of several items from matched pairs; probability of exactly one complete pair (combinations ratio)",
+     "variant": "probability as a ratio of combinations (choose k of n)",
+     "items": [
+      {
+       "testId": "quant-013",
+       "qid": "s2q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two independent uniform arrival times in one interval with a fixed stay: the meeting region is a band in a square; compare with a fraction",
+     "variant": "geometric probability (a point in a region)",
+     "items": [
+      {
+       "testId": "quant-015",
+       "qid": "s2q5"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 4,
+   "concept": "weighted-average",
+   "name": "Weighted average and changing averages",
+   "variant": "the change in the mean when a group joins",
+   "area": "data",
+   "bucket": "review",
+   "reason": "wrong on a question testing it; already in untaken quant-015",
+   "exemplars": [],
+   "history": [
+    {
+     "setup": "two group means and one group's size; find the other group's size from the overall mean",
+     "variant": "the ratio of group sizes from the means",
+     "items": [
+      {
+       "testId": "quant-001",
+       "qid": "s1q9"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "add members of one kind outside a category to dilute the category's share to a subgroup's share; count from stacked bars",
+     "variant": "a mixture's concentration as a weighted average",
+     "items": [
+      {
+       "testId": "quant-011",
+       "qid": "s1q12"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two group means and which group is larger; combined mean vs the midpoint of the means",
+     "variant": "combining the means of two groups",
+     "items": [
+      {
+       "testId": "quant-013",
+       "qid": "s2q4"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a frequency table gives a group's mean; a few new members with one equal score join; the rise in the mean",
+     "variant": "the change in the mean when a group joins",
+     "items": [
+      {
+       "testId": "quant-015",
+       "qid": "s1q10"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 5,
+   "concept": "algebraic-expressions",
+   "name": "Algebraic expressions, identities, simplification",
+   "variant": "expressions with nested parentheses and signs",
+   "area": "algebra",
+   "bucket": "review",
+   "reason": "wrong on a question testing it; already in untaken quant-016",
+   "exemplars": [
+    "bb-t1s7-14",
+    "ogq-set3-9"
+   ],
+   "history": [
+    {
+     "setup": "value of a symmetric expression (a^3 ± b^3, |a| + |b|, a^2 + b^2) from a ± b, ab or a^2 + b^2",
+     "variant": "an expression's value from a related expression (x + 1/x given)",
+     "items": [
+      {
+       "testId": "quant-002",
+       "qid": "s1q8"
+      },
+      {
+       "testId": "quant-003",
+       "qid": "s2q4"
+      },
+      {
+       "testId": "quant-006",
+       "qid": "s2q5"
+      }
+     ],
+     "worn": true
+    },
+    {
+     "setup": "which expressions equal a rational expression on its whole domain (removable points)",
+     "variant": "simplifying a rational expression",
+     "items": [
+      {
+       "testId": "quant-004",
+       "qid": "s2q13"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "which expressions equal (a - b)^2 (a + b)^2 identically",
+     "variant": "identities across QC quantities",
+     "items": [
+      {
+       "testId": "quant-005",
+       "qid": "s2q13"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "difference of two rational expressions that both simplify; compare with a constant (the excluded values do not matter)",
+     "variant": "simplifying a rational expression",
+     "items": [
+      {
+       "testId": "quant-007",
+       "qid": "s2q4"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "remove nested brackets with sign changes; the expression collapses to one term",
+     "variant": "expressions with nested parentheses and signs",
+     "items": [
+      {
+       "testId": "quant-008",
+       "qid": "s2q12"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "factor a difference of squares twice; select every polynomial factor, including composite ones",
+     "variant": "identities across QC quantities",
+     "items": [
+      {
+       "testId": "quant-009",
+       "qid": "s2q13"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "an identity in completed-square form: match constant terms to find k",
+     "variant": "identities across QC quantities",
+     "items": [
+      {
+       "testId": "quant-010",
+       "qid": "s2q4"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "x + 1/x given; a non-symmetric polynomial in x reduces to a constant by repeatedly replacing x^2 with a linear expression",
+     "variant": "an expression's value from a related expression (x + 1/x given)",
+     "items": [
+      {
+       "testId": "quant-013",
+       "qid": "s2q8"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 6,
+   "concept": "normal-distribution",
+   "name": "Normal distribution: 68-95-99.7 rule, z-scores, percentiles",
+   "variant": "symmetry: P(X > m + a) = P(X < m - a)",
+   "area": "data",
+   "bucket": "review",
+   "reason": "wrong on a question testing it; already in untaken quant-016",
+   "exemplars": [
+    "ogq-set3-5",
+    "ogq-t1-s5-9"
+   ],
+   "history": [
+    {
+     "setup": "variance given rather than SD; percentile at two SDs above the mean against the 95 from the empirical rule",
+     "variant": "a percentile from a z-score",
+     "items": [
+      {
+       "testId": "quant-011",
+       "qid": "s2q2"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "an interval from one to three standard deviations above the mean: one tail band only, against a value",
+     "variant": "the 68-95-99.7 rule for a probability",
+     "items": [
+      {
+       "testId": "quant-012",
+       "qid": "s2q4"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "normal with known mean and one upper-tail probability; lower-tail probability at a nearer cutoff vs that probability",
+     "variant": "symmetry: P(X > m + a) = P(X < m - a)",
+     "items": [
+      {
+       "testId": "quant-013",
+       "qid": "s2q1"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 7,
+   "concept": "counting-restrictions",
+   "name": "Counting with restrictions and arrangements",
+   "variant": "two people must sit together, or apart",
+   "area": "data",
+   "bucket": "review",
+   "reason": "wrong on a question testing it; already in untaken quant-015",
+   "exemplars": [
+    "ogq-t1-s5-11"
+   ],
+   "history": [
+    {
+     "setup": "row seating: two people not adjacent and neither at an end",
+     "variant": "two people must sit together, or apart",
+     "items": [
+      {
+       "testId": "quant-001",
+       "qid": "s1q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "count integers in a range divisible by one number or another but not a third (inclusion-exclusion)",
+     "variant": "complement counting: total minus the forbidden",
+     "items": [
+      {
+       "testId": "quant-001",
+       "qid": "s2q15"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "lane assignment: two runners adjacent, a third not at either end",
+     "variant": "two people must sit together, or apart",
+     "items": [
+      {
+       "testId": "quant-003",
+       "qid": "s1q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "committee with at least one of a group and two people who cannot serve together",
+     "variant": "at least one of a type in a selection",
+     "items": [
+      {
+       "testId": "quant-004",
+       "qid": "s1q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "order items so that no two of one group are consecutive and the first isn't from it (gaps)",
+     "variant": "two people must sit together, or apart",
+     "items": [
+      {
+       "testId": "quant-005",
+       "qid": "s1q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "count four-digit numbers whose digits have a given product",
+     "variant": "digits with restrictions (no repeats, even, > 500)",
+     "items": [
+      {
+       "testId": "quant-006",
+       "qid": "s1q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "row with no two children adjacent and one child next to a given adult",
+     "variant": "two people must sit together, or apart",
+     "items": [
+      {
+       "testId": "quant-007",
+       "qid": "s1q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "schedule with one item before another but not adjacent, plus a slot restriction",
+     "variant": "complement counting: total minus the forbidden",
+     "items": [
+      {
+       "testId": "quant-008",
+       "qid": "s1q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "identical items of three kinds with a cap per kind (stars and bars minus the overflows)",
+     "variant": "selections with a cap per type (at most 2 from one group)",
+     "items": [
+      {
+       "testId": "quant-009",
+       "qid": "s1q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "crew with exactly k from one group and a one-way condition (A only if B); remove the forbidden pairs",
+     "variant": "complement counting: total minus the forbidden",
+     "items": [
+      {
+       "testId": "quant-010",
+       "qid": "s1q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "row seating as a probability: two people non-adjacent with neither at an end, against a fraction",
+     "variant": "identical items arranged with a restriction",
+     "items": [
+      {
+       "testId": "quant-012",
+       "qid": "s2q2"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "choose a set with at least one of each of three kinds: total minus sets missing one kind, plus the single-kind sets counted twice",
+     "variant": "at least one of a type in a selection",
+     "items": [
+      {
+       "testId": "quant-014",
+       "qid": "s1q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "three-digit even numbers above a bound with distinct digits: the leading digit's parity changes the units count, so split into two cases",
+     "variant": "digits with restrictions (no repeats, even, > 500)",
+     "items": [
+      {
+       "testId": "quant-015",
+       "qid": "s1q7"
+      }
+     ],
+     "worn": false
+    }
+   ],
+   "revisit": {
+    "ref": "quant-003:s1q7",
+    "result": "missed",
+    "item": "Six runners, among them Ana, Ben and Chloe, are assigned to lanes 1 through 6 of a track, one runner per lane. Ben and Chloe must be in adjacent lanes, and Ana may not be in lane 1 or lane 6. How many different lane assignments are possible? · choices: 96 / 120 / 144 / 192 / 240",
+    "setup": "lane assignment: two runners adjacent, a third not at either end",
+    "change": "change the format (quantitative comparison, multiple choice or numeric entry) and the question asked"
+   }
+  },
+  {
+   "slot": 8,
+   "concept": "primes-factors",
+   "name": "Primes, factors, multiples, GCD/LCM",
+   "variant": "number of positive divisors from the prime factorization",
+   "area": "arithmetic",
+   "bucket": "review",
+   "reason": "wrong on a question testing it; already in untaken quant-015",
+   "exemplars": [
+    "bb-t3s2-30",
+    "ogq-t1-s6-21"
+   ],
+   "history": [
+    {
+     "setup": "x^2 - y^2 = N: count or list integer solutions from same-parity factor pairs",
+     "variant": "GCD / LCM from two products or a word problem",
+     "items": [
+      {
+       "testId": "quant-001",
+       "qid": "s1q4"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "divisor-count function: d(n^2) vs 3·d(n) for an unknown n",
+     "variant": "number of positive divisors from the prime factorization",
+     "items": [
+      {
+       "testId": "quant-001",
+       "qid": "s2q5"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "divisor-count relation d(n^2) = 3·d(n) given; select the n that satisfy it",
+     "variant": "smallest multiplier that makes a perfect square or cube",
+     "items": [
+      {
+       "testId": "quant-011",
+       "qid": "s2q14"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a power of a composite dividing a factorial: the squared small prime limits, not the larger prime",
+     "variant": "highest power of a prime dividing n! or a product",
+     "items": [
+      {
+       "testId": "quant-012",
+       "qid": "s2q14"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "divisors of a perfect square below its square root: pair d with N/d and set the root aside; compare the count with a value",
+     "variant": "count of primes or factors in a stated range",
+     "items": [
+      {
+       "testId": "quant-013",
+       "qid": "s2q2"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "count the primes in two short ranges stated as integers with exactly two divisors; one range hides composites that look prime",
+     "variant": "count of primes or factors in a stated range",
+     "items": [
+      {
+       "testId": "quant-015",
+       "qid": "s2q4"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 9,
+   "concept": "percent",
+   "name": "Percent, percent change, successive percent",
+   "variant": "percent change vs percentage-point change",
+   "area": "arithmetic",
+   "bucket": "review",
+   "reason": "wrong on a question testing it; already in untaken quant-015",
+   "exemplars": [
+    "bb-t1s3-29",
+    "ogq-t1-s5-15"
+   ],
+   "history": [
+    {
+     "setup": "price up p% then down q% (or back to a reference); find the missing percent or value",
+     "variant": "successive percent changes and reversal (up x%, then down x%)",
+     "items": [
+      {
+       "testId": "quant-003",
+       "qid": "s1q5"
+      },
+      {
+       "testId": "quant-004",
+       "qid": "s1q9"
+      },
+      {
+       "testId": "quant-006",
+       "qid": "s1q5"
+      }
+     ],
+     "worn": true
+    },
+    {
+     "setup": "dilute a solution: add water to lower the concentration to a target percent",
+     "variant": "percent of a percent across subgroups",
+     "items": [
+      {
+       "testId": "quant-001",
+       "qid": "s1q5"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "DI: which categories' share of the total fell between two years",
+     "variant": "percent change vs percentage-point change",
+     "items": [
+      {
+       "testId": "quant-001",
+       "qid": "s1q11"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "list price above cost, two successive discounts, final price; markup percent",
+     "variant": "successive percent changes and reversal (up x%, then down x%)",
+     "items": [
+      {
+       "testId": "quant-005",
+       "qid": "s2q6"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a rate falls from p% to q%: percent decrease against the percentage-point drop",
+     "variant": "percent change vs percentage-point change",
+     "items": [
+      {
+       "testId": "quant-007",
+       "qid": "s1q9"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a price after one discount is given; find the original (divide by the remaining share)",
+     "variant": "finding the original value after a change",
+     "items": [
+      {
+       "testId": "quant-008",
+       "qid": "s1q9"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "the whole and a subgroup grow by different percents; percent change in the subgroup's share",
+     "variant": "percent of a percent across subgroups",
+     "items": [
+      {
+       "testId": "quant-009",
+       "qid": "s2q6"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a percent of a subgroup that is itself a percent of the whole (part of a part)",
+     "variant": "percent of a percent across subgroups",
+     "items": [
+      {
+       "testId": "quant-010",
+       "qid": "s1q5"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two quantities rise by different percents but by the same absolute amount; compare one new value with a multiple of the other's old value",
+     "variant": "percent comparisons in QC with unknown bases",
+     "items": [
+      {
+       "testId": "quant-013",
+       "qid": "s1q3"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "one group a percent larger than another, a different percent of each group taken; compare the two parts (the base offsets the rate)",
+     "variant": "percent comparisons in QC with unknown bases",
+     "items": [
+      {
+       "testId": "quant-015",
+       "qid": "s1q2"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 10,
+   "concept": "word-problems-rate",
+   "name": "Rate, work, distance and mixture problems",
+   "variant": "rate with a unit change mid-problem",
+   "area": "algebra",
+   "bucket": "review",
+   "reason": "wrong on a question testing it; already in untaken quant-015",
+   "exemplars": [
+    "bb-t1s3-11",
+    "bb-t2s5-29"
+   ],
+   "history": [
+    {
+     "setup": "out and back at two speeds; average speed for the round trip",
+     "variant": "average speed over two legs",
+     "items": [
+      {
+       "testId": "quant-004",
+       "qid": "s1q6"
+      },
+      {
+       "testId": "quant-009",
+       "qid": "s1q6"
+      }
+     ],
+     "worn": true
+    },
+    {
+     "setup": "two fill pipes and a drain together; time to fill",
+     "variant": "pipes filling and draining at once",
+     "items": [
+      {
+       "testId": "quant-002",
+       "qid": "s2q10"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "second traveller leaves later and faster on the same route; when it leads by a distance",
+     "variant": "relative speed: meeting or overtaking",
+     "items": [
+      {
+       "testId": "quant-003",
+       "qid": "s2q9"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "one crew starts alone, the other joins; finish at a set time; solo time",
+     "variant": "combined work rates",
+     "items": [
+      {
+       "testId": "quant-005",
+       "qid": "s2q9"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "upstream and downstream legs with a current; time difference",
+     "variant": "relative speed: meeting or overtaking",
+     "items": [
+      {
+       "testId": "quant-006",
+       "qid": "s1q6"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two legs with speeds in different units (km/h and m/s); total time",
+     "variant": "rate with a unit change mid-problem",
+     "items": [
+      {
+       "testId": "quant-007",
+       "qid": "s2q9"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "combined rate known and one machine slower by a fixed time: the rate equation becomes a quadratic",
+     "variant": "combined work rates",
+     "items": [
+      {
+       "testId": "quant-008",
+       "qid": "s1q6"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two swimmers going back and forth in a pool; time of the second meeting",
+     "variant": "relative speed: meeting or overtaking",
+     "items": [
+      {
+       "testId": "quant-010",
+       "qid": "s1q6"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "drain part of a solution and replace it with the pure substance to reach a target concentration; amount drained",
+     "variant": "mixing two solutions to a target concentration",
+     "items": [
+      {
+       "testId": "quant-013",
+       "qid": "s1q5"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "inlet and drain open together for a stretch, then the drain closes; total time to fill",
+     "variant": "pipes filling and draining at once",
+     "items": [
+      {
+       "testId": "quant-015",
+       "qid": "s1q9"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 11,
+   "concept": "polygons-quadrilaterals",
+   "name": "Polygons and quadrilaterals",
+   "variant": "the number of diagonals of a polygon",
+   "area": "geometry",
+   "bucket": "review",
+   "reason": "wrong on a question testing it; already in untaken quant-016",
+   "exemplars": [
+    "ogq-set3-1",
+    "bb-t1s3-5"
+   ],
+   "history": [
+    {
+     "setup": "rhombus with side and one diagonal; area against a value",
+     "variant": "parallelogram, rhombus or trapezoid properties",
+     "items": [
+      {
+       "testId": "quant-002",
+       "qid": "s2q3"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "interior angle k times the exterior angle; number of diagonals",
+     "variant": "interior angle sum of an n-gon, and regular polygons",
+     "items": [
+      {
+       "testId": "quant-003",
+       "qid": "s2q15"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "count the diagonals of a regular polygon, then remove those through the center",
+     "variant": "the number of diagonals of a polygon",
+     "items": [
+      {
+       "testId": "quant-011",
+       "qid": "s2q11"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "the triangle on two adjacent vertices and an opposite vertex of a regular hexagon: its fraction of the hexagon's area",
+     "variant": "a regular hexagon split into triangles",
+     "items": [
+      {
+       "testId": "quant-012",
+       "qid": "s2q12"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "trapezoid diagonals cut it into four triangles; two triangle areas give the trapezoid's area",
+     "variant": "parallelogram, rhombus or trapezoid properties",
+     "items": [
+      {
+       "testId": "quant-013",
+       "qid": "s2q9"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 12,
+   "concept": "exponents-roots",
+   "name": "Exponents and radicals",
+   "variant": "negative and fractional exponents",
+   "area": "arithmetic",
+   "bucket": "review",
+   "reason": "wrong on a question testing it; already in untaken quant-016",
+   "exemplars": [
+    "bb-t2s2-15",
+    "ogq-t1-s5-16"
+   ],
+   "history": [
+    {
+     "setup": "(b^{n+k} ± b^n) over a similar sum of powers: factor out the common power",
+     "variant": "factoring out a common power: 2^{n+2} - 2^n",
+     "items": [
+      {
+       "testId": "quant-002",
+       "qid": "s1q2"
+      },
+      {
+       "testId": "quant-005",
+       "qid": "s1q2"
+      }
+     ],
+     "worn": true
+    },
+    {
+     "setup": "sqrt(3·9^n) against a power of 3: rewrite as powers of 3",
+     "variant": "equations solved by rewriting to a common base",
+     "items": [
+      {
+       "testId": "quant-003",
+       "qid": "s2q1"
+      },
+      {
+       "testId": "quant-004",
+       "qid": "s1q2"
+      }
+     ],
+     "worn": true
+    },
+    {
+     "setup": "sqrt(a+2) - sqrt(a) vs sqrt(a) - sqrt(a-2) (conjugates)",
+     "variant": "comparing large powers or roots without a calculator",
+     "items": [
+      {
+       "testId": "quant-006",
+       "qid": "s2q1"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "0 < x < 1: compare two negative fractional powers of x (the more negative exponent gives the larger value)",
+     "variant": "bases between 0 and 1 or negative bases",
+     "items": [
+      {
+       "testId": "quant-007",
+       "qid": "s1q2"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "5th root of 5 vs cube root of 3 (raise both to the 15th)",
+     "variant": "comparing large powers or roots without a calculator",
+     "items": [
+      {
+       "testId": "quant-008",
+       "qid": "s2q1"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a negative fractional power is given; raise it to another power by multiplying exponents",
+     "variant": "negative and fractional exponents",
+     "items": [
+      {
+       "testId": "quant-009",
+       "qid": "s2q1"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "sqrt(a + 2sqrt b) - sqrt(a - 2sqrt b) denested; compare with a root",
+     "variant": "nested and conjugate radicals (rationalizing a denominator)",
+     "items": [
+      {
+       "testId": "quant-010",
+       "qid": "s1q2"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "sum of reciprocals of consecutive root sums telescopes after rationalizing; select n making it an integer",
+     "variant": "nested and conjugate radicals (rationalizing a denominator)",
+     "items": [
+      {
+       "testId": "quant-013",
+       "qid": "s2q14"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 13,
+   "concept": "overlapping-sets",
+   "name": "Overlapping sets, Venn diagrams",
+   "variant": "overlap given as percents of different bases",
+   "area": "data",
+   "bucket": "review",
+   "reason": "wrong on a question testing it; already in untaken quant-015",
+   "exemplars": [
+    "ogq-t2-s6-4",
+    "bb-t1s7-23"
+   ],
+   "history": [
+    {
+     "setup": "two-set problem with a neither bound; range of the number in exactly one",
+     "variant": "maximum and minimum of the overlap",
+     "items": [
+      {
+       "testId": "quant-001",
+       "qid": "s2q12"
+      },
+      {
+       "testId": "quant-003",
+       "qid": "s1q8"
+      },
+      {
+       "testId": "quant-006",
+       "qid": "s2q13"
+      }
+     ],
+     "worn": true
+    },
+    {
+     "setup": "three overlapping sets, everyone in at least one; greatest number in exactly one",
+     "variant": "three-set Venn diagram",
+     "items": [
+      {
+       "testId": "quant-004",
+       "qid": "s2q11"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "three sets with all-three and neither counts; number in exactly one",
+     "variant": "three-set Venn diagram",
+     "items": [
+      {
+       "testId": "quant-005",
+       "qid": "s2q11"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "the overlap stated as a percent of each set: equate the two expressions to compare the sets' sizes",
+     "variant": "overlap given as percents of different bases",
+     "items": [
+      {
+       "testId": "quant-007",
+       "qid": "s2q5"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "three sets with the exactly-two count and a neither count given; find the number in all three (counting by multiplicity)",
+     "variant": "three-set Venn diagram",
+     "items": [
+      {
+       "testId": "quant-008",
+       "qid": "s2q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two-way table with one cell relation linking two other cells; solve for a cell",
+     "variant": "a double-matrix (two-way) table",
+     "items": [
+      {
+       "testId": "quant-009",
+       "qid": "s2q8"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two sets where the both count is a multiple of the neither count; solve for neither",
+     "variant": "the neither region from a two-set problem",
+     "items": [
+      {
+       "testId": "quant-010",
+       "qid": "s2q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "three overlapping groups in a fixed population: the feasible range of the triple overlap (complement bound below, smallest group above)",
+     "variant": "at least / at most counts from a survey with overlap",
+     "items": [
+      {
+       "testId": "quant-012",
+       "qid": "s2q13"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two-way table with only margins given; one cell's range from keeping every other cell nonnegative",
+     "variant": "a double-matrix (two-way) table",
+     "items": [
+      {
+       "testId": "quant-014",
+       "qid": "s2q13"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "least overlap of two survey answers across two separate groups: bound each group separately; pooling the totals understates it",
+     "variant": "at least / at most counts from a survey with overlap",
+     "items": [
+      {
+       "testId": "quant-015",
+       "qid": "s1q12"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 14,
+   "concept": "triangles",
+   "name": "Triangles: similar, isosceles, equilateral, inequality",
+   "variant": "a midsegment: parallel to the third side and half as long",
+   "area": "geometry",
+   "bucket": "review",
+   "reason": "wrong on a question testing it; already in untaken quant-016",
+   "exemplars": [
+    "bb-t1s3-12",
+    "bb-t3s6-15"
+   ],
+   "history": [
+    {
+     "setup": "two sides given and an obtuse (or bounded) angle; the third side's range from c^2 against a^2 + b^2",
+     "variant": "larger side opposite the larger angle; obtuse vs acute from c^2 against a^2 + b^2",
+     "items": [
+      {
+       "testId": "quant-005",
+       "qid": "s2q14"
+      },
+      {
+       "testId": "quant-006",
+       "qid": "s2q15"
+      },
+      {
+       "testId": "quant-007",
+       "qid": "s2q2"
+      }
+     ],
+     "worn": true
+    },
+    {
+     "setup": "13-14-15 triangle: altitude to one side via Heron or two right triangles",
+     "variant": "area with an altitude outside the triangle",
+     "items": [
+      {
+       "testId": "quant-001",
+       "qid": "s2q10"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "isosceles with sides 4 and 9: the third side must be 9; perimeter vs a value",
+     "variant": "triangle inequality: the range of the third side",
+     "items": [
+      {
+       "testId": "quant-003",
+       "qid": "s1q3"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "isosceles triangle with one 40° angle: two cases; compare the largest angle with twice the smallest",
+     "variant": "isosceles or equilateral properties hidden in a figure",
+     "items": [
+      {
+       "testId": "quant-004",
+       "qid": "s2q1"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a line parallel to one side cuts off a similar triangle; compare the trapezoid with the small triangle (areas scale as squares)",
+     "variant": "similar triangles: side and area ratios",
+     "items": [
+      {
+       "testId": "quant-008",
+       "qid": "s2q2"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "isosceles chain AD = BD = BC with one angle given; exterior angle then base angles; compare an angle with a value",
+     "variant": "angle chasing through isosceles triangles in a figure",
+     "items": [
+      {
+       "testId": "quant-009",
+       "qid": "s2q4"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "exterior angle equals the sum of the two remote interior angles; split it by a given difference",
+     "variant": "exterior angle theorem",
+     "items": [
+      {
+       "testId": "quant-010",
+       "qid": "s2q2"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "obtuse triangle with three integer sides: the altitude to the shortest side falls outside it; find it from the area",
+     "variant": "triangles sharing a height: area ratio from the base ratio",
+     "items": [
+      {
+       "testId": "quant-012",
+       "qid": "s1q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two sides of a triangle given; perimeter of the midpoint triangle against the value at the triangle-inequality bound",
+     "variant": "a midsegment: parallel to the third side and half as long",
+     "items": [
+      {
+       "testId": "quant-013",
+       "qid": "s2q5"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "one side and the altitude to it given; select possible lengths of another side (the foot may fall outside the base)",
+     "variant": "area with an altitude outside the triangle",
+     "items": [
+      {
+       "testId": "quant-014",
+       "qid": "s2q14"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 15,
+   "concept": "lines-angles",
+   "name": "Lines and angles, parallel lines",
+   "variant": "angles around a point or on a straight line",
+   "area": "geometry",
+   "bucket": "new",
+   "reason": "wrong on a question testing it; already in untaken quant-015",
+   "exemplars": [
+    "bb-t2s5-15",
+    "bb-t3s2-15"
+   ],
+   "history": [
+    {
+     "setup": "two angle expressions at a transversal: equal or supplementary; select x",
+     "variant": "parallel lines cut by a transversal",
+     "items": [
+      {
+       "testId": "quant-002",
+       "qid": "s2q13"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a ray from the intersection of two lines makes given angles with each line; compare the acute angle between the lines with a value (ray inside or outside)",
+     "variant": "angles around a point or on a straight line",
+     "items": [
+      {
+       "testId": "quant-011",
+       "qid": "s1q3"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two internal angle bisectors of a triangle meet: the angle between them is 90 plus half the third angle, whatever the other two",
+     "variant": "angle bisectors",
+     "items": [
+      {
+       "testId": "quant-012",
+       "qid": "s1q3"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "three concurrent lines with three marked angles, one across from an unmarked angle; solve along one line, then the obtuse angle between the other two lines",
+     "variant": "angles formed by several intersecting lines",
+     "items": [
+      {
+       "testId": "quant-014",
+       "qid": "s2q3"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "five lines with no three concurrent form a star; four point angles given; the fifth from the angle sum through exterior angles of small triangles",
+     "variant": "angles formed by several intersecting lines",
+     "items": [
+      {
+       "testId": "quant-015",
+       "qid": "s2q6"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 16,
+   "concept": "abs-value-inequalities",
+   "name": "Absolute-value equations and inequalities",
+   "variant": "an absolute-value equation with two cases, one extraneous",
+   "area": "algebra",
+   "bucket": "new",
+   "reason": "wrong on a question testing it; already in untaken quant-015",
+   "exemplars": [
+    "ogq-t2-s5-21"
+   ],
+   "history": [
+    {
+     "setup": "sum of two absolute values |x - a| + |x - b| against a bound",
+     "variant": "nested or summed absolute values",
+     "items": [
+      {
+       "testId": "quant-001",
+       "qid": "s2q9"
+      },
+      {
+       "testId": "quant-005",
+       "qid": "s1q8"
+      },
+      {
+       "testId": "quant-009",
+       "qid": "s2q2"
+      }
+     ],
+     "worn": true
+    },
+    {
+     "setup": "|x + c| < b gives an interval for x; compare x^2 with a constant (endpoint signs matter)",
+     "variant": "|x - a| < b as a distance interval",
+     "items": [
+      {
+       "testId": "quant-001",
+       "qid": "s1q2"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "forces opposite signs; compare (x + y)^2 with (x - y)^2",
+     "variant": "nested or summed absolute values",
+     "items": [
+      {
+       "testId": "quant-004",
+       "qid": "s1q4"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "count integers with |x + a| > k|x - b|; compare with a value",
+     "variant": "nested or summed absolute values",
+     "items": [
+      {
+       "testId": "quant-006",
+       "qid": "s2q2"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "|x - a| = bx + c: two cases, one rejected because the right side would be negative",
+     "variant": "an absolute-value equation with two cases, one extraneous",
+     "items": [
+      {
+       "testId": "quant-007",
+       "qid": "s1q8"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two distances from a shared point on the number line: the third distance is their sum or difference",
+     "variant": "|x - a| < b as a distance interval",
+     "items": [
+      {
+       "testId": "quant-008",
+       "qid": "s1q8"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "which absolute-value identities and inequalities hold for every real x (test a negative)",
+     "variant": "|x| against x in QC",
+     "items": [
+      {
+       "testId": "quant-010",
+       "qid": "s1q8"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two different numbers equidistant from a fixed point: their sum is twice that point",
+     "variant": "|x - a| = |x - b|: the point midway",
+     "items": [
+      {
+       "testId": "quant-012",
+       "qid": "s1q2"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a side length within a tolerance; the area's greatest deviation from nominal against the linear estimate (the square term breaks the tie)",
+     "variant": "a tolerance stated as an absolute-value inequality",
+     "items": [
+      {
+       "testId": "quant-014",
+       "qid": "s2q2"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "one unknown equidistant from two fixed numbers written as equal absolute values; compare it with a value",
+     "variant": "|x - a| = |x - b|: the point midway",
+     "items": [
+      {
+       "testId": "quant-015",
+       "qid": "s1q1"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 17,
+   "concept": "graphs-of-functions",
+   "name": "Graphs of functions and parabolas, shifts and reflections",
+   "variant": "symmetry about an axis, the origin or y = x",
+   "area": "algebra",
+   "bucket": "new",
+   "reason": "right but slow; already in untaken quant-015",
+   "exemplars": [],
+   "history": [
+    {
+     "setup": "parabola crossing the x-axis on both sides of the y-axis; compare b with c",
+     "variant": "parabola vertex, axis of symmetry and intercepts",
+     "items": [
+      {
+       "testId": "quant-002",
+       "qid": "s2q5"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "piecewise-linear graph read at points between vertices after the input is reflected and shifted",
+     "variant": "reading the value of f at a point from a graph",
+     "items": [
+      {
+       "testId": "quant-011",
+       "qid": "s2q5"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a graph symmetric about the y-axis shifted horizontally: compare values at two points equidistant from the new axis",
+     "variant": "symmetry about an axis, the origin or y = x",
+     "items": [
+      {
+       "testId": "quant-012",
+       "qid": "s2q3"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a function's unique maximum point; a reflected, stretched and shifted copy: compare where the copy's extreme value occurs with a value",
+     "variant": "a shift, a stretch or a reflection of a graph",
+     "items": [
+      {
+       "testId": "quant-014",
+       "qid": "s2q4"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a parabola against an absolute-value graph: solve on each piece and reject the roots outside that piece's domain; compare the count with a value",
+     "variant": "intersections of two graphs",
+     "items": [
+      {
+       "testId": "quant-015",
+       "qid": "s2q3"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 18,
+   "concept": "word-problems-age-sum",
+   "name": "Algebraic translation word problems",
+   "variant": "coins or tickets of two denominations",
+   "area": "algebra",
+   "bucket": "new",
+   "reason": "wrong on a question testing it; already in untaken quant-016",
+   "exemplars": [],
+   "history": [
+    {
+     "setup": "three people's shares related by more-than / twice / percent of the total",
+     "variant": "translating 'more than' / 'less than' in order",
+     "items": [
+      {
+       "testId": "quant-003",
+       "qid": "s1q9"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "'when one was as old as the other is now' statements in both directions; the constant age gap",
+     "variant": "ages then and now",
+     "items": [
+      {
+       "testId": "quant-011",
+       "qid": "s2q6"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "the value of two coin types and the value if their counts were swapped; the total count from adding the two equations",
+     "variant": "coins or tickets of two denominations",
+     "items": [
+      {
+       "testId": "quant-012",
+       "qid": "s1q6"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "sum of an even-length run of consecutive integers given; the greatest from the half-integer average",
+     "variant": "consecutive-number sums",
+     "items": [
+      {
+       "testId": "quant-014",
+       "qid": "s1q9"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 19,
+   "concept": "remainders-units",
+   "name": "Remainders and units digits",
+   "variant": "remainder of a sum or product from the remainders of its parts",
+   "area": "arithmetic",
+   "bucket": "new",
+   "reason": "wrong on a question testing it; already in untaken quant-015",
+   "exemplars": [
+    "ogq-t1-s6-7",
+    "bb-t1s3-8"
+   ],
+   "history": [
+    {
+     "setup": "remainder of a^n ± b^n mod a small number via power cycles",
+     "variant": "remainder of a sum or product from the remainders of its parts",
+     "items": [
+      {
+       "testId": "quant-001",
+       "qid": "s1q6"
+      },
+      {
+       "testId": "quant-001",
+       "qid": "s2q8"
+      },
+      {
+       "testId": "quant-005",
+       "qid": "s1q6"
+      },
+      {
+       "testId": "quant-006",
+       "qid": "s1q2"
+      }
+     ],
+     "worn": true
+    },
+    {
+     "setup": "k ≡ 5 mod 6; remainders of high powers of k mod 8 and mod 3",
+     "variant": "remainder of a sum or product from the remainders of its parts",
+     "items": [
+      {
+       "testId": "quant-003",
+       "qid": "s1q2"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "units digits of 3^n and 7^n combined (sum vs product) for every n",
+     "variant": "units digit of a large power (cycle length)",
+     "items": [
+      {
+       "testId": "quant-004",
+       "qid": "s2q3"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two remainder conditions that conflict in parity: no such number; compare the count with a value",
+     "variant": "two remainder conditions at once: smallest such number",
+     "items": [
+      {
+       "testId": "quant-007",
+       "qid": "s2q3"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "n + 1 a multiple of 6; remainder of n^2 + n mod 12 vs a value",
+     "variant": "remainder of a sum or product from the remainders of its parts",
+     "items": [
+      {
+       "testId": "quant-008",
+       "qid": "s2q3"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "the decimal part of n/d reduces to a fraction; the least divisor is its reduced denominator",
+     "variant": "remainder written as a decimal part (n/d = q.25)",
+     "items": [
+      {
+       "testId": "quant-009",
+       "qid": "s1q4"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "from the last digit of a sum of powers back to the parity of n; then another power's last digit",
+     "variant": "units digit of a large power (cycle length)",
+     "items": [
+      {
+       "testId": "quant-010",
+       "qid": "s2q1"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "remainder of the negative of a large power, via the power's cycle and the nonnegative-remainder rule",
+     "variant": "remainder of a negative or fractional expression of n",
+     "items": [
+      {
+       "testId": "quant-011",
+       "qid": "s1q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "product of a long run of odd integers: an odd multiple of 25 ends in 25 or 75; the residue mod 4 decides",
+     "variant": "last two digits of a product too large for the calculator",
+     "items": [
+      {
+       "testId": "quant-014",
+       "qid": "s1q4"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a multiple of 3 with a known remainder mod 14; the remainder of the number divided by 3 is fixed because 3 and 14 are coprime; compare it with the original remainder",
+     "variant": "remainder of a negative or fractional expression of n",
+     "items": [
+      {
+       "testId": "quant-015",
+       "qid": "s1q4"
+      }
+     ],
+     "worn": false
+    }
+   ],
+   "revisit": {
+    "ref": "quant-003:s1q2",
+    "result": "missed",
+    "item": "When the positive integer $k$ is divided by 6, the remainder is 5. · Quantity A: The remainder when $k^{100}$ is divided by 8 | Quantity B: The remainder when $k^{50}$ is divided by 3",
+    "setup": "k ≡ 5 mod 6; remainders of high powers of k mod 8 and mod 3",
+    "change": "combine the same insight with a second concept"
+   }
+  },
+  {
+   "slot": 20,
+   "concept": "solids-volume",
+   "name": "Volume and surface area of solids",
+   "variant": "a diagonal cross-section of a box",
+   "area": "geometry",
+   "bucket": "new",
+   "reason": "wrong on a question testing it; already in untaken quant-016",
+   "exemplars": [
+    "bb-t1s3-10",
+    "bb-t3s2-19"
+   ],
+   "history": [
+    {
+     "setup": "horizontal cylinder partly filled: circular-segment area times length",
+     "variant": "cylinder volume or surface area",
+     "items": [
+      {
+       "testId": "quant-002",
+       "qid": "s2q8"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "rectangular block painted on all faces but its base, then cut into unit cubes; count cubes with exactly two painted faces",
+     "variant": "cubes painted or cut into smaller cubes",
+     "items": [
+      {
+       "testId": "quant-011",
+       "qid": "s2q15"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a cone filled to half its height poured into a cylinder: the water's volume scales with the cube of the depth",
+     "variant": "liquid poured between containers",
+     "items": [
+      {
+       "testId": "quant-012",
+       "qid": "s2q5"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "horizontal cylinder more than half full, the empty segment's central angle given: whole cross section minus the empty segment, times the length",
+     "variant": "scaling a dimension: the effect on volume",
+     "items": [
+      {
+       "testId": "quant-014",
+       "qid": "s2q11"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 21,
+   "concept": "functions",
+   "name": "Functions, notation, composition and defined operations",
+   "variant": "f given on a transformed input, such as f((x + 3)/2)",
+   "area": "algebra",
+   "bucket": "new",
+   "reason": "wrong on a question testing it; already in untaken quant-015",
+   "exemplars": [
+    "bb-t1s7-10",
+    "ogq-t2-s5-22"
+   ],
+   "history": [
+    {
+     "setup": "minimum value of f(f(x)) for a quadratic f",
+     "variant": "composition f(g(x)), or solving f(x) = g(x)",
+     "items": [
+      {
+       "testId": "quant-001",
+       "qid": "s2q11"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a function on a finite domain given by a table; the inputs fixed by applying f twice; compare one such input with a value",
+     "variant": "a function given by a table",
+     "items": [
+      {
+       "testId": "quant-011",
+       "qid": "s2q4"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "odd function with a period: one value fixes the value two units away and forces a zero at half the period",
+     "variant": "a function property such as f(-x) = -f(x) or f(x + 1) = f(x)",
+     "items": [
+      {
+       "testId": "quant-012",
+       "qid": "s2q1"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "linear function with a nonzero constant term: compare f(a + b) with f(a) + f(b) (the constant counts twice)",
+     "variant": "f(a + b) against f(a) + f(b)",
+     "items": [
+      {
+       "testId": "quant-014",
+       "qid": "s2q1"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "count the integers in the domain of a quotient of square roots whose denominator subtracts a constant from a root (one hidden excluded point)",
+     "variant": "domain restrictions (square roots, denominators)",
+     "items": [
+      {
+       "testId": "quant-015",
+       "qid": "s2q2"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 22,
+   "concept": "linear-equations",
+   "name": "Linear equations and simultaneous equations",
+   "variant": "a literal equation: solve for one letter in terms of the others",
+   "area": "algebra",
+   "bucket": "new",
+   "reason": "wrong on a question testing it; already in untaken quant-016",
+   "exemplars": [
+    "ogq-t1-s6-8",
+    "bb-t1s3-27"
+   ],
+   "history": [
+    {
+     "setup": "counts of items at two or three prices from a total count and revenue",
+     "variant": "three variables, two equations: what can be determined",
+     "items": [
+      {
+       "testId": "quant-003",
+       "qid": "s2q12"
+      },
+      {
+       "testId": "quant-005",
+       "qid": "s2q10"
+      }
+     ],
+     "worn": true
+    },
+    {
+     "setup": "for which k a 2x2 linear system has no solution",
+     "variant": "a system with no solution or infinitely many",
+     "items": [
+      {
+       "testId": "quant-002",
+       "qid": "s2q15"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "count integer k for which a 2x2 system has an integer solution",
+     "variant": "solving for an expression (x + y) instead of each variable",
+     "items": [
+      {
+       "testId": "quant-004",
+       "qid": "s2q9"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "three item counts, two price lists and totals; greatest possible count of one",
+     "variant": "three variables, two equations: what can be determined",
+     "items": [
+      {
+       "testId": "quant-006",
+       "qid": "s2q9"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two linear equations in three unknowns; a third combination is determined",
+     "variant": "three variables, two equations: what can be determined",
+     "items": [
+      {
+       "testId": "quant-007",
+       "qid": "s2q12"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "1/a + 1/b = 1/c with positive values: solve for c and compare it with a",
+     "variant": "a literal equation: solve for one letter in terms of the others",
+     "items": [
+      {
+       "testId": "quant-008",
+       "qid": "s2q4"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "solve y = (ax + b)/(x - 1) for x: collect the x terms and factor",
+     "variant": "a literal equation: solve for one letter in terms of the others",
+     "items": [
+      {
+       "testId": "quant-009",
+       "qid": "s1q5"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "sum and difference linked by a multiple: find both, then the larger is their average",
+     "variant": "solving for an expression (x + y) instead of each variable",
+     "items": [
+      {
+       "testId": "quant-010",
+       "qid": "s2q9"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two equations that are multiples of one line: count the positive integer solutions of that line",
+     "variant": "a system with no solution or infinitely many",
+     "items": [
+      {
+       "testId": "quant-012",
+       "qid": "s2q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a price after a percent discount plus a flat fee, solved for the discount rate (move the fee before dividing; the fee's sign flips)",
+     "variant": "a literal equation: solve for one letter in terms of the others",
+     "items": [
+      {
+       "testId": "quant-014",
+       "qid": "s2q6"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 23,
+   "concept": "integers-properties",
+   "name": "Integer properties, even/odd, divisibility",
+   "variant": "divisibility of an expression such as n(n+1)(n+2) for every integer n",
+   "area": "arithmetic",
+   "bucket": "new",
+   "reason": "wrong on a question testing it; already in untaken quant-016",
+   "exemplars": [
+    "ogq-t1-s6-16",
+    "ogq-set3-6"
+   ],
+   "history": [
+    {
+     "setup": "k^2 leaves remainder 1 mod 8; compare k mod 8 with k^3 mod 8",
+     "variant": "must be / could be an integer from a stated condition",
+     "items": [
+      {
+       "testId": "quant-002",
+       "qid": "s1q4"
+      },
+      {
+       "testId": "quant-005",
+       "qid": "s2q1"
+      }
+     ],
+     "worn": true
+    },
+    {
+     "setup": "n with exactly 3 divisors is p^2; compare divisor counts of n^2 and 2n",
+     "variant": "must be / could be an integer from a stated condition",
+     "items": [
+      {
+       "testId": "quant-004",
+       "qid": "s2q5"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "k^2 divisible by 72: greatest number that must divide k",
+     "variant": "must be / could be an integer from a stated condition",
+     "items": [
+      {
+       "testId": "quant-006",
+       "qid": "s2q4"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "reversing a two-digit number changes it by 9 times the digit difference; count the numbers",
+     "variant": "digits and place value of an unknown number",
+     "items": [
+      {
+       "testId": "quant-007",
+       "qid": "s2q1"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "parity of ab + a + b through (a + 1)(b + 1) - 1; count pairs",
+     "variant": "even/odd parity of sums and products of unknown integers",
+     "items": [
+      {
+       "testId": "quant-008",
+       "qid": "s2q15"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "count divisors of N divisible by one number but not another (from the prime factorization)",
+     "items": [
+      {
+       "testId": "quant-009",
+       "qid": "s2q15"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a sum of an odd number k of consecutive integers is k times the middle one; select which numbers qualify",
+     "variant": "consecutive integers: sum, product or count in a range",
+     "items": [
+      {
+       "testId": "quant-010",
+       "qid": "s2q14"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two parity conditions on three unknown integers (one leaves open which of two is even); which expression must be odd",
+     "variant": "even/odd parity of sums and products of unknown integers",
+     "items": [
+      {
+       "testId": "quant-013",
+       "qid": "s2q12"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a digit condition makes a three-digit number a multiple of 11; compare the remainder with the units digit, which can be zero",
+     "variant": "digits and place value of an unknown number",
+     "items": [
+      {
+       "testId": "quant-014",
+       "qid": "s2q5"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 24,
+   "concept": "circles",
+   "name": "Circles: arcs, sectors, chords, tangents",
+   "variant": "arc length and sector area from the central angle",
+   "area": "geometry",
+   "bucket": "wildcard",
+   "reason": "wrong on a question testing it; already in untaken quant-015",
+   "exemplars": [
+    "bb-t1s7-11",
+    "ogq-t1-s6-23"
+   ],
+   "history": [
+    {
+     "setup": "chord length gives the central angle; minor arc length",
+     "variant": "arc length and sector area from the central angle",
+     "items": [
+      {
+       "testId": "quant-002",
+       "qid": "s1q6"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two parallel chords at known distances from the center",
+     "variant": "chord length from the distance to the center",
+     "items": [
+      {
+       "testId": "quant-003",
+       "qid": "s2q6"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "annulus with a chord of the outer circle tangent to the inner; ring area",
+     "variant": "tangent lines and the radius",
+     "items": [
+      {
+       "testId": "quant-004",
+       "qid": "s2q6"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "arc length and sector area give r and angle; compare the chord with a value",
+     "variant": "arc length and sector area from the central angle",
+     "items": [
+      {
+       "testId": "quant-005",
+       "qid": "s2q2"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two equal circles at a given center distance; area of the overlap (lens)",
+     "items": [
+      {
+       "testId": "quant-006",
+       "qid": "s2q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "chord and radius give the distance to the center; chord to the arc midpoint",
+     "variant": "chord length from the distance to the center",
+     "items": [
+      {
+       "testId": "quant-007",
+       "qid": "s1q6"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two wheels of different diameters cover the same distance; the difference in rotations",
+     "variant": "circumference, or the number of rotations of a wheel",
+     "items": [
+      {
+       "testId": "quant-008",
+       "qid": "s2q6"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "two tangents from an external point; area between the tangents and the minor arc",
+     "variant": "tangent lines and the radius",
+     "items": [
+      {
+       "testId": "quant-009",
+       "qid": "s2q9"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "concentric lanes: the extra distance per lap is 2 pi times the gap, independent of the radius",
+     "variant": "circumference, or the number of rotations of a wheel",
+     "items": [
+      {
+       "testId": "quant-010",
+       "qid": "s2q6"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a radius-radius isosceles triangle gives the central angle; the inscribed angle from a point on the minor arc uses the reflex arc",
+     "variant": "inscribed angle vs central angle",
+     "items": [
+      {
+       "testId": "quant-012",
+       "qid": "s2q8"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "chord and radius give the central angle; the inscribed angle from the major arc makes an isosceles inscribed triangle equilateral; its area",
+     "variant": "inscribed angle vs central angle",
+     "items": [
+      {
+       "testId": "quant-014",
+       "qid": "s2q8"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a measuring wheel's turns around a circle's edge give that circle's circumference; the enclosed area",
+     "variant": "circumference, or the number of rotations of a wheel",
+     "items": [
+      {
+       "testId": "quant-015",
+       "qid": "s2q9"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 25,
+   "concept": "estimation-sigfig",
+   "name": "Estimation, rounding, scientific notation",
+   "variant": "scientific notation arithmetic with large powers of 10",
+   "area": "arithmetic",
+   "bucket": "wildcard",
+   "reason": "wrong on a question testing it; already in untaken quant-015",
+   "exemplars": [
+    "bb-t1s3-3",
+    "bb-t2s5-17"
+   ],
+   "history": [
+    {
+     "setup": "estimate a product and quotient of numbers in scientific notation",
+     "variant": "scientific notation arithmetic with large powers of 10",
+     "items": [
+      {
+       "testId": "quant-003",
+       "qid": "s2q10"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "sum of many amounts each rounded to the nearest unit; bound the true total against the strict upper limit",
+     "variant": "rounding to a place, then computing",
+     "items": [
+      {
+       "testId": "quant-011",
+       "qid": "s2q1"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a difference of squares of two decimals near consecutive whole numbers: rounding each term misleads, factoring gives the product",
+     "variant": "estimating a product or quotient to pick the closest choice",
+     "items": [
+      {
+       "testId": "quant-012",
+       "qid": "s2q10"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "square root of a number in scientific notation with an odd power of ten; compare with a power of ten",
+     "variant": "order of magnitude comparison in QC",
+     "items": [
+      {
+       "testId": "quant-013",
+       "qid": "s1q2"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "concentration times volume over a per-dose amount, with a unit conversion; round each factor and pick the nearest of closely spaced choices",
+     "variant": "estimating a product or quotient to pick the closest choice",
+     "items": [
+      {
+       "testId": "quant-015",
+       "qid": "s1q5"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  },
+  {
+   "slot": 26,
+   "concept": "inscribed-figures",
+   "name": "Inscribed and circumscribed figures, composite shapes",
+   "variant": "a rectangle inscribed in a circle or semicircle (diameter as diagonal)",
+   "area": "geometry",
+   "bucket": "wildcard",
+   "reason": "wrong on a question testing it; already in untaken quant-015",
+   "exemplars": [
+    "ogq-set2-3"
+   ],
+   "history": [
+    {
+     "setup": "square inscribed in a semicircle with one side on the diameter",
+     "variant": "a rectangle inscribed in a circle or semicircle (diameter as diagonal)",
+     "items": [
+      {
+       "testId": "quant-001",
+       "qid": "s2q7"
+      },
+      {
+       "testId": "quant-003",
+       "qid": "s2q8"
+      },
+      {
+       "testId": "quant-006",
+       "qid": "s2q11"
+      }
+     ],
+     "worn": true
+    },
+    {
+     "setup": "incircle of a right triangle; distance from the incenter to a vertex or the circumcenter",
+     "variant": "a circle inscribed in a right triangle",
+     "items": [
+      {
+       "testId": "quant-004",
+       "qid": "s2q8"
+      },
+      {
+       "testId": "quant-009",
+       "qid": "s2q7"
+      }
+     ],
+     "worn": true
+    },
+    {
+     "setup": "square in a circle in a larger square of given area; compare the inner square's area with a value",
+     "variant": "a square inscribed in a circle, or a circle in a square",
+     "items": [
+      {
+       "testId": "quant-001",
+       "qid": "s1q3"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "equilateral triangle between its incircle and circumcircle; ring area gives the side",
+     "variant": "an equilateral triangle in a circle",
+     "items": [
+      {
+       "testId": "quant-005",
+       "qid": "s2q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "crescents on the legs of a right triangle inscribed in a circle: their total area equals the triangle's",
+     "variant": "overlapping circles or semicircles",
+     "items": [
+      {
+       "testId": "quant-007",
+       "qid": "s2q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "circle through two vertices of a square and tangent to the opposite side; radius",
+     "variant": "a square inscribed in a circle, or a circle in a square",
+     "items": [
+      {
+       "testId": "quant-008",
+       "qid": "s2q8"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "four tangent circles in a square: the central gap is the centers' square minus four quarter disks",
+     "variant": "a shaded region: whole minus part",
+     "items": [
+      {
+       "testId": "quant-010",
+       "qid": "s2q8"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "regular hexagon in a circle in a larger regular hexagon of given area; the inner area from the apothem-radius ratio",
+     "variant": "a regular hexagon in a circle",
+     "items": [
+      {
+       "testId": "quant-011",
+       "qid": "s2q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "square on the diameter of a semicircle with its area given; the radius from the half-side, then semicircle minus square",
+     "variant": "a shaded region: whole minus part",
+     "items": [
+      {
+       "testId": "quant-014",
+       "qid": "s2q7"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "three semicircles on one segment (two inside the large one); a perpendicular half-chord at the split point gives the product of the parts; area of the region between them",
+     "variant": "overlapping circles or semicircles",
+     "items": [
+      {
+       "testId": "quant-015",
+       "qid": "s2q7"
+      }
+     ],
+     "worn": false
+    }
+   ],
+   "revisit": {
+    "ref": "quant-003:s2q8",
+    "result": "missed",
+    "item": "Square $S_1$ has two vertices on the diameter of a semicircle of radius $r$ and its other two vertices on the arc of the semicircle. Square $S_2$ has all four vertices on a circle of radius $r$. The area of $S_1$ is what fraction of the area of $S_2$? · choices: $\\dfrac14$ / $\\dfrac13$ / $\\dfrac25$ / $\\dfrac12$ / $\\dfrac45$",
+    "setup": "square inscribed in a semicircle with one side on the diameter",
+    "change": "keep the insight but move the trap: a different wrong path should tempt"
+   }
+  },
+  {
+   "slot": 27,
+   "concept": "fractions-decimals",
+   "name": "Fractions, decimals and decimal representation",
+   "variant": "the k-th digit after the decimal point of a repeating decimal",
+   "area": "arithmetic",
+   "bucket": "wildcard",
+   "reason": "wrong on a question testing it; already in untaken quant-016",
+   "exemplars": [
+    "bb-t3s6-14",
+    "bb-t2s2-28"
+   ],
+   "history": [
+    {
+     "setup": "sum of two repeating decimals vs 1",
+     "variant": "the k-th digit after the decimal point of a repeating decimal",
+     "items": [
+      {
+       "testId": "quant-002",
+       "qid": "s2q4"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "compare (10^8 + 1)/(10^9 + 1) with (10^9 + 1)/(10^10 + 1)",
+     "variant": "ordering fractions with unknowns or near-equal values",
+     "items": [
+      {
+       "testId": "quant-003",
+       "qid": "s2q3"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "digits after the decimal point of k/(2^a 5^b) for odd k",
+     "variant": "terminating vs repeating decimal from the denominator's prime factors",
+     "items": [
+      {
+       "testId": "quant-004",
+       "qid": "s2q4"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "tank goes from one fraction full to another after a draw; amount to fill",
+     "variant": "complex (nested) fractions",
+     "items": [
+      {
+       "testId": "quant-005",
+       "qid": "s1q9"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "telescoping product of (1 - 1/k^2)",
+     "variant": "complex (nested) fractions",
+     "items": [
+      {
+       "testId": "quant-006",
+       "qid": "s1q9"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "which fraction lies between two close fractions",
+     "variant": "ordering fractions with unknowns or near-equal values",
+     "items": [
+      {
+       "testId": "quant-007",
+       "qid": "s2q10"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "repeating decimal x; compare 1/x with a value",
+     "variant": "the k-th digit after the decimal point of a repeating decimal",
+     "items": [
+      {
+       "testId": "quant-008",
+       "qid": "s1q1"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "an expression with surds whose irrational parts cancel; compare it with a whole number",
+     "variant": "rational vs irrational: which expressions must be rational",
+     "items": [
+      {
+       "testId": "quant-009",
+       "qid": "s1q1"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "which fraction terminates: reduce first, then check the denominator's primes",
+     "variant": "terminating vs repeating decimal from the denominator's prime factors",
+     "items": [
+      {
+       "testId": "quant-010",
+       "qid": "s2q10"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "a nonzero rational combined with an irrational: closure under sum, product and quotient against squares and reciprocal sums that can cancel",
+     "variant": "rational vs irrational: which expressions must be rational",
+     "items": [
+      {
+       "testId": "quant-012",
+       "qid": "s1q8"
+      }
+     ],
+     "worn": false
+    },
+    {
+     "setup": "sum and product of two numbers rational; select the symmetric expressions forced rational, with conjugate counterexamples for the rest",
+     "variant": "rational vs irrational: which expressions must be rational",
+     "items": [
+      {
+       "testId": "quant-014",
+       "qid": "s1q8"
+      }
+     ],
+     "worn": false
+    }
+   ]
+  }
+ ],
+ "instructions": "Assign the 27 concept slots to the 27 blueprint slots (any order, but a DI set of 3 should share a concept area). Each question: one primary concept (the slot) and optional secondary tags. Write each question as its slot's variant, the form of the concept earlier mocks used least, with a setup that is not in the slot's history (worn setups are banned). Record `setup` (one abstract line, no numbers or story) and `variant` on every question. A slot with a `revisit` is the exception: its variant is that earlier item's form, and you write a sibling of the item (the user missed or guessed it), keeping its decisive insight and making the change named, and set `revisits` to its ref. Provide a python verification script. typeFocus ranks question types by practice need (miss rate plus slowness against pace): put the weakest review words / skills / concepts on the slots of the top two types (need >= 0.4), so the practice lands where it is needed."
+}

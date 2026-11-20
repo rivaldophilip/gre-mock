@@ -1,0 +1,1088 @@
+{
+  "id": "quant-016",
+  "measure": "quant",
+  "title": "Quant Hard Mock 16",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 21
+    },
+    {
+      "n": 2,
+      "minutes": 26
+    }
+  ],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Clutch sizes (number of eggs) in the nests of two bird species surveyed in a wetland",
+      "table": {
+        "head": [
+          "Number of eggs",
+          "Nests of species R",
+          "Nests of species T"
+        ],
+        "rows": [
+          [
+            "1",
+            "4",
+            "2"
+          ],
+          [
+            "2",
+            "9",
+            "6"
+          ],
+          [
+            "3",
+            "14",
+            "12"
+          ],
+          [
+            "4",
+            "9",
+            "15"
+          ],
+          [
+            "5",
+            "4",
+            "5"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fig2",
+      "caption": "Note: Figure not drawn to scale.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 310 205' width='310' height='205' font-family='serif' font-size='14'><line x1='10' y1='55' x2='290' y2='50' stroke='currentColor' stroke-width='1.5'/><line x1='10' y1='150' x2='290' y2='153' stroke='currentColor' stroke-width='1.5'/><line x1='82' y1='18' x2='58' y2='188' stroke='currentColor' stroke-width='1.5'/><line x1='198' y1='14' x2='238' y2='190' stroke='currentColor' stroke-width='1.5'/><text x='89' y='74' fill='currentColor'>85°</text><text x='77' y='141' fill='currentColor'>97°</text><text x='181' y='71' fill='currentColor'>x°</text><text x='199' y='142' fill='currentColor'>y°</text><text x='293' y='48' fill='currentColor' font-style='italic'>ℓ</text><text x='293' y='158' fill='currentColor' font-style='italic'>m</text><text x='86' y='16' fill='currentColor' font-style='italic'>p</text><text x='186' y='14' fill='currentColor' font-style='italic'>q</text></svg>"
+    },
+    {
+      "id": "fig3",
+      "caption": "Average July temperature at 12 weather stations",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 340' width='330' height='340' font-family='sans-serif' font-size='11'><line x1='50' y1='290' x2='50' y2='30' stroke='currentColor' stroke-opacity='0.2'/><line x1='50' y1='290' x2='310' y2='290' stroke='currentColor' stroke-opacity='0.2'/><text x='50' y='305' fill='currentColor' text-anchor='middle'>18</text><text x='44' y='294' fill='currentColor' text-anchor='end'>18</text><line x1='90' y1='290' x2='90' y2='30' stroke='currentColor' stroke-opacity='0.2'/><line x1='50' y1='250' x2='310' y2='250' stroke='currentColor' stroke-opacity='0.2'/><text x='90' y='305' fill='currentColor' text-anchor='middle'>20</text><text x='44' y='254' fill='currentColor' text-anchor='end'>20</text><line x1='130' y1='290' x2='130' y2='30' stroke='currentColor' stroke-opacity='0.2'/><line x1='50' y1='210' x2='310' y2='210' stroke='currentColor' stroke-opacity='0.2'/><text x='130' y='305' fill='currentColor' text-anchor='middle'>22</text><text x='44' y='214' fill='currentColor' text-anchor='end'>22</text><line x1='170' y1='290' x2='170' y2='30' stroke='currentColor' stroke-opacity='0.2'/><line x1='50' y1='170' x2='310' y2='170' stroke='currentColor' stroke-opacity='0.2'/><text x='170' y='305' fill='currentColor' text-anchor='middle'>24</text><text x='44' y='174' fill='currentColor' text-anchor='end'>24</text><line x1='210' y1='290' x2='210' y2='30' stroke='currentColor' stroke-opacity='0.2'/><line x1='50' y1='130' x2='310' y2='130' stroke='currentColor' stroke-opacity='0.2'/><text x='210' y='305' fill='currentColor' text-anchor='middle'>26</text><text x='44' y='134' fill='currentColor' text-anchor='end'>26</text><line x1='250' y1='290' x2='250' y2='30' stroke='currentColor' stroke-opacity='0.2'/><line x1='50' y1='90' x2='310' y2='90' stroke='currentColor' stroke-opacity='0.2'/><text x='250' y='305' fill='currentColor' text-anchor='middle'>28</text><text x='44' y='94' fill='currentColor' text-anchor='end'>28</text><line x1='290' y1='290' x2='290' y2='30' stroke='currentColor' stroke-opacity='0.2'/><line x1='50' y1='50' x2='310' y2='50' stroke='currentColor' stroke-opacity='0.2'/><text x='290' y='305' fill='currentColor' text-anchor='middle'>30</text><text x='44' y='54' fill='currentColor' text-anchor='end'>30</text><line x1='50' y1='290' x2='310' y2='290' stroke='currentColor' stroke-width='1.2'/><line x1='50' y1='290' x2='50' y2='30' stroke='currentColor' stroke-width='1.2'/><circle cx='70' cy='210' r='4' fill='currentColor'/><circle cx='110' cy='170' r='4' fill='currentColor'/><circle cx='150' cy='130' r='4' fill='currentColor'/><circle cx='190' cy='90' r='4' fill='currentColor'/><circle cx='250' cy='50' r='4' fill='currentColor'/><circle cx='90' cy='290' r='4' fill='currentColor'/><circle cx='130' cy='270' r='4' fill='currentColor'/><circle cx='170' cy='230' r='4' fill='currentColor'/><circle cx='210' cy='190' r='4' fill='currentColor'/><circle cx='230' cy='150' r='4' fill='currentColor'/><circle cx='270' cy='130' r='4' fill='currentColor'/><circle cx='290' cy='110' r='4' fill='currentColor'/><text x='180' y='322' fill='currentColor' text-anchor='middle' font-size='12'>Year 1 average (°C)</text><text x='14' y='160' fill='currentColor' text-anchor='middle' font-size='12' transform='rotate(-90 14 160)'>Year 2 average (°C)</text></svg>"
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "$|x - 2| = 5$ and $|y - 2| = 3$.",
+      "qc": {
+        "a": "$|x - y|$",
+        "b": "$2$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "$|x - 2| = 5$ puts $x$ at distance 5 from 2, so $x = 7$ or $x = -3$; $|y - 2| = 3$ puts $y$ at $5$ or $-1$. If $x$ and $y$ lie on the same side of 2, they are $5 - 3 = 2$ apart; on opposite sides they are $5 + 3 = 8$ apart. Quantity A can equal Quantity B or exceed it, so the answer is D.",
+        "steps": [
+          "1. $x = 7$ or $x = -3$; $y = 5$ or $y = -1$.",
+          "2. Same side of 2: $x = 7$, $y = 5$ gives $|x - y| = 2$, equal to B.",
+          "3. Opposite sides: $x = 7$, $y = -1$ gives $|x - y| = 8$, greater than B. Answer D."
+        ],
+        "fast": "Two distances measured from the same point combine as their difference or their sum: $|x - y|$ is $2$ or $8$.",
+        "trap": "Using only the positive solutions, $x = 7$ and $y = 5$, gives $|x - y| = 2$ and answer C."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-line-abs",
+          "role": "primary"
+        }
+      ],
+      "setup": "two unknowns at given distances from the same point; their distance from each other is the difference or the sum of those distances; compare with a value",
+      "variant": "distance between two numbers as an absolute value"
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "$-1 < x < 0$",
+      "qc": {
+        "a": "$x^3 - x$",
+        "b": "$x^2 - x^4$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Factor both quantities: $x^3 - x = -x(1 - x^2)$ and $x^2 - x^4 = x^2(1 - x^2)$. The common factor $1 - x^2$ is positive, so compare $-x$ with $x^2$. Here $-x = |x|$ lies between 0 and 1, and a number between 0 and 1 is greater than its square, so $-x > x^2$ and Quantity A is greater.",
+        "steps": [
+          "1. A $= -x(1 - x^2)$, B $= x^2(1 - x^2)$.",
+          "2. $0 < x^2 < 1$, so $1 - x^2 > 0$: compare $-x$ with $x^2$.",
+          "3. $-x = |x|$ and $|x| > |x|^2 = x^2$ when $0 < |x| < 1$. A is greater.",
+          "4. Check with $x = -\\tfrac12$: A $= -\\tfrac18 + \\tfrac12 = \\tfrac38$, B $= \\tfrac14 - \\tfrac1{16} = \\tfrac3{16}$."
+        ],
+        "fast": "Try $x = -\\tfrac12$ ($\\tfrac38$ vs $\\tfrac3{16}$) and $x = -0.9$ ($0.171$ vs $0.154$); the factoring shows the order never changes.",
+        "trap": "Calling $x^3 - x$ negative because $x$ is negative, and choosing B. On this interval $x^3$ is closer to 0 than $x$, so $x^3 > x$ and A is positive."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-sense-qc",
+          "role": "primary"
+        }
+      ],
+      "setup": "x between -1 and 0: an odd-power difference against an even-power difference; factor out the common positive factor and compare |x| with x^2",
+      "variant": "x between -1 and 0: powers and reciprocals ordered"
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "figureId": "fig2",
+      "prompt": "In the figure, lines $p$ and $q$ each cross lines $\\ell$ and $m$. The four labeled angles are the angles of the region enclosed by the four lines.",
+      "qc": {
+        "a": "$x + y$",
+        "b": "$180$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Lines $\\ell$ and $m$ only look parallel; nothing states it. The four lines enclose a quadrilateral with angles $85^\\circ$, $97^\\circ$, $x^\\circ$ and $y^\\circ$, and the angles of a quadrilateral add to $360^\\circ$. So $x + y = 360 - 85 - 97 = 178$, less than 180. Quantity B is greater.",
+        "steps": [
+          "1. The enclosed region is a quadrilateral: its angles sum to $360^\\circ$.",
+          "2. $x + y = 360 - (85 + 97) = 178$.",
+          "3. $178 < 180$. Answer B. (Since $85 + 97 \\ne 180$, lines $\\ell$ and $m$ are in fact not parallel.)"
+        ],
+        "fast": "Quadrilateral angle sum: $360 - 182 = 178$.",
+        "trap": "Treating $\\ell$ and $m$ as parallel because the figure suggests it: the same-side interior angles along $q$ would then add to $180^\\circ$, answer C. The angles along $p$ already add to $182^\\circ$, which shows the lines are not parallel."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "figures-not-to-scale",
+          "role": "primary"
+        }
+      ],
+      "setup": "two lines that look parallel cut by two transversals; the given pair of angles at one transversal does not sum to 180, and the angle sum of the enclosed quadrilateral fixes the pair at the other",
+      "variant": "lines that look parallel or perpendicular but are not stated to be"
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "Consider the integers $n$ for which $n^4 < 10n^2$.",
+      "qc": {
+        "a": "The number of such integers",
+        "b": "$7$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$n^4 < 10n^2$ is $n^2(n^2 - 10) < 0$. The product is negative only when $n^2 > 0$ and $n^2 < 10$, so $n = \\pm1, \\pm2, \\pm3$: six integers. For $n = 0$ the inequality reads $0 < 0$, which is false. Quantity B is greater.",
+        "steps": [
+          "1. Rewrite: $n^2(n^2 - 10) < 0$.",
+          "2. $n^2 \\ge 0$, so the product is negative only if $n^2 > 0$ (that is, $n \\ne 0$) and $n^2 < 10$.",
+          "3. $n \\in \\{-3, -2, -1, 1, 2, 3\\}$: 6 integers, fewer than 7. Answer B."
+        ],
+        "fast": "Test $n = 0$ first: $0 < 0$ fails. The rest is $n^2 < 10$ without 0: 6 integers.",
+        "trap": "Dividing both sides by $n^2$ to get $n^2 < 10$ and counting $-3$ through $3$: seven integers, answer C. Dividing by $n^2$ assumes $n \\ne 0$, and $n = 0$ fails the strict inequality."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quadratic-inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "a quartic inequality that factors as n^2 times a quadratic; dividing by n^2 silently admits n = 0, which fails the strict inequality; count the integers",
+      "variant": "integer count in a solution set such as x^2 < 10"
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "During a storm, $2.5$ centimeters of rain fell evenly on a meadow of $3$ hectares. If $1$ hectare is $10{,}000$ square meters and $1$ cubic meter of water has a mass of $1{,}000$ kilograms, what was the total mass of the rain that fell on the meadow, in metric tons? ($1$ metric ton $= 1{,}000$ kilograms)",
+      "choices": [
+        "$7.5$",
+        "$75$",
+        "$750$",
+        "$7{,}500$",
+        "$75{,}000$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Depth $2.5$ cm $= 0.025$ m; area $3 \\times 10{,}000 = 30{,}000$ m$^2$. Volume $= 0.025 \\times 30{,}000 = 750$ m$^3$, a mass of $750{,}000$ kg, which is $750$ metric tons.",
+        "steps": [
+          "1. $2.5$ cm $= 0.025$ m.",
+          "2. $3$ hectares $= 30{,}000$ m$^2$.",
+          "3. Volume: $0.025 \\times 30{,}000 = 750$ m$^3$.",
+          "4. Mass: $750 \\times 1{,}000 = 750{,}000$ kg $= 750$ metric tons."
+        ],
+        "fast": "Each cubic meter of water is exactly 1 metric ton, so the answer is the volume in cubic meters: $0.025 \\times 30{,}000 = 750$.",
+        "trap": "Converting $2.5$ cm as $0.25$ m gives $7{,}500$; as $0.0025$ m gives $75$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "units-conversion",
+          "role": "primary"
+        }
+      ],
+      "setup": "rain depth over a land area gives a water volume, then a mass, through area, length and mass unit changes",
+      "variant": "chained unit conversion"
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "The bib numbers of the five runners on a relay team are consecutive odd integers. The sum of the three smallest bib numbers is $31$ more than the sum of the two largest. What is the largest bib number?",
+      "choices": [
+        "$39$",
+        "$43$",
+        "$45$",
+        "$47$",
+        "$51$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Write the bib numbers as $a, a + 2, a + 4, a + 6, a + 8$. The three smallest sum to $3a + 6$ and the two largest to $2a + 14$. So $3a + 6 = 2a + 14 + 31$, giving $a = 39$, and the largest is $a + 8 = 47$. Check: $39 + 41 + 43 = 123$ and $45 + 47 = 92$; $123 - 92 = 31$.",
+        "steps": [
+          "1. Consecutive odd integers step by 2: $a, a+2, a+4, a+6, a+8$.",
+          "2. $3a + 6 = (2a + 14) + 31$.",
+          "3. $a = 39$; largest $= 47$."
+        ],
+        "fast": "Match the 2nd and 3rd numbers with the 4th and 5th: each pair differs by 4, so those two sum to 8 less than the two largest. The smallest number must make up the 31 plus that 8: $a = 39$, and the largest is $39 + 8 = 47$.",
+        "trap": "Writing the numbers as $a, a + 1, \\dots$ (consecutive integers) gives $3a + 3 = 2a + 38$, $a = 35$ and a largest of 39; answering with the smallest number, 39, is the other slip."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-age-sum",
+          "role": "primary"
+        }
+      ],
+      "setup": "consecutive odd integers; one partial sum exceeds another by a given amount; translate into one equation in the smallest term",
+      "variant": "consecutive-number sums"
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "On a map with a coordinate grid in kilometers, a wetland reserve is the convex quadrilateral $PQRS$ with vertices $P(0, 0)$, $Q(8, 2)$, $R(6, 8)$ and $S(k, 6)$. If the reserve has an area of $40$ square kilometers, what is the value of $k$?",
+      "choices": [
+        "$-1$",
+        "$1$",
+        "$4$",
+        "$8$",
+        "$21$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Split $PQRS$ along diagonal $PR$. Triangle $PQR$ has area $\\tfrac12|8 \\cdot 8 - 6 \\cdot 2| = 26$, so triangle $PRS$ must have area $14$: $\\tfrac12|6 \\cdot 6 - 8k| = 14$, so $|36 - 8k| = 28$ and $k = 1$ or $k = 8$. For the quadrilateral to be convex, $S$ must lie on the opposite side of line $PR$ from $Q$. Line $PR$ is $y = \\tfrac43 x$, and $Q$ lies below it, so $S$ must lie above it: $6 > \\tfrac43 k$, $k < 4.5$. Only $k = 1$ works.",
+        "steps": [
+          "1. Area of $PQR$ (vertex at the origin): $\\tfrac12|x_Q y_R - x_R y_Q| = \\tfrac12|64 - 12| = 26$.",
+          "2. Area of $PRS$: $\\tfrac12|6 \\cdot 6 - k \\cdot 8| = 40 - 26 = 14$, so $36 - 8k = \\pm 28$: $k = 1$ or $k = 8$.",
+          "3. $Q(8, 2)$ is below $y = \\tfrac43 x$; a convex $PQRS$ needs $S$ above it: $6 > \\tfrac43 k$.",
+          "4. $k = 1$ ($k = 8$ puts $S$ below the line, on $Q$'s side)."
+        ],
+        "fast": "Shoelace in the order $P, Q, R, S$: $\\tfrac12(0 + 52 + (36 - 8k) + 0) = 44 - 4k = 40$, so $k = 1$, provided the order is counterclockwise, which a quick sketch confirms.",
+        "trap": "Accepting $k = 8$ from the absolute value: that $S$ lies on the same side of $PR$ as $Q$, and the quadrilateral $PQRS$ then crosses itself. Taking the shoelace value with the wrong sign, $4k - 44 = 40$, gives $21$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "geometry-coordinate",
+          "role": "primary"
+        }
+      ],
+      "setup": "convex quadrilateral with one vertex coordinate unknown and the area given; split by a diagonal, the absolute value gives two positions and convexity rejects one",
+      "variant": "area of a polygon from its vertex coordinates"
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "The number $x$ satisfies $x^2 + \\dfrac{1}{x^2} = 14$. Which of the following could be the value of $x + \\dfrac1x$?\n\nIndicate all such values.",
+      "choices": [
+        "$-4$",
+        "$-2\\sqrt{3}$",
+        "$2\\sqrt{3}$",
+        "$\\sqrt{14}$",
+        "$4$",
+        "$12$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "$\\left(x + \\tfrac1x\\right)^2 = x^2 + 2 + \\tfrac1{x^2} = 14 + 2 = 16$, so $x + \\tfrac1x = 4$ or $-4$. Both occur: $x = 2 + \\sqrt3$ gives $4$, and $x = -2 - \\sqrt3$ gives $-4$. The values $\\pm 2\\sqrt3$ belong to $x - \\tfrac1x$, whose square is $14 - 2 = 12$.",
+        "steps": [
+          "1. Square the unknown: $\\left(x + \\tfrac1x\\right)^2 = x^2 + \\tfrac1{x^2} + 2 = 16$.",
+          "2. $x + \\tfrac1x = \\pm 4$.",
+          "3. Both signs are reachable: if $x$ works, so does $-x$, which flips the sign of $x + \\tfrac1x$.",
+          "4. Select $-4$ and $4$."
+        ],
+        "fast": "Replacing $x$ by $-x$ leaves $x^2 + \\tfrac1{x^2}$ unchanged and negates $x + \\tfrac1x$, so the answers come in a $\\pm$ pair: $\\pm\\sqrt{16}$.",
+        "trap": "Keeping only the positive root 4; or subtracting the 2 instead of adding it, which gives $\\pm\\sqrt{12} = \\pm 2\\sqrt3$, the values of $x - \\tfrac1x$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "algebraic-expressions",
+          "role": "primary"
+        }
+      ],
+      "setup": "x^2 + 1/x^2 given; recover x + 1/x by squaring back, with both signs possible",
+      "variant": "an expression's value from a related expression (x + 1/x given)",
+      "revisits": "quant-002:s1q8"
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 3,
+      "prompt": "A block of glacier ice cut for study is a rectangular solid. Three of its faces that meet at one corner have areas of $24$, $32$ and $48$ square centimeters. What is the volume of the block, in cubic centimeters?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "192"
+      },
+      "explanation": {
+        "key": "With edges $a$, $b$, $c$, the faces are $ab = 24$, $bc = 32$ and $ca = 48$. Their product is $(abc)^2 = 24 \\cdot 32 \\cdot 48 = 36{,}864$, so the volume is $abc = 192$. (The edges are $6$, $4$ and $8$.)",
+        "steps": [
+          "1. $ab \\cdot bc \\cdot ca = (abc)^2$.",
+          "2. $24 \\cdot 32 \\cdot 48 = 36{,}864 = 192^2$.",
+          "3. Volume $= 192$ cubic centimeters."
+        ],
+        "fast": "Find the edges: $\\tfrac{ab \\cdot ca}{bc} = a^2 = 36$, so $a = 6$, then $b = 4$, $c = 8$; $6 \\cdot 4 \\cdot 8 = 192$.",
+        "trap": "Multiplying the three face areas without taking the square root ($36{,}864$), or adding them."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "solids-volume",
+          "role": "primary"
+        }
+      ],
+      "setup": "rectangular solid with the three face areas at one corner given; the volume is the square root of their product",
+      "variant": "rectangular solid: faces, volume, diagonal"
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "numeric",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 3,
+      "prompt": "The number of species R nests with 4 eggs is what percent less than the number of species T nests with 4 eggs?\n\nEnter the percent as a number (for $25\\%$, enter 25).",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "40"
+      },
+      "explanation": {
+        "key": "Species R has 9 nests with 4 eggs and species T has 15. \"Less than the T count\" makes 15 the base: $\\tfrac{15 - 9}{15} = \\tfrac{6}{15} = 40\\%$.",
+        "steps": [
+          "1. Read the 4-egg row: R $= 9$, T $= 15$.",
+          "2. Difference $6$; base is the count being compared against, $15$.",
+          "3. $\\tfrac{6}{15} = 0.4$: enter 40."
+        ],
+        "fast": "$9$ is $\\tfrac35$ of $15$, so it is $40\\%$ less.",
+        "trap": "Dividing by the smaller count, $\\tfrac69 \\approx 67\\%$, answers how much greater T is than R."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: percent less between two groups' counts, with the larger count as the base",
+      "variant": "a ratio between two categories in different graphs",
+      "revisits": "quant-002:s1q11"
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 4,
+      "prompt": "What is the median number of eggs per nest for the species T nests?",
+      "choices": [
+        "$3$",
+        "$3.5$",
+        "$4$",
+        "$6$",
+        "$12$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Species T has $2 + 6 + 12 + 15 + 5 = 40$ nests, so the median is the mean of the 20th and 21st values in order. Running totals: 2 nests with 1 egg, 8 with at most 2, 20 with at most 3. So the 20th value is 3 and the 21st is 4, and the median is $3.5$.",
+        "steps": [
+          "1. 40 nests: the median averages the 20th and 21st values.",
+          "2. Cumulative counts: $2, 8, 20, 35, 40$.",
+          "3. The 20th value is the last 3; the 21st is the first 4.",
+          "4. Median $= \\tfrac{3 + 4}{2} = 3.5$."
+        ],
+        "fast": "Exactly half the T nests (20 of 40) have at most 3 eggs, so the median sits halfway between 3 and 4.",
+        "trap": "Taking the middle row of the table (3), or the median of the counts in the column (6), instead of the median of the 40 egg numbers."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "frequency-distributions",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: median of one group from a frequency table where the two middle values fall in adjacent rows",
+      "variant": "median from a frequency table"
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "mc",
+      "setId": "di1",
+      "figureId": "fig1",
+      "difficulty": 5,
+      "prompt": "One nest is chosen at random from all the nests, of either species, that have 3 or 4 eggs. What is the probability that the chosen nest belongs to species R or has exactly 3 eggs?",
+      "choices": [
+        "$\\dfrac{23}{50}$",
+        "$\\dfrac{13}{20}$",
+        "$\\dfrac{7}{10}$",
+        "$\\dfrac{37}{50}$",
+        "$\\dfrac{49}{50}$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The pool is the 3- and 4-egg rows: $14 + 9 + 12 + 15 = 50$ nests. Species R contributes $14 + 9 = 23$; nests with 3 eggs number $14 + 12 = 26$; the 14 species R nests with 3 eggs are in both. So $23 + 26 - 14 = 35$ nests qualify, and the probability is $\\tfrac{35}{50} = \\tfrac{7}{10}$.",
+        "steps": [
+          "1. Pool: rows 3 and 4, both species: 50 nests.",
+          "2. Species R in the pool: 23. With 3 eggs: 26. Both: 14.",
+          "3. Either: $23 + 26 - 14 = 35$.",
+          "4. $\\tfrac{35}{50} = \\tfrac7{10}$."
+        ],
+        "fast": "Count the complement: species T nests with 4 eggs, 15 of 50. $1 - \\tfrac{15}{50} = \\tfrac7{10}$.",
+        "trap": "Adding 23 and 26 without removing the 14 nests counted twice gives $\\tfrac{49}{50}$; using all 80 nests as the pool gives $\\tfrac{40 + 12}{80} = \\tfrac{13}{20}$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-conditional",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: one pick from a restricted part of a frequency table; P(one group or one value) with the overlap counted once",
+      "variant": "P(A or B) with overlap"
+    },
+    {
+      "id": "s2q1",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "$n$ is an integer greater than $1$.",
+      "qc": {
+        "a": "$(-2)^n + (-3)^n$",
+        "b": "$(-5)^n$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "For every $n > 1$, $2^n + 3^n < 5^n$. If $n$ is even, all three powers are positive: A $= 2^n + 3^n$ is less than B $= 5^n$ ($n = 2$: $13 < 25$). If $n$ is odd, all three are negative: A $= -(2^n + 3^n)$ and B $= -5^n$, and negating reverses the order, so A is greater ($n = 3$: $-35 > -125$). The answer is D.",
+        "steps": [
+          "1. $n = 2$: A $= 4 + 9 = 13$, B $= 25$. B is greater.",
+          "2. $n = 3$: A $= -8 - 27 = -35$, B $= -125$. A is greater.",
+          "3. Two different outcomes: D."
+        ],
+        "fast": "A negative base makes the sign follow the parity of $n$; with both sides negative for odd $n$, the smaller magnitude is the larger number.",
+        "trap": "Testing only an even $n$ (answer B), or reasoning that $2^n + 3^n < 5^n$ settles it for every $n$, without seeing that for odd $n$ both sides are negative and the order flips."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponents-roots",
+          "role": "primary"
+        }
+      ],
+      "setup": "sum of two powers with negative bases against the power of the negative sum; the exponent's parity decides the signs and flips the order",
+      "variant": "bases between 0 and 1 or negative bases"
+    },
+    {
+      "id": "s2q2",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "Wingspans of adult birds in population P are normally distributed with mean $42$ centimeters and standard deviation $3$ centimeters. Wingspans in population Q are normally distributed with mean $50$ centimeters and standard deviation $5$ centimeters.",
+      "qc": {
+        "a": "The percent of birds in P with wingspans greater than $46.5$ centimeters",
+        "b": "The percent of birds in Q with wingspans greater than $57$ centimeters"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Measure each cutoff in standard deviations. In P, $46.5$ is $\\tfrac{4.5}{3} = 1.5$ standard deviations above the mean; in Q, $57$ is $\\tfrac{7}{5} = 1.4$ standard deviations above the mean. A cutoff fewer standard deviations above the mean leaves a larger share above it, so Quantity B is greater.",
+        "steps": [
+          "1. P: $z = \\tfrac{46.5 - 42}{3} = 1.5$.",
+          "2. Q: $z = \\tfrac{57 - 50}{5} = 1.4$.",
+          "3. The upper tail beyond $z = 1.4$ is larger than beyond $z = 1.5$. Answer B."
+        ],
+        "fast": "Put both cutoffs in SD units: $1.5$ for P, $1.4$ for Q. The lower $z$ has more birds above it.",
+        "trap": "Comparing raw distances: $57$ is $7$ cm above Q's mean, farther than $4.5$ cm, which suggests fewer Q birds clear it and answer A. Q's spread is wider, so in standard deviations its cutoff is the nearer one."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "normal-distribution",
+          "role": "primary"
+        }
+      ],
+      "setup": "two normal populations with different means and standard deviations; the cutoff farther in raw units is nearer in standard deviations; compare upper-tail percents",
+      "variant": "comparing values in two normal distributions (z-scores)"
+    },
+    {
+      "id": "s2q3",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A biologist weighs 10 frogs, no two of which have the same mass. Two more frogs are then weighed, each heavier than every one of the first 10. (For a list with an even number of values, the first and third quartiles are the medians of the lower half and of the upper half of the list.)",
+      "qc": {
+        "a": "The interquartile range of the masses of all 12 frogs",
+        "b": "The interquartile range of the masses of the first 10 frogs"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Order the first 10 masses $m_1 < m_2 < \\dots < m_{10}$. With 10 values each half has 5, so $Q_1 = m_3$ and $Q_3 = m_8$. With 12 values each half has 6 and the two new frogs are the 11th and 12th values, so $Q_1 = \\tfrac{m_3 + m_4}{2}$ and $Q_3 = \\tfrac{m_9 + m_{10}}{2}$. Both quartiles move up, by amounts set by the gaps. Masses $1, 2, \\dots, 10$: IQR $5$ before and $6$ after (A greater). Masses $1, 2, 3, 100, 101, \\dots, 106$: IQR $101$ before and $105.5 - 51.5 = 54$ after (B greater). The answer is D.",
+        "steps": [
+          "1. First 10: $Q_1 = m_3$, $Q_3 = m_8$.",
+          "2. All 12: $Q_1 = \\tfrac{m_3 + m_4}{2}$, $Q_3 = \\tfrac{m_9 + m_{10}}{2}$.",
+          "3. $Q_3$ rises by $\\tfrac{(m_9 - m_8) + (m_{10} - m_8)}{2}$; $Q_1$ rises by $\\tfrac{m_4 - m_3}{2}$.",
+          "4. Either rise can be the larger: D."
+        ],
+        "fast": "Adding at the top shifts the lower half upward too: $Q_1$ moves halfway into the gap between the 3rd and 4th masses, which can be as large as you like.",
+        "trap": "Reasoning that heavier additions can only stretch the spread, so the IQR must grow (A). The first quartile also moves up, and if the gap after the 3rd mass is large it moves more than the third quartile does."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quartiles-boxplots",
+          "role": "primary"
+        }
+      ],
+      "setup": "two values above every value of an even-count list are added; both quartiles shift to averages of neighbours; compare the IQRs",
+      "variant": "quartiles of a list with an even count",
+      "revisits": "quant-002:s2q2"
+    },
+    {
+      "id": "s2q4",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "In triangle $ABC$, the exterior angle at vertex $A$ measures more than $130^\\circ$, and the exterior angle at vertex $B$ measures more than $110^\\circ$.",
+      "qc": {
+        "a": "The measure of angle $C$",
+        "b": "$60^\\circ$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "By the exterior angle theorem, the exterior angle at $A$ equals $B + C$ and the exterior angle at $B$ equals $A + C$. So $B + C > 130$ and $A + C > 110$. Adding, $A + B + 2C > 240$; since $A + B + C = 180$, this is $180 + C > 240$, so $C > 60$. Quantity A is greater.",
+        "steps": [
+          "1. Exterior at $A$: $B + C > 130$.",
+          "2. Exterior at $B$: $A + C > 110$.",
+          "3. Add: $(A + B + C) + C > 240$, so $C > 60$. Answer A."
+        ],
+        "fast": "The interior angles at $A$ and $B$ are less than $50^\\circ$ and $70^\\circ$, so together less than $120^\\circ$, leaving more than $60^\\circ$ for $C$.",
+        "trap": "Treating the bounds as exact: exterior angles of $130^\\circ$ and $110^\\circ$ give $C = 60^\\circ$ and answer C. The inequalities are strict, so $C$ is always more than $60^\\circ$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "primary"
+        }
+      ],
+      "setup": "lower bounds on two exterior angles of a triangle; add the two exterior-angle relations to bound the third interior angle",
+      "variant": "exterior angle theorem"
+    },
+    {
+      "id": "s2q5",
+      "section": 2,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A wildlife survey plot is a square whose side length $s$, in meters, is chosen at random from the interval $2 \\le s \\le 6$, so that every part of the interval of a given length is equally likely to contain $s$.",
+      "qc": {
+        "a": "The probability that the plot's area is less than $16$ square meters",
+        "b": "The probability that the plot's area is greater than $20$ square meters"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Translate each area condition into one on $s$, which is the uniform quantity. Area $< 16$ means $s < 4$: probability $\\tfrac{4 - 2}{6 - 2} = \\tfrac12$. Area $> 20$ means $s > \\sqrt{20} \\approx 4.47$: probability $\\tfrac{6 - 4.47}{4} \\approx 0.38$. Quantity A is greater.",
+        "steps": [
+          "1. $s^2 < 16 \\iff s < 4$: length $2$ out of $4$, probability $\\tfrac12$.",
+          "2. $s^2 > 20 \\iff s > \\sqrt{20} \\approx 4.47$: length about $1.53$ out of $4$, probability about $0.38$.",
+          "3. $0.5 > 0.38$. Answer A."
+        ],
+        "fast": "Since $\\sqrt{20} > 4$ is more than $\\tfrac12$ unit past the midpoint, B is clearly under one half, while A is exactly one half.",
+        "trap": "Treating the area as uniform from $4$ to $36$: then A would be $\\tfrac{12}{32} = 0.375$ and B $\\tfrac{16}{32} = 0.5$, answer B. The side is uniform; its square is not."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "random-variables",
+          "role": "primary"
+        }
+      ],
+      "setup": "a length uniform on an interval; probabilities about its square found by converting back to the length (the square is not uniform)",
+      "variant": "a uniform distribution over an interval"
+    },
+    {
+      "id": "s2q6",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "For a certain integer $n$ less than $30$, the sum of all the integers from $n$ to $30$, inclusive, is $30$. How many integers are in this list?",
+      "choices": [
+        "$30$",
+        "$31$",
+        "$59$",
+        "$60$",
+        "$61$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "A sum of only 30 means the list reaches into the negatives. The integers from $n$ to $-n$ cancel in pairs with their opposites (sum 0), so the integers left over, from $-n + 1$ to $30$, must add to 30. A run of positive integers ending at 30 with sum 30 is just $\\{30\\}$, so $-n + 1 = 30$ and $n = -29$. The list $-29, -28, \\dots, 30$ has $30 - (-29) + 1 = 60$ integers.",
+        "steps": [
+          "1. Pair each negative with its opposite: $-29$ with $29$, …, $-1$ with $1$; with 0 these contribute 0.",
+          "2. What remains must be the 30 alone, so the list starts at $-29$.",
+          "3. Count: $30 - (-29) + 1 = 60$."
+        ],
+        "fast": "Sum $=$ (number of terms) $\\times$ (average); with $n = -29$ the average is $\\tfrac12$, and $60 \\times \\tfrac12 = 30$ checks.",
+        "trap": "Subtracting the endpoints, $30 - (-29) = 59$, forgets the $+1$ of an inclusive count; starting the list at $-30$ (61 terms) makes the sum 0."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "integers-properties",
+          "role": "primary"
+        }
+      ],
+      "setup": "a run of consecutive integers ending at a given positive number has a small given sum; negatives cancel their opposites, which fixes the start; count the terms",
+      "variant": "consecutive integers: sum, product or count in a range"
+    },
+    {
+      "id": "s2q7",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "In the $xy$-plane, the lines $ax + 2y = 8$ and $18x + ay = 24$, where $a$ is a constant, have no point in common. Together, the two lines cross the $x$-axis and the $y$-axis at four points. What is the area of the quadrilateral that has these four points as its vertices?",
+      "choices": [
+        "$\\dfrac{16}{3}$",
+        "$8$",
+        "$\\dfrac{32}{3}$",
+        "$16$",
+        "$\\dfrac{64}{3}$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "No common point means the lines are parallel and distinct. Parallel needs $\\tfrac{a}{18} = \\tfrac{2}{a}$, so $a^2 = 36$ and $a = \\pm 6$. For $a = 6$, the second equation $18x + 6y = 24$ is 3 times the first, $6x + 2y = 8$: the same line, so $a = 6$ fails. For $a = -6$ the lines are $y = 3x + 4$ and $y = 3x - 4$. Their intercepts are $\\left(-\\tfrac43, 0\\right)$, $(0, 4)$, $\\left(\\tfrac43, 0\\right)$ and $(0, -4)$. The quadrilateral's diagonals lie along the axes, with lengths $\\tfrac83$ and $8$, and are perpendicular, so its area is $\\tfrac12 \\cdot \\tfrac83 \\cdot 8 = \\tfrac{32}{3}$.",
+        "steps": [
+          "1. Parallel: $\\tfrac{a}{18} = \\tfrac{2}{a}$, $a = \\pm 6$.",
+          "2. $a = 6$: the equations describe one line (infinitely many common points). So $a = -6$.",
+          "3. $-6x + 2y = 8$: intercepts $\\left(-\\tfrac43, 0\\right)$, $(0, 4)$. $18x - 6y = 24$: intercepts $\\left(\\tfrac43, 0\\right)$, $(0, -4)$.",
+          "4. Diagonals $\\tfrac83$ (on the $x$-axis) and $8$ (on the $y$-axis), perpendicular: area $\\tfrac12 \\cdot \\tfrac83 \\cdot 8 = \\tfrac{32}3$."
+        ],
+        "fast": "The four intercepts sit symmetrically on the axes at $\\pm\\tfrac43$ and $\\pm 4$: a rhombus with area $2 \\cdot \\tfrac43 \\cdot 4 = \\tfrac{32}3$.",
+        "trap": "Taking $\\tfrac83 \\cdot 8$ without the $\\tfrac12$ gives $\\tfrac{64}{3}$; stopping at $a = 6$ leaves only one line and two intercepts, so no quadrilateral."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "linear-equations",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "geometry-coordinate",
+          "role": "secondary"
+        }
+      ],
+      "setup": "a 2x2 system with no solution fixes the constant (one root makes the lines coincide); the axis intercepts of the two parallel lines form a quadrilateral whose area comes from its perpendicular diagonals",
+      "variant": "a system with no solution or infinitely many",
+      "revisits": "quant-002:s2q15"
+    },
+    {
+      "id": "s2q8",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A snowflake design starts from a regular hexagon with an area of $48$ square centimeters. The midpoints of the hexagon's six sides are joined in order to form a smaller hexagon. What is the area of the smaller hexagon, in square centimeters?",
+      "choices": [
+        "$24$",
+        "$27$",
+        "$32$",
+        "$36$",
+        "$40$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Let the large hexagon have side $s$. Each corner region cut off by the small hexagon is a triangle with two sides $\\tfrac s2$ and the hexagon's $120^\\circ$ angle between them. Splitting it by the altitude from that vertex gives two $30$-$60$-$90$ triangles, so its third side, a side of the small hexagon, is $\\tfrac s2 \\cdot \\sqrt3$. Both figures are regular hexagons, so the area ratio is $\\left(\\tfrac{\\sqrt3}{2}\\right)^2 = \\tfrac34$, and the small hexagon's area is $\\tfrac34 \\cdot 48 = 36$.",
+        "steps": [
+          "1. Corner triangle: sides $\\tfrac s2$, $\\tfrac s2$, angle $120^\\circ$ between them.",
+          "2. Its base is $2 \\cdot \\tfrac s2 \\sin 60^\\circ = \\tfrac{\\sqrt3}{2} s$: the small hexagon's side.",
+          "3. Area ratio $\\tfrac34$; area $36$."
+        ],
+        "fast": "Split the large hexagon from its center into 6 equilateral triangles of area 8. Each corner triangle has two sides half as long as that triangle's sides and an angle twice as wide, so its area is $\\tfrac14$ of $8$ (half the base times half the side, same sine): $2$. Six corners: $12$. $48 - 12 = 36$.",
+        "trap": "Using the square's rule, where joining midpoints halves the area, gives $24$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "polygons-quadrilaterals",
+          "role": "primary"
+        }
+      ],
+      "setup": "midpoints of a regular hexagon's sides form a smaller hexagon; the cut-off corner triangles with a 120-degree angle give the side ratio; compare areas",
+      "variant": "a regular hexagon split into triangles"
+    },
+    {
+      "id": "s2q9",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "The area covered by algae in each of two ponds grows by a constant factor every day, though the factor for one pond need not equal the factor for the other. Pond P had $50$ square meters of algae on day 2 and $200$ square meters on day 6. Pond Q had $20$ square meters on day 2 and $180$ square meters on day 6. On day 0, the algae area in pond P was how many times the algae area in pond Q?",
+      "choices": [
+        "$\\dfrac{10}{9}$",
+        "$\\dfrac{5}{2}$",
+        "$\\dfrac{15}{4}$",
+        "$\\dfrac{9}{2}$",
+        "$\\dfrac{45}{8}$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Over the 4 days from day 2 to day 6, P grew by a factor of $4$ and Q by a factor of $9$. So over any 2 days P grows by $\\sqrt4 = 2$ and Q by $\\sqrt9 = 3$. Going back 2 days from day 2: P had $\\tfrac{50}{2} = 25$ and Q had $\\tfrac{20}{3}$ square meters. The ratio is $25 \\div \\tfrac{20}{3} = \\tfrac{15}{4}$.",
+        "steps": [
+          "1. 4-day factors: P $\\tfrac{200}{50} = 4$, Q $\\tfrac{180}{20} = 9$.",
+          "2. 2-day factors: $2$ and $3$.",
+          "3. Day 0: P $= 25$, Q $= \\tfrac{20}{3}$.",
+          "4. Ratio $\\tfrac{25}{20/3} = \\tfrac{15}{4}$."
+        ],
+        "fast": "The ratio P/Q is $\\tfrac52$ on day 2 and shrinks by the factor $\\tfrac23$ every 2 days (P gains 2 while Q gains 3), so on day 0 it was $\\tfrac52 \\cdot \\tfrac32 = \\tfrac{15}4$.",
+        "trap": "Dividing by the 4-day factors to step back only 2 days gives $\\tfrac{12.5}{20/9} = \\tfrac{45}{8}$; using the day-2 ratio $\\tfrac{50}{20}$ gives $\\tfrac52$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponential-growth",
+          "role": "primary"
+        }
+      ],
+      "setup": "two exponential models each known at the same two times; the factor for half the gap is the square root; extrapolate both back and compare",
+      "variant": "comparing two exponential models"
+    },
+    {
+      "id": "s2q10",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 3,
+      "figureId": "fig3",
+      "prompt": "Each point in the scatterplot shows one weather station's average July temperature in Year 1 (horizontal axis) and in Year 2 (vertical axis). For how many of the 12 stations was the average July temperature higher in Year 2 than in Year 1?",
+      "choices": [
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$",
+        "$8$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "A station was warmer in Year 2 when its vertical coordinate exceeds its horizontal one, that is, when its point lies above the diagonal line $y = x$. The points $(19, 22)$, $(21, 24)$, $(23, 26)$, $(25, 28)$ and $(28, 30)$ qualify: 5 stations. The other 7 points lie below the diagonal.",
+        "steps": [
+          "1. Higher in Year 2 means $y > x$: above the line $y = x$.",
+          "2. Read each point; five have $y > x$.",
+          "3. Answer 5."
+        ],
+        "fast": "Lay a straightedge from $(18, 18)$ to $(30, 30)$ and count the points above it.",
+        "trap": "Counting the points below the diagonal, 7, which are the stations warmer in Year 1; or judging by height alone (the 6 highest points)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-tables-graphs",
+          "role": "primary"
+        }
+      ],
+      "setup": "scatterplot of the same units measured in two years; count the points above the line y = x",
+      "variant": "a scatterplot: counting points or reading a trend line"
+    },
+    {
+      "id": "s2q11",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A comet is visible from a certain observatory in year 3 and then every 7 years after that (years 3, 10, 17, and so on). A meteor shower is unusually strong there in year 5 and then every 4 years after that (years 5, 9, 13, and so on). In how many of the years from 100 through 500, inclusive, do both events occur?",
+      "choices": [
+        "$14$",
+        "$15$",
+        "$16$",
+        "$17$",
+        "$18$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Comet years are 3 more than a multiple of 7; shower years are 1 more than a multiple of 4. The first year on both lists is 17, and after that the shared years repeat every $\\text{lcm}(7, 4) = 28$ years: $17 + 28k$. The first one in the window is $17 + 28 \\cdot 3 = 101$ and the last is $17 + 28 \\cdot 17 = 493$ (the next, 521, is past 500). That is $k = 3$ through $17$: $15$ years.",
+        "steps": [
+          "1. Comet: 3, 10, 17, 24, …; shower: 5, 9, 13, 17, …: first shared year 17.",
+          "2. Shared years form an arithmetic sequence with difference 28: $17 + 28k$.",
+          "3. $100 \\le 17 + 28k \\le 500$: $k = 3, 4, \\dots, 17$.",
+          "4. $17 - 3 + 1 = 15$."
+        ],
+        "fast": "Shared years below 100: 17, 45, 73 (three). Shared years up to 500: $1 + \\left\\lfloor \\tfrac{483}{28} \\right\\rfloor = 18$. $18 - 3 = 15$.",
+        "trap": "Estimating $\\tfrac{400}{28} \\approx 14.3$ and answering 14; or counting every shared year from 17 to 500 (18)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "sequences-patterns",
+          "role": "primary"
+        }
+      ],
+      "setup": "two arithmetic sequences with different differences and starts; their common terms form an arithmetic sequence with the lcm as difference; count those inside a window that does not start at the first term",
+      "variant": "arithmetic sequence: n-th term, sum, count of terms"
+    },
+    {
+      "id": "s2q12",
+      "section": 2,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "On a ranger's map grid, a patrol zone is the set of all points $(x, y)$ with $2|x| \\le y \\le 6$. A marker is placed at every point of the zone whose coordinates are both integers. How many markers are placed?",
+      "choices": [
+        "$13$",
+        "$16$",
+        "$25$",
+        "$28$",
+        "$49$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "For each integer $y$ from 0 to 6, the zone allows $|x| \\le \\tfrac y2$. Row by row: $y = 0$: 1 point; $y = 1$: 1 (only $x = 0$); $y = 2$: 3; $y = 3$: 3; $y = 4$: 5; $y = 5$: 5; $y = 6$: 7. Total $25$.",
+        "steps": [
+          "1. The zone is a triangle with vertices $(0, 0)$, $(-3, 6)$, $(3, 6)$.",
+          "2. In row $y$, the integers $x$ with $|x| \\le \\tfrac y2$ number $2\\left\\lfloor \\tfrac y2 \\right\\rfloor + 1$.",
+          "3. $1 + 1 + 3 + 3 + 5 + 5 + 7 = 25$."
+        ],
+        "fast": "Rows pair up: $(0, 1)$, $(2, 3)$, $(4, 5)$ give $2 + 6 + 10$, plus 7 for $y = 6$.",
+        "trap": "Reading the condition as $|x| \\le y$ gives $1 + 3 + \\dots + 13 = 49$; counting only the even rows gives 16; leaving out boundary points gives 13."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "coordinate-geometry",
+          "role": "primary"
+        }
+      ],
+      "setup": "a V-shaped region bounded above by a horizontal line; count the lattice points row by row, odd rows rounding the half-width down",
+      "variant": "a region defined by inequalities in the plane"
+    },
+    {
+      "id": "s2q13",
+      "section": 2,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "If $0 < a < b$, which of the following must be greater than $\\dfrac ab$?\n\nIndicate all such expressions.",
+      "choices": [
+        "$\\dfrac{a+1}{b+1}$",
+        "$\\left(\\dfrac{a}{b}\\right)^2$",
+        "$\\dfrac{a-1}{b-1}$",
+        "$\\sqrt{\\dfrac{a}{b}}$",
+        "$\\dfrac{2a}{a+b}$",
+        "$\\dfrac{a}{b+1}$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "$\\tfrac ab$ is between 0 and 1. (A) Adding the same positive amount to both parts of a fraction below 1 moves it toward 1: $\\tfrac{a+1}{b+1} - \\tfrac ab = \\tfrac{b - a}{b(b+1)} > 0$. Must. (B) Squaring a number between 0 and 1 makes it smaller. No. (C) For $1 < a < b$ it is smaller ($\\tfrac{2 - 1}{3 - 1} = \\tfrac12 < \\tfrac23$), though for $a < b < 1$ it exceeds 1. Not must. (D) The square root of a number between 0 and 1 is larger. Must. (E) $\\tfrac{2a}{a+b} > \\tfrac ab \\iff 2b > a + b \\iff b > a$. Must. (F) A larger denominator makes it smaller. No.",
+        "steps": [
+          "1. Let $r = \\tfrac ab$, with $0 < r < 1$.",
+          "2. (A) $\\tfrac{a+1}{b+1} - r = \\tfrac{b - a}{b(b+1)} > 0$: yes.",
+          "3. (B) $r^2 < r$: no. (D) $\\sqrt r > r$: yes.",
+          "4. (C) $a = 2, b = 3$: $\\tfrac12 < \\tfrac23$: not always.",
+          "5. (E) cross-multiply: $2ab > a(a + b) \\iff b > a$: yes. (F) $\\tfrac{a}{b+1} < \\tfrac ab$: no."
+        ],
+        "fast": "Try $a = 2$, $b = 3$ ($r = \\tfrac23$): (A) $\\tfrac34$, (B) $\\tfrac49$, (C) $\\tfrac12$, (D) $0.82$, (E) $\\tfrac45$, (F) $\\tfrac12$. Then prove A, D, E in general.",
+        "trap": "Testing only $a < b < 1$, where (C) exceeds $\\tfrac ab$; or thinking a square root of a fraction is smaller than the fraction."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "fractions-decimals",
+          "role": "primary"
+        }
+      ],
+      "setup": "a fraction between 0 and 1 with unknown parts; which transformed fractions must exceed it (the same amount added to or taken from both parts, square, root, a mixed form)",
+      "variant": "ordering fractions with unknowns or near-equal values"
+    },
+    {
+      "id": "s2q14",
+      "section": 2,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "A rectangular nesting enclosure has two opposite sides that are each $10$ meters long. It is rebuilt as a new rectangle using exactly the same length of fence: those two sides are each lengthened by $50$ percent, to $15$ meters, and the other two sides are each shortened by $5$ meters so that the perimeter is unchanged. Which of the following could be the percent change in the area of the enclosure?\n\nIndicate all such percents.",
+      "choices": [
+        "$-90\\%$",
+        "$-20\\%$",
+        "$0\\%$",
+        "$25\\%$",
+        "$50\\%$",
+        "$75\\%$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Let the other two sides be $W$ meters, with $W > 5$ so they can lose 5 meters. The area goes from $10W$ to $15(W - 5)$, a change of $\\tfrac{15(W - 5) - 10W}{10W} = \\tfrac12 - \\tfrac{7.5}{W}$. As $W$ runs from just above 5 to as large as you like, this takes every value strictly between $-1$ and $\\tfrac12$: any percent change strictly between $-100\\%$ and $+50\\%$. That allows $-90\\%$, $-20\\%$, $0\\%$ and $25\\%$, but not $50\\%$ or $75\\%$.",
+        "steps": [
+          "1. Old area $10W$; new area $15(W - 5)$, with $W > 5$.",
+          "2. Percent change $= \\left(\\tfrac12 - \\tfrac{7.5}{W}\\right) \\times 100\\%$, which rises toward $+50\\%$ as $W$ grows but never reaches it.",
+          "3. Examples: $W = 15$ gives $0\\%$; $W = 30$ gives $+25\\%$; $W = \\tfrac{75}{7}$ gives $-20\\%$; $W = \\tfrac{75}{14}$ gives $-90\\%$.",
+          "4. $+50\\%$ would need $\\tfrac{7.5}{W} = 0$, impossible; $+75\\%$ is beyond it."
+        ],
+        "fast": "The new area is $1.5$ times the old one minus $75$ square meters, so the area grows by less than $50\\%$, and it can shrink almost to nothing when $W$ is just over 5.",
+        "trap": "Allowing $+50\\%$ because one pair of sides grew by $50\\%$: the shortened sides always take something away, so $+50\\%$ is a bound that is never reached."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "area-perimeter",
+          "role": "primary"
+        }
+      ],
+      "setup": "one pair of sides of known length scaled by a percent at a fixed perimeter, the other pair unknown; the percent change in area is one expression in the unknown side, bounded by an unreachable limit; select the possible percent changes",
+      "variant": "the effect of scaling a side on the area"
+    },
+    {
+      "id": "s2q15",
+      "section": 2,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "Two observers counted meteors during several hours of a meteor shower. Observer 1's hourly counts were $3$, $6$, $6$, $9$ and $x$; observer 2's hourly counts were $4$, $8$, $8$ and $12$. In the combined list of all nine counts, $8$ is the only mode and the range is $9$. If $x$ is a positive integer, what is the value of $x$?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "8"
+      },
+      "explanation": {
+        "key": "Without $x$, the counts 6 and 8 each appear twice, so 8 is not yet the only mode. Only $x = 8$ breaks the tie in 8's favor ($x = 6$ would make 6 the mode, and any other value leaves the tie). The range condition is already met by the known counts, which run from 3 (observer 1) to 12 (observer 2), and $x = 8$ keeps it at 9.",
+        "steps": [
+          "1. Combined known counts: $3, 4, 6, 6, 8, 8, 9, 12$. 6 and 8 tie.",
+          "2. Only mode 8: $x = 8$.",
+          "3. Check the range: $12 - 3 = 9$. So $x = 8$."
+        ],
+        "fast": "The range is already 9 across both observers, so only the mode constrains $x$: it must break the 6-8 tie, so $x = 8$.",
+        "trap": "Using the range on observer 1's counts alone (3 to 9) and setting $x = 12$ to stretch it to 9; across both lists 12 is already the maximum, and $x = 12$ leaves 6, 8 and 12 tied as modes."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "primary"
+        }
+      ],
+      "setup": "two lists combined, one unknown; the unique-mode condition breaks a tie and forces the unknown, while the range condition is already met across both lists (a one-list reading of it is the trap)",
+      "variant": "mode and range of a combined list"
+    }
+  ]
+}
