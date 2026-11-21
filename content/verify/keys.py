@@ -10,6 +10,8 @@ Use in content/verify/<id>.py (run by `npm run -s check -- <id>`; example: quant
     t.sel("s1q8", [0, 2, 3, 5])        # any choice type: computed indices, or letters ("C", "A C")
     t.value("s1q9", 8 * k)             # numeric entry: int, Fraction or float
     t.choices("s2q11")                 # the choice texts, math $ stripped (\\$ kept as $), to parse yourself
+    number(text)                       # (from keys import number) one choice's value, as t.choice reads it; use it
+                                       # on t.choices(...) for an "approximately" item: pick the nearest choice yourself
     t.done()                           # lists unchecked questions; prints "27/27 keys verified"
 """
 import json

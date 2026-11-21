@@ -1,0 +1,401 @@
+{
+  "id": "quant-018",
+  "measure": "quant",
+  "title": "Quant Hard Mock 18",
+  "sections": [{ "n": 1, "minutes": 21 }, { "n": 2, "minutes": 26 }],
+  "passages": [],
+  "figures": [
+    { "id": "fig1", "caption": "Number of the 80 members of a rowing club by number of outings in each month, January to June",
+      "table": { "head": ["Outings in the month", "Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+        "rows": [
+          ["0", "14", "12", "8", "20", "10", "6"],
+          ["1", "18", "15", "12", "22", "16", "12"],
+          ["2", "22", "18", "18", "14", "17", "18"],
+          ["3", "16", "20", "24", "14", "21", "26"],
+          ["4 or more", "10", "15", "18", "10", "16", "18"]
+        ] } },
+    { "id": "fig2", "caption": "Note: Figure not drawn to scale.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 205' width='300' height='205' font-family='serif' font-size='14'><line x1='103.9' y1='15.1' x2='192.9' y2='179.1' stroke='currentColor' stroke-width='1.5'/><line x1='185.5' y1='34.7' x2='107.1' y2='179.1' stroke='currentColor' stroke-width='1.5'/><line x1='103.9' y1='15.1' x2='185.5' y2='34.7' stroke='currentColor' stroke-width='1.5'/><line x1='107.1' y1='179.1' x2='192.9' y2='179.1' stroke='currentColor' stroke-width='1.5'/><text x='90' y='14' fill='currentColor'>A</text><text x='190' y='32' fill='currentColor'>B</text><text x='94' y='194' fill='currentColor'>C</text><text x='196' y='194' fill='currentColor'>D</text><text x='163' y='104' fill='currentColor'>E</text><text x='113' y='34' fill='currentColor'>48°</text><text x='155' y='44' fill='currentColor'>75°</text><text x='118' y='174' fill='currentColor'>62°</text><text x='170' y='174' fill='currentColor'>y°</text></svg>" },
+    { "id": "fig3", "caption": "Note: Figure not drawn to scale.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 310 200' width='310' height='200' font-family='serif' font-size='14'><line x1='10' y1='40' x2='290' y2='40' stroke='currentColor' stroke-width='1.5'/><line x1='10' y1='170' x2='290' y2='170' stroke='currentColor' stroke-width='1.5'/><line x1='110' y1='40' x2='230' y2='105' stroke='currentColor' stroke-width='1.5'/><line x1='230' y1='105' x2='196' y2='170' stroke='currentColor' stroke-width='1.5'/><text x='104' y='32' fill='currentColor'>A</text><text x='190' y='190' fill='currentColor'>B</text><text x='236' y='110' fill='currentColor'>P</text><text x='148' y='55' fill='currentColor'>x°</text><text x='212' y='165' fill='currentColor'>2x°</text><text x='192' y='114' fill='currentColor'>3x°</text><text x='293' y='44' fill='currentColor' font-style='italic'>ℓ</text><text x='293' y='174' fill='currentColor' font-style='italic'>m</text></svg>" }
+  ],
+  "questions": [
+    { "id": "s1q1", "section": 1, "type": "qc", "difficulty": 3,
+      "prompt": "$x$ is greater than $\\tfrac{1}{2}$ and less than $1$.",
+      "qc": { "a": "$\\dfrac{1}{x} - 1$", "b": "$1 - x$" },
+      "key": { "sel": [0] },
+      "explanation": {
+        "key": "Subtract: $\\left(\\tfrac{1}{x} - 1\\right) - (1 - x) = \\tfrac{1}{x} + x - 2 = \\tfrac{(x - 1)^2}{x}$. For $x$ between $\\tfrac12$ and $1$ this is positive, so Quantity A is greater.",
+        "steps": ["1. A minus B is $\\tfrac{1}{x} + x - 2$.", "2. Over the common denominator, $\\tfrac{x^2 - 2x + 1}{x} = \\tfrac{(x-1)^2}{x}$.", "3. With $x > 0$ and $x \\ne 1$ the difference is positive. Answer A."],
+        "fast": "Try $x = 0.8$: A $= 0.25$, B $= 0.2$; near $\\tfrac12$: A $\\approx 1$, B $\\approx \\tfrac12$. The gap $\\tfrac{(x-1)^2}{x}$ never closes inside the interval.",
+        "trap": "Both quantities shrink toward 0 as $x$ nears 1, which tempts C; the gap shrinks but stays positive because $x = 1$ is excluded."
+      },
+      "tags": [{ "kind": "concept", "id": "number-line-abs", "role": "primary" }],
+      "setup": "a number located strictly between two positive marks; compare the reciprocal minus one with one minus the number (the difference is a square over the number)",
+      "variant": "ordering expressions of a number located between two marks" },
+
+    { "id": "s1q2", "section": 1, "type": "qc", "difficulty": 4,
+      "prompt": "At a school, every student is either a girl or a boy, and the number of girls is $25\\%$ greater than the number of boys.",
+      "qc": { "a": "The percent of the school's students who are boys", "b": "$45\\%$" },
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "Let there be $b$ boys; then there are $1.25b$ girls and $2.25b$ students. The boys' share is $\\tfrac{b}{2.25b} = \\tfrac{4}{9} \\approx 44.4\\%$, whatever $b$ is. Quantity B is greater.",
+        "steps": ["1. Boys $= b$, girls $= 1.25b$, total $= 2.25b$.", "2. Boys' share $= \\tfrac{1}{2.25} = \\tfrac{4}{9}$.", "3. $\\tfrac49 \\approx 44.4\\% < 45\\%$. Answer B."],
+        "fast": "Ratio girls to boys is $5:4$, so boys are $\\tfrac49$ of the school, just under $45\\%$.",
+        "trap": "The base is unknown, which suggests D, but the share does not depend on it. Splitting the 25 percent evenly ($50\\% - 12.5\\%$) gives $37.5\\%$ and answer A."
+      },
+      "tags": [{ "kind": "concept", "id": "percent", "role": "primary" }],
+      "setup": "one group a percent larger than the other with no counts given; the smaller group's share of the whole against a value just above it",
+      "variant": "percent comparisons in QC with unknown bases" },
+
+    { "id": "s1q3", "section": 1, "type": "qc", "difficulty": 4, "figureId": "fig2",
+      "prompt": "In the figure, segments $AD$ and $BC$ intersect at point $E$.",
+      "qc": { "a": "$y$", "b": "$62$" },
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "In triangle $ABE$, angle $AEB = 180 - 48 - 75 = 57^\\circ$. Angle $CED$ is vertical to it, so it is also $57^\\circ$, and in triangle $CDE$, $y = 180 - 57 - 62 = 61$. So $y < 62$, although the figure draws the angles at $C$ and $D$ as equal.",
+        "steps": ["1. Triangle $ABE$: angle $AEB = 57^\\circ$.", "2. Vertical angles: angle $CED = 57^\\circ$.", "3. Triangle $CDE$: $y = 180 - 57 - 62 = 61$.", "4. $61 < 62$. Answer B."],
+        "fast": "Vertical angles at $E$ make the other two angles of each triangle sum to the same total: $48 + 75 = 62 + y$, so $y = 61$.",
+        "trap": "The bottom triangle is drawn isosceles, which suggests C; reading $AB$ and $CD$ as parallel and matching $y$ with an angle at the top gives 48 or 75."
+      },
+      "tags": [{ "kind": "concept", "id": "figures-not-to-scale", "role": "primary" }],
+      "setup": "two triangles joined at a crossing point (a bowtie) with two angles given in one and one in the other; vertical angles make the remaining pairs share a sum; compare the unknown with the angle drawn equal to it",
+      "variant": "angles that only look equal" },
+
+    { "id": "s1q4", "section": 1, "type": "qc", "difficulty": 5,
+      "prompt": "$n$ is a positive integer, and the digits of $\\dfrac{n}{12}$ after the decimal point are $75$ and nothing more.",
+      "qc": { "a": "The remainder when $n$ is divided by $4$", "b": "$3$" },
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "The decimal part of $\\tfrac{n}{12}$ is the remainder over 12: $\\tfrac{r}{12} = 0.75$, so $r = 9$ and $n = 12q + 9$. Since $12q$ is a multiple of 4, $n$ leaves the same remainder as $9$, which is $1$. Quantity B is greater.",
+        "steps": ["1. $\\tfrac{n}{12} = q + 0.75$, so the remainder is $0.75 \\times 12 = 9$.", "2. $n = 12q + 9$, e.g. $9, 21, 33$.", "3. $12q$ is divisible by 4, so $n$ and $9$ share the remainder $1$.", "4. $1 < 3$. Answer B."],
+        "fast": "Test $n = 9$: $\\tfrac{9}{12} = 0.75$ and $9 = 2 \\cdot 4 + 1$.",
+        "trap": "Reading $0.75 = \\tfrac34$ as a remainder of 3 on division by 4 gives C; the fraction $\\tfrac34$ describes $\\tfrac{n}{12}$, not $\\tfrac{n}{4}$."
+      },
+      "tags": [{ "kind": "concept", "id": "remainders-units", "role": "primary" }],
+      "setup": "the decimal part of n over a given divisor fixes the remainder; compare the remainder by a factor of that divisor with the reduced fraction's numerator",
+      "variant": "remainder written as a decimal part (n/d = q.25)" },
+
+    { "id": "s1q5", "section": 1, "type": "mc", "difficulty": 3,
+      "prompt": "Every title in a library's collection is fiction, nonfiction or reference. The ratio of fiction titles to nonfiction titles is $4$ to $3$, and the ratio of reference titles to nonfiction titles is $1$ to $2$. What fraction of the collection is reference titles?",
+      "choices": ["$\\dfrac{1}{10}$", "$\\dfrac{1}{8}$", "$\\dfrac{3}{17}$", "$\\dfrac{1}{5}$", "$\\dfrac{6}{17}$"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Make the nonfiction term match: $4:3 = 8:6$ and $1:2 = 3:6$. So fiction : nonfiction : reference $= 8:6:3$, a total of 17 parts, and reference is $\\tfrac{3}{17}$.",
+        "steps": ["1. Nonfiction appears in both ratios; the least common multiple of 3 and 2 is 6.", "2. Fiction : nonfiction $= 8:6$; reference : nonfiction $= 3:6$.", "3. Total $8 + 6 + 3 = 17$; reference share $\\tfrac{3}{17}$."],
+        "fast": "Scale nonfiction to 6: $8 + 6 + 3 = 17$ parts, 3 of them reference.",
+        "trap": "Joining the ratios as written, $4:3:1$, gives $\\tfrac18$; adding all four numbers gives $\\tfrac{1}{10}$."
+      },
+      "tags": [{ "kind": "concept", "id": "ratio-proportion", "role": "primary" }],
+      "setup": "two ratios that each compare a different kind with the same shared kind (shared term second in both); one kind's fraction of the whole",
+      "variant": "combining two ratios that share a term (a:b and b:c)" },
+
+    { "id": "s1q6", "section": 1, "type": "mc", "difficulty": 4,
+      "prompt": "In the $xy$-plane, exactly two circles lie in the first quadrant, are tangent to both the $x$-axis and the $y$-axis, and pass through the point $(2, 1)$. What is the distance between the centers of these two circles?",
+      "choices": ["$4$", "$4\\sqrt{2}$", "$5$", "$5\\sqrt{2}$", "$6$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "A first-quadrant circle tangent to both axes has center $(r, r)$ and radius $r$. Through $(2, 1)$: $(2 - r)^2 + (1 - r)^2 = r^2$, so $r^2 - 6r + 5 = 0$ and $r = 1$ or $r = 5$. The centers $(1, 1)$ and $(5, 5)$ are $\\sqrt{4^2 + 4^2} = 4\\sqrt{2}$ apart.",
+        "steps": ["1. Tangent to both axes in quadrant I: center $(r, r)$, radius $r$.", "2. $(2-r)^2 + (1-r)^2 = r^2 \\Rightarrow r^2 - 6r + 5 = 0 \\Rightarrow r = 1, 5$.", "3. Distance from $(1,1)$ to $(5,5)$ is $4\\sqrt2$."],
+        "fast": "Both centers lie on $y = x$, so their distance is $\\sqrt2$ times the difference of the radii, $\\sqrt2 \\cdot 4$.",
+        "trap": "Taking the difference of the radii, 4, forgets that the centers move along the diagonal; $5\\sqrt2$ is the larger center's distance from the origin."
+      },
+      "tags": [{ "kind": "concept", "id": "geometry-coordinate", "role": "primary" }],
+      "setup": "circles tangent to both axes through a given point: the radius solves a quadratic with two roots; the distance between the two possible centers on the line y = x",
+      "variant": "a circle in the coordinate plane" },
+
+    { "id": "s1q7", "section": 1, "type": "mc", "difficulty": 5,
+      "prompt": "A review panel of 5 people is to be chosen from 4 chemists, 5 physicists and 3 biologists, so that no more than 2 members of the panel come from any one of the three fields. How many different panels are possible?",
+      "choices": ["$270$", "$300$", "$390$", "$480$", "$792$"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "With at most 2 from each of three fields and 5 people in all, the split must be $2, 2, 1$. Choose which field supplies 1. Biologist single: $\\binom42\\binom52\\binom31 = 6 \\cdot 10 \\cdot 3 = 180$. Physicist single: $\\binom42\\binom51\\binom32 = 6 \\cdot 5 \\cdot 3 = 90$. Chemist single: $\\binom41\\binom52\\binom32 = 4 \\cdot 10 \\cdot 3 = 120$. Total $390$.",
+        "steps": ["1. A cap of 2 per field with 5 seats forces the counts $2, 2, 1$ in some order.", "2. One biologist: $6 \\cdot 10 \\cdot 3 = 180$.", "3. One physicist: $6 \\cdot 5 \\cdot 3 = 90$.", "4. One chemist: $4 \\cdot 10 \\cdot 3 = 120$.", "5. Sum: $390$."],
+        "fast": "Only $2,2,1$ fits under the cap; three cases by the field that sends one person: $180 + 90 + 120$.",
+        "trap": "Missing one of the three cases gives 270 or 300; $\\binom{12}{5} = 792$ ignores the cap."
+      },
+      "tags": [{ "kind": "concept", "id": "counting-restrictions", "role": "primary" }],
+      "setup": "choose a group from three kinds of different sizes with the same cap on every kind; the cap forces a single split pattern, counted by which kind takes the short share",
+      "variant": "selections with a cap per type (at most 2 from one group)" },
+
+    { "id": "s1q8", "section": 1, "type": "mc_multi", "difficulty": 4, "revisits": "quant-003:s1q8",
+      "prompt": "Of the 150 employees at an office, 70 sometimes take the train to work and 64 sometimes cycle to work. The number of employees who do neither is at least twice the number who do both. Indicate every value below that is a possible count of employees who do just one of the two.",
+      "choices": ["$6$", "$96$", "$100$", "$102$", "$120$", "$134$"],
+      "key": { "sel": [3, 4, 5] },
+      "explanation": {
+        "key": "Let $B$ employees do both. Then $70 + 64 - B = 134 - B$ do at least one, so $150 - (134 - B) = B + 16$ do neither, and $134 - 2B$ do exactly one. The condition $B + 16 \\ge 2B$ gives $B \\le 16$, and $B \\ge 0$. So exactly one runs over the even numbers from $134 - 32 = 102$ to $134$: 102, 120 and 134 work.",
+        "steps": ["1. Neither $= 150 - (134 - B) = B + 16$.", "2. Exactly one $= 134 - 2B$.", "3. $B + 16 \\ge 2B \\Rightarrow B \\le 16$; with $B \\ge 0$, exactly one is between 102 and 134 (even).", "4. Choices 102, 120, 134."],
+        "fast": "Both and neither always differ by 16 here, so neither $\\ge 2 \\cdot$ both caps both at 16: exactly one $\\ge 134 - 32 = 102$.",
+        "trap": "Dropping the link between neither and both leaves $B$ free up to 64 and admits 6, 96 and 100; 100 comes from stopping one short at $B = 17$, where neither is 33, less than 34."
+      },
+      "tags": [{ "kind": "concept", "id": "overlapping-sets", "role": "primary" }],
+      "setup": "two sets in a fixed population with a condition linking the neither count to the both count; the neither count is the both count plus a constant, so the link caps the overlap; the possible exactly-one counts",
+      "variant": "maximum and minimum of the overlap" },
+
+    { "id": "s1q9", "section": 1, "type": "numeric", "difficulty": 3,
+      "prompt": "A water utility charges each household a fixed $\\$6$ service fee per month, plus $\\$0.12$ per unit for each of the first 200 units used that month and $\\$0.18$ per unit for each unit used beyond 200. One month a household's total bill was $\\$57$. How many units did the household use that month?",
+      "numeric": { "kind": "single" },
+      "key": { "value": "350" },
+      "explanation": {
+        "key": "Remove the fee: $57 - 6 = 51$. The first 200 units cost $200 \\times 0.12 = 24$, leaving $27$ at $\\$0.18$ per unit: $\\tfrac{27}{0.18} = 150$ more units. Total $350$.",
+        "steps": ["1. Usage charges: $\\$51$.", "2. First tier: $\\$24$ for 200 units.", "3. Second tier: $\\tfrac{27}{0.18} = 150$ units.", "4. $200 + 150 = 350$."],
+        "fast": "$\\tfrac{51 - 24}{0.18} + 200 = 350$.",
+        "trap": "Entering only the second-tier units, 150, or forgetting the fee ($\\tfrac{33}{0.18} \\approx 183$ extra units)."
+      },
+      "tags": [{ "kind": "concept", "id": "word-problems-interest", "role": "primary" }],
+      "setup": "a fixed fee plus a two-tier per-unit rate; the total bill given; the total usage",
+      "variant": "tiered pricing or commission" },
+
+    { "id": "s1q10", "section": 1, "type": "mc", "setId": "di1", "figureId": "fig1", "difficulty": 3,
+      "prompt": "Between which two consecutive months did the number of members with at least 3 outings change by the greatest amount?",
+      "choices": ["January and February", "February and March", "March and April", "April and May", "May and June"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Members with at least 3 outings (rows 3 and 4 or more): Jan 26, Feb 35, Mar 42, Apr 24, May 37, Jun 44. The changes are $+9, +7, -18, +13, +7$. The largest change is the drop of 18 from March to April.",
+        "steps": ["1. Add the last two rows for each month: 26, 35, 42, 24, 37, 44.", "2. Consecutive changes: $+9, +7, -18, +13, +7$.", "3. Largest in size: March to April."],
+        "fast": "March to April loses 10 and 8 in the two top rows; no other step moves 18.",
+        "trap": "Looking only for the largest increase picks April to May ($+13$)."
+      },
+      "tags": [{ "kind": "concept", "id": "data-tables-graphs", "role": "primary" }],
+      "setup": "monthly frequency columns; sum two rows per period and find the largest change in either direction (a drop wins)",
+      "variant": "a time plot: the largest change between periods" },
+
+    { "id": "s1q11", "section": 1, "type": "mc", "setId": "di1", "figureId": "fig1", "difficulty": 4,
+      "prompt": "For how many of the six months was the median number of outings per member exactly 2?",
+      "choices": ["$1$", "$2$", "$3$", "$4$", "$5$"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "With 80 members the median is the mean of the 40th and 41st values. Cumulative counts through 1 outing and through 2: Jan 32, 54 (median 2); Feb 27, 45 (2); Mar 20, 38 (3); Apr 42, 56 (1); May 26, 43 (2); Jun 18, 36 (3). The median is 2 in January, February and May: 3 months.",
+        "steps": ["1. The median sits at the 40th and 41st values.", "2. It is 2 when the count through 1 outing is below 40 and the count through 2 outings is at least 41.", "3. Jan $32, 54$; Feb $27, 45$; May $26, 43$ qualify; Mar and Jun reach only 38 and 36 through 2 (median 3); Apr has 42 through 1 (median 1).", "4. Three months."],
+        "fast": "Check whether the 40th and 41st members land in the row for 2: yes for Jan, Feb, May.",
+        "trap": "Using the most common row instead of the middle member: Feb and May peak at 3 outings, which leaves only January and suggests 1."
+      },
+      "tags": [{ "kind": "concept", "id": "frequency-distributions", "role": "primary" }],
+      "setup": "several frequency columns over the same population; count the columns whose median falls in a given row (cumulative counts against the middle position)",
+      "variant": "median from a frequency table" },
+
+    { "id": "s1q12", "section": 1, "type": "mc", "setId": "di1", "figureId": "fig1", "difficulty": 5,
+      "prompt": "In June, $75\\%$ of the club's 80 members also entered a regatta. If one of the 80 members is chosen at random, what is the least possible probability that the member had at least 3 outings in June and entered the regatta?",
+      "choices": ["$0.25$", "$0.30$", "$0.41$", "$0.55$", "$0.75$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "In June $26 + 18 = 44$ members had at least 3 outings, a probability of $\\tfrac{44}{80} = 0.55$. The regatta group is $0.75$. The two groups must overlap by at least $0.55 + 0.75 - 1 = 0.30$ of the club (24 members), and that overlap can be achieved by putting all 20 non-entrants among the 44. So the least probability is $0.30$.",
+        "steps": ["1. June, at least 3 outings: $44$ of $80$, $P(A) = 0.55$.", "2. $P(B) = 0.75$.", "3. $P(A \\text{ and } B) \\ge P(A) + P(B) - 1 = 0.30$.", "4. Attained when every non-entrant is among the 44."],
+        "fast": "Only 36 members had fewer than 3 outings; at most 36 of the 60 entrants fit there, so at least 24 of 80 are in both.",
+        "trap": "Multiplying as if the events were independent gives $0.4125 \\approx 0.41$; $0.55$ is the greatest possible value, not the least."
+      },
+      "tags": [{ "kind": "concept", "id": "probability-conditional", "role": "primary" }],
+      "setup": "one event's probability read from a frequency column and a second given as a percent with no joint information; the least probability of both (sum minus one)",
+      "variant": "bounds on P(A and B) or P(A or B) from P(A) and P(B)" },
+
+    { "id": "s2q1", "section": 2, "type": "qc", "difficulty": 4,
+      "prompt": "$x$ and $y$ are positive numbers, and $x + y = 5$.",
+      "qc": { "a": "$xy$", "b": "$6.2$" },
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "Integer pairs give $xy = 4$ or $6$, both less than $6.2$. But $x$ and $y$ need not be integers: $x = y = 2.5$ gives $xy = 6.25 > 6.2$, while $x = 1, y = 4$ gives $4$. The relationship cannot be determined.",
+        "steps": ["1. $x = 1, y = 4$: $xy = 4 < 6.2$.", "2. $x = y = 2.5$: $xy = 6.25 > 6.2$.", "3. Both cases are allowed. Answer D."],
+        "fast": "The product of two numbers with a fixed sum peaks when they are equal: $2.5^2 = 6.25$.",
+        "trap": "Testing only whole numbers (largest product 6) gives B."
+      },
+      "tags": [{ "kind": "concept", "id": "number-sense-qc", "role": "primary" }],
+      "setup": "two positive numbers with a fixed sum; their product against a value between the best whole-number product and the true maximum",
+      "variant": "non-integer test values that flip the relationship" },
+
+    { "id": "s2q2", "section": 2, "type": "qc", "difficulty": 5,
+      "prompt": "$a$ and $b$ are constants, and $k$ is a positive constant.",
+      "qc": { "a": "The number of different real numbers $x$ for which $(x - a)(x - b) = k$", "b": "$2$" },
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Expand: $x^2 - (a + b)x + (ab - k) = 0$. The discriminant is $(a + b)^2 - 4(ab - k) = (a - b)^2 + 4k$, a square plus a positive number, so it is always positive and there are always exactly two real solutions, even when $a = b$.",
+        "steps": ["1. $x^2 - (a+b)x + ab - k = 0$.", "2. Discriminant $(a+b)^2 - 4ab + 4k = (a-b)^2 + 4k$.", "3. $(a-b)^2 \\ge 0$ and $4k > 0$, so it is positive: two real solutions.", "4. Answer C."],
+        "fast": "The parabola $y = (x-a)(x-b)$ opens up and dips to 0 or below, so the line $y = k > 0$ always crosses it twice.",
+        "trap": "Thinking $a = b$ gives a double root and one solution leads to D; that is the case $k = 0$, which is excluded."
+      },
+      "tags": [{ "kind": "concept", "id": "quadratics-factoring", "role": "primary" }],
+      "setup": "a product of two linear factors set equal to a positive constant with unknown parameters; the discriminant is a square plus a positive term, so the solution count is fixed",
+      "variant": "the discriminant: number of real solutions" },
+
+    { "id": "s2q3", "section": 2, "type": "qc", "difficulty": 5, "revisits": "quant-003:s1q4",
+      "prompt": "$x$ satisfies both $4x + 9 < 1$ and $3x + 15 \\ge 3$, and $y$ satisfies $|y - 2| \\le 1$.",
+      "qc": { "a": "$xy$", "b": "$-2$" },
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "$4x + 9 < 1$ gives $x < -2$ and $3x + 15 \\ge 3$ gives $x \\ge -4$, so $-4 \\le x < -2$. $|y - 2| \\le 1$ gives $1 \\le y \\le 3$. With $x$ negative and $y$ positive, $xy$ is largest when $x$ is nearest 0 and $y$ is smallest, but $x$ never reaches $-2$: $xy \\le x \\cdot 1 = x < -2$. Quantity B is greater.",
+        "steps": ["1. $-4 \\le x < -2$.", "2. $1 \\le y \\le 3$.", "3. For negative $x$, a larger $y$ makes $xy$ more negative, so $xy \\le x$.", "4. $x < -2$, so $xy < -2$. Answer B."],
+        "fast": "The best case is $x$ just below $-2$ and $y = 1$, giving a product just below $-2$.",
+        "trap": "Pairing the endpoints $x = -2$ and $y = 1$ as if $-2$ were allowed makes the quantities able to be equal (D); pairing $x$ near 0 with $y = 3$ looks for the maximum in the wrong place."
+      },
+      "tags": [{ "kind": "concept", "id": "inequalities", "role": "primary" }, { "kind": "concept", "id": "number-line-abs", "role": "secondary" }],
+      "setup": "two linear inequalities give a half-open negative interval and an absolute-value inequality gives a positive interval; the product's supremum is excluded; compare with it",
+      "variant": "compound inequality: range of x + y or x - y or xy" },
+
+    { "id": "s2q4", "section": 2, "type": "qc", "difficulty": 4, "figureId": "fig3",
+      "prompt": "In the figure, line $\\ell$ is parallel to line $m$, point $A$ is on $\\ell$, point $B$ is on $m$, and point $P$ lies between the two lines, to the right of both $A$ and $B$. The acute angle between segment $AP$ and line $\\ell$ measures $x^\\circ$, the acute angle between segment $BP$ and line $m$ measures $2x^\\circ$, and angle $APB$ measures $3x^\\circ$.",
+      "qc": { "a": "$x$", "b": "$30$" },
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "Draw the line through $P$ parallel to $\\ell$ and $m$. It splits angle $APB$ into an angle equal to $x^\\circ$ (alternate with the acute angle at $A$) and one equal to $2x^\\circ$ (alternate with the acute angle at $B$). So angle $APB = 3x^\\circ$ for every $x$: the third measure adds no information. Any $x$ with $2x$ acute, $0 < x < 45$, fits, such as 20 or 40.",
+        "steps": ["1. A parallel through $P$ gives angle $APB = x + 2x$ by alternate angles.", "2. The stated $3x^\\circ$ is therefore automatic and fixes nothing.", "3. $x = 20$ and $x = 40$ both give valid figures. Answer D."],
+        "fast": "The bend angle between two parallels always equals the sum of the two angles at the lines.",
+        "trap": "Treating $x$, $2x$ and $3x$ as the angles of a triangle and solving $6x = 180$ gives $x = 30$ and answer C."
+      },
+      "tags": [{ "kind": "concept", "id": "lines-angles", "role": "primary" }],
+      "setup": "a bent path between two parallel lines with the bend angle labeled as the sum of the two angles at the lines; the label is redundant, so the angle is undetermined",
+      "variant": "parallel lines cut by a transversal" },
+
+    { "id": "s2q5", "section": 2, "type": "qc", "difficulty": 5,
+      "prompt": "$a < b < c$, and the number $x$ satisfies both $(x - a)(x - c) < 0$ and $(x - b)(x - c) > 0$.",
+      "qc": { "a": "$(x - a)(x - b)$", "b": "$0$" },
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "$(x - a)(x - c) < 0$ puts $x$ between its roots: $a < x < c$. $(x - b)(x - c) > 0$ puts $x$ outside its roots: $x < b$ or $x > c$. Together, $a < x < b$. Then $x - a > 0$ and $x - b < 0$, so $(x - a)(x - b) < 0$. Quantity B is greater.",
+        "steps": ["1. First condition: $a < x < c$.", "2. Second condition: $x < b$ or $x > c$.", "3. Both: $a < x < b$.", "4. On that interval $(x - a)(x - b)$ is negative. Answer B."],
+        "fast": "Try $a = 0, b = 1, c = 2$: the conditions leave $0 < x < 1$, where $x(x - 1) < 0$.",
+        "trap": "Reading the second condition as another between-the-roots interval gives $b < x < c$, where $(x - a)(x - b) > 0$ (answer A); combining the conditions loosely as $a < x < c$ suggests D."
+      },
+      "tags": [{ "kind": "concept", "id": "quadratic-inequalities", "role": "primary" }],
+      "setup": "three ordered parameters with no values; one factored product negative (between its roots) and one positive (outside its roots) intersect to a sub-interval; the sign of a third pairing of the factors",
+      "variant": "sign analysis of a factored product (x - a)(x - b) < 0" },
+
+    { "id": "s2q6", "section": 2, "type": "mc", "difficulty": 4, "revisits": "quant-003:s1q12",
+      "prompt": "The lengths of the bolts made by machine P are approximately normally distributed with a mean of 40 millimeters and a standard deviation of 2 millimeters; those made by machine Q are approximately normally distributed with a mean of 41 millimeters and a standard deviation of 1 millimeter. During one shift, machine P made 500 bolts, and of all the bolts the two machines made during that shift, approximately $1{,}180$ had lengths between 38 and 42 millimeters. Approximately how many bolts did machine Q make during the shift?",
+      "choices": ["$500$", "$900$", "$1{,}000$", "$1{,}240$", "$1{,}500$"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "For P, 38 to 42 is within 1 standard deviation of the mean: about $68\\%$ of 500, or 340 bolts. For Q, 38 is 3 standard deviations below 41 and 42 is 1 above, so the band holds about $2 + 14 + 34 + 34 = 84\\%$ of Q's bolts. So $0.84N \\approx 1{,}180 - 340 = 840$ and $N \\approx 1{,}000$.",
+        "steps": ["1. P: $38$ to $42$ is $\\pm 1$ SD, about $68\\%$: 340 bolts.", "2. Q: $38$ to $42$ runs from $-3$ to $+1$ SD, about $84\\%$.", "3. $0.84N \\approx 840$, so $N \\approx 1{,}000$."],
+        "fast": "Q's band is everything below $+1$ SD: $50\\% + 34\\% = 84\\%$; $\\tfrac{840}{0.84} = 1{,}000$.",
+        "trap": "Using $68\\%$ for Q as well treats the same lengths as the same SD band: $\\tfrac{840}{0.68} \\approx 1{,}240$."
+      },
+      "tags": [{ "kind": "concept", "id": "std-dev-normal", "role": "primary" }],
+      "setup": "two normal groups with different means and SDs, one group's size and the combined count inside a fixed band given; the band sits at different SD distances in each group; solve for the other group's size",
+      "variant": "values within k standard deviations of the mean" },
+
+    { "id": "s2q7", "section": 2, "type": "mc", "difficulty": 4,
+      "prompt": "A regular hexagon with perimeter 36 is inscribed in a circle. What is the area of the region bounded by one side of the hexagon and the shorter arc of the circle joining that side's endpoints?",
+      "choices": ["$6\\pi - 9\\sqrt{3}$", "$6\\pi - 18$", "$12\\pi - 9\\sqrt{3}$", "$36\\pi - 54\\sqrt{3}$", "$9\\pi - 9\\sqrt{3}$"],
+      "key": { "sel": [0] },
+      "explanation": {
+        "key": "The side is $\\tfrac{36}{6} = 6$, and a regular hexagon's side equals the radius of its circle, so $r = 6$. One side subtends a central angle of $60^\\circ$. The region is the $60^\\circ$ sector minus the equilateral triangle formed by the side and two radii: $\\tfrac{60}{360}\\pi \\cdot 36 - \\tfrac{\\sqrt3}{4} \\cdot 36 = 6\\pi - 9\\sqrt3$.",
+        "steps": ["1. Side $= 6 = r$.", "2. Central angle per side: $60^\\circ$; sector area $= 6\\pi$.", "3. Triangle on that side with two radii is equilateral: area $9\\sqrt3$.", "4. Region $= 6\\pi - 9\\sqrt3$."],
+        "fast": "One sixth of the gap between circle and hexagon: $\\tfrac16(36\\pi - 54\\sqrt3)$.",
+        "trap": "$36\\pi - 54\\sqrt3$ is all six such regions; treating the triangle as right-angled ($\\tfrac12 \\cdot 6 \\cdot 6$) gives $6\\pi - 18$; a $120^\\circ$ sector gives $12\\pi - 9\\sqrt3$."
+      },
+      "tags": [{ "kind": "concept", "id": "inscribed-figures", "role": "primary" }],
+      "setup": "regular hexagon in a circle with the hexagon's perimeter given; the area of the circular segment cut off by one side (one-sixth sector minus an equilateral triangle)",
+      "variant": "a regular hexagon in a circle" },
+
+    { "id": "s2q8", "section": 2, "type": "mc", "difficulty": 5,
+      "prompt": "Point $P$ lies outside a circle with center $O$. Segment $PT$ is tangent to the circle at $T$ and has length 12, and the point of the circle closest to $P$ is 8 units from $P$. What is the radius of the circle?",
+      "choices": ["$4$", "$5$", "$6$", "$4\\sqrt{5}$", "$10$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "The radius $OT$ is perpendicular to the tangent, so triangle $OTP$ has a right angle at $T$. The closest point of the circle lies on segment $OP$, so $OP = r + 8$. Then $(r + 8)^2 = r^2 + 12^2$: $16r + 64 = 144$, $r = 5$.",
+        "steps": ["1. $OT \\perp PT$: right triangle $OTP$.", "2. $OP = r + 8$, since the nearest point is on line $OP$.", "3. $r^2 + 16r + 64 = r^2 + 144 \\Rightarrow r = 5$."],
+        "fast": "$12^2 = 8(8 + 2r)$: $144 = 64 + 16r$, $r = 5$.",
+        "trap": "Using 8 as the distance from $P$ to the center gives $r^2 = 144 - 64$, $r = 4\\sqrt5$; treating 8 as a diameter gives 4."
+      },
+      "tags": [{ "kind": "concept", "id": "circles", "role": "primary" }],
+      "setup": "a tangent length and the external point's distance to the circle (not to the center) given; the radius from the right angle at the point of tangency",
+      "variant": "tangent lines and the radius" },
+
+    { "id": "s2q9", "section": 2, "type": "mc", "difficulty": 4,
+      "prompt": "For all numbers $a$ and $b$, the operation $\\diamond$ is defined by $a \\diamond b = a^2 - 2b$. If $(3 \\diamond k) \\diamond 1 = 47$, which of the following could be the value of $k$?",
+      "choices": ["$-1$", "$2$", "$4$", "$8$", "$16$"],
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "$3 \\diamond k = 9 - 2k$. Then $(9 - 2k) \\diamond 1 = (9 - 2k)^2 - 2 = 47$, so $(9 - 2k)^2 = 49$ and $9 - 2k = 7$ or $-7$: $k = 1$ or $k = 8$. Only 8 is listed.",
+        "steps": ["1. Inner: $3 \\diamond k = 9 - 2k$.", "2. Outer: $(9 - 2k)^2 - 2 = 47 \\Rightarrow (9 - 2k)^2 = 49$.", "3. $9 - 2k = \\pm 7$: $k = 1$ or $8$."],
+        "fast": "Work outward in: the inner result squared is 49, so it is $\\pm 7$; $-7$ gives $k = 8$.",
+        "trap": "Taking only the positive root gives $k = 1$, which is not a choice; applying the operation as $a - 2b^2$ reverses the roles."
+      },
+      "tags": [{ "kind": "concept", "id": "functions", "role": "primary" }],
+      "setup": "a defined operation nested with an unknown in the inner pair; the outer value gives a square, and only the negative root's value is offered",
+      "variant": "a defined operation (x ◊ y = ...) applied twice" },
+
+    { "id": "s2q10", "section": 2, "type": "mc", "difficulty": 3,
+      "prompt": "A rectangular floor measuring 84 inches by 120 inches is to be covered exactly, with no cutting or overlap, by identical square tiles whose side length is a whole number of inches. If the tiles are as large as possible, how many tiles are needed?",
+      "choices": ["$12$", "$35$", "$70$", "$84$", "$140$"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "The tile side must divide both 84 and 120, and the largest such side is their greatest common divisor, 12. The floor then holds $\\tfrac{84}{12} \\times \\tfrac{120}{12} = 7 \\times 10 = 70$ tiles.",
+        "steps": ["1. $84 = 2^2 \\cdot 3 \\cdot 7$, $120 = 2^3 \\cdot 3 \\cdot 5$; GCD $= 12$.", "2. Tiles along each side: 7 and 10.", "3. $7 \\times 10 = 70$."],
+        "fast": "GCD 12; $\\tfrac{84 \\cdot 120}{144} = 70$.",
+        "trap": "Stopping at the tile side, 12, answers a different question; a 24-inch tile does not divide 84."
+      },
+      "tags": [{ "kind": "concept", "id": "primes-factors", "role": "primary" }],
+      "setup": "largest square tile that covers a rectangle exactly; the number of tiles (the GCD is the side, not the answer)",
+      "variant": "GCD / LCM from two products or a word problem" },
+
+    { "id": "s2q11", "section": 2, "type": "mc", "difficulty": 5,
+      "prompt": "A car dealer offers $n$ optional features, and a buyer may choose any set of them, including none at all. The number of different sets containing exactly 3 features is equal to the number of different sets containing exactly 5 features. How many different sets contain at most 2 features?",
+      "choices": ["$28$", "$36$", "$37$", "$64$", "$93$"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "$\\binom{n}{3} = \\binom{n}{5}$ with $3 \\ne 5$ forces $3 + 5 = n$, so $n = 8$ (choosing 3 to include is the same as choosing 5 to leave out). Sets with at most 2 features: $\\binom80 + \\binom81 + \\binom82 = 1 + 8 + 28 = 37$.",
+        "steps": ["1. $\\binom{n}{k} = \\binom{n}{n-k}$, and different sizes match only when they sum to $n$: $n = 8$.", "2. Sizes 0, 1, 2: $1 + 8 + 28 = 37$."],
+        "fast": "$n = 3 + 5 = 8$; $1 + 8 + 28$.",
+        "trap": "Leaving out the empty set gives 36; counting only the 2-feature sets gives 28; including size 3 gives 93."
+      },
+      "tags": [{ "kind": "concept", "id": "counting-permutations", "role": "primary" }],
+      "setup": "equal counts of subsets of two different sizes fix the set's size by symmetry; then the number of subsets up to a small size, the empty set included",
+      "variant": "subset counts and the symmetry C(n, k) = C(n, n - k)" },
+
+    { "id": "s2q12", "section": 2, "type": "mc", "difficulty": 4,
+      "prompt": "On each of 4 days, a ferry is delayed with probability $\\tfrac{1}{3}$, independently of the other days. What is the probability that the ferry is delayed on exactly 2 of the 4 days?",
+      "choices": ["$\\dfrac{4}{81}$", "$\\dfrac{1}{9}$", "$\\dfrac{2}{9}$", "$\\dfrac{8}{27}$", "$\\dfrac{4}{9}$"],
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "One particular pattern of 2 delayed days and 2 on-time days has probability $\\left(\\tfrac13\\right)^2 \\left(\\tfrac23\\right)^2 = \\tfrac{4}{81}$. There are $\\binom42 = 6$ ways to choose which days are delayed, so the probability is $\\tfrac{24}{81} = \\tfrac{8}{27}$.",
+        "steps": ["1. One arrangement: $\\tfrac19 \\cdot \\tfrac49 = \\tfrac{4}{81}$.", "2. Arrangements: $\\binom42 = 6$.", "3. $6 \\cdot \\tfrac{4}{81} = \\tfrac{8}{27}$."],
+        "fast": "$\\binom42 \\cdot 1^2 \\cdot 2^2 / 3^4 = \\tfrac{24}{81}$.",
+        "trap": "Stopping at one arrangement gives $\\tfrac{4}{81}$; $\\tfrac19$ ignores the two on-time days."
+      },
+      "tags": [{ "kind": "concept", "id": "probability-basic", "role": "primary" }],
+      "setup": "independent repeated trials with a success chance other than one half; exactly k successes in n trials (one arrangement times the number of arrangements)",
+      "variant": "independent events across repeated trials" },
+
+    { "id": "s2q13", "section": 2, "type": "mc_multi", "difficulty": 4,
+      "prompt": "In the sequence $a_1, a_2, a_3, \\ldots$, each term after the second is the sum of the two terms just before it. If $a_5 = 19$ and $a_7 = 50$, which of the following statements are true? Indicate all such statements.",
+      "choices": ["$a_1 = 2$", "$a_2 = 7$", "$a_4 = 12$", "$a_8 = 79$", "$a_1 + a_2 + a_3 + a_4 + a_5 + a_6 = 76$"],
+      "key": { "sel": [0, 2, 4] },
+      "explanation": {
+        "key": "Work backward: $a_6 = a_7 - a_5 = 31$, $a_4 = a_6 - a_5 = 12$, $a_3 = a_5 - a_4 = 7$, $a_2 = a_4 - a_3 = 5$, $a_1 = a_3 - a_2 = 2$. Forward, $a_8 = 31 + 50 = 81$. The first six terms sum to $2 + 5 + 7 + 12 + 19 + 31 = 76$. True: A, C, E.",
+        "steps": ["1. $a_6 = 50 - 19 = 31$.", "2. $a_4 = 12$, $a_3 = 7$, $a_2 = 5$, $a_1 = 2$.", "3. $a_8 = a_6 + a_7 = 81$, not 79.", "4. Sum of the first six: 76."],
+        "fast": "For this rule, $a_1 + \\cdots + a_6 = a_8 - a_2 = 81 - 5 = 76$.",
+        "trap": "Taking $a_6$ as $50 - 21$ or misplacing $a_3$ as $a_2$ makes B or D look true."
+      },
+      "tags": [{ "kind": "concept", "id": "sequences-patterns", "role": "primary" }],
+      "setup": "two-term additive recursion with two terms two places apart given; recover the middle term, run backward to the start, then a later term and a partial sum",
+      "variant": "recursive sequence: find a term or a sum" },
+
+    { "id": "s2q14", "section": 2, "type": "mc_multi", "difficulty": 5,
+      "prompt": "In the $xy$-plane, for which of the following values of $m$ does the line $y = mx$ intersect the graph of $y = |x - 2|$ at exactly two points? Indicate all such values.",
+      "choices": ["$-2$", "$-\\dfrac{1}{2}$", "$0$", "$\\dfrac{1}{3}$", "$\\dfrac{3}{4}$", "$1$"],
+      "key": { "sel": [3, 4] },
+      "explanation": {
+        "key": "The graph is a V with vertex $(2, 0)$: the left arm $y = 2 - x$ (slope $-1$) and the right arm $y = x - 2$ (slope 1). A line through the origin meets the left arm where $x = \\tfrac{2}{1 + m}$, which must be less than 2: true when $m > 0$ or $m < -1$. It meets the right arm where $x = \\tfrac{2}{1 - m}$, which must be at least 2: true when $0 \\le m < 1$. Both happen only for $0 < m < 1$: $\\tfrac13$ and $\\tfrac34$.",
+        "steps": ["1. Left arm: $mx = 2 - x \\Rightarrow x = \\tfrac{2}{1+m} < 2 \\iff m > 0$ or $m < -1$.", "2. Right arm: $mx = x - 2 \\Rightarrow x = \\tfrac{2}{1-m} \\ge 2 \\iff 0 \\le m < 1$.", "3. $m = -2$: one point. $m = -\\tfrac12$: none. $m = 0$: only the vertex. $m = 1$: parallel to the right arm, one point.", "4. Two points for $0 < m < 1$: $\\tfrac13, \\tfrac34$."],
+        "fast": "Rotate a line about the origin: it cuts both arms only while it is steeper than the flat line through the vertex and shallower than the right arm.",
+        "trap": "Counting $m = 0$ (it touches only the vertex) or $m = 1$ (it runs parallel to the right arm) as two crossings; $m = -2$ meets only the left arm."
+      },
+      "tags": [{ "kind": "concept", "id": "graphs-of-functions", "role": "primary" }],
+      "setup": "a line through the origin against a V-shaped graph whose vertex is off the origin; the slopes for which they meet twice (between the flat line through the vertex and the far arm's slope)",
+      "variant": "intersections of two graphs" },
+
+    { "id": "s2q15", "section": 2, "type": "numeric", "difficulty": 4, "revisits": "quant-002:s2q6",
+      "prompt": "In right triangle $JKL$, the right angle is at $K$. The altitude from $K$ meets the hypotenuse $JL$ at point $M$, $KM = 6$ and $JM = 3$. What is the area of triangle $JKL$?",
+      "numeric": { "kind": "single" },
+      "key": { "value": "45" },
+      "explanation": {
+        "key": "The altitude to the hypotenuse makes triangles $JMK$ and $KML$ similar, so $KM^2 = JM \\cdot ML$: $36 = 3 \\cdot ML$ and $ML = 12$. The hypotenuse is $JL = 15$, and with the altitude 6 as the height, the area is $\\tfrac12 \\cdot 15 \\cdot 6 = 45$.",
+        "steps": ["1. Similar triangles $JMK \\sim KML$: $\\tfrac{JM}{KM} = \\tfrac{KM}{ML}$.", "2. $ML = \\tfrac{36}{3} = 12$, so $JL = 15$.", "3. Area $= \\tfrac12 \\cdot JL \\cdot KM = 45$."],
+        "fast": "$ML = \\tfrac{6^2}{3} = 12$; area $= \\tfrac12 \\cdot 15 \\cdot 6$.",
+        "trap": "Using triangle $JMK$ alone ($\\tfrac12 \\cdot 3 \\cdot 6 = 9$) or assuming $ML = 3$ as well (area 18) misses the similar-triangle step."
+      },
+      "tags": [{ "kind": "concept", "id": "pythagorean-special", "role": "primary" }],
+      "setup": "altitude to the hypotenuse and one hypotenuse segment given; the other segment from the geometric mean, then the area with the altitude as height",
+      "variant": "altitude to the hypotenuse: similar right triangles" }
+  ]
+}

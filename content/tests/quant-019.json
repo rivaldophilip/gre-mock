@@ -1,0 +1,1081 @@
+{
+ "id": "quant-019",
+ "measure": "quant",
+ "title": "Quant Hard Mock 19",
+ "sections": [
+  {
+   "n": 1,
+   "minutes": 21
+  },
+  {
+   "n": 2,
+   "minutes": 26
+  }
+ ],
+ "passages": [],
+ "figures": [
+  {
+   "id": "fig1",
+   "caption": "Trees and yield in the four blocks of an orchard last season",
+   "table": {
+    "head": [
+     "Block",
+     "Number of trees",
+     "Mean yield per tree (kilograms)"
+    ],
+    "rows": [
+     [
+      "North",
+      "10",
+      "70"
+     ],
+     [
+      "East",
+      "25",
+      "52"
+     ],
+     [
+      "South",
+      "60",
+      "45"
+     ],
+     [
+      "West",
+      "35",
+      "58"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "fig2",
+   "caption": "Note: Figure not drawn to scale.",
+   "svg": "<svg viewBox='0 0 300 230' xmlns='http://www.w3.org/2000/svg' font-family='serif' font-size='16' fill='currentColor'><circle cx='150' cy='120' r='90' fill='none' stroke='currentColor' stroke-width='2'/><polygon points='60,120 112,38 240,120' fill='none' stroke='currentColor' stroke-width='2'/><line x1='150' y1='120' x2='112' y2='38' stroke='currentColor' stroke-width='1.5'/><line x1='60' y1='120' x2='240' y2='120' stroke='currentColor' stroke-width='2'/><circle cx='150' cy='120' r='2.5'/><text x='42' y='126'>A</text><text x='246' y='126'>B</text><text x='104' y='30'>C</text><text x='145' y='140'>O</text><text x='72' y='78'>6</text><text x='137' y='84'>4</text></svg>"
+  },
+  {
+   "id": "fig3",
+   "caption": "Test scores of the applicants at centers P and Q",
+   "svg": "<svg viewBox='0 0 340 205' xmlns='http://www.w3.org/2000/svg' font-family='serif' font-size='13' fill='currentColor'><g stroke='currentColor' stroke-width='1.5' fill='none'><line x1='187' y1='45' x2='215' y2='45'/><line x1='271' y1='45' x2='306' y2='45'/><rect x='215' y='30' width='56' height='30'/><line x1='243' y1='30' x2='243' y2='60'/><line x1='187' y1='37' x2='187' y2='53'/><line x1='306' y1='37' x2='306' y2='53'/><line x1='75' y1='115' x2='131' y2='115'/><line x1='201' y1='115' x2='285' y2='115'/><rect x='131' y='100' width='70' height='30'/><line x1='166' y1='100' x2='166' y2='130'/><line x1='75' y1='107' x2='75' y2='123'/><line x1='285' y1='107' x2='285' y2='123'/><line x1='40' y1='165' x2='320' y2='165'/><line x1='40' y1='165' x2='40' y2='170'/><line x1='75' y1='165' x2='75' y2='170'/><line x1='110' y1='165' x2='110' y2='170'/><line x1='145' y1='165' x2='145' y2='170'/><line x1='180' y1='165' x2='180' y2='170'/><line x1='215' y1='165' x2='215' y2='170'/><line x1='250' y1='165' x2='250' y2='170'/><line x1='285' y1='165' x2='285' y2='170'/><line x1='320' y1='165' x2='320' y2='170'/></g><g font-size='12' text-anchor='middle'><text x='187' y='24'>62</text><text x='215' y='24'>70</text><text x='243' y='24'>78</text><text x='271' y='24'>86</text><text x='306' y='24'>96</text><text x='75' y='94'>30</text><text x='131' y='94'>46</text><text x='166' y='94'>56</text><text x='201' y='94'>66</text><text x='285' y='94'>90</text><text x='40' y='184'>20</text><text x='110' y='184'>40</text><text x='180' y='184'>60</text><text x='250' y='184'>80</text><text x='320' y='184'>100</text><text x='180' y='201'>Score</text></g><text x='8' y='50' font-size='15'>P</text><text x='8' y='120' font-size='15'>Q</text></svg>"
+  },
+  {
+   "id": "fig4",
+   "caption": "Note: Figure not drawn to scale.",
+   "svg": "<svg viewBox='0 0 300 250' xmlns='http://www.w3.org/2000/svg' font-family='serif' font-size='16' fill='currentColor'><circle cx='150' cy='130' r='100' fill='none' stroke='currentColor' stroke-width='2'/><polygon points='86,207 150,30 237,180' fill='none' stroke='currentColor' stroke-width='2'/><line x1='150' y1='130' x2='86' y2='207' stroke='currentColor' stroke-width='1.5'/><line x1='150' y1='130' x2='150' y2='30' stroke='currentColor' stroke-width='1.5'/><line x1='150' y1='130' x2='237' y2='180' stroke='currentColor' stroke-width='1.5'/><circle cx='150' cy='130' r='2.5'/><text x='144' y='22'>B</text><text x='68' y='224'>A</text><text x='243' y='194'>C</text><text x='134' y='150'>O</text></svg>"
+  }
+ ],
+ "questions": [
+  {
+   "id": "s1q1",
+   "section": 1,
+   "type": "qc",
+   "difficulty": 3,
+   "prompt": "$|x| + x = 0$",
+   "qc": {
+    "a": "$|x| - x$",
+    "b": "$0$"
+   },
+   "key": {
+    "sel": [
+     3
+    ]
+   },
+   "explanation": {
+    "key": "$|x| + x = 0$ means $|x| = -x$, which holds exactly when $x \\le 0$, zero included. Then $|x| - x = -2x$, which is $0$ when $x = 0$ and positive when $x < 0$. Both cases are allowed, so the relationship cannot be determined.",
+    "steps": [
+     "1. $|x| = -x$ holds for every $x \\le 0$, including $x = 0$.",
+     "2. For such $x$, $|x| - x = -x - x = -2x \\ge 0$.",
+     "3. $x = 0$ gives $0 = 0$; $x = -1$ gives $2 > 0$. Answer D."
+    ],
+    "fast": "Try $x = 0$ and $x = -1$.",
+    "trap": "Reading the condition as $x < 0$ drops $x = 0$ and gives A."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "abs-value-inequalities",
+     "role": "primary"
+    }
+   ],
+   "setup": "the sum of |x| and x is zero (x nonpositive, zero allowed); compare |x| minus x with zero",
+   "variant": "|x| against x in QC"
+  },
+  {
+   "id": "s1q2",
+   "section": 1,
+   "type": "qc",
+   "difficulty": 4,
+   "figureId": "fig2",
+   "prompt": "In the figure, $O$ is the center of the circle, $AB$ is a diameter, and the radius of the circle is 5. Also, $AC = 6$ and $OC = 4$.",
+   "qc": {
+    "a": "$BC$",
+    "b": "$8$"
+   },
+   "key": {
+    "sel": [
+     1
+    ]
+   },
+   "explanation": {
+    "key": "The figure shows $C$ on the circle, but $OC = 4$ is less than the radius 5, so $C$ lies inside the circle. From a point inside the circle the diameter $AB$ subtends an angle greater than $90^\\circ$, so $AC^2 + BC^2 < AB^2 = 100$. Then $BC^2 < 64$ and $BC < 8$. (Exactly, $BC = \\sqrt{46}$.)",
+    "steps": [
+     "1. $OC = 4 < 5$: $C$ is inside the circle, not on it as drawn.",
+     "2. Only a point on the circle makes $\\angle ACB = 90^\\circ$; inside it, $\\angle ACB > 90^\\circ$, so $AC^2 + BC^2 < AB^2$.",
+     "3. $36 + BC^2 < 100$, so $BC < 8$. Answer B."
+    ],
+    "fast": "Put $A = (-5, 0)$ and $B = (5, 0)$. $OC = 4$ and $AC = 6$ give $C = (-0.5, \\pm\\sqrt{15.75})$, and $BC^2 = 5.5^2 + 15.75 = 46 < 64$.",
+    "trap": "Trusting the drawing puts $C$ on the circle, makes $\\angle ACB$ a right angle and gives the 6-8-10 triangle: answer C."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "figures-not-to-scale",
+     "role": "primary"
+    }
+   ],
+   "setup": "a point drawn on a circle opposite a diameter, but its distance from the center is less than the radius; compare the third side of the triangle on the diameter with the right-triangle value",
+   "variant": "a point that looks on a line or circle but is not stated to be"
+  },
+  {
+   "id": "s1q3",
+   "section": 1,
+   "type": "qc",
+   "difficulty": 4,
+   "prompt": "$x + 2y + 3z = 20$ and $2x + 4y + 5z = 37$",
+   "qc": {
+    "a": "$z$",
+    "b": "$x + 2y - 8$"
+   },
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "In both equations $x$ and $y$ appear only as $x + 2y$. Twice the first equation is $2x + 4y + 6z = 40$; subtracting the second leaves $z = 3$. Then $x + 2y = 20 - 9 = 11$, so Quantity B is $11 - 8 = 3$. Neither $x$ nor $y$ is known, but both quantities are, and they are equal.",
+    "steps": [
+     "1. Let $u = x + 2y$: the equations are $u + 3z = 20$ and $2u + 5z = 37$.",
+     "2. Doubling the first and subtracting: $z = 3$, so $u = 11$.",
+     "3. Quantity B $= u - 8 = 3 =$ Quantity A. Answer C."
+    ],
+    "fast": "Treat $x + 2y$ as one unknown: two equations, two unknowns.",
+    "trap": "Three unknowns and only two equations suggests nothing is fixed, answer D; the pair $x, y$ moves as a block, so $z$ and $x + 2y$ are both determined."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "linear-equations",
+     "role": "primary"
+    }
+   ],
+   "setup": "two equations in three unknowns in which two unknowns enter only as the same combination; a single unknown and that combination are both fixed; compare them",
+   "variant": "three variables, two equations: what can be determined"
+  },
+  {
+   "id": "s1q4",
+   "section": 1,
+   "type": "qc",
+   "difficulty": 5,
+   "prompt": "$x^2 y = 9y$ and $xy = -3y$",
+   "qc": {
+    "a": "$x$",
+    "b": "$-3$"
+   },
+   "key": {
+    "sel": [
+     3
+    ]
+   },
+   "explanation": {
+    "key": "Dividing both equations by $y$ gives $x^2 = 9$ and $x = -3$, which agree, so $x = -3$ looks forced. But that division assumes $y \\ne 0$. If $y = 0$, both equations read $0 = 0$ whatever $x$ is. So $x$ is $-3$ when $y \\ne 0$, and can be any number when $y = 0$.",
+    "steps": [
+     "1. Factor instead of dividing: $y(x^2 - 9) = 0$ and $y(x + 3) = 0$.",
+     "2. If $y \\ne 0$: $x^2 = 9$ and $x = -3$, so $x = -3$ (equal to B).",
+     "3. If $y = 0$: both hold for any $x$, for instance $x = 5$ (A greater). Answer D."
+    ],
+    "fast": "Ask what happens when the cancelled factor $y$ is zero.",
+    "trap": "Cancelling $y$ from both equations gives $x = -3$ and answer C."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "quadratics-factoring",
+     "role": "primary"
+    }
+   ],
+   "setup": "two equations sharing a factor of one variable; cancelling it pins the other variable, but the factor can be zero and then frees it; compare the other variable with the pinned value",
+   "variant": "dividing by a variable that may be zero"
+  },
+  {
+   "id": "s1q5",
+   "section": 1,
+   "type": "mc",
+   "difficulty": 3,
+   "prompt": "A garden supplier makes two mulches from bark and compost. In mulch R, the ratio of the weight of bark to the weight of compost is $1:2$. When 18 kilograms of mulch R are combined with 12 kilograms of mulch S, the combined mulch contains equal weights of bark and compost. Bark makes up what fraction of the weight of mulch S?",
+   "choices": [
+    "$\\dfrac{1}{3}$",
+    "$\\dfrac{1}{2}$",
+    "$\\dfrac{2}{3}$",
+    "$\\dfrac{3}{4}$",
+    "$\\dfrac{4}{5}$"
+   ],
+   "key": {
+    "sel": [
+     3
+    ]
+   },
+   "explanation": {
+    "key": "Bark is $\\tfrac{1}{1 + 2} = \\tfrac13$ of mulch R, so the 18 kilograms of R hold 6 kilograms of bark. The 30-kilogram mix must hold 15 kilograms of bark, so the 12 kilograms of S supply $15 - 6 = 9$ kilograms: $\\tfrac{9}{12} = \\tfrac34$.",
+    "steps": [
+     "1. A $1:2$ ratio means bark is $\\tfrac13$ of R: $\\tfrac13 \\cdot 18 = 6$ kg of bark.",
+     "2. Equal weights in $18 + 12 = 30$ kg means 15 kg of bark in all.",
+     "3. S supplies $15 - 6 = 9$ of its 12 kg as bark: $\\tfrac34$."
+    ],
+    "fast": "R is 6 bark to 12 compost; S must make up the 6 kg gap and add an even split: 9 bark, 3 compost.",
+    "trap": "Reading $1:2$ as 'bark is half of R' gives 9 kg of bark in R, 6 kg needed from S and $\\tfrac12$; the part-to-part ratio $1:2$ is a part-to-whole share of $\\tfrac13$."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "ratio-proportion",
+     "role": "primary"
+    }
+   ],
+   "setup": "two blends combined into an even mixture, with both amounts and one blend's part-to-part ratio given; find the other blend's part-to-whole share",
+   "variant": "part-to-part vs part-to-whole confusion",
+   "revisits": "quant-004:s1q5"
+  },
+  {
+   "id": "s1q6",
+   "section": 1,
+   "type": "mc",
+   "difficulty": 4,
+   "prompt": "A shop sells a lamp for $\\$84$, and its profit on the lamp is 40 percent of the lamp's cost to the shop. If the shop had instead set the price so that its profit was 40 percent of the selling price, with the cost unchanged, how much more would the lamp have sold for?",
+   "choices": [
+    "$\\$9.60$",
+    "$\\$12.00$",
+    "$\\$16.00$",
+    "$\\$24.00$",
+    "$\\$33.60$"
+   ],
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "With cost $C$, $C + 0.4C = 84$, so $C = 60$. For the new price $P$ the profit $P - 60$ equals $0.4P$, so $0.6P = 60$ and $P = 100$: $\\$16$ more.",
+    "steps": [
+     "1. $1.4C = 84$ gives $C = \\$60$.",
+     "2. Profit $40\\%$ of price: $P - 60 = 0.4P$, so $P = \\tfrac{60}{0.6} = \\$100$.",
+     "3. $100 - 84 = \\$16$."
+    ],
+    "fast": "When profit is $40\\%$ of the price, cost is $60\\%$ of the price: $\\tfrac{60}{0.6} = 100$.",
+    "trap": "Taking $40\\%$ of the old price, $0.4 \\cdot 84 = 33.60$, as the new profit gives a price of $\\$93.60$ and $\\$9.60$ more; $\\$24$ is the old profit, not the change."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "word-problems-interest",
+     "role": "primary"
+    }
+   ],
+   "setup": "a price and a profit stated as a percent of cost give the cost; re-price so the same percent is of the selling price; the change in price",
+   "variant": "profit as a percent of cost vs of price"
+  },
+  {
+   "id": "s1q7",
+   "section": 1,
+   "type": "mc",
+   "difficulty": 4,
+   "prompt": "A dealer has at least 100 cards. When the cards are dealt into piles of 6, 4 cards are left over, and when they are dealt into piles of 9, 7 cards are left over. What is the least number of cards the dealer can have?",
+   "choices": [
+    "100",
+    "106",
+    "115",
+    "124",
+    "133"
+   ],
+   "key": {
+    "sel": [
+     1
+    ]
+   },
+   "explanation": {
+    "key": "Each leftover is 2 short of a full pile, so 2 more cards would fill piles of 6 and piles of 9 exactly: the count plus 2 is a multiple of both, hence of their least common multiple 18, not of $6 \\cdot 9 = 54$. So the count is $18k - 2$: 16, 34, 52, 70, 88, 106, … The least count of at least 100 is 106.",
+    "steps": [
+     "1. With $n$ cards, $n + 2$ is a multiple of 6 and a multiple of 9.",
+     "2. A common multiple of 6 and 9 is a multiple of $\\operatorname{lcm}(6, 9) = 18$.",
+     "3. $n + 2 \\ge 102$ and a multiple of 18: $n + 2 = 108$, $n = 106$."
+    ],
+    "fast": "Add the 2 missing cards: find the least multiple of 18 that is at least 102.",
+    "trap": "Finding the first solution 16 and stepping by $6 \\cdot 9 = 54$ gives 70 and then 124, skipping 106; 6 and 9 share a factor of 3, so solutions repeat every 18."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "remainders-units",
+     "role": "primary"
+    }
+   ],
+   "setup": "two leftover conditions, each the same amount short of its divisor, with divisors that share a factor; solutions repeat every lcm; the least one above a threshold",
+   "variant": "two remainder conditions at once: smallest such number"
+  },
+  {
+   "id": "s1q8",
+   "section": 1,
+   "type": "mc_multi",
+   "difficulty": 4,
+   "prompt": "If $c < 0$ and $\\dfrac{a}{c} > \\dfrac{b}{c}$, which of the following must be true?\n\nIndicate all such statements.",
+   "choices": [
+    "$a > b$",
+    "$ac^2 < bc^2$",
+    "$-a > -b$",
+    "$ac > bc$",
+    "$a^2 < b^2$",
+    "$\\dfrac{1}{a} > \\dfrac{1}{b}$"
+   ],
+   "key": {
+    "sel": [
+     1,
+     2,
+     3
+    ]
+   },
+   "explanation": {
+    "key": "Multiplying $\\tfrac ac > \\tfrac bc$ by the negative number $c$ reverses it: $a < b$. A is false. B: $c^2 > 0$, so $a < b$ gives $ac^2 < bc^2$. C: negating $a < b$ reverses it, $-a > -b$. D: multiplying $a < b$ by $c < 0$ reverses it, $ac > bc$. E fails for $a = -3$, $b = 1$. F fails for $a = -1$, $b = 2$ ($-1 < \\tfrac12$).",
+    "steps": [
+     "1. Multiply by $c < 0$ and flip: $a < b$.",
+     "2. Rescale $a < b$ by each factor: by $c^2 > 0$ keep the sign (B); by $-1$ or by $c$ flip it (C, D).",
+     "3. Squares and reciprocals depend on the signs of $a$ and $b$, which are unknown (E, F fail). Answer B, C, D."
+    ],
+    "fast": "Recover $a < b$ first, then track only the sign of each multiplier.",
+    "trap": "Clearing the fractions without flipping gives $a > b$ and turns every answer around; E and F hold for positive $a$ and $b$ but not in general."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "inequalities",
+     "role": "primary"
+    }
+   ],
+   "setup": "an inequality between two quotients by the same negative number; select the rescaled forms that must hold (each multiplier a negative number or a positive square)",
+   "variant": "multiplying or dividing by a negative"
+  },
+  {
+   "id": "s1q9",
+   "section": 1,
+   "type": "numeric",
+   "difficulty": 3,
+   "prompt": "A rectangular floor with an area of 18 square meters is to be covered exactly, with no gaps or overlaps, by square tiles that are 30 centimeters on a side. How many tiles are needed? (1 meter = 100 centimeters)",
+   "numeric": {
+    "kind": "single"
+   },
+   "key": {
+    "value": "200"
+   },
+   "explanation": {
+    "key": "A square meter is $100 \\times 100 = 10{,}000$ square centimeters, so the floor is $180{,}000$ square centimeters. Each tile covers $30^2 = 900$ square centimeters: $\\tfrac{180{,}000}{900} = 200$.",
+    "steps": [
+     "1. $18 \\text{ m}^2 = 18 \\cdot 100^2 = 180{,}000 \\text{ cm}^2$.",
+     "2. One tile: $30^2 = 900 \\text{ cm}^2$.",
+     "3. $180{,}000 \\div 900 = 200$."
+    ],
+    "fast": "A tile is $0.3 \\times 0.3 = 0.09 \\text{ m}^2$; $18 \\div 0.09 = 200$.",
+    "trap": "Converting square meters with a single factor of 100 gives $1{,}800 \\div 900 = 2$; dividing the area by the side, $18 \\div 0.3 = 60$, treats an area like a length."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "units-conversion",
+     "role": "primary"
+    }
+   ],
+   "setup": "a floor area in square meters covered by square tiles measured in centimeters; the number of tiles (convert by the square of the length factor)",
+   "variant": "area or volume unit conversion (squares and cubes)"
+  },
+  {
+   "id": "s1q10",
+   "section": 1,
+   "type": "mc",
+   "setId": "di1",
+   "figureId": "fig1",
+   "difficulty": 3,
+   "prompt": "The total yield of the West block was approximately what percent greater than the total yield of the East block?",
+   "choices": [
+    "$12\\%$",
+    "$36\\%$",
+    "$40\\%$",
+    "$56\\%$",
+    "$156\\%$"
+   ],
+   "key": {
+    "sel": [
+     3
+    ]
+   },
+   "explanation": {
+    "key": "The table gives means, not totals; a block's total is its number of trees times its mean. West: $35 \\cdot 58 = 2{,}030$ kg. East: $25 \\cdot 52 = 1{,}300$ kg. $\\tfrac{2{,}030 - 1{,}300}{1{,}300} = \\tfrac{730}{1{,}300} \\approx 0.56$, about $56\\%$.",
+    "steps": [
+     "1. West total: $35 \\cdot 58 = 2{,}030$ kg.",
+     "2. East total: $25 \\cdot 52 = 1{,}300$ kg.",
+     "3. $\\tfrac{730}{1{,}300} \\approx 56\\%$ greater."
+    ],
+    "fast": "$\\tfrac{35}{25} \\cdot \\tfrac{58}{52} = 1.4 \\cdot 1.115 \\approx 1.56$.",
+    "trap": "Comparing the means, $\\tfrac{58}{52}$, gives $12\\%$; comparing the tree counts gives $40\\%$; using West as the base gives $36\\%$; reporting the ratio itself gives $156\\%$."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "data-interpretation-calc",
+     "role": "primary"
+    }
+   ],
+   "setup": "DI: each group's total is its count times its mean (not shown); percent greater between two groups' totals",
+   "variant": "a value implied but not shown (derived total)"
+  },
+  {
+   "id": "s1q11",
+   "section": 1,
+   "type": "mc",
+   "setId": "di1",
+   "figureId": "fig1",
+   "difficulty": 4,
+   "prompt": "The mean yield per tree of the East and West blocks combined was approximately how many kilograms greater than the mean yield per tree of the North and South blocks combined?",
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "A combined mean weights each block by its trees. East and West: $\\tfrac{1{,}300 + 2{,}030}{25 + 35} = \\tfrac{3{,}330}{60} = 55.5$ kg. North and South: $\\tfrac{700 + 2{,}700}{10 + 60} = \\tfrac{3{,}400}{70} \\approx 48.6$ kg. The difference is about $6.9$ kg.",
+    "steps": [
+     "1. Totals: North 700, South 2,700, East 1,300, West 2,030 kg.",
+     "2. East and West: $3{,}330$ kg on 60 trees, 55.5 kg per tree; North and South: $3{,}400$ kg on 70 trees, about 48.6 kg per tree.",
+     "3. $55.5 - 48.6 \\approx 6.9$."
+    ],
+    "fast": "North's 10 trees barely move South's 60, so the second pair sits near 48.6, not midway between 45 and 70.",
+    "trap": "Averaging the block means, $\\tfrac{52 + 58}{2} = 55$ against $\\tfrac{70 + 45}{2} = 57.5$, makes North and South the higher pair, by 2.5."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "weighted-average",
+     "role": "primary"
+    }
+   ],
+   "setup": "DI: two pairs of groups, each pair's combined mean weighted by counts; the difference of the two combined means (the unweighted averages order the pairs the other way)",
+   "variant": "combining the means of two groups",
+   "choices": [
+    "2.5",
+    "5.0",
+    "6.9",
+    "7.5",
+    "10.5"
+   ]
+  },
+  {
+   "id": "s1q12",
+   "section": 1,
+   "type": "numeric",
+   "setId": "di1",
+   "figureId": "fig1",
+   "difficulty": 5,
+   "prompt": "The orchard plans to add a fifth block, Central, in which every tree is expected to yield 70 kilograms. How many trees must the Central block have so that the mean yield per tree of all five blocks combined is 55 kilograms?",
+   "numeric": {
+    "kind": "single"
+   },
+   "key": {
+    "value": "28"
+   },
+   "explanation": {
+    "key": "The four blocks yield $700 + 1{,}300 + 2{,}700 + 2{,}030 = 6{,}730$ kg on 130 trees, about 51.8 kg per tree. With $k$ new trees at 70 kg, $\\tfrac{6{,}730 + 70k}{130 + k} = 55$, so $6{,}730 + 70k = 7{,}150 + 55k$, $15k = 420$ and $k = 28$.",
+    "steps": [
+     "1. Block totals: $10 \\cdot 70 = 700$, $25 \\cdot 52 = 1{,}300$, $60 \\cdot 45 = 2{,}700$, $35 \\cdot 58 = 2{,}030$; in all $6{,}730$ kg on 130 trees.",
+     "2. At a mean of 55 the 130 trees would need $7{,}150$ kg: they are 420 kg short.",
+     "3. Each new tree is 15 kg above 55: $\\tfrac{420}{15} = 28$ trees."
+    ],
+    "fast": "Shortfall $55 \\cdot 130 - 6{,}730 = 420$; each new tree covers 15 of it.",
+    "trap": "Taking the orchard's mean as the average of the four block means, $\\tfrac{70 + 52 + 45 + 58}{4} = 56.25$, makes the mean already above 55 and suggests no new trees; the per-tree mean must weight each block by its trees."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "mean-median-mode",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "data-interpretation-calc",
+     "role": "secondary"
+    }
+   ],
+   "setup": "DI: the overall total from counts times means; add a new group of equal values until the overall mean reaches a target; the new group's size",
+   "variant": "a mean after adding or removing values",
+   "revisits": "quant-003:s1q11"
+  },
+  {
+   "id": "s2q1",
+   "section": 2,
+   "type": "qc",
+   "difficulty": 4,
+   "prompt": "$N = 8^{11}$",
+   "qc": {
+    "a": "$N$",
+    "b": "$10^{10}$"
+   },
+   "key": {
+    "sel": [
+     1
+    ]
+   },
+   "explanation": {
+    "key": "$8^{11} = 2^{33} = 2^3 \\cdot (2^{10})^3 = 8 \\cdot 1{,}024^3$. Since $1.024^3 \\approx 1.07$, $1{,}024^3 \\approx 1.07 \\times 10^9$, and $8^{11} \\approx 8.6 \\times 10^9$, which is less than $10^{10}$. B is greater.",
+    "steps": [
+     "1. $8^{11} = 2^{33} = 8 \\cdot (2^{10})^3$.",
+     "2. $2^{10} = 1{,}024$, and $1.024^3 < 1.1$, so $(2^{10})^3 < 1.1 \\times 10^9$.",
+     "3. $8^{11} < 8.8 \\times 10^9 < 10^{10}$. Answer B."
+    ],
+    "fast": "$2^{10}$ is only $2.4\\%$ above $10^3$, too little for $8 \\times 10^9$ to reach $10^{10}$.",
+    "trap": "Eleven factors against ten looks like A; rounding $2^{10} \\approx 10^3$ and then $8 \\times 10^9$ up to 'about $10^{10}$' suggests C."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "estimation-sigfig",
+     "role": "primary"
+    }
+   ],
+   "setup": "a power of a small base against a power of ten with a different exponent; rewrite the base in powers of two, use 2 to the 10th as about a thousand, and bound the error",
+   "variant": "order of magnitude comparison in QC"
+  },
+  {
+   "id": "s2q2",
+   "section": 2,
+   "type": "qc",
+   "difficulty": 5,
+   "prompt": "List $P$ consists of 6 integers whose sum is 21. List $Q$ consists of 6 integers whose sum is 20.",
+   "qc": {
+    "a": "The least possible standard deviation of the integers in list $P$",
+    "b": "The least possible standard deviation of the integers in list $Q$"
+   },
+   "key": {
+    "sel": [
+     0
+    ]
+   },
+   "explanation": {
+    "key": "The standard deviation is least when the integers are as nearly equal as possible. $P$ has mean 3.5, and no integer is closer than 0.5 to it: the best list is 3, 3, 3, 4, 4, 4, with every value 0.5 from the mean. $Q$ has mean $3\\tfrac13$: the best list is 3, 3, 3, 3, 4, 4, with four values $\\tfrac13$ away and two $\\tfrac23$ away. Squared deviations: $P$, $6 \\cdot \\tfrac14 = 1.5$; $Q$, $4 \\cdot \\tfrac19 + 2 \\cdot \\tfrac49 = \\tfrac43$. Both lists have 6 values, so $Q$'s least standard deviation is smaller. A is greater.",
+    "steps": [
+     "1. Least spread: make the integers as equal as possible.",
+     "2. $P$: 3, 3, 3, 4, 4, 4 about mean 3.5; sum of squared deviations $1.5$.",
+     "3. $Q$: 3, 3, 3, 3, 4, 4 about mean $\\tfrac{10}{3}$; sum of squared deviations $\\tfrac43 < 1.5$. Same count, so A is greater."
+    ],
+    "fast": "A half-integer mean keeps every integer at least 0.5 away; a mean of $3\\tfrac13$ lets most values sit only $\\tfrac13$ away.",
+    "trap": "Both lists are 'split as evenly as possible', which suggests C; the tidy 3-and-4 split of $P$ looks like the smaller spread and suggests B."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "std-dev-normal",
+     "role": "primary"
+    }
+   ],
+   "setup": "two integer lists of the same size whose sums differ by one; compare their least possible standard deviations (a half-integer mean forces every value off the mean)",
+   "variant": "the least or greatest possible standard deviation under a constraint"
+  },
+  {
+   "id": "s2q3",
+   "section": 2,
+   "type": "qc",
+   "difficulty": 5,
+   "prompt": "The random variable $X$ is uniformly distributed on the interval from 10 to 20. The integer $N$ is chosen at random from the integers 10 through 20, inclusive, with each integer equally likely.",
+   "qc": {
+    "a": "The probability that $X \\le 13$",
+    "b": "The probability that $N \\le 13$"
+   },
+   "key": {
+    "sel": [
+     1
+    ]
+   },
+   "explanation": {
+    "key": "For the uniform $X$, a probability is a share of the interval's length: $\\tfrac{13 - 10}{20 - 10} = 0.3$. $N$ has 11 equally likely values, and 4 of them (10, 11, 12, 13) are at most 13: $\\tfrac{4}{11} \\approx 0.36$. B is greater.",
+    "steps": [
+     "1. $P(X \\le 13) = \\tfrac{3}{10} = 0.3$ (length 3 out of 10).",
+     "2. $N$ takes the 11 values 10 through 20; four are at most 13: $\\tfrac{4}{11}$.",
+     "3. $\\tfrac{4}{11} > \\tfrac{3}{10}$ because $40 > 33$. Answer B."
+    ],
+    "fast": "The continuous case measures length (3 of 10); the discrete case counts endpoints too (4 of 11).",
+    "trap": "Treating $N$ like $X$ gives $0.3$ for both and C; counting $13 - 10 = 3$ integers gives $\\tfrac{3}{11}$ and A."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "random-variables",
+     "role": "primary"
+    }
+   ],
+   "setup": "a continuous uniform variable and a discrete uniform integer on the same endpoints; compare the probabilities of the same at-most event (length share against inclusive count)",
+   "variant": "a uniform distribution over an interval"
+  },
+  {
+   "id": "s2q4",
+   "section": 2,
+   "type": "qc",
+   "difficulty": 4,
+   "figureId": "fig3",
+   "prompt": "The box plots summarize the test scores of the 20 applicants at testing center P and of the 200 applicants at testing center Q.",
+   "qc": {
+    "a": "The number of applicants at center P who scored above 60",
+    "b": "The number of applicants at center Q who scored above 60"
+   },
+   "key": {
+    "sel": [
+     1
+    ]
+   },
+   "explanation": {
+    "key": "P's lowest score is 62, so all 20 of its applicants scored above 60: Quantity A is 20. Q's third quartile is 66, so the top quarter of Q's 200 scores, at least 50 applicants, scored 66 or more, which is above 60. Quantity B is at least 50. B is greater, although P's percent above 60 (100 percent) is far larger than Q's.",
+    "steps": [
+     "1. P: minimum 62 > 60, so every one of its 20 applicants counts: A $= 20$.",
+     "2. Q: $Q_3 = 66 > 60$, so at least a quarter of 200, that is 50 applicants, scored above 60: B $\\ge 50$.",
+     "3. $50 > 20$. Answer B."
+    ],
+    "fast": "A quarter of 200 already outnumbers all 20 of P.",
+    "trap": "P's whole plot sits above 60 while most of Q's sits below it, so P looks like it has more scores above 60: A. That compares percents; the groups differ tenfold in size."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "quartiles-boxplots",
+     "role": "primary"
+    }
+   ],
+   "setup": "two box plots of groups of very different sizes, one wholly above a value and the other mostly below it; compare the counts above the value (a quarter of the large group outnumbers all of the small one)",
+   "variant": "comparing two boxplots"
+  },
+  {
+   "id": "s2q5",
+   "section": 2,
+   "type": "qc",
+   "difficulty": 5,
+   "prompt": "The value of a fund rose by the same percent every year for 10 years. At the end of the 10 years, the value was 300 percent greater than at the start.",
+   "qc": {
+    "a": "The value of the fund at the end of the fifth year",
+    "b": "The average (arithmetic mean) of the fund's values at the start and at the end of the 10 years"
+   },
+   "key": {
+    "sel": [
+     1
+    ]
+   },
+   "explanation": {
+    "key": "A 300 percent increase multiplies the value by 4. With a constant yearly factor $r$, $r^{10} = 4$, so $r^5 = 2$: after five years the value is $2V$, where $V$ is the start. The average of $V$ and $4V$ is $2.5V$. B is greater: halfway through, steady percent growth reaches the geometric mean $\\sqrt{V \\cdot 4V} = 2V$, below the arithmetic mean.",
+    "steps": [
+     "1. 300 percent greater means the factor over 10 years is $1 + 3 = 4$.",
+     "2. Half the period: $r^5 = \\sqrt{r^{10}} = 2$, so A $= 2V$.",
+     "3. B $= \\tfrac{V + 4V}{2} = 2.5V > 2V$. Answer B."
+    ],
+    "fast": "Halfway in time is the square root of the total factor: $\\sqrt4 = 2$, against an average of 2.5.",
+    "trap": "Splitting the increase evenly, 150 percent in each half, puts A at $2.5V$ and gives C; percent growth compounds, so the first half gains less than half the increase."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "exponential-growth",
+     "role": "primary"
+    },
+    {
+     "kind": "concept",
+     "id": "mean-median-mode",
+     "role": "secondary"
+    }
+   ],
+   "setup": "constant percent growth with the overall percent increase over the period; the value at the halfway point against the average of the starting and ending values (geometric against arithmetic mean)",
+   "variant": "growth by a factor over a stated number of periods",
+   "revisits": "quant-003:s2q5"
+  },
+  {
+   "id": "s2q6",
+   "section": 2,
+   "type": "mc",
+   "difficulty": 3,
+   "prompt": "In the $xy$-plane, point $P$ lies on the $x$-axis, point $Q$ lies on the $y$-axis, and the midpoint of segment $PQ$ is $(4, 3)$. What is the length of $PQ$?",
+   "choices": [
+    "5",
+    "7",
+    "8",
+    "10",
+    "14"
+   ],
+   "key": {
+    "sel": [
+     3
+    ]
+   },
+   "explanation": {
+    "key": "The midpoint's coordinates are averages. $P = (p, 0)$ and $Q = (0, q)$ give $\\tfrac p2 = 4$ and $\\tfrac q2 = 3$, so $P = (8, 0)$ and $Q = (0, 6)$. $PQ = \\sqrt{8^2 + 6^2} = 10$.",
+    "steps": [
+     "1. Midpoint of $(p, 0)$ and $(0, q)$ is $(\\tfrac p2, \\tfrac q2) = (4, 3)$.",
+     "2. $P = (8, 0)$, $Q = (0, 6)$.",
+     "3. $PQ = \\sqrt{64 + 36} = 10$."
+    ],
+    "fast": "The midpoint of the hypotenuse of right triangle $OPQ$ is 5 from $O$, and that is half the hypotenuse.",
+    "trap": "The distance from the origin to the midpoint, $\\sqrt{4^2 + 3^2} = 5$, is only half of $PQ$; adding the intercepts, $8 + 6 = 14$, is not a distance."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "coordinate-geometry",
+     "role": "primary"
+    }
+   ],
+   "setup": "a segment with one endpoint on each axis and a given midpoint; the endpoints from doubling the midpoint's coordinates; the segment's length (not the origin-to-midpoint distance)",
+   "variant": "distance and midpoint"
+  },
+  {
+   "id": "s2q7",
+   "section": 2,
+   "type": "mc",
+   "difficulty": 5,
+   "figureId": "fig4",
+   "prompt": "In the figure, $O$ is the center of the circle, and points $A$, $B$ and $C$ lie on the circle. If the measure of $\\angle BAO$ is $20^\\circ$ and the measure of $\\angle BCO$ is $30^\\circ$, what is the measure of $\\angle AOC$?",
+   "choices": [
+    "$50^\\circ$",
+    "$80^\\circ$",
+    "$100^\\circ$",
+    "$130^\\circ$",
+    "$160^\\circ$"
+   ],
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "$OA$, $OB$ and $OC$ are radii, so triangles $OAB$ and $OCB$ are isosceles, although nothing says so. Then $\\angle ABO = \\angle BAO = 20^\\circ$ and $\\angle CBO = \\angle BCO = 30^\\circ$, so $\\angle ABC = 50^\\circ$. The angles of quadrilateral $ABCO$ add to $360^\\circ$, and its angle at $O$ is the reflex one: $20 + 50 + 30 + (360 - \\angle AOC) = 360$, so $\\angle AOC = 100^\\circ$. (Equivalently, a central angle is twice the inscribed angle $\\angle ABC$.)",
+    "steps": [
+     "1. Equal radii: $\\angle ABO = 20^\\circ$ and $\\angle CBO = 30^\\circ$.",
+     "2. $\\angle ABC = 20 + 30 = 50^\\circ$.",
+     "3. $\\angle AOC$ is the central angle on arc $AC$: $2 \\cdot 50 = 100^\\circ$."
+    ],
+    "fast": "Copy each given angle across its isosceles triangle to $B$; double the total.",
+    "trap": "Without the equal radii, $20 + 30 = 50^\\circ$ looks like the answer; that is the inscribed angle at $B$, half the central angle $\\angle AOC$. $130^\\circ = 180 - 50$ treats $ABCO$ as if it were a triangle."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "triangles",
+     "role": "primary"
+    }
+   ],
+   "setup": "three points on a circle joined to its center; two given angles at the circle are base angles of triangles made isosceles only by equal radii; the central angle between two of the points",
+   "variant": "angle chasing through isosceles triangles in a figure"
+  },
+  {
+   "id": "s2q8",
+   "section": 2,
+   "type": "mc",
+   "difficulty": 5,
+   "prompt": "A chemist mixes some 20 percent salt solution with some 50 percent salt solution to make a 40 percent salt solution. When she then adds 10 liters of pure water to the mixture, its concentration falls to 30 percent. How many liters of the 20 percent solution did she use?",
+   "choices": [
+    "6",
+    "10",
+    "12",
+    "15",
+    "20"
+   ],
+   "key": {
+    "sel": [
+     1
+    ]
+   },
+   "explanation": {
+    "key": "Let $T$ be the liters of 40 percent mixture. Water adds no salt, so $0.4T = 0.3(T + 10)$, giving $T = 30$ and 12 liters of salt. With $x$ liters of the 20 percent solution and $30 - x$ of the 50 percent: $0.2x + 0.5(30 - x) = 12$, so $15 - 0.3x = 12$ and $x = 10$.",
+    "steps": [
+     "1. Dilution: $0.4T = 0.3(T + 10)$ gives $T = 30$ liters, holding 12 liters of salt.",
+     "2. Mixing: $0.2x + 0.5(30 - x) = 12$.",
+     "3. $0.3x = 3$, so $x = 10$."
+    ],
+    "fast": "40 percent sits twice as far from 20 as from 50, so the mix is 1 part of 20 percent to 2 parts of 50 percent: $\\tfrac13$ of 30 liters.",
+    "trap": "Solving the mix and reporting the 50 percent amount, 20 liters, answers for the wrong solution."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "word-problems-rate",
+     "role": "primary"
+    }
+   ],
+   "setup": "two solutions mixed to a target concentration, then a stated amount of water dilutes it to a second concentration; the dilution fixes the mixture's size, then the mixing equation gives one part",
+   "variant": "mixing two solutions to a target concentration"
+  },
+  {
+   "id": "s2q9",
+   "section": 2,
+   "type": "mc",
+   "difficulty": 4,
+   "prompt": "Ray $OC$ bisects $\\angle AOB$. Ray $OD$ lies inside $\\angle COB$, the measure of $\\angle COD$ is $12^\\circ$, and the measure of $\\angle AOD$ is 3 times the measure of $\\angle DOB$. What is the measure of $\\angle AOB$?",
+   "choices": [
+    "$24^\\circ$",
+    "$36^\\circ$",
+    "$48^\\circ$",
+    "$54^\\circ$",
+    "$72^\\circ$"
+   ],
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "Let $\\angle AOC = \\angle COB = a$. Then $\\angle DOB = a - 12$ and $\\angle AOD = a + 12$. So $a + 12 = 3(a - 12)$, giving $2a = 48$, $a = 24$ and $\\angle AOB = 2a = 48^\\circ$.",
+    "steps": [
+     "1. The bisector gives two halves of size $a$.",
+     "2. $OD$ is $12^\\circ$ past the bisector: $\\angle AOD = a + 12$, $\\angle DOB = a - 12$.",
+     "3. $a + 12 = 3a - 36$ gives $a = 24$; the whole angle is $48^\\circ$."
+    ],
+    "fast": "$\\angle AOD : \\angle DOB = 3 : 1$ puts $OD$ at three quarters of the way across; the bisector is at one half, so $12^\\circ$ is a quarter of the angle.",
+    "trap": "Stopping at $a = 24$ gives half the angle."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "lines-angles",
+     "role": "primary"
+    }
+   ],
+   "setup": "a bisected angle with a second ray inside one half; the ray's offset from the bisector and the ratio of the two angles it makes with the sides; the whole angle",
+   "variant": "angle bisectors"
+  },
+  {
+   "id": "s2q10",
+   "section": 2,
+   "type": "mc",
+   "difficulty": 3,
+   "prompt": "If $x - 2y = 5$, what is the value of $x - [\\,2y - (x - 3y)\\,] - (-y)$?",
+   "choices": [
+    "$-10$",
+    "$0$",
+    "$5$",
+    "$10$",
+    "$15$"
+   ],
+   "key": {
+    "sel": [
+     3
+    ]
+   },
+   "explanation": {
+    "key": "Work from the inside out. $2y - (x - 3y) = 5y - x$. Then $x - (5y - x) = 2x - 5y$, and subtracting $-y$ adds $y$: $2x - 4y = 2(x - 2y) = 10$.",
+    "steps": [
+     "1. $2y - (x - 3y) = 2y - x + 3y = 5y - x$.",
+     "2. $x - (5y - x) = 2x - 5y$.",
+     "3. $2x - 5y + y = 2x - 4y = 2 \\cdot 5 = 10$."
+    ],
+    "fast": "Clear the innermost parentheses first and flip every sign inside a subtracted group.",
+    "trap": "Not flipping $-3y$ inside the parentheses gives $2y - x - 3y = -x - y$ and then $2x + 2y$, which $x - 2y = 5$ cannot evaluate; stopping at $x - 2y$ gives 5."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "algebraic-expressions",
+     "role": "primary"
+    }
+   ],
+   "setup": "a doubly nested expression with a subtracted negative term simplifies to a multiple of a given linear combination; its value",
+   "variant": "expressions with nested parentheses and signs"
+  },
+  {
+   "id": "s2q11",
+   "section": 2,
+   "type": "mc",
+   "difficulty": 5,
+   "prompt": "A bonus pool of $\\$100{,}000$ is divided among 5 employees. Each bonus is a whole number of thousands of dollars, and no employee's bonus is more than twice any other employee's bonus. What is the greatest possible bonus that one employee could receive?",
+   "choices": [
+    "$\\$30{,}000$",
+    "$\\$31{,}000$",
+    "$\\$32{,}000$",
+    "$\\$33{,}000$",
+    "$\\$40{,}000$"
+   ],
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "Work in thousands. Let the largest bonus be $L$ and the smallest $s$, so $L \\le 2s$. The other four bonuses are each at least $s$, so $100 \\ge 4s + L \\ge 2L + L = 3L$ and $L \\le 33$. But $L = 33$ needs $s \\ge 16.5$, so $s \\ge 17$, and then the total is at least $4 \\cdot 17 + 33 = 101$. $L = 32$ works: 32, 20, 16, 16, 16.",
+    "steps": [
+     "1. Every bonus is at least $s \\ge \\tfrac L2$, so $100 \\ge L + 4 \\cdot \\tfrac L2 = 3L$: $L \\le 33$.",
+     "2. $L = 33$: whole thousands force $s \\ge 17$, and $33 + 4 \\cdot 17 = 101 > 100$. Impossible.",
+     "3. $L = 32$, $s = 16$: 32, 20, 16, 16, 16 sums to 100. Answer $\\$32{,}000$."
+    ],
+    "fast": "Test the bound: 33 needs four bonuses of at least 17.",
+    "trap": "$3L \\le 100$ gives $L \\le 33\\tfrac13$, and rounding down to 33 forgets that the smallest bonus must then be a whole number of at least 16.5."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "min-max-bounding",
+     "role": "primary"
+    }
+   ],
+   "setup": "a total split into a fixed number of whole-number shares, the largest at most twice the smallest; the greatest possible largest share (a ratio bound, then whole numbers)",
+   "variant": "the largest share or longest side under an ordering or triangle constraint"
+  },
+  {
+   "id": "s2q12",
+   "section": 2,
+   "type": "mc",
+   "difficulty": 4,
+   "prompt": "The sum of seven integers is odd, and their product is even. What is the greatest possible number of the seven integers that are odd?",
+   "choices": [
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "key": {
+    "sel": [
+     2
+    ]
+   },
+   "explanation": {
+    "key": "A sum of integers is odd exactly when it has an odd number of odd terms. An even product needs at least one even integer, leaving at most 6 odd ones, and the count must be odd: at most 5. Five works: 1, 1, 1, 1, 1, 2, 2 has sum 9 and an even product.",
+    "steps": [
+     "1. Even product: at least one even integer, so at most 6 odd.",
+     "2. Odd sum: the number of odd integers is odd.",
+     "3. The greatest odd number up to 6 is 5, and 1, 1, 1, 1, 1, 2, 2 attains it."
+    ],
+    "fast": "Six odd and one even gives an even sum, so drop to five.",
+    "trap": "Using only the product condition gives 6; using only the sum condition gives 7."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "integers-properties",
+     "role": "primary"
+    }
+   ],
+   "setup": "several integers with an odd sum and an even product; the greatest possible number of odd ones (the count of odd terms must be odd)",
+   "variant": "even/odd parity of sums and products of unknown integers"
+  },
+  {
+   "id": "s2q13",
+   "section": 2,
+   "type": "mc_multi",
+   "difficulty": 4,
+   "prompt": "A rectangle has a perimeter of 28. Which of the following could be the length of a diagonal of the rectangle?\n\nIndicate all such lengths.",
+   "choices": [
+    "8",
+    "10",
+    "12",
+    "13",
+    "14"
+   ],
+   "key": {
+    "sel": [
+     1,
+     2,
+     3
+    ]
+   },
+   "explanation": {
+    "key": "With sides $a$ and $b$, $a + b = 14$ and the diagonal $d$ has $d^2 = a^2 + b^2 = 196 - 2ab$. The product $ab$ is greatest, 49, for the square, so the square has the shortest diagonal: $d^2 \\ge 98$, $d \\ge 7\\sqrt2 \\approx 9.9$. As one side shrinks toward 0, $d$ approaches 14 but never reaches it. So $7\\sqrt2 \\le d < 14$: 10, 12 and 13.",
+    "steps": [
+     "1. $d^2 = (a + b)^2 - 2ab = 196 - 2ab$.",
+     "2. $0 < ab \\le 49$, so $98 \\le d^2 < 196$.",
+     "3. $9.9 \\approx 7\\sqrt2 \\le d < 14$: 10, 12 and 13 qualify; 8 is shorter than the square's diagonal and 14 needs a side of 0."
+    ],
+    "fast": "Square: $d = 7\\sqrt2 \\approx 9.9$; flat limit: $d \\to 14$.",
+    "trap": "Treating the square as the longest-diagonal case, as it is the largest-perimeter case for a fixed diagonal, flips the range; checking only the 6-8-10 rectangle keeps 10 alone; a flat 'rectangle' would admit 14."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "area-perimeter",
+     "role": "primary"
+    }
+   ],
+   "setup": "a rectangle with a fixed perimeter; select the possible diagonal lengths (the square gives the least, a flat rectangle the unreachable greatest)",
+   "variant": "perimeter fixed, area varies (or the reverse)",
+   "revisits": "quant-003:s2q14"
+  },
+  {
+   "id": "s2q14",
+   "section": 2,
+   "type": "mc_multi",
+   "difficulty": 5,
+   "prompt": "A right triangle has sides of integer length, and one of its legs has length 12. Which of the following could be the length of its hypotenuse?\n\nIndicate all such lengths.",
+   "choices": [
+    "13",
+    "15",
+    "16",
+    "20",
+    "25",
+    "37"
+   ],
+   "key": {
+    "sel": [
+     0,
+     1,
+     3,
+     5
+    ]
+   },
+   "explanation": {
+    "key": "With other leg $b$ and hypotenuse $c$, $c^2 - b^2 = 144$, so $(c - b)(c + b) = 144$. The two factors have the same parity (their sum is $2c$), so both are even: $2 \\cdot 72$, $4 \\cdot 36$, $6 \\cdot 24$ and $8 \\cdot 18$ give $c = 37, 20, 15, 13$, the triangles 12-35-37, 12-16-20, 9-12-15 and 5-12-13. 16 is the other leg of 12-16-20, and $25^2 - 12^2 = 481$ is not a perfect square.",
+    "steps": [
+     "1. $(c - b)(c + b) = 144$ with $c - b < c + b$ and both even.",
+     "2. Pairs $(2, 72), (4, 36), (6, 24), (8, 18)$ give $c = 37, 20, 15, 13$.",
+     "3. Choices 13, 15, 20 and 37 qualify; 16 and 25 do not."
+    ],
+    "fast": "Scaled triples with a 12: 3-4-5 times 3 or 4, 5-12-13 itself; then the primitive one with even leg $2mn = 12$, $m = 6, n = 1$: 35-12-37.",
+    "trap": "Listing only multiples of 3-4-5 and 5-12-13 misses the primitive 12-35-37; 16 is a leg of 12-16-20, not its hypotenuse."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "pythagorean-special",
+     "role": "primary"
+    }
+   ],
+   "setup": "a right triangle with integer sides and one given leg; select the possible hypotenuses (factor the difference of squares into same-parity pairs: primitive and scaled triples)",
+   "variant": "Pythagorean triples and their multiples"
+  },
+  {
+   "id": "s2q15",
+   "section": 2,
+   "type": "numeric",
+   "difficulty": 4,
+   "prompt": "How many integers $n$ satisfy $12 < n^2 \\le 81$?",
+   "numeric": {
+    "kind": "single"
+   },
+   "key": {
+    "value": "12"
+   },
+   "explanation": {
+    "key": "$n^2 > 12$ needs $|n| \\ge 4$, since $3^2 = 9$ is too small, and $n^2 \\le 81$ needs $|n| \\le 9$. So $|n|$ is 4, 5, 6, 7, 8 or 9, and each value gives two integers, $n$ and $-n$: 12 integers.",
+    "steps": [
+     "1. Lower bound: $n^2 > 12$ means $|n| > \\sqrt{12} \\approx 3.46$, so $|n| \\ge 4$.",
+     "2. Upper bound: $n^2 \\le 81$ means $|n| \\le 9$, 9 included.",
+     "3. Six absolute values, two signs each: 12."
+    ],
+    "fast": "Count $4, \\dots, 9$ (six values) and double for the negatives.",
+    "trap": "Forgetting the negative integers gives 6; including $\\pm 3$ gives 14; excluding $\\pm 9$ gives 10."
+   },
+   "tags": [
+    {
+     "kind": "concept",
+     "id": "quadratic-inequalities",
+     "role": "primary"
+    }
+   ],
+   "setup": "a two-sided bound on n squared with a non-square lower bound and a square upper bound; count the integers of both signs",
+   "variant": "integer count in a solution set such as x^2 < 10"
+  }
+ ]
+}

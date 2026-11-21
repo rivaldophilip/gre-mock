@@ -87,6 +87,8 @@ function inFlightRevisits(current: string) {
 /**
  * Variants used so far (concept -> variant -> times). A test that records its variants (quant `variant` fields)
  * counts from its questions; a brief counts only while its test is unwritten or records none (verbal skill slots).
+ * A brief whose test is unwritten is a sibling being authored in parallel, so it counts 1.5: on a tie with a variant an
+ * earlier test used once, the sibling's variant loses, and two parallel mocks don't practise the same form.
  */
 function variantsUsed(current: string) {
   const dir = "content/briefs";
@@ -99,6 +101,7 @@ function variantsUsed(current: string) {
   for (const f of fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => new RegExp(`^${measure}-\\d+\\.json$`).test(f)) : []) {
     const b = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
     if (b.testId === current || recorded.has(b.testId)) continue;
+    const weight = fs.existsSync(path.join("content/tests", `${b.testId}.json`)) ? 1 : 1.5;
     const slots = [
       ...((b.conceptSlots ?? []) as { concept: string; variant?: string }[]).map((s) => [s.concept, s.variant] as const),
       ...((b.skillSlots ?? []) as { skill: string; variant?: string }[]).map((s) => [s.skill, s.variant] as const),
@@ -106,7 +109,7 @@ function variantsUsed(current: string) {
     for (const [concept, variant] of slots) {
       if (!variant) continue;
       const m = used.get(concept) ?? new Map<string, number>();
-      used.set(concept, m.set(variant, (m.get(variant) ?? 0) + 1));
+      used.set(concept, m.set(variant, (m.get(variant) ?? 0) + weight));
     }
   }
   return used;
@@ -420,6 +423,14 @@ async function main() {
     const siblingForms = new Map([...revisits].flatMap(([i, r]) => (r.question.variant ? [[i, r.question.variant] as const] : [])));
     const variants = assignVariants(picks.map((p) => p.itemId), JSON.parse(fs.readFileSync("data/concept_variants.json", "utf8")), variantsUsed(id), random, siblingForms);
     const history = conceptHistory(measure);
+    // other earlier items in a revisited item's setup group: the sibling's change must differ from theirs too, or the judge
+    // calls it a copy of one of them (quant-018's revisit of a worn two-set item moved its trap where quant-006 already had)
+    const shownOf = new Map<string, string>(measureTests(measure).flatMap((t) => t.questions.map((q) => [`${t.id}:${q.id}`, itemText(q)] as [string, string])));
+    const siblingsOf = (concept: string, ref: string) =>
+      ((history.get(concept) ?? []).find((g) => g.items.some((it) => `${it.testId}:${it.qid}` === ref))?.items ?? [])
+        .map((it) => `${it.testId}:${it.qid}`)
+        .filter((r) => r !== ref)
+        .map((r) => `${r}: ${clip(shownOf.get(r) ?? "", 220)}`);
     let nth = 0;
     brief.conceptSlots = picks.map((p, i) => ({
       slot: i + 1,
@@ -431,7 +442,7 @@ async function main() {
       reason: p.reason,
       exemplars: conceptExemplars(refs, p.itemId),
       history: history.get(p.itemId) ?? [],
-      ...(revisits.has(i) ? { revisit: revisitNote(revisits.get(i)!, nth++) } : {}),
+      ...(revisits.has(i) ? { revisit: { ...revisitNote(revisits.get(i)!, nth++), siblings: siblingsOf(p.itemId, revisits.get(i)!.ref) } } : {}),
     }));
     brief.instructions =
       "Assign the 27 concept slots to the 27 blueprint slots (any order, but a DI set of 3 should share a concept area). Each question: one primary concept (the slot) and optional secondary tags. Write each question as its slot's variant, the form of the concept earlier mocks used least, with a setup that is not in the slot's history (worn setups are banned). Record `setup` (one abstract line, no numbers or story) and `variant` on every question. A slot with a `revisit` is the exception: its variant is that earlier item's form, and you write a sibling of the item (the user missed or guessed it), keeping its decisive insight and making the change named, and set `revisits` to its ref. Provide a python verification script." + focusNote;
@@ -446,10 +457,10 @@ async function main() {
 }
 
 type Slot = { section: number; slot: number; type: string; level: number; exemplars: string[]; keys?: number };
-type RevisitNote = { ref: string; result: string; item: string; setup?: string; change: string };
+type RevisitNote = { ref: string; result: string; item: string; setup?: string; change: string; siblings?: string[] };
 type UsedBefore = { ref: string; stem?: string; keys?: string[]; distractors: string[] };
 type Word = { word: string; id: string; secondary: boolean; sense: string | null; bucket?: string; reason?: string; usedBefore?: UsedBefore[]; revisit?: RevisitNote };
-const revisitLine = (r: RevisitNote) => `  - **revisit ${r.ref}** (you ${r.result} it): ${r.item}${r.setup ? ` [setup: ${r.setup}]` : ""}. Write a sibling, not a copy: ${r.change}. Set \`"revisits": "${r.ref}"\`.${measure === "verbal" ? " Check still rejects its distractors and its SE key pair, so give it new ones." : ""}`;
+const revisitLine = (r: RevisitNote) => `  - **revisit ${r.ref}** (you ${r.result} it): ${r.item}${r.setup ? ` [setup: ${r.setup}]` : ""}. Write a sibling, not a copy: ${r.change}. Set \`"revisits": "${r.ref}"\`.${r.siblings?.length ? ` Earlier items already rework this setup, and the judge compares the sibling with them too, so make a change none of them made: ${r.siblings.join(" ‖ ")}.` : ""}${measure === "verbal" ? " Check still rejects its distractors and its SE key pair, so give it new ones." : ""}`;
 
 /**
  * Which passage each reading slot belongs to: blueprint passages in order (p1, p2, ...), arguments a1, a2. The first
