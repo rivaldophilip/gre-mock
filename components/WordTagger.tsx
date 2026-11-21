@@ -1,5 +1,6 @@
 "use client";
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { createPortal } from "react-dom";
 import { baseForms } from "@/lib/vocab-match";
 import { Rich, RichInline, type WordRender } from "./Rich";
 
@@ -157,25 +158,69 @@ export function tapWord(tags: WordTags, senses?: Sense[] | null): WordRender {
     const sense = (senses ?? tags.senses(tok))?.[0];
     const hint = on ? "Marked as not known. Tap to undo." : "Didn’t know it? Tap to see it more often.";
     return (
-      <span
+      <HoverTip
         key={key}
         title={sense ? undefined : hint}
-        onClick={(e) => {
-          e.stopPropagation();
-          void tags.toggle(tok, senses);
-        }}
-        className={`group relative cursor-pointer rounded -mx-px px-px transition-colors ${on ? "bg-warn-soft font-medium text-warn" : "hover:bg-surface-2"}`}
+        onClick={() => void tags.toggle(tok, senses)}
+        className={`cursor-pointer rounded -mx-px px-px transition-colors ${on ? "bg-warn-soft font-medium text-warn" : "hover:bg-surface-2"}`}
+        tip={
+          sense && (
+            <>
+              {shortDef(sense)}
+              <span className="mt-1 block text-xs text-muted">{hint}</span>
+            </>
+          )
+        }
       >
         {tok}
-        {sense && (
-          <span role="tooltip" className="pointer-events-none absolute bottom-full left-1/2 z-20 mb-1.5 hidden w-60 -translate-x-1/2 rounded-lg border border-line bg-surface px-3 py-2 text-left text-[13px] font-normal leading-snug text-fg shadow-lg group-hover:block">
-            {shortDef(sense)}
-            <span className="mt-1 block text-xs text-muted">{hint}</span>
-          </span>
-        )}
-      </span>
+      </HoverTip>
     );
   };
+}
+
+const TIP_W = 240;
+const EDGE = 8;
+
+/** A word with a hover tooltip drawn in a portal, so scrolling panes (the passage split) never clip or cover it. */
+function HoverTip({ children, tip, title, onClick, className }: { children: ReactNode; tip?: ReactNode; title?: string; onClick: () => void; className: string }) {
+  const [pos, setPos] = useState<{ x: number; y: number; below: boolean } | null>(null);
+  useEffect(() => {
+    if (!pos) return;
+    const hide = () => setPos(null);
+    window.addEventListener("scroll", hide, true);
+    return () => window.removeEventListener("scroll", hide, true);
+  }, [pos]);
+  return (
+    <span
+      title={title}
+      className={className}
+      onClick={(e) => {
+        e.stopPropagation();
+        onClick();
+      }}
+      onMouseEnter={(e) => {
+        if (!tip) return;
+        const r = e.currentTarget.getBoundingClientRect();
+        const x = Math.min(Math.max(r.left + r.width / 2 - TIP_W / 2, EDGE), window.innerWidth - TIP_W - EDGE);
+        const below = r.top < 90;
+        setPos({ x, y: below ? r.bottom + 6 : r.top - 6, below });
+      }}
+      onMouseLeave={() => setPos(null)}
+    >
+      {children}
+      {tip && pos &&
+        createPortal(
+          <span
+            role="tooltip"
+            style={{ left: pos.x, top: pos.y, width: TIP_W, transform: pos.below ? undefined : "translateY(-100%)" }}
+            className="pointer-events-none fixed z-50 block rounded-lg border border-line bg-surface px-3 py-2 text-left text-[13px] font-normal leading-snug text-fg shadow-lg"
+          >
+            {tip}
+          </span>,
+          document.body,
+        )}
+    </span>
+  );
 }
 
 /** Rich text whose words are tappable; `senses` is the definition to show on hover when the text is a single word. */

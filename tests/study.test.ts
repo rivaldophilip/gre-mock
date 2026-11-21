@@ -14,7 +14,8 @@ const richLines = (guide: Study) => [
   ...guide.quickRef.flatMap((g) => g.items.flatMap((it) => [it.name, it.text ?? "", it.note ?? ""])),
   ...guide.formats.flatMap((f) => f.rules),
   ...guide.pacing,
-  ...guide.sections.flatMap((s) => [s.idea, s.example.q, ...s.example.steps, ...s.facts, ...s.tricks, ...s.traps,
+  ...guide.sections.flatMap((s) => [s.idea, s.example.q, ...s.example.steps, ...(s.facts ?? []), ...(s.tricks ?? []), ...(s.traps ?? []),
+    ...(s.examples ?? []).flatMap((x) => [x.q, x.label, x.answer, ...x.wrong.flatMap((w) => [w.text, w.why])]),
     ...(s.tips ?? []).flatMap((t) => [t.title, t.text, t.example ?? ""]),
     ...(s.patterns ?? []).flatMap((p) => [p.idea, ...p.cases.flatMap((c) => [c.name, c.q, c.spot, ...c.steps]), ...(p.notWhen ?? [])])]),
 ];

@@ -86,7 +86,7 @@ async function Guide({ guide }: { guide: NonNullable<ReturnType<typeof loadStudy
   const numberOf = attemptNumbers(attempts);
   const marks = (kind: MarkKind) => new Map(markRows.filter((r) => r.kind === kind).map((r): [string, Mark] => [r.itemId, { state: r.state as Mark["state"], updatedAt: r.updatedAt }]));
   const cards = applyMarks(guide.quickRef.flatMap((g) => g.items.map((it) => ({ ...it, group: g.title, id: cardId(g.title, it.name) }))), (c) => c.id, marks("card"));
-  const groups = guide.quickRef.map((g) => ({ title: g.title, items: cards.shown.filter((c) => c.group === g.title) })).filter((g) => g.items.length);
+  const groups = guide.quickRef.map((g) => ({ title: g.title, intro: g.intro, svg: g.svg, items: cards.shown.filter((c) => c.group === g.title) })).filter((g) => g.items.length);
   const topics = applyMarks(orderSections(guide.sections, stats.sections), (s) => s.id, marks("topic"), (s, since) =>
     stats.sections.get(s.id)!.misses.some((x) => x.finishedAt > since));
   const sections = topics.shown;
@@ -96,13 +96,14 @@ async function Guide({ guide }: { guide: NonNullable<ReturnType<typeof loadStudy
   const sheet = guide.measure === "quant"
     ? { title: "Formula sheet", sub: "Every formula you need, one per card." }
     : { title: "Cheat sheet", sub: "Every move you need, one per card." };
+  const hasSheet = guide.quickRef.length > 0;
 
   return (
     <>
       <div className="space-y-3">
         <p className="max-w-2xl text-[15px] leading-relaxed"><RichInline text={guide.intro} /></p>
         <nav aria-label="On this page" className="flex flex-wrap gap-1.5 print:hidden">
-          {[["formulas", sheet.title], ["topics", "Topics"], ["formats", "Question types"], ["pacing", "Pacing"]].map(([id, label]) => (
+          {[...(hasSheet ? [["formulas", sheet.title]] : []), ["topics", "Topics"], ["formats", "Question types"], ["pacing", "Pacing"]].map(([id, label]) => (
             <a key={id} href={`#${id}`} className={chip}>{label}</a>
           ))}
         </nav>
@@ -142,7 +143,7 @@ async function Guide({ guide }: { guide: NonNullable<ReturnType<typeof loadStudy
         )}
       </section>
 
-      <section id="formulas" className="scroll-mt-20 space-y-4">
+      {hasSheet && <section id="formulas" className="scroll-mt-20 space-y-4">
         <div className="space-y-2">
           <div>
             <h2 className="font-semibold">{sheet.title}</h2>
@@ -158,6 +159,12 @@ async function Guide({ guide }: { guide: NonNullable<ReturnType<typeof loadStudy
         {groups.map((g) => (
           <div key={g.title} id={`f-${slug(g.title)}`} className="scroll-mt-20 space-y-2">
             <h3 className={eyebrow}>{g.title}</h3>
+            {(g.intro || g.svg) && (
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                {g.svg && <div className="flex shrink-0 justify-center rounded-lg bg-surface-2 p-2 text-fg [&>svg]:h-auto [&>svg]:max-h-44 [&>svg]:max-w-full" dangerouslySetInnerHTML={{ __html: g.svg }} />}
+                {g.intro && <p className="max-w-xl text-[15px] leading-relaxed"><RichInline text={g.intro} /></p>}
+              </div>
+            )}
             <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {g.items.map((it) => <FormulaCard key={it.id} measure={guide.measure} card={it} />)}
             </div>
@@ -170,7 +177,7 @@ async function Guide({ guide }: { guide: NonNullable<ReturnType<typeof loadStudy
             </div>
           </Shelf>
         )}
-      </section>
+      </section>}
 
       <section id="topics" className="scroll-mt-20 space-y-3">
         <div className="space-y-2">
@@ -314,11 +321,14 @@ function Topic({ s, measure, stats, numberOf, open, back, state }: {
           <RichInline text={s.idea} />
         </p>
         <Example q={s.example.q} steps={s.example.steps} />
-        <Block label="Rules to remember" lines={s.facts} />
-        <div className="grid gap-5 sm:grid-cols-2">
-          <Block label="Shortcuts" lines={s.tricks} tone="ok" />
-          <Block label="Watch out" lines={s.traps} tone="bad" />
-        </div>
+        {s.examples && <Examples examples={s.examples} />}
+        {s.facts && <Block label="Rules to remember" lines={s.facts} />}
+        {(s.tricks || s.traps) && (
+          <div className="grid gap-5 sm:grid-cols-2">
+            {s.tricks && <Block label="Shortcuts" lines={s.tricks} tone="ok" />}
+            {s.traps && <Block label="Watch out" lines={s.traps} tone="bad" />}
+          </div>
+        )}
         {s.tips && <Tips tips={s.tips} />}
         {s.patterns?.map((p) => <Pattern key={p.title} pattern={p} />)}
         {t.misses.length > 0 && <Misses misses={t.misses} numberOf={numberOf} />}
@@ -362,6 +372,28 @@ function Example({ q, steps }: { q: string; steps: string[] }) {
   );
 }
 
+function Examples({ examples }: { examples: NonNullable<StudySection["examples"]> }) {
+  return (
+    <div className="space-y-2">
+      <h3 className={eyebrow}>More examples</h3>
+      <ul className="grid gap-2 sm:grid-cols-2">
+        {examples.map((x) => (
+          <li key={x.q} className="space-y-2.5 rounded-xl border border-line p-3.5 break-inside-avoid">
+            <p className="text-[15px] font-medium leading-relaxed"><RichInline text={x.q} /></p>
+            <p className="text-[15px] leading-relaxed"><span className="font-semibold text-ok">{x.label}: </span><RichInline text={x.answer} /></p>
+            <div className="space-y-1">
+              <div className="text-xs font-semibold text-bad">Looks right, but isn’t</div>
+              <ul className="list-disc space-y-1.5 pl-5 text-sm leading-relaxed marker:text-bad">
+                {x.wrong.map((w) => <li key={w.text}><span className="italic"><RichInline text={w.text} /></span> <span className="text-muted"><RichInline text={w.why} /></span></li>)}
+              </ul>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function Tips({ tips }: { tips: NonNullable<StudySection["tips"]> }) {
   return (
     <div className="space-y-2">
@@ -395,6 +427,7 @@ function Pattern({ pattern }: { pattern: NonNullable<StudySection["patterns"]>[n
               <span className="font-semibold leading-snug">{c.name}</span>
             </div>
             <p className="text-[15px] font-medium leading-relaxed"><RichInline text={c.q} /></p>
+            {c.svg && <div className="flex justify-center rounded-lg bg-surface-2 p-2 text-fg [&>svg]:h-auto [&>svg]:max-h-44 [&>svg]:max-w-full" dangerouslySetInnerHTML={{ __html: c.svg }} />}
             <p className="text-sm leading-relaxed"><span className="font-semibold text-accent">Spot it: </span><RichInline text={c.spot} /></p>
             <ul className="list-disc space-y-1 pl-5 text-sm leading-relaxed marker:text-muted">
               {c.steps.map((st, j) => <li key={j}><RichInline text={st} /></li>)}

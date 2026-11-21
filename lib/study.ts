@@ -8,11 +8,13 @@ const Lines = z.array(z.string().min(1)).min(1);
 export const StudySchema = z.object({
   measure: z.enum(["verbal", "quant"]),
   intro: z.string().min(1),
-  /** quick-reference tiles: a plain name, then either the formula (bare TeX, no $) or a short rule (Rich), and an optional one-line note (Rich) */
+  /** quick-reference tiles: a plain name, then either the formula (bare TeX, no $) or a short rule (Rich), and an optional one-line note (Rich); a group may open with a short setup (Rich) and a drawing */
   quickRef: z
     .array(
       z.object({
         title: z.string().min(1),
+        intro: z.string().min(1).optional(),
+        svg: z.string().startsWith("<svg").optional(),
         items: z
           .array(
             z
@@ -22,7 +24,7 @@ export const StudySchema = z.object({
           .min(1),
       }),
     )
-    .min(1),
+    .default([]),
   formats: z.array(
     z.object({
       type: z.enum(["tc1", "tc2", "tc3", "se", "rc", "rc_multi", "rc_select", "arg", "qc", "mc", "mc_multi", "numeric", "di"]),
@@ -41,20 +43,31 @@ export const StudySchema = z.object({
         /** the one-sentence intuition the section hangs on */
         idea: z.string().min(1),
         example: z.object({ q: z.string().min(1), steps: Lines }),
-        facts: Lines,
-        tricks: Lines,
-        traps: Lines,
+        facts: Lines.optional(),
+        tricks: Lines.optional(),
+        traps: Lines.optional(),
+        /** short examples: an argument, the right answer under a label ("Assumed", "Weakens"), and the tempting wrong answers, each with why it fails */
+        examples: z
+          .array(
+            z.object({
+              q: z.string().min(1),
+              label: z.string().min(1),
+              answer: z.string().min(1),
+              wrong: z.array(z.object({ text: z.string().min(1), why: z.string().min(1) })).min(1),
+            }),
+          )
+          .optional(),
         /** tips & tricks: a named move, when it applies, a quick worked case, and an optional drawing (inline SVG drawn with currentColor and theme vars) */
         tips: z
           .array(z.object({ title: z.string().min(1), text: z.string().min(1), example: z.string().min(1).optional(), svg: z.string().startsWith("<svg").optional() }))
           .optional(),
-        /** pattern drills: one method in every disguise it shows up in, each with how to spot it and a worked case */
+        /** pattern drills: one method in every disguise it shows up in, each with how to spot it, a worked case and an optional drawing */
         patterns: z
           .array(
             z.object({
               title: z.string().min(1),
               idea: z.string().min(1),
-              cases: z.array(z.object({ name: z.string().min(1), q: z.string().min(1), spot: z.string().min(1), steps: Lines })).min(1),
+              cases: z.array(z.object({ name: z.string().min(1), q: z.string().min(1), spot: z.string().min(1), steps: Lines, svg: z.string().startsWith("<svg").optional() })).min(1),
               /** look-alikes the method does not fit */
               notWhen: Lines.optional(),
             }),

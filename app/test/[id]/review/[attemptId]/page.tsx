@@ -16,6 +16,7 @@ import rcSkills from "@/data/rc_skills.json";
 import { AppHeader } from "@/components/AppHeader";
 import { IconCheck, IconNext, IconX } from "@/components/icons";
 import { Explain } from "@/components/Explain";
+import { HashPad } from "@/components/HashPad";
 import { badge, btn, card } from "@/components/ui";
 
 export const dynamic = "force-dynamic";
@@ -229,7 +230,7 @@ export default async function Review({ params }: { params: Promise<{ id: string;
           const stemWords = shownWords(q.tags, "stem").filter((id) => !choiceIds.has(id));
           const ex = q.explanation;
           return (
-            <section key={q.id} id={`q-${q.id}`} className={`${card} scroll-mt-20 space-y-4 p-4 sm:p-5`}>
+            <section key={q.id} id={`q-${q.id}`} className={`${card} scroll-mt-20 space-y-4 p-4 target:ring-2 target:ring-accent/50 sm:p-5`}>
               <div className="flex flex-wrap items-center gap-2">
                 <span className={badge(ok ? "ok" : "bad")}>
                   {ok ? <IconCheck size={13} /> : <IconX size={13} />}
@@ -323,6 +324,7 @@ export default async function Review({ params }: { params: Promise<{ id: string;
             </section>
           );
         })}
+        <HashPad />
       </main>
     </>
   );

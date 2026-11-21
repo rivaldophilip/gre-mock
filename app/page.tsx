@@ -191,12 +191,12 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
         {drill && (drill.total > 0 || drill.misses > 0) && (
           <section className={`${row} flex flex-col gap-2.5 border-accent/40 bg-accent-soft sm:flex-row sm:items-center sm:gap-3`}>
             <div className="min-w-0 flex-1">
-              <h2 className="font-semibold leading-snug">Endless vocab</h2>
+              <h2 className="w-fit cursor-help font-semibold leading-snug" title="One question at a time, aimed at words you have not met">
+                Endless vocab
+              </h2>
               <p className="text-sm text-muted">
                 {drill.left > 0 ? (
                   <>
-                    One question at a time, aimed at words you have not met
-                    <br />
                     <span className="tabular-nums">{drill.left}</span> {drill.left === 1 ? "question" : "questions"} ·{" "}
                     <span className="tabular-nums">{drill.untested}</span> untested words
                   </>

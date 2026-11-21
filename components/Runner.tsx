@@ -402,9 +402,11 @@ export function Runner(p: RunnerProps) {
               Continue to Section 2 <IconNext size={18} />
             </button>
           ) : (
-            <a className={`${btn("primary", "lg")} w-full`} href={`/test/${test.id}/review/${attemptId}`}>
+            // a Link, not <a>: finishing already started a soft navigation here, and a full page load would abort its
+            // stream mid-render, flashing Next's "This page couldn't load" until the new document arrived
+            <Link className={`${btn("primary", "lg")} w-full`} href={`/test/${test.id}/review/${attemptId}`} prefetch={false}>
               See results <IconNext size={18} />
-            </a>
+            </Link>
           )}
           {mode === "exam" && sec1 && (
             <a className={`${btn("secondary")} w-full`} target="_blank" href={`/test/${test.id}/review/${attemptId}`}>
