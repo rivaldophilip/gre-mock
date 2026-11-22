@@ -42,7 +42,7 @@ async function main() {
       const test = a && testOf(a.testId);
       const q = test?.questions.find((x) => `${test.id}:${x.id}` === r.questionId);
       if (!test || !q || !q.tags.some((t) => t.kind === "concept")) continue;
-      const evs = eventsForResponse(q, test.measure, (r.answer ?? undefined) as Answer | undefined, { guessed: r.guessed, timeMs: r.timeMs }).filter(
+      const evs = eventsForResponse(q, test.measure, (r.answer ?? undefined) as Answer | undefined, { guessed: r.guessed, timeMs: r.timeMs, silly: r.silly }).filter(
         (e) => e.kind === "concept",
       );
       for (const e of evs) rows.push({ ...e, responseId: r.id, attemptId: r.attemptId, createdAt: r.updatedAt });

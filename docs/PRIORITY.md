@@ -29,6 +29,8 @@ Which words are "shown": `npm run tag` (run by `check`) tags every bank word in 
 
 Concepts: primary wrong +0.8, secondary wrong +0.4, right-but-guessed +0.3, right-but-slow +0.2 (>105 s quant, >90 s verbal), primary right −0.6, secondary right −0.3.
 
+**Silly mistakes (quant).** Once a wrong quant answer is shown (after Check in Practice, in review after the section in Exam), "Silly mistake?" marks it a slip rather than a gap (`responses.silly`, `POST /api/attempts/<id>/silly`). Its `concept_wrong_*` events then weigh `SILLY_FACTOR` (½): primary +0.4, secondary +0.2. Undoing restores the full weights. Only those events change: the answer still scores as wrong and still joins the revisit queue. `npm run reweight` keeps the halving.
+
 Events are emitted when a response is *finalized*: on "Check answer" in Practice mode, on section end in Exam mode. Blank questions emit nothing (they are also left out of accuracy). Abandoning an attempt ("Discard attempt" on the dashboard) finalizes nothing, so an Exam section not yet submitted leaves no events; checked Practice answers and finished sections keep theirs. `npm run cleanup:unanswered [-- --apply]` removes events that older attempts logged for blanks.
 
 The section clock (`lib/clock.ts`) pauses while the test-taker is off the page (Pause & exit, or the page hidden or closed) and resumes on return; a page that stops sending heartbeats for 60 s counts as paused from its last one.

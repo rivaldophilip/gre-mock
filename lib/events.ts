@@ -1,6 +1,6 @@
 import type { Answer, Question, Tag, Test } from "./types";
 import { isAnswered, scoreAnswer } from "./scoring";
-import { WORD_W, CONCEPT_W, READING_WPM, SLOW_MS } from "./priority/config";
+import { WORD_W, CONCEPT_W, READING_WPM, SILLY_FACTOR, SLOW_MS } from "./priority/config";
 
 export type ItemKind = "word" | "concept";
 export type EventKind =
@@ -74,21 +74,25 @@ export function readingAllowanceMs(test: Pick<Test, "questions" | "passages">, q
   return Math.round((words / READING_WPM) * 60_000);
 }
 
+/** The weight of a concept_wrong_* event: halved (SILLY_FACTOR) when the test-taker marked the miss a silly mistake. */
+export function wrongWeight(event: "concept_wrong_primary" | "concept_wrong_secondary", silly: boolean): number {
+  const w = event === "concept_wrong_primary" ? CONCEPT_W.wrong_primary : CONCEPT_W.wrong_secondary;
+  return silly ? w * SILLY_FACTOR : w;
+}
+
 function conceptEvents(
   t: Tag,
   correct: boolean,
   guessed: boolean,
   slow: boolean,
+  silly: boolean,
 ): ItemEvent[] {
   const primary = t.role === "primary";
   const base = { kind: "concept" as const, itemId: t.id };
   const out: ItemEvent[] = [];
   if (!correct) {
-    out.push(
-      primary
-        ? { ...base, event: "concept_wrong_primary", weight: CONCEPT_W.wrong_primary }
-        : { ...base, event: "concept_wrong_secondary", weight: CONCEPT_W.wrong_secondary },
-    );
+    const event = primary ? "concept_wrong_primary" : "concept_wrong_secondary";
+    out.push({ ...base, event, weight: wrongWeight(event, silly) });
     return out;
   }
   if (guessed) {
@@ -109,8 +113,8 @@ export function eventsForResponse(
   q: Question,
   measure: "verbal" | "quant",
   a: Answer | undefined,
-  /** readingMs: the passage-reading allowance for this question (readingAllowanceMs) */
-  opts: { guessed: boolean; timeMs: number; readingMs?: number },
+  /** readingMs: the passage-reading allowance for this question (readingAllowanceMs); silly: a wrong quant answer marked "silly mistake" */
+  opts: { guessed: boolean; timeMs: number; readingMs?: number; silly?: boolean },
   passageTags: Tag[] = [],
 ): ItemEvent[] {
   // a blank (or partly filled) question says nothing about the words or concepts in it, so it records nothing
@@ -126,7 +130,7 @@ export function eventsForResponse(
       if (!e || e.event === "exposure") out.push({ kind: "word", itemId: t.id, event: "seen_known", weight: WORD_W.seen_known });
       if ((e?.event === "key_correct" || e?.event === "key_guessed") && slow) out.push({ ...e, event: "key_slow", weight: WORD_W.key_slow });
     } else {
-      out.push(...conceptEvents(t, correct, opts.guessed, slow));
+      out.push(...conceptEvents(t, correct, opts.guessed, slow, !!opts.silly && measure === "quant"));
     }
   }
   return out;

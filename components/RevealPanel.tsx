@@ -4,7 +4,7 @@ import { Rich, RichInline } from "./Rich";
 import { TaggableText, TaggedList, type Sense, type WordTags } from "./WordTagger";
 import { IconCheck, IconX } from "./icons";
 
-export type Reveal = { key: Key; explanation: Explanation; isCorrect: boolean; words?: { word: string; id?: string; senses?: Sense[] | null }[] };
+export type Reveal = { key: Key; explanation: Explanation; isCorrect: boolean; silly?: boolean; words?: { word: string; id?: string; senses?: Sense[] | null }[] };
 
 /**
  * A checked answer: correct or not, the explanation, and (verbal, with `tags`) the question's words as "didn't know"

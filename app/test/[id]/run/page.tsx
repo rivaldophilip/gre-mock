@@ -16,12 +16,12 @@ export default async function Run({ params, searchParams }: { params: Promise<{ 
   const rows = await responsesFor(a.id);
   const byQ = new Map(rows.map((r) => [r.questionId, r]));
   const initial: Record<string, { answer: never; guessed: boolean; marked: boolean; timeMs: number; finalized: boolean }> = {};
-  const reveals: Record<string, { key: unknown; explanation: unknown; isCorrect: boolean; words?: unknown }> = {};
+  const reveals: Record<string, { key: unknown; explanation: unknown; isCorrect: boolean; silly: boolean; words?: unknown }> = {};
   for (const q of test.questions) {
     const r = byQ.get(pairKey(id, q.id));
     if (!r) continue;
     initial[q.id] = { answer: r.answer as never, guessed: r.guessed, marked: r.marked, timeMs: r.timeMs, finalized: r.finalized };
-    if (a.mode === "practice" && r.finalized && canReveal(a, test, q, r)) reveals[q.id] = { key: q.key, explanation: q.explanation, isCorrect: r.isCorrect, words: await revealWords(q, test) };
+    if (a.mode === "practice" && r.finalized && canReveal(a, test, q, r)) reveals[q.id] = { key: q.key, explanation: q.explanation, isCorrect: r.isCorrect, silly: r.silly, words: await revealWords(q, test) };
   }
   return (
     <Runner

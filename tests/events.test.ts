@@ -137,3 +137,30 @@ describe("unanswered questions", () => {
     expect(eventsForResponse(se, "verbal", { sel: [] }, { guessed: false, timeMs: 1000 })).toEqual([]);
   });
 });
+
+describe("silly mistakes", () => {
+  const mc: Question = {
+    id: "q9",
+    section: 1,
+    type: "mc",
+    difficulty: 4,
+    prompt: "x",
+    choices: ["1", "2", "3", "4", "5"],
+    key: { sel: [1] },
+    explanation: { key: "k" },
+    tags: [
+      { kind: "concept", id: "ratios", role: "primary" },
+      { kind: "concept", id: "percents", role: "secondary" },
+    ],
+  };
+  const w = (silly: boolean, measure: "quant" | "verbal" = "quant", sel = [0]) =>
+    Object.fromEntries(eventsForResponse(mc, measure, { sel }, { guessed: false, timeMs: 1000, silly }).map((e) => [e.itemId, e.weight]));
+  it("halve a wrong quant answer's concept weights", () => {
+    expect(w(false)).toEqual({ ratios: 0.8, percents: 0.4 });
+    expect(w(true)).toEqual({ ratios: 0.4, percents: 0.2 });
+  });
+  it("leave right answers and verbal alone", () => {
+    expect(w(true, "quant", [1])).toEqual(w(false, "quant", [1]));
+    expect(w(true, "verbal")).toEqual({ ratios: 0.8, percents: 0.4 });
+  });
+});

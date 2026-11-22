@@ -1,0 +1,1 @@
+ALTER TABLE "responses" ADD COLUMN "silly" boolean DEFAULT false NOT NULL;

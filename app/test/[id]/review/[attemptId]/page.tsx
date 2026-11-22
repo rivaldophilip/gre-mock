@@ -4,7 +4,7 @@ import { and, desc, eq, inArray, isNotNull } from "drizzle-orm";
 import { schema } from "@/lib/db";
 import { userDb } from "@/lib/session";
 import { loadTest } from "@/lib/content";
-import { canReveal, getAttempt, isClosed, pairKey, responsesFor, sectionOvertimeMs, sectionStatus } from "@/lib/attempts";
+import { canMarkSilly, canReveal, getAttempt, isClosed, pairKey, responsesFor, sectionOvertimeMs, sectionStatus } from "@/lib/attempts";
 import { bandText, bandWhy, estimateBand, scoreAnswer } from "@/lib/scoring";
 import { TYPE_INFO, slotType } from "@/lib/qtypes";
 import { choiceWords, wordIdFor } from "@/lib/choice-words";
@@ -17,6 +17,7 @@ import { AppHeader } from "@/components/AppHeader";
 import { IconCheck, IconNext, IconX } from "@/components/icons";
 import { Explain } from "@/components/Explain";
 import { HashPad } from "@/components/HashPad";
+import { SillyToggle, flagLabel } from "@/components/SillyToggle";
 import { badge, btn, card } from "@/components/ui";
 
 export const dynamic = "force-dynamic";
@@ -297,6 +298,14 @@ export default async function Review({ params }: { params: Promise<{ id: string;
                   <dd className="font-medium text-ok"><AnswerText {...keyText(q)} /></dd>
                 </div>
               </dl>
+              {canMarkSilly(a, test, q, r) && (
+                <div className="flex flex-wrap items-center gap-x-6">
+                  <label className={`${flagLabel} cursor-default`}>
+                    <input type="checkbox" className="size-5" checked={r!.guessed} disabled readOnly /> I guessed
+                  </label>
+                  <SillyToggle attemptId={a.id} questionId={q.id} initial={r!.silly} />
+                </div>
+              )}
               <div className="space-y-3 rounded-xl bg-surface-2 p-3.5 leading-relaxed sm:p-4">
                 <Rich text={ex.key} />
                 {ex.steps && <ol className="list-decimal space-y-1.5 pl-5 marker:text-muted">{ex.steps.map((s, i) => <li key={i}><Rich text={s} /></li>)}</ol>}

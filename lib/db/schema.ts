@@ -96,6 +96,8 @@ export const responses = pgTable(
     timeMs: integer("time_ms").notNull().default(0),
     guessed: boolean("guessed").notNull().default(false),
     marked: boolean("marked").notNull().default(false),
+    // a wrong quant answer the test-taker marked "silly mistake" once it was shown: its concept_wrong_* weights are halved
+    silly: boolean("silly").notNull().default(false),
     finalized: boolean("finalized").notNull().default(false), // item events emitted
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
   },

@@ -22,6 +22,8 @@ export const CONCEPT_W = {
   right_primary: -0.6,
   right_secondary: -0.3,
 } as const;
+/** A wrong quant answer the test-taker marks "silly mistake" (after the answer is shown) logs its wrong_* weights at this share. */
+export const SILLY_FACTOR = 0.5;
 
 /** "slow" = more than 1.5x pace (1:10 quant, 1:00 verbal per question). */
 export const SLOW_MS = { quant: 105_000, verbal: 90_000 } as const;

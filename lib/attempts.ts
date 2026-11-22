@@ -3,8 +3,8 @@ import { and, eq, inArray } from "drizzle-orm";
 import { schema } from "./db";
 import { userDb } from "./session";
 import { loadTest, orderedQuestions } from "./content";
-import { eventsForResponse, readingAllowanceMs } from "./events";
-import { scoreAnswer } from "./scoring";
+import { eventsForResponse, readingAllowanceMs, wrongWeight } from "./events";
+import { isAnswered, scoreAnswer } from "./scoring";
 import { choiceWords, wordIdFor } from "./choice-words";
 import type { Answer, Question, Test } from "./types";
 import { clockSecondsLeft, elapsedMs, overtimeMs, paused, resumed, type PauseReason, type SectionState } from "./clock";
@@ -124,18 +124,43 @@ export async function finalizeResponse(a: Attempt, test: Test, q: Question, resp
  * The item events of a response the caller has just claimed (flipped `finalized` on). Replays log none. Split from
  * finalizeResponse so a Check, which claims and scores the response in its own upsert, needs no further round trips.
  */
-export async function logResponseEvents(a: Attempt, test: Test, q: Question, r: Pick<typeof responses.$inferSelect, "id" | "answer" | "guessed" | "timeMs">) {
+export async function logResponseEvents(a: Attempt, test: Test, q: Question, r: Pick<typeof responses.$inferSelect, "id" | "answer" | "guessed" | "timeMs" | "silly">) {
   if (isReplay(a)) return;
   const ans = (r.answer ?? undefined) as Answer | undefined;
   const passageTags = q.passageId ? (test.passages.find((p) => p.id === q.passageId)?.tags ?? []) : [];
   const readingMs = readingAllowanceMs(test, q, await openedFirst(a.id, test, q, r.id));
-  const evs = eventsForResponse(q, test.measure, ans, { guessed: r.guessed, timeMs: r.timeMs, readingMs }, passageTags);
+  const evs = eventsForResponse(q, test.measure, ans, { guessed: r.guessed, timeMs: r.timeMs, readingMs, silly: r.silly }, passageTags);
   if (evs.length) {
     const db = await userDb();
     await db
       .insert(itemEvents)
       .values(evs.map((e) => ({ kind: e.kind, itemId: e.itemId, event: e.event, weight: e.weight, responseId: r.id, attemptId: a.id })));
   }
+}
+
+/** A finalized, wrong (answered) quant response whose answer is shown: the ones that can be marked "silly mistake". */
+export function canMarkSilly(a: Attempt, test: Test, q: Question, r?: { finalized: boolean; answer: unknown }): boolean {
+  if (test.measure !== "quant" || isReplay(a) || !r?.finalized || !canReveal(a, test, q, r)) return false;
+  const ans = (r.answer ?? undefined) as Answer | undefined;
+  return isAnswered(q, ans) && !scoreAnswer(q, ans);
+}
+
+/**
+ * Mark (or unmark) a wrong quant answer as a silly mistake, and bring its logged concept_wrong_* events to the
+ * matching weight (halved while marked). Other events of the response are untouched.
+ */
+export async function setSilly(responseId: number, silly: boolean) {
+  const db = await userDb();
+  const wrong = ["concept_wrong_primary", "concept_wrong_secondary"] as const;
+  await Promise.all([
+    db.update(responses).set({ silly }).where(eq(responses.id, responseId)),
+    ...wrong.map((event) =>
+      db
+        .update(itemEvents)
+        .set({ weight: wrongWeight(event, silly) })
+        .where(and(eq(itemEvents.responseId, responseId), eq(itemEvents.event, event))),
+    ),
+  ]);
 }
 
 export async function finalizeSection(a: Attempt, test: Test, n: 1 | 2) {

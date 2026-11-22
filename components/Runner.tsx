@@ -11,6 +11,7 @@ import { PassagePane } from "./PassagePane";
 import { QuestionRenderer } from "./QuestionRenderer";
 import { RevealPanel, type Reveal } from "./RevealPanel";
 import { ReviewGrid } from "./ReviewGrid";
+import { SillyToggle, flagLabel } from "./SillyToggle";
 import { useWordTags, type Sense } from "./WordTagger";
 import { IconBack, IconCalc, IconCheck, IconClock, IconFlag, IconGrid, IconNext, IconPause, IconPlay } from "./icons";
 import { btn, card, iconBtn, seg, segItem } from "./ui";
@@ -623,9 +624,20 @@ export function Runner(p: RunnerProps) {
             )}
             <QuestionRenderer q={q} answer={a} onChange={setAnswer} disabled={locked} keySel={keySel} keyValue={keyValue} tags={tags} />
             <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line pt-4">
-              <label className="flex min-h-11 cursor-pointer items-center gap-2.5 text-sm text-muted">
-                <input type="checkbox" className="size-5" checked={!!cur?.guessed} disabled={locked} onChange={(e) => setFlag("guessed", e.target.checked)} /> I guessed
-              </label>
+              <div className="flex flex-wrap items-center gap-x-6">
+                <label className={flagLabel}>
+                  <input type="checkbox" className="size-5" checked={!!cur?.guessed} disabled={locked} onChange={(e) => setFlag("guessed", e.target.checked)} /> I guessed
+                </label>
+                {isQuant && reveal && !reveal.isCorrect && (
+                  <SillyToggle
+                    key={q.id}
+                    attemptId={attemptId}
+                    questionId={q.id}
+                    initial={!!reveal.silly}
+                    onChange={(silly) => setReveals((r) => ({ ...r, [q.id]: { ...r[q.id], silly } }))}
+                  />
+                )}
+              </div>
               {mode === "practice" && !locked && (
                 <button disabled={busy || !isAnswered(q, a)} onClick={check} className={`${btn("ok")} max-sm:flex-1`}>
                   {busy ? "Checking…" : "Check answer"}
