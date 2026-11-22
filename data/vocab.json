@@ -6591,35 +6591,6 @@
 "yield": 0.2
 },
 {
-"id": "barring",
-"lemma": "barring",
-"variants": [],
-"pos": "adverb",
-"senses": [
-{
-"pos": "adverb",
-"def": "except for; unless something occurs",
-"secondary": false,
-"synonyms": [
-"excepting",
-"save for",
-"excluding"
-],
-"connotation": "neutral",
-"example": "Barring unforeseen delays, the bridge will open by June."
-}
-],
-"isSecondary": false,
-"meaningGroup": null,
-"sources": [
-"ets_official"
-],
-"sourceCount": 0,
-"pink": false,
-"tier": "ets",
-"yield": 0.5
-},
-{
 "id": "barter",
 "lemma": "barter",
 "variants": [],
