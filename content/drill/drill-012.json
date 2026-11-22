@@ -1,0 +1,1965 @@
+{
+  "id": "drill-012",
+  "measure": "verbal",
+  "title": "Endless vocab batch 12",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Listeners who expected the composer's program notes to clarify the song cycle found them ___: rather than naming the scenes the seven songs depict, the notes gesture at \"a landscape of memory\" and leave each reader to guess what is meant.",
+      "choices": [
+        "forbidding",
+        "obscure",
+        "sardonic",
+        "rebarbative",
+        "vague",
+        "prodigious"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The colon explains the blank: the notes fail to name anything and leave readers guessing, so they are unclear. Obscure (hard to understand) and vague (imprecise, not clearly expressed) both give that sense.",
+        "distractors": {
+          "forbidding": "Trap pair with rebarbative: off-putting, unfriendly. The complaint is that the notes are unclear, not that they repel readers.",
+          "rebarbative": "Trap pair with forbidding: repellent, objectionable. Nothing says readers are put off; they are left guessing.",
+          "sardonic": "Grimly mocking. The notes are evasive about meaning, not scornful in tone.",
+          "prodigious": "Enormous or remarkable. Size or wonder has nothing to do with notes that fail to clarify."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "forbidding",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obscure",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sardonic",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rebarbative",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "vague",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "prodigious",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Students who sat through the old architect's last lectures remembered them chiefly as puzzling, but after the floods of 1953 his elliptical remarks about building on reclaimed marshland came to seem ___.",
+      "choices": [
+        "chronological",
+        "precarious",
+        "prophetic",
+        "temporal",
+        "sibylline",
+        "pristine"
+      ],
+      "key": {
+        "sel": [
+          2,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The remarks were cryptic when spoken and were borne out by a later disaster, so in hindsight they look like forecasts. Prophetic (accurately foretelling) and sibylline (prophetic and mysterious) both fit; sibylline also keeps the puzzling quality.",
+        "distractors": {
+          "chronological": "Trap pair with temporal: concerned with the order of time. The sentence involves time, but the remarks did not become 'about the sequence of events'; they became foresight.",
+          "temporal": "Trap pair with chronological: relating to time (or to worldly matters). It names the topic of time, not the quality of having predicted something.",
+          "precarious": "Dangerously unstable. Building on marshland was precarious, but the blank describes the remarks, which came to seem foresighted, not unstable.",
+          "pristine": "Unspoiled, in original condition. Nothing about the lectures was preserved or pure; they turned out to predict the floods."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "chronological",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "precarious",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "prophetic",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "temporal",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sibylline",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pristine",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Nothing in the restorer's own account of his work is grandiose: his notebooks describe it in dry, almost apologetic prose. Later curators nonetheless judged the work itself ___, for he had carved new arms for the ancient torso to a design of his own, as though the sculptor's intentions were his to settle.",
+      "choices": [
+        "orotund",
+        "presumptuous",
+        "repining",
+        "impertinent",
+        "magniloquent",
+        "bucolic"
+      ],
+      "key": {
+        "sel": [
+          1,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "'Nonetheless' separates the plain prose from the deed. Carving arms to his own design, as if the sculptor's intentions were his to decide, oversteps a restorer's bounds: presumptuous and impertinent (taking liberties beyond one's place) both fit.",
+        "distractors": {
+          "orotund": "Trap pair with magniloquent: pompous in style. The first sentence rules out grandiosity in the account; the fault lies in the act.",
+          "magniloquent": "Trap pair with orotund: bombastic in speech. The notebooks are dry and apologetic, so the judgment cannot be about style.",
+          "repining": "Fretting, complaining. The restorer took liberties with the sculpture; he was not lamenting anything.",
+          "bucolic": "Rustic, pastoral. Nothing in carving new arms for a torso is rural."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "orotund",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "presumptuous",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "repine",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "impertinent",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "magniloquent",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bucolic",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Far from being the relic of a passing fashion, the lotus motif remained ___ in the city's architecture for a century, turning up on everything from temple capitals to the iron grilles of shopfronts.",
+      "choices": [
+        "bygone",
+        "pervasive",
+        "sporadic",
+        "erstwhile",
+        "ubiquitous",
+        "contiguous"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "'Far from' a relic, the motif appears on everything from temples to shopfronts, so it was found everywhere. Pervasive (spread throughout) and ubiquitous (present everywhere) both fit.",
+        "distractors": {
+          "bygone": "Trap pair with erstwhile: belonging to the past. That is the reading 'far from' rejects; the motif stayed current.",
+          "erstwhile": "Trap pair with bygone: former. The sentence says the motif was not a thing of the past but lasted a century.",
+          "sporadic": "Occasional, scattered. 'Turning up on everything' says it was constant, not occasional.",
+          "contiguous": "Touching, adjoining. Spatial adjacency does not describe how widespread a motif is."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "bygone",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pervasive",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sporadic",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "erstwhile",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ubiquitous",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "contiguous",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The lecture wandered through a dozen anecdotes about the court painters and their quarrels before reaching, in its final minutes, its ___: that the royal portraits had been instruments of policy rather than attempts at likeness.",
+      "choices": [
+        "hubris",
+        "nuance",
+        "pith",
+        "presumption",
+        "crux",
+        "ethos"
+      ],
+      "key": {
+        "sel": [
+          2,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "After wandering anecdotes, the lecture arrives at its central claim. Pith (the essential part) and crux (the decisive point) both name that core.",
+        "distractors": {
+          "hubris": "Trap pair with presumption: overweening pride. The sentence describes the structure of an argument, not anyone's arrogance.",
+          "presumption": "Trap pair with hubris: arrogant boldness. A lecture does not reach its arrogance; it reaches its main point.",
+          "nuance": "A subtle shade of meaning. The claim is the lecture's central thesis, not a fine distinction at its margin.",
+          "ethos": "The characteristic spirit of a culture or group. The blank needs the argument's main point, not a guiding spirit."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "hubris",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nuance",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pith",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "presumption",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "crux",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ethos",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Critics who find the old railway sheds brooding read a mood into what is merely ___ design: their builders cared only that the roofs shed rain and the bays fit the locomotives, and the bleakness lies in the absence of ornament, not in any intended gloom.",
+      "choices": [
+        "sullen",
+        "redoubtable",
+        "pragmatic",
+        "saturnine",
+        "utilitarian",
+        "anachronistic"
+      ],
+      "key": {
+        "sel": [
+          2,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The builders cared only about function (keeping rain out, fitting locomotives), so the design is practical rather than expressive. Utilitarian (useful rather than attractive) and pragmatic (sensible and practical rather than theoretical or ideal) both give 'merely practical'.",
+        "distractors": {
+          "sullen": "Trap pair with saturnine: gloomy, brooding. That is the mood the critics read in, which the sentence denies: 'not in any intended gloom'.",
+          "saturnine": "Trap pair with sullen: dark and gloomy in temper. The sentence rejects the gloomy reading in favor of plain function.",
+          "redoubtable": "Formidable, commanding respect. The sheds are described as plain and practical, not imposing.",
+          "anachronistic": "Out of its proper time. Nothing says the design belongs to the wrong era."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "sullen",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "redoubtable",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pragmatic",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "saturnine",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "utilitarian",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "anachronistic",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Guidebooks long dismissed the inner wall of the river fortress as ___, a costly duplication of an outer wall that had never once let floodwater through; it took the flood of 1909, which breached the outer wall in a single afternoon, to show what the builders had foreseen.",
+      "choices": [
+        "impervious",
+        "superfluous",
+        "ponderous",
+        "impermeable",
+        "redundant",
+        "robust"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The guidebooks called the inner wall a 'duplication' of a wall that already did the job; the flood later proved them wrong, but the blank reports their view. Superfluous (more than is needed) and redundant (needlessly repeating what is already there) both fit.",
+        "distractors": {
+          "impervious": "Trap pair with impermeable: letting no water through. That describes the outer wall's record, not what the guidebooks said of the inner one, which they thought unnecessary.",
+          "impermeable": "Trap pair with impervious: watertight. The topic is floodwater, but the appositive 'a costly duplication' calls for a word meaning unneeded.",
+          "ponderous": "Heavy and unwieldy. 'Costly' might suggest bulk, but the charge is duplication, not weight.",
+          "robust": "Strong, sturdy. That would praise the wall, while the guidebooks were dismissing it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "impervious",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "superfluous",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ponderous",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "impermeable",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "redundant",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "robust",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The cadenza that critics praised as the most carefully wrought passage of the evening was, the violinist later admitted, wholly ___: having forgotten the written version mid-phrase, she invented a new one on the spot.",
+      "choices": [
+        "plausible",
+        "stringent",
+        "extemporaneous",
+        "tenable",
+        "unpremeditated",
+        "adroit"
+      ],
+      "key": {
+        "sel": [
+          2,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "She invented the passage on the spot, the opposite of 'carefully wrought'. Extemporaneous (improvised) and unpremeditated (not planned in advance) both fit.",
+        "distractors": {
+          "plausible": "Trap pair with tenable: believable, reasonable. The admission concerns how the passage was made, not whether a claim was credible.",
+          "tenable": "Trap pair with plausible: defensible. A cadenza invented on the spot is not a position to defend.",
+          "stringent": "Strict, exacting. Strictness would suit 'carefully wrought', which the admission contradicts.",
+          "adroit": "Skillful. The passage may have been skillful, but the sentence turns on its being unplanned, and adroit says nothing about that."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "plausible",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "stringent",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "extemporaneous",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tenable",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "unpremeditated",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "adroit",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "revisits": "drill-001:s1q7",
+      "prompt": "What the dealer's friends praised as the reviewer's worldliness (she moved easily among the auction houses of three capitals) the learned society came to see in a less flattering light once it emerged that the dealer had paid her for the very review that endorsed his attributions, an arrangement the society judged ___ for anyone claiming scholarly independence.",
+      "choices": [
+        "urbane",
+        "untoward",
+        "feckless",
+        "cosmopolitan",
+        "unseemly",
+        "diffuse"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The sentence sets the friends' label against the society's verdict. Taking money from the dealer whose attributions she was reviewing is a conflict of interest, improper for an independent scholar: untoward and unseemly (unbecoming, out of keeping with one's role) both fit.",
+        "distractors": {
+          "urbane": "Trap pair with cosmopolitan: polished and sophisticated. That is the friends' flattering 'worldliness', which the society sees 'in a less flattering light'.",
+          "cosmopolitan": "Trap pair with urbane: at home in many countries. The parenthesis about three capitals invites it, but the blank holds the society's disapproving verdict on the payment.",
+          "feckless": "Ineffective or irresponsible. The review succeeded in endorsing the attributions; the objection is to impropriety, not to weakness.",
+          "diffuse": "Spread thin, unfocused. The arrangement was precisely targeted, and its fault is the conflict of interest."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "urbane",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "untoward",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "feckless",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cosmopolitan",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "unseemly",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "diffuse",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "endorse",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "attribution",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Admirers expected the elderly playwright to answer his detractors with the kind of (i) ___ that had made his curtain speeches notorious, yet he thanked them mildly and left the stage. Braced for a fight, the critics were left to write notices whose severity no one could blame on provocation. Those notices were (ii) ___ all the same, though the charge was tedium rather than offense: the play, they agreed, was (iii) ___ from its first scene to its last.",
+      "blanks": [
+        [
+          "approbation",
+          "harangue",
+          "parody"
+        ],
+        [
+          "felicitous",
+          "soporific",
+          "scathing"
+        ],
+        [
+          "humdrum",
+          "ribald",
+          "refulgent"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Yet he thanked them mildly' reverses the expectation, so the expected thing was a combative speech: harangue. (ii) 'Severity … all the same' means the notices were harsh even without provocation: scathing. (iii) The charge was 'tedium': the play was humdrum.",
+        "distractors": {
+          "approbation": "Approval. Thanking the critics was a form of approbation, but that is what he did instead of what was expected; 'notorious' and 'answer his detractors' point to attack.",
+          "parody": "A mocking imitation. Curtain speeches that answered detractors were attacks, not imitations.",
+          "felicitous": "Apt, well put. The notices are described by their 'severity', which needs harshness.",
+          "soporific": "Sleep-inducing. Tedium is the play's fault in blank (iii); the notices themselves were severe.",
+          "ribald": "Coarsely humorous. The charge was 'tedium rather than offense', which rules out vulgarity.",
+          "refulgent": "Radiant, brilliant, the opposite of a tedious play."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "approbation",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "harangue",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "parody",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "felicitous",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "soporific",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "scathing",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "humdrum",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ribald",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "refulgent",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "notorious",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Earlier surveys of Flemish painting aimed to be (i) ___, sweeping across two centuries of altarpieces in a single volume. Kessler's study sets out only to (ii) ___ the working methods of one Bruges workshop, panel by panel and pigment by pigment, and its exactness exposes how often the broader books' attributions rested on (iii) ___ impressions of style rather than on the guild records she reads line by line.",
+      "blanks": [
+        [
+          "cardinal",
+          "synoptic",
+          "hoary"
+        ],
+        [
+          "debunk",
+          "cadge",
+          "delineate"
+        ],
+        [
+          "indigenous",
+          "subjective",
+          "truncated"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) Sweeping across two centuries in one volume is a general overview: synoptic. (ii) Panel by panel and pigment by pigment, Kessler describes one workshop's methods precisely: delineate. (iii) Impressions of style are set against documentary records, so they are personal judgments rather than verifiable facts: subjective.",
+        "distractors": {
+          "cardinal": "Of chief importance. The clue is the surveys' breadth, not their importance.",
+          "hoary": "Very old, or stale from long use. 'Sweeping across two centuries' describes scope, not age or staleness.",
+          "debunk": "To expose as false. Kessler describes the workshop's own methods; she is not disproving them.",
+          "cadge": "To get by begging. Methods are not begged for; they are described.",
+          "indigenous": "Native to a place. The contrast is between personal impression and records, not between local and foreign.",
+          "truncated": "Cut short. The contrast with records 'read line by line' is about evidence versus opinion, not completeness."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "cardinal",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "synoptic",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hoary",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "debunk",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cadge",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "delineate",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "indigenous",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "subjective",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "truncate",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "attribution",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "For decades the guild's vellum charters lay in a sunlit attic whose summer heat (i) ___ them until they cracked at every fold. The (ii) ___ work begun last year, slow humidification followed by pressing between blotters, has restored much of their suppleness, but conservators note that the heat was not equally (iii) ___ to every sheet: charters written in iron-gall ink were scorched beyond help, while those in carbon ink emerged nearly unharmed.",
+      "blanks": [
+        [
+          "sullied",
+          "desiccated",
+          "secreted"
+        ],
+        [
+          "perennial",
+          "remedial",
+          "posthumous"
+        ],
+        [
+          "inadvertent",
+          "efficacious",
+          "deleterious"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) Heat that leaves vellum cracking at the folds has dried it out: desiccated. (ii) Work that restores the lost suppleness corrects damage: remedial. (iii) The colon contrasts sheets 'scorched beyond help' with ones 'nearly unharmed', so the heat was not equally harmful: deleterious.",
+        "distractors": {
+          "sullied": "Soiled. Dirt does not make vellum crack; drying does.",
+          "secreted": "Here, hid away. Heat cannot hide the charters; the everyday sense (produced a fluid) fits even less.",
+          "perennial": "Lasting year after year. The work began only last year, and the clue is its purpose of restoring suppleness.",
+          "posthumous": "Occurring after death. No one's death is involved.",
+          "inadvertent": "Unintentional. The colon compares degrees of damage, not intent.",
+          "efficacious": "Effective. Heat was not a treatment; the contrast is between sheets ruined and sheets spared."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "sully",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "desiccate",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "secrete",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "perennial",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "remedial",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "posthumous",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inadvertent",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "efficacious",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "deleterious",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Though as a correspondent Marlowe was (i) ___, still writing a dozen letters a week in her nineties, she was so (ii) ___ with praise that a single approving adjective from her was hoarded by younger writers. Little wonder, then, that the (iii) ___ tributes scattered through her letters to one forgotten village poet have puzzled her biographers.",
+      "blanks": [
+        [
+          "supine",
+          "natty",
+          "indefatigable"
+        ],
+        [
+          "audacious",
+          "sparing",
+          "culpable"
+        ],
+        [
+          "scant",
+          "canonical",
+          "profuse"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) A dozen letters a week in her nineties shows a tireless writer: indefatigable. (ii) 'Though' sets her abundance of letters against her stinginess with praise, and a single compliment was hoarded: sparing. (iii) What puzzles biographers must break that pattern, so the tributes to the village poet are abundant: profuse.",
+        "distractors": {
+          "supine": "Lying face up, or passive. A woman writing a dozen letters a week is anything but passive.",
+          "natty": "Smartly dressed. Her dress is irrelevant to her output as a correspondent.",
+          "audacious": "Bold, daring. If her praise was bold, a single adjective would not be treasured as rare.",
+          "culpable": "Deserving blame. Rarity of praise is the point, not guilt.",
+          "scant": "Barely enough. This matches 'sparing' and so would not puzzle anyone; the puzzle requires abundance.",
+          "canonical": "Accepted as authoritative or part of the canon. The puzzle is about how much she praised the poet, not about the status of the tributes."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "supine",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "natty",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "indefatigable",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "audacious",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sparing",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "culpable",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "scant",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "canonical",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "profuse",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Biographers like to read the student quartet as the first (i) ___ of the symphonist to come, but the piece is better described as (ii) ___ within his output: nowhere else does he write so sparely, and the surviving sketches show that, far from finding his own voice, he (iii) ___ so closely to a teacher's rules that he struck out every bar they forbade, rules he would abandon within a year.",
+      "blanks": [
+        [
+          "temperance",
+          "augury",
+          "plethora"
+        ],
+        [
+          "insipid",
+          "polarized",
+          "anomalous"
+        ],
+        [
+          "adhered",
+          "divulged",
+          "groused"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) Biographers treat the early piece as a sign of what was coming: augury. (ii) 'But' rejects that reading, and the colon explains that 'nowhere else' does he write this way, so the quartet departs from his norm: anomalous. (iii) Striking out every bar the rules forbade is close obedience to them: adhered.",
+        "distractors": {
+          "temperance": "Moderation. The spare writing might suggest restraint, but 'of the symphonist to come' needs a sign of the future.",
+          "plethora": "An excess. A single quartet is not an oversupply of anything.",
+          "insipid": "Bland. The spare writing might tempt, but 'within his output' and 'nowhere else' point to deviation from his norm, not to dullness.",
+          "polarized": "Split into opposing camps. Nothing about the quartet divides into factions; it simply stands apart.",
+          "divulged": "Revealed a secret. One does not divulge to rules; the sketches show obedience.",
+          "groused": "Grumbled. A student who struck out every forbidden bar was complying, not complaining."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "temperance",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "augury",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "plethora",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "insipid",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "polarize",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "anomalous",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "adhere",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "divulge",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "grouse",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "In the two decades after the Salon des Refusés, painters working in the rejected manner (i) ___ so quickly that the Academy could no longer treat it as one eccentric's folly. The jury's efforts to (ii) ___ the style from the official exhibitions only lent it the glamour of the forbidden, and by the 1880s dealers were paying (iii) ___ sums, far beyond what any academic history painting fetched, for canvases the jury had once dismissed as unfinished.",
+      "blanks": [
+        [
+          "dithered",
+          "proliferated",
+          "lumbered"
+        ],
+        [
+          "banish",
+          "disabuse",
+          "reap"
+        ],
+        [
+          "impecunious",
+          "prime",
+          "inordinate"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) The painters increased so fast that the style was no longer one person's quirk: proliferated. (ii) Keeping a style out of the official exhibitions is driving it out: banish. (iii) Sums 'far beyond' those for academic paintings are excessive: inordinate.",
+        "distractors": {
+          "dithered": "Hesitated indecisively. Hesitation does not explain why the style stopped looking like one eccentric's folly; growth in numbers does.",
+          "lumbered": "Moved slowly and heavily, which clashes with 'so quickly'.",
+          "disabuse": "To free someone from a mistaken belief. It takes a person as object, not a style, and the jury was excluding, not correcting.",
+          "reap": "To gather in, as a harvest or reward. The jury was trying to exclude the style, not collect it.",
+          "impecunious": "Having little money. It describes people, and the sums were large.",
+          "prime": "Of the first quality. 'Far beyond' needs a word for excess, not quality."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "dither",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "proliferate",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lumber",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "banish",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "disabuse",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "reap",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "impecunious",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "prime",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inordinate",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "eccentric",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "revisits": "drill-001:s1q4",
+      "prompt": "Defenders and detractors of the glass canopy over the ruined cloister agree on one thing: it is (i) ___. The defenders call this its honesty, since no visitor could mistake it for medieval work; the detractors, who grant that the stones beneath it have at last stopped crumbling, reply that a structure doing no harm to the masonry need not, for that reason, be counted (ii) ___ in its effect on the valley it now dominates.",
+      "blanks": [
+        [
+          "diaphanous",
+          "cloaked",
+          "conspicuous"
+        ],
+        [
+          "harrowing",
+          "benign",
+          "scurvy"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) The first sentence fits any of the three choices; the clue comes at the end. The canopy 'dominates' the valley and cannot be mistaken for old work, so it is highly visible: conspicuous. (ii) The detractors concede that the canopy does no harm to the stones, then deny that this makes its effect on the valley harmless. 'Need not be counted X' must name the quality they refuse to grant: benign.",
+        "distractors": {
+          "diaphanous": "Sheer, translucent. It suits glass and fits the first sentence, but a canopy that 'dominates' the valley is not near-invisible.",
+          "cloaked": "Here, concealed or disguised. It fits the first sentence until the end: a canopy that no one could mistake for medieval work and that dominates the valley is not hidden.",
+          "harrowing": "Here, deeply distressing. Detractors would want to call the canopy distressing; saying it 'need not be counted harrowing' would concede their own case.",
+          "scurvy": "Here, contemptible. Like harrowing, it is a charge the detractors would make, so denying it would defend the canopy; and the concession about the masonry concerns harm, which points to benign."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "diaphanous",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cloak",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "conspicuous",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "harrow",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "benign",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "scurvy",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "revisits": "drill-001:s1q5",
+      "prompt": "The editors hoped that publishing the two poets' letters would at last settle their quarrel; instead, every slight the letters revealed seemed to (i) ___ new partisanship among their admirers, and the centenary symposium, convened expressly to (ii) ___ the bitterness, became the scene of its fiercest exchange.",
+      "blanks": [
+        [
+          "stymie",
+          "engender",
+          "consummate"
+        ],
+        [
+          "kindle",
+          "embroil",
+          "alleviate"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Instead' of settling the quarrel, each revealed slight produced new partisanship: engender. (ii) The symposium was convened to ease the bitterness, and the irony is that it produced the fiercest exchange: alleviate.",
+        "distractors": {
+          "stymie": "To block or thwart. Blocking partisanship would match the editors' hope, which 'instead' says failed.",
+          "consummate": "Here, to complete or fulfill. Partisanship that is 'new' is being created, not brought to completion.",
+          "kindle": "Here, to arouse a feeling. That describes what happened, but the symposium was 'convened expressly' for the opposite purpose.",
+          "embroil": "To involve in conflict. One embroils people, not bitterness, and the symposium's purpose was to ease conflict."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "stymie",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "engender",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "consummate",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "kindle",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "embroil",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "alleviate",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "revisits": "drill-001:s1q9",
+      "prompt": "The editor of the collected poems dismissed the late sonnets as (i) ___, a startling departure from the poet's settled manner. Had he (ii) ___ her notebooks instead of relying on a colleague's summary of them, he would have found drafts in the same strict form going back twenty years.",
+      "blanks": [
+        [
+          "inexorable",
+          "aberrant",
+          "fecund"
+        ],
+        [
+          "ascertained",
+          "perused",
+          "coalesced"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) The appositive defines the blank as a startling departure from her usual manner: aberrant. (ii) The contrast with 'relying on a colleague's summary' means reading the notebooks himself: perused. The second sentence shows the dismissal was wrong, since the form was not a departure at all.",
+        "distractors": {
+          "inexorable": "Relentless, impossible to stop. The appositive calls the sonnets a departure, not something unstoppable.",
+          "fecund": "Fertile, productive. The appositive is about deviation, not productivity.",
+          "ascertained": "Found out for certain. One ascertains a fact, not a set of notebooks; the contrast with a summary calls for reading them.",
+          "coalesced": "Came together into one. It cannot take notebooks as an object, and it says nothing about reading."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "inexorable",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "aberrant",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fecund",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ascertain",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "peruse",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "coalesce",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Victorian reviewers, who called the novel (i) ___ and warned that it would corrupt any young reader who opened it, would be astonished to find it assigned in schools today as a coolly (ii) ___ exercise, admired for the intricacy of its structure rather than for any passion it might stir.",
+      "blanks": [
+        [
+          "egalitarian",
+          "halcyon",
+          "noxious"
+        ],
+        [
+          "palatial",
+          "cerebral",
+          "imputed"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) A book that would 'corrupt any young reader' is morally harmful: noxious. (ii) Admired for structure 'rather than for any passion' means it appeals to the intellect: cerebral.",
+        "distractors": {
+          "egalitarian": "Believing in equality. That might alarm some Victorians, but 'corrupt' needs moral harm.",
+          "halcyon": "Calm and idyllic. Reviewers who warned of corruption did not find the book serene.",
+          "palatial": "Like a palace, grand. 'Coolly' and 'structure rather than passion' point to intellect, not grandeur.",
+          "imputed": "Attributed, often unfairly. An 'imputed exercise' makes no sense; the clue is intellect over feeling."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "egalitarian",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "halcyon",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "noxious",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "palatial",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cerebral",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "impute",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "novel",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The recovered letters, which show the engraver at her first commission only months before the plates that made her name, do not so much explain her as deepen her standing as the period's great ___: a novice's history and a master's hand are harder to reconcile than either would be alone.",
+      "blanks": [
+        [
+          "tyro",
+          "sinecure",
+          "enigma",
+          "bent",
+          "chauvinist"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "'Do not so much explain her as deepen' says the letters leave her more puzzling, and the colon explains why: a beginner's record and a master's work do not fit together. She is a mystery: enigma.",
+        "distractors": {
+          "tyro": "A beginner. The letters do show a novice, but the sentence says they deepen something they fail to explain, and her being a beginner is what they explain plainly. The puzzle is the clash between beginner and master.",
+          "sinecure": "A paid post that demands little work. It names a job, not a person, and the engraver worked hard enough to master her craft quickly.",
+          "bent": "A natural talent or inclination. Talent might seem to fit 'a master's hand', but a talent does not become harder to account for; the blank needs something unexplained.",
+          "chauvinist": "A person fanatically partisan for a group or nation. Nothing in the letters concerns partisanship."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "tyro",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sinecure",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "enigma",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bent",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "chauvinist",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "reconcile",
+          "role": "stem"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1972 @@
+{
+  "id": "drill-014",
+  "measure": "verbal",
+  "title": "Endless vocab batch 14",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "When the ministry first opened its press room, its briefings were rare events that packed the gallery and often ended in shouting matches; a decade on, the shouting long forgotten, they have become ___ rituals, held every morning at nine whether or not there is any news.",
+      "choices": [
+        "polemical",
+        "quotidian",
+        "etiolated",
+        "contentious",
+        "diurnal",
+        "intermittent"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The contrast is between 'rare events' then and briefings 'held every morning' now, so the blank needs a word for daily occurrence. Quotidian (occurring every day, routine) and diurnal (occurring daily) both give it.",
+        "distractors": {
+          "polemical": "Trap pair with contentious: combative, argumentative. The sentence says the shouting is 'long forgotten', so the briefings are no longer combative.",
+          "contentious": "Trap pair with polemical: causing or given to argument. Ruled out by 'the shouting long forgotten'.",
+          "etiolated": "Pale and enfeebled. It might describe tired briefings, but the clause after the blank defines them by frequency, not by vigor, and nothing else among the choices means 'enfeebled'.",
+          "intermittent": "Occurring at irregular intervals, the opposite of a fixed every-morning schedule."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "polemical",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "quotidian",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "etiolated",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "contentious",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "diurnal",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "intermittent",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The new procurement chief proved so ___ that bids came back for a misaligned margin or a signature in blue rather than black ink, and suppliers joked that winning a contract now took a calligrapher more than a competitive price.",
+      "choices": [
+        "feasible",
+        "game",
+        "finicky",
+        "viable",
+        "fastidious",
+        "pliant"
+      ],
+      "key": {
+        "sel": [
+          2,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Rejecting bids over margins and ink color shows someone excessively demanding about small details. Finicky and fastidious both mean fussy and hard to please.",
+        "distractors": {
+          "feasible": "Trap pair with viable: workable, practicable. These describe plans, not a person's exacting temperament.",
+          "viable": "Trap pair with feasible: capable of working or succeeding. Nothing in the sentence concerns whether something can work.",
+          "game": "Eager and willing to try something new. The chief is not adventurous, just exacting.",
+          "pliant": "Easily bent or influenced, the opposite of someone who rejects a bid over ink color."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "feasible",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "game",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "finicky",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "viable",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fastidious",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pliant",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "That the port authority's director has now been indicted for steering contracts to his cousins will surprise few who knew him only by reputation; the reformers who worked beside him, however, had long held him up as a ___, and what wounds them is less his fall than the comfort it gives everyone who always said an honest official was a myth.",
+      "choices": [
+        "miscreant",
+        "paragon",
+        "skullduggery",
+        "exemplar",
+        "reprobate",
+        "mercantilism"
+      ],
+      "key": {
+        "sel": [
+          1,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The first clause tempts the reader toward a word for a wrongdoer, but 'however' turns to the reformers' earlier view, and 'held him up' plus 'an honest official was a myth' shows they had presented him as proof that honest officials exist. The blank needs a model of excellence: paragon and exemplar.",
+        "distractors": {
+          "miscreant": "Trap pair with reprobate: a wrongdoer. It matches the indictment and the reputation in the first clause, but 'however' shifts to how the reformers saw him, and one does not 'hold up' a miscreant as an argument for honest government.",
+          "reprobate": "Trap pair with miscreant: an unprincipled person. Same trap: it describes the indicted man, not the figure the reformers held up.",
+          "skullduggery": "Underhanded trickery. It names what he is charged with, not what the reformers held him up as, and it is not a word for a person.",
+          "mercantilism": "An economic doctrine favoring exports and accumulated national wealth. On topic for a port, but not a model official."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "miscreant",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "paragon",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "skullduggery",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exemplar",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "reprobate",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mercantilism",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "To its critics the central bank's new headquarters, all glass walls and open galleries, is mere stagecraft; to its admirers it is the ___ of the transparency the bank now preaches, since no institution has ever made openness so literal.",
+      "choices": [
+        "artifice",
+        "apotheosis",
+        "atavism",
+        "guile",
+        "determinism",
+        "epitome"
+      ],
+      "key": {
+        "sel": [
+          1,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "The semicolon sets the admirers against the critics, and 'no institution has ever made openness so literal' calls the building the highest, most perfect expression of transparency. Apotheosis and epitome both give that.",
+        "distractors": {
+          "artifice": "Trap pair with guile: clever trickery. That is the critics' view ('mere stagecraft'); the blank is the admirers'.",
+          "guile": "Trap pair with artifice: sly cunning. Again the critics' reading, which the semicolon turns away from.",
+          "atavism": "A reversion to an ancestral type or an old way. The building is presented as new, not as a throwback.",
+          "determinism": "The doctrine that every event is fixed by prior causes. It has nothing to do with embodying transparency."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "artifice",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "apotheosis",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "atavism",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "guile",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "determinism",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "epitome",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Defenders of the 1998 statute point out that no one ever repealed it, and they are right; what they forget is that the broader code of 2011, though mocked at the time as a stopgap thrown together in a weekend, ___ it so thoroughly that lawyers who still cite the old law are invoking text that governs nothing.",
+      "choices": [
+        "concocted",
+        "supplanted",
+        "weaned",
+        "fabricated",
+        "superseded",
+        "truck"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The concession ('they are right') grants that the statute was never repealed; 'what they forget' turns to what happened instead: the newer code took its place, so the old text 'governs nothing'. Superseded and supplanted both mean replaced.",
+        "distractors": {
+          "concocted": "Trap pair with fabricated: invented, made up. 'Thrown together in a weekend' invites it, but that describes how the 2011 code was drafted; the blank's object is the 1998 statute, which the code did not invent.",
+          "fabricated": "Trap pair with concocted: invented, often falsely. Same trap: the haste belongs to the new code, while the blank says what the code did to the old law.",
+          "weaned": "Caused to give up a dependence gradually. Lawyers might be weaned off the old statute, but a code does not wean a statute, and 'so thoroughly that... governs nothing' calls for replacement.",
+          "truck": "A noun, used in 'have no truck with' (refuse dealings with). It cannot fill the verb slot."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "concoct",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "supplant",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "wean",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fabricate",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "supersede",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "truck",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mock",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Each new draft of the party's platform seemed to ___ its ideas further, stripping away the founders' crude slogans until what remained was a doctrine so refined that only its authors could explain it.",
+      "choices": [
+        "transcend",
+        "purify",
+        "attune",
+        "surpass",
+        "rarefy",
+        "phylogeny"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "'Stripping away the crude slogans' until the doctrine is 'so refined' asks for a verb of refining. Purify (free from impurities) and rarefy (refine, make more subtle) both give it.",
+        "distractors": {
+          "transcend": "Trap pair with surpass: to go beyond. A draft does not go beyond its own ideas; it strips them down.",
+          "surpass": "Trap pair with transcend: to exceed. The sentence is about removal and refinement, not about outdoing.",
+          "attune": "To bring into harmony with something. The drafts are not adjusting the ideas to an audience; they leave them comprehensible only to their authors.",
+          "phylogeny": "The evolutionary history of a species, a noun that cannot fill the verb slot."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "transcend",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "purify",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "attune",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "surpass",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rarefy",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "phylogeny",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Facing a deficit it could neither borrow nor tax its way out of, the council chose to ___ its programs rather than abolish any outright, trimming each by a few posts so that every service survived in smaller form.",
+      "choices": [
+        "refute",
+        "plume",
+        "prune",
+        "gainsay",
+        "curtail",
+        "abeyance"
+      ],
+      "key": {
+        "sel": [
+          2,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "'Rather than abolish' and 'trimming each... so that every service survived in smaller form' call for reducing, not ending. Prune (cut away the superfluous) and curtail (cut short, reduce) both fit.",
+        "distractors": {
+          "refute": "Trap pair with gainsay: to deny or disprove. The council is cutting programs, not arguing against them.",
+          "gainsay": "Trap pair with refute: to contradict. Nothing is being denied.",
+          "abeyance": "A state of temporary suspension (a noun). Suspending programs would contradict 'every service survived'.",
+          "plume": "To preen, or (as 'plume oneself on') to congratulate oneself smugly. A council short of money is cutting programs, not preening over them."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "refute",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "plume",
+          "role": "distractor",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "prune",
+          "role": "key",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "gainsay",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "curtail",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "abeyance",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Talks between the airline and its pilots, civil at first, began to ___ once management published the pilots' salaries, and within a month the two sides were speaking only through lawyers.",
+      "choices": [
+        "concur",
+        "devolve",
+        "ontogeny",
+        "assent",
+        "deteriorate",
+        "morass"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "'Civil at first' and 'speaking only through lawyers' mark a slide from better to worse. Devolve (degenerate gradually) and deteriorate (grow worse) both give it.",
+        "distractors": {
+          "concur": "Trap pair with assent: to agree. The talks moved away from agreement.",
+          "assent": "Trap pair with concur: to express approval. The opposite of the breakdown described.",
+          "ontogeny": "The development of a single organism, a noun that cannot fill the verb slot.",
+          "morass": "A swamp, or a situation hard to escape (a noun). The talks may end in one, but the slot needs a verb."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "concur",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "devolve",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ontogeny",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "assent",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "deteriorate",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "morass",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "revisits": "drill-009:s1q12",
+      "prompt": "The central bank's founding governor left his successors a single (i) ___: never tell the markets in advance what the bank will do. They kept it less from conviction than from habit, warning that any advance signal would (ii) ___ a later change of course, since a broken promise would cost more credibility than silence ever had. Younger staff economists, who saw open guidance working at every other central bank, were left to (iii) ___ under the rule for a decade before a new governor quietly dropped it.",
+      "blanks": [
+        [
+          "proviso",
+          "dictum",
+          "lacuna"
+        ],
+        [
+          "occasion",
+          "still",
+          "preclude"
+        ],
+        [
+          "chafe",
+          "stay",
+          "meld"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) The colon gives a standalone, authoritative rule: dictum. (ii) If a signal makes a later reversal too costly, it rules that reversal out in advance: preclude. (iii) Economists who think the rule outdated but must live under it for a decade feel irritation at the restriction: chafe under it.",
+        "distractors": {
+          "proviso": "A condition attached to an agreement. The rule stands alone; it is not a clause qualifying some other arrangement.",
+          "lacuna": "A gap or missing part. The governor left a rule, not an absence.",
+          "occasion": "To bring about. The warning is that a signal would make a change harder, not cause one.",
+          "still": "Here, to make calm or quiet. One can still unrest, but the warning is that a signal would rule a reversal out, not calm it.",
+          "stay": "Here, to halt or postpone (a legal proceeding); in the everyday sense, to remain. The economists did remain under the rule, but 'who saw open guidance working' everywhere else gives them a grievance, so the blank needs irritation, not mere staying.",
+          "meld": "To blend or merge. The economists object to the rule; they do not merge with it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "proviso",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "dictum",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lacuna",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "occasion",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "still",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "preclude",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "chafe",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "stay",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "meld",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "revisits": "drill-010:s1q14",
+      "prompt": "Boosters credit the region's start-up boom to a few celebrated investors, but the investors are its ornament rather than its (i) ___: what the boom actually rests on is a public university that has trained engineers for forty years. Nor is the cluster as (ii) ___ as the brochures suggest, since a chip designer, a seed bank and a freight-routing firm share little beyond a postcode. The (iii) ___ that no brochure states outright is that a cut to the university's budget would do more harm than the departure of every investor.",
+      "blanks": [
+        [
+          "valence",
+          "substrate",
+          "praxis"
+        ],
+        [
+          "labile",
+          "atavistic",
+          "cohesive"
+        ],
+        [
+          "implication",
+          "desideratum",
+          "historicism"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Ornament rather than its ___' contrasted with 'what the boom actually rests on' asks for the underlying foundation: substrate. (ii) Firms that 'share little beyond a postcode' are not a unified whole: the cluster is not as cohesive as claimed. (iii) Something 'no brochure states outright' is a consequence suggested rather than said: implication.",
+        "distractors": {
+          "valence": "Here, the positive or negative appeal of something. The contrast with 'ornament' is about what supports the boom, not its appeal.",
+          "praxis": "Practice, as opposed to theory. Nothing contrasts theory with practice.",
+          "labile": "Unstable, liable to change. Unrelated firms sharing a postcode shows disunity, not volatility.",
+          "atavistic": "Reverting to something ancestral or primitive. The point concerns unity, not throwbacks.",
+          "desideratum": "Something needed or wanted. The unstated point is a consequence, not a wish.",
+          "historicism": "The view that ideas and events must be understood in their historical context. Not what the brochures leave unsaid."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "valence",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "substrate",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "praxis",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "labile",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "atavistic",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cohesive",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "implication",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "desideratum",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "historicism",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "celebrated",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Few commentators expected the tribunal to (i) ___ the merger, since every earlier challenge to such a deal had ended with the parties merely fined; hence their surprise at a judgment that treats the combined bank as though it had never lawfully existed. Yet the judgment may (ii) ___ less than it appears to. The price the shareholders will receive, the only question they ever cared about, has been left to a later hearing, and anyone hoping to (iii) ___ that hearing's outcome has little more to work with than the judges' choice, in one paragraph, of the word 'regrettable'.",
+      "blanks": [
+        [
+          "mulct",
+          "confiscate",
+          "annul"
+        ],
+        [
+          "irk",
+          "settle",
+          "refract"
+        ],
+        [
+          "surmise",
+          "perpetrate",
+          "doctor"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) Nothing next to the blank decides it. 'Few expected' plus 'merely fined' says the result went beyond a fine, and only the later clause, a bank treated 'as though it had never lawfully existed', shows the tribunal declared the deal invalid: annul. (ii) 'Less than it appears to' could take several verbs. The next sentence decides it: the one question that mattered is still open, so the judgment resolves less than it seems: settle. (iii) Hoping to ___ an outcome fits several verbs. The decisive clue is the evidence: one word in one paragraph is a thin basis, so people can only guess: surmise.",
+        "distractors": {
+          "mulct": "To extract money by a fine or by fraud. It fits 'merely fined', but the earlier cases ended that way, so a fine is exactly what commentators did expect. The surprise is a judgment treating the bank as never having lawfully existed.",
+          "confiscate": "To seize property by authority. A drastic step that could surprise observers, but seizing assets presupposes that the bank exists. The judgment treats it as never having lawfully existed, which is invalidation.",
+          "irk": "To annoy. 'May irk less than it appears to' reads naturally, but the next sentence is about the main question being left open, not about anyone's annoyance.",
+          "refract": "To present an idea through a particular perspective. Nothing that follows concerns how the judgment frames matters. It concerns what the judgment leaves undecided.",
+          "perpetrate": "To commit a crime or blunder. Observers of a hearing commit nothing, and the thin evidence points to guessing.",
+          "doctor": "To alter something in order to deceive. Rigging the hearing's outcome is a possible reading of 'hoping to ___ that outcome', but the clause about having 'little more to work with' than one word concerns evidence for a forecast, not means of tampering."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "mulct",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "confiscate",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "annul",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "irk",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "settle",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "refract",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "surmise",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "perpetrate",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "doctor",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Party elders dismissed the new deputy as (i) ___, a twenty-six-year-old who had never chaired so much as a committee. Their scorn only grew when he began to (ii) ___ the chamber's lobby as if he already held a ministry, chin raised for the cameras. Yet when the speaker rebuked him, he did not argue; he would only (iii) ___ coyly and look away, which the elders found more irritating still.",
+      "blanks": [
+        [
+          "antediluvian",
+          "callow",
+          "cultivated"
+        ],
+        [
+          "repair",
+          "strut",
+          "expunge"
+        ],
+        [
+          "simper",
+          "tergiversate",
+          "regress"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          1,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Twenty-six' and 'never chaired so much as a committee' mark youth and inexperience: callow. (ii) 'As if he already held a ministry, chin raised' is a conceited, self-important walk: strut. (iii) 'Coyly' with no argument and a look away is a silly, affected smile: simper.",
+        "distractors": {
+          "antediluvian": "Hopelessly old-fashioned, the opposite of a twenty-six-year-old newcomer.",
+          "cultivated": "Refined and well educated. The elders are scornful, and the clue is inexperience, not polish.",
+          "tergiversate": "To equivocate or keep changing sides. He 'did not argue' at all, and 'coyly' describes a smile, not evasive talk.",
+          "repair": "Here, to go to a place, often in company; the everyday 'fix' reading ('repair the lobby') is the trap. Neither names the proud manner 'chin raised' describes.",
+          "expunge": "To erase completely. He is parading through the lobby, not wiping anything out.",
+          "regress": "To return to an earlier or worse state. One could call his coyness childish, but 'coyly... and look away' describes an affected smile, and regress names no gesture."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "antediluvian",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "callow",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cultivated",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "repair",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "strut",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "expunge",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "simper",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tergiversate",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "regress",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rebuke",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The new import levy was billed as (i) ___, one rate for every importer whatever its size or sector, but its schedule of exemptions runs to forty pages. Critics who wave the exemptions away as a trifle misjudge their scale: the revenue they forgo is (ii) ___, roughly the whole budget of the health ministry. Meanwhile the relief offered to small traders who pay in full is so (iii) ___ that a typical stallholder recovers less than a day's takings a year.",
+      "blanks": [
+        [
+          "supply",
+          "uniform",
+          "stock"
+        ],
+        [
+          "nontrivial",
+          "lean",
+          "gross"
+        ],
+        [
+          "remunerative",
+          "fiduciary",
+          "mean"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'One rate for every importer whatever its size' defines an unvarying levy: uniform. (ii) 'Misjudge their scale' and 'roughly the whole budget of the health ministry' reject 'trifle', so the sum is significant: nontrivial. (iii) Relief worth 'less than a day's takings a year' is stingy: mean, in its sense of ungenerous, not the everyday sense of unkind.",
+        "distractors": {
+          "supply": "Here, flexible and easily bent (supple), the opposite of a single fixed rate.",
+          "stock": "Commonplace and unoriginal. The clause defines the levy by its single rate, not by any lack of originality.",
+          "lean": "Meager. That is the critics' 'trifle' view, which the sentence says misjudges the scale.",
+          "gross": "Here, flagrant and unacceptable (not 'total before deductions'). The clue is size, and the sentence makes no charge of wrongdoing about the sum itself.",
+          "remunerative": "Profitable, well paying, the opposite of relief worth less than a day's takings.",
+          "fiduciary": "Relating to a trust or a trustee's duty. On topic for finance, but it says nothing about how small the relief is."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "supply",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "uniform",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "stock",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nontrivial",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lean",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "gross",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "remunerative",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fiduciary",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mean",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The coalition's two partners, the Agrarians and the Liberals, took the finance and interior ministries (i) ___, and from the first week the two ministers' messages were (ii) ___: the Agrarian at finance promised austerity on the same morning that the Liberal at interior promised a hundred new police stations. Neither attacked the other openly; each preferred to (iii) ___ the other's unfitness for office through anonymous briefings.",
+      "blanks": [
+        [
+          "fast",
+          "respectively",
+          "laissez-faire"
+        ],
+        [
+          "irenic",
+          "companionable",
+          "discordant"
+        ],
+        [
+          "asseverate",
+          "insinuate",
+          "tender"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'The Agrarian at finance' and 'the Liberal at interior' show each party took the ministry in the order named: respectively. (ii) Austerity and a costly building program announced the same morning clash: discordant. (iii) 'Neither attacked the other openly' and 'anonymous briefings' point to hinting indirectly: insinuate.",
+        "distractors": {
+          "fast": "Here, firmly fixed or loyal. Even read as the everyday adverb 'quickly', it would not say which party got which ministry, and that pairing is what the next sentence relies on.",
+          "laissez-faire": "Favoring minimal government interference. It describes an economic policy, not how the two ministries were divided.",
+          "irenic": "Peaceful, conciliatory, the opposite of messages that contradict each other.",
+          "companionable": "Friendly and pleasant company. The ministers are briefing against each other.",
+          "asseverate": "To declare earnestly and solemnly. That is open assertion, which 'neither attacked the other openly' rules out.",
+          "tender": "To offer formally for acceptance. A formal offer is the opposite of an anonymous whisper."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "fast",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "respectively",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "laissez-faire",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "irenic",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "companionable",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "discordant",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "asseverate",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "insinuate",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tender",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "austerity",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "anonymous",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The tabloid's story about the minister was (i) ___ enough to fool seasoned editors, its invented hotel bills and dates arranged with a forger's care; what finally gave it away was not any factual slip but its (ii) ___ relish for bedroom detail, a leer that no serious paper's lawyers would have let through.",
+      "blanks": [
+        [
+          "falsifiable",
+          "verisimilar",
+          "representational"
+        ],
+        [
+          "pettifogging",
+          "subservient",
+          "lascivious"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) A fabricated story that could 'fool seasoned editors' thanks to careful forgery only appears true: verisimilar. (ii) 'Relish for bedroom detail' and 'a leer' are openly lewd: lascivious.",
+        "distractors": {
+          "falsifiable": "Capable of being proved false. Every factual claim is falsifiable in principle; that does not explain why editors were fooled.",
+          "representational": "Depicting real objects, as in art. The story imitated reality, but the word describes a style of depiction, not plausibility that deceives.",
+          "pettifogging": "Quibbling over trivial details. The story's fault was lewdness, not petty quibbles.",
+          "subservient": "Excessively obedient. Nothing in the 'leer' is servile."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "falsifiable",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "verisimilar",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "representational",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pettifogging",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "subservient",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lascivious",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "relish",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Opposition economists lined up to (i) ___ the budget on the night it was published, calling it a giveaway dressed up as reform; yet even the harshest of them conceded that one clause (ii) ___ something small firms have sought for years: the right to defer tax until a sale is actually paid.",
+      "blanks": [
+        [
+          "champion",
+          "pan",
+          "tax"
+        ],
+        [
+          "divests",
+          "hamstrings",
+          "affords"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Calling it a giveaway dressed up as reform' is harsh criticism: pan. (ii) 'Yet... conceded' turns to praise: the clause provided small firms a long-sought right: afford, in its sense of supply, not the everyday 'have enough money for'.",
+        "distractors": {
+          "champion": "To support publicly, the opposite of calling the budget a disguised giveaway.",
+          "tax": "Here, to make heavy demands on or strain. Critics do not strain a budget by attacking it.",
+          "divests": "Divest: to deprive of something, or to dispose of an asset. The concession says the clause gave firms what they sought, not took it away.",
+          "hamstrings": "Hamstring: to severely restrict. The 'yet... conceded' turn makes the clause a benefit, not a restriction."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "champion",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pan",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tax",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "divest",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hamstring",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "afford",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "revisits": "drill-011:s1q17",
+      "prompt": "Ministers described the state pension fund's position as challenging but manageable; the actuaries, whose report showed assets covering barely half of its promises, preferred the word (i) ___. Even so, the treasury refused the trustees any (ii) ___, reasoning that a bailout would teach every other fund that recklessness carries no cost.",
+      "blanks": [
+        [
+          "inclement",
+          "parlous",
+          "positivist"
+        ],
+        [
+          "reciprocity",
+          "strife",
+          "succor"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Preferred the word' sets the actuaries against 'manageable', and assets covering 'barely half' of promises is a precarious, dangerous position: parlous. (ii) 'Refused... any ___' glossed by 'a bailout' calls for help in distress: succor.",
+        "distractors": {
+          "inclement": "Harsh, used of weather. It does not name financial danger.",
+          "positivist": "Holding that only scientifically verifiable claims count as knowledge. It describes a philosophy, not a fund's condition.",
+          "reciprocity": "Mutual exchange of privileges. A bailout is one-way relief, not an exchange.",
+          "strife": "Bitter conflict. The treasury refused help; it did not refuse conflict."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "inclement",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "parlous",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "positivist",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "reciprocity",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "strife",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "succor",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "asset",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The commission rejected a single jump in the pension age, proposing instead a slow (i) ___ of increases, one month for each year of birth, so that no cohort would face a cliff edge. Unions that had come prepared to (ii) ___ the commission for exemptions found that the schedule already granted most of what they had meant to beg for.",
+      "blanks": [
+        [
+          "cessation",
+          "gradation",
+          "senescence"
+        ],
+        [
+          "elicit",
+          "incense",
+          "supplicate"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Rather than a single jump', 'one month for each year of birth' describes a step-by-step series: gradation. (ii) 'What they had meant to beg for' glosses the blank: supplicate, to beg humbly.",
+        "distractors": {
+          "cessation": "A stopping. The plan continues the increases in small steps; it does not halt them.",
+          "senescence": "The process of growing old. On topic for a pension age, but a plan cannot propose 'a slow senescence of increases'.",
+          "elicit": "To draw out a response from someone. The unions meant to plead humbly, and 'what they had meant to beg for' glosses the blank as begging, not drawing anything out.",
+          "incense": "Here, to make extremely angry. Enraging the commission is the opposite of the humble begging the sentence describes."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "cessation",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "gradation",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "senescence",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "elicit",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "incense",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "supplicate",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Admirers who prize the chief justice's opinions for their economy took her description of the canal ruling as her most ___ to be modesty, until they read it: far from apologizing for its excursions into river tolls and Roman contract law, she argued that only a ruling free to roam could show how the holding had been reached.",
+      "blanks": [
+        [
+          "spare",
+          "grave",
+          "discursive",
+          "epistolary",
+          "plangent"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The admirers heard the description as self-deprecation, which means the word must be a mild fault by their standard of 'economy'. The excursions into tolls and Roman law, and her defense of a ruling 'free to roam', show the word is literal: the opinion moves from topic to topic. That is discursive.",
+        "distractors": {
+          "spare": "Lacking ornament or excess. It matches the 'economy' the admirers prize, which is the trap: calling an opinion her most spare would be a boast, not modesty, and the excursions show it is not spare.",
+          "grave": "Serious and solemn. A court opinion may be grave, but that is no fault to be modest about, and it says nothing about roaming.",
+          "epistolary": "Written in the form of letters. Nothing suggests letters.",
+          "plangent": "Loud and mournful in sound. The opinion is digressive, not resonant or sad."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "spare",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "grave",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "discursive",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "epistolary",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "plangent",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "revisits": "drill-004:s1q11",
+      "prompt": "At joint rallies the senator's dry, figure-laden speeches served as a ___ to the governor's soaring rhetoric: heard side by side, the numbers made the vision sound achievable and the vision made the numbers sound worth caring about.",
+      "blanks": [
+        [
+          "fustian",
+          "farrago",
+          "counterpoint",
+          "iconography",
+          "primitivism"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The colon explains how two contrasting styles set each other off, each making the other stronger. A contrasting element that complements another is a counterpoint.",
+        "distractors": {
+          "fustian": "Pompous, inflated speech. That might describe the governor's soaring rhetoric, but the blank names the senator's dry speeches.",
+          "farrago": "A confused jumble. The speeches are dry and orderly, and they complement rather than muddle.",
+          "iconography": "The set of images or symbols tied to a subject. Speeches full of figures are not imagery.",
+          "primitivism": "A preference for the simple or primitive over the sophisticated. Nothing in the contrast concerns primitive styles."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "fustian",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "farrago",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "counterpoint",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "iconography",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "primitivism",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rhetoric",
+          "role": "stem"
+        }
+      ]
+    }
+  ]
+}

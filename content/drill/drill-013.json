@@ -1,0 +1,1962 @@
+{
+  "id": "drill-013",
+  "measure": "verbal",
+  "title": "Endless vocab batch 13",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Reviewers faulted the new climate textbook not for denying that weather and climate differ, which its authors affirm in the preface, but for the way its later chapters ___ the two in practice, citing a single cold winter as if it bore on a century-long warming trend.",
+      "choices": [
+        "discredit",
+        "conflate",
+        "sever",
+        "elide",
+        "debunk",
+        "canonize"
+      ],
+      "key": {
+        "sel": [
+          1,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The pivot 'not for denying ... but for' says the fault is not disputing the distinction but blurring it in use: treating a cold winter as evidence about climate merges the two. Conflate (merge separate things into one, wrongly) and elide (pass over so a difference is obscured) both give that meaning.",
+        "distractors": {
+          "discredit": "Trap pair with debunk: to damage the credibility of. The authors affirm the distinction, so the chapters are not attacking it; the 'not for denying' clause rules this sense out.",
+          "debunk": "Trap pair with discredit: to expose as false. The sentence explicitly says the book does not deny the distinction.",
+          "sever": "To cut apart or separate completely, the opposite of the fault described: the chapters run weather and climate together.",
+          "canonize": "To treat as authoritative or sacred. Nothing suggests the chapters elevate weather or climate; they muddle them."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "discredit",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "conflate",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sever",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "elide",
+          "role": "key",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "debunk",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "canonize",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Cut off from one another on separate islands for thousands of generations, the descendants of a single finch population have undergone such thorough ___ that birds from neighboring islands, brought together in an aviary, now ignore each other's songs and will not interbreed.",
+      "choices": [
+        "gradualism",
+        "divergence",
+        "blight",
+        "uniformitarianism",
+        "speciation",
+        "juxtaposition"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The blank is a process the populations 'have undergone' through isolation, ending with birds that no longer interbreed. Divergence (growing apart in form) and speciation (the rise of new, distinct species) both describe it.",
+        "distractors": {
+          "gradualism": "Trap pair with uniformitarianism: the view that change happens slowly, by small degrees. It is a theory a scientist holds, not something a bird population undergoes.",
+          "uniformitarianism": "Trap pair with gradualism: the principle that the earth was shaped by the same slow processes still at work. A geological doctrine, not a process the finches went through.",
+          "blight": "A disease or ruinous affliction. Nothing suggests the birds were damaged; they changed so much that they became separate kinds.",
+          "juxtaposition": "Placing things side by side. The populations were separated, not juxtaposed; the aviary pairing comes after the change and is how it is shown."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "gradualism",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "divergence",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "blight",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "uniformitarianism",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "speciation",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "juxtaposition",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The island's conservation plan aimed not merely to thin the invasive rats that were devouring seabird eggs but to ___ them altogether, since even a few surviving pairs could repopulate the island within a decade.",
+      "choices": [
+        "impair",
+        "eradicate",
+        "hamper",
+        "undermine",
+        "extirpate",
+        "indemnify"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "'Not merely to thin ... but to ___ them altogether', and the warning that a few survivors would undo the work, call for total removal. Eradicate (destroy completely) and extirpate (root out and destroy completely) both fit.",
+        "distractors": {
+          "impair": "Trap pair with undermine: to weaken or damage. Weakening the rats is only a stronger form of thinning them, which the sentence sets aside as not enough.",
+          "undermine": "Trap pair with impair: to weaken gradually. Too mild for 'altogether'; a weakened population would still contain the surviving pairs the plan fears.",
+          "hamper": "To hinder or obstruct. Slowing the rats' breeding is partial, and the sentence demands that none survive.",
+          "indemnify": "To compensate for loss or protect against liability. It has no sense of destroying anything."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "impair",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "eradicate",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hamper",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "undermine",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "extirpate",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "indemnify",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "The founders insisted that the rural clinic was a purely ___ enterprise, run on donations and charging its patients nothing, and they bristled at the suggestion that the free care was really a way of recruiting volunteers for the drug trials conducted upstairs.",
+      "choices": [
+        "impudent",
+        "altruistic",
+        "penurious",
+        "forward",
+        "chivalrous",
+        "eleemosynary"
+      ],
+      "key": {
+        "sel": [
+          1,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "The founders claim the clinic exists only to help, funded by gifts and free to patients, and they reject the charge of a hidden self-serving motive. Altruistic (unselfishly concerned for others) and eleemosynary (charitable, dependent on charity) both give that claim.",
+        "distractors": {
+          "impudent": "Trap pair with forward: offensively bold and disrespectful. It describes manners, not the motive behind an enterprise, and the founders would hardly boast of it.",
+          "forward": "Trap pair with impudent: presumptuous, overly familiar (the 'ahead' sense is no better). Neither sense describes a donation-funded clinic.",
+          "penurious": "Poverty-stricken or stingy. A clinic run on donations might be poor, but the founders are defending its motives, not describing its budget, and 'stingy' contradicts free care.",
+          "chivalrous": "Gallant and courteous, in the knightly manner. Too narrow a virtue for a clinic's charitable purpose, and it has nothing to do with the suspicion of self-interest the founders reject."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "impudent",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "altruistic",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "penurious",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "forward",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "chivalrous",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "eleemosynary",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Relativity did not so much overthrow Newtonian mechanics as ___ it: the older theory survives inside the newer one as the special case to which Einstein's equations reduce at speeds far below that of light.",
+      "choices": [
+        "presage",
+        "subsume",
+        "bemoan",
+        "prefigure",
+        "incorporate",
+        "rue"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The colon explains the blank: Newton's theory lives on inside relativity as a special case. Subsume (include within a larger system) and incorporate (include as part of a whole) both say that.",
+        "distractors": {
+          "presage": "Trap pair with prefigure: to be a sign of something to come. Relativity came after Newton, so it cannot foreshadow the older theory; the time order runs the wrong way.",
+          "prefigure": "Trap pair with presage: to show in advance something that comes later. Newton might be said to prefigure Einstein, not the reverse.",
+          "bemoan": "To lament or complain about. The sentence describes a logical relation between theories, not an attitude toward the older one.",
+          "rue": "To regret bitterly. Like bemoan, an emotion; the colon's explanation is about containment, not regret."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "presage",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "subsume",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bemoan",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "prefigure",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "incorporate",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rue",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The junior astronomer's reply to the observatory's director was remembered less for its argument than for its ___: before a room of colleagues she called his life's work a catalog of instrument errors and advised him to retire before compiling another.",
+      "choices": [
+        "taciturnity",
+        "insolence",
+        "bonhomie",
+        "reserve",
+        "contumely",
+        "reluctance"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The colon gives the evidence: a junior colleague publicly mocks her superior's life's work and tells him to retire. Insolence (bold disrespect) and contumely (insulting, arrogant language) both name that.",
+        "distractors": {
+          "taciturnity": "Trap pair with reserve: the habit of saying very little. She said a great deal, and none of it held back.",
+          "reserve": "Trap pair with taciturnity: restraint in showing one's feelings. Her reply was the opposite of restrained; the 'stored supply' sense fits no better.",
+          "bonhomie": "Cheerful friendliness. Calling someone's work a catalog of errors is not genial.",
+          "reluctance": "Unwillingness. Nothing suggests she held back; she volunteered advice to retire."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "taciturnity",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "insolence",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bonhomie",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "reserve",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "contumely",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "reluctance",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Though he had led more field seasons in the Andes than most of its members, the mining magnate who bankrolled the geological society's expeditions was treated by its old guard as a ___: his fortune was recent, his manners loud, and his donations, they muttered, were an attempt to buy the standing his birth had not given him.",
+      "choices": [
+        "diatribe",
+        "parvenu",
+        "fledgling",
+        "tirade",
+        "arriviste",
+        "virtuoso"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The colon lists the old guard's complaints: new money, loud manners, status bought rather than inherited. Parvenu and arriviste both name a newcomer to wealth and status who is scorned as lacking the breeding to match.",
+        "distractors": {
+          "diatribe": "Trap pair with tirade: a bitter verbal attack. The old guard may have muttered one, but the blank names what they took the man to be, and a person is not a speech.",
+          "tirade": "Trap pair with diatribe: a long angry speech. Same problem: the blank needs a kind of person.",
+          "fledgling": "A beginner or inexperienced newcomer. The concession says he had more field experience than most members, so the scorn is about his social standing, not his inexperience.",
+          "virtuoso": "A person of outstanding skill. His field record might earn that, but the old guard's complaints are all disparaging, so the label they gave him must be too."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "diatribe",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "parvenu",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fledgling",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tirade",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "arriviste",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "virtuoso",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "magnate",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "mutter",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Because few animals regrow lost tissue as completely as the axolotl, which can rebuild a lost limb, part of its spinal cord and even damaged heart muscle, textbooks routinely choose it to ___ regeneration.",
+      "choices": [
+        "stigmatize",
+        "exemplify",
+        "hail",
+        "vilify",
+        "instantiate",
+        "replicate"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The axolotl shows the capacity more fully than almost any other animal, so textbooks use it as the standard case. Exemplify (serve as a typical example of) and instantiate (serve as a concrete instance of an abstract type) both fit.",
+        "distractors": {
+          "stigmatize": "Trap pair with vilify: to brand as shameful. Nothing negative is said about regeneration.",
+          "vilify": "Trap pair with stigmatize: to speak of with abuse. Textbooks have no reason to attack regeneration, and the axolotl is chosen for showing it well.",
+          "hail": "To praise or acclaim. The textbooks pick the axolotl for being a clear case, not to celebrate the process.",
+          "replicate": "To reproduce or copy. The axolotl displays regeneration; it does not reproduce someone else's version of it."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "stigmatize",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exemplify",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hail",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "vilify",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "instantiate",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "replicate",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "revisits": "drill-010:s1q13",
+      "prompt": "The emergency department's rule that any patient over sixty with chest pain be seen within ten minutes was meant only as a (i) ___ device, a rough rule of thumb for sorting a crowded waiting room, not a diagnosis. Within a year, though, triage staff had come to (ii) ___, treating every patient it flagged as a cardiac case, and the physicians who drafted it were (iii) ___ when an audit found younger patients with textbook heart-attack symptoms waiting behind older ones with indigestion.",
+      "blanks": [
+        [
+          "syntactic",
+          "heuristic",
+          "practicable"
+        ],
+        [
+          "descant on it",
+          "inveigh against it",
+          "apply it uncritically"
+        ],
+        [
+          "inured",
+          "astounded",
+          "cajoled"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) The appositive glosses the blank: 'a rough rule of thumb ... not a diagnosis', which is what heuristic means. (ii) 'Though' turns from the rule's modest purpose to its misuse: staff treated every flagged patient as cardiac, so they applied it uncritically, as if it were a diagnosis. (iii) The audit's finding of a result the drafters never intended calls for surprise: astounded.",
+        "distractors": {
+          "syntactic": "Relating to sentence structure. The rule sorts patients; it has nothing to do with grammar.",
+          "practicable": "Feasible, able to be carried out. True of the rule, but the appositive defines it as a rough rule of thumb set against a diagnosis, which is heuristic, not merely workable.",
+          "descant on it": "To talk at length about it. The staff did not lecture on the rule; they acted on it, flagging every patient.",
+          "inveigh against it": "To protest bitterly against it. The staff followed the rule too faithfully; they did not attack it.",
+          "inured": "Accustomed to something unpleasant, so no longer affected. The drafters are reacting to a discovery, and the sentence implies shock, not resignation.",
+          "cajoled": "Coaxed by flattery into doing something. No one is persuading the physicians of anything; the audit finding surprises them."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "syntactic",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "heuristic",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "practicable",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "descant",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inveigh",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "uncritically",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inure",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "astound",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cajole",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "The blind, colorless fish of the cave system descend from ancestors that were (i) ___, foraging only in the sunlit shallows of surface streams. Thousands of generations in the (ii) ___ of the caverns have since stripped them of pigment and eyes. Of the dozen such lineages the first surveyors described, only three are still (iii) ___; runoff from the farms above has extinguished the rest.",
+      "blanks": [
+        [
+          "furtive",
+          "synchronous",
+          "diurnal"
+        ],
+        [
+          "lofty aerie",
+          "stygian depths",
+          "sunlit declivity"
+        ],
+        [
+          "extant",
+          "minute",
+          "predominant"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Foraging only in the sunlit shallows' defines diurnal, active by day. (ii) The contrast with the ancestors' daylight, and the loss of eyes and pigment, call for total darkness: the stygian depths. (iii) 'Extinguished the rest' means the three are the survivors: still extant.",
+        "distractors": {
+          "furtive": "Secretive, stealthy. The clue is when the ancestors fed (in sunlight), not how cautiously.",
+          "synchronous": "Occurring at the same time as something else. There is nothing for the ancestors' activity to coincide with; the clue is daylight.",
+          "sunlit declivity": "A sunlit downward slope. Sunlight is exactly what the cave fish lack; it belongs to their ancestors' streams.",
+          "minute": "Extremely small. The contrast is between lineages that survive and those that were extinguished, not their size.",
+          "predominant": "Most common or powerful. Three survivors out of a dozen are not said to dominate anything; they simply still exist.",
+          "lofty aerie": "A high perch, like an eagle's nest. Caverns that rob fish of their eyes are dark depths, not heights."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "furtive",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "synchronous",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "diurnal",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "aerie",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "stygian",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "declivity",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "extant",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "minute",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "predominant",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "forage",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "A ten-year trial at first seemed to confirm the modest view that the drug could slow the retinal disease but not (i) ___ its worst outcome, since many treated patients went blind anyway. Sorting patients by when treatment began told a different story: almost none who started before their sight had begun to (ii) ___ went on to lose it. The authors even suspect that this figure understates the benefit, because the scans used to date each patient's onset are (iii) ___ enough that a few patients counted as early were probably already declining.",
+      "blanks": [
+        [
+          "entail",
+          "palliate",
+          "avert"
+        ],
+        [
+          "deteriorate",
+          "malinger",
+          "fester"
+        ],
+        [
+          "inimitable",
+          "fallible",
+          "nice"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          0,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) The modest view sets 'slow' against something stronger, and the later finding that early patients were spared blindness shows what that stronger thing is: to prevent the outcome, avert. (ii) Treatment that starts before the sight 'had begun to ___' must start before it worsens: deteriorate, which 'already declining' later restates. (iii) The figure understates the benefit only if some patients were misdated, already declining yet counted as early (and their losses charged to early treatment). So the scans make mistakes: fallible. Reading the figure as flattering the drug points to the wrong polarity.",
+        "distractors": {
+          "entail": "To involve as a necessary consequence. A drug that entailed blindness would cause it; the contrast with 'slow' needs prevention.",
+          "palliate": "To ease or lessen without curing. That is close to what 'slow' already says, so it cannot be the stronger power the modest view denies; the trial's point is that early patients were spared outright.",
+          "malinger": "To fake illness to avoid duty. People malinger; sight does not, and nothing is feigned.",
+          "fester": "To worsen through neglect, said of wounds or grievances. Tempting as a word for getting worse, but sight does not fester, and the patients were not neglected; the blank is simply the decline 'already declining' restates.",
+          "inimitable": "So good it cannot be copied. Praise for the scans would not explain why the figure understates the benefit.",
+          "nice": "Precise, capable of fine discrimination (the GRE sense). Precise scans would date onset correctly, and then no 'early' patient would already be declining."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "entail",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "palliate",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "avert",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "deteriorate",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "malinger",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fester",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inimitable",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fallible",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nice",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "modest",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Investigators spent two years trying to (i) ___ the source of the ward's infections, and when they finally traced it to a contaminated sink drain, the hospital's lawyers moved at once to (ii) ___ their report, fearing the penalties its publication would (iii) ___. The suppression failed only because a nurse sent a copy to the health ministry.",
+      "blanks": [
+        [
+          "barter away",
+          "ferret out",
+          "jeer at"
+        ],
+        [
+          "propagate",
+          "garner",
+          "squelch"
+        ],
+        [
+          "incur",
+          "palliate",
+          "rescind"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) Two years of searching that ends when they 'finally traced it' is persistent investigation: ferret out (the verb, not the animal). (ii) The next sentence calls it 'the suppression', so the lawyers tried to squelch the report. (iii) The fear is of penalties that publication would bring on the hospital: incur.",
+        "distractors": {
+          "barter away": "To trade off. The investigators were hunting for the source, not exchanging it for something.",
+          "jeer at": "To mock. The source is something to be found, and the sentence says they finally traced it.",
+          "propagate": "To spread widely, the opposite of the suppression the next sentence names.",
+          "garner": "To gather or collect. The lawyers wanted the report buried, not collected or added to.",
+          "palliate": "To ease or lessen. Publication was feared because it would bring penalties, not lighten them.",
+          "rescind": "To revoke or cancel. Publication would not cancel penalties; the lawyers fear it would bring them on."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "barter",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ferret",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "jeer",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "propagate",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "garner",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "squelch",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "incur",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "palliate",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rescind",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Because a command from Earth takes up to twenty minutes to reach Mars, the rover, though nominally steered by its controllers, enjoys (i) ___ independence on each drive: it chooses its own path around boulders and dunes, and the team learns of its choices only afterward. Engineers expect its successors to be more (ii) ___ still, since onboard computing power, far from creeping upward, has been (iii) ___, doubling every few years.",
+      "blanks": [
+        [
+          "fell",
+          "sublime",
+          "virtual"
+        ],
+        [
+          "arch",
+          "autonomous",
+          "beatific"
+        ],
+        [
+          "waxing gradually",
+          "foundering abruptly",
+          "rising exponentially"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Though nominally steered' concedes that the rover is not officially independent, yet in practice it is: virtual independence, almost so though not strictly. The 'computer simulation' sense is the trap; the rover's freedom is real, not simulated. (ii) 'More ... still' continues the rover's self-direction: autonomous. (iii) 'Far from creeping upward' and 'doubling every few years' describe repeated multiplication: rising exponentially.",
+        "distractors": {
+          "fell": "Fiercely cruel or deadly (the GRE sense). Nothing about the rover's freedom is savage; the clue is that it is almost, not formally, independent.",
+          "arch": "Knowingly playful or mischievous. A machine's growing self-direction is not a matter of coy manner.",
+          "beatific": "Blissful, serene. Says nothing about whether a machine acts on its own.",
+          "waxing gradually": "Increasing slowly. 'Far from creeping upward' rules out slow growth; doubling every few years is fast.",
+          "foundering abruptly": "Failing or collapsing suddenly. Collapsing computing power could not justify expecting more capable successors.",
+          "sublime": "Awe-inspiring, of the highest excellence. The rover's freedom may be impressive, but 'though nominally steered' asks for a word about the degree of independence, almost but not formally complete, which sublime does not give."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "fell",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sublime",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "virtual",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "arch",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "autonomous",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "beatific",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "wax",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "founder",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exponentially",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mar",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Writing for patients rather than colleagues, the neurologist strips her case histories of (i) ___, glossing every technical term in plain words. For most of the book her tone is one of clinical (ii) ___, and the restraint pays off in the final chapter: her account of a young patient's death moves readers precisely because it avoids the (iii) ___ pathos of the deathbed scenes in most medical memoirs.",
+      "blanks": [
+        [
+          "exposition",
+          "jargon",
+          "flotsam"
+        ],
+        [
+          "enmity",
+          "rumination",
+          "detachment"
+        ],
+        [
+          "cloying",
+          "bilious",
+          "lapidary"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Glossing every technical term in plain words' shows what she strips out: jargon. (ii) 'The restraint' refers back to the tone, so it is a cool, uninvolved one: clinical detachment. (iii) The scene moves readers because it avoids the overdone sentiment of the genre: cloying pathos.",
+        "distractors": {
+          "exposition": "Explanation. Glossing terms adds exposition; she removes the jargon, not the explaining.",
+          "flotsam": "Floating wreckage or odds and ends. Not what technical terms are, and the clue is specialized vocabulary.",
+          "enmity": "Hostility. 'The restraint' describes coolness, not ill will toward her patients.",
+          "rumination": "Brooding reflection. A restrained, clinical tone is not one of brooding, and the next clause calls it restraint.",
+          "bilious": "Bad-tempered, irritable. The deathbed scenes she avoids are sentimental, not peevish.",
+          "lapidary": "Elegant and concise, as if engraved. That would describe restraint, which is what her account has, not the overwrought pathos it avoids."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "exposition",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "jargon",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "flotsam",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "enmity",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rumination",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "detachment",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cloying",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bilious",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lapidary",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "revisits": "drill-001:s1q8",
+      "prompt": "Granted, the closing minutes of the paleontologist's reply to her critics were a (i) ___ rather than the measured summary her slides had promised; yet few who had sat through the preceding hour, in which each rival's \"question\" about her feathered reconstruction drew a bigger laugh from the hall than the last, could fault her for meeting so much (ii) ___ with something less than patience.",
+      "blanks": [
+        [
+          "coda",
+          "bombast",
+          "tirade"
+        ],
+        [
+          "insincerity",
+          "derision",
+          "complacency"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Neither blank is settled by the first half: any closing passage that is not a measured summary, and any unworthy treatment from rivals, would fit. The decisive clue is the understatement at the end, 'something less than patience', which says her closing minutes were angry, and 'could fault her' says they needed excusing. (i) An angry, intemperate closing speech is a tirade. (ii) What excuses the anger is what the hall did: 'questions' that served only to get a bigger laugh at her reconstruction each time, which is derision, contemptuous ridicule.",
+        "distractors": {
+          "coda": "A concluding section. The closing minutes literally were one, so it fits the first half, but a coda is neutral; it would need no excuse and would not be 'something less than patience'.",
+          "bombast": "Pompous, inflated speech. Also unlike a measured summary, but bombast is grandiose, not angry, and the litotes 'less than patience' points to anger.",
+          "insincerity": "Lack of genuine feeling. The scare quotes make the questions look insincere, the tempting reading, but what they did was raise laughs at her expense; the provocation that excuses her anger is the ridicule, not the pretense.",
+          "complacency": "Smug self-satisfaction. Complacent rivals might be unworthy, but laughter at her work is active mockery, and complacency would hardly provoke the impatience the sentence excuses."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "coda",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bombast",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tirade",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "insincerity",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "derision",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "complacency",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Tuned water tanks beneath the footbridge's deck were meant to (i) ___ the swaying that crowds of walkers set off, the sloshing water soaking up the energy of each sway. Far from the model solution the engineering press first called it, though, the remedy proved (ii) ___ once winter came: the tanks froze solid, and ice does not slosh.",
+      "blanks": [
+        [
+          "saturate",
+          "damp",
+          "inure"
+        ],
+        [
+          "quintessential",
+          "winsome",
+          "problematic"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) The tanks exist to reduce the swaying, with the water absorbing its energy: damp in its verb sense of restraining intensity. The water and 'soaking up' bait the 'make wet' sense. (ii) 'Far from the model solution' reverses the press's praise, and the colon names the failure, frozen tanks that cannot absorb motion: the remedy proved problematic.",
+        "distractors": {
+          "saturate": "To soak completely, the 'wet' sense of damp, which the water and 'soaking up' invite. The tanks are meant to reduce the swaying, not soak it.",
+          "inure": "To accustom someone to hardship. Walkers might be inured to the swaying, but the tanks act on the motion itself.",
+          "quintessential": "The perfect example of a type. It matches 'model solution', but 'far from' reverses that praise, and the colon describes a failure.",
+          "winsome": "Charming. Clashes with 'far from the model solution' and with the frozen tanks."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "saturate",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "damp",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inure",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "quintessential",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "winsome",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "problematic",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Early colon tumors bleed only in traces too slight to see, so the screening test looks for (i) ___ blood rather than for any visible sign. That a kit costing a few dollars can flag cancers at this stage is a genuine (ii) ___ of screening research, though no one who worked on it claims it makes colonoscopy obsolete.",
+      "blanks": [
+        [
+          "diabolical",
+          "occult",
+          "opprobrious"
+        ],
+        [
+          "impasse",
+          "imprimatur",
+          "attainment"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) Blood 'too slight to see' rather than a 'visible sign' is blood hidden from ordinary observation: occult, in its 'hidden' sense, not the supernatural one. (ii) A cheap kit that catches early cancers is something the field has achieved, an attainment, which 'though' then keeps in proportion.",
+        "distractors": {
+          "diabolical": "Devilish, fiendishly wicked. It plays on occult's supernatural sense, but the clue is that the blood is invisible, not sinister.",
+          "opprobrious": "Expressing scorn, or shameful. Blood in a stool sample is neither, and the clue is invisibility.",
+          "impasse": "A deadlock with no way forward. A kit that catches cancers early is progress, the opposite of a dead end.",
+          "imprimatur": "An official sanction or approval. Research does not grant approval to itself; the cheap kit is something achieved, not a seal of approval."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "diabolical",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "occult",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "opprobrious",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "impasse",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "imprimatur",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "attainment",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "obsolete",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Beaten to the pole by five weeks, the second expedition's leader could only (i) ___ the fame that went to his rival. He spent his later years trying to (ii) ___, stressing the rock and ice samples his team had hauled back, which his rival, intent on speed alone, had never troubled to collect.",
+      "blanks": [
+        [
+          "covet",
+          "importune",
+          "desecrate"
+        ],
+        [
+          "make restitution to his rival",
+          "burnish his own reputation",
+          "take a break from exploring"
+        ]
+      ],
+      "key": {
+        "sel": [
+          0,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Could only' and 'went to his rival' mean he desired what belonged to another and could not have it: covet. (ii) Stressing what his team achieved and his rival neglected is an effort to polish his own standing: burnish his own reputation.",
+        "distractors": {
+          "importune": "To beg persistently. One importunes a person, not fame, and nothing says he pleaded with anyone.",
+          "desecrate": "To violate something sacred. He envied his rival's fame; nothing suggests he defiled it.",
+          "make restitution to his rival": "To compensate his rival for a loss. He had caused his rival no loss, and stressing his own samples is self-promotion, not repayment.",
+          "take a break from exploring": "To pause his work. Stressing the samples his team collected is an active campaign for credit, not a rest."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "covet",
+          "role": "key",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "importune",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "desecrate",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "restitution",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "burnish",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "break",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "revisits": "drill-002:s1q1",
+      "prompt": "Critics who dismissed the link between the supplement and longer life as a statistical fluke were right that it was ___ but wrong about why: it vanished once the analysis adjusted for exercise and smoking, habits that vitamin buyers happen to share.",
+      "blanks": [
+        [
+          "fortuitous",
+          "involved",
+          "spurious",
+          "unguided",
+          "ecstatic"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "'Right that it was ___ but wrong about why' separates what the critics got right (the link was not real) from their reason (chance). The link turned out to come from shared habits, so it was false though it looked genuine, for a reason other than chance: spurious.",
+        "distractors": {
+          "fortuitous": "Happening by chance. This is exactly the critics' reason, 'a statistical fluke', which the sentence says was wrong; the link vanished because of shared habits, not luck.",
+          "involved": "Intricate, hard to follow (the GRE sense). The link's cause was simple, two habits, and the critics were right that it was false, not complicated.",
+          "unguided": "Without direction or guidance. Describes a process, not whether a statistical link is genuine.",
+          "ecstatic": "Overjoyed. An association has no feelings, and the critics were judging whether it was real."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "fortuitous",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "involved",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "spurious",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "unguided",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ecstatic",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "revisits": "drill-007:s1q15",
+      "prompt": "The expedition had spent lavishly on the newest crampons, yet on the ice-glazed slab below the summit ridge even their steel points found no ___, and twice the lead climber slid back the full length of the rope.",
+      "blanks": [
+        [
+          "boon",
+          "nave",
+          "purchase",
+          "wakefulness",
+          "goosebumps"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Points that cannot stop a climber sliding on glazed ice have no grip: purchase in its sense of a firm hold or foothold. The money spent on the crampons baits the 'buying' sense, which makes no sense of 'found no ___'.",
+        "distractors": {
+          "boon": "A blessing or benefit. The crampons failed to grip; the clue is the slide, which needs a word for hold, not help in general.",
+          "nave": "The central aisle of a church. Nothing in the sentence concerns a building.",
+          "wakefulness": "The state of being awake. Crampon points do not sleep or wake.",
+          "goosebumps": "Small bumps on the skin from cold or fear. The climbers may have had them, but steel points cannot find them, and the slide shows a failure to grip."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "boon",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "nave",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "purchase",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "wakefulness",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "goosebumps",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "summit",
+          "role": "stem"
+        }
+      ]
+    }
+  ]
+}

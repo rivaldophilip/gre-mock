@@ -1,0 +1,1997 @@
+{
+  "id": "drill-015",
+  "measure": "verbal",
+  "title": "Endless vocab batch 15",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Friends who watched Mara skip the weekly restaurant outings took her for melancholy, imagining her lost in thought over some private sorrow; in fact she was merely ___, quietly banking the money toward the small house she meant to buy outright.",
+      "choices": [
+        "wistful",
+        "provident",
+        "supererogatory",
+        "pensive",
+        "frugal",
+        "putative"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "'In fact ... merely' corrects the friends' reading: she is not sad or brooding, just saving for the future (banking money toward a house). Provident (planning and saving ahead) and frugal (economical with money) both give that sense.",
+        "distractors": {
+          "wistful": "Trap pair with pensive: full of sad longing. That is the friends' mistaken reading, which 'in fact she was merely' sets aside.",
+          "pensive": "Trap pair with wistful: deeply, often sadly thoughtful. Again the misreading the sentence corrects; banking money is a practical habit, not a mood.",
+          "supererogatory": "Going beyond what duty requires, or superfluous. Skipping dinners to save is not described as an excess of duty.",
+          "putative": "Supposed or commonly believed. It would describe the friends' assumption, not what Mara actually was."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "wistful",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "provident",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "supererogatory",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pensive",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "frugal",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "putative",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Tomas, who would agree to almost anything a host proposed, ___ only once that evening: asked to give an impromptu toast, he protested mildly that he had no gift for speeches, and the host let the matter drop.",
+      "choices": [
+        "abridged",
+        "balked",
+        "reified",
+        "curtailed",
+        "disaggregated",
+        "demurred"
+      ],
+      "key": {
+        "sel": [
+          1,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "The contrast with 'would agree to almost anything' and the gloss 'protested mildly' call for a verb meaning hesitated or objected. Balked and demurred both mean that, and both stand without an object.",
+        "distractors": {
+          "abridged": "Trap pair with curtailed: shortened. Both need an object (something shortened) and neither means objecting; he did not shorten a speech, he declined to give one.",
+          "curtailed": "Trap pair with abridged: cut short. Nothing is cut short; the sentence is about his reluctance.",
+          "reified": "Treated an abstraction as a concrete thing, a term from philosophy that has nothing to do with declining a toast.",
+          "disaggregated": "Separated into component parts; it needs an object and does not describe reluctance."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "abridge",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "balk",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "reify",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "curtail",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "disaggregate",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "demur",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Those who met Lady Fenn only briefly blamed her manner on a wandering mind, since she answered questions half a minute late and drifted from guest to guest with no apparent plan; longer acquaintance showed the drifting to be ___, each pause timed to let a speaker feel how little his remark had merited her attention.",
+      "choices": [
+        "haphazard",
+        "haughty",
+        "oleaginous",
+        "desultory",
+        "supercilious",
+        "recherche"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The first clause offers the tempting reading (a wandering, aimless mind), and 'longer acquaintance showed' reverses it. Pauses 'timed' to show a speaker how little he merited her attention are deliberate disdain. Haughty and supercilious both mean looking down on others with pride.",
+        "distractors": {
+          "haphazard": "Trap pair with desultory: random, unplanned. It matches the first impression ('no apparent plan'), but the reversal shows the pauses were timed, so nothing was random.",
+          "desultory": "Trap pair with haphazard: drifting aimlessly from one thing to another. It echoes 'drifted from guest to guest', which is exactly the reading longer acquaintance overturned.",
+          "oleaginous": "Unctuous, fawningly flattering. She signals that remarks are beneath her, the opposite of fawning.",
+          "recherche": "Exotic or overrefined, said of tastes or objects. Her pauses express contempt, not rarefied taste."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "haphazard",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "haughty",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "oleaginous",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "desultory",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "supercilious",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "recherche",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "The best man's speech was ___ rather than sentimental: far from dabbing at his eyes, he declaimed about 'the eternal covenant of two souls' in a voice meant to fill a cathedral, though the reception was held in a small backyard.",
+      "choices": [
+        "treacly",
+        "bombastic",
+        "tautological",
+        "maudlin",
+        "allegorical",
+        "pompous"
+      ],
+      "key": {
+        "sel": [
+          1,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "'Rather than sentimental' excludes tearfulness; the grand phrasing and cathedral-filling voice in a small backyard mark inflated, self-important speech. Bombastic and pompous both say that.",
+        "distractors": {
+          "treacly": "Trap pair with maudlin: cloyingly sentimental. 'Rather than sentimental' and 'far from dabbing at his eyes' rule it out.",
+          "maudlin": "Trap pair with treacly: tearfully sentimental. Exactly what the sentence says the speech was not.",
+          "tautological": "Saying the same thing twice in different words. Nothing in the sentence points to repetition.",
+          "allegorical": "Telling one story to stand for another. His phrase is grandiose, not a symbolic narrative."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "treacly",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bombastic",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tautological",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "maudlin",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "allegorical",
+          "role": "distractor",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pompous",
+          "role": "key",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "When the host knocked a full decanter across the white tablecloth, she met the moment with such ___ that several guests later doubted it had happened at all; she offered no clever saying to paper over it, only an unhurried reach for the napkins.",
+      "choices": [
+        "maxim",
+        "aplomb",
+        "gravamen",
+        "apothegm",
+        "composure",
+        "sensibility"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Guests doubting the spill happened and her 'unhurried reach' show unruffled poise under embarrassment. Aplomb and composure both name that calm self-possession.",
+        "distractors": {
+          "maxim": "Trap pair with apothegm: a pithy saying. The sentence says she offered no clever saying, and one does not meet a moment 'with such maxim'.",
+          "apothegm": "Trap pair with maxim: a terse, witty saying. Explicitly excluded by 'she offered no clever saying'.",
+          "gravamen": "The essential grievance or point of a complaint. No complaint is being made.",
+          "sensibility": "Keen emotional responsiveness. A heightened capacity for feeling is the opposite of the unbothered calm described."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "maxim",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "aplomb",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "gravamen",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "apothegm",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "composure",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sensibility",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Hoping to sound profound, the self-help author borrowed openly from Montaigne and Emerson, but because he quoted only their most familiar lines, the effect was not richly layered but merely ___.",
+      "choices": [
+        "intertextual",
+        "hackneyed",
+        "irrefragable",
+        "allusive",
+        "banal",
+        "impolitic"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Quoting only the most familiar lines makes the result stale and unoriginal. 'Not richly layered but merely' calls for a deflating word, and hackneyed and banal both mean trite.",
+        "distractors": {
+          "intertextual": "Trap pair with allusive: drawing on other texts. He does borrow, but 'not richly layered' denies that the borrowing creates this effect.",
+          "allusive": "Trap pair with intertextual: full of references. The layered effect is exactly what the sentence says he did not achieve.",
+          "irrefragable": "Impossible to refute. Familiar quotations are not being judged as arguments.",
+          "impolitic": "Unwise or tactless. Quoting well-known lines is dull, not imprudent."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "intertextual",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hackneyed",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "irrefragable",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "allusive",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "banal",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "impolitic",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "profound",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "se",
+      "difficulty": 5,
+      "prompt": "Seasoned therapists learn to ___ in a client's offhand jokes the anxieties the client cannot yet name; the skill lies not in magnifying those worries but in noticing them at all.",
+      "choices": [
+        "enhance",
+        "descry",
+        "deracinate",
+        "aggrandize",
+        "discern",
+        "belie"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The second clause defines the skill as 'noticing them at all': picking out something hard to see. Descry and discern both mean perceiving what is not obvious.",
+        "distractors": {
+          "enhance": "Trap pair with aggrandize: to increase or magnify. The sentence says the skill is 'not in magnifying those worries'.",
+          "aggrandize": "Trap pair with enhance: to make greater. Ruled out by the same 'not in magnifying'.",
+          "deracinate": "To uproot, tear away from one's native place. Removing the anxieties is a later step at best; the sentence is about noticing them.",
+          "belie": "To give a false impression of, or contradict. The jokes may belie the anxieties, but the therapist does not."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "enhance",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "descry",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "deracinate",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "aggrandize",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "discern",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "belie",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "se",
+      "difficulty": 4,
+      "prompt": "Guests found the old innkeeper ___, always ready with a joke and an easy word for strangers, but no one mistook his warmth for pliancy: he refused every request to bend the house rules.",
+      "choices": [
+        "tractable",
+        "affable",
+        "bibulous",
+        "amenable",
+        "amiable",
+        "headstrong"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "'Ready with a joke and an easy word' describes friendliness, and 'his warmth' names it. Affable and amiable both mean genial and easy to talk to.",
+        "distractors": {
+          "tractable": "Trap pair with amenable: easily managed or persuaded. 'No one mistook his warmth for pliancy' rules out compliance.",
+          "amenable": "Trap pair with tractable: willing to go along. He refused every request to bend the rules.",
+          "bibulous": "Fond of alcohol. Nothing in the sentence concerns drinking.",
+          "headstrong": "Stubbornly self-willed. It fits the rule-keeping but not the jokes and easy words the blank describes."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "tractable",
+          "role": "distractor",
+          "at": [
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "affable",
+          "role": "key",
+          "at": [
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bibulous",
+          "role": "distractor",
+          "at": [
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "amenable",
+          "role": "distractor",
+          "at": [
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "amiable",
+          "role": "key",
+          "at": [
+            4
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "headstrong",
+          "role": "distractor",
+          "at": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Aunt Ruth's account of human nature was thoroughly (i) ___: shyness existed to protect us, jealousy to hold families together, as though each trait had been designed for the job it now does. Her nephew, a philosophy student, objected less to that than to her (ii) ___ habit of treating 'men' and 'women' as fixed kinds whose every member shared one nature. Still, he conceded that her readings of family quarrels showed real (iii) ___ subtlety: she could find three meanings in a single slammed door.",
+      "blanks": [
+        [
+          "tautological",
+          "teleological",
+          "constitutive"
+        ],
+        [
+          "phenomenological",
+          "syncretic",
+          "essentialist"
+        ],
+        [
+          "gimcrack",
+          "hermeneutic",
+          "archaic"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) Explaining each trait by the purpose it serves ('existed to protect us') is teleological reasoning. (ii) Treating groups as fixed kinds whose every member shares one nature is the essentialist view. (iii) Finding several meanings in one slammed door is skill at interpretation: hermeneutic subtlety.",
+        "distractors": {
+          "tautological": "Circular, restating the same thing. Her explanations are by purpose, not by repetition.",
+          "constitutive": "Forming an essential part of something. The colon spells out explanation by purpose, which this word does not mean.",
+          "phenomenological": "Concerned with how things are experienced from the inside. Fixed kinds with one shared nature is a claim about essences, not experience.",
+          "syncretic": "Blending different beliefs or traditions. Nothing is being combined; she sorts people into rigid categories.",
+          "gimcrack": "Showy but flimsy. The nephew is conceding a real strength, so a disparaging word contradicts 'Still, he conceded'.",
+          "archaic": "Old-fashioned, out of date. Finding three meanings in a door is about interpretation, not age."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "tautological",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "teleological",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "constitutive",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "phenomenological",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "syncretic",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "essentialist",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "gimcrack",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hermeneutic",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "archaic",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "concede",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "For all his (i) ___ upbringing, with its boarding schools and summers on the family estate, Julian preferred the company of (ii) ___ characters: card sharps, aging roués and cabaret singers who kept unrespectable hours. His mother tried every (iii) ___ she could think of, from compliments on his taste to promises of a new car, to coax him back toward more suitable friends.",
+      "blanks": [
+        [
+          "plebeian",
+          "patrician",
+          "gimcrack"
+        ],
+        [
+          "scrupulous",
+          "resolute",
+          "louche"
+        ],
+        [
+          "blandishment",
+          "gravamen",
+          "bathos"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) Boarding schools and a family estate mark an aristocratic upbringing: patrician. (ii) 'For all' sets his friends against that background, and card sharps and roués are disreputable in a raffish way: louche. (iii) Compliments and promises used to coax someone are blandishments.",
+        "distractors": {
+          "plebeian": "Common, lower-class: the opposite of an estate and boarding schools.",
+          "gimcrack": "Cheap and flimsy. Nothing about the upbringing is shoddy.",
+          "scrupulous": "Careful and morally upright. Card sharps who keep unrespectable hours are the reverse.",
+          "resolute": "Determined. The colon lists disreputable people, not determined ones.",
+          "gravamen": "The core of a grievance. Compliments and promises are inducements, not complaints.",
+          "bathos": "An abrupt, ludicrous drop from the lofty to the trivial. It names an effect in speech or writing, not a means of persuasion."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "plebeian",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "patrician",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "gimcrack",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "scrupulous",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "resolute",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "louche",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "blandishment",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "gravamen",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "bathos",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Having spent a decade counseling prisoners, a few of them guilty of truly (i) ___ acts, Father Anselm had little patience for the (ii) ___ parishioners who kept careful tallies of their own fasts and tithes while snubbing the former inmates at the back of the church. Yet he declined to rebuke them, reasoning that a (iii) ___ reproach would only feed their appetite for moral instruction; instead he quietly seated the newcomers beside them at the parish supper.",
+      "blanks": [
+        [
+          "premature",
+          "flagitious",
+          "artless"
+        ],
+        [
+          "fervent",
+          "naive",
+          "pharisaical"
+        ],
+        [
+          "homiletic",
+          "lucid",
+          "eccentric"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Truly' set against the parishioners' petty sins needs a word for grave wrongdoing: flagitious, extremely wicked. (ii) Tallying one's own fasts and tithes while snubbing the outcasts the faith should welcome is outward observance over spirit: pharisaical. (iii) The reproach he avoids is one that would 'feed their appetite for moral instruction', so it is a moralizing, sermonlike one: homiletic. The logic runs through what he declines to do, not through a tone he takes.",
+        "distractors": {
+          "premature": "Too early. 'Truly' calls for a degree of wickedness, not a question of timing.",
+          "artless": "Guileless, natural. 'Truly artless acts' would not explain why counseling such men left him impatient with petty hypocrites.",
+          "fervent": "Intensely sincere. The tallying and the snubbing put display ahead of substance, so sincerity misreads them; this is the topic-only decoy.",
+          "naive": "Innocent, inexperienced. People who keep careful tallies of their virtue are calculating, not naive.",
+          "lucid": "Clear. A clear rebuke would not especially feed a taste for moral instruction; only a moralizing one would.",
+          "eccentric": "Odd or unconventional. Oddness has nothing to do with appealing to an appetite for moral lessons."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "premature",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "flagitious",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "artless",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fervent",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "naive",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pharisaical",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "homiletic",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lucid",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "eccentric",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rebuke",
+          "role": "stem"
+        },
+        {
+          "kind": "word",
+          "id": "reproach",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "revisits": "drill-002:s1q14",
+      "prompt": "Under Aunt Ines the seaside guesthouse was famously (i) ___, a place where even the children spoke in murmurs and the loudest sound was the clock in the hall. Under its new owners it has become (ii) ___, the carpets stained and the sinks crusted with grime. Oddly, though, the regulars who once wrote polite notes about a single dripping tap now say nothing, whereas the neighbors, who never cared what went on inside, have grown (iii) ___ in their complaints to the owners.",
+      "blanks": [
+        [
+          "caustic",
+          "tranquil",
+          "gimcrack"
+        ],
+        [
+          "squalid",
+          "pellucid",
+          "constitutive"
+        ],
+        [
+          "inscrutable",
+          "artless",
+          "vociferous"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) Murmuring children and a ticking clock as the loudest sound describe a calm, quiet house: tranquil. (ii) Stained carpets and grimy sinks make it squalid, filthy and run-down. (iii) 'Whereas' contrasts the now-silent regulars with the neighbors, so the neighbors must be loud and insistent: vociferous.",
+        "distractors": {
+          "caustic": "Bitingly sarcastic. A house of murmurs is quiet, not cutting.",
+          "gimcrack": "Showy but flimsy. The sentence describes the atmosphere's quiet, not cheap construction.",
+          "pellucid": "Clear and transparent, the opposite of stained and crusted.",
+          "constitutive": "Forming an essential element. It does not describe a grimy state.",
+          "inscrutable": "Impossible to read or interpret. 'Whereas' needs the opposite of saying nothing, and loud complaints are not mysterious.",
+          "artless": "Natural, without guile. It says nothing about loudness, which is what the contrast with 'say nothing' demands."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "caustic",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "tranquil",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "gimcrack",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "squalid",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pellucid",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "constitutive",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inscrutable",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "artless",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "vociferous",
+          "role": "key",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Old Mrs. Vey's family had practiced (i) ___ for generations, marrying only within the handful of clans on the island, so that by her time nearly everyone at a wedding could trace some (ii) ___ with the bride and groom. Yet as the young people left for the mainland, the pool of eligible partners grew so (iii) ___ that the custom finally collapsed under its own rule.",
+      "blanks": [
+        [
+          "dimorphism",
+          "endogamy",
+          "presentism"
+        ],
+        [
+          "anomie",
+          "externality",
+          "consanguinity"
+        ],
+        [
+          "redolent",
+          "exiguous",
+          "equitable"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Marrying only within the handful of clans' defines endogamy. (ii) After generations of such marriage, wedding guests share blood descent with the couple: consanguinity. (iii) 'Yet' turns to the exodus of young people, which shrank the pool of partners; a pool too small to sustain the custom is exiguous.",
+        "distractors": {
+          "dimorphism": "The occurrence of two distinct forms within a species, such as male and female. It is not a marriage custom.",
+          "presentism": "Judging the past by the standards of the present. 'Marrying only within the handful of clans' describes a marriage custom, not a habit of judgment.",
+          "anomie": "Social breakdown and loss of shared norms. The family is bound by a strict norm, the reverse of anomie.",
+          "externality": "A side effect of an activity borne by others. One does not 'trace' an externality with a bride and groom.",
+          "redolent": "Fragrant, or strongly suggestive of something. A pool of partners does not grow 'redolent' because people leave.",
+          "equitable": "Fair and even-handed. Departures make the pool smaller, not fairer."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "dimorphism",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "endogamy",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "presentism",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "anomie",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "externality",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "consanguinity",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "redolent",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "exiguous",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "equitable",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Delia's admirers remember her as the (i) ___ of every gathering, the guest toward whom all eyes turned the moment her (ii) ___ smile appeared in the doorway. Her daughter's new memoir, though, is no (iii) ___: it records the radiance, but also the sulks that followed whenever someone else held the room.",
+      "blanks": [
+        [
+          "provenance",
+          "rentier",
+          "cynosure"
+        ],
+        [
+          "turbid",
+          "effulgent",
+          "astringent"
+        ],
+        [
+          "hagiography",
+          "historiography",
+          "ethnography"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2,
+          1,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'The guest toward whom all eyes turned' defines a cynosure, the center of attention. (ii) The memoir later recalls 'the radiance', so the smile was effulgent, shining brilliantly. (iii) 'Though' and 'no' signal that the memoir does not idealize her; it includes the sulks. A biography that idealizes its subject is a hagiography.",
+        "distractors": {
+          "provenance": "The origin or history of ownership of something. It does not mean the focus of everyone's eyes.",
+          "rentier": "A person living on income from property or investments. Nothing about attention.",
+          "turbid": "Cloudy, murky: the opposite of the radiance the memoir records.",
+          "astringent": "Sharp, severe or harsh. A smile that draws every admiring eye is warm, not astringent.",
+          "historiography": "The study of how history is written. A daughter's memoir is not a study of historical method.",
+          "ethnography": "A descriptive study of a culture or people. The contrast is between idealizing and candid portraits of one person."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "provenance",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rentier",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "cynosure",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "turbid",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "effulgent",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "astringent",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "hagiography",
+          "role": "key",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "historiography",
+          "role": "distractor",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ethnography",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "It is a measure of how thoroughly the wellness industry has learned to (i) ___ inner life that even solitude now arrives with a price tag, in weekend 'silence retreats' sold by the seat. Their brochures lean on a familiar (ii) ___, the frazzled executive who finds herself again beside a candle, so worn by repetition that it reads almost as parody.",
+      "blanks": [
+        [
+          "abjure",
+          "commodify",
+          "recant"
+        ],
+        [
+          "trope",
+          "ablation",
+          "rodomontade"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          0
+        ]
+      },
+      "explanation": {
+        "key": "(i) Solitude arriving 'with a price tag' and sold by the seat means the industry turns something never sold into a product: commodify. (ii) A stock figure 'worn by repetition' across many brochures is a trope, a recurring convention.",
+        "distractors": {
+          "abjure": "To renounce solemnly. The industry is selling inner life, not giving it up.",
+          "recant": "To take back a statement or belief. Nothing is being retracted.",
+          "ablation": "Removal or erosion of material from a surface. A recurring stock character is not a removal.",
+          "rodomontade": "Boastful, bragging talk. The executive-with-candle image is a cliché, not a boast."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "abjure",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "commodify",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "recant",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "trope",
+          "role": "key",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "ablation",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "rodomontade",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "parody",
+          "role": "stem"
+        }
+      ]
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Uncle Theo, once the family's most restless traveler, became almost (i) ___ after his retirement, rooted to one armchair; worse, his opinions began a (ii) ___ drift, circling back to prejudices he had disowned decades earlier.",
+      "blanks": [
+        [
+          "headstrong",
+          "sessile",
+          "naive"
+        ],
+        [
+          "premature",
+          "syncretic",
+          "retrograde"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) 'Rooted to one armchair' after a restless life calls for fixed in one place: sessile. (ii) Opinions 'circling back' to positions he had given up are moving backward: retrograde.",
+        "distractors": {
+          "headstrong": "Stubbornly willful. The armchair image is about staying put, not about obstinacy.",
+          "naive": "Innocent, inexperienced. A retired lifelong traveler is hardly naive, and it ignores 'rooted'.",
+          "premature": "Too early. 'Circling back to prejudices disowned decades earlier' is about direction, not timing.",
+          "syncretic": "Blending different beliefs. He is not combining views; he is returning to old ones."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "headstrong",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "sessile",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "naive",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "premature",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "syncretic",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "retrograde",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "The therapist compared the couple's arrangement to (i) ___ in nature, like the cleaner fish and the grouper, each partner drawing something the other freely supplied. Their quarrels, too, were (ii) ___ rather than merely similar: both grew from the same childhood fear of being left, though in him it surfaced as anger and in her as silence.",
+      "blanks": [
+        [
+          "paternalism",
+          "mutualism",
+          "forbearance"
+        ],
+        [
+          "analogous",
+          "simultaneous",
+          "homologous"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "(i) Cleaner fish and grouper both benefit, and each partner gains from the other: mutualism. (ii) 'Rather than merely similar' plus a shared origin (the same childhood fear) expressed in different forms (anger, silence) is exactly homologous: corresponding by common origin even where the function differs.",
+        "distractors": {
+          "paternalism": "One party governing another 'for their own good'. The arrangement is reciprocal, not one-sided.",
+          "forbearance": "Patient self-restraint. Nothing in nature is being compared to patience; the image is mutual benefit.",
+          "analogous": "Similar in function or appearance without shared origin. That is the 'merely similar' the sentence rejects in favor of a common root.",
+          "simultaneous": "Happening at the same time. The point is shared origin, not timing."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "paternalism",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "mutualism",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "forbearance",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "analogous",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "simultaneous",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "homologous",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Raised beside a still mountain lake, Ana had assumed any waterside town would feel like home, but her (i) ___ childhood had not prepared her for the tides and gulls of a (ii) ___ village, where life ran on the schedule of the sea. Only when she moved inland again, to a valley whose fields had been laid down by the silt of a meandering river, did she find in its (iii) ___ plains something of the calm she remembered.",
+      "blanks": [
+        [
+          "aeolian",
+          "lacustrine",
+          "turbid"
+        ],
+        [
+          "archaic",
+          "conspecific",
+          "littoral"
+        ],
+        [
+          "noisome",
+          "fluvial",
+          "illusionistic"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) A childhood 'beside a still mountain lake' is lacustrine. (ii) Tides, gulls and life on the sea's schedule place the village on the shore: littoral. (iii) Plains laid down by river silt are fluvial.",
+        "distractors": {
+          "aeolian": "Formed by or relating to the wind. The sentence ties her childhood to a lake, not to wind.",
+          "turbid": "Muddy, cloudy. The lake is described as still, and the blank asks where she grew up, not how clear the water was.",
+          "archaic": "Old-fashioned. Tides and gulls locate the village by the sea; its age is never at issue.",
+          "conspecific": "Belonging to the same species. It does not describe a place.",
+          "noisome": "Foul-smelling or harmful. The plains give her calm, so a repellent word contradicts the sentence.",
+          "illusionistic": "Creating an illusion of reality, as in painting. The plains are real ground laid down by a river."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "aeolian",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lacustrine",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "turbid",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "archaic",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "conspecific",
+          "role": "distractor",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "littoral",
+          "role": "key",
+          "at": [
+            1,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "noisome",
+          "role": "distractor",
+          "at": [
+            2,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "fluvial",
+          "role": "key",
+          "at": [
+            2,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "illusionistic",
+          "role": "distractor",
+          "at": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 5,
+      "prompt": "Grandmother answered every request for advice with a ___ one-liner ('A watched kettle teaches the pot patience') that left her grandchildren unsure whether they had been counseled or teased.",
+      "blanks": [
+        [
+          "fulsome",
+          "heretofore",
+          "gnomic",
+          "lucid",
+          "thenceforth"
+        ]
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "A pithy, maxim-like line whose meaning is unclear enough that the listeners cannot tell counsel from teasing is gnomic: terse, aphoristic and often cryptic.",
+        "distractors": {
+          "fulsome": "Excessively flattering. The kettle line praises no one.",
+          "heretofore": "An adverb meaning 'until now'. The sentence draws no contrast between earlier and later behavior; she always answered this way.",
+          "lucid": "Clear and easy to understand: the opposite of a line that leaves listeners unsure what it meant.",
+          "thenceforth": "An adverb meaning 'from that time on'. No turning point is described, and it cannot describe the one-liner itself."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "fulsome",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "heretofore",
+          "role": "distractor",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "gnomic",
+          "role": "key",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "lucid",
+          "role": "distractor",
+          "at": [
+            0,
+            3
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "thenceforth",
+          "role": "distractor",
+          "at": [
+            0,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "tc",
+      "difficulty": 4,
+      "prompt": "Every Sunday Nonna lit a (i) ___ candle at the little shrine, keeping a promise she had made during a hard winter long ago, and her demand for those candles proved remarkably (ii) ___: when the church shop tripled the price, she complained bitterly but bought exactly as many as before.",
+      "blanks": [
+        [
+          "archaic",
+          "votive",
+          "makeshift"
+        ],
+        [
+          "subversive",
+          "inelastic",
+          "pertinent"
+        ]
+      ],
+      "key": {
+        "sel": [
+          1,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "(i) A candle lit at a shrine in fulfillment of a promise is votive. (ii) Buying exactly as many after the price tripled means her demand barely responded to price: inelastic.",
+        "distractors": {
+          "archaic": "Antiquated. The promise is old, but the candle is defined by what it fulfills, not by its age.",
+          "makeshift": "Improvised as a temporary substitute. Nothing suggests the candle is a stopgap.",
+          "subversive": "Seeking to undermine authority. Complaining while paying is not subversion.",
+          "pertinent": "Relevant. The colon describes demand unchanged by price, not relevance."
+        }
+      },
+      "tags": [
+        {
+          "kind": "word",
+          "id": "archaic",
+          "role": "distractor",
+          "at": [
+            0,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "votive",
+          "role": "key",
+          "at": [
+            0,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "makeshift",
+          "role": "distractor",
+          "at": [
+            0,
+            2
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "subversive",
+          "role": "distractor",
+          "at": [
+            1,
+            0
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "inelastic",
+          "role": "key",
+          "at": [
+            1,
+            1
+          ]
+        },
+        {
+          "kind": "word",
+          "id": "pertinent",
+          "role": "distractor",
+          "at": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  ]
+}

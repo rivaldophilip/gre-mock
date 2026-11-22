@@ -1,5 +1,7 @@
 // Brief for one endless-vocab drill batch: standalone TC / SE items whose choices are, almost all, words never tested.
-// usage: npm run -s brief:drill [-- --count 20] [--seed N] [--user <email>]
+// usage: npm run -s brief:drill [-- --count 20] [--seed N] [--user <email>] [--sweep]
+// --sweep: so the drill alone can cover every untested word, also take pink words and adverbs, and words that only an
+// untaken mock holds.
 // Writes content/briefs/drill-NNN.{json,md}. Then author content/drill/drill-NNN.json and run check, blind, novelty and
 // register on it as for a mock (docs/QUIZ-AUTHORING.md, Drill batches).
 import { config } from "dotenv";
@@ -19,8 +21,9 @@ import { DRILL_LEVELS } from "./validate-test";
 
 const arg = (name: string) => (process.argv.includes(name) ? process.argv[process.argv.indexOf(name) + 1] : undefined);
 const count = Number(arg("--count") ?? DRILL_BATCH);
+const sweep = process.argv.includes("--sweep");
 if (!Number.isInteger(count) || count < 1 || count > 30) {
-  console.error("usage: npm run -s brief:drill [-- --count 1..30] [--seed N] [--user <email>]");
+  console.error("usage: npm run -s brief:drill [-- --count 1..30] [--seed N] [--user <email>] [--sweep]");
   process.exit(1);
 }
 
@@ -53,7 +56,7 @@ function nextId() {
  * drill question not answered yet, and of a brief (mock or drill) whose test is not registered. A drill brief whose
  * batch is already written holds only the words the batch uses, so its unused distractor list goes back to the pool.
  */
-async function soonShown(db: Awaited<ReturnType<typeof oneTarget>>["db"]) {
+async function soonShown(db: Awaited<ReturnType<typeof oneTarget>>["db"], mocks = true) {
   const tests = await db.select({ id: schema.tests.id }).from(schema.tests);
   const attempts = await db.select().from(schema.attempts);
   const taken = new Set(attempts.filter((a) => a.finishedAt && a.mode !== "drill").map((a) => a.testId));
@@ -64,13 +67,13 @@ async function soonShown(db: Awaited<ReturnType<typeof oneTarget>>["db"]) {
   for (const r of await db.select().from(schema.questionItems)) {
     if (r.kind !== "word") continue;
     const test = r.questionId.split(":")[0];
-    if (isDrillId(test) ? !answered.has(r.questionId) : !taken.has(test)) hold(r.itemId);
+    if (isDrillId(test) ? !answered.has(r.questionId) : mocks && !taken.has(test)) hold(r.itemId);
   }
   const registered = new Set(tests.map((t) => t.id));
   const dir = "content/briefs";
   for (const f of fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => /^(verbal|drill)-\d+\.json$/.test(f)) : []) {
     const b = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
-    if (registered.has(b.testId)) continue;
+    if (registered.has(b.testId) || (!mocks && !isDrillId(b.testId))) continue;
     const written = path.join(DRILL_DIR, `${b.testId}.json`);
     const words: string[] =
       isDrillId(b.testId) && fs.existsSync(written)
@@ -121,12 +124,14 @@ async function main() {
   // only words data/vocab.json still holds: `tag` reads that file, so a stale database row could never be tagged
   const bank = new Set((JSON.parse(fs.readFileSync("data/vocab.json", "utf8")) as { id: string }[]).map((v) => v.id));
   // and only nouns, verbs and adjectives with a sense: an adverb or preposition almost never suits a TC / SE blank
-  const choicePos = new Set(["noun", "verb", "adjective"]);
-  const vocab = (await db.select().from(schema.vocab)).filter((v) => !v.pink && bank.has(v.id) && choicePos.has((v.senses as { pos?: string }[] | null)?.[0]?.pos ?? ""));
+  // (--sweep: adverbs and pink words too); definitions spell adjective either way
+  const choicePos = new Set(sweep ? ["noun", "verb", "adjective", "adverb"] : ["noun", "verb", "adjective"]);
+  const normPos = (p?: string) => (p === "adj" ? "adjective" : p);
+  const vocab = (await db.select().from(schema.vocab)).filter((v) => (sweep || !v.pink) && bank.has(v.id) && choicePos.has(normPos((v.senses as { pos?: string }[] | null)?.[0]?.pos) ?? ""));
   const byId = new Map(vocab.map((v) => [v.id, v]));
   const events = (await db.select().from(schema.itemEvents)).filter((e) => e.kind === "word");
   const scores = scoreAll(vocab.map((v) => ({ id: v.id, yield: v.yield })), events.map((e) => ({ itemId: e.itemId, event: e.event, weight: e.weight, createdAt: e.createdAt, attemptId: e.attemptId })), now);
-  const holds = await soonShown(db);
+  const holds = await soonShown(db, !sweep);
   const held = (wid: string) => holds.get(wid) ?? 0;
   // never-seen words not due elsewhere, high yield first with some shuffle so sibling batches differ
   const jitter = new Map(scores.map((s) => [s.itemId, random()]));
@@ -136,7 +141,7 @@ async function main() {
   // weakest (highest priority), so a word comes back only after the rest of the bank has had its turn
   const review = scores.filter((s) => !freshIds.has(s.itemId)).sort((a, b) => held(a.itemId) - held(b.itemId) || b.P + 0.1 * jitter.get(b.itemId)! - (a.P + 0.1 * jitter.get(a.itemId)!));
   const ranked = [...fresh, ...review];
-  const posOf = (wid: string) => (byId.get(wid)?.senses as { pos?: string }[] | null)?.[0]?.pos;
+  const posOf = (wid: string) => normPos((byId.get(wid)?.senses as { pos?: string }[] | null)?.[0]?.pos);
   const synonyms = bankSynonyms();
 
   const types = slotTypes(count);
@@ -179,7 +184,7 @@ async function main() {
   };
   // SE pairs: two bank synonyms of one part of speech, keyed together, never a pair an earlier item keyed
   const sePairs = pairs(nSe, () => true, true);
-  const loose = Math.max(0, nKeys - sePairs.length * 2 - revisits.length);
+  const loose = Math.max(0, nKeys - sePairs.length * 2 - revisits.reduce((t, r) => t + r.question.tags.filter((x) => x.kind === "word" && x.role === "key").length, 0));
   const keys = ranked.filter((s) => !used.has(s.itemId)).slice(0, loose);
   keys.forEach(take);
   // SE trap pairs: synonyms that suit each other but not the sentence, one per SE item, in the part of speech of its
@@ -232,7 +237,7 @@ async function main() {
 }
 
 type Shown = { id: string; word: string; secondary: boolean; sense: string | null };
-const POS_ABBR: Record<string, string> = { noun: "n", verb: "v", adjective: "adj" };
+const POS_ABBR: Record<string, string> = { noun: "n", verb: "v", adjective: "adj", adverb: "adv" };
 /** `torpor (n)`, or `foil (v, 2nd sense: to prevent from succeeding)` for a word whose everyday sense is not the one. */
 function choiceWord(w: Shown) {
   const [pos, ...def] = (w.sense ?? "").split(" ");

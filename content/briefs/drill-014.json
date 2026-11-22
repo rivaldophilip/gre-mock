@@ -1,0 +1,1356 @@
+{
+ "testId": "drill-014",
+ "measure": "drill",
+ "seed": 60448,
+ "generatedAt": "2026-11-22T07:31:00.448Z",
+ "count": 20,
+ "slots": [
+  {
+   "slot": 1,
+   "type": "se",
+   "level": 5
+  },
+  {
+   "slot": 2,
+   "type": "se",
+   "level": 4
+  },
+  {
+   "slot": 3,
+   "type": "se",
+   "level": 5
+  },
+  {
+   "slot": 4,
+   "type": "se",
+   "level": 4
+  },
+  {
+   "slot": 5,
+   "type": "se",
+   "level": 5
+  },
+  {
+   "slot": 6,
+   "type": "se",
+   "level": 4
+  },
+  {
+   "slot": 7,
+   "type": "se",
+   "level": 5
+  },
+  {
+   "slot": 8,
+   "type": "se",
+   "level": 4
+  },
+  {
+   "slot": 9,
+   "type": "tc3",
+   "level": 5
+  },
+  {
+   "slot": 10,
+   "type": "tc3",
+   "level": 4
+  },
+  {
+   "slot": 11,
+   "type": "tc3",
+   "level": 5
+  },
+  {
+   "slot": 12,
+   "type": "tc3",
+   "level": 4
+  },
+  {
+   "slot": 13,
+   "type": "tc3",
+   "level": 5
+  },
+  {
+   "slot": 14,
+   "type": "tc3",
+   "level": 4
+  },
+  {
+   "slot": 15,
+   "type": "tc2",
+   "level": 5
+  },
+  {
+   "slot": 16,
+   "type": "tc2",
+   "level": 4
+  },
+  {
+   "slot": 17,
+   "type": "tc2",
+   "level": 5
+  },
+  {
+   "slot": 18,
+   "type": "tc2",
+   "level": 4
+  },
+  {
+   "slot": 19,
+   "type": "tc1",
+   "level": 5
+  },
+  {
+   "slot": 20,
+   "type": "tc1",
+   "level": 4
+  }
+ ],
+ "keyWords": [
+  {
+   "id": "quotidian",
+   "word": "quotidian",
+   "secondary": false,
+   "sense": "adjective occurring every day; commonplace and ordinary to the point of dullness",
+   "bucket": "review"
+  },
+  {
+   "id": "diurnal",
+   "word": "diurnal",
+   "secondary": false,
+   "sense": "adjective occurring daily or during the daytime; active by day",
+   "bucket": "review"
+  },
+  {
+   "id": "paragon",
+   "word": "paragon",
+   "secondary": false,
+   "sense": "noun a model of excellence or perfection",
+   "bucket": "review"
+  },
+  {
+   "id": "exemplar",
+   "word": "exemplar",
+   "secondary": false,
+   "sense": "noun a model or typical example worthy of imitation",
+   "bucket": "review"
+  },
+  {
+   "id": "supersede",
+   "word": "supersede",
+   "secondary": false,
+   "sense": "verb to take the place of something older or less valid; to replace",
+   "bucket": "review"
+  },
+  {
+   "id": "supplant",
+   "word": "supplant",
+   "secondary": false,
+   "sense": "verb to take the place of, often by force or scheming",
+   "bucket": "review"
+  },
+  {
+   "id": "apotheosis",
+   "word": "apotheosis",
+   "secondary": false,
+   "sense": "noun the highest or most glorified example of something; elevation to divine status",
+   "bucket": "review"
+  },
+  {
+   "id": "epitome",
+   "word": "epitome",
+   "secondary": false,
+   "sense": "noun a perfect example or embodiment of a quality or type",
+   "bucket": "review"
+  },
+  {
+   "id": "purify",
+   "word": "purify",
+   "secondary": false,
+   "sense": "verb to free from impurities, contamination or corrupting elements",
+   "bucket": "review"
+  },
+  {
+   "id": "rarefy",
+   "word": "rarefy",
+   "secondary": false,
+   "sense": "verb to make thinner or less dense; also to refine or make more subtle",
+   "bucket": "review"
+  },
+  {
+   "id": "prune",
+   "word": "prune",
+   "secondary": false,
+   "sense": "verb to cut away unwanted parts, especially branches, or to reduce by removing the superfluous",
+   "bucket": "review"
+  },
+  {
+   "id": "curtail",
+   "word": "curtail",
+   "secondary": false,
+   "sense": "verb to cut short or reduce",
+   "bucket": "review"
+  },
+  {
+   "id": "devolve",
+   "word": "devolve",
+   "secondary": false,
+   "sense": "verb to deteriorate or degenerate gradually into a worse or lower state",
+   "bucket": "review"
+  },
+  {
+   "id": "deteriorate",
+   "word": "deteriorate",
+   "secondary": false,
+   "sense": "verb to grow worse over time",
+   "bucket": "review"
+  },
+  {
+   "id": "finicky",
+   "word": "finicky",
+   "secondary": false,
+   "sense": "adjective excessively fussy or hard to please, especially about small details",
+   "bucket": "review"
+  },
+  {
+   "id": "fastidious",
+   "word": "fastidious",
+   "secondary": false,
+   "sense": "adjective very attentive to detail and hard to please; meticulous",
+   "bucket": "review",
+   "avoid": [
+    "cavalier",
+    "incisive",
+    "laconic"
+   ]
+  },
+  {
+   "id": "preclude",
+   "word": "preclude",
+   "secondary": false,
+   "sense": "verb to make impossible by taking action in advance; to prevent",
+   "bucket": "new"
+  },
+  {
+   "id": "discursive",
+   "word": "discursive",
+   "secondary": false,
+   "sense": "adjective moving from topic to topic digressively rather than in a direct, logical line",
+   "bucket": "new"
+  },
+  {
+   "id": "succor",
+   "word": "succor",
+   "secondary": false,
+   "sense": "noun help or relief given in time of distress",
+   "bucket": "new"
+  },
+  {
+   "id": "nontrivial",
+   "word": "nontrivial",
+   "secondary": false,
+   "sense": "adjective significant enough to matter; not insignificant or easily dismissed",
+   "bucket": "new"
+  },
+  {
+   "id": "afford",
+   "word": "afford",
+   "secondary": true,
+   "sense": "verb to provide or supply something, such as an opportunity or view",
+   "bucket": "new"
+  },
+  {
+   "id": "strut",
+   "word": "strut",
+   "secondary": false,
+   "sense": "verb to walk with a stiff, proud, self-important gait, displaying conceit",
+   "bucket": "new"
+  },
+  {
+   "id": "lascivious",
+   "word": "lascivious",
+   "secondary": false,
+   "sense": "adjective openly lustful or lewd",
+   "bucket": "new"
+  },
+  {
+   "id": "uniform",
+   "word": "uniform",
+   "secondary": true,
+   "sense": "adj remaining the same in all cases and at all times; unvarying",
+   "bucket": "new"
+  },
+  {
+   "id": "respectively",
+   "word": "respectively",
+   "secondary": false,
+   "sense": "adverb each in the order mentioned; separately in the sequence given",
+   "bucket": "new"
+  },
+  {
+   "id": "gradation",
+   "word": "gradation",
+   "secondary": false,
+   "sense": "noun a gradual, step-by-step change; a stage in a series",
+   "bucket": "new",
+   "avoid": [
+    "contumely",
+    "exposition",
+    "implication",
+    "insolence"
+   ]
+  },
+  {
+   "id": "simper",
+   "word": "simper",
+   "secondary": false,
+   "sense": "verb to smile in a silly, affected or coy manner",
+   "bucket": "new"
+  },
+  {
+   "id": "implication",
+   "word": "implication",
+   "secondary": false,
+   "sense": "noun something suggested without being stated outright; a likely consequence",
+   "bucket": "new"
+  },
+  {
+   "id": "settle",
+   "word": "settle",
+   "secondary": true,
+   "sense": "verb to resolve a dispute or decide something conclusively",
+   "bucket": "new"
+  },
+  {
+   "id": "callow",
+   "word": "callow",
+   "secondary": false,
+   "sense": "adjective young and inexperienced; immature",
+   "bucket": "new"
+  },
+  {
+   "id": "insinuate",
+   "word": "insinuate",
+   "secondary": false,
+   "sense": "verb to hint at something unpleasant indirectly",
+   "bucket": "new"
+  },
+  {
+   "id": "supplicate",
+   "word": "supplicate",
+   "secondary": false,
+   "sense": "verb to beg humbly and earnestly",
+   "bucket": "new"
+  },
+  {
+   "id": "chafe",
+   "word": "chafe",
+   "secondary": true,
+   "sense": "verb to feel irritation or impatience, especially at restrictions",
+   "bucket": "new"
+  },
+  {
+   "id": "pan",
+   "word": "pan",
+   "secondary": true,
+   "sense": "verb to criticize severely, especially in a review",
+   "bucket": "new"
+  },
+  {
+   "id": "annul",
+   "word": "annul",
+   "secondary": false,
+   "sense": "verb to declare legally invalid; to cancel",
+   "bucket": "new",
+   "avoid": [
+    "curtail"
+   ]
+  },
+  {
+   "id": "cohesive",
+   "word": "cohesive",
+   "secondary": false,
+   "sense": "adjective sticking together firmly; forming a unified whole",
+   "bucket": "new"
+  },
+  {
+   "id": "discordant",
+   "word": "discordant",
+   "secondary": false,
+   "sense": "adjective harsh-sounding or clashing; in disagreement",
+   "bucket": "new"
+  },
+  {
+   "id": "mean",
+   "word": "mean",
+   "secondary": true,
+   "sense": "adj ungenerous with money; or poor and shabby in quality",
+   "bucket": "new"
+  },
+  {
+   "id": "verisimilar",
+   "word": "verisimilar",
+   "secondary": false,
+   "sense": "adjective appearing to be true or real; plausible",
+   "bucket": "new"
+  },
+  {
+   "id": "surmise",
+   "word": "surmise",
+   "secondary": false,
+   "sense": "verb to infer or guess without strong evidence",
+   "bucket": "new"
+  }
+ ],
+ "sePairs": [
+  [
+   "quotidian",
+   "diurnal"
+  ],
+  [
+   "paragon",
+   "exemplar"
+  ],
+  [
+   "supersede",
+   "supplant"
+  ],
+  [
+   "apotheosis",
+   "epitome"
+  ],
+  [
+   "purify",
+   "rarefy"
+  ],
+  [
+   "prune",
+   "curtail"
+  ],
+  [
+   "devolve",
+   "deteriorate"
+  ],
+  [
+   "finicky",
+   "fastidious"
+  ]
+ ],
+ "revisits": [
+  {
+   "ref": "drill-010:s1q14",
+   "result": "missed",
+   "item": "Hikers who reach the bare summit ridge often assume a fire stripped it, but no fire was needed: ten thousand years of wind and frost have worked a slow (i) ___, carrying the soil downhill grain by grain until only the granite was left. That granite is now the sole (ii) ___ on which the orange lichens grow, and they draw nothing from it but a place to hold on. The gray jays that haunt the summit cairn are often called pests, but the word overstates the case; their tie to the hikers is merely (iii) ___, a matter of living off dropped crumbs that no hiker misses. · blank 1: precession / denudation / speciation; blank 2: locus / hinterland / substrate; blank 3: commensal / maladaptive / conspecific",
+   "keys": [
+    "denudation",
+    "substrate",
+    "commensal"
+   ],
+   "change": "new sentence logic: a contrast instead of a cause, or a concession instead of a restatement"
+  },
+  {
+   "ref": "drill-004:s1q11",
+   "result": "missed",
+   "item": "Rather than courting (i) ___, the poet sets clotted consonants against her long vowels, so that each line's harshness acts as a (ii) ___ to its sweetness rather than a flaw in it. Her reasoning, given in a late essay, is that unbroken sweetness does not delight the ear for long but comes to (iii) ___ it, lulling the reader into hearing sound without sense. · blank 1: tranquillity / jargon / euphony; blank 2: welter / counterpoint / equivocation; blank 3: stultify / champion / tender",
+   "keys": [
+    "euphony",
+    "counterpoint",
+    "stultify"
+   ],
+   "change": "new format: an SE item becomes a TC blank, or a TC blank becomes an SE pair"
+  },
+  {
+   "ref": "drill-011:s1q17",
+   "result": "missed",
+   "item": "Purists accused the translator of having (i) ___ the epic, mixing in idioms of her own century until its ancient voice was hard to hear; her defenders replied that the literal versions had left the poem in so (ii) ___ a state, unread outside a few seminars, that only a bolder rendering could have saved it. · blank 1: adulterate / enhance / attenuate; blank 2: remedial / covert / parlous",
+   "keys": [
+    "adulterate",
+    "parlous"
+   ],
+   "change": "a different SE partner or a different sense of the word"
+  },
+  {
+   "ref": "drill-009:s1q12",
+   "result": "missed",
+   "item": "The old grammarian's (i) ___ that no sentence may end with a preposition was repeated for a century by teachers who never asked where it came from. Its most zealous (ii) ___ was a newspaper style editor who rewrote reporters' copy to obey it, however strained the result. Ironically, the reporters' mocking compliance, which buried prepositions in ever more tortured clauses, did more to (iii) ___ the rule than any linguist's critique: readers who had never questioned it began to find it ridiculous. · blank 1: jeremiad / rodomontade / dictum; blank 2: hedonist / apostle / boor; blank 3: second / subvert / saturate",
+   "keys": [
+    "dictum",
+    "apostle",
+    "subvert"
+   ],
+   "change": "a new context and no distractor shared with the earlier item"
+  }
+ ],
+ "distractorWords": {
+  "untested": [
+   {
+    "id": "plangent",
+    "word": "plangent",
+    "secondary": false,
+    "sense": "adj having a loud, resonant, and mournful sound"
+   },
+   {
+    "id": "antediluvian",
+    "word": "antediluvian",
+    "secondary": false,
+    "sense": "adj ridiculously old-fashioned or extremely old"
+   },
+   {
+    "id": "gross",
+    "word": "gross",
+    "secondary": true,
+    "sense": "adj glaringly obvious and unacceptable; flagrant"
+   },
+   {
+    "id": "doctor",
+    "word": "doctor",
+    "secondary": true,
+    "sense": "verb to alter something, especially in order to deceive"
+   },
+   {
+    "id": "etiolated",
+    "word": "etiolated",
+    "secondary": false,
+    "sense": "adj pale and weakened, as from lack of light; lacking vigor"
+   },
+   {
+    "id": "truck",
+    "word": "truck",
+    "secondary": true,
+    "sense": "noun have no truck with: to refuse dealings or association with"
+   },
+   {
+    "id": "mulct",
+    "word": "mulct",
+    "secondary": false,
+    "sense": "verb to extract money from by fine, taxation, or fraud"
+   },
+   {
+    "id": "game",
+    "word": "game",
+    "secondary": true,
+    "sense": "adj eager and willing to do something new or challenging"
+   },
+   {
+    "id": "stay",
+    "word": "stay",
+    "secondary": true,
+    "sense": "verb to stop, halt, or postpone, especially a legal proceeding"
+   },
+   {
+    "id": "supply",
+    "word": "supply",
+    "secondary": true,
+    "sense": "adj flexible and easily bent; supple"
+   },
+   {
+    "id": "refract",
+    "word": "refract",
+    "secondary": true,
+    "sense": "verb to present or transform an idea through a particular perspective or medium"
+   },
+   {
+    "id": "labile",
+    "word": "labile",
+    "secondary": false,
+    "sense": "adj liable to change; unstable, especially emotionally or chemically"
+   },
+   {
+    "id": "lean",
+    "word": "lean",
+    "secondary": true,
+    "sense": "adj offering little reward or abundance; meager"
+   },
+   {
+    "id": "atavism",
+    "word": "atavism",
+    "secondary": false,
+    "sense": "noun reversion to an ancestral or primitive type or behavior"
+   },
+   {
+    "id": "asseverate",
+    "word": "asseverate",
+    "secondary": false,
+    "sense": "verb to declare earnestly or solemnly"
+   },
+   {
+    "id": "cultivated",
+    "word": "cultivated",
+    "secondary": true,
+    "sense": "adj refined and well educated in manners or taste"
+   },
+   {
+    "id": "stock",
+    "word": "stock",
+    "secondary": true,
+    "sense": "adj commonly used and therefore unoriginal; stereotyped"
+   },
+   {
+    "id": "plume",
+    "word": "plume",
+    "secondary": true,
+    "sense": "verb to congratulate oneself smugly on something"
+   },
+   {
+    "id": "desideratum",
+    "word": "desideratum",
+    "secondary": false,
+    "sense": "noun something needed or wanted; an essential requirement"
+   },
+   {
+    "id": "regress",
+    "word": "regress",
+    "secondary": false,
+    "sense": "verb to return to an earlier or less developed state"
+   },
+   {
+    "id": "companionable",
+    "word": "companionable",
+    "secondary": false,
+    "sense": "adjective friendly and pleasant to be with"
+   },
+   {
+    "id": "still",
+    "word": "still",
+    "secondary": true,
+    "sense": "verb to make calm or quiet; to subdue"
+   },
+   {
+    "id": "tergiversate",
+    "word": "tergiversate",
+    "secondary": false,
+    "sense": "verb to make conflicting or evasive statements; to change sides or abandon a cause"
+   },
+   {
+    "id": "lacuna",
+    "word": "lacuna",
+    "secondary": false,
+    "sense": "noun a gap or missing part, as in a manuscript or argument"
+   },
+   {
+    "id": "farrago",
+    "word": "farrago",
+    "secondary": false,
+    "sense": "noun a confused mixture; a hodgepodge"
+   },
+   {
+    "id": "positivist",
+    "word": "positivist",
+    "secondary": false,
+    "sense": "adjective holding that only claims verifiable by observation or experiment count as genuine knowledge"
+   },
+   {
+    "id": "spare",
+    "word": "spare",
+    "secondary": true,
+    "sense": "adj lacking ornament or excess; austere, lean, or meager"
+   },
+   {
+    "id": "subservient",
+    "word": "subservient",
+    "secondary": false,
+    "sense": "adj overly eager to obey; or less important, subordinate"
+   },
+   {
+    "id": "fustian",
+    "word": "fustian",
+    "secondary": false,
+    "sense": "noun pompous, inflated speech or writing"
+   },
+   {
+    "id": "fast",
+    "word": "fast",
+    "secondary": true,
+    "sense": "adj firmly fixed or attached; steadfastly loyal"
+   },
+   {
+    "id": "epistolary",
+    "word": "epistolary",
+    "secondary": false,
+    "sense": "adjective written as or carried on through letters"
+   },
+   {
+    "id": "representational",
+    "word": "representational",
+    "secondary": false,
+    "sense": "adjective depicting recognizable objects, people, or scenes rather than abstract forms"
+   },
+   {
+    "id": "skullduggery",
+    "word": "skullduggery",
+    "secondary": false,
+    "sense": "noun underhanded or dishonest behavior"
+   },
+   {
+    "id": "iconography",
+    "word": "iconography",
+    "secondary": false,
+    "sense": "noun the set of conventional images and symbols associated with a subject, or the study of them"
+   },
+   {
+    "id": "fiduciary",
+    "word": "fiduciary",
+    "secondary": false,
+    "sense": "adjective involving a legal or ethical duty to act in another's best interest, especially regarding money"
+   },
+   {
+    "id": "valence",
+    "word": "valence",
+    "secondary": true,
+    "sense": "noun the positive or negative emotional quality or appeal of something"
+   },
+   {
+    "id": "historicism",
+    "word": "historicism",
+    "secondary": false,
+    "sense": "noun the view that ideas, values, and events can be understood only within their own historical context"
+   },
+   {
+    "id": "grave",
+    "word": "grave",
+    "secondary": true,
+    "sense": "adj serious and requiring careful thought; solemn in manner"
+   },
+   {
+    "id": "tax",
+    "word": "tax",
+    "secondary": true,
+    "sense": "verb to make heavy demands on; to strain"
+   },
+   {
+    "id": "reciprocity",
+    "word": "reciprocity",
+    "secondary": false,
+    "sense": "noun the practice of exchanging favors, goods, or obligations for mutual benefit"
+   },
+   {
+    "id": "irenic",
+    "word": "irenic",
+    "secondary": false,
+    "sense": "adj aiming or aimed at peace and reconciliation"
+   },
+   {
+    "id": "phylogeny",
+    "word": "phylogeny",
+    "secondary": false,
+    "sense": "noun the evolutionary history and branching relationships of a species or group"
+   },
+   {
+    "id": "inclement",
+    "word": "inclement",
+    "secondary": false,
+    "sense": "adjective harsh and unpleasant, said of weather; also merciless"
+   },
+   {
+    "id": "cessation",
+    "word": "cessation",
+    "secondary": false,
+    "sense": "noun the act or fact of coming to an end"
+   },
+   {
+    "id": "repair",
+    "word": "repair",
+    "secondary": true,
+    "sense": "verb to go to a place, often in company"
+   },
+   {
+    "id": "proviso",
+    "word": "proviso",
+    "secondary": false,
+    "sense": "noun a condition or qualification attached to an agreement or statement"
+   },
+   {
+    "id": "atavistic",
+    "word": "atavistic",
+    "secondary": false,
+    "sense": "adjective reverting to traits or behavior of remote ancestors; primitive"
+   },
+   {
+    "id": "ontogeny",
+    "word": "ontogeny",
+    "secondary": false,
+    "sense": "noun the development of an individual organism from embryo to adult"
+   },
+   {
+    "id": "senescence",
+    "word": "senescence",
+    "secondary": false,
+    "sense": "noun the process of deterioration that comes with biological aging"
+   },
+   {
+    "id": "primitivism",
+    "word": "primitivism",
+    "secondary": false,
+    "sense": "noun an artistic or intellectual idealization of supposedly simpler, non-Western, or pre-industrial cultures"
+   },
+   {
+    "id": "confiscate",
+    "word": "confiscate",
+    "secondary": false,
+    "sense": "verb to seize by authority, as a penalty"
+   },
+   {
+    "id": "strife",
+    "word": "strife",
+    "secondary": false,
+    "sense": "noun angry or bitter conflict"
+   },
+   {
+    "id": "hamstring",
+    "word": "hamstring",
+    "secondary": true,
+    "sense": "verb to severely restrict the ability of someone or something to act"
+   },
+   {
+    "id": "laissez-faire",
+    "word": "laissez-faire",
+    "secondary": false,
+    "sense": "adjective favoring minimal government interference in economic affairs"
+   },
+   {
+    "id": "remunerative",
+    "word": "remunerative",
+    "secondary": false,
+    "sense": "adjective bringing in money or profit; well paid"
+   },
+   {
+    "id": "perpetrate",
+    "word": "perpetrate",
+    "secondary": false,
+    "sense": "verb to carry out a harmful, illegal, or immoral act"
+   },
+   {
+    "id": "praxis",
+    "word": "praxis",
+    "secondary": false,
+    "sense": "noun practice or action as distinct from theory, especially action guided by a theory"
+   },
+   {
+    "id": "mercantilism",
+    "word": "mercantilism",
+    "secondary": false,
+    "sense": "noun an early modern economic policy aiming to enrich a state by maximizing exports and hoarding gold"
+   },
+   {
+    "id": "pettifogging",
+    "word": "pettifogging",
+    "secondary": false,
+    "sense": "adj overly concerned with trivial details; petty and quibbling"
+   },
+   {
+    "id": "falsifiable",
+    "word": "falsifiable",
+    "secondary": false,
+    "sense": "adjective capable in principle of being proved false by some possible observation or test"
+   },
+   {
+    "id": "determinism",
+    "word": "determinism",
+    "secondary": false,
+    "sense": "noun the view that every event, including human choice, is fixed by prior causes"
+   }
+  ],
+  "review": [
+   {
+    "id": "feasible",
+    "word": "feasible",
+    "secondary": false,
+    "sense": "adjective capable of being done or achieved; practicable"
+   },
+   {
+    "id": "viable",
+    "word": "viable",
+    "secondary": false,
+    "sense": "adjective capable of working successfully or surviving"
+   },
+   {
+    "id": "miscreant",
+    "word": "miscreant",
+    "secondary": false,
+    "sense": "noun a wrongdoer; a villain"
+   },
+   {
+    "id": "reprobate",
+    "word": "reprobate",
+    "secondary": false,
+    "sense": "noun an unprincipled, immoral person; a scoundrel"
+   },
+   {
+    "id": "concoct",
+    "word": "concoct",
+    "secondary": false,
+    "sense": "verb to devise or fabricate, often a story or plan, by combining elements"
+   },
+   {
+    "id": "fabricate",
+    "word": "fabricate",
+    "secondary": false,
+    "sense": "verb to invent in order to deceive; also to construct or manufacture"
+   },
+   {
+    "id": "artifice",
+    "word": "artifice",
+    "secondary": false,
+    "sense": "noun clever deception or trickery; cunning skill"
+   },
+   {
+    "id": "guile",
+    "word": "guile",
+    "secondary": false,
+    "sense": "noun cunning and skill in deceiving others"
+   },
+   {
+    "id": "transcend",
+    "word": "transcend",
+    "secondary": false,
+    "sense": "verb to rise above or go beyond the limits of"
+   },
+   {
+    "id": "surpass",
+    "word": "surpass",
+    "secondary": false,
+    "sense": "verb to exceed or go beyond in quality or degree"
+   },
+   {
+    "id": "refute",
+    "word": "refute",
+    "secondary": false,
+    "sense": "verb to prove a claim or argument to be false"
+   },
+   {
+    "id": "gainsay",
+    "word": "gainsay",
+    "secondary": false,
+    "sense": "verb to deny or contradict; to speak against"
+   },
+   {
+    "id": "concur",
+    "word": "concur",
+    "secondary": false,
+    "sense": "verb to agree; to happen at the same time"
+   },
+   {
+    "id": "assent",
+    "word": "assent",
+    "secondary": false,
+    "sense": "verb to express agreement or approval"
+   },
+   {
+    "id": "polemical",
+    "word": "polemical",
+    "secondary": false,
+    "sense": "adjective aggressively argumentative, attacking or defending a position"
+   },
+   {
+    "id": "contentious",
+    "word": "contentious",
+    "secondary": false,
+    "sense": "adjective controversial or given to arguing"
+   },
+   {
+    "id": "meld",
+    "word": "meld",
+    "secondary": false,
+    "sense": "verb to blend or merge into one"
+   },
+   {
+    "id": "pronounced",
+    "word": "pronounced",
+    "secondary": true,
+    "sense": "adjective very noticeable; strongly marked"
+   },
+   {
+    "id": "concupiscence",
+    "word": "concupiscence",
+    "secondary": false,
+    "sense": "noun strong sexual desire; lust"
+   },
+   {
+    "id": "pragmatism",
+    "word": "pragmatism",
+    "secondary": false,
+    "sense": "noun a practical, results-oriented approach that values what works over abstract principle"
+   },
+   {
+    "id": "illiberality",
+    "word": "illiberality",
+    "secondary": false,
+    "sense": "noun narrow-mindedness; also stinginess"
+   },
+   {
+    "id": "champion",
+    "word": "champion",
+    "secondary": true,
+    "sense": "verb to support or defend a cause or person publicly and vigorously"
+   },
+   {
+    "id": "ignominious",
+    "word": "ignominious",
+    "secondary": false,
+    "sense": "adjective deserving or bringing public disgrace; humiliating"
+   },
+   {
+    "id": "antidote",
+    "word": "antidote",
+    "secondary": false,
+    "sense": "noun a remedy that counteracts a poison or an evil"
+   },
+   {
+    "id": "tender",
+    "word": "tender",
+    "secondary": true,
+    "sense": "verb to offer formally for acceptance"
+   },
+   {
+    "id": "mediator",
+    "word": "mediator",
+    "secondary": false,
+    "sense": "noun a neutral person who helps opposing parties reach agreement"
+   },
+   {
+    "id": "repast",
+    "word": "repast",
+    "secondary": false,
+    "sense": "noun a meal, especially a substantial or formal one"
+   },
+   {
+    "id": "abeyance",
+    "word": "abeyance",
+    "secondary": false,
+    "sense": "noun a state of temporary inactivity or suspension"
+   },
+   {
+    "id": "expatriate",
+    "word": "expatriate",
+    "secondary": false,
+    "sense": "noun a person living outside their native country"
+   },
+   {
+    "id": "intermittent",
+    "word": "intermittent",
+    "secondary": false,
+    "sense": "adjective stopping and starting at irregular intervals"
+   },
+   {
+    "id": "abstemious",
+    "word": "abstemious",
+    "secondary": false,
+    "sense": "adjective restrained in eating, drinking or other indulgences"
+   },
+   {
+    "id": "cordial",
+    "word": "cordial",
+    "secondary": false,
+    "sense": "adjective warm and friendly, often in a polite way"
+   },
+   {
+    "id": "penury",
+    "word": "penury",
+    "secondary": false,
+    "sense": "noun extreme poverty; destitution"
+   },
+   {
+    "id": "pious",
+    "word": "pious",
+    "secondary": false,
+    "sense": "adjective deeply reverent and devoted to religion; or hypocritically virtuous"
+   },
+   {
+    "id": "exaptation",
+    "word": "exaptation",
+    "secondary": false,
+    "sense": "noun a trait that evolved for one function and was later co-opted for a different one"
+   },
+   {
+    "id": "steadfast",
+    "word": "steadfast",
+    "secondary": false,
+    "sense": "adjective firmly loyal and unwavering in purpose"
+   },
+   {
+    "id": "desultory",
+    "word": "desultory",
+    "secondary": false,
+    "sense": "adjective lacking a plan, purpose or enthusiasm; jumping from one thing to another"
+   },
+   {
+    "id": "attune",
+    "word": "attune",
+    "secondary": false,
+    "sense": "verb to make receptive or accustomed to; to bring into harmony"
+   },
+   {
+    "id": "temperate",
+    "word": "temperate",
+    "secondary": false,
+    "sense": "adjective moderate and restrained; not extreme in climate or behavior"
+   },
+   {
+    "id": "demagogue",
+    "word": "demagogue",
+    "secondary": false,
+    "sense": "noun a leader who wins power by appealing to popular prejudice and emotion"
+   },
+   {
+    "id": "morass",
+    "word": "morass",
+    "secondary": false,
+    "sense": "noun a situation that is confusing and hard to escape; a bog"
+   },
+   {
+    "id": "blithe",
+    "word": "blithe",
+    "secondary": false,
+    "sense": "adjective carefree and cheerful; showing casual indifference"
+   },
+   {
+    "id": "verisimilitude",
+    "word": "verisimilitude",
+    "secondary": false,
+    "sense": "noun the appearance of being true or real"
+   },
+   {
+    "id": "stalwart",
+    "word": "stalwart",
+    "secondary": false,
+    "sense": "adjective loyal, reliable and sturdy, especially in support of a cause"
+   },
+   {
+    "id": "connoisseur",
+    "word": "connoisseur",
+    "secondary": false,
+    "sense": "noun an expert judge in matters of taste or art"
+   },
+   {
+    "id": "amiable",
+    "word": "amiable",
+    "secondary": false,
+    "sense": "adjective having a friendly, pleasant and good-natured disposition"
+   },
+   {
+    "id": "pliant",
+    "word": "pliant",
+    "secondary": false,
+    "sense": "adjective easily bent; easily influenced or yielding"
+   },
+   {
+    "id": "entrenched",
+    "word": "entrenched",
+    "secondary": false,
+    "sense": "adjective firmly established and difficult to change"
+   },
+   {
+    "id": "occasion",
+    "word": "occasion",
+    "secondary": true,
+    "sense": "verb to bring about or cause something, often incidentally"
+   },
+   {
+    "id": "divest",
+    "word": "divest",
+    "secondary": false,
+    "sense": "verb to strip of possessions, rights or titles; to get rid of an asset"
+   },
+   {
+    "id": "dispatch",
+    "word": "dispatch",
+    "secondary": false,
+    "sense": "noun speed and efficiency in doing something; promptness"
+   },
+   {
+    "id": "antithetical",
+    "word": "antithetical",
+    "secondary": false,
+    "sense": "adjective directly opposed or contrasted"
+   },
+   {
+    "id": "elicit",
+    "word": "elicit",
+    "secondary": false,
+    "sense": "verb to draw out a response, reaction or fact"
+   },
+   {
+    "id": "impious",
+    "word": "impious",
+    "secondary": false,
+    "sense": "adjective lacking reverence for God or what is held sacred"
+   },
+   {
+    "id": "reprehensible",
+    "word": "reprehensible",
+    "secondary": false,
+    "sense": "adjective deserving strong criticism or blame; morally wrong"
+   },
+   {
+    "id": "wean",
+    "word": "wean",
+    "secondary": true,
+    "sense": "verb to cause someone to give up a habit or dependence gradually"
+   },
+   {
+    "id": "discrepancy",
+    "word": "discrepancy",
+    "secondary": false,
+    "sense": "noun a lack of agreement between facts or accounts that should match"
+   },
+   {
+    "id": "implacable",
+    "word": "implacable",
+    "secondary": false,
+    "sense": "adjective unable to be appeased or pacified; relentless"
+   },
+   {
+    "id": "erroneous",
+    "word": "erroneous",
+    "secondary": false,
+    "sense": "adjective wrong; based on a mistake"
+   },
+   {
+    "id": "cupidity",
+    "word": "cupidity",
+    "secondary": false,
+    "sense": "noun excessive desire for money or possessions; greed"
+   },
+   {
+    "id": "malfeasance",
+    "word": "malfeasance",
+    "secondary": false,
+    "sense": "noun wrongdoing, especially by a public official"
+   },
+   {
+    "id": "overweening",
+    "word": "overweening",
+    "secondary": false,
+    "sense": "adjective showing excessive pride or self-confidence; presumptuous"
+   },
+   {
+    "id": "adulation",
+    "word": "adulation",
+    "secondary": false,
+    "sense": "noun excessive praise or flattery"
+   },
+   {
+    "id": "primacy",
+    "word": "primacy",
+    "secondary": false,
+    "sense": "noun the state of being first in rank, importance, or order"
+   },
+   {
+    "id": "composure",
+    "word": "composure",
+    "secondary": false,
+    "sense": "noun calm, controlled state of mind"
+   },
+   {
+    "id": "incense",
+    "word": "incense",
+    "secondary": true,
+    "sense": "verb to make extremely angry"
+   },
+   {
+    "id": "spurious",
+    "word": "spurious",
+    "secondary": false,
+    "sense": "adjective not genuine or authentic; false despite appearing real"
+   },
+   {
+    "id": "monotonous",
+    "word": "monotonous",
+    "secondary": false,
+    "sense": "adjective dull because of lack of variety; tediously unchanging"
+   },
+   {
+    "id": "expunge",
+    "word": "expunge",
+    "secondary": false,
+    "sense": "verb to erase or remove completely, as from a record"
+   },
+   {
+    "id": "structuralism",
+    "word": "structuralism",
+    "secondary": false,
+    "sense": "noun an approach that explains language, myth, or culture through underlying systems of relationships"
+   },
+   {
+    "id": "equivocation",
+    "word": "equivocation",
+    "secondary": false,
+    "sense": "noun the use of ambiguous language to avoid commitment or conceal the truth"
+   },
+   {
+    "id": "patent",
+    "word": "patent",
+    "secondary": false,
+    "sense": "adjective plainly evident; obvious"
+   },
+   {
+    "id": "solipsistic",
+    "word": "solipsistic",
+    "secondary": false,
+    "sense": "adjective extremely self-absorbed, treating one's own mind or experience as the only thing that matters"
+   },
+   {
+    "id": "mendacity",
+    "word": "mendacity",
+    "secondary": false,
+    "sense": "noun the habit of lying; untruthfulness"
+   },
+   {
+    "id": "brevity",
+    "word": "brevity",
+    "secondary": false,
+    "sense": "noun concise and exact use of words; shortness of duration"
+   },
+   {
+    "id": "irk",
+    "word": "irk",
+    "secondary": false,
+    "sense": "verb to annoy or irritate"
+   },
+   {
+    "id": "exploit",
+    "word": "exploit",
+    "secondary": true,
+    "sense": "noun a daring, notable, or heroic act"
+   }
+  ],
+  "trapPairs": [
+   [
+    "feasible",
+    "viable"
+   ],
+   [
+    "miscreant",
+    "reprobate"
+   ],
+   [
+    "concoct",
+    "fabricate"
+   ],
+   [
+    "artifice",
+    "guile"
+   ],
+   [
+    "transcend",
+    "surpass"
+   ],
+   [
+    "refute",
+    "gainsay"
+   ],
+   [
+    "concur",
+    "assent"
+   ],
+   [
+    "polemical",
+    "contentious"
+   ]
+  ]
+ },
+ "drillTargets": {
+  "untestedChoiceShare": 0.9
+ },
+ "freshLeft": 140
+}

@@ -259,7 +259,7 @@ export function validateTest(raw: unknown, id: string): Validation {
   const skills = new Map((JSON.parse(fs.readFileSync("data/rc_skills.json", "utf8")) as { id: string; area: string }[]).map((c) => [c.id, c.area]));
 
   const testNo = (tid: string) => Number(/-(\d+)$/.exec(tid)?.[1] ?? 0);
-  const formatRules = test.measure === "verbal" && testNo(test.id) >= VERBAL_FORMAT_FROM;
+  const formatRules = test.measure === "verbal" && !isDrillId(test.id) && testNo(test.id) >= VERBAL_FORMAT_FROM;
   const setupRules = test.measure === "quant" && testNo(test.id) >= QUANT_SETUP_FROM;
   const variants = JSON.parse(fs.readFileSync("data/concept_variants.json", "utf8")) as Record<string, string[]>;
   const slotType = (q: Question) => (q.type === "tc" ? `tc${q.blanks?.length}` : q.subtype === "arg" ? "arg" : q.type === "numeric" || q.type === "mc" || q.type === "mc_multi" || q.type === "qc" ? q.type : q.setId ? "di" : q.type);
