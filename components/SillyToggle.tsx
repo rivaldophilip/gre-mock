@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import { SILLY_HELP } from "@/lib/flag-help";
+import { Explain } from "./Explain";
 
 /** Label classes shared with the "I guessed" checkbox, so the two sit on one line and align. */
 export const flagLabel = "flex min-h-11 cursor-pointer items-center gap-2.5 text-sm text-muted";
@@ -26,10 +28,12 @@ export function SillyToggle({ attemptId, questionId, initial = false, onChange }
     }
   }
   return (
-    <label className={`${flagLabel} ${on ? "font-medium text-warn" : err ? "text-bad" : ""}`} title="A slip (misread, arithmetic, copied wrong), not a gap in the concept: the miss counts half against it">
-      <input type="checkbox" className="size-5 accent-warn" checked={on} disabled={busy} onChange={(e) => void toggle(e.target.checked)} />
-      Silly mistake
-      {err && <span className="text-xs">(not saved, try again)</span>}
-    </label>
+    <Explain plain why={SILLY_HELP}>
+      <label className={`${flagLabel} ${on ? "font-medium text-warn" : err ? "text-bad" : ""}`}>
+        <input type="checkbox" className="size-5 accent-warn" checked={on} disabled={busy} onChange={(e) => void toggle(e.target.checked)} />
+        Silly mistake
+        {err && <span className="text-xs">(not saved, try again)</span>}
+      </label>
+    </Explain>
   );
 }

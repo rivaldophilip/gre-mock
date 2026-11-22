@@ -12,6 +12,8 @@ import { QuestionRenderer } from "./QuestionRenderer";
 import { RevealPanel, type Reveal } from "./RevealPanel";
 import { ReviewGrid } from "./ReviewGrid";
 import { SillyToggle, flagLabel } from "./SillyToggle";
+import { Explain } from "./Explain";
+import { GUESSED_HELP } from "@/lib/flag-help";
 import { useWordTags, type Sense } from "./WordTagger";
 import { IconBack, IconCalc, IconCheck, IconClock, IconFlag, IconGrid, IconNext, IconPause, IconPlay } from "./icons";
 import { btn, card, iconBtn, seg, segItem } from "./ui";
@@ -625,9 +627,11 @@ export function Runner(p: RunnerProps) {
             <QuestionRenderer q={q} answer={a} onChange={setAnswer} disabled={locked} keySel={keySel} keyValue={keyValue} tags={tags} />
             <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line pt-4">
               <div className="flex flex-wrap items-center gap-x-6">
-                <label className={flagLabel}>
-                  <input type="checkbox" className="size-5" checked={!!cur?.guessed} disabled={locked} onChange={(e) => setFlag("guessed", e.target.checked)} /> I guessed
-                </label>
+                <Explain plain why={GUESSED_HELP}>
+                  <label className={flagLabel}>
+                    <input type="checkbox" className="size-5" checked={!!cur?.guessed} disabled={locked} onChange={(e) => setFlag("guessed", e.target.checked)} /> I guessed
+                  </label>
+                </Explain>
                 {isQuant && reveal && !reveal.isCorrect && (
                   <SillyToggle
                     key={q.id}

@@ -18,6 +18,7 @@ import { IconCheck, IconNext, IconX } from "@/components/icons";
 import { Explain } from "@/components/Explain";
 import { HashPad } from "@/components/HashPad";
 import { SillyToggle, flagLabel } from "@/components/SillyToggle";
+import { GUESSED_HELP } from "@/lib/flag-help";
 import { badge, btn, card } from "@/components/ui";
 
 export const dynamic = "force-dynamic";
@@ -300,9 +301,11 @@ export default async function Review({ params }: { params: Promise<{ id: string;
               </dl>
               {canMarkSilly(a, test, q, r) && (
                 <div className="flex flex-wrap items-center gap-x-6">
-                  <label className={`${flagLabel} cursor-default`}>
-                    <input type="checkbox" className="size-5" checked={r!.guessed} disabled readOnly /> I guessed
-                  </label>
+                  <Explain plain why={GUESSED_HELP}>
+                    <label className={`${flagLabel} cursor-default`}>
+                      <input type="checkbox" className="size-5" checked={r!.guessed} disabled readOnly /> I guessed
+                    </label>
+                  </Explain>
                   <SillyToggle attemptId={a.id} questionId={q.id} initial={r!.silly} />
                 </div>
               )}

@@ -7,8 +7,9 @@ const W = 300;
 /**
  * A value with a dotted underline that shows how it was derived on hover, or on tap/focus on touch.
  * The tooltip is position:fixed, so scrolling table wrappers don't clip it. `why` lines split on "\n".
+ * `plain` wraps a control (a checkbox label): no underline and no tab stop of its own, since the control's focus shows it.
  */
-export function Explain({ children, why }: { children: ReactNode; why: string }) {
+export function Explain({ children, why, plain }: { children: ReactNode; why: string; plain?: boolean }) {
   const ref = useRef<HTMLSpanElement>(null);
   const id = useId();
   const [pos, setPos] = useState<{ left: number; top: number; width: number; up: boolean } | null>(null);
@@ -36,13 +37,13 @@ export function Explain({ children, why }: { children: ReactNode; why: string })
   return (
     <span
       ref={ref}
-      tabIndex={0}
+      tabIndex={plain ? undefined : 0}
       aria-describedby={pos ? id : undefined}
       onMouseEnter={show}
       onMouseLeave={hide}
       onFocus={show}
       onBlur={hide}
-      className="cursor-help rounded underline decoration-muted/60 decoration-dotted underline-offset-4 outline-none focus-visible:ring-2 focus-visible:ring-accent/40"
+      className={plain ? "inline-flex" : "cursor-help rounded underline decoration-muted/60 decoration-dotted underline-offset-4 outline-none focus-visible:ring-2 focus-visible:ring-accent/40"}
     >
       {children}
       {pos && (
