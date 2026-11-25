@@ -1,0 +1,299 @@
+{
+  "id": "quant-021",
+  "measure": "quant",
+  "title": "Quant Hard Mock 21",
+  "sections": [{ "n": 1, "minutes": 21 }, { "n": 2, "minutes": 26 }],
+  "passages": [],
+  "figures": [
+    { "id": "fig1", "caption": "Ashgrove High School has 800 students. The bar chart gives each grade's percent of the 800 students; the table gives the hours of volunteer service logged during the school year, as a percent of the students in each grade.", "svg": "<svg viewBox='0 0 330 215' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' fill='currentColor' font-size='12'><text x='165' y='16' text-anchor='middle' font-size='13'>Percent of the 800 students, by grade</text><line x1='45' y1='180.0' x2='315' y2='180.0' stroke='currentColor' stroke-opacity='0.2'/><text x='38' y='184.0' text-anchor='end'>0%</text><line x1='45' y1='140.0' x2='315' y2='140.0' stroke='currentColor' stroke-opacity='0.2'/><text x='38' y='144.0' text-anchor='end'>10%</text><line x1='45' y1='100.0' x2='315' y2='100.0' stroke='currentColor' stroke-opacity='0.2'/><text x='38' y='104.0' text-anchor='end'>20%</text><line x1='45' y1='60.0' x2='315' y2='60.0' stroke='currentColor' stroke-opacity='0.2'/><text x='38' y='64.0' text-anchor='end'>30%</text><rect x='65' y='60.0' width='38' height='120.0' fill='currentColor' fill-opacity='0.35' stroke='currentColor'/><text x='84' y='55.0' text-anchor='middle'>30%</text><text x='84' y='196' text-anchor='middle'>Grade 9</text><rect x='130' y='80.0' width='38' height='100.0' fill='currentColor' fill-opacity='0.35' stroke='currentColor'/><text x='149' y='75.0' text-anchor='middle'>25%</text><text x='149' y='196' text-anchor='middle'>Grade 10</text><rect x='195' y='80.0' width='38' height='100.0' fill='currentColor' fill-opacity='0.35' stroke='currentColor'/><text x='214' y='75.0' text-anchor='middle'>25%</text><text x='214' y='196' text-anchor='middle'>Grade 11</text><rect x='260' y='100.0' width='38' height='80.0' fill='currentColor' fill-opacity='0.35' stroke='currentColor'/><text x='279' y='95.0' text-anchor='middle'>20%</text><text x='279' y='196' text-anchor='middle'>Grade 12</text><line x1='45' y1='180' x2='315' y2='180' stroke='currentColor' stroke-width='1.5'/></svg>",
+      "table": { "head": ["Hours logged", "Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "rows": [["0–9", "45%", "30%", "15%", "10%"], ["10–19", "25%", "25%", "25%", "20%"], ["20–29", "15%", "20%", "25%", "25%"], ["30–39", "10%", "15%", "20%", "25%"], ["40 or more", "5%", "10%", "15%", "20%"]] } },
+    { "id": "fig2", "caption": "Prices of the 40 sweaters in a store's winter line", "svg": "<svg viewBox='0 0 340 150' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' fill='currentColor' font-size='12'><g stroke='currentColor' stroke-width='1.5' fill='none'><line x1='44' y1='60' x2='86' y2='60'/><line x1='198' y1='60' x2='310' y2='60'/><rect x='86' y='42' width='112' height='36'/><line x1='128' y1='42' x2='128' y2='78'/><line x1='44' y1='50' x2='44' y2='70'/><line x1='310' y1='50' x2='310' y2='70'/><line x1='30' y1='110' x2='310' y2='110'/><line x1='30' y1='110' x2='30' y2='115'/><line x1='65' y1='110' x2='65' y2='115'/><line x1='100' y1='110' x2='100' y2='115'/><line x1='135' y1='110' x2='135' y2='115'/><line x1='170' y1='110' x2='170' y2='115'/><line x1='205' y1='110' x2='205' y2='115'/><line x1='240' y1='110' x2='240' y2='115'/><line x1='275' y1='110' x2='275' y2='115'/><line x1='310' y1='110' x2='310' y2='115'/></g><g text-anchor='middle'><text x='44' y='34'>12</text><text x='86' y='34'>18</text><text x='128' y='34'>24</text><text x='198' y='34'>34</text><text x='310' y='34'>50</text><text x='30' y='130'>10</text><text x='65' y='130'>15</text><text x='100' y='130'>20</text><text x='135' y='130'>25</text><text x='170' y='130'>30</text><text x='205' y='130'>35</text><text x='240' y='130'>40</text><text x='275' y='130'>45</text><text x='310' y='130'>50</text><text x='170' y='146'>Price (dollars)</text></g></svg>" },
+    { "id": "fig3", "caption": "Note: Figure not drawn to scale. Lengths are in meters.", "svg": "<svg viewBox='0 0 340 195' xmlns='http://www.w3.org/2000/svg' font-family='sans-serif' fill='currentColor' font-size='14'><path d='M 30,160 L 270,160 L 270,130 A 40 40 0 0 0 270,50 L 270,20 L 90,20 L 30,80 Z' fill='none' stroke='currentColor' stroke-width='2'/><text x='150' y='180' text-anchor='middle'>24</text><text x='18' y='124' text-anchor='middle'>8</text><text x='180' y='14' text-anchor='middle'>18</text><text x='260' y='150' text-anchor='middle'>3</text><text x='260' y='40' text-anchor='middle'>3</text></svg>" }
+  ],
+  "questions": [
+    {"id": "s1q1", "section": 1, "type": "qc", "difficulty": 3, "prompt": "$a = 5^{30}$ and $b = 10^{22}$.", "qc": {"a": "$a$", "b": "$10^{22}$"}, "key": {"sel": [1]}, "explanation": {"key": "Write $5 = \\dfrac{10}{2}$: $5^{30} = \\dfrac{10^{30}}{2^{30}}$. Since $2^{10} = 1{,}024 > 10^3$, $2^{30} > 10^9$, so $5^{30} < \\dfrac{10^{30}}{10^9} = 10^{21}$, which is less than $10^{22}$. Quantity B is greater.", "steps": ["1. $5^{30} \\cdot 2^{30} = 10^{30}$, so $5^{30} = 10^{30} \\div 2^{30}$.", "2. $2^{30} = (2^{10})^3 > (10^3)^3 = 10^9$.", "3. So $5^{30} < 10^{21} < 10^{22}$. B is greater."], "fast": "$5^{30}2^{30} = 10^{30}$ and $2^{30} > 10^9$, so $5^{30}$ is below $10^{21}$, a tenth of B.", "trap": "Seeing the exponent 30 against 22 and choosing A without accounting for the base: halving the base 10 thirty times costs more than eight factors of 10."}, "tags": [{"kind": "concept", "id": "exponents-roots", "role": "primary"}], "setup": "a large power of 5 against a power of 10: write 5 as 10 over 2 and bound the power of 2 with 2^10 above 10^3", "variant": "comparing large powers or roots without a calculator"},
+
+    { "id": "s1q2", "section": 1, "type": "qc", "difficulty": 4,
+      "prompt": "A coffee roaster sells beans in bags whose weight $w$, in grams, satisfies $|w - 250| \\le 10$.",
+      "qc": { "a": "The greatest possible percent by which the weight of one bag exceeds the weight of another bag", "b": "$8\\%$" },
+      "key": { "sel": [0] },
+      "explanation": {
+        "key": "The tolerance means $240 \\le w \\le 260$. The largest excess is a $260$-gram bag over a $240$-gram bag, and a percent by which one weight exceeds another is measured on the smaller weight: $\\dfrac{20}{240} = \\dfrac{1}{12} \\approx 8.3\\%$, which is more than $8\\%$.",
+        "steps": ["1. $|w - 250| \\le 10$ gives $240 \\le w \\le 260$.", "2. The greatest difference is $260 - 240 = 20$ grams.", "3. As a percent of the lighter bag: $\\dfrac{20}{240} \\times 100\\% = 8\\tfrac13\\%$. A is greater."],
+        "fast": "The spread $20$ is $8\\%$ of the nominal $250$, but the base is the lighter bag, $240$, so the percent is a bit above $8\\%$.",
+        "trap": "Dividing the spread by the nominal weight $250$ gives exactly $8\\%$ and answer C."
+      },
+      "tags": [{ "kind": "concept", "id": "abs-value-inequalities", "role": "primary" }, { "kind": "concept", "id": "percent", "role": "secondary" }],
+      "setup": "a tolerance band around a nominal value written as an absolute-value inequality; the percent by which the top of the band exceeds the bottom (base is the bottom) against the spread over the nominal",
+      "variant": "a tolerance stated as an absolute-value inequality" },
+
+    {"id": "s1q3", "section": 1, "type": "qc", "difficulty": 4, "prompt": "$x < -1$", "qc": {"a": "$\\dfrac{1}{1 + \\dfrac{1}{x}}$", "b": "$1$"}, "key": {"sel": [0]}, "explanation": {"key": "$1 + \\dfrac1x = \\dfrac{x+1}{x}$, so Quantity A is $\\dfrac{x}{x+1}$. For $x < -1$, $\\dfrac1x$ lies between $-1$ and $0$, so the denominator $1 + \\dfrac1x$ is between 0 and 1, and 1 divided by it is greater than 1. A is greater.", "steps": ["1. $1 + \\dfrac1x = \\dfrac{x+1}{x}$, so A $= \\dfrac{x}{x+1}$.", "2. $\\dfrac{x}{x+1} - 1 = \\dfrac{-1}{x+1}$, and $x + 1 < 0$ for $x < -1$, so the difference is positive.", "3. For example $x = -2$ gives A $= 2$. A is greater."], "fast": "For $x < -1$, $1 + \\dfrac1x$ is a positive number less than 1, and its reciprocal exceeds 1.", "trap": "Reading '1 over one plus something' as less than 1 (true only when the added part is positive) gives B; here $\\dfrac1x$ is negative."}, "tags": [{"kind": "concept", "id": "fractions-decimals", "role": "primary"}], "setup": "a two-level nested fraction in x below -1; the inner part is a positive number below 1, so its reciprocal exceeds 1 (the sign of 1/x flips the usual reading)", "variant": "complex (nested) fractions"},
+
+    { "id": "s1q4", "section": 1, "type": "qc", "difficulty": 5,
+      "prompt": "A teacher chooses a positive integer $n$ and tells the class two facts about it: $n^2$ has exactly 9 positive factors, and $2n$ has exactly 6 positive factors.",
+      "qc": { "a": "The number of positive factors of $n$", "b": "$4$" },
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "A number has 9 factors when its prime exponents give $9 = 9$ or $9 = 3 \\times 3$, so $n^2 = p^8$ or $n^2 = p^2q^2$: $n = p^4$ or $n = pq$. If $n = pq$ with both primes odd, $2n$ has 8 factors, so one prime is 2: $n = 2q$, with 4 factors (e.g. $n = 6$: $36$ has 9 factors, $12$ has 6). If $n = p^4$ with $p$ odd, $2n$ has 10 factors, so $p = 2$: $n = 16$, with 5 factors ($256$ has 9, $32$ has 6). A is 4 or 5.",
+        "steps": ["1. $n^2$ has 9 factors: $n^2 = p^8$ or $p^2q^2$, so $n = p^4$ or $n = pq$ (distinct primes).", "2. $n = pq$: $2n$ has 6 factors only if one prime is 2 ($2n = 4q$, factors $3 \\times 2$). Then $n = 2q$ has 4 factors.", "3. $n = p^4$: $2n$ has 6 factors only if $p = 2$ ($2n = 2^5$). Then $n = 16$ has 5 factors.", "4. $n = 6$ gives A $= 4$; $n = 16$ gives A $= 5$. Cannot be determined."],
+        "fast": "Try the two shapes: $n = 6$ ($36$: 9 factors, $12$: 6) and $n = 16$ ($256$: 9, $32$: 6) give 4 and 5 factors.",
+        "trap": "Reading 9 only as $3 \\times 3$ gives $n = pq$ and answer C; the single-prime form $n = p^4$, with $p = 2$, also fits both facts."
+      },
+      "tags": [{ "kind": "concept", "id": "integers-properties", "role": "primary" }, { "kind": "concept", "id": "primes-factors", "role": "secondary" }],
+      "setup": "run backwards: the divisor counts of n^2 and 2n are given; recover the possible prime shapes of n and compare its divisor count with a value",
+      "variant": "must be / could be an integer from a stated condition",
+      "revisits": "quant-004:s2q5" },
+
+    { "id": "s1q5", "section": 1, "type": "mc", "difficulty": 3,
+      "prompt": "An online shop lists a camera at 162,000 yen. On the day of purchase, 1 euro is worth 1.08 US dollars and 1 US dollar is worth 150 yen. What is the price of the camera in euros?",
+      "choices": ["$925.93$", "$1{,}000$", "$1{,}080$", "$1{,}166.40$", "$1{,}620$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "Yen to dollars: $162{,}000 \\div 150 = 1{,}080$ dollars. Dollars to euros: each euro costs $1.08$ dollars, so $1{,}080 \\div 1.08 = 1{,}000$ euros.",
+        "steps": ["1. $162{,}000 \\div 150 = 1{,}080$ US dollars.", "2. One euro is $1.08$ dollars, so the number of euros is $1{,}080 \\div 1.08 = 1{,}000$."],
+        "fast": "One euro is $1.08 \\times 150 = 162$ yen, and $162{,}000 \\div 162 = 1{,}000$.",
+        "trap": "Multiplying by $1.08$ at the second step gives $1{,}166.40$; stopping at the dollar amount gives $1{,}080$."
+      },
+      "tags": [{ "kind": "concept", "id": "units-conversion", "role": "primary" }],
+      "setup": "a price converted through two exchange rates in a chain (a cross rate); divide, not multiply, at the second rate",
+      "variant": "currency or exchange rates" },
+
+    { "id": "s1q6", "section": 1, "type": "mc", "difficulty": 4,
+      "prompt": "In a laboratory model, the growth rate of a bacterial culture is directly proportional to the concentration of a nutrient and inversely proportional to the square of the culture's population density. If the nutrient concentration increases by $50\\%$ and the population density increases by $25\\%$, what happens to the growth rate?",
+      "choices": ["It increases by $25\\%$.", "It increases by $20\\%$.", "It does not change.", "It decreases by $4\\%$.", "It decreases by $16\\%$."],
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "The rate is $k \\cdot \\dfrac{C}{D^2}$. The new rate is $\\dfrac{1.5}{1.25^2} = \\dfrac{1.5}{1.5625} = 0.96$ times the old one: a $4\\%$ decrease.",
+        "steps": ["1. Rate $= k\\dfrac{C}{D^2}$.", "2. $C$ is multiplied by $1.5$; $D^2$ is multiplied by $1.25^2 = 1.5625$.", "3. The rate is multiplied by $\\dfrac{1.5}{1.5625} = 0.96$: it decreases by $4\\%$."],
+        "fast": "$\\dfrac{3/2}{25/16} = \\dfrac{24}{25} = 0.96$.",
+        "trap": "Forgetting to square the density factor gives $\\dfrac{1.5}{1.25} = 1.2$, an increase of $20\\%$; subtracting percents gives $25\\%$."
+      },
+      "tags": [{ "kind": "concept", "id": "ratio-proportion", "role": "primary" }],
+      "setup": "a quantity varies directly with one variable and inversely with the square of another; both change by percents; the net percent change (the factors divide, the square applies to the factor)",
+      "variant": "direct vs inverse proportion" },
+
+    { "id": "s1q7", "section": 1, "type": "mc", "difficulty": 5,
+      "prompt": "A boutique will feature 4 of its items in a window display, chosen from 5 different shirts, 4 different hats and 3 different scarves. The display may include at most 2 shirts and at most 1 scarf. How many different sets of 4 items can be chosen?",
+      "choices": ["$222$", "$290$", "$303$", "$312$", "$378$"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Count by the numbers of shirts $s \\le 2$ and scarves $c \\le 1$; hats fill the rest. $(0,0)$: $\\binom44 = 1$; $(0,1)$: $3\\binom43 = 12$; $(1,0)$: $5\\binom43 = 20$; $(1,1)$: $5 \\cdot 3 \\cdot \\binom42 = 90$; $(2,0)$: $\\binom52\\binom42 = 60$; $(2,1)$: $\\binom52 \\cdot 3 \\cdot 4 = 120$. Total $303$.",
+        "steps": ["1. Without the caps there are $\\binom{12}{4} = 495$ sets.", "2. Sets with 3 or more shirts: $\\binom53\\binom71 + \\binom54 = 70 + 5 = 75$.", "3. Sets with 2 or more scarves: $\\binom32\\binom92 + \\binom33\\binom91 = 108 + 9 = 117$.", "4. No set of 4 has both 3 shirts and 2 scarves, so nothing is subtracted twice: $495 - 75 - 117 = 303$."],
+        "fast": "Complement: $495 - 75 - 117 = 303$, since the two overflow cases cannot happen together in 4 items.",
+        "trap": "Counting the scarf overflow as exactly 2 scarves only ($108$) gives $312$; reading the scarf cap as exactly one scarf gives $222$; forgetting the shirt cap gives $495 - 117 = 378$."
+      },
+      "tags": [{ "kind": "concept", "id": "counting-restrictions", "role": "primary" }],
+      "setup": "choose a set from three kinds of distinct items with a different cap on two of the kinds and the third uncapped; casework or the complement of the two overflows, which cannot occur together",
+      "variant": "selections with a cap per type (at most 2 from one group)" },
+
+    { "id": "s1q8", "section": 1, "type": "mc_multi", "difficulty": 4,
+      "prompt": "A circle in the $xy$-plane has the equation $x^2 + y^2 - 6x + 4y = 12$. Which of the following points lie in the interior of the circle, not on the circle itself?\n\nIndicate all such points.",
+      "choices": ["$(0, 2)$", "$(-1, -2)$", "$(6, -5)$", "$(8, -2)$", "$(-2, 1)$", "$(2, 2)$"],
+      "key": { "sel": [1, 2, 5] },
+      "explanation": {
+        "key": "Completing the square gives $(x-3)^2 + (y+2)^2 = 25$: center $(3, -2)$, radius 5. A point is inside when its squared distance from the center is less than 25.",
+        "steps": ["1. $x^2 - 6x + 9 + y^2 + 4y + 4 = 12 + 13$, so $(x-3)^2 + (y+2)^2 = 25$.", "2. $(0,2)$: $9 + 16 = 25$, on the circle. $(-1,-2)$: $16 + 0 = 16$, inside.", "3. $(6,-5)$: $9 + 9 = 18$, inside. $(8,-2)$: $25 + 0 = 25$, on the circle.", "4. $(-2,1)$: $25 + 9 = 34$, outside. $(2,2)$: $1 + 16 = 17$, inside."],
+        "fast": "Plug each point into $x^2 + y^2 - 6x + 4y$ and keep those giving less than 12: $(-1,-2)$ gives $3$, $(6,-5)$ gives $5$, $(2,2)$ gives $4$; $(0,2)$ and $(8,-2)$ give exactly 12.",
+        "trap": "Taking the center as $(-3, 2)$ (signs not flipped) or counting points on the circle as inside."
+      },
+      "tags": [{ "kind": "concept", "id": "geometry-coordinate", "role": "primary" }],
+      "setup": "a circle given in expanded form; complete the square for the center and radius; select the points strictly inside (some lie exactly on the circle)",
+      "variant": "a circle in the coordinate plane" },
+
+    {"id": "s1q9", "section": 1, "type": "numeric", "difficulty": 3, "prompt": "A lab technician mixes 300 milliliters of a $12\\%$ salt solution with 200 milliliters of a $4\\%$ salt solution, then adds 100 milliliters of a third salt solution. The resulting 600 milliliters is a $10\\%$ salt solution. What is the salt concentration of the third solution? Enter the percent as a number (for $25\\%$, enter 25).", "numeric": {"kind": "single"}, "key": {"value": "16"}, "explanation": {"key": "Track the salt. The final 600 mL at $10\\%$ holds 60 mL of salt. The first two solutions supply $0.12(300) + 0.04(200) = 36 + 8 = 44$ mL, so the 100 mL of the third solution must hold 16 mL: a $16\\%$ solution.", "steps": ["1. Salt needed: $0.10 \\times 600 = 60$ mL.", "2. Salt supplied: $0.12 \\times 300 + 0.04 \\times 200 = 44$ mL.", "3. The third solution supplies $60 - 44 = 16$ mL in 100 mL: $16\\%$."], "fast": "The overall concentration is the volume-weighted average: $\\dfrac{300(12) + 200(4) + 100c}{600} = 10$ gives $c = 16$.", "trap": "Averaging the three concentrations without weights, $\\dfrac{12 + 4 + c}{3} = 10$, gives $14$."}, "tags": [{"kind": "concept", "id": "weighted-average", "role": "primary"}], "setup": "two solutions of known amounts and concentrations plus a fixed amount of a third; the third's concentration that brings the whole to a target (balance the solute, weighted by volume)", "variant": "a mixture's concentration as a weighted average"},
+
+    { "id": "s1q10", "section": 1, "type": "mc", "setId": "di1", "figureId": "fig1", "difficulty": 3,
+      "prompt": "Grade-12 students who logged 30 or more hours make up what percent of all 800 students at the school?",
+      "choices": ["$5\\%$", "$9\\%$", "$20\\%$", "$25\\%$", "$45\\%$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "In grade 12, $25\\% + 20\\% = 45\\%$ logged 30 or more hours, and grade 12 is $20\\%$ of the school. So they are $45\\%$ of $20\\%$, which is $9\\%$ of all students (72 students).",
+        "steps": ["1. Grade 12, 30 or more hours: $25\\% + 20\\% = 45\\%$ of the grade.", "2. Grade 12 is $20\\%$ of the 800 students.", "3. $0.45 \\times 0.20 = 0.09$, so $9\\%$."],
+        "fast": "$45\\%$ of $20\\% = 9\\%$.",
+        "trap": "Reporting $45\\%$, the share within grade 12, or using only the 30–39 row ($25\\%$ of $20\\% = 5\\%$)."
+      },
+      "tags": [{ "kind": "concept", "id": "data-interpretation-calc", "role": "primary" }],
+      "setup": "DI: two rows of a within-group percent table combined, then applied to that group's share of the whole from a second chart; the cell's share of the whole",
+      "variant": "percent of a percent across two charts" },
+
+    { "id": "s1q11", "section": 1, "type": "mc", "setId": "di1", "figureId": "fig1", "difficulty": 4,
+      "prompt": "Of the grade-10 students, 84 belong to the school's service club, and $\\tfrac45$ of the grade-10 students who logged 30 or more hours belong to the club. How many grade-10 students neither belong to the club nor logged 30 or more hours?",
+      "choices": ["$66$", "$94$", "$106$", "$116$", "$150$"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Grade 10 has $25\\%$ of 800 $= 200$ students; $15\\% + 10\\% = 25\\%$ of them, 50 students, logged 30 or more hours, and $\\tfrac45$ of those, 40, are in the club. The union is $84 + 50 - 40 = 94$, so $200 - 94 = 106$ are in neither group.",
+        "steps": ["1. Grade 10: $0.25 \\times 800 = 200$ students.", "2. 30 or more hours: $(15\\% + 10\\%) \\times 200 = 50$; both: $\\tfrac45 \\times 50 = 40$.", "3. Club or 30+ hours: $84 + 50 - 40 = 94$.", "4. Neither: $200 - 94 = 106$."],
+        "fast": "$200 - (84 + 50 - 40) = 106$.",
+        "trap": "Subtracting both groups without adding back the overlap gives $200 - 84 - 50 = 66$; reporting the union gives $94$."
+      },
+      "tags": [{ "kind": "concept", "id": "overlapping-sets", "role": "primary" }, { "kind": "concept", "id": "data-interpretation-calc", "role": "secondary" }],
+      "setup": "DI: one set's size read as a percent of a percent from the figure, the other set's size given, the overlap a fraction of the first set; the count in neither within that group",
+      "variant": "the neither region from a two-set problem" },
+
+    {"id": "s1q12", "section": 1, "type": "mc", "setId": "di1", "figureId": "fig1", "difficulty": 5, "prompt": "Consider only the grade-11 students who logged at least 10 hours. The 60th percentile of the number of hours these students logged lies in which interval?", "choices": ["0–9", "10–19", "20–29", "30–39", "40 or more"], "key": {"sel": [3]}, "explanation": {"key": "Grade 11 has $25\\%$ of 800 $= 200$ students, and $100\\% - 15\\% = 85\\%$ of them, 170 students, logged at least 10 hours: 50 in 10–19, 50 in 20–29, 40 in 30–39 and 30 in 40 or more. The 60th percentile sits at position $0.6 \\times 170 = 102$; the first two intervals hold only 100 of these students, so it lies in 30–39.", "steps": ["1. Grade 11: $0.25 \\times 800 = 200$ students; at least 10 hours: $0.85 \\times 200 = 170$.", "2. Counts: 10–19: 50; 20–29: 50 (running total 100); 30–39: 40 (running total 140).", "3. $60\\%$ of 170 is 102, past the 100 students below 30 hours: the 60th percentile is in 30–39."], "fast": "Re-base on the subgroup: $\\dfrac{25 + 25}{85} \\approx 59\\% < 60\\%$, so the percentile passes 29 hours.", "trap": "Accumulating the grade-11 column from the 0–9 row on the whole grade ($15\\%, 40\\%, 65\\%$) puts the 60th percentile in 20–29; the students under 10 hours are not in the group."}, "tags": [{"kind": "concept", "id": "frequency-distributions", "role": "primary"}, {"kind": "concept", "id": "data-interpretation-calc", "role": "secondary"}], "setup": "DI: a percentile within a subgroup that leaves out one group's lowest row; re-base on the subgroup before accumulating (accumulating the whole group's column points to the row below)", "variant": "which interval contains the median or a percentile"},
+
+    { "id": "s2q1", "section": 2, "type": "qc", "figureId": "fig2", "difficulty": 4,
+      "prompt": "The box plot shows the prices of the 40 sweaters in a store's winter line. The store then raises every price by $20\\%$ and adds a $\\$3$ handling charge to each.",
+      "qc": { "a": "The interquartile range of the new prices, in dollars", "b": "$20$" },
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "From the plot, $Q_1 = 18$ and $Q_3 = 34$, so the IQR is $16$. Raising every price by $20\\%$ and adding $\\$3$ keeps the order, so the new quartiles are $1.2Q_1 + 3$ and $1.2Q_3 + 3$; the $\\$3$ cancels in the difference, and the new IQR is $1.2 \\times 16 = 19.2 < 20$.",
+        "steps": ["1. Read the box: $Q_1 = 18$, $Q_3 = 34$, IQR $= 16$.", "2. New quartiles: $1.2(18) + 3 = 24.6$ and $1.2(34) + 3 = 43.8$.", "3. New IQR: $43.8 - 24.6 = 19.2$. B is greater."],
+        "fast": "A shift cancels in a spread; only the factor $1.2$ acts: $1.2 \\times 16 = 19.2$.",
+        "trap": "Adding the $\\$3$ to the IQR gives $22.2$ and answer A; reading the range ($50 - 12 = 38$) or the box from the median gives other values."
+      },
+      "tags": [{ "kind": "concept", "id": "quartiles-boxplots", "role": "primary" }],
+      "setup": "read Q1 and Q3 off a box plot; every value is scaled by a percent and then shifted by a constant; the new IQR (the shift cancels) against a value",
+      "variant": "reading quartiles and the IQR from a boxplot" },
+
+    { "id": "s2q2", "section": 2, "type": "qc", "difficulty": 5,
+      "prompt": "$(x^2 - 5)^2 = (x + 1)^2$",
+      "qc": { "a": "The sum of all real solutions of the equation", "b": "$1$" },
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "Move everything to one side and factor as a difference of squares: $\\big[(x^2 - 5) - (x + 1)\\big]\\big[(x^2 - 5) + (x + 1)\\big] = (x^2 - x - 6)(x^2 + x - 4) = 0$. The first factor has roots $3$ and $-2$ (sum $1$); the second has two real roots ($1 + 16 > 0$) with sum $-1$. All four are different, so the sum is $0$, less than 1.",
+        "steps": ["1. $a^2 = b^2$ means $(a - b)(a + b) = 0$: $(x^2 - x - 6)(x^2 + x - 4) = 0$.", "2. $x^2 - x - 6 = (x - 3)(x + 2)$: roots $3, -2$.", "3. $x^2 + x - 4$: discriminant $17 > 0$, roots $\\dfrac{-1 \\pm \\sqrt{17}}{2}$, sum $-1$.", "4. The four roots are distinct; their sum is $1 + (-1) = 0$. B is greater."],
+        "fast": "Expanded, the equation is $x^4 - 11x^2 - 2x + 24 = 0$ with no $x^3$ term, and all four roots are real, so they sum to $0$.",
+        "trap": "Taking only $x^2 - 5 = x + 1$ gives the roots $3$ and $-2$ with sum $1$ and answer C; $x^2 - 5 = -(x + 1)$ adds two more real roots."
+      },
+      "tags": [{ "kind": "concept", "id": "quadratics-factoring", "role": "primary" }],
+      "setup": "one squared quadratic equals another squared expression; factor as a difference of squares into two quadratics; the sum of all real roots (the one-sided equation misses a factor)",
+      "variant": "special products: (a+b)^2, (a-b)^2, a^2 - b^2" },
+
+    { "id": "s2q3", "section": 2, "type": "qc", "difficulty": 5,
+      "prompt": "Points $A$, $B$, $C$ and $D$ lie, in that order, on a circle with center $O$, and $O$ lies inside quadrilateral $ABCD$. Angle $AOB$ measures $100^\\circ$ and angle $COD$ measures $40^\\circ$. Chords $AC$ and $BD$ intersect at point $E$.",
+      "qc": { "a": "The measure of angle $AEB$", "b": "$70^\\circ$" },
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Angle $AEB$ is an exterior angle of triangle $EBC$, so it equals angle $EBC$ + angle $ECB$. Angle $DBC$ is inscribed on arc $CD$, so it is half of $40^\\circ$, $20^\\circ$; angle $ACB$ is inscribed on arc $AB$, half of $100^\\circ$, $50^\\circ$. Angle $AEB = 70^\\circ$ whatever the other two arcs are.",
+        "steps": ["1. With $O$ inside $ABCD$, arc $AB$ (away from $C$, $D$) is $100^\\circ$ and arc $CD$ is $40^\\circ$.", "2. Inscribed angles: $\\angle ACB = \\tfrac12(100^\\circ) = 50^\\circ$ and $\\angle DBC = \\tfrac12(40^\\circ) = 20^\\circ$.", "3. In triangle $EBC$, the exterior angle at $E$ is $\\angle AEB = 50^\\circ + 20^\\circ = 70^\\circ$. Equal."],
+        "fast": "The angle between two chords is half the sum of the arcs it and its vertical angle cut off: $\\tfrac12(100^\\circ + 40^\\circ) = 70^\\circ$.",
+        "trap": "Treating angle $AEB$ as an inscribed angle on arc $AB$ ($50^\\circ$), or taking half the difference of the arcs ($30^\\circ$), or deciding the unknown arcs $BC$ and $DA$ leave it undetermined (D)."
+      },
+      "tags": [{ "kind": "concept", "id": "circles", "role": "primary" }],
+      "setup": "two central angles on opposite arcs given; the angle between two intersecting chords from two inscribed angles (exterior angle of a triangle); the other arcs are free and do not matter",
+      "variant": "inscribed angle vs central angle" },
+
+    { "id": "s2q4", "section": 2, "type": "qc", "difficulty": 4,
+      "prompt": "A food company redesigns its cylindrical can: the radius of the base is increased by $20\\%$, and the height is decreased by $30\\%$.",
+      "qc": { "a": "The volume of the redesigned can", "b": "The volume of the original can" },
+      "key": { "sel": [0] },
+      "explanation": {
+        "key": "Volume is $\\pi r^2 h$. The radius factor is squared: $1.2^2 = 1.44$, and the height factor is $0.7$, so the volume is multiplied by $1.44 \\times 0.7 = 1.008$, slightly more than before.",
+        "steps": ["1. $V = \\pi r^2 h$.", "2. New volume: $\\pi(1.2r)^2(0.7h) = 1.44 \\times 0.7 \\times \\pi r^2 h$.", "3. $1.44 \\times 0.7 = 1.008 > 1$. A is greater."],
+        "fast": "$1.2^2 \\times 0.7 = 1.008$.",
+        "trap": "Netting the percents ($+20\\% - 30\\%$) or using the radius factor unsquared ($1.2 \\times 0.7 = 0.84$) gives B."
+      },
+      "tags": [{ "kind": "concept", "id": "solids-volume", "role": "primary" }],
+      "setup": "a cylinder's radius and height scaled by different percents in opposite directions; the volume factor (radius squared) just above 1",
+      "variant": "scaling a dimension: the effect on volume" },
+
+    {"id": "s2q5", "section": 2, "type": "qc", "difficulty": 5, "prompt": "A rule $f$ obeys $f(x + 1) = x^2 + 2x - 3$ for all real $x$, and $t$ is a number with $f(t) = 0$.", "qc": {"a": "$f(t + 1)$", "b": "$f(t - 1)$"}, "key": {"sel": [3]}, "explanation": {"key": "$x^2 + 2x - 3 = (x + 1)^2 - 4$, so $f(u) = u^2 - 4$. $f(t) = 0$ gives $t = 2$ or $t = -2$. For $t = 2$: $f(3) = 5$ and $f(1) = -3$, so A is greater. For $t = -2$: $f(-1) = -3$ and $f(-3) = 5$, so B is greater. Cannot be determined.", "steps": ["1. $f(x+1) = (x+1)^2 - 4$, so $f(u) = u^2 - 4$.", "2. $f(t) = 0 \\Rightarrow t = 2$ or $t = -2$.", "3. $t = 2$: A $= f(3) = 5$, B $= f(1) = -3$; A is greater.", "4. $t = -2$: A $= f(-1) = -3$, B $= f(-3) = 5$; B is greater. Answer D."], "fast": "$f(u) = u^2 - 4$ is even with zeros $\\pm 2$; which of $t + 1$ and $t - 1$ lies farther from 0 depends on the sign of $t$.", "trap": "Keeping only the positive zero $t = 2$ gives A; solving $x^2 + 2x - 3 = 0$ and taking its roots $1$ and $-3$ as values of $t$ confuses the inner variable with the input of $f$."}, "tags": [{"kind": "concept", "id": "functions", "role": "primary"}], "setup": "f given on a shifted input; completing the square gives an even closed form; a zero of f has two signs, and f one step above against one step below the zero flips with the sign", "variant": "f given on a transformed input, such as f((x + 3)/2)"},
+
+    { "id": "s2q6", "section": 2, "type": "mc", "difficulty": 4,
+      "prompt": "In the $xy$-plane, the line $y = kx - 1$ passes below every point of the line segment that joins $(2, 3)$ and $(6, 1)$, without touching the segment. Which of the following describes all possible values of the constant $k$?",
+      "choices": ["$k < \\tfrac13$", "$k < \\tfrac34$", "$k < 2$", "$\\tfrac13 < k < 2$", "$k > \\tfrac13$"],
+      "key": { "sel": [0] },
+      "explanation": {
+        "key": "On $2 \\le x \\le 6$ both the line and the segment are linear in $x$, so their vertical gap is linear and is positive throughout exactly when it is positive at both ends. At $x = 2$: $2k - 1 < 3$, so $k < 2$. At $x = 6$: $6k - 1 < 1$, so $k < \\tfrac13$. Both hold when $k < \\tfrac13$.",
+        "steps": ["1. The segment's height minus the line's height is a linear function of $x$ on $[2, 6]$.", "2. A linear function is positive on an interval exactly when it is positive at both endpoints.", "3. $x = 2$: $2k - 1 < 3 \\Rightarrow k < 2$. $x = 6$: $6k - 1 < 1 \\Rightarrow k < \\tfrac13$.", "4. Together: $k < \\tfrac13$."],
+        "fast": "Check the two endpoints; the stricter one, at $(6, 1)$, decides: $k < \\tfrac13$.",
+        "trap": "Checking only the first endpoint gives $k < 2$; checking the midpoint $(4, 2)$ gives $k < \\tfrac34$."
+      },
+      "tags": [{ "kind": "concept", "id": "inequalities", "role": "primary" }, { "kind": "concept", "id": "coordinate-geometry", "role": "secondary" }],
+      "setup": "a line through a fixed intercept with an unknown slope must stay below a whole segment; the gap is linear, so both endpoints decide and the stricter one wins",
+      "variant": "an inequality with a parameter: for which k a solution exists",
+      "revisits": "quant-004:s1q8" },
+
+    { "id": "s2q7", "section": 2, "type": "mc", "difficulty": 5,
+      "prompt": "Lena opens a savings account with a deposit of $\\$1{,}000$, and exactly 8 years later she deposits another $\\$3{,}000$. She makes no other deposits and no withdrawals. Money in the account grows at a fixed rate under which any amount doubles every 8 years. How many years after opening the account does the balance first reach $\\$40{,}000$?",
+      "choices": ["$24$", "$28$", "$32$", "$36$", "$40$"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "At $t$ years ($t \\ge 8$) the first deposit is worth $1{,}000 \\cdot 2^{t/8}$ and the second $3{,}000 \\cdot 2^{(t-8)/8} = 1{,}500 \\cdot 2^{t/8}$. The balance is $2{,}500 \\cdot 2^{t/8} = 40{,}000$, so $2^{t/8} = 16$ and $t = 32$.",
+        "steps": ["1. First deposit after $t$ years: $1{,}000 \\cdot 2^{t/8}$.", "2. Second deposit has grown for $t - 8$ years: $3{,}000 \\cdot 2^{(t-8)/8} = 1{,}500 \\cdot 2^{t/8}$.", "3. Total $2{,}500 \\cdot 2^{t/8} = 40{,}000 \\Rightarrow 2^{t/8} = 16 = 2^4 \\Rightarrow t = 32$.", "4. Check: at 32 years, $1{,}000 \\cdot 16 + 3{,}000 \\cdot 8 = 40{,}000$."],
+        "fast": "At year 8 the balance is $2{,}000 + 3{,}000 = 5{,}000$; it must grow 8-fold, three doublings, 24 more years: $32$.",
+        "trap": "Counting the doublings from the second deposit and answering $24$; or letting the $\\$3{,}000$ grow from the start, which gives no whole number of doublings."
+      },
+      "tags": [{ "kind": "concept", "id": "exponential-growth", "role": "primary" }, { "kind": "concept", "id": "word-problems-interest", "role": "secondary" }],
+      "setup": "two deposits made one doubling period apart in an account with a fixed doubling time; the time from opening until the balance reaches a target (combine at the second deposit, then count doublings)",
+      "variant": "doubling or halving time" },
+
+    {"id": "s2q8", "section": 2, "type": "mc", "difficulty": 4, "prompt": "Rana and Theo each try the same bonus problem on a quiz, working independently. The probability that Rana solves it is $\\tfrac23$, and the probability that Theo solves it is $\\tfrac14$. Given that exactly one of the two solves the problem, what is the probability that Theo is the one who solves it?", "choices": ["$\\dfrac{1}{12}$", "$\\dfrac{1}{7}$", "$\\dfrac{1}{4}$", "$\\dfrac{3}{7}$", "$\\dfrac{7}{12}$"], "key": {"sel": [1]}, "explanation": {"key": "Only Theo: $\\tfrac13 \\cdot \\tfrac14 = \\tfrac{1}{12}$. Only Rana: $\\tfrac23 \\cdot \\tfrac34 = \\tfrac12 = \\tfrac{6}{12}$. Exactly one: $\\tfrac{7}{12}$. Given exactly one, Theo's share is $\\dfrac{1/12}{7/12} = \\dfrac17$.", "steps": ["1. P(Theo solves, Rana does not) $= \\tfrac14 \\cdot \\tfrac13 = \\tfrac1{12}$.", "2. P(Rana solves, Theo does not) $= \\tfrac23 \\cdot \\tfrac34 = \\tfrac6{12}$.", "3. P(exactly one) $= \\tfrac7{12}$.", "4. Conditional: $\\tfrac{1}{12} \\div \\tfrac{7}{12} = \\tfrac17$."], "fast": "The two 'exactly one' outcomes are in the ratio $1 : 6$, so Theo's share is $\\tfrac17$.", "trap": "Answering Theo's own probability $\\tfrac14$ (ignoring the condition) or the unconditional $\\tfrac1{12}$; $\\tfrac7{12}$ is the probability of the condition itself."}, "tags": [{"kind": "concept", "id": "probability-conditional", "role": "primary"}], "setup": "two independent events with different probabilities; given that exactly one occurs, the probability it is a named one (ratio of the two one-only products)", "variant": "exactly one of two independent events"},
+
+    { "id": "s2q9", "section": 2, "type": "mc", "difficulty": 4,
+      "prompt": "What are the last two digits (the tens digit followed by the units digit) of the product $1{,}996 \\times 2{,}997 \\times 3{,}998$?",
+      "choices": ["$04$", "$24$", "$36$", "$76$", "$96$"],
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "Only each factor's remainder mod 100 matters, and each is just below a multiple of 100: $-4$, $-3$ and $-2$. Their product is $-24$, which is $76$ more than a multiple of 100. The last two digits are 76.",
+        "steps": ["1. Mod 100: $1{,}996 \\equiv -4$, $2{,}997 \\equiv -3$, $3{,}998 \\equiv -2$.", "2. $(-4)(-3)(-2) = -24$.", "3. $-24 \\equiv 100 - 24 = 76 \\pmod{100}$. (Check: $96 \\times 97 = 9{,}312$; $12 \\times 98 = 1{,}176$.)"],
+        "fast": "Three factors each a little under a hundred-multiple: $(-4)(-3)(-2) = -24$, so the product ends in $76$.",
+        "trap": "Dropping the sign (an odd number of negative factors) gives $24$."
+      },
+      "tags": [{ "kind": "concept", "id": "remainders-units", "role": "primary" }],
+      "setup": "last two digits of a product of three large numbers, each a little below a multiple of 100; multiply the small negative residues and convert the negative result",
+      "variant": "last two digits of a product too large for the calculator" },
+
+    { "id": "s2q10", "section": 2, "type": "mc", "difficulty": 3,
+      "prompt": "A convex polygon has 5 times as many diagonals as it has sides. How many diagonals can be drawn from any one of its vertices?",
+      "choices": ["$5$", "$10$", "$13$", "$26$", "$65$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "An $n$-gon has $\\dfrac{n(n-3)}{2}$ diagonals. Setting this equal to $5n$ gives $n - 3 = 10$, so $n = 13$. From one vertex, diagonals go to every vertex except itself and its two neighbours: $13 - 3 = 10$.",
+        "steps": ["1. $\\dfrac{n(n-3)}{2} = 5n \\Rightarrow n - 3 = 10 \\Rightarrow n = 13$.", "2. Diagonals from one vertex: $n - 3 = 10$."],
+        "fast": "$\\dfrac{n-3}{2} = 5$ gives $n - 3 = 10$ directly, which is the count per vertex.",
+        "trap": "Answering the total number of diagonals ($65$) or the number of sides ($13$)."
+      },
+      "tags": [{ "kind": "concept", "id": "polygons-quadrilaterals", "role": "primary" }],
+      "setup": "the diagonal count is a stated multiple of the side count; find n, then report the diagonals from one vertex (a neighbouring quantity)",
+      "variant": "the number of diagonals of a polygon" },
+
+    { "id": "s2q11", "section": 2, "type": "mc", "difficulty": 5,
+      "prompt": "In acute triangle $ABC$, angle $B$ measures $70^\\circ$. The bisector of angle $A$ and the altitude from $A$ to side $BC$ form an angle of $12^\\circ$. What is the measure of angle $A$?",
+      "choices": ["$16^\\circ$", "$24^\\circ$", "$52^\\circ$", "$64^\\circ$", "$82^\\circ$"],
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "The altitude makes angle $90^\\circ - 70^\\circ = 20^\\circ$ with side $AB$; the bisector makes angle $\\tfrac{A}{2}$ with $AB$. So $\\left|\\tfrac{A}{2} - 20^\\circ\\right| = 12^\\circ$, giving $A = 64^\\circ$ or $A = 16^\\circ$. With $A = 16^\\circ$, angle $C = 94^\\circ$ and the triangle is not acute; with $A = 64^\\circ$, $C = 46^\\circ$. So $A = 64^\\circ$.",
+        "steps": ["1. In the right triangle formed by $A$, $B$ and the foot of the altitude, the angle at $A$ is $90^\\circ - 70^\\circ = 20^\\circ$.", "2. The bisector makes $\\tfrac{A}{2}$ with $AB$, so $\\tfrac{A}{2} - 20^\\circ = \\pm 12^\\circ$: $A = 64^\\circ$ or $16^\\circ$.", "3. $A = 16^\\circ$ forces $C = 94^\\circ$, not acute. So $A = 64^\\circ$ (then $C = 46^\\circ$; check: $\\tfrac{|B - C|}{2} = 12^\\circ$)."],
+        "fast": "The bisector–altitude angle is half the difference of the other two angles: $\\tfrac{|70^\\circ - C|}{2} = 12^\\circ$ gives $C = 46^\\circ$ (acute), so $A = 64^\\circ$.",
+        "trap": "Taking $A = 2 \\times 12^\\circ = 24^\\circ$, or keeping $A = 16^\\circ$ without checking that the triangle stays acute."
+      },
+      "tags": [{ "kind": "concept", "id": "lines-angles", "role": "primary" }, { "kind": "concept", "id": "triangles", "role": "secondary" }],
+      "setup": "the angle between an angle bisector and the altitude from the same vertex is given with one other angle; two signs give two candidates and the acute condition rejects one",
+      "variant": "angle bisectors" },
+
+    { "id": "s2q12", "section": 2, "type": "mc", "figureId": "fig3", "difficulty": 4,
+      "prompt": "The figure shows the floor plan of a shop. The curved wall is a semicircle whose diameter lies along the right wall, the slanted wall cuts an isosceles right triangle off the top-left corner of a rectangle, and every other corner is a right angle. What is the area of the floor, in square meters?",
+      "choices": ["$300 + 8\\pi$", "$318 + 8\\pi$", "$318 + 16\\pi$", "$318 + 32\\pi$", "$336 + 8\\pi$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "The top wall is $18$ of the full width $24$, so the cut-off triangle has a horizontal leg of $6$, and, being isosceles, a vertical leg of $6$. The rectangle's height is $8 + 6 = 14$. The right wall is $3 + d + 3 = 14$, so the semicircle's diameter is $8$ and its radius $4$. Area $= 24 \\times 14 - \\tfrac12(6)(6) + \\tfrac12\\pi(4)^2 = 336 - 18 + 8\\pi = 318 + 8\\pi$.",
+        "steps": ["1. Horizontal leg of the cut: $24 - 18 = 6$; isosceles, so the vertical leg is $6$.", "2. Height: $8 + 6 = 14$.", "3. Diameter: $14 - 3 - 3 = 8$, radius $4$.", "4. Area: $336 - 18 + \\tfrac12 \\pi \\cdot 16 = 318 + 8\\pi$."],
+        "fast": "Rectangle $24 \\times 14$, minus a $6$-$6$ right triangle, plus a half-disk of radius 4.",
+        "trap": "Using a full disk of radius 4 ($16\\pi$), the diameter as the radius ($32\\pi$), or subtracting a $6 \\times 6$ square for the corner ($300$)."
+      },
+      "tags": [{ "kind": "concept", "id": "area-perimeter", "role": "primary" }],
+      "setup": "a rectilinear floor plan with one corner cut off and a semicircular bay; the missing height and the bay's diameter come from the labeled pieces; area = rectangle minus triangle plus half-disk",
+      "variant": "the area of an irregular composite figure" },
+
+    {"id": "s2q13", "section": 2, "type": "mc_multi", "difficulty": 4, "prompt": "Let $R(x) = \\dfrac{9 - x^2}{x^2 - 3x}$. Which of the following give the same value as $R(x)$ at every $x$ for which $R(x)$ has a value, and are themselves defined there?\n\nIndicate all such expressions.", "choices": ["$\\dfrac{x+3}{x}$", "$-1 - \\dfrac{3}{x}$", "$\\dfrac{x^2+6x+9}{-x^2-3x}$", "$\\dfrac{3+x}{-x}$", "$\\dfrac{x^2-9}{3x-x^2}$"], "key": {"sel": [1, 3, 4]}, "explanation": {"key": "$R(x) = \\dfrac{(3-x)(3+x)}{x(x-3)}$, defined for $x \\ne 0, 3$. Since $3 - x = -(x - 3)$, it equals $-\\dfrac{x+3}{x}$ there. B and D are that expression, and E is $R(x)$ with numerator and denominator both negated. A drops the minus sign; C is undefined at $x = -3$, where $R(-3) = 0$.", "steps": ["1. $R(x) = \\dfrac{-(x-3)(x+3)}{x(x-3)} = -\\dfrac{x+3}{x}$ for $x \\ne 0, 3$.", "2. A: $\\dfrac{x+3}{x}$ has the opposite sign (at $x = 1$: $4$ vs $R(1) = -4$). No.", "3. B: $-1 - \\dfrac3x = -\\dfrac{x+3}{x}$. Yes. D: $\\dfrac{3+x}{-x} = -\\dfrac{x+3}{x}$. Yes.", "4. C: $\\dfrac{(x+3)^2}{-x(x+3)}$ matches where defined but is undefined at $x = -3$, where $R(-3) = 0$. No.", "5. E: $\\dfrac{x^2-9}{3x-x^2} = \\dfrac{-(9-x^2)}{-(x^2-3x)} = R(x)$, with the same excluded values $0$ and $3$. Yes."], "fast": "Flip $3 - x$ to $-(x-3)$, cancel, and compare every choice with $-\\dfrac{x+3}{x}$ at $x = 1$ and $x = -3$.", "trap": "Cancelling $3 - x$ against $x - 3$ as if they were equal gives $\\dfrac{x+3}{x}$ (A) without the minus sign; C looks equal after cancelling but adds a hole at $x = -3$."}, "tags": [{"kind": "concept", "id": "algebraic-expressions", "role": "primary"}], "setup": "which expressions equal a rational expression whose numerator factor is the negative of a denominator factor (the sign flip on cancelling), with one choice adding a new excluded point", "variant": "simplifying a rational expression", "revisits": "quant-004:s2q13"},
+
+    { "id": "s2q14", "section": 2, "type": "mc_multi", "difficulty": 5,
+      "prompt": "The lockers in a school hallway are numbered 1 through $N$, where $N \\ge 3$. A student adds up the numbers of all the lockers whose numbers are multiples of 3 and gets a total of $T$. Which of the following could be $T$?\n\nIndicate all such values.",
+      "choices": ["$18$", "$45$", "$90$", "$165$", "$252$", "$630$"],
+      "key": { "sel": [0, 1, 3, 5] },
+      "explanation": {
+        "key": "If $m$ multiples of 3 are at most $N$, they are $3, 6, \\dots, 3m$, with sum $3(1 + 2 + \\dots + m) = \\dfrac{3m(m+1)}{2}$. So $T$ must be 3 times a triangular number: $\\dfrac{T}{3}$ must be one of $1, 3, 6, 10, 15, 21, \\dots$",
+        "steps": ["1. $T = 3 \\cdot \\dfrac{m(m+1)}{2}$, where $m = \\lfloor N/3 \\rfloor \\ge 1$.", "2. $18 \\to 6 = \\tfrac{3 \\cdot 4}{2}$ ($m = 3$). Yes. $45 \\to 15$ ($m = 5$). Yes.", "3. $90 \\to 30$, between $28$ and $36$. No. $165 \\to 55$ ($m = 10$). Yes.", "4. $252 \\to 84$, between $78$ and $91$. No. $630 \\to 210$ ($m = 20$). Yes."],
+        "fast": "Divide by 3 and test for a triangular number: $6, 15, 55, 210$ are; $30$ and $84$ are not.",
+        "trap": "Keeping every multiple of 3 (or of 9) as possible; $90$ and $252$ are multiples of 9 but not 3 times a triangular number."
+      },
+      "tags": [{ "kind": "concept", "id": "sequences-patterns", "role": "primary" }],
+      "setup": "the sum of the multiples of 3 up to an unknown bound is 3 times a triangular number; select the totals that can occur",
+      "variant": "sum of integers in a range with a condition (multiples of 3)" },
+
+    {"id": "s2q15", "section": 2, "type": "numeric", "difficulty": 4, "prompt": "The constant $k$ is a negative integer, and the equations $4x + y = 9$ and $kx + 2y = 3$ have a common solution $(x, y)$ in which $x$ and $y$ are integers. What is the value of $x + y$?", "numeric": {"kind": "single"}, "key": {"value": "6"}, "explanation": {"key": "From the first equation $y = 9 - 4x$. Substituting: $kx + 18 - 8x = 3$, so $(8 - k)x = 15$. Since $k$ is negative, $8 - k$ is an integer of at least 9 that divides 15, so $8 - k = 15$, $k = -7$ and $x = 1$. Then $y = 5$ and $x + y = 6$.", "steps": ["1. $y = 9 - 4x$; substituting, $(8 - k)x = 15$.", "2. $k \\le -1$ makes $8 - k \\ge 9$; the only divisor of 15 that large is 15.", "3. $k = -7$, $x = 1$, $y = 5$: $x + y = 6$. Check: $-7(1) + 2(5) = 3$."], "fast": "$(8 - k)x = 15$ with $8 - k \\ge 9$ forces $x = 1$, so $x + y = 9 - 3x = 6$.", "trap": "Allowing any integer $k$ leaves $x$ open among the divisors of 15 ($\\pm1, \\pm3, \\pm5, \\pm15$) and suggests the value cannot be found; the sign of $k$ leaves one case."}, "tags": [{"kind": "concept", "id": "linear-equations", "role": "primary"}], "setup": "a 2x2 system with a negative integer parameter and an integer solution; elimination gives (8 - k)x = 15, and 8 - k >= 9 leaves one divisor; then x + y", "variant": "solving for an expression (x + y) instead of each variable", "revisits": "quant-004:s2q9"}
+  ]
+}

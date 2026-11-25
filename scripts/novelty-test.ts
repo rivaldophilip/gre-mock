@@ -44,6 +44,15 @@ function bankSynonyms() {
   return synCache;
 }
 
+/** A DI item's figure as text for the judge: caption and table rows (an SVG chart is named, not shown). */
+function figureText(test: Test, id: string): string {
+  const f = test.figures.find((x) => x.id === id);
+  if (!f) return "";
+  const lines = [`Figure ${id}: ${oneLine(f.caption ?? "")}${f.svg ? " (chart)" : ""}`];
+  if (f.table) lines.push(`| ${f.table.head.join(" | ")} |`, ...f.table.rows.map((r) => `| ${r.join(" | ")} |`));
+  return lines.join("\n");
+}
+
 function quantSections(test: Test, earlier: PastItem[], only?: Set<string>): string[] {
   const out: string[] = [];
   for (const q of test.questions) {
@@ -58,6 +67,8 @@ function quantSections(test: Test, earlier: PastItem[], only?: Set<string>): str
       .slice(0, CROSS_MAX)
       .map((x) => x.e);
     out.push(`### ${test.id} ${q.id} (${q.type}, ${c})`, itemText(q), "");
+    const fig = q.figureId ? figureText(test, q.figureId) : "";
+    if (fig) out.push(fig, "");
     if (q.variant) out.push(variantNote(q.variant), "");
     if (q.revisits) out.push(revisitNote(q.revisits), "");
     out.push(same.length || cross.length ? "Earlier items:" : "Earlier items: none");

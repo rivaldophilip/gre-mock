@@ -1,0 +1,584 @@
+{
+  "id": "quant-020",
+  "measure": "quant",
+  "title": "Quant Hard Mock 20",
+  "sections": [{ "n": 1, "minutes": 21 }, { "n": 2, "minutes": 26 }],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Finishers of a city 10-kilometer road race, by age division and finishing time in minutes",
+      "table": {
+        "head": ["Division", "30–39", "40–49", "50–59", "60–69", "Total"],
+        "rows": [
+          ["Open (under 40)", "36", "84", "60", "20", "200"],
+          ["Masters (40 to 54)", "14", "46", "70", "30", "160"],
+          ["Veterans (55 and over)", "2", "18", "40", "20", "80"],
+          ["Total", "52", "148", "170", "70", "440"]
+        ]
+      }
+    },
+    {
+      "id": "fig2",
+      "caption": "Every value of the function f",
+      "table": {
+        "head": ["x", "0", "1", "2", "3", "4", "5", "6"],
+        "rows": [["f(x)", "5", "4", "2", "4", "7", "1", "4"]]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1", "section": 1, "type": "qc", "difficulty": 3,
+      "prompt": "An elevator makes two moves in a row: first $a$ floors, then $b$ floors, where $a$ and $b$ are nonzero integers, a positive number meaning up and a negative number meaning down. After the two moves the elevator is 4 floors above where it started, and it has traveled 10 floors in all.",
+      "qc": { "a": "$ab$", "b": "$-21$" },
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "The net change is $|a+b| = 4$ but the distance traveled is $|a|+|b| = 10$. The two are equal when $a$ and $b$ have the same sign, so here the signs are opposite, and the moves are $7$ up and $3$ down: $ab = -21$.",
+        "steps": [
+          "Net change: $a + b = 4$. Distance traveled: $|a| + |b| = 10$.",
+          "If $a$ and $b$ had the same sign, $|a| + |b|$ would equal $|a + b| = 4$. Since $10 \\ne 4$, one move is up and one is down.",
+          "Up move $u$, down move of size $w$: $u - w = 4$ and $u + w = 10$, so $u = 7$ and $w = 3$.",
+          "Whichever order the moves came in, $ab = 7 \\cdot (-3) = -21$. The quantities are equal."
+        ],
+        "fast": "Opposite signs, so the sizes are $\\tfrac{10+4}{2} = 7$ and $\\tfrac{10-4}{2} = 3$; the product is $-21$.",
+        "trap": "Treating 10 as $a + b$ (or missing that the order of the moves does not matter) leads to D; the two given totals fix both sizes and the signs."
+      },
+      "tags": [{ "kind": "concept", "id": "number-line-abs", "role": "primary" }],
+      "setup": "two signed moves with the net change and the total distance given; the product of the moves against a value",
+      "variant": "|a| + |b| against |a + b| for signed values"
+    },
+    {
+      "id": "s1q2", "section": 1, "type": "qc", "difficulty": 4,
+      "prompt": "$x^{2} < 1$ and $x < 0$.",
+      "qc": { "a": "$\\dfrac{1}{x} + \\dfrac{1}{x^{2}}$", "b": "$0$" },
+      "key": { "sel": [0] },
+      "explanation": {
+        "key": "Let $y = \\tfrac{1}{x}$. Since $-1 < x < 0$, $y < -1$, and Quantity A is $y + y^{2} = y(y + 1)$, a product of two negatives, so it is positive.",
+        "steps": [
+          "The conditions give $-1 < x < 0$, so $y = \\tfrac{1}{x}$ is less than $-1$.",
+          "Quantity A is $y + y^{2} = y(y + 1)$.",
+          "Both $y$ and $y + 1$ are negative, so the product is positive: Quantity A is greater than 0.",
+          "Check: $x = -\\tfrac{1}{2}$ gives $-2 + 4 = 2 > 0$."
+        ],
+        "fast": "Over a common denominator, A is $\\dfrac{x + 1}{x^{2}}$: the numerator is positive because $x > -1$.",
+        "trap": "Seeing $\\tfrac{1}{x}$ as a large negative number and stopping there gives B; the square of a number below $-1$ outweighs the number itself."
+      },
+      "tags": [{ "kind": "concept", "id": "number-sense-qc", "role": "primary" }],
+      "setup": "negative number above -1: the sum of its reciprocal and the reciprocal of its square against zero",
+      "variant": "x between -1 and 0: powers and reciprocals ordered"
+    },
+    {
+      "id": "s1q3", "section": 1, "type": "qc", "difficulty": 4,
+      "prompt": "The lengths of the bolts produced by a machine are normally distributed. Of these bolts, 16 percent are shorter than 49.4 millimeters and 16 percent are longer than 50.6 millimeters.",
+      "qc": { "a": "The percent of the bolts that are longer than 51.2 millimeters", "b": "$2$" },
+      "key": { "sel": [0] },
+      "explanation": {
+        "key": "Equal tails sit symmetrically about the mean, so the mean is 50 mm; 16 percent beyond a cutoff puts it one standard deviation out, so the standard deviation is 0.6 mm. Then 51.2 mm is 2 standard deviations above the mean, and about 2.5 percent of bolts lie beyond it (more than 2).",
+        "steps": [
+          "The two 16 percent tails are equal, so the mean is midway: $\\tfrac{49.4 + 50.6}{2} = 50$.",
+          "About 16 percent lie more than 1 standard deviation above the mean, so $\\sigma = 50.6 - 50 = 0.6$.",
+          "$z = \\tfrac{51.2 - 50}{0.6} = 2$.",
+          "About 95 percent lie within 2 standard deviations, so about $2.5\\%$ lie above $z = 2$ (the exact normal value is about $2.3\\%$). Either way Quantity A is greater than 2."
+        ],
+        "fast": "Mean 50, $\\sigma = 0.6$, so 51.2 is at $z = 2$: about $2.5\\% > 2\\%$.",
+        "trap": "Using the 5 percent outside 2 standard deviations without halving it, or reading 51.2 as only 1 standard deviation above the mean, misjudges the tail."
+      },
+      "tags": [{ "kind": "concept", "id": "normal-distribution", "role": "primary" }],
+      "setup": "two symmetric tail percents fix the mean and the standard deviation; the percent beyond a farther cutoff against a value",
+      "variant": "a percentile from a z-score"
+    },
+    {
+      "id": "s1q4", "section": 1, "type": "qc", "difficulty": 5,
+      "prompt": "The number $x$ satisfies $(0.6)^{x} > \\left(\\dfrac{5}{3}\\right)^{x - 4}$.",
+      "qc": { "a": "$x$", "b": "$2$" },
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "Write $\\tfrac{5}{3} = (0.6)^{-1}$, so the right side is $(0.6)^{4 - x}$. With a base between 0 and 1, the larger power is the one with the smaller exponent: $x < 4 - x$, so $x < 2$.",
+        "steps": [
+          "$\\left(\\tfrac{5}{3}\\right)^{x - 4} = \\left(\\tfrac{3}{5}\\right)^{4 - x} = (0.6)^{4 - x}$.",
+          "The inequality is $(0.6)^{x} > (0.6)^{4 - x}$.",
+          "Because $0 < 0.6 < 1$, powers of 0.6 decrease as the exponent grows, so the inequality reverses: $x < 4 - x$.",
+          "So $x < 2$, and Quantity B is greater."
+        ],
+        "fast": "Same base 0.6, inequality flips: $x < 4 - x$.",
+        "trap": "Comparing exponents as if the base were above 1 gives $x > 2$ and answer A."
+      },
+      "tags": [{ "kind": "concept", "id": "exponents-roots", "role": "primary" }],
+      "setup": "an exponential inequality with a base below 1 on one side and its reciprocal on the other; rewrite to one base, flip the inequality, compare x with a value",
+      "variant": "bases between 0 and 1 or negative bases"
+    },
+    {
+      "id": "s1q5", "section": 1, "type": "mc", "difficulty": 3,
+      "prompt": "A three-leg relay course is laid out for a charity run. The second leg is 6 kilometers shorter than twice the first leg, the third leg is 2 kilometers longer than the second leg, and the first leg makes up 25 percent of the whole course. How many kilometers long is the longest leg?",
+      "choices": ["10", "16", "20", "34", "40"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "With first leg $f$: second $2f - 6$, third $2f - 4$, total $5f - 10$. Then $f = \\tfrac{1}{4}(5f - 10)$ gives $f = 10$, and the longest leg is the third, $16$ km.",
+        "steps": [
+          "\"6 shorter than twice the first\" is $2f - 6$; the third leg is $(2f - 6) + 2 = 2f - 4$.",
+          "Total: $f + (2f - 6) + (2f - 4) = 5f - 10$.",
+          "$f = 0.25(5f - 10)$, so $4f = 5f - 10$ and $f = 10$.",
+          "Legs: 10, 14 and 16 km. The longest is 16 km."
+        ],
+        "fast": "Four first legs equal the course: $4f = 5f - 10$, $f = 10$, third leg $2(10) - 4 = 16$.",
+        "trap": "Reading \"6 shorter than twice\" as $2(f - 6)$ gives $f = 22$ and a longest leg of 34; stopping at the total (40) or at $f$ (10) answers a neighbouring question."
+      },
+      "tags": [{ "kind": "concept", "id": "word-problems-age-sum", "role": "primary" }],
+      "setup": "three parts related by less-than-twice / more-than / percent of the total; the largest part",
+      "variant": "translating 'more than' / 'less than' in order",
+      "revisits": "quant-003:s1q9"
+    },
+    {
+      "id": "s1q6", "section": 1, "type": "mc", "difficulty": 4,
+      "prompt": "In the $xy$-plane, a billiard ball rolls in a straight line from point $A(-2, 3)$ to a point $P$ on the $x$-axis and then in a straight line to point $B(8, 5)$. The point $P$ is chosen so that the total distance $AP + PB$ is as small as possible. What is the $x$-coordinate of $P$?",
+      "choices": ["$\\tfrac{3}{2}$", "$\\tfrac{7}{4}$", "$\\tfrac{5}{2}$", "$3$", "$\\tfrac{17}{4}$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "Reflect $B$ across the $x$-axis to $B'(8, -5)$. For every $P$ on the axis, $PB = PB'$, so $AP + PB$ is least when $P$ lies on segment $AB'$. That segment crosses the axis at $x = \\tfrac{7}{4}$.",
+        "steps": [
+          "Reflection across the $x$-axis: $B(8, 5) \\to B'(8, -5)$, and $PB = PB'$ for $P$ on the axis.",
+          "$AP + PB'$ is least when $A$, $P$, $B'$ are collinear.",
+          "Line $AB'$: slope $\\tfrac{-5 - 3}{8 - (-2)} = -\\tfrac{4}{5}$, so $y = 3 - \\tfrac{4}{5}(x + 2)$.",
+          "$y = 0$ when $x + 2 = \\tfrac{15}{4}$, so $x = \\tfrac{7}{4}$."
+        ],
+        "fast": "$P$ divides the horizontal run from $-2$ to $8$ in the ratio of the heights $3 : 5$: $x = -2 + 10 \\cdot \\tfrac{3}{8} = \\tfrac{7}{4}$.",
+        "trap": "The midpoint of the $x$-coordinates (3) ignores the different heights; splitting the run in the ratio $5 : 3$ instead of $3 : 5$ gives $\\tfrac{17}{4}$."
+      },
+      "tags": [{ "kind": "concept", "id": "geometry-coordinate", "role": "primary" }],
+      "setup": "shortest path from one point to an axis and on to a second point: reflect one point across the axis and join with a straight line; the touching point",
+      "variant": "reflection of a point across an axis or y = x"
+    },
+    {
+      "id": "s1q7", "section": 1, "type": "mc", "difficulty": 5,
+      "prompt": "A delivery van drives from its depot to a warehouse that is 6 blocks east and 4 blocks north of the depot, along a rectangular grid of streets, always driving one block east or one block north at a time. Two intersections are closed for roadwork: the one 2 blocks east and 2 blocks north of the depot, and the one 4 blocks east and 3 blocks north of the depot. How many different routes can the van take that avoid both closed intersections?",
+      "choices": ["15", "54", "69", "105", "120"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "A route is an arrangement of 6 identical E moves and 4 identical N moves: $\\binom{10}{4} = 210$. Remove the 90 routes through the first closed point and the 105 through the second, then add back the 54 through both: $69$.",
+        "steps": [
+          "All routes: $\\binom{10}{4} = 210$.",
+          "Through $(2, 2)$: $\\binom{4}{2}\\binom{6}{2} = 6 \\cdot 15 = 90$.",
+          "Through $(4, 3)$: $\\binom{7}{3}\\binom{3}{1} = 35 \\cdot 3 = 105$.",
+          "Through both: $\\binom{4}{2} \\cdot \\binom{3}{1} \\cdot \\binom{3}{1} = 6 \\cdot 3 \\cdot 3 = 54$ (from $(2, 2)$ to $(4, 3)$ is 2 E and 1 N).",
+          "Avoiding both: $210 - 90 - 105 + 54 = 69$."
+        ],
+        "fast": "Inclusion-exclusion on the two blocked points: $210 - 90 - 105 + 54 = 69$.",
+        "trap": "Forgetting to add back the routes through both points gives $15$; removing only one point's routes gives 120 or 105."
+      },
+      "tags": [{ "kind": "concept", "id": "counting-restrictions", "role": "primary" }],
+      "setup": "grid routes as arrangements of identical east and north moves avoiding two blocked points: total minus routes through each, plus routes through both",
+      "variant": "identical items arranged with a restriction"
+    },
+    {
+      "id": "s1q8", "section": 1, "type": "mc_multi", "difficulty": 4,
+      "prompt": "A machine cuts a steel rod 1 meter long into $n$ pieces of equal length, where $n$ is a positive integer, and the length of each piece, in meters, is a terminating decimal. Which of the following numbers must also be terminating decimals? Select all such numbers.",
+      "choices": ["$\\dfrac{1}{2n}$", "$\\dfrac{1}{n + 1}$", "$\\dfrac{9}{6n}$", "$\\dfrac{n + 1}{n}$", "$\\dfrac{1}{3n}$", "$\\dfrac{n}{12}$"],
+      "key": { "sel": [0, 2, 3] },
+      "explanation": {
+        "key": "$\\tfrac{1}{n}$ terminates exactly when $n$ has no prime factors other than 2 and 5. Then $\\tfrac{1}{2n}$, $\\tfrac{9}{6n} = \\tfrac{3}{2n}$ and $\\tfrac{n + 1}{n} = 1 + \\tfrac{1}{n}$ all have such denominators in lowest terms. $\\tfrac{1}{n+1}$ fails for $n = 2$, and $\\tfrac{1}{3n}$ and $\\tfrac{n}{12}$ keep a factor 3 that $n$ can never cancel.",
+        "steps": [
+          "$n = 2^{a}5^{b}$.",
+          "A: $2n = 2^{a+1}5^{b}$; terminates.",
+          "B: $n = 2$ gives $\\tfrac{1}{3}$; not always.",
+          "C: $\\tfrac{9}{6n} = \\tfrac{3}{2n}$ in lowest terms has denominator $2^{a+1}5^{b}$; terminates.",
+          "D: $1 + \\tfrac{1}{n}$; terminates.",
+          "E: $3n$ keeps the factor 3 and the numerator 1 cannot cancel it; never terminates.",
+          "F: $\\tfrac{n}{12} = \\tfrac{n}{4 \\cdot 3}$, and 3 does not divide $n$; never terminates."
+        ],
+        "fast": "Reduce each fraction and look for a prime other than 2 or 5 in the denominator.",
+        "trap": "Rejecting $\\tfrac{9}{6n}$ because 6 contains a 3 (it cancels), or accepting $\\tfrac{1}{n+1}$ because it works for $n = 1$ and $n = 4$."
+      },
+      "tags": [{ "kind": "concept", "id": "fractions-decimals", "role": "primary" }],
+      "setup": "1/n is known to terminate; select which related fractions must terminate (an extra factor 2, a 3 that cancels, one plus the fraction, a factor 3 that cannot cancel, a shifted denominator)",
+      "variant": "terminating vs repeating decimal from the denominator's prime factors"
+    },
+    {
+      "id": "s1q9", "section": 1, "type": "numeric", "difficulty": 3,
+      "prompt": "The front row of one seating section in a stadium has 18 seats, and each row behind it has 3 more seats than the row directly in front of it. The back row of the section has 75 seats. How many seats are in the section altogether?",
+      "numeric": { "kind": "single" },
+      "key": { "value": "930" },
+      "explanation": {
+        "key": "There are $\\tfrac{75 - 18}{3} + 1 = 20$ rows, averaging $\\tfrac{18 + 75}{2} = 46.5$ seats: $20 \\times 46.5 = 930$.",
+        "steps": [
+          "Row $k$ has $18 + 3(k - 1)$ seats; $18 + 3(k - 1) = 75$ gives $k = 20$.",
+          "Sum of an arithmetic sequence: number of terms times the average of the first and last terms.",
+          "$20 \\cdot \\tfrac{18 + 75}{2} = 930$."
+        ],
+        "fast": "$20$ rows, average $46.5$: $930$.",
+        "trap": "Counting $\\tfrac{75 - 18}{3} = 19$ rows (the off-by-one) gives $883.5$, which is not even a whole number."
+      },
+      "tags": [{ "kind": "concept", "id": "sequences-patterns", "role": "primary" }],
+      "setup": "first term, common difference and last term given; count the terms, then the sum",
+      "variant": "arithmetic sequence: n-th term, sum, count of terms"
+    },
+    {
+      "id": "s1q10", "section": 1, "type": "mc", "setId": "di1", "figureId": "fig1", "difficulty": 3,
+      "prompt": "The Masters finishers with times under 50 minutes made up what percent of all the finishers with times under 50 minutes?",
+      "choices": ["$15\\%$", "$25\\%$", "$30\\%$", "$37.5\\%$", "$45\\%$"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Masters under 50 minutes: $14 + 46 = 60$. All finishers under 50 minutes: $52 + 148 = 200$ (from the Total row). $\\tfrac{60}{200} = 30\\%$.",
+        "steps": [
+          "Masters, 30–39 and 40–49: $14 + 46 = 60$.",
+          "Column totals for those two intervals: $52 + 148 = 200$.",
+          "$\\tfrac{60}{200} = 0.30 = 30\\%$."
+        ],
+        "fast": "$\\tfrac{14 + 46}{52 + 148} = 30\\%$.",
+        "trap": "Dividing by the Masters row total, $\\tfrac{60}{160} = 37.5\\%$, answers what percent of the Masters ran under 50 minutes."
+      },
+      "tags": [{ "kind": "concept", "id": "data-tables-graphs", "role": "primary" }],
+      "setup": "two cells of one row against the matching column totals (not the row total)",
+      "variant": "a two-way table with totals"
+    },
+    {
+      "id": "s1q11", "section": 1, "type": "mc", "setId": "di1", "figureId": "fig1", "difficulty": 4,
+      "prompt": "Each finisher's time was recorded as a whole number of minutes. Based on the table, what is the greatest possible mean time, in minutes, of the Veterans finishers?",
+      "choices": ["49.75", "54.25", "54.75", "58.75", "59.75"],
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "The mean is greatest when every Veteran's time is at the top of its interval: 39, 49, 59 or 69. That gives $\\tfrac{2(39) + 18(49) + 40(59) + 20(69)}{80} = \\tfrac{4{,}700}{80} = 58.75$.",
+        "steps": [
+          "Veterans: 2, 18, 40 and 20 finishers in the four intervals; 80 in all.",
+          "Whole-minute times in 30–39 are at most 39, and so on: the tops are 39, 49, 59, 69.",
+          "$2(39) + 18(49) + 40(59) + 20(69) = 78 + 882 + 2{,}360 + 1{,}380 = 4{,}700$.",
+          "$\\tfrac{4{,}700}{80} = 58.75$."
+        ],
+        "fast": "Midpoint estimate $54.25$ plus the $4.5$ minutes from each midpoint to its interval's top: $58.75$.",
+        "trap": "The midpoint estimate (54.25) is the usual grouped mean, not the greatest possible one; using 40, 50, 60, 70 as tops (59.75) counts times the intervals exclude."
+      },
+      "tags": [
+        { "kind": "concept", "id": "frequency-distributions", "role": "primary" },
+        { "kind": "concept", "id": "min-max-bounding", "role": "secondary" }
+      ],
+      "setup": "grouped whole-number data: the greatest possible mean of one row puts every value at its interval's top",
+      "variant": "mean from a histogram's grouped data"
+    },
+    {
+      "id": "s1q12", "section": 1, "type": "mc", "setId": "di1", "figureId": "fig1", "difficulty": 5,
+      "prompt": "Of the Masters finishers, 15 percent were running the race for the first time. Of all the first-time runners in the Open and Masters divisions together, 30 percent were in the Masters division. If one Open finisher is chosen at random, what is the probability that this finisher was running the race for the first time?",
+      "choices": ["$\\dfrac{7}{55}$", "$\\dfrac{2}{9}$", "$\\dfrac{7}{25}$", "$\\dfrac{3}{10}$", "$\\dfrac{7}{10}$"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "First-time Masters: $0.15 \\times 160 = 24$. They are 30 percent of the first-timers in the two divisions, so there are $\\tfrac{24}{0.3} = 80$ such first-timers, 56 of them in Open. Among the 200 Open finishers: $\\tfrac{56}{200} = \\tfrac{7}{25}$.",
+        "steps": [
+          "Masters finishers: 160 (table). First-timers among them: $0.15 \\times 160 = 24$.",
+          "These 24 are $30\\%$ of the first-timers in Open and Masters: total $\\tfrac{24}{0.30} = 80$.",
+          "Open first-timers: $80 - 24 = 56$.",
+          "Open finishers: 200 (table). $P(\\text{first time} \\mid \\text{Open}) = \\tfrac{56}{200} = \\tfrac{7}{25}$."
+        ],
+        "fast": "$24 \\to 80 \\to 56$, over the Open total 200.",
+        "trap": "Dividing the 80 first-timers by both divisions' 360 finishers ($\\tfrac{2}{9}$) answers a different question; $\\tfrac{7}{10}$ is $P(\\text{Open} \\mid \\text{first time})$, the reverse conditional; $\\tfrac{7}{55}$ uses all 440 finishers."
+      },
+      "tags": [
+        { "kind": "concept", "id": "probability-conditional", "role": "primary" },
+        { "kind": "concept", "id": "data-tables-graphs", "role": "secondary" }
+      ],
+      "setup": "a rate within one group and that group's share of an event give the event's count in the other group; the probability within that other group",
+      "variant": "conditional probability from a two-way table",
+      "revisits": "quant-004:s1q12"
+    },
+    {
+      "id": "s2q1", "section": 2, "type": "qc", "figureId": "fig2", "difficulty": 4,
+      "prompt": "The table gives every value of a function $f$ that is defined only at the seven integers shown. For two different integers $p$ and $q$ in the table, $f(p) = f(q) = 4$.",
+      "qc": { "a": "$p + q$", "b": "$7$" },
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "Three inputs give 4: $x = 1$, $3$ and $6$. The pair $\\{p, q\\}$ can be $\\{1, 3\\}$, $\\{1, 6\\}$ or $\\{3, 6\\}$, so $p + q$ is 4, 7 or 9.",
+        "steps": [
+          "Read the table: $f(1) = f(3) = f(6) = 4$, and no other input gives 4.",
+          "Possible sums: $1 + 3 = 4 < 7$; $1 + 6 = 7$; $3 + 6 = 9 > 7$.",
+          "Different pairs give different relationships, so it cannot be determined."
+        ],
+        "fast": "Three inputs share the output 4, so the pair is not fixed.",
+        "trap": "Stopping at the first two 4s ($x = 1$ and $x = 3$) gives B."
+      },
+      "tags": [{ "kind": "concept", "id": "functions", "role": "primary" }],
+      "setup": "finite-domain table with one output repeated three times; the sum of two inputs sharing that output against a value",
+      "variant": "a function given by a table"
+    },
+    {
+      "id": "s2q2", "section": 2, "type": "qc", "difficulty": 5,
+      "prompt": "On an assembly line, each part is defective with probability 0.1, independently of every other part. An inspector checks the parts one at a time, in order, and stops as soon as she finds a defective part.",
+      "qc": { "a": "The probability that the inspector checks at least 7 parts", "b": "$\\dfrac{1}{2}$" },
+      "key": { "sel": [0] },
+      "explanation": {
+        "key": "She checks at least 7 parts exactly when the first 6 parts are all good: $0.9^{6} \\approx 0.531$, which is greater than $\\tfrac{1}{2}$.",
+        "steps": [
+          "Checking a 7th part means no defective part among the first 6.",
+          "$P = 0.9^{6}$.",
+          "$0.9^{2} = 0.81$, $0.9^{3} = 0.729$, $0.9^{6} = 0.729^{2} \\approx 0.531$.",
+          "$0.531 > 0.5$, so Quantity A is greater."
+        ],
+        "fast": "$0.729^{2}$ is a little above $0.7^{2} + 2(0.7)(0.029) \\approx 0.53$.",
+        "trap": "Requiring the first 7 parts to be good gives $0.9^{7} \\approx 0.478 < 0.5$ and answer B: the 7th part is checked whether or not it is defective."
+      },
+      "tags": [{ "kind": "concept", "id": "probability-basic", "role": "primary" }],
+      "setup": "repeated independent trials stopped at the first failure; at least k trials means the first k - 1 all succeed; against one half",
+      "variant": "independent events across repeated trials"
+    },
+    {
+      "id": "s2q3", "section": 2, "type": "qc", "difficulty": 5,
+      "prompt": "In triangle $ABC$, $AB = 10$ and $AC = 8$. Point $D$ lies strictly between $A$ and $B$ on side $AB$, and point $E$ lies on side $AC$ with $AE = 4$. Angle $AED$ has the same measure as angle $ABC$.",
+      "qc": { "a": "The area of triangle $ADE$", "b": "$\\dfrac{1}{6}$ of the area of triangle $ABC$" },
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "Triangles $AED$ and $ABC$ share angle $A$ and have $\\angle AED = \\angle ABC$, so they are similar with $E \\leftrightarrow B$ and $D \\leftrightarrow C$. The ratio is $\\tfrac{AE}{AB} = \\tfrac{4}{10}$, so the area ratio is $0.16 < \\tfrac{1}{6}$.",
+        "steps": [
+          "Matching angles: $A \\leftrightarrow A$, $E \\leftrightarrow B$, $D \\leftrightarrow C$.",
+          "Scale factor: $\\tfrac{AE}{AB} = \\tfrac{4}{10} = 0.4$ (so $AD = 0.4 \\cdot AC = 3.2$, which is on side $AB$).",
+          "Area ratio: $0.4^{2} = 0.16$.",
+          "$\\tfrac{1}{6} \\approx 0.167 > 0.16$, so Quantity B is greater."
+        ],
+        "fast": "$AE$ corresponds to $AB$, not $AC$: $(0.4)^{2} = 0.16 < 0.1\\overline{6}$.",
+        "trap": "Treating $DE$ as parallel to $BC$ pairs $AE$ with $AC$, a ratio of $\\tfrac{1}{2}$ and an area of $\\tfrac{1}{4}$ of $ABC$, which gives A."
+      },
+      "tags": [{ "kind": "concept", "id": "triangles", "role": "primary" }],
+      "setup": "a cut-off triangle similar to the whole with the vertices matched crosswise (not parallel to the third side); the area ratio against a fraction",
+      "variant": "similar triangles: side and area ratios"
+    },
+    {
+      "id": "s2q4", "section": 2, "type": "qc", "difficulty": 4,
+      "prompt": "An airline first added 40 daily flights to its schedule at one airport and then increased the number of its daily flights there by 15 percent. After both changes, the airline had 299 daily flights at the airport.",
+      "qc": { "a": "The number of daily flights the airline had at the airport before the changes", "b": "$220$" },
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Undo the changes in reverse order: before the 15 percent increase there were $\\tfrac{299}{1.15} = 260$ flights, and before the 40 were added there were $260 - 40 = 220$.",
+        "steps": [
+          "Last change first: $\\tfrac{299}{1.15} = 260$.",
+          "Then remove the 40 added flights: $260 - 40 = 220$.",
+          "Check: $(220 + 40) \\times 1.15 = 299$. The quantities are equal."
+        ],
+        "fast": "$\\tfrac{299}{1.15} - 40 = 220$.",
+        "trap": "Undoing the changes in the order they happened, $\\tfrac{299 - 40}{1.15} \\approx 225.2$, gives A."
+      },
+      "tags": [{ "kind": "concept", "id": "percent", "role": "primary" }],
+      "setup": "an absolute addition followed by a percent increase; undo them in reverse order to recover the original",
+      "variant": "finding the original value after a change"
+    },
+    {
+      "id": "s2q5", "section": 2, "type": "qc", "difficulty": 5,
+      "prompt": "In the $xy$-plane, the graph of $y = x^{2} + bx + c$ crosses the $x$-axis at two points that are 6 units apart and crosses the $y$-axis at the point $(0, 7)$.",
+      "qc": { "a": "The $x$-coordinate of the vertex of the graph", "b": "$0$" },
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "The roots are $r$ and $r + 6$ with product $c = 7$: $r^{2} + 6r - 7 = 0$, so $r = 1$ or $r = -7$. The roots are 1 and 7 (vertex at $x = 4$) or $-7$ and $-1$ (vertex at $x = -4$).",
+        "steps": [
+          "With leading coefficient 1, the product of the roots is $c = 7$.",
+          "Roots $r$ and $r + 6$: $r(r + 6) = 7$, so $(r + 7)(r - 1) = 0$.",
+          "$r = 1$: roots 1 and 7, vertex at $x = 4 > 0$.",
+          "$r = -7$: roots $-7$ and $-1$, vertex at $x = -4 < 0$.",
+          "Both parabolas fit the facts, so the relationship cannot be determined."
+        ],
+        "fast": "Reflecting a fitting parabola across the $y$-axis keeps the gap between the intercepts and the $y$-intercept, so the vertex can be on either side.",
+        "trap": "Taking only the positive root pair (1 and 7) gives A."
+      },
+      "tags": [{ "kind": "concept", "id": "graphs-of-functions", "role": "primary" }],
+      "setup": "monic parabola with the gap between its x-intercepts and its y-intercept given; two mirror-image parabolas fit, so the vertex's side of the y-axis is undetermined",
+      "variant": "parabola vertex, axis of symmetry and intercepts"
+    },
+    {
+      "id": "s2q6", "section": 2, "type": "mc", "difficulty": 4,
+      "prompt": "The cross section of a road tunnel is a circle. The flat road surface across the tunnel is 12 meters wide, and the highest point of the tunnel is 9 meters above the road surface. What is the radius of the circle, in meters?",
+      "choices": ["6", "$\\tfrac{13}{2}$", "7", "$\\tfrac{15}{2}$", "9"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "The road is a chord of length 12 at distance $9 - r$ below the center. Half-chord, distance and radius form a right triangle: $6^{2} + (9 - r)^{2} = r^{2}$, so $r = \\tfrac{13}{2}$.",
+        "steps": [
+          "The highest point is directly above the chord's midpoint, on the line through the center: it is $r$ above the center, so the center is $9 - r$ above the road.",
+          "Right triangle: half-chord 6, leg $9 - r$, hypotenuse $r$.",
+          "$36 + 81 - 18r + r^{2} = r^{2}$, so $18r = 117$ and $r = 6.5$.",
+          "Check: the center is $2.5$ m above the road, and $6^{2} + 2.5^{2} = 6.5^{2}$."
+        ],
+        "fast": "$r = \\dfrac{6^{2} + 9^{2}}{2 \\cdot 9} = \\tfrac{117}{18} = 6.5$.",
+        "trap": "Assuming the road passes through the center gives $r = 6$; taking the height as the radius gives 9."
+      },
+      "tags": [{ "kind": "concept", "id": "circles", "role": "primary" }],
+      "setup": "a chord and the greatest distance from the chord to the circle (through the center) given; the radius from the half-chord right triangle",
+      "variant": "chord length from the distance to the center"
+    },
+    {
+      "id": "s2q7", "section": 2, "type": "mc", "difficulty": 5,
+      "prompt": "Every athlete at a training camp entered at least one of three events: 70 athletes entered the swim, 64 entered the cycling race and 58 entered the run. Given these three counts and the number of athletes at the camp, the greatest possible number of athletes who entered exactly one event is 33. How many athletes were at the camp?",
+      "choices": ["80", "83", "86", "89", "96"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "With $s$, $d$, $t$ athletes in exactly one, two and three events and $N$ in all: $s + d + t = N$ and $s + 2d + 3t = 192$. Then $s = 2N - 192 + t$ and $d = 192 - N - 2t \\ge 0$, so the greatest $s$ is $2N - 192 + \\lfloor \\tfrac{192 - N}{2} \\rfloor$. Only $N = 86$ gives 33.",
+        "steps": [
+          "Entries: $70 + 64 + 58 = 192 = s + 2d + 3t$; people: $N = s + d + t$.",
+          "Subtract: $d + 2t = 192 - N$, so $s = N - d - t = 2N - 192 + t$. Make $t$ as large as possible.",
+          "$d \\ge 0$ caps $t$ at $\\tfrac{192 - N}{2}$. For $N = 86$: $t = 53$, $d = 0$, $s = 172 - 192 + 53 = 33$ (singles $17$, $11$, $5$; all within the event counts).",
+          "Other choices: $N = 80 \\to 24$, $83 \\to 28$, $89 \\to 37$, $96 \\to 48$. The greatest $s$ rises with $N$, so 86 is the only fit."
+        ],
+        "fast": "Greatest $s$ is about $\\tfrac{3N - 192}{2}$: $\\tfrac{3N - 192}{2} = 33$ gives $N = 86$.",
+        "trap": "Capping $t$ at the smallest event (58) instead of at $\\tfrac{192 - N}{2}$ gives $2N - 134 = 33$, $N = 83.5$, pointing to 83; the true cap is set by $d \\ge 0$."
+      },
+      "tags": [
+        { "kind": "concept", "id": "overlapping-sets", "role": "primary" },
+        { "kind": "concept", "id": "min-max-bounding", "role": "secondary" }
+      ],
+      "setup": "three overlapping sets, everyone in at least one: the greatest possible exactly-one count is given; find the total",
+      "variant": "three-set Venn diagram",
+      "revisits": "quant-004:s2q11"
+    },
+    {
+      "id": "s2q8", "section": 2, "type": "mc", "difficulty": 5,
+      "prompt": "A sports team's captain, coach, two rookies and four other players sit down to dinner at a round table with 8 equally spaced seats. The captain and the coach must sit directly across from each other, and the two rookies must sit next to each other. If seatings that differ only by a rotation of the table count as the same, how many different seatings are possible?",
+      "choices": ["96", "192", "240", "720", "1440"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "Fix the captain's seat (this removes rotations); the coach's seat is then forced. The other 6 seats form two arcs of 3, which hold 4 pairs of adjacent seats. Rookies: $4 \\times 2$ ways; the other 4 players: $4!$. Total $8 \\times 24 = 192$.",
+        "steps": [
+          "Captain at seat 0; coach at seat 4 (directly across).",
+          "Seats 1, 2, 3 and 5, 6, 7 remain. Adjacent pairs: (1, 2), (2, 3), (5, 6), (6, 7); seats 3 and 5 are separated by the coach, and 7 and 1 by the captain.",
+          "Rookies: 4 pairs $\\times$ 2 orders $= 8$.",
+          "Other players in the remaining 4 seats: $4! = 24$. Total $8 \\cdot 24 = 192$."
+        ],
+        "fast": "$4 \\cdot 2 \\cdot 4! = 192$.",
+        "trap": "Counting 5 adjacent pairs (treating the two arcs as one run) gives 240; ignoring the rookie condition gives $6! = 720$."
+      },
+      "tags": [{ "kind": "concept", "id": "counting-permutations", "role": "primary" }],
+      "setup": "round table with two people fixed opposite and two others adjacent: fix one seat, count the adjacent seat pairs left on the two arcs",
+      "variant": "circular arrangements"
+    },
+    {
+      "id": "s2q9", "section": 2, "type": "mc", "difficulty": 4,
+      "prompt": "Two running tracks, P and Q, are each laid out as a regular polygon, and the two tracks have the same perimeter. At each corner of track P, the interior angle is 3 times the exterior angle; at each corner of track Q, the interior angle is 5 times the exterior angle. If each side of track P is 90 meters long, how long is each side of track Q, in meters?",
+      "choices": ["54", "60", "72", "135", "150"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "Interior plus exterior is $180^\\circ$. For P: $4e = 180^\\circ$, $e = 45^\\circ$, 8 sides. For Q: $6e = 180^\\circ$, $e = 30^\\circ$, 12 sides. Perimeter $8 \\times 90 = 720$ m, so each side of Q is $\\tfrac{720}{12} = 60$ m.",
+        "steps": [
+          "P: $3e + e = 180^\\circ$, $e = 45^\\circ$, $n = \\tfrac{360}{45} = 8$.",
+          "Q: $5e + e = 180^\\circ$, $e = 30^\\circ$, $n = \\tfrac{360}{30} = 12$.",
+          "Common perimeter: $8 \\cdot 90 = 720$ m.",
+          "Side of Q: $\\tfrac{720}{12} = 60$ m."
+        ],
+        "fast": "Equal perimeters make side length inversely proportional to the number of sides: $90 \\cdot \\tfrac{8}{12} = 60$.",
+        "trap": "Scaling directly by the number of sides, $90 \\cdot \\tfrac{12}{8} = 135$, or by the angle ratios, $90 \\cdot \\tfrac{3}{5} = 54$."
+      },
+      "tags": [{ "kind": "concept", "id": "polygons-quadrilaterals", "role": "primary" }],
+      "setup": "interior angle k times the exterior angle fixes n for two regular polygons of equal perimeter; side lengths in inverse ratio of n",
+      "variant": "interior angle sum of an n-gon, and regular polygons",
+      "revisits": "quant-003:s2q15"
+    },
+    {
+      "id": "s2q10", "section": 2, "type": "mc", "difficulty": 3,
+      "prompt": "At a dye plant, an inlet pipe pours dye into a vat at 9 gallons per minute, and the vat's drain, when open, lets out 4 gallons per minute. One morning a worker forgot to close the drain, and filling the empty vat took 40 minutes longer than it does with the drain closed. How many gallons does the vat hold?",
+      "choices": ["160", "200", "360", "450", "1,170"],
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "With capacity $C$ gallons, the fill takes $\\tfrac{C}{9}$ minutes with the drain closed and $\\tfrac{C}{9 - 4} = \\tfrac{C}{5}$ minutes with it open. $\\tfrac{C}{5} - \\tfrac{C}{9} = \\tfrac{4C}{45} = 40$, so $C = 450$.",
+        "steps": [
+          "Drain closed: rate 9 gallons per minute, time $\\tfrac{C}{9}$.",
+          "Drain open: net rate $9 - 4 = 5$ gallons per minute, time $\\tfrac{C}{5}$.",
+          "$\\tfrac{C}{5} - \\tfrac{C}{9} = 40$: $\\tfrac{9C - 5C}{45} = 40$, so $C = 450$.",
+          "Check: 90 minutes against 50 minutes, a difference of 40."
+        ],
+        "fast": "$C\\left(\\tfrac{1}{5} - \\tfrac{1}{9}\\right) = 40$ gives $C = 40 \\cdot \\tfrac{45}{4} = 450$.",
+        "trap": "Adding the drain's rate instead of subtracting it ($\\tfrac{C}{9} - \\tfrac{C}{13} = 40$) gives 1,170; treating the 40 extra minutes as the whole fill at the net rate gives $40 \\cdot 5 = 200$, or at the inlet rate 360; $40 \\cdot 4 = 160$ is only what the drain lets out in 40 minutes."
+      },
+      "tags": [{ "kind": "concept", "id": "word-problems-rate", "role": "primary" }],
+      "setup": "inlet and drain rates in volume units; the extra fill time with the drain open gives the capacity",
+      "variant": "pipes filling and draining at once"
+    },
+    {
+      "id": "s2q11", "section": 2, "type": "mc", "difficulty": 4,
+      "prompt": "A round metal badge has an equilateral triangle and a square engraved on it, each with all of its vertices on the badge's circular edge. The perimeter of the triangle is 36 centimeters. What is the area of the square, in square centimeters?",
+      "choices": ["48", "72", "96", "144", "216"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "The triangle's side is 12. For an equilateral triangle, the circumradius is $\\tfrac{2}{3}$ of the height $6\\sqrt{3}$, so $R = 4\\sqrt{3}$ and $R^{2} = 48$. The square's diagonal is $2R$, so its area is $\\tfrac{(2R)^{2}}{2} = 2R^{2} = 96$.",
+        "steps": [
+          "Side of the triangle: $\\tfrac{36}{3} = 12$; height $6\\sqrt{3}$.",
+          "The center is the centroid, $\\tfrac{2}{3}$ of the way down the height: $R = 4\\sqrt{3}$, $R^{2} = 48$.",
+          "The square's diagonal is a diameter, $2R$; area $= \\tfrac{d^{2}}{2} = \\tfrac{4R^{2}}{2} = 96$."
+        ],
+        "fast": "$R^{2} = \\tfrac{s^{2}}{3} = 48$; the square's area is $2R^{2} = 96$.",
+        "trap": "Taking the radius as the triangle's full height ($6\\sqrt{3}$) gives 216; giving the square the triangle's side gives 144; stopping at $R^{2}$ gives 48."
+      },
+      "tags": [{ "kind": "concept", "id": "inscribed-figures", "role": "primary" }],
+      "setup": "an equilateral triangle and a square inscribed in one circle: the triangle's side gives the radius, the radius gives the square",
+      "variant": "an equilateral triangle in a circle"
+    },
+    {
+      "id": "s2q12", "section": 2, "type": "mc", "difficulty": 4,
+      "prompt": "On a map drawn in the $xy$-plane with 1 unit equal to 1 kilometer, two straight rail lines lie along the lines $y = 2x + 3$ and $y = 2x - 7$. A straight access road runs from the point $(-1, 1)$ on the first rail line to the second rail line and is perpendicular to both. How long is the access road, in kilometers?",
+      "choices": ["$\\sqrt{5}$", "$2\\sqrt{5}$", "$4$", "$5$", "$10$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "The road has slope $-\\tfrac{1}{2}$: $y - 1 = -\\tfrac{1}{2}(x + 1)$. It meets $y = 2x - 7$ at $(3, -1)$, and the distance from $(-1, 1)$ to $(3, -1)$ is $\\sqrt{16 + 4} = 2\\sqrt{5}$.",
+        "steps": [
+          "Both rail lines have slope 2, so the road has slope $-\\tfrac{1}{2}$.",
+          "Road: $y = -\\tfrac{1}{2}x + \\tfrac{1}{2}$. Set equal to $2x - 7$: $\\tfrac{5}{2}x = \\tfrac{15}{2}$, $x = 3$, $y = -1$.",
+          "Length: $\\sqrt{(3 + 1)^{2} + (-1 - 1)^{2}} = \\sqrt{20} = 2\\sqrt{5}$."
+        ],
+        "fast": "The vertical gap between the lines is 10; the perpendicular gap is $\\tfrac{10}{\\sqrt{1 + 2^{2}}} = 2\\sqrt{5}$.",
+        "trap": "The vertical gap (10) and the horizontal gap (5) between the lines are not the perpendicular distance."
+      },
+      "tags": [{ "kind": "concept", "id": "coordinate-geometry", "role": "primary" }],
+      "setup": "two parallel lines; the perpendicular segment between them from a point on one (not the vertical gap)",
+      "variant": "parallel and perpendicular lines"
+    },
+    {
+      "id": "s2q13", "section": 2, "type": "mc_multi", "difficulty": 4,
+      "prompt": "A tile factory has exactly $360k$ identical square tiles, where $k$ is a positive integer, and lays all of them, with none left over, in one large square without gaps or overlaps. Which of the following could be the value of $k$? Select all such values.",
+      "choices": ["5", "10", "15", "40", "60"],
+      "key": { "sel": [1, 3] },
+      "explanation": {
+        "key": "$360k$ must be a perfect square. $360 = 2^{3} \\cdot 3^{2} \\cdot 5$, so $k$ must supply one more 2 and one more 5: $k = 10m^{2}$. Of the choices, $10$ and $40 = 10 \\cdot 4$ work.",
+        "steps": [
+          "$360 = 2^{3} \\cdot 3^{2} \\cdot 5$: the exponents of 2 and 5 are odd.",
+          "So $k$ must contain $2 \\cdot 5 = 10$ times a perfect square.",
+          "$10$: $3{,}600 = 60^{2}$. $40$: $14{,}400 = 120^{2}$.",
+          "$5$, $15$ and $60 = 10 \\cdot 6$ leave an odd exponent."
+        ],
+        "fast": "Divide each choice by 10 and ask whether the quotient is a perfect square.",
+        "trap": "Fixing only the 5 (choosing 5 or 15) leaves $2^{3}$ unpaired; $60$ is a multiple of 10 but not 10 times a square."
+      },
+      "tags": [{ "kind": "concept", "id": "primes-factors", "role": "primary" }],
+      "setup": "a multiple of a fixed number must be a perfect square; the possible multipliers are the least one times any square",
+      "variant": "smallest multiplier that makes a perfect square or cube"
+    },
+    {
+      "id": "s2q14", "section": 2, "type": "mc_multi", "difficulty": 5,
+      "prompt": "In a time trial, each of five cyclists recorded a finishing time that was a whole number of minutes, and some cyclists may have tied. The fastest time was 30 minutes, the slowest time was 12 minutes more than the fastest, and the mean of the five times was 35 minutes. Which of the following could be the median of the five times? Select all such values.",
+      "choices": ["30", "32", "35", "36", "38"],
+      "key": { "sel": [1, 2, 3] },
+      "explanation": {
+        "key": "The times are $30 \\le a \\le m \\le b \\le 42$ with total $5 \\times 35 = 175$, so $a + m + b = 103$. Greatest $m$: $a = 30$ and $b = m$ give $2m = 73$, so $m \\le 36$. Least $m$: $a = m$ and $b = 42$ give $2m = 61$, so $m \\ge 31$. So 32, 35 and 36 qualify.",
+        "steps": [
+          "Slowest: $30 + 12 = 42$. Total: $5 \\times 35 = 175$, so the middle three sum to $175 - 30 - 42 = 103$.",
+          "Upper bound: $a \\ge 30$ and $b \\ge m$, so $103 \\ge 30 + 2m$ and $m \\le 36.5$, so $m \\le 36$.",
+          "Lower bound: $a \\le m$ and $b \\le 42$, so $103 \\le 2m + 42$ and $m \\ge 30.5$, so $m \\ge 31$.",
+          "Examples: 30, 30, 32, 41, 42 (median 32); 30, 33, 35, 35, 42 (median 35); 30, 30, 36, 37, 42 (median 36). The median 30 would need a time of 43, and 38 needs a total of at least $30 + 30 + 38 + 38 + 42 = 178$."
+        ],
+        "fast": "The middle three sum to 103 and lie between 30 and 42: $30 + 2m \\le 103 \\le 2m + 42$.",
+        "trap": "Forgetting that the range fixes the slowest time at 42 (letting it drop to the median) gives $30 + 30 + 3m \\le 175$, $m \\le 38$, and admits 38; the fastest time 30 is not a possible median."
+      },
+      "tags": [{ "kind": "concept", "id": "min-max-bounding", "role": "primary" }],
+      "setup": "five integers with the least value, the range and the mean given; the median's bounds from the fixed ends and the middle sum",
+      "variant": "extreme values of a mean or median"
+    },
+    {
+      "id": "s2q15", "section": 2, "type": "numeric", "difficulty": 4,
+      "prompt": "The inside of a shipping crate is a rectangular box 9 inches by 12 inches by 40 inches. A flat rectangular divider panel is to be fitted diagonally across the inside so that two opposite sides of the panel run along two edges of the box that are parallel to each other but do not share a face. Depending on which pair of edges is used, the panel can have different areas. What is the largest possible area of the panel, in square inches?",
+      "numeric": { "kind": "single" },
+      "key": { "value": "600" },
+      "explanation": {
+        "key": "The panel is a rectangle whose sides are the chosen edge and the diagonal of the face formed by the other two dimensions. Through the 40-cm edges: $40 \\times \\sqrt{9^{2} + 12^{2}} = 40 \\times 15 = 600$. Through the 12-cm edges: $12 \\times \\sqrt{9^{2} + 40^{2}} = 12 \\times 41 = 492$. Through the 9-cm edges: $9\\sqrt{12^{2} + 40^{2}} \\approx 376$. Greatest: 600.",
+        "steps": [
+          "Edges of length 40: the panel is $40$ by $\\sqrt{81 + 144} = 15$: area 600.",
+          "Edges of length 12: $12$ by $\\sqrt{81 + 1600} = 41$: area 492.",
+          "Edges of length 9: $9$ by $\\sqrt{144 + 1600} \\approx 41.8$: area about 376.",
+          "Greatest: 600 (the panel along the longest edges always wins: compare $c^{2}(a^{2} + b^{2})$ with $a^{2}(b^{2} + c^{2})$)."
+        ],
+        "fast": "Use the longest edge with the diagonal of the smallest face: $40 \\times 15 = 600$.",
+        "trap": "Pairing the longest face diagonal (41) with its edge 12 gives 492, which is smaller."
+      },
+      "tags": [{ "kind": "concept", "id": "solids-volume", "role": "primary" }],
+      "setup": "a diagonal partition of a box along two opposite parallel edges, three possible pairs; the largest uses the longest edges with the diagonal of the face of the other two",
+      "variant": "a diagonal cross-section of a box"
+    }
+  ]
+}
