@@ -26,8 +26,8 @@
         "nostrum",
         "ascendancy",
         "panacea",
-        "propinquity",
-        "dissolution"
+        "apex",
+        "moment"
       ],
       "key": {
         "sel": [
@@ -40,8 +40,8 @@
         "distractors": {
           "nostrum": "Trap pair with panacea: a quack remedy, or a cure-all. Nothing in the sentence concerns cures.",
           "panacea": "Trap pair with nostrum: a universal remedy. Trade dominance is not a remedy for anything here.",
-          "propinquity": "Nearness. Venice's closeness to the Adriatic is true but is not what charters and tolls demonstrate.",
-          "dissolution": "Breakup or collapse, the opposite of a position strong enough to control rivals' cargo."
+          "apex": "The highest point. Venice held control over the trade, not a summit over it.",
+          "moment": "Importance, as in 'a matter of great moment'. The sentence is about Venice's control of Adriatic trade, not its significance."
         }
       },
       "tags": [
@@ -79,7 +79,7 @@
         },
         {
           "kind": "word",
-          "id": "propinquity",
+          "id": "apex",
           "role": "distractor",
           "at": [
             4
@@ -87,7 +87,7 @@
         },
         {
           "kind": "word",
-          "id": "dissolution",
+          "id": "moment",
           "role": "distractor",
           "at": [
             5
@@ -107,7 +107,7 @@
         "grating",
         "indifferent",
         "limpid",
-        "churlish"
+        "sonorous"
       ],
       "key": {
         "sel": [
@@ -121,7 +121,7 @@
           "nonchalant": "Trap pair with indifferent: casually unconcerned. The sentence has just granted her offhand calm and then contrasts it; 'as though she minded very much' rules this out.",
           "indifferent": "Trap pair with nonchalant: not caring. It repeats the manner the sentence contrasts with the tone, and listeners do not wince at indifference.",
           "limpid": "Clear and transparent, a pleasant quality that would not make students wince.",
-          "churlish": "Rude and surly describes manners, not the sound of a voice, and nothing in the sentence is about rudeness."
+          "sonorous": "Deep and resonant. A full, rich voice is no reason to wince; the blank needs a harsh tone."
         }
       },
       "tags": [
@@ -167,7 +167,7 @@
         },
         {
           "kind": "word",
-          "id": "churlish",
+          "id": "sonorous",
           "role": "distractor",
           "at": [
             5
@@ -266,7 +266,7 @@
         "reprove",
         "berate",
         "remonstrate",
-        "vindicate",
+        "scrutinize",
         "feign"
       ],
       "key": {
@@ -280,7 +280,7 @@
         "distractors": {
           "reprove": "Trap pair with remonstrate: to rebuke mildly. 'Terms so savage' rule out a mild rebuke.",
           "remonstrate": "Trap pair with reprove: to protest or reason with someone. It is too mild, and it takes 'with' a person rather than a direct object.",
-          "vindicate": "To clear of blame. The letters attack the protégés.",
+          "scrutinize": "To examine closely. She did read each line closely, but 'terms so savage' that protégés never wrote again need a scolding, not an inspection.",
           "feign": "To pretend. The private harshness is the real her; it is the television gentleness that might be a show."
         }
       },
@@ -319,7 +319,7 @@
         },
         {
           "kind": "word",
-          "id": "vindicate",
+          "id": "scrutinize",
           "role": "distractor",
           "at": [
             4
@@ -347,7 +347,7 @@
         "convivial",
         "meticulous",
         "ascetic",
-        "wary"
+        "spare"
       ],
       "key": {
         "sel": [
@@ -361,7 +361,7 @@
           "fastidious": "Trap pair with meticulous: exacting about detail. It is the quality the notebooks show, which is exactly what 'sat oddly' with his reputation, so it cannot be the reputation.",
           "meticulous": "Trap pair with fastidious: careful about detail. Same problem: the notebooks, not the reputation, show it.",
           "ascetic": "Austere and self-denying, opposed to a happy host at a table of forty.",
-          "wary": "Cautious and watchful, which contradicts 'never happier than with forty people at his table'."
+          "spare": "Austere and lean; trap pair with ascetic. A host happiest at a table of forty is the opposite of spare."
         }
       },
       "tags": [
@@ -407,7 +407,7 @@
         },
         {
           "kind": "word",
-          "id": "wary",
+          "id": "spare",
           "role": "distractor",
           "at": [
             5
@@ -587,7 +587,7 @@
         "loquacious",
         "incorrigible",
         "plodding",
-        "wary"
+        "vainglorious"
       ],
       "key": {
         "sel": [
@@ -601,7 +601,7 @@
           "inveterate": "Trap pair with incorrigible: long-established and unlikely to change. The sentence says the habit was not deep-rooted and ended at once.",
           "incorrigible": "Trap pair with inveterate: beyond reform. One word from the director reformed her.",
           "plodding": "Slow and dull in movement or thought; it does not describe filling pauses with talk.",
-          "wary": "Cautious and watchful, the opposite of a woman who talks freely."
+          "vainglorious": "Boastful about one's achievements. Talk of her bus route and her cat is chatter, not boasting."
         }
       },
       "tags": [
@@ -647,7 +647,7 @@
         },
         {
           "kind": "word",
-          "id": "wary",
+          "id": "vainglorious",
           "role": "distractor",
           "at": [
             5
@@ -660,6 +660,7 @@
       "section": 1,
       "type": "tc",
       "difficulty": 5,
+      "retired": true,
       "prompt": "The anthology's editor had (i) ___ tastes, setting street ballads beside sonnets and folk riddles beside sermons, but he would not (ii) ___ translations: every foreign poem appears in the original, on the theory that a reader's slow (iii) ___ to another literature's habits, earned by struggling with its words, was itself part of the education.",
       "blanks": [
         [
@@ -920,6 +921,7 @@
       "section": 1,
       "type": "tc",
       "difficulty": 5,
+      "retired": true,
       "prompt": "Teachers do not simply hand children a culture; they (i) ___ it, shaping each lesson through their own habits and emphases. A good one will (ii) ___ a child's frustration with encouragement, never denying it. Even the Greek word behind 'school' is said to (iii) ___ leisure, not labor.",
       "blanks": [
         [
@@ -1170,6 +1172,7 @@
       "section": 1,
       "type": "tc",
       "difficulty": 4,
+      "retired": true,
       "prompt": "The mayor was (i) ___ about the new school district, predicting that attendance would climb within a year, though the evidence gave him little ground for the prediction. His aims were (ii) ___, no one doubted, though a goal can deserve praise without being met. His deputy, by contrast, was (iii) ___ about the whole business, neither cheered by the projections nor troubled by the delays.",
       "blanks": [
         [
@@ -1420,6 +1423,7 @@
       "section": 1,
       "type": "tc",
       "difficulty": 5,
+      "retired": true,
       "prompt": "Because the two hill villages were (i) ___, founded within a few years of each other by settlers from the same valley, the archaeologist felt entitled to (ii) ___ from the well-preserved one to its ruined twin, reconstructing the lost village's layout street by street.",
       "blanks": [
         [
@@ -1515,6 +1519,7 @@
       "section": 1,
       "type": "tc",
       "difficulty": 4,
+      "retired": true,
       "prompt": "The patron, ordinarily (i) ___ toward the university and giving millions unasked, was (ii) ___ that not a cent go to the new stadium.",
       "blanks": [
         [
@@ -1703,7 +1708,7 @@
           "preempt"
         ],
         [
-          "dissolution",
+          "veneration",
           "ire",
           "altruism"
         ]
@@ -1719,7 +1724,7 @@
         "distractors": {
           "vindicate": "To justify or clear of blame. It needs an object, and neutrality justifies no one.",
           "preempt": "To act first to forestall. She did nothing; that was the problem.",
-          "dissolution": "Breaking up, or debauchery. The factions are united against her, not broken up.",
+          "veneration": "Deep respect. Each faction concluded she was hostile, so what they shared was anger, not veneration.",
           "altruism": "Selfless concern for others. It is a quality, not something the factions could feel toward her."
         }
       },
@@ -1753,7 +1758,7 @@
         },
         {
           "kind": "word",
-          "id": "dissolution",
+          "id": "veneration",
           "role": "distractor",
           "at": [
             1,
@@ -1785,6 +1790,7 @@
       "section": 1,
       "type": "tc",
       "difficulty": 5,
+      "retired": true,
       "prompt": "Nursery attendants assumed the toddlers merely ___ as they played, but recordings showed that their sounds followed the grammar of the home language more closely than anyone had expected.",
       "blanks": [
         [

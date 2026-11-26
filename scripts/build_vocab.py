@@ -5,7 +5,8 @@ usage: python3 scripts/build_vocab.py [--xlsx PATH] [--ets reference/*-words.txt
 
 Inputs in data/: popular_words.txt (core), extra_words.json (secondary / extended / passage tiers from the
 expansion research), definitions.json (pos + senses per lemma, written by the definitions pass),
-dropped_words.txt (ordinary words the official-items mining pulled in; never applied to core words).
+dropped_words.txt (ordinary words the official-items mining pulled in; never applied to core words),
+exposure_only.txt (words shown only in passages, never as a TC / SE choice; every passage-tier word is one too).
 
 Reads the xlsx directly (zip + xml). Sheet 2 holds the words; columns B..I are the lists;
 cell fill: yellow (FFF2CC) = common to other lists, pink (F4CCCC) = probably won't be tested.
@@ -199,12 +200,25 @@ def main():
         bonus = 0.2 if (w["isSecondary"] or ets) else 0
         w["yield"] = round(min(1.0, w["sourceCount"] / 5 + bonus + (0.3 if ets else 0)), 3)
 
+    # exposure-only words: passages and stems only, never a TC / SE choice (every passage-tier word, plus the list)
+    eo_file = ROOT / "data" / "exposure_only.txt"
+    eo = {fold(l.strip()) for l in eo_file.read_text().splitlines() if l.strip() and not l.startswith("#")} if eo_file.exists() else set()
+    eo_unknown = sorted(w for w in eo if w not in words)
+    eo_secondary = sorted(w for w in eo if w in words and words[w]["isSecondary"])
+    for k, w in words.items():
+        w["exposureOnly"] = w["tier"] == "passage" or (k in eo and not w["isSecondary"])
+
     out = sorted(words.values(), key=lambda x: x["lemma"])
     (ROOT / "data" / "vocab.json").write_text(json.dumps(out, indent=0, ensure_ascii=False))
     tiers = defaultdict(int)
     for w in out:
         tiers[w["tier"]] += 1
     print(f"{len(out)} words", dict(tiers), f"pink={sum(w['pink'] for w in out)}", f"secondary={sum(w['isSecondary'] for w in out)}", file=sys.stderr)
+    print(f"exposureOnly={sum(w['exposureOnly'] for w in out)}", file=sys.stderr)
+    if eo_unknown:
+        print(f"data/exposure_only.txt: not in the bank: {', '.join(eo_unknown)}", file=sys.stderr)
+    if eo_secondary:
+        print(f"data/exposure_only.txt: secondary-sense words stay testable: {', '.join(eo_secondary)}", file=sys.stderr)
     if missing:
         print(f"{len(missing)} words have no definition: {', '.join(sorted(missing)[:40])}", file=sys.stderr)
 

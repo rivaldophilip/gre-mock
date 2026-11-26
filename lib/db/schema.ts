@@ -25,6 +25,8 @@ export const vocab = pgTable("vocab", {
   pink: boolean("pink").notNull().default(false),
   tier: text("tier").notNull().default("core"), // core|secondary|ets|extended|passage|user_added
   yield: real("yield").notNull().default(0.5),
+  // shown only in passages and stems, never a TC / SE choice; one showing covers it (docs/PRIORITY.md)
+  exposureOnly: boolean("exposure_only").notNull().default(false),
 });
 
 export const concepts = pgTable("concepts", {

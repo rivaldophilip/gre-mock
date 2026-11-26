@@ -33,6 +33,7 @@ export async function seedDb(db: DB) {
           pink: sql`excluded.pink`,
           tier: sql`excluded.tier`,
           yield: sql`excluded.yield`,
+          exposureOnly: sql`excluded.exposure_only`,
         },
       });
   }
@@ -75,6 +76,8 @@ export async function registerTest(db: DB, id: string) {
   await db.insert(schema.tests).values({ id: test.id, measure: test.measure, title: test.title, brief })
     .onConflictDoUpdate({ target: schema.tests.id, set: { title: test.title, brief } });
 
+  // a retired drill item is kept in the file for the batch's checks but has no rows: nothing serves or counts it
+  test.questions = test.questions.filter((q) => !q.retired);
   const qrows = test.questions.map((q, i) => ({ id: `${test.id}:${q.id}`, testId: test.id, section: q.section, position: i, type: q.type, difficulty: q.difficulty }));
   const prior = await db.select({ id: schema.questions.id }).from(schema.questions).where(eq(schema.questions.testId, test.id));
   for (const p of prior) await db.delete(schema.questionItems).where(eq(schema.questionItems.questionId, p.id));

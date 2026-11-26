@@ -184,10 +184,10 @@
       "choices": [
         "miscreant",
         "paragon",
-        "skullduggery",
+        "stricture",
         "exemplar",
         "reprobate",
-        "mercantilism"
+        "nave"
       ],
       "key": {
         "sel": [
@@ -200,8 +200,8 @@
         "distractors": {
           "miscreant": "Trap pair with reprobate: a wrongdoer. It matches the indictment and the reputation in the first clause, but 'however' shifts to how the reformers saw him, and one does not 'hold up' a miscreant as an argument for honest government.",
           "reprobate": "Trap pair with miscreant: an unprincipled person. Same trap: it describes the indicted man, not the figure the reformers held up.",
-          "skullduggery": "Underhanded trickery. It names what he is charged with, not what the reformers held him up as, and it is not a word for a person.",
-          "mercantilism": "An economic doctrine favoring exports and accumulated national wealth. On topic for a port, but not a model official."
+          "stricture": "A restricting rule, or severe criticism. The reformers praised him; they did not hold him up as a rule or a rebuke.",
+          "nave": "The central part of a church. It names a place, not a person held up as a model."
         }
       },
       "tags": [
@@ -223,7 +223,7 @@
         },
         {
           "kind": "word",
-          "id": "skullduggery",
+          "id": "stricture",
           "role": "distractor",
           "at": [
             2
@@ -247,7 +247,7 @@
         },
         {
           "kind": "word",
-          "id": "mercantilism",
+          "id": "nave",
           "role": "distractor",
           "at": [
             5
@@ -266,7 +266,7 @@
         "apotheosis",
         "atavism",
         "guile",
-        "determinism",
+        "palimpsest",
         "epitome"
       ],
       "key": {
@@ -281,7 +281,7 @@
           "artifice": "Trap pair with guile: clever trickery. That is the critics' view ('mere stagecraft'); the blank is the admirers'.",
           "guile": "Trap pair with artifice: sly cunning. Again the critics' reading, which the semicolon turns away from.",
           "atavism": "A reversion to an ancestral type or an old way. The building is presented as new, not as a throwback.",
-          "determinism": "The doctrine that every event is fixed by prior causes. It has nothing to do with embodying transparency."
+          "palimpsest": "A reused manuscript still showing traces of the erased writing. Nothing about the building layers new over old; the blank wants the perfect embodiment of transparency."
         }
       },
       "tags": [
@@ -319,7 +319,7 @@
         },
         {
           "kind": "word",
-          "id": "determinism",
+          "id": "palimpsest",
           "role": "distractor",
           "at": [
             4
@@ -589,7 +589,7 @@
       "choices": [
         "concur",
         "devolve",
-        "ontogeny",
+        "air",
         "assent",
         "deteriorate",
         "morass"
@@ -605,7 +605,7 @@
         "distractors": {
           "concur": "Trap pair with assent: to agree. The talks moved away from agreement.",
           "assent": "Trap pair with concur: to express approval. The opposite of the breakdown described.",
-          "ontogeny": "The development of a single organism, a noun that cannot fill the verb slot.",
+          "air": "To voice publicly. Talks do not 'air'; the blank needs a word for getting worse.",
           "morass": "A swamp, or a situation hard to escape (a noun). The talks may end in one, but the slot needs a verb."
         }
       },
@@ -628,7 +628,7 @@
         },
         {
           "kind": "word",
-          "id": "ontogeny",
+          "id": "air",
           "role": "distractor",
           "at": [
             2
@@ -1890,6 +1890,7 @@
       "section": 1,
       "type": "tc",
       "difficulty": 4,
+      "retired": true,
       "revisits": "drill-004:s1q11",
       "prompt": "At joint rallies the senator's dry, figure-laden speeches served as a ___ to the governor's soaring rhetoric: heard side by side, the numbers made the vision sound achievable and the vision made the numbers sound worth caring about.",
       "blanks": [

@@ -157,3 +157,47 @@
     display: none;
   }
 }
+
+/* outline checkbox (weakest-words list): a faint ring, filled with the text colour when ticked; a dash when some are */
+@layer components {
+  .cbx {
+    appearance: none;
+    display: grid;
+    place-items: center;
+    width: 16px;
+    height: 16px;
+    margin: 2px 0 0;
+    border-radius: 5px;
+    background: transparent;
+    box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--fg) 24%, transparent);
+    cursor: pointer;
+    transition: background-color 0.12s, box-shadow 0.12s;
+  }
+  .cbx:hover {
+    box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--fg) 45%, transparent);
+  }
+  .cbx::after {
+    content: "";
+    width: 8px;
+    height: 4px;
+    border-left: 2px solid var(--surface);
+    border-bottom: 2px solid var(--surface);
+    transform: translateY(-1px) rotate(-45deg);
+    opacity: 0;
+  }
+  .cbx:checked,
+  .cbx:indeterminate {
+    background: var(--fg);
+    box-shadow: none;
+  }
+  .cbx:checked::after {
+    opacity: 1;
+  }
+  .cbx:indeterminate::after {
+    opacity: 1;
+    width: 8px;
+    height: 0;
+    border-left: 0;
+    transform: none;
+  }
+}

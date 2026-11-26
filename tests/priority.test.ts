@@ -60,6 +60,18 @@ describe("priority math", () => {
     const two = scoreItem("w", [1, 1, 2].map((a) => at(e("exposure", 0, 5), a)), 0.5, now);
     expect(two.C).toBeCloseTo(0.3);
   });
+  it("one showing covers an exposure-only word, and a didn't-know tap keeps its weakness", () => {
+    const at = (x: LoggedEvent, attemptId: number) => ({ ...x, attemptId });
+    const read = scoreItem("w", [at(e("exposure", 0, 5), 1), at(e("seen_known", -0.3, 5), 1)], 0.5, now, true);
+    expect(read.C).toBe(1);
+    expect(read.tested).toBe(false);
+    expect(read.exposureOnly).toBe(true);
+    const missed = scoreItem("w", [at(e("exposure", 0, 5), 1), at(e("dont_know", WORD_W.dont_know, 5), 1)], 0.5, now, true);
+    expect(missed.C).toBe(1);
+    expect(missed.S).toBeGreaterThan(1 / 3);
+    expect(scoreItem("w", [at(e("exposure", 0, 5), 1)], 0.5, now).C).toBeCloseTo(0.15);
+    expect(scoreAll([{ id: "w", yield: 0.5, exposureOnly: true }], [at(e("exposure", 0, 5), 1)], now)[0].C).toBe(1);
+  });
   it("seen_known counts once per attempt, and not where the word was tagged or judged", () => {
     const at = (x: LoggedEvent, attemptId: number) => ({ ...x, attemptId });
     const seen = (a: number) => at(e("seen_known", -0.3, 0), a);
@@ -318,5 +330,23 @@ describe("SE pairs among key words", () => {
     // a's only partner was keyed before; f's partner x would have to replace a (d is review, e kept), which ranks higher
     expect(pairs).toEqual([]);
     expect(keys.map((k) => k.itemId)).toEqual(["a", "f", "d", "e"]);
+  });
+});
+
+describe("dismissed words", () => {
+  const dismiss = (d: number) => e("dismissed", WORD_W.dismissed, d);
+  it("a dismissal leaves S, coverage and recency alone", () => {
+    const before = scoreItem("w", [e("distractor_chosen", 0.6, 10)], 0.5, now);
+    const after = scoreItem("w", [e("distractor_chosen", 0.6, 10), dismiss(0)], 0.5, now);
+    expect(after.dismissed).toBe(true);
+    expect(after.reason).toBe("dismissed");
+    expect(after.S).toBeCloseTo(before.S);
+    expect(after.C).toBe(before.C);
+    expect(after.P).toBeCloseTo(before.P);
+  });
+  it("a later miss brings it back; a later right answer or showing does not", () => {
+    expect(scoreItem("w", [e("distractor_chosen", 0.6, 10), dismiss(5), e("key_missed", 0.8, 1)], 0.5, now).dismissed).toBeUndefined();
+    expect(scoreItem("w", [e("distractor_chosen", 0.6, 10), dismiss(5), e("dont_know", WORD_W.dont_know, 1)], 0.5, now).dismissed).toBeUndefined();
+    expect(scoreItem("w", [e("distractor_chosen", 0.6, 10), dismiss(5), e("key_correct", -0.6, 1), e("seen_known", -0.3, 1)], 0.5, now).dismissed).toBe(true);
   });
 });

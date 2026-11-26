@@ -10,7 +10,7 @@ import type { PublicQuestion } from "./types";
 const { attempts, responses, itemEvents, tests, vocab } = schema;
 
 /**
- * Every drill item of a registered batch, which ones are answered (a locked response), and each bank word's coverage
+ * Every drill item of a registered batch (retired ones aside), which ones are answered (a locked response), and each bank word's coverage
  * now. A batch on disk that has not been registered is a draft still going through its checks, so it stays out.
  */
 async function pool() {
@@ -18,7 +18,7 @@ async function pool() {
   const registered = new Set((await db.select({ id: tests.id }).from(tests).where(like(tests.id, "drill-%"))).map((t) => t.id));
   const items: DrillItem[] = listDrillIds().filter((id) => registered.has(id)).flatMap((id) => {
     const t = loadTest(id);
-    return t ? t.questions.map((q) => ({ testId: id, q })) : [];
+    return t ? t.questions.filter((q) => !q.retired).map((q) => ({ testId: id, q })) : [];
   });
   const drillAttempts = await db.select().from(attempts).where(and(eq(attempts.mode, "drill"), isNull(attempts.abandonedAt)));
   const answered = new Set<string>();
@@ -30,12 +30,13 @@ async function pool() {
     for (const r of rows) answered.add(r.q);
   }
   const [words, events] = await Promise.all([
-    db.select({ id: vocab.id, yield: vocab.yield }).from(vocab),
+    db.select({ id: vocab.id, yield: vocab.yield, exposureOnly: vocab.exposureOnly }).from(vocab),
     db.select().from(itemEvents).where(eq(itemEvents.kind, "word")),
   ]);
-  // the same scoring /stats counts "untested" with (C === 0: never a key, distractor or passage word)
+  // the same scoring /stats counts "untested" with (C === 0: never a key, distractor or passage word); exposure-only
+  // words are left out, since a drill item (no passage) never shows them, and so are dismissed ones
   const scores = scoreAll(words, events.map((e) => ({ itemId: e.itemId, event: e.event, weight: e.weight, createdAt: e.createdAt, attemptId: e.attemptId })));
-  const untested = new Set(scores.filter((s) => s.C === 0).map((s) => s.itemId));
+  const untested = new Set(scores.filter((s) => s.C === 0 && !s.exposureOnly && !s.dismissed).map((s) => s.itemId));
   return { db, items, answered, untested, drillAttempts };
 }
 

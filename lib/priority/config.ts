@@ -12,6 +12,8 @@ export const WORD_W = {
   exposure: 0,
   // shown (passage, stem, unjudged distractor) and not tagged "didn't know"; counted once per attempt (compute.ts)
   seen_known: -0.3,
+  // "Dismiss" on /stats (known, or not worth it): no weight; the word is not targeted until a later weakness event (compute.ts)
+  dismissed: 0,
 } as const;
 
 export const CONCEPT_W = {
@@ -35,7 +37,8 @@ export const READING_WPM = 250;
 
 export const HALF_LIFE_DAYS = 21;
 export const SMOOTH = { prior: 0.5, total: 1.5 } as const;
-export const COVERAGE_W = { key: 1.0, distractor: 0.3, passage: 0.15 } as const;
+/** passageExposureOnly: an exposure-only word (data/exposure_only.txt, passage tier) is never a choice, so one showing covers it */
+export const COVERAGE_W = { key: 1.0, distractor: 0.3, passage: 0.15, passageExposureOnly: 1.0 } as const;
 export const INTERVALS_DAYS = [1, 3, 7, 14, 30] as const;
 export const P_WEIGHTS = { S: 0.4, N: 0.3, D: 0.15, Y: 0.15 } as const;
 export const RECENT_DAYS = 2;

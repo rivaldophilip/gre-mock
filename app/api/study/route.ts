@@ -13,13 +13,14 @@ const Body = z.object({
   state: z.enum(["archived", "deleted", "shown"]),
 });
 
-/** Archive, delete, or restore (state "shown") one formula card or topic of a study guide. */
+/** Archive, delete, or restore (state "shown") one formula card or topic card of a study guide. Topics themselves take no new marks; an old one can only be cleared. */
 export async function POST(req: Request) {
   const body = Body.safeParse(await req.json().catch(() => null));
   if (!body.success) return NextResponse.json({ error: "bad request" }, { status: 400 });
   const { measure, kind, id, state } = body.data;
   const guide = loadStudy(measure);
   if (!guide || !markIds(guide)[kind].has(id)) return NextResponse.json({ error: "not found" }, { status: 404 });
+  if (kind === "topic" && state !== "shown") return NextResponse.json({ error: "topics are marked card by card" }, { status: 400 });
 
   const db = await userDb();
   const t = schema.studyMarks;

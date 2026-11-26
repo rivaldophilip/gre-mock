@@ -1,0 +1,59 @@
+# Exposure-only words: shown only in passages and stems, never as a TC / SE key, distractor or trap pair.
+# One showing covers them (docs/PRIORITY.md, Exposure-only words). Every `passage`-tier word is exposure-only too;
+# this file adds bank words from other tiers that are too rare to be a fair TC / SE choice.
+# Seeded from: on at most one prep list, not ETS-attested, not a secondary-sense word; then pruned by hand.
+# Never list a secondary-sense word: its everyday-sense trap only works as a choice.
+aleatory
+animadversion
+apologia
+arriviste
+asseverate
+badinage
+bibulous
+clangor
+concupiscence
+condign
+contumely
+coruscate
+cozen
+crepuscular
+demotic
+deracinate
+desideratum
+dudgeon
+effulgent
+eleemosynary
+etiolated
+excrescence
+exiguous
+farrago
+flagitious
+gimcrack
+gravamen
+hauteur
+homiletic
+irrefragable
+logorrhea
+louche
+magniloquent
+mountebank
+mulct
+nonpareil
+numinous
+objurgate
+oleaginous
+parlous
+periphrasis
+pettifogging
+pharisaical
+plangent
+propinquity
+rebarbative
+recherche
+recreant
+rodomontade
+scintilla
+sibylline
+skulduggery
+skullduggery
+tergiversate

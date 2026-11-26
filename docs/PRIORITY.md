@@ -18,6 +18,7 @@ Positive weight = evidence of weakness, negative = mastery.
 | `distractor_rejected` | distractor not picked on a question you got right | −0.15 |
 | `exposure` | word in a passage/stem | 0 (coverage only; once per attempt, however many questions share the passage) |
 | `seen_known` | word shown but not judged by the answer (passage, stem, or an unpicked distractor on a wrong question), logged alongside `exposure` | −0.3 (once per attempt; dropped if that attempt tagged the word `dont_know` or logged a `key_*` / `distractor_*` event for it) |
+| `dismissed` | Dismiss on ticked words in the /stats weakest-words list (see Dismissing a word) | 0 |
 
 Text completion and SE are judged per word: on a wrong question, a right blank (TC) or a right pick (SE) logs `key_correct` (or `key_guessed`), and the distractors of a right blank `distractor_rejected`; only the wrong blank's or pick's words log `key_missed` / `distractor_chosen`. `npm run rebuild:words [-- --apply]` re-derives the word events that older TC/SE answers logged.
 
@@ -38,10 +39,23 @@ The section clock (`lib/clock.ts`) pauses while the test-taker is off the page (
 ## Scores per item (each event decayed by `0.5^(age_days/21)`)
 
 - Weakness `S = (Σ⁺ + 0.5) / (Σ⁺ + Σ|⁻| + 1.5)`. Untested = 0.33.
-- Coverage `C = min(1, n_key + 0.3·n_distractor + 0.15·n_passage)`; novelty `N = 1 − C`.
+- Coverage `C = min(1, n_key + 0.3·n_distractor + 0.15·n_passage)`; novelty `N = 1 − C`. For an exposure-only word (below), `n_passage` weighs 1, so one showing covers it.
 - Due `D = min(1, days_since_last_test / I)`, `I = [1,3,7,14,30][min(streak,4)]`; never tested → 0.
 - Yield `Y`: words `min(1, source_count/5)` +0.2 for secondary-sense/ETS words (+0.3 more for words attested in official materials); concepts hand-set in `data/concepts.json`.
 - Priority `P = 0.40·S + 0.30·N + 0.15·D + 0.15·Y`, ×0.3 if tested in the last 2 days.
+
+## Exposure-only words
+
+Some bank words are too rare or too technical to be a fair TC / SE choice; the GRE would only show them in a passage. They are `exposureOnly` in `data/vocab.json`: every `passage`-tier word, plus the curated `data/exposure_only.txt` (rarities from other tiers; never a secondary-sense word, whose everyday-sense trap only works as a choice). `build_vocab.py` sets the flag and `npm run seed` copies it to `vocab.exposure_only`.
+
+- **Shown, never chosen.** Briefs leave them out of key slots, both distractor lists, SE trap pairs and bank synonyms (`bankSynonyms`), and drill briefs leave them out altogether (a drill item has no passage). So they never get a revisit sibling either. Briefs from this rule on record `wordTargets.exposureOnlyChoices: false` (drill: `drillTargets`), and `check` rejects one used as a key or distractor; older tests keep theirs.
+- **Covered by one showing.** A passage or stem showing gives C = 1, whatever is tapped. Weakness still moves as usual: leaving it untapped logs `seen_known`, a "didn't know" tap raises S.
+- **Passage-word pool.** The brief's passage words take exposure-only words first: never shown (C < 1), then shown ones with weakness above the untested prior (tapped "didn't know"), by P, so a missed word returns in a later passage; untested bank words fill the rest of the 40.
+- **/stats.** A covered exposure-only word counts as Tested on the Words card. The drill card's untested count leaves exposure-only words out.
+
+## Dismissing a word
+
+Ticking words on the /stats weakest-words list and pressing Dismiss (`POST /api/words/dismiss` with `ids`) is for a word you already know (a slip, such as a common word picked as a wrong choice) or one not worth the time. One `dismissed` event is logged, with weight 0, so S, coverage and recency do not change. While it is newer than the word's every positive event, `ItemScore.dismissed` holds and the word is not targeted anywhere: it is left off the weak list and the /stats odds, and the verbal brief (keys, SE partners, both distractor lists, the passage-word pool) and the drill brief drop it before allocating. The drill card's untested count leaves it out too. A later weakness event (a miss, a guess, a "didn't know" tap) brings it back with its full history; a right answer or a `seen_known` does not. It can still turn up when an author uses it unprompted. A row click ticks a word, Shift-click a range; the header row turns into the selection bar on wider screens, and a toolbar docks to the bottom on phones. Esc clears the ticks, Delete dismisses them, and a toast offers Undo. A secondary-sense word asks first and names its GRE sense, since that trap is usually why it was missed. "Dismissed (n)" under the list restores a word (`DELETE`, which removes its `dismissed` rows).
 
 ## Slot allocation (`npm run brief`)
 

@@ -3,6 +3,7 @@ import type { Explanation, Key, PublicQuestion } from "@/lib/types";
 import { Rich, RichInline } from "./Rich";
 import { TaggableText, TaggedList, type Sense, type WordTags } from "./WordTagger";
 import { IconCheck, IconX } from "./icons";
+import { vocabTokens } from "@/lib/choice-words";
 
 export type Reveal = { key: Key; explanation: Explanation; isCorrect: boolean; silly?: boolean; words?: { word: string; id?: string; senses?: Sense[] | null }[] };
 
@@ -57,7 +58,7 @@ export function RevealPanel({
           <p className="text-xs text-muted">Tap any word you didn’t know, here or in the {inPassage ? "passage" : "sentence"}. It will come up more in later tests; the ones you leave untapped come up less.</p>
           {chips.length > 0 && (
             <p className="flex flex-wrap gap-x-4 gap-y-1 text-[15px]">
-              {chips.map((w) => <span key={w.word}><TaggableText text={w.word} tags={tags} senses={w.senses} inline /></span>)}
+              {chips.map((w) => <span key={w.word} className="whitespace-nowrap"><TaggableText text={w.word} tags={tags} senses={w.senses} only={vocabTokens(w.word, w.id)} inline /></span>)}
             </p>
           )}
           <TaggedList texts={[q.prompt, ...chips.map((w) => w.word)]} tags={tags} />

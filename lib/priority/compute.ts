@@ -40,6 +40,10 @@ export interface ItemScore {
   lastTestedAt: Date | null;
   /** ids of the registered, unfinished tests (or unregistered briefs) that already target this item */
   pending?: string[];
+  /** a word shown only in passages and stems, never a TC / SE choice: one showing covers it */
+  exposureOnly?: boolean;
+  /** dismissed on /stats and not missed since: off the weak list and never targeted by a brief or drill */
+  dismissed?: boolean;
 }
 
 const DAY = 86_400_000;
@@ -49,7 +53,7 @@ function roleOf(event: string): Role {
   if (event.startsWith("key_") || event.startsWith("concept_")) return "key";
   if (event.startsWith("distractor_")) return "distractor";
   if (event === "exposure") return "passage";
-  return "other"; // dont_know, seen_known
+  return "other"; // dont_know, seen_known, dismissed
 }
 
 const MASTERY = new Set(["key_correct", "concept_right_primary", "concept_right_secondary"]);
@@ -72,6 +76,7 @@ export const REASONS: Record<string, string> = {
   distractor_chosen: "chosen as a wrong answer",
   key_guessed: "answered correctly but guessed",
   key_slow: "right but slow",
+  dismissed: "dismissed",
   concept_wrong_primary: "wrong on a question testing it",
   concept_wrong_secondary: "wrong on a question touching it",
   concept_guessed: "right but guessed",
@@ -119,7 +124,7 @@ function ignoredSeen(events: LoggedEvent[]): Set<LoggedEvent> {
   return skip;
 }
 
-export function scoreItem(itemId: string, events: LoggedEvent[], yieldWeight: number, now: Date): ItemScore {
+export function scoreItem(itemId: string, events: LoggedEvent[], yieldWeight: number, now: Date, exposureOnly = false): ItemScore {
   let pos = 0;
   let neg = 0;
   let nKey = 0;
@@ -127,6 +132,8 @@ export function scoreItem(itemId: string, events: LoggedEvent[], yieldWeight: nu
   let nPas = 0;
   let last: Date | null = null;
   let lastAny: Date | null = null;
+  let lastWeak = 0;
+  let lastDismissed = 0;
   const reasonMass = new Map<string, number>();
 
   const sorted = [...events].sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime());
@@ -136,6 +143,11 @@ export function scoreItem(itemId: string, events: LoggedEvent[], yieldWeight: nu
   const seenPassage = new Set<number>();
   for (const e of sorted) {
     const d = decay((now.getTime() - e.createdAt.getTime()) / DAY);
+    if (e.event === "dismissed") {
+      lastDismissed = e.createdAt.getTime();
+      continue; // no weight, coverage or recency: a dismissal is not a showing
+    }
+    if (e.weight > 0) lastWeak = e.createdAt.getTime();
     if (e.weight > 0 && !skip.has(e)) {
       pos += e.weight * d;
       reasonMass.set(e.event, (reasonMass.get(e.event) ?? 0) + e.weight * d);
@@ -152,7 +164,7 @@ export function scoreItem(itemId: string, events: LoggedEvent[], yieldWeight: nu
   }
 
   const S = (pos + SMOOTH.prior) / (pos + neg + SMOOTH.total);
-  const C = Math.min(1, COVERAGE_W.key * nKey + COVERAGE_W.distractor * nDis + COVERAGE_W.passage * nPas);
+  const C = Math.min(1, COVERAGE_W.key * nKey + COVERAGE_W.distractor * nDis + (exposureOnly ? COVERAGE_W.passageExposureOnly : COVERAGE_W.passage) * nPas);
   const N = 1 - C;
 
   // streak: consecutive mastery events at the end of the tested history
@@ -170,17 +182,20 @@ export function scoreItem(itemId: string, events: LoggedEvent[], yieldWeight: nu
   const recent = !!lastAny && (now.getTime() - lastAny.getTime()) / DAY < RECENT_DAYS;
   if (recent) P *= RECENT_FACTOR;
 
+  // a weakness event after the dismissal (a miss, a guess, a "didn't know" tap) brings the word back
+  const dismissed = lastDismissed > 0 && lastDismissed >= lastWeak;
   let reason = "never tested";
-  if (events.length) {
+  if (dismissed) reason = "dismissed";
+  else if (events.length) {
     const top = [...reasonMass.entries()].sort((a, b) => b[1] - a[1])[0];
     reason = top ? REASONS[top[0]] ?? top[0] : C >= 1 ? "covered, no weakness" : "partly covered";
   }
   const evidence = [...reasonMass.entries()].map(([event, mass]) => ({ event, mass })).sort((a, b) => b.mass - a.mass);
-  return { itemId, S, C, N, D, Y: yieldWeight, P, reason, weakEvidence: pos, mastery: neg, tested: nKey > 0, evidence, streak, recent, lastTestedAt: last };
+  return { itemId, S, C, N, D, Y: yieldWeight, P, reason, weakEvidence: pos, mastery: neg, tested: nKey > 0, evidence, streak, recent, lastTestedAt: last, ...(exposureOnly ? { exposureOnly } : {}), ...(dismissed ? { dismissed } : {}) };
 }
 
 export function scoreAll(
-  items: { id: string; yield: number }[],
+  items: { id: string; yield: number; exposureOnly?: boolean }[],
   events: LoggedEvent[],
   now: Date = new Date(),
 ): ItemScore[] {
@@ -190,7 +205,7 @@ export function scoreAll(
     if (arr) arr.push(e);
     else by.set(e.itemId, [e]);
   }
-  return items.map((it) => scoreItem(it.id, by.get(it.id) ?? [], it.yield, now));
+  return items.map((it) => scoreItem(it.id, by.get(it.id) ?? [], it.yield, now, !!it.exposureOnly));
 }
 
 /**

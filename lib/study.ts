@@ -2,13 +2,66 @@ import { z } from "zod";
 import { isListed } from "./attempt-summary";
 import { slotType, type SlotType } from "./qtypes";
 import type { Test } from "./types";
+import conceptVariants from "@/data/concept_variants.json";
+
+const VARIANTS: Record<string, string[]> = conceptVariants;
 
 /** A study guide (content/study/<measure>.json). Strings use the Rich markup: $math$, **bold**, *italic*. */
 const Lines = z.array(z.string().min(1)).min(1);
+const Slug = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/);
+const Svg = z.string().startsWith("<svg");
+/**
+ * Fields every topic card shares. `id` is permanent within its topic (marks are keyed by it), so a card that
+ * changes meaning gets a new id; `variant` names the data/concept_variants.json sub-form it teaches, so a later
+ * miss on that sub-form brings it back from the archive; `added` (YYYY-MM-DD) flags cards written after a reader
+ * may already have studied the topic.
+ */
+const base = { id: Slug, variant: z.string().min(1).optional(), added: z.iso.date().optional() };
+/**
+ * A tile, drawn like a formula-sheet card: a short plain `name`, then the point itself as one Rich line (`text`) or a
+ * formula (`tex`, bare TeX), an optional one-line `note` (when it applies, why), an optional one-line `example` and
+ * an optional drawing (inline SVG drawn with currentColor and theme vars).
+ */
+const tile = { name: z.string().min(1), text: z.string().min(1).optional(), tex: z.string().min(1).optional(), note: z.string().min(1).optional(), example: z.string().min(1).optional(), svg: Svg.optional() };
+export type TileCard = Extract<StudyCard, { kind: "rule" | "shortcut" | "trap" | "limit" }>;
+export const isTile = (c: StudyCard): c is TileCard => c.kind === "rule" || c.kind === "shortcut" || c.kind === "trap" || c.kind === "limit";
+
+export const CardSchema = z.discriminatedUnion("kind", [
+  /** the one-sentence intuition the topic hangs on */
+  z.object({ ...base, kind: z.literal("idea"), text: z.string().min(1) }),
+  /** a full question worked step by step */
+  z.object({ ...base, kind: z.literal("example"), q: z.string().min(1), steps: Lines, svg: Svg.optional() }),
+  /** a short argument, the right answer under a label ("Assumed", "Weakens"), and the tempting wrong answers, each with why it fails */
+  z.object({ ...base, kind: z.literal("contrast"), q: z.string().min(1), label: z.string().min(1), answer: z.string().min(1), wrong: z.array(z.object({ text: z.string().min(1), why: z.string().min(1) })).min(1) }),
+  /** a fact to know cold */
+  z.object({ ...base, ...tile, kind: z.literal("rule") }),
+  /** a faster way in */
+  z.object({ ...base, ...tile, kind: z.literal("shortcut") }),
+  /** a mistake the test is built to catch */
+  z.object({ ...base, ...tile, kind: z.literal("trap") }),
+  /** one disguise of a pattern: its name, a question, how to spot it, the steps */
+  z.object({ ...base, kind: z.literal("case"), pattern: Slug, name: z.string().min(1), q: z.string().min(1), spot: z.string().min(1), steps: Lines, svg: Svg.optional() }),
+  /** a look-alike the pattern's method does not fit */
+  z.object({ ...base, ...tile, kind: z.literal("limit"), pattern: Slug }),
+]);
+export type StudyCard = z.infer<typeof CardSchema>;
+export type CardKind = StudyCard["kind"];
+
+/** The lanes a topic shows its cards in, in this order; `case` and `limit` cards render inside their pattern instead. */
+export const LANES: { kind: Exclude<CardKind, "case" | "limit">; label: string }[] = [
+  { kind: "idea", label: "Big idea" },
+  { kind: "example", label: "Worked example" },
+  { kind: "contrast", label: "More examples" },
+  { kind: "rule", label: "Rules to remember" },
+  { kind: "shortcut", label: "Shortcuts & tips" },
+  { kind: "trap", label: "Watch out" },
+];
+export const KIND_LABEL: Record<CardKind, string> = { idea: "Big idea", example: "Worked example", contrast: "Example", rule: "Rule", shortcut: "Shortcut", trap: "Watch out", case: "Pattern", limit: "Not this method" };
+
 export const StudySchema = z.object({
   measure: z.enum(["verbal", "quant"]),
   intro: z.string().min(1),
-  /** quick-reference tiles: a plain name, then either the formula (bare TeX, no $) or a short rule (Rich), and an optional one-line note (Rich); a group may open with a short setup (Rich) and a drawing */
+  /** quick-reference tiles: a plain name, then either the formula (bare TeX, no $) or a short rule (Rich), an optional one-line note (Rich) and an optional drawing; a group may open with a short setup (Rich) and a drawing */
   quickRef: z
     .array(
       z.object({
@@ -18,7 +71,7 @@ export const StudySchema = z.object({
         items: z
           .array(
             z
-              .object({ name: z.string().min(1), tex: z.string().min(1).optional(), text: z.string().min(1).optional(), note: z.string().optional() })
+              .object({ name: z.string().min(1), tex: z.string().min(1).optional(), text: z.string().min(1).optional(), note: z.string().optional(), svg: z.string().startsWith("<svg").optional() })
               .refine((it) => (it.tex === undefined) !== (it.text === undefined), "a tile has exactly one of tex or text"),
           )
           .min(1),
@@ -35,50 +88,34 @@ export const StudySchema = z.object({
   pacing: Lines,
   sections: z
     .array(
-      z.object({
-        id: z.string().regex(/^[a-z0-9-]+$/),
-        title: z.string().min(1),
-        /** concept (or reading-skill) ids this section teaches; a question counts here if any of its tags is one of them */
-        concepts: z.array(z.string()).min(1),
-        /** the one-sentence intuition the section hangs on */
-        idea: z.string().min(1),
-        example: z.object({ q: z.string().min(1), steps: Lines }),
-        facts: Lines.optional(),
-        tricks: Lines.optional(),
-        traps: Lines.optional(),
-        /** short examples: an argument, the right answer under a label ("Assumed", "Weakens"), and the tempting wrong answers, each with why it fails */
-        examples: z
-          .array(
-            z.object({
-              q: z.string().min(1),
-              label: z.string().min(1),
-              answer: z.string().min(1),
-              wrong: z.array(z.object({ text: z.string().min(1), why: z.string().min(1) })).min(1),
-            }),
-          )
-          .optional(),
-        /** tips & tricks: a named move, when it applies, a quick worked case, and an optional drawing (inline SVG drawn with currentColor and theme vars) */
-        tips: z
-          .array(z.object({ title: z.string().min(1), text: z.string().min(1), example: z.string().min(1).optional(), svg: z.string().startsWith("<svg").optional() }))
-          .optional(),
-        /** pattern drills: one method in every disguise it shows up in, each with how to spot it, a worked case and an optional drawing */
-        patterns: z
-          .array(
-            z.object({
-              title: z.string().min(1),
-              idea: z.string().min(1),
-              cases: z.array(z.object({ name: z.string().min(1), q: z.string().min(1), spot: z.string().min(1), steps: Lines, svg: z.string().startsWith("<svg").optional() })).min(1),
-              /** look-alikes the method does not fit */
-              notWhen: Lines.optional(),
-            }),
-          )
-          .optional(),
-      }),
+      z
+        .object({
+          id: z.string().regex(/^[a-z0-9-]+$/),
+          title: z.string().min(1),
+          /** concept (or reading-skill) ids this section teaches; a question counts here if any of its tags is one of them */
+          concepts: z.array(z.string()).min(1),
+          /** pattern drills: one method in every disguise it shows up in; the disguises are its `case` cards, the look-alikes it does not fit its `limit` cards */
+          patterns: z.array(z.object({ id: Slug, title: z.string().min(1), idea: z.string().min(1) })).optional(),
+          /** everything the topic teaches, one archivable card each, in file order within each lane (docs/STUDY-GUIDE.md) */
+          cards: z.array(CardSchema).min(1),
+        })
+        .superRefine((s, ctx) => {
+          const ids = s.cards.map((c) => c.id);
+          for (const id of ids.filter((id, i) => ids.indexOf(id) !== i)) ctx.addIssue({ code: "custom", message: `${s.id}: duplicate card id ${id}` });
+          const patterns = new Set((s.patterns ?? []).map((p) => p.id));
+          for (const c of s.cards) {
+            if (isTile(c) && (c.text === undefined) === (c.tex === undefined)) ctx.addIssue({ code: "custom", message: `${s.id}/${c.id}: a tile has exactly one of text or tex` });
+            if ((c.kind === "case" || c.kind === "limit") && !patterns.has(c.pattern)) ctx.addIssue({ code: "custom", message: `${s.id}/${c.id}: unknown pattern ${c.pattern}` });
+            if (c.variant && !s.concepts.some((k) => (VARIANTS[k] ?? []).includes(c.variant!))) ctx.addIssue({ code: "custom", message: `${s.id}/${c.id}: variant "${c.variant}" is not a sub-form of ${s.concepts.join(", ")}` });
+          }
+          for (const p of patterns) if (!s.cards.some((c) => c.kind === "case" && c.pattern === p)) ctx.addIssue({ code: "custom", message: `${s.id}: pattern ${p} has no case card` });
+        }),
     )
     .min(1),
 });
 export type Study = z.infer<typeof StudySchema>;
 export type StudySection = Study["sections"][number];
+export type StudyPattern = NonNullable<StudySection["patterns"]>[number];
 
 /** Over this, a question counts as a long sink in the pacing summary. */
 export const LONG_MS = 180_000;
@@ -92,6 +129,8 @@ export interface Miss {
   timeMs: number;
   guessed: boolean;
   trap?: string;
+  /** the question's sub-form of its primary concept, when the author named one */
+  variant?: string;
   finishedAt: Date;
 }
 
@@ -138,7 +177,7 @@ export function studyStats(guide: Study, attempts: AttemptRow[], responses: Resp
     const mine = rows.filter((x) => s.concepts.some((c) => x.concepts.has(c)));
     const misses = mine
       .filter((x) => !x.ok)
-      .map((x) => ({ testId: x.a.testId, attemptId: x.a.id, qid: x.q.id, type: slotType(x.q), difficulty: x.q.difficulty, timeMs: x.ms, guessed: x.r.guessed, trap: x.q.explanation.trap || undefined, finishedAt: x.a.finishedAt! }));
+      .map((x) => ({ testId: x.a.testId, attemptId: x.a.id, qid: x.q.id, type: slotType(x.q), difficulty: x.q.difficulty, timeMs: x.ms, guessed: x.r.guessed, trap: x.q.explanation.trap || undefined, ...(x.q.variant ? { variant: x.q.variant } : {}), finishedAt: x.a.finishedAt! }));
     sections.set(s.id, { ...tally(mine), misses });
   }
 
@@ -178,7 +217,8 @@ export function orderSections<S extends { id: string }>(sections: S[], stats: Ma
     .map((x) => x.s);
 }
 
-export const MARK_KINDS = ["card", "topic"] as const;
+/** card: a formula-sheet tile; piece: one card of a topic (pieceId); topic: legacy whole-topic marks, which can only be cleared */
+export const MARK_KINDS = ["card", "piece", "topic"] as const;
 export type MarkKind = (typeof MARK_KINDS)[number];
 export type MarkState = "archived" | "deleted";
 export interface Mark {
@@ -189,10 +229,14 @@ export interface Mark {
 /** A formula card's mark id: its group and name, which are unique within a guide. */
 export const cardId = (group: string, name: string) => `${group} / ${name}`;
 
+/** A topic card's mark id: its topic and its own id. */
+export const pieceId = (topicId: string, cardId: string) => `${topicId}/${cardId}`;
+
 /** Every id a guide can mark, by kind. */
 export function markIds(guide: Study): Record<MarkKind, Set<string>> {
   return {
     card: new Set(guide.quickRef.flatMap((g) => g.items.map((it) => cardId(g.title, it.name)))),
+    piece: new Set(guide.sections.flatMap((s) => s.cards.map((c) => pieceId(s.id, c.id)))),
     topic: new Set(guide.sections.map((s) => s.id)),
   };
 }
@@ -213,4 +257,26 @@ export function applyMarks<T>(items: T[], id: (t: T) => string, marks: Map<strin
     } else out.archived.push(t);
   }
   return out;
+}
+
+/** YYYY-MM-DD of a moment, in UTC (card `added` dates are plain days). */
+const day = (d: Date) => d.toISOString().slice(0, 10);
+
+/**
+ * One topic's cards split by the reader's marks. An archived card comes back (`back`) when a mock finished after it
+ * was archived misses a question of the same `variant`; cards without a variant stay archived, and `missedSince`
+ * says a miss landed after something here was archived, so the reader can look over the shelf. `fresh` names shown
+ * cards added on or after the day of the topic's latest archive: material written after the reader studied it.
+ */
+export function topicCards(s: StudySection, marks: Map<string, Mark>, misses: Miss[]) {
+  const split = applyMarks(s.cards, (c) => pieceId(s.id, c.id), marks, (c, since) =>
+    !!c.variant && misses.some((m) => m.variant === c.variant && m.finishedAt > since));
+  const archivedAt = s.cards.flatMap((c) => {
+    const m = marks.get(pieceId(s.id, c.id));
+    return m?.state === "archived" ? [m.updatedAt] : [];
+  });
+  const latest = archivedAt.length ? day(new Date(Math.max(...archivedAt.map((d) => +d)))) : null;
+  const fresh = new Set(latest ? split.shown.filter((c) => c.added && c.added >= latest).map((c) => c.id) : []);
+  const missedSince = archivedAt.some((at) => misses.some((m) => m.finishedAt > at));
+  return { ...split, back: new Set([...split.back].map((k) => k.slice(s.id.length + 1))), fresh, missedSince };
 }

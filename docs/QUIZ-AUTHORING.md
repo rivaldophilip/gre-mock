@@ -14,7 +14,7 @@ Read this page, the brief and `docs/HARD-PATTERNS.md`; nothing else is needed. E
 2. **Author** the whole test in one Write, using the shapes below. Write `$...$` for math, in explanations too (key, steps, fast, trap): `$a_{50}$`, `$\tfrac{1}{50}$`, not `a_50` or `1/50`, which show raw; `check` rejects them. Spend the brief as the structure rules say:
    - key words as keys;
    - distractor words: at least 75% of distractors from its untested list, the rest from its weak list (`check` enforces it when the brief has `wordTargets`). The brief's **SE trap pairs** line names untested bank synonym pairs already on that list: use them as SE items' wrong synonym pairs, so a trap pair needs neither a non-bank word nor the weak list's few pairs;
-   - 5-6 passage words woven into each reading passage, arguments excluded (`check` enforces the 5);
+   - 5-6 passage words woven into each reading passage, arguments excluded (`check` enforces the 5). Words marked `exposureOnly` belong in passages only: never a key or distractor (`check` rejects one; `docs/PRIORITY.md`, Exposure-only words);
    - the weakest review items on the slots of the brief's type-focus line, if it names any.
 
    Write each RC question's skill tag and each quant question's concept tags. Do **not** write word tags; check fills them. An irregular form (`forsworn`) is the one exception: tag that by hand.
@@ -58,6 +58,7 @@ A drill batch is a set of standalone TC / SE items (`/new-drill`, 20 by default)
 3. **Check** enforces the drill rules instead of the blueprint: TC / SE only, at most 30 items, every level 4 or 5 with at least half at 5, and at least 90% of choice words drawn from the brief.
 4. **Blind** and **novelty** run unchanged. Novelty pairs a drill item with every verbal mock and earlier batch. When the solver rates an item off its level, retag it to the rating while the half-at-5 rule still holds; otherwise rewrite.
 5. **Register** as usual. The card on the dashboard picks the batch up at once. Until then the batch is a draft: `/drill` serves only registered batches, so a file in `content/drill/` that has not passed its checks never reaches the user.
+6. **Repacking later.** Once mocks and other batches have tested an unanswered item's keys, it can be retired with `"retired": true` rather than deleted. It stays in the file, so the batch's checks (half at level 5, brief share) and the setup history still count it, but `register` gives it no rows and `/drill` never serves it. An untested word that only it held moves into a distractor slot of a kept item, taking the place of a word already tested or an exposure-only word. Re-run `check` and `blind --only` on the edited items, then `register`. Only an item that is unanswered and has no key still untested, or seen only as a distractor or in a passage, is retired.
 
 ## Structure rules (the validator enforces most)
 

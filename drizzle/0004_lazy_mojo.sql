@@ -1,0 +1,1 @@
+ALTER TABLE "vocab" ADD COLUMN "exposure_only" boolean DEFAULT false NOT NULL;

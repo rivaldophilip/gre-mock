@@ -151,9 +151,9 @@ const shortDef = (s: Sense) => `${s.pos ? `${s.pos}. ` : ""}${s.def.split(/[;:]/
  * A per-word renderer for Rich / RichInline: each word is tappable, tagged words are highlighted. A word whose definition
  * is known (`senses`, or the tag's own) shows it on hover, with a line on what tapping does.
  */
-export function tapWord(tags: WordTags, senses?: Sense[] | null): WordRender {
+export function tapWord(tags: WordTags, senses?: Sense[] | null, only?: string[]): WordRender {
   return function TapWord(tok, key) {
-    if (norm(tok).length < MIN_LEN) return tok;
+    if (norm(tok).length < MIN_LEN || (only && !only.some((o) => norm(o) === norm(tok)))) return tok;
     const on = tags.has(tok);
     const sense = (senses ?? tags.senses(tok))?.[0];
     const hint = on ? "Marked as not known. Tap to undo." : "Didn’t know it? Tap to see it more often.";
@@ -223,9 +223,12 @@ function HoverTip({ children, tip, title, onClick, className }: { children: Reac
   );
 }
 
-/** Rich text whose words are tappable; `senses` is the definition to show on hover when the text is a single word. */
-export function TaggableText({ text, tags, senses, inline, className }: { text: string; tags: WordTags; senses?: Sense[] | null; inline?: boolean; className?: string }) {
-  const word = tapWord(tags, senses);
+/**
+ * Rich text whose words are tappable; `senses` is the definition to show on hover when the text is a single word, and
+ * `only` limits the taps to those words (a phrase choice's vocab word).
+ */
+export function TaggableText({ text, tags, senses, only, inline, className }: { text: string; tags: WordTags; senses?: Sense[] | null; only?: string[]; inline?: boolean; className?: string }) {
+  const word = tapWord(tags, senses, only);
   return inline ? <RichInline text={text} word={word} /> : <Rich text={text} className={className} word={word} />;
 }
 

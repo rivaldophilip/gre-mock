@@ -20,6 +20,7 @@
       "section": 1,
       "type": "se",
       "difficulty": 5,
+      "retired": true,
       "prompt": "Purists hoped the usage panel would denounce the slang creeping into broadcast English, but its report did not so much condemn the new words as ___ the territory in which they would be tolerated: acceptable in sports commentary and weather chat, still barred from the evening news.",
       "choices": [
         "fulminate",
@@ -192,7 +193,7 @@
         "communitarian",
         "complacent",
         "insular",
-        "liminal"
+        "jejune"
       ],
       "key": {
         "sel": [
@@ -206,7 +207,7 @@
           "indifferent": "Trap pair with complacent. Indifferent means uninterested, and the editors 'followed avidly' the wider world's news.",
           "complacent": "Trap pair with indifferent: self-satisfied, uncritically content. The sentence clears them of smugness at the start.",
           "communitarian": "Stressing the community over the individual, as a social philosophy. It fits the local theme, but it is not a fault of narrowness and does not describe reducing a war to property values.",
-          "liminal": "On a threshold, transitional. Nothing in the coverage is in between two states."
+          "jejune": "Naive and simplistic. The paper's fault is not shallowness but measuring every distant event by local property values, a narrowness of outlook."
         }
       },
       "tags": [
@@ -252,7 +253,7 @@
         },
         {
           "kind": "word",
-          "id": "liminal",
+          "id": "jejune",
           "role": "distractor",
           "at": [
             5
@@ -270,7 +271,7 @@
         "quiescent",
         "impetuous",
         "conscientious",
-        "dormant",
+        "inert",
         "besotted",
         "rash"
       ],
@@ -283,8 +284,8 @@
       "explanation": {
         "key": "The quiet months 'misled' the editors, so the truth runs the other way, and the evidence is airing an unconfirmed memo within minutes. Impetuous and rash both mean acting suddenly without thought.",
         "distractors": {
-          "quiescent": "Trap pair with dormant: inactive, at rest. It matches 'quiet first months', but those months are exactly what misled the editors.",
-          "dormant": "Trap pair with quiescent: inactive, as if asleep. Same failure: the real failing showed in hasty action.",
+          "quiescent": "Trap pair with inert: inactive, at rest. It matches 'quiet first months', but those months are exactly what misled the editors.",
+          "inert": "Sluggish, unable to act. Trap pair with quiescent: it describes the quiet first months that misled the editors, not her real failing.",
           "conscientious": "Careful and diligent. That is the 'cautious hand' the editors wrongly assumed.",
           "besotted": "Infatuated, or muddled by drink. Nothing points to infatuation; the fault is haste."
         }
@@ -316,7 +317,7 @@
         },
         {
           "kind": "word",
-          "id": "dormant",
+          "id": "inert",
           "role": "distractor",
           "at": [
             3
@@ -1718,13 +1719,13 @@
       "prompt": "The editorial drew such (i) ___ from readers that the paper shut its comments section within the hour, yet the writer was not left to face the storm alone: by the next morning a (ii) ___ of the paper's own columnists had signed a letter defending her right to publish it.",
       "blanks": [
         [
-          "manumission",
+          "goosebumps",
           "vitriol",
           "skulduggery"
         ],
         [
           "jeremiad",
-          "polity",
+          "pinnacle",
           "phalanx"
         ]
       ],
@@ -1737,16 +1738,16 @@
       "explanation": {
         "key": "(i) Reader reaction bad enough to close the comments within the hour is bitter abuse: vitriol. (ii) 'Not left to face the storm alone' and 'defending' call for a massed group united in defense: phalanx.",
         "distractors": {
-          "manumission": "The freeing of a slave. Readers cannot direct that at an editorial.",
+          "goosebumps": "Bumps on the skin from cold or a thrill. A response that shut the comments section within the hour was anger, not a shiver.",
           "skulduggery": "Underhanded scheming. The 'storm' is open abuse in the comments, not secret trickery.",
           "jeremiad": "A long lament. A letter can be a jeremiad, but columnists cannot be 'a jeremiad of' anything.",
-          "polity": "A state or organized society. A group of columnists signing a letter is not a political body."
+          "pinnacle": "The highest point. The blank needs a group standing together, a body of columnists, not a summit."
         }
       },
       "tags": [
         {
           "kind": "word",
-          "id": "manumission",
+          "id": "goosebumps",
           "role": "distractor",
           "at": [
             0,
@@ -1782,7 +1783,7 @@
         },
         {
           "kind": "word",
-          "id": "polity",
+          "id": "pinnacle",
           "role": "distractor",
           "at": [
             1,

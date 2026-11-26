@@ -9,7 +9,7 @@ import { oneTarget } from "./lib/accounts";
 import { bankSynonyms } from "./lib/bank";
 import { DRILL_DIR, isDrillId } from "../lib/test-path";
 import { markPending, scoreAll, type ItemScore, type LoggedEvent } from "../lib/priority/compute";
-import { PASSAGE_WORDS_MIN, SE_TRAP_PAIRS, UNTESTED_DISTRACTOR_SHARE } from "../lib/priority/config";
+import { PASSAGE_WORDS_MIN, SE_TRAP_PAIRS, SMOOTH, UNTESTED_DISTRACTOR_SHARE } from "../lib/priority/config";
 import { allocateConcepts, allocateVerbalKeys, assignVariants, drawMultiKeys, pairSeKeys, rng, SE_PAIRS } from "../lib/priority/allocate";
 import { slotType, typeStats, TYPE_INFO, type SlotType } from "../lib/qtypes";
 import { conceptHistory, itemText, measureTests, primaryOf, testVariants, type SetupGroup } from "../lib/setup-history";
@@ -324,7 +324,11 @@ async function main() {
   if (measure === "verbal") {
     const vocab = (await db.select().from(schema.vocab)).filter((v) => !v.pink);
     const byId = new Map(vocab.map((v) => [v.id, v]));
-    const scores = markPending(scoreAll(vocab.map((v) => ({ id: v.id, yield: v.yield })), logged, now), pending.items);
+    const allScores = markPending(scoreAll(vocab.map((v) => ({ id: v.id, yield: v.yield, exposureOnly: v.exposureOnly })), logged, now), pending.items);
+    // dismissed words (/stats) are never targeted, in any list; exposure-only words are never a key, distractor or SE
+    // trap: they go to the passage-word pool only
+    const liveScores = allScores.filter((s) => !s.dismissed);
+    const scores = liveScores.filter((s) => !s.exposureOnly);
     const drawn = allocateVerbalKeys(scores, (wid) => !!byId.get(wid)?.isSecondary, 29, random);
     // SE keys two words: pair key words with bank synonyms up front, so all 29 can be keys (never an SE pair keyed before)
     const synonyms = bankSynonyms();
@@ -362,15 +366,19 @@ async function main() {
     // passage words never repeat a distractor-list word, so each one is a further word seen
     const free = scores.filter((s) => !used.has(s.itemId) && !weakIds.has(s.itemId) && !freshIds.has(s.itemId) && s.N === 1);
     const byNY = (a: ItemScore, b: ItemScore) => unshown(a) - unshown(b) || b.N * b.Y - a.N * a.Y;
-    // shuffled first: equal N·Y would otherwise keep table order, so every brief drew the same a-c words
-    const tiered = free.filter((s) => ["passage", "extended"].includes(byId.get(s.itemId)!.tier)).sort(() => random() - 0.5).sort(byNY);
-    // until the passage/extended tiers are populated, fall back to untested bank words
-    const filler = free.filter((s) => !tiered.includes(s)).sort(() => random() - 0.5).sort(byNY);
-    const passPool = [...tiered, ...filler].slice(0, 40);
+    // exposure-only words first: a passage is their only way in. Never shown ones, then shown ones with weakness
+    // evidence ("didn't know"), so a word the reader missed comes back in a later passage; then untested bank words.
+    // Shuffled first: equal N·Y would otherwise keep table order, so every brief drew the same a-c words
+    const UNTESTED_S = SMOOTH.prior / SMOOTH.total;
+    const exposure = liveScores.filter((s) => s.exposureOnly);
+    const unread = exposure.filter((s) => s.C < 1).sort(() => random() - 0.5).sort(byNY);
+    const reread = exposure.filter((s) => s.C >= 1 && s.S > UNTESTED_S).sort((a, b) => unshown(a) - unshown(b) || b.P - a.P);
+    const filler = free.sort(() => random() - 0.5).sort(byNY);
+    const passPool = [...unread, ...reread, ...filler].slice(0, 40);
     const show = (s: ItemScore, bucket?: string) => {
       const v = byId.get(s.itemId)!;
       const sense = (v.senses as { def: string; pos?: string; secondary?: boolean }[] | null)?.[0];
-      return { word: v.lemma, id: v.id, tier: v.tier, secondary: v.isSecondary, sense: sense ? `${sense.pos ?? ""} ${sense.def}`.trim() : null, bucket, reason: s.reason, P: +s.P.toFixed(2) };
+      return { word: v.lemma, id: v.id, tier: v.tier, secondary: v.isSecondary, ...(v.exposureOnly ? { exposureOnly: true } : {}), sense: sense ? `${sense.pos ?? ""} ${sense.def}`.trim() : null, bucket, reason: s.reason, P: +s.P.toFixed(2) };
     };
     const answers = await finishedAnswers(db);
     const revisits = matchRevisits(keys.map((k) => k.itemId), revisitQueue(answers, measureTests(measure), now).filter(notHeld), keyWordsOf);
@@ -408,9 +416,9 @@ async function main() {
       skillSlots,
       distractorWords: { weak: weakD.map((s) => show(s)), untested: freshD.map((s) => show(s)), trapPairs: trapPairs.map((p) => p.map((w) => byId.get(w)!.lemma)) },
       passageWords: passPool.map((s) => show(s)),
-      wordTargets: { untestedDistractorShare: UNTESTED_DISTRACTOR_SHARE, passageWordsMin: PASSAGE_WORDS_MIN },
+      wordTargets: { untestedDistractorShare: UNTESTED_DISTRACTOR_SHARE, passageWordsMin: PASSAGE_WORDS_MIN, exposureOnlyChoices: false },
       instructions:
-        "Use keyWords as the answers/keys across TC blanks and SE pairs (29 slots, order free); key each of the sePairs (two key words that are bank synonyms) as one SE item; any other SE item pairs a key word with a listed bank synonym. Draw at least " + Math.round(UNTESTED_DISTRACTOR_SHARE * 100) + "% of the distractor words from distractorWords.untested, the rest from distractorWords.weak. Weave " + PASSAGE_WORDS_MIN + "-6 passageWords into each RC passage (not the arguments). check enforces both. Do not write word tags: `npm run tag` fills them from the choice and passage text (regular inflections match; tag an irregular form such as `forsworn` by hand). Each key word's `sense` is the GRE-tested sense: write the sentence so THAT sense is the one that fits (for secondary=true words, the everyday sense must be the trap). Give each RC question one primary skill tag {kind:'concept', role:'primary'} from skillSlots (argument skills on the arg items, rc-select-verify suits rc_multi), optionally a secondary one; the reading skills can repeat. Write each skill slot's question as its `variant`. A key word that was used before comes back in a new sentence logic, with a new SE partner where possible, and with no distractor from its earlier items (the validator rejects a shared distractor or a repeated SE pair). A key word with a `revisit` is a deliberate sibling of that earlier item, made with the change named: set `revisits` to its ref on the question." + focusNote,
+        "Use keyWords as the answers/keys across TC blanks and SE pairs (29 slots, order free); key each of the sePairs (two key words that are bank synonyms) as one SE item; any other SE item pairs a key word with a listed bank synonym. Draw at least " + Math.round(UNTESTED_DISTRACTOR_SHARE * 100) + "% of the distractor words from distractorWords.untested, the rest from distractorWords.weak. Weave " + PASSAGE_WORDS_MIN + "-6 passageWords into each RC passage (not the arguments). check enforces both. Words marked exposureOnly are passage words only: never a TC / SE choice (check rejects one). Do not write word tags: `npm run tag` fills them from the choice and passage text (regular inflections match; tag an irregular form such as `forsworn` by hand). Each key word's `sense` is the GRE-tested sense: write the sentence so THAT sense is the one that fits (for secondary=true words, the everyday sense must be the trap). Give each RC question one primary skill tag {kind:'concept', role:'primary'} from skillSlots (argument skills on the arg items, rc-select-verify suits rc_multi), optionally a secondary one; the reading skills can repeat. Write each skill slot's question as its `variant`. A key word that was used before comes back in a new sentence logic, with a new SE partner where possible, and with no distractor from its earlier items (the validator rejects a shared distractor or a repeated SE pair). A key word with a `revisit` is a deliberate sibling of that earlier item, made with the change named: set `revisits` to its ref on the question." + focusNote,
     });
   } else {
     const concepts = conceptRows.filter((c) => !SKILL_AREAS.includes(c.area));

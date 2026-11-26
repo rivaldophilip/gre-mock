@@ -16,9 +16,9 @@ type Brief = {
   passageWords?: { id: string }[];
   distractorWords?: { untested?: { id: string }[]; review?: { id: string }[] };
   /** set by briefs from the untested-word push on (lib/priority/config.ts); older briefs keep the old aims */
-  wordTargets?: { untestedDistractorShare: number; passageWordsMin: number };
+  wordTargets?: { untestedDistractorShare: number; passageWordsMin: number; exposureOnlyChoices?: false };
   /** drill briefs: the least share of choice words from the brief, and the missed drill items to sibling */
-  drillTargets?: { untestedChoiceShare: number };
+  drillTargets?: { untestedChoiceShare: number; exposureOnlyChoices?: false };
   revisits?: { ref: string; keys: string[] }[];
   conceptSlots?: { concept: string }[];
   slots?: { type: string; keys?: number }[];
@@ -103,6 +103,21 @@ function drillCoverage(test: Test, brief: Brief) {
   return { lines, problems };
 }
 
+/**
+ * Exposure-only words (data/exposure_only.txt, the passage tier) are shown in passages and stems only. Briefs from
+ * that rule on carry `exposureOnlyChoices: false`, and a key or distractor among them is a problem; older tests keep theirs.
+ */
+function exposureOnlyChoices(test: Test, brief: Brief) {
+  if (brief.wordTargets?.exposureOnlyChoices !== false && brief.drillTargets?.exposureOnlyChoices !== false) return [];
+  const vocab = JSON.parse(fs.readFileSync("data/vocab.json", "utf8")) as { id: string; exposureOnly?: boolean }[];
+  const only = new Set(vocab.filter((v) => v.exposureOnly).map((v) => v.id));
+  return test.questions.flatMap((q) =>
+    q.tags
+      .filter((t) => t.kind === "word" && (t.role === "key" || t.role === "distractor") && only.has(t.id))
+      .map((t) => `${q.id}: "${t.id}" is an exposure-only word (passages and stems only); replace this ${t.role} with a brief word`),
+  );
+}
+
 /** `L5 5/10 (>= half) · levels 4-5` for a drill batch, whose rules replace the section ones. */
 const drillLevelLine = (test: Test) => {
   const l5 = test.questions.filter((q) => q.difficulty >= 5).length;
@@ -170,6 +185,7 @@ function main() {
       unusedKeys = c.unusedKeys;
       problems.push(...c.problems);
     } else coverage.push(...quantCoverage(test, brief));
+    problems.push(...exposureOnlyChoices(test, brief));
   } else coverage.push(`no ${briefFile}; coverage against the brief skipped`);
   if (unusedKeys.length && notInBank.size) problems.push(`unused brief key words, to replace a non-bank key: ${unusedKeys.join(", ")}`);
 

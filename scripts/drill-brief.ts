@@ -121,8 +121,9 @@ async function main() {
   const random = rng(seed);
   const now = new Date();
   const id = nextId();
-  // only words data/vocab.json still holds: `tag` reads that file, so a stale database row could never be tagged
-  const bank = new Set((JSON.parse(fs.readFileSync("data/vocab.json", "utf8")) as { id: string }[]).map((v) => v.id));
+  // only words data/vocab.json still holds: `tag` reads that file, so a stale database row could never be tagged;
+  // and never an exposure-only word (passages only, and a drill item has no passage)
+  const bank = new Set((JSON.parse(fs.readFileSync("data/vocab.json", "utf8")) as { id: string; exposureOnly?: boolean }[]).filter((v) => !v.exposureOnly).map((v) => v.id));
   // and only nouns, verbs and adjectives with a sense: an adverb or preposition almost never suits a TC / SE blank
   // (--sweep: adverbs and pink words too); definitions spell adjective either way
   const choicePos = new Set(sweep ? ["noun", "verb", "adjective", "adverb"] : ["noun", "verb", "adjective"]);
@@ -130,7 +131,8 @@ async function main() {
   const vocab = (await db.select().from(schema.vocab)).filter((v) => (sweep || !v.pink) && bank.has(v.id) && choicePos.has(normPos((v.senses as { pos?: string }[] | null)?.[0]?.pos) ?? ""));
   const byId = new Map(vocab.map((v) => [v.id, v]));
   const events = (await db.select().from(schema.itemEvents)).filter((e) => e.kind === "word");
-  const scores = scoreAll(vocab.map((v) => ({ id: v.id, yield: v.yield })), events.map((e) => ({ itemId: e.itemId, event: e.event, weight: e.weight, createdAt: e.createdAt, attemptId: e.attemptId })), now);
+  // dismissed words (/stats) are never targeted
+  const scores = scoreAll(vocab.map((v) => ({ id: v.id, yield: v.yield })), events.map((e) => ({ itemId: e.itemId, event: e.event, weight: e.weight, createdAt: e.createdAt, attemptId: e.attemptId })), now).filter((s) => !s.dismissed);
   const holds = await soonShown(db, !sweep);
   const held = (wid: string) => holds.get(wid) ?? 0;
   // never-seen words not due elsewhere, high yield first with some shuffle so sibling batches differ
@@ -224,7 +226,7 @@ async function main() {
     sePairs,
     revisits: revisits.map((r, i) => ({ ref: r.ref, result: r.result, item: itemText(r.question), keys: r.question.tags.filter((t) => t.kind === "word" && t.role === "key").map((t) => t.id), change: REVISIT_CHANGES.verbal[i % REVISIT_CHANGES.verbal.length] })),
     distractorWords: { untested: shown.filter((w) => freshIds.has(w)).map(show), review: shown.filter((w) => !freshIds.has(w)).map(show), trapPairs: trapPairs.map((p) => p.map((w) => byId.get(w)!.lemma)) },
-    drillTargets: { untestedChoiceShare: DRILL_UNTESTED_SHARE },
+    drillTargets: { untestedChoiceShare: DRILL_UNTESTED_SHARE, exposureOnlyChoices: false },
     freshLeft: fresh.length,
   };
   fs.mkdirSync("content/briefs", { recursive: true });

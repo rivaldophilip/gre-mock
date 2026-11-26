@@ -274,10 +274,10 @@
       "choices": [
         "enigmatic",
         "explicit",
-        "artful",
+        "prescient",
         "ominous",
         "unequivocal",
-        "disingenuous"
+        "indistinct"
       ],
       "key": {
         "sel": [
@@ -288,8 +288,8 @@
       "explanation": {
         "key": "The inscription is set against the riddles 'that could be read to fit any outcome': it named king, city and season, and 'so ___ that' the priests could find no saving reading. It left no room for interpretation, so explicit and unequivocal.",
         "distractors": {
-          "artful": "Trap pair with disingenuous: crafty, cunning. These suit the riddles, built to fit any outcome, but the inscription is the exception to them.",
-          "disingenuous": "Trap pair with artful: insincere, falsely candid. Craft would have left the priests a way out, and they found none.",
+          "prescient": "Having foresight. The inscription's prophecy failed, so it was anything but prescient; the blank is about how plainly it was worded.",
+          "indistinct": "Unclear or vague, the opposite of an inscription that named the king, the city and the season. Trap pair with enigmatic.",
           "enigmatic": "Mysterious, hard to interpret. That describes the other pronouncements, not this one.",
           "ominous": "Threatening, foreshadowing evil. A prophecy of defeat is ominous, but menace does not explain why no reading could rescue it."
         }
@@ -313,7 +313,7 @@
         },
         {
           "kind": "word",
-          "id": "artful",
+          "id": "prescient",
           "role": "distractor",
           "at": [
             2
@@ -337,7 +337,7 @@
         },
         {
           "kind": "word",
-          "id": "disingenuous",
+          "id": "indistinct",
           "role": "distractor",
           "at": [
             5
@@ -350,6 +350,7 @@
       "section": 1,
       "type": "se",
       "difficulty": 5,
+      "retired": true,
       "prompt": "Gout had made the old judge so ___ that barristers learned to bring their applications in the first hour of the morning, before the pain, and with it his readiness to fly into a rage at a mislaid document, had time to rise.",
       "choices": [
         "choleric",
@@ -443,7 +444,7 @@
           "petulant": "Childishly sulky. Nothing she does is a show of temper; she simply lacks energy.",
           "sportive": "Playful, frolicsome. The opposite of a woman drifting listlessly after a fever.",
           "precipitous": "Steep, or done too hastily. An abrupt ending is a common complaint, but this one 'dissolves', the opposite of a sudden drop.",
-          "peevish": "Irritable. It is a word for a person's temper, and the critics are describing a chapter that lacks force."
+          "grave": "Serious or solemn. The critics meant the chapter goes slack and limp, 'as enervated as its invalid', not that it is weighty."
         }
       },
       "tags": [
@@ -494,7 +495,7 @@
         },
         {
           "kind": "word",
-          "id": "peevish",
+          "id": "grave",
           "role": "distractor",
           "at": [
             1,
@@ -526,7 +527,7 @@
         [
           "tame",
           "precipitous",
-          "peevish"
+          "grave"
         ]
       ]
     },
@@ -1478,7 +1479,7 @@
           "stolid"
         ],
         [
-          "declension",
+          "boon",
           "ferment",
           "mettle"
         ]
@@ -1494,7 +1495,7 @@
         "distractors": {
           "indomitable": "Impossible to subdue. It fits the final scene, but blank (i) is the opening-episode judgment that the final scene unsettles, and it rests on double-dealing.",
           "stolid": "Calm and unemotional, showing little feeling. Nothing in the forging of secret alliances suggests impassivity.",
-          "declension": "A falling-off from a better state. The last scene raises the hero in the listener's eyes rather than showing his decline.",
+          "boon": "A timely blessing. The scene shows a quality of the hero's own, courage, not a benefit he received.",
           "ferment": "A state of agitation or unrest. Agitation is not what scheming fails to supply; the contrast is with courage."
         }
       },
@@ -1528,7 +1529,7 @@
         },
         {
           "kind": "word",
-          "id": "declension",
+          "id": "boon",
           "role": "distractor",
           "at": [
             1,
@@ -1570,7 +1571,7 @@
         [
           "bedlam",
           "humility",
-          "empiricism"
+          "reverence"
         ]
       ],
       "key": {
@@ -1585,7 +1586,7 @@
           "cataclysm": "A violent upheaval or disaster. The magistrates are presenting a lighter sentence, not a disaster.",
           "paucity": "Scarcity. It has nothing to do with sparing the heretic's life.",
           "humility": "Modesty. A stone-throwing crowd is not humble.",
-          "empiricism": "Reliance on observation and experiment. It does not describe a riot in a courtroom."
+          "reverence": "Deep respect. A crowd hurling stones and shouting down the judges shows none."
         }
       },
       "tags": [
@@ -1636,7 +1637,7 @@
         },
         {
           "kind": "word",
-          "id": "empiricism",
+          "id": "reverence",
           "role": "distractor",
           "at": [
             1,

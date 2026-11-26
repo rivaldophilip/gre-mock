@@ -2,7 +2,7 @@ import fs from "node:fs";
 import { describe, expect, it } from "vitest";
 import katex from "katex";
 import concepts from "@/data/concepts.json";
-import { applyMarks, cardId, markIds, orderSections, StudySchema, studyStats, type Mark, type Study } from "@/lib/study";
+import { applyMarks, cardId, isTile, markIds, orderSections, pieceId, StudySchema, studyStats, topicCards, type Mark, type Miss, type Study, type StudyCard, type StudySection } from "@/lib/study";
 import rcSkills from "@/data/rc_skills.json";
 import type { Test } from "@/lib/types";
 
@@ -14,11 +14,17 @@ const richLines = (guide: Study) => [
   ...guide.quickRef.flatMap((g) => g.items.flatMap((it) => [it.name, it.text ?? "", it.note ?? ""])),
   ...guide.formats.flatMap((f) => f.rules),
   ...guide.pacing,
-  ...guide.sections.flatMap((s) => [s.idea, s.example.q, ...s.example.steps, ...(s.facts ?? []), ...(s.tricks ?? []), ...(s.traps ?? []),
-    ...(s.examples ?? []).flatMap((x) => [x.q, x.label, x.answer, ...x.wrong.flatMap((w) => [w.text, w.why])]),
-    ...(s.tips ?? []).flatMap((t) => [t.title, t.text, t.example ?? ""]),
-    ...(s.patterns ?? []).flatMap((p) => [p.idea, ...p.cases.flatMap((c) => [c.name, c.q, c.spot, ...c.steps]), ...(p.notWhen ?? [])])]),
+  ...guide.sections.flatMap((s) => [...(s.patterns ?? []).flatMap((p) => [p.title, p.idea]), ...s.cards.flatMap(cardLines)]),
 ];
+const cardLines = (c: StudyCard): string[] => {
+  switch (c.kind) {
+    case "example": return [c.q, ...c.steps];
+    case "contrast": return [c.q, c.label, c.answer, ...c.wrong.flatMap((w) => [w.text, w.why])];
+    case "case": return [c.name, c.q, c.spot, ...c.steps];
+    case "idea": return [c.text];
+    default: return [c.name, c.text ?? "", c.note ?? "", c.example ?? ""];
+  }
+};
 
 /** Each guide's sections cover its concept ids exactly once, and name no unknown one. */
 const KNOWN: Record<string, string[]> = {
@@ -46,11 +52,16 @@ describe.each(["quant", "verbal"])("content/study/%s.json", (measure) => {
     const ids = guide.sections.map((s) => s.id);
     expect(new Set(ids).size).toBe(ids.length);
     expect(markIds(guide).card.size).toBe(guide.quickRef.reduce((t, g) => t + g.items.length, 0));
+    expect(markIds(guide).piece.size).toBe(guide.sections.reduce((t, s) => t + s.cards.length, 0));
     expect(lines().filter((l) => (l.match(/\$/g) ?? []).length % 2 !== 0)).toEqual([]);
   });
 
-  it("draws every tip figure as one clean, theme-colored SVG", () => {
-    const svgs = guide.sections.flatMap((s) => (s.tips ?? []).flatMap((t) => (t.svg ? [t.svg] : [])));
+  it("opens every topic with its big idea and a worked example", () => {
+    expect(guide.sections.filter((s) => !s.cards.some((c) => c.kind === "idea") || !s.cards.some((c) => c.kind === "example")).map((s) => s.id)).toEqual([]);
+  });
+
+  it("draws every card figure as one clean, theme-colored SVG", () => {
+    const svgs = guide.sections.flatMap((s) => s.cards.flatMap((c) => ("svg" in c && c.svg ? [c.svg] : [])));
     if (measure === "quant") expect(svgs.length).toBeGreaterThan(0);
     const bad = svgs.filter((svg) => {
       const tags = svg.match(/<[a-z][^>]*>/g) ?? [];
@@ -68,6 +79,7 @@ describe.each(["quant", "verbal"])("content/study/%s.json", (measure) => {
   it("renders every formula and every $math$ span in KaTeX without an error", () => {
     const tex = [
       ...guide.quickRef.flatMap((g) => g.items.flatMap((it) => (it.tex ? [it.tex] : []))),
+      ...guide.sections.flatMap((s) => s.cards.flatMap((c) => (isTile(c) && c.tex ? [c.tex] : []))),
       ...lines().flatMap((l) => [...l.matchAll(/\$((?:\\.|[^$\\])+)\$/g)].map((m) => m[1])),
     ];
     if (measure === "quant") expect(tex.length).toBeGreaterThan(200);
@@ -84,13 +96,33 @@ describe.each(["quant", "verbal"])("content/study/%s.json", (measure) => {
 });
 
 describe("StudySchema quick-reference tiles", () => {
-  const base = { measure: "verbal", intro: "x", formats: [], pacing: ["x"], sections: [{ id: "x", title: "x", concepts: ["x"], idea: "x", example: { q: "x", steps: ["x"] }, facts: ["x"], tricks: ["x"], traps: ["x"] }] };
+  const base = { measure: "verbal", intro: "x", formats: [], pacing: ["x"], sections: [{ id: "x", title: "x", concepts: ["x"], cards: [{ id: "idea", kind: "idea", text: "x" }] }] };
   const tiles = (item: object) => ({ ...base, quickRef: [{ title: "x", items: [{ name: "x", ...item }] }] });
   it("takes a formula or a text rule, but not both or neither", () => {
     expect(StudySchema.safeParse(tiles({ tex: "x" })).success).toBe(true);
     expect(StudySchema.safeParse(tiles({ text: "x" })).success).toBe(true);
     expect(StudySchema.safeParse(tiles({ tex: "x", text: "x" })).success).toBe(false);
     expect(StudySchema.safeParse(tiles({})).success).toBe(false);
+  });
+});
+
+describe("StudySchema topic cards", () => {
+  const parse = (section: object) => StudySchema.safeParse({ measure: "quant", intro: "x", formats: [], pacing: ["x"], sections: [{ id: "t", title: "t", concepts: ["primes-factors"], ...section }] });
+  const idea = { id: "idea", kind: "idea", text: "x" };
+  const cs = { id: "c1", kind: "case", pattern: "p", name: "x", q: "x", spot: "x", steps: ["x"] };
+  it("takes cards with unique ids, known patterns and the topic's own variants", () => {
+    expect(parse({ cards: [idea, { id: "r", kind: "rule", name: "x", text: "x", variant: "GCD / LCM from two products or a word problem", added: "2026-11-25" }] }).success).toBe(true);
+    expect(parse({ patterns: [{ id: "p", title: "x", idea: "x" }], cards: [idea, cs, { id: "l", kind: "limit", pattern: "p", name: "x", tex: "x" }] }).success).toBe(true);
+  });
+  it("refuses a duplicate id, a dangling or empty pattern, a foreign variant and a bad id or date", () => {
+    expect(parse({ cards: [idea, { ...idea, text: "y" }] }).success).toBe(false);
+    expect(parse({ cards: [idea, cs] }).success).toBe(false);
+    expect(parse({ patterns: [{ id: "p", title: "x", idea: "x" }], cards: [idea] }).success).toBe(false);
+    expect(parse({ cards: [idea, { id: "r", kind: "rule", name: "x", text: "x", variant: "not a sub-form" }] }).success).toBe(false);
+    expect(parse({ cards: [{ ...idea, id: "Big Idea" }] }).success).toBe(false);
+    expect(parse({ cards: [{ ...idea, added: "25/11/2026" }] }).success).toBe(false);
+    expect(parse({ cards: [idea, { id: "r", kind: "rule", name: "x" }] }).success).toBe(false);
+    expect(parse({ cards: [idea, { id: "r", kind: "rule", name: "x", text: "x", tex: "x" }] }).success).toBe(false);
   });
 });
 
@@ -101,9 +133,9 @@ const guide: Study = {
   formats: [],
   pacing: ["x"],
   sections: [
-    { id: "geo", title: "Geometry", concepts: ["circles", "triangles"], idea: "x", example: { q: "x", steps: ["x"] }, facts: ["x"], tricks: ["x"], traps: ["x"] },
-    { id: "count", title: "Counting", concepts: ["counting-permutations"], idea: "x", example: { q: "x", steps: ["x"] }, facts: ["x"], tricks: ["x"], traps: ["x"] },
-    { id: "sets", title: "Sets", concepts: ["overlapping-sets"], idea: "x", example: { q: "x", steps: ["x"] }, facts: ["x"], tricks: ["x"], traps: ["x"] },
+    { id: "geo", title: "Geometry", concepts: ["circles", "triangles"], cards: [{ id: "idea", kind: "idea", text: "x" }] },
+    { id: "count", title: "Counting", concepts: ["counting-permutations"], cards: [{ id: "idea", kind: "idea", text: "x" }] },
+    { id: "sets", title: "Sets", concepts: ["overlapping-sets"], cards: [{ id: "idea", kind: "idea", text: "x" }] },
   ],
 };
 
@@ -202,5 +234,43 @@ describe("markIds", () => {
     const n = guide.quickRef.reduce((t, g) => t + g.items.length, 0);
     expect(markIds(guide).card.size).toBe(n);
     expect(markIds(guide).card.has(cardId(guide.quickRef[0].title, guide.quickRef[0].items[0].name))).toBe(true);
+  });
+});
+
+describe("topicCards", () => {
+  const at = (iso: string) => new Date(iso);
+  const s: StudySection = {
+    id: "nt",
+    title: "Number theory",
+    concepts: ["primes-factors"],
+    cards: [
+      { id: "idea", kind: "idea", text: "x" },
+      { id: "gcd", kind: "rule", name: "x", text: "x", variant: "gcd" },
+      { id: "plain", kind: "trap", name: "x", text: "x" },
+      { id: "late", kind: "shortcut", name: "x", text: "x", added: "2026-03-01" },
+      { id: "old", kind: "shortcut", name: "x", text: "x", added: "2026-01-01" },
+    ],
+  };
+  const archived = (iso: string): Mark => ({ state: "archived", updatedAt: at(iso) });
+  const marks = new Map([[pieceId("nt", "gcd"), archived("2026-02-01")], [pieceId("nt", "plain"), archived("2026-02-01")]]);
+  const miss = (variant: string | undefined, iso: string) => ({ variant, finishedAt: at(iso) }) as Miss;
+
+  it("brings back only the archived card whose variant a later mock missed", () => {
+    const r = topicCards(s, marks, [miss("gcd", "2026-02-10"), miss(undefined, "2026-02-10")]);
+    expect(r.shown.map((c) => c.id)).toEqual(["idea", "gcd", "late", "old"]);
+    expect(r.archived.map((c) => c.id)).toEqual(["plain"]);
+    expect([...r.back]).toEqual(["gcd"]);
+    expect(r.missedSince).toBe(true);
+  });
+
+  it("keeps cards archived on an earlier or other-variant miss", () => {
+    const r = topicCards(s, marks, [miss("gcd", "2026-01-10"), miss("lcm", "2026-02-10")]);
+    expect(r.archived.map((c) => c.id)).toEqual(["gcd", "plain"]);
+    expect(r.back.size).toBe(0);
+  });
+
+  it("flags as new only shown cards added since the topic's latest archive", () => {
+    expect([...topicCards(s, marks, []).fresh]).toEqual(["late"]);
+    expect(topicCards(s, new Map(), []).fresh.size).toBe(0);
   });
 });

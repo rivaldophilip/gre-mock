@@ -104,7 +104,7 @@
       "choices": [
         "abridged",
         "balked",
-        "reified",
+        "mustered",
         "curtailed",
         "disaggregated",
         "demurred"
@@ -120,7 +120,7 @@
         "distractors": {
           "abridged": "Trap pair with curtailed: shortened. Both need an object (something shortened) and neither means objecting; he did not shorten a speech, he declined to give one.",
           "curtailed": "Trap pair with abridged: cut short. Nothing is cut short; the sentence is about his reluctance.",
-          "reified": "Treated an abstraction as a concrete thing, a term from philosophy that has nothing to do with declining a toast.",
+          "mustered": "Summoned up, as courage or support. Tomas objected once; he did not summon anything.",
           "disaggregated": "Separated into component parts; it needs an object and does not describe reluctance."
         }
       },
@@ -143,7 +143,7 @@
         },
         {
           "kind": "word",
-          "id": "reify",
+          "id": "muster",
           "role": "distractor",
           "at": [
             2
@@ -184,7 +184,7 @@
       "choices": [
         "haphazard",
         "haughty",
-        "oleaginous",
+        "unguided",
         "desultory",
         "supercilious",
         "recherche"
@@ -200,7 +200,7 @@
         "distractors": {
           "haphazard": "Trap pair with desultory: random, unplanned. It matches the first impression ('no apparent plan'), but the reversal shows the pauses were timed, so nothing was random.",
           "desultory": "Trap pair with haphazard: drifting aimlessly from one thing to another. It echoes 'drifted from guest to guest', which is exactly the reading longer acquaintance overturned.",
-          "oleaginous": "Unctuous, fawningly flattering. She signals that remarks are beneath her, the opposite of fawning.",
+          "unguided": "Without direction or plan. A trap with haphazard and desultory: it is the first impression, which longer acquaintance overturned.",
           "recherche": "Exotic or overrefined, said of tastes or objects. Her pauses express contempt, not rarefied taste."
         }
       },
@@ -223,7 +223,7 @@
         },
         {
           "kind": "word",
-          "id": "oleaginous",
+          "id": "unguided",
           "role": "distractor",
           "at": [
             2
@@ -344,10 +344,10 @@
       "choices": [
         "maxim",
         "aplomb",
-        "gravamen",
+        "chagrin",
         "apothegm",
         "composure",
-        "sensibility"
+        "axiom"
       ],
       "key": {
         "sel": [
@@ -360,8 +360,8 @@
         "distractors": {
           "maxim": "Trap pair with apothegm: a pithy saying. The sentence says she offered no clever saying, and one does not meet a moment 'with such maxim'.",
           "apothegm": "Trap pair with maxim: a terse, witty saying. Explicitly excluded by 'she offered no clever saying'.",
-          "gravamen": "The essential grievance or point of a complaint. No complaint is being made.",
-          "sensibility": "Keen emotional responsiveness. A heightened capacity for feeling is the opposite of the unbothered calm described."
+          "chagrin": "Embarrassment at a failure. Guests doubted anything had happened at all, so she showed the opposite of chagrin.",
+          "axiom": "A principle taken as self-evident. With maxim and apothegm it is a kind of saying, and she 'offered no clever saying'."
         }
       },
       "tags": [
@@ -383,7 +383,7 @@
         },
         {
           "kind": "word",
-          "id": "gravamen",
+          "id": "chagrin",
           "role": "distractor",
           "at": [
             2
@@ -407,7 +407,7 @@
         },
         {
           "kind": "word",
-          "id": "sensibility",
+          "id": "axiom",
           "role": "distractor",
           "at": [
             5
@@ -512,7 +512,7 @@
         "deracinate",
         "aggrandize",
         "discern",
-        "belie"
+        "entertain"
       ],
       "key": {
         "sel": [
@@ -526,7 +526,7 @@
           "enhance": "Trap pair with aggrandize: to increase or magnify. The sentence says the skill is 'not in magnifying those worries'.",
           "aggrandize": "Trap pair with enhance: to make greater. Ruled out by the same 'not in magnifying'.",
           "deracinate": "To uproot, tear away from one's native place. Removing the anxieties is a later step at best; the sentence is about noticing them.",
-          "belie": "To give a false impression of, or contradict. The jokes may belie the anxieties, but the therapist does not."
+          "entertain": "To hold an idea in mind. The therapist detects anxieties in the jokes; one does not entertain something in a joke."
         }
       },
       "tags": [
@@ -572,7 +572,7 @@
         },
         {
           "kind": "word",
-          "id": "belie",
+          "id": "entertain",
           "role": "distractor",
           "at": [
             5
@@ -589,7 +589,7 @@
       "choices": [
         "tractable",
         "affable",
-        "bibulous",
+        "cognizant",
         "amenable",
         "amiable",
         "headstrong"
@@ -605,7 +605,7 @@
         "distractors": {
           "tractable": "Trap pair with amenable: easily managed or persuaded. 'No one mistook his warmth for pliancy' rules out compliance.",
           "amenable": "Trap pair with tractable: willing to go along. He refused every request to bend the rules.",
-          "bibulous": "Fond of alcohol. Nothing in the sentence concerns drinking.",
+          "cognizant": "Fully aware. Nothing in the sentence is about what the innkeeper knows; the blank wants friendliness to strangers.",
           "headstrong": "Stubbornly self-willed. It fits the rule-keeping but not the jokes and easy words the blank describes."
         }
       },
@@ -628,7 +628,7 @@
         },
         {
           "kind": "word",
-          "id": "bibulous",
+          "id": "cognizant",
           "role": "distractor",
           "at": [
             2
@@ -665,6 +665,7 @@
       "section": 1,
       "type": "tc",
       "difficulty": 5,
+      "retired": true,
       "prompt": "Aunt Ruth's account of human nature was thoroughly (i) ___: shyness existed to protect us, jealousy to hold families together, as though each trait had been designed for the job it now does. Her nephew, a philosophy student, objected less to that than to her (ii) ___ habit of treating 'men' and 'women' as fixed kinds whose every member shared one nature. Still, he conceded that her readings of family quarrels showed real (iii) ___ subtlety: she could find three meanings in a single slammed door.",
       "blanks": [
         [
@@ -920,6 +921,7 @@
       "section": 1,
       "type": "tc",
       "difficulty": 5,
+      "retired": true,
       "prompt": "Having spent a decade counseling prisoners, a few of them guilty of truly (i) ___ acts, Father Anselm had little patience for the (ii) ___ parishioners who kept careful tallies of their own fasts and tithes while snubbing the former inmates at the back of the church. Yet he declined to rebuke them, reasoning that a (iii) ___ reproach would only feed their appetite for moral instruction; instead he quietly seated the newcomers beside them at the parish supper.",
       "blanks": [
         [
@@ -1055,6 +1057,7 @@
       "section": 1,
       "type": "tc",
       "difficulty": 4,
+      "retired": true,
       "revisits": "drill-002:s1q14",
       "prompt": "Under Aunt Ines the seaside guesthouse was famously (i) ___, a place where even the children spoke in murmurs and the loudest sound was the clock in the hall. Under its new owners it has become (ii) ___, the carpets stained and the sinks crusted with grime. Oddly, though, the regulars who once wrote polite notes about a single dripping tap now say nothing, whereas the neighbors, who never cared what went on inside, have grown (iii) ___ in their complaints to the owners.",
       "blanks": [
@@ -1181,6 +1184,7 @@
       "section": 1,
       "type": "tc",
       "difficulty": 5,
+      "retired": true,
       "prompt": "Old Mrs. Vey's family had practiced (i) ___ for generations, marrying only within the handful of clans on the island, so that by her time nearly everyone at a wedding could trace some (ii) ___ with the bride and groom. Yet as the young people left for the mainland, the pool of eligible partners grew so (iii) ___ that the custom finally collapsed under its own rule.",
       "blanks": [
         [
@@ -1431,6 +1435,7 @@
       "section": 1,
       "type": "tc",
       "difficulty": 5,
+      "retired": true,
       "prompt": "It is a measure of how thoroughly the wellness industry has learned to (i) ___ inner life that even solitude now arrives with a price tag, in weekend 'silence retreats' sold by the seat. Their brochures lean on a familiar (ii) ___, the frazzled executive who finds herself again beside a candle, so worn by repetition that it reads almost as parody.",
       "blanks": [
         [
@@ -1526,6 +1531,7 @@
       "section": 1,
       "type": "tc",
       "difficulty": 4,
+      "retired": true,
       "prompt": "Uncle Theo, once the family's most restless traveler, became almost (i) ___ after his retirement, rooted to one armchair; worse, his opinions began a (ii) ___ drift, circling back to prejudices he had disowned decades earlier.",
       "blanks": [
         [
@@ -1616,6 +1622,7 @@
       "section": 1,
       "type": "tc",
       "difficulty": 5,
+      "retired": true,
       "prompt": "The therapist compared the couple's arrangement to (i) ___ in nature, like the cleaner fish and the grouper, each partner drawing something the other freely supplied. Their quarrels, too, were (ii) ___ rather than merely similar: both grew from the same childhood fear of being left, though in him it surfaced as anger and in her as silence.",
       "blanks": [
         [
@@ -1706,6 +1713,7 @@
       "section": 1,
       "type": "tc",
       "difficulty": 4,
+      "retired": true,
       "prompt": "Raised beside a still mountain lake, Ana had assumed any waterside town would feel like home, but her (i) ___ childhood had not prepared her for the tides and gulls of a (ii) ___ village, where life ran on the schedule of the sea. Only when she moved inland again, to a valley whose fields had been laid down by the silt of a meandering river, did she find in its (iii) ___ plains something of the calm she remembered.",
       "blanks": [
         [
@@ -1908,6 +1916,7 @@
       "section": 1,
       "type": "tc",
       "difficulty": 4,
+      "retired": true,
       "prompt": "Every Sunday Nonna lit a (i) ___ candle at the little shrine, keeping a promise she had made during a hard winter long ago, and her demand for those candles proved remarkably (ii) ___: when the church shop tripled the price, she complained bitterly but bought exactly as many as before.",
       "blanks": [
         [

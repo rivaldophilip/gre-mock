@@ -7,7 +7,7 @@ import { loadTest } from "@/lib/content";
 import { canMarkSilly, canReveal, getAttempt, isClosed, pairKey, responsesFor, sectionOvertimeMs, sectionStatus } from "@/lib/attempts";
 import { bandText, bandWhy, estimateBand, scoreAnswer } from "@/lib/scoring";
 import { TYPE_INFO, slotType } from "@/lib/qtypes";
-import { choiceWords, wordIdFor } from "@/lib/choice-words";
+import { choiceWords, vocabTokens, wordIdFor } from "@/lib/choice-words";
 import type { Answer, Question, Test } from "@/lib/types";
 import { Rich, RichInline } from "@/components/Rich";
 import { Figure } from "@/components/Figure";
@@ -219,7 +219,9 @@ export default async function Review({ params }: { params: Promise<{ id: string;
             </Link>
           )}
         </div>
-        <p className="rounded-xl bg-warn-soft px-4 py-3 text-sm text-fg">Tap any word you did not know. It raises that word’s priority in your next test.</p>
+        {vocabRows.length > 0 && (
+          <p className="rounded-xl bg-warn-soft px-4 py-3 text-sm text-fg">Tap any word you did not know. It raises that word’s priority in your next test.</p>
+        )}
 
         {visible.map((q, qi) => {
           const r = rows.get(pairKey(id, q.id));
@@ -326,9 +328,14 @@ export default async function Review({ params }: { params: Promise<{ id: string;
               )}
               {(words.length > 0 || stemWords.length > 0) && (
                 <div className="grid gap-3 border-t border-line pt-4 sm:grid-cols-2">
-                  {words.map((w) => {
+                  {words.flatMap((w) => {
                     const wid = wordIdFor(q, w);
-                    return <WordChip key={w} word={w} attemptId={a.id} senses={wid ? sensesOf.get(wid) : undefined} tagged={!!wid && taggedIds.has(wid)} />;
+                    // a phrase choice ("lobbied against") offers only its vocab word, never "against"
+                    const toks = vocabTokens(w, wid);
+                    return toks.map((t) => {
+                      const id = toks.length === 1 ? wid : undefined;
+                      return <WordChip key={`${w}:${t}`} word={t} attemptId={a.id} senses={id ? sensesOf.get(id) : undefined} tagged={!!id && taggedIds.has(id)} />;
+                    });
                   })}
                   {stemWords.map((id) => <WordChip key={id} word={lemmaOf.get(id)!} attemptId={a.id} senses={sensesOf.get(id)} tagged={taggedIds.has(id)} />)}
                 </div>

@@ -76,6 +76,9 @@ export const QuestionSchema = z.object({
   variant: z.string().min(1).optional(),
   /** a deliberate revisit: the earlier item ("quant-005:s2q14") whose insight this sibling practises again (docs/PRIORITY.md) */
   revisits: z.string().regex(/^[a-z]+-\d{3}:s\dq\d+$/).optional(),
+  /** drill only: taken out of the pool before it was answered (its words are tested elsewhere). It stays in the file, so
+   * the batch's checks and setup history still see it, but `register` skips it and /drill never serves it */
+  retired: z.boolean().optional(),
 });
 export type Question = z.infer<typeof QuestionSchema>;
 

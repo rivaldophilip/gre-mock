@@ -1880,7 +1880,7 @@
    "prompt": "Commissioned to deliver the official ___ at the dead king's funeral, the court poet found himself in difficulty: custom demanded unbroken praise, and the king's reign had offered little to praise.",
    "blanks": [
     [
-     "apologia",
+     "wakefulness",
      "pejorative",
      "panegyric",
      "bromide",
@@ -1895,7 +1895,7 @@
    "explanation": {
     "key": "The colon explains the difficulty: 'custom demanded unbroken praise'. The official funeral speech is a formal speech of elaborate praise, a panegyric.",
     "distractors": {
-     "apologia": "A formal defense of one's views or conduct. The custom demands praise, not a defense, and a defense would be the easier task for a poor reign.",
+     "wakefulness": "The state of being awake. A trap for anyone thinking of a funeral 'wake'; the poet must deliver a speech of praise.",
      "pejorative": "A word or phrase expressing contempt. It is the opposite of the praise custom demands.",
      "bromide": "A trite, unoriginal remark. One might fear producing one, but no one is commissioned to deliver it.",
      "expedient": "A means to an end, often a makeshift one. It is not a kind of speech."
@@ -1904,7 +1904,7 @@
    "tags": [
     {
      "kind": "word",
-     "id": "apologia",
+     "id": "wakefulness",
      "role": "distractor",
      "at": [
       0,
