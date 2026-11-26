@@ -272,7 +272,7 @@ export default async function Stats() {
 
         <Section title="Question types to practise" note="Ranked by practice need: how often you miss a type, plus how far over the target pace you run. Hover or tap a number to see how it was worked out.">
           {types.length === 0 ? <Empty text="No answered questions yet." /> : (
-            <Table head={["Question type", "Accuracy", "Avg time / target", "Miss chance", "Practice need"]} noun="question types" shown={cutoff(types, (t) => t.need >= NEED_MED, 3)} rows={types.map((t) => (
+            <Table head={["Question type", "Accuracy", "Avg time", "Miss chance", "Practice need"]} noun="question types" shown={cutoff(types, (t) => t.need >= NEED_MED, 3)} rows={types.map((t) => (
                 <tr key={t.type}>
                   <td className="min-w-56">
                     <span className="font-medium">{TYPE_INFO[t.type].label}</span>

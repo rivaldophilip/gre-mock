@@ -174,7 +174,7 @@
      "name": "Excircle of a right triangle",
      "tex": "r_c=s,\\quad r_a=s-b",
      "note": "$r_c$: beyond the hypotenuse; $r_a$: beyond leg $a$ ($b$ = the other leg)",
-     "svg": "<svg viewBox=\"0 0 260 210\" width=\"260\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-label=\"A right triangle with legs a and b and long side c, and the circle outside c touching c and the extended legs; its radius r sub c makes an s by s square with the right-angle corner, so r sub c = s, half the perimeter\"><polygon points=\"49,186 130,186 130,105 49,105\" stroke=\"currentColor\" stroke-width=\"2\" style=\"fill:var(--accent);fill-opacity:.18\"/><polygon points=\"49,145.5 103,186 49,186\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"130\" cy=\"105\" r=\"81\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"103\" y1=\"186\" x2=\"130\" y2=\"186\" stroke-width=\"1.5\" stroke-dasharray=\"5 5\" style=\"stroke:var(--muted)\"/><line x1=\"49\" y1=\"145.5\" x2=\"49\" y2=\"105\" stroke-width=\"1.5\" stroke-dasharray=\"5 5\" style=\"stroke:var(--muted)\"/><line x1=\"130\" y1=\"105\" x2=\"130\" y2=\"186\" stroke-width=\"2.5\" style=\"stroke:var(--accent)\"/><line x1=\"130\" y1=\"105\" x2=\"49\" y2=\"105\" stroke-width=\"2.5\" style=\"stroke:var(--accent)\"/><circle cx=\"130\" cy=\"105\" r=\"2.5\" stroke=\"none\"/><polyline points=\"58,186 58,177 49,177\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"142\" y=\"150.5\" text-anchor=\"start\" stroke=\"none\" style=\"fill:var(--accent)\"><tspan font-style=\"italic\">r</tspan><tspan font-size=\"11\" dy=\"4\">c</tspan></text><text x=\"35\" y=\"170.8\" text-anchor=\"middle\" stroke=\"none\"><tspan font-style=\"italic\">a</tspan></text><text x=\"76\" y=\"205\" text-anchor=\"middle\" stroke=\"none\"><tspan font-style=\"italic\">b</tspan></text><text x=\"70\" y=\"178.8\" text-anchor=\"middle\" stroke=\"none\"><tspan font-style=\"italic\">c</tspan></text></svg>"
+     "svg": "<svg viewBox=\"0 0 260 210\" width=\"260\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-label=\"A right triangle with legs a and b and long side c, with two outside circles. The big circle outside c touches c and the extended legs; its radius r sub c makes an s by s square with the right-angle corner, so r sub c = s, half the perimeter. The small circle outside leg a touches a, the extended b and the extended c; its radius r sub a makes a square with the right-angle corner on the other side, so r sub a = s minus b\"><polygon points=\"79,186 160,186 160,105 79,105\" stroke=\"currentColor\" stroke-width=\"2\" style=\"fill:var(--accent);fill-opacity:.18\"/><polygon points=\"52,186 79,186 79,159 52,159\" stroke=\"currentColor\" stroke-width=\"2\" style=\"fill:var(--accent);fill-opacity:.18\"/><polygon points=\"79,145.5 133,186 79,186\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"160\" cy=\"105\" r=\"81\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"52\" cy=\"159\" r=\"27\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"133\" y1=\"186\" x2=\"160\" y2=\"186\" stroke-width=\"1.5\" stroke-dasharray=\"5 5\" style=\"stroke:var(--muted)\"/><line x1=\"79\" y1=\"145.5\" x2=\"79\" y2=\"105\" stroke-width=\"1.5\" stroke-dasharray=\"5 5\" style=\"stroke:var(--muted)\"/><line x1=\"79\" y1=\"145.5\" x2=\"68.2\" y2=\"137.4\" stroke-width=\"1.5\" stroke-dasharray=\"5 5\" style=\"stroke:var(--muted)\"/><line x1=\"160\" y1=\"105\" x2=\"160\" y2=\"186\" stroke-width=\"2.5\" style=\"stroke:var(--accent)\"/><line x1=\"160\" y1=\"105\" x2=\"79\" y2=\"105\" stroke-width=\"2.5\" style=\"stroke:var(--accent)\"/><line x1=\"52\" y1=\"159\" x2=\"52\" y2=\"186\" stroke-width=\"2.5\" style=\"stroke:var(--accent)\"/><line x1=\"52\" y1=\"159\" x2=\"79\" y2=\"159\" stroke-width=\"2.5\" style=\"stroke:var(--accent)\"/><circle cx=\"160\" cy=\"105\" r=\"2.5\" stroke=\"none\"/><circle cx=\"52\" cy=\"159\" r=\"2.5\" stroke=\"none\"/><polyline points=\"88,186 88,177 79,177\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"/><text x=\"172\" y=\"150.5\" text-anchor=\"start\" stroke=\"none\" style=\"fill:var(--accent)\"><tspan font-style=\"italic\">r</tspan><tspan font-size=\"11\" dy=\"4\">c</tspan></text><text x=\"65\" y=\"178\" text-anchor=\"middle\" stroke=\"none\" style=\"fill:var(--accent)\"><tspan font-style=\"italic\">r</tspan><tspan font-size=\"11\" dy=\"4\">a</tspan></text><text x=\"87\" y=\"166\" text-anchor=\"middle\" stroke=\"none\"><tspan font-style=\"italic\">a</tspan></text><text x=\"106\" y=\"205\" text-anchor=\"middle\" stroke=\"none\"><tspan font-style=\"italic\">b</tspan></text><text x=\"114\" y=\"158\" text-anchor=\"middle\" stroke=\"none\"><tspan font-style=\"italic\">c</tspan></text></svg>"
     },
     {
      "name": "Excircle of an equilateral triangle",
@@ -963,6 +963,17 @@
      ]
     },
     {
+     "id": "outside-angles-one-full-turn",
+     "kind": "rule",
+     "name": "Why the outside angles total $360^\\circ$",
+     "text": "walk the edge: you turn by the outside angle at each corner and end facing the way you started, so the turns make **one full turn**",
+     "note": "true for any number of sides, regular or not (one outside angle per corner, shape not dented in); slide the angles to one point and they fill a circle",
+     "example": "a triangle's outside angles total $360^\\circ$, and so do a $20$-gon's",
+     "svg": "<svg viewBox=\"0 0 260 170\" width=\"260\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A five-sided shape with each side extended past its corner as a dashed line, like a pinwheel. The outside angles a, b, c, d and e are shaded where the extension meets the next side. On the right the five angles are slid to one point, where they fill a whole circle with no gap or overlap, so they total 360 degrees\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"35\" y1=\"120\" x2=\"38.4\" y2=\"147.8\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\" style=\"stroke:var(--muted)\"/><path d=\"M35,120 L37,136.9 A17,17 0 0 0 51.9,121.5 Z\" stroke=\"none\" style=\"fill:var(--accent);fill-opacity:0.35\"/><text x=\"53.7\" y=\"143.1\" text-anchor=\"middle\" font-size=\"14\" stroke=\"none\" style=\"fill:var(--accent)\"><tspan font-style=\"italic\">a</tspan></text><line x1=\"125\" y1=\"128\" x2=\"152.9\" y2=\"130.5\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\" style=\"stroke:var(--muted)\"/><path d=\"M125,128 L141.9,129.5 A17,17 0 0 0 128.8,111.4 Z\" stroke=\"none\" style=\"fill:var(--accent);fill-opacity:0.35\"/><text x=\"146\" y=\"117.7\" text-anchor=\"middle\" font-size=\"14\" stroke=\"none\" style=\"fill:var(--accent)\"><tspan font-style=\"italic\">b</tspan></text><line x1=\"140\" y1=\"62\" x2=\"146.2\" y2=\"34.7\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\" style=\"stroke:var(--muted)\"/><path d=\"M140,62 L143.8,45.4 A17,17 0 0 0 125.5,53.1 Z\" stroke=\"none\" style=\"fill:var(--accent);fill-opacity:0.35\"/><text x=\"130\" y=\"43\" text-anchor=\"middle\" font-size=\"14\" stroke=\"none\" style=\"fill:var(--accent)\"><tspan font-style=\"italic\">c</tspan></text><line x1=\"85\" y1=\"28\" x2=\"61.2\" y2=\"13.3\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\" style=\"stroke:var(--muted)\"/><path d=\"M85,28 L70.5,19.1 A17,17 0 0 0 70.4,36.7 Z\" stroke=\"none\" style=\"fill:var(--accent);fill-opacity:0.35\"/><text x=\"59\" y=\"32.8\" text-anchor=\"middle\" font-size=\"14\" stroke=\"none\" style=\"fill:var(--accent)\"><tspan font-style=\"italic\">d</tspan></text><line x1=\"28\" y1=\"62\" x2=\"4\" y2=\"76.3\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\" style=\"stroke:var(--muted)\"/><path d=\"M28,62 L13.4,70.7 A17,17 0 0 0 30,78.9 Z\" stroke=\"none\" style=\"fill:var(--accent);fill-opacity:0.35\"/><text x=\"16.5\" y=\"90.3\" text-anchor=\"middle\" font-size=\"14\" stroke=\"none\" style=\"fill:var(--accent)\"><tspan font-style=\"italic\">e</tspan></text><polygon points=\"35,120 125,128 140,62 85,28 28,62\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M212,78 L231.3,55 A30,30 0 0 1 238.5,92.1 Z\" stroke-width=\"1\" style=\"fill:var(--accent);fill-opacity:0.45;stroke:var(--surface)\"/><text x=\"252.2\" y=\"75.2\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--accent)\"><tspan font-style=\"italic\">a</tspan></text><path d=\"M212,78 L238.5,92.1 A30,30 0 0 1 201.6,106.1 Z\" stroke-width=\"1\" style=\"fill:var(--accent);fill-opacity:0.2;stroke:var(--surface)\"/><text x=\"226.6\" y=\"121.3\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--accent)\"><tspan font-style=\"italic\">b</tspan></text><path d=\"M212,78 L201.6,106.1 A30,30 0 0 1 182,77.3 Z\" stroke-width=\"1\" style=\"fill:var(--accent);fill-opacity:0.45;stroke:var(--surface)\"/><text x=\"178.1\" y=\"106\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--accent)\"><tspan font-style=\"italic\">c</tspan></text><path d=\"M212,78 L182,77.3 A30,30 0 0 1 198.8,51.1 Z\" stroke-width=\"1\" style=\"fill:var(--accent);fill-opacity:0.2;stroke:var(--surface)\"/><text x=\"177.5\" y=\"60.9\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--accent)\"><tspan font-style=\"italic\">d</tspan></text><path d=\"M212,78 L198.8,51.1 A30,30 0 0 1 231.3,55 Z\" stroke-width=\"1\" style=\"fill:var(--accent);fill-opacity:0.45;stroke:var(--surface)\"/><text x=\"217\" y=\"42.3\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--accent)\"><tspan font-style=\"italic\">e</tspan></text><circle cx=\"212\" cy=\"78\" r=\"30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"156\" y1=\"78\" x2=\"168\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M163,74 L168,78 L163,82\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"130\" y=\"165\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\">a + b + c + d + e = 360°: one full turn</text></svg>",
+     "variant": "interior angle sum of an n-gon, and regular polygons",
+     "added": "2026-11-26"
+    },
+    {
      "id": "outside-angles-add-regular-shape",
      "kind": "rule",
      "name": "Regular polygon, each outside angle",
@@ -976,7 +987,19 @@
      "name": "Inside + outside angle",
      "tex": "180^\\circ",
      "note": "at every corner they make a straight line",
-     "example": "regular hexagon: outside $60^\\circ$, inside $120^\\circ$"
+     "example": "regular hexagon: outside $60^\\circ$, inside $120^\\circ$",
+     "svg": "<svg viewBox=\"0 0 260 170\" width=\"260\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A four-sided shape. At its bottom-right corner the bottom side is extended past the corner as a dashed line. The inside angle (shaded, between the two sides) and the outside angle (between the next side and the dashed extension) sit side by side on that straight line, so they add to 180 degrees\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"30,130 150,130 120,40 45,60\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"150\" y1=\"130\" x2=\"230\" y2=\"130\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\" style=\"stroke:var(--muted)\"/><path d=\"M150,130 L141.8,105.3 A26,26 0 0 0 124,130 Z\" stroke=\"none\" style=\"fill:var(--accent);fill-opacity:0.35\"/><path d=\"M170,130 A20,20 0 0 0 143.7,111\" fill=\"none\" stroke-width=\"2\" style=\"stroke:var(--warn)\"/><text x=\"115.9\" y=\"110.4\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--accent)\">inside</text><text x=\"173.4\" y=\"102.6\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--warn)\">outside</text><text x=\"130\" y=\"163\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--muted)\">together a straight line: 180°</text></svg>"
+    },
+    {
+     "id": "inside-angles-triangles-from-corner",
+     "kind": "rule",
+     "name": "Why the inside angles total $(n-2)\\times180^\\circ$",
+     "text": "draw every diagonal from **one** corner: it cuts the shape into $n-2$ triangles, $180^\\circ$ each",
+     "note": "or from the outside angles: $n$ corners make $n\\times180^\\circ$ of straight lines, minus the $360^\\circ$ of outside angles",
+     "example": "hexagon: $4$ triangles, $720^\\circ$; $6\\times180-360=720$",
+     "svg": "<svg viewBox=\"0 0 260 170\" width=\"260\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"A five-sided shape with two diagonals drawn from its bottom-left corner, cutting it into 3 triangles numbered 1 to 3. Each triangle's angles add to 180 degrees and together they make up all the inside angles, so the inside angles total (5 minus 2) times 180, which is 540 degrees\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"40,135 160,135 185,70\" stroke=\"none\" style=\"fill:var(--accent);fill-opacity:0.15\"/><polygon points=\"40,135 185,70 110,25\" stroke=\"none\" style=\"fill:var(--accent);fill-opacity:0.32\"/><polygon points=\"40,135 110,25 30,65\" stroke=\"none\" style=\"fill:var(--accent);fill-opacity:0.15\"/><line x1=\"40\" y1=\"135\" x2=\"185\" y2=\"70\" stroke-width=\"1.5\" style=\"stroke:var(--accent)\"/><line x1=\"40\" y1=\"135\" x2=\"110\" y2=\"25\" stroke-width=\"1.5\" style=\"stroke:var(--accent)\"/><polygon points=\"40,135 160,135 185,70 110,25 30,65\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"128.3\" y=\"118.3\" text-anchor=\"middle\" font-size=\"15\" stroke=\"none\" style=\"fill:var(--accent)\">1</text><text x=\"111.7\" y=\"81.7\" text-anchor=\"middle\" font-size=\"15\" stroke=\"none\" style=\"fill:var(--accent)\">2</text><text x=\"60\" y=\"80\" text-anchor=\"middle\" font-size=\"15\" stroke=\"none\" style=\"fill:var(--accent)\">3</text><text x=\"222\" y=\"77\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--muted)\">5 sides</text><text x=\"222\" y=\"97\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--muted)\">3 triangles</text><text x=\"130\" y=\"165\" text-anchor=\"middle\" font-size=\"14\" stroke=\"none\">(5 − 2) × 180° = 540°</text></svg>",
+     "variant": "interior angle sum of an n-gon, and regular polygons",
+     "added": "2026-11-26"
     },
     {
      "id": "diagonals-cut-trapezoid-four-triangles",
@@ -1082,11 +1105,36 @@
      ]
     },
     {
+     "id": "round-table-8-people",
+     "kind": "example",
+     "q": "In how many ways can 8 people sit at a round table, if two seatings count as the same when everyone has the same neighbours?",
+     "steps": [
+      "Pretend the seats are numbered and line everyone up: $8!$ seatings.",
+      "Now spin the table. Moving all 8 people one seat clockwise changes every seat number, but each person keeps the same left and right neighbour, so it is the **same** round seating.",
+      "There are 8 such turns (by 0, 1, …, 7 seats), and each gives a different numbered seating. So every round seating was counted **8 times** in the $8!$.",
+      "Divide out the repeats: $\\frac{8!}{8}=\\frac{8\\times7!}{8}=7!=\\mathbf{5040}$. That is why the $8$ drops off and you get $(n-1)!$.",
+      "Same answer, quicker: seat one person anywhere to fix the turn (every seat is alike), then the other 7 fill the seats relative to them: $7!$."
+     ],
+     "svg": "<svg viewBox=\"0 0 260 165\" width=\"260\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Two round tables of four seats. Left: A at the top, then B, C, D going clockwise. Right: every person moved one seat clockwise, so D is at the top, then A, B, C. Each person still has the same neighbours on each side, so it is the same seating\" font-family=\"serif\" font-size=\"15\" fill=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"58\" cy=\"78\" r=\"30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"58\" y=\"38\" text-anchor=\"middle\" stroke=\"none\" style=\"fill:var(--accent)\" font-weight=\"bold\"><tspan font-style=\"italic\">A</tspan></text><text x=\"102\" y=\"83\" text-anchor=\"middle\" stroke=\"none\"><tspan font-style=\"italic\">B</tspan></text><text x=\"58\" y=\"128\" text-anchor=\"middle\" stroke=\"none\"><tspan font-style=\"italic\">C</tspan></text><text x=\"14\" y=\"83\" text-anchor=\"middle\" stroke=\"none\"><tspan font-style=\"italic\">D</tspan></text><circle cx=\"202\" cy=\"78\" r=\"30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"202\" y=\"38\" text-anchor=\"middle\" stroke=\"none\"><tspan font-style=\"italic\">D</tspan></text><text x=\"246\" y=\"83\" text-anchor=\"middle\" stroke=\"none\" style=\"fill:var(--accent)\" font-weight=\"bold\"><tspan font-style=\"italic\">A</tspan></text><text x=\"202\" y=\"128\" text-anchor=\"middle\" stroke=\"none\"><tspan font-style=\"italic\">B</tspan></text><text x=\"158\" y=\"83\" text-anchor=\"middle\" stroke=\"none\"><tspan font-style=\"italic\">C</tspan></text><line x1=\"112\" y1=\"78\" x2=\"148\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1.5\"/><path d=\"M142,73 L148,78 L142,83\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text x=\"130\" y=\"66\" text-anchor=\"middle\" font-size=\"12\" stroke=\"none\" style=\"fill:var(--muted)\">turn 1 seat</text><text x=\"130\" y=\"156\" text-anchor=\"middle\" font-size=\"13\" stroke=\"none\" style=\"fill:var(--muted)\">same neighbours: the same table</text></svg>",
+     "variant": "circular arrangements",
+     "added": "2026-11-26"
+    },
+    {
      "id": "must-not-together-all-ways",
      "kind": "rule",
      "name": "Must NOT be together",
      "text": "all ways − ways together",
      "example": "5 people, A and B apart: $5!-4!\\times2=120-48=72$"
+    },
+    {
+     "id": "round-table-divide-by-turns",
+     "kind": "rule",
+     "name": "Round table",
+     "tex": "\\tfrac{n!}{n}=(n-1)!",
+     "note": "a circle has no first seat: turning everyone one seat gives the same table, and each table shows up as $n$ of the $n!$ rows, one per turn",
+     "example": "8 people: $\\frac{8!}{8}=7!=5040$",
+     "variant": "circular arrangements",
+     "added": "2026-11-26"
     },
     {
      "id": "pickiest-first-ann-cant-sit",
@@ -1159,6 +1207,16 @@
      "name": "Banned seat + glued pair",
      "text": "glue **first**, then seat the picky one",
      "note": "seating them first splits the row and forces casework"
+    },
+    {
+     "id": "round-table-marked-seat-no-divide",
+     "kind": "trap",
+     "name": "A marked seat stops the spin",
+     "text": "numbered chairs, a head seat or a window: seats differ, so it is $n!$ again",
+     "note": "only divide by $n$ when turning the table really gives the same seating",
+     "example": "8 numbered chairs around a table: $8!$; a bracelet that can also flip: $\\frac{(n-1)!}2$",
+     "variant": "circular arrangements",
+     "added": "2026-11-26"
     },
     {
      "id": "together-banned-not-round-table-fix",
@@ -1381,6 +1439,13 @@
     "overlapping-sets",
     "min-max-bounding"
    ],
+   "patterns": [
+    {
+     "id": "entries-people",
+     "title": "Exactly one, two or three: count entries, then place the extras",
+     "idea": "Keep two totals apart: **people** $N=S+D+T$ and **entries** $S+2D+3T$ (S, D, T = in exactly one, two, three). Subtract them: $D+2T=\\text{entries}-N$. These are the **extras**, the entries beyond each person's first. A double uses 1 extra and a triple uses 2. To get the most singles, stack the extras on as few people as possible (triples). To get the most doubles, spread them out, one per person, and only make triples once everyone has a second entry."
+    }
+   ],
    "cards": [
     {
      "id": "idea",
@@ -1462,6 +1527,87 @@
      "name": "\"Could be\" an overlap",
      "text": "the value must sit between the smallest and largest \"both\"",
      "example": "both ranges $15$–$25$: $12$ is impossible, whatever its parity"
+    },
+    {
+     "id": "entries-people-most-exactly-one",
+     "kind": "case",
+     "pattern": "entries-people",
+     "name": "Most in exactly one: stack into triples",
+     "q": "At a training camp, each of the $86$ athletes entered at least one of three events: $70$ entered the swim, $64$ the bike race and $58$ the run. What is the greatest possible number of athletes who entered exactly one event?",
+     "spot": "\"greatest number in exactly one\" (or \"at most one\"), with the head count given.",
+     "steps": [
+      "Entries: $70+64+58=192$. Extras: $192-86=106$, so $D+2T=106$.",
+      "Singles are $86-(D+T)$, so make $D+T$ small. A triple eats 2 extras per person, so set $D=0$: $2T=106$, $T=53$.",
+      "$S=86-53=\\mathbf{33}$. Shortcut: $S=N-\\frac{\\text{extras}}2$ (if the extras are odd, one person is a double).",
+      "Check it can be built: 53 triples fit, since even the smallest event has $58\\ge53$. The singles split $17,11,5$."
+     ],
+     "variant": "the most in exactly one, two or all three groups from the entry total",
+     "added": "2026-11-26"
+    },
+    {
+     "id": "entries-people-most-all-three",
+     "kind": "case",
+     "pattern": "entries-people",
+     "name": "Most in all three, head count given",
+     "q": "At a training camp, each of the $86$ athletes entered at least one of three events: $70$ entered the swim, $64$ the bike race and $58$ the run. What is the greatest possible number of athletes who entered all three events?",
+     "spot": "\"greatest number in all three\" **and** the total number of people is fixed.",
+     "steps": [
+      "Two caps. Each event needs a spot for every triple, so $T\\le\\min(70,64,58)=58$.",
+      "But each triple uses 2 of the $106$ extras: $2T\\le106$, so $T\\le53$. That cap is tighter.",
+      "$T=\\mathbf{53}$, with $D=0$ and $S=33$, the same split as case 1. Answering $58$ ignores the head count: $58$ triples need $116$ extras, and only $106$ exist."
+     ],
+     "variant": "the most in exactly one, two or all three groups from the entry total",
+     "added": "2026-11-26"
+    },
+    {
+     "id": "entries-people-all-three-no-head-count",
+     "kind": "case",
+     "pattern": "entries-people",
+     "name": "Most in all three, no head count",
+     "q": "In a triathlon, $70$ entries were for the swim, $64$ for the bike race and $58$ for the run, and every athlete entered at least one event. The number of athletes is not given. What is the greatest possible number who entered all three?",
+     "spot": "event totals only: nothing fixes $N$.",
+     "steps": [
+      "With $N$ free, the only cap is the smallest event: $T\\le58$.",
+      "$58$ works: put every runner in all three. That leaves $12$ swim and $6$ bike entries, which any extra athletes can take.",
+      "$T=\\mathbf{58}=\\min(\\text{events})$. The head count then depends on how the leftovers are placed: $6$ doubles and $6$ singles give $N=70$."
+     ],
+     "variant": "the most in exactly one, two or all three groups from the entry total",
+     "added": "2026-11-26"
+    },
+    {
+     "id": "entries-people-most-exactly-two",
+     "kind": "case",
+     "pattern": "entries-people",
+     "name": "Most in exactly two: spread, then spill",
+     "q": "At a training camp, each of the $86$ athletes entered at least one of three events: $70$ entered the swim, $64$ the bike race and $58$ the run. What is the greatest possible number of athletes who entered exactly two events?",
+     "spot": "\"greatest number in exactly two\".",
+     "steps": [
+      "Spread the $106$ extras one per person. Each person can only take one extra and stay a double, so at most $86$ doubles use $86$ extras.",
+      "That leaves $106-86=20$ extras, which must go to people who already have two, making them triples: $T=20$.",
+      "$D=86-20=\\mathbf{66}$, $S=0$. Check: $66\\times2+20\\times3=192$.",
+      "In general: if extras $\\le N$, $D=\\text{extras}$ and $T=0$. If extras $>N$, $T=\\text{extras}-N$ and $D=N-T$. With $N=120$: extras $72$, so $D=72$, $S=48$."
+     ],
+     "variant": "the most in exactly one, two or all three groups from the entry total",
+     "added": "2026-11-26"
+    },
+    {
+     "id": "entries-people-not-some-entered-none",
+     "kind": "limit",
+     "pattern": "entries-people",
+     "name": "Some entered none",
+     "text": "take out the \"none\" group first: extras $=$ entries $-$ (people in at least one)",
+     "note": "the $N$ in $D+2T$ only counts people with an entry",
+     "example": "$100$ campers, $14$ in no event, $192$ entries: extras $192-86=106$",
+     "added": "2026-11-26"
+    },
+    {
+     "id": "entries-people-not-pair-overlaps-given",
+     "kind": "limit",
+     "pattern": "entries-people",
+     "name": "Exact counts given, one unknown",
+     "text": "nothing to maximize: solve $S+2D+3T=$ entries directly",
+     "example": "$S=33$, $D=0$, $192$ entries: $3T=159$, $T=53$, $N=86$",
+     "added": "2026-11-26"
     }
    ]
   },
@@ -2448,7 +2594,7 @@
     {
      "id": "repeating-decimal",
      "title": "Repeating decimal to fraction",
-     "idea": "Call the decimal $x$. Multiply by $10$ once for each repeating digit (so by 10, 100 or 1,000), then subtract $x$. The endless tail cancels, leaving the repeating block over that many 9s."
+     "idea": "To turn a repeating decimal into a fraction, call it $x$. Multiply by $10$ if 1 digit repeats, $100$ if 2 do, $1{,}000$ if 3 do. Then subtract $x$: the endless tails cancel, leaving the repeating block over that many 9s."
     },
     {
      "id": "frozen",
@@ -2490,14 +2636,26 @@
      "id": "repeating-forever-exactly-1",
      "kind": "rule",
      "name": "$0.\\overline{9}$",
-     "text": "**exactly** $1$"
+     "text": "**exactly** $1$",
+     "note": "same 9s rule: $\\frac99=1$"
     },
     {
      "id": "repeating-decimal-repeating-block-over",
      "kind": "rule",
-     "name": "Repeating decimal",
-     "text": "the block over that many 9s",
-     "example": "$0.\\overline{36}=\\frac{36}{99}$"
+     "name": "Bar on top = over 9s",
+     "text": "the digits under the bar, over **one 9 per digit**",
+     "note": "then simplify",
+     "example": "$0.\\overline7=\\frac79$, $0.\\overline{36}=\\frac{36}{99}=\\frac4{11}$, $0.\\overline{123}=\\frac{123}{999}$"
+    },
+    {
+     "id": "terminating-decimal-only-2s-5s",
+     "kind": "rule",
+     "name": "When a decimal ends",
+     "text": "in lowest terms, the bottom has **only 2s and 5s**",
+     "note": "the top doesn't matter; any other prime in the bottom (3, 7, 11, …) makes it repeat",
+     "example": "$\\frac7{40}=0.175$ ends ($40=2^3\\times5$); $\\frac9{12}=\\frac34$ ends too, once simplified",
+     "variant": "terminating vs repeating decimal from the denominator's prime factors",
+     "added": "2026-11-26"
     },
     {
      "id": "frozen-zero-cancelled-factor",
@@ -2705,8 +2863,8 @@
      "kind": "limit",
      "pattern": "repeating-decimal",
      "name": "Digits before the repeat",
-     "text": "shift past them first, then the 9s rule",
-     "example": "$0.1\\overline6$: $\\frac1{10}\\cdot\\frac{15}9=\\frac16$"
+     "text": "multiply by 10 to move them left of the point, then use the 9s rule",
+     "example": "$0.1\\overline6$: $10x=1.\\overline6=1+\\frac69=\\frac{15}9$, so $x=\\frac{15}{90}=\\frac16$"
     },
     {
      "id": "repeating-decimal-1-repeating-digit",
@@ -2716,8 +2874,8 @@
      "q": "Write $0.\\overline{7}$ as a fraction.",
      "spot": "one digit repeats, so multiply by $10$.",
      "steps": [
-      "$10x=7.\\overline{7}$ and $x=0.\\overline{7}$.",
-      "$10x-x=9x=7$, so $x=\\mathbf{\\frac79}$."
+      "$10x=7.\\overline7$ and $x=0.\\overline7$.",
+      "Subtract: the 7s after the point cancel, so $9x=7$ and $x=\\mathbf{\\frac79}$."
      ]
     },
     {
@@ -2729,7 +2887,7 @@
      "spot": "two digits repeat, so multiply by $100$.",
      "steps": [
       "$100x=36.\\overline{36}$ and $x=0.\\overline{36}$.",
-      "$100x-x=99x=36$, so $x=\\frac{36}{99}=\\mathbf{\\frac{4}{11}}$."
+      "Subtract: the tails cancel, so $99x=36$ and $x=\\frac{36}{99}=\\mathbf{\\frac4{11}}$."
      ]
     },
     {
@@ -2741,7 +2899,7 @@
      "spot": "three digits repeat, so multiply by $1{,}000$.",
      "steps": [
       "$1000x=123.\\overline{123}$ and $x=0.\\overline{123}$.",
-      "$1000x-x=999x=123$, so $x=\\frac{123}{999}=\\mathbf{\\frac{41}{333}}$."
+      "Subtract: the tails cancel, so $999x=123$ and $x=\\frac{123}{999}=\\mathbf{\\frac{41}{333}}$."
      ]
     }
    ]
