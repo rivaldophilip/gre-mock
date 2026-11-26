@@ -1,6 +1,6 @@
 /** Shared class strings, so every page draws buttons, cards and pills the same way. */
 
-type BtnVariant = "primary" | "secondary" | "soft" | "ghost" | "danger" | "ok";
+type BtnVariant = "primary" | "secondary" | "soft" | "ghost" | "danger" | "ok" | "vocab";
 type BtnSize = "sm" | "md" | "lg";
 
 const BTN_BASE =
@@ -17,6 +17,7 @@ const BTN_VARIANT: Record<BtnVariant, string> = {
   ghost: "text-muted hover:bg-surface-2 hover:text-fg",
   danger: "bg-bad text-bad-fg hover:bg-bad/90",
   ok: "bg-ok text-surface hover:bg-ok/90",
+  vocab: "bg-vocab text-vocab-fg hover:bg-vocab/90 active:bg-vocab/80",
 };
 
 export const btn = (variant: BtnVariant = "secondary", size: BtnSize = "md") => `${BTN_BASE} ${BTN_SIZE[size]} ${BTN_VARIANT[variant]}`;

@@ -10,8 +10,9 @@ export const dynamic = "force-dynamic";
 const AREA = { arithmetic: "Arithmetic", algebra: "Algebra", geometry: "Geometry", data: "Data analysis", reading: "Reading", argument: "Arguments" } as Record<string, string>;
 
 /** Make a quiz from the question bank: a full mock, or a custom one (types, topics, levels, length). */
-export default async function Create({ searchParams }: { searchParams: Promise<{ m?: string }> }) {
-  const measure = (await searchParams).m === "quant" ? "quant" : "verbal";
+export default async function Create({ searchParams }: { searchParams: Promise<{ m?: string; kind?: string }> }) {
+  const { m, kind } = await searchParams;
+  const measure = m === "quant" ? "quant" : "verbal";
   const group = (rows: { id: string; name: string; area: string }[]): TopicGroup[] =>
     [...new Set(rows.map((r) => r.area))].map((area) => ({ area: AREA[area] ?? area, items: rows.filter((r) => r.area === area).map((r) => ({ id: r.id, name: r.name })) }));
   const topics = { quant: group(concepts), verbal: group(rcSkills) };
@@ -27,7 +28,7 @@ export default async function Create({ searchParams }: { searchParams: Promise<{
           <h1 className="text-2xl font-semibold tracking-tight">New quiz</h1>
           <p className="text-sm text-muted">Assembled from the question bank, aimed at what you need next. Questions you have seen are left out.</p>
         </div>
-        <CreateQuiz initialMeasure={measure} topics={topics} types={types} />
+        <CreateQuiz initialMeasure={measure} initialKind={kind === "custom" ? "custom" : "mock"} topics={topics} types={types} />
       </main>
     </>
   );

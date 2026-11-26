@@ -22,6 +22,11 @@
   --warn: #b45309;
   --warn-soft: #fdf2e2;
   --mark: #e08a12;
+  /* endless vocab card: a slate blue, clear of the teal tests and the orange in-progress rows */
+  --vocab: #33628e;
+  --vocab-fg: #ffffff;
+  --vocab-soft: #eaf2f8;
+  --vocab-line: #c3d8e9;
   /* chart series (validated for CVD separation on --surface) */
   --series-verbal: #2a78d6;
   --series-quant: #eb6834;
@@ -48,6 +53,10 @@
     --warn: #fbbf24;
     --warn-soft: #2d2412;
     --mark: #fbbf24;
+    --vocab: #9ebede;
+    --vocab-fg: #111a26;
+    --vocab-soft: #1a2432;
+    --vocab-line: #30445d;
     --series-verbal: #3987e5;
     --series-quant: #d95926;
     --scrim: rgb(0 0 0 / 0.6);
@@ -73,6 +82,10 @@
   --warn: #fbbf24;
   --warn-soft: #2d2412;
   --mark: #fbbf24;
+  --vocab: #9ebede;
+  --vocab-fg: #111a26;
+  --vocab-soft: #1a2432;
+  --vocab-line: #30445d;
   --series-verbal: #3987e5;
   --series-quant: #d95926;
   --scrim: rgb(0 0 0 / 0.6);
@@ -97,6 +110,10 @@
   --color-warn: var(--warn);
   --color-warn-soft: var(--warn-soft);
   --color-mark: var(--mark);
+  --color-vocab: var(--vocab);
+  --color-vocab-fg: var(--vocab-fg);
+  --color-vocab-soft: var(--vocab-soft);
+  --color-vocab-line: var(--vocab-line);
   --color-series-verbal: var(--series-verbal);
   --color-series-quant: var(--series-quant);
   --color-scrim: var(--scrim);

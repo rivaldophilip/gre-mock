@@ -11,15 +11,19 @@ export type TopicGroup = { area: string; items: { id: string; name: string }[] }
 type Preview = { total: number; minutes: number; byType: Record<string, number>; byLevel: Record<string, number>; byTarget: Record<string, number> };
 type Created = { id: number; testId: string; title: string; status: "ready" | "draft"; fallbacks: FallbackLine[]; preview: Preview };
 
+/** A toggle chip for one target: accent when on. */
+const chip = (on: boolean) =>
+  `inline-flex min-h-9 items-center gap-1 rounded-full border px-3 text-sm transition-colors ${on ? "border-accent/50 bg-accent-soft font-medium text-accent" : "border-line hover:bg-surface-2"}`;
+
 const TYPE_NAME: Record<string, string> = { tc1: "TC, 1 blank", tc2: "TC, 2 blanks", tc3: "TC, 3 blanks", se: "Sentence equivalence", rc: "Reading", rc_multi: "Reading, select all", rc_select: "Reading, select sentence", arg: "Argument", qc: "Quantitative comparison", mc: "Multiple choice", mc_multi: "Multiple choice, select all", numeric: "Numeric entry", di: "Data interpretation" };
 
 /**
  * Choose a full mock or a custom quiz, assemble it on the server, then start it. A draft (the bank ran short) opens
  * the fallback dialog first; the preview shows counts only, never an item.
  */
-export function CreateQuiz({ initialMeasure, topics, types }: { initialMeasure: Measure; topics: Record<Measure, TopicGroup[]>; types: Record<Measure, { id: string; label: string }[]> }) {
+export function CreateQuiz({ initialMeasure, initialKind, topics, types }: { initialMeasure: Measure; initialKind: "mock" | "custom"; topics: Record<Measure, TopicGroup[]>; types: Record<Measure, { id: string; label: string }[]> }) {
   const [measure, setMeasure] = useState<Measure>(initialMeasure);
-  const [kind, setKind] = useState<"mock" | "custom">("mock");
+  const [kind, setKind] = useState<"mock" | "custom">(initialKind);
   const [length, setLength] = useState(10);
   const [picked, setPicked] = useState<Record<Measure, Set<string>>>({ verbal: new Set(["tc3", "se"]), quant: new Set(["qc", "mc"]) });
   const [weakest, setWeakest] = useState(true);
@@ -87,7 +91,7 @@ export function CreateQuiz({ initialMeasure, topics, types }: { initialMeasure: 
         </div>
         <div className="grid gap-4 text-sm sm:grid-cols-3">
           <div className="space-y-1.5"><h3 className={eyebrow}>Types</h3><ul className="space-y-0.5">{counts(made.preview.byType, (k) => TYPE_NAME[k] ?? k)}</ul></div>
-          <div className="space-y-1.5"><h3 className={eyebrow}>Levels</h3><ul className="space-y-0.5">{counts(made.preview.byLevel, (k) => `Level ${k}`)}</ul></div>
+          <div className="space-y-1.5"><h3 className={eyebrow}>Difficulty</h3><ul className="space-y-0.5">{counts(made.preview.byLevel, (k) => `Difficulty ${k}`)}</ul></div>
           <div className="space-y-1.5"><h3 className={eyebrow}>Topics</h3><ul className="max-h-48 space-y-0.5 overflow-y-auto pr-1">{counts(made.preview.byTarget, (k) => k)}</ul></div>
         </div>
         <div className="flex flex-wrap items-center gap-2 border-t border-line pt-4">
@@ -136,28 +140,42 @@ export function CreateQuiz({ initialMeasure, topics, types }: { initialMeasure: 
             </fieldset>
             <fieldset className="space-y-2">
               <legend className={eyebrow}>{measure === "quant" ? "Concepts" : "Reading skills"}</legend>
-              <label className="flex items-center gap-2 text-sm">
-                <input type="checkbox" checked={weakest} onChange={(e) => setWeakest(e.target.checked)} /> Target my weaknesses
-              </label>
-              {!weakest && (
-                <div className="max-h-80 space-y-3 overflow-y-auto rounded-xl border border-line p-3">
-                  {topics[measure].map((g) => (
-                    <div key={g.area} className="space-y-1">
-                      <h3 className="text-xs font-semibold text-muted">{g.area}</h3>
+              {/* every topic stays in view: "my weakest" is the default chip, picking a topic replaces it, and clearing the last one brings it back */}
+              <div className="flex flex-wrap items-center gap-2 text-sm">
+                <button type="button" aria-pressed={weakest} onClick={() => { setWeakest(true); setChosen(new Set()); }} className={chip(weakest)}>
+                  {weakest && <IconCheck size={14} />} My weakest
+                </button>
+                <span className="text-muted">or pick {measure === "quant" ? "concepts" : "skills"}:</span>
+              </div>
+              <div className="space-y-3">
+                {topics[measure].map((g) => (
+                  <div key={g.area} className="space-y-1.5">
+                    <h3 className="text-xs font-semibold text-muted">{g.area}</h3>
+                    <div className="flex flex-wrap gap-1.5">
                       {g.items.map((it) => (
-                        <label key={it.id} className="flex items-start gap-2 text-sm">
-                          <input type="checkbox" className="mt-0.5" checked={chosen.has(it.id)} onChange={() => setChosen(toggle(chosen, it.id))} /> {it.name}
-                        </label>
+                        <button
+                          key={it.id}
+                          type="button"
+                          aria-pressed={chosen.has(it.id)}
+                          onClick={() => {
+                            const next = toggle(chosen, it.id);
+                            setChosen(next);
+                            setWeakest(next.size === 0);
+                          }}
+                          className={chip(chosen.has(it.id))}
+                        >
+                          {it.name}
+                        </button>
                       ))}
                     </div>
-                  ))}
-                </div>
-              )}
+                  </div>
+                ))}
+              </div>
               {measure === "verbal" && <p className="text-xs text-muted">Completions aim at your {weakest ? "weakest" : "highest-priority"} words; skills steer the reading passages.</p>}
             </fieldset>
             <div className="flex flex-wrap items-end gap-4">
               <label className="space-y-1.5">
-                <span className={`${eyebrow} block`}>Levels</span>
+                <span className={`${eyebrow} block`}>Difficulty (1 easiest – 5 hardest)</span>
                 <span className="flex items-center gap-2 text-sm">
                   <select className={`${field} w-20`} value={levels[0]} onChange={(e) => setLevels([Number(e.target.value), Math.max(Number(e.target.value), levels[1])])}>
                     {[1, 2, 3, 4, 5].map((l) => <option key={l}>{l}</option>)}

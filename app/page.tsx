@@ -16,7 +16,8 @@ import { StartForm } from "@/components/StartForm";
 import { TestSearch } from "@/components/TestSearch";
 import { DiscardButton } from "@/components/DiscardButton";
 import { AppHeader } from "@/components/AppHeader";
-import { IconNext, IconPlay, IconPlus, IconUndo } from "@/components/icons";
+import { QuickMock } from "@/components/QuickMock";
+import { IconNext, IconPlay, IconUndo } from "@/components/icons";
 import { DraftReview, QuizDiscard, type FallbackLine } from "@/components/FallbackDialog";
 import { badge, btn, card, eyebrow, seg, segItem } from "@/components/ui";
 
@@ -195,21 +196,17 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
       <main className="mx-auto w-full max-w-3xl space-y-6 px-4 py-6 pb-[max(2rem,env(safe-area-inset-bottom))] sm:py-8">
         <div className="flex items-center justify-between gap-4">
           <h1 className="text-2xl font-semibold tracking-tight">Your tests</h1>
-          <div className="flex items-center gap-2">
-            <nav className={`${seg} w-40 sm:w-56`} aria-label="Measure">
-              {(["verbal", "quant"] as const).map((m) => (
-                <Link key={m} href={tabHref(m)} aria-current={measure === m ? "page" : undefined} className={`${segItem(measure === m)} capitalize`}>
-                  {m}
-                </Link>
-              ))}
-            </nav>
-            <Link className={btn("primary", "sm")} href={`/create?m=${measure}`} aria-label="New quiz">
-              <IconPlus size={16} /> <span className="hidden sm:inline">New quiz</span>
-            </Link>
-          </div>
+          <nav className={`${seg} w-40 sm:w-56`} aria-label="Measure">
+            {(["verbal", "quant"] as const).map((m) => (
+              <Link key={m} href={tabHref(m)} aria-current={measure === m ? "page" : undefined} className={`${segItem(measure === m)} capitalize`}>
+                {m}
+              </Link>
+            ))}
+          </nav>
         </div>
+        {!query && <QuickMock measure={measure} />}
         {drill && (drill.total > 0 || drill.misses > 0) && (
-          <section className={`${row} flex flex-col gap-2.5 border-accent/40 bg-accent-soft sm:flex-row sm:items-center sm:gap-3`}>
+          <section className={`${row} flex flex-col gap-2.5 border-vocab-line bg-vocab-soft sm:flex-row sm:items-center sm:gap-3`}>
             <div className="min-w-0 flex-1">
               <h2 className="w-fit cursor-help font-semibold leading-snug" title="One question at a time, aimed at words you have not met">
                 Endless vocab
@@ -235,12 +232,12 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
             </div>
             <div className="flex gap-2 sm:flex-none">
               {drill.misses > 0 && (
-                <Link className={`${btn(drill.left > 0 ? "secondary" : "primary", "sm")} max-sm:flex-1`} href="/drill?replay=1">
+                <Link className={`${btn(drill.left > 0 ? "secondary" : "vocab", "sm")} max-sm:flex-1`} href="/drill?replay=1">
                   <IconUndo size={14} /> Replay misses
                 </Link>
               )}
               {drill.left > 0 && (
-                <Link className={`${btn("primary", "sm")} max-sm:flex-1`} href="/drill">
+                <Link className={`${btn("vocab", "sm")} max-sm:flex-1`} href="/drill">
                   <IconPlay size={14} /> Play
                 </Link>
               )}
