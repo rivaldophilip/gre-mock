@@ -306,14 +306,17 @@ function Topic({ s, measure, t, split, numberOf, titleOf, open }: {
     <details id={`t-${s.id}`} className={`${card} group scroll-mt-20`} open={open}>
       <summary className="flex min-h-14 list-none items-center gap-3 px-4 py-2 [&::-webkit-details-marker]:hidden">
         <IconNext size={16} className="shrink-0 text-muted transition-transform group-open:rotate-90 print:hidden" />
-        <span className="flex-1 font-semibold">{s.title}</span>
-        {missedSince && <span className={badge("warn")} title="A mock finished after you archived some of these cards missed this topic">missed since studied</span>}
-        {fresh.size > 0 && <span className={badge("accent")} title="Cards added after you last studied this topic">{fresh.size} new</span>}
-        {archived.length > 0 && (shown.length === 0
-          ? <span className={badge("ok")}>all studied</span>
-          : <span className="hidden text-xs tabular-nums text-muted sm:inline">{archived.length}/{total} studied</span>)}
-        {t.misses.length > 0 && <span className="hidden text-xs tabular-nums text-muted sm:inline">{t.misses.length} missed</span>}
-        <span className={badge(tone(t))}>{t.n ? `${t.correct}/${t.n} right` : "not tested yet"}</span>
+        <span className="min-w-0 flex-1 font-semibold">{s.title}</span>
+        {/* the badges wrap under each other on a phone rather than push the row past the screen */}
+        <span className="flex max-w-[50%] flex-wrap items-center justify-end gap-x-3 gap-y-1 sm:max-w-none">
+          {missedSince && <span className={badge("warn")} title="A mock finished after you archived some of these cards missed this topic">missed since studied</span>}
+          {fresh.size > 0 && <span className={badge("accent")} title="Cards added after you last studied this topic">{fresh.size} new</span>}
+          {archived.length > 0 && (shown.length === 0
+            ? <span className={badge("ok")}>all studied</span>
+            : <span className="hidden text-xs tabular-nums text-muted sm:inline">{archived.length}/{total} studied</span>)}
+          {t.misses.length > 0 && <span className="hidden text-xs tabular-nums text-muted sm:inline">{t.misses.length} missed</span>}
+          <span className={badge(tone(t))}>{t.n ? `${t.correct}/${t.n} right` : "not tested yet"}</span>
+        </span>
       </summary>
       <div className="space-y-5 border-t border-line p-4 sm:p-5">
         {total === 0 && <p className="text-sm text-muted">Every card here is removed. Restore them from “Removed” at the bottom of the page.</p>}
