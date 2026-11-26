@@ -334,7 +334,8 @@
   "maximum and minimum of the overlap",
   "a double-matrix (two-way) table",
   "overlap given as percents of different bases",
-  "at least / at most counts from a survey with overlap"
+  "at least / at most counts from a survey with overlap",
+  "the most in exactly one, two or all three groups from the entry total"
  ],
  "weighted-average": [
   "combining the means of two groups",

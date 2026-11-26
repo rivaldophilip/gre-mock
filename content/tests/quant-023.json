@@ -1,0 +1,559 @@
+{
+  "id": "quant-023",
+  "measure": "quant",
+  "title": "Quant Hard Mock 23",
+  "sections": [{ "n": 1, "minutes": 21 }, { "n": 2, "minutes": 26 }],
+  "passages": [],
+  "figures": [
+    { "id": "fig1", "caption": "New titles released by a publisher, by format, 2019 to 2023. Each title was released in exactly one format.", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 440 320' width='440' height='320' font-family='sans-serif' font-size='12'><line x1='50' y1='250' x2='420' y2='250' stroke='currentColor' stroke-opacity='0.35' stroke-width='1'/><text x='44' y='254' text-anchor='end' fill='currentColor'>0</text><line x1='50' y1='240' x2='420' y2='240' stroke='currentColor' stroke-opacity='0.15' stroke-width='1'/><line x1='50' y1='230' x2='420' y2='230' stroke='currentColor' stroke-opacity='0.35' stroke-width='1'/><text x='44' y='234' text-anchor='end' fill='currentColor'>10</text><line x1='50' y1='220' x2='420' y2='220' stroke='currentColor' stroke-opacity='0.15' stroke-width='1'/><line x1='50' y1='210' x2='420' y2='210' stroke='currentColor' stroke-opacity='0.35' stroke-width='1'/><text x='44' y='214' text-anchor='end' fill='currentColor'>20</text><line x1='50' y1='200' x2='420' y2='200' stroke='currentColor' stroke-opacity='0.15' stroke-width='1'/><line x1='50' y1='190' x2='420' y2='190' stroke='currentColor' stroke-opacity='0.35' stroke-width='1'/><text x='44' y='194' text-anchor='end' fill='currentColor'>30</text><line x1='50' y1='180' x2='420' y2='180' stroke='currentColor' stroke-opacity='0.15' stroke-width='1'/><line x1='50' y1='170' x2='420' y2='170' stroke='currentColor' stroke-opacity='0.35' stroke-width='1'/><text x='44' y='174' text-anchor='end' fill='currentColor'>40</text><line x1='50' y1='160' x2='420' y2='160' stroke='currentColor' stroke-opacity='0.15' stroke-width='1'/><line x1='50' y1='150' x2='420' y2='150' stroke='currentColor' stroke-opacity='0.35' stroke-width='1'/><text x='44' y='154' text-anchor='end' fill='currentColor'>50</text><line x1='50' y1='140' x2='420' y2='140' stroke='currentColor' stroke-opacity='0.15' stroke-width='1'/><line x1='50' y1='130' x2='420' y2='130' stroke='currentColor' stroke-opacity='0.35' stroke-width='1'/><text x='44' y='134' text-anchor='end' fill='currentColor'>60</text><line x1='50' y1='120' x2='420' y2='120' stroke='currentColor' stroke-opacity='0.15' stroke-width='1'/><line x1='50' y1='110' x2='420' y2='110' stroke='currentColor' stroke-opacity='0.35' stroke-width='1'/><text x='44' y='114' text-anchor='end' fill='currentColor'>70</text><line x1='50' y1='100' x2='420' y2='100' stroke='currentColor' stroke-opacity='0.15' stroke-width='1'/><line x1='50' y1='90' x2='420' y2='90' stroke='currentColor' stroke-opacity='0.35' stroke-width='1'/><text x='44' y='94' text-anchor='end' fill='currentColor'>80</text><line x1='50' y1='80' x2='420' y2='80' stroke='currentColor' stroke-opacity='0.15' stroke-width='1'/><line x1='50' y1='70' x2='420' y2='70' stroke='currentColor' stroke-opacity='0.35' stroke-width='1'/><text x='44' y='74' text-anchor='end' fill='currentColor'>90</text><line x1='50' y1='60' x2='420' y2='60' stroke='currentColor' stroke-opacity='0.15' stroke-width='1'/><line x1='50' y1='50' x2='420' y2='50' stroke='currentColor' stroke-opacity='0.35' stroke-width='1'/><text x='44' y='54' text-anchor='end' fill='currentColor'>100</text><line x1='50' y1='40' x2='420' y2='40' stroke='currentColor' stroke-opacity='0.15' stroke-width='1'/><line x1='50' y1='30' x2='420' y2='30' stroke='currentColor' stroke-opacity='0.35' stroke-width='1'/><text x='44' y='34' text-anchor='end' fill='currentColor'>110</text><line x1='50' y1='20' x2='420' y2='20' stroke='currentColor' stroke-opacity='0.15' stroke-width='1'/><line x1='50' y1='10' x2='420' y2='10' stroke='currentColor' stroke-opacity='0.35' stroke-width='1'/><text x='44' y='14' text-anchor='end' fill='currentColor'>120</text><rect x='80' y='110' width='44' height='140' fill='currentColor' fill-opacity='0.6' stroke='currentColor' stroke-width='1.2'/><rect x='80' y='60' width='44' height='50' fill='currentColor' fill-opacity='0.25' stroke='currentColor' stroke-width='1.2'/><rect x='80' y='30' width='44' height='30' fill='currentColor' fill-opacity='0.04' stroke='currentColor' stroke-width='1.2'/><text x='102' y='268' text-anchor='middle' fill='currentColor'>2019</text><rect x='150' y='130' width='44' height='120' fill='currentColor' fill-opacity='0.6' stroke='currentColor' stroke-width='1.2'/><rect x='150' y='60' width='44' height='70' fill='currentColor' fill-opacity='0.25' stroke='currentColor' stroke-width='1.2'/><rect x='150' y='30' width='44' height='30' fill='currentColor' fill-opacity='0.04' stroke='currentColor' stroke-width='1.2'/><text x='172' y='268' text-anchor='middle' fill='currentColor'>2020</text><rect x='220' y='150' width='44' height='100' fill='currentColor' fill-opacity='0.6' stroke='currentColor' stroke-width='1.2'/><rect x='220' y='70' width='44' height='80' fill='currentColor' fill-opacity='0.25' stroke='currentColor' stroke-width='1.2'/><rect x='220' y='30' width='44' height='40' fill='currentColor' fill-opacity='0.04' stroke='currentColor' stroke-width='1.2'/><text x='242' y='268' text-anchor='middle' fill='currentColor'>2021</text><rect x='290' y='180' width='44' height='70' fill='currentColor' fill-opacity='0.6' stroke='currentColor' stroke-width='1.2'/><rect x='290' y='80' width='44' height='100' fill='currentColor' fill-opacity='0.25' stroke='currentColor' stroke-width='1.2'/><rect x='290' y='40' width='44' height='40' fill='currentColor' fill-opacity='0.04' stroke='currentColor' stroke-width='1.2'/><text x='312' y='268' text-anchor='middle' fill='currentColor'>2022</text><rect x='360' y='170' width='44' height='80' fill='currentColor' fill-opacity='0.6' stroke='currentColor' stroke-width='1.2'/><rect x='360' y='80' width='44' height='90' fill='currentColor' fill-opacity='0.25' stroke='currentColor' stroke-width='1.2'/><rect x='360' y='20' width='44' height='60' fill='currentColor' fill-opacity='0.04' stroke='currentColor' stroke-width='1.2'/><text x='382' y='268' text-anchor='middle' fill='currentColor'>2023</text><line x1='50' y1='250' x2='420' y2='250' stroke='currentColor' stroke-width='1.5'/><line x1='50' y1='10' x2='50' y2='250' stroke='currentColor' stroke-width='1.5'/><text x='235' y='288' text-anchor='middle' fill='currentColor'>Year</text><text x='14' y='130' text-anchor='middle' fill='currentColor' transform='rotate(-90 14 130)'>Number of new titles</text><rect x='90' y='295' width='14' height='10' fill='currentColor' fill-opacity='0.6' stroke='currentColor'/><text x='110' y='304' fill='currentColor'>Print</text><rect x='190' y='295' width='14' height='10' fill='currentColor' fill-opacity='0.25' stroke='currentColor'/><text x='210' y='304' fill='currentColor'>E-book</text><rect x='300' y='295' width='14' height='10' fill='currentColor' fill-opacity='0.04' stroke='currentColor'/><text x='320' y='304' fill='currentColor'>Audiobook</text></svg>" },
+    { "id": "fig2", "caption": "Note: Figure not drawn to scale.", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 190' width='260' height='190' font-family='serif' font-size='16'><polygon points='40,150 220,150 170,50 90,50' fill='none' stroke='currentColor' stroke-width='2'/><line x1='60' y1='97' x2='70' y2='103' stroke='currentColor' stroke-width='1.5'/><line x1='190' y1='103' x2='200' y2='97' stroke='currentColor' stroke-width='1.5'/><path d='M 62 150 A 22 22 0 0 0 50 130' fill='none' stroke='currentColor' stroke-width='1.2'/><text x='60' y='142' fill='currentColor' font-size='13'>70\u00b0</text><text x='22' y='166' fill='currentColor'>A</text><text x='226' y='166' fill='currentColor'>B</text><text x='174' y='44' fill='currentColor'>C</text><text x='74' y='44' fill='currentColor'>D</text></svg>" }
+  ],
+  "questions": [
+    {
+      "id": "s1q1", "section": 1, "type": "qc", "difficulty": 3,
+      "prompt": "From 2022 to 2023, the share of a publisher's revenue that came from e-books rose by 4 percentage points, and this was an increase of $25\\%$ in that share.",
+      "qc": { "a": "The percent of the publisher's 2023 revenue that came from e-books", "b": "$20\\%$" },
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "The 4-point rise is $25\\%$ of the old share, so the old share was $16\\%$ and the new one is $20\\%$: equal.",
+        "steps": [
+          "1. Let the 2022 share be $s$ percent. A rise of 4 points that is a $25\\%$ increase means $0.25s = 4$.",
+          "2. So $s = 16$, and the 2023 share is $16 + 4 = 20$ percent.",
+          "3. Quantity A is $20\\%$, the same as Quantity B: (C)."
+        ],
+        "trap": "Treating the $25\\%$ as 25 percentage points (or as the new share itself) instead of as the rise measured against the old share."
+      },
+      "tags": [{ "kind": "concept", "id": "percent", "role": "primary" }],
+      "setup": "a share's rise given both in percentage points and as a percent of itself; recover the new share and compare it with a value",
+      "variant": "percent change vs percentage-point change"
+    },
+    {
+      "id": "s1q2", "section": 1, "type": "qc", "difficulty": 4,
+      "prompt": "$-2 < x < -1$",
+      "qc": { "a": "$\\dfrac{x}{x+1}$", "b": "$\\dfrac{x+1}{x+2}$" },
+      "key": { "sel": [0] },
+      "explanation": {
+        "key": "In this range $x + 1$ is negative and $x + 2$ is positive, so A is a negative over a negative (positive) and B is a negative over a positive (negative).",
+        "steps": [
+          "1. $-2 < x < -1$ gives $x < 0$, $x + 1 < 0$ and $x + 2 > 0$.",
+          "2. A: numerator and denominator are both negative, so A $> 0$. At $x = -1.5$, A $= 3$.",
+          "3. B: a negative numerator over a positive denominator, so B $< 0$. At $x = -1.5$, B $= -1$.",
+          "4. A is positive and B is negative for every such $x$: (A)."
+        ],
+        "trap": "The pattern $\\tfrac{n}{n+1} < \\tfrac{n+1}{n+2}$ holds for positive $n$; carried over here it gives (B), but in this range the two denominators have opposite signs."
+      },
+      "tags": [{ "kind": "concept", "id": "fractions-decimals", "role": "primary" }],
+      "setup": "two fractions of the form n over n plus one with consecutive shifts; the variable lies where one denominator is negative and the other positive; compare them",
+      "variant": "ordering fractions with unknowns or near-equal values"
+    },
+    {
+      "id": "s1q3", "section": 1, "type": "qc", "difficulty": 4, "figureId": "fig2",
+      "prompt": "In quadrilateral $ABCD$, side $AB$ is parallel to side $DC$, $AD = BC$, and angle $DAB$ measures $70^\\circ$.",
+      "qc": { "a": "The measure of angle $ABC$", "b": "$70^\\circ$" },
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "The givens fit an isosceles trapezoid, where angle $ABC = 70^\\circ$, and also a parallelogram, where angle $ABC = 110^\\circ$.",
+        "steps": [
+          "1. Isosceles trapezoid, as drawn: the angles at the ends of base $AB$ are equal, so angle $ABC = 70^\\circ$.",
+          "2. Parallelogram: $AB \\parallel DC$, and $AD$ and $BC$ are opposite sides, which are equal in any parallelogram. Consecutive angles of a parallelogram are supplementary, so angle $ABC = 180^\\circ - 70^\\circ = 110^\\circ$.",
+          "3. Nothing says $AB \\ne DC$, so both shapes are allowed: (D)."
+        ],
+        "trap": "Reading the drawn symmetry as given: one pair of parallel sides with the other two sides equal looks like an isosceles trapezoid, but a parallelogram meets the same conditions."
+      },
+      "tags": [{ "kind": "concept", "id": "figures-not-to-scale", "role": "primary" }],
+      "setup": "one pair of parallel sides and the other pair equal, drawn as a symmetric trapezoid; a parallelogram also fits; compare the other base angle with the given one",
+      "variant": "a figure looks symmetric, but the givens don't force it"
+    },
+    {
+      "id": "s1q4", "section": 1, "type": "qc", "difficulty": 5,
+      "prompt": "The equation $x^2 - 4x + c = 0$, where $c$ is a constant, has no real solution.",
+      "qc": { "a": "The number of real solutions of $x^2 - 4x + c = 5$", "b": "$1$" },
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "No real solution forces $c > 4$. The second equation's discriminant is $36 - 4c$, which is positive, zero or negative depending on where $c$ lies above 4.",
+        "steps": [
+          "1. No real solution: $16 - 4c < 0$, so $c > 4$.",
+          "2. The second equation is $x^2 - 4x + (c - 5) = 0$, with discriminant $16 - 4(c - 5) = 36 - 4c$.",
+          "3. $c = 5$: $36 - 20 > 0$, two solutions (A greater). $c = 9$: discriminant 0, one solution (equal). $c = 10$: negative, no solution (B greater).",
+          "4. (D)."
+        ],
+        "trap": "Assuming the second equation has no solution because the first has none (B), or that lowering the constant by 5 always creates two solutions (A); how far $c$ lies above 4 decides."
+      },
+      "tags": [{ "kind": "concept", "id": "quadratics-factoring", "role": "primary" }],
+      "setup": "a quadratic with no real root bounds its constant; the same quadratic set equal to a positive number; compare its solution count with a value",
+      "variant": "the discriminant: number of real solutions"
+    },
+    {
+      "id": "s1q5", "section": 1, "type": "mc", "difficulty": 3,
+      "prompt": "On an architect's first drawing of a building, 1 centimeter represents 2.5 meters, and the front wall is drawn 14 centimeters long. On a second drawing of the same building, the front wall is drawn 20 centimeters long. If the scale of the second drawing is written as $1 : n$, with both parts in the same unit, what is $n$?",
+      "choices": ["$140$", "$175$", "$200$", "$250$", "$350$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "The wall is $14 \\times 2.5 = 35$ meters long. On the second drawing 20 centimeters stand for 35 meters, so 1 centimeter stands for 1.75 meters, which is 175 centimeters.",
+        "steps": [
+          "1. Real length: $14 \\times 2.5 = 35$ meters.",
+          "2. Second drawing: 20 centimeters represent 35 meters, so 1 centimeter represents $\\tfrac{35}{20} = 1.75$ meters.",
+          "3. In one unit: 1 centimeter to 175 centimeters, so $n = 175$."
+        ],
+        "fast": "The first drawing is $1 : 250$. The second draws the wall longer, so its ratio is smaller: $250 \\times \\tfrac{14}{20} = 175$.",
+        "trap": "Scaling the wrong way, $250 \\times \\tfrac{20}{14} \\approx 357$ (near 350), or leaving the first drawing's 250 unchanged."
+      },
+      "tags": [{ "kind": "concept", "id": "ratio-proportion", "role": "primary" }],
+      "setup": "the same object on two scale drawings; one drawing's scale and both drawn lengths give the other drawing's scale as a unitless ratio",
+      "variant": "scale maps and models"
+    },
+    {
+      "id": "s1q6", "section": 1, "type": "mc", "difficulty": 4,
+      "prompt": "On a given night, the probability of clear skies at the Ridge observatory is $0.3$, and the weather there is independent of the weather at the Valley observatory. If the probability that exactly one of the two observatories has clear skies that night is $0.46$, what is the probability of clear skies at the Valley observatory?",
+      "choices": ["$0.16$", "$0.30$", "$0.40$", "$0.46$", "$0.60$"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "With Valley probability $q$: $P(\\text{exactly one}) = 0.3(1 - q) + 0.7q = 0.3 + 0.4q = 0.46$, so $q = 0.4$.",
+        "steps": [
+          "1. Exactly one clear means Ridge clear and Valley cloudy, or Valley clear and Ridge cloudy.",
+          "2. $0.3(1 - q) + (1 - 0.3)q = 0.3 + 0.4q$.",
+          "3. $0.3 + 0.4q = 0.46$ gives $q = 0.4$."
+        ],
+        "fast": "Test $0.40$: $0.3 \\times 0.6 + 0.7 \\times 0.4 = 0.18 + 0.28 = 0.46$.",
+        "trap": "Writing exactly one as $0.3 + q$ gives $0.16$; the formula must subtract the nights when both are clear, twice."
+      },
+      "tags": [{ "kind": "concept", "id": "probability-conditional", "role": "primary" }],
+      "setup": "two independent events, one probability and the probability that exactly one occurs given; solve for the other probability",
+      "variant": "exactly one of two independent events"
+    },
+    {
+      "id": "s1q7", "section": 1, "type": "mc", "difficulty": 5,
+      "prompt": "A builder will set 7 panels in a row along a facade: 3 identical glass panels, 2 identical steel panels and 2 identical stone panels. Both stone panels must lie somewhere between the two steel panels, though not necessarily next to them. How many different orders of the panels are possible?",
+      "choices": ["$30$", "$35$", "$70$", "$105$", "$210$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "Choose the 4 places that hold steel or stone, $\\binom{7}{4} = 35$; the rule then allows only one pattern in them, steel, stone, stone, steel. So 35 orders.",
+        "steps": [
+          "1. The glass panels fill whatever places are left, so an order is fixed by which 4 of the 7 places hold steel or stone and how those 4 are filled.",
+          "2. Places for steel and stone: $\\binom{7}{4} = 35$.",
+          "3. Read those 4 places from left to right. Both stones lie between the two steels only if the pattern is S, T, T, S; the stones are identical, so this is one filling.",
+          "4. $35 \\times 1 = 35$."
+        ],
+        "fast": "Without the rule there are $\\tfrac{7!}{3!\\,2!\\,2!} = 210$ orders. The 4 steel and stone panels show each of the $\\tfrac{4!}{2!\\,2!} = 6$ patterns equally often, and only S, T, T, S is allowed: $\\tfrac{210}{6} = 35$.",
+        "trap": "Treating 'stones between steels' as a one-in-three or one-in-two chance (70 or 105), as if the panels were distinct or only one stone had to be inside; with identical panels, 1 of the 6 patterns qualifies."
+      },
+      "tags": [{ "kind": "concept", "id": "counting-restrictions", "role": "primary" }],
+      "setup": "identical items of three kinds in a row; both items of one kind must lie between the two items of another; choose the places for those two kinds, then only one left-to-right pattern is allowed",
+      "variant": "identical items arranged with a restriction"
+    },
+    {
+      "id": "s1q8", "section": 1, "type": "mc_multi", "difficulty": 4,
+      "prompt": "If $1 < x < 2$, which of the following orderings must be true? Indicate all such orderings.",
+      "choices": [
+        "$\\sqrt{x} < x < x^2$",
+        "$\\dfrac{1}{x} < \\dfrac{x}{2} < 1$",
+        "$2 - x < \\dfrac{1}{x} < 1$",
+        "$x^2 < 2x < x^3$",
+        "$\\dfrac{1}{x^2} < \\dfrac{x}{2} < \\sqrt{x}$",
+        "$x - 1 < \\dfrac{x}{2} < \\dfrac{x^2}{2}$"
+      ],
+      "key": { "sel": [0, 2, 5] },
+      "explanation": {
+        "key": "A, C and F hold on the whole interval; B, D and E each fail for $x$ just above 1.",
+        "steps": [
+          "A: for $x > 1$, $\\sqrt{x} < x < x^2$. True.",
+          "B: $\\tfrac{x}{2} < 1$ holds, but $\\tfrac{1}{x} < \\tfrac{x}{2}$ needs $x^2 > 2$. At $x = 1.2$: $0.83 > 0.6$. Not forced.",
+          "C: $\\tfrac{1}{x} < 1$ holds, and $2 - x < \\tfrac{1}{x}$ is $2x - x^2 < 1$, that is $(x - 1)^2 > 0$, true for $x \\ne 1$. True.",
+          "D: $x^2 < 2x$ holds for $x < 2$, but $2x < x^3$ needs $x^2 > 2$. At $x = 1.2$: $2.4 > 1.728$. Not forced.",
+          "E: $\\tfrac{x}{2} < \\sqrt{x}$ holds, but $\\tfrac{1}{x^2} < \\tfrac{x}{2}$ needs $x^3 > 2$. At $x = 1.2$: $0.69 > 0.6$. Not forced.",
+          "F: $x - 1 < \\tfrac{x}{2}$ is $x < 2$, and $\\tfrac{x}{2} < \\tfrac{x^2}{2}$ is $x > 1$. True."
+        ],
+        "fast": "Test both ends of the interval, say $x = 1.2$ and $x = 1.9$: B, D and E break at 1.2, and C's left step is a perfect square in disguise.",
+        "trap": "Testing only $x = 1.5$, where B ($0.67 < 0.75 < 1$), D ($2.25 < 3 < 3.375$) and E ($0.44 < 0.75 < 1.22$) all look true; each fails near $x = 1$."
+      },
+      "tags": [{ "kind": "concept", "id": "inequalities", "role": "primary" }],
+      "setup": "a variable between 1 and 2; select the three-term chains of powers, roots and reciprocals that hold on the whole interval (some flip at an interior point)",
+      "variant": "ordering several expressions under a given range"
+    },
+    {
+      "id": "s1q9", "section": 1, "type": "numeric", "difficulty": 3,
+      "prompt": "On Tuesday a walk-in clinic saw 14 fewer than twice as many patients as it saw on Monday. It also saw 23 more patients on Tuesday than on Monday. How many patients did the clinic see on the two days combined?",
+      "numeric": { "kind": "single" },
+      "key": { "value": "97" },
+      "explanation": {
+        "key": "Tuesday $= 2 \\times$ Monday $- 14$ and Tuesday $=$ Monday $+ 23$, so Monday is 37, Tuesday 60, and the total 97.",
+        "steps": [
+          "1. Let Monday be $m$ and Tuesday $t$. Fourteen fewer than twice Monday: $t = 2m - 14$.",
+          "2. Twenty-three more than Monday: $t = m + 23$.",
+          "3. $2m - 14 = m + 23$, so $m = 37$ and $t = 60$.",
+          "4. Total: $37 + 60 = 97$."
+        ],
+        "fast": "Twice Monday minus 14 equals Monday plus 23, so Monday is $23 + 14 = 37$.",
+        "trap": "Writing 'fewer than' in the order read, $t = 14 - 2m$, or entering one day's count (37 or 60) instead of the total."
+      },
+      "tags": [{ "kind": "concept", "id": "word-problems-age-sum", "role": "primary" }],
+      "setup": "one quantity stated as a fixed amount fewer than a multiple of another and also as a fixed amount more than it; translate both in order; the total",
+      "variant": "translating 'more than' / 'less than' in order"
+    },
+    {
+      "id": "s1q10", "section": 1, "type": "mc", "setId": "di1", "figureId": "fig1", "difficulty": 3,
+      "prompt": "In which year did the publisher release the greatest number of e-book titles?",
+      "choices": ["2019", "2020", "2021", "2022", "2023"],
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "Each e-book count is the length of the middle segment: the top of the e-book segment minus the top of the print segment. The longest is 2022's, $85 - 35 = 50$.",
+        "steps": [
+          "1. E-book titles = top of the e-book segment minus top of the print segment.",
+          "2. 2019: $95 - 70 = 25$; 2020: $95 - 60 = 35$; 2021: $90 - 50 = 40$; 2022: $85 - 35 = 50$; 2023: $85 - 40 = 45$.",
+          "3. Greatest: 2022."
+        ],
+        "fast": "Compare the middle segments' lengths, not where they end: 2022's runs from 35 to 85.",
+        "trap": "Reading where the e-book segment ends (95 in 2019 and 2020) picks the years whose print segments are tallest and whose e-book segments are shortest."
+      },
+      "tags": [{ "kind": "concept", "id": "data-tables-graphs", "role": "primary" }],
+      "setup": "stacked bars of three formats over years; the year with the longest middle segment (lengths, not tops)",
+      "variant": "reading values from a stacked or segmented bar graph"
+    },
+    {
+      "id": "s1q11", "section": 1, "type": "mc", "setId": "di1", "figureId": "fig1", "difficulty": 4,
+      "prompt": "For the five years combined, the number of e-book titles was approximately what percent of the number of print titles?",
+      "choices": ["$35\\%$", "$65\\%$", "$76\\%$", "$131\\%$", "$176\\%$"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "Print totals $70 + 60 + 50 + 35 + 40 = 255$ and e-book $25 + 35 + 40 + 50 + 45 = 195$; $\\tfrac{195}{255} \\approx 76\\%$.",
+        "steps": [
+          "1. Print (bottom segments): $70 + 60 + 50 + 35 + 40 = 255$.",
+          "2. E-book (middle segments): $25 + 35 + 40 + 50 + 45 = 195$.",
+          "3. $\\tfrac{195}{255} \\approx 0.765$, about $76\\%$."
+        ],
+        "fast": "$\\tfrac{195}{255}$ is a little over $\\tfrac34$, since $\\tfrac34 \\times 255 \\approx 191$.",
+        "trap": "Inverting the base ($\\tfrac{255}{195} \\approx 131\\%$), dividing by all titles ($\\tfrac{195}{550} \\approx 35\\%$), or adding the e-book segment tops ($95 + 95 + 90 + 85 + 85 = 450$) as if they were counts ($176\\%$)."
+      },
+      "tags": [{ "kind": "concept", "id": "data-interpretation-calc", "role": "primary" }, { "kind": "concept", "id": "data-tables-graphs", "role": "secondary" }],
+      "setup": "stacked bars: one category's multi-year total as a percent of another category's total; estimate to the nearest choice",
+      "variant": "estimation to pick the closest value"
+    },
+    {
+      "id": "s1q12", "section": 1, "type": "mc", "setId": "di1", "figureId": "fig1", "difficulty": 5,
+      "prompt": "The five yearly numbers of e-book titles and the five yearly numbers of audiobook titles are put together in a single list of 10 numbers. What is the median of that list?",
+      "choices": ["$25$", "$27.5$", "$30$", "$32.5$", "$42.5$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "E-book counts 25, 35, 40, 50, 45 and audiobook counts 15, 15, 20, 20, 30 sort to 15, 15, 20, 20, 25, 30, 35, 40, 45, 50; the median is $\\tfrac{25 + 30}{2} = 27.5$.",
+        "steps": [
+          "1. E-book (middle segments): 25, 35, 40, 50, 45.",
+          "2. Audiobook (top segments: bar total minus the e-book top): $110 - 95 = 15$, $110 - 95 = 15$, $110 - 90 = 20$, $105 - 85 = 20$, $115 - 85 = 30$.",
+          "3. All ten in order: 15, 15, 20, 20, 25, 30, 35, 40, 45, 50.",
+          "4. With ten values the median is the mean of the 5th and 6th: $\\tfrac{25 + 30}{2} = 27.5$."
+        ],
+        "fast": "Only one e-book count (25) is below 30, and four audiobook counts are below 25, so the 5th and 6th values are 25 and 30.",
+        "trap": "Averaging the two lists' medians, $\\tfrac{40 + 20}{2} = 30$, or reading the audiobook segment tops (the bar totals) as audiobook counts."
+      },
+      "tags": [{ "kind": "concept", "id": "mean-median-mode", "role": "primary" }, { "kind": "concept", "id": "data-tables-graphs", "role": "secondary" }],
+      "setup": "two series read off one stacked bar graph (middle and top segments) pooled into one list; the median of the even-size pool, not the mean of the two medians",
+      "variant": "median of two lists combined"
+    },
+    {
+      "id": "s2q1", "section": 2, "type": "qc", "difficulty": 4,
+      "prompt": "Each quantity is written in scientific notation.",
+      "qc": { "a": "$4 \\times 10^{31} + 6 \\times 10^{30}$", "b": "$\\left(7 \\times 10^{15}\\right)^{2}$" },
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "A $= 4.6 \\times 10^{31}$ once the powers are aligned; B $= 49 \\times 10^{30} = 4.9 \\times 10^{31}$.",
+        "steps": [
+          "1. A: write $6 \\times 10^{30}$ as $0.6 \\times 10^{31}$, so A $= 4.6 \\times 10^{31}$.",
+          "2. B: square both factors, $7^2 = 49$ and $(10^{15})^2 = 10^{30}$, so B $= 49 \\times 10^{30} = 4.9 \\times 10^{31}$.",
+          "3. $4.9 > 4.6$: (B)."
+        ],
+        "trap": "Adding the coefficients without aligning the powers ($10 \\times 10^{31}$), or squaring only the power of ten ($7 \\times 10^{30}$); either makes A look larger."
+      },
+      "tags": [{ "kind": "concept", "id": "estimation-sigfig", "role": "primary" }],
+      "setup": "a sum of two numbers in scientific notation one power apart against the square of another; align the powers and square the coefficient",
+      "variant": "scientific notation arithmetic with large powers of 10"
+    },
+    {
+      "id": "s2q2", "section": 2, "type": "qc", "difficulty": 5,
+      "prompt": "A surveyor sets four stakes $A$, $B$, $C$ and $D$ on flat ground, no three of them on one line, with $AB = 5$, $BC = 9$, $CD = 4$ and $DA = 7$, all in meters. A rope is stretched straight from $A$ to $C$.",
+      "qc": { "a": "$25$", "b": "The perimeter, in meters, of triangle $ABC$" },
+      "key": { "sel": [0] },
+      "explanation": {
+        "key": "Triangle $ACD$ gives $AC < 4 + 7 = 11$, so the perimeter $14 + AC$ of triangle $ABC$ stays below 25.",
+        "steps": [
+          "1. Triangle $ABC$: $9 - 5 < AC < 9 + 5$, so $4 < AC < 14$.",
+          "2. Triangle $ACD$: $7 - 4 < AC < 7 + 4$, so $3 < AC < 11$.",
+          "3. Both hold: $4 < AC < 11$.",
+          "4. The perimeter of triangle $ABC$ is $5 + 9 + AC$, between 18 and 25 but never 25: (A)."
+        ],
+        "trap": "Using only triangle $ABC$, whose own bound lets $AC$ approach 14 and the perimeter approach 28, which suggests (D)."
+      },
+      "tags": [{ "kind": "concept", "id": "triangles", "role": "primary" }],
+      "setup": "a quadrilateral's four sides given with a diagonal shared by two triangles; the tighter triangle inequality caps the diagonal; compare one triangle's perimeter with a value",
+      "variant": "triangle inequality: the range of the third side"
+    },
+    {
+      "id": "s2q3", "section": 2, "type": "qc", "difficulty": 5, "revisits": "quant-005:s2q13",
+      "prompt": "$N = 3^{10}$",
+      "qc": { "a": "$(N - 1)^2(N + 1)^2$", "b": "$81^{5}\\left(81^{5} - 2\\right) + 2$" },
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "A $= (N^2 - 1)^2$, and $N^2 = 3^{20} = 81^5$. With $M = 81^5$, A $= M^2 - 2M + 1$ while B $= M^2 - 2M + 2$.",
+        "steps": [
+          "1. $(N - 1)^2(N + 1)^2 = \\left[(N - 1)(N + 1)\\right]^2 = (N^2 - 1)^2$.",
+          "2. $N^2 = 3^{20}$, and $81^5 = (3^4)^5 = 3^{20}$. Call this number $M$.",
+          "3. A $= (M - 1)^2 = M^2 - 2M + 1$.",
+          "4. B $= M(M - 2) + 2 = M^2 - 2M + 2$.",
+          "5. B exceeds A by exactly 1: (B)."
+        ],
+        "trap": "Spotting the perfect-square shape and calling the quantities equal: B ends in $+2$, not $+1$. Expanding A as $N^4 - 1$ (the difference of squares taken one level too far) makes A look larger."
+      },
+      "tags": [{ "kind": "concept", "id": "algebraic-expressions", "role": "primary" }, { "kind": "concept", "id": "exponents-roots", "role": "secondary" }],
+      "setup": "the product of the squares of a difference and a sum rewritten as the square of a difference of squares, with the base a power that matches another power; compare with a nearly equal expression",
+      "variant": "identities across QC quantities"
+    },
+    {
+      "id": "s2q4", "section": 2, "type": "qc", "difficulty": 4, "revisits": "quant-005:s1q2",
+      "prompt": "$\\dfrac{2^{n+2} - 2^{n}}{4^{6} + 2^{11}} = 16$",
+      "qc": { "a": "$n$", "b": "$15$" },
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "The numerator is $3 \\cdot 2^n$ and the denominator is $2^{12} + 2^{11} = 3 \\cdot 2^{11}$, so the ratio is $2^{n - 11} = 16 = 2^4$ and $n = 15$.",
+        "steps": [
+          "1. Numerator: $2^n(2^2 - 1) = 3 \\cdot 2^n$.",
+          "2. Denominator: $4^6 = 2^{12}$, and $2^{12} + 2^{11} = 2^{11}(2 + 1) = 3 \\cdot 2^{11}$.",
+          "3. The 3s cancel: $2^{n - 11} = 2^4$, so $n = 15$: (C)."
+        ],
+        "trap": "Reading $4^6$ as $2^6$, or cancelling powers term by term instead of factoring out the common power; neither leaves a single power of 2 to set equal to 16."
+      },
+      "tags": [{ "kind": "concept", "id": "exponents-roots", "role": "primary" }],
+      "setup": "a difference of powers of 2 over a sum with one term written as a power of 4 equals a power of 2; factor out the common power in both and solve for the exponent",
+      "variant": "factoring out a common power: 2^{n+2} - 2^n"
+    },
+    {
+      "id": "s2q5", "section": 2, "type": "qc", "difficulty": 5,
+      "prompt": "At an observatory, one instrument records a reading every $m$ seconds and a second instrument every $n$ seconds, where $m$ and $n$ are positive integers. Both record at time 0, the next time they record together is 180 seconds later, and the greatest integer that divides both $m$ and $n$ is 6.",
+      "qc": { "a": "$m + n$", "b": "$66$" },
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "A gcd of 6 and an lcm of 180 allow $(6, 180)$, $(12, 90)$, $(18, 60)$ and $(30, 36)$, whose sums 186, 102, 78 and 66 are all at least 66, with 66 reached.",
+        "steps": [
+          "1. Next together after 180 seconds means $\\operatorname{lcm}(m, n) = 180$.",
+          "2. Write $m = 6a$ and $n = 6b$ with $a$ and $b$ sharing no factor. Then $\\operatorname{lcm}(m, n) = 6ab = 180$, so $ab = 30$.",
+          "3. Pairs sharing no factor with product 30: $(1, 30)$, $(2, 15)$, $(3, 10)$, $(5, 6)$, giving $m + n = 186, 102, 78, 66$.",
+          "4. $m + n$ can equal 66 or exceed it: (D)."
+        ],
+        "trap": "Finding only $(6, 180)$ gives (A), and finding only the closest pair $(30, 36)$ gives (C); several pairs share the same gcd and lcm."
+      },
+      "tags": [{ "kind": "concept", "id": "primes-factors", "role": "primary" }],
+      "setup": "two periodic events with a given gcd and lcm of their periods; list the coprime splits of lcm over gcd; compare the sum of the periods with its least value",
+      "variant": "GCD / LCM from two products or a word problem"
+    },
+    {
+      "id": "s2q6", "section": 2, "type": "mc", "difficulty": 4,
+      "prompt": "The numbers $x$ and $y$ satisfy both $|x| + y = 5$ and $x + |y| = 3$. What is the value of $xy$?",
+      "choices": ["$-5$", "$-4$", "$-1$", "$4$", "$5$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "Only the case $x < 0 \\le y$ survives: $-x + y = 5$ and $x + y = 3$ give $x = -1$ and $y = 4$, so $xy = -4$.",
+        "steps": [
+          "1. $x \\ge 0$, $y \\ge 0$: $x + y = 5$ and $x + y = 3$ contradict each other.",
+          "2. $x \\ge 0$, $y < 0$: $x + y = 5$ and $x - y = 3$ give $x = 4$, $y = 1$, but $y$ was assumed negative: reject.",
+          "3. $x < 0$, $y \\ge 0$: $-x + y = 5$ and $x + y = 3$ give $y = 4$, $x = -1$; both signs fit. Check: $1 + 4 = 5$ and $-1 + 4 = 3$.",
+          "4. $x < 0$, $y < 0$: $-x + y = 5$ and $x - y = 3$ add to $0 = 8$: impossible.",
+          "5. $xy = (-1)(4) = -4$."
+        ],
+        "fast": "Subtract the equations: $(|x| - x) - (|y| - y) = 2$. Each bracket is 0 for a nonnegative number and twice its size for a negative one, so $x < 0 \\le y$, $-2x = 2$, $x = -1$, $y = 4$.",
+        "trap": "Dropping the bars as if a sign did not matter leads to the pair $(4, 1)$ from the mixed case, which breaks the sign it assumed and gives $xy = 4$."
+      },
+      "tags": [{ "kind": "concept", "id": "abs-value-inequalities", "role": "primary" }],
+      "setup": "two linear equations, each with a different variable inside bars; of the sign cases, the natural-looking pair violates its own case; the product of the surviving pair",
+      "variant": "an absolute-value equation with two cases, one extraneous"
+    },
+    {
+      "id": "s2q7", "section": 2, "type": "mc", "difficulty": 4,
+      "prompt": "A rectangular construction site measures 50 meters by 30 meters. A gravel strip is laid outside the site, covering exactly the points that lie outside the rectangle and within 4 meters of it. What is the area of the gravel strip, in square meters?",
+      "choices": ["$640 + 4\\pi$", "$640 + 16\\pi$", "$704$", "$640 + 64\\pi$", "$320 + 16\\pi$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "The strips along the four sides total $4 \\times 160 = 640$; beyond the corners lie four quarter-disks of radius 4, together one disk of area $16\\pi$.",
+        "steps": [
+          "1. Beside each side, the points within 4 meters form a rectangle of width 4: in total $4 \\times (50 + 30 + 50 + 30) = 640$.",
+          "2. Beyond each corner, the points within 4 meters of the rectangle are within 4 meters of that corner: a quarter-disk of radius 4, not a square.",
+          "3. Four quarter-disks make one disk: $\\pi \\cdot 4^2 = 16\\pi$.",
+          "4. Total: $640 + 16\\pi$."
+        ],
+        "fast": "Strip area $=$ perimeter $\\times$ width $+ \\pi \\times$ width$^2 = 160 \\times 4 + 16\\pi$.",
+        "trap": "Filling the corners with 4-by-4 squares gives the frame $58 \\times 38 - 50 \\times 30 = 704$, but a square's far corner is $4\\sqrt2$ meters from the site."
+      },
+      "tags": [{ "kind": "concept", "id": "area-perimeter", "role": "primary" }, { "kind": "concept", "id": "circles", "role": "secondary" }],
+      "setup": "the region within a fixed distance outside a rectangle: side strips plus rounded quarter-disk corners, not a square-cornered frame",
+      "variant": "a border or path around a rectangle"
+    },
+    {
+      "id": "s2q8", "section": 2, "type": "mc", "difficulty": 5,
+      "prompt": "Each of the 50 nurses at a hospital holds at least one of three certifications: 20 hold the pediatric certification, 25 hold the critical-care certification and 30 hold the trauma certification. What is the greatest possible number of nurses who hold all three certifications?",
+      "choices": ["$10$", "$12$", "$13$", "$20$", "$25$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "The certifications total $20 + 25 + 30 = 75$ for 50 nurses, so the 25 extra satisfy (exactly two) $+ 2 \\times$ (all three) $= 25$. All three is at most 12, and 12 can occur.",
+        "steps": [
+          "1. Let $e_1$, $e_2$ and $e_3$ be the numbers of nurses holding exactly one, two and three. Nurses: $e_1 + e_2 + e_3 = 50$. Certifications: $e_1 + 2e_2 + 3e_3 = 75$.",
+          "2. Subtract: $e_2 + 2e_3 = 25$. Since $e_2 = 25 - 2e_3 \\ge 0$ and $e_3$ is a whole number, $e_3 \\le 12$.",
+          "3. 12 works: 12 hold all three, 1 holds only critical care and trauma, and 8, 12 and 17 hold only pediatric, only critical care and only trauma. The certifications count $12 + 8 = 20$, $12 + 1 + 12 = 25$ and $12 + 1 + 17 = 30$, for $12 + 1 + 8 + 12 + 17 = 50$ nurses.",
+          "4. Greatest: 12."
+        ],
+        "fast": "There are 25 certifications beyond one per nurse, and each nurse holding all three uses 2 of them: at most 12.",
+        "trap": "Taking the smallest group (20) as the limit ignores that every nurse holds at least one certification; rounding $\\tfrac{25}{2}$ up to 13 leaves $e_2 = -1$."
+      },
+      "tags": [{ "kind": "concept", "id": "overlapping-sets", "role": "primary" }],
+      "setup": "three sets covering a fixed population with given sizes; the surplus of the size sum over the population caps the triple overlap at half the surplus",
+      "variant": "the most in exactly one, two or all three groups from the entry total"
+    },
+    {
+      "id": "s2q9", "section": 2, "type": "mc", "difficulty": 4,
+      "prompt": "A contractor borrowed money on February 1 at a simple interest rate of $6\\%$ per year and repaid the loan with its interest on October 1 of the same year. If the repayment was $\\$15{,}600$, how much did the contractor borrow?",
+      "choices": ["$\\$14{,}400$", "$\\$14{,}664$", "$\\$14{,}976$", "$\\$15{,}000$", "$\\$15{,}120$"],
+      "key": { "sel": [3] },
+      "explanation": {
+        "key": "February 1 to October 1 is 8 months, so the interest is $6\\% \\times \\tfrac{8}{12} = 4\\%$ of the amount borrowed: $1.04P = 15{,}600$ and $P = 15{,}000$.",
+        "steps": [
+          "1. February 1 to October 1 is 8 months, $\\tfrac{8}{12} = \\tfrac23$ of a year.",
+          "2. Interest for the term: $6\\% \\times \\tfrac23 = 4\\%$ of the amount borrowed.",
+          "3. Repayment $= 1.04P = 15{,}600$, so $P = 15{,}000$."
+        ],
+        "fast": "Check the choice: $4\\%$ of $\\$15{,}000$ is $\\$600$, and $15{,}000 + 600 = 15{,}600$.",
+        "trap": "Taking $4\\%$ off the repayment ($15{,}600 \\times 0.96 = 14{,}976$) applies the rate to the wrong base, and taking a full year's $6\\%$ off it gives $14{,}664$."
+      },
+      "tags": [{ "kind": "concept", "id": "word-problems-interest", "role": "primary" }],
+      "setup": "a repayment of principal plus simple interest over a fraction of a year; count the months, scale the annual rate, divide by one plus the term rate",
+      "variant": "simple interest over a partial year"
+    },
+    {
+      "id": "s2q10", "section": 2, "type": "mc", "difficulty": 3,
+      "prompt": "An architect designs a fan-shaped window in the form of a sector of a circle. The curved edge of the window is $3\\pi$ feet long, and its two straight edges meet at an angle of $135^\\circ$. What is the area of the window, in square feet?",
+      "choices": ["$3\\pi$", "$6\\pi$", "$8\\pi$", "$12\\pi$", "$16\\pi$"],
+      "key": { "sel": [1] },
+      "explanation": {
+        "key": "The sector is $\\tfrac{135}{360} = \\tfrac38$ of a circle. From $\\tfrac38 \\cdot 2\\pi r = 3\\pi$, $r = 4$, and the area is $\\tfrac38 \\cdot 16\\pi = 6\\pi$.",
+        "steps": [
+          "1. The sector is $\\tfrac{135}{360} = \\tfrac38$ of the circle.",
+          "2. Arc: $\\tfrac38 \\cdot 2\\pi r = 3\\pi$, so $r = 4$.",
+          "3. Area: $\\tfrac38 \\cdot \\pi \\cdot 4^2 = 6\\pi$."
+        ],
+        "fast": "Sector area $= \\tfrac12 \\times$ radius $\\times$ arc $= \\tfrac12 \\cdot 4 \\cdot 3\\pi = 6\\pi$.",
+        "trap": "Reporting the whole circle's area ($16\\pi$), or using the diameter in place of the radius in $\\tfrac12 r L$ ($12\\pi$)."
+      },
+      "tags": [{ "kind": "concept", "id": "circles", "role": "primary" }],
+      "setup": "a sector's arc length and central angle give the radius; the sector's area",
+      "variant": "arc length and sector area from the central angle"
+    },
+    {
+      "id": "s2q11", "section": 2, "type": "mc", "difficulty": 5, "revisits": "quant-005:s2q7",
+      "prompt": "A circular plaza contains a triangular garden with three equal sides, whose corners lie on the plaza's edge. A circular fountain inside the garden touches all three of its sides. The ring-shaped walkway between the fountain's edge and the plaza's edge is 3 meters wide everywhere. What is the area of the garden, in square meters?",
+      "choices": ["$\\dfrac{27\\sqrt{3}}{4}$", "$9\\sqrt{3}$", "$27\\sqrt{3}$", "$36\\sqrt{3}$", "$81\\sqrt{3}$"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "For an equilateral triangle the circumradius is twice the inradius, so the width $R - r$ equals $r$: $r = 3$, $R = 6$, the altitude is 9, the side $6\\sqrt3$ and the area $27\\sqrt3$.",
+        "steps": [
+          "1. The incircle and circumcircle of an equilateral triangle share a center, which lies one-third of the way up each altitude $h$: $r = \\tfrac13 h$ and $R = \\tfrac23 h$, so $R = 2r$.",
+          "2. Width: $R - r = r = 3$, so $r = 3$, $R = 6$ and $h = R + r = 9$.",
+          "3. Side: $s = \\tfrac{2h}{\\sqrt3} = 6\\sqrt3$.",
+          "4. Area: $\\tfrac12 \\cdot 6\\sqrt3 \\cdot 9 = 27\\sqrt3$."
+        ],
+        "fast": "$h = R + r = 3r = 9$, and an equilateral triangle with altitude $h$ has area $\\tfrac{h^2}{\\sqrt3} = \\tfrac{81}{\\sqrt3} = 27\\sqrt3$.",
+        "trap": "Taking the 3-meter width as the plaza's radius (side $3\\sqrt3$, area $\\tfrac{27\\sqrt3}{4}$) or as half a side (side 6, area $9\\sqrt3$), or the side as the plaza's diameter (area $36\\sqrt3$). The width is the difference of the radii, which equals the smaller radius."
+      },
+      "tags": [{ "kind": "concept", "id": "inscribed-figures", "role": "primary" }, { "kind": "concept", "id": "pythagorean-special", "role": "secondary" }],
+      "setup": "equilateral triangle between its incircle and circumcircle; the ring's width (not its area) equals the inradius, which gives the side and the area",
+      "variant": "an equilateral triangle in a circle"
+    },
+    {
+      "id": "s2q12", "section": 2, "type": "mc", "difficulty": 4,
+      "prompt": "The cross section of a concrete retaining wall is a trapezoid whose parallel sides are its top and its base. Each slanted side makes a $60^\\circ$ angle with the base and is as long as the top. If the perimeter of the cross section is 40 feet, what is its area, in square feet?",
+      "choices": ["$32\\sqrt{3}$", "$40\\sqrt{3}$", "$48\\sqrt{3}$", "$64\\sqrt{3}$", "$96$"],
+      "key": { "sel": [2] },
+      "explanation": {
+        "key": "With top and slanted sides $a$, each overhang is $\\tfrac a2$, so the base is $2a$, the perimeter $5a = 40$ gives $a = 8$, the height is $4\\sqrt3$ and the area $\\tfrac{8 + 16}{2} \\cdot 4\\sqrt3 = 48\\sqrt3$.",
+        "steps": [
+          "1. Let the top and each slanted side be $a$. Heights dropped from the ends of the top cut off two 30-60-90 triangles with hypotenuse $a$.",
+          "2. Each has short leg $\\tfrac a2$ along the base and long leg $\\tfrac{\\sqrt3}{2}a$, the height.",
+          "3. Base $= a + 2 \\cdot \\tfrac a2 = 2a$; perimeter $= a + a + a + 2a = 5a = 40$, so $a = 8$.",
+          "4. Height $4\\sqrt3$; area $= \\tfrac{8 + 16}{2} \\cdot 4\\sqrt3 = 48\\sqrt3$."
+        ],
+        "fast": "The shape is half of a regular hexagon of side 8, that is three equilateral triangles: $3 \\cdot \\tfrac{\\sqrt3}{4} \\cdot 64 = 48\\sqrt3$.",
+        "trap": "Using the slanted side as the height gives $12 \\times 8 = 96$; adding only one overhang to the base ($8 + 4 = 12$) gives $40\\sqrt3$."
+      },
+      "tags": [{ "kind": "concept", "id": "pythagorean-special", "role": "primary" }, { "kind": "concept", "id": "area-perimeter", "role": "secondary" }],
+      "setup": "an isosceles trapezoid with 60-degree base angles and legs equal to the short base; the perimeter gives the side; heights cut off 30-60-90 triangles (half a regular hexagon)",
+      "variant": "30-60-90 triangle inside a hexagon, rhombus or trapezoid"
+    },
+    {
+      "id": "s2q13", "section": 2, "type": "mc_multi", "difficulty": 4,
+      "prompt": "A list begins with the terms 3 and 5, and each later term equals the term just before it minus the term two places before it, so $a_n = a_{n-1} - a_{n-2}$ for $n \\ge 3$. Which of the following sums equal 0? Indicate all such sums.",
+      "choices": [
+        "The sum of the first 20 terms",
+        "The sum of the first 30 terms",
+        "The sum of the first 40 terms",
+        "The sum of the terms from $a_{4}$ through $a_{15}$",
+        "The sum of the terms from $a_{10}$ through $a_{20}$",
+        "The sum of the first 45 terms"
+      ],
+      "key": { "sel": [1, 3] },
+      "explanation": {
+        "key": "The list runs 3, 5, 2, $-3$, $-5$, $-2$ and then repeats, and each block of 6 consecutive terms sums to 0. Only the sums made of whole blocks, the first 30 terms and $a_4$ through $a_{15}$, are 0.",
+        "steps": [
+          "1. Terms: $3, 5, 2, -3, -5, -2, 3, 5, \\ldots$; $a_7 = a_1$ and $a_8 = a_2$, so the list repeats every 6 terms.",
+          "2. Any 6 consecutive terms are the block in some rotation, with sum $3 + 5 + 2 - 3 - 5 - 2 = 0$.",
+          "3. First 30 terms: five blocks, sum 0. $a_4$ through $a_{15}$: 12 terms, two blocks, sum 0.",
+          "4. First 20: three blocks plus $a_{19} + a_{20} = 3 + 5 = 8$. First 40: six blocks plus $a_{37}$ to $a_{40}$, $3 + 5 + 2 - 3 = 7$. First 45: seven blocks plus $3 + 5 + 2 = 10$.",
+          "5. $a_{10}$ through $a_{20}$ is 11 terms: $a_{10}$ to $a_{15}$ is a block, and $a_{16}$ to $a_{20}$ is $-3 - 5 - 2 + 3 + 5 = -2$."
+        ],
+        "fast": "Only the count of leftover terms past whole blocks of 6 matters: 30 and 12 terms leave none; 20, 40, 45 and 11 leave some.",
+        "trap": "Expecting 40 terms to vanish because 40 is a round count (only multiples of 6 give whole blocks), or counting $a_{10}$ through $a_{20}$ as 10 terms."
+      },
+      "tags": [{ "kind": "concept", "id": "sequences-patterns", "role": "primary" }],
+      "setup": "a two-term difference recursion from two given starting terms repeats every six terms with block sum zero; select the sums over index ranges that equal zero",
+      "variant": "pattern in a defined list (terms that alternate or repeat)"
+    },
+    {
+      "id": "s2q14", "section": 2, "type": "mc_multi", "difficulty": 5,
+      "prompt": "A literary magazine has accepted 8 stories, no two of them submitted on the same date. Which of the following numbers of ways are equal to $\\dbinom{8}{3}$? Indicate all such numbers.",
+      "choices": [
+        "The number of ways to pick 3 of the stories for a special issue, where only which stories appear matters",
+        "The number of ways to schedule 3 of the stories, one each, in the March, April and May issues",
+        "The number of ways to pick 3 of the stories and print them in order of submission date, earliest first",
+        "The number of ways to line up 3 identical red covers and 5 identical blue covers in a row",
+        "The number of ways to pick 3 of the stories and place them around a round display stand, where two placements that differ only by a rotation of the stand count as the same"
+      ],
+      "key": { "sel": [0, 2, 3] },
+      "explanation": {
+        "key": "$\\binom{8}{3} = 56$. A is an unordered pick. In C the order is forced by the dates, so each set of 3 gives exactly one printing. In D, choosing which 3 of the 8 places hold red covers fixes the row. B orders the 3 picks ($8 \\cdot 7 \\cdot 6 = 336$), and E gives each set 2 circular orders (112).",
+        "steps": [
+          "1. A: an unordered choice of 3 from 8: $\\binom{8}{3} = 56$. Equal.",
+          "2. B: three different months, so order matters: $8 \\cdot 7 \\cdot 6 = 336$. Not equal.",
+          "3. C: once the 3 stories are chosen, the dates fix the one order they are printed in, so the count is the number of sets: 56. Equal.",
+          "4. D: a row is fixed by which 3 of the 8 places get red covers: $\\binom{8}{3} = 56$. Equal.",
+          "5. E: each set of 3 can sit around the stand in $(3 - 1)! = 2$ ways, so $56 \\times 2 = 112$. Not equal."
+        ],
+        "fast": "A count equals $\\binom{8}{3}$ when each set of 3 is counted once: no order (A), an order forced by a rule (C), or a choice of positions (D).",
+        "trap": "Rejecting C because the stories are 'put in order': the order is decided by the dates, not chosen. Taking E as unordered because rotations are merged leaves 2 circular orders per set."
+      },
+      "tags": [{ "kind": "concept", "id": "counting-permutations", "role": "primary" }],
+      "setup": "select the situations counted by one binomial coefficient: an unordered pick, a pick printed in a forced order, and an arrangement of two kinds of identical items, against an ordered schedule and a circular display",
+      "variant": "choosing a group (combinations) vs ordering it"
+    },
+    {
+      "id": "s2q15", "section": 2, "type": "numeric", "difficulty": 4, "revisits": "quant-006:s1q6",
+      "prompt": "A survey boat measuring a river's depth for a planned bridge moves at 16 kilometers per hour in still water. In the time it takes the boat to travel 30 kilometers downstream, it can travel only 18 kilometers upstream. What is the speed of the river's current, in kilometers per hour?",
+      "numeric": { "kind": "single" },
+      "key": { "value": "4" },
+      "explanation": {
+        "key": "Equal times: $\\dfrac{30}{16 + c} = \\dfrac{18}{16 - c}$, so $480 - 30c = 288 + 18c$ and $c = 4$.",
+        "steps": [
+          "1. With current $c$, the downstream speed is $16 + c$ and the upstream speed $16 - c$.",
+          "2. Equal times: $\\dfrac{30}{16 + c} = \\dfrac{18}{16 - c}$.",
+          "3. $30(16 - c) = 18(16 + c)$: $480 - 30c = 288 + 18c$, so $48c = 192$ and $c = 4$."
+        ],
+        "fast": "Equal times put the speeds in the ratio of the distances, $30 : 18 = 5 : 3$. The two speeds sum to $2 \\times 16 = 32$, so they are 20 and 12, and the current is 4.",
+        "trap": "Entering a boat speed (20 or 12) instead of the current, or putting the speeds in the inverse ratio of the distances."
+      },
+      "tags": [{ "kind": "concept", "id": "word-problems-rate", "role": "primary" }],
+      "setup": "equal times downstream and upstream over different distances with the still-water speed known; the speeds are in the distance ratio; the current",
+      "variant": "relative speed: meeting or overtaking"
+    }
+  ]
+}
