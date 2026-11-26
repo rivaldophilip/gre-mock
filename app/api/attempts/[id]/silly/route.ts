@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { canMarkSilly, loadAttemptTest, pairKey, responseFor, setSilly } from "@/lib/attempts";
+import { canMarkSilly, loadAttemptTest, responseFor, setSilly } from "@/lib/attempts";
+import { refOf } from "@/lib/ref";
 
 const Body = z.object({ questionId: z.string(), silly: z.boolean() });
 
@@ -12,7 +13,7 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
   if (!body.success || !loaded) return NextResponse.json({ error: "bad request" }, { status: 400 });
   const { a, test } = loaded;
   const q = test.questions.find((x) => x.id === body.data.questionId);
-  const r = q && (await responseFor(a.id, pairKey(test.id, q.id)));
+  const r = q && (await responseFor(a.id, refOf(q)));
   if (!q || !r || !canMarkSilly(a, test, q, r)) return NextResponse.json({ error: "not a revealed wrong quant answer" }, { status: 409 });
   await setSilly(r.id, body.data.silly);
   return NextResponse.json({ ok: true, silly: body.data.silly });

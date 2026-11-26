@@ -8,9 +8,11 @@ import { tagTest } from "./tag-test";
 import { difficultyLine, DRILL_LEVELS, validateTest } from "./validate-test";
 import { readTestFile, writeTestFile } from "./lib/test-file";
 import type { VocabEntry } from "../lib/vocab-match";
-import { isDrillId } from "../lib/test-path";
+import { isBankId, isDrillId } from "../lib/test-path";
 
 type Brief = {
+  /** bank batches (scripts/bank-brief.ts): quant | tcse | rc */
+  kind?: string;
   keyWords?: { id: string; word: string; bucket?: string }[];
   skillSlots?: { skill: string }[];
   passageWords?: { id: string }[];
@@ -118,6 +120,13 @@ function exposureOnlyChoices(test: Test, brief: Brief) {
   );
 }
 
+/** `levels: L4 ×12, L5 ×12` for a bank batch: a quiz meets the section rules when it is assembled. */
+const levelCounts = (test: Test) => {
+  const n = new Map<number, number>();
+  for (const q of test.questions) n.set(q.difficulty, (n.get(q.difficulty) ?? 0) + 1);
+  return "levels: " + [...n].sort((a, b) => a[0] - b[0]).map(([l, k]) => `L${l} ×${k}`).join(", ");
+};
+
 /** `L5 5/10 (>= half) · levels 4-5` for a drill batch, whose rules replace the section ones. */
 const drillLevelLine = (test: Test) => {
   const l5 = test.questions.filter((q) => q.difficulty >= 5).length;
@@ -175,7 +184,8 @@ function main() {
   }
   const coverage: string[] = [];
   if (brief) {
-    if (isDrillId(id)) {
+    // a TC / SE bank batch is checked as a drill batch is, a reading batch as a verbal mock's reading part
+    if (isDrillId(id) || brief.kind === "tcse") {
       const c = drillCoverage(test, brief);
       coverage.push(...c.lines);
       problems.push(...c.problems);
@@ -190,7 +200,7 @@ function main() {
   if (unusedKeys.length && notInBank.size) problems.push(`unused brief key words, to replace a non-bank key: ${unusedKeys.join(", ")}`);
 
   const head = `${test.questions.length} questions, ${test.passages.length} passages${info.length ? " · " + info.join(" · ") : ""}`;
-  report(id, problems, v.warns, [head, `difficulty: ${isDrillId(id) ? drillLevelLine(test) : difficultyLine(test.questions)}`, ...coverage.map((c) => "coverage: " + c)],
+  report(id, problems, v.warns, [head, `difficulty: ${isDrillId(id) ? drillLevelLine(test) : isBankId(id) ? levelCounts(test) : difficultyLine(test.questions)}`, ...coverage.map((c) => "coverage: " + c)],
     problems.length ? "fix these with Edit" : `npm run -s blind -- ${id}, then give content/.blind/${id}.md to the gre-blind-solver agent`);
 }
 

@@ -5,8 +5,8 @@ import { btn } from "./ui";
 
 type Mode = "exam" | "practice";
 
-/** One click starts the test, timed, in the chosen mode. */
-export function StartForm({ testId }: { testId: string }) {
+/** One click starts the test in the chosen mode, timed unless the quiz was made untimed. */
+export function StartForm({ testId, timerOn = true }: { testId: string; timerOn?: boolean }) {
   const [busy, setBusy] = useState<Mode | null>(null);
   const router = useRouter();
   async function start(mode: Mode) {
@@ -14,7 +14,7 @@ export function StartForm({ testId }: { testId: string }) {
     const r = await fetch("/api/attempts", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ testId, mode, timerOn: true }),
+      body: JSON.stringify({ testId, mode, timerOn }),
     });
     const j = await r.json();
     if (r.ok) router.push(`/test/${testId}/run?attempt=${j.id}`);

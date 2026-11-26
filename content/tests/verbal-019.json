@@ -70,7 +70,8 @@
           "id": "falsifiable",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "p2",
@@ -118,7 +119,8 @@
           "id": "trope",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "a1",
@@ -131,7 +133,8 @@
           "id": "impermeable",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "p3",
@@ -192,7 +195,8 @@
           "id": "anomaly",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "p4",
@@ -235,7 +239,8 @@
           "id": "gravamen",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "p5",
@@ -283,14 +288,16 @@
           "id": "magniloquent",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "a2",
       "paragraphs": [
         "School board member: Opponents of moving our high schools' opening bell from 7:30 to 8:30 say that teenagers would simply go to bed an hour later and so would gain no sleep. If that were so, students at Fenwick High, which made exactly this change four years ago, should report sleeping no more than Fenwick students did before it. Yet on the district's annual health survey, Fenwick students have reported, in every year since the change, about forty minutes more sleep per night than in any year before it. The opponents' prediction, then, is mistaken."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "social science"
     }
   ],
   "figures": [],

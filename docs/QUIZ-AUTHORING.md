@@ -1,5 +1,7 @@
 # Authoring a hard GRE mock test
 
+New questions are now written as **bank batches** (`/bank-fill`, section [Bank batches](#bank-batches) below): the webapp assembles quizzes from the bank (`docs/BANK.md`). The mock steps below still apply to a batch item by item, and to the 42 mocks already written.
+
 Output: one **original** 27-question test (Section 1 = 12 questions, Section 2 = 15) as `content/tests/<measure>-NNN.json`. The same steps run for `verbal` and `quant`. **Never copy, closely paraphrase or reuse stems/passages from ETS or Big Book material.** The repo is public. Official items (local only, `../books/extracted/reference/items.jsonl`) are for style and difficulty calibration.
 
 Read this page, the brief and `docs/HARD-PATTERNS.md`; nothing else is needed. Every command below prints what is wrong by question id and ends with a `next:` line naming the step to run. Open `lib/types.ts`, the scripts or older tests only if a message is not enough. Run the scripts as `npm run -s …` (no npm banner).
@@ -41,7 +43,7 @@ Read this page, the brief and `docs/HARD-PATTERNS.md`; nothing else is needed. E
    - `npm run -s novelty -- <id>` writes `content/.blind/<id>.novelty.md`. Each item appears next to the earlier items it could repeat: quant by concept, plus close wording from other concepts; verbal passages and arguments against earlier ones (each pool listed once, at the head of its section), TC and SE items against earlier ones sharing a key word, then a bank synonym of one (the likeliest disguised repeat), then close wording.
    - Give the path to the `gre-novelty-judge` agent. It writes its verdicts to the reply file the copy names (`<id>.novelty.txt`); then run `npm run -s novelty -- <id> --check`. **same** means rewrite with a setup the brief does not list; **similar** means rewrite unless the decisive step really differs. A revisit judged **similar** to the item it revisits passes.
    - After rewrites, run `check`, then `blind --only` for the solver, then `npm run -s novelty -- <id> --only s1q3,s2q5`, and SendMessage that file to the **same** judge (`--check --only …` once it has written its reply).
-5. **Register and publish.** `npm run -s register -- <id>` writes to every user's database. It refuses a test that does not validate, and warns if no blind or novelty check is on record. Then run `git add content && git commit && git push` (Vercel redeploys).
+5. **Sync and publish.** `npm run -s bank:sync -- <id>` (alias `register`) writes the source into the shared question bank, `gre_bank` (`docs/BANK.md`). It refuses a test that does not validate and warns if no blind or novelty check is on record (a bank batch needs both). Then run `git add content && git commit && git push`. The app picks up the new bank version within seconds; no redeploy is needed for content.
 
 `npm run -s novelty -- --audit quant|verbal [--tests id,id]` writes a novelty copy for each listed test (each against the tests numbered before it), to sweep earlier tests for repeats.
 
@@ -49,16 +51,30 @@ Recalibrate only after changing the solver's model: `npm run -s blind -- --calib
 
 **Improving the pipeline.** After a run, `python3 scripts/session_stats.py` (add `--commands` for the command list) summarizes the newest transcript: tool calls, errors, how many check and blind rounds ran, and tokens. When a step keeps looping or erroring, fix its script's message or this page, not the next test.
 
-## Drill batches (endless vocab)
+## Bank batches
 
-A drill batch is a set of standalone TC / SE items (`/new-drill`, 20 by default) for the Endless vocab mode. Its job is to put untested bank words in front of the user, at the hard end of a mock. The pipeline is the one above, with these differences:
+A batch is a set of items written by topic for the question bank: `content/bank/quant/qbank-NNN.json` or `content/bank/verbal/vbank-NNN.json`. The webapp serves its items one by one in assembled quizzes and in the drill. A batch is no mock, so the **mock-level** rules do not apply to it; each quiz meets those when it is assembled (`lib/blueprint-rules.ts`). Those rules are the section averages and level counts, the cap on items rated 4+, the blueprint's type counts, the opening TC or QC block, and the passage layout. Every **per-item** rule still does: schema, tags, setup and variant, the verify script, 6-gram overlap, the skeleton check, `wordReuse`, revisit links, blind and novelty.
 
-1. **Brief.** `npm run -s brief:drill [-- --count N]` writes `content/briefs/drill-NNN.{json,md}`. It has a slot table (about 40% SE, 30% 3-blank TC, 20% 2-blank, 10% 1-blank), key words (all untested, with SE pairs), any revisits of missed drill items, a long list of untested distractor words and SE trap pairs. Read only the `.md`.
-2. **Author** `content/drill/drill-NNN.json` in one Write. It uses the same shapes as a verbal mock, with ids `s1q1`…, every item in `"section": 1`, `"sections": [{ "n": 1, "minutes": 60 }, { "n": 2, "minutes": 1 }]` and no passages. Spend every key word as a key, and take every distractor from the brief. Each item stands alone, so a short single-sentence TC is fine, but the 3-blank TCs should still be 2–3 sentence passages with a pivot. Give every wrong choice a `distractors` explanation: the drill shows them on the reveal, since each word's meaning is the point.
-3. **Check** enforces the drill rules instead of the blueprint: TC / SE only, at most 30 items, every level 4 or 5 with at least half at 5, and at least 90% of choice words drawn from the brief.
-4. **Blind** and **novelty** run unchanged. Novelty pairs a drill item with every verbal mock and earlier batch. When the solver rates an item off its level, retag it to the rating while the half-at-5 rule still holds; otherwise rewrite.
-5. **Register** as usual. The card on the dashboard picks the batch up at once. Until then the batch is a draft: `/drill` serves only registered batches, so a file in `content/drill/` that has not passed its checks never reaches the user.
-6. **Repacking later.** Once mocks and other batches have tested an unanswered item's keys, it can be retired with `"retired": true` rather than deleted. It stays in the file, so the batch's checks (half at level 5, brief share) and the setup history still count it, but `register` gives it no rows and `/drill` never serves it. An untested word that only it held moves into a distractor slot of a kept item, taking the place of a word already tested or an exposure-only word. Re-run `check` and `blind --only` on the edited items, then `register`. Only an item that is unanswered and has no key still untested, or seen only as a distractor or in a passage, is retired.
+1. **Gaps and brief.** `npm run -s bank:gaps` ranks what the bank is short of for the user and recommends a batch. `npm run -s bank:brief [-- quant|verbal] [--kind quant|tcse|rc]` writes `content/briefs/<id>.{json,md}`. Read only the `.md`, about 10 KB. Its slot table gives each item's id (`s1q1`, …), type and level, and its concept or skill and variant (quant, reading), or its unit. Kinds:
+   - **quant**: 20–30 items over 4–8 concepts at levels 4 and 5, revisit siblings, a DI set (`unit` d1, three slots) when the bank lacks one. Each concept's earlier setups are listed once; the rules for setups are the mock's (step 1).
+   - **tcse**: replaces drill batches. Standalone TC / SE items keyed with the words the brief lists (those marked *no unseen item keys it* first), distractors from its lists, SE trap pairs, revisits of missed TC / SE items. The drill rules for words apply: at least 90% of choice words from the brief.
+   - **rc**: reading passages in the unit shapes the brief names (`rc4-long`: 2–4 paragraphs, 4 questions; `rc2` and `rc1`: 1–2 paragraphs; `arg1`: a one-paragraph argument), each question with its skill and variant, passage words to weave in (5–6 per reading passage). Give each passage a `domain` (science, social science, humanities, arts, business).
+2. **Author** the batch in one Write, in the drill shape: `"sections": [{ "n": 1, "minutes": 60 }, { "n": 2, "minutes": 1 }]`, every item in `"section": 1`, ids `s1q1` … in slot order. A unit's questions use the unit id as their `passageId` (reading, argument) or `setId` and `figureId` (DI). Quant also writes `content/verify/<id>.py`.
+3. **Check.** `npm run -s check -- <id>` adds `batchRules`:
+   - the items match the brief's slots, type and level per item, in any order;
+   - each unit has its shape's question count;
+   - a third of the 3-blank TCs may be one sentence, the rest are 3–5 sentence passages;
+   - a fifth of the TC blanks have all-phrase choices (the mock's 2 of 3 and 3 of 15, as ratios);
+   - select-all items are not all 2-key.
+4. **Blind** as for a mock, with one solver. `blind --check` writes each item's raw rating into the file as `solverRating`; assembly caps the items rated 4+ per quiz section. A batch has no section balance to keep, so a too-easy item may always be retagged to its honest level, and there is no "too hard" round.
+5. **Novelty** as for a mock, with one judge. A quant batch lists each concept's earlier items once, then that concept's new items (with their cross-concept look-alikes), so the copy stays small.
+6. **Sync.** `npm run -s bank:sync -- <id>` refuses a batch without its blind and novelty records. Commit the batch, its brief and its verify script, then run `bank:gaps` again: it should shrink.
+
+**Retiring** an item: set `"retired": true` and sync. The item keeps its row and ref (status `retired`), and quizzes and the drill skip it. Never delete an item or change its id: responses point to its ref.
+
+## Drill batches (endless vocab, retired)
+
+The 15 drill batches in `content/drill` are bank sources like the mocks: the drill serves every unseen TC / SE item of the bank, not just theirs. New TC / SE stock is written as **tcse** bank batches (above); `brief:drill` is gone. The drill rules (TC / SE only, levels 4–5 with half at 5, 90% brief words) still validate the existing batches.
 
 ## Structure rules (the validator enforces most)
 

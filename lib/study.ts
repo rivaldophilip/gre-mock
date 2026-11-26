@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { isListed } from "./attempt-summary";
 import { slotType, type SlotType } from "./qtypes";
-import type { Test } from "./types";
+import type { Question, Test } from "./types";
 import conceptVariants from "@/data/concept_variants.json";
 
 const VARIANTS: Record<string, string[]> = conceptVariants;
@@ -123,6 +123,8 @@ export const LONG_MS = 180_000;
 export interface Miss {
   testId: string;
   attemptId: number;
+  /** the item's bank ref, which its review anchor is built from (lib/ref.ts, qAnchor) */
+  ref: string;
   qid: string;
   type: SlotType;
   difficulty: number;
@@ -148,7 +150,7 @@ export interface StudyStats {
 }
 
 type AttemptRow = { id: number; testId: string; startedAt: Date; finishedAt: Date | null; abandonedAt: Date | null; sectionState: unknown };
-type ResponseRow = { attemptId: number; questionId: string; isCorrect: boolean; timeMs: number; guessed: boolean };
+type ResponseRow = { attemptId: number; questionId: string; isCorrect: boolean; timeMs: number; guessed: boolean; reused?: boolean };
 
 const tally = (rows: { ok: boolean; ms: number }[]): Tally => ({
   n: rows.length,
@@ -159,15 +161,16 @@ const tally = (rows: { ok: boolean; ms: number }[]): Tally => ({
 /**
  * The guide's live numbers: every response of a finished, listed attempt at a test of this measure, grouped by
  * section (via concept tags, primary or secondary), by format, and for pacing. A question tagged with concepts
- * of two sections counts in both.
+ * of two sections counts in both. `items` holds the answered questions by ref (built from `tests`' questions when
+ * left out); an item a quiz reused (docs/BANK.md) is left out, as it is of the concept stats.
  */
-export function studyStats(guide: Study, attempts: AttemptRow[], responses: ResponseRow[], tests: Map<string, Test>): StudyStats {
+export function studyStats(guide: Study, attempts: AttemptRow[], responses: ResponseRow[], tests: Map<string, Pick<Test, "measure"> & Partial<Pick<Test, "questions">>>, items?: Map<string, Question>): StudyStats {
+  const byRef = items ?? new Map([...tests].flatMap(([id, t]) => (t.questions ?? []).map((q) => [`${id}:${q.id}`, q] as const)));
   const done = new Map(attempts.filter((a) => isListed(a) && a.finishedAt && tests.get(a.testId)?.measure === guide.measure).map((a) => [a.id, a]));
   const rows = responses.flatMap((r) => {
     const a = done.get(r.attemptId);
-    if (!a) return [];
-    const qid = r.questionId.slice(r.questionId.indexOf(":") + 1);
-    const q = tests.get(a.testId)!.questions.find((x) => x.id === qid);
+    if (!a || r.reused) return [];
+    const q = byRef.get(r.questionId);
     if (!q) return [];
     return [{ a, q, r, ok: r.isCorrect, ms: r.timeMs, concepts: new Set(q.tags.filter((t) => t.kind === "concept").map((t) => t.id)) }];
   });
@@ -177,7 +180,7 @@ export function studyStats(guide: Study, attempts: AttemptRow[], responses: Resp
     const mine = rows.filter((x) => s.concepts.some((c) => x.concepts.has(c)));
     const misses = mine
       .filter((x) => !x.ok)
-      .map((x) => ({ testId: x.a.testId, attemptId: x.a.id, qid: x.q.id, type: slotType(x.q), difficulty: x.q.difficulty, timeMs: x.ms, guessed: x.r.guessed, trap: x.q.explanation.trap || undefined, ...(x.q.variant ? { variant: x.q.variant } : {}), finishedAt: x.a.finishedAt! }));
+      .map((x) => ({ testId: x.a.testId, attemptId: x.a.id, ref: x.r.questionId, qid: x.r.questionId.slice(x.r.questionId.indexOf(":") + 1), type: slotType(x.q), difficulty: x.q.difficulty, timeMs: x.ms, guessed: x.r.guessed, trap: x.q.explanation.trap || undefined, ...(x.q.variant ? { variant: x.q.variant } : {}), finishedAt: x.a.finishedAt! }));
     sections.set(s.id, { ...tally(mine), misses });
   }
 

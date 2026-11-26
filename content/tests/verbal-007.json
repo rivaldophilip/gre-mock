@@ -51,7 +51,8 @@
           "id": "pervasive",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "p2",
@@ -79,14 +80,16 @@
           "id": "reluctance",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "a1",
       "paragraphs": [
         "In the Kessel valley, apple growers who have put up nest boxes for barn owls lose far fewer young trees to voles, which gnaw the bark, than growers who have not. Barn owls hunt voles almost exclusively, a breeding pair hunts over an area about the size of a typical orchard, and an occupied box is usually used by the same pair for years. The valley's growers' association therefore argues that if every grower in the valley put up nest boxes, vole damage throughout the valley would fall to the level now seen on the farms that have them."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "science"
     },
     {
       "id": "p3",
@@ -136,7 +139,8 @@
           "id": "reciprocity",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "p4",
@@ -190,7 +194,8 @@
           "id": "balk",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "p5",
@@ -214,7 +219,8 @@
           "id": "contravene",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "a2",
@@ -227,7 +233,8 @@
           "id": "premature",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "business"
     }
   ],
   "figures": [],

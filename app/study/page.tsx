@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { schema } from "@/lib/db";
 import { userDb } from "@/lib/session";
-import { listTestIds, loadStudy, loadTest } from "@/lib/content";
+import { loadStudy } from "@/lib/content";
+import { bankQuestions } from "@/lib/bank";
+import { testMetas } from "@/lib/test-load";
+import { qAnchor } from "@/lib/ref";
 import { attemptNumbers } from "@/lib/attempt-summary";
 import { eq } from "drizzle-orm";
 import { applyMarks, cardId, LONG_MS, orderSections, pieceId, studyStats, topicCards, type Mark, type MarkKind, type Miss, type Study, type StudySection, type Tally } from "@/lib/study";
 import { TYPE_INFO } from "@/lib/qtypes";
-import type { Test } from "@/lib/types";
 import { AppHeader } from "@/components/AppHeader";
 import { RichInline, Tex } from "@/components/Rich";
 import { IconNext } from "@/components/icons";
@@ -79,11 +81,11 @@ async function Guide({ guide }: { guide: NonNullable<ReturnType<typeof loadStudy
     db.select().from(schema.responses),
     db.select().from(schema.studyMarks).where(eq(schema.studyMarks.measure, guide.measure)),
   ]);
-  const tests = new Map(listTestIds().flatMap((id): [string, Test][] => {
-    const t = loadTest(id);
-    return t && t.measure === guide.measure ? [[id, t]] : [];
-  }));
-  const stats = studyStats(guide, attempts, responses, tests);
+  const tests = new Map([...(await testMetas(db))].filter(([, t]) => t.measure === guide.measure));
+  const mine = new Set(attempts.filter((a) => tests.has(a.testId) && a.finishedAt).map((a) => a.id));
+  const items = await bankQuestions(responses.filter((r) => mine.has(r.attemptId)).map((r) => r.questionId));
+  const stats = studyStats(guide, attempts, responses, tests, items);
+  const titleOf = new Map([...tests].map(([id, t]) => [id, t.kind === "quiz" ? t.title : id]));
   const numberOf = attemptNumbers(attempts);
   const marks = (kind: MarkKind) => new Map(markRows.filter((r) => r.kind === kind).map((r): [string, Mark] => [r.itemId, { state: r.state as Mark["state"], updatedAt: r.updatedAt }]));
   const cards = applyMarks(guide.quickRef.flatMap((g) => g.items.map((it) => ({ ...it, group: g.title, id: cardId(g.title, it.name) }))), (c) => c.id, marks("card"));
@@ -200,7 +202,7 @@ async function Guide({ guide }: { guide: NonNullable<ReturnType<typeof loadStudy
         </div>
         <div className="space-y-2">
           {sections.map((s, i) => (
-            <Topic key={s.id} s={s} measure={guide.measure} t={stats.sections.get(s.id)!} split={split.get(s.id)!} numberOf={numberOf} open={i < OPEN && stats.sections.get(s.id)!.n > 0} />
+            <Topic key={s.id} s={s} measure={guide.measure} t={stats.sections.get(s.id)!} split={split.get(s.id)!} numberOf={numberOf} titleOf={titleOf} open={i < OPEN && stats.sections.get(s.id)!.n > 0} />
           ))}
         </div>
       </section>
@@ -289,12 +291,13 @@ function FormulaCard({ measure, card: it, state }: { measure: Study["measure"]; 
   );
 }
 
-function Topic({ s, measure, t, split, numberOf, open }: {
+function Topic({ s, measure, t, split, numberOf, titleOf, open }: {
   s: StudySection;
   measure: Study["measure"];
   t: Tally & { misses: Miss[] };
   split: ReturnType<typeof topicCards>;
   numberOf: Map<number, number>;
+  titleOf: Map<string, string>;
   open?: boolean;
 }) {
   const { shown, archived, back, fresh, missedSince } = split;
@@ -323,13 +326,13 @@ function Topic({ s, measure, t, split, numberOf, open }: {
             </div>
           </Shelf>
         )}
-        {t.misses.length > 0 && <Misses misses={t.misses} numberOf={numberOf} />}
+        {t.misses.length > 0 && <Misses misses={t.misses} numberOf={numberOf} titleOf={titleOf} />}
       </div>
     </details>
   );
 }
 
-function Misses({ misses, numberOf }: { misses: Miss[]; numberOf: Map<number, number> }) {
+function Misses({ misses, numberOf, titleOf }: { misses: Miss[]; numberOf: Map<number, number>; titleOf: Map<string, string> }) {
   return (
     <Shelf label={`Your misses · ${misses.length}`}>
       <ul className="divide-y divide-line overflow-hidden rounded-xl border border-line">
@@ -339,8 +342,8 @@ function Misses({ misses, numberOf }: { misses: Miss[]; numberOf: Map<number, nu
           return (
             <li key={`${x.attemptId}:${x.qid}`} className="space-y-1 px-3.5 py-2.5 text-sm">
               <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                <Link href={`/test/${x.testId}/review/${x.attemptId}#q-${x.qid}`} className="font-medium text-accent underline-offset-4 hover:underline">
-                  {x.testId}{n > 1 ? ` (attempt ${n})` : ""} · {sec ? `S${sec} Q${q}` : x.qid}
+                <Link href={`/test/${x.testId}/review/${x.attemptId}#${qAnchor(x.ref)}`} className="font-medium text-accent underline-offset-4 hover:underline">
+                  {titleOf.get(x.testId) ?? x.testId}{n > 1 ? ` (attempt ${n})` : ""} · {x.testId.startsWith("quiz-") ? x.ref.replace(":", " ") : sec ? `S${sec} Q${q}` : x.qid}
                 </Link>
                 <span className="text-xs text-muted">{TYPE_INFO[x.type].label} · level {x.difficulty} · {mss(x.timeMs)}{x.guessed ? " · guessed" : ""}</span>
               </div>

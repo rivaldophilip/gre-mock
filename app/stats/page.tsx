@@ -5,8 +5,9 @@ import { scoreAll, type LoggedEvent } from "@/lib/priority/compute";
 import { allocateConcepts, selectionOdds } from "@/lib/priority/allocate";
 import { avgTimeWhy, missWhy, needWhy, paceWhy, weaknessWhy } from "@/lib/priority/explain";
 import { SLOW_MS } from "@/lib/priority/config";
-import { listTestIds, loadTest } from "@/lib/content";
-import { pairKey, sectionOvertimeMs } from "@/lib/attempts";
+import { bankMetas, bankQuestions } from "@/lib/bank";
+import { testMetas } from "@/lib/test-load";
+import { sectionOvertimeMs } from "@/lib/attempts";
 import { attemptNumbers, attemptTimeMs, fmtDuration, isListed, mockNumbers } from "@/lib/attempt-summary";
 import { bandText, bandWhy, estimateBand, isAnswered } from "@/lib/scoring";
 import { slotType, typeStats, TYPE_INFO, type SlotType } from "@/lib/qtypes";
@@ -38,13 +39,14 @@ const cutoff = <T,>(rows: T[], keep: (r: T) => boolean, min: number, max = Infin
 
 export default async function Stats() {
   const db = await userDb();
-  const [vocab, concepts, events, resp, attempts, qitems] = await Promise.all([
+  const [vocab, concepts, events, resp, attempts, metas, tests] = await Promise.all([
     db.select().from(schema.vocab),
     db.select().from(schema.concepts),
     db.select().from(schema.itemEvents),
     db.select().from(schema.responses),
     db.select().from(schema.attempts),
-    db.select().from(schema.questionItems),
+    bankMetas(),
+    testMetas(db),
   ]);
   const vmap = new Map(vocab.map((v) => [v.id, v]));
   const now = new Date();
@@ -91,14 +93,13 @@ export default async function Stats() {
     return ids.length ? { n: ids.length, ms: ids.reduce((t, r) => t + (timeOf.get(r) ?? 0), 0) / ids.length } : null;
   };
 
-  // every authored question, for its type and for attempt totals
-  const tests = new Map(listTestIds().map((id) => [id, loadTest(id)!]));
-  const qByKey = new Map<string, Question>();
-  for (const t of tests.values()) for (const q of t.questions) qByKey.set(pairKey(t.id, q.id), q);
-  // blank questions are left out of accuracy, as they are out of the priority model
+  // every answered question (from the bank, by ref), for its type; tests by id for attempt totals
+  const qByKey: Map<string, Question> = await bankQuestions(resp.map((r) => r.questionId));
+  // blank questions are left out of accuracy, as they are out of the priority model; so are items a quiz reused
+  // (answered before, docs/BANK.md), which count toward their attempt's score only
   const answered = (r: (typeof resp)[number]) => {
     const q = qByKey.get(r.questionId);
-    return !!q && r.finalized && isAnswered(q, (r.answer ?? undefined) as Answer | undefined);
+    return !!q && r.finalized && !r.reused && isAnswered(q, (r.answer ?? undefined) as Answer | undefined);
   };
   const types = typeStats(
     resp.filter(answered).map((r) => ({ type: slotType(qByKey.get(r.questionId)!), isCorrect: r.isCorrect, guessed: r.guessed, timeMs: r.timeMs })),
@@ -115,7 +116,7 @@ export default async function Stats() {
   }
 
   // accuracy by quant concept area and by reading skill, through each question's primary tag
-  const primaryOf = new Map(qitems.filter((i) => i.kind === "concept" && i.role === "primary").map((i) => [i.questionId, i.itemId]));
+  const primaryOf = new Map(metas.items.flatMap((i) => (i.primary ? [[i.ref, i.primary] as const] : [])));
   const byArea = new Map<string, { n: number; ok: number }>();
   const byConcept = new Map<string, { n: number; ok: number }>();
   const bySkill = new Map<string, { n: number; ok: number; ms: number }>();
@@ -157,13 +158,15 @@ export default async function Stats() {
   // abandoned attempts are not listed and take no number
   const listed = attempts.filter(isListed);
   const numberOf = attemptNumbers(listed);
+  // a custom quiz has no score band and stays off the chart: it is not a mock
+  const isMock = (a: (typeof attempts)[number]) => tests.get(a.testId)?.quizKind !== "custom";
   const bandOf = (a: (typeof attempts)[number]) => {
     const s = byAttempt.get(a.id) ?? { correct: 0, guessed: 0 };
-    return a.finishedAt ? estimateBand(s.correct, s.guessed, tests.get(a.testId)?.questions.length ?? 0) : null;
+    return a.finishedAt && isMock(a) ? estimateBand(s.correct, s.guessed, tests.get(a.testId)?.total ?? 0) : null;
   };
   // the Attempts tiles and progress chart: every finished attempt, all time (the chart scrolls back to mock #1 and
   // the tiles follow it); retakes share their mock's number
-  const measureOf = (a: (typeof attempts)[number]) => tests.get(a.testId)?.measure;
+  const measureOf = (a: (typeof attempts)[number]) => (isMock(a) ? tests.get(a.testId)?.measure : undefined);
   const mockNo = mockNumbers(listed, measureOf);
   const progress: ProgressPoint[] = listed.flatMap((a) => {
     const band = bandOf(a);
@@ -277,7 +280,7 @@ export default async function Stats() {
                     <span className="text-xs text-muted">{TYPE_INFO[t.type].what} {slotCount(t.type)} per test.</span>
                   </td>
                   <td className="whitespace-nowrap"><Accuracy pct={Math.round((100 * t.correct) / t.n)} /> <span className="text-xs text-muted">of {t.n}</span></td>
-                  <td className={`whitespace-nowrap tabular-nums ${t.paceRatio > 1.15 ? "text-warn" : ""}`}><Explain why={paceWhy(t)}>{Math.round(t.avgMs / 1000)}s / {TYPE_INFO[t.type].paceSec}s</Explain></td>
+                  <td className={`whitespace-nowrap tabular-nums ${t.paceRatio > 1.15 ? "text-warn" : ""}`}><Explain why={paceWhy(t)}>{Math.round(t.avgMs / 1000)}s</Explain></td>
                   <td className="tabular-nums"><Explain why={missWhy(t)}>{pct(t.missP)}</Explain></td>
                   <td className="whitespace-nowrap">
                     <Explain why={needWhy(t)}><span className={badge(t.need >= NEED_HIGH ? "bad" : t.need >= NEED_MED ? "warn" : "ok")}>{t.need >= NEED_HIGH ? "High" : t.need >= NEED_MED ? "Medium" : "Low"} · {pct(t.need)}</span></Explain>
@@ -331,14 +334,14 @@ export default async function Stats() {
         <Section title="Attempt history">
           {listed.length === 0 ? <Empty text="No attempts yet." /> : (
             <List noun="attempts" shown={5} items={[...listed].sort((x, y) => y.startedAt.getTime() - x.startedAt.getTime()).map((a) => {
-                const total = tests.get(a.testId)?.questions.length ?? 0;
+                const total = tests.get(a.testId)?.total ?? 0;
                 const s = byAttempt.get(a.id) ?? { correct: 0, guessed: 0 };
                 const band = bandOf(a);
                 const test = tests.get(a.testId);
                 const overMs = test ? sectionOvertimeMs(a, test, 1) + sectionOvertimeMs(a, test, 2) : 0;
                 return (
                   <li key={a.id} className="flex flex-wrap items-center gap-x-3 gap-y-1 px-4 py-3 text-sm">
-                    <Link className="font-medium underline-offset-4 hover:underline" href={`/test/${a.testId}/review/${a.id}`}>{a.testId} · attempt {numberOf.get(a.id)}</Link>
+                    <Link className="font-medium underline-offset-4 hover:underline" href={`/test/${a.testId}/review/${a.id}`}>{test?.kind === "quiz" ? test.title : a.testId} · attempt {numberOf.get(a.id)}</Link>
                     <span className="capitalize text-muted">{a.mode}{a.timerOn ? "" : ", untimed"}</span>
                     <span className={badge(a.finishedAt ? "ok" : "warn")}>{a.finishedAt ? "Finished" : "In progress"}</span>
                     <span className="tabular-nums text-muted" title="Time on the section clocks, without pauses">{fmtDuration(attemptTimeMs(a))}</span>

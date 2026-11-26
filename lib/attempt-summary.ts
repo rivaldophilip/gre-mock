@@ -5,6 +5,12 @@ type AttemptLike = { id: number; testId: string; startedAt: Date; abandonedAt: D
 /** Abandoned attempts are hidden from every list and take no number; so are endless-vocab drill batches and miss replays, which are not mocks. */
 export const isListed = (a: AttemptLike) => !a.abandonedAt && a.mode !== "drill" && a.mode !== "replay";
 
+/**
+ * Whether a response logs item events: not in a miss replay, and not for an item a quiz reused (answered before,
+ * docs/BANK.md). Both are scored; neither says anything new about the words, concepts or skills in them.
+ */
+export const logsItemEvents = (a: { mode: string }, q: { reused?: boolean }) => a.mode !== "replay" && !q.reused;
+
 /** Attempt number within its own test (1, 2, …), counting only attempts that were not abandoned, oldest first. */
 export function attemptNumbers(attempts: AttemptLike[]): Map<number, number> {
   const out = new Map<number, number>();

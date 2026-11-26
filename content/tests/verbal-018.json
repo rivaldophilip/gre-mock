@@ -55,7 +55,8 @@
           "id": "subside",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "p2",
@@ -98,14 +99,16 @@
           "id": "fledgling",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "a1",
       "paragraphs": [
         "Marrow Freight is considering fitting its trucks with speed limiters set at 90 kilometers per hour. When Delling Freight installed such limiters three years ago, its fuel costs per kilometer fell by 12 percent, while its average delivery times barely changed. Marrow's managers conclude that limiters would cut Marrow's fuel costs per kilometer by a similar proportion without noticeably slowing its deliveries."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     },
     {
       "id": "p3",
@@ -160,7 +163,8 @@
           "id": "bathos",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "arts"
     },
     {
       "id": "p4",
@@ -193,7 +197,8 @@
           "id": "constitutive",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "p5",
@@ -266,14 +271,16 @@
           "id": "inconclusive",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "arts"
     },
     {
       "id": "a2",
       "paragraphs": [
         "Some analysts have urged Hollin Boots to move production of its work boots from its plant in Ardley to a contract factory abroad, where wages are a third as high. **The savings from that move would be smaller than they appear**: labor accounts for only a fifth of the cost of each boot, and shipping finished boots from abroad would add nearly as much per pair as the lower wages would save. Moreover, Hollin's customers, mostly building contractors who reorder on a few days' notice, choose it chiefly for the speed of delivery that a nearby plant allows. **Hollin should therefore keep its production in Ardley**."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     }
   ],
   "figures": [],

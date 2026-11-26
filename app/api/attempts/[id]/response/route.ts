@@ -3,10 +3,10 @@ import { serverTiming } from "@/lib/timing";
 import { z } from "zod";
 import { schema } from "@/lib/db";
 import { userDb } from "@/lib/session";
-import { and, eq, inArray } from "drizzle-orm";
-import { canReveal, logResponseEvents, revealWords, isClosed, isDrill, isReplay, loadAttemptTest, pairKey, sectionStatus, secondsLeft, setClockPaused } from "@/lib/attempts";
-import { AnswerSchema, type Test } from "@/lib/types";
-import type { Attempt } from "@/lib/attempts";
+import { eq } from "drizzle-orm";
+import { canReveal, logResponseEvents, revealWords, isClosed, isDrill, isReplay, loadAttemptTest, sectionStatus, secondsLeft, setClockPaused } from "@/lib/attempts";
+import { AnswerSchema } from "@/lib/types";
+import { refOf } from "@/lib/ref";
 import { scoreAnswer } from "@/lib/scoring";
 
 const Body = z.object({
@@ -51,12 +51,13 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
   const ans = body.data.answer ?? undefined;
   const values = {
     attemptId: a.id,
-    questionId: pairKey(test.id, q.id),
+    questionId: refOf(q),
     answer: body.data.answer,
     isCorrect: scoreAnswer(q, ans),
     timeMs: body.data.timeMs,
     guessed: body.data.guessed,
     marked: body.data.marked,
+    reused: !!q.reused,
     updatedAt: new Date(),
     // a Check claims the response in the same write (finalizeResponse's claim), so its events are logged once
     ...(commit ? { finalized: true } : {}),
@@ -74,14 +75,14 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
   }
 
   if (commit) {
-    const [paused, closed, reveal] = await Promise.all([
+    // a drill attempt stays open: the drill pool is the shared bank, not one batch (lib/drill.ts)
+    const [paused, reveal] = await Promise.all([
       a.mode === "practice" ? setClockPaused(a, q.section, true, "reveal") : a,
-      isDrill(a) ? closeDrillBatch(a, test) : a,
       revealWords(q, test),
       logResponseEvents(a, test, q, row),
       savePosition(),
     ]);
-    a = { ...paused, finishedAt: closed.finishedAt };
+    a = paused;
     return NextResponse.json({
       ok: true,
       reveal: canReveal(a, test, q, row) ? { key: q.key, explanation: q.explanation, isCorrect: row.isCorrect, words: reveal } : null,
@@ -90,18 +91,4 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
   }
   await savePosition();
   return NextResponse.json({ ok: true, ...clock() }, { headers: serverTiming(t0) });
-}
-
-/** A drill batch is finished once every one of its questions has a locked answer, so later briefs count it as taken. */
-async function closeDrillBatch(a: Attempt, test: Test): Promise<Attempt> {
-  const db = await userDb();
-  const keys = test.questions.map((x) => pairKey(test.id, x.id));
-  const done = await db
-    .select({ id: schema.responses.id })
-    .from(schema.responses)
-    .where(and(eq(schema.responses.attemptId, a.id), eq(schema.responses.finalized, true), inArray(schema.responses.questionId, keys)));
-  if (done.length < keys.length || a.finishedAt) return a;
-  const finishedAt = new Date();
-  await db.update(schema.attempts).set({ finishedAt }).where(eq(schema.attempts.id, a.id));
-  return { ...a, finishedAt };
 }

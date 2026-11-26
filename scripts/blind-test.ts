@@ -11,9 +11,10 @@ import path from "node:path";
 import { TestSchema, type Question, type Test } from "../lib/types";
 import { passageSentences } from "../lib/sentences";
 import { parseNumber } from "../lib/scoring";
-import { difficultyRules, drillRules, TOP_CAP } from "./validate-test";
-import { isDrillId } from "../lib/test-path";
-import { die, readTestFile } from "./lib/test-file";
+import { difficultyRules, drillRules } from "./validate-test";
+import { TOP_CAP, TOP_RATING } from "../lib/blueprint-rules";
+import { isBankId, isDrillId } from "../lib/test-path";
+import { die, readTestFile, writeTestFile } from "./lib/test-file";
 
 const L = "ABCDEFGHI";
 const DIR = "content/.blind";
@@ -141,6 +142,8 @@ function calibration(measure: string): { offset: number; model?: string } | null
  * Compare the solver's lines with the key. Each issue is one line per item (plus the solver's note), worded as the
  * action to take; `act` lists the items to fix and re-solve. A too-easy item is offered a retag to its honest level
  * when the section difficulty rules (a drill batch's own rules) still pass with it and with the retags offered before it.
+ * A bank batch has no sections to keep in balance (a quiz meets the rules when it is assembled): a retag is always
+ * offered, and there is no cap on items rated 4+ (their ratings are recorded instead, as `solverRating`).
  */
 export function checkAnswers(test: Test, answers: Map<string, SolverLine>, offset: number, only?: Set<string>) {
   const issues: string[] = [];
@@ -165,7 +168,9 @@ export function checkAnswers(test: Test, answers: Map<string, SolverLine>, offse
       const est = a.difficulty + offset;
       const honest = Math.max(1, Math.min(5, Math.round(est)));
       const trial = levels.map((x) => (x.id === q.id ? { ...x, difficulty: honest } : x));
-      const broken = isDrillId(test.id)
+      const broken = isBankId(test.id)
+        ? []
+        : isDrillId(test.id)
         ? drillRules({ ...test, questions: test.questions.map((x) => ({ ...x, difficulty: trial.find((t) => t.id === x.id)!.difficulty })) }).map((rule) => ({ rule }))
         : difficultyRules(trial).filter((r) => !r.ok);
       const head = `${q.id}  too easy: rated ${a.difficulty} (+${offset} = ${est}) vs target ${target}; rewrite it harder`;
@@ -190,7 +195,7 @@ export function checkAnswers(test: Test, answers: Map<string, SolverLine>, offse
   }
   // quant: a raw rating of 4+ is where items land at level 6+ after calibration (official hard items get 4 about 15% of
   // the time), so more than TOP_CAP per section overshoots the real GRE; ease the extra ones (docs/CALIBRATION.md)
-  if (test.measure === "quant")
+  if (test.measure === "quant" && !isBankId(test.id))
     for (const n of [1, 2] as const) {
       const top = test.questions
         .filter((q) => q.section === n && (answers.get(q.id)?.difficulty ?? 0) >= TOP_RATING)
@@ -206,8 +211,23 @@ export function checkAnswers(test: Test, answers: Map<string, SolverLine>, offse
   return { right, total: qs.length, issues, act: [...act] };
 }
 
-/** Raw quant solver rating from which an item usually calibrates to level 6+. */
-export const TOP_RATING = 4;
+export { TOP_RATING };
+
+/**
+ * A bank batch keeps each item's raw solver rating (`solverRating`): assembly caps the items rated TOP_RATING+ per
+ * section of a quiz (lib/blueprint-rules.ts). Writes the latest ratings into the file; returns how many changed.
+ */
+export function recordRatings(raw: { questions: { id: string; solverRating?: number }[] }, answers: Map<string, SolverLine>): number {
+  let n = 0;
+  for (const q of raw.questions) {
+    const d = answers.get(q.id)?.difficulty;
+    if (d && q.solverRating !== d) {
+      q.solverRating = d;
+      n++;
+    }
+  }
+  return n;
+}
 
 // ---- calibration set: official items of known P+ (local corpus only, never committed)
 const REF = path.resolve("../books/extracted/reference/items.jsonl");
@@ -259,7 +279,7 @@ function readReply(args: string[], fallback: string): string {
   return fs.readFileSync(file, "utf8");
 }
 
-/** Where `check` records each blind check; `register` warns when a test has none. */
+/** Where `check` records each blind check; `bank:sync` warns when a mock has none and refuses a batch without one. */
 export const checkRecord = (id: string) => `${DIR}/${id}.checked.json`;
 
 function main() {
@@ -311,7 +331,16 @@ function main() {
   // an --only reply updates the full record (later lines win), so the per-section 4+ cap counts every item's latest rating
   const full = `${DIR}/${id}.answers.txt`;
   if (only && fs.existsSync(full)) fs.writeFileSync(full, (reply = fs.readFileSync(full, "utf8").trimEnd() + "\n" + reply.trim() + "\n"));
-  const { right, total, issues, act } = checkAnswers(test, parseAnswers(reply), cal?.offset ?? 0, only);
+  const parsedReply = parseAnswers(reply);
+  const { right, total, issues, act } = checkAnswers(test, parsedReply, cal?.offset ?? 0, only);
+  if (isBankId(id)) {
+    const raw = readTestFile(id, usage) as { questions: { id: string; solverRating?: number }[] };
+    const n = recordRatings(raw, parsedReply);
+    if (n) {
+      writeTestFile(id, raw);
+      console.log(`recorded ${n} solver rating(s) as solverRating in ${id}`);
+    }
+  }
   fs.writeFileSync(checkRecord(id), JSON.stringify({ at: new Date().toISOString(), only: only ? [...only] : null, right, total, toFix: act }) + "\n");
   console.log(`${id}: ${right}/${total} match the key${issues.length ? "" : "; nothing to fix"}`);
   for (const i of issues) console.log("  " + i);
@@ -319,7 +348,7 @@ function main() {
   console.log(
     act.length
       ? `next: fix ${act.join(", ")} with Edit, npm run -s check -- ${id}, then npm run -s blind -- ${id} --only ${ids}, SendMessage the same solver the new file, and --check --only ${ids} once it has written its reply`
-      : `next: npm run -s register -- ${id}, then commit and push`,
+      : `next: npm run -s novelty -- ${id}, then give its copy to the gre-novelty-judge agent`,
   );
 }
 

@@ -45,7 +45,8 @@
           "id": "ambit",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "p2",
@@ -73,14 +74,16 @@
           "id": "ramification",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "a1",
       "paragraphs": [
         "Growers in the Marral district have begun replacing maize with a drought-tolerant sorghum, and the district's agronomists predict that its grain output will fall, since the sorghum yields less per hectare than maize does in a year of normal rainfall. This prediction is probably mistaken. In three of the past five years rainfall in the district has been well below normal, and in such years maize yields collapse while the sorghum's barely change. Moreover, the growers switching to sorghum are concentrated on the district's sandy upland soils, where maize has fared worst even in wet years. The district's grain output is therefore more likely to rise than to fall."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     },
     {
       "id": "p3",
@@ -135,7 +138,8 @@
           "id": "deference",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "arts"
     },
     {
       "id": "p4",
@@ -173,7 +177,8 @@
           "id": "prevail",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "p5",
@@ -201,14 +206,16 @@
           "id": "inclined",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "a2",
       "paragraphs": [
         "The Corlan grocery chain charges the same price for its house-brand coffee in all of its stores. At the Corlan stores located near a competitor that sells a comparable coffee for less, sales of the house-brand coffee are a third lower than at Corlan's other stores, while sales of Corlan's other house-brand goods, which the competitor does not undercut, are the same as elsewhere. Next month the competitor will stop selling coffee altogether, and no other store near those Corlan stores sells a comparable coffee. Therefore, at the Corlan stores near the competitor, ___"
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     }
   ],
   "figures": [],

@@ -16,7 +16,7 @@ export function readTestFile(id: string | undefined, usage: string): unknown {
   if (!fs.existsSync(file)) {
     const dir = testDir(id);
     const have = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith(".json")).map((f) => f.slice(0, -5)).sort() : [];
-    die(`no ${file}. Tests on disk: ${have.join(", ") || "none"}. A new test starts with: npm run -s brief -- verbal|quant (a drill batch: npm run -s brief:drill)`);
+    die(`no ${file}. Tests on disk: ${have.join(", ") || "none"}. A new bank batch starts with: npm run -s bank:brief`);
   }
   const text = fs.readFileSync(file, "utf8");
   try {

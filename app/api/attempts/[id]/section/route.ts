@@ -4,6 +4,7 @@ import { eq } from "drizzle-orm";
 import { schema } from "@/lib/db";
 import { userDb } from "@/lib/session";
 import { finalizeSection, isClosed, loadAttemptTest, sectionStatus, secondsLeft, type SectionState } from "@/lib/attempts";
+import { closeQuiz } from "@/lib/quiz";
 
 const Body = z.object({ section: z.union([z.literal(1), z.literal(2)]), action: z.enum(["start", "finish"]) });
 
@@ -21,8 +22,9 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
   const key = String(section);
   const now = new Date().toISOString();
 
+  if (!test.sections.some((s) => s.n === section)) return NextResponse.json({ error: "no such section" }, { status: 400 });
   if (action === "start") {
-    if (section === 2 && !sectionStatus(a, 1).finished) return NextResponse.json({ error: "finish section 1 first" }, { status: 409 });
+    if (section > 1 && !sectionStatus(a, (section - 1) as 1 | 2).finished) return NextResponse.json({ error: `finish section ${section - 1} first` }, { status: 409 });
     // only the first start resets the position; a repeated start (double click, retry) is a no-op
     if (!st[key]?.startedAt) {
       st[key] = { startedAt: now, lastSeenAt: now };
@@ -35,8 +37,10 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
       a = { ...a, sectionState: st };
       await finalizeSection(a, test, section);
     }
-    if (st["1"]?.finishedAt && st["2"]?.finishedAt && !isClosed(a)) {
+    // a custom quiz has one section, a mock two
+    if (test.sections.every((s) => st[String(s.n)]?.finishedAt) && !isClosed(a)) {
       await db.update(schema.attempts).set({ finishedAt: new Date() }).where(eq(schema.attempts.id, a.id));
+      await closeQuiz(db, a.testId, "done");
     }
   }
   a = { ...a, sectionState: st };

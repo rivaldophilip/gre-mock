@@ -2,7 +2,10 @@ import "server-only";
 import { and, eq, inArray } from "drizzle-orm";
 import { schema } from "./db";
 import { userDb } from "./session";
-import { loadTest, orderedQuestions } from "./content";
+import { orderedQuestions } from "./content";
+import { loadTestById } from "./test-load";
+import { refOf } from "./ref";
+import { logsItemEvents } from "./attempt-summary";
 import { eventsForResponse, readingAllowanceMs, wrongWeight } from "./events";
 import { isAnswered, scoreAnswer } from "./scoring";
 import { choiceWords, wordIdFor } from "./choice-words";
@@ -34,7 +37,7 @@ export function sectionStatus(a: Attempt, n: 1 | 2) {
  * Seconds left in a section, from server time (so refresh cannot reset the clock). Practice-mode pauses don't count.
  * Negative once time is up: the section stays open until the test-taker finishes it, and the overtime is shown in review.
  */
-export function secondsLeft(a: Attempt, test: Test, n: 1 | 2, now = Date.now()): number | null {
+export function secondsLeft(a: Attempt, test: Pick<Test, "sections">, n: 1 | 2, now = Date.now()): number | null {
   if (!a.timerOn) return null;
   const st = (a.sectionState as SectionState)[String(n)];
   if (!st?.startedAt) return null;
@@ -42,7 +45,7 @@ export function secondsLeft(a: Attempt, test: Test, n: 1 | 2, now = Date.now()):
 }
 
 /** Milliseconds a timed section ran past its limit (0 untimed, in time, or not started). */
-export function sectionOvertimeMs(a: Attempt, test: Test, n: 1 | 2, now = Date.now()): number {
+export function sectionOvertimeMs(a: Attempt, test: Pick<Test, "sections">, n: 1 | 2, now = Date.now()): number {
   if (!a.timerOn) return 0;
   const sec = test.sections.find((s) => s.n === n);
   return sec ? overtimeMs((a.sectionState as SectionState)[String(n)], sec.minutes, now) : 0;
@@ -68,10 +71,6 @@ export async function setClockPaused(a: Attempt, n: 1 | 2, pause: boolean, reaso
   return { ...a, sectionState };
 }
 
-export function pairKey(testId: string, qid: string) {
-  return `${testId}:${qid}`;
-}
-
 /** An endless-vocab drill batch's attempt: untimed, one question at a time, each answer revealed and logged on Check. */
 export const isDrill = (a: Pick<Attempt, "mode">) => a.mode === "drill";
 
@@ -95,7 +94,7 @@ export function canReveal(a: Attempt, test: Test, q: Question, resp?: { finalize
  */
 async function openedFirst(attemptId: number, test: Test, q: Question, respId: number): Promise<boolean> {
   if (!q.passageId) return false;
-  const keys = test.questions.filter((x) => x.passageId === q.passageId).map((x) => pairKey(test.id, x.id));
+  const keys = test.questions.filter((x) => x.passageId === q.passageId).map(refOf);
   const db = await userDb();
   const rows = await db
     .select({ id: responses.id })
@@ -121,11 +120,13 @@ export async function finalizeResponse(a: Attempt, test: Test, q: Question, resp
 }
 
 /**
- * The item events of a response the caller has just claimed (flipped `finalized` on). Replays log none. Split from
- * finalizeResponse so a Check, which claims and scores the response in its own upsert, needs no further round trips.
+ * The item events of a response the caller has just claimed (flipped `finalized` on). Replays log none, and neither
+ * does an item a quiz reused (answered before, docs/BANK.md): a question seen once proves little the second time.
+ * Split from finalizeResponse so a Check, which claims and scores the response in its own upsert, needs no further
+ * round trips.
  */
 export async function logResponseEvents(a: Attempt, test: Test, q: Question, r: Pick<typeof responses.$inferSelect, "id" | "answer" | "guessed" | "timeMs" | "silly">) {
-  if (isReplay(a)) return;
+  if (!logsItemEvents(a, q)) return;
   const ans = (r.answer ?? undefined) as Answer | undefined;
   const passageTags = q.passageId ? (test.passages.find((p) => p.id === q.passageId)?.tags ?? []) : [];
   const readingMs = readingAllowanceMs(test, q, await openedFirst(a.id, test, q, r.id));
@@ -138,9 +139,9 @@ export async function logResponseEvents(a: Attempt, test: Test, q: Question, r: 
   }
 }
 
-/** A finalized, wrong (answered) quant response whose answer is shown: the ones that can be marked "silly mistake". */
+/** A finalized, wrong (answered) quant response whose answer is shown: the ones that can be marked "silly mistake". A reused item logged no events to halve. */
 export function canMarkSilly(a: Attempt, test: Test, q: Question, r?: { finalized: boolean; answer: unknown }): boolean {
-  if (test.measure !== "quant" || isReplay(a) || !r?.finalized || !canReveal(a, test, q, r)) return false;
+  if (test.measure !== "quant" || isReplay(a) || q.reused || !r?.finalized || !canReveal(a, test, q, r)) return false;
   const ans = (r.answer ?? undefined) as Answer | undefined;
   return isAnswered(q, ans) && !scoreAnswer(q, ans);
 }
@@ -169,7 +170,7 @@ export async function finalizeSection(a: Attempt, test: Test, n: 1 | 2) {
   const byQ = new Map(rows.map((r) => [r.questionId, r]));
   for (const q of orderedQuestions(test).filter((q) => q.section === n)) {
     // never-reached questions have no row and stay out of stats; blank ones are finalized without events
-    const r = byQ.get(pairKey(test.id, q.id));
+    const r = byQ.get(refOf(q));
     if (r) await finalizeResponse(a, test, q, r.id);
   }
 }
@@ -177,7 +178,7 @@ export async function finalizeSection(a: Attempt, test: Test, n: 1 | 2) {
 export async function loadAttemptTest(id: number) {
   const a = await getAttempt(id);
   if (!a) return null;
-  const test = loadTest(a.testId);
+  const test = await loadTestById(await userDb(), a.testId);
   if (!test) return null;
   return { a, test };
 }

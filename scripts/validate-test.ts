@@ -1,5 +1,5 @@
-// Validate a test file before it is registered.  usage: npm run -s validate -- verbal-001
-// The checks are also exported for `npm run check` (the authoring loop) and `npm run register` (the gate).
+// Validate a source file before it is synced into the bank.  usage: npm run -s validate -- verbal-001
+// The checks are also exported for `npm run check` (the authoring loop) and `npm run bank:sync` (the gate).
 import fs from "node:fs";
 import path from "node:path";
 import { TestSchema, type Question, type Test } from "../lib/types";
@@ -7,15 +7,14 @@ import { passageSentences, splitSentences } from "../lib/sentences";
 import { parseNumber } from "../lib/scoring";
 import { containment, MIN_SHINGLES, SETUP_TH, shingles } from "../lib/ngram";
 import { earlierTests, pastItems, primaryOf, setupOverlap, setupText, sharedSkeleton } from "../lib/setup-history";
-import { DRILL_DIR, isDrillId, TESTS_DIR } from "../lib/test-path";
+import { isBankId, isDrillId } from "../lib/test-path";
+import { listSources } from "../lib/sources";
+import { blueprintType, difficultyRules, isLongTc3, isPhraseBlank, LONG_TC3_MIN, openingBlockRules, PHRASE_BLANKS_MIN, typeCountRules, verbalItemRules, verbalLayoutRules, type Blueprint } from "../lib/blueprint-rules";
 import { REVISIT_MAX } from "../lib/priority/revisit";
 import { choiceIsWord } from "../lib/vocab-match";
 import { readTestFile } from "./lib/test-file";
 
-type Rated = Pick<Question, "section" | "difficulty">;
-
-/** At most this many items per section may sit above official hard difficulty (levels 6-7, docs/CALIBRATION.md). */
-export const TOP_CAP = 2;
+export { TOP_CAP, LONG_TC3_MIN, PHRASE_BLANKS_MIN, MULTI_PARA_MAX, LABEL_CHOICE, isPhraseBlank, difficultyRules, difficultyLine } from "../lib/blueprint-rules";
 
 /** Verbal tests from this number on follow the official-format rules in verbalFormatRules (earlier tests predate them). */
 export const VERBAL_FORMAT_FROM = 15;
@@ -23,94 +22,21 @@ export const VERBAL_FORMAT_FROM = 15;
 export const ARG_BOLD_FROM = 18;
 /** Verbal tests from this number on may not open an RC choice with a summary label and a colon ("qualified approval: …"); the real test never does. */
 export const NO_LABEL_CHOICES_FROM = 18;
-/** A reading choice that opens with a short label and a colon. */
-export const LABEL_CHOICE = /^[A-Za-z][\w'-]*(?:,? [\w'-]+){0,4}:\s/;
 /** Quant tests from this number on carry a `setup` and `variant` on every question (earlier ones were backfilled). */
 export const QUANT_SETUP_FROM = 11;
 /** Tests from these numbers on must not reuse an earlier setup (quant) or an earlier item's company (verbal); earlier ones were taken first. */
 export const NOVELTY_FROM = { quant: 7, verbal: 8 } as const;
-/** Minimum 3-blank TCs of 3-5 sentences, and minimum blanks whose choices are all phrases, per verbal test. */
-export const LONG_TC3_MIN = 2;
-export const PHRASE_BLANKS_MIN = 3;
-/** At most this many reading passages (not arguments) may run past one paragraph. */
-export const MULTI_PARA_MAX = 2;
 
-/** True when every choice of a TC blank is a multi-word phrase ("at odds with", "a perfunctory"). */
-export const isPhraseBlank = (choices: string[]) => choices.every((c) => /\s/.test(c.trim()));
+/** A rule that started at mock number `n` applies to this source: mocks from n on, and every bank batch. */
+export const ruleFrom = (id: string, n: number) => isBankId(id) || Number(/-(\d+)$/.exec(id)?.[1] ?? 0) >= n;
 
 /**
- * The official-format rules for verbal (docs/QUIZ-AUTHORING.md, Structure rules): passage shapes from the blueprint,
- * TC length and phrase blanks, and a select-all key count other than the habitual two.
+ * The official-format rules for a verbal mock (docs/QUIZ-AUTHORING.md, Structure rules): the passage layout
+ * (lib/blueprint-rules.ts, verbalLayoutRules) and the rules each item meets on its own (verbalItemRules).
  */
-export function verbalFormatRules(test: Test, blueprint: { passages?: Record<string, { questions: number; paragraphs?: string }[]> }): string[] {
-  const out: string[] = [];
-  const reading = test.passages.filter((p) => test.questions.some((q) => q.passageId === p.id && q.subtype !== "arg"));
-  const multi = reading.filter((p) => p.paragraphs.length > 1);
-  if (multi.length > MULTI_PARA_MAX) out.push(`${multi.length} reading passages run past one paragraph (${multi.map((p) => p.id).join(", ")}); at most ${MULTI_PARA_MAX}, as on the real test: make the others one paragraph`);
-  for (const n of [1, 2] as const) {
-    const want = blueprint.passages?.[String(n)] ?? [];
-    const order: string[] = [];
-    for (const q of test.questions) if (q.section === n && q.passageId && q.subtype !== "arg" && !order.includes(q.passageId)) order.push(q.passageId);
-    const sizes = order.map((id) => test.questions.filter((q) => q.passageId === id).length);
-    if (sizes.join(",") !== want.map((w) => w.questions).join(","))
-      out.push(`section ${n}: passages carry ${sizes.join(" + ") || "no"} questions, blueprint wants ${want.map((w) => w.questions).join(" + ")} (in slot order)`);
-    else
-      order.forEach((id, i) => {
-        const [lo, hi = lo] = (want[i].paragraphs ?? "1-9").split("-").map(Number);
-        const k = test.passages.find((p) => p.id === id)!.paragraphs.length;
-        if (k < lo || k > hi) out.push(`passage ${id}: ${k} paragraph(s), blueprint wants ${want[i].paragraphs}`);
-      });
-  }
-  const tc = test.questions.filter((q) => q.type === "tc");
-  const long = tc.filter((q) => q.blanks?.length === 3 && splitSentences(q.prompt).length >= 3).length;
-  if (long < LONG_TC3_MIN) out.push(`only ${long} 3-blank TC(s) of 3-5 sentences; write at least ${LONG_TC3_MIN} as short passages whose deciding clue sits a sentence away from the blank (docs/HARD-PATTERNS.md)`);
-  const blanks = tc.flatMap((q) => (q.blanks ?? []).map((b, i) => ({ q, b, i })));
-  for (const { q, b, i } of blanks) if (!isPhraseBlank(b) && b.some((c) => /\s/.test(c.trim()))) out.push(`${q.id}: blank ${i + 1} mixes phrases and single words; make all three choices the same form`);
-  const phrase = blanks.filter((x) => isPhraseBlank(x.b)).length;
-  if (phrase < PHRASE_BLANKS_MIN) out.push(`${phrase} TC blank(s) with phrase choices; at least ${PHRASE_BLANKS_MIN} of the 15 blanks need all-phrase choices ("at odds with", "a perfunctory", noun phrases), each holding its key word`);
-  const multiKeys = test.questions.filter((q) => q.type === "rc_multi").map((q) => ("sel" in q.key ? q.key.sel.length : 0));
-  if (multiKeys.length && multiKeys.every((k) => k === 2)) out.push(`every rc_multi has 2 keys; official select-all items have 1, 2 or 3 correct answers about 40/40/20: use the key counts the brief's slot table gives`);
-  if (Number(/-(\d+)$/.exec(test.id)?.[1] ?? 0) >= ARG_BOLD_FROM)
-    for (const q of test.questions.filter((x) => x.tags.some((t) => t.kind === "concept" && t.id === "arg-role" && t.role === "primary"))) {
-      const text = test.passages.find((p) => p.id === q.passageId)?.paragraphs.join(" ") ?? "";
-      const spans = text.match(/\*\*[^*]+\*\*/g) ?? [];
-      // a bold span split across two sentences would lose its markers when the runner renders sentence by sentence
-      const split = spans.filter((b) => splitSentences(b.slice(2, -2)).length > 1);
-      if (spans.length < 1 || spans.length > 2 || !/boldface/i.test(q.prompt))
-        out.push(`${q.id} (arg-role): set the 1-2 portions in **bold** in the argument and ask about "the portions in boldface", as on the real test (found ${spans.length} bold span(s))`);
-      else if (split.length) out.push(`${q.id} (arg-role): a bold portion spans two sentences; bold one sentence or clause at a time`);
-    }
-  if (Number(/-(\d+)$/.exec(test.id)?.[1] ?? 0) >= NO_LABEL_CHOICES_FROM)
-    for (const q of test.questions.filter((x) => x.type.startsWith("rc"))) {
-      const labelled = (q.choices ?? []).filter((c) => LABEL_CHOICE.test(c));
-      if (labelled.length) out.push(`${q.id}: ${labelled.length} choice(s) open with a summary label ("${labelled[0].split(":")[0]}: …"); write each choice as a bare phrase or a full sentence, as the real test does`);
-    }
-  return out;
+export function verbalFormatRules(test: Test, blueprint: Blueprint): string[] {
+  return [...verbalLayoutRules(test, blueprint), ...verbalItemRules(test, { argBold: ruleFrom(test.id, ARG_BOLD_FROM), noLabels: ruleFrom(test.id, NO_LABEL_CHOICES_FROM) })];
 }
-
-/** The section difficulty rules (docs/QUIZ-AUTHORING.md), one entry per rule, each with whether it passes. */
-export function difficultyRules(questions: Rated[]) {
-  const out: { rule: string; ok: boolean }[] = [];
-  for (const n of [1, 2] as const) {
-    const qs = questions.filter((q) => q.section === n);
-    if (!qs.length) continue;
-    const avg = qs.reduce((a, q) => a + q.difficulty, 0) / qs.length;
-    const top = qs.filter((q) => q.difficulty >= 6).length;
-    if (top) out.push({ rule: `S${n} L6+ ${top} (<=${TOP_CAP})`, ok: top <= TOP_CAP });
-    if (n === 1) out.push({ rule: `S1 avg ${avg.toFixed(2)} (>=3.75)`, ok: avg >= 3.75 });
-    else {
-      const l3 = qs.filter((q) => q.difficulty <= 3).length;
-      const l5 = qs.filter((q) => q.difficulty >= 5).length;
-      out.push({ rule: `S2 avg ${avg.toFixed(2)} (>=4.2)`, ok: avg >= 4.2 });
-      out.push({ rule: `S2 L3 ${l3} (<=2)`, ok: l3 <= 2 });
-      out.push({ rule: `S2 L5 ${l5} (>=${Math.ceil(qs.length / 3)})`, ok: l5 >= qs.length / 3 });
-    }
-  }
-  return out;
-}
-
-/** One line for the author: `S1 avg 3.83 (>=3.75) ✓ · S2 avg 4.27 (>=4.2) ✓ · ...` */
-export const difficultyLine = (questions: Rated[]) => difficultyRules(questions).map((r) => `${r.rule} ${r.ok ? "✓" : "✗"}`).join(" · ");
 
 /** The first bit of TeX-like or slash-fraction math left outside `$...$` (it would show raw, e.g. `a_50`, `Σ_{n=1}^{49}`, `1/50`), or "". */
 export function plainMath(s: string): string {
@@ -145,7 +71,7 @@ function briefVariants(id: string, dir: string): Set<string> {
  * variant already used twice for that concept is a warning.
  */
 export function sameSetups(test: Test, dir = "content/tests"): { error: boolean; message: string }[] {
-  if (test.measure !== "quant" || Number(/-(\d+)$/.exec(test.id)?.[1] ?? 0) < NOVELTY_FROM.quant) return [];
+  if (test.measure !== "quant" || !ruleFrom(test.id, NOVELTY_FROM.quant)) return [];
   const earlier = pastItems(test.measure, test.id, dir);
   const assigned = briefVariants(test.id, path.join(dir, "..", "briefs"));
   const out: { error: boolean; message: string }[] = [];
@@ -184,7 +110,7 @@ export function revisitRules(test: Test, dir = "content/tests"): string[] {
   if (links.length > REVISIT_MAX) out.push(`${links.length} revisits; at most ${REVISIT_MAX} per test, every other item must be new`);
   for (const q of links) {
     const e = earlier.get(q.revisits!);
-    if (!e) out.push(`${q.id}: revisits ${q.revisits}, which is not an item of an earlier ${test.measure} test${isDrillId(test.id) ? " or drill batch" : ""}`);
+    if (!e) out.push(`${q.id}: revisits ${q.revisits}, which is not an item of an earlier ${test.measure} test${isDrillId(test.id) || isBankId(test.id) ? " or batch" : ""}`);
     else if (test.measure === "quant" && primaryOf(e) !== primaryOf(q)) out.push(`${q.id}: revisits ${q.revisits} (${primaryOf(e)}) but tests ${primaryOf(q)}; a revisit keeps the concept`);
     else if (test.measure === "verbal" && !keys(q).some((k) => keys(e).includes(k))) out.push(`${q.id}: revisits ${q.revisits} but shares no key word with it`);
   }
@@ -196,7 +122,7 @@ export function revisitRules(test: Test, dir = "content/tests"): string[] {
  * SE item must not reuse any of that item's distractor words, and an SE item must not repeat its key pair.
  */
 export function wordReuse(test: Test, dir = "content/tests"): string[] {
-  if (test.measure !== "verbal" || (!isDrillId(test.id) && Number(/-(\d+)$/.exec(test.id)?.[1] ?? 0) < NOVELTY_FROM.verbal)) return [];
+  if (test.measure !== "verbal" || (!isDrillId(test.id) && !ruleFrom(test.id, NOVELTY_FROM.verbal))) return [];
   const words = (q: Question, role: string) => q.tags.filter((t) => t.kind === "word" && t.role === role).map((t) => t.id);
   const earlier = earlierTests(test, dir)
     .flatMap((t) => t.questions.filter((q) => q.type === "tc" || q.type === "se").map((q) => ({ ref: `${t.id} ${q.id}`, q })));
@@ -238,6 +164,56 @@ export function drillRules(test: Test): string[] {
   return out;
 }
 
+/** A bank batch's brief as batchRules reads it (scripts/bank-brief.ts writes it). */
+export type BatchBrief = {
+  slots: { qid?: string; type: string; level: number; unit?: string }[];
+  units?: { id: string; shape: string }[];
+};
+
+/** Questions a unit shape holds: rc4-long 4, rc2 2, arg1 1, di3 3. */
+export const shapeSize = (shape: string) => Number(/(\d+)/.exec(shape)?.[1] ?? 0);
+
+/**
+ * A bank batch (content/bank/<measure>): every item in section 1 with an s1qN id, the brief's slots (type and level,
+ * in any order) and units (each a passage or DI set with the shape's question count, its id the unit's id), and the
+ * mock's TC craft as batch-wide ratios: a third of the 3-blank TCs may be one sentence, and a fifth of the blanks are
+ * all phrases, as LONG_TC3_MIN of 3 and PHRASE_BLANKS_MIN of 15 are in a mock.
+ */
+export function batchRules(test: Test, brief: BatchBrief): string[] {
+  const out: string[] = [];
+  for (const q of test.questions) {
+    if (q.section !== 1) out.push(`${q.id}: section ${q.section}; every batch item is in section 1`);
+    if (!/^s1q\d+$/.test(q.id)) out.push(`${q.id}: ids are s1q1, s1q2, …`);
+  }
+  const key = (type: string, level: number) => `${type} L${level}`;
+  const want = brief.slots.map((s) => key(s.type, s.level)).sort();
+  const got = test.questions.map((q) => key(blueprintType(q), q.difficulty)).sort();
+  const missing = [...want];
+  const extra: string[] = [];
+  for (const g of got) {
+    const i = missing.indexOf(g);
+    if (i >= 0) missing.splice(i, 1);
+    else extra.push(g);
+  }
+  if (missing.length || extra.length)
+    out.push(`slots: the brief wants ${missing.length ? missing.join(", ") : "nothing more"}${extra.length ? `; the batch has ${extra.join(", ")} it does not ask for` : ""} (type and level per item; retag only an honest level)`);
+  for (const u of brief.units ?? []) {
+    const n = test.questions.filter((q) => q.passageId === u.id || q.setId === u.id).length;
+    if (n !== shapeSize(u.shape)) out.push(`unit ${u.id} (${u.shape}): ${n} question(s) with passageId or setId "${u.id}", the shape wants ${shapeSize(u.shape)}`);
+    if (u.shape === "rc4-long" && (test.passages.find((p) => p.id === u.id)?.paragraphs.length ?? 0) < 2) out.push(`unit ${u.id} (rc4-long): the long passage runs 2-4 paragraphs`);
+    if (/^rc[12]$/.test(u.shape) && (test.passages.find((p) => p.id === u.id)?.paragraphs.length ?? 0) > 2) out.push(`unit ${u.id} (${u.shape}): a short passage is 1-2 paragraphs`);
+  }
+  const tc3 = test.questions.filter((q) => q.type === "tc" && q.blanks?.length === 3);
+  const long = tc3.filter(isLongTc3).length;
+  if (tc3.length && long < Math.ceil((tc3.length * LONG_TC3_MIN) / 3)) out.push(`${long} of ${tc3.length} 3-blank TCs run 3-5 sentences; write at least ${Math.ceil((tc3.length * LONG_TC3_MIN) / 3)} as short passages whose deciding clue sits a sentence away from the blank`);
+  const blanks = test.questions.filter((q) => q.type === "tc").flatMap((q) => q.blanks ?? []);
+  const phrase = blanks.filter(isPhraseBlank).length;
+  if (blanks.length >= 5 && phrase < Math.ceil((blanks.length * PHRASE_BLANKS_MIN) / 15)) out.push(`${phrase} of ${blanks.length} TC blanks have all-phrase choices; at least ${Math.ceil((blanks.length * PHRASE_BLANKS_MIN) / 15)} need them`);
+  const multiKeys = test.questions.filter((q) => q.type === "rc_multi").map((q) => ("sel" in q.key ? q.key.sel.length : 0));
+  if (multiKeys.length >= 3 && multiKeys.every((k) => k === 2)) out.push(`every rc_multi has 2 keys; use the key counts the brief's slot table gives`);
+  return out;
+}
+
 export type Validation = { errors: string[]; warns: string[]; test?: Test; schemaFailed?: boolean };
 
 export function validateTest(raw: unknown, id: string): Validation {
@@ -258,46 +234,37 @@ export function validateTest(raw: unknown, id: string): Validation {
   const concepts = new Set((JSON.parse(fs.readFileSync("data/concepts.json", "utf8")) as { id: string }[]).map((c) => c.id));
   const skills = new Map((JSON.parse(fs.readFileSync("data/rc_skills.json", "utf8")) as { id: string; area: string }[]).map((c) => [c.id, c.area]));
 
-  const testNo = (tid: string) => Number(/-(\d+)$/.exec(tid)?.[1] ?? 0);
-  const formatRules = test.measure === "verbal" && !isDrillId(test.id) && testNo(test.id) >= VERBAL_FORMAT_FROM;
-  const setupRules = test.measure === "quant" && testNo(test.id) >= QUANT_SETUP_FROM;
+  const formatRules = test.measure === "verbal" && !isDrillId(test.id) && ruleFrom(test.id, VERBAL_FORMAT_FROM);
+  const setupRules = test.measure === "quant" && ruleFrom(test.id, QUANT_SETUP_FROM);
   const variants = JSON.parse(fs.readFileSync("data/concept_variants.json", "utf8")) as Record<string, string[]>;
-  const slotType = (q: Question) => (q.type === "tc" ? `tc${q.blanks?.length}` : q.subtype === "arg" ? "arg" : q.type === "numeric" || q.type === "mc" || q.type === "mc_multi" || q.type === "qc" ? q.type : q.setId ? "di" : q.type);
-  const typeOf = (q: Question) => (q.setId ? "di" : slotType(q));
 
-  // ---- blueprint: counts per section, types, difficulty mix
+  // ---- blueprint: counts per section, types, difficulty mix (a bank batch has its brief's slots instead)
   const ids = new Set<string>();
   for (const q of test.questions) {
     if (ids.has(q.id)) err(`duplicate question id ${q.id}`);
     ids.add(q.id);
   }
   const drill = isDrillId(test.id);
+  const batch = isBankId(test.id);
   if (drill) for (const m of drillRules(test)) err(`drill: ${m}`);
-  for (const sec of drill ? [] : (blueprint.sections as { n: 1 | 2; slots: { type: string; level: number }[] }[])) {
-    const qs = test.questions.filter((q) => q.section === sec.n);
-    if (qs.length !== sec.slots.length) err(`section ${sec.n}: ${qs.length} questions, blueprint wants ${sec.slots.length}`);
-    const want: Record<string, number> = {};
-    const got: Record<string, number> = {};
-    sec.slots.forEach((s) => (want[s.type] = (want[s.type] ?? 0) + 1));
-    qs.forEach((q) => (got[typeOf(q)] = (got[typeOf(q)] ?? 0) + 1));
-    for (const t of new Set([...Object.keys(want), ...Object.keys(got)])) if ((want[t] ?? 0) !== (got[t] ?? 0)) err(`section ${sec.n}: type ${t} x${got[t] ?? 0}, blueprint wants x${want[t] ?? 0}`);
+  if (batch) {
+    const briefFile = `content/briefs/${test.id}.json`;
+    if (!fs.existsSync(briefFile)) err(`batch: no ${briefFile}; a batch starts with npm run -s bank:brief`);
+    for (const m of batchRules(test, fs.existsSync(briefFile) ? (JSON.parse(fs.readFileSync(briefFile, "utf8")) as BatchBrief) : { slots: [] })) err(`batch: ${m}`);
   }
-  for (const r of drill ? [] : difficultyRules(test.questions))
-    if (!r.ok)
-      err(`difficulty: ${r.rule} fails; ${r.rule.includes("L6+") ? "ease the extra items to official-L5 difficulty and re-rate them, see docs/CALIBRATION.md" : "raise levels honestly (harder items), see docs/HARD-PATTERNS.md"}`);
-  // block order: TC (verbal) / QC (quant) must open each section
-  for (const n of drill ? [] : ([1, 2] as const)) {
-    const qs = test.questions.filter((q) => q.section === n);
-    const lead = test.measure === "verbal" ? "tc" : "qc";
-    const firstNon = qs.findIndex((q) => q.type !== lead);
-    if (qs.slice(firstNon === -1 ? qs.length : firstNon).some((q) => q.type === lead)) err(`section ${n}: ${lead} items must form the opening block`);
-    if (qs[0] && qs[0].type !== lead) err(`section ${n} must open with a ${lead} item`);
+  if (!drill && !batch) {
+    for (const m of typeCountRules(test.questions, blueprint)) err(m);
+    for (const r of difficultyRules(test.questions))
+      if (!r.ok)
+        err(`difficulty: ${r.rule} fails; ${r.rule.includes("L6+") ? "ease the extra items to official-L5 difficulty and re-rate them, see docs/CALIBRATION.md" : "raise levels honestly (harder items), see docs/HARD-PATTERNS.md"}`);
+    // block order: TC (verbal) / QC (quant) must open each section
+    for (const m of openingBlockRules(test.questions, test.measure)) err(m);
+    if (test.measure === "quant") {
+      const di = test.questions.filter((q) => q.setId);
+      if (new Set(di.map((q) => q.setId)).size !== 1 || di.length !== 3) err("quant needs exactly one data-interpretation set of 3 questions");
+    }
   }
-  if (test.measure === "quant") {
-    const di = test.questions.filter((q) => q.setId);
-    if (new Set(di.map((q) => q.setId)).size !== 1 || di.length !== 3) err("quant needs exactly one data-interpretation set of 3 questions");
-    for (const q of di) if (!q.figureId) err(`${q.id}: DI question needs figureId`);
-  }
+  for (const q of test.questions.filter((x) => x.setId)) if (!q.figureId) err(`${q.id}: DI question needs figureId`);
 
   // ---- per-question structure
   const slugOk = (s: string) => /^[a-z0-9-]+$/.test(s);
@@ -421,7 +388,8 @@ export function validateTest(raw: unknown, id: string): Validation {
   for (const p of test.passages) for (const t of p.tags) if (t.kind === "word" && !vocab.has(t.id)) err(`passage ${p.id}: word tag "${t.id}" not in vocab`);
   for (const q of test.questions)
     if (q.type === "tc" && splitSentences(q.prompt).length > 5) err(`${q.id} (tc): ${splitSentences(q.prompt).length} sentences; a TC passage has 1-5`);
-  if (formatRules) for (const m of verbalFormatRules(test, blueprint)) err(`format: ${m}`);
+  // a batch is no mock: its passage layout is the quiz's to meet (lib/assemble), and batchRules holds its TC ratios
+  if (formatRules) for (const m of batch ? verbalItemRules(test, { argBold: true, noLabels: true }) : verbalFormatRules(test, blueprint)) err(`format: ${m}`);
 
   // ---- placeholders
   const all = JSON.stringify(raw);
@@ -437,7 +405,7 @@ export function validateTest(raw: unknown, id: string): Validation {
   // one error per overlapping source, listing our items: questions on one passage all overlap together
   const overlaps = new Map<string, Set<string>>();
   const overlap = (source: string, where: string) => overlaps.set(source, (overlaps.get(source) ?? new Set()).add(where));
-  const others = [TESTS_DIR, DRILL_DIR].flatMap((dir) => (fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith(".json") && f !== `${id}.json`).map((f) => path.join(dir, f)) : []));
+  const others = listSources().filter((s) => s.id !== id).map((s) => s.file);
   for (const f of others) {
     const other = TestSchema.safeParse(JSON.parse(fs.readFileSync(f, "utf8")));
     if (!other.success) continue;

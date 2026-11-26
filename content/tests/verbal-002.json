@@ -49,7 +49,8 @@
      "id": "modest",
      "role": "passage"
     }
-   ]
+   ],
+   "domain": "science"
   },
   {
    "id": "p2",
@@ -77,14 +78,16 @@
      "id": "subordinate",
      "role": "passage"
     }
-   ]
+   ],
+   "domain": "arts"
   },
   {
    "id": "a1",
    "paragraphs": [
     "A regional health agency began mailing reminder postcards to patients due for a routine eye examination. In the following year, the share of such patients who booked an examination rose from 41 percent to 58 percent. The agency concludes that the postcards caused the increase and plans to extend the program to dental checkups."
    ],
-   "tags": []
+   "tags": [],
+   "domain": "social science"
   },
   {
    "id": "p3",
@@ -148,7 +151,8 @@
      "id": "vindicate",
      "role": "passage"
     }
-   ]
+   ],
+   "domain": "humanities"
   },
   {
    "id": "p4",
@@ -186,7 +190,8 @@
      "id": "reciprocity",
      "role": "passage"
     }
-   ]
+   ],
+   "domain": "social science"
   },
   {
    "id": "p5",
@@ -219,14 +224,16 @@
      "id": "curb",
      "role": "passage"
     }
-   ]
+   ],
+   "domain": "humanities"
   },
   {
    "id": "a2",
    "paragraphs": [
     "Over the past decade, reported cases of a tick-borne illness in Corvale County have tripled. During the same period, a statewide campaign taught doctors in Corvale and its neighboring counties to recognize the illness's symptoms. County health officials nonetheless attribute the rise chiefly to the spread, into the county's northern forests, of the tick species that carries the illness."
    ],
-   "tags": []
+   "tags": [],
+   "domain": "science"
   }
  ],
  "figures": [],

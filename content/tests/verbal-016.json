@@ -55,7 +55,8 @@
           "id": "fervent",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "arts"
     },
     {
       "id": "p2",
@@ -98,14 +99,16 @@
           "id": "simultaneous",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "a1",
       "paragraphs": [
         "To reduce summer water use, the Brindle water utility will double the price households pay for any water they use beyond a fixed monthly allowance. Utility officials predict that households now exceeding the allowance will cut back to avoid the higher rate, and that summer water use across the city will therefore fall substantially."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     },
     {
       "id": "p3",
@@ -150,7 +153,8 @@
           "id": "fallacy",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "p4",
@@ -183,7 +187,8 @@
           "id": "primacy",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "p5",
@@ -221,14 +226,16 @@
           "id": "acme",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "arts"
     },
     {
       "id": "a2",
       "paragraphs": [
         "At the Kestrel textile mill last month, every machine that was serviced had first been inspected, and no machine was inspected unless an operator had flagged it. None of the machines that operators flagged last month was on the dyeing floor."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     }
   ],
   "figures": [],

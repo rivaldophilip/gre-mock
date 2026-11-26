@@ -3,6 +3,7 @@
 // still untaken never seeds a repeat; everything else a later test asks must be new.
 import type { Question, Test } from "../types";
 import { INTERVALS_DAYS } from "./config";
+import { makeRef } from "../ref";
 
 /** At most this many revisit slots per test (quant concept slots, verbal TC/SE keys); the rest must be new. */
 export const REVISIT_MAX = 4;
@@ -28,9 +29,6 @@ export const REVISIT_CHANGES = {
 export type Answered = { questionId: string; isCorrect: boolean; guessed: boolean; at: Date };
 export type Revisit = { ref: string; testId: string; qid: string; result: "missed" | "guessed"; at: Date; question: Question };
 
-/** "quant-005:s2q14" */
-export const refOf = (testId: string, qid: string) => `${testId}:${qid}`;
-
 /**
  * Items to revisit, oldest miss first: the latest finished answer to each question was wrong or guessed, it is at least
  * REVISIT_MIN_DAYS old, and no test revisits it yet. Verbal revisits are TC and SE items (word level).
@@ -39,7 +37,7 @@ export function revisitQueue(answers: Answered[], tests: Test[], now: Date, minD
   const latest = new Map<string, Answered>();
   for (const a of answers) if (!latest.has(a.questionId) || latest.get(a.questionId)!.at < a.at) latest.set(a.questionId, a);
   const revisited = new Set(tests.flatMap((t) => t.questions.flatMap((q) => (q.revisits ? [q.revisits] : []))));
-  const byRef = new Map(tests.flatMap((t) => t.questions.map((q) => [refOf(t.id, q.id), { t, q }] as const)));
+  const byRef = new Map(tests.flatMap((t) => t.questions.map((q) => [makeRef(t.id, q.id), { t, q }] as const)));
   const out: Revisit[] = [];
   for (const a of latest.values()) {
     const hit = byRef.get(a.questionId);

@@ -12,6 +12,7 @@ import { TestSchema, type Question, type Test } from "../lib/types";
 import { earlierTests, itemText, measureTests, pastItems, primaryOf, setupOverlap, setupText, type PastItem } from "../lib/setup-history";
 import { containment, shingles } from "../lib/ngram";
 import { die, readTestFile } from "./lib/test-file";
+import { isBankId } from "../lib/test-path";
 
 const DIR = "content/.blind";
 /** Other-concept items shown beside a quant item when their masked stems overlap at least this much. */
@@ -74,6 +75,42 @@ function quantSections(test: Test, earlier: PastItem[], only?: Set<string>): str
     out.push(same.length || cross.length ? "Earlier items:" : "Earlier items: none");
     for (const e of [...same, ...cross]) out.push(`- ${e.testId} ${e.qid}${e.concept !== c ? ` (${e.concept})` : ""}: ${e.shown}${e.setup !== e.text ? ` [setup: ${e.setup}]` : ""}`);
     out.push("");
+  }
+  return out;
+}
+
+/**
+ * A bank batch groups its items by concept: each concept's earlier items are listed once, then every new item of that
+ * concept with only its cross-concept look-alikes. A mock lists the pool under each item instead (its 27 items cover
+ * 20+ concepts, so there is little to share); a batch's 20-30 items cover 4-8, and repeating each pool per item was
+ * most of the file.
+ */
+export function quantPools(test: Test, earlier: PastItem[], only?: Set<string>): string[] {
+  const out: string[] = [];
+  const mine = test.questions.filter((q) => !only || only.has(q.id));
+  for (const c of [...new Set(mine.map(primaryOf))]) {
+    const same = earlier.filter((e) => e.concept === c);
+    out.push(`## Concept ${c}: earlier items (judge every new ${c} item below against all of these)`, "");
+    for (const e of same) out.push(`- ${e.testId} ${e.qid}: ${e.shown}${e.setup !== e.text ? ` [setup: ${e.setup}]` : ""}`);
+    if (!same.length) out.push("- none");
+    out.push("");
+    for (const q of mine.filter((x) => primaryOf(x) === c)) {
+      const cross = earlier
+        .filter((e) => e.concept !== c)
+        .map((e) => ({ e, s: setupOverlap(setupText(q), e.text) }))
+        .filter((x) => x.s >= CROSS_TH)
+        .sort((a, b) => b.s - a.s)
+        .slice(0, CROSS_MAX)
+        .map((x) => x.e);
+      out.push(`### ${test.id} ${q.id} (${q.type}, ${c})`, itemText(q), "");
+      const fig = q.figureId ? figureText(test, q.figureId) : "";
+      if (fig) out.push(fig, "");
+      if (q.variant) out.push(variantNote(q.variant), "");
+      if (q.revisits) out.push(revisitNote(q.revisits), "");
+      out.push(`Earlier items: every ${c} item in the list above${cross.length ? ", and these of other concepts:" : "."}`);
+      for (const e of cross) out.push(`- ${e.testId} ${e.qid} (${e.concept}): ${e.shown}${e.setup !== e.text ? ` [setup: ${e.setup}]` : ""}`);
+      out.push("");
+    }
   }
   return out;
 }
@@ -142,7 +179,7 @@ export function noveltyCopy(test: Test, dir = "content/tests", only?: Set<string
   ];
   const body =
     test.measure === "quant"
-      ? quantSections(test, pastItems("quant", test.id, dir), only)
+      ? (isBankId(test.id) ? quantPools : quantSections)(test, pastItems("quant", test.id, dir), only)
       : verbalSections(test, earlierTests(test, dir, true), only);
   return [...head, ...body].join("\n");
 }
@@ -164,7 +201,7 @@ export function parseVerdicts(text: string): Map<string, Verdict> {
   return out;
 }
 
-/** Where the novelty check is recorded; `register` warns when a test has none. */
+/** Where the novelty check is recorded; `bank:sync` warns when a mock has none and refuses a batch without one. */
 export const noveltyRecord = (id: string) => `${DIR}/${id}.novelty.json`;
 
 function readReply(args: string[], fallback: string, again: string): string {
@@ -230,7 +267,7 @@ function main() {
   console.log(
     act.length
       ? `next: rewrite ${act.join(", ")} with Edit, npm run -s check -- ${id}, npm run -s blind -- ${id} --only ${act.filter((x) => /^s\d/.test(x)).join(",") || "<ids>"} (solver), then ${`npm run -s novelty -- ${id} --only ${act.join(",")}`} and SendMessage the same judge the new file`
-      : `next: npm run -s register -- ${id}, then commit and push`,
+      : `next: npm run -s bank:sync -- ${id}, then commit and push`,
   );
 }
 

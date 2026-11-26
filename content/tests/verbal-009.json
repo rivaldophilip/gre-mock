@@ -50,7 +50,8 @@
           "id": "refute",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "p2",
@@ -78,7 +79,8 @@
           "id": "demotic",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "p3",
@@ -128,7 +130,8 @@
           "id": "elaborate",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "p4",
@@ -182,7 +185,8 @@
           "id": "marginal",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "arts"
     },
     {
       "id": "p5",
@@ -211,14 +215,16 @@
           "id": "dogged",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "a1",
       "paragraphs": [
         "Since the Hartwell Museum began requiring visitors to reserve a timed entry slot, complaints about crowded galleries have fallen by more than half, although total annual attendance is unchanged. The museum's director concludes that the crowding visitors had complained of was caused not by the number of visitors but by their tendency to arrive at the same hours, and that the timed slots, by spreading arrivals across the day, eliminated most of it."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     },
     {
       "id": "a2",
@@ -231,7 +237,8 @@
           "id": "marginal",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "business"
     }
   ],
   "figures": [],

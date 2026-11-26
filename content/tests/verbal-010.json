@@ -50,7 +50,8 @@
           "id": "inhibit",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "p2",
@@ -83,14 +84,16 @@
           "id": "numinous",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "a1",
       "paragraphs": [
         "Eighteen months ago the Corvan hotel chain replaced the paper comment cards in its guest rooms with a short survey e-mailed to every guest after checkout. Since the change, the share of responses rating the stay as poor has fallen from 14 percent to 6 percent. The chain's operations director concludes that the quality of service at Corvan hotels has improved over the period."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     },
     {
       "id": "p3",
@@ -134,7 +137,8 @@
           "id": "vernacular",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "p4",
@@ -184,7 +188,8 @@
           "id": "confound",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "p5",
@@ -222,14 +227,16 @@
           "id": "indifferent",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "a2",
       "paragraphs": [
         "In the province of Vastra, restaurants are inspected at unannounced times, and any inspection that finds a serious violation triggers a follow-up visit within thirty days, at which an uncorrected violation brings a heavy fine. Five years ago that fine was doubled. Since then, the proportion of follow-up visits finding the original violation uncorrected has fallen steadily, while the proportion of first inspections finding a serious violation has remained about the same. The standards inspectors use to classify a violation as serious have not changed over the period."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     }
   ],
   "figures": [],

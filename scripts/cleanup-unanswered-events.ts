@@ -7,7 +7,7 @@ config({ path: ".env.local" });
 import { inArray } from "drizzle-orm";
 import { schema } from "../lib/db";
 import { isAnswered } from "../lib/scoring";
-import { loadTestFile } from "./lib/sync";
+import { readSource } from "../lib/sources";
 import { targets } from "./lib/accounts";
 import type { Answer, Test } from "../lib/types";
 
@@ -19,14 +19,14 @@ async function main() {
     const responses = await db.select().from(schema.responses);
     const tests = new Map<string, Test | null>();
     const testOf = (id: string) => {
-      if (!tests.has(id)) tests.set(id, loadTestFile(id));
+      if (!tests.has(id)) tests.set(id, readSource(id));
       return tests.get(id)!;
     };
     const attemptOf = new Map(attempts.map((a) => [a.id, a]));
     const blank: number[] = [];
     for (const r of responses) {
       const a = attemptOf.get(r.attemptId);
-      const test = a && testOf(a.testId);
+      const test = a && !r.reused ? testOf(r.questionId.split(":")[0]) : null;
       const q = test?.questions.find((x) => `${test.id}:${x.id}` === r.questionId);
       if (q && !isAnswered(q, (r.answer ?? undefined) as Answer | undefined)) blank.push(r.id);
     }

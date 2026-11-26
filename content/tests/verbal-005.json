@@ -50,7 +50,8 @@
           "id": "respire",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "p2",
@@ -88,7 +89,8 @@
           "id": "posit",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "a1",
@@ -101,7 +103,8 @@
           "id": "deter",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "p3",
@@ -141,7 +144,8 @@
           "id": "tacit",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "p4",
@@ -180,7 +184,8 @@
           "id": "sparing",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "p5",
@@ -219,14 +224,16 @@
           "id": "impute",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "a2",
       "paragraphs": [
         "At auctions of rare wines, bottles whose labels are stained or torn sell for markedly less than bottles from the same lot whose labels are intact. Yet when panels of experienced tasters sampled, without seeing the bottles, wine from damaged-label and intact-label bottles of the same lots, they could not reliably tell the two apart and rated them equally. Moreover, at these auctions label damage almost always results from cellar humidity, which, if anything, helps preserve wine during long storage."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     }
   ],
   "figures": [],

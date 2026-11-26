@@ -4,19 +4,23 @@ import { drizzle as drizzlePg } from "drizzle-orm/node-postgres";
 import { Pool } from "pg";
 import * as schema from "./schema";
 import * as registry from "./registry";
+import * as bank from "./bank";
 
 type DB = ReturnType<typeof drizzleNeon<typeof schema>>;
 type RegistryDB = ReturnType<typeof drizzleNeon<typeof registry>>;
+type BankDB = ReturnType<typeof drizzleNeon<typeof bank>>;
 
 /** Per-user database names; anything else is refused before it reaches a connection string. */
 export const USER_DB_RE = /^gre_u_\d+$/;
+/** The shared question bank (docs/BANK.md). A session can never name it: dbFor and the JWT check accept USER_DB_RE only. */
+export const BANK_DB = "gre_bank";
 
 export const isLocal = (url: string) => /@(localhost|127\.0\.0\.1)[:/]/.test(url);
 
 /** DATABASE_URL with its database name swapped (same host and role, so no per-user credentials exist). */
 export function dbUrl(dbName: string, base = process.env.DATABASE_URL): string {
   if (!base) throw new Error("DATABASE_URL is not set (run `vercel env pull .env.local`)");
-  if (!USER_DB_RE.test(dbName)) throw new Error(`bad user database name: ${dbName}`);
+  if (!USER_DB_RE.test(dbName) && dbName !== BANK_DB) throw new Error(`bad database name: ${dbName}`);
   const u = new URL(base);
   u.pathname = `/${dbName}`;
   return u.toString();
@@ -30,9 +34,11 @@ function connect<S extends Record<string, unknown>>(url: string, s: S) {
 
 const users = new Map<string, DB>();
 let _registry: RegistryDB | null = null;
+let _bank: BankDB | null = null;
 
 /** One user's database. */
 export function dbFor(dbName: string): DB {
+  if (!USER_DB_RE.test(dbName)) throw new Error(`bad user database name: ${dbName}`);
   let d = users.get(dbName);
   if (!d) users.set(dbName, (d = connect(dbUrl(dbName), schema)));
   return d;
@@ -45,5 +51,10 @@ export function registryDb(): RegistryDB {
   return (_registry ??= connect(url, registry));
 }
 
-export type { DB };
-export { schema, registry };
+/** The question bank. The app only reads it; `npm run bank:sync` writes it. */
+export function bankDb(): BankDB {
+  return (_bank ??= connect(dbUrl(BANK_DB), bank));
+}
+
+export type { DB, BankDB };
+export { schema, registry, bank };

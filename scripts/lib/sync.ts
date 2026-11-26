@@ -1,9 +1,8 @@
-// Content sync shared by the seed/register scripts and `user:add`: one user database at a time.
+// Seed data shared by `npm run seed` and `user:add`: one user database at a time. Questions live in the shared bank
+// (gre_bank), written by `npm run bank:sync` (scripts/lib/bank-sync.ts).
 import fs from "node:fs";
-import { and, eq, ne, notInArray, sql } from "drizzle-orm";
+import { and, ne, notInArray, sql } from "drizzle-orm";
 import { schema, type DB } from "../../lib/db";
-import { TestSchema } from "../../lib/types";
-import { DRILL_DIR, TESTS_DIR, testPath } from "../../lib/test-path";
 
 /** Upsert data/vocab.json, data/concepts.json and data/rc_skills.json; prune words dropped from the bank (never user_added). */
 export async function seedDb(db: DB) {
@@ -51,47 +50,4 @@ export async function seedDb(db: DB) {
       set: { name: sql`excluded.name`, area: sql`excluded.area`, etsSection: sql`excluded.ets_section`, yield: sql`excluded.yield` },
     });
   return { words: vocab.length, concepts: concepts.length, pruned: pruned.length };
-}
-
-/** Mocks, then drill batches: everything a new account registers. */
-export function testIds(): string[] {
-  const ids = (dir: string) => (fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith(".json")).map((f) => f.replace(/\.json$/, "")).sort() : []);
-  return [...ids(TESTS_DIR), ...ids(DRILL_DIR)];
-}
-
-/** A test file, or null if it is missing or invalid. */
-export function loadTestFile(id: string) {
-  const file = testPath(id);
-  if (!fs.existsSync(file)) return null;
-  const parsed = TestSchema.safeParse(JSON.parse(fs.readFileSync(file, "utf8")));
-  return parsed.success ? parsed.data : null;
-}
-
-/** Upsert one test (tests, questions, question_items). */
-export async function registerTest(db: DB, id: string) {
-  const test = TestSchema.parse(JSON.parse(fs.readFileSync(testPath(id), "utf8")));
-  const briefFile = `content/briefs/${id}.json`;
-  const brief = fs.existsSync(briefFile) ? JSON.parse(fs.readFileSync(briefFile, "utf8")) : null;
-
-  await db.insert(schema.tests).values({ id: test.id, measure: test.measure, title: test.title, brief })
-    .onConflictDoUpdate({ target: schema.tests.id, set: { title: test.title, brief } });
-
-  // a retired drill item is kept in the file for the batch's checks but has no rows: nothing serves or counts it
-  test.questions = test.questions.filter((q) => !q.retired);
-  const qrows = test.questions.map((q, i) => ({ id: `${test.id}:${q.id}`, testId: test.id, section: q.section, position: i, type: q.type, difficulty: q.difficulty }));
-  const prior = await db.select({ id: schema.questions.id }).from(schema.questions).where(eq(schema.questions.testId, test.id));
-  for (const p of prior) await db.delete(schema.questionItems).where(eq(schema.questionItems.questionId, p.id));
-  await db.delete(schema.questions).where(eq(schema.questions.testId, test.id));
-  await db.insert(schema.questions).values(qrows);
-
-  const items = new Map<string, typeof schema.questionItems.$inferInsert>();
-  for (const q of test.questions) {
-    const passageTags = q.passageId ? (test.passages.find((p) => p.id === q.passageId)?.tags ?? []) : [];
-    for (const t of [...q.tags, ...passageTags]) {
-      const row = { questionId: `${test.id}:${q.id}`, kind: t.kind, itemId: t.id, role: t.role };
-      items.set(`${row.questionId}|${row.kind}|${row.itemId}|${row.role}`, row);
-    }
-  }
-  if (items.size) await db.insert(schema.questionItems).values([...items.values()]);
-  return { questions: qrows.length, tags: items.size };
 }

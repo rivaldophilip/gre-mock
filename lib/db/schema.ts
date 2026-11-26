@@ -37,38 +37,6 @@ export const concepts = pgTable("concepts", {
   yield: real("yield").notNull().default(0.5),
 });
 
-export const tests = pgTable("tests", {
-  id: text("id").primaryKey(),
-  measure: text("measure").notNull(), // verbal|quant
-  title: text("title").notNull(),
-  createdAt: timestamp("created_at").notNull().defaultNow(),
-  brief: jsonb("brief"),
-});
-
-export const questions = pgTable(
-  "questions",
-  {
-    id: text("id").primaryKey(), // `${testId}:${questionId}`
-    testId: text("test_id").notNull(),
-    section: integer("section").notNull(),
-    position: integer("position").notNull(),
-    type: text("type").notNull(),
-    difficulty: integer("difficulty").notNull(),
-  },
-  (t) => [index("questions_test_idx").on(t.testId)],
-);
-
-export const questionItems = pgTable(
-  "question_items",
-  {
-    questionId: text("question_id").notNull(),
-    kind: text("kind").notNull(), // word|concept
-    itemId: text("item_id").notNull(),
-    role: text("role").notNull(),
-  },
-  (t) => [primaryKey({ columns: [t.questionId, t.kind, t.itemId, t.role] }), index("qi_item_idx").on(t.kind, t.itemId)],
-);
-
 export const attempts = pgTable(
   "attempts",
   {
@@ -101,6 +69,8 @@ export const responses = pgTable(
     // a wrong quant answer the test-taker marked "silly mistake" once it was shown: its concept_wrong_* weights are halved
     silly: boolean("silly").notNull().default(false),
     finalized: boolean("finalized").notNull().default(false), // item events emitted
+    // an assembled quiz showed an item answered before (lib/assemble, ladder steps 4-6): scored, but no item events
+    reused: boolean("reused").notNull().default(false),
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
   },
   (t) => [uniqueIndex("responses_attempt_q").on(t.attemptId, t.questionId)],
@@ -132,4 +102,44 @@ export const studyMarks = pgTable(
     updatedAt: timestamp("updated_at").notNull().defaultNow(),
   },
   (t) => [primaryKey({ columns: [t.measure, t.kind, t.itemId] })],
+);
+
+/**
+ * A quiz assembled from the bank (lib/quiz.ts, docs/BANK.md): a full mock or a custom quiz. Its attempt's testId is
+ * `quiz-<id>`. `layout` lists each section's items by bank ref; `fallbacks` the slots the ladder could not fill exactly.
+ */
+export const quizzes = pgTable("quizzes", {
+  id: serial("id").primaryKey(),
+  measure: text("measure").notNull(), // verbal|quant
+  kind: text("kind").notNull(), // mock|custom
+  title: text("title").notNull(),
+  spec: jsonb("spec").notNull(), // what was asked for (lib/assemble/custom.ts, QuizSpec)
+  seed: integer("seed").notNull(),
+  bankVersion: integer("bank_version").notNull(),
+  layout: jsonb("layout").notNull(), // {sections: [{n, minutes, items: [{ref, slotId, slotType, level, target, unitId, reused, revisitOf}]}]}
+  fallbacks: jsonb("fallbacks").notNull().default([]),
+  // draft (fell back; waits for Proceed) | ready | started | done | abandoned | cancelled
+  status: text("status").notNull(),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+});
+
+/** A slot the bank could not fill as wanted: what was wanted, the ladder step that filled it, and with what. bank:gaps reads the open ones. */
+export const shortfalls = pgTable(
+  "shortfalls",
+  {
+    id: serial("id").primaryKey(),
+    quizId: integer("quiz_id").notNull(),
+    slotId: text("slot_id").notNull(),
+    measure: text("measure").notNull(),
+    slotType: text("slot_type").notNull(),
+    wantedKind: text("wanted_kind").notNull(), // concept|skill|words|any
+    wantedId: text("wanted_id"),
+    wantedLevel: integer("wanted_level"),
+    step: integer("step").notNull(), // ladder step 2-8 (lib/assemble/ladder.ts)
+    gotRef: text("got_ref"),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    resolvedAt: timestamp("resolved_at"),
+  },
+  (t) => [index("shortfalls_open_idx").on(t.resolvedAt)],
 );

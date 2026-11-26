@@ -50,7 +50,8 @@
           "id": "ethnography",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "p2",
@@ -78,7 +79,8 @@
           "id": "summit",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "p3",
@@ -128,7 +130,8 @@
           "id": "revisionist",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "arts"
     },
     {
       "id": "p4",
@@ -166,7 +169,8 @@
           "id": "deliberate",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "arts"
     },
     {
       "id": "p5",
@@ -195,21 +199,24 @@
           "id": "jeopardize",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "a1",
       "paragraphs": [
         "Two years ago the town of Brask began requiring every restaurant that opens or remodels a kitchen to install a grease trap and to have it inspected each quarter. Since then, the number of sewer blockages reported in Brask has fallen by nearly half, while in the neighboring town of Holm, which imposes no such requirement, the number has held steady. Brask's public works director concludes that the inspection requirement is chiefly responsible for the decline."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     },
     {
       "id": "a2",
       "paragraphs": [
         "Last year the municipal pool in Corwin extended its hours, staying open until ten at night instead of closing at six. Over the year, the total number of swimmer visits rose by 30 percent, yet the number of incidents in which a lifeguard had to rescue a swimmer fell by nearly a third."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     }
   ],
   "figures": [],

@@ -51,6 +51,8 @@ export function Runner(p: RunnerProps) {
   const sectionStarted = !!sectionState[String(section)]?.startedAt;
   const sectionDone = !!sectionState[String(section)]?.finishedAt;
   const minutes = test.sections.find((s) => s.n === section)!.minutes;
+  // a custom quiz has one section; a mock two
+  const lastSection = Math.max(...test.sections.map((s) => s.n));
 
   const [idx, setIdx] = useState(() => (p.sectionState[String(section)]?.startedAt ? Math.min(p.position, qs.length - 1) : 0));
   const [answers, setAnswers] = useState<Record<string, Answer | undefined>>(() =>
@@ -198,9 +200,9 @@ export function Runner(p: RunnerProps) {
     setGrid(false);
     if (r.ok) {
       setSectionState(j.sectionState);
-      if (section === 2) router.push(`/test/${test.id}/review/${attemptId}`);
+      if (section === lastSection) router.push(`/test/${test.id}/review/${attemptId}`);
     }
-  }, [q, settle, post, flush, attemptId, section, test.id, router]);
+  }, [q, settle, post, flush, attemptId, section, lastSection, test.id, router]);
 
   const startSection = useCallback(async () => {
     setBusy(true);
@@ -382,7 +384,8 @@ export function Runner(p: RunnerProps) {
   );
 
   if (sectionDone) {
-    const sec1 = section === 1;
+    const more = section < lastSection;
+    const next = (section + 1) as 1 | 2;
     return shell(
       <>
         <div className="space-y-3">
@@ -391,18 +394,18 @@ export function Runner(p: RunnerProps) {
             <p className="text-sm text-muted">{test.title}</p>
             <h1 className="text-2xl font-semibold tracking-tight">Section {section} complete</h1>
           </div>
-          {sec1 && <p className="text-muted">Take a breath. Section 2 starts its own timer when you begin it.</p>}
+          {more && <p className="text-muted">Take a breath. Section {next} starts its own timer when you begin it.</p>}
         </div>
         <div className="flex flex-col gap-2.5">
-          {sec1 ? (
+          {more ? (
             <button
               className={`${btn("primary", "lg")} w-full`}
               onClick={() => {
-                setSection(2);
+                setSection(next);
                 setIdx(0);
               }}
             >
-              Continue to Section 2 <IconNext size={18} />
+              Continue to Section {next} <IconNext size={18} />
             </button>
           ) : (
             // a Link, not <a>: finishing already started a soft navigation here, and a full page load would abort its
@@ -411,9 +414,9 @@ export function Runner(p: RunnerProps) {
               See results <IconNext size={18} />
             </Link>
           )}
-          {mode === "exam" && sec1 && (
+          {mode === "exam" && more && (
             <a className={`${btn("secondary")} w-full`} target="_blank" href={`/test/${test.id}/review/${attemptId}`}>
-              Review Section 1 answers (new tab)
+              Review Section {section} answers (new tab)
             </a>
           )}
         </div>

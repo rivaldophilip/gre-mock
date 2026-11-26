@@ -60,7 +60,8 @@
           "id": "resolve",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "p2",
@@ -88,7 +89,8 @@
           "id": "limn",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "arts"
     },
     {
       "id": "p3",
@@ -138,7 +140,8 @@
           "id": "evasive",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "p4",
@@ -167,7 +170,8 @@
           "id": "refute",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "p5",
@@ -195,21 +199,24 @@
           "id": "jeopardize",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "a1",
       "paragraphs": [
         "To reduce the amount of paper it uses, the Ostrow insurance company will stop printing its customers' policy documents and will instead email the documents to them. Because printing policy documents accounts for most of the company's paper use, the company expects its paper consumption to fall by at least half."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     },
     {
       "id": "a2",
       "paragraphs": [
         "Every film that has won the Corvara Festival's top prize in the past decade was shot on location rather than in a studio. Director Okafor's new film was shot entirely on location, so it stands an excellent chance of winning the top prize at this year's festival."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "arts"
     }
   ],
   "figures": [],

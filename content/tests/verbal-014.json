@@ -60,7 +60,8 @@
           "id": "prerogative",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "p2",
@@ -83,14 +84,16 @@
           "id": "portend",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "a1",
       "paragraphs": [
         "To cut costs, the Pell County transit authority plans to replace each of its diesel buses with an electric bus as the diesel wears out. An electric bus costs more to buy, but the authority calculates that its lower fuel and maintenance costs will more than make up the difference over the twelve years a bus typically stays in service. The authority concludes that the plan will reduce its costs."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     },
     {
       "id": "p3",
@@ -144,7 +147,8 @@
           "id": "contend",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "p4",
@@ -188,7 +192,8 @@
           "id": "indifferent",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "p5",
@@ -222,14 +227,16 @@
           "id": "celebrated",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "a2",
       "paragraphs": [
         "The average age of the members of the Larkspur Book Club is 61. Teodor, who is 34, concludes that most of the club's members must be much older than he is and that he would almost certainly be its youngest member if he joined."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "social science"
     }
   ],
   "figures": [],

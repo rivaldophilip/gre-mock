@@ -1,5 +1,5 @@
 // Accounts CLI. The app has no sign-up path: this is the only way to create a user.
-//   npm run user:add -- <email>       create the account + its own database (gre_u_<id>), migrate, seed, register tests
+//   npm run user:add -- <email>       create the account + its own database (gre_u_<id>), migrate, seed (questions live in gre_bank)
 //   npm run user:passwd -- <email>    change the password
 //   npm run user:list
 //   npm run user:remove -- <email>    delete the account AND drop its database (asks to confirm)
@@ -11,7 +11,7 @@ import { eq, sql } from "drizzle-orm";
 import { dbFor, registry, registryDb } from "../lib/db";
 import { hashPassword } from "../lib/password";
 import { createDatabase, dropDatabase, findAccount, listAccounts, migrateRegistry, migrateUserDb } from "./lib/accounts";
-import { registerTest, seedDb, testIds } from "./lib/sync";
+import { seedDb } from "./lib/sync";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -60,8 +60,7 @@ async function add(email: string) {
     await migrateUserDb(dbName);
     const db = dbFor(dbName);
     const s = await seedDb(db);
-    for (const id of testIds()) await registerTest(db, id);
-    console.log(`created ${email} -> ${dbName}: ${s.words} words, ${s.concepts} concepts, tests ${testIds().join(", ")}`);
+    console.log(`created ${email} -> ${dbName}: ${s.words} words, ${s.concepts} concepts (questions come from the shared bank, gre_bank)`);
   } catch (e) {
     // no half-made accounts: undo the database and the registry row
     await dropDatabase(dbName).catch(() => {});

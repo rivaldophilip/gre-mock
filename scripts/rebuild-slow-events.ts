@@ -8,7 +8,7 @@ import { and, eq, inArray } from "drizzle-orm";
 import { schema } from "../lib/db";
 import { readingAllowanceMs } from "../lib/events";
 import { SLOW_MS } from "../lib/priority/config";
-import { loadTestFile } from "./lib/sync";
+import { readSource } from "../lib/sources";
 import { targets } from "./lib/accounts";
 import type { Test } from "../lib/types";
 
@@ -16,17 +16,16 @@ const apply = process.argv.includes("--apply");
 
 async function main() {
   for (const { account, db } of await targets()) {
-    const attempts = new Map((await db.select().from(schema.attempts)).map((a) => [a.id, a]));
     const responses = await db.select().from(schema.responses);
     const tests = new Map<string, Test | null>();
     const testOf = (id: string) => {
-      if (!tests.has(id)) tests.set(id, loadTestFile(id));
+      if (!tests.has(id)) tests.set(id, readSource(id));
       return tests.get(id)!;
     };
     // lowest response id per (attempt, passage): the question opened first on it
     const firstId = new Map<string, number>();
     for (const r of responses) {
-      const test = testOf(attempts.get(r.attemptId)?.testId ?? "");
+      const test = r.reused ? null : testOf(r.questionId.split(":")[0]);
       const q = test?.questions.find((x) => `${test.id}:${x.id}` === r.questionId);
       if (!q?.passageId) continue;
       const k = `${r.attemptId}:${q.passageId}`;
@@ -35,7 +34,7 @@ async function main() {
     const drop: number[] = [];
     for (const r of responses) {
       if (!r.finalized) continue;
-      const test = testOf(attempts.get(r.attemptId)?.testId ?? "");
+      const test = r.reused ? null : testOf(r.questionId.split(":")[0]);
       const q = test?.questions.find((x) => `${test.id}:${x.id}` === r.questionId);
       if (!test || !q?.passageId) continue;
       const readingMs = readingAllowanceMs(test, q, firstId.get(`${r.attemptId}:${q.passageId}`) === r.id);

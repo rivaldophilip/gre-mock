@@ -5,7 +5,7 @@ import { Client } from "pg";
 import { asc, eq } from "drizzle-orm";
 import { migrate as migrateNeon } from "drizzle-orm/neon-http/migrator";
 import { migrate as migratePg } from "drizzle-orm/node-postgres/migrator";
-import { dbFor, dbUrl, isLocal, registry, registryDb, USER_DB_RE, type DB } from "../../lib/db";
+import { BANK_DB, bankDb, dbFor, dbUrl, isLocal, registry, registryDb, USER_DB_RE, type DB } from "../../lib/db";
 
 export type Account = typeof registry.users.$inferSelect;
 
@@ -57,8 +57,24 @@ async function adminExec(statement: string) {
 }
 
 export async function createDatabase(name: string) {
-  if (!USER_DB_RE.test(name)) throw new Error(`bad database name ${name}`);
+  if (!USER_DB_RE.test(name) && name !== BANK_DB) throw new Error(`bad database name ${name}`);
   await adminExec(`CREATE DATABASE "${name}"`);
+}
+
+/** Whether a database exists on the registry's server. */
+export async function databaseExists(name: string): Promise<boolean> {
+  const url = process.env.DATABASE_URL!;
+  const q = "SELECT 1 FROM pg_database WHERE datname = $1";
+  if (isLocal(url)) {
+    const c = new Client({ connectionString: url });
+    await c.connect();
+    try {
+      return (await c.query(q, [name])).rowCount! > 0;
+    } finally {
+      await c.end();
+    }
+  }
+  return (await neon(url).query(q, [name])).length > 0;
 }
 
 export async function dropDatabase(name: string) {
@@ -80,6 +96,23 @@ export async function migrateUserDb(name: string) {
     }
   } else {
     await migrateNeon(dbFor(name), { migrationsFolder });
+  }
+}
+
+/** Apply drizzle-bank/ migrations to the question bank (gre_bank). */
+export async function migrateBank() {
+  const migrationsFolder = path.resolve("drizzle-bank");
+  if (isLocal(process.env.DATABASE_URL!)) {
+    const c = new Client({ connectionString: dbUrl(BANK_DB) });
+    await c.connect();
+    try {
+      const { drizzle } = await import("drizzle-orm/node-postgres");
+      await migratePg(drizzle(c), { migrationsFolder });
+    } finally {
+      await c.end();
+    }
+  } else {
+    await migrateNeon(bankDb(), { migrationsFolder });
   }
 }
 

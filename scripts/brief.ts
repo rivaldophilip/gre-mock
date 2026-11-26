@@ -7,14 +7,13 @@ import path from "node:path";
 import { schema } from "../lib/db";
 import { oneTarget } from "./lib/accounts";
 import { bankSynonyms } from "./lib/bank";
-import { DRILL_DIR, isDrillId } from "../lib/test-path";
+import { bankHolds, bankNow, clip, conceptExemplars, finishedAnswers, keyedSePairs, keyWordsOf, levelOf, refItems, revisitNote as noteOf, typeFocus, variantsUsed as usedVariants, wordHistory, type RefItem } from "./lib/brief-parts";
 import { markPending, scoreAll, type ItemScore, type LoggedEvent } from "../lib/priority/compute";
 import { PASSAGE_WORDS_MIN, SE_TRAP_PAIRS, SMOOTH, UNTESTED_DISTRACTOR_SHARE } from "../lib/priority/config";
 import { allocateConcepts, allocateVerbalKeys, assignVariants, drawMultiKeys, pairSeKeys, rng, SE_PAIRS } from "../lib/priority/allocate";
-import { slotType, typeStats, TYPE_INFO, type SlotType } from "../lib/qtypes";
-import { conceptHistory, itemText, measureTests, primaryOf, testVariants, type SetupGroup } from "../lib/setup-history";
-import { matchRevisits, revisitQueue, REVISIT_CHANGES, type Answered, type Revisit } from "../lib/priority/revisit";
-import type { Question } from "../lib/types";
+import { conceptHistory, itemText, primaryOf, type SetupGroup } from "../lib/setup-history";
+import { measureSources } from "../lib/sources";
+import { matchRevisits, revisitQueue, type Revisit } from "../lib/priority/revisit";
 
 const measure = process.argv[2] as "verbal" | "quant";
 if (measure !== "verbal" && measure !== "quant") {
@@ -24,7 +23,6 @@ if (measure !== "verbal" && measure !== "quant") {
 const seedArg = process.argv.indexOf("--seed");
 
 const blueprint = JSON.parse(fs.readFileSync("data/blueprints.json", "utf8"))[measure];
-const REF = path.resolve("../books/extracted/reference/items.jsonl"); // local-only corpus (not in the repo)
 
 /** Test ids this measure already uses: written tests plus briefs still being authored (so parallel runs don't collide). */
 function usedNumbers() {
@@ -34,42 +32,6 @@ function usedNumbers() {
 }
 function nextId() {
   return `${measure}-${String(Math.max(0, ...usedNumbers()) + 1).padStart(3, "0")}`;
-}
-
-/** Targets of briefs whose test is not registered yet (still being authored), as [itemId, test id] pairs. */
-function inFlightBriefs(registered: Set<string>) {
-  const dir = "content/briefs";
-  const out: [string, string][] = [];
-  for (const f of fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => new RegExp(`^${measure}-\\d+\\.json$`).test(f)).sort() : []) {
-    const b = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
-    if (registered.has(b.testId)) continue;
-    const ids: string[] = [
-      ...(b.keyWords ?? []).map((k: { id: string }) => k.id),
-      ...(b.skillSlots ?? []).map((k: { skill: string }) => k.skill),
-      ...(b.conceptSlots ?? []).map((k: { concept: string }) => k.concept),
-    ];
-    for (const id of ids) out.push([id, b.testId]);
-  }
-  return out;
-}
-
-type DrillBrief = { testId: string; keyWords?: { id: string }[]; distractorWords?: { untested?: { id: string }[]; review?: { id: string }[] } };
-/** Drill batch briefs on disk (content/briefs/drill-NNN.json). */
-function drillBriefs(): DrillBrief[] {
-  const dir = "content/briefs";
-  return fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => /^drill-\d+\.json$/.test(f)).sort().map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"))) : [];
-}
-
-/** Never-seen words that briefs still being authored offer as distractors or passage words, so sibling briefs offer others. */
-function inFlightFreshWords(registered: Set<string>) {
-  const dir = "content/briefs";
-  const out = new Set<string>();
-  for (const f of fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => new RegExp(`^${measure}-\\d+\\.json$`).test(f)) : []) {
-    const b = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
-    if (registered.has(b.testId)) continue;
-    for (const w of [...(b.distractorWords?.untested ?? []), ...(b.distractorWords?.review ?? []), ...(b.passageWords ?? [])] as { id: string }[]) out.add(w.id);
-  }
-  return out;
 }
 
 /** Revisit refs promised by other briefs whose test is not written yet, so parallel briefs don't sibling one item twice. */
@@ -84,44 +46,6 @@ function inFlightRevisits(current: string) {
   return refs;
 }
 
-/**
- * Variants used so far (concept -> variant -> times). A test that records its variants (quant `variant` fields)
- * counts from its questions; a brief counts only while its test is unwritten or records none (verbal skill slots).
- * A brief whose test is unwritten is a sibling being authored in parallel, so it counts 1.5: on a tie with a variant an
- * earlier test used once, the sibling's variant loses, and two parallel mocks don't practise the same form.
- */
-function variantsUsed(current: string) {
-  const dir = "content/briefs";
-  const used = testVariants(measure);
-  const recorded = new Set<string>();
-  for (const f of fs.existsSync("content/tests") ? fs.readdirSync("content/tests").filter((f) => new RegExp(`^${measure}-\\d+\\.json$`).test(f)) : []) {
-    const t = JSON.parse(fs.readFileSync(path.join("content/tests", f), "utf8"));
-    if ((t.questions ?? []).some((q: { variant?: string }) => q.variant)) recorded.add(t.id);
-  }
-  for (const f of fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => new RegExp(`^${measure}-\\d+\\.json$`).test(f)) : []) {
-    const b = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
-    if (b.testId === current || recorded.has(b.testId)) continue;
-    const weight = fs.existsSync(path.join("content/tests", `${b.testId}.json`)) ? 1 : 1.5;
-    const slots = [
-      ...((b.conceptSlots ?? []) as { concept: string; variant?: string }[]).map((s) => [s.concept, s.variant] as const),
-      ...((b.skillSlots ?? []) as { skill: string; variant?: string }[]).map((s) => [s.skill, s.variant] as const),
-    ];
-    for (const [concept, variant] of slots) {
-      if (!variant) continue;
-      const m = used.get(concept) ?? new Map<string, number>();
-      used.set(concept, m.set(variant, (m.get(variant) ?? 0) + weight));
-    }
-  }
-  return used;
-}
-
-/** Cut at a word boundary, so a topic reads as words rather than a fragment. */
-function clip(s: string, n: number) {
-  if (s.length <= n) return s;
-  const i = s.lastIndexOf(" ", n);
-  return s.slice(0, i > 0 ? i : n) + "…";
-}
-
 /** Verbal: passage topics of every earlier test, stems of the latest only. Quant lists its history per concept slot instead. */
 function previousTests() {
   const dir = "content/tests";
@@ -134,130 +58,6 @@ function previousTests() {
       passageTopics: (t.passages ?? []).map((p: { title?: string; paragraphs: string[] }) => p.title ?? clip(p.paragraphs[0], 70)),
       ...(i === files.length - 1 ? { stems: (t.questions ?? []).map((q: { prompt: string }) => clip(q.prompt, 60)) } : {}),
     }));
-}
-
-/**
- * Items that registered tests without a finished attempt already target (key words, primary skills / concepts),
- * as itemId -> the test ids holding it. Making several tests before taking them then spreads the targets instead of
- * repeating them; once every item is held, the least-held ones come first.
- */
-async function pendingItems(db: Awaited<ReturnType<typeof oneTarget>>["db"]) {
-  const tests = await db.select({ id: schema.tests.id }).from(schema.tests);
-  const taken = new Set((await db.select({ t: schema.attempts.testId, f: schema.attempts.finishedAt }).from(schema.attempts)).filter((a) => a.f).map((a) => a.t));
-  const untaken = new Set(tests.map((t) => t.id).filter((id) => !taken.has(id)));
-  const out = new Map<string, string[]>();
-  const hold = (item: string, test: string) => {
-    const held = out.get(item) ?? [];
-    if (!held.includes(test)) out.set(item, [...held, test]);
-  };
-  // words an untaken test will show anyway (distractors, passage words): not offered again as never-seen
-  const shown = new Set<string>();
-  // a drill batch is taken one question at a time: only its unanswered questions still hold their words
-  const drillRuns = new Set((await db.select({ id: schema.attempts.id, mode: schema.attempts.mode }).from(schema.attempts)).filter((a) => a.mode === "drill").map((a) => a.id));
-  const drillAnswered = new Set((await db.select().from(schema.responses)).filter((r) => r.finalized && drillRuns.has(r.attemptId)).map((r) => r.questionId));
-  for (const r of await db.select().from(schema.questionItems)) {
-    const test = r.questionId.split(":")[0];
-    if (isDrillId(test)) {
-      if (drillAnswered.has(r.questionId) || r.kind !== "word") continue;
-      if (r.role === "key") hold(r.itemId, test);
-      else shown.add(r.itemId);
-      continue;
-    }
-    if (!untaken.has(test)) continue;
-    if (r.role === "key" || r.role === "primary") hold(r.itemId, test);
-    else if (r.kind === "word") shown.add(r.itemId);
-  }
-  // briefs still being authored count as untaken tests too
-  const registered = new Set(tests.map((t) => t.id));
-  for (const [item, test] of inFlightBriefs(registered)) {
-    untaken.add(test);
-    hold(item, test);
-  }
-  for (const item of inFlightFreshWords(registered)) shown.add(item);
-  // drill briefs still being authored: their keys are held and their distractors will be shown
-  if (measure === "verbal")
-    for (const b of drillBriefs().filter((b) => !registered.has(b.testId))) {
-      for (const k of b.keyWords ?? []) hold(k.id, b.testId);
-      for (const w of b.distractorWords?.untested ?? []) shown.add(w.id);
-    }
-  // only drill batches with questions left count as untaken
-  const listed = [...untaken].filter((t) => !isDrillId(t) || [...out.values()].some((ts) => ts.includes(t)));
-  return { untaken: listed.sort(), items: out, shown };
-}
-
-/** Every finalized answer of a finished attempt, timed at the attempt's finish: what the revisit queue reads. */
-async function finishedAnswers(db: Awaited<ReturnType<typeof oneTarget>>["db"]): Promise<Answered[]> {
-  const done = new Map((await db.select().from(schema.attempts)).filter((a) => a.finishedAt).map((a) => [a.id, a.finishedAt!]));
-  return (await db.select().from(schema.responses))
-    .filter((r) => r.finalized && done.has(r.attemptId))
-    .map((r) => ({ questionId: r.questionId, isCorrect: r.isCorrect, guessed: r.guessed, at: done.get(r.attemptId)! }));
-}
-
-const keyWordsOf = (q: Question) => q.tags.filter((t) => t.kind === "word" && t.role === "key").map((t) => t.id);
-
-/** A revisit as the brief shows it: the earlier item, how it went, and the structural change the sibling makes. */
-const revisitNote = (r: Revisit, n: number) => ({
-  ref: r.ref,
-  result: r.result,
-  item: itemText(r.question),
-  setup: r.question.setup,
-  change: REVISIT_CHANGES[measure][n % REVISIT_CHANGES[measure].length],
-});
-
-/** Verbal: earlier TC / SE items per key word, with their distractor words, so a returning word gets new company. */
-function wordHistory(): Map<string, UsedBefore[]> {
-  const out = new Map<string, UsedBefore[]>();
-  for (const t of [...measureTests("verbal"), ...measureTests("drill", DRILL_DIR)])
-    for (const q of t.questions.filter((x) => x.type === "tc" || x.type === "se")) {
-      const distractors = q.tags.filter((x) => x.kind === "word" && x.role === "distractor").map((x) => x.id);
-      const keys = keyWordsOf(q);
-      // the stem too, so a returning word's earlier frame is visible: without it, authors reach for the word's textbook frame, which the earlier item usually used
-      for (const k of keys) out.set(k, [...(out.get(k) ?? []), { ref: `${t.id}:${q.id}`, stem: clip(q.prompt, 200), keys, distractors }]);
-    }
-  return out;
-}
-
-/** Accuracy and pace per question type on this measure, most in need of practice first. */
-async function typeFocus(db: Awaited<ReturnType<typeof oneTarget>>["db"]) {
-  const dir = "content/tests";
-  const typeOf = new Map<string, SlotType>();
-  for (const f of fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.startsWith(measure + "-")) : []) {
-    const t = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
-    for (const q of t.questions ?? []) typeOf.set(`${t.id}:${q.id}`, slotType(q));
-  }
-  // miss replays re-ask questions already seen, so they would flatter the format's accuracy
-  const replays = new Set((await db.select({ id: schema.attempts.id, mode: schema.attempts.mode }).from(schema.attempts)).filter((a) => a.mode === "replay").map((a) => a.id));
-  const rows = (await db.select().from(schema.responses))
-    .filter((r) => r.finalized && typeOf.has(r.questionId) && !replays.has(r.attemptId))
-    .map((r) => ({ type: typeOf.get(r.questionId)!, isCorrect: r.isCorrect, guessed: r.guessed, timeMs: r.timeMs }));
-  return typeStats(rows).map((s) => ({
-    type: s.type,
-    label: TYPE_INFO[s.type].label,
-    answered: s.n,
-    accuracy: +(s.correct / s.n).toFixed(2),
-    avgSec: Math.round(s.avgMs / 1000),
-    paceSec: TYPE_INFO[s.type].paceSec,
-    need: +s.need.toFixed(2),
-  }));
-}
-
-type RefItem = { id: string; type: string; source: string; pplus: number | null; difficulty: string | null; concepts?: string[]; answer_check?: string };
-function refItems(): RefItem[] {
-  if (!fs.existsSync(REF)) return [];
-  return fs
-    .readFileSync(REF, "utf8")
-    .split("\n")
-    .filter(Boolean)
-    .map((l) => JSON.parse(l))
-    .filter((x) => x.type !== "passage" && x.answer_check !== "not_found");
-}
-
-/** Estimated level of an official item: from P+ (5: <30, 4: 30-45, 3: 45-60), else from the OG set label. */
-function levelOf(x: RefItem): number | null {
-  if (x.pplus !== null && x.pplus !== undefined) return x.pplus < 30 ? 5 : x.pplus < 45 ? 4 : x.pplus < 60 ? 3 : 2;
-  if (x.difficulty === "hard") return 4.5;
-  if (x.difficulty === "medium") return 3;
-  return null;
 }
 
 /** Which official item types can anchor a blueprint slot type (old Big Book formats map onto modern ones). */
@@ -285,15 +85,6 @@ function slotExemplars(items: RefItem[]) {
   );
 }
 
-/** Hardest official items whose primary concept is `concept`. */
-function conceptExemplars(items: RefItem[], concept: string) {
-  return items
-    .filter((x) => x.concepts?.[0] === concept && levelOf(x) !== null)
-    .sort((a, b) => levelOf(b)! - levelOf(a)!)
-    .slice(0, 2)
-    .map((x) => x.id);
-}
-
 async function main() {
   const { account, db } = await oneTarget();
   console.log(`brief for ${account.email} (${account.dbName})`);
@@ -311,13 +102,14 @@ async function main() {
   const heldRevisits = inFlightRevisits(id);
   const notHeld = (r: Revisit) => !heldRevisits.has(r.ref);
   const refs = refItems();
-  const pending = await pendingItems(db);
+  const metas = await bankNow();
+  const pending = await bankHolds(db, metas, measure);
   if (pending.untaken.length) console.log(`untaken tests: ${pending.untaken.join(", ")}; ${pending.items.size} of their targets are damped`);
   const slots: Slot[] = slotExemplars(refs);
   // select-all slots get their key count up front (official 1 / 2 / 3 mix), so the author doesn't default to two
   const multi = slots.filter((s) => s.type === "rc_multi");
   drawMultiKeys(multi.length, random).forEach((k, i) => (multi[i].keys = k));
-  const brief: Record<string, unknown> = { testId: id, measure, seed, generatedAt: now.toISOString(), untakenTests: pending.untaken, blueprint, ...(measure === "verbal" ? { previous: previousTests() } : {}), slots, typeFocus: await typeFocus(db) };
+  const brief: Record<string, unknown> = { testId: id, measure, seed, generatedAt: now.toISOString(), untakenTests: pending.untaken, blueprint, ...(measure === "verbal" ? { previous: previousTests() } : {}), slots, typeFocus: await typeFocus(db, metas, measure) };
   const focusNote =
     " typeFocus ranks question types by practice need (miss rate plus slowness against pace): put the weakest review words / skills / concepts on the slots of the top two types (need >= 0.4), so the practice lands where it is needed.";
 
@@ -332,7 +124,7 @@ async function main() {
     const drawn = allocateVerbalKeys(scores, (wid) => !!byId.get(wid)?.isSecondary, 29, random);
     // SE keys two words: pair key words with bank synonyms up front, so all 29 can be keys (never an SE pair keyed before)
     const synonyms = bankSynonyms();
-    const seKeyed = new Set([...measureTests("verbal"), ...measureTests("drill", DRILL_DIR)].flatMap((t) => t.questions.filter((q) => q.type === "se").map((q) => keyWordsOf(q).sort().join("|"))));
+    const seKeyed = keyedSePairs();
     const { keys, pairs: sePairs } = pairSeKeys(drawn, scores, (wid) => synonyms.get(wid) ?? [], {
       keep: (wid) => !!byId.get(wid)?.isSecondary,
       usedPair: (a, b) => seKeyed.has([a, b].sort().join("|")),
@@ -381,14 +173,14 @@ async function main() {
       return { word: v.lemma, id: v.id, tier: v.tier, secondary: v.isSecondary, ...(v.exposureOnly ? { exposureOnly: true } : {}), sense: sense ? `${sense.pos ?? ""} ${sense.def}`.trim() : null, bucket, reason: s.reason, P: +s.P.toFixed(2) };
     };
     const answers = await finishedAnswers(db);
-    const revisits = matchRevisits(keys.map((k) => k.itemId), revisitQueue(answers, measureTests(measure), now).filter(notHeld), keyWordsOf);
+    const revisits = matchRevisits(keys.map((k) => k.itemId), revisitQueue(answers, measureSources(measure), now).filter(notHeld), keyWordsOf);
     const history = wordHistory();
     let nth = 0;
     const keySlots = keys.map((k, i) => ({
       ...show(scores.find((s) => s.itemId === k.itemId)!, k.bucket),
       reason: k.reason,
       usedBefore: history.get(k.itemId) ?? [],
-      ...(revisits.has(i) ? { revisit: revisitNote(revisits.get(i)!, nth++) } : {}),
+      ...(revisits.has(i) ? { revisit: noteOf(measure, revisits.get(i)!, nth++) } : {}),
     }));
     // reading skills: the blueprint's argument slots get argument skills, the other RC slots reading skills
     const rcSlots = (blueprint.sections as { slots: { type: string }[] }[]).flatMap((sec) => sec.slots).filter((sl) => sl.type.startsWith("rc") || sl.type === "arg");
@@ -400,7 +192,7 @@ async function main() {
       allocateConcepts(skillScores.filter((s) => skillArea.get(s.itemId) === area).map((s) => ({ ...s, area })), n, [area], random);
     const skillPicks = [...pickSkills("reading", rcSlots.length - nArg), ...pickSkills("argument", nArg)];
     // a skill repeats across slots and mocks, so each slot also gets the sub-form used least so far
-    const skillVariants = assignVariants(skillPicks.map((p) => p.itemId), JSON.parse(fs.readFileSync("data/concept_variants.json", "utf8")), variantsUsed(id), random);
+    const skillVariants = assignVariants(skillPicks.map((p) => p.itemId), JSON.parse(fs.readFileSync("data/concept_variants.json", "utf8")), usedVariants(measure, metas, id), random);
     const skillSlots = skillPicks.map((p, i) => ({
       skill: p.itemId,
       name: skillRows.find((c) => c.id === p.itemId)?.name,
@@ -426,14 +218,14 @@ async function main() {
     const areaOf = new Map(concepts.map((c) => [c.id, c.area]));
     const withArea = scores.map((s) => ({ ...s, area: areaOf.get(s.itemId)! }));
     const picks = allocateConcepts(withArea, 27, ["arithmetic", "algebra", "geometry", "data"], random);
-    const revisits = matchRevisits(picks.map((p) => p.itemId), revisitQueue(await finishedAnswers(db), measureTests(measure), now).filter(notHeld), (q) => [primaryOf(q) ?? ""]);
+    const revisits = matchRevisits(picks.map((p) => p.itemId), revisitQueue(await finishedAnswers(db), measureSources(measure), now).filter(notHeld), (q) => [primaryOf(q) ?? ""]);
     // a revisit keeps its earlier item's form (the change it names is structural), so its slot takes that variant
     const siblingForms = new Map([...revisits].flatMap(([i, r]) => (r.question.variant ? [[i, r.question.variant] as const] : [])));
-    const variants = assignVariants(picks.map((p) => p.itemId), JSON.parse(fs.readFileSync("data/concept_variants.json", "utf8")), variantsUsed(id), random, siblingForms);
+    const variants = assignVariants(picks.map((p) => p.itemId), JSON.parse(fs.readFileSync("data/concept_variants.json", "utf8")), usedVariants(measure, metas, id), random, siblingForms);
     const history = conceptHistory(measure);
     // other earlier items in a revisited item's setup group: the sibling's change must differ from theirs too, or the judge
     // calls it a copy of one of them (quant-018's revisit of a worn two-set item moved its trap where quant-006 already had)
-    const shownOf = new Map<string, string>(measureTests(measure).flatMap((t) => t.questions.map((q) => [`${t.id}:${q.id}`, itemText(q)] as [string, string])));
+    const shownOf = new Map<string, string>(measureSources(measure).flatMap((t) => t.questions.map((q) => [`${t.id}:${q.id}`, itemText(q)] as [string, string])));
     const siblingsOf = (concept: string, ref: string) =>
       ((history.get(concept) ?? []).find((g) => g.items.some((it) => `${it.testId}:${it.qid}` === ref))?.items ?? [])
         .map((it) => `${it.testId}:${it.qid}`)
@@ -450,7 +242,7 @@ async function main() {
       reason: p.reason,
       exemplars: conceptExemplars(refs, p.itemId),
       history: history.get(p.itemId) ?? [],
-      ...(revisits.has(i) ? { revisit: { ...revisitNote(revisits.get(i)!, nth++), siblings: siblingsOf(p.itemId, revisits.get(i)!.ref) } } : {}),
+      ...(revisits.has(i) ? { revisit: { ...noteOf(measure, revisits.get(i)!, nth++), siblings: siblingsOf(p.itemId, revisits.get(i)!.ref) } } : {}),
     }));
     brief.instructions =
       "Assign the 27 concept slots to the 27 blueprint slots (any order, but a DI set of 3 should share a concept area). Each question: one primary concept (the slot) and optional secondary tags. Write each question as its slot's variant, the form of the concept earlier mocks used least, with a setup that is not in the slot's history (worn setups are banned). Record `setup` (one abstract line, no numbers or story) and `variant` on every question. A slot with a `revisit` is the exception: its variant is that earlier item's form, and you write a sibling of the item (the user missed or guessed it), keeping its decisive insight and making the change named, and set `revisits` to its ref. Provide a python verification script." + focusNote;

@@ -36,6 +36,13 @@
       "when": 1795334626370,
       "tag": "0004_lazy_mojo",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1795698188486,
+      "tag": "0005_quizzes",
+      "breakpoints": true
     }
   ]
 }

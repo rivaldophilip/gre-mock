@@ -180,7 +180,7 @@ describe("studyStats", () => {
   });
 
   it("builds the miss with what the review link and trap line need", () => {
-    expect(s.sections.get("geo")!.misses).toEqual([{ testId: "quant-001", attemptId: 1, qid: "s1q1", type: "mc", difficulty: 4, timeMs: 200_000, guessed: true, trap: "used the radius", finishedAt: day }]);
+    expect(s.sections.get("geo")!.misses).toEqual([{ testId: "quant-001", attemptId: 1, ref: "quant-001:s1q1", qid: "s1q1", type: "mc", difficulty: 4, timeMs: 200_000, guessed: true, trap: "used the radius", finishedAt: day }]);
   });
 
   it("splits by format and summarizes pacing", () => {

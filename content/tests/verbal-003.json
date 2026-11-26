@@ -65,7 +65,8 @@
           "id": "lure",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "p2",
@@ -88,14 +89,16 @@
           "id": "tantalize",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "a1",
       "paragraphs": [
         "After the city of Harlow replaced its paper parking permits with a smartphone app that warns drivers an hour before their permit expires, the number of citations issued for expired permits fell by a third, although the number of enforcement officers and the hours they patrol did not change. The city's transportation director concludes that the warnings have made drivers substantially less likely to let their permits lapse."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     },
     {
       "id": "p3",
@@ -135,7 +138,8 @@
           "id": "rejoinder",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "p4",
@@ -184,7 +188,8 @@
           "id": "eccentric",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "arts"
     },
     {
       "id": "p5",
@@ -212,14 +217,16 @@
           "id": "concede",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "a2",
       "paragraphs": [
         "Opponents of a proposed tax on sugary drinks argue that it would drive small grocers out of business. Yet in the three cities that adopted such a tax a decade ago, the number of small grocers has not fallen. It is true that all three cities grew rapidly during that decade, and growth may have sustained grocers who would otherwise have closed. But the grocers' sales of untaxed goods rose by about as much as their sales of taxed drinks fell, which suggests that customers redirected their spending rather than abandoning the stores. The opponents' fear, therefore, appears to be unfounded."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     }
   ],
   "figures": [],

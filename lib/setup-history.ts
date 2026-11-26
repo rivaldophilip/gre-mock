@@ -1,10 +1,11 @@
 // What earlier tests already asked, per concept: the brief lists it so a new item uses a different setup, and the
-// novelty check pairs each new item with it. Reads content/tests only (scripts, never the app).
+// novelty check pairs each new item with it. Reads the source files (lib/sources.ts; scripts, never the app).
 import fs from "node:fs";
 import path from "node:path";
 import { TestSchema, type Question, type Test } from "./types";
 import { containment, MIN_SKELETON, SETUP_TH, skeletonShingles } from "./ngram";
-import { DRILL_DIR, isDrillId } from "./test-path";
+import { DRILL_DIR, isBankId, isDrillId } from "./test-path";
+import { isEarlier, measureSources } from "./sources";
 
 /** `text` is the stem plus QC quantities (for comparison); `shown` adds labels and choices (for a reader). */
 export type PastItem = { testId: string; qid: string; concept: string; variant?: string; setup: string; text: string; shown: string };
@@ -39,19 +40,21 @@ export function measureTests(measure: string, dir = "content/tests"): Test[] {
 /**
  * The tests a new one is compared with: lower-numbered tests of its measure. Drill batches (content/drill) are their
  * own series, verbal in measure: a batch is compared with every verbal mock and the earlier batches, and a verbal mock
- * with `withDrills` also with every batch (the novelty judge only; the validator's rules stay mock-to-mock).
+ * with `withDrills` also with every batch (the novelty judge only; the validator's rules stay mock-to-mock). A bank
+ * batch (qbank-, vbank-) comes after every mock and drill batch of its measure (lib/sources.ts).
  */
 export function earlierTests(test: Pick<Test, "id" | "measure">, dir = "content/tests", withDrills = false): Test[] {
   const below = (t: Test) => testNo(t.id) < testNo(test.id);
+  if (isBankId(test.id)) return measureSources(test.measure, dir).filter((t) => isEarlier(t.id, test.id));
   if (isDrillId(test.id)) return [...measureTests("verbal", dir), ...measureTests("drill", DRILL_DIR).filter(below)];
   return [...measureTests(test.measure, dir).filter(below), ...(withDrills && test.measure === "verbal" ? measureTests("drill", DRILL_DIR) : [])];
 }
 
-/** Items of tests numbered below `before` (all tests when omitted), with their primary concept. */
+/** Items of sources earlier than `before` (all sources when omitted), with their primary concept. */
 export function pastItems(measure: string, before?: string, dir = "content/tests"): PastItem[] {
   const out: PastItem[] = [];
-  for (const t of measureTests(measure, dir)) {
-    if (before && testNo(t.id) >= testNo(before)) continue;
+  for (const t of measureSources(measure, dir)) {
+    if (before && !isEarlier(t.id, before)) continue;
     for (const q of t.questions) {
       const concept = primaryOf(q);
       if (!concept) continue;

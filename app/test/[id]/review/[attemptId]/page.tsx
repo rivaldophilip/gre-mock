@@ -3,12 +3,13 @@ import { redirect } from "next/navigation";
 import { and, desc, eq, inArray, isNotNull } from "drizzle-orm";
 import { schema } from "@/lib/db";
 import { userDb } from "@/lib/session";
-import { loadTest } from "@/lib/content";
-import { canMarkSilly, canReveal, getAttempt, isClosed, pairKey, responsesFor, sectionOvertimeMs, sectionStatus } from "@/lib/attempts";
+import { canMarkSilly, canReveal, getAttempt, isClosed, responsesFor, sectionOvertimeMs, sectionStatus } from "@/lib/attempts";
+import { loadTestById, testMetas } from "@/lib/test-load";
+import { qAnchor, refOf } from "@/lib/ref";
 import { bandText, bandWhy, estimateBand, scoreAnswer } from "@/lib/scoring";
 import { TYPE_INFO, slotType } from "@/lib/qtypes";
 import { choiceWords, vocabTokens, wordIdFor } from "@/lib/choice-words";
-import type { Answer, Question, Test } from "@/lib/types";
+import type { Answer, Question } from "@/lib/types";
 import { Rich, RichInline } from "@/components/Rich";
 import { Figure } from "@/components/Figure";
 import { TaggablePassage, WordChip, type Sense } from "@/components/WordTagger";
@@ -98,12 +99,13 @@ function AnswerText({ parts, sep }: Parts) {
 export default async function Review({ params }: { params: Promise<{ id: string; attemptId: string }> }) {
   const db = await userDb();
   const { id, attemptId } = await params;
-  const test = loadTest(id) as Test | null;
+  const test = await loadTestById(db, id);
   const a = await getAttempt(Number(attemptId));
   if (!test || !a || a.testId !== id) redirect("/");
   const rows = new Map((await responsesFor(a.id)).map((r) => [r.questionId, r]));
-  const visible = test.questions.filter((q) => canReveal(a, test, q, rows.get(pairKey(id, q.id))));
-  const correct = visible.filter((q) => scoreAnswer(q, (rows.get(pairKey(id, q.id))?.answer ?? undefined) as Answer | undefined)).length;
+  const rowOf = (q: Question) => rows.get(refOf(q));
+  const visible = test.questions.filter((q) => canReveal(a, test, q, rowOf(q)));
+  const correct = visible.filter((q) => scoreAnswer(q, (rowOf(q)?.answer ?? undefined) as Answer | undefined)).length;
   // definitions for every tagged word on the visible questions, and this attempt's "didn't know" tags
   const passageTagsOf = (q: Question) => (q.passageId ? (test.passages.find((p) => p.id === q.passageId)?.tags ?? []) : []);
   const wordIds = [...new Set(visible.flatMap((q) => [...q.tags, ...passageTagsOf(q)].filter((t) => t.kind === "word").map((t) => t.id)))];
@@ -120,41 +122,36 @@ export default async function Review({ params }: { params: Promise<{ id: string;
     .from(schema.itemEvents)
     .where(and(eq(schema.itemEvents.attemptId, a.id), eq(schema.itemEvents.event, "dont_know")));
   const taggedIds = new Set(taggedRows.map((r) => r.itemId));
-  // deliberate revisits: where the earlier item lives (its latest finished review) and how it went there
+  // deliberate revisits: where the earlier item was last shown (its latest finished response, any test) and how it went
   const revisitRefs = [...new Set(visible.flatMap((q) => (q.revisits ? [q.revisits] : [])))];
-  const revisitTests = [...new Set(revisitRefs.map((r) => r.split(":")[0]))];
-  const earlierAttempts = revisitTests.length
+  const earlierRows = revisitRefs.length
     ? await db
-        .select({ id: schema.attempts.id, testId: schema.attempts.testId })
-        .from(schema.attempts)
-        .where(and(inArray(schema.attempts.testId, revisitTests), isNotNull(schema.attempts.finishedAt)))
+        .select({ attemptId: schema.responses.attemptId, testId: schema.attempts.testId, questionId: schema.responses.questionId, isCorrect: schema.responses.isCorrect, guessed: schema.responses.guessed })
+        .from(schema.responses)
+        .innerJoin(schema.attempts, eq(schema.attempts.id, schema.responses.attemptId))
+        .where(and(inArray(schema.responses.questionId, revisitRefs), isNotNull(schema.attempts.finishedAt)))
         .orderBy(desc(schema.attempts.finishedAt))
     : [];
-  const latestAttempt = new Map<string, number>();
-  for (const e of earlierAttempts) if (!latestAttempt.has(e.testId)) latestAttempt.set(e.testId, e.id);
-  const earlierRows = latestAttempt.size
-    ? await db
-        .select({ attemptId: schema.responses.attemptId, questionId: schema.responses.questionId, isCorrect: schema.responses.isCorrect, guessed: schema.responses.guessed })
-        .from(schema.responses)
-        .where(and(inArray(schema.responses.attemptId, [...latestAttempt.values()]), inArray(schema.responses.questionId, revisitRefs)))
-    : [];
+  const metas = await testMetas(db);
+  const earlierTests = new Map(
+    await Promise.all([...new Set(earlierRows.map((r) => r.testId))].map(async (tid) => [tid, await loadTestById(db, tid)] as const)),
+  );
   const revisitOf = (ref: string) => {
-    const [tid, qid] = ref.split(":");
-    const t = loadTest(tid);
-    const n = t ? t.questions.findIndex((x) => x.id === qid) + 1 : 0;
-    const aid = latestAttempt.get(tid);
-    const r = earlierRows.find((x) => x.attemptId === aid && x.questionId === ref);
-    return { title: t?.title ?? tid, n, qid, href: aid ? `/test/${tid}/review/${aid}#q-${qid}` : undefined, how: r ? (!r.isCorrect ? "which you missed" : r.guessed ? "which you guessed" : "") : "" };
+    const r = earlierRows.find((x) => x.questionId === ref);
+    const t = r ? earlierTests.get(r.testId) : undefined;
+    const n = t ? t.questions.findIndex((x) => x.ref === ref) + 1 : 0;
+    const title = r ? (metas.get(r.testId)?.title ?? r.testId) : ref.split(":")[0];
+    return { title, n, href: r ? `/test/${r.testId}/review/${r.attemptId}#${qAnchor(ref)}` : undefined, how: r ? (!r.isCorrect ? "which you missed" : r.guessed ? "which you guessed" : "") : "" };
   };
   const waitingOn2 = !isClosed(a) && sectionStatus(a, 1).finished && !sectionStatus(a, 2).finished;
   // the clock runs negative past the limit; under a second over is rounding, not overtime
   const overBy = ([1, 2] as const).map((n) => ({ n, ms: sectionStatus(a, n).finished ? sectionOvertimeMs(a, test, n) : 0 })).filter((o) => o.ms >= 1000);
 
   const pct = visible.length ? Math.round((100 * correct) / visible.length) : 0;
-  const results = visible.map((q) => ({ q, ok: scoreAnswer(q, (rows.get(pairKey(id, q.id))?.answer ?? undefined) as Answer | undefined) }));
-  const guessedRight = results.filter(({ q, ok }) => ok && rows.get(pairKey(id, q.id))?.guessed).length;
-  // an abandoned attempt shows its answers and keys, but is not a score
-  const band = a.abandonedAt ? null : estimateBand(correct, guessedRight, visible.length);
+  const results = visible.map((q) => ({ q, ok: scoreAnswer(q, (rowOf(q)?.answer ?? undefined) as Answer | undefined) }));
+  const guessedRight = results.filter(({ q, ok }) => ok && rowOf(q)?.guessed).length;
+  // an abandoned attempt shows its answers and keys, but is not a score; nor is a custom quiz, which is no mock
+  const band = a.abandonedAt || metas.get(id)?.quizKind === "custom" ? null : estimateBand(correct, guessedRight, visible.length);
 
   return (
     <>
@@ -204,7 +201,7 @@ export default async function Review({ params }: { params: Promise<{ id: string;
               {results.map(({ q, ok }, i) => (
                 <a
                   key={q.id}
-                  href={`#q-${q.id}`}
+                  href={`#${qAnchor(refOf(q))}`}
                   aria-label={`Question ${i + 1}, ${ok ? "correct" : "incorrect"}`}
                   className={`grid size-8 place-items-center rounded-lg text-xs font-semibold tabular-nums transition-opacity hover:opacity-80 ${ok ? "bg-ok-soft text-ok" : "bg-bad-soft text-bad"}`}
                 >
@@ -224,7 +221,7 @@ export default async function Review({ params }: { params: Promise<{ id: string;
         )}
 
         {visible.map((q, qi) => {
-          const r = rows.get(pairKey(id, q.id));
+          const r = rowOf(q);
           const ans = (r?.answer ?? undefined) as Answer | undefined;
           const ok = scoreAnswer(q, ans);
           const passage = q.passageId ? test.passages.find((p) => p.id === q.passageId) : undefined;
@@ -234,15 +231,20 @@ export default async function Review({ params }: { params: Promise<{ id: string;
           const stemWords = shownWords(q.tags, "stem").filter((id) => !choiceIds.has(id));
           const ex = q.explanation;
           return (
-            <section key={q.id} id={`q-${q.id}`} className={`${card} scroll-mt-20 space-y-4 p-4 target:ring-2 target:ring-accent/50 sm:p-5`}>
+            <section key={q.id} id={qAnchor(refOf(q))} className={`${card} scroll-mt-20 space-y-4 p-4 target:ring-2 target:ring-accent/50 sm:p-5`}>
               <div className="flex flex-wrap items-center gap-2">
                 <span className={badge(ok ? "ok" : "bad")}>
                   {ok ? <IconCheck size={13} /> : <IconX size={13} />}
                   {ok ? "Correct" : "Incorrect"}
                 </span>
                 <span className="text-sm font-semibold">Q{qi + 1}</span>
+                {q.reused && (
+                  <Explain why="You have answered this question before; the quiz reused it because the bank ran short. It counts toward this score but not toward your word, concept or skill stats.">
+                    <span className={badge("muted")}>Seen before</span>
+                  </Explain>
+                )}
                 <span className="text-sm text-muted">
-                  S{q.section} · <Explain why={TYPE_INFO[slotType(q)].what}>{TYPE_INFO[slotType(q)].label}</Explain> · {q.id}
+                  S{q.section} · <Explain why={TYPE_INFO[slotType(q)].what}>{TYPE_INFO[slotType(q)].label}</Explain> · {refOf(q).replace(":", " ")}
                   {skillOf(q) && <> · skill: {skillOf(q)}</>}
                 </span>
                 <span className="ml-auto text-xs tabular-nums text-muted">
@@ -256,7 +258,7 @@ export default async function Review({ params }: { params: Promise<{ id: string;
                     <Explain why="A revisit keeps the idea of an earlier item you missed or guessed and changes how it is asked, so you practise the idea rather than recognise the question.">
                       <strong>Revisit</strong>
                     </Explain>{" "}
-                    of {rv.title}, Q{rv.n} ({rv.qid}){rv.how ? `, ${rv.how}` : ""}.{" "}
+                    of {rv.title}{rv.n ? `, Q${rv.n}` : ""}{rv.how ? `, ${rv.how}` : ""}.{" "}
                     {rv.href && <Link className="font-medium text-accent underline underline-offset-2" href={rv.href}>See that question</Link>}
                   </p>
                 );

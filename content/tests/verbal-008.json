@@ -55,7 +55,8 @@
           "id": "concession",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "p2",
@@ -88,14 +89,16 @@
           "id": "novel",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "a1",
       "paragraphs": [
         "Last year the public libraries of Brennan County stopped charging fines for overdue books and mailed every borrower whose account showed an overdue item a notice announcing the change. In the twelve months that followed, nearly three times as many books more than a year overdue were returned as in the preceding twelve months. The county's library director concludes that the fines had been keeping many borrowers from returning long-overdue books."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "social science"
     },
     {
       "id": "p3",
@@ -140,7 +143,8 @@
           "id": "anonymous",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "p4",
@@ -189,7 +193,8 @@
           "id": "trivial",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "p5",
@@ -243,14 +248,16 @@
           "id": "nostrum",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "a2",
       "paragraphs": [
         "Transportation analysts have predicted that the new toll on the Harbor Bridge will push commuters onto the free Ferry Street tunnel and badly worsen congestion there. This prediction overlooks the tunnel's height limit, which already bars the delivery trucks that make up most of the bridge's rush-hour traffic. Commuters in private cars, moreover, report that they choose the bridge for its direct route into the business district, an advantage the toll does nothing to change. The toll is therefore unlikely to add much traffic to the tunnel."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     }
   ],
   "figures": [],

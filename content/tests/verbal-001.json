@@ -24,7 +24,8 @@
      "id": "prevail",
      "role": "passage"
     }
-   ]
+   ],
+   "domain": "science"
   },
   {
    "id": "p2",
@@ -52,7 +53,8 @@
      "id": "table",
      "role": "passage"
     }
-   ]
+   ],
+   "domain": "arts"
   },
   {
    "id": "a1",
@@ -65,7 +67,8 @@
      "id": "inherent",
      "role": "passage"
     }
-   ]
+   ],
+   "domain": "business"
   },
   {
    "id": "p3",
@@ -98,7 +101,8 @@
      "id": "substrate",
      "role": "passage"
     }
-   ]
+   ],
+   "domain": "social science"
   },
   {
    "id": "p4",
@@ -121,7 +125,8 @@
      "id": "corollary",
      "role": "passage"
     }
-   ]
+   ],
+   "domain": "social science"
   },
   {
    "id": "p5",
@@ -144,7 +149,8 @@
      "id": "novel",
      "role": "passage"
     }
-   ]
+   ],
+   "domain": "humanities"
   },
   {
    "id": "a2",
@@ -162,7 +168,8 @@
      "id": "plastic",
      "role": "passage"
     }
-   ]
+   ],
+   "domain": "business"
   }
  ],
  "figures": [],

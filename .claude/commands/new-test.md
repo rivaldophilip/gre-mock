@@ -1,20 +1,7 @@
 ---
-description: Generate, verify and publish one new hard GRE mock test (verbal or quant)
+description: Refill the question bank for a measure (quizzes are now assembled from the bank); runs /bank-fill
 argument-hint: verbal|quant
 ---
-Create one new hard GRE **$ARGUMENTS** test by following `docs/QUIZ-AUTHORING.md` end to end:
-brief → author (one Write; quant also writes its verify script) → `check` until OK → blind-solve → `blind --check` until clean → novelty check → `novelty --check` until clean → register → commit and push.
+Mocks are no longer authored whole: the webapp assembles each quiz from the question bank (`docs/BANK.md`). To add questions for **$ARGUMENTS**, run the `/bank-fill $ARGUMENTS` steps (`.claude/commands/bank-fill.md`): `bank:gaps`, `bank:brief`, one Write, `check`, one blind solver, one novelty judge, `bank:sync`, commit and push.
 
-Keep it lean:
-- Before authoring, read only `content/briefs/<id>.md`, `docs/QUIZ-AUTHORING.md` and `docs/HARD-PATTERNS.md`, plus `<id>.local.md` exemplars for a type you are unsure about. Don't read schema, scripts or old tests unless a message is not enough.
-- Write the test in one Write call and fix it with Edit. Run every script as `npm run -s …` and follow its `next:` line.
-- Use one `gre-blind-solver` agent. It writes its reply to the file the copy names; then run `npm run -s blind -- <id> --check` (don't retype the reply). Send rewritten items to the same agent with `--only`.
-- Then one `gre-novelty-judge` agent on `npm run -s novelty -- <id>`, the same way: it writes its verdicts, you run `--check`, and send rewrites to the same judge with `--only`.
-- Quant: each concept slot in the brief lists the setups earlier mocks used. Use a different setup, never a **worn** one; a new story or new numbers around a listed setup is the same item.
-
-Don't stop before registering and pushing unless a step can't be completed. The final report gives:
-- the test id;
-- the solver's agreement: the `N/27 match the key` line, plus the reading-skill agreement for verbal;
-- the novelty line (`N/N items judged, K repeats`) and what was rewritten for it;
-- the `coverage:` lines from the last `check`;
-- the items you rewrote or retagged, and why.
+Write a whole 27-question mock (`npm run -s brief -- <measure>`, `docs/QUIZ-AUTHORING.md`, Steps) only when the user asks for one by name.

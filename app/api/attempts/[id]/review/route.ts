@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { canReveal, loadAttemptTest, pairKey, responsesFor } from "@/lib/attempts";
+import { canReveal, loadAttemptTest, responsesFor } from "@/lib/attempts";
+import { refOf } from "@/lib/ref";
 import { scoreAnswer } from "@/lib/scoring";
 import type { Answer } from "@/lib/types";
 
@@ -12,7 +13,7 @@ export async function GET(_req: Request, ctx: { params: Promise<{ id: string }> 
   const rows = new Map((await responsesFor(a.id)).map((r) => [r.questionId, r]));
   const out: Record<string, unknown> = {};
   for (const q of test.questions) {
-    const r = rows.get(pairKey(test.id, q.id));
+    const r = rows.get(refOf(q));
     if (!canReveal(a, test, q, r)) continue;
     out[q.id] = {
       key: q.key,

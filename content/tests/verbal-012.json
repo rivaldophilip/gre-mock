@@ -50,7 +50,8 @@
           "id": "diffuse",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "p2",
@@ -78,7 +79,8 @@
           "id": "interrogate",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "p3",
@@ -133,7 +135,8 @@
           "id": "contend",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "p4",
@@ -167,7 +170,8 @@
           "id": "gradation",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "arts"
     },
     {
       "id": "p5",
@@ -196,21 +200,24 @@
           "id": "dormant",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "a1",
       "paragraphs": [
         "Since the city added bicycle lanes along Harbor Avenue two years ago, the share of the avenue's reported traffic accidents that involve cyclists has risen from 8 percent to 14 percent. A council member concludes that the lanes have made Harbor Avenue more dangerous for the cyclists who use it."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     },
     {
       "id": "a2",
       "paragraphs": [
         "Each of the forty musicians in the Halden Chamber Orchestra has won at least one international competition as a soloist. The Halden Chamber Orchestra must therefore be one of the finest orchestras performing today."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "arts"
     }
   ],
   "figures": [],

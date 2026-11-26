@@ -51,7 +51,8 @@
           "id": "transient",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "p2",
@@ -89,7 +90,8 @@
           "id": "reverence",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "p3",
@@ -144,7 +146,8 @@
           "id": "concession",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "p4",
@@ -179,7 +182,8 @@
           "id": "sparse",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "p5",
@@ -233,21 +237,24 @@
           "id": "slake",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "a1",
       "paragraphs": [
         "Three years ago the fisheries board of a coastal province required trawlers to use nets with a larger mesh, which lets smaller fish slip through. Since then, the average length of the cod landed at the province's ports has increased by nearly a fifth. The board concludes that, by allowing young cod to escape and mature, the new rule has begun to restore the province's depleted cod stock."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     },
     {
       "id": "a2",
       "paragraphs": [
         "Since a coastal province began requiring storm shutters on all new houses, the houses built under the requirement have suffered markedly less damage in storms than comparable older houses. Yet over the same period, the average amount that insurers have paid per storm-damage claim on houses built under the requirement has been higher than the average they have paid per claim on the older houses."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "business"
     }
   ],
   "figures": [],

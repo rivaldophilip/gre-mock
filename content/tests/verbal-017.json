@@ -55,7 +55,8 @@
           "id": "inordinate",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "science"
     },
     {
       "id": "p2",
@@ -108,14 +109,16 @@
           "id": "ethos",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "a1",
       "paragraphs": [
         "Ecologists studying the Brannock Range attribute the recovery of streamside willows there since wolves were reintroduced not to any reduction in elk numbers, which have held steady, but to elk avoiding places where wolves can ambush them, chiefly stream banks screened by dense brush. Along the streams of the range's eastern valleys, however, where the banks are just as brushy and wolves just as numerous as elsewhere in the range, the willows have shown no recovery at all."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "science"
     },
     {
       "id": "p3",
@@ -160,7 +163,8 @@
           "id": "posthumous",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "p4",
@@ -193,7 +197,8 @@
           "id": "reap",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "social science"
     },
     {
       "id": "p5",
@@ -226,14 +231,16 @@
           "id": "syntax",
           "role": "passage"
         }
-      ]
+      ],
+      "domain": "humanities"
     },
     {
       "id": "a2",
       "paragraphs": [
         "Last year the Ashby school district moved recess at its elementary schools from after lunch to before it. Over the following school year, the weight of food that students threw away from their lunch trays fell by a third. District officials conclude that children who play before they eat come to lunch hungrier and so finish more of their meals."
       ],
-      "tags": []
+      "tags": [],
+      "domain": "social science"
     }
   ],
   "figures": [],

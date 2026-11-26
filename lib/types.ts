@@ -79,8 +79,15 @@ export const QuestionSchema = z.object({
   /** drill only: taken out of the pool before it was answered (its words are tested elsewhere). It stays in the file, so
    * the batch's checks and setup history still see it, but `register` skips it and /drill never serves it */
   retired: z.boolean().optional(),
+  /** bank batches: the blind solver's raw rating (1-5), written back by `blind --check`; assembly caps the 4+ ones per section (docs/BANK.md) */
+  solverRating: z.number().int().min(1).max(5).optional(),
 });
-export type Question = z.infer<typeof QuestionSchema>;
+export type Question = z.infer<typeof QuestionSchema> & {
+  /** set by the loader, never written in a file: the bank ref ("quant-005:s2q14"), which responses are keyed by */
+  ref?: string;
+  /** set by the loader in an assembled quiz: an item the user has answered before, scored but logging no item events */
+  reused?: boolean;
+};
 
 export const PassageSchema = z.object({
   id: z.string(),
@@ -88,6 +95,8 @@ export const PassageSchema = z.object({
   /** paragraphs; for rc_select questions each sentence is clickable */
   paragraphs: z.array(z.string()).min(1),
   tags: z.array(TagSchema).default([]),
+  /** the subject area (science, history, arts, social science, business), so a quiz section can vary them */
+  domain: z.string().min(1).optional(),
 });
 export type Passage = z.infer<typeof PassageSchema>;
 
@@ -110,10 +119,10 @@ export const TestSchema = z.object({
   figures: z.array(FigureSchema).default([]),
   questions: z.array(QuestionSchema).min(1),
 });
-export type Test = z.infer<typeof TestSchema>;
+export type Test = Omit<z.infer<typeof TestSchema>, "questions"> & { questions: Question[] };
 
 // ---- runner-facing (answers stripped) ----
-export type PublicQuestion = Omit<Question, "key" | "explanation" | "tags" | "difficulty" | "setup" | "variant" | "revisits">;
+export type PublicQuestion = Omit<Question, "key" | "explanation" | "tags" | "difficulty" | "setup" | "variant" | "revisits" | "solverRating" | "ref" | "reused">;
 export type PublicPassage = Omit<Passage, "tags">;
 export type PublicTest = Omit<Test, "questions" | "passages"> & {
   questions: PublicQuestion[];

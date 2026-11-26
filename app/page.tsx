@@ -2,19 +2,22 @@ import Link from "next/link";
 import { desc } from "drizzle-orm";
 import { schema } from "@/lib/db";
 import { userDb } from "@/lib/session";
-import { conceptNames, listTestIds, loadTest } from "@/lib/content";
+import { conceptNames } from "@/lib/content";
 import { matchCount } from "@/lib/search";
 import { drillSummary } from "@/lib/drill";
-import { isClosed, pairKey, sectionStatus, type SectionState } from "@/lib/attempts";
+import { isClosed, sectionStatus, type SectionState } from "@/lib/attempts";
+import { loadTestById, testMetas, type TestMeta } from "@/lib/test-load";
+import { bankQuestions } from "@/lib/bank";
 import { isAway } from "@/lib/clock";
 import { attemptNumbers, attemptTimeMs, fmtDuration, isListed } from "@/lib/attempt-summary";
 import { bandText, estimateBand, isAnswered } from "@/lib/scoring";
-import type { Answer, Question } from "@/lib/types";
+import type { Answer } from "@/lib/types";
 import { StartForm } from "@/components/StartForm";
 import { TestSearch } from "@/components/TestSearch";
 import { DiscardButton } from "@/components/DiscardButton";
 import { AppHeader } from "@/components/AppHeader";
-import { IconNext, IconPlay, IconUndo } from "@/components/icons";
+import { IconNext, IconPlay, IconPlus, IconUndo } from "@/components/icons";
+import { DraftReview, QuizDiscard, type FallbackLine } from "@/components/FallbackDialog";
 import { badge, btn, card, eyebrow, seg, segItem } from "@/components/ui";
 
 /** Rows are short and grouped by state, so a long run of mocks stays one screen: Done folds away. */
@@ -29,32 +32,27 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
   const measure = tab === "quant" ? "quant" : "verbal";
   const other = measure === "quant" ? "verbal" : "quant";
   const query = (q ?? "").trim();
-  // newest test first: ids are zero-padded, so a reversed sort is newest-first
-  const all = listTestIds().reverse().map((id) => loadTest(id)!);
-  // a search keeps only tests with a matching question, across both measures so the other tab can be offered
-  const hits = new Map<string, number>();
-  if (query) for (const t of all) {
-    const n = matchCount(t, query, conceptNames);
-    if (n) hits.set(t.id, n);
-  }
-  const tests = all.filter((t) => t.measure === measure && (!query || hits.has(t.id)));
-  const otherHits = query ? all.filter((t) => t.measure === other && hits.has(t.id)).length : 0;
   const tabHref = (m: string) => `/?tab=${m}${query ? `&q=${encodeURIComponent(query)}` : ""}`;
+  const [metas, quizRows, allAttempts, rows] = await Promise.all([
+    testMetas(db),
+    db.select().from(schema.quizzes).orderBy(desc(schema.quizzes.createdAt)),
+    db.select().from(schema.attempts).orderBy(desc(schema.attempts.startedAt)),
+    db
+      .select({ a: schema.responses.attemptId, qid: schema.responses.questionId, ok: schema.responses.isCorrect, g: schema.responses.guessed, fin: schema.responses.finalized, ans: schema.responses.answer })
+      .from(schema.responses),
+  ]);
   // abandoned attempts are not listed and take no number: each test counts its own attempts from 1
-  const attempts = (await db.select().from(schema.attempts).orderBy(desc(schema.attempts.startedAt))).filter(isListed);
+  const attempts = allAttempts.filter((a) => isListed(a) && metas.has(a.testId));
   const numberOf = attemptNumbers(attempts);
   const correct = new Map<number, number>();
   const guessed = new Map<number, number>();
   const answered = new Map<number, number>();
-  const rows = await db
-    .select({ a: schema.responses.attemptId, qid: schema.responses.questionId, ok: schema.responses.isCorrect, g: schema.responses.guessed, fin: schema.responses.finalized, ans: schema.responses.answer })
-    .from(schema.responses);
-  const qByKey = new Map<string, Question>();
-  for (const t of tests) for (const q of t.questions) qByKey.set(pairKey(t.id, q.id), q);
   // progress of an open attempt: a cleared choice or a half-filled completion is not an answer
+  const openIds = new Set(attempts.filter((a) => !isClosed(a)).map((a) => a.id));
+  const qByKey = await bankQuestions(rows.filter((r) => openIds.has(r.a)).map((r) => r.qid));
   for (const r of rows) {
-    const q = qByKey.get(r.qid);
-    if (q && isAnswered(q, (r.ans ?? undefined) as Answer | undefined)) answered.set(r.a, (answered.get(r.a) ?? 0) + 1);
+    const qq = qByKey.get(r.qid);
+    if (openIds.has(r.a) && qq && isAnswered(qq, (r.ans ?? undefined) as Answer | undefined)) answered.set(r.a, (answered.get(r.a) ?? 0) + 1);
   }
   // only finalized answers count: an exam section still open (or abandoned) has not been scored
   for (const r of rows) if (r.ok && r.fin) {
@@ -62,27 +60,34 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
     if (r.g) guessed.set(r.a, (guessed.get(r.a) ?? 0) + 1);
   }
 
-  // endless vocab sits on the verbal tab, above the mocks; a search is about mocks, so it hides
+  // endless vocab sits on the verbal tab, above the quizzes; a search is about quizzes, so it hides
   const drill = measure === "verbal" && !query ? await drillSummary() : null;
 
   type Attempt = typeof schema.attempts.$inferSelect;
-  const views = tests.map((t) => {
-    const mine = attempts.filter((a) => a.testId === t.id);
-    const open = mine.find((a) => !isClosed(a));
+  type View = { t: TestMeta; total: number; minutes: number; open?: Attempt; done: Attempt[]; latest?: Attempt };
+  // a test is listed once it has an attempt (an untaken authored mock is bank stock now, not a row), and a quiz once it is made
+  const testIds = new Set([...attempts.map((a) => a.testId), ...quizRows.filter((x) => x.status === "ready" || x.status === "draft").map((x) => `quiz-${x.id}`)]);
+  const all: View[] = [...testIds].flatMap((id) => {
+    const t = metas.get(id);
+    if (!t) return [];
+    const mine = attempts.filter((a) => a.testId === id);
     const done = mine.filter((a) => isClosed(a));
-    return {
-      t,
-      total: t.questions.length,
-      minutes: t.sections.reduce((s, x) => s + x.minutes, 0),
-      open,
-      done,
-      latest: done[0],
-    };
+    return [{ t, total: t.total, minutes: t.minutes, open: mine.find((a) => !isClosed(a)), done, latest: done[0] }];
   });
-  type View = (typeof views)[number];
+  // a search keeps only tests with a matching question, across both measures so the other tab can be offered
+  const hits = new Map<string, number>();
+  if (query)
+    for (const v of all) {
+      const t = await loadTestById(db, v.t.id);
+      const n = t ? matchCount(t, query, conceptNames) : 0;
+      if (n) hits.set(v.t.id, n);
+    }
+  const views = all.filter((v) => v.t.measure === measure && (!query || hits.has(v.t.id)));
+  const otherHits = query ? all.filter((v) => v.t.measure === other && hits.has(v.t.id)).length : 0;
+  const quizOf = new Map(quizRows.map((x) => [`quiz-${x.id}`, x]));
   const inProgress = views.flatMap(({ open, ...v }) => (open ? [{ ...v, open }] : []));
-  const notStarted = views.filter((v) => !v.open && !v.latest);
-  const finished = views.filter((v) => !v.open && v.latest);
+  const ready = views.filter((v) => !v.open && !v.latest && ["ready", "draft"].includes(quizOf.get(v.t.id)?.status ?? ""));
+  const finished = views.filter((v) => !v.open && v.latest).sort((x, y) => y.latest!.startedAt.getTime() - x.latest!.startedAt.getTime());
 
   // how many questions matched, not which: an untaken test is not spoiled
   const hit = (id: string) => {
@@ -90,9 +95,10 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
     return n ? <span className={`${badge("accent")} ml-2 align-middle`}>{n} matching question{n === 1 ? "" : "s"}</span> : null;
   };
 
-  const score = (a: Attempt, total: number) => {
+  const score = (a: Attempt, total: number, t: TestMeta) => {
     const c = correct.get(a.id) ?? 0;
-    const band = a.finishedAt ? estimateBand(c, guessed.get(a.id) ?? 0, total) : null;
+    // a custom quiz is no mock: no score band
+    const band = a.finishedAt && t.quizKind !== "custom" ? estimateBand(c, guessed.get(a.id) ?? 0, total) : null;
     return (
       <>
         <span className="font-mono font-semibold tabular-nums">
@@ -138,24 +144,33 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
     );
   };
 
-  const newRow = ({ t, total, minutes }: View) => (
-    <li key={t.id} className={`${row} flex flex-col gap-2.5 border-line bg-surface sm:flex-row sm:items-center sm:gap-3`}>
-      <div className="min-w-0 flex-1">
-        <h2 className="font-semibold leading-snug">{t.title}{hit(t.id)}</h2>
-        <p className="text-sm text-muted">
-          {total} questions · {minutes} min
-        </p>
-      </div>
-      <StartForm testId={t.id} />
-    </li>
-  );
+  // a ready quiz starts here or is discarded; a draft (the bank ran short) waits for Proceed in its dialog
+  const readyRow = ({ t, total, minutes }: View) => {
+    const quiz = quizOf.get(t.id)!;
+    const draft = quiz.status === "draft";
+    const untimed = (quiz.spec as { timer?: boolean }).timer === false;
+    return (
+      <li key={t.id} className={`${row} flex flex-col gap-2.5 border-line bg-surface sm:flex-row sm:items-center sm:gap-3`}>
+        <div className="min-w-0 flex-1">
+          <h2 className="font-semibold leading-snug">{t.title}{hit(t.id)}</h2>
+          <p className="text-sm text-muted">
+            {total} questions · {untimed ? "untimed" : `${minutes} min`}
+            {draft && <> · <span className={badge("warn")}>{(quiz.fallbacks as FallbackLine[]).length} substitutes to confirm</span></>}
+          </p>
+        </div>
+        <div className="flex items-center gap-1">
+          {draft ? <DraftReview quizId={quiz.id} fallbacks={quiz.fallbacks as FallbackLine[]} /> : <StartForm testId={t.id} timerOn={!untimed} />}
+          {!draft && <QuizDiscard quizId={quiz.id} />}
+        </div>
+      </li>
+    );
+  };
 
-  // a finished test retakes from its title row; every attempt below shows its own score and opens its review
+  // every attempt shows its own score and opens its review (a quiz is taken once; a new one is assembled instead)
   const doneRow = ({ t, total, done }: View) => (
     <li key={t.id} className={`${row} space-y-2.5 border-line bg-surface`}>
       <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:gap-3">
         <h2 className="min-w-0 flex-1 font-semibold leading-snug">{t.title}{hit(t.id)}</h2>
-        <StartForm testId={t.id} />
       </div>
       <ul className="space-y-1">
         {done.map((a) => (
@@ -165,7 +180,7 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
                 Attempt {numberOf.get(a.id)} · <span className="capitalize">{a.mode}</span> ·{" "}
                 <span className="tabular-nums" title="Time on the section clocks, without pauses">{fmtDuration(attemptTimeMs(a))}</span>
               </span>
-              {score(a, total)}
+              {score(a, total, t)}
               <IconNext size={15} className={`${chevron} group-hover:translate-x-0.5`} />
             </Link>
           </li>
@@ -180,13 +195,18 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
       <main className="mx-auto w-full max-w-3xl space-y-6 px-4 py-6 pb-[max(2rem,env(safe-area-inset-bottom))] sm:py-8">
         <div className="flex items-center justify-between gap-4">
           <h1 className="text-2xl font-semibold tracking-tight">Your tests</h1>
-          <nav className={`${seg} w-44 sm:w-56`} aria-label="Measure">
-            {(["verbal", "quant"] as const).map((m) => (
-              <Link key={m} href={tabHref(m)} aria-current={measure === m ? "page" : undefined} className={`${segItem(measure === m)} capitalize`}>
-                {m}
-              </Link>
-            ))}
-          </nav>
+          <div className="flex items-center gap-2">
+            <nav className={`${seg} w-40 sm:w-56`} aria-label="Measure">
+              {(["verbal", "quant"] as const).map((m) => (
+                <Link key={m} href={tabHref(m)} aria-current={measure === m ? "page" : undefined} className={`${segItem(measure === m)} capitalize`}>
+                  {m}
+                </Link>
+              ))}
+            </nav>
+            <Link className={btn("primary", "sm")} href={`/create?m=${measure}`} aria-label="New quiz">
+              <IconPlus size={16} /> <span className="hidden sm:inline">New quiz</span>
+            </Link>
+          </div>
         </div>
         {drill && (drill.total > 0 || drill.misses > 0) && (
           <section className={`${row} flex flex-col gap-2.5 border-accent/40 bg-accent-soft sm:flex-row sm:items-center sm:gap-3`}>
@@ -228,7 +248,7 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
           </section>
         )}
         {all.length > 0 && <TestSearch tab={measure} q={query} />}
-        {tests.length === 0 &&
+        {views.length === 0 &&
           (query ? (
             <p className={`${card} p-6 text-center text-muted`}>
               No {measure} tests match “{query}”.
@@ -243,7 +263,10 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
               )}
             </p>
           ) : (
-            <p className={`${card} p-6 text-center text-muted`}>No {measure} tests yet. Ask Claude Code to run /new-test {measure}.</p>
+            <p className={`${card} p-6 text-center text-muted`}>
+              No {measure} quizzes yet.{" "}
+              <Link href={`/create?m=${measure}`} className="font-medium text-accent hover:underline">Make one</Link> from the question bank.
+            </p>
           ))}
         {inProgress.length > 0 && (
           <section className="space-y-2">
@@ -251,15 +274,15 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
             <ul className="space-y-2">{inProgress.map(progressRow)}</ul>
           </section>
         )}
-        {notStarted.length > 0 && (
+        {ready.length > 0 && (
           <section className="space-y-2">
-            <h2 className={eyebrow}>Not started</h2>
-            <ul className="space-y-2">{notStarted.map(newRow)}</ul>
+            <h2 className={eyebrow}>Ready</h2>
+            <ul className="space-y-2">{ready.map(readyRow)}</ul>
           </section>
         )}
         {finished.length > 0 && (
           // folded away by default; open when there is nothing else to show, or when searching
-          <details className="group/done space-y-2" open={!!query || inProgress.length + notStarted.length === 0}>
+          <details className="group/done space-y-2" open={!!query || inProgress.length + ready.length === 0}>
             <summary className={`${eyebrow} flex list-none items-center gap-1 hover:text-fg [&::-webkit-details-marker]:hidden`}>
               <IconNext size={14} className={`${chevron} group-open/done:rotate-90`} />
               Done · {finished.length}

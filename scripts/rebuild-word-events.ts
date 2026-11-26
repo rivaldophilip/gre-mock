@@ -8,7 +8,7 @@ config({ path: ".env.local" });
 import { and, eq, inArray, notInArray } from "drizzle-orm";
 import { schema } from "../lib/db";
 import { eventsForResponse } from "../lib/events";
-import { loadTestFile } from "./lib/sync";
+import { readSource } from "../lib/sources";
 import { targets } from "./lib/accounts";
 import type { Answer, Test } from "../lib/types";
 
@@ -21,13 +21,13 @@ async function main() {
     const responses = await db.select().from(schema.responses).where(eq(schema.responses.finalized, true));
     const tests = new Map<string, Test | null>();
     const testOf = (id: string) => {
-      if (!tests.has(id)) tests.set(id, loadTestFile(id));
+      if (!tests.has(id)) tests.set(id, readSource(id));
       return tests.get(id)!;
     };
     let changed = 0;
     for (const r of responses) {
       const a = attempts.get(r.attemptId);
-      const test = a && testOf(a.testId);
+      const test = a && !r.reused ? testOf(r.questionId.split(":")[0]) : null;
       const q = test?.questions.find((x) => `${test.id}:${x.id}` === r.questionId);
       if (!a || !test || !q || (q.type !== "tc" && q.type !== "se")) continue;
       const old = await db
