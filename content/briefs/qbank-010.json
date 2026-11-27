@@ -1,0 +1,1083 @@
+{
+ "testId": "qbank-010",
+ "measure": "quant",
+ "kind": "quant",
+ "seed": 19461,
+ "generatedAt": "2026-11-27T17:18:39.551Z",
+ "gaps": [
+  "revisit quant-008:s2q8 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q15 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q4 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q9 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q2 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q3 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q5 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q4 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q9 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q6 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q6 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q12 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q15 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q7 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q14 (you missed it; no sibling in the bank yet)",
+  "revisit quant-010:s1q7 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-010:s1q12 (you missed it; no sibling in the bank yet)",
+  "revisit quant-010:s1q3 (you missed it; no sibling in the bank yet)",
+  "revisit quant-010:s2q10 (you missed it; no sibling in the bank yet)"
+ ],
+ "slots": [
+  {
+   "slot": 1,
+   "qid": "s1q1",
+   "type": "mc",
+   "level": 3,
+   "concept": "random-variables",
+   "name": "Random variables, probability distributions, expected value",
+   "variant": "expected value from a probability table"
+  },
+  {
+   "slot": 2,
+   "qid": "s1q2",
+   "type": "qc",
+   "level": 5,
+   "concept": "random-variables",
+   "name": "Random variables, probability distributions, expected value",
+   "variant": "mean and median of a discrete distribution table"
+  },
+  {
+   "slot": 3,
+   "qid": "s1q3",
+   "type": "mc",
+   "level": 4,
+   "concept": "counting-restrictions",
+   "name": "Counting with restrictions and arrangements",
+   "variant": "at least one of a type in a selection"
+  },
+  {
+   "slot": 4,
+   "qid": "s1q4",
+   "type": "mc",
+   "level": 3,
+   "concept": "counting-restrictions",
+   "name": "Counting with restrictions and arrangements",
+   "variant": "digits with restrictions (no repeats, even, > 500)"
+  },
+  {
+   "slot": 5,
+   "qid": "s1q5",
+   "type": "qc",
+   "level": 3,
+   "concept": "graphs-of-functions",
+   "name": "Graphs of functions and parabolas, shifts and reflections",
+   "variant": "reading the value of f at a point from a graph"
+  },
+  {
+   "slot": 6,
+   "qid": "s1q6",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "graphs-of-functions",
+   "name": "Graphs of functions and parabolas, shifts and reflections",
+   "variant": "a shift, a stretch or a reflection of a graph"
+  },
+  {
+   "slot": 7,
+   "qid": "s1q7",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "lines-angles",
+   "name": "Lines and angles, parallel lines",
+   "variant": "parallel lines cut by a transversal"
+  },
+  {
+   "slot": 8,
+   "qid": "s1q8",
+   "type": "mc",
+   "level": 3,
+   "concept": "lines-angles",
+   "name": "Lines and angles, parallel lines",
+   "variant": "angles formed by several intersecting lines"
+  },
+  {
+   "slot": 9,
+   "qid": "s1q9",
+   "type": "mc",
+   "level": 5,
+   "concept": "lines-angles",
+   "name": "Lines and angles, parallel lines",
+   "variant": "angles around a point or on a straight line"
+  },
+  {
+   "slot": 10,
+   "qid": "s1q10",
+   "type": "mc",
+   "level": 4,
+   "concept": "lines-angles",
+   "name": "Lines and angles, parallel lines",
+   "variant": "angles formed by several intersecting lines"
+  },
+  {
+   "slot": 11,
+   "qid": "s1q11",
+   "type": "numeric",
+   "level": 4,
+   "concept": "lines-angles",
+   "name": "Lines and angles, parallel lines",
+   "variant": "angle bisectors"
+  },
+  {
+   "slot": 12,
+   "qid": "s1q12",
+   "type": "qc",
+   "level": 5,
+   "concept": "percent",
+   "name": "Percent, percent change, successive percent",
+   "variant": "finding the original value after a change"
+  },
+  {
+   "slot": 13,
+   "qid": "s1q13",
+   "type": "qc",
+   "level": 4,
+   "concept": "percent",
+   "name": "Percent, percent change, successive percent",
+   "variant": "percent of a percent across subgroups"
+  },
+  {
+   "slot": 14,
+   "qid": "s1q14",
+   "type": "mc",
+   "level": 3,
+   "concept": "area-perimeter",
+   "name": "Area and perimeter",
+   "variant": "the effect of scaling a side on the area"
+  },
+  {
+   "slot": 15,
+   "qid": "s1q15",
+   "type": "mc",
+   "level": 4,
+   "concept": "area-perimeter",
+   "name": "Area and perimeter",
+   "variant": "perimeter fixed, area varies (or the reverse)"
+  },
+  {
+   "slot": 16,
+   "qid": "s1q16",
+   "type": "mc",
+   "level": 5,
+   "concept": "fractions-decimals",
+   "name": "Fractions, decimals and decimal representation",
+   "variant": "rational vs irrational: which expressions must be rational"
+  },
+  {
+   "slot": 17,
+   "qid": "s1q17",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "fractions-decimals",
+   "name": "Fractions, decimals and decimal representation",
+   "variant": "complex (nested) fractions"
+  },
+  {
+   "slot": 18,
+   "qid": "s1q18",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "fractions-decimals",
+   "name": "Fractions, decimals and decimal representation",
+   "variant": "terminating vs repeating decimal from the denominator's prime factors"
+  },
+  {
+   "slot": 19,
+   "qid": "s1q19",
+   "type": "mc",
+   "level": 3,
+   "concept": "functions",
+   "name": "Functions, notation, composition and defined operations",
+   "variant": "domain restrictions (square roots, denominators)"
+  },
+  {
+   "slot": 20,
+   "qid": "s1q20",
+   "type": "numeric",
+   "level": 5,
+   "concept": "functions",
+   "name": "Functions, notation, composition and defined operations",
+   "variant": "domain restrictions (square roots, denominators)"
+  },
+  {
+   "slot": 21,
+   "qid": "s1q21",
+   "type": "mc",
+   "level": 5,
+   "concept": "inscribed-figures",
+   "name": "Inscribed and circumscribed figures, composite shapes",
+   "variant": "a square inscribed in a circle, or a circle in a square",
+   "revisit": {
+    "ref": "quant-008:s2q8",
+    "result": "missed",
+    "item": "Square $ABCD$ has sides of length 10. A circle passes through vertices $A$ and $B$ and is tangent to side $CD$. What is the radius of the circle? · choices: $5$ / $6$ / $\\dfrac{25}{4}$ / $5\\sqrt{2}$ / $\\dfrac{15}{2}$",
+    "setup": "circle through two vertices of a square and tangent to the opposite side; radius",
+    "change": "run it backwards: give what the earlier item asked for, and ask for one of its givens"
+   }
+  },
+  {
+   "slot": 22,
+   "qid": "s1q22",
+   "type": "qc",
+   "level": 4,
+   "concept": "integers-properties",
+   "name": "Integer properties, even/odd, divisibility",
+   "variant": "even/odd parity of sums and products of unknown integers",
+   "revisit": {
+    "ref": "quant-008:s2q15",
+    "result": "missed",
+    "item": "For how many ordered pairs of integers $(a, b)$ with $1 \\le a \\le 10$ and $1 \\le b \\le 10$ is $ab + a + b$ odd?",
+    "setup": "parity of ab + a + b through (a + 1)(b + 1) - 1; count pairs",
+    "change": "change the format (quantitative comparison, multiple choice or numeric entry) and the question asked"
+   }
+  },
+  {
+   "slot": 23,
+   "qid": "s1q23",
+   "type": "qc",
+   "level": 5,
+   "concept": "triangles",
+   "name": "Triangles: similar, isosceles, equilateral, inequality",
+   "variant": "angle chasing through isosceles triangles in a figure",
+   "revisit": {
+    "ref": "quant-009:s2q4",
+    "result": "missed",
+    "item": "In triangle $ABC$, $D$ is a point on side $AC$, and the segments $AD$, $BD$ and $BC$ all have the same length. Angle $BAC$ measures $36^\\circ$. · Quantity A: The measure of angle $ABC$, in degrees | Quantity B: $72$",
+    "setup": "isosceles chain AD = BD = BC with one angle given; exterior angle then base angles; compare an angle with a value",
+    "change": "combine the same insight with a second concept"
+   }
+  },
+  {
+   "slot": 24,
+   "qid": "s1q24",
+   "type": "numeric",
+   "level": 3,
+   "concept": "ratio-proportion",
+   "name": "Ratio and proportion",
+   "variant": "scale maps and models",
+   "revisit": {
+    "ref": "quant-009:s1q9",
+    "result": "missed",
+    "item": "On a map, 2.5 centimeters represent 15 kilometers. A rectangular park appears on the map as a rectangle 3 centimeters by 2 centimeters. What is the actual area of the park, in square kilometers?",
+    "setup": "a map scale applies to lengths; the actual area scales by its square",
+    "change": "keep the insight but move the trap: a different wrong path should tempt"
+   }
+  },
+  {
+   "slot": 25,
+   "qid": "s1q25",
+   "type": "di",
+   "level": 3,
+   "concept": "random-variables",
+   "name": "Random variables, probability distributions, expected value",
+   "unit": "d1",
+   "variant": "a uniform distribution over an interval"
+  },
+  {
+   "slot": 26,
+   "qid": "s1q26",
+   "type": "di",
+   "level": 4,
+   "concept": "random-variables",
+   "name": "Random variables, probability distributions, expected value",
+   "unit": "d1",
+   "variant": "mean and median of a discrete distribution table"
+  },
+  {
+   "slot": 27,
+   "qid": "s1q27",
+   "type": "di",
+   "level": 5,
+   "concept": "random-variables",
+   "name": "Random variables, probability distributions, expected value",
+   "unit": "d1",
+   "variant": "expected value from a probability table"
+  }
+ ],
+ "units": [
+  {
+   "id": "d1",
+   "shape": "di3"
+  }
+ ],
+ "conceptSlots": [
+  {
+   "concept": "random-variables",
+   "variant": "expected value from a probability table"
+  },
+  {
+   "concept": "random-variables",
+   "variant": "mean and median of a discrete distribution table"
+  },
+  {
+   "concept": "counting-restrictions",
+   "variant": "at least one of a type in a selection"
+  },
+  {
+   "concept": "counting-restrictions",
+   "variant": "digits with restrictions (no repeats, even, > 500)"
+  },
+  {
+   "concept": "graphs-of-functions",
+   "variant": "reading the value of f at a point from a graph"
+  },
+  {
+   "concept": "graphs-of-functions",
+   "variant": "a shift, a stretch or a reflection of a graph"
+  },
+  {
+   "concept": "lines-angles",
+   "variant": "parallel lines cut by a transversal"
+  },
+  {
+   "concept": "lines-angles",
+   "variant": "angles formed by several intersecting lines"
+  },
+  {
+   "concept": "lines-angles",
+   "variant": "angles around a point or on a straight line"
+  },
+  {
+   "concept": "lines-angles",
+   "variant": "angles formed by several intersecting lines"
+  },
+  {
+   "concept": "lines-angles",
+   "variant": "angle bisectors"
+  },
+  {
+   "concept": "percent",
+   "variant": "finding the original value after a change"
+  },
+  {
+   "concept": "percent",
+   "variant": "percent of a percent across subgroups"
+  },
+  {
+   "concept": "area-perimeter",
+   "variant": "the effect of scaling a side on the area"
+  },
+  {
+   "concept": "area-perimeter",
+   "variant": "perimeter fixed, area varies (or the reverse)"
+  },
+  {
+   "concept": "fractions-decimals",
+   "variant": "rational vs irrational: which expressions must be rational"
+  },
+  {
+   "concept": "fractions-decimals",
+   "variant": "complex (nested) fractions"
+  },
+  {
+   "concept": "fractions-decimals",
+   "variant": "terminating vs repeating decimal from the denominator's prime factors"
+  },
+  {
+   "concept": "functions",
+   "variant": "domain restrictions (square roots, denominators)"
+  },
+  {
+   "concept": "functions",
+   "variant": "domain restrictions (square roots, denominators)"
+  },
+  {
+   "concept": "inscribed-figures",
+   "variant": "a square inscribed in a circle, or a circle in a square"
+  },
+  {
+   "concept": "integers-properties",
+   "variant": "even/odd parity of sums and products of unknown integers"
+  },
+  {
+   "concept": "triangles",
+   "variant": "angle chasing through isosceles triangles in a figure"
+  },
+  {
+   "concept": "ratio-proportion",
+   "variant": "scale maps and models"
+  },
+  {
+   "concept": "random-variables",
+   "variant": "a uniform distribution over an interval"
+  },
+  {
+   "concept": "random-variables",
+   "variant": "mean and median of a discrete distribution table"
+  },
+  {
+   "concept": "random-variables",
+   "variant": "expected value from a probability table"
+  }
+ ],
+ "targets": {
+  "concepts": [
+   "random-variables",
+   "counting-restrictions",
+   "graphs-of-functions",
+   "lines-angles",
+   "percent",
+   "area-perimeter",
+   "fractions-decimals",
+   "functions"
+  ]
+ },
+ "history": {
+  "random-variables": [
+   {
+    "setup": "probability table where the median is not the middle listed value; mean minus median",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: expected days on site per employee, weighting by department share and the non-remote share, remote counted as 0",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "triangular density on an interval: find the peak height, then the area of a tail; compare with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a length uniform on an interval; probabilities about its square found by converting back to the length (the square is not uniform)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a continuous uniform variable and a discrete uniform integer on the same endpoints; compare the probabilities of the same at-most event (length share against inclusive count)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a density whose graph is one sloped segment with both end heights given; the probability of the lower half is a trapezoid area (average height times width), not the length share",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a prize table with two unknown positive probabilities whose sum is fixed; the expected value is linear in one of them, so it fills an open interval; select the attainable values (not the endpoints, not the mean of the prize values)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a table counts groups by size, but the random pick is a member, not a group; weight each size by its members to build the distribution, then find its mean and median (the per-group mean and median are the trap)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a step density at two heights, one twice the other, on two adjacent intervals; total area 1 fixes the heights, and a probability across the step adds two rectangles (not the length share)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a waiting time uniform on an interval; a conditional probability given that the event has not happened yet is a length share of the remaining interval, compared with an unconditional length share",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "counting-restrictions": [
+   {
+    "setup": "row seating: two people not adjacent and neither at an end",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "count integers in a range divisible by one number or another but not a third (inclusion-exclusion)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "lane assignment: two runners adjacent, a third not at either end",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "committee with at least one of a group and two people who cannot serve together",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "order items so that no two of one group are consecutive and the first isn't from it (gaps)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "count four-digit numbers whose digits have a given product",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "row with no two children adjacent and one child next to a given adult",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "schedule with one item before another but not adjacent, plus a slot restriction",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "identical items of three kinds with a cap per kind (stars and bars minus the overflows)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "crew with exactly k from one group and a one-way condition (A only if B); remove the forbidden pairs",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "row seating as a probability: two people non-adjacent with neither at an end, against a fraction",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "choose a set with at least one of each of three kinds: total minus sets missing one kind, plus the single-kind sets counted twice",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three-digit even numbers above a bound with distinct digits: the leading digit's parity changes the units count, so split into two cases",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "row order with a third person kept off both ends: two people adjacent compared with the same two exactly one place apart",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "choose a group from three kinds of different sizes with the same cap on every kind; the cap forces a single split pattern, counted by which kind takes the short share",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "grid routes as arrangements of identical east and north moves avoiding two blocked points: total minus routes through each, plus routes through both",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "choose a set from three kinds of distinct items with a different cap on two of the kinds and the third uncapped; casework or the complement of the two overflows, which cannot occur together",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "identical items of three kinds in a row; both items of one kind must lie between the two items of another; choose the places for those two kinds, then only one left-to-right pattern is allowed",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "an equally likely pick among three-digit numbers with a fixed digit product; list the digit multisets (one with a repeat) and their orders, then count the even ones above a bound",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "run backwards: the ratio of row orders with two people apart to those with them together is given; together is twice (n - 1)!, apart is the rest, so the ratio is (n - 2)/2; find n",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "orders of n tasks with one task barred from first place (complement) and one task required before another (half); the count is given and n is asked",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "graphs-of-functions": [
+   {
+    "setup": "parabola crossing the x-axis on both sides of the y-axis; compare b with c",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "piecewise-linear graph read at points between vertices after the input is reflected and shifted",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a graph symmetric about the y-axis shifted horizontally: compare values at two points equidistant from the new axis",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a function's unique maximum point; a reflected, stretched and shifted copy: compare where the copy's extreme value occurs with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a parabola against an absolute-value graph: solve on each piece and reject the roots outside that piece's domain; compare the count with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a graph symmetric about two parallel vertical lines: chaining the reflections links two values that neither reflection links alone; compare them",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a line through the origin against a V-shaped graph whose vertex is off the origin; the slopes for which they meet twice (between the flat line through the vertex and the far arm's slope)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "monic parabola with the gap between its x-intercepts and its y-intercept given; two mirror-image parabolas fit, so the vertex's side of the y-axis is undetermined",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a horizontal compression, a shift and a vertical stretch of a graph scale the area between it and the x-axis by the product of the two stretch factors (the shift changes nothing); compare with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a piecewise-linear graph read twice: find f(x) between vertices, then read f at that output; select the inputs where the composition is negative (not where f itself is negative)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a circle against a parabola: substitute to get a quadratic in y, keep the roots with x^2 = y + c nonnegative, and count one point (not two) where x = 0",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a graph unchanged by a half-turn about the origin with its formula given only for positive x; a value at a negative input fixes the unknown coefficient through f(-x) = -f(x); then evaluate at a positive input",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a level crossed twice on the negative side of a piecewise-linear graph, once at a grid point and once between grid lines on a steep segment; the graph read one unit to the right of each crossing falls on opposite sides of the level",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the zeros of a function given; the zeros after the input is multiplied by a constant (a horizontal compression, not a stretch)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two equal heights of a projectile give the axis; the launch at ground level mirrors to the landing point; intercept form gives the peak",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a line through a fixed point on the y-axis against a parabola; two intersection points from a positive discriminant; the tangent slopes are excluded and the negative branch is easy to miss",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a monic parabola known by its vertex; the sum of the squares of its x-intercepts from the root sum and product (the product is negative)",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "lines-angles": [
+   {
+    "setup": "two angle expressions at a transversal: equal or supplementary; select x",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a ray from the intersection of two lines makes given angles with each line; compare the acute angle between the lines with a value (ray inside or outside)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two internal angle bisectors of a triangle meet: the angle between them is 90 plus half the third angle, whatever the other two",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three concurrent lines with three marked angles, one across from an unmarked angle; solve along one line, then the obtuse angle between the other two lines",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "five lines with no three concurrent form a star; four point angles given; the fifth from the angle sum through exterior angles of small triangles",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "rays around a point with angles in a given ratio; the angle between two non-adjacent rays is the smaller way around",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a bent path between two parallel lines with the bend angle labeled as the sum of the two angles at the lines; the label is redundant, so the angle is undetermined",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a bisected angle with a second ray inside one half; the ray's offset from the bisector and the ratio of the two angles it makes with the sides; the whole angle",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the angle between an angle bisector and the altitude from the same vertex is given with one other angle; two signs give two candidates and the acute condition rejects one",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "clock hands at a given time: the hour hand's drift past its hour mark; the smaller angle between the hands",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "percent": [
+   {
+    "setup": "price up p% then down q% (or back to a reference); find the missing percent or value",
+    "worn": true,
+    "items": 3
+   },
+   {
+    "setup": "dilute a solution: add water to lower the concentration to a target percent",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: which categories' share of the total fell between two years",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "list price above cost, two successive discounts, final price; markup percent",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a rate falls from p% to q%: percent decrease against the percentage-point drop",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a price after one discount is given; find the original (divide by the remaining share)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the whole and a subgroup grow by different percents; percent change in the subgroup's share",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a percent of a subgroup that is itself a percent of the whole (part of a part)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two quantities rise by different percents but by the same absolute amount; compare one new value with a multiple of the other's old value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one group a percent larger than another, a different percent of each group taken; compare the two parts (the base offsets the rate)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a share rises by some percentage points, then falls by a percent of itself; with the starting share bounded, compare the final share with the starting one",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one group a percent larger than the other with no counts given; the smaller group's share of the whole against a value just above it",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "an absolute addition followed by a percent increase; undo them in reverse order to recover the original",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two complementary subgroups, each with its own rate; the overall percent is the sum of the two parts of parts, not the average of the two rates",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a share's rise given both in percentage points and as a percent of itself; recover the new share and compare it with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a fare up x% then down x% ends at a known value; recover the original by dividing by the net factor (not by applying the changes in reverse)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a value after a percent decrease is known only to lie in a range; the possible originals come from dividing both ends by the remaining share (not from adding the percent back)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a whole grows by one percent while one part, given as a share of the old whole, shrinks by another percent; the rest's percent change, measured against the rest's own old size (with no totals given)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a success rate rises by some percentage points while the number of attempts falls by a percent; the count of successes is rate times attempts, so the rate's rise is a percent of the old rate, not the point gain",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a part-to-part ratio rises by a percent with no counts given; the part-to-whole share r/(1 + r) always rises by a smaller percent, whatever the starting ratio; compare with the ratio's percent",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "area-perimeter": [
+   {
+    "setup": "uniform border around a rectangle; border area against the outer dimensions or perimeter",
+    "worn": true,
+    "items": 3
+   },
+   {
+    "setup": "rectangle from perimeter and diagonal; area via (a+b)^2 - (a^2+b^2)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "rectangle with a fixed diagonal; select possible perimeters (range)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "trade length for width at a fixed perimeter until a square; the area gain",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "corner cut from a rectangle: perimeter of the remaining L shape",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "perimeter of a composite figure: count only the outside edges (shared sides drop out)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "rectangle cut into four by two cuts; three areas given, find the fourth (integer sides)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "similar rectangles: the perimeter ratio and the larger area give the smaller area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one side scaled by a percent; the other side's percent change that gives a target area increase (factors multiply, not add)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one pair of sides of known length scaled by a percent at a fixed perimeter, the other pair unknown; the percent change in area is one expression in the unknown side, bounded by an unreachable limit; select the possible percent changes",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a rectangle with a fixed perimeter; select the possible diagonal lengths (the square gives the least, a flat rectangle the unreachable greatest)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a rectilinear floor plan with one corner cut off and a semicircular bay; the missing height and the bay's diameter come from the labeled pieces; area = rectangle minus triangle plus half-disk",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the region within a fixed distance outside a rectangle: side strips plus rounded quarter-disk corners, not a square-cornered frame",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "L-shaped region from a corner cut: the perimeter equals the full rectangle's, which gives the missing side; area is the rectangle minus the cut",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "fractions-decimals": [
+   {
+    "setup": "sum of two repeating decimals vs 1",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "compare (10^8 + 1)/(10^9 + 1) with (10^9 + 1)/(10^10 + 1)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "digits after the decimal point of k/(2^a 5^b) for odd k",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "tank goes from one fraction full to another after a draw; amount to fill",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "telescoping product of (1 - 1/k^2)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "which fraction lies between two close fractions",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "repeating decimal x; compare 1/x with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "an expression with surds whose irrational parts cancel; compare it with a whole number",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "which fraction terminates: reduce first, then check the denominator's primes",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a nonzero rational combined with an irrational: closure under sum, product and quotient against squares and reciprocal sums that can cancel",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "sum and product of two numbers rational; select the symmetric expressions forced rational, with conjugate counterexamples for the rest",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a fraction between 0 and 1 with unknown parts; which transformed fractions must exceed it (the same amount added to or taken from both parts, square, root, a mixed form)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the k-th digit of a repeating decimal with one non-repeating digit before the period, against a digit of a pure repeating decimal",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "1/n is known to terminate; select which related fractions must terminate (an extra factor 2, a 3 that cancels, one plus the fraction, a factor 3 that cannot cancel, a shifted denominator)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a two-level nested fraction in x below -1; the inner part is a positive number below 1, so its reciprocal exceeds 1 (the sign of 1/x flips the usual reading)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two fractions of the form n over n plus one with consecutive shifts; the variable lies where one denominator is negative and the other positive; compare them",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "functions": [
+   {
+    "setup": "minimum value of f(f(x)) for a quadratic f",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a function on a finite domain given by a table; the inputs fixed by applying f twice; compare one such input with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "odd function with a period: one value fixes the value two units away and forces a zero at half the period",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "linear function with a nonzero constant term: compare f(a + b) with f(a) + f(b) (the constant counts twice)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "count the integers in the domain of a quotient of square roots whose denominator subtracts a constant from a root (one hidden excluded point)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "f of a linear expression in x given; the input that gives a stated output (the solved x is not the answer)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a defined operation nested with an unknown in the inner pair; the outer value gives a square, and only the negative root's value is offered",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "finite-domain table with one output repeated three times; the sum of two inputs sharing that output against a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "f given on a shifted input; completing the square gives an even closed form; a zero of f has two signs, and f one step above against one step below the zero flips with the sign",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a pure square function: f(a + b) exceeds f(a) + f(b) by the cross term only; from the excess find the product",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a function repeating every two units, given by a square on one period; one solution per period counted over a window, and the negative root of the square is not a solution",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a quadratic and a linear function composed in both orders; set the two compositions equal and sum the irrational roots of the resulting quadratic",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a defined operation equal to a sum of reciprocals applied twice with the grouping moved; compare the two groupings (the operation is not associative)",
+    "worn": false,
+    "items": 1
+   }
+  ]
+ },
+ "exemplars": {
+  "random-variables": [],
+  "counting-restrictions": [
+   "ogq-t1-s5-11"
+  ],
+  "graphs-of-functions": [],
+  "lines-angles": [
+   "bb-t2s5-15",
+   "bb-t3s2-15"
+  ],
+  "percent": [
+   "bb-t1s3-29",
+   "ogq-t1-s5-15"
+  ],
+  "area-perimeter": [
+   "bb-t2s5-30",
+   "bb-t3s6-30"
+  ],
+  "fractions-decimals": [
+   "bb-t3s6-14",
+   "bb-t2s2-28"
+  ],
+  "functions": [
+   "bb-t1s7-10",
+   "ogq-t2-s5-22"
+  ]
+ }
+}

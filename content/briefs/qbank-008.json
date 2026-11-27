@@ -1,0 +1,903 @@
+{
+ "testId": "qbank-008",
+ "measure": "quant",
+ "kind": "quant",
+ "seed": 14428,
+ "generatedAt": "2026-11-27T17:18:34.526Z",
+ "gaps": [
+  "revisit quant-008:s2q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s1q8 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q5 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s1q1 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s1q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q13 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q7 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q14 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q8 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q15 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q4 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q9 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q2 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q3 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q5 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q4 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q9 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q6 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q6 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q12 (you missed it; no sibling in the bank yet)"
+ ],
+ "slots": [
+  {
+   "slot": 1,
+   "qid": "s1q1",
+   "type": "mc",
+   "level": 3,
+   "concept": "quadratics-factoring",
+   "name": "Factoring and quadratic equations",
+   "variant": "sum and product of the roots"
+  },
+  {
+   "slot": 2,
+   "qid": "s1q2",
+   "type": "numeric",
+   "level": 3,
+   "concept": "quadratics-factoring",
+   "name": "Factoring and quadratic equations",
+   "variant": "dividing by a variable that may be zero"
+  },
+  {
+   "slot": 3,
+   "qid": "s1q3",
+   "type": "numeric",
+   "level": 3,
+   "concept": "triangles",
+   "name": "Triangles: similar, isosceles, equilateral, inequality",
+   "variant": "isosceles or equilateral properties hidden in a figure"
+  },
+  {
+   "slot": 4,
+   "qid": "s1q4",
+   "type": "mc",
+   "level": 3,
+   "concept": "triangles",
+   "name": "Triangles: similar, isosceles, equilateral, inequality",
+   "variant": "exterior angle theorem"
+  },
+  {
+   "slot": 5,
+   "qid": "s1q5",
+   "type": "qc",
+   "level": 3,
+   "concept": "triangles",
+   "name": "Triangles: similar, isosceles, equilateral, inequality",
+   "variant": "isosceles or equilateral properties hidden in a figure"
+  },
+  {
+   "slot": 6,
+   "qid": "s1q6",
+   "type": "numeric",
+   "level": 3,
+   "concept": "sequences-patterns",
+   "name": "Sequences, series and patterns",
+   "variant": "geometric sequence or a repeating cycle of terms"
+  },
+  {
+   "slot": 7,
+   "qid": "s1q7",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "sequences-patterns",
+   "name": "Sequences, series and patterns",
+   "variant": "telescoping sum of differences"
+  },
+  {
+   "slot": 8,
+   "qid": "s1q8",
+   "type": "qc",
+   "level": 4,
+   "concept": "sequences-patterns",
+   "name": "Sequences, series and patterns",
+   "variant": "telescoping sum of differences"
+  },
+  {
+   "slot": 9,
+   "qid": "s1q9",
+   "type": "numeric",
+   "level": 4,
+   "concept": "sequences-patterns",
+   "name": "Sequences, series and patterns",
+   "variant": "recursive sequence: find a term or a sum"
+  },
+  {
+   "slot": 10,
+   "qid": "s1q10",
+   "type": "mc",
+   "level": 3,
+   "concept": "sequences-patterns",
+   "name": "Sequences, series and patterns",
+   "variant": "geometric sequence or a repeating cycle of terms"
+  },
+  {
+   "slot": 11,
+   "qid": "s1q11",
+   "type": "mc",
+   "level": 5,
+   "concept": "sequences-patterns",
+   "name": "Sequences, series and patterns",
+   "variant": "arithmetic sequence: n-th term, sum, count of terms"
+  },
+  {
+   "slot": 12,
+   "qid": "s1q12",
+   "type": "numeric",
+   "level": 3,
+   "concept": "data-interpretation-calc",
+   "name": "Data interpretation: percent and ratio from graphs",
+   "variant": "a value implied but not shown (derived total)"
+  },
+  {
+   "slot": 13,
+   "qid": "s1q13",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "data-interpretation-calc",
+   "name": "Data interpretation: percent and ratio from graphs",
+   "variant": "percent of a percent across two charts"
+  },
+  {
+   "slot": 14,
+   "qid": "s1q14",
+   "type": "mc",
+   "level": 5,
+   "concept": "data-interpretation-calc",
+   "name": "Data interpretation: percent and ratio from graphs",
+   "variant": "the percent increase between two periods"
+  },
+  {
+   "slot": 15,
+   "qid": "s1q15",
+   "type": "mc",
+   "level": 3,
+   "concept": "data-interpretation-calc",
+   "name": "Data interpretation: percent and ratio from graphs",
+   "variant": "estimation to pick the closest value"
+  },
+  {
+   "slot": 16,
+   "qid": "s1q16",
+   "type": "qc",
+   "level": 3,
+   "concept": "linear-equations",
+   "name": "Linear equations and simultaneous equations",
+   "variant": "a system with no solution or infinitely many"
+  },
+  {
+   "slot": 17,
+   "qid": "s1q17",
+   "type": "mc",
+   "level": 3,
+   "concept": "linear-equations",
+   "name": "Linear equations and simultaneous equations",
+   "variant": "solving for an expression (x + y) instead of each variable"
+  },
+  {
+   "slot": 18,
+   "qid": "s1q18",
+   "type": "mc",
+   "level": 5,
+   "concept": "linear-equations",
+   "name": "Linear equations and simultaneous equations",
+   "variant": "a literal equation: solve for one letter in terms of the others"
+  },
+  {
+   "slot": 19,
+   "qid": "s1q19",
+   "type": "qc",
+   "level": 3,
+   "concept": "exponential-growth",
+   "name": "Exponential growth and compound interest",
+   "variant": "compound interest against simple interest"
+  },
+  {
+   "slot": 20,
+   "qid": "s1q20",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "exponential-growth",
+   "name": "Exponential growth and compound interest",
+   "variant": "doubling or halving time"
+  },
+  {
+   "slot": 21,
+   "qid": "s1q21",
+   "type": "mc",
+   "level": 5,
+   "concept": "counting-permutations",
+   "name": "Counting: permutations and combinations",
+   "variant": "subset counts and the symmetry C(n, k) = C(n, n - k)",
+   "revisit": {
+    "ref": "quant-008:s2q11",
+    "result": "missed",
+    "item": "How many subsets of the set $\\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\}$ contain more even numbers than odd numbers? · choices: 252 / 386 / 512 / 638 / 772",
+    "setup": "subsets with more of one kind than another: symmetry pairs them, then remove the equal case",
+    "change": "run it backwards: give what the earlier item asked for, and ask for one of its givens"
+   }
+  },
+  {
+   "slot": 22,
+   "qid": "s1q22",
+   "type": "qc",
+   "level": 4,
+   "concept": "abs-value-inequalities",
+   "name": "Absolute-value equations and inequalities",
+   "variant": "|x - a| < b as a distance interval",
+   "revisit": {
+    "ref": "quant-008:s1q8",
+    "result": "missed",
+    "item": "The numbers $a$, $b$ and $c$ satisfy $|a - b| = 5$ and $|b - c| = 3$. Which of the following could be the value of $|a - c|$? Indicate all such values. · choices: $0$ / $2$ / $3$ / $5$ / $8$ / $15$",
+    "setup": "two distances from a shared point on the number line: the third distance is their sum or difference",
+    "change": "change the format (quantitative comparison, multiple choice or numeric entry) and the question asked"
+   }
+  },
+  {
+   "slot": 23,
+   "qid": "s1q23",
+   "type": "qc",
+   "level": 4,
+   "concept": "probability-basic",
+   "name": "Probability: independent events, complement",
+   "variant": "complement: at least one success",
+   "revisit": {
+    "ref": "quant-008:s2q5",
+    "result": "missed",
+    "item": "Whether a commuter's morning train is late and whether her evening bus is late are independent events. On any given day, the probability that the train is late is 0.5 and the probability that at least one of the two is late is 0.7. · Quantity A: The probability that the evening bus is late | Quantity B: $0.4$",
+    "setup": "P(A) and P(A or B) for independent events; compare P(B) with a value",
+    "change": "combine the same insight with a second concept"
+   }
+  },
+  {
+   "slot": 24,
+   "qid": "s1q24",
+   "type": "qc",
+   "level": 3,
+   "concept": "fractions-decimals",
+   "name": "Fractions, decimals and decimal representation",
+   "variant": "the k-th digit after the decimal point of a repeating decimal",
+   "revisit": {
+    "ref": "quant-008:s1q1",
+    "result": "missed",
+    "item": "$x = 0.\\overline{36}$ · Quantity A: $\\dfrac{1}{x}$ | Quantity B: $2.75$",
+    "setup": "repeating decimal x; compare 1/x with a value",
+    "change": "keep the insight but move the trap: a different wrong path should tempt"
+   }
+  },
+  {
+   "slot": 25,
+   "qid": "s1q25",
+   "type": "di",
+   "level": 3,
+   "concept": "data-interpretation-calc",
+   "name": "Data interpretation: percent and ratio from graphs",
+   "unit": "d1",
+   "variant": "estimation to pick the closest value"
+  },
+  {
+   "slot": 26,
+   "qid": "s1q26",
+   "type": "di",
+   "level": 4,
+   "concept": "data-interpretation-calc",
+   "name": "Data interpretation: percent and ratio from graphs",
+   "unit": "d1",
+   "variant": "a ratio between two categories in different graphs"
+  },
+  {
+   "slot": 27,
+   "qid": "s1q27",
+   "type": "di",
+   "level": 5,
+   "concept": "data-interpretation-calc",
+   "name": "Data interpretation: percent and ratio from graphs",
+   "unit": "d1",
+   "variant": "the percent increase between two periods"
+  }
+ ],
+ "units": [
+  {
+   "id": "d1",
+   "shape": "di3"
+  }
+ ],
+ "conceptSlots": [
+  {
+   "concept": "quadratics-factoring",
+   "variant": "sum and product of the roots"
+  },
+  {
+   "concept": "quadratics-factoring",
+   "variant": "dividing by a variable that may be zero"
+  },
+  {
+   "concept": "triangles",
+   "variant": "isosceles or equilateral properties hidden in a figure"
+  },
+  {
+   "concept": "triangles",
+   "variant": "exterior angle theorem"
+  },
+  {
+   "concept": "triangles",
+   "variant": "isosceles or equilateral properties hidden in a figure"
+  },
+  {
+   "concept": "sequences-patterns",
+   "variant": "geometric sequence or a repeating cycle of terms"
+  },
+  {
+   "concept": "sequences-patterns",
+   "variant": "telescoping sum of differences"
+  },
+  {
+   "concept": "sequences-patterns",
+   "variant": "telescoping sum of differences"
+  },
+  {
+   "concept": "sequences-patterns",
+   "variant": "recursive sequence: find a term or a sum"
+  },
+  {
+   "concept": "sequences-patterns",
+   "variant": "geometric sequence or a repeating cycle of terms"
+  },
+  {
+   "concept": "sequences-patterns",
+   "variant": "arithmetic sequence: n-th term, sum, count of terms"
+  },
+  {
+   "concept": "data-interpretation-calc",
+   "variant": "a value implied but not shown (derived total)"
+  },
+  {
+   "concept": "data-interpretation-calc",
+   "variant": "percent of a percent across two charts"
+  },
+  {
+   "concept": "data-interpretation-calc",
+   "variant": "the percent increase between two periods"
+  },
+  {
+   "concept": "data-interpretation-calc",
+   "variant": "estimation to pick the closest value"
+  },
+  {
+   "concept": "linear-equations",
+   "variant": "a system with no solution or infinitely many"
+  },
+  {
+   "concept": "linear-equations",
+   "variant": "solving for an expression (x + y) instead of each variable"
+  },
+  {
+   "concept": "linear-equations",
+   "variant": "a literal equation: solve for one letter in terms of the others"
+  },
+  {
+   "concept": "exponential-growth",
+   "variant": "compound interest against simple interest"
+  },
+  {
+   "concept": "exponential-growth",
+   "variant": "doubling or halving time"
+  },
+  {
+   "concept": "counting-permutations",
+   "variant": "subset counts and the symmetry C(n, k) = C(n, n - k)"
+  },
+  {
+   "concept": "abs-value-inequalities",
+   "variant": "|x - a| < b as a distance interval"
+  },
+  {
+   "concept": "probability-basic",
+   "variant": "complement: at least one success"
+  },
+  {
+   "concept": "fractions-decimals",
+   "variant": "the k-th digit after the decimal point of a repeating decimal"
+  },
+  {
+   "concept": "data-interpretation-calc",
+   "variant": "estimation to pick the closest value"
+  },
+  {
+   "concept": "data-interpretation-calc",
+   "variant": "a ratio between two categories in different graphs"
+  },
+  {
+   "concept": "data-interpretation-calc",
+   "variant": "the percent increase between two periods"
+  }
+ ],
+ "targets": {
+  "concepts": [
+   "quadratics-factoring",
+   "triangles",
+   "sequences-patterns",
+   "data-interpretation-calc",
+   "linear-equations",
+   "exponential-growth"
+  ]
+ },
+ "history": {
+  "quadratics-factoring": [
+   {
+    "setup": "x^2 + kx + c with two distinct positive integer roots; possible k",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "squares of the sum and of the difference given; find the product",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "equation linear in x and sqrt x: substitute, reject the negative root; sum of solutions",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a cubic with no constant term has three distinct nonnegative integer solutions: factor out x (zero is one root), then factor pairs of the constant give the coefficient",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a product of two linear factors set equal to a positive constant with unknown parameters; the discriminant is a square plus a positive term, so the solution count is fixed",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two equations sharing a factor of one variable; cancelling it pins the other variable, but the factor can be zero and then frees it; compare the other variable with the pinned value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one squared quadratic equals another squared expression; factor as a difference of squares into two quadratics; the sum of all real roots (the one-sided equation misses a factor)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a quadratic with no real root bounds its constant; the same quadratic set equal to a positive number; compare its solution count with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a monic quadratic with fixed sum of roots and a free constant; the sum of squares of the roots from sum and product, bounded below by requiring two distinct real roots",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a quadratic in a quadratic expression of x; back-substitution gives two quadratics, one a perfect square with a repeated root, so the sum of the different solutions is not the sum of both root sums",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two squares whose sides differ by a given amount and areas by another; the difference of squares gives the sum of the sides, then the combined area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a negative constant appears in two quadratics: in one it is moved across the equals sign and its sign decides the discriminant; in the other a negative constant term forces two roots",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "triangles": [
+   {
+    "setup": "two sides given and an obtuse (or bounded) angle; the third side's range from c^2 against a^2 + b^2",
+    "worn": true,
+    "items": 3
+   },
+   {
+    "setup": "13-14-15 triangle: altitude to one side via Heron or two right triangles",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "isosceles with sides 4 and 9: the third side must be 9; perimeter vs a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "isosceles triangle with one 40° angle: two cases; compare the largest angle with twice the smallest",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a line parallel to one side cuts off a similar triangle; compare the trapezoid with the small triangle (areas scale as squares)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "isosceles chain AD = BD = BC with one angle given; exterior angle then base angles; compare an angle with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "exterior angle equals the sum of the two remote interior angles; split it by a given difference",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "obtuse triangle with three integer sides: the altitude to the shortest side falls outside it; find it from the area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two sides of a triangle given; perimeter of the midpoint triangle against the value at the triangle-inequality bound",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one side and the altitude to it given; select possible lengths of another side (the foot may fall outside the base)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "lower bounds on two exterior angles of a triangle; add the two exterior-angle relations to bound the third interior angle",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a trapezoid's midline cut by a diagonal into two midsegments, each half of one base; from the midline and the pieces' difference, compare the shorter base with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three points on a circle joined to its center; two given angles at the circle are base angles of triangles made isosceles only by equal radii; the central angle between two of the points",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a cut-off triangle similar to the whole with the vertices matched crosswise (not parallel to the third side); the area ratio against a fraction",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a diagonal splits a trapezoid into two triangles with the same height between the parallel sides; their areas are in the ratio of the bases; compare one with a percent of the whole figure",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a quadrilateral's four sides given with a diagonal shared by two triangles; the tighter triangle inequality caps the diagonal; compare one triangle's perimeter with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two sides fixed and the third an integer chosen at random among those that close a triangle; obtuse either opposite the third side or opposite the larger given side; probability over the triangle-inequality range",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two sides given, the angle between them is the largest and acute; the third side must be longer than both and below the Pythagorean value; pick the one possible length",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a parallel cut gives a small triangle and a trapezoid with their areas; the side ratio comes from the small triangle against the whole, not against the trapezoid; compare the cut with a fraction of the base",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "sequences-patterns": [
+   {
+    "setup": "recursive a_{n+1} = 1/(1 - a_n) cycles with period 3; sum of 100 terms",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "recursive sequence whose step is a partial-fraction term; the nth term by telescoping, with an off-by-one in the term count",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "linear recursion doubling minus one: shift by 1 to get powers of 2; first term past a bound",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a recursion with period four; sum of the terms whose index is a multiple of three up to a bound",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a list of squares with alternating signs: pair consecutive terms into differences of squares; an odd number of terms leaves one unpaired",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two arithmetic sequences with different differences and starts; their common terms form an arithmetic sequence with the lcm as difference; count those inside a window that does not start at the first term",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two-term additive recursion with two terms two places apart given; recover the middle term, run backward to the start, then a later term and a partial sum",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "first term, common difference and last term given; count the terms, then the sum",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the sum of the multiples of 3 up to an unknown bound is 3 times a triangular number; select the totals that can occur",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a two-term difference recursion from two given starting terms repeats every six terms with block sum zero; select the sums over index ranges that equal zero",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "data-interpretation-calc": [
+   {
+    "setup": "DI: percent increase of a combined total (all categories but one) between two years",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: percent greater between two groups' counts",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: one category's percent of a total across groups",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: percent increase in the total across all categories",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: percent change of one category between two years",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: one category's percent increase as a multiple of another's percent decrease",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: a stated fraction of one subgroup gives a count; its percent of the whole group",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: percentage-point difference between two groups' shares",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: total of one status across groups, each from a percent of a different base",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: read each box plot's interquartile range and count those meeting a bound",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: compare two departments' non-remote counts, each the complement of a within-department percent applied to a percent of the whole",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: share of all units (not of orders) that sit in the larger-order rows of a frequency table",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: percent less between two groups' counts, with the larger count as the base",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: each group's total is its count times its mean (not shown); percent greater between two groups' totals",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: two rows of a within-group percent table combined, then applied to that group's share of the whole from a second chart; the cell's share of the whole",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "stacked bars: one category's multi-year total as a percent of another category's total; estimate to the nearest choice",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "linear-equations": [
+   {
+    "setup": "counts of items at two or three prices from a total count and revenue",
+    "worn": true,
+    "items": 2
+   },
+   {
+    "setup": "for which k a 2x2 linear system has no solution",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "count integer k for which a 2x2 system has an integer solution",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three item counts, two price lists and totals; greatest possible count of one",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two linear equations in three unknowns; a third combination is determined",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "1/a + 1/b = 1/c with positive values: solve for c and compare it with a",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "solve y = (ax + b)/(x - 1) for x: collect the x terms and factor",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "sum and difference linked by a multiple: find both, then the larger is their average",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two equations that are multiples of one line: count the positive integer solutions of that line",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a price after a percent discount plus a flat fee, solved for the discount rate (move the fee before dividing; the fee's sign flips)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a 2x2 system with no solution fixes the constant (one root makes the lines coincide); the axis intercepts of the two parallel lines form a quadrilateral whose area comes from its perpendicular diagonals",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a product formula with a coefficient times a square root of two variables: solve for one variable under the root (square both sides, the coefficient included)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two equations in three unknowns in which two unknowns enter only as the same combination; a single unknown and that combination are both fixed; compare them",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a 2x2 system with a negative integer parameter and an integer solution; elimination gives (8 - k)x = 15, and 8 - k >= 9 leaves one divisor; then x + y",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "integer coefficient pairs that make a 2x2 system singular: the product condition has negative factor pairs too, and one pair makes the lines coincide, so it is excluded",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a weighted-grade formula solved for the weight: collect the weight's terms and factor; select the equivalent forms, including a negated fraction and one written as 100 minus the other weight",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two lines that never meet: the slopes force the coefficient, but the constant is only kept off one value; compare the coefficient with the constant",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one linear equation in two unknowns simplifies to a fixed sum; select the expressions fixed by the sum alone (a perfect square of it, a power product), not one that still needs the product",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two price totals for three items with arithmetic-progression counts; the one-of-each total is a combination of the two equations, while the easy difference gives a different basket",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "exponential-growth": [
+   {
+    "setup": "constant yearly growth with an overall 700% increase; percent over a third of the period",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two decaying amounts with different halving times and a starting ratio; time when they are equal",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the two-year gap between compound and simple interest is the principal times the rate squared: recover the rate, then the simple interest",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two exponential models whose different-looking bases and exponents rewrite to the same yearly factor; a constant ratio",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two exponential models each known at the same two times; the factor for half the gap is the square root; extrapolate both back and compare",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "constant percent growth with the overall percent increase over the period; the value at the halfway point against the average of the starting and ending values (geometric against arithmetic mean)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two deposits made one doubling period apart in an account with a fixed doubling time; the time from opening until the balance reaches a target (combine at the second deposit, then count doublings)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "equal deposits at the same rate, one simple and one compounded yearly, run for three years; select the true statements on balances, a single year's interest, the gap and the percent gain",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "growth by a fixed factor per period; the number of days to reach a larger factor, solved by writing both factors as powers of a common base (a non-whole number of periods)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two growth models with different periods, one stated as a percent increase per period equal to the other's factor; count the periods for each over one span and take the ratio of the powers",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a fixed percent loss per period; the time to fall to half against the linear estimate of 50 over the percent (compounding losses take longer)",
+    "worn": false,
+    "items": 1
+   }
+  ]
+ },
+ "exemplars": {
+  "quadratics-factoring": [
+   "bb-t3s2-14",
+   "ogq-t2-s6-6"
+  ],
+  "triangles": [
+   "bb-t1s3-12",
+   "bb-t3s6-15"
+  ],
+  "sequences-patterns": [
+   "ogq-set3-12",
+   "bb-t2s2-11"
+  ],
+  "data-interpretation-calc": [
+   "bb-t2s5-24",
+   "ogq-set4-3"
+  ],
+  "linear-equations": [
+   "ogq-t1-s6-8",
+   "bb-t1s3-27"
+  ],
+  "exponential-growth": []
+ }
+}

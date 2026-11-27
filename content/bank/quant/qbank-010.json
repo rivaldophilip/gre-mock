@@ -1,0 +1,1189 @@
+{
+  "id": "qbank-010",
+  "measure": "quant",
+  "title": "Quant bank batch 10",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Probability distribution of $X$, the number of days with measurable rain in a randomly chosen week.",
+      "table": {
+        "head": [
+          "$X$",
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "rows": [
+          [
+            "Probability",
+            "0.10",
+            "0.25",
+            "?",
+            "0.20",
+            "0.15"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fig2",
+      "caption": "Probability distribution of $X$, the number of curtain calls at a performance.",
+      "table": {
+        "head": [
+          "$X$",
+          "1",
+          "2",
+          "3",
+          "5",
+          "8"
+        ],
+        "rows": [
+          [
+            "Probability",
+            "0.20",
+            "$a$",
+            "$b$",
+            "0.15",
+            "0.10"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fig3",
+      "caption": "The graph of $y = f(x)$ for $-4 \\le x \\le 5$.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 260' width='380' height='260' font-family='sans-serif' font-size='12'><line x1='15.0' y1='190' x2='369.0' y2='190' stroke='currentColor' stroke-width='1'/><line x1='180' y1='226.0' x2='180' y2='22.0' stroke='currentColor' stroke-width='1'/><text x='373.0' y='194' fill='currentColor'>x</text><text x='185' y='26.0' fill='currentColor'>y</text><text x='170' y='204' fill='currentColor'>O</text><line x1='30' y1='187' x2='30' y2='193' stroke='currentColor' stroke-width='1'/><line x1='60' y1='187' x2='60' y2='193' stroke='currentColor' stroke-width='1'/><line x1='90' y1='187' x2='90' y2='193' stroke='currentColor' stroke-width='1'/><line x1='120' y1='187' x2='120' y2='193' stroke='currentColor' stroke-width='1'/><line x1='150' y1='187' x2='150' y2='193' stroke='currentColor' stroke-width='1'/><line x1='210' y1='187' x2='210' y2='193' stroke='currentColor' stroke-width='1'/><line x1='240' y1='187' x2='240' y2='193' stroke='currentColor' stroke-width='1'/><line x1='270' y1='187' x2='270' y2='193' stroke='currentColor' stroke-width='1'/><line x1='300' y1='187' x2='300' y2='193' stroke='currentColor' stroke-width='1'/><line x1='330' y1='187' x2='330' y2='193' stroke='currentColor' stroke-width='1'/><line x1='360' y1='187' x2='360' y2='193' stroke='currentColor' stroke-width='1'/><line x1='177' y1='220' x2='183' y2='220' stroke='currentColor' stroke-width='1'/><line x1='177' y1='160' x2='183' y2='160' stroke='currentColor' stroke-width='1'/><line x1='177' y1='130' x2='183' y2='130' stroke='currentColor' stroke-width='1'/><line x1='177' y1='100' x2='183' y2='100' stroke='currentColor' stroke-width='1'/><line x1='177' y1='70' x2='183' y2='70' stroke='currentColor' stroke-width='1'/><line x1='177' y1='40' x2='183' y2='40' stroke='currentColor' stroke-width='1'/><polyline points='60,160 150,70 210,190 330,130' fill='none' stroke='currentColor' stroke-width='2'/><circle cx='60' cy='160' r='3' fill='currentColor'/><text x='16' y='152' fill='currentColor'>(-4, 1)</text><circle cx='150' cy='70' r='3' fill='currentColor'/><text x='132' y='60' fill='currentColor'>(-1, 4)</text><circle cx='210' cy='190' r='3' fill='currentColor'/><text x='216' y='206' fill='currentColor'>(1, 0)</text><circle cx='330' cy='130' r='3' fill='currentColor'/><text x='316' y='120' fill='currentColor'>(5, 2)</text><text x='276.0' y='134.0' fill='currentColor' font-style='italic'>y = f(x)</text></svg>"
+    },
+    {
+      "id": "fig4",
+      "caption": "Note: Figure not drawn to scale.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 260' width='380' height='260' font-family='serif' font-size='15'><line x1='15.0' y1='200.0' x2='356.0' y2='200.0' stroke='currentColor' stroke-width='1.5'/><line x1='18.1' y1='243.5' x2='262.7' y2='38.3' stroke='currentColor' stroke-width='1.5'/><line x1='311.5' y1='237.3' x2='193.1' y2='32.1' stroke='currentColor' stroke-width='1.5'/><text x='64.0' y='218.0' fill='currentColor'>P</text><text x='292.0' y='218.0' fill='currentColor'>Q</text><text x='213.2' y='65.6' fill='currentColor'>R</text><text x='8.7' y='220.3' fill='currentColor'>40°</text><text x='304.3' y='175.2' fill='currentColor'>120°</text><text x='216.6' y='110.8' fill='currentColor'>x°</text></svg>"
+    },
+    {
+      "id": "fig5",
+      "caption": "Note: Figure not drawn to scale.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 300' width='330' height='300' font-family='serif' font-size='15'><line x1='19.8' y1='165.5' x2='222.1' y2='10.3' stroke='currentColor' stroke-width='1.5'/><line x1='14.5' y1='148.9' x2='269.3' y2='160.0' stroke='currentColor' stroke-width='1.5'/><line x1='19.8' y1='134.5' x2='222.1' y2='289.7' stroke='currentColor' stroke-width='1.5'/><line x1='176.1' y1='280.7' x2='165.1' y2='29.4' stroke='currentColor' stroke-width='1.5'/><text x='24.0' y='155.0' fill='currentColor'>O</text><text x='174.1' y='47.2' fill='currentColor'>P</text><text x='182.9' y='267.5' fill='currentColor'>Q</text><text x='178.6' y='147.7' fill='currentColor'>R</text><text x='226.1' y='14.3' fill='currentColor' font-style='italic'>ℓ₁</text><text x='273.3' y='164.0' fill='currentColor' font-style='italic'>ℓ₂</text><text x='226.1' y='293.7' fill='currentColor' font-style='italic'>ℓ₃</text><text x='169.1' y='33.4' fill='currentColor' font-style='italic'>m</text><text x='78.6' y='139.7' fill='currentColor'>40°</text><text x='77.9' y='172.4' fill='currentColor'>35°</text><text x='198.4' y='239.9' fill='currentColor'>130°</text><text x='144.6' y='141.7' fill='currentColor'>x°</text></svg>"
+    },
+    {
+      "id": "d1",
+      "caption": "Each policyholder of an insurer is classified by the number of claims the policyholder filed in 2025. For every claim, the number of days the insurer took to process it is uniformly distributed between 5 days and 25 days.",
+      "table": {
+        "head": [
+          "Number of claims filed in 2025",
+          "Percent of policyholders"
+        ],
+        "rows": [
+          [
+            "0",
+            "40%"
+          ],
+          [
+            "1",
+            "25%"
+          ],
+          [
+            "2",
+            "20%"
+          ],
+          [
+            "3",
+            "10%"
+          ],
+          [
+            "4",
+            "5%"
+          ]
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "figureId": "fig1",
+      "prompt": "A weather station records $X$, the number of days in a randomly chosen week on which measurable rain falls. The table gives the probability distribution of $X$, except that the probability for $X = 2$ is missing. What is the expected value of $X$?",
+      "choices": [
+        "$1.45$",
+        "$1.90$",
+        "$2.00$",
+        "$2.05$",
+        "$2.50$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The probabilities sum to 1, so $P(X = 2) = 1 - (0.10 + 0.25 + 0.20 + 0.15) = 0.30$. Then $E(X) = 0(0.10) + 1(0.25) + 2(0.30) + 3(0.20) + 4(0.15) = 2.05$.",
+        "steps": [
+          "1. Missing probability: $1 - 0.70 = 0.30$.",
+          "2. Weight each value by its probability: $0 + 0.25 + 0.60 + 0.60 + 0.60$.",
+          "3. $E(X) = 2.05$."
+        ],
+        "fast": "Find the gap to 1 first, then sum value times probability.",
+        "trap": "Leaving the missing row out gives $1.45$; averaging the five values $0$ to $4$ without weights gives $2.00$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "random-variables",
+          "role": "primary"
+        }
+      ],
+      "setup": "a probability table with one probability left blank; the blank comes from the total of 1, then weight each value",
+      "variant": "expected value from a probability table",
+      "solverRating": 1
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "figureId": "fig2",
+      "prompt": "At each performance of a touring ballet, the number of curtain calls $X$ has the probability distribution in the table, where $a$ and $b$ are positive constants. The mean of $X$ is $3.05$.",
+      "qc": {
+        "a": "The median of $X$",
+        "b": "$2.5$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The probabilities sum to 1: $a + b = 0.55$. The mean gives $0.20 + 2a + 3b + 0.75 + 0.80 = 3.05$, so $2a + 3b = 1.30$. Then $b = 0.20$ and $a = 0.35$. Cumulative: $P(X \\le 1) = 0.20$, $P(X \\le 2) = 0.55 \\ge 0.5$, so the median is $2$, less than $2.5$.",
+        "steps": [
+          "1. Total: $0.20 + a + b + 0.15 + 0.10 = 1$, so $a + b = 0.55$.",
+          "2. Mean: $1(0.20) + 2a + 3b + 5(0.15) + 8(0.10) = 3.05$, so $2a + 3b = 1.30$.",
+          "3. Subtract twice the first: $b = 1.30 - 1.10 = 0.20$, so $a = 0.35$.",
+          "4. Cumulative probabilities: $0.20$ at $1$, $0.55$ at $2$; the first to reach $0.5$ is at $X = 2$.",
+          "5. Median $2 < 2.5$: Quantity B is greater."
+        ],
+        "fast": "Once $a = 0.35$, the first two rows hold $0.55$ of the probability, so the median is $2$.",
+        "trap": "Taking the middle listed value, $3$, as the median (A greater), or assuming the large values $5$ and $8$ push the median above $2.5$; the median follows the cumulative probability, not the list."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "random-variables",
+          "role": "primary"
+        }
+      ],
+      "setup": "a table with two unknown probabilities fixed by the total and a given mean; the median then falls below the middle listed value; compare it with a value",
+      "variant": "mean and median of a discrete distribution table",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A pianist will play a recital of 4 different pieces, one after another, chosen from a list of 9 pieces. Exactly 3 of the 9 pieces are by Bach. How many different recitals, counting the order of the pieces, include at least one piece by Bach?",
+      "choices": [
+        "$111$",
+        "$360$",
+        "$2{,}664$",
+        "$3{,}024$",
+        "$4{,}032$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Ordered recitals of 4 from 9: $9 \\cdot 8 \\cdot 7 \\cdot 6 = 3{,}024$. Those with no Bach use only the other 6 pieces: $6 \\cdot 5 \\cdot 4 \\cdot 3 = 360$. At least one Bach: $3{,}024 - 360 = 2{,}664$.",
+        "steps": [
+          "1. All ordered recitals: $9 \\cdot 8 \\cdot 7 \\cdot 6 = 3{,}024$.",
+          "2. Recitals with no Bach: $6 \\cdot 5 \\cdot 4 \\cdot 3 = 360$.",
+          "3. Complement: $3{,}024 - 360 = 2{,}664$."
+        ],
+        "fast": "Total minus none, both counted in order.",
+        "trap": "Counting unordered sets gives $126 - 15 = 111$; fixing one Bach piece first and filling the rest, $3 \\cdot 8 \\cdot 7 \\cdot 6 \\cdot 4 = 4{,}032$, counts recitals with two or three Bach pieces more than once."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-restrictions",
+          "role": "primary"
+        }
+      ],
+      "setup": "an ordered selection that must include at least one item of a kind: all orders minus the orders using none of that kind",
+      "variant": "at least one of a type in a selection",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "A theater's box office prints a three-digit code on each season pass. Every digit of a code is even, no digit appears twice in the same code, and every code is greater than $500$. How many different codes are possible?",
+      "choices": [
+        "$12$",
+        "$24$",
+        "$36$",
+        "$48$",
+        "$50$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The even digits are $0, 2, 4, 6, 8$. A code above $500$ with an even first digit starts with $6$ or $8$. The tens digit is any of the 4 even digits left, and the units digit any of the 3 left: $2 \\cdot 4 \\cdot 3 = 24$.",
+        "steps": [
+          "1. Hundreds digit: even and at least $5$, so $6$ or $8$ (2 ways).",
+          "2. Tens digit: one of the 4 remaining even digits, $0$ allowed.",
+          "3. Units digit: one of the 3 still unused.",
+          "4. $2 \\cdot 4 \\cdot 3 = 24$."
+        ],
+        "fast": "Two leading digits, then arrange 2 of the 4 remaining even digits: $2 \\cdot 12$.",
+        "trap": "Allowing repeated digits gives $2 \\cdot 5 \\cdot 5 = 50$; leaving out $0$ gives $2 \\cdot 3 \\cdot 2 = 12$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-restrictions",
+          "role": "primary"
+        }
+      ],
+      "setup": "three-digit codes above a bound with every digit even and no repeats: the bound and the evenness leave two leading digits, then arrange the rest of the even digits",
+      "variant": "digits with restrictions (no repeats, even, > 500)",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "figureId": "fig3",
+      "prompt": "The graph of the function $f$ consists of the three line segments shown, joining the labeled points.",
+      "qc": {
+        "a": "$f(-2)$",
+        "b": "$f(0) + f(3)$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "On the segment from $(-4, 1)$ to $(-1, 4)$ the slope is $1$, so $f(-2) = 3$. On the segment from $(-1, 4)$ to $(1, 0)$ the slope is $-2$, so $f(0) = 2$. On the segment from $(1, 0)$ to $(5, 2)$ the slope is $\\tfrac12$, so $f(3) = 1$. B $= 2 + 1 = 3$, equal to A.",
+        "steps": [
+          "1. $f(-2)$: two units right of $(-4, 1)$ at slope $1$: $3$.",
+          "2. $f(0)$: one unit right of $(-1, 4)$ at slope $-2$: $2$.",
+          "3. $f(3)$: two units right of $(1, 0)$ at slope $\\tfrac12$: $1$.",
+          "4. A $= 3$, B $= 3$: equal."
+        ],
+        "fast": "$f(0)$ is the midpoint height of the middle segment, $2$; $f(3)$ is the midpoint height of the last, $1$.",
+        "trap": "Reading $f(0)$ as the $y$-coordinate where the graph meets the axis near $(1, 0)$, or treating $f(3)$ as $2$ (the height at the right end), makes B look larger or smaller."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "graphs-of-functions",
+          "role": "primary"
+        }
+      ],
+      "setup": "a piecewise-linear graph with labeled vertices; read f at three inputs between vertices by slope and compare one value with the sum of the other two",
+      "variant": "reading the value of f at a point from a graph",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "The graph of $y = x^2$ is shifted 2 units to the right. The resulting graph is then stretched horizontally by a factor of 2, away from the $y$-axis, so that each point $(x, y)$ moves to $(2x, y)$. Which of the following are equations of the final graph?<br>Indicate all such equations.",
+      "choices": [
+        "$y = \\left(\\dfrac{x}{2} - 2\\right)^2$",
+        "$y = \\dfrac{1}{4}(x - 4)^2$",
+        "$y = \\left(2 - \\dfrac{x}{2}\\right)^2$",
+        "$y = \\left(\\dfrac{x}{2} - 1\\right)^2$",
+        "$y = \\dfrac{1}{4}(x - 2)^2$",
+        "$y = \\dfrac{1}{2}(x - 4)^2$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The shift gives $y = (x - 2)^2$. Stretching horizontally by 2 replaces $x$ with $\\tfrac{x}{2}$: $y = \\left(\\tfrac{x}{2} - 2\\right)^2 = \\tfrac14(x - 4)^2$, and since a square ignores sign, $\\left(2 - \\tfrac{x}{2}\\right)^2$ is the same. The vertex moves from $(2, 0)$ to $(4, 0)$.",
+        "steps": [
+          "1. Shift right 2: $y = (x - 2)^2$, vertex $(2, 0)$.",
+          "2. Stretch: a point $(x, y)$ of the new graph came from $\\left(\\tfrac{x}{2}, y\\right)$, so $y = \\left(\\tfrac{x}{2} - 2\\right)^2$.",
+          "3. Factor out $\\tfrac12$: $\\left(\\tfrac{x - 4}{2}\\right)^2 = \\tfrac14(x - 4)^2$.",
+          "4. $\\left(2 - \\tfrac{x}{2}\\right)^2 = \\left(\\tfrac{x}{2} - 2\\right)^2$.",
+          "5. Not $\\left(\\tfrac{x}{2} - 1\\right)^2$ (vertex at $2$), not $\\tfrac14(x - 2)^2$ (vertex at $2$), not $\\tfrac12(x - 4)^2$ (wrong width)."
+        ],
+        "fast": "Track the vertex: $(0,0) \\to (2,0) \\to (4,0)$; the point $(3, 1)$ of the shifted graph goes to $(6, 1)$. Test each equation at $x = 4$ and $x = 6$.",
+        "trap": "Doing the stretch before the shift gives $\\left(\\tfrac{x}{2} - 1\\right)^2$: the stretch also doubles the shift, so the vertex ends at $4$, not $2$. Dropping the sign form $\\left(2 - \\tfrac{x}{2}\\right)^2$ as different misses a key."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "graphs-of-functions",
+          "role": "primary"
+        }
+      ],
+      "setup": "a shift followed by a horizontal stretch: the stretch doubles the shift, so the vertex lands twice as far; select the equivalent equations, including a sign-flipped square",
+      "variant": "a shift, a stretch or a reflection of a graph",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "Lines $\\ell$ and $m$ are parallel. Line $t$ crosses $\\ell$ at point $P$ and $m$ at point $Q$, and the acute angle between $t$ and $\\ell$ measures $70^\\circ$. Point $R$ is on line $m$, and $R$ is not $Q$. Which of the following could be the measure of angle $PRQ$?<br>Indicate all such measures.",
+      "choices": [
+        "$15^\\circ$",
+        "$60^\\circ$",
+        "$85^\\circ$",
+        "$110^\\circ$",
+        "$125^\\circ$",
+        "$140^\\circ$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Since $\\ell \\parallel m$, line $t$ also meets $m$ at angles of $70^\\circ$ and $110^\\circ$. Angle $PQR$ of triangle $PQR$ is $110^\\circ$ if $R$ is on one side of $Q$ and $70^\\circ$ if $R$ is on the other. Then angle $PRQ$ is less than $180^\\circ - 110^\\circ = 70^\\circ$ or less than $180^\\circ - 70^\\circ = 110^\\circ$, and as $R$ slides along $m$ every value in between occurs. So angle $PRQ$ can be any measure strictly between $0^\\circ$ and $110^\\circ$.",
+        "steps": [
+          "1. Corresponding angles: $t$ makes $70^\\circ$ and $110^\\circ$ with $m$ at $Q$.",
+          "2. Case 1: angle $PQR = 110^\\circ$, so angle $PRQ < 70^\\circ$.",
+          "3. Case 2: angle $PQR = 70^\\circ$, so angle $PRQ < 110^\\circ$ (angle $QPR$ must stay positive).",
+          "4. Far from $Q$ the angle at $R$ nears $0^\\circ$; near $Q$ it nears $110^\\circ$ in case 2.",
+          "5. $15^\\circ$, $60^\\circ$ and $85^\\circ$ are possible; $110^\\circ$ and more are not."
+        ],
+        "fast": "The angle at $R$ is $180^\\circ$ minus the angle at $Q$ minus a positive angle at $P$; the angle at $Q$ is at least $70^\\circ$.",
+        "trap": "Picturing $R$ only on the side where the angle at $Q$ is $110^\\circ$ caps the answer at $70^\\circ$ and drops $85^\\circ$; taking $110^\\circ$ itself needs a zero angle at $P$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "lines-angles",
+          "role": "primary"
+        }
+      ],
+      "setup": "a transversal between parallel lines and a free third point on one line; the triangle's angle at the crossing is the acute or the obtuse angle depending on the side, so the free angle ranges up to the acute angle's supplement",
+      "variant": "parallel lines cut by a transversal",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "figureId": "fig4",
+      "prompt": "In the figure, three lines intersect at points $P$, $Q$ and $R$. What is the value of $x$?",
+      "choices": [
+        "$60$",
+        "$70$",
+        "$80$",
+        "$100$",
+        "$120$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The $40^\\circ$ angle at $P$ is vertical to angle $QPR$, so angle $QPR = 40^\\circ$. The $120^\\circ$ angle at $Q$ forms a straight line with angle $PQR$, so angle $PQR = 60^\\circ$. In triangle $PQR$, $x = 180 - 40 - 60 = 80$.",
+        "steps": [
+          "1. Vertical angles: angle $QPR = 40^\\circ$.",
+          "2. Straight line at $Q$: angle $PQR = 180^\\circ - 120^\\circ = 60^\\circ$.",
+          "3. Triangle sum: $x = 180 - 40 - 60 = 80$."
+        ],
+        "fast": "Interior angles $40$ and $60$, so the third is $80$.",
+        "trap": "Using $120^\\circ$ as the interior angle at $Q$ makes the sum exceed $180^\\circ$; $100$ is the angle next to $x$ on the straight line, not $x$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "lines-angles",
+          "role": "primary"
+        }
+      ],
+      "setup": "three lines form a triangle; a vertical angle at one vertex and a straight-line angle at another give two interior angles; the third from the angle sum",
+      "variant": "angles formed by several intersecting lines",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "Four different rays $OA$, $OB$, $OC$ and $OD$ start at point $O$ and lie in one plane. Angle $AOB$ measures $40^\\circ$, angle $BOC$ measures $70^\\circ$, and angle $COD$ measures $50^\\circ$, where each angle named is the angle of less than $180^\\circ$ between its two rays. Which of the following could be the measure of angle $AOD$?",
+      "choices": [
+        "$30^\\circ$",
+        "$80^\\circ$",
+        "$110^\\circ$",
+        "$120^\\circ$",
+        "$140^\\circ$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Measure each ray's direction from $OA$. $OB$ is $40^\\circ$ one way or the other, $OC$ is $70^\\circ$ further either way from $OB$, and $OD$ is $50^\\circ$ either way from $OC$. The direction of $OD$ is $\\pm 40 \\pm 70 \\pm 50$, giving angle $AOD$ of $160^\\circ$, $60^\\circ$, $20^\\circ$ or $80^\\circ$. Only $80^\\circ$ is listed: $-40 + 70 + 50 = 80$.",
+        "steps": [
+          "1. Put $OA$ at direction $0^\\circ$; then $OB$ is at $+40^\\circ$ or $-40^\\circ$.",
+          "2. $OC$ is $70^\\circ$ from $OB$ in either direction; $OD$ is $50^\\circ$ from $OC$ in either direction.",
+          "3. The eight sign choices give $\\pm 160, \\pm 60, \\pm 20, \\pm 80$.",
+          "4. So angle $AOD$ is $20^\\circ$, $60^\\circ$, $80^\\circ$ or $160^\\circ$; of the choices only $80^\\circ$ works ($OB$ on the far side of $OA$ from $OC$ and $OD$)."
+        ],
+        "fast": "Angle $AOD$ is $|\\pm40 \\pm 70 \\pm 50|$ (all below $180$); only $80$ appears.",
+        "trap": "Assuming the rays go around in the order $A, B, C, D$ gives only $160^\\circ$ and stops; $110^\\circ$ and $120^\\circ$ add just two of the three angles."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "lines-angles",
+          "role": "primary"
+        }
+      ],
+      "setup": "three consecutive angles between four rays at a point, with no order of the rays given; each ray can turn either way, so the last angle is a signed sum; pick the attainable value",
+      "variant": "angles around a point or on a straight line",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "figureId": "fig5",
+      "prompt": "In the figure, lines $\\ell_1$, $\\ell_2$ and $\\ell_3$ meet at point $O$, and line $m$ crosses them at $P$, $R$ and $Q$. What is the value of $x$?",
+      "choices": [
+        "$50$",
+        "$75$",
+        "$85$",
+        "$95$",
+        "$105$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The $130^\\circ$ angle at $Q$ is on a straight line with angle $OQR$, so angle $OQR = 50^\\circ$. In triangle $ORQ$, angle $ROQ = 35^\\circ$, so angle $ORQ = 180 - 35 - 50 = 95^\\circ$. Angle $ORP$ is its supplement: $x = 85$.",
+        "steps": [
+          "1. Straight line at $Q$: angle $OQR = 180^\\circ - 130^\\circ = 50^\\circ$.",
+          "2. Triangle $ORQ$: angle $ORQ = 180^\\circ - 35^\\circ - 50^\\circ = 95^\\circ$.",
+          "3. $P$, $R$, $Q$ lie on $m$: $x = 180 - 95 = 85$.",
+          "4. Check with triangle $OPQ$: angle $OPQ = 180 - 75 - 50 = 55$, and triangle $OPR$ gives $180 - 40 - 55 = 85$."
+        ],
+        "fast": "Exterior angle of triangle $ORQ$ at $R$: $x = 35 + 50 = 85$.",
+        "trap": "$95$ is angle $ORQ$, on the other side of $\\ell_2$; $75$ is the whole angle $POQ$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "lines-angles",
+          "role": "primary"
+        }
+      ],
+      "setup": "three concurrent lines crossed by a fourth; a straight-line angle at one crossing and one angle at the common point give a small triangle, and the wanted angle is the supplement of its third angle",
+      "variant": "angles formed by several intersecting lines",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "Ray $OB$ lies inside angle $AOC$. Ray $OM$ bisects angle $AOB$, and ray $ON$ bisects angle $AOC$. If angle $MON$ measures $17^\\circ$ and angle $AOB$ measures $48^\\circ$, what is the measure of angle $AOC$, in degrees?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "82"
+      },
+      "explanation": {
+        "key": "Angle $AOM = 24^\\circ$ and angle $AON = \\tfrac12 \\angle AOC$. Both bisectors start from $OA$, so angle $MON = \\tfrac12 \\angle AOC - 24^\\circ$ (positive here, since ON must be past OM). Then $\\tfrac12 \\angle AOC = 41^\\circ$ and angle $AOC = 82^\\circ$.",
+        "steps": [
+          "1. $\\angle AOM = \\tfrac12 (48^\\circ) = 24^\\circ$.",
+          "2. $\\angle AON = \\tfrac12 \\angle AOC$, and $\\angle AOC > 48^\\circ$, so $\\angle AON > 24^\\circ$: $ON$ is beyond $OM$.",
+          "3. $\\angle MON = \\angle AON - \\angle AOM$: $17 = \\tfrac12 \\angle AOC - 24$.",
+          "4. $\\angle AOC = 2(41) = 82$."
+        ],
+        "fast": "$\\angle MON = \\tfrac12(\\angle AOC - \\angle AOB)$, so $\\angle AOC = 48 + 2(17) = 82$.",
+        "trap": "$34$ is angle $BOC$, not $AOC$; treating $ON$ as the bisector of $BOC$ and adding gives $48 + 17 = 65$ or other values."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "lines-angles",
+          "role": "primary"
+        }
+      ],
+      "setup": "bisectors of an angle and of a part of it sharing one side; the angle between the bisectors is half the leftover part; recover the whole angle",
+      "variant": "angle bisectors",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "A theater lowered the price of a season ticket by $\\$36$. The price before the change was $18$ percent greater than the price after the change.",
+      "qc": {
+        "a": "The price of the season ticket before the change",
+        "b": "$\\$230$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "The old price is $1.18$ times the new price, so the $\\$36$ cut is $18\\%$ of the new price: new $= 36 \\div 0.18 = \\$200$, old $= \\$236 > \\$230$.",
+        "steps": [
+          "1. Let $N$ be the new price. Old price $= 1.18N$.",
+          "2. Cut $= 1.18N - N = 0.18N = 36$, so $N = 200$.",
+          "3. Old price $= 200 + 36 = 236$.",
+          "4. $236 > 230$: Quantity A is greater."
+        ],
+        "fast": "The $18\\%$ is measured on the new price: $36$ is $18\\%$ of $200$, so the old price is $236$.",
+        "trap": "Reading the change as an $18\\%$ decrease from the old price gives old $= 36 \\div 0.18 = \\$200$, less than $\\$230$ (B greater); the percent's base is the new price."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "percent",
+          "role": "primary"
+        }
+      ],
+      "setup": "a cut in dollars and the old value stated as a percent above the new; the percent's base is the new value, so the new value comes first and the original is new plus the cut; compare with a value between the two readings",
+      "variant": "finding the original value after a change",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "At a three-day music festival, $25$ percent of the attendees came from out of town. Out-of-town attendees who camped on site made up $15$ percent of all attendees, and local attendees who camped on site made up $10$ percent of all attendees.",
+      "qc": {
+        "a": "The percent of the attendees who camped on site who came from out of town",
+        "b": "The percent of the out-of-town attendees who camped on site"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Out of 100 attendees: 25 out of town, 15 of them camped; 10 locals camped. Campers: $15 + 10 = 25$, of whom 15 are from out of town: A $= 60\\%$. Out-of-town: 25, of whom 15 camped: B $= 60\\%$. Equal.",
+        "steps": [
+          "1. Take 100 attendees: 25 out of town.",
+          "2. Campers: $15 + 10 = 25$.",
+          "3. A: $\\tfrac{15}{25} = 60\\%$.",
+          "4. B: $\\tfrac{15}{25} = 60\\%$.",
+          "5. Equal, because the campers happen to number the same as the out-of-town attendees."
+        ],
+        "fast": "Both are 15 over 25: the two bases, campers and out-of-town attendees, are both 25 percent of the festival.",
+        "trap": "Reading the $15$ percent as a percent of the out-of-town group gives B $= 15$; multiplying $25\\% \\times 15\\%$ treats a percent of the whole as a percent of a part."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "percent",
+          "role": "primary"
+        }
+      ],
+      "setup": "joint percents of the whole for two subgroups; one share re-based on the category total and one re-based on the subgroup total; the two bases turn out equal",
+      "variant": "percent of a percent across subgroups",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "A painter replaces a square canvas with a larger square canvas whose sides are $50$ percent longer. By what percent is the area of the new canvas greater than the area of the original canvas?",
+      "choices": [
+        "$50\\%$",
+        "$100\\%$",
+        "$125\\%$",
+        "$150\\%$",
+        "$225\\%$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Each side is multiplied by $1.5$, so the area is multiplied by $1.5^2 = 2.25$: an increase of $125\\%$.",
+        "steps": [
+          "1. Side factor: $1.5$.",
+          "2. Area factor: $1.5^2 = 2.25$.",
+          "3. Increase: $2.25 - 1 = 1.25 = 125\\%$."
+        ],
+        "fast": "A side of 10 becomes 15: area 100 becomes 225.",
+        "trap": "$50\\%$ treats area like length; $225\\%$ is the new area as a percent of the old, not the increase."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "area-perimeter",
+          "role": "primary"
+        }
+      ],
+      "setup": "a square's side grows by a percent; the area factor is the square of the side factor, and the question asks for the increase, not the new-to-old ratio",
+      "variant": "the effect of scaling a side on the area",
+      "solverRating": 1
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "For an outdoor show, a stage manager uses $60$ meters of rope to mark off a rectangular audience area against the long straight back wall of a theater. The wall forms one side of the rectangle, and the rope forms the other three sides. What is the greatest possible area of the audience area, in square meters?",
+      "choices": [
+        "$200$",
+        "$225$",
+        "$400$",
+        "$450$",
+        "$900$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Let each side perpendicular to the wall be $x$; the side parallel to it is $60 - 2x$. Area $= x(60 - 2x) = 2x(30 - x)$, greatest at $x = 15$: $15 \\times 30 = 450$.",
+        "steps": [
+          "1. Rope: $2x + y = 60$, so $y = 60 - 2x$.",
+          "2. Area $A = x(60 - 2x) = -2(x - 15)^2 + 450$.",
+          "3. Greatest at $x = 15$, $y = 30$: $A = 450$."
+        ],
+        "fast": "Split the rope equally between the parallel side and the two perpendicular sides together: $30$ and $15 + 15$.",
+        "trap": "Making the area a square, $20 \\times 20 = 400$, is best only when all four sides use rope; $225$ is the square on a $60$-meter loop of all four sides."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "area-perimeter",
+          "role": "primary"
+        }
+      ],
+      "setup": "a fixed length of rope makes three sides of a rectangle with a wall as the fourth; the area is greatest when the side along the wall is twice each other side, not at a square",
+      "variant": "perimeter fixed, area varies (or the reverse)",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "The number $x$ is irrational, but $x^2$ is rational. Which of the following must be rational?",
+      "choices": [
+        "$x^3$",
+        "$(x + 1)^2$",
+        "$x + \\dfrac{1}{x}$",
+        "$\\left(x + \\dfrac{1}{x}\\right)^2$",
+        "$x^3 + x$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "$\\left(x + \\tfrac1x\\right)^2 = x^2 + 2 + \\tfrac{1}{x^2}$, built only from the rational $x^2$, so it is rational. Each of the others is a nonzero rational multiple of $x$ plus a rational: $x^3 = x^2 \\cdot x$, $(x + 1)^2 = x^2 + 1 + 2x$, $x + \\tfrac1x = \\tfrac{x^2 + 1}{x^2} \\cdot x$, $x^3 + x = (x^2 + 1)x$, and these are irrational.",
+        "steps": [
+          "1. $x^2 = q$ is rational and nonzero ($x \\ne 0$, since $0$ is rational).",
+          "2. $\\left(x + \\tfrac1x\\right)^2 = q + 2 + \\tfrac1q$: rational.",
+          "3. $x^3 = qx$; $x^3 + x = (q + 1)x$ with $q + 1 > 0$; $x + \\tfrac1x = \\tfrac{q + 1}{q}x$: each a nonzero rational times $x$, so irrational.",
+          "4. $(x + 1)^2 = q + 1 + 2x$: a rational plus an irrational, so irrational.",
+          "5. Example: $x = \\sqrt2$ gives $\\left(\\sqrt2 + \\tfrac{1}{\\sqrt2}\\right)^2 = \\tfrac92$."
+        ],
+        "fast": "Only an expression in even powers of $x$ is safe; squaring $x + \\tfrac1x$ leaves only $x^2$, $1$ and $x^{-2}$.",
+        "trap": "$x + \\tfrac1x$ looks balanced enough to cancel, but $\\sqrt2 + \\tfrac{1}{\\sqrt2} = \\tfrac{3}{\\sqrt2}$; and $x^3 + x$ cannot cancel because $x^2 + 1$ is never $0$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "fractions-decimals",
+          "role": "primary"
+        }
+      ],
+      "setup": "an irrational number with a rational square; only an expression in even powers survives as rational, and a symmetric sum with its reciprocal is rational only after squaring",
+      "variant": "rational vs irrational: which expressions must be rational",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "For a number $x$, let $E = \\dfrac{1}{1 - \\dfrac{1}{1 - \\dfrac{1}{x}}}$, wherever every denominator in the expression is nonzero. Which of the following are possible values of $E$?<br>Indicate all such values.",
+      "choices": [
+        "$-1$",
+        "$0$",
+        "$\\dfrac{1}{2}$",
+        "$1$",
+        "$2$",
+        "$3$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2,
+          4,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "Inside out: $1 - \\tfrac1x = \\tfrac{x - 1}{x}$; its reciprocal is $\\tfrac{x}{x - 1}$; $1 - \\tfrac{x}{x - 1} = \\tfrac{-1}{x - 1}$; so $E = -(x - 1) = 1 - x$. But $x \\ne 0$ (the innermost denominator) and $x \\ne 1$ (the middle one), so $E$ cannot be $1$ or $0$. Every other value is reached: $E = -1, \\tfrac12, 2, 3$ at $x = 2, \\tfrac12, -1, -2$.",
+        "steps": [
+          "1. $1 - \\tfrac1x = \\tfrac{x - 1}{x}$, defined for $x \\ne 0$.",
+          "2. $\\dfrac{1}{(x - 1)/x} = \\tfrac{x}{x - 1}$, defined for $x \\ne 1$.",
+          "3. $1 - \\tfrac{x}{x - 1} = -\\tfrac{1}{x - 1}$, never $0$, so the outer fraction is always defined.",
+          "4. $E = 1 - x$ with $x \\ne 0, 1$: $E \\ne 1$ and $E \\ne 0$.",
+          "5. $x = 2, \\tfrac12, -1, -2$ give $-1, \\tfrac12, 2, 3$."
+        ],
+        "fast": "The simplified form $1 - x$ would take every value, so look for the inputs the original forbids: $x = 0$ and $x = 1$ remove $E = 1$ and $E = 0$.",
+        "trap": "Simplifying to $1 - x$ and selecting every value forgets the excluded inputs; selecting $0$ uses $x = 1$, where $1 - \\tfrac1x = 0$ is a denominator."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "fractions-decimals",
+          "role": "primary"
+        }
+      ],
+      "setup": "a three-level nested fraction collapses to a linear expression, but the inputs that zero an inner denominator remove two values from its range; select the attainable values",
+      "variant": "complex (nested) fractions",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "Which of the following sums, written as a decimal, terminates?<br>Indicate all such sums.",
+      "choices": [
+        "$\\dfrac{1}{6} + \\dfrac{1}{3}$",
+        "$\\dfrac{1}{3} + \\dfrac{1}{12}$",
+        "$\\dfrac{1}{15} + \\dfrac{1}{10}$",
+        "$\\dfrac{2}{7} + \\dfrac{3}{14}$",
+        "$\\dfrac{1}{6} + \\dfrac{1}{30}$",
+        "$\\dfrac{1}{12} + \\dfrac{1}{20}$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Add, reduce, then check the denominator for primes other than 2 and 5: $\\tfrac12$ terminates, $\\tfrac{5}{12}$ does not, $\\tfrac16$ does not, $\\tfrac12$ terminates, $\\tfrac15$ terminates, $\\tfrac{2}{15}$ does not.",
+        "steps": [
+          "1. $\\tfrac16 + \\tfrac13 = \\tfrac36 = \\tfrac12$: terminates.",
+          "2. $\\tfrac13 + \\tfrac1{12} = \\tfrac{5}{12}$: a 3 remains.",
+          "3. $\\tfrac1{15} + \\tfrac1{10} = \\tfrac{5}{30} = \\tfrac16$: a 3 remains.",
+          "4. $\\tfrac27 + \\tfrac3{14} = \\tfrac{7}{14} = \\tfrac12$: terminates.",
+          "5. $\\tfrac16 + \\tfrac1{30} = \\tfrac{6}{30} = \\tfrac15$: terminates.",
+          "6. $\\tfrac1{12} + \\tfrac1{20} = \\tfrac{8}{60} = \\tfrac{2}{15}$: a 3 remains."
+        ],
+        "fast": "Two repeating decimals can add to a terminating one when the sum's numerator cancels the 3 or 7; a terminating plus a repeating decimal never terminates.",
+        "trap": "Assuming two repeating decimals always give a repeating sum rejects $\\tfrac16 + \\tfrac13$ and $\\tfrac27 + \\tfrac3{14}$; judging by the unreduced common denominator rejects $\\tfrac16 + \\tfrac1{30}$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "fractions-decimals",
+          "role": "primary"
+        }
+      ],
+      "setup": "sums of two fractions, often both repeating; reduce the sum, since the numerator can cancel the 3 or 7 that made each addend repeat",
+      "variant": "terminating vs repeating decimal from the denominator's prime factors",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "Let $f(x) = \\dfrac{\\sqrt{6 - 2x}}{x + 1}$. For exactly which values of $x$ does this formula give a real number?",
+      "choices": [
+        "$x \\le 3$ and $x \\ne -1$",
+        "$x < 3$ and $x \\ne -1$",
+        "$x \\le 3$",
+        "$x \\ge 3$",
+        "$-1 < x \\le 3$"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "The square root needs $6 - 2x \\ge 0$, so $x \\le 3$; $x = 3$ is allowed, since $\\sqrt0 = 0$ is a fine numerator. The denominator needs $x \\ne -1$. Values below $-1$ are fine: $x = -2$ gives $\\tfrac{\\sqrt{10}}{-1}$.",
+        "steps": [
+          "1. Root: $6 - 2x \\ge 0 \\iff x \\le 3$.",
+          "2. Denominator: $x + 1 \\ne 0 \\iff x \\ne -1$.",
+          "3. Domain: $x \\le 3$, $x \\ne -1$."
+        ],
+        "fast": "Test $x = 3$ (gives $0$, allowed), $x = -1$ (division by zero) and $x = -2$ (allowed).",
+        "trap": "Excluding $x = 3$ treats a zero numerator as a problem; $-1 < x \\le 3$ wrongly drops the negatives below $-1$, where a negative denominator is harmless."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "functions",
+          "role": "primary"
+        }
+      ],
+      "setup": "a square root over a linear denominator; the root's endpoint is allowed, the denominator removes one point, and the inputs past that point stay in",
+      "variant": "domain restrictions (square roots, denominators)",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "prompt": "Let $g(x) = \\sqrt{\\dfrac{x^2 - 4}{x - 5}}$. Of the 13 integers from $-6$ through $6$, how many can be used as inputs so that $g(x)$ is a real number?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "6"
+      },
+      "explanation": {
+        "key": "Need $\\dfrac{(x - 2)(x + 2)}{x - 5} \\ge 0$ with $x \\ne 5$. Sign chart with breaks at $-2$, $2$, $5$: negative below $-2$, nonnegative on $[-2, 2]$, negative on $(2, 5)$, positive above $5$. Integers: $-2, -1, 0, 1, 2$ and $6$, so 6.",
+        "steps": [
+          "1. Factor: $\\dfrac{(x - 2)(x + 2)}{x - 5} \\ge 0$, $x \\ne 5$.",
+          "2. $x < -2$: $(+)/(-)$, negative. $-2 \\le x \\le 2$: $(-\\text{ or }0)/(-)$, nonnegative. $2 < x < 5$: $(+)/(-)$, negative. $x > 5$: positive.",
+          "3. Domain: $-2 \\le x \\le 2$ or $x > 5$.",
+          "4. Integers in $[-6, 6]$: $-2, -1, 0, 1, 2, 6$: six."
+        ],
+        "fast": "Test one integer in each region: $-3$ gives $\\tfrac{5}{-8}$ (out), $0$ gives $\\tfrac45$ (in), $3$ gives $\\tfrac{5}{-2}$ (out), $6$ gives $32$ (in).",
+        "trap": "Requiring $x^2 - 4 \\ge 0$ and $x - 5 > 0$ separately keeps only $x = 6$; requiring only $x^2 \\ge 4$ keeps the negatives below $-2$, where the quotient is negative."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "functions",
+          "role": "primary"
+        }
+      ],
+      "setup": "a root of a quotient with a quadratic numerator; the sign chart with three breaks keeps the middle band where both parts are negative and the region past the pole; count the integers in a window",
+      "variant": "domain restrictions (square roots, denominators)",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q21",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A circle of radius $5$ and a square lie in one plane. Two adjacent corners of the square lie on the circle, and the side of the square opposite those two corners touches the circle at exactly one point. What is the length of a side of the square?",
+      "choices": [
+        "$5$",
+        "$5\\sqrt{2}$",
+        "$\\dfrac{15}{2}$",
+        "$8$",
+        "$10$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Let the side be $s$. The side through the two corners is a chord of length $s$; the opposite side is tangent, so it is $5$ from the center, and the chord is $s - 5$ from the center on the other side. The half-chord, that distance and a radius form a right triangle: $\\left(\\tfrac s2\\right)^2 + (s - 5)^2 = 25$, so $\\tfrac54 s^2 = 10s$ and $s = 8$.",
+        "steps": [
+          "1. Tangent side: its distance from the center is the radius, $5$.",
+          "2. The chord side is $s$ from the tangent side, so $s - 5$ from the center.",
+          "3. Right triangle: $\\tfrac{s^2}{4} + (s - 5)^2 = 25 \\Rightarrow \\tfrac{5s^2}{4} - 10s = 0$.",
+          "4. $s = 8$ (the chord is then $3$ from the center, and $4^2 + 3^2 = 5^2$)."
+        ],
+        "fast": "Try $s = 8$: half-chord $4$, distance $3$, radius $5$, a 3-4-5 triangle.",
+        "trap": "$5\\sqrt2$ is the side of the square with all four corners on the circle; $10$ is the square drawn around the circle; neither has one side as a chord and the opposite side tangent."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inscribed-figures",
+          "role": "primary"
+        }
+      ],
+      "setup": "run backwards: the circle's radius given; two adjacent corners of a square on it and the opposite side tangent; the side length from half-chord, center distance and radius",
+      "variant": "a square inscribed in a circle, or a circle in a square",
+      "revisits": "quant-008:s2q8",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q22",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "Two integers $m$ and $n$ make $mn + m + n$ an even number.",
+      "qc": {
+        "a": "$(-1)^m$",
+        "b": "$(-1)^{n + 1}$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "$mn + m + n = (m + 1)(n + 1) - 1$. It is even exactly when $(m + 1)(n + 1)$ is odd, so both $m + 1$ and $n + 1$ are odd: $m$ and $n$ are both even. Then A $= (-1)^{\\text{even}} = 1$ and B $= (-1)^{\\text{odd}} = -1$.",
+        "steps": [
+          "1. Add 1 and factor: $mn + m + n + 1 = (m + 1)(n + 1)$.",
+          "2. $mn + m + n$ even $\\iff (m + 1)(n + 1)$ odd $\\iff m + 1$ and $n + 1$ both odd.",
+          "3. So $m$ and $n$ are both even.",
+          "4. A: $m$ even, so $(-1)^m = 1$. B: $n + 1$ odd, so $(-1)^{n + 1} = -1$. A is greater."
+        ],
+        "fast": "Check parities: odd-odd gives odd + odd + odd (odd); odd-even gives even + odd + even (odd); only even-even gives even.",
+        "trap": "Thinking an even sum just needs $m$ and $n$ to share a parity allows $m$ and $n$ both odd (A $= -1$, B $= 1$); the product term $mn$ breaks the odd-odd case."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "integers-properties",
+          "role": "primary"
+        }
+      ],
+      "setup": "the parity of mn + m + n fixed as even; factoring (m + 1)(n + 1) - 1 forces both even; compare -1 raised to m with -1 raised to n + 1",
+      "variant": "even/odd parity of sums and products of unknown integers",
+      "revisits": "quant-008:s2q15",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q23",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "In triangle $ABC$, point $D$ lies on side $AC$ strictly between $A$ and $C$, and $AD = BD = BC$. Angle $BAC$ measures $40^\\circ$.",
+      "qc": {
+        "a": "$AB$",
+        "b": "$AC$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "$AD = BD$ gives angle $ABD = 40^\\circ$, so the exterior angle $BDC = 80^\\circ$. $BD = BC$ gives angle $BCD = 80^\\circ$. In triangle $ABC$: angle $C = 80^\\circ$, angle $A = 40^\\circ$, angle $B = 60^\\circ$. The longest side faces the largest angle: $AB$ faces $80^\\circ$, $AC$ faces $60^\\circ$, so $AB > AC$.",
+        "steps": [
+          "1. Triangle $ABD$: $AD = BD$, so angle $ABD$ = angle $BAD = 40^\\circ$.",
+          "2. Exterior angle at $D$: angle $BDC = 40^\\circ + 40^\\circ = 80^\\circ$.",
+          "3. Triangle $BDC$: $BD = BC$, so angle $BCD$ = angle $BDC = 80^\\circ$, and angle $DBC = 20^\\circ$.",
+          "4. Triangle $ABC$: angles $40^\\circ$ at $A$, $60^\\circ$ at $B$, $80^\\circ$ at $C$.",
+          "5. $AB$ is opposite the $80^\\circ$ angle and $AC$ opposite the $60^\\circ$ angle: $AB > AC$."
+        ],
+        "fast": "Chase $40, 40 \\to 80, 80 \\to$ angle $C = 80^\\circ$ is the largest angle of $ABC$, so the side across from it, $AB$, is the longest.",
+        "trap": "$AC$ is made of two pieces, $AD + DC$, so it looks longest; or putting the equal angles of triangle $BDC$ at $B$ and $D$ makes angle $C = 50^\\circ$ and reverses the order."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "primary"
+        }
+      ],
+      "setup": "isosceles chain AD = BD = BC with one angle given; chase through both isosceles triangles to all three angles of the big triangle, then compare two sides by the angles opposite them",
+      "variant": "angle chasing through isosceles triangles in a figure",
+      "revisits": "quant-009:s2q4",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q24",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 3,
+      "prompt": "A set designer builds a model of a stage at a scale of $1$ to $40$: every length on the model is $\\tfrac{1}{40}$ of the matching length on the real stage. The real stage floor has an area of $192$ square meters. What is the area of the model's stage floor, in square centimeters? ($1$ meter $= 100$ centimeters.)",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "1200"
+      },
+      "explanation": {
+        "key": "Areas scale by $\\left(\\tfrac{1}{40}\\right)^2 = \\tfrac{1}{1{,}600}$: the model floor is $\\tfrac{192}{1{,}600} = 0.12$ square meter. One square meter is $100 \\times 100 = 10{,}000$ square centimeters, so $0.12 \\times 10{,}000 = 1{,}200$.",
+        "steps": [
+          "1. Area factor: $\\tfrac{1}{40^2} = \\tfrac{1}{1{,}600}$.",
+          "2. Model area: $192 \\div 1{,}600 = 0.12$ m$^2$.",
+          "3. $1$ m$^2 = 10{,}000$ cm$^2$.",
+          "4. $0.12 \\times 10{,}000 = 1{,}200$ cm$^2$."
+        ],
+        "fast": "A $1$ m by $1$ m patch becomes $2.5$ cm by $2.5$ cm, so each square meter becomes $6.25$ cm$^2$: $192 \\times 6.25 = 1{,}200$.",
+        "trap": "Converting square meters to square centimeters with a factor of 100 instead of $10{,}000$ gives $12$; dividing the area by 40 instead of $1{,}600$ gives $48{,}000$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "ratio-proportion",
+          "role": "primary"
+        }
+      ],
+      "setup": "a model scale applies to lengths; run from the real area to the model area by the square of the scale, then convert square units with the square of the unit factor",
+      "variant": "scale maps and models",
+      "revisits": "quant-009:s1q9",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q25",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "setId": "d1",
+      "figureId": "d1",
+      "prompt": "One claim filed in 2025 is chosen at random. What is the probability that its processing time was more than 4 days longer than the mean processing time of a claim?",
+      "choices": [
+        "$0.20$",
+        "$0.24$",
+        "$0.30$",
+        "$0.40$",
+        "$0.70$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Uniform on $[5, 25]$: the mean is $15$ days. More than 4 days longer means more than $19$ days, an interval of length $25 - 19 = 6$ out of $20$: $\\tfrac{6}{20} = 0.30$.",
+        "steps": [
+          "1. Mean of a uniform distribution: the midpoint, $\\tfrac{5 + 25}{2} = 15$.",
+          "2. Event: processing time $> 19$ days.",
+          "3. Probability $= \\tfrac{25 - 19}{25 - 5} = \\tfrac{6}{20} = 0.30$."
+        ],
+        "fast": "Length share: $6$ of the $20$ days.",
+        "trap": "Dividing by $25$ instead of the interval's length $20$ gives $0.24$; $0.20$ uses the 4-day gap as the length; $0.70$ is the chance of at most $19$ days."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "random-variables",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: a uniform processing time on an interval; the mean is the midpoint, and an event a fixed amount above the mean is a length share of the interval",
+      "variant": "a uniform distribution over an interval",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q26",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "setId": "d1",
+      "figureId": "d1",
+      "prompt": "One policyholder is chosen at random from the policyholders who filed at least one claim in 2025, and $Y$ is the number of claims that policyholder filed in 2025. Which of the following gives the mean and the median of $Y$, to the nearest hundredth?",
+      "choices": [
+        "Mean $1.15$, median $1$",
+        "Mean $1.92$, median $1$",
+        "Mean $1.92$, median $2$",
+        "Mean $1.15$, median $2$",
+        "Mean $2.50$, median $2.50$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Drop the 0-claim row and divide the rest by $0.60$: $P(Y = 1) = \\tfrac{25}{60}$, $P(Y = 2) = \\tfrac{20}{60}$, $P(Y = 3) = \\tfrac{10}{60}$, $P(Y = 4) = \\tfrac{5}{60}$. Mean $= \\tfrac{25 + 40 + 30 + 20}{60} = \\tfrac{115}{60} \\approx 1.92$. Cumulative: $\\tfrac{25}{60} < 0.5$ at 1, $\\tfrac{45}{60} \\ge 0.5$ at 2, so the median is $2$.",
+        "steps": [
+          "1. Policyholders with at least one claim: $25 + 20 + 10 + 5 = 60$ percent of all.",
+          "2. Re-base: $Y = 1, 2, 3, 4$ with probabilities $\\tfrac{25}{60}, \\tfrac{20}{60}, \\tfrac{10}{60}, \\tfrac{5}{60}$.",
+          "3. Mean: $\\tfrac{1(25) + 2(20) + 3(10) + 4(5)}{60} = \\tfrac{115}{60} \\approx 1.92$.",
+          "4. Median: $P(Y \\le 1) \\approx 0.42$, $P(Y \\le 2) = 0.75$, so $2$."
+        ],
+        "fast": "Mean of $X$ is $1.15$, all from claimants, so the claimants' mean is $1.15 / 0.60$; the claimants with 1 claim are under half of them, so the median is $2$.",
+        "trap": "Keeping the 0-claim policyholders gives the whole group's mean $1.15$ and median $1$; mixing one re-based measure with one that is not gives the other wrong pairs."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "random-variables",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: a distribution table restricted to the nonzero values; re-base on the remaining probability, then the mean and median of the restricted variable (the median moves up a value)",
+      "variant": "mean and median of a discrete distribution table",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q27",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "setId": "d1",
+      "figureId": "d1",
+      "prompt": "For each claim filed in 2025, the insurer paid $\\$1{,}200$, except that each policyholder who filed at least one claim paid a deductible of $\\$400$ once for the year, taken from the payment on that policyholder's first claim. What was the expected total amount the insurer paid on 2025 claims to a policyholder chosen at random from all policyholders?",
+      "choices": [
+        "$\\$920$",
+        "$\\$1{,}140$",
+        "$\\$1{,}380$",
+        "$\\$1{,}900$",
+        "$\\$2{,}300$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Payment $= 1{,}200X - 400$ when $X \\ge 1$, and $0$ when $X = 0$. $E(X) = 0.25 + 0.40 + 0.30 + 0.20 = 1.15$ and $P(X \\ge 1) = 0.60$, so the expected payment is $1{,}200(1.15) - 400(0.60) = 1{,}380 - 240 = \\$1{,}140$.",
+        "steps": [
+          "1. $E(X) = 1(0.25) + 2(0.20) + 3(0.10) + 4(0.05) = 1.15$.",
+          "2. Gross expected payment: $1{,}200 \\times 1.15 = 1{,}380$.",
+          "3. The deductible applies once per claimant: expected deduction $400 \\times P(X \\ge 1) = 400 \\times 0.60 = 240$.",
+          "4. $1{,}380 - 240 = 1{,}140$."
+        ],
+        "fast": "Row by row: $0.25(800) + 0.20(2{,}000) + 0.10(3{,}200) + 0.05(4{,}400) = 200 + 400 + 320 + 220 = 1{,}140$.",
+        "trap": "Taking the deductible from every claim gives $800 \\times 1.15 = \\$920$; ignoring it gives $\\$1{,}380$; dividing by the claimants' share $0.60$ gives the average per claimant, $\\$1{,}900$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "random-variables",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: expected payment from a claim-count table where a fixed amount comes off once per policyholder with any claim, weighted by the probability of at least one claim, not by the expected count",
+      "variant": "expected value from a probability table",
+      "solverRating": 4
+    }
+  ]
+}

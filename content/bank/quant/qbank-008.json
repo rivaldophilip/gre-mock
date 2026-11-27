@@ -1,0 +1,1200 @@
+{
+  "id": "qbank-008",
+  "measure": "quant",
+  "title": "Quant bank batch 8",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Triangle PQR. Note: Figure not drawn to scale.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 230' width='320' height='230' font-family='sans-serif' font-size='14'><polygon points='140,25 30,200 290,200' fill='none' stroke='currentColor' stroke-width='1.8'/><text x='140' y='18' fill='currentColor' text-anchor='middle'>P</text><text x='18' y='214' fill='currentColor' text-anchor='middle'>Q</text><text x='302' y='214' fill='currentColor' text-anchor='middle'>R</text><text x='140' y='58' fill='currentColor' text-anchor='middle'>40°</text><text x='62' y='192' fill='currentColor' text-anchor='middle'>70°</text><text x='236' y='104' fill='currentColor' text-anchor='middle'>2x + 4</text><text x='52' y='104' fill='currentColor' text-anchor='middle'>3x − 1</text></svg>"
+    },
+    {
+      "id": "fig2",
+      "caption": "Triangle PQR. The tick marks show that sides PQ and PR have equal length. Note: Figure not drawn to scale.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 220' width='320' height='220' font-family='sans-serif' font-size='14'><polygon points='160,25 40,190 280,190' fill='none' stroke='currentColor' stroke-width='1.8'/><text x='160' y='18' fill='currentColor' text-anchor='middle'>P</text><text x='28' y='204' fill='currentColor' text-anchor='middle'>Q</text><text x='292' y='204' fill='currentColor' text-anchor='middle'>R</text><line x1='93' y1='101' x2='107' y2='111' stroke='currentColor' stroke-width='1.8'/><line x1='213' y1='111' x2='227' y2='101' stroke='currentColor' stroke-width='1.8'/><text x='76' y='182' fill='currentColor' text-anchor='middle'>62°</text></svg>"
+    },
+    {
+      "id": "fig3",
+      "caption": "Patient visits at a clinic in January, by department. The Pediatrics entry is missing.",
+      "table": {
+        "head": [
+          "Department",
+          "Visits"
+        ],
+        "rows": [
+          [
+            "Cardiology",
+            "420"
+          ],
+          [
+            "Dermatology",
+            "310"
+          ],
+          [
+            "Pediatrics",
+            "—"
+          ],
+          [
+            "Orthopedics",
+            "565"
+          ],
+          [
+            "Total",
+            "1,850"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fig4",
+      "caption": "The 80,000 subscribers of a regional newspaper, by region. Every subscriber has exactly one plan: digital-only or print.",
+      "table": {
+        "head": [
+          "Region",
+          "Percent of all 80,000 subscribers",
+          "Percent of the region's subscribers who are digital-only"
+        ],
+        "rows": [
+          [
+            "North",
+            "30%",
+            "40%"
+          ],
+          [
+            "South",
+            "25%",
+            "52%"
+          ],
+          [
+            "East",
+            "16%",
+            "37.5%"
+          ],
+          [
+            "West",
+            "20%",
+            "55%"
+          ],
+          [
+            "Central",
+            "9%",
+            "30%"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fig5",
+      "caption": "Members and membership revenue of a fitness chain",
+      "table": {
+        "head": [
+          "Year",
+          "Members",
+          "Membership revenue"
+        ],
+        "rows": [
+          [
+            "2022",
+            "12,000",
+            "$4.8 million"
+          ],
+          [
+            "2023",
+            "13,000",
+            "$5.2 million"
+          ],
+          [
+            "2024",
+            "14,000",
+            "$6.3 million"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fig6",
+      "caption": "Subscribers and monthly prices of a streaming service's three plans in March",
+      "table": {
+        "head": [
+          "Plan",
+          "Subscribers",
+          "Monthly price"
+        ],
+        "rows": [
+          [
+            "Basic",
+            "41,800",
+            "$7.99"
+          ],
+          [
+            "Standard",
+            "28,350",
+            "$12.49"
+          ],
+          [
+            "Premium",
+            "9,870",
+            "$17.99"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "d1",
+      "caption": "Container throughput at five freight ports in 2022 and 2024, in thousands of twenty-foot equivalent units (TEU), and the percent of each port's 2024 throughput that was refrigerated containers.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 330' width='640' height='330' font-family='sans-serif' font-size='12'><text x='170' y='18' fill='currentColor' text-anchor='middle' font-weight='bold'>Throughput (thousand TEU)</text><rect x='40' y='28' width='12' height='10' fill='currentColor' fill-opacity='0.25' stroke='currentColor'/><text x='57' y='37' fill='currentColor'>2022</text><rect x='110' y='28' width='12' height='10' fill='currentColor' fill-opacity='0.75' stroke='currentColor'/><text x='127' y='37' fill='currentColor'>2024</text><text x='94' y='73' fill='currentColor' text-anchor='end'>Arlo</text><rect x='100' y='55' width='139.4' height='14' fill='currentColor' fill-opacity='0.25' stroke='currentColor'/><text x='243.4' y='66' fill='currentColor'>820</text><rect x='100' y='71' width='172.6' height='14' fill='currentColor' fill-opacity='0.75' stroke='currentColor'/><text x='276.6' y='82' fill='currentColor'>1,015</text><text x='94' y='125' fill='currentColor' text-anchor='end'>Kestrel Bay</text><rect x='100' y='107' width='193.8' height='14' fill='currentColor' fill-opacity='0.25' stroke='currentColor'/><text x='297.8' y='118' fill='currentColor'>1,140</text><rect x='100' y='123' width='205.7' height='14' fill='currentColor' fill-opacity='0.75' stroke='currentColor'/><text x='309.7' y='134' fill='currentColor'>1,210</text><text x='94' y='177' fill='currentColor' text-anchor='end'>Marenne</text><rect x='100' y='159' width='111.4' height='14' fill='currentColor' fill-opacity='0.25' stroke='currentColor'/><text x='215.4' y='170' fill='currentColor'>655</text><rect x='100' y='175' width='134.3' height='14' fill='currentColor' fill-opacity='0.75' stroke='currentColor'/><text x='238.3' y='186' fill='currentColor'>790</text><text x='94' y='229' fill='currentColor' text-anchor='end'>Sutton Quay</text><rect x='100' y='211' width='81.6' height='14' fill='currentColor' fill-opacity='0.25' stroke='currentColor'/><text x='185.6' y='222' fill='currentColor'>480</text><rect x='100' y='227' width='103.7' height='14' fill='currentColor' fill-opacity='0.75' stroke='currentColor'/><text x='207.7' y='238' fill='currentColor'>610</text><text x='94' y='281' fill='currentColor' text-anchor='end'>Velport</text><rect x='100' y='263' width='153.9' height='14' fill='currentColor' fill-opacity='0.25' stroke='currentColor'/><text x='257.9' y='274' fill='currentColor'>905</text><rect x='100' y='279' width='147.9' height='14' fill='currentColor' fill-opacity='0.75' stroke='currentColor'/><text x='251.9' y='290' fill='currentColor'>870</text><line x1='100' y1='48' x2='100' y2='315' stroke='currentColor'/><text x='500' y='18' fill='currentColor' text-anchor='middle' font-weight='bold'>Refrigerated containers, 2024</text><text x='500' y='34' fill='currentColor' text-anchor='middle'>(percent of each port's 2024 throughput)</text><text x='434' y='74' fill='currentColor' text-anchor='end'>Arlo</text><rect x='440' y='63' width='96' height='14' fill='currentColor' fill-opacity='0.5' stroke='currentColor'/><text x='540' y='74' fill='currentColor'>12%</text><text x='434' y='126' fill='currentColor' text-anchor='end'>Kestrel Bay</text><rect x='440' y='115' width='64' height='14' fill='currentColor' fill-opacity='0.5' stroke='currentColor'/><text x='508' y='126' fill='currentColor'>8%</text><text x='434' y='178' fill='currentColor' text-anchor='end'>Marenne</text><rect x='440' y='167' width='160' height='14' fill='currentColor' fill-opacity='0.5' stroke='currentColor'/><text x='604' y='178' fill='currentColor'>20%</text><text x='434' y='230' fill='currentColor' text-anchor='end'>Sutton Quay</text><rect x='440' y='219' width='120' height='14' fill='currentColor' fill-opacity='0.5' stroke='currentColor'/><text x='564' y='230' fill='currentColor'>15%</text><text x='434' y='282' fill='currentColor' text-anchor='end'>Velport</text><rect x='440' y='271' width='80' height='14' fill='currentColor' fill-opacity='0.5' stroke='currentColor'/><text x='524' y='282' fill='currentColor'>10%</text><line x1='440' y1='48' x2='440' y2='315' stroke='currentColor'/></svg>"
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "The equation $2x^2 - 9x + 6 = 0$ has two real solutions, $r$ and $s$. What is the value of $\\dfrac{1}{r} + \\dfrac{1}{s}$?",
+      "choices": [
+        "$\\dfrac{2}{3}$",
+        "$\\dfrac{3}{2}$",
+        "$3$",
+        "$\\dfrac{9}{2}$",
+        "$9$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$\\dfrac1r + \\dfrac1s = \\dfrac{r + s}{rs}$. For $2x^2 - 9x + 6 = 0$, $r + s = \\dfrac92$ and $rs = \\dfrac62 = 3$, so the value is $\\dfrac{9/2}{3} = \\dfrac32$.",
+        "steps": [
+          "1. Combine: $\\dfrac1r + \\dfrac1s = \\dfrac{s + r}{rs}$.",
+          "2. Sum of the roots: $-\\dfrac{-9}{2} = \\dfrac92$; product: $\\dfrac{6}{2} = 3$.",
+          "3. $\\dfrac{9/2}{3} = \\dfrac32$."
+        ],
+        "fast": "Reciprocal roots solve the reversed equation $6x^2 - 9x + 2 = 0$, whose root sum is $\\dfrac96 = \\dfrac32$.",
+        "trap": "Inverting the fraction (product over sum) gives $\\dfrac23$; using the sum alone gives $\\dfrac92$, and using the product alone gives $3$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quadratics-factoring",
+          "role": "primary"
+        }
+      ],
+      "setup": "a quadratic with a leading coefficient other than 1; the sum of the reciprocals of its roots is their sum over their product",
+      "variant": "sum and product of the roots",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 3,
+      "prompt": "What is the sum of all values of $x$ for which $(x - 3)(x + 4) = 2(x - 3)$?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "1"
+      },
+      "explanation": {
+        "key": "Move everything to one side and factor out $x - 3$: $(x - 3)(x + 4 - 2) = (x - 3)(x + 2) = 0$, so $x = 3$ or $x = -2$. The sum is $1$.",
+        "steps": [
+          "1. $(x - 3)(x + 4) - 2(x - 3) = 0$.",
+          "2. Factor: $(x - 3)(x + 2) = 0$.",
+          "3. Solutions $x = 3$ and $x = -2$; sum $3 + (-2) = 1$."
+        ],
+        "fast": "Either $x - 3 = 0$, or it is not and you may cancel it: $x + 4 = 2$. Both cases count.",
+        "trap": "Dividing both sides by $x - 3$ gives only $x = -2$ and the answer $-2$; that step assumes $x \\ne 3$, and $x = 3$ makes both sides $0$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quadratics-factoring",
+          "role": "primary"
+        }
+      ],
+      "setup": "a product with a linear factor set equal to a multiple of the same factor; cancelling it loses the root that zeroes the factor; sum of all solutions",
+      "variant": "dividing by a variable that may be zero",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 3,
+      "figureId": "fig1",
+      "prompt": "In triangle $PQR$ shown, the side lengths $PQ = 3x - 1$ and $PR = 2x + 4$ are labeled. What is the length of side $PQ$?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "14"
+      },
+      "explanation": {
+        "key": "Angle $R = 180^\\circ - 40^\\circ - 70^\\circ = 70^\\circ$, the same as angle $Q$. Sides opposite equal angles are equal: $PQ$ (opposite $R$) equals $PR$ (opposite $Q$), so $3x - 1 = 2x + 4$, $x = 5$ and $PQ = 14$.",
+        "steps": [
+          "1. Angle $R = 180^\\circ - 40^\\circ - 70^\\circ = 70^\\circ$.",
+          "2. Angles $Q$ and $R$ are equal, so the sides opposite them are equal: $PQ = PR$.",
+          "3. $3x - 1 = 2x + 4$ gives $x = 5$, so $PQ = 3(5) - 1 = 14$."
+        ],
+        "fast": "Two $70^\\circ$ angles share side $QR$, so the two sides from $P$ are equal.",
+        "trap": "Stopping at $x = 5$ answers the wrong quantity; matching the equal angles to the sides that touch them instead of the sides opposite them leaves no equation, and the picture, where $QR$ looks longest, is not to scale."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "primary"
+        }
+      ],
+      "setup": "two angles of a triangle labeled; the third angle equals one of them, so the two sides opposite, labeled as expressions, are equal; solve and report a side, not the variable",
+      "variant": "isosceles or equilateral properties hidden in a figure",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "Points $M$, $J$, $K$ and $N$ lie on a line in that order, and point $L$ is not on the line. Angle $MJL$ measures $110^\\circ$ and angle $LKN$ measures $135^\\circ$. What is the measure of angle $JLK$?",
+      "choices": [
+        "$45^\\circ$",
+        "$55^\\circ$",
+        "$65^\\circ$",
+        "$70^\\circ$",
+        "$115^\\circ$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Interior $J = 180^\\circ - 110^\\circ = 70^\\circ$ and interior $K = 180^\\circ - 135^\\circ = 45^\\circ$, so $L = 180^\\circ - 70^\\circ - 45^\\circ = 65^\\circ$.",
+        "steps": [
+          "1. Interior $J = 70^\\circ$, interior $K = 45^\\circ$.",
+          "2. $L = 180^\\circ - 115^\\circ = 65^\\circ$."
+        ],
+        "fast": "Each exterior angle is $180^\\circ$ minus its interior angle, so the two exterior angles add to $360^\\circ - J - K = 180^\\circ + L$: $245^\\circ - 180^\\circ = 65^\\circ$.",
+        "trap": "$360^\\circ - 110^\\circ - 135^\\circ = 115^\\circ$ is the exterior angle at $L$, not the interior angle; $70^\\circ$ and $45^\\circ$ are the other interior angles."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "primary"
+        }
+      ],
+      "setup": "two exterior angles of a triangle given exactly; their sum is 180 degrees plus the third interior angle",
+      "variant": "exterior angle theorem",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "figureId": "fig2",
+      "prompt": "In triangle $PQR$ shown, angle $Q$ measures $62^\\circ$.",
+      "qc": {
+        "a": "$QR$",
+        "b": "$PQ$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$PQ = PR$ makes angle $R = 62^\\circ$ too, so angle $P = 180^\\circ - 124^\\circ = 56^\\circ$. The base $QR$ is opposite the smallest angle ($56^\\circ$) and $PQ$ is opposite $62^\\circ$, so $QR < PQ$: Quantity B is greater.",
+        "steps": [
+          "1. Equal sides $PQ$ and $PR$: the angles opposite them, $R$ and $Q$, are equal, so $R = 62^\\circ$.",
+          "2. $P = 180^\\circ - 62^\\circ - 62^\\circ = 56^\\circ$.",
+          "3. $QR$ faces $56^\\circ$, $PQ$ faces $62^\\circ$; the larger angle faces the longer side, so $PQ > QR$."
+        ],
+        "fast": "A base angle above $60^\\circ$ makes the apex below $60^\\circ$, so the base is shorter than the legs.",
+        "trap": "The figure draws the base $QR$ as the longest side, which suggests A; it is not to scale."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "primary"
+        }
+      ],
+      "setup": "isosceles triangle marked by ticks with a base angle given; the apex angle is smaller than the base angles, so the base is the shortest side; compare the base with a leg",
+      "variant": "isosceles or equilateral properties hidden in a figure",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 3,
+      "prompt": "A fitness studio's attendance at its new evening class was, each week, the same multiple of the previous week's attendance. The class drew 72 people in week 3 and 243 people in week 6. How many people attended in week 1?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "32"
+      },
+      "explanation": {
+        "key": "From week 3 to week 6 is three steps: $r^3 = \\dfrac{243}{72} = \\dfrac{27}{8}$, so $r = \\dfrac32$. Week 1 is two steps before week 3: $72 \\div \\left(\\dfrac32\\right)^2 = 72 \\cdot \\dfrac49 = 32$.",
+        "steps": [
+          "1. $72 r^3 = 243$, so $r^3 = \\dfrac{27}{8}$ and $r = \\dfrac32$.",
+          "2. Week 2: $72 \\div \\dfrac32 = 48$; week 1: $48 \\div \\dfrac32 = 32$."
+        ],
+        "fast": "Run backward: $72 \\to 48 \\to 32$, dividing by $\\dfrac32$ each week.",
+        "trap": "Counting the gap from week 3 to week 6 as two steps gives $r^2 = \\dfrac{27}{8}$ with no tidy ratio; dividing by $r$ only once gives week 2's $48$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "sequences-patterns",
+          "role": "primary"
+        }
+      ],
+      "setup": "two terms of a geometric sequence three places apart; the cube root of their ratio gives the common ratio; back up two places to the first term",
+      "variant": "geometric sequence or a repeating cycle of terms",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "For each positive integer $n$, $S_n$ is the sum $\\dfrac{1}{1 \\cdot 3} + \\dfrac{1}{2 \\cdot 4} + \\dfrac{1}{3 \\cdot 5} + \\cdots + \\dfrac{1}{n(n + 2)}$. Which of the following statements are true? Indicate all such statements.",
+      "choices": [
+        "$S_{10} > 0.68$",
+        "$S_n < \\dfrac{3}{4}$ for every positive integer $n$",
+        "$S_n < \\dfrac{1}{2}$ for every positive integer $n$",
+        "$S_{20} > 0.7$",
+        "$S_{40} > 0.74$",
+        "$S_{6} > 0.6$"
+      ],
+      "key": {
+        "sel": [
+          1,
+          3,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "$\\dfrac{1}{k(k + 2)} = \\dfrac12\\left(\\dfrac1k - \\dfrac{1}{k + 2}\\right)$. Each $\\dfrac1k$ cancels the term two places later, so $\\dfrac11$ and $\\dfrac12$ survive at the front and $\\dfrac{1}{n + 1}$ and $\\dfrac{1}{n + 2}$ at the back: $S_n = \\dfrac34 - \\dfrac12\\left(\\dfrac{1}{n + 1} + \\dfrac{1}{n + 2}\\right)$. True: $S_n < \\tfrac34$ always, $S_{20} > 0.7$ and $S_6 > 0.6$.",
+        "steps": [
+          "1. Partial fractions: $\\dfrac{1}{k(k + 2)} = \\dfrac12\\left(\\dfrac1k - \\dfrac{1}{k + 2}\\right)$.",
+          "2. Telescoping skips one: $S_n = \\dfrac12\\left(1 + \\dfrac12 - \\dfrac{1}{n + 1} - \\dfrac{1}{n + 2}\\right) = \\dfrac34 - \\dfrac12\\left(\\dfrac{1}{n + 1} + \\dfrac{1}{n + 2}\\right)$.",
+          "3. $S_{10} = 0.75 - \\dfrac12\\left(\\dfrac{1}{11} + \\dfrac{1}{12}\\right) \\approx 0.663$: not above $0.68$.",
+          "4. The subtracted part is positive, so $S_n < \\dfrac34$ for every $n$: true.",
+          "5. $S_3 = \\dfrac13 + \\dfrac18 + \\dfrac{1}{15} \\approx 0.525 > \\dfrac12$: the bound $\\dfrac12$ fails.",
+          "6. $S_{20} \\approx 0.75 - \\dfrac12(0.0476 + 0.0455) \\approx 0.703$: true. $S_{40} \\approx 0.75 - \\dfrac12(0.0244 + 0.0238) \\approx 0.726$: not above $0.74$. $S_6 = 0.75 - \\dfrac12\\left(\\dfrac17 + \\dfrac18\\right) \\approx 0.616$: true."
+        ],
+        "fast": "The limit is $\\tfrac34$, and $S_n$ falls short of it by about $\\dfrac{1}{n}$.",
+        "trap": "Cancelling as if only the first and last terms survive gives $S_n = \\dfrac12\\left(1 - \\dfrac{1}{n + 2}\\right) < \\dfrac12$, which makes '$S_n < \\tfrac12$' look true and the others false; keeping $\\tfrac12$ but dropping $\\dfrac{1}{n + 1}$ makes $S_{10} > 0.68$ look true."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "sequences-patterns",
+          "role": "primary"
+        }
+      ],
+      "setup": "a sum of reciprocals of products two apart: partial fractions with a factor of one half, and two terms survive at each end; test bounds on partial sums",
+      "variant": "telescoping sum of differences",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "$T = \\dfrac{3}{1 \\cdot 4} + \\dfrac{5}{4 \\cdot 9} + \\dfrac{7}{9 \\cdot 16} + \\cdots + \\dfrac{19}{81 \\cdot 100}$, where the $k$-th term is $\\dfrac{2k + 1}{k^2 (k + 1)^2}$.",
+      "qc": {
+        "a": "$T$",
+        "b": "$0.99$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Each numerator is a difference of the two squares below it: $2k + 1 = (k + 1)^2 - k^2$, so $\\dfrac{2k + 1}{k^2 (k + 1)^2} = \\dfrac{1}{k^2} - \\dfrac{1}{(k + 1)^2}$. The sum telescopes to $1 - \\dfrac{1}{100} = 0.99$. The quantities are equal.",
+        "steps": [
+          "1. The last term has $k = 9$, so there are 9 terms.",
+          "2. $\\dfrac{2k + 1}{k^2 (k + 1)^2} = \\dfrac{(k + 1)^2 - k^2}{k^2 (k + 1)^2} = \\dfrac{1}{k^2} - \\dfrac{1}{(k + 1)^2}$.",
+          "3. Adding for $k = 1$ to $9$: $T = \\dfrac{1}{1} - \\dfrac{1}{100} = 0.99$."
+        ],
+        "fast": "Partial sums: $\\dfrac34 = 1 - \\dfrac14$, then $\\dfrac34 + \\dfrac{5}{36} = \\dfrac89 = 1 - \\dfrac19$; the pattern is $1 - \\dfrac{1}{(n + 1)^2}$.",
+        "trap": "Stopping the pattern one square early gives $1 - \\dfrac{1}{81} \\approx 0.988$ and suggests B; estimating from the first term alone ($0.75$ plus small terms) also points to B."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "sequences-patterns",
+          "role": "primary"
+        }
+      ],
+      "setup": "a sum whose numerators 2k + 1 are differences of consecutive squares telescopes to 1 - 1/(n + 1)^2; compare with a decimal",
+      "variant": "telescoping sum of differences",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "Each term of a list after the first is found from the term before it: if the previous term is even, the new term is half of it; if the previous term is odd, the new term is 5 more than it. The first term is 12. What is the sum of the first 20 terms?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "90"
+      },
+      "explanation": {
+        "key": "The list is $12, 6, 3, 8, 4, 2, 1, 6, 3, \\ldots$: after the first term it repeats $6, 3, 8, 4, 2, 1$ (sum $24$). Terms 2 to 19 are three full cycles ($72$) and term 20 starts a fourth ($6$). Total $12 + 72 + 6 = 90$.",
+        "steps": [
+          "1. Terms: $12, 6, 3, 8, 4, 2, 1$, then $1 + 5 = 6$, so the block $6, 3, 8, 4, 2, 1$ repeats from term 2.",
+          "2. Block sum: $6 + 3 + 8 + 4 + 2 + 1 = 24$.",
+          "3. Terms 2 to 19 are $18$ terms, three blocks: $72$.",
+          "4. Term 20 is the first of the next block: $6$.",
+          "5. Sum $= 12 + 72 + 6 = 90$."
+        ],
+        "fast": "One $12$, then $19$ cycle terms: $3 \\times 24 + 6$.",
+        "trap": "Treating the $12$ as part of the cycle (a 7-term block $12, 6, 3, 8, 4, 2, 1$ of sum $36$) gives $2 \\times 36 + 35 = 107$; counting 20 cycle terms after the $12$ instead of 19 adds a $3$ and gives $93$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "sequences-patterns",
+          "role": "primary"
+        }
+      ],
+      "setup": "a recursion that halves even terms and adds an odd constant to odd terms enters a cycle after the first term; sum of the first terms with a pre-cycle term and a partial cycle",
+      "variant": "recursive sequence: find a term or a sum",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "A streaming channel fills its ad slots in the repeating order A, A, B, C, A, B, where each letter is an advertiser: the first slot goes to A, the second to A, the third to B, and so on, and after the sixth slot the order starts again. Of the first 100 ad slots, how many go to advertiser A?",
+      "choices": [
+        "48",
+        "49",
+        "50",
+        "51",
+        "52"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Each block of 6 slots has 3 for A. $100 = 6 \\times 16 + 4$: 16 blocks give $48$, and slots 97 to 100 follow A, A, B, C, adding 2. Total $50$.",
+        "steps": [
+          "1. Block A, A, B, C, A, B: three A slots in six.",
+          "2. $100 = 96 + 4$: sixteen full blocks, $16 \\times 3 = 48$.",
+          "3. Slots 97 to 100 are A, A, B, C: two more.",
+          "4. $48 + 2 = 50$."
+        ],
+        "fast": "Half of 96 is 48; the first four slots of a block hold two A slots.",
+        "trap": "Taking half of 100 happens to give 50 here only by luck; stopping at full blocks gives 48, and counting all three A slots of a partial block gives 51."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "sequences-patterns",
+          "role": "primary"
+        }
+      ],
+      "setup": "a fixed repeating pattern of slot types; count one type among the first N slots: full cycles plus the start of the next",
+      "variant": "geometric sequence or a repeating cycle of terms",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "For every positive integer $n$, the average (arithmetic mean) of the first $n$ terms of a sequence is $n + 4$. What is the 30th term of the sequence?",
+      "choices": [
+        "34",
+        "57",
+        "61",
+        "63",
+        "68"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The sum of the first $n$ terms is $n(n + 4) = n^2 + 4n$. The 30th term is the sum of 30 terms minus the sum of 29: $(900 + 120) - (841 + 116) = 1020 - 957 = 63$.",
+        "steps": [
+          "1. $S_n = n \\cdot (n + 4) = n^2 + 4n$.",
+          "2. $S_{30} = 1020$, $S_{29} = 957$.",
+          "3. Term 30 $= S_{30} - S_{29} = 63$ (in general the $n$th term is $2n + 3$, an arithmetic sequence $5, 7, 9, \\ldots$)."
+        ],
+        "fast": "$S_n - S_{n-1} = n^2 + 4n - (n - 1)^2 - 4(n - 1) = 2n + 3$.",
+        "trap": "Reading $n + 4$ as the $n$th term gives $34$; doubling the average gives $68$; using $2n + 1$ (forgetting the $4$ in the difference) gives $61$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "sequences-patterns",
+          "role": "primary"
+        }
+      ],
+      "setup": "the mean of the first n terms of a sequence is a linear expression in n; times n it gives the partial sum, and a term is the difference of consecutive partial sums",
+      "variant": "arithmetic sequence: n-th term, sum, count of terms",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 3,
+      "figureId": "fig3",
+      "prompt": "According to the table, the Pediatrics department's visits were what percent of the clinic's total visits in January? Enter the percent as a number (for $25\\%$, enter 25).",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "30"
+      },
+      "explanation": {
+        "key": "Pediatrics $= 1{,}850 - (420 + 310 + 565) = 1{,}850 - 1{,}295 = 555$, and $\\dfrac{555}{1{,}850} = 0.30$, or $30\\%$.",
+        "steps": [
+          "1. Known departments: $420 + 310 + 565 = 1{,}295$.",
+          "2. Pediatrics: $1{,}850 - 1{,}295 = 555$.",
+          "3. $\\dfrac{555}{1{,}850} = 0.3$: enter 30."
+        ],
+        "fast": "$555$ is $3 \\times 185$, and $1{,}850$ is $10 \\times 185$.",
+        "trap": "Dividing by the three known departments' $1{,}295$ instead of the total gives about $43$; adding the total row in with the departments double-counts it."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "primary"
+        }
+      ],
+      "setup": "a table with one entry missing and the total given; the missing entry from the total, then its percent of the total",
+      "variant": "a value implied but not shown (derived total)",
+      "solverRating": 1
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "figureId": "fig4",
+      "prompt": "According to the table, in which regions did the newspaper have more than 8,000 print subscribers? Indicate all such regions.",
+      "choices": [
+        "North",
+        "South",
+        "East",
+        "West",
+        "Central"
+      ],
+      "key": {
+        "sel": [
+          0,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Print share of each region is $100\\%$ minus its digital-only percent; the count is that times the region's share of $80{,}000$. North $0.30 \\times 0.60 \\times 80{,}000 = 14{,}400$; South $0.25 \\times 0.48 = 12\\%$, $9{,}600$; East $0.16 \\times 0.625 = 10\\%$, exactly $8{,}000$ (not more); West $0.20 \\times 0.45 = 9\\%$, $7{,}200$; Central $0.09 \\times 0.70 = 6.3\\%$, $5{,}040$. North and South.",
+        "steps": [
+          "1. More than $8{,}000$ of $80{,}000$ means more than $10\\%$ of all subscribers.",
+          "2. North: $0.30 \\times 0.60 = 18\\%$. South: $0.25 \\times 0.48 = 12\\%$.",
+          "3. East: $0.16 \\times 0.625 = 10\\%$, equal to the bound, so not more.",
+          "4. West: $0.20 \\times 0.45 = 9\\%$. Central: $0.09 \\times 0.70 = 6.3\\%$.",
+          "5. Only North and South exceed $10\\%$."
+        ],
+        "fast": "Turn the bound into $10\\%$ of the whole and compare share $\\times$ print percent with $0.10$.",
+        "trap": "Choosing by the print percent alone picks Central ($70\\%$) and East ($62.5\\%$), whose regions are small; using the digital-only percent instead of its complement picks West; counting East's exact $8{,}000$ as more than $8{,}000$ adds East."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "primary"
+        }
+      ],
+      "setup": "select regions whose count of the complementary plan exceeds a threshold: each count is the region's share of the whole times one minus the given within-region percent, with one region landing exactly on the threshold",
+      "variant": "percent of a percent across two charts",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "figureId": "fig5",
+      "prompt": "According to the table, by approximately what percent did the chain's membership revenue per member increase from 2022 to 2024?",
+      "choices": [
+        "$12.5\\%$",
+        "$14.6\\%$",
+        "$16.7\\%$",
+        "$31.3\\%$",
+        "$53.1\\%$"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Revenue per member was $\\dfrac{\\$4.8 \\text{ million}}{12{,}000} = \\$400$ in 2022 and $\\dfrac{\\$6.3 \\text{ million}}{14{,}000} = \\$450$ in 2024. The increase is $\\dfrac{50}{400} = 12.5\\%$.",
+        "steps": [
+          "1. 2022: $4{,}800{,}000 \\div 12{,}000 = 400$.",
+          "2. 2024: $6{,}300{,}000 \\div 14{,}000 = 450$.",
+          "3. $\\dfrac{450 - 400}{400} = 0.125$: $12.5\\%$."
+        ],
+        "fast": "The ratio of ratios: $\\dfrac{6.3/4.8}{14/12} = \\dfrac{1.3125}{1.1\\overline{6}} = 1.125$.",
+        "trap": "Subtracting the percent increases (revenue $31.25\\%$, members $16.7\\%$) gives $14.6\\%$; the 2023 row plays no part. Reporting either increase alone gives $31.3\\%$ or $16.7\\%$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "primary"
+        }
+      ],
+      "setup": "percent increase of a per-member quotient between two years, when both the total and the count grew; not the difference of the two percent increases",
+      "variant": "the percent increase between two periods",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "figureId": "fig6",
+      "prompt": "According to the table, the streaming service's total subscription revenue for March was closest to which of the following?",
+      "choices": [
+        "$\\$700{,}000$",
+        "$\\$780{,}000$",
+        "$\\$870{,}000$",
+        "$\\$950{,}000$",
+        "$\\$1{,}030{,}000$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Round each plan: $42{,}000 \\times \\$8 \\approx \\$336{,}000$, $28{,}000 \\times \\$12.50 = \\$350{,}000$, $10{,}000 \\times \\$18 = \\$180{,}000$. Total about $\\$866{,}000$; the exact value is $\\$865{,}635$, closest to $\\$870{,}000$.",
+        "steps": [
+          "1. Basic: $41{,}800 \\times 7.99 \\approx 334{,}000$.",
+          "2. Standard: $28{,}350 \\times 12.49 \\approx 354{,}000$.",
+          "3. Premium: $9{,}870 \\times 17.99 \\approx 178{,}000$.",
+          "4. Sum $\\approx 866{,}000$: $\\$870{,}000$."
+        ],
+        "fast": "$42 \\times 8 + 28 \\times 12.5 + 10 \\times 18 = 336 + 350 + 180 = 866$ thousand.",
+        "trap": "Adding the subscribers and multiplying by the mean price $\\left(\\dfrac{7.99 + 12.49 + 17.99}{3} \\approx 12.82\\right)$ gives about $\\$1{,}026{,}000$ and the largest choice, because most subscribers are on the cheapest plan."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: total revenue as a sum of counts times unit prices, estimated by rounding each count and price",
+      "variant": "estimation to pick the closest value",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "In the $xy$-plane, the equations $3x - ky = 6$ and $6x + 4y = c$ describe the same line, where $k$ and $c$ are constants.",
+      "qc": {
+        "a": "$k + c$",
+        "b": "$10$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The same line means the second equation is a multiple of the first. $6x$ is $2 \\times 3x$, so $4y = 2(-ky)$, giving $k = -2$, and $c = 2 \\times 6 = 12$. Then $k + c = 10$: equal.",
+        "steps": [
+          "1. Multiplier: $6 \\div 3 = 2$.",
+          "2. $y$-coefficient: $2 \\times (-k) = 4$, so $k = -2$.",
+          "3. Constant: $c = 2 \\times 6 = 12$.",
+          "4. $k + c = -2 + 12 = 10$."
+        ],
+        "fast": "Match coefficients after doubling the first equation: $6x - 2ky = 12$.",
+        "trap": "Dropping the minus sign in $-ky$ gives $k = 2$ and $k + c = 14$, which suggests A."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "linear-equations",
+          "role": "primary"
+        }
+      ],
+      "setup": "two linear equations stated to describe the same line: one is a multiple of the other, which fixes a coefficient (negative) and the constant; compare their sum with a value",
+      "variant": "a system with no solution or infinitely many",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "At a hospital café, 3 smoothies and 5 granola bars cost $\\$34$ in all, and 5 smoothies and 3 granola bars cost $\\$30$ in all. Each smoothie has the same price, and each granola bar has the same price. What is the total cost of 4 smoothies and 4 granola bars?",
+      "choices": [
+        "$\\$8$",
+        "$\\$16$",
+        "$\\$30$",
+        "$\\$32$",
+        "$\\$64$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Add the two purchases: $8s + 8b = 64$, so $s + b = 8$ and $4s + 4b = 32$.",
+        "steps": [
+          "1. $3s + 5b = 34$ and $5s + 3b = 30$.",
+          "2. Add: $8s + 8b = 64$.",
+          "3. $4s + 4b = \\dfrac{64}{2} = 32$."
+        ],
+        "fast": "The two baskets together are 8 of each item for $\\$64$; half of that is 4 of each.",
+        "trap": "Stopping at $s + b = 8$ answers one of each item ($\\$8$); doubling instead of halving the combined $\\$64$ answers 16 of each. Solving for $s = 3$ and $b = 5$ first works but wastes time."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "linear-equations",
+          "role": "primary"
+        }
+      ],
+      "setup": "two purchases with the quantities of two items swapped; adding the equations gives a multiple of the combined price, asked for a different multiple",
+      "variant": "solving for an expression (x + y) instead of each variable",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A podcast's first episode runs $a$ minutes, and each later episode runs $d$ minutes longer than the one before. The total running time of the first $n$ episodes is $S = \\dfrac{n}{2}\\big(2a + (n - 1)d\\big)$ minutes. Which of the following expresses $a$ in terms of $S$, $n$ and $d$?",
+      "choices": [
+        "$\\dfrac{2S - (n - 1)d}{2n}$",
+        "$\\dfrac{2S - n(n - 1)d}{2n}$",
+        "$\\dfrac{S - n(n - 1)d}{2n}$",
+        "$\\dfrac{2S}{n} - (n - 1)d$",
+        "$\\dfrac{S - (n - 1)d}{n}$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Multiply by $\\dfrac2n$: $2a + (n - 1)d = \\dfrac{2S}{n}$. Subtract and halve: $a = \\dfrac{S}{n} - \\dfrac{(n - 1)d}{2}$. Over the common denominator $2n$: $a = \\dfrac{2S - n(n - 1)d}{2n}$.",
+        "steps": [
+          "1. $\\dfrac{2S}{n} = 2a + (n - 1)d$.",
+          "2. $2a = \\dfrac{2S}{n} - (n - 1)d$.",
+          "3. $a = \\dfrac{S}{n} - \\dfrac{(n - 1)d}{2} = \\dfrac{2S - n(n - 1)d}{2n}$.",
+          "4. Check: $n = 3$, $a = 10$, $d = 2$ gives $S = 36$; $\\dfrac{72 - 3 \\cdot 2 \\cdot 2}{6} = 10$."
+        ],
+        "fast": "Plug in a small case ($n = 3$, $a = 10$, $d = 2$, $S = 36$) and test each choice for $10$.",
+        "trap": "Writing $\\dfrac{2S - (n - 1)d}{2n}$ divides the $(n - 1)d$ term by $n$ along with $2S$, though it was never multiplied by $n$ (gives $\\tfrac{68}{6}$ in the check); $\\dfrac{2S}{n} - (n - 1)d$ forgets to halve, giving $20$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "linear-equations",
+          "role": "primary"
+        }
+      ],
+      "setup": "the sum formula of equally spaced terms solved for the first term: clear the halving and the outside factor, so the step term picks up the count as a factor",
+      "variant": "a literal equation: solve for one letter in terms of the others",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "A health savings account pays $10\\%$ simple annual interest. A second account pays $9.5\\%$ annual interest, compounded annually. A deposit of $\\$1{,}000$ is made into each account, and no other deposits or withdrawals are made.",
+      "qc": {
+        "a": "The balance of the simple-interest account after 2 years",
+        "b": "The balance of the compound-interest account after 2 years"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Simple: $1{,}000(1 + 2 \\times 0.10) = \\$1{,}200$. Compound: $1{,}000(1.095)^2 = \\$1{,}199.03$. The simple account is ahead by about 97 cents: A.",
+        "steps": [
+          "1. Simple, 2 years: interest $2 \\times 100 = 200$; balance $1{,}200$.",
+          "2. Compound: $1.095^2 = 1.199025$; balance $1{,}199.03$.",
+          "3. $1{,}200 > 1{,}199.03$."
+        ],
+        "fast": "Compounding adds only $r^2 = 0.095^2 \\approx 0.009$ of the principal over two years, about $\\$9$, less than the $\\$10$ gap from the half-point rate difference.",
+        "trap": "Assuming compounding always wins suggests B; it wins only when the rates are equal or close enough that interest on interest covers the gap."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponential-growth",
+          "role": "primary"
+        }
+      ],
+      "setup": "a slightly higher simple rate against a slightly lower compound rate over two years; the compounding bonus is too small to close the gap",
+      "variant": "compound interest against simple interest",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "A streaming service's number of subscribers doubles every 8 months, growing by the same percent each month. Which of the following statements must be true? Indicate all such statements.",
+      "choices": [
+        "After 24 months the service has 6 times as many subscribers as at the start.",
+        "After 4 months the service has 1.5 times as many subscribers as at the start.",
+        "After 13 months the service has more than 3 times as many subscribers as at the start.",
+        "The number of subscribers increases by 12.5 percent each month.",
+        "After 20 months the service has more than 5 times as many subscribers as at the start.",
+        "After 12 months the service has fewer than 3 times as many subscribers as at the start."
+      ],
+      "key": {
+        "sel": [
+          2,
+          4,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "After $t$ months the count is $2^{t/8}$ times the start. Month 13: $2^{13/8} \\approx 3.08 > 3$. Month 20: $2^{2.5} \\approx 5.66 > 5$. Month 12: $2^{1.5} \\approx 2.83 < 3$. The rest fail: month 24 is $2^3 = 8$ times; month 4 is $\\sqrt2 \\approx 1.41$ times; the monthly growth is $2^{1/8} - 1 \\approx 9.1\\%$.",
+        "steps": [
+          "1. Factor after $t$ months: $2^{t/8}$.",
+          "2. $t = 24$: $8$, not $6$.",
+          "3. $t = 4$: $2^{1/2} \\approx 1.414$, not $1.5$.",
+          "4. $t = 13$: $2^{1.625} = 2 \\cdot 2^{0.625} \\approx 3.08$: true.",
+          "5. Monthly factor $2^{1/8} \\approx 1.091$, about $9\\%$, not $12.5\\%$.",
+          "6. $t = 20$: $4\\sqrt2 \\approx 5.66$: true. $t = 12$: $2\\sqrt2 \\approx 2.83$: true."
+        ],
+        "fast": "Write each month as doubling periods: $\\tfrac12$ period is $\\times\\sqrt2$, $1\\tfrac12$ periods is $\\times 2\\sqrt2$, $2\\tfrac12$ is $\\times 4\\sqrt2$.",
+        "trap": "Treating growth as linear inside a doubling period gives $1.5$ at month 4 and $12.5\\%$ a month ($100\\% \\div 8$); counting doublings additively gives $6$ times at month 24."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponential-growth",
+          "role": "primary"
+        }
+      ],
+      "setup": "a fixed doubling time; statements about fractional numbers of doubling periods (half a period is a factor of root 2, not 1.5) and a monthly rate against the linear split",
+      "variant": "doubling or halving time",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q21",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A newsroom has the same number of senior reporters as junior reporters. Of all the groups of one or more reporters that can be formed from them, exactly 93 contain more senior reporters than junior reporters. How many reporters does the newsroom have in all?",
+      "choices": [
+        "4",
+        "6",
+        "7",
+        "8",
+        "10"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "revisits": "quant-008:s2q11",
+      "explanation": {
+        "key": "With $m$ seniors and $m$ juniors, swapping the two kinds pairs each group with more seniors with one with more juniors, so 'more seniors' is half of the groups that are not ties: $\\dfrac{2^{2m} - \\binom{2m}{m}}{2}$. (The empty group is a tie, so leaving it out changes nothing.) $m = 4$: $\\dfrac{256 - 70}{2} = 93$. So $8$ reporters.",
+        "steps": [
+          "1. Ties (equal numbers of each): $\\sum_k \\binom{m}{k}^2 = \\binom{2m}{m}$.",
+          "2. More seniors $= \\dfrac{4^m - \\binom{2m}{m}}{2}$.",
+          "3. $m = 3$: $\\dfrac{64 - 20}{2} = 22$; $m = 4$: $\\dfrac{256 - 70}{2} = 93$; $m = 5$: $386$.",
+          "4. $m = 4$, so $2m = 8$ reporters."
+        ],
+        "fast": "$2 \\times 93 = 186$ must be $4^m$ minus a tie count; $256 - 186 = 70 = \\binom84$.",
+        "trap": "Answering $4$ gives the senior reporters alone, not the newsroom total; forgetting to remove the ties ($\\tfrac{4^m}{2} = 93$ has no whole-number solution) leaves solvers guessing $7$ or $6$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-permutations",
+          "role": "primary"
+        }
+      ],
+      "setup": "run backwards: the number of groups with more of one kind than the other, from two equal-size kinds, is given; find the size from half of all subsets minus the ties",
+      "variant": "subset counts and the symmetry C(n, k) = C(n, n - k)",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q22",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "On a straight highway, a hospital sits at mile marker $h$. A pharmacy at marker $p$ satisfies $|p - h| = 5$, and a walk-in clinic at marker $w$ satisfies $|w - h| < 3$.",
+      "qc": {
+        "a": "$|p - w|$",
+        "b": "$2$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "revisits": "quant-008:s1q8",
+      "explanation": {
+        "key": "$w$ lies in the open interval from $h - 3$ to $h + 3$, and $p$ is $5$ from $h$, outside that interval. The nearest point of the interval to $p$ is $2$ away, and the interval is open, so $|p - w| > 2$ always: A.",
+        "steps": [
+          "1. $|w - h| < 3$: $w$ is strictly between $h - 3$ and $h + 3$.",
+          "2. Say $p = h + 5$; then $p - w > (h + 5) - (h + 3) = 2$.",
+          "3. The case $p = h - 5$ is the mirror image. So $|p - w|$ is always more than $2$ (and less than $8$)."
+        ],
+        "fast": "Triangle inequality on a line: $|p - w| \\ge |p - h| - |h - w| > 5 - 3 = 2$.",
+        "trap": "Thinking the clinic could sit right next to the pharmacy (so $|p - w|$ could be $0$ or $1$) suggests D; $w$ can never get within $2$ of $p$, and the strict $< 3$ keeps the distance from equalling $2$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "abs-value-inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "one point at an exact distance from a middle point and another strictly within a smaller distance of it; the distance between the two outer points is strictly above the difference of the two distances",
+      "variant": "|x - a| < b as a distance interval",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q23",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "On any night, each of a streaming service's two backup servers, X and Y, may fail, independently of each other. The probability that Y fails is twice the probability $p$ that X fails, and the probability that at least one of the two servers fails is $0.28$.",
+      "qc": {
+        "a": "$p$",
+        "b": "$0.1$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "revisits": "quant-008:s2q5",
+      "explanation": {
+        "key": "Neither fails with probability $(1 - p)(1 - 2p) = 1 - 0.28 = 0.72$. So $2p^2 - 3p + 0.28 = 0$, or $50p^2 - 75p + 7 = 0 = (10p - 1)(5p - 7)$: $p = 0.1$ or $p = 1.4$. A probability cannot be $1.4$, so $p = 0.1$: equal.",
+        "steps": [
+          "1. Complement: $P(\\text{neither}) = 0.72 = (1 - p)(1 - 2p)$.",
+          "2. $1 - 3p + 2p^2 = 0.72$, so $2p^2 - 3p + 0.28 = 0$.",
+          "3. $p = \\dfrac{3 \\pm \\sqrt{9 - 2.24}}{4} = \\dfrac{3 \\pm 2.6}{4}$: $0.1$ or $1.4$.",
+          "4. Reject $1.4$; $p = 0.1$."
+        ],
+        "fast": "Test $p = 0.1$: $0.9 \\times 0.8 = 0.72$, exactly the complement of $0.28$.",
+        "trap": "Adding without the overlap, $p + 2p = 0.28$, gives $p \\approx 0.093$ and suggests B; keeping both roots of the quadratic suggests D."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-basic",
+          "role": "primary"
+        }
+      ],
+      "setup": "two independent events, one twice as likely as the other, with P(at least one) given; the complement gives a quadratic whose larger root is not a probability",
+      "variant": "complement: at least one success",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q24",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "$x = 0.\\overline{36}$",
+      "qc": {
+        "a": "The 15th digit to the right of the decimal point in $3x$",
+        "b": "The 15th digit to the right of the decimal point in $x$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "revisits": "quant-008:s1q1",
+      "explanation": {
+        "key": "$x = \\dfrac{36}{99} = \\dfrac{4}{11}$, so $3x = \\dfrac{12}{11} = 1.\\overline{09}$. The 15th digit after the decimal point is in an odd place: $0$ for $3x$ and $3$ for $x$. B is greater.",
+        "steps": [
+          "1. $x = \\dfrac{4}{11}$; its digits after the point go $3, 6, 3, 6, \\ldots$, with $3$ in every odd place.",
+          "2. $3x = \\dfrac{12}{11} = 1.090909\\ldots$: $0$ in every odd place, $9$ in every even place.",
+          "3. 15th place: $0$ for $3x$, $3$ for $x$."
+        ],
+        "fast": "$3 \\times 0.\\overline{36} = 1.\\overline{09}$, since $3 \\times 36 = 108$ and the carry wraps around.",
+        "trap": "Tripling each digit ($3 \\times 3 = 9$ in the odd places) suggests A; the carries shift every digit, so convert to a fraction first."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "fractions-decimals",
+          "role": "primary"
+        }
+      ],
+      "setup": "a repeating decimal times a whole number: convert to a fraction first, since the product's period shifts and digit-by-digit multiplication misleads; compare a digit of each",
+      "variant": "the k-th digit after the decimal point of a repeating decimal",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q25",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "setId": "d1",
+      "figureId": "d1",
+      "prompt": "According to the graphs, at which port was the number of refrigerated containers handled in 2024 closest to 100 thousand TEU?",
+      "choices": [
+        "Arlo",
+        "Kestrel Bay",
+        "Marenne",
+        "Sutton Quay",
+        "Velport"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Refrigerated in 2024 = 2024 throughput $\\times$ percent: Arlo $1{,}015 \\times 0.12 \\approx 122$; Kestrel Bay $1{,}210 \\times 0.08 \\approx 97$; Marenne $790 \\times 0.20 = 158$; Sutton Quay $610 \\times 0.15 \\approx 92$; Velport $870 \\times 0.10 = 87$. Kestrel Bay, about 3 away, is closest.",
+        "steps": [
+          "1. Use the 2024 bars with the percents.",
+          "2. Arlo $\\approx 122$, Kestrel Bay $\\approx 97$, Marenne $158$, Sutton Quay $\\approx 92$, Velport $87$.",
+          "3. Distances from 100: $22$, $3$, $58$, $8$, $13$: Kestrel Bay."
+        ],
+        "fast": "$8\\%$ of about $1{,}200$ is about $96$.",
+        "trap": "Picking Velport because $10\\%$ of a port near $1{,}000$ looks like $100$ ignores that Velport handled only $870$ in 2024; reading the 2022 bars instead also shifts every product."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: which category's product of a total and a percent from a second panel is nearest a target value",
+      "variant": "estimation to pick the closest value",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q26",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "setId": "d1",
+      "figureId": "d1",
+      "prompt": "According to the graphs, the number of refrigerated containers handled at Arlo in 2024 was approximately what percent of the number of non-refrigerated containers handled at Sutton Quay in 2024?",
+      "choices": [
+        "$14\\%$",
+        "$20\\%$",
+        "$23\\%$",
+        "$27\\%$",
+        "$32\\%$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Arlo refrigerated: $0.12 \\times 1{,}015 \\approx 121.8$ thousand. Sutton Quay non-refrigerated: $0.85 \\times 610 = 518.5$ thousand. $\\dfrac{121.8}{518.5} \\approx 0.235$, about $23\\%$.",
+        "steps": [
+          "1. Arlo: $12\\%$ of $1{,}015 \\approx 121.8$.",
+          "2. Sutton Quay: $100\\% - 15\\% = 85\\%$ of $610 = 518.5$.",
+          "3. $121.8 \\div 518.5 \\approx 23.5\\%$."
+        ],
+        "fast": "$\\dfrac{0.12 \\times 1{,}015}{0.85 \\times 610} \\approx \\dfrac{122}{520}$, a bit under a quarter.",
+        "trap": "Dividing by all of Sutton Quay's $610$ gives $20\\%$; comparing the percents alone ($\\tfrac{12}{85}$) gives $14\\%$; using Sutton Quay's refrigerated $15\\%$ ($\\tfrac{121.8}{91.5}$) gives over $100\\%$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: one port's refrigerated count against another port's non-refrigerated count, each from its total in one panel and a percent (or its complement) in the other",
+      "variant": "a ratio between two categories in different graphs",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q27",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "setId": "d1",
+      "figureId": "d1",
+      "prompt": "In 2022, $16\\%$ of Marenne's throughput was refrigerated containers. According to the graphs, by approximately what percent did the number of refrigerated containers handled at Marenne increase from 2022 to 2024?",
+      "choices": [
+        "$21\\%$",
+        "$25\\%$",
+        "$46\\%$",
+        "$51\\%$",
+        "$56\\%$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "2022: $0.16 \\times 655 = 104.8$ thousand. 2024: $0.20 \\times 790 = 158$ thousand. Increase $\\dfrac{158 - 104.8}{104.8} \\approx 0.508$: about $51\\%$.",
+        "steps": [
+          "1. 2022 refrigerated: $0.16 \\times 655 = 104.8$.",
+          "2. 2024 refrigerated: $0.20 \\times 790 = 158$.",
+          "3. $\\dfrac{158}{104.8} \\approx 1.508$: an increase of about $51\\%$."
+        ],
+        "fast": "Factors multiply: share $\\times \\tfrac{20}{16} = 1.25$, throughput $\\times \\tfrac{790}{655} \\approx 1.206$, together $\\approx 1.508$.",
+        "trap": "Adding the two increases ($25\\% + 20.6\\%$) gives $46\\%$; the share's increase alone gives $25\\%$, and the throughput's alone gives $21\\%$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-interpretation-calc",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: percent increase of a sub-count when both its share and the base changed; the growth factors multiply, so the answer is not the sum of the two percent increases",
+      "variant": "the percent increase between two periods",
+      "solverRating": 4
+    }
+  ]
+}
