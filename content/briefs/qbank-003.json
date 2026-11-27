@@ -1,0 +1,802 @@
+{
+ "testId": "qbank-003",
+ "measure": "quant",
+ "kind": "quant",
+ "seed": 80952,
+ "generatedAt": "2026-11-27T04:39:41.007Z",
+ "gaps": [
+  "revisit quant-006:s1q12 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q3 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q4 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q7 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q8 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q15 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q4 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s1q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q5 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s1q6 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s1q7 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q2 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q14 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q12 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s1q7 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q10 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q1 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q2 (you missed it; no sibling in the bank yet)"
+ ],
+ "slots": [
+  {
+   "slot": 1,
+   "qid": "s1q1",
+   "type": "mc",
+   "level": 4,
+   "concept": "min-max-bounding",
+   "name": "Bounding: minimum/maximum values under constraints",
+   "variant": "worst-case count (pigeonhole)"
+  },
+  {
+   "slot": 2,
+   "qid": "s1q2",
+   "type": "qc",
+   "level": 5,
+   "concept": "min-max-bounding",
+   "name": "Bounding: minimum/maximum values under constraints",
+   "variant": "extreme values of a mean or median"
+  },
+  {
+   "slot": 3,
+   "qid": "s1q3",
+   "type": "mc",
+   "level": 4,
+   "concept": "min-max-bounding",
+   "name": "Bounding: minimum/maximum values under constraints",
+   "variant": "the extreme value of an expression over an integer range"
+  },
+  {
+   "slot": 4,
+   "qid": "s1q4",
+   "type": "qc",
+   "level": 5,
+   "concept": "min-max-bounding",
+   "name": "Bounding: minimum/maximum values under constraints",
+   "variant": "the largest share or longest side under an ordering or triangle constraint"
+  },
+  {
+   "slot": 5,
+   "qid": "s1q5",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "word-problems-interest",
+   "name": "Interest, profit, discount and cost problems",
+   "variant": "whole-unit pricing and boundary cases (sold only by the full yard; \"or less\")"
+  },
+  {
+   "slot": 6,
+   "qid": "s1q6",
+   "type": "mc",
+   "level": 4,
+   "concept": "word-problems-interest",
+   "name": "Interest, profit, discount and cost problems",
+   "variant": "markup then discount"
+  },
+  {
+   "slot": 7,
+   "qid": "s1q7",
+   "type": "numeric",
+   "level": 5,
+   "concept": "word-problems-interest",
+   "name": "Interest, profit, discount and cost problems",
+   "variant": "profit as a percent of cost vs of price"
+  },
+  {
+   "slot": 8,
+   "qid": "s1q8",
+   "type": "qc",
+   "level": 4,
+   "concept": "word-problems-interest",
+   "name": "Interest, profit, discount and cost problems",
+   "variant": "whole-unit pricing and boundary cases (sold only by the full yard; \"or less\")"
+  },
+  {
+   "slot": 9,
+   "qid": "s1q9",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "primes-factors",
+   "name": "Primes, factors, multiples, GCD/LCM",
+   "variant": "smallest multiplier that makes a perfect square or cube"
+  },
+  {
+   "slot": 10,
+   "qid": "s1q10",
+   "type": "mc",
+   "level": 5,
+   "concept": "primes-factors",
+   "name": "Primes, factors, multiples, GCD/LCM",
+   "variant": "highest power of a prime dividing n! or a product"
+  },
+  {
+   "slot": 11,
+   "qid": "s1q11",
+   "type": "numeric",
+   "level": 4,
+   "concept": "primes-factors",
+   "name": "Primes, factors, multiples, GCD/LCM",
+   "variant": "number of positive divisors from the prime factorization"
+  },
+  {
+   "slot": 12,
+   "qid": "s1q12",
+   "type": "qc",
+   "level": 5,
+   "concept": "primes-factors",
+   "name": "Primes, factors, multiples, GCD/LCM",
+   "variant": "count of primes or factors in a stated range"
+  },
+  {
+   "slot": 13,
+   "qid": "s1q13",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "graphs-of-functions",
+   "name": "Graphs of functions and parabolas, shifts and reflections",
+   "variant": "reading the value of f at a point from a graph"
+  },
+  {
+   "slot": 14,
+   "qid": "s1q14",
+   "type": "mc",
+   "level": 5,
+   "concept": "graphs-of-functions",
+   "name": "Graphs of functions and parabolas, shifts and reflections",
+   "variant": "intersections of two graphs"
+  },
+  {
+   "slot": 15,
+   "qid": "s1q15",
+   "type": "numeric",
+   "level": 4,
+   "concept": "graphs-of-functions",
+   "name": "Graphs of functions and parabolas, shifts and reflections",
+   "variant": "symmetry about an axis, the origin or y = x"
+  },
+  {
+   "slot": 16,
+   "qid": "s1q16",
+   "type": "qc",
+   "level": 5,
+   "concept": "graphs-of-functions",
+   "name": "Graphs of functions and parabolas, shifts and reflections",
+   "variant": "reading the value of f at a point from a graph"
+  },
+  {
+   "slot": 17,
+   "qid": "s1q17",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "random-variables",
+   "name": "Random variables, probability distributions, expected value",
+   "variant": "expected value from a probability table"
+  },
+  {
+   "slot": 18,
+   "qid": "s1q18",
+   "type": "mc",
+   "level": 5,
+   "concept": "random-variables",
+   "name": "Random variables, probability distributions, expected value",
+   "variant": "mean and median of a discrete distribution table"
+  },
+  {
+   "slot": 19,
+   "qid": "s1q19",
+   "type": "numeric",
+   "level": 4,
+   "concept": "random-variables",
+   "name": "Random variables, probability distributions, expected value",
+   "variant": "probability from areas under a density curve"
+  },
+  {
+   "slot": 20,
+   "qid": "s1q20",
+   "type": "qc",
+   "level": 5,
+   "concept": "random-variables",
+   "name": "Random variables, probability distributions, expected value",
+   "variant": "a uniform distribution over an interval"
+  },
+  {
+   "slot": 21,
+   "qid": "s1q21",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "percent",
+   "name": "Percent, percent change, successive percent",
+   "variant": "finding the original value after a change"
+  },
+  {
+   "slot": 22,
+   "qid": "s1q22",
+   "type": "mc",
+   "level": 5,
+   "concept": "percent",
+   "name": "Percent, percent change, successive percent",
+   "variant": "percent comparisons in QC with unknown bases"
+  },
+  {
+   "slot": 23,
+   "qid": "s1q23",
+   "type": "numeric",
+   "level": 4,
+   "concept": "percent",
+   "name": "Percent, percent change, successive percent",
+   "variant": "percent change vs percentage-point change"
+  },
+  {
+   "slot": 24,
+   "qid": "s1q24",
+   "type": "qc",
+   "level": 5,
+   "concept": "percent",
+   "name": "Percent, percent change, successive percent",
+   "variant": "percent comparisons in QC with unknown bases"
+  },
+  {
+   "slot": 25,
+   "qid": "s1q25",
+   "type": "mc",
+   "level": 5,
+   "concept": "mean-median-mode",
+   "name": "Mean, median, mode, range",
+   "variant": "a mean after adding or removing values",
+   "revisit": {
+    "ref": "quant-006:s1q12",
+    "result": "missed",
+    "item": "Suppose that French enrollment in 2025 is $x$ students, and that for the seven years 2019 through 2025 the median of the annual French enrollments equals their average (arithmetic mean). What is the sum of all possible values of $x$? · choices: $470$ / $870$ / $940$ / $1010$ / $1410$",
+    "setup": "add one value so the median equals the mean",
+    "change": "run it backwards: give what the earlier item asked for, and ask for one of its givens"
+   }
+  },
+  {
+   "slot": 26,
+   "qid": "s1q26",
+   "type": "numeric",
+   "level": 5,
+   "concept": "inscribed-figures",
+   "name": "Inscribed and circumscribed figures, composite shapes",
+   "variant": "a rectangle inscribed in a circle or semicircle (diameter as diagonal)",
+   "revisit": {
+    "ref": "quant-006:s2q11",
+    "result": "missed",
+    "item": "A square is inscribed in a semicircle of radius 5, with two vertices of the square on the diameter and the other two on the arc. A circle is inscribed in the square. What is the area of the region that lies inside the semicircle but outside the circle? · choices: $5\\pi$ / $\\dfrac{15\\pi}{2}$ / $\\dfrac{25\\pi}{2}-20$ / $10\\pi$ / $\\dfrac{25\\pi}{4}$",
+    "setup": "square inscribed in a semicircle with one side on the diameter",
+    "change": "change the format (quantitative comparison, multiple choice or numeric entry) and the question asked"
+   }
+  },
+  {
+   "slot": 27,
+   "qid": "s1q27",
+   "type": "qc",
+   "level": 5,
+   "concept": "probability-basic",
+   "name": "Probability: independent events, complement",
+   "variant": "probability from a count of outcomes with dice or coins",
+   "revisit": {
+    "ref": "quant-006:s2q3",
+    "result": "missed",
+    "item": "A fair coin is to be tossed several times. · Quantity A: The probability of getting more heads than tails in 5 tosses | Quantity B: The probability of getting more heads than tails in 6 tosses",
+    "setup": "compare two binomial probabilities with p = 1/2 (at least / more heads than tails)",
+    "change": "combine the same insight with a second concept"
+   }
+  },
+  {
+   "slot": 28,
+   "qid": "s1q28",
+   "type": "qc",
+   "level": 4,
+   "concept": "integers-properties",
+   "name": "Integer properties, even/odd, divisibility",
+   "variant": "must be / could be an integer from a stated condition",
+   "revisit": {
+    "ref": "quant-006:s2q4",
+    "result": "missed",
+    "item": "$k$ is a positive integer, and $k^2$ is divisible by 72. · Quantity A: The greatest integer that must be a divisor of $k$ | Quantity B: 12",
+    "setup": "k^2 divisible by 72: greatest number that must divide k",
+    "change": "keep the insight but move the trap: a different wrong path should tempt"
+   }
+  }
+ ],
+ "units": [],
+ "conceptSlots": [
+  {
+   "concept": "min-max-bounding",
+   "variant": "worst-case count (pigeonhole)"
+  },
+  {
+   "concept": "min-max-bounding",
+   "variant": "extreme values of a mean or median"
+  },
+  {
+   "concept": "min-max-bounding",
+   "variant": "the extreme value of an expression over an integer range"
+  },
+  {
+   "concept": "min-max-bounding",
+   "variant": "the largest share or longest side under an ordering or triangle constraint"
+  },
+  {
+   "concept": "word-problems-interest",
+   "variant": "whole-unit pricing and boundary cases (sold only by the full yard; \"or less\")"
+  },
+  {
+   "concept": "word-problems-interest",
+   "variant": "markup then discount"
+  },
+  {
+   "concept": "word-problems-interest",
+   "variant": "profit as a percent of cost vs of price"
+  },
+  {
+   "concept": "word-problems-interest",
+   "variant": "whole-unit pricing and boundary cases (sold only by the full yard; \"or less\")"
+  },
+  {
+   "concept": "primes-factors",
+   "variant": "smallest multiplier that makes a perfect square or cube"
+  },
+  {
+   "concept": "primes-factors",
+   "variant": "highest power of a prime dividing n! or a product"
+  },
+  {
+   "concept": "primes-factors",
+   "variant": "number of positive divisors from the prime factorization"
+  },
+  {
+   "concept": "primes-factors",
+   "variant": "count of primes or factors in a stated range"
+  },
+  {
+   "concept": "graphs-of-functions",
+   "variant": "reading the value of f at a point from a graph"
+  },
+  {
+   "concept": "graphs-of-functions",
+   "variant": "intersections of two graphs"
+  },
+  {
+   "concept": "graphs-of-functions",
+   "variant": "symmetry about an axis, the origin or y = x"
+  },
+  {
+   "concept": "graphs-of-functions",
+   "variant": "reading the value of f at a point from a graph"
+  },
+  {
+   "concept": "random-variables",
+   "variant": "expected value from a probability table"
+  },
+  {
+   "concept": "random-variables",
+   "variant": "mean and median of a discrete distribution table"
+  },
+  {
+   "concept": "random-variables",
+   "variant": "probability from areas under a density curve"
+  },
+  {
+   "concept": "random-variables",
+   "variant": "a uniform distribution over an interval"
+  },
+  {
+   "concept": "percent",
+   "variant": "finding the original value after a change"
+  },
+  {
+   "concept": "percent",
+   "variant": "percent comparisons in QC with unknown bases"
+  },
+  {
+   "concept": "percent",
+   "variant": "percent change vs percentage-point change"
+  },
+  {
+   "concept": "percent",
+   "variant": "percent comparisons in QC with unknown bases"
+  },
+  {
+   "concept": "mean-median-mode",
+   "variant": "a mean after adding or removing values"
+  },
+  {
+   "concept": "inscribed-figures",
+   "variant": "a rectangle inscribed in a circle or semicircle (diameter as diagonal)"
+  },
+  {
+   "concept": "probability-basic",
+   "variant": "probability from a count of outcomes with dice or coins"
+  },
+  {
+   "concept": "integers-properties",
+   "variant": "must be / could be an integer from a stated condition"
+  }
+ ],
+ "targets": {
+  "concepts": [
+   "min-max-bounding",
+   "word-problems-interest",
+   "primes-factors",
+   "graphs-of-functions",
+   "random-variables",
+   "percent"
+  ]
+ },
+ "history": {
+  "min-max-bounding": [
+   {
+    "setup": "integer ranges for x and y; select all possible values of the product xy",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x < y < z positive integers with fixed product; select possible values of z",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x/y over interval ranges with y ≠ 0; select possible values",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "distinct integer weights with a sum and a cap; least possible second-largest",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three distinct integer lengths with a fixed sum that form a triangle; possible longest",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "worst-case draws to guarantee a color condition (pigeonhole); select the true counts",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a rectangle in the corner of a right triangle: its area peaks at half the triangle's area; select attainable areas",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a point moving on a line: its distance to a fixed point is at least the perpendicular distance; select attainable distances",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "interval ranges: greatest x^2 - y^2 vs greatest xy",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "integer scores in a fixed range with a given median; select possible means (extremes and integer totals)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "sum of a quadratic in x and a quadratic in y over integer ranges: one vertex outside its range, the other between integers",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "integer points in a disk: the extreme values of several expressions, where the real optimum is not at an integer point",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a total split into a fixed number of whole-number shares, the largest at most twice the smallest; the greatest possible largest share (a ratio bound, then whole numbers)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "five integers with the least value, the range and the mean given; the median's bounds from the fixed ends and the middle sum",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "distances from a fixed point to a point on a half circle: the nearest point of the full circle lies on the missing half, so the least distance is at an end of the arc; the greatest is the center distance plus the radius",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "distinct integer lengths with a sum and a floor; greatest possible second-largest (the others pushed to the floor, the largest one above it)",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "word-problems-interest": [
+   {
+    "setup": "lots sold at markup and at a discount off list; cost per unit from total profit",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two deposits starting in different months in one simple-interest account; total interest at year's end",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "salary plus a flat commission against commission only above a threshold: the break-even sales",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "goods sold only in whole units with a non-whole need, then a fee on orders at or below a threshold: buying one more unit is cheaper",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "profit given as a percent of the selling price; the price rises by a percent with the cost fixed; the new profit as a percent of cost",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a fixed fee plus a two-tier per-unit rate; the total bill given; the total usage",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a price and a profit stated as a percent of cost give the cost; re-price so the same percent is of the selling price; the change in price",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a dollar markup over cost followed by a percent discount on the marked price; the profit left over gives the cost (the discount comes off cost plus markup)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a repayment of principal plus simple interest over a fraction of a year; count the months, scale the annual rate, divide by one plus the term rate",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "primes-factors": [
+   {
+    "setup": "x^2 - y^2 = N: count or list integer solutions from same-parity factor pairs",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "divisor-count function: d(n^2) vs 3·d(n) for an unknown n",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "divisor-count relation d(n^2) = 3·d(n) given; select the n that satisfy it",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a power of a composite dividing a factorial: the squared small prime limits, not the larger prime",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "divisors of a perfect square below its square root: pair d with N/d and set the root aside; compare the count with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "count the primes in two short ranges stated as integers with exactly two divisors; one range hides composites that look prime",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "divisor count of a product of powers of two composite numbers that share a prime (combine the exponents first)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "largest square tile that covers a rectangle exactly; the number of tiles (the GCD is the side, not the answer)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a multiple of a fixed number must be a perfect square; the possible multipliers are the least one times any square",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a product of the first n even numbers rewritten as a power of 2 times n!; the power of an odd prime comes from n!, not from the larger factorial",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two periodic events with a given gcd and lcm of their periods; list the coprime splits of lcm over gcd; compare the sum of the periods with its least value",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "graphs-of-functions": [
+   {
+    "setup": "parabola crossing the x-axis on both sides of the y-axis; compare b with c",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "piecewise-linear graph read at points between vertices after the input is reflected and shifted",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a graph symmetric about the y-axis shifted horizontally: compare values at two points equidistant from the new axis",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a function's unique maximum point; a reflected, stretched and shifted copy: compare where the copy's extreme value occurs with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a parabola against an absolute-value graph: solve on each piece and reject the roots outside that piece's domain; compare the count with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a graph symmetric about two parallel vertical lines: chaining the reflections links two values that neither reflection links alone; compare them",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a line through the origin against a V-shaped graph whose vertex is off the origin; the slopes for which they meet twice (between the flat line through the vertex and the far arm's slope)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "monic parabola with the gap between its x-intercepts and its y-intercept given; two mirror-image parabolas fit, so the vertex's side of the y-axis is undetermined",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a horizontal compression, a shift and a vertical stretch of a graph scale the area between it and the x-axis by the product of the two stretch factors (the shift changes nothing); compare with a value",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "random-variables": [
+   {
+    "setup": "probability table where the median is not the middle listed value; mean minus median",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: expected days on site per employee, weighting by department share and the non-remote share, remote counted as 0",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "triangular density on an interval: find the peak height, then the area of a tail; compare with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a length uniform on an interval; probabilities about its square found by converting back to the length (the square is not uniform)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a continuous uniform variable and a discrete uniform integer on the same endpoints; compare the probabilities of the same at-most event (length share against inclusive count)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a density whose graph is one sloped segment with both end heights given; the probability of the lower half is a trapezoid area (average height times width), not the length share",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "percent": [
+   {
+    "setup": "price up p% then down q% (or back to a reference); find the missing percent or value",
+    "worn": true,
+    "items": 3
+   },
+   {
+    "setup": "dilute a solution: add water to lower the concentration to a target percent",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: which categories' share of the total fell between two years",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "list price above cost, two successive discounts, final price; markup percent",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a rate falls from p% to q%: percent decrease against the percentage-point drop",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a price after one discount is given; find the original (divide by the remaining share)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the whole and a subgroup grow by different percents; percent change in the subgroup's share",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a percent of a subgroup that is itself a percent of the whole (part of a part)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two quantities rise by different percents but by the same absolute amount; compare one new value with a multiple of the other's old value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one group a percent larger than another, a different percent of each group taken; compare the two parts (the base offsets the rate)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a share rises by some percentage points, then falls by a percent of itself; with the starting share bounded, compare the final share with the starting one",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one group a percent larger than the other with no counts given; the smaller group's share of the whole against a value just above it",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "an absolute addition followed by a percent increase; undo them in reverse order to recover the original",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two complementary subgroups, each with its own rate; the overall percent is the sum of the two parts of parts, not the average of the two rates",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a share's rise given both in percentage points and as a percent of itself; recover the new share and compare it with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a fare up x% then down x% ends at a known value; recover the original by dividing by the net factor (not by applying the changes in reverse)",
+    "worn": false,
+    "items": 1
+   }
+  ]
+ },
+ "exemplars": {
+  "min-max-bounding": [],
+  "word-problems-interest": [
+   "bb-t1s3-28",
+   "bb-t1s7-16"
+  ],
+  "primes-factors": [
+   "bb-t3s2-30",
+   "ogq-t1-s6-21"
+  ],
+  "graphs-of-functions": [],
+  "random-variables": [],
+  "percent": [
+   "bb-t1s3-29",
+   "ogq-t1-s5-15"
+  ]
+ }
+}

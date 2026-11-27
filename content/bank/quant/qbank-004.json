@@ -1,0 +1,1132 @@
+{
+  "id": "qbank-004",
+  "measure": "quant",
+  "title": "Quant bank batch 4",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Land use on a 480-hectare farm. Each sector is labeled with its percent of the farm's land or with its central angle; the barley sector is unlabeled.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 275' width='330' height='275' font-family='sans-serif' font-size='13'><path d='M150,135 L150.0,40.0 A95,95 0 0 1 226.9,190.8 Z' fill='currentColor' fill-opacity='0.1' stroke='currentColor' stroke-width='1.5'/><text x='201' y='113' fill='currentColor' text-anchor='middle'>Wheat 35%</text><path d='M150,135 L226.9,190.8 A95,95 0 0 1 120.6,225.4 Z' fill='currentColor' fill-opacity='0.3' stroke='currentColor' stroke-width='1.5'/><text x='168' y='193' fill='currentColor' text-anchor='middle'>Corn 72°</text><path d='M150,135 L120.6,225.4 A95,95 0 0 1 59.6,105.6 Z' fill='currentColor' fill-opacity='0.5' stroke='currentColor' stroke-width='1.5'/><text x='99' y='165' fill='currentColor' text-anchor='middle'>Soy 25%</text><path d='M150,135 L59.6,105.6 A95,95 0 0 1 120.6,44.6 Z' fill='currentColor' fill-opacity='0.2' stroke='currentColor' stroke-width='1.5'/><text x='110' y='99' fill='currentColor' text-anchor='middle'>Barley</text><path d='M150,135 L120.6,44.6 A95,95 0 0 1 150.0,40.0 Z' fill='currentColor' fill-opacity='0.65' stroke='currentColor' stroke-width='1.5'/><line x1='135.1' y1='41.2' x2='131.7' y2='19.4' stroke='currentColor' stroke-width='1'/><text x='128' y='15' fill='currentColor' text-anchor='end'>Fallow 18°</text></svg>"
+    },
+    {
+      "id": "fig2",
+      "caption": "Number of wind turbines operating in a county at each reading. Readings were taken only in the years shown.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 250' width='390' height='250' font-family='sans-serif' font-size='12'><line x1='50' y1='200.0' x2='375' y2='200.0' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='44' y='204' fill='currentColor' text-anchor='end'>0</text><line x1='50' y1='165.0' x2='375' y2='165.0' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='44' y='169' fill='currentColor' text-anchor='end'>20</text><line x1='50' y1='130.0' x2='375' y2='130.0' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='44' y='134' fill='currentColor' text-anchor='end'>40</text><line x1='50' y1='95.0' x2='375' y2='95.0' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='44' y='99' fill='currentColor' text-anchor='end'>60</text><line x1='50' y1='60.0' x2='375' y2='60.0' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='44' y='64' fill='currentColor' text-anchor='end'>80</text><line x1='50' y1='25.0' x2='375' y2='25.0' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='44' y='29' fill='currentColor' text-anchor='end'>100</text><line x1='50' y1='20' x2='50' y2='200' stroke='currentColor' stroke-width='1.5'/><line x1='50' y1='200' x2='375' y2='200' stroke='currentColor' stroke-width='1.5'/><polyline points='80,165.0 134,123.0 188,98.5 242,82.8 296,70.5 350,39.0' fill='none' stroke='currentColor' stroke-width='2'/><circle cx='80' cy='165.0' r='4' fill='currentColor'/><text x='80' y='155' fill='currentColor' text-anchor='middle' font-weight='bold'>20</text><text x='80' y='218' fill='currentColor' text-anchor='middle'>2000</text><circle cx='134' cy='123.0' r='4' fill='currentColor'/><text x='134' y='113' fill='currentColor' text-anchor='middle' font-weight='bold'>44</text><text x='134' y='218' fill='currentColor' text-anchor='middle'>2010</text><circle cx='188' cy='98.5' r='4' fill='currentColor'/><text x='188' y='88' fill='currentColor' text-anchor='middle' font-weight='bold'>58</text><text x='188' y='218' fill='currentColor' text-anchor='middle'>2015</text><circle cx='242' cy='82.8' r='4' fill='currentColor'/><text x='242' y='73' fill='currentColor' text-anchor='middle' font-weight='bold'>67</text><text x='242' y='218' fill='currentColor' text-anchor='middle'>2018</text><circle cx='296' cy='70.5' r='4' fill='currentColor'/><text x='296' y='60' fill='currentColor' text-anchor='middle' font-weight='bold'>74</text><text x='296' y='218' fill='currentColor' text-anchor='middle'>2020</text><circle cx='350' cy='39.0' r='4' fill='currentColor'/><text x='350' y='29' fill='currentColor' text-anchor='middle' font-weight='bold'>92</text><text x='350' y='218' fill='currentColor' text-anchor='middle'>2026</text><text x='210' y='240' fill='currentColor' text-anchor='middle'>Year of reading</text><text x='14' y='112' fill='currentColor' text-anchor='middle' transform='rotate(-90 14 112)'>Turbines</text></svg>"
+    },
+    {
+      "id": "fig3",
+      "caption": "Output of a factory's three production lines, by quarter (thousands of units)",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 270' width='380' height='270' font-family='sans-serif' font-size='12'><line x1='50' y1='220.0' x2='300' y2='220.0' stroke='currentColor' stroke-opacity='0.3' stroke-width='1'/><text x='44' y='224' fill='currentColor' text-anchor='end'>0</text><line x1='50' y1='208.9' x2='300' y2='208.9' stroke='currentColor' stroke-opacity='0.12' stroke-width='1'/><line x1='50' y1='197.8' x2='300' y2='197.8' stroke='currentColor' stroke-opacity='0.3' stroke-width='1'/><text x='44' y='202' fill='currentColor' text-anchor='end'>10</text><line x1='50' y1='186.7' x2='300' y2='186.7' stroke='currentColor' stroke-opacity='0.12' stroke-width='1'/><line x1='50' y1='175.6' x2='300' y2='175.6' stroke='currentColor' stroke-opacity='0.3' stroke-width='1'/><text x='44' y='180' fill='currentColor' text-anchor='end'>20</text><line x1='50' y1='164.4' x2='300' y2='164.4' stroke='currentColor' stroke-opacity='0.12' stroke-width='1'/><line x1='50' y1='153.3' x2='300' y2='153.3' stroke='currentColor' stroke-opacity='0.3' stroke-width='1'/><text x='44' y='157' fill='currentColor' text-anchor='end'>30</text><line x1='50' y1='142.2' x2='300' y2='142.2' stroke='currentColor' stroke-opacity='0.12' stroke-width='1'/><line x1='50' y1='131.1' x2='300' y2='131.1' stroke='currentColor' stroke-opacity='0.3' stroke-width='1'/><text x='44' y='135' fill='currentColor' text-anchor='end'>40</text><line x1='50' y1='120.0' x2='300' y2='120.0' stroke='currentColor' stroke-opacity='0.12' stroke-width='1'/><line x1='50' y1='108.9' x2='300' y2='108.9' stroke='currentColor' stroke-opacity='0.3' stroke-width='1'/><text x='44' y='113' fill='currentColor' text-anchor='end'>50</text><line x1='50' y1='97.8' x2='300' y2='97.8' stroke='currentColor' stroke-opacity='0.12' stroke-width='1'/><line x1='50' y1='86.7' x2='300' y2='86.7' stroke='currentColor' stroke-opacity='0.3' stroke-width='1'/><text x='44' y='91' fill='currentColor' text-anchor='end'>60</text><line x1='50' y1='75.6' x2='300' y2='75.6' stroke='currentColor' stroke-opacity='0.12' stroke-width='1'/><line x1='50' y1='64.4' x2='300' y2='64.4' stroke='currentColor' stroke-opacity='0.3' stroke-width='1'/><text x='44' y='68' fill='currentColor' text-anchor='end'>70</text><line x1='50' y1='53.3' x2='300' y2='53.3' stroke='currentColor' stroke-opacity='0.12' stroke-width='1'/><line x1='50' y1='42.2' x2='300' y2='42.2' stroke='currentColor' stroke-opacity='0.3' stroke-width='1'/><text x='44' y='46' fill='currentColor' text-anchor='end'>80</text><line x1='50' y1='31.1' x2='300' y2='31.1' stroke='currentColor' stroke-opacity='0.12' stroke-width='1'/><line x1='50' y1='20.0' x2='300' y2='20.0' stroke='currentColor' stroke-opacity='0.3' stroke-width='1'/><text x='44' y='24' fill='currentColor' text-anchor='end'>90</text><line x1='50' y1='20' x2='50' y2='220' stroke='currentColor' stroke-width='1.5'/><line x1='50' y1='220' x2='300' y2='220' stroke='currentColor' stroke-width='1.5'/><rect x='70' y='153.3' width='36' height='66.7' fill='currentColor' fill-opacity='0.12' stroke='currentColor' stroke-width='1'/><rect x='70' y='108.9' width='36' height='44.4' fill='currentColor' fill-opacity='0.45' stroke='currentColor' stroke-width='1'/><rect x='70' y='75.6' width='36' height='33.3' fill='currentColor' fill-opacity='0.8' stroke='currentColor' stroke-width='1'/><text x='88' y='238' fill='currentColor' text-anchor='middle'>Q1</text><rect x='128' y='164.4' width='36' height='55.6' fill='currentColor' fill-opacity='0.12' stroke='currentColor' stroke-width='1'/><rect x='128' y='97.8' width='36' height='66.7' fill='currentColor' fill-opacity='0.45' stroke='currentColor' stroke-width='1'/><rect x='128' y='75.6' width='36' height='22.2' fill='currentColor' fill-opacity='0.8' stroke='currentColor' stroke-width='1'/><text x='146' y='238' fill='currentColor' text-anchor='middle'>Q2</text><rect x='186' y='142.2' width='36' height='77.8' fill='currentColor' fill-opacity='0.12' stroke='currentColor' stroke-width='1'/><rect x='186' y='86.7' width='36' height='55.6' fill='currentColor' fill-opacity='0.45' stroke='currentColor' stroke-width='1'/><rect x='186' y='42.2' width='36' height='44.4' fill='currentColor' fill-opacity='0.8' stroke='currentColor' stroke-width='1'/><text x='204' y='238' fill='currentColor' text-anchor='middle'>Q3</text><rect x='244' y='175.6' width='36' height='44.4' fill='currentColor' fill-opacity='0.12' stroke='currentColor' stroke-width='1'/><rect x='244' y='86.7' width='36' height='88.9' fill='currentColor' fill-opacity='0.45' stroke='currentColor' stroke-width='1'/><rect x='244' y='53.3' width='36' height='33.3' fill='currentColor' fill-opacity='0.8' stroke='currentColor' stroke-width='1'/><text x='262' y='238' fill='currentColor' text-anchor='middle'>Q4</text><rect x='312' y='50' width='16' height='16' fill='currentColor' fill-opacity='0.8' stroke='currentColor' stroke-width='1'/><text x='334' y='63' fill='currentColor'>Line C</text><rect x='312' y='76' width='16' height='16' fill='currentColor' fill-opacity='0.45' stroke='currentColor' stroke-width='1'/><text x='334' y='89' fill='currentColor'>Line B</text><rect x='312' y='102' width='16' height='16' fill='currentColor' fill-opacity='0.12' stroke='currentColor' stroke-width='1'/><text x='334' y='115' fill='currentColor'>Line A</text><text x='175' y='260' fill='currentColor' text-anchor='middle'>Quarter</text><text x='14' y='120' fill='currentColor' text-anchor='middle' transform='rotate(-90 14 120)'>Units (thousands)</text></svg>"
+    },
+    {
+      "id": "fig4",
+      "caption": "Fertilizer applied and harvest for each of 7 test plots on a farm",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 270' width='360' height='270' font-family='sans-serif' font-size='12'><line x1='55.0' y1='20' x2='55.0' y2='220' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='55' y='236' fill='currentColor' text-anchor='middle'>15</text><line x1='90.6' y1='20' x2='90.6' y2='220' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='91' y='236' fill='currentColor' text-anchor='middle'>20</text><line x1='126.2' y1='20' x2='126.2' y2='220' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='126' y='236' fill='currentColor' text-anchor='middle'>25</text><line x1='161.9' y1='20' x2='161.9' y2='220' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='162' y='236' fill='currentColor' text-anchor='middle'>30</text><line x1='197.5' y1='20' x2='197.5' y2='220' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='198' y='236' fill='currentColor' text-anchor='middle'>35</text><line x1='233.1' y1='20' x2='233.1' y2='220' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='233' y='236' fill='currentColor' text-anchor='middle'>40</text><line x1='268.8' y1='20' x2='268.8' y2='220' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='269' y='236' fill='currentColor' text-anchor='middle'>45</text><line x1='304.4' y1='20' x2='304.4' y2='220' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='304' y='236' fill='currentColor' text-anchor='middle'>50</text><line x1='340.0' y1='20' x2='340.0' y2='220' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='340' y='236' fill='currentColor' text-anchor='middle'>55</text><line x1='55' y1='220.0' x2='340' y2='220.0' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='49' y='224' fill='currentColor' text-anchor='end'>40</text><line x1='55' y1='191.4' x2='340' y2='191.4' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='49' y='195' fill='currentColor' text-anchor='end'>50</text><line x1='55' y1='162.9' x2='340' y2='162.9' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='49' y='167' fill='currentColor' text-anchor='end'>60</text><line x1='55' y1='134.3' x2='340' y2='134.3' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='49' y='138' fill='currentColor' text-anchor='end'>70</text><line x1='55' y1='105.7' x2='340' y2='105.7' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='49' y='110' fill='currentColor' text-anchor='end'>80</text><line x1='55' y1='77.1' x2='340' y2='77.1' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='49' y='81' fill='currentColor' text-anchor='end'>90</text><line x1='55' y1='48.6' x2='340' y2='48.6' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='49' y='53' fill='currentColor' text-anchor='end'>100</text><line x1='55' y1='20.0' x2='340' y2='20.0' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='49' y='24' fill='currentColor' text-anchor='end'>110</text><line x1='55' y1='20' x2='55' y2='220' stroke='currentColor' stroke-width='1.5'/><line x1='55' y1='220' x2='340' y2='220' stroke='currentColor' stroke-width='1.5'/><circle cx='90.6' cy='191.4' r='5' fill='currentColor'/><circle cx='126.2' cy='134.3' r='5' fill='currentColor'/><circle cx='161.9' cy='134.3' r='5' fill='currentColor'/><circle cx='197.5' cy='77.1' r='5' fill='currentColor'/><circle cx='233.1' cy='105.7' r='5' fill='currentColor'/><circle cx='268.8' cy='48.6' r='5' fill='currentColor'/><circle cx='304.4' cy='77.1' r='5' fill='currentColor'/><text x='198' y='258' fill='currentColor' text-anchor='middle'>Fertilizer applied (kilograms)</text><text x='14' y='120' fill='currentColor' text-anchor='middle' transform='rotate(-90 14 120)'>Harvest (kilograms)</text></svg>"
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A bridge engineer's model gives the sag error at position $x$ as the product $(4 - x)(2x + 6)$. For which values of $x$ is the sag error negative?",
+      "choices": [
+        "$-3 < x < 4$",
+        "$x < -3$ or $x > 4$",
+        "$-4 < x < 3$",
+        "$x < -4$ or $x > 3$",
+        "$x > 4$ only"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The roots are $x = 4$ and $x = -3$, but the factor $4 - x$ is reversed: $(4 - x)(2x + 6) = -2(x - 4)(x + 3)$. So the product is negative exactly where $(x - 4)(x + 3)$ is positive, outside the roots: $x < -3$ or $x > 4$.",
+        "steps": [
+          "1. Roots: $4 - x = 0$ at $x = 4$ and $2x + 6 = 0$ at $x = -3$.",
+          "2. Rewrite: $(4 - x)(2x + 6) = -2(x - 4)(x + 3)$.",
+          "3. $-2(x - 4)(x + 3) < 0$ means $(x - 4)(x + 3) > 0$: $x < -3$ or $x > 4$.",
+          "4. Check $x = 0$: $(4)(6) = 24 > 0$, so the middle interval is not negative."
+        ],
+        "fast": "Test one point between the roots: $x = 0$ gives $24$, positive, so the negative region is outside.",
+        "trap": "Treating it as $(x - a)(x - b) < 0$ and answering 'between the roots' ($-3 < x < 4$) misses the reversed factor $4 - x$; misreading the roots as $-4$ and $3$ gives the other two pairs."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quadratic-inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "a product of two linear factors, one with the variable's sign reversed, is negative; the solution is outside the roots, not between them",
+      "variant": "sign analysis of a factored product (x - a)(x - b) < 0",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "Squaring the number $x$ gives a result greater than $x$, and cubing $x$ gives a result less than $x^2$.",
+      "qc": {
+        "a": "$x^3$",
+        "b": "$x$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "$x^2 > x$ means $x < 0$ or $x > 1$. $x^3 < x^2$ means $x^2(x - 1) < 0$: $x < 1$ and $x \\ne 0$. Together: $x < 0$. On the negatives, $x^3$ and $x$ trade places at $-1$: $x = -2$ gives $-8 < -2$, but $x = -\\tfrac12$ gives $-\\tfrac18 > -\\tfrac12$.",
+        "steps": [
+          "1. $x^2 > x \\iff x(x - 1) > 0 \\iff x < 0$ or $x > 1$.",
+          "2. $x^3 < x^2 \\iff x^2(x - 1) < 0 \\iff x < 1$, $x \\ne 0$.",
+          "3. Both: $x < 0$.",
+          "4. $x = -2$: A $= -8$, B $= -2$, B greater. $x = -\\tfrac12$: A $= -\\tfrac18$, B $= -\\tfrac12$, A greater.",
+          "5. The relationship cannot be determined."
+        ],
+        "fast": "The conditions leave only negatives; on the negatives a cube is smaller than the number below $-1$ and larger between $-1$ and $0$.",
+        "trap": "Testing only an integer such as $-2$ (B greater), or thinking 'cubing makes a negative more negative' always, or keeping $x > 1$ as a case (it fails $x^3 < x^2$), where A is greater."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quadratic-inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "two power inequalities on one number intersect to the negatives only; compare the cube with the number, which flips at -1",
+      "variant": "powers against the number: where x^2 > x or x^3 < x",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A sensor's correction factor is $\\dfrac{3}{x - 2}$, where $x$ is the sensor's reading and $x \\ne 2$. For which readings $x$ is the correction factor less than $-1$?",
+      "choices": [
+        "$x < -1$",
+        "$-1 < x < 2$",
+        "$x > 2$",
+        "$x < -1$ or $x > 2$",
+        "$x < 2$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "A positive numerator over $x - 2$ can be below $-1$ only if $x - 2 < 0$. Multiplying by the negative $x - 2$ flips the inequality: $3 > -(x - 2) = 2 - x$, so $x > -1$. With $x < 2$: $-1 < x < 2$.",
+        "steps": [
+          "1. The fraction is negative only when $x - 2 < 0$, so $x < 2$.",
+          "2. For $x < 2$, multiply $\\dfrac{3}{x - 2} < -1$ by $x - 2 < 0$ and flip: $3 > -(x - 2)$.",
+          "3. $3 > 2 - x$ gives $x > -1$.",
+          "4. Combine: $-1 < x < 2$. Check $x = 0$: $\\tfrac{3}{-2} = -1.5 < -1$."
+        ],
+        "fast": "Only $x < 2$ can work; there, $x - 2$ must lie between $-3$ and $0$, so $x$ is between $-1$ and $2$.",
+        "trap": "Multiplying by $x - 2$ without flipping gives $3 < 2 - x$, so $x < -1$, exactly the readings that fail (at $x = -4$ the factor is $-0.5$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quadratic-inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "a constant over a linear expression below a negative constant: only one sign of the denominator can work, and multiplying by it flips the inequality",
+      "variant": "an inequality with x in the denominator (case on sign)",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "A list contains every integer $n$ for which $n^2 \\le 2|n| + 8$, and no other numbers.",
+      "qc": {
+        "a": "The number of integers in the list",
+        "b": "$8$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Since $n^2 = |n|^2$, the condition is $|n|^2 - 2|n| - 8 \\le 0$, that is $(|n| - 4)(|n| + 2) \\le 0$, so $|n| \\le 4$. The list is $-4, -3, \\dots, 4$: 9 integers, more than 8.",
+        "steps": [
+          "1. Write $n^2$ as $|n|^2$: $|n|^2 - 2|n| - 8 \\le 0$.",
+          "2. Factor: $(|n| - 4)(|n| + 2) \\le 0$; since $|n| + 2 > 0$, $|n| \\le 4$.",
+          "3. Integers with $|n| \\le 4$: $-4$ through $4$, which is $9$ integers ($n = \\pm 4$ gives $16 \\le 16$).",
+          "4. $9 > 8$: Quantity A is greater."
+        ],
+        "fast": "The inequality is a quadratic in $|n|$; the solution is symmetric, $-4$ to $4$.",
+        "trap": "Dropping the absolute value and solving $n^2 - 2n - 8 \\le 0$ gives $-2$ to $4$, 7 integers (B greater); excluding the boundary $\\pm 4$ also gives 7."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quadratic-inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "a quadratic inequality in the absolute value of the variable; the solution set is symmetric; count the integers including the boundary",
+      "variant": "integer count in a solution set such as x^2 < 10",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "A freight train's dispatcher logs a run as $350$ kilometers, rounded to the nearest $10$ kilometers, and its travel time as $5.0$ hours, rounded to the nearest tenth of an hour. Which of the following could be the train's actual average speed for the run, in kilometers per hour? Indicate all such speeds.",
+      "choices": [
+        "$68.2$",
+        "$68.4$",
+        "$69.9$",
+        "$70.5$",
+        "$71.6$",
+        "$71.8$"
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The distance is at least $345$ and less than $355$; the time is at least $4.95$ and less than $5.05$. The slowest speed pairs the least distance with the longest time, $\\tfrac{345}{5.05} \\approx 68.3$; the fastest pairs the greatest distance with the shortest time, $\\tfrac{355}{4.95} \\approx 71.7$. So 68.4, 69.9, 70.5 and 71.6 are possible.",
+        "steps": [
+          "1. Distance $d$: $345 \\le d < 355$. Time $t$: $4.95 \\le t < 5.05$.",
+          "2. Speed $\\dfrac{d}{t}$ is least for small $d$ and large $t$: above $\\dfrac{345}{5.05} \\approx 68.32$.",
+          "3. It is greatest for large $d$ and small $t$: below $\\dfrac{355}{4.95} \\approx 71.72$.",
+          "4. In range: $68.4$, $69.9$, $70.5$, $71.6$. Out: $68.2$ and $71.8$."
+        ],
+        "fast": "Extreme speed = extreme distance over the opposite extreme of time.",
+        "trap": "Pairing the small ends together ($\\tfrac{345}{4.95} \\approx 69.7$) and the large ends together ($\\tfrac{355}{5.05} \\approx 70.3$) gives a narrow band that keeps only 69.9."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "estimation-sigfig",
+          "role": "primary"
+        }
+      ],
+      "setup": "two rounded measurements, one divided by the other; the quotient's range comes from opposite ends of the two rounding intervals; select values inside it",
+      "variant": "rounding to a place, then computing",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A satellite in low orbit travels about $7.7$ kilometers each second, and a high-speed train travels about $300$ kilometers each hour. The satellite's speed is approximately how many times the train's speed?",
+      "choices": [
+        "$0.03$",
+        "$1.5$",
+        "$90$",
+        "$900$",
+        "$9{,}000$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Put both speeds in the same unit. The satellite covers $7.7 \\times 3{,}600 \\approx 27{,}700$ kilometers per hour, and $\\tfrac{27{,}700}{300} \\approx 92$, closest to $90$.",
+        "steps": [
+          "1. One hour is $60 \\times 60 = 3{,}600$ seconds.",
+          "2. Satellite: $7.7 \\times 3{,}600 = 27{,}720$ km per hour.",
+          "3. Ratio: $\\dfrac{27{,}720}{300} = 92.4$, about $90$."
+        ],
+        "fast": "$\\tfrac{7.7 \\times 3{,}600}{300} = 7.7 \\times 12 \\approx 92$.",
+        "trap": "Comparing the raw numbers ($\\tfrac{7.7}{300} \\approx 0.03$) ignores the units; converting with 60 instead of 3,600 gives $1.5$; a slip of one power of ten gives $900$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "estimation-sigfig",
+          "role": "primary"
+        }
+      ],
+      "setup": "two rates in different time units; convert one before taking the ratio; choices a factor of ten apart",
+      "variant": "order of magnitude comparison in QC",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "prompt": "A security system's key space contains $4^{23} \\cdot 25^{21}$ possible keys. When this number is written out in full as an ordinary integer, how many digits does it have?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "44"
+      },
+      "explanation": {
+        "key": "$4^{23} \\cdot 25^{21} = 2^{46} \\cdot 5^{42} = 2^{4} \\cdot (2 \\cdot 5)^{42} = 16 \\times 10^{42}$. That is $16$ followed by $42$ zeros: $44$ digits.",
+        "steps": [
+          "1. Prime powers: $4^{23} = 2^{46}$ and $25^{21} = 5^{42}$.",
+          "2. Pair 42 twos with the 42 fives: $2^{46} \\cdot 5^{42} = 2^4 \\cdot 10^{42}$.",
+          "3. $2^4 = 16$, so the number is $16 \\times 10^{42} = 1.6 \\times 10^{43}$.",
+          "4. A number $1.6 \\times 10^{43}$ has $43 + 1 = 44$ digits."
+        ],
+        "fast": "Leftover factor $16$ (two digits) followed by 42 zeros.",
+        "trap": "Counting only the zeros plus one digit (43) forgets that the leftover $16$ has two digits; $10^{42}$ itself has 43 digits, not 42."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "estimation-sigfig",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "exponents-roots",
+          "role": "secondary"
+        }
+      ],
+      "setup": "a product of powers of 4 and 25 rewritten as a power of ten times a leftover power of two; the leftover's own digit count adds to the zeros",
+      "variant": "estimating a product or quotient to pick the closest choice",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "A counter on a satellite's clock starts at $0$ and goes up by $1$ every second, without stopping.",
+      "qc": {
+        "a": "The counter's reading after 30 years of 365 days each",
+        "b": "$10^9$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Thirty 365-day years have $30 \\times 365 \\times 86{,}400 = 946{,}080{,}000$ seconds, which is less than $10^9 = 1{,}000{,}000{,}000$.",
+        "steps": [
+          "1. Seconds per day: $24 \\times 3{,}600 = 86{,}400$.",
+          "2. Per 365-day year: $86{,}400 \\times 365 = 31{,}536{,}000$, about $3.15 \\times 10^7$.",
+          "3. Thirty years: $31{,}536{,}000 \\times 30 = 946{,}080{,}000 \\approx 9.5 \\times 10^8$.",
+          "4. $9.5 \\times 10^8 < 10^9$: B is greater."
+        ],
+        "fast": "A year is about $3.15 \\times 10^7$ seconds; 30 years is about $9.5 \\times 10^8$, just under a billion.",
+        "trap": "Rounding $86{,}400$ up to $10^5$ gives $30 \\times 365 \\times 10^5 \\approx 1.1 \\times 10^9$ and picks A; the rounding error (16%) is larger than the true gap (5%)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "estimation-sigfig",
+          "role": "primary"
+        }
+      ],
+      "setup": "a count of seconds over many years against a power of ten; a coarse rounding of one factor overshoots the power, the exact product falls just short",
+      "variant": "order of magnitude comparison in QC",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "mc_multi",
+      "figureId": "fig1",
+      "difficulty": 4,
+      "prompt": "The circle graph shows how the land on a 480-hectare farm is used. Which of the following statements are true? Indicate all such statements.",
+      "choices": [
+        "The barley sector has a central angle of $54^\\circ$.",
+        "Corn and fallow land together cover $120$ hectares.",
+        "Wheat covers more land than corn and barley combined.",
+        "The soy sector's central angle is more than $1.5$ times the corn sector's.",
+        "Fallow land covers $18$ hectares.",
+        "Barley covers $72$ hectares."
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "Convert every label to a percent: corn is $\\tfrac{72}{360} = 20\\%$ and fallow $\\tfrac{18}{360} = 5\\%$, so barley is $100 - 35 - 20 - 25 - 5 = 15\\%$. Then barley's angle is $0.15 \\times 360 = 54^\\circ$, corn and fallow are $25\\%$ of 480, or 120 hectares, and barley is $0.15 \\times 480 = 72$ hectares.",
+        "steps": [
+          "1. Corn: $\\tfrac{72}{360} = 20\\%$. Fallow: $\\tfrac{18}{360} = 5\\%$.",
+          "2. Barley: $100\\% - (35 + 20 + 25 + 5)\\% = 15\\%$; its angle is $54^\\circ$ (true).",
+          "3. Corn and fallow: $25\\%$ of $480 = 120$ hectares (true).",
+          "4. Wheat ($35\\%$) against corn and barley ($20\\% + 15\\% = 35\\%$): equal, not more (false).",
+          "5. Soy's angle is $90^\\circ$, less than $1.5 \\times 72^\\circ = 108^\\circ$ (false).",
+          "6. Fallow: $5\\%$ of $480 = 24$ hectares, not 18 (false). Barley: $15\\%$ of $480 = 72$ hectares (true)."
+        ],
+        "fast": "Turn degrees into percents by dividing by 3.6; then hectares are percents of 480.",
+        "trap": "Reading an angle label as a percent or as hectares (fallow '18' hectares, corn '72%'), and counting wheat as more than corn plus barley when the two are equal."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-tables-graphs",
+          "role": "primary"
+        }
+      ],
+      "setup": "a circle graph labeled partly in percents and partly in central angles, one sector unlabeled; convert to one unit, find the missing sector, test statements in degrees and in land area",
+      "variant": "a circle graph: central angle and percent",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "mc",
+      "figureId": "fig2",
+      "difficulty": 4,
+      "prompt": "The graph shows the number of wind turbines operating in a county at six readings. Between which two consecutive readings was the average increase per year in the number of turbines the greatest?",
+      "choices": [
+        "2000 to 2010",
+        "2010 to 2015",
+        "2015 to 2018",
+        "2018 to 2020",
+        "2020 to 2026"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The readings are not evenly spaced in time, so divide each increase by its number of years: $\\tfrac{24}{10} = 2.4$, $\\tfrac{14}{5} = 2.8$, $\\tfrac{9}{3} = 3$, $\\tfrac{7}{2} = 3.5$, $\\tfrac{18}{6} = 3$. The greatest is 2018 to 2020.",
+        "steps": [
+          "1. 2000 to 2010: $44 - 20 = 24$ over 10 years, $2.4$ per year.",
+          "2. 2010 to 2015: $14$ over 5 years, $2.8$.",
+          "3. 2015 to 2018: $9$ over 3 years, $3$.",
+          "4. 2018 to 2020: $7$ over 2 years, $3.5$.",
+          "5. 2020 to 2026: $18$ over 6 years, $3$. Greatest: 2018 to 2020."
+        ],
+        "fast": "The points are evenly spaced on the page but not in time; compute increase over years for each gap.",
+        "trap": "Picking the biggest jump on the graph (2000 to 2010, an increase of 24) or the steepest-looking segment ignores that the gaps between readings range from 2 to 10 years."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-tables-graphs",
+          "role": "primary"
+        }
+      ],
+      "setup": "a line graph of readings at unevenly spaced years drawn at even spacing; the greatest average change per year, not the greatest change between points",
+      "variant": "a time plot: the largest change between periods",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "numeric",
+      "figureId": "fig3",
+      "difficulty": 4,
+      "prompt": "The graph shows the output of a factory's three production lines in each quarter of one year. By how many thousand units did line B's total output for the four quarters exceed line A's total output for the four quarters?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "5"
+      },
+      "explanation": {
+        "key": "Line B is the middle segment, so its output each quarter is the segment's length, not the height of its top: $20, 30, 25, 40$, total $115$. Line A (bottom) is $30, 25, 35, 20$, total $110$. The difference is $5$ thousand units.",
+        "steps": [
+          "1. Line A (bottom segments): $30 + 25 + 35 + 20 = 110$.",
+          "2. Line B tops are at $50, 55, 60, 60$; subtract the A tops: $20, 30, 25, 40$.",
+          "3. Line B total: $115$.",
+          "4. $115 - 110 = 5$."
+        ],
+        "fast": "Middle segment = its top minus the top of the segment below.",
+        "trap": "Reading line B's values at the tops of its segments ($50 + 55 + 60 + 60 = 225$) gives $225 - 110 = 115$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-tables-graphs",
+          "role": "primary"
+        }
+      ],
+      "setup": "stacked bars of three lines over four periods; total of the middle segment's lengths against the bottom segment's total (tops of the middle segments overstate it)",
+      "variant": "reading values from a stacked or segmented bar graph",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "qc",
+      "figureId": "fig4",
+      "difficulty": 5,
+      "prompt": "The scatterplot shows the fertilizer applied to each of 7 test plots and the plot's harvest. A plot's efficiency is its harvest, in kilograms, divided by the fertilizer applied to it, in kilograms.",
+      "qc": {
+        "a": "The fertilizer, in kilograms, applied to the most efficient plot",
+        "b": "$30$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The efficiencies are $\\tfrac{50}{20} = 2.5$, $\\tfrac{70}{25} = 2.8$, $\\tfrac{70}{30} \\approx 2.33$, $\\tfrac{90}{35} \\approx 2.57$, $\\tfrac{80}{40} = 2$, $\\tfrac{100}{45} \\approx 2.22$ and $\\tfrac{90}{50} = 1.8$. The most efficient plot used $25$ kilograms, less than $30$.",
+        "steps": [
+          "1. Read the 7 points: $(20, 50), (25, 70), (30, 70), (35, 90), (40, 80), (45, 100), (50, 90)$.",
+          "2. Divide harvest by fertilizer for each; the greatest is $2.8$, at $(25, 70)$.",
+          "3. Quantity A is $25$; $25 < 30$, so B is greater."
+        ],
+        "fast": "Efficiency is the slope of the line from the true origin $(0, 0)$, which is off the graph because both axes start above 0.",
+        "trap": "Taking the plot with the greatest harvest ($45$ kilograms of fertilizer, efficiency only about $2.22$) as the most efficient gives A."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "data-tables-graphs",
+          "role": "primary"
+        }
+      ],
+      "setup": "a scatterplot whose axes start above zero; the point with the greatest ratio of its two coordinates is not the highest point; compare its first coordinate with a value",
+      "variant": "a scatterplot: counting points or reading a trend line",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "At a school's science fair, the principal noted that she is 30 years older than this year's youngest exhibitor, and that in 6 years she will be 3 times as old as the exhibitor will be then. Which of the following statements are true? Indicate all such statements.",
+      "choices": [
+        "Three years ago, the principal was 6 times as old as the exhibitor.",
+        "The principal is now 3 times as old as the exhibitor.",
+        "When the exhibitor is 30, the principal will be twice as old as the exhibitor.",
+        "The sum of their present ages is 48.",
+        "In 6 years, the exhibitor will be 21.",
+        "Six years ago, the principal was 12 times as old as the exhibitor."
+      ],
+      "key": {
+        "sel": [
+          0,
+          2,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Let the exhibitor be $s$: $s + 36 = 3(s + 6)$, so $s = 9$ and the principal is $39$. Three years ago: $36$ and $6$ (6 times). The gap is always 30, so the principal is twice the exhibitor's age when the exhibitor is 30. Now the sum is $48$.",
+        "steps": [
+          "1. Principal $= s + 30$; in 6 years: $s + 36 = 3(s + 6)$.",
+          "2. $s + 36 = 3s + 18$, so $s = 9$; principal $39$.",
+          "3. Three years ago: $36 = 6 \\times 6$ (true).",
+          "4. Now: $\\tfrac{39}{9} \\ne 3$ (false). When the exhibitor is 30, the principal is 60 (true).",
+          "5. Sum now: $9 + 39 = 48$ (true). In 6 years the exhibitor is $15$, not $21$ (false)."
+        ],
+        "fast": "Set up the future equation with 6 added to both ages; the 30-year gap never changes.",
+        "trap": "Writing $s + 36 = 3s + 6$ (adding 6 to only one side) gives $s = 15$, which makes 'now 3 times as old' and 'exhibitor 21 in 6 years' look true."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-age-sum",
+          "role": "primary"
+        }
+      ],
+      "setup": "a fixed age gap and a future multiple give both present ages; test statements about past, present and future multiples and sums",
+      "variant": "ages then and now",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A ferry charges $\\$18$ for each car and $\\$7$ for each foot passenger. On one crossing, ticket sales totaled exactly $\\$500$, and the number of foot passengers was greater than the number of cars but less than 3 times the number of cars. How many tickets, cars and foot passengers combined, were sold on that crossing?",
+      "choices": [
+        "$29$",
+        "$40$",
+        "$45$",
+        "$51$",
+        "$62$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "$18c + 7f = 500$ in whole numbers: $500 - 18c$ must be a positive multiple of 7, which gives $c = 6, 13, 20, 27$ with $f = 56, 38, 20, 2$. Only $c = 13$, $f = 38$ has $c < f < 3c$ ($13 < 38 < 39$). Total: $51$.",
+        "steps": [
+          "1. $7f = 500 - 18c$ must be a positive multiple of 7.",
+          "2. Working through $c$: $c = 6$ ($f = 56$), $13$ ($f = 38$), $20$ ($f = 20$), $27$ ($f = 2$); these step by 7 in $c$ and by 18 in $f$.",
+          "3. $c < f < 3c$: $c = 6$ fails ($56 > 18$), $c = 20$ fails ($f = c$), $c = 27$ fails ($2 < 27$).",
+          "4. $c = 13$, $f = 38$: $51$ tickets."
+        ],
+        "fast": "Back-solve with the totals: $18c + 7(T - c) = 500$ gives $11c = 500 - 7T$; keep only totals that make $c$ a whole number and pass the bounds.",
+        "trap": "Stopping at the first whole-number solution ($c = 6$, total 62) or at $c = 20$ (total 40) without checking that foot passengers are more than the cars and fewer than 3 times as many."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-age-sum",
+          "role": "primary"
+        }
+      ],
+      "setup": "two ticket prices and an exact total revenue: whole-number solutions step by the other price; a two-sided bound between the counts keeps one; the total count",
+      "variant": "coins or tickets of two denominations",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "A teacher adds up the page numbers of a workbook whose pages are numbered $1, 2, 3, \\dots, n$. By mistake, she adds one of the page numbers twice and gets a total of $1{,}000$. Which page number did she add twice?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "10"
+      },
+      "explanation": {
+        "key": "The correct total $1 + 2 + \\dots + n = \\tfrac{n(n + 1)}{2}$ must be less than 1,000 but more than $1{,}000 - n$. $n = 44$ gives $990$, and $n = 45$ gives $1{,}035$, too much. So the extra page is $1{,}000 - 990 = 10$.",
+        "steps": [
+          "1. $\\tfrac{n(n + 1)}{2} < 1{,}000$ and the extra page is at most $n$.",
+          "2. $n = 44$: $\\tfrac{44 \\cdot 45}{2} = 990$; $n = 45$: $1{,}035 > 1{,}000$.",
+          "3. $n = 43$: $946$, but then the extra page would be $54 > 43$, impossible.",
+          "4. So $n = 44$ and the repeated page is $10$."
+        ],
+        "fast": "Find the triangular number just below 1,000: $990$; the excess is the repeated page.",
+        "trap": "Taking $n = 45$ and subtracting the wrong way ($1{,}035 - 1{,}000 = 35$), as if a page had been skipped rather than repeated."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-age-sum",
+          "role": "primary"
+        }
+      ],
+      "setup": "a sum 1 to n with one term counted twice is given; the true sum is the triangular number just below it, the excess is the repeated term",
+      "variant": "consecutive-number sums",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A regional rail line sells only two kinds of fare: off-peak fares at $\\$5$ each and peak fares at $\\$8$ each. On Monday, the average price of all the fares sold was $\\$6.20$.",
+      "qc": {
+        "a": "The total revenue from off-peak fares on Monday",
+        "b": "The total revenue from peak fares on Monday"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "With $p$ peak and $q$ off-peak fares, $5q + 8p = 6.2(q + p)$, so $1.8p = 1.2q$ and $q = 1.5p$. Off-peak revenue is $5(1.5p) = 7.5p$ dollars; peak revenue is $8p$. B is greater.",
+        "steps": [
+          "1. $5q + 8p = 6.2q + 6.2p$.",
+          "2. $1.8p = 1.2q$, so $q = 1.5p$.",
+          "3. Off-peak revenue: $5 \\times 1.5p = 7.5p$. Peak revenue: $8p$.",
+          "4. $8p > 7.5p$ for every positive $p$: B is greater."
+        ],
+        "fast": "The average $6.20$ is $1.20$ above 5 and $1.80$ below 8, so the counts are $3 : 2$ off-peak to peak; revenues $3 \\cdot 5 : 2 \\cdot 8 = 15 : 16$.",
+        "trap": "Answering D because the number of fares is unknown, or A because more off-peak fares were sold: the count ratio fixes the revenue ratio."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-age-sum",
+          "role": "primary"
+        }
+      ],
+      "setup": "two prices and the average price per item give the count ratio; compare the revenues of the two kinds (more items of the cheaper kind, yet less revenue)",
+      "variant": "coins or tickets of two denominations",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "Each of the following numbers is written out in full. Which of them have a units digit of $1$? Indicate all such numbers.",
+      "choices": [
+        "$3^{20}$",
+        "$7^{30}$",
+        "$9^{15}$",
+        "$13^{40}$",
+        "$17^{22}$",
+        "$19^{24}$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "Only the units digit of the base matters. Units digits of powers of 3 and of 7 repeat every 4 (1 when the exponent is a multiple of 4); powers of 9 repeat every 2 (1 when the exponent is even).",
+        "steps": [
+          "1. $3^{20}$: $20$ is a multiple of 4, units digit $1$ (yes).",
+          "2. $7^{30}$: $30 = 4 \\cdot 7 + 2$, so like $7^2 = 49$: $9$ (no).",
+          "3. $9^{15}$: odd exponent, units digit $9$ (no).",
+          "4. $13^{40}$: like $3^{40}$, a multiple of 4: $1$ (yes).",
+          "5. $17^{22}$: like $7^{22}$, $22 = 4 \\cdot 5 + 2$: $9$ (no).",
+          "6. $19^{24}$: like $9^{24}$, even exponent: $1$ (yes)."
+        ],
+        "fast": "Base ending in 3 or 7: need exponent divisible by 4. Base ending in 9: need an even exponent.",
+        "trap": "Using one rule for every base: 'an even exponent gives 1' wrongly accepts $7^{30}$ and $17^{22}$, and 'the exponent must be a multiple of 4' wrongly rejects $19^{24}$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "remainders-units",
+          "role": "primary"
+        }
+      ],
+      "setup": "units digit 1 for powers whose bases end in 3, 7 or 9: the cycle is 4 for 3 and 7 but 2 for 9; select the powers that qualify",
+      "variant": "units digit of a large power (cycle length)",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A rotary table on an assembly line has 8 stations, numbered 0 through 7 in order around the table. Each click turns the table forward one station, and one click forward from station 7 reaches station 0. Starting at station 0, the table is turned forward $3n$ clicks, where $n$ is a positive integer, and stops at station 5. If the table had instead started at station 0 and been turned backward $n$ clicks, at which station would it have stopped?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$5$",
+        "$7$"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "The station after $k$ forward clicks is the remainder of $k$ on division by 8. $3n$ leaves remainder 5, and among the remainders 0 to 7 only $n \\to 7$ works ($3 \\times 7 = 21 = 16 + 5$). Backward $n$ clicks lands on the remainder of $-n$, and $-7 + 8 = 1$.",
+        "steps": [
+          "1. $3n$ leaves remainder 5 on division by 8.",
+          "2. Try the remainders of $n$: $3 \\times 7 = 21$ leaves 5, and no other remainder does; so $n$ leaves remainder 7.",
+          "3. Backward $n$ clicks from 0: the station is the remainder of $-n$, that is $8 - 7 = 1$.",
+          "4. Check with $n = 7$: 7 clicks back from 0 is $7, 6, 5, 4, 3, 2, 1$: station 1."
+        ],
+        "fast": "Find the remainder of $n$ first (7); going back 7 stations from 0 lands on station 1.",
+        "trap": "Answering 3, as if backward $n$ were backward $3n$ ($8 - 5$), or 7 (the remainder of $n$ itself, forgetting to go backward)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "remainders-units",
+          "role": "primary"
+        }
+      ],
+      "setup": "a remainder of a multiple of n is given; recover the remainder of n, then the remainder of -n (count back from the divisor)",
+      "variant": "remainder of a negative or fractional expression of n",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "A machine packs bolts into boxes that each hold the same number of bolts. When the number of bolts is divided by the number of bolts per box, the result is $14.25$. After 14 boxes are filled, 9 bolts are left over. How many bolts are there?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "513"
+      },
+      "explanation": {
+        "key": "The decimal part $0.25$ is the leftover over the box size: $\\tfrac{9}{d} = 0.25$, so $d = 36$ bolts per box. Then $14 \\times 36 + 9 = 513$.",
+        "steps": [
+          "1. $\\tfrac{n}{d} = 14 + \\tfrac{9}{d}$, so $\\tfrac{9}{d} = 0.25$.",
+          "2. $d = 36$.",
+          "3. $n = 14 \\times 36 + 9 = 513$. Check: $\\tfrac{513}{36} = 14.25$."
+        ],
+        "fast": "Leftover $= 0.25 \\times$ box size, so the box size is $4 \\times 9 = 36$.",
+        "trap": "Entering the box size 36, or reading $0.25$ as 25 leftover bolts; $14.25 \\times 9$ mixes the quotient with the leftover."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "remainders-units",
+          "role": "primary"
+        }
+      ],
+      "setup": "the decimal part of the quotient and the remainder are both given; their ratio is the divisor, then rebuild the dividend",
+      "variant": "remainder written as a decimal part (n/d = q.25)",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A factory packs parts in crates that each hold the same number $d$ of parts, filling as many crates as it can. Packing 158 hinges this way leaves 8 hinges over, and packing 101 brackets this way leaves 11 brackets over.",
+      "qc": {
+        "a": "The least possible value of $d$",
+        "b": "$15$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "$d$ divides $158 - 8 = 150$ and $101 - 11 = 90$, so $d$ divides $30$. A leftover is always less than $d$, so $d > 11$. The divisors of 30 above 11 are 15 and 30; the least is 15.",
+        "steps": [
+          "1. $d$ divides $150$ and $90$, so $d$ divides $\\gcd(150, 90) = 30$.",
+          "2. 11 brackets are left over, so $d > 11$ (otherwise another crate would be filled).",
+          "3. Divisors of 30: $1, 2, 3, 5, 6, 10, 15, 30$; above 11: $15, 30$.",
+          "4. Least $d = 15$: equal to B. Check: $158 = 10 \\cdot 15 + 8$, $101 = 6 \\cdot 15 + 11$."
+        ],
+        "fast": "Common divisors of the two differences, larger than the bigger leftover.",
+        "trap": "Ignoring that $d$ must exceed both leftovers gives $d = 1$ or $d = 10$ (B greater); taking the GCD itself gives 30 (A greater)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "remainders-units",
+          "role": "primary"
+        }
+      ],
+      "setup": "two dividends with given remainders by the same unknown divisor: it divides both differences and must exceed the larger remainder; the least possible divisor",
+      "variant": "two remainder conditions at once: smallest such number",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q21",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "A school is hiring buses and vans to take 150 students on a field trip, with a seat for every student. Each bus seats 40 students and costs $\\$300$; each van seats 12 students and costs $\\$90$. The school will hire at least one van, at most 6 vehicles in all, and will spend no more than $\\$1{,}350$. Which of the following could be the number of vans the school hires? Indicate all such numbers.",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Check each number of vans against all three conditions. 1 van works with 4 buses (172 seats, 5 vehicles, $\\$1{,}290$). 2 vans fail: 3 buses seat only 144, and 4 buses cost $\\$1{,}380$. 3 vans work with 3 buses (156 seats, 6 vehicles, $\\$1{,}170$). 4 or more vans leave room for at most 2 buses, which seat too few.",
+        "steps": [
+          "1. Seats: $40b + 12v \\ge 150$; vehicles: $b + v \\le 6$; cost: $300b + 90v \\le 1{,}350$.",
+          "2. $v = 1$: seats need $40b \\ge 138$, so $b \\ge 4$; $b = 4$ gives 172 seats, 5 vehicles, $\\$1{,}290$ (works).",
+          "3. $v = 2$: $b = 3$ seats $144 < 150$; $b = 4$ costs $\\$1{,}380 > \\$1{,}350$ (fails).",
+          "4. $v = 3$: $b = 3$ seats 156, 6 vehicles, $\\$1{,}170$ (works).",
+          "5. $v \\ge 4$: $b \\le 2$, at most $80 + 12v \\le 80 + 48 = 128$ seats with $v = 4$, and fewer buses as $v$ grows (fails)."
+        ],
+        "fast": "For each $v$, the vehicle cap and the seat need pin $b$; then check the budget.",
+        "trap": "Assuming the possible counts form an unbroken run (1, 2, 3): 2 vans fail because 3 buses are too few and 4 buses go over budget, while 3 vans succeed with 3 buses."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "two kinds of vehicle with a seat requirement, a vehicle cap and a budget; test each count of one kind against all three; the feasible counts have a gap",
+      "variant": "a word problem with an inequality constraint",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q22",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "Three bus stops lie along a straight road at positions $a$, $b$ and $c$, measured in kilometers from a depot (positive on one side of the depot, negative on the other), with $a < b < c$. The first stop is farther from the second stop than the second stop is from the third. Which of the following must be true?",
+      "choices": [
+        "$a + b + c > 0$",
+        "$\\dfrac{a + b + c}{3} > b$",
+        "$\\dfrac{a + b + c}{3} < b$",
+        "$c - b > \\dfrac{c - a}{2}$",
+        "$b - a > 2(c - b)$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The condition is $b - a > c - b$, which rearranges to $a + c < 2b$: the midpoint of the outer stops lies before $b$. Adding $b$ to both sides gives $a + b + c < 3b$, so the mean of the three positions is less than $b$.",
+        "steps": [
+          "1. Translate: $b - a > c - b$.",
+          "2. Rearrange: $a + c < 2b$.",
+          "3. Add $b$: $a + b + c < 3b$, so $\\dfrac{a + b + c}{3} < b$ (true), and the opposite statement is false.",
+          "4. $c - b > \\dfrac{c - a}{2}$ is the same as $a + c > 2b$: false.",
+          "5. $a + b + c > 0$ fails for $-9, -3, -1$; $b - a > 2(c - b)$ fails for $0, 3, 5$ ($3 < 4$)."
+        ],
+        "fast": "A longer first gap pulls the middle stop toward the far end, so $b$ sits above the midpoint of $a$ and $c$ and above the mean of all three.",
+        "trap": "Picturing the long first gap as dragging the average up past $b$ (the mean is pulled toward $a$, not $c$), or assuming positive positions and choosing $a + b + c > 0$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "three ordered numbers with the first gap longer than the second; the gap comparison rearranges to the middle number exceeding the outer midpoint, so the mean of the three lies below the middle number",
+      "variant": "a chain a < b < c: what must be true of sums or differences",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q23",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "prompt": "For a constant $k$, a technician needs a dial setting $x$ that satisfies both $7 - 2x < 1$ and $4x - k \\le 5$. What is the least integer value of $k$ for which such a setting $x$ exists?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "8"
+      },
+      "explanation": {
+        "key": "$7 - 2x < 1$ gives $x > 3$ (dividing by $-2$ flips the sign). $4x - k \\le 5$ gives $x \\le \\tfrac{k + 5}{4}$. A setting exists only when $\\tfrac{k + 5}{4} > 3$, that is $k > 7$; the least integer is $8$.",
+        "steps": [
+          "1. $-2x < -6$, so $x > 3$.",
+          "2. $4x \\le k + 5$, so $x \\le \\tfrac{k + 5}{4}$.",
+          "3. The interval $3 < x \\le \\tfrac{k + 5}{4}$ is nonempty only if $\\tfrac{k + 5}{4} > 3$, i.e. $k > 7$.",
+          "4. $k = 7$ gives $3 < x \\le 3$, empty; $k = 8$ gives $3 < x \\le 3.25$. Least integer: $8$."
+        ],
+        "fast": "The upper bound $\\tfrac{k + 5}{4}$ must pass the open lower bound 3, strictly.",
+        "trap": "Allowing equality ($k = 7$) forgets that $x > 3$ is strict; not flipping the first inequality gives $x < 3$, which seems to work for every $k$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "a strict lower bound from one linear inequality (with a sign flip) and a parameter-dependent upper bound from another; the system has a solution only when the upper bound passes the lower one strictly; least integer parameter",
+      "variant": "an inequality with a parameter: for which k a solution exists",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q24",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "A factory's freight elevator may carry a total load of less than $1{,}000$ kilograms. On each trip it carries one operator, who weighs $100$ kilograms, and a number of crates weighing $45$ kilograms each; a trip must carry at least 4 crates.",
+      "qc": {
+        "a": "The number of different possible numbers of crates on a trip",
+        "b": "$16$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "$100 + 45n < 1{,}000$ gives $n < 20$, so $n \\le 19$; with $n \\ge 4$, the possible counts are $4$ through $19$, which is $19 - 4 + 1 = 16$ values.",
+        "steps": [
+          "1. $45n < 900$, so $n < 20$: at most 19 crates (20 crates make exactly 1,000, not less).",
+          "2. At least 4 crates.",
+          "3. $4, 5, \\dots, 19$: $16$ values. Equal to B."
+        ],
+        "fast": "Count from 4 to 19 inclusive: $19 - 4 + 1$.",
+        "trap": "Allowing 20 crates (the limit is strict) gives 17; subtracting $19 - 4 = 15$ drops one end of the inclusive count."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "a strict load limit with a fixed extra weight and a minimum count; count the whole numbers that satisfy both bounds (strict top, inclusive count)",
+      "variant": "a word problem with an inequality constraint",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q25",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "revisits": "quant-006:s2q7",
+      "prompt": "A pair of identical radar dishes scan disk-shaped zones, each with a radius of 6 kilometers. The part of the ground that both dishes scan has an area of $24\\pi - 18\\sqrt{3}$ square kilometers. How many kilometers apart are the two dishes?",
+      "choices": [
+        "$3$",
+        "$3\\sqrt{3}$",
+        "$6$",
+        "$6\\sqrt{2}$",
+        "$6\\sqrt{3}$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The shared region is two equal circular segments, each $12\\pi - 9\\sqrt{3}$. A sector of radius 6 with area $12\\pi$ has a $120^\\circ$ central angle, and the triangle cut off, two radii at $120^\\circ$, has area $\\tfrac12 \\cdot 6 \\cdot 6 \\sin 120^\\circ = 9\\sqrt3$. So each center sees the common chord at $120^\\circ$; half of that, $60^\\circ$, puts the other center at distance $2 \\cdot 6 \\cos 60^\\circ = 6$.",
+        "steps": [
+          "1. Each half of the shared region: $\\tfrac12(24\\pi - 18\\sqrt3) = 12\\pi - 9\\sqrt3$.",
+          "2. Sector part: $12\\pi = \\tfrac{\\theta}{360} \\cdot 36\\pi$ gives $\\theta = 120^\\circ$; triangle part $9\\sqrt3$ matches.",
+          "3. The two centers and an intersection point form a triangle with sides 6, 6 and $d$, with the angle at each center $60^\\circ$ (half of $120^\\circ$): equilateral.",
+          "4. $d = 6$: each dish sits on the edge of the other's zone."
+        ],
+        "fast": "$\\sqrt3$ in the area means a $60^\\circ$ or $120^\\circ$ angle; a $60^\\circ$ angle gives only $12\\pi - 18\\sqrt3$, so it is $120^\\circ$, and then the center distance equals the radius.",
+        "trap": "Taking the $60^\\circ$ central angle (the area $12\\pi - 18\\sqrt3$) gives $6\\sqrt3$; using the $90^\\circ$ case of the overlap gives $6\\sqrt2$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "circles",
+          "role": "primary"
+        }
+      ],
+      "setup": "run backwards: the overlap area of two equal circles is given; recover the central angle of each segment, then the center distance",
+      "variant": "inscribed angle vs central angle",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q26",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "revisits": "quant-006:s2q8",
+      "prompt": "The 8 members of a robotics club include two pairs of twins: Lena and Max, and Omar and Priya. For a build day, the coach divides all 8 members into 4 teams of 2; only which pairs are formed matters, since the teams have no names or order. In how many of the possible divisions are the members of exactly one pair of twins on the same team?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "24"
+      },
+      "explanation": {
+        "key": "Lena with Max: the other 6 members pair up in $5 \\cdot 3 \\cdot 1 = 15$ ways, of which 3 also put Omar with Priya. So $15 - 3 = 12$ divisions have Lena with Max but not Omar with Priya, and likewise 12 the other way: $24$.",
+        "steps": [
+          "1. Lena and Max on one team: pair the other 6 in $5 \\cdot 3 \\cdot 1 = 15$ ways.",
+          "2. Of these, Omar and Priya together too: pair the last 4 in $3 \\cdot 1 = 3$ ways.",
+          "3. Lena with Max only: $15 - 3 = 12$. Omar with Priya only: $12$.",
+          "4. Exactly one pair of twins together: $12 + 12 = 24$."
+        ],
+        "fast": "Exactly one $=$ (A together) $+$ (B together) $- 2$(both).",
+        "trap": "Adding $15 + 15 = 30$ counts the 3 both-together divisions twice and keeps them; subtracting them once gives 27, the count for at least one pair."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-permutations",
+          "role": "primary"
+        }
+      ],
+      "setup": "split 8 people into unordered pairs; count the splits with exactly one of two given pairs together (subtract the both-together case from each, not once)",
+      "variant": "multiplication principle across independent choices",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q27",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "revisits": "quant-006:s2q15",
+      "prompt": "A workshop builds a triangular frame from a rod 8 decimeters long, a rod 15 decimeters long and a third rod whose length, in decimeters, is chosen at random from all the integers for which the three rods can form a triangle. What is the probability that the frame is an obtuse triangle?",
+      "numeric": {
+        "kind": "fraction"
+      },
+      "key": {
+        "value": "2/3"
+      },
+      "explanation": {
+        "key": "The third side $x$ satisfies $7 < x < 23$: 15 integers, 8 to 22. If $x$ is the longest side, obtuse means $x^2 > 8^2 + 15^2 = 289$, so $x \\ge 18$: 5 values. If 15 is the longest, obtuse means $15^2 > 8^2 + x^2$, so $x^2 < 161$, $x \\le 12$: 5 values (8 to 12). $x = 17$ is a right triangle. Probability $\\tfrac{10}{15} = \\tfrac23$.",
+        "steps": [
+          "1. Triangle inequality: $15 - 8 < x < 15 + 8$, so $x = 8, 9, \\dots, 22$: 15 values.",
+          "2. Obtuse at the angle opposite $x$: $x^2 > 289$, $x \\ge 18$: $18$ to $22$, 5 values.",
+          "3. Obtuse at the angle opposite 15: $225 > 64 + x^2$, $x^2 < 161$: $x \\le 12$, 5 values.",
+          "4. $x = 17$ is right ($8$-$15$-$17$); $13$ to $16$ are acute.",
+          "5. $P = \\tfrac{10}{15} = \\tfrac23$."
+        ],
+        "fast": "Two ways to be obtuse: a long third side ($x \\ge 18$) or a short one that leaves 15 longest ($x \\le 12$).",
+        "trap": "Checking only the case where the third rod is the longest gives $\\tfrac{5}{15} = \\tfrac13$; counting 17 as obtuse or using 1 to 22 as the possible lengths also changes the answer."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "probability-basic",
+          "role": "secondary"
+        }
+      ],
+      "setup": "two sides fixed and the third an integer chosen at random among those that close a triangle; obtuse either opposite the third side or opposite the larger given side; probability over the triangle-inequality range",
+      "variant": "larger side opposite the larger angle; obtuse vs acute from c^2 against a^2 + b^2",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q28",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "revisits": "quant-007:s2q4",
+      "prompt": "$x$ is neither $0$ nor $2$.",
+      "qc": {
+        "a": "$\\dfrac{4 - x^2}{x^2 - 2x} + \\dfrac{2}{x}$",
+        "b": "$0$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$x^2 - 2x = x(x - 2)$ and $4 - x^2 = (2 - x)(2 + x) = -(x - 2)(x + 2)$. So the first fraction is $-\\tfrac{x + 2}{x}$, and A $= -\\tfrac{x + 2}{x} + \\tfrac{2}{x} = -\\tfrac{x}{x} = -1$, less than 0.",
+        "steps": [
+          "1. Factor: $\\dfrac{4 - x^2}{x^2 - 2x} = \\dfrac{-(x - 2)(x + 2)}{x(x - 2)} = -\\dfrac{x + 2}{x}$.",
+          "2. Add $\\dfrac{2}{x}$: $\\dfrac{-(x + 2) + 2}{x} = \\dfrac{-x}{x} = -1$.",
+          "3. A $= -1$ for every allowed $x$; B $= 0$: B is greater."
+        ],
+        "fast": "Try $x = 1$: $\\tfrac{3}{-1} + 2 = -1$.",
+        "trap": "Cancelling $4 - x^2$ against $x - 2$ as if they shared the factor $x - 2$ with the same sign gives $\\tfrac{x + 2}{x} + \\tfrac{2}{x} = \\tfrac{x + 4}{x}$, which changes with $x$ and suggests D (or A for positive test values)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "algebraic-expressions",
+          "role": "primary"
+        }
+      ],
+      "setup": "a sum of two rational expressions in which one numerator factors with a reversed sign; the sum is a negative constant; compare it with zero",
+      "variant": "simplifying a rational expression",
+      "solverRating": 3
+    }
+  ]
+}

@@ -1,0 +1,790 @@
+{
+ "testId": "qbank-004",
+ "measure": "quant",
+ "kind": "quant",
+ "seed": 82438,
+ "generatedAt": "2026-11-27T04:39:42.493Z",
+ "gaps": [
+  "revisit quant-006:s2q7 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q8 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q15 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q4 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s1q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q5 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s1q6 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s1q7 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q2 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q14 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q12 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s1q7 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q10 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q1 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q2 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s1q8 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q5 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s1q1 (you missed it; no sibling in the bank yet)"
+ ],
+ "slots": [
+  {
+   "slot": 1,
+   "qid": "s1q1",
+   "type": "mc",
+   "level": 4,
+   "concept": "quadratic-inequalities",
+   "name": "Quadratic and other nonlinear inequalities (sign analysis)",
+   "variant": "sign analysis of a factored product (x - a)(x - b) < 0"
+  },
+  {
+   "slot": 2,
+   "qid": "s1q2",
+   "type": "qc",
+   "level": 5,
+   "concept": "quadratic-inequalities",
+   "name": "Quadratic and other nonlinear inequalities (sign analysis)",
+   "variant": "powers against the number: where x^2 > x or x^3 < x"
+  },
+  {
+   "slot": 3,
+   "qid": "s1q3",
+   "type": "mc",
+   "level": 4,
+   "concept": "quadratic-inequalities",
+   "name": "Quadratic and other nonlinear inequalities (sign analysis)",
+   "variant": "an inequality with x in the denominator (case on sign)"
+  },
+  {
+   "slot": 4,
+   "qid": "s1q4",
+   "type": "qc",
+   "level": 5,
+   "concept": "quadratic-inequalities",
+   "name": "Quadratic and other nonlinear inequalities (sign analysis)",
+   "variant": "integer count in a solution set such as x^2 < 10"
+  },
+  {
+   "slot": 5,
+   "qid": "s1q5",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "estimation-sigfig",
+   "name": "Estimation, rounding, scientific notation",
+   "variant": "rounding to a place, then computing"
+  },
+  {
+   "slot": 6,
+   "qid": "s1q6",
+   "type": "mc",
+   "level": 4,
+   "concept": "estimation-sigfig",
+   "name": "Estimation, rounding, scientific notation",
+   "variant": "order of magnitude comparison in QC"
+  },
+  {
+   "slot": 7,
+   "qid": "s1q7",
+   "type": "numeric",
+   "level": 5,
+   "concept": "estimation-sigfig",
+   "name": "Estimation, rounding, scientific notation",
+   "variant": "estimating a product or quotient to pick the closest choice"
+  },
+  {
+   "slot": 8,
+   "qid": "s1q8",
+   "type": "qc",
+   "level": 4,
+   "concept": "estimation-sigfig",
+   "name": "Estimation, rounding, scientific notation",
+   "variant": "order of magnitude comparison in QC"
+  },
+  {
+   "slot": 9,
+   "qid": "s1q9",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "data-tables-graphs",
+   "name": "Reading tables, bar, line, circle graphs, scatterplots and time plots",
+   "variant": "a circle graph: central angle and percent"
+  },
+  {
+   "slot": 10,
+   "qid": "s1q10",
+   "type": "mc",
+   "level": 5,
+   "concept": "data-tables-graphs",
+   "name": "Reading tables, bar, line, circle graphs, scatterplots and time plots",
+   "variant": "a time plot: the largest change between periods"
+  },
+  {
+   "slot": 11,
+   "qid": "s1q11",
+   "type": "numeric",
+   "level": 4,
+   "concept": "data-tables-graphs",
+   "name": "Reading tables, bar, line, circle graphs, scatterplots and time plots",
+   "variant": "reading values from a stacked or segmented bar graph"
+  },
+  {
+   "slot": 12,
+   "qid": "s1q12",
+   "type": "qc",
+   "level": 5,
+   "concept": "data-tables-graphs",
+   "name": "Reading tables, bar, line, circle graphs, scatterplots and time plots",
+   "variant": "a scatterplot: counting points or reading a trend line"
+  },
+  {
+   "slot": 13,
+   "qid": "s1q13",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "word-problems-age-sum",
+   "name": "Algebraic translation word problems",
+   "variant": "ages then and now"
+  },
+  {
+   "slot": 14,
+   "qid": "s1q14",
+   "type": "mc",
+   "level": 5,
+   "concept": "word-problems-age-sum",
+   "name": "Algebraic translation word problems",
+   "variant": "coins or tickets of two denominations"
+  },
+  {
+   "slot": 15,
+   "qid": "s1q15",
+   "type": "numeric",
+   "level": 4,
+   "concept": "word-problems-age-sum",
+   "name": "Algebraic translation word problems",
+   "variant": "consecutive-number sums"
+  },
+  {
+   "slot": 16,
+   "qid": "s1q16",
+   "type": "qc",
+   "level": 5,
+   "concept": "word-problems-age-sum",
+   "name": "Algebraic translation word problems",
+   "variant": "coins or tickets of two denominations"
+  },
+  {
+   "slot": 17,
+   "qid": "s1q17",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "remainders-units",
+   "name": "Remainders and units digits",
+   "variant": "units digit of a large power (cycle length)"
+  },
+  {
+   "slot": 18,
+   "qid": "s1q18",
+   "type": "mc",
+   "level": 5,
+   "concept": "remainders-units",
+   "name": "Remainders and units digits",
+   "variant": "remainder of a negative or fractional expression of n"
+  },
+  {
+   "slot": 19,
+   "qid": "s1q19",
+   "type": "numeric",
+   "level": 4,
+   "concept": "remainders-units",
+   "name": "Remainders and units digits",
+   "variant": "remainder written as a decimal part (n/d = q.25)"
+  },
+  {
+   "slot": 20,
+   "qid": "s1q20",
+   "type": "qc",
+   "level": 5,
+   "concept": "remainders-units",
+   "name": "Remainders and units digits",
+   "variant": "two remainder conditions at once: smallest such number"
+  },
+  {
+   "slot": 21,
+   "qid": "s1q21",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "inequalities",
+   "name": "Linear and simultaneous inequalities",
+   "variant": "a word problem with an inequality constraint"
+  },
+  {
+   "slot": 22,
+   "qid": "s1q22",
+   "type": "mc",
+   "level": 4,
+   "concept": "inequalities",
+   "name": "Linear and simultaneous inequalities",
+   "variant": "a chain a < b < c: what must be true of sums or differences"
+  },
+  {
+   "slot": 23,
+   "qid": "s1q23",
+   "type": "numeric",
+   "level": 5,
+   "concept": "inequalities",
+   "name": "Linear and simultaneous inequalities",
+   "variant": "an inequality with a parameter: for which k a solution exists"
+  },
+  {
+   "slot": 24,
+   "qid": "s1q24",
+   "type": "qc",
+   "level": 4,
+   "concept": "inequalities",
+   "name": "Linear and simultaneous inequalities",
+   "variant": "a word problem with an inequality constraint"
+  },
+  {
+   "slot": 25,
+   "qid": "s1q25",
+   "type": "mc",
+   "level": 5,
+   "concept": "circles",
+   "name": "Circles: arcs, sectors, chords, tangents",
+   "variant": "inscribed angle vs central angle",
+   "revisit": {
+    "ref": "quant-006:s2q7",
+    "result": "missed",
+    "item": "Two lawn sprinklers each water a circular region of radius 6 meters. The sprinklers are placed $6\\sqrt{2}$ meters apart. What is the area, in square meters, of the part of the lawn watered by both sprinklers? · choices: $9\\pi - 18$ / $18\\pi - 36$ / $18\\pi - 18$ / $24\\pi - 18\\sqrt{3}$ / $36\\pi - 36$",
+    "setup": "two equal circles at a given center distance; area of the overlap (lens)",
+    "change": "run it backwards: give what the earlier item asked for, and ask for one of its givens"
+   }
+  },
+  {
+   "slot": 26,
+   "qid": "s1q26",
+   "type": "numeric",
+   "level": 5,
+   "concept": "counting-permutations",
+   "name": "Counting: permutations and combinations",
+   "variant": "multiplication principle across independent choices",
+   "revisit": {
+    "ref": "quant-006:s2q8",
+    "result": "guessed",
+    "item": "Eight tennis players, among them the siblings Ana and Ben and the siblings Cara and Dev, are to be split into four doubles teams of two players each. The teams are not labelled or ordered. In how many of the possible splits are no two siblings on the same team? · choices: $72$ / $75$ / $78$ / $90$ / $105$",
+    "setup": "split 8 people into unordered pairs with two sibling pairs not together",
+    "change": "change the format (quantitative comparison, multiple choice or numeric entry) and the question asked"
+   }
+  },
+  {
+   "slot": 27,
+   "qid": "s1q27",
+   "type": "numeric",
+   "level": 5,
+   "concept": "triangles",
+   "name": "Triangles: similar, isosceles, equilateral, inequality",
+   "variant": "larger side opposite the larger angle; obtuse vs acute from c^2 against a^2 + b^2",
+   "revisit": {
+    "ref": "quant-006:s2q15",
+    "result": "missed",
+    "item": "In triangle $ABC$, $AB = 7$, $BC = 11$, and the length of $AC$ is an integer less than 11. For how many possible values of $AC$ is triangle $ABC$ obtuse?",
+    "setup": "two sides given and an obtuse (or bounded) angle; the third side's range from c^2 against a^2 + b^2",
+    "change": "combine the same insight with a second concept"
+   }
+  },
+  {
+   "slot": 28,
+   "qid": "s1q28",
+   "type": "qc",
+   "level": 4,
+   "concept": "algebraic-expressions",
+   "name": "Algebraic expressions, identities, simplification",
+   "variant": "simplifying a rational expression",
+   "revisit": {
+    "ref": "quant-007:s2q4",
+    "result": "missed",
+    "item": "$x$ is a number other than $0$, $1$ and $-1$. · Quantity A: $\\dfrac{x^3 - x}{x^2 - x} - \\dfrac{x^2 - 1}{x + 1}$ | Quantity B: $2$",
+    "setup": "difference of two rational expressions that both simplify; compare with a constant (the excluded values do not matter)",
+    "change": "keep the insight but move the trap: a different wrong path should tempt"
+   }
+  }
+ ],
+ "units": [],
+ "conceptSlots": [
+  {
+   "concept": "quadratic-inequalities",
+   "variant": "sign analysis of a factored product (x - a)(x - b) < 0"
+  },
+  {
+   "concept": "quadratic-inequalities",
+   "variant": "powers against the number: where x^2 > x or x^3 < x"
+  },
+  {
+   "concept": "quadratic-inequalities",
+   "variant": "an inequality with x in the denominator (case on sign)"
+  },
+  {
+   "concept": "quadratic-inequalities",
+   "variant": "integer count in a solution set such as x^2 < 10"
+  },
+  {
+   "concept": "estimation-sigfig",
+   "variant": "rounding to a place, then computing"
+  },
+  {
+   "concept": "estimation-sigfig",
+   "variant": "order of magnitude comparison in QC"
+  },
+  {
+   "concept": "estimation-sigfig",
+   "variant": "estimating a product or quotient to pick the closest choice"
+  },
+  {
+   "concept": "estimation-sigfig",
+   "variant": "order of magnitude comparison in QC"
+  },
+  {
+   "concept": "data-tables-graphs",
+   "variant": "a circle graph: central angle and percent"
+  },
+  {
+   "concept": "data-tables-graphs",
+   "variant": "a time plot: the largest change between periods"
+  },
+  {
+   "concept": "data-tables-graphs",
+   "variant": "reading values from a stacked or segmented bar graph"
+  },
+  {
+   "concept": "data-tables-graphs",
+   "variant": "a scatterplot: counting points or reading a trend line"
+  },
+  {
+   "concept": "word-problems-age-sum",
+   "variant": "ages then and now"
+  },
+  {
+   "concept": "word-problems-age-sum",
+   "variant": "coins or tickets of two denominations"
+  },
+  {
+   "concept": "word-problems-age-sum",
+   "variant": "consecutive-number sums"
+  },
+  {
+   "concept": "word-problems-age-sum",
+   "variant": "coins or tickets of two denominations"
+  },
+  {
+   "concept": "remainders-units",
+   "variant": "units digit of a large power (cycle length)"
+  },
+  {
+   "concept": "remainders-units",
+   "variant": "remainder of a negative or fractional expression of n"
+  },
+  {
+   "concept": "remainders-units",
+   "variant": "remainder written as a decimal part (n/d = q.25)"
+  },
+  {
+   "concept": "remainders-units",
+   "variant": "two remainder conditions at once: smallest such number"
+  },
+  {
+   "concept": "inequalities",
+   "variant": "a word problem with an inequality constraint"
+  },
+  {
+   "concept": "inequalities",
+   "variant": "a chain a < b < c: what must be true of sums or differences"
+  },
+  {
+   "concept": "inequalities",
+   "variant": "an inequality with a parameter: for which k a solution exists"
+  },
+  {
+   "concept": "inequalities",
+   "variant": "a word problem with an inequality constraint"
+  },
+  {
+   "concept": "circles",
+   "variant": "inscribed angle vs central angle"
+  },
+  {
+   "concept": "counting-permutations",
+   "variant": "multiplication principle across independent choices"
+  },
+  {
+   "concept": "triangles",
+   "variant": "larger side opposite the larger angle; obtuse vs acute from c^2 against a^2 + b^2"
+  },
+  {
+   "concept": "algebraic-expressions",
+   "variant": "simplifying a rational expression"
+  }
+ ],
+ "targets": {
+  "concepts": [
+   "quadratic-inequalities",
+   "estimation-sigfig",
+   "data-tables-graphs",
+   "word-problems-age-sum",
+   "remainders-units",
+   "inequalities"
+  ]
+ },
+ "history": {
+  "quadratic-inequalities": [
+   {
+    "setup": "rational inequality k/x > x - c; multiplying through by x loses the negative branch; compare x with the left root",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x^3 < x with no sign given; compare x^2 with x across the two solution intervals",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a quartic inequality that factors as n^2 times a quadratic; dividing by n^2 silently admits n = 0, which fails the strict inequality; count the integers",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three ordered parameters with no values; one factored product negative (between its roots) and one positive (outside its roots) intersect to a sub-interval; the sign of a third pairing of the factors",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a two-sided bound on n squared with a non-square lower bound and a square upper bound; count the integers of both signs",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a linear-over-linear expression at least a constant; move everything to one side and read the sign chart; the boundary root is included and the pole excluded; count the integers",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "estimation-sigfig": [
+   {
+    "setup": "estimate a product and quotient of numbers in scientific notation",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "sum of many amounts each rounded to the nearest unit; bound the true total against the strict upper limit",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a difference of squares of two decimals near consecutive whole numbers: rounding each term misleads, factoring gives the product",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "square root of a number in scientific notation with an odd power of ten; compare with a power of ten",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "concentration times volume over a per-dose amount, with a unit conversion; round each factor and pick the nearest of closely spaced choices",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a difference of two numbers in scientific notation with different powers, divided by a negative power of ten",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a power of a small base against a power of ten with a different exponent; rewrite the base in powers of two, use 2 to the 10th as about a thousand, and bound the error",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a count known only after rounding to one place; rounding it to a coarser place directly against rounding the already-rounded figure (double rounding)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a sum of two numbers in scientific notation one power apart against the square of another; align the powers and square the coefficient",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "data-tables-graphs": [
+   {
+    "setup": "DI: count of students at or above a threshold from a frequency chart",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "stacked bars of two groups over intervals; pick the interval with the greatest ratio of segment heights",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: circle graph of a subgroup only: central angle of one category on the reduced base",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "scatterplot of the same units measured in two years; count the points above the line y = x",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "monthly frequency columns; sum two rows per period and find the largest change in either direction (a drop wins)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two cells of one row against the matching column totals (not the row total)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: read two grid points on a drawn trend line and take its slope (not one point's ratio of the two coordinates)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "stacked bars of three formats over years; the year with the longest middle segment (lengths, not tops)",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "word-problems-age-sum": [
+   {
+    "setup": "three people's shares related by more-than / twice / percent of the total",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "'when one was as old as the other is now' statements in both directions; the constant age gap",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the value of two coin types and the value if their counts were swapped; the total count from adding the two equations",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "sum of an even-length run of consecutive integers given; the greatest from the half-integer average",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "consecutive odd integers; one partial sum exceeds another by a given amount; translate into one equation in the smallest term",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two ticket prices with equal revenue from each kind and a total count: the counts are in the inverse ratio of the prices; the total revenue",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three parts related by less-than-twice / more-than / percent of the total; the largest part",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a past multiple and the present sum give both ages; then the future year at which one is twice the other",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one quantity stated as a fixed amount fewer than a multiple of another and also as a fixed amount more than it; translate both in order; the total",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "remainders-units": [
+   {
+    "setup": "remainder of a^n ± b^n mod a small number via power cycles",
+    "worn": true,
+    "items": 4
+   },
+   {
+    "setup": "k ≡ 5 mod 6; remainders of high powers of k mod 8 and mod 3",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "units digits of 3^n and 7^n combined (sum vs product) for every n",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two remainder conditions that conflict in parity: no such number; compare the count with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "n + 1 a multiple of 6; remainder of n^2 + n mod 12 vs a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the decimal part of n/d reduces to a fraction; the least divisor is its reduced denominator",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "from the last digit of a sum of powers back to the parity of n; then another power's last digit",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "remainder of the negative of a large power, via the power's cycle and the nonnegative-remainder rule",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "product of a long run of odd integers: an odd multiple of 25 ends in 25 or 75; the residue mod 4 decides",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a multiple of 3 with a known remainder mod 14; the remainder of the number divided by 3 is fixed because 3 and 14 are coprime; compare it with the original remainder",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two integers with the same remainder mod 6: their high even powers are fixed mod 24 through mod 8 and mod 3; compare the remainder of the sum of the powers with that of the square of the integers' sum",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the decimal part of n over a given divisor fixes the remainder; compare the remainder by a factor of that divisor with the reduced fraction's numerator",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two leftover conditions, each the same amount short of its divisor, with divisors that share a factor; solutions repeat every lcm; the least one above a threshold",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "last two digits of a product of three large numbers, each a little below a multiple of 100; multiply the small negative residues and convert the negative result",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a remainder mod 20 of a sum of two powers, one of whose units digit never changes; that constant units digit is not its remainder mod 20 (settle the tens with mod 4)",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "inequalities": [
+   {
+    "setup": "DI: two linear growth projections; first year one exceeds the other",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "-1 < a < 0 < b < 1: select all inequalities that must hold",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two linear inequalities give an interval; compare x^2 with -4x",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "for which k a linear inequality holds for every x in an interval (check endpoints)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "6/x < 2 and a quadratic inequality; sign of x",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "compound linear inequality gives an x interval; select possible x^2",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three ordered numbers summing to zero; select the sign facts that must hold",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "linear cost with a fixed difference in counts, bounded above and below; select possible counts",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "which rewritten forms are equivalent to a linear inequality with a negative coefficient (the sign flips)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a quadratic inequality has a solution only when the discriminant is positive; select parameter values",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a chained ordering of x, 1/x and x^2 is given; select the values of x that satisfy it (sign cases)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a < b < c with no signs given; select the sum, difference and product inequalities that must hold",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two linear inequalities give a half-open negative interval and an absolute-value inequality gives a positive interval; the product's supremum is excluded; compare with it",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "an inequality between two quotients by the same negative number; select the rescaled forms that must hold (each multiplier a negative number or a positive square)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a line through a fixed intercept with an unknown slope must stay below a whole segment; the gap is linear, so both endpoints decide and the stricter one wins",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a variable between 1 and 2; select the three-term chains of powers, roots and reciprocals that hold on the whole interval (some flip at an interior point)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two compound linear inequalities, one with a negative coefficient, give half-open intervals; select the bounds on the difference and the sum that must hold, minding which ends are reached",
+    "worn": false,
+    "items": 1
+   }
+  ]
+ },
+ "exemplars": {
+  "quadratic-inequalities": [],
+  "estimation-sigfig": [
+   "bb-t1s3-3",
+   "bb-t2s5-17"
+  ],
+  "data-tables-graphs": [
+   "ogq-t1-s6-18",
+   "ogq-t1-s6-19"
+  ],
+  "word-problems-age-sum": [],
+  "remainders-units": [
+   "ogq-t1-s6-7",
+   "bb-t1s3-8"
+  ],
+  "inequalities": [
+   "ogq-set3-8",
+   "ogq-t2-s5-24"
+  ]
+ }
+}

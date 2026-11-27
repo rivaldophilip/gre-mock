@@ -1,0 +1,1161 @@
+{
+  "id": "qbank-003",
+  "measure": "quant",
+  "title": "Quant bank batch 3",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "The graph of y = f(x), made of four line segments, for −4 ≤ x ≤ 4",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 284 236' width='284' height='236' font-family='serif' font-size='12'><line x1='22' y1='214' x2='22' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='46' y1='214' x2='46' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='70' y1='214' x2='70' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='94' y1='214' x2='94' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='118' y1='214' x2='118' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='142' y1='214' x2='142' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='166' y1='214' x2='166' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='190' y1='214' x2='190' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='214' y1='214' x2='214' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='238' y1='214' x2='238' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='262' y1='214' x2='262' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='22' y1='214' x2='262' y2='214' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='22' y1='190' x2='262' y2='190' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='22' y1='166' x2='262' y2='166' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='22' y1='142' x2='262' y2='142' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='22' y1='118' x2='262' y2='118' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='22' y1='94' x2='262' y2='94' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='22' y1='70' x2='262' y2='70' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='22' y1='46' x2='262' y2='46' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='22' y1='22' x2='262' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='14' y1='142' x2='270' y2='142' stroke='currentColor' stroke-width='1.3'/><line x1='142' y1='222' x2='142' y2='14' stroke='currentColor' stroke-width='1.3'/><polygon points='276,142 268,138 268,146' fill='currentColor'/><polygon points='142,8 138,16 146,16' fill='currentColor'/><text x='272' y='158' fill='currentColor' font-style='italic'>x</text><text x='149' y='16' fill='currentColor' font-style='italic'>y</text><text x='46' y='156' text-anchor='middle' fill='currentColor'>-4</text><text x='70' y='156' text-anchor='middle' fill='currentColor'>-3</text><text x='94' y='156' text-anchor='middle' fill='currentColor'>-2</text><text x='118' y='156' text-anchor='middle' fill='currentColor'>-1</text><text x='166' y='156' text-anchor='middle' fill='currentColor'>1</text><text x='190' y='156' text-anchor='middle' fill='currentColor'>2</text><text x='214' y='156' text-anchor='middle' fill='currentColor'>3</text><text x='238' y='156' text-anchor='middle' fill='currentColor'>4</text><text x='137' y='194' text-anchor='end' fill='currentColor'>-2</text><text x='137' y='170' text-anchor='end' fill='currentColor'>-1</text><text x='137' y='122' text-anchor='end' fill='currentColor'>1</text><text x='137' y='98' text-anchor='end' fill='currentColor'>2</text><text x='137' y='74' text-anchor='end' fill='currentColor'>3</text><text x='137' y='50' text-anchor='end' fill='currentColor'>4</text><text x='137' y='156' text-anchor='end' fill='currentColor' font-style='italic'>O</text><polyline points='46,142 94,46 142,94 190,190 238,142' fill='none' stroke='currentColor' stroke-width='2.4'/><circle cx='46' cy='142' r='3.5' fill='currentColor'/><circle cx='238' cy='142' r='3.5' fill='currentColor'/><text x='234' y='134' text-anchor='end' fill='currentColor' font-style='italic'>y = f(x)</text></svg>"
+    },
+    {
+      "id": "fig2",
+      "caption": "The graph of y = g(x), made of four line segments, for −4 ≤ x ≤ 4",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 284 188' width='284' height='188' font-family='serif' font-size='12'><line x1='22' y1='166' x2='22' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='46' y1='166' x2='46' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='70' y1='166' x2='70' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='94' y1='166' x2='94' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='118' y1='166' x2='118' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='142' y1='166' x2='142' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='166' y1='166' x2='166' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='190' y1='166' x2='190' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='214' y1='166' x2='214' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='238' y1='166' x2='238' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='262' y1='166' x2='262' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='22' y1='166' x2='262' y2='166' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='22' y1='142' x2='262' y2='142' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='22' y1='118' x2='262' y2='118' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='22' y1='94' x2='262' y2='94' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='22' y1='70' x2='262' y2='70' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='22' y1='46' x2='262' y2='46' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='22' y1='22' x2='262' y2='22' stroke='currentColor' stroke-opacity='0.18' stroke-width='1'/><line x1='14' y1='118' x2='270' y2='118' stroke='currentColor' stroke-width='1.3'/><line x1='142' y1='174' x2='142' y2='14' stroke='currentColor' stroke-width='1.3'/><polygon points='276,118 268,114 268,122' fill='currentColor'/><polygon points='142,8 138,16 146,16' fill='currentColor'/><text x='272' y='134' fill='currentColor' font-style='italic'>x</text><text x='149' y='16' fill='currentColor' font-style='italic'>y</text><text x='46' y='132' text-anchor='middle' fill='currentColor'>-4</text><text x='70' y='132' text-anchor='middle' fill='currentColor'>-3</text><text x='94' y='132' text-anchor='middle' fill='currentColor'>-2</text><text x='118' y='132' text-anchor='middle' fill='currentColor'>-1</text><text x='166' y='132' text-anchor='middle' fill='currentColor'>1</text><text x='190' y='132' text-anchor='middle' fill='currentColor'>2</text><text x='214' y='132' text-anchor='middle' fill='currentColor'>3</text><text x='238' y='132' text-anchor='middle' fill='currentColor'>4</text><text x='137' y='146' text-anchor='end' fill='currentColor'>-1</text><text x='137' y='98' text-anchor='end' fill='currentColor'>1</text><text x='137' y='74' text-anchor='end' fill='currentColor'>2</text><text x='137' y='50' text-anchor='end' fill='currentColor'>3</text><text x='137' y='132' text-anchor='end' fill='currentColor' font-style='italic'>O</text><polyline points='46,94 94,46 142,142 190,94 238,46' fill='none' stroke='currentColor' stroke-width='2.4'/><circle cx='46' cy='94' r='3.5' fill='currentColor'/><circle cx='238' cy='46' r='3.5' fill='currentColor'/><text x='234' y='38' text-anchor='end' fill='currentColor' font-style='italic'>y = g(x)</text></svg>"
+    },
+    {
+      "id": "fig3",
+      "caption": "Prize won by one fundraiser ticket",
+      "table": {
+        "head": [
+          "Prize",
+          "$0",
+          "$1",
+          "$2",
+          "$5"
+        ],
+        "rows": [
+          [
+            "Probability",
+            "0.4",
+            "p",
+            "q",
+            "0.1"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fig4",
+      "caption": "Acts at a music festival, by number of performers",
+      "table": {
+        "head": [
+          "Performers in the act",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "rows": [
+          [
+            "Number of acts",
+            "20",
+            "30",
+            "30",
+            "20"
+          ]
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "At a charity bingo night, 25 tickets numbered 1 through 25 are placed in a drum, and tickets are drawn one at a time without being replaced. What is the least number of tickets that must be drawn to be certain that two of the drawn tickets have numbers whose sum is 26?",
+      "choices": [
+        "$12$",
+        "$13$",
+        "$14$",
+        "$15$",
+        "$25$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The numbers split into the 12 pairs $\\{1, 25\\}, \\{2, 24\\}, \\ldots, \\{12, 14\\}$, each summing to 26, plus the number 13, which has no partner (there is only one ticket 13). One ticket from every pair plus ticket 13 is 13 tickets with no pair summing to 26, so 13 draws are not enough; a 14th ticket must complete a pair. The answer is 14.",
+        "steps": [
+          "1. Pairs summing to 26: $(1, 25), (2, 24), \\ldots, (12, 14)$, which is 12 pairs.",
+          "2. Ticket 13 is left over: $13 + 13 = 26$ would need two tickets numbered 13.",
+          "3. Worst case: one ticket from each pair and ticket 13, which is $12 + 1 = 13$ tickets with no pair summing to 26.",
+          "4. The next ticket belongs to a pair whose other ticket is already drawn, so 14 draws guarantee it."
+        ],
+        "fast": "Largest set with no pair: one per pair plus every unpaired number; add 1.",
+        "trap": "Counting only the 12 pairs and answering 13, forgetting that ticket 13 can be drawn without ever completing a pair."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "min-max-bounding",
+          "role": "primary"
+        }
+      ],
+      "setup": "distinct numbered tickets drawn blind until two of them must sum to a fixed total; the numbers pair off, but the middle number has no partner, so it joins the worst case",
+      "variant": "worst-case count (pigeonhole)",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "In a gymnastics final, each of 7 judges gives a routine a whole-number score from 0 to 10, inclusive. One highest score and one lowest score are dropped (if scores tie, only one copy is dropped), and the mean of the remaining 5 scores is 8.4.",
+      "qc": {
+        "a": "The greatest possible mean of all 7 scores",
+        "b": "$8.6$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The 5 kept scores total $5 \\times 8.4 = 42$. The dropped high score is at most 10. The dropped low score is at most the smallest kept score, and 5 whole numbers totaling 42 cannot all be 9 or more ($5 \\times 9 = 45$), so the smallest kept score, and with it the dropped low score, is at most 8. The total is at most $42 + 10 + 8 = 60$, reached by 8, 8, 8, 8, 9, 9, 10. So A is $\\tfrac{60}{7} \\approx 8.57$, less than 8.6.",
+        "steps": [
+          "1. Kept scores: total $42$.",
+          "2. Dropped high score: at most $10$.",
+          "3. Dropped low score $\\le$ smallest kept score; five whole numbers with total $42$ have a smallest value of at most $8$ (all $9$ or more would total at least $45$).",
+          "4. Greatest total: $42 + 10 + 8 = 60$, from $8, 8, 8, 8, 9, 9, 10$ (drop one $8$ and the $10$; the rest total $42$).",
+          "5. Greatest mean: $\\tfrac{60}{7} \\approx 8.57 < 8.6$, so Quantity B is greater."
+        ],
+        "fast": "The low score cannot beat the kept scores, and whole numbers averaging 8.4 include an 8 or less: the best case is $\\tfrac{42 + 10 + 8}{7}$.",
+        "trap": "Making both dropped scores 10 ($\\tfrac{62}{7} \\approx 8.86$), or letting the low score equal the kept mean 8.4 ($\\tfrac{60.4}{7} \\approx 8.63$); either gives A."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "min-max-bounding",
+          "role": "primary"
+        }
+      ],
+      "setup": "whole-number scores in a fixed range with one top and one bottom score dropped and the mean of the rest given; the greatest mean of all the scores (the dropped low score is capped by the smallest kept score, which whole numbers force below the kept mean)",
+      "variant": "extreme values of a mean or median",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "In a card game, a player draws one red card and one black card. The red card shows an integer $r$ from $-4$ to $3$, inclusive, and the black card shows an integer $b$ from $-2$ to $5$, inclusive. The player's score is $r^2 + rb$. What is the greatest possible score?",
+      "choices": [
+        "$15$",
+        "$16$",
+        "$24$",
+        "$28$",
+        "$31$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "$r^2 + rb = r(r + b)$. For a large product the two factors should share a sign. Both negative: $r = -4$, $b = -2$ gives $(-4)(-6) = 24$. Both positive: $r = 3$, $b = 5$ gives $3 \\times 8 = 24$. No other pair does better, so the greatest score is 24.",
+        "steps": [
+          "1. Factor: $r^2 + rb = r(r + b)$.",
+          "2. With $r < 0$, make $r + b$ as negative as possible: $b = -2$, so the score is $r(r - 2)$, largest at $r = -4$: $24$.",
+          "3. With $r > 0$, make $r + b$ as large as possible: $b = 5$, so the score is $r(r + 5)$, largest at $r = 3$: $24$.",
+          "4. The greatest score is $24$."
+        ],
+        "fast": "Factor and test the two same-sign corners $(-4, -2)$ and $(3, 5)$.",
+        "trap": "Maximizing each term on its own: $r^2 \\le 16$ at $r = -4$ and $rb \\le 15$ at $r = 3$, $b = 5$, giving 31, but no single pair $(r, b)$ reaches both."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "min-max-bounding",
+          "role": "primary"
+        }
+      ],
+      "setup": "a two-variable expression r^2 + rb over integer ranges of mixed sign; factor it as r(r + b) and take both factors negative or both positive (maximizing the two terms separately overshoots)",
+      "variant": "the extreme value of an expression over an integer range",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A singer's encore set has four songs whose lengths are four different whole numbers of minutes, 50 minutes in all. To keep the set balanced, the longest song must run for less time than the two shortest songs combined.",
+      "qc": {
+        "a": "The greatest possible length, in minutes, of the longest song",
+        "b": "$17$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Call the lengths $a<b<c<d$. To make $d$ large, the other three should total as little as possible, but $d<a+b$ keeps $a+b$ from being small. Taking $c=b+1$, the sum is $a+2b+1+d=50$, so $d=49-a-2b$, and $d<a+b$ needs $2a+3b>50$. With $a=9$, $b=11$: $2a+3b=51$, $c=12$ and $d=18<20$. That beats the consecutive $10,11,12$ (which give $d=17$). $d=19$ would need $a+2b=30$ with $2a+3b\\ge 51$ and $a<b$, which is impossible, so the greatest $d$ is $18>17$.",
+        "steps": [
+          "1. Order the lengths $a<b<c<d$. The total is 50, and $d<a+b$.",
+          "2. To push $d$ up, keep $c$ as small as it can be, $c=b+1$, so $d=49-a-2b$.",
+          "3. The balance rule $d<a+b$ becomes $2a+3b>50$; we want $a+2b$ as small as possible.",
+          "4. $a+2b=31$ works with $a=9$, $b=11$: lengths $9, 11, 12, 18$, and $18<20$.",
+          "5. $a+2b=30$ fails: $a=30-2b<b$ needs $b\\ge 11$, but then $2a+3b=60-b\\le 49$. So the greatest $d$ is $18$, more than $17$."
+        ],
+        "fast": "Consecutive $10, 11, 12$ leave $17$. Lowering the shortest to $9$ keeps $9+11=20$ above the longest and frees a minute: $9, 11, 12, 18$ works, so A is greater.",
+        "trap": "Making the three shorter songs consecutive ($10, 11, 12$) feels optimal and gives $17$, so C. Lowering $a$ while keeping $b$ high keeps $a+b$ large enough and frees a minute for $d$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "min-max-bounding",
+          "role": "primary"
+        }
+      ],
+      "setup": "four distinct whole numbers with a fixed sum, the largest below the sum of the two smallest; the greatest possible largest comes from keeping the third number low while spreading the two smallest apart, not from making the three smaller ones consecutive",
+      "variant": "the largest share or longest side under an ordering or triangle constraint",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "A sports club rents its squash courts by the booking. A booking of 1 hour or less is charged a flat $\\$10$. A longer booking is charged $\\$14$ per hour, with any part of an hour charged as a full hour. Kai made two bookings whose lengths totaled exactly 3 hours. Which of the following could be the total amount Kai was charged for the two bookings? Indicate all such amounts.",
+      "choices": [
+        "$\\$38$",
+        "$\\$42$",
+        "$\\$48$",
+        "$\\$52$",
+        "$\\$56$",
+        "$\\$70$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Both bookings cannot be 1 hour or less (they total 3 hours). If one is 1 hour or less, the other is 2 hours or more: exactly 1 and 2 hours costs $\\$10 + \\$28 = \\$38$; under 1 hour leaves over 2 hours, charged as 3: $\\$10 + \\$42 = \\$52$. If both exceed 1 hour, each is under 2 hours and charged as 2: $\\$28 + \\$28 = \\$56$. The possible totals are $\\$38$, $\\$52$ and $\\$56$.",
+        "steps": [
+          "1. One booking of at most 1 hour forces the other to at least 2 hours.",
+          "2. Exactly 1 hour and exactly 2 hours: $10 + 2(14) = 38$.",
+          "3. Under 1 hour and over 2 hours (a part of the third hour): $10 + 3(14) = 52$.",
+          "4. Both over 1 hour: each is under 2 hours, so $2(14) + 2(14) = 56$.",
+          "5. Possible totals: $\\$38$, $\\$52$, $\\$56$."
+        ],
+        "fast": "Case on whether a booking is at most 1 hour, and check the split that lands exactly on 1 and 2 hours.",
+        "trap": "Missing $\\$38$: the split of exactly 1 hour and 2 hours charges neither booking for a started extra hour. Also $\\$42$ treats the 3 hours as one booking."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-interest",
+          "role": "primary"
+        }
+      ],
+      "setup": "two bookings with a fixed total length, each charged a flat fee up to a threshold and per started unit above it; the possible totals, including the split that lands exactly on the threshold and on a whole unit",
+      "variant": "whole-unit pricing and boundary cases (sold only by the full yard; \"or less\")",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A boutique sets the regular price of every item 40 percent above the item's cost. During a sale, a jacket's tag read “Save $\\$21$,” which was 25 percent off the jacket's regular price. What was the boutique's profit on the jacket when it sold at the sale price?",
+      "choices": [
+        "$\\$3$",
+        "$\\$9$",
+        "$\\$12.60$",
+        "$\\$15$",
+        "$\\$21$"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "$\\$21$ is 25 percent of the regular price, so the regular price is $\\$84$ and the sale price is $\\$63$. The regular price is 140 percent of cost, so the cost is $\\tfrac{84}{1.4} = \\$60$. Profit: $63 - 60 = \\$3$.",
+        "steps": [
+          "1. Regular price: $\\tfrac{21}{0.25} = 84$.",
+          "2. Sale price: $84 - 21 = 63$.",
+          "3. Cost: $84 = 1.4c$, so $c = 60$.",
+          "4. Profit: $63 - 60 = 3$."
+        ],
+        "fast": "$1.4 \\times 0.75 = 1.05$: the sale price is 5 percent above cost, and the cost is $\\tfrac{84}{1.4} = 60$, so the profit is $\\$3$.",
+        "trap": "Taking the cost as 40 percent less than the regular price ($84 \\times 0.6 = 50.40$, profit $\\$12.60$), or subtracting the percents (15 percent of $\\$60$, $\\$9$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-interest",
+          "role": "primary"
+        }
+      ],
+      "setup": "a percent markup on cost, then a sale discount stated both in dollars and as a percent of the regular price; the dollar amount gives the regular price, which is divided by one plus the markup to get the cost; the profit at the sale price",
+      "variant": "markup then discount",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "prompt": "An art dealer sold two prints for $\\$600$ each. On the first print, her profit was 20 percent of the selling price. On the second print, her loss was 20 percent of what she had paid for it. Taking both sales together, how many dollars did the dealer lose?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "30"
+      },
+      "explanation": {
+        "key": "First print: profit $0.2 \\times 600 = \\$120$, so it cost $\\$480$. Second print: the price is 80 percent of its cost, so it cost $\\tfrac{600}{0.8} = \\$750$, a loss of $\\$150$. Net: $120 - 150 = -30$, a loss of $\\$30$.",
+        "steps": [
+          "1. First print: profit $= 0.2 \\times 600 = 120$ (cost $480$).",
+          "2. Second print: $600 = 0.8c$, so $c = 750$ and the loss is $150$.",
+          "3. Net: $120 - 150 = -30$.",
+          "4. She lost $\\$30$."
+        ],
+        "fast": "Total cost $480 + 750 = 1230$ against revenue $1200$.",
+        "trap": "Treating both 20 percents as percents of the price (a gain of $\\$120$ and a loss of $\\$120$, so 0), or both as percents of cost (costs $\\$500$ and $\\$750$, a loss of $\\$50$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-interest",
+          "role": "primary"
+        }
+      ],
+      "setup": "two sales at the same price, a gain stated as a percent of the price and a loss stated as the same percent of the cost; find each cost on its own base; the net result is a loss, not break-even",
+      "variant": "profit as a percent of cost vs of price",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "A costume designer needs 75 inches of braided trim. Shop X sells the trim only by the full yard, at $\\$1.80$ per yard, and Shop Y sells the same trim only by the full foot, at $\\$0.65$ per foot. At each shop she would buy the least amount that gives her at least 75 inches. (1 yard = 36 inches; 1 foot = 12 inches.)",
+      "qc": {
+        "a": "The amount she would pay at Shop X",
+        "b": "The amount she would pay at Shop Y"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "At Shop X she needs 3 yards (2 yards is only 72 inches), costing $3 \\times 1.80 = \\$5.40$. At Shop Y she needs 7 feet (84 inches), costing $7 \\times 0.65 = \\$4.55$. Quantity A is greater, even though Shop X has the lower rate per inch.",
+        "steps": [
+          "1. Shop X: $\\tfrac{75}{36} \\approx 2.08$, so 3 yards: $\\$5.40$.",
+          "2. Shop Y: $\\tfrac{75}{12} = 6.25$, so 7 feet: $\\$4.55$.",
+          "3. $5.40 > 4.55$: Quantity A is greater."
+        ],
+        "fast": "Round up at each shop first, then multiply.",
+        "trap": "Comparing rates: $\\$1.80$ a yard is $\\$0.60$ a foot, cheaper than $\\$0.65$, so Shop X looks cheaper, but rounding 75 inches up to 108 inches wastes far more than rounding up to 84."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-interest",
+          "role": "primary"
+        }
+      ],
+      "setup": "the same length bought from two shops that sell only whole units of different sizes; the shop with the lower rate per inch costs more once each purchase is rounded up to whole units",
+      "variant": "whole-unit pricing and boundary cases (sold only by the full yard; \"or less\")",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "A puzzle card asks for a positive integer $x$ with two properties: $12x$ is a perfect square, and $18x$ is a perfect cube. Which of the following values of $x$ have both properties? Indicate all such values.",
+      "choices": [
+        "$6$",
+        "$12$",
+        "$48$",
+        "$324$",
+        "$768$",
+        "$8{,}748$"
+      ],
+      "key": {
+        "sel": [
+          1,
+          4,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "Write $x = 2^a 3^b m$ with $m$ free of 2 and 3. Then $12x = 2^{a+2} 3^{b+1} m$ needs $a$ even and $b$ odd, and $18x = 2^{a+1} 3^{b+2} m$ needs $a + 1$ and $b + 2$ to be multiples of 3; also $m$ must be both a square and a cube. So $a = 2, 8, \\ldots$ and $b = 1, 7, \\ldots$, and $x$ is $12$ times a sixth power: $12$, $768 = 12 \\times 2^6$ and $8{,}748 = 12 \\times 3^6$ work.",
+        "steps": [
+          "1. $12x = 2^{a+2} 3^{b+1} m$ is a square: $a$ even, $b$ odd, $m$ a square.",
+          "2. $18x = 2^{a+1} 3^{b+2} m$ is a cube: $a \\equiv 2$ and $b \\equiv 1 \\pmod 3$, $m$ a cube.",
+          "3. Least: $a = 2$, $b = 1$, $x = 12$ ($144 = 12^2$, $216 = 6^3$).",
+          "4. Others: $12 \\times 2^6 = 768$ and $12 \\times 3^6 = 8{,}748$.",
+          "5. $6$ ($72$ is not a square), $48$ ($864$ is not a cube) and $324$ ($3{,}888$ is not a square) fail."
+        ],
+        "fast": "Find the least $x$ (12), then multiply only by sixth powers, the numbers that are both squares and cubes.",
+        "trap": "Checking only the square condition: $48$ makes $12x = 576 = 24^2$ but $18x = 864$ is not a cube. Or thinking the least value is the only one."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "primes-factors",
+          "role": "primary"
+        }
+      ],
+      "setup": "one unknown multiplier must make one product a perfect square and another product a perfect cube; each prime's exponent meets an even condition and a multiple-of-three condition at once, so the solutions are the least one times sixth powers",
+      "variant": "smallest multiplier that makes a perfect square or cube",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A quiz-show contestant is asked to multiply together all the integers from 26 to 75, inclusive. When the product is written out in full, how many zeros does it end with?",
+      "choices": [
+        "$10$",
+        "$11$",
+        "$12$",
+        "$17$",
+        "$18$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The zeros at the end count the factors of 10, which are limited by factors of 5 (factors of 2 are far more common). The multiples of 5 from 30 to 75 are 10 numbers, and 50 and 75 are multiples of 25, each giving one more 5: $10 + 2 = 12$.",
+        "steps": [
+          "1. Trailing zeros = number of factors of 10 = number of factors of 5 here.",
+          "2. Multiples of 5 in $26, \\ldots, 75$: $30, 35, \\ldots, 75$, which is 10 numbers.",
+          "3. Multiples of 25: $50$ and $75$, one extra 5 each.",
+          "4. Total: $12$."
+        ],
+        "fast": "$\\tfrac{75!}{25!}$: factors of 5 in $75!$ are $15 + 3 = 18$, in $25!$ are $5 + 1 = 6$, so $18 - 6 = 12$.",
+        "trap": "Counting only the multiples of 5 (10), or counting the factors of 5 in $75!$ from 1 (18) and forgetting that the product starts at 26."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "primes-factors",
+          "role": "primary"
+        }
+      ],
+      "setup": "the trailing zeros of a product of consecutive integers that does not start at 1: count factors of 5 (2s are plentiful), with an extra 5 from each multiple of 25 in the range",
+      "variant": "highest power of a prime dividing n! or a product",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "A music festival has 3,600 folding chairs. The organizers will set out all of the chairs in at least 2 blocks of equal size, and each block will be a square array of chairs with at least 2 rows. How many different block sizes are possible?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "10"
+      },
+      "explanation": {
+        "key": "A block is an $s$ by $s$ square, so $s^2$ must divide $3{,}600 = 60^2$, which happens exactly when $s$ divides 60. 60 has $(2 + 1)(1 + 1)(1 + 1) = 12$ divisors. Remove $s = 1$ (only 1 row) and $s = 60$ (a single block): 10 sizes.",
+        "steps": [
+          "1. $3{,}600 = 60^2 = 2^4 \\cdot 3^2 \\cdot 5^2$.",
+          "2. $s^2 \\mid 60^2$ exactly when $s \\mid 60$; $60 = 2^2 \\cdot 3 \\cdot 5$ has $3 \\cdot 2 \\cdot 2 = 12$ divisors.",
+          "3. Exclude $s = 1$ (one row) and $s = 60$ (one block of 3,600).",
+          "4. $12 - 2 = 10$."
+        ],
+        "fast": "Block sides are the divisors of 60 other than 1 and 60.",
+        "trap": "Answering 12 (keeping the 1-chair block and the single block of all 3,600 chairs), or counting all 45 divisors of 3,600."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "primes-factors",
+          "role": "primary"
+        }
+      ],
+      "setup": "a perfect-square total split into equal square blocks: the block side must divide the square root of the total; count its divisors and drop the one-row block and the single block",
+      "variant": "number of positive divisors from the prime factorization",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A board game uses 49 tiles numbered 1 through 49. A tile is called a quad if the number on it has exactly four positive divisors.",
+      "qc": {
+        "a": "The number of quad tiles",
+        "b": "$14$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "A number has exactly four divisors when it is $pq$ (two different primes) or $p^3$. The products $pq$ up to 49 are 6, 10, 14, 15, 21, 22, 26, 33, 34, 35, 38, 39, 46 (13 of them), and the cubes are 8 and 27. That makes 15 quads, more than 14.",
+        "steps": [
+          "1. Four divisors: $(e_1 + 1)(e_2 + 1) \\cdots = 4$, so $n = pq$ or $n = p^3$.",
+          "2. $2q$: 6, 10, 14, 22, 26, 34, 38, 46 (8); $3q$: 15, 21, 33, 39 (4); $5 \\cdot 7 = 35$ (1): 13 in all.",
+          "3. $p^3$: $8$ and $27$.",
+          "4. Quads: $15 > 14$, so Quantity A is greater."
+        ],
+        "fast": "$4 = 2 \\times 2$ or $4$: the two shapes are $pq$ and $p^3$.",
+        "trap": "Listing only products of two primes (13) and missing the cubes 8 and 27, which gives B."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "primes-factors",
+          "role": "primary"
+        }
+      ],
+      "setup": "count the integers in a range with exactly four divisors: products of two different primes and also cubes of primes (the second form is easy to miss); compare with a value",
+      "variant": "count of primes or factors in a stated range",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "Four line segments joined end to end make up the graph of the function $f$ shown, defined for $-4 \\le x \\le 4$. For which of the following values of $x$ is $f(f(x))$ negative? Indicate all such values.",
+      "figureId": "fig1",
+      "choices": [
+        "$-3$",
+        "$-1$",
+        "$0$",
+        "$1$",
+        "$3$",
+        "$4$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Read $f(x)$, then read $f$ at that value: $f(-3) = 2$ and $f(2) = -2$; $f(-1) = 3$ and $f(3) = -1$; $f(0) = 2$ and $f(2) = -2$; $f(1) = 0$ and $f(0) = 2$; $f(3) = -1$ and $f(-1) = 3$; $f(4) = 0$ and $f(0) = 2$. The composition is negative for $x = -3, -1, 0$.",
+        "steps": [
+          "1. $x = -3$: midway from $(-4, 0)$ to $(-2, 4)$, $f(-3) = 2$; $f(2) = -2 < 0$.",
+          "2. $x = -1$: midway from $(-2, 4)$ to $(0, 2)$, $f(-1) = 3$; $f(3) = -1 < 0$.",
+          "3. $x = 0$: $f(0) = 2$; $f(2) = -2 < 0$.",
+          "4. $x = 1$: $f(1) = 0$; $f(0) = 2 > 0$.",
+          "5. $x = 3$: $f(3) = -1$; $f(-1) = 3 > 0$. $x = 4$: $f(4) = 0$; $f(0) = 2 > 0$."
+        ],
+        "fast": "$f(f(x)) < 0$ exactly when $f(x)$ lies strictly between 1 and 4 (where $f$ is below the axis), so look for $1 < f(x) < 4$.",
+        "trap": "Choosing the $x$ where $f(x)$ itself is negative ($x = 3$), or misreading $f$ at a point between grid vertices."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "graphs-of-functions",
+          "role": "primary"
+        }
+      ],
+      "setup": "a piecewise-linear graph read twice: find f(x) between vertices, then read f at that output; select the inputs where the composition is negative (not where f itself is negative)",
+      "variant": "reading the value of f at a point from a graph",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A jeweler sketches a pendant design in the $xy$-plane: the circle $x^2 + y^2 = 25$ and the parabola $y = x^2 - 5$. At how many points do the two curves meet?",
+      "choices": [
+        "$0$",
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "From the parabola, $x^2 = y + 5$. Substituting: $y + 5 + y^2 = 25$, so $y^2 + y - 20 = 0$ and $y = 4$ or $y = -5$. For $y = 4$, $x^2 = 9$ gives two points $(\\pm 3, 4)$. For $y = -5$, $x^2 = 0$ gives the single point $(0, -5)$. Three points in all.",
+        "steps": [
+          "1. $x^2 = y + 5$; substitute: $y^2 + y - 20 = 0$.",
+          "2. $(y - 4)(y + 5) = 0$: $y = 4$ or $y = -5$.",
+          "3. $y = 4$: $x = \\pm 3$, two points.",
+          "4. $y = -5$: $x = 0$, one point (the parabola's vertex touches the circle's bottom).",
+          "5. Total: 3."
+        ],
+        "fast": "Each $y$-root gives two points only when $x^2 > 0$; at $x^2 = 0$ it gives one.",
+        "trap": "Answering 4 by giving each $y$-root two values of $x$, or 2 by discarding $y = -5$ as if it gave no point."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "graphs-of-functions",
+          "role": "primary"
+        }
+      ],
+      "setup": "a circle against a parabola: substitute to get a quadratic in y, keep the roots with x^2 = y + c nonnegative, and count one point (not two) where x = 0",
+      "variant": "intersections of two graphs",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "A function $f$ is defined for every real number, and rotating its graph $180^\\circ$ about the origin leaves the graph unchanged. For every $x > 0$, $f(x) = x^2 + kx$, where $k$ is a constant. If $f(-2) = 8$, what is the value of $f(3)$?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "-9"
+      },
+      "explanation": {
+        "key": "A half-turn about the origin sends $(x, y)$ to $(-x, -y)$, so $f(-x) = -f(x)$. Then $f(2) = -f(-2) = -8$, so $4 + 2k = -8$ and $k = -6$. So $f(3) = 9 - 18 = -9$.",
+        "steps": [
+          "1. Symmetry about the origin: $f(-x) = -f(x)$.",
+          "2. $f(2) = -8$, so $4 + 2k = -8$, $k = -6$.",
+          "3. $f(3) = 3^2 - 6(3) = -9$."
+        ],
+        "fast": "Move the given point to the positive side, $(2, -8)$, and solve for $k$.",
+        "trap": "Putting $x = -2$ into the formula, which holds only for $x > 0$ ($4 - 2k = 8$, $k = -2$, answer 3), or using mirror symmetry about the $y$-axis ($f(2) = 8$, $k = 2$, answer 15)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "graphs-of-functions",
+          "role": "primary"
+        }
+      ],
+      "setup": "a graph unchanged by a half-turn about the origin with its formula given only for positive x; a value at a negative input fixes the unknown coefficient through f(-x) = -f(x); then evaluate at a positive input",
+      "variant": "symmetry about an axis, the origin or y = x",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "The graph of the function $g$, shown, is made of four line segments and is defined for $-4 \\le x \\le 4$. The number $k$ is negative, and $g(k) = 2$.",
+      "figureId": "fig2",
+      "qc": {
+        "a": "$g(k + 1)$",
+        "b": "$2$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "On the negative side the graph reaches height 2 twice: at $k = -3$ (rising from $(-4, 1)$ to $(-2, 3)$) and at $k = -1.5$ (falling from $(-2, 3)$ to $(0, -1)$ with slope $-2$). For $k = -3$, $g(k + 1) = g(-2) = 3 > 2$. For $k = -1.5$, $g(k + 1) = g(-0.5) = 0 < 2$. The relationship cannot be determined.",
+        "steps": [
+          "1. Rising segment, slope 1: $g(x) = 2$ at $x = -3$.",
+          "2. Falling segment, slope $-2$: $3 - 2(x + 2) = 2$ at $x = -1.5$.",
+          "3. $k = -3$: $g(-2) = 3$, greater than 2.",
+          "4. $k = -1.5$: $g(-0.5) = 3 - 2(1.5) = 0$, less than 2.",
+          "5. Both values of $k$ fit, so the answer is D."
+        ],
+        "fast": "Draw the horizontal line $y = 2$ and count its crossings left of the $y$-axis before reading anything.",
+        "trap": "Seeing only the crossing at the grid point $(-3, 2)$ and answering A; the second crossing at $x = -1.5$ lies between grid lines."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "graphs-of-functions",
+          "role": "primary"
+        }
+      ],
+      "setup": "a level crossed twice on the negative side of a piecewise-linear graph, once at a grid point and once between grid lines on a steep segment; the graph read one unit to the right of each crossing falls on opposite sides of the level",
+      "variant": "reading the value of f at a point from a graph",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "At a sports club's fundraiser, every ticket wins exactly one of the prizes in the table, with the probabilities shown, where $p$ and $q$ are both positive. Which of the following could be the expected value of the prize on one ticket? Indicate all such values.",
+      "figureId": "fig3",
+      "choices": [
+        "$\\$0.90$",
+        "$\\$1.05$",
+        "$\\$1.20$",
+        "$\\$1.45$",
+        "$\\$1.50$",
+        "$\\$2.00$"
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The probabilities total 1, so $p + q = 0.5$. The expected value is $0(0.4) + 1p + 2q + 5(0.1) = p + 2(0.5 - p) + 0.5 = 1.5 - p$. With $0 < p < 0.5$, it lies strictly between $\\$1.00$ and $\\$1.50$: $\\$1.05$, $\\$1.20$ and $\\$1.45$ are possible.",
+        "steps": [
+          "1. $0.4 + p + q + 0.1 = 1$, so $q = 0.5 - p$.",
+          "2. $E = p + 2q + 0.5 = 1.5 - p$.",
+          "3. $0 < p < 0.5$ gives $1 < E < 1.5$.",
+          "4. Possible: $\\$1.05$, $\\$1.20$, $\\$1.45$; $\\$1.50$ would need $p = 0$."
+        ],
+        "fast": "Push all of the unknown probability onto $\\$1$ or onto $\\$2$ to get the two (excluded) ends, $\\$1.00$ and $\\$1.50$.",
+        "trap": "Including $\\$1.50$, which needs $p = 0$, or $\\$2.00$, the average of the four prize values, which ignores the probabilities."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "random-variables",
+          "role": "primary"
+        }
+      ],
+      "setup": "a prize table with two unknown positive probabilities whose sum is fixed; the expected value is linear in one of them, so it fills an open interval; select the attainable values (not the endpoints, not the mean of the prize values)",
+      "variant": "expected value from a probability table",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "The table shows how many acts of each size performed at a music festival; each performer appeared in exactly one act. One of the festival's performers is chosen at random, and $X$ is the number of performers in that person's act. Which of the following gives the mean and the median of $X$?",
+      "figureId": "fig4",
+      "choices": [
+        "Mean $2.5$, median $2.5$",
+        "Mean $2.5$, median $3$",
+        "Mean $2.92$, median $2.5$",
+        "Mean $2.92$, median $3$",
+        "Mean $3$, median $3$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The acts hold $20 + 60 + 90 + 80 = 250$ performers, so $P(X = 1) = \\tfrac{20}{250}$, $P(X = 2) = \\tfrac{60}{250}$, $P(X = 3) = \\tfrac{90}{250}$, $P(X = 4) = \\tfrac{80}{250}$. Mean: $\\tfrac{20 + 120 + 270 + 320}{250} = \\tfrac{730}{250} = 2.92$. The cumulative probability is $0.32$ through $X = 2$ and $0.68$ through $X = 3$, so the median is 3.",
+        "steps": [
+          "1. Performers by act size: $1 \\cdot 20$, $2 \\cdot 30$, $3 \\cdot 30$, $4 \\cdot 20$, which is $20, 60, 90, 80$ (total 250).",
+          "2. Mean: $\\tfrac{1(20) + 2(60) + 3(90) + 4(80)}{250} = \\tfrac{730}{250} = 2.92$.",
+          "3. Cumulative: $0.08$ (size 1), $0.32$ (size 2), $0.68$ (size 3), so the median is 3.",
+          "4. Mean 2.92, median 3."
+        ],
+        "fast": "Weight each act size by its performers; bigger acts get picked more often, so both the mean and the median rise above the per-act 2.5.",
+        "trap": "Using the number of acts as the weights (mean 2.5 and median 2.5), which describes a randomly chosen act, not a randomly chosen performer."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "random-variables",
+          "role": "primary"
+        }
+      ],
+      "setup": "a table counts groups by size, but the random pick is a member, not a group; weight each size by its members to build the distribution, then find its mean and median (the per-group mean and median are the trap)",
+      "variant": "mean and median of a discrete distribution table",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "At a walk-in clinic, a patient's waiting time $X$, in minutes, is modeled by a density curve that is a horizontal segment at height $h$ for $0 \\le x < 20$ and a horizontal segment at height $2h$ for $20 \\le x \\le 50$, and is $0$ elsewhere. What is the probability that a patient waits between 10 and 30 minutes?",
+      "numeric": {
+        "kind": "fraction"
+      },
+      "key": {
+        "value": "3/8"
+      },
+      "explanation": {
+        "key": "Total area: $20h + 30(2h) = 80h = 1$, so $h = \\tfrac{1}{80}$. The interval from 10 to 30 covers 10 minutes at height $h$ and 10 minutes at height $2h$: $10h + 20h = 30h = \\tfrac{30}{80} = \\tfrac{3}{8}$.",
+        "steps": [
+          "1. Area under the curve: $20h + 60h = 80h = 1$, so $h = \\tfrac{1}{80}$.",
+          "2. From 10 to 20: $10 \\times \\tfrac{1}{80} = \\tfrac{10}{80}$.",
+          "3. From 20 to 30: $10 \\times \\tfrac{2}{80} = \\tfrac{20}{80}$.",
+          "4. Total: $\\tfrac{30}{80} = \\tfrac{3}{8}$."
+        ],
+        "fast": "In units of $h$-minutes the whole curve is 80 and the window is $10 + 20 = 30$.",
+        "trap": "Using the length share $\\tfrac{20}{50} = \\tfrac{2}{5}$, as if the density were flat, or giving both pieces the height $\\tfrac{1}{80}$ (which makes the window $\\tfrac{20}{80} = \\tfrac14$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "random-variables",
+          "role": "primary"
+        }
+      ],
+      "setup": "a step density at two heights, one twice the other, on two adjacent intervals; total area 1 fixes the heights, and a probability across the step adds two rectangles (not the length share)",
+      "variant": "probability from areas under a density curve",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "In a lab test, the time $T$, in minutes, until an indicator solution changes color is uniformly distributed between 2 and 8 minutes.",
+      "qc": {
+        "a": "The probability that the color changes within 6 minutes, given that it has not changed in the first 4 minutes",
+        "b": "The probability that the color changes within 5 minutes"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Given that the color has not changed in the first 4 minutes, $T$ is uniform on the remaining interval from 4 to 8, so the chance it changes by minute 6 is $\\tfrac{6 - 4}{8 - 4} = \\tfrac12$. Quantity B is $P(T \\le 5) = \\tfrac{5 - 2}{8 - 2} = \\tfrac12$. They are equal.",
+        "steps": [
+          "1. A: condition on $T > 4$; $T$ is then uniform on $[4, 8]$.",
+          "2. A $= \\tfrac{2}{4} = \\tfrac12$.",
+          "3. B $= \\tfrac{5 - 2}{6} = \\tfrac12$.",
+          "4. The quantities are equal."
+        ],
+        "fast": "“Has not happened yet” shrinks the interval to $[4, 8]$; then it is a plain length share.",
+        "trap": "Computing A as $P(4 < T \\le 6) = \\tfrac{2}{6} = \\tfrac13$ without conditioning, which makes B look greater."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "random-variables",
+          "role": "primary"
+        }
+      ],
+      "setup": "a waiting time uniform on an interval; a conditional probability given that the event has not happened yet is a length share of the remaining interval, compared with an unconditional length share",
+      "variant": "a uniform distribution over an interval",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q21",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "After a month on a new diet, a patient's cholesterol reading was 20 percent lower than her reading before the diet. The new reading was between 160 and 176, inclusive. Which of the following could have been her reading before the diet? Indicate all such readings.",
+      "choices": [
+        "$190$",
+        "$192$",
+        "$200$",
+        "$210$",
+        "$220$",
+        "$225$"
+      ],
+      "key": {
+        "sel": [
+          2,
+          3,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The new reading is 80 percent of the old one, so the old reading is the new one divided by 0.8: between $\\tfrac{160}{0.8} = 200$ and $\\tfrac{176}{0.8} = 220$, inclusive. Of the choices, 200, 210 and 220 fit.",
+        "steps": [
+          "1. New $= 0.8 \\times$ old, so old $= \\tfrac{\\text{new}}{0.8}$.",
+          "2. $\\tfrac{160}{0.8} = 200$ and $\\tfrac{176}{0.8} = 220$.",
+          "3. Possible: 200, 210, 220."
+        ],
+        "fast": "Check each choice forward: $0.8 \\times 210 = 168$ is in range; $0.8 \\times 225 = 180$ is not.",
+        "trap": "Adding 20 percent back to the new reading (range 192 to 211.2), which picks 192 and drops 220."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "percent",
+          "role": "primary"
+        }
+      ],
+      "setup": "a value after a percent decrease is known only to lie in a range; the possible originals come from dividing both ends by the remaining share (not from adding the percent back)",
+      "variant": "finding the original value after a change",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q22",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A basketball team scored 20 percent more points this season than last season. Last season, its top scorer accounted for 40 percent of the team's points, and this season she scored 10 percent fewer points than she did last season. By what percent did the number of points scored by the rest of the team increase from last season to this season?",
+      "choices": [
+        "$10\\%$",
+        "$20\\%$",
+        "$30\\%$",
+        "$40\\%$",
+        "$50\\%$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Let last season's total be 100. The top scorer had 40 and the rest had 60. This season the team scored 120 and the top scorer 36, so the rest scored 84. From 60 to 84 is an increase of $\\tfrac{24}{60} = 40$ percent.",
+        "steps": [
+          "1. Last season: total 100, top scorer 40, rest 60.",
+          "2. This season: total 120, top scorer $0.9 \\times 40 = 36$.",
+          "3. Rest: $120 - 36 = 84$.",
+          "4. Increase: $\\tfrac{84 - 60}{60} = 40\\%$."
+        ],
+        "fast": "Pick 100 for the old total; the rest gains the team's 20 plus her lost 4, out of 60.",
+        "trap": "Combining the percents directly ($20 + 10 = 30$ percent), or assuming the rest of the team grew at the team's rate (20 percent); the gain of 24 must be measured against the rest's old 60, not the team's old 100."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "percent",
+          "role": "primary"
+        }
+      ],
+      "setup": "a whole grows by one percent while one part, given as a share of the old whole, shrinks by another percent; the rest's percent change, measured against the rest's own old size (with no totals given)",
+      "variant": "percent comparisons in QC with unknown bases",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q23",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "Last season, a tennis player landed 75 percent of her first serves. This season she landed 80 percent of her first serves, but she hit 10 percent fewer first serves than last season. By what percent did the number of first serves she landed decrease? (Enter the percent as a number; for $25\\%$, enter 25.)",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "4"
+      },
+      "explanation": {
+        "key": "Say she hit 100 first serves last season and landed 75. This season she hit 90 and landed $0.8 \\times 90 = 72$. From 75 to 72 is a decrease of $\\tfrac{3}{75} = 4$ percent.",
+        "steps": [
+          "1. Last season: 100 serves, 75 landed.",
+          "2. This season: 90 serves, $0.80 \\times 90 = 72$ landed.",
+          "3. Decrease: $\\tfrac{75 - 72}{75} = 0.04$, so 4 percent."
+        ],
+        "fast": "Landed serves scale by $\\tfrac{80}{75} \\times 0.9 = 0.96$.",
+        "trap": "Reading the rise from 75 to 80 percent as a 5 percent increase, which gives $1.05 \\times 0.9 = 0.945$, a 5.5 percent decrease, or simply $10 - 5 = 5$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "percent",
+          "role": "primary"
+        }
+      ],
+      "setup": "a success rate rises by some percentage points while the number of attempts falls by a percent; the count of successes is rate times attempts, so the rate's rise is a percent of the old rate, not the point gain",
+      "variant": "percent change vs percentage-point change",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q24",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "In a lab culture, every cell is either live or dead. From Monday to Tuesday, the ratio of the number of live cells to the number of dead cells increased by 50 percent. (On both days the culture had at least one live cell and at least one dead cell.)",
+      "qc": {
+        "a": "The percent increase from Monday to Tuesday in the fraction of the culture's cells that were live",
+        "b": "$50$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "If the ratio is $r$ on Monday, the live share is $\\tfrac{r}{1 + r}$, and on Tuesday it is $\\tfrac{1.5r}{1 + 1.5r}$. The share grows by the factor $\\tfrac{1.5(1 + r)}{1 + 1.5r}$, which is less than 1.5 because $1 + r < 1 + 1.5r$. So the share always rises by less than 50 percent (for $r = 1$: from $\\tfrac12$ to $\\tfrac35$, a 20 percent rise).",
+        "steps": [
+          "1. Monday: ratio $r$, live share $\\tfrac{r}{1 + r}$.",
+          "2. Tuesday: ratio $1.5r$, live share $\\tfrac{1.5r}{1 + 1.5r}$.",
+          "3. Growth factor: $\\tfrac{1.5(1 + r)}{1 + 1.5r} < 1.5$ since $r > 0$.",
+          "4. Quantity A is under 50 for every starting ratio: B is greater."
+        ],
+        "fast": "The whole grows too (dead cells are fewer relative to live ones), so the share's percent rise is diluted; one case such as $r = 1$ (20 percent) shows the direction, and the factor proves it for all $r$.",
+        "trap": "Treating the ratio and the share as the same thing and answering C."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "percent",
+          "role": "primary"
+        }
+      ],
+      "setup": "a part-to-part ratio rises by a percent with no counts given; the part-to-whole share r/(1 + r) always rises by a smaller percent, whatever the starting ratio; compare with the ratio's percent",
+      "variant": "percent comparisons in QC with unknown bases",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q25",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A darts player recorded her scores for six rounds as 41, 45, 52, 60, 66 and one more score that was lost. In a seventh round she scored 50. For the seven rounds, the median score equals the mean score. What was the lost score?",
+      "choices": [
+        "$29$",
+        "$36$",
+        "$48$",
+        "$50$",
+        "$64$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Call the lost score $n$. The other six scores sort to 41, 45, 50, 52, 60, 66 (total 314), so the median of the seven is 50 if $n \\le 50$, $n$ itself if $50 \\le n \\le 52$, and 52 if $n \\ge 52$. Setting each equal to $\\tfrac{314 + n}{7}$: $n = 36$ (fits), $n = \\tfrac{157}{3} \\approx 52.3$ (outside $[50, 52]$) and $n = 50$ (not at least 52). Only $n = 36$ works.",
+        "steps": [
+          "1. Known scores: 41, 45, 50, 52, 60, 66; total 314.",
+          "2. If $n \\le 50$: median 50, so $314 + n = 350$ and $n = 36$ (consistent).",
+          "3. If $50 \\le n \\le 52$: median $n$, so $314 + n = 7n$ and $n \\approx 52.3$ (inconsistent).",
+          "4. If $n \\ge 52$: median 52, so $314 + n = 364$ and $n = 50$ (inconsistent).",
+          "5. The lost score was 36."
+        ],
+        "fast": "Try the median candidates 50 and 52: mean 50 needs a total of 350 ($n = 36 \\le 50$ works); mean 52 needs 364 ($n = 50$, which drags the median back to 50).",
+        "trap": "Assuming the median is 52, the middle of the six recorded values, and answering 50, which fails its own check (the median becomes 50 while the mean is 52)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "primary"
+        }
+      ],
+      "setup": "run backwards: the added value is given and the median of the enlarged list equals its mean; one original value is missing; case on its rank, solve each case and keep the one consistent with its case",
+      "variant": "a mean after adding or removing values",
+      "revisits": "quant-006:s1q12",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q26",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "prompt": "A framer fits a rectangular mirror into a semicircular arch whose radius is 5 feet. The mirror's bottom edge lies along the straight base of the arch, its two top corners touch the curved edge, and the mirror has a perimeter of 20 feet. What is the area of the mirror, in square feet?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "24"
+      },
+      "explanation": {
+        "key": "The mirror is centered on the base, so if its width is $2a$ and its height is $h$, a top corner is $a$ across and $h$ up from the center of the base: $a^2 + h^2 = 25$. The perimeter gives $4a + 2h = 20$, so $h = 10 - 2a$. Then $a^2 + (10 - 2a)^2 = 25$, which becomes $a^2 - 8a + 15 = 0$: $a = 3$ or $a = 5$. $a = 5$ makes $h = 0$, no rectangle, so $a = 3$, $h = 4$: the mirror is 6 by 4, area 24.",
+        "steps": [
+          "1. By symmetry the mirror is centered on the base: width $2a$, height $h$, top corner at $(a, h)$.",
+          "2. The corner is on the arc: $a^2 + h^2 = 5^2$.",
+          "3. Perimeter: $2(2a) + 2h = 20$, so $h = 10 - 2a$.",
+          "4. $a^2 + (10 - 2a)^2 = 25 \\Rightarrow 5a^2 - 40a + 75 = 0 \\Rightarrow (a - 3)(a - 5) = 0$.",
+          "5. $a = 5$ gives $h = 0$ (a flat segment), so $a = 3$, $h = 4$; area $6 \\times 4 = 24$."
+        ],
+        "fast": "Try the 3-4-5 triangle: half-width 3 and height 4 put the corner on the arc, and the perimeter is $2(6 + 4) = 20$.",
+        "trap": "Treating the mirror's diagonal as a diameter of 10, as for a rectangle in a full circle: with width plus height 10, the identity $(w + h)^2 - (w^2 + h^2) = 2wh$ gives an area of $0$. The corner sits half the width from the center, not the full width."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inscribed-figures",
+          "role": "primary"
+        }
+      ],
+      "setup": "a non-square rectangle in a semicircle with its base on the diameter and its perimeter given; the top corner is half the base across and the full height up from the center, so the corner equation and the perimeter give a quadratic whose second root is a flat, degenerate rectangle; the area",
+      "variant": "a rectangle inscribed in a circle or semicircle (diameter as diagonal)",
+      "revisits": "quant-006:s2q11",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q27",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "At a game night, Ana rolls two fair six-sided dice and wins if the sum of the two numbers is greater than 7. Ben tosses a fair coin 4 times and wins if he gets more heads than tails.",
+      "qc": {
+        "a": "The probability that Ana wins",
+        "b": "The probability that Ben wins"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Both experiments are symmetric: a dice sum above 7 is as likely as one below 7, and more heads is as likely as more tails. So each probability is half of what is left after the tie. A sum of exactly 7 has probability $\\tfrac{6}{36} = \\tfrac16$, so A $= \\tfrac12 \\cdot \\tfrac56 = \\tfrac{5}{12}$. Exactly 2 heads in 4 tosses has probability $\\tfrac{6}{16} = \\tfrac38$, so B $= \\tfrac12 \\cdot \\tfrac58 = \\tfrac{5}{16}$. A is greater.",
+        "steps": [
+          "1. Dice: sums 8 to 12 mirror sums 6 to 2; $P(\\text{sum} = 7) = \\tfrac{6}{36}$.",
+          "2. A $= \\tfrac12\\left(1 - \\tfrac16\\right) = \\tfrac{5}{12} \\approx 0.42$.",
+          "3. Coins: $P(2 \\text{ heads}) = \\tfrac{\\binom42}{16} = \\tfrac{6}{16}$.",
+          "4. B $= \\tfrac12\\left(1 - \\tfrac38\\right) = \\tfrac{5}{16} \\approx 0.31$.",
+          "5. Quantity A is greater."
+        ],
+        "fast": "Both are $\\tfrac12(1 - P(\\text{tie}))$; the coin tie ($\\tfrac38$) is likelier than the dice tie ($\\tfrac16$).",
+        "trap": "Answering C because both games are “above the middle” of a symmetric experiment, as if each were $\\tfrac12$; or taking A as $\\tfrac{5}{11}$ by counting the 11 possible sums as equally likely."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-basic",
+          "role": "primary"
+        }
+      ],
+      "setup": "two symmetric experiments, a two-dice sum above its center and more heads than tails in an even number of tosses; each probability is half of one minus the tie, so compare the tie probabilities",
+      "variant": "probability from a count of outcomes with dice or coins",
+      "revisits": "quant-006:s2q3",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q28",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "A marching band lines up in a square formation of $k$ rows with $k$ members in each row. The number of members in the band is a multiple of 50, and each row can be split exactly into groups of 4 members.",
+      "qc": {
+        "a": "The largest positive integer that divides every possible value of $k$",
+        "b": "$20$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "$k^2$ is a multiple of $50 = 2 \\cdot 5^2$, and the exponents in a square are even, so $k$ is a multiple of $2 \\cdot 5 = 10$. Also $4 \\mid k$. So $k$ is a multiple of $\\operatorname{lcm}(10, 4) = 20$, and $k = 20$ works ($400 = 8 \\times 50$). The greatest integer that must divide $k$ is 20: the quantities are equal.",
+        "steps": [
+          "1. $50 = 2 \\cdot 5^2$; $k^2$ has even exponents, so $2 \\mid k$ and $5 \\mid k$: $10 \\mid k$.",
+          "2. Rows split into groups of 4: $4 \\mid k$.",
+          "3. Together: $\\operatorname{lcm}(10, 4) = 20 \\mid k$.",
+          "4. $k = 20$ satisfies both conditions, so nothing larger must divide $k$.",
+          "5. The quantities are equal."
+        ],
+        "fast": "The least valid $k$ is 20, and every valid $k$ is a multiple of it.",
+        "trap": "Multiplying the two requirements ($10 \\times 4 = 40$) although they share a factor of 2, or thinking $k$ must be a multiple of 50 (giving 100); either makes A look greater."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "integers-properties",
+          "role": "primary"
+        }
+      ],
+      "setup": "a square count is a multiple of one number and its side is a multiple of another; the side's forced divisor is the least common multiple of the square-root requirement and the second number, not their product",
+      "variant": "must be / could be an integer from a stated condition",
+      "revisits": "quant-006:s2q4",
+      "solverRating": 4
+    }
+  ]
+}
