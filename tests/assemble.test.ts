@@ -297,3 +297,22 @@ describe("verbal assembly", () => {
     expect(out.failures.map((f) => f.slotType)).toEqual(["se"]);
   });
 });
+
+describe("bank gaps dry run", () => {
+  it("asks for nothing when the bank can fill the next mocks exactly", async () => {
+    const { dryRunFallbacks } = await import("@/scripts/lib/bank-gaps");
+    // (every fixture DI set is on one concept, so the second mock's DI slot, aimed elsewhere, falls back)
+    expect(dryRunFallbacks(quantCtx()).filter((f) => f.slotType !== "di")).toEqual([]);
+  });
+
+  it("turns the L3 slots a mock would fall back on into concept gaps at L3, with the slot's type", async () => {
+    const { bankGaps, dryRunFallbacks } = await import("@/scripts/lib/bank-gaps");
+    const base = quantCtx();
+    const ctx = { ...base, items: base.items.filter((c) => c.difficulty !== 3 || c.unitId) };
+    const missed = dryRunFallbacks(ctx).filter((f) => f.wantedLevel === 3);
+    expect(missed.length).toBeGreaterThan(0);
+    const gaps = bankGaps(ctx, [], new Set()).filter((g) => g.kind === "concept" && g.level === 3);
+    expect(gaps.reduce((t, g) => t + g.need, 0)).toBe(missed.filter((f) => f.wantedKind === "concept").length);
+    expect(gaps.every((g) => g.types?.length === g.need && g.why.includes("dry run"))).toBe(true);
+  });
+});

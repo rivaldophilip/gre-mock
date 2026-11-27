@@ -88,10 +88,17 @@ async function main() {
       typeLeft.set(t, typeLeft.get(t)! - 4);
       return t;
     };
-    // levels 4 and 5 in turn, the level a gap names first
+    // the levels the concept's gaps name first (a dry-run or shortfall gap may name L3, or the same level twice), then
+    // 4 and 5 in turn
     for (const c of concepts) {
-      const first = gaps.find((g) => g.kind === "concept" && g.id === c && g.level)?.level ?? 4;
-      for (let i = 0; i < per; i++) add({ type: nextType(), level: i % 2 === 0 ? first : 9 - first, concept: c, name: names.get(c) });
+      const named = gaps
+        .filter((g) => g.kind === "concept" && g.id === c && g.level)
+        .flatMap((g) => Array.from({ length: Math.max(1, g.deficit) }, (_, k) => ({ level: g.level!, type: g.types?.[k] })));
+      for (let i = 0; i < per; i++) {
+        const want = named[i];
+        const type = want?.type && typeLeft.has(want.type) ? (typeLeft.set(want.type, typeLeft.get(want.type)! - 4), want.type) : nextType();
+        add({ type, level: want?.level ?? (i % 2 === 0 ? 4 : 5), concept: c, name: names.get(c) });
+      }
     }
     revisitGaps.slice(0, REVISIT_MAX).forEach((g, n) => {
       const q = byRef.get(g.id)!;

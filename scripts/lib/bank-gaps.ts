@@ -4,8 +4,9 @@
 import { allocateConcepts, allocateVerbalKeys, rng } from "../../lib/priority/allocate";
 import { markPending } from "../../lib/priority/compute";
 import { DRILL_BATCH } from "../../lib/priority/config";
+import { assembleMock } from "../../lib/assemble";
 import { QUANT_AREAS, KEY_SLOTS } from "../../lib/assemble/plan";
-import type { Cand, Ctx } from "../../lib/assemble/types";
+import type { Cand, Ctx, Fallback } from "../../lib/assemble/types";
 
 /** Mocks of stock to keep ahead per measure. */
 export const MOCKS_AHEAD = 2;
@@ -18,6 +19,8 @@ export type Gap = {
   kind: "concept" | "skill" | "words" | "type" | "unit" | "revisit" | "shortfall";
   id: string;
   level?: number;
+  /** the slot types a dry-run or shortfall gap was short in, one per item it needs */
+  types?: string[];
   need: number;
   have: number;
   deficit: number;
@@ -57,6 +60,30 @@ export function simulatedTargets(ctx: Ctx, n = MOCKS_AHEAD, seed = 1) {
   return { counts, words };
 }
 
+/**
+ * The fallbacks the next `n` mocks would log, assembled for real against today's stock: each run holds what the one
+ * before took and damps its targets, as an untaken mock does. This is the exact demand (slot type, target and level)
+ * that simulatedTargets only estimates, so L3 slots and a second L4 of one concept show up before a quiz falls back.
+ */
+export function dryRunFallbacks(ctx: Ctx, n = MOCKS_AHEAD): Fallback[] {
+  const out: Fallback[] = [];
+  const byRef = new Map(ctx.items.map((c) => [c.ref, c]));
+  let c = ctx;
+  for (let i = 0; i < n; i++) {
+    const a = assembleMock(c);
+    out.push(...a.fallbacks, ...a.failures);
+    const picked = a.layout.sections.flatMap((s) => s.items.map((x) => byRef.get(x.ref))).filter((x): x is Cand => !!x);
+    const pending = (ids: string[]) => ids.reduce((m, id) => m.set(id, [...(m.get(id) ?? []), `dry-${i}`]), new Map<string, string[]>());
+    c = {
+      ...c,
+      held: new Set([...c.held, ...picked.map((x) => x.ref)]),
+      conceptScores: markPending(c.conceptScores, pending(picked.flatMap((x) => (x.primary ? [x.primary] : [])))) as Ctx["conceptScores"],
+      wordScores: markPending(c.wordScores, pending(picked.flatMap((x) => x.keyWords))),
+    };
+  }
+  return out;
+}
+
 /** The ranked gaps, largest weighted deficit first. */
 export function bankGaps(ctx: Ctx, shortfalls: ShortfallRow[], revisitedRefs: Set<string>): Gap[] {
   const out: Gap[] = [];
@@ -64,15 +91,33 @@ export function bankGaps(ctx: Ctx, shortfalls: ShortfallRow[], revisitedRefs: Se
   const stock = ctx.items.filter((c) => isFresh(c));
   const P = new Map(ctx.conceptScores.map((s) => [s.itemId, s.P]));
   const { counts, words } = simulatedTargets(ctx);
+  const kind = ctx.measure === "quant" ? "concept" : "skill";
+
+  // what the next mocks, assembled for real, would fall back on: one gap per target and level, as many items as slots
+  const dry = new Map<string, Gap>();
+  for (const f of dryRunFallbacks(ctx)) {
+    const targeted = (f.wantedKind === "concept" || f.wantedKind === "skill") && f.wantedId;
+    const id = targeted ? f.wantedId! : `${f.wantedKind}:${f.wantedId ?? f.slotType}`;
+    const key = `${id}|${f.wantedLevel ?? ""}`;
+    const g = dry.get(key);
+    if (g) {
+      g.need++;
+      g.deficit++;
+      g.types!.push(f.slotType);
+      continue;
+    }
+    const w = targeted ? 2 + (P.get(id) ?? 0) : 2;
+    dry.set(key, { kind: targeted ? kind : "shortfall", id, level: f.wantedLevel ?? undefined, types: [f.slotType], need: 1, have: 0, deficit: 1, weight: w, why: `the next ${MOCKS_AHEAD} mocks would fall back (dry run: ${f.slotType}, step ${f.step})` });
+  }
+  out.push(...dry.values());
 
   // concepts and skills: unseen L4 and L5 for every one; the simulated mocks' targets need as many items as they draw
-  const kind = ctx.measure === "quant" ? "concept" : "skill";
   for (const s of ctx.conceptScores) {
     if (ctx.measure === "quant" && !QUANT_AREAS.includes(s.area)) continue;
     const mine = stock.filter((c) => c.primary === s.itemId);
     for (const level of STOCK_LEVELS) {
       const have = mine.filter((c) => c.difficulty === level).length;
-      if (!have) out.push({ kind, id: s.itemId, level, need: 1, have, deficit: 1, weight: P.get(s.itemId) ?? 0.5, why: `no unseen L${level} item` });
+      if (!have && !dry.has(`${s.itemId}|${level}`)) out.push({ kind, id: s.itemId, level, need: 1, have, deficit: 1, weight: P.get(s.itemId) ?? 0.5, why: `no unseen L${level} item` });
     }
     const want = counts.get(s.itemId) ?? 0;
     const have = mine.filter((c) => c.difficulty >= 3).length;
@@ -112,11 +157,16 @@ export function bankGaps(ctx: Ctx, shortfalls: ShortfallRow[], revisitedRefs: Se
     for (const [w] of words) if (!keyed.has(w)) out.push({ kind: "words", id: w, need: 1, have: 0, deficit: 1, weight: wP.get(w) ?? 0.5, why: "a target word no unseen item keys" });
   }
 
-  // open shortfalls a quiz logged, unless the stock now covers them
+  // open shortfalls a quiz logged, unless the stock now covers them or the dry run already asks for them; a concept or
+  // skill one is a gap of that kind, so the brief writes it
   for (const f of shortfalls) {
     if (f.resolvedAt) continue;
     if (covered(ctx, stock, f)) continue;
-    out.push({ kind: "shortfall", id: `${f.wantedKind}:${f.wantedId ?? f.slotType}`, level: f.wantedLevel ?? undefined, need: 1, have: 0, deficit: 1, weight: 2, why: `a quiz ${f.step === 8 ? "could not be assembled" : `fell back (ladder step ${f.step})`}` });
+    const targeted = (f.wantedKind === "concept" || f.wantedKind === "skill") && f.wantedId;
+    if (targeted && dry.has(`${f.wantedId}|${f.wantedLevel ?? ""}`)) continue;
+    const why = `a quiz ${f.step === 8 ? "could not be assembled" : `fell back (ladder step ${f.step})`}`;
+    if (targeted) out.push({ kind, id: f.wantedId!, level: f.wantedLevel ?? undefined, types: [f.slotType], need: 1, have: 0, deficit: 1, weight: 2 + (P.get(f.wantedId!) ?? 0), why });
+    else out.push({ kind: "shortfall", id: `${f.wantedKind}:${f.wantedId ?? f.slotType}`, level: f.wantedLevel ?? undefined, need: 1, have: 0, deficit: 1, weight: 2, why });
   }
 
   // revisit siblings: misses old enough to come back whose sibling is not written yet
