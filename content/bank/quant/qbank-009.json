@@ -1,0 +1,1134 @@
+{
+  "id": "qbank-009",
+  "measure": "quant",
+  "title": "Quant bank batch 9",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Parcels shipped by a courier last month, in hundreds, by depot and service",
+      "table": {
+        "head": [
+          "Depot",
+          "Standard",
+          "Express"
+        ],
+        "rows": [
+          [
+            "North",
+            "30",
+            "10"
+          ],
+          [
+            "South",
+            "20",
+            "20"
+          ],
+          [
+            "East",
+            "45",
+            "x"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "d1",
+      "caption": "A survey of 400 visitors to a museum on one Saturday. Each visitor reported whether they visited the sculpture hall and whether they visited the photography wing. For returning visitors, the number who visited both was not recorded.",
+      "table": {
+        "head": [
+          "",
+          "First-time visitors",
+          "Returning visitors"
+        ],
+        "rows": [
+          [
+            "Visitors surveyed",
+            "240",
+            "160"
+          ],
+          [
+            "Visited the sculpture hall",
+            "150",
+            "90"
+          ],
+          [
+            "Visited the photography wing",
+            "120",
+            "100"
+          ],
+          [
+            "Visited both",
+            "60",
+            "not recorded"
+          ]
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "Of the 90 drivers at a courier depot, 40 are certified to drive refrigerated trucks, 35 are certified for oversize loads and 45 are certified to carry hazardous goods, so the three lists hold 120 certifications in all. Some drivers may hold none of the three certifications. What is the greatest possible number of drivers who hold exactly two of the three certifications?",
+      "choices": [
+        "$30$",
+        "$35$",
+        "$45$",
+        "$55$",
+        "$60$"
+      ],
+      "key": {
+        "sel": [
+          4
+        ]
+      },
+      "explanation": {
+        "key": "With $e_1$, $e_2$, $e_3$ drivers holding exactly one, two or three certifications and $z$ holding none: $e_1 + e_2 + e_3 + z = 90$ and $e_1 + 2e_2 + 3e_3 = 120$. Take $e_3 = 0$; subtracting gives $e_2 = 30 + z$, so every driver with no certification raises $e_2$ by one. It peaks when $e_1 = 0$: $2e_2 = 120$, so $e_2 = 60$ with $z = 30$. The split $15$ refrigerated and oversize, $25$ refrigerated and hazardous, $20$ oversize and hazardous fits the three lists.",
+        "steps": [
+          "1. Count by multiplicity: $e_1 + 2e_2 + 3e_3 = 120$ and $e_1 + e_2 + e_3 = 90 - z$.",
+          "2. A triple holder spends three of the 120 entries on one person, so set $e_3 = 0$ for the most pairs.",
+          "3. Then $e_2 = 120 - (90 - z) = 30 + z$ and $e_1 = 60 - 2z$, so $e_2$ grows as $z$ grows until $e_1 = 0$ at $z = 30$.",
+          "4. $e_2 = 60$: pairs $15 + 25 + 20 = 60$ give list sizes $15 + 25 = 40$, $15 + 20 = 35$, $25 + 20 = 45$. Feasible."
+        ],
+        "fast": "At most half the 120 entries can be paired up: $120 \\div 2 = 60$, reached when 30 drivers hold nothing.",
+        "trap": "Assuming every driver holds at least one certification gives $120 - 90 = 30$. The stem allows drivers with none, and each one frees two more entries for pairing. 35, the smallest list, is a bound on a triple, not on pairs."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "overlapping-sets",
+          "role": "primary"
+        }
+      ],
+      "setup": "three certifications in a fixed staff with their entry total given and holding none allowed; the most holding exactly two rises with the number holding none until no one holds exactly one",
+      "variant": "the most in exactly one, two or all three groups from the entry total",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "In a survey of 100 patrons at a public library, 10 patrons used none of three services: borrowing, the computer lab and the study rooms. Counting each patron once for every service used, the survey recorded 170 uses: 80 of borrowing, 70 of the computer lab and 20 of the study rooms.",
+      "qc": {
+        "a": "The greatest possible number of patrons who used exactly one of the three services",
+        "b": "$40$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "90 patrons used at least one service. With $e_1$, $e_2$, $e_3$ using exactly one, two or three: $e_1 + e_2 + e_3 = 90$ and $e_1 + 2e_2 + 3e_3 = 170$, so $e_2 + 2e_3 = 80$. To make $e_1$ large, the 80 extra uses should be packed into as few people as possible, that is, into triples. But only 20 patrons used the study rooms, so $e_3 \\le 20$. Then $e_2 = 80 - 40 = 40$ and $e_1 = 90 - 60 = 30$, which is less than 40.",
+        "steps": [
+          "1. Users of at least one service: $100 - 10 = 90$.",
+          "2. $e_1 + e_2 + e_3 = 90$ and $e_1 + 2e_2 + 3e_3 = 170$, so $e_2 + 2e_3 = 80$ and $e_1 = 90 - (80 - e_3) = 10 + e_3$.",
+          "3. $e_3 \\le 20$ (the study rooms had only 20 users), so $e_1 \\le 30$.",
+          "4. Reached: all 20 study-room users use all three, 40 more use borrowing and the lab only, 20 borrowing only and 10 lab only. A $= 30 <$ B $= 40$."
+        ],
+        "fast": "$e_1 = 10 + e_3$, and the triple can be no larger than the smallest service, 20.",
+        "trap": "Putting all 80 extra uses into triples ($e_3 = 40$, $e_2 = 0$) gives $e_1 = 50$ and answers A, but 40 patrons cannot use the study rooms when only 20 did. Forgetting the 10 non-users makes the surplus 70 instead of 80."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "overlapping-sets",
+          "role": "primary"
+        }
+      ],
+      "setup": "three services with a none count given and their entry total; the exactly-one count grows with the triple count, but the smallest service caps the triple below half the surplus, so the rest of the surplus is forced into pairs; compare the most in exactly one with a value",
+      "variant": "the most in exactly one, two or all three groups from the entry total",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 3,
+      "prompt": "A courier drove for 2 hours at an average speed of 45 miles per hour, and then drove 120 more miles at an average speed of 40 miles per hour. What was the courier's average speed, in miles per hour, for the whole drive?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "42"
+      },
+      "explanation": {
+        "key": "First leg: $2 \\times 45 = 90$ miles. Second leg: $120 \\div 40 = 3$ hours. Whole drive: $210$ miles in $5$ hours, so $42$ miles per hour.",
+        "steps": [
+          "1. Leg 1 distance: $2 \\times 45 = 90$ miles.",
+          "2. Leg 2 time: $\\tfrac{120}{40} = 3$ hours.",
+          "3. Average: $\\tfrac{90 + 120}{2 + 3} = \\tfrac{210}{5} = 42$."
+        ],
+        "fast": "Total miles over total hours: $210 \\div 5$.",
+        "trap": "Averaging the two speeds gives $42.5$. The courier spent more time at 40 miles per hour, so the average sits below the midpoint."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-rate",
+          "role": "primary"
+        }
+      ],
+      "setup": "one leg given by its time and speed, the other by its distance and speed; total distance over total time",
+      "variant": "average speed over two legs",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A crew is resurfacing a 120-square-meter stretch of path in a city park. For the first 90 minutes the crew works by hand, resurfacing 24 square meters per hour. A machine then takes over and finishes the stretch, resurfacing 2,000 square centimeters per minute. How many hours does the whole job take? ($1$ meter $= 100$ centimeters)",
+      "choices": [
+        "$7$",
+        "$8.5$",
+        "$9.1$",
+        "$10$",
+        "$11.5$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "By hand: $1.5 \\times 24 = 36$ square meters, leaving $84$. One square meter is $100^2 = 10{,}000$ square centimeters, so the machine does $0.2$ square meter per minute, or $12$ per hour, and needs $84 \\div 12 = 7$ hours. Total $1.5 + 7 = 8.5$ hours.",
+        "steps": [
+          "1. Hand work: 90 minutes $= 1.5$ hours, $1.5 \\times 24 = 36$ m$^2$.",
+          "2. Left: $120 - 36 = 84$ m$^2$.",
+          "3. Machine: $\\tfrac{2{,}000}{10{,}000} = 0.2$ m$^2$ per minute $= 12$ m$^2$ per hour.",
+          "4. Machine time: $\\tfrac{84}{12} = 7$ hours; whole job $8.5$ hours."
+        ],
+        "fast": "Convert the machine to $12$ m$^2$ per hour first, then $1.5 + \\tfrac{84}{12}$.",
+        "trap": "Using $1$ m$^2 = 100$ cm$^2$ makes the machine 100 times too fast and the job about $1.6$ hours. Reporting only the machine's 7 hours, timing all 120 m$^2$ at the machine rate (10), or adding that to the hand time (11.5) are the other slips; reading 90 minutes as $0.9$ hour gives about $9.1$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-rate",
+          "role": "primary"
+        }
+      ],
+      "setup": "a job measured in square meters; the rate switches from square meters per hour to square centimeters per minute partway; the area conversion uses the square of the length factor, then the time split",
+      "variant": "rate with a unit change mid-problem",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "On a coordinate grid, a park planner draws a straight path $k$ that runs through both $(-4, 6)$ and $(2, -3)$ and extends without end in each direction. Which quadrants does path $k$ cross?",
+      "choices": [
+        "II and IV only",
+        "I, II and IV only",
+        "II, III and IV only",
+        "I and III only",
+        "I, II, III and IV"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "The slope is $\\tfrac{-3 - 6}{2 - (-4)} = -\\tfrac{3}{2}$, and $y = -\\tfrac32 x$ fits both points, so the line passes through the origin. A line through the origin with negative slope runs from quadrant II to quadrant IV and touches no other quadrant.",
+        "steps": [
+          "1. Slope: $\\tfrac{-9}{6} = -\\tfrac32$.",
+          "2. Intercept: $6 = -\\tfrac32(-4) + b$ gives $b = 0$.",
+          "3. $y = -\\tfrac32 x$: positive $y$ for negative $x$ (II), negative $y$ for positive $x$ (IV)."
+        ],
+        "fast": "The two points are negatives of each other's multiples: $(2, -3) = -\\tfrac12(-4, 6)$, so the origin is on the line.",
+        "trap": "Assuming every slanted line crosses three quadrants leads to II, III and IV or I, II and IV. A line through the origin crosses only two."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "coordinate-geometry",
+          "role": "primary"
+        }
+      ],
+      "setup": "a line through two given points has y-intercept zero; through the origin it crosses only two quadrants",
+      "variant": "which quadrants a line passes through",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "In the $xy$-plane, $M(1, 1)$ is the midpoint of segment $PQ$, and $P$ is the point $(-3, 4)$.",
+      "qc": {
+        "a": "The length of $PQ$",
+        "b": "$10$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "From $P$ to $M$ the step is $(+4, -3)$, so $Q = M + (4, -3) = (5, -2)$. $PQ = \\sqrt{8^2 + 6^2} = 10$. The quantities are equal.",
+        "steps": [
+          "1. Step $P \\to M$: $(1 - (-3), 1 - 4) = (4, -3)$.",
+          "2. $Q = (1 + 4, 1 - 3) = (5, -2)$.",
+          "3. $PQ = \\sqrt{(5 + 3)^2 + (-2 - 4)^2} = \\sqrt{100} = 10$."
+        ],
+        "fast": "$PM = \\sqrt{4^2 + 3^2} = 5$, and $PQ = 2 \\cdot PM = 10$.",
+        "trap": "Stopping at $PM = 5$ makes B look greater; the question asks for the whole segment."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "coordinate-geometry",
+          "role": "primary"
+        }
+      ],
+      "setup": "one endpoint and the midpoint given; the far endpoint by doubling the step, so the full length is twice the endpoint-to-midpoint distance; compare with a value",
+      "variant": "distance and midpoint",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "Three courier depots stand along a straight highway at mile markers $a$, $b$ and $c$, where $a < b < c$.",
+      "qc": {
+        "a": "$(a - b)(c - b)$",
+        "b": "$0$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$a < b$ makes $a - b$ negative, and $b < c$ makes $c - b$ positive. Their product is negative whatever the signs of $a$, $b$ and $c$, so B is greater.",
+        "steps": [
+          "1. $a - b < 0$.",
+          "2. $c - b > 0$.",
+          "3. Negative times positive: $(a - b)(c - b) < 0$."
+        ],
+        "fast": "Measured from the middle marker, one depot is behind and one is ahead: opposite signs.",
+        "trap": "Answering D because the markers' own signs are unknown: only the order matters for the differences."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "three ordered numbers with no signs given; the two differences taken from the middle number have opposite signs, so their product is negative",
+      "variant": "a chain a < b < c: what must be true of sums or differences",
+      "solverRating": 1
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "$-3 < x < -2$ and $1 < y < 2$. Which of the following must be true? Indicate all such statements.",
+      "choices": [
+        "$xy < x < \\dfrac{x}{y}$",
+        "$\\dfrac{x}{y} < x < xy$",
+        "$x + y < 0 < x^2 - y^2$",
+        "$x - y < xy$",
+        "$xy < -3$",
+        "$y - x > 3$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "Since $x < 0$ and $y > 1$: $xy - x = x(y - 1) < 0$, and $\\tfrac{x}{y} - x = x\\left(\\tfrac1y - 1\\right) > 0$, so $xy < x < \\tfrac{x}{y}$. Also $x + y < -2 + 2 = 0$ and $x^2 > 4 > y^2$, and $y - x > 1 + 2 = 3$. But $xy$ ranges over $(-6, -2)$ and $x - y$ over $(-5, -3)$, so neither $xy < -3$ nor $x - y < xy$ always holds.",
+        "steps": [
+          "1. $xy < x$: $x(y - 1)$ is negative times positive. And $x < \\tfrac{x}{y}$: dividing a negative number by more than 1 moves it toward 0. First chain true; the reversed chain false.",
+          "2. $x + y < 0$ since $x < -2$ and $y < 2$; $x^2 - y^2 > 0$ since $x^2 > 4 > y^2$. True.",
+          "3. $xy < -3$: $x = -2.1$, $y = 1.1$ gives $-2.31$. Not always.",
+          "4. $x - y < xy$: $x = -2.9$, $y = 1.9$ gives $-4.8$ against $-5.51$. Not always.",
+          "5. $y - x > 3$: $y > 1$ and $-x > 2$. True."
+        ],
+        "fast": "Fix the signs first ($x$ negative, $y$ above 1), then test each statement at the corners of the box.",
+        "trap": "Treating 'divide by more than 1' as 'smaller' picks the reversed chain $\\tfrac{x}{y} < x < xy$. Testing only the middle values $x = -2.5$, $y = 1.5$ makes $xy < -3$ look forced ($-3.75$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "x between two negative integers and y between 1 and 2; select the orderings of sums, products and quotients that must hold (dividing a negative by more than 1 raises it; a product's range needs both ends)",
+      "variant": "ordering several expressions under a given range",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "When $18^{42}$ is written out in full, which digit is in its ones place?",
+      "choices": [
+        "$2$",
+        "$4$",
+        "$6$",
+        "$8$",
+        "$0$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Only the last digit 8 matters. Powers of 8 end in $8, 4, 2, 6$ and repeat every 4. $42 = 4 \\cdot 10 + 2$, so $18^{42}$ ends like $8^2$: in 4.",
+        "steps": [
+          "1. Last digits of $8^1, 8^2, 8^3, 8^4$: $8, 4, 2, 6$; then the cycle repeats.",
+          "2. $42 \\div 4$ leaves remainder 2.",
+          "3. The second entry of the cycle: 4."
+        ],
+        "fast": "Remainder 2 in a cycle of 4 means the same ending as $8^2 = 64$.",
+        "trap": "Using an even exponent to guess 6 (the ending of $8^4$), or taking the cycle as 2 long."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "remainders-units",
+          "role": "primary"
+        }
+      ],
+      "setup": "the ones digit of a power of a two-digit base follows its last digit's four-step cycle; the exponent's remainder mod 4 picks the place",
+      "variant": "units digit of a large power (cycle length)",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "For positive integers $n$ and $d$ with $d < 100$, the quotient $n \\div d$ equals $8.35$ exactly. Which of the following could be the remainder left when $n$ is divided by $d$? Indicate all such remainders.",
+      "choices": [
+        "$5$",
+        "$7$",
+        "$14$",
+        "$28$",
+        "$35$",
+        "$42$"
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The remainder is $0.35d$, and $0.35 = \\tfrac{7}{20}$ in lowest terms, so $d = 20k$ and the remainder is $7k$. With $d < 100$, $k$ is 1, 2, 3 or 4, so the remainder is 7, 14, 21 or 28. Of the choices: 7, 14 and 28.",
+        "steps": [
+          "1. $n = 8d + r$ with $\\tfrac{r}{d} = 0.35 = \\tfrac{7}{20}$.",
+          "2. $r$ is a whole number, so $d$ is a multiple of 20: $d = 20k$, $r = 7k$.",
+          "3. $d < 100$: $k \\le 4$, so $r \\in \\{7, 14, 21, 28\\}$.",
+          "4. 35 needs $d = 100$ and 42 needs $d = 120$; 5 is not a multiple of 7."
+        ],
+        "fast": "Reduce the decimal part: the remainder is a multiple of the numerator 7, the divisor the same multiple of 20.",
+        "trap": "Reading the digits 35 as the remainder: that needs $d = 100$, which the cap rules out. Missing that $\\tfrac{35}{100}$ reduces leaves 7, 14 and 28 unchosen."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "remainders-units",
+          "role": "primary"
+        }
+      ],
+      "setup": "the quotient's decimal part reduces to 7/20, so the divisor is a multiple of 20 and the remainder the same multiple of 7; a cap on the divisor cuts off the remainder that copies the decimal digits",
+      "variant": "remainder written as a decimal part (n/d = q.25)",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "Two positive integers have a product of 2,160, and their greatest common divisor is 6.",
+      "qc": {
+        "a": "The least common multiple of the two integers",
+        "b": "$360$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "For any two positive integers, $\\gcd \\times \\operatorname{lcm} = $ their product, so the lcm is $2{,}160 \\div 6 = 360$. For example, $12 \\times 180$ and $24 \\times 90$ both work, and each pair has lcm 360.",
+        "steps": [
+          "1. $\\gcd(a, b) \\cdot \\operatorname{lcm}(a, b) = ab$.",
+          "2. $\\operatorname{lcm} = \\tfrac{2{,}160}{6} = 360$.",
+          "3. The quantities are equal."
+        ],
+        "fast": "Product over gcd.",
+        "trap": "Answering D because the two numbers are not fixed: every admissible pair has the same lcm."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "primes-factors",
+          "role": "primary"
+        }
+      ],
+      "setup": "the product of two numbers and their gcd given; the lcm is the product over the gcd; compare with a value",
+      "variant": "GCD / LCM from two products or a word problem",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "A library has 360 folding chairs to set out in rows for a lecture. Every chair must be used, every row must hold the same number of chairs, and each row must hold more than 10 chairs but fewer than 30. How many different numbers of chairs per row are possible?",
+      "choices": [
+        "$4$",
+        "$5$",
+        "$6$",
+        "$7$",
+        "$8$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The row size must divide $360 = 2^3 \\cdot 3^2 \\cdot 5$ and lie strictly between 10 and 30: 12, 15, 18, 20 and 24. That is 5 sizes.",
+        "steps": [
+          "1. Divisors of 360 from 10 to 30: 10, 12, 15, 18, 20, 24, 30.",
+          "2. 'More than 10' and 'fewer than 30' drop 10 and 30.",
+          "3. Five sizes remain."
+        ],
+        "fast": "Pair divisors: $360 = 12 \\cdot 30 = 15 \\cdot 24 = 18 \\cdot 20$, plus $10 \\cdot 36$; keep the ones strictly inside.",
+        "trap": "Counting 10 and 30 gives 7; missing 15 or 18 gives 4."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "primes-factors",
+          "role": "primary"
+        }
+      ],
+      "setup": "equal rows using every item: the row sizes are the divisors of the total strictly between two bounds (the bounds themselves are divisors but excluded)",
+      "variant": "count of primes or factors in a stated range",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "A courier's sorting machine accepts a parcel only if the parcel's weight $w$, in kilograms, satisfies $|4w - 30| \\le 2$.",
+      "qc": {
+        "a": "The weight of the heaviest parcel the machine accepts minus the weight of the lightest, in kilograms",
+        "b": "$1$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "$|4w - 30| \\le 2$ means $28 \\le 4w \\le 32$, so $7 \\le w \\le 8$. The heaviest accepted weight minus the lightest is $8 - 7 = 1$.",
+        "steps": [
+          "1. $-2 \\le 4w - 30 \\le 2$.",
+          "2. $28 \\le 4w \\le 32$, so $7 \\le w \\le 8$.",
+          "3. Spread: $1$. Equal."
+        ],
+        "fast": "The band on $4w$ has width 4; divide by 4 for the band on $w$.",
+        "trap": "Reading the tolerance 2 as the spread (A $= 2$ or $4$) without dividing by the coefficient 4."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "abs-value-inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "a tolerance on a multiple of the variable written as an absolute-value inequality; divide the band by the coefficient for the variable's own spread; compare with a value",
+      "variant": "a tolerance stated as an absolute-value inequality",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "A straight bike path in a park begins at marker 0 and runs east, and its markers give the distance in kilometers from that start, so every marker on the path is at least 0. A water fountain on the path stands at marker $x$, where $|x - 6| = |2x - 3|$. Which of the following lists every possible value of $x$?",
+      "choices": [
+        "$3$ only",
+        "$-3$ only",
+        "$-3$ and $3$",
+        "$1$ and $3$",
+        "$3$ and $9$"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Two absolute values are equal when the insides are equal or opposite. $x - 6 = 2x - 3$ gives $x = -3$; $x - 6 = -(2x - 3)$ gives $3x = 9$, so $x = 3$. Both satisfy the equation, but a marker on the path is at least 0, so $-3$ is rejected. Only 3.",
+        "steps": [
+          "1. Same sign: $x - 6 = 2x - 3$, so $x = -3$.",
+          "2. Opposite sign: $x - 6 = 3 - 2x$, so $x = 3$.",
+          "3. Both check: $|-9| = |-9|$ and $|-3| = |3|$.",
+          "4. The path starts at 0, so $x \\ge 0$: only $x = 3$."
+        ],
+        "fast": "Solve both sign cases, then keep the roots the path allows.",
+        "trap": "Both roots satisfy the equation, so stopping at the algebra gives $-3$ and $3$; the story's domain, not the equation, rejects $-3$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "abs-value-inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "two absolute values set equal: the equal and opposite cases give two roots that both satisfy the equation, and the story's domain (a marker at least zero) rejects the negative one",
+      "variant": "an absolute-value equation with two cases, one extraneous",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "The floor of a park gazebo is a regular polygon, and each of its interior angles measures $156^\\circ$.",
+      "qc": {
+        "a": "The number of sides of the gazebo's floor",
+        "b": "$15$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Each exterior angle is $180^\\circ - 156^\\circ = 24^\\circ$, and the exterior angles of any polygon sum to $360^\\circ$, so there are $360 \\div 24 = 15$ sides. Equal.",
+        "steps": [
+          "1. Exterior angle: $24^\\circ$.",
+          "2. $n = \\tfrac{360}{24} = 15$.",
+          "3. Check: $\\tfrac{(15 - 2) \\cdot 180}{15} = 156$."
+        ],
+        "fast": "360 over the exterior angle.",
+        "trap": "Dividing 360 by the interior angle, or solving $(n - 2) \\cdot 180 = 156$ as if 156 were the angle sum."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "polygons-quadrilaterals",
+          "role": "primary"
+        }
+      ],
+      "setup": "one interior angle of a regular polygon given; its supplement is the exterior angle, and 360 over it is the number of sides; compare with a value",
+      "variant": "interior angle sum of an n-gon, and regular polygons",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "prompt": "Regular hexagon $ABCDEF$ has an area of 180. Diagonals $AC$ and $BD$ intersect at point $P$. What is the area of triangle $BPC$?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "10"
+      },
+      "explanation": {
+        "key": "Triangle $ABC$ is isosceles with a $120^\\circ$ angle at $B$, so angle $BCA = 30^\\circ$; likewise angle $CBD = 30^\\circ$. So $BPC$ has base $BC = s$ and base angles $30^\\circ$, height $\\tfrac{s}{2}\\tan 30^\\circ = \\tfrac{s}{2\\sqrt3}$, and area $\\tfrac{s^2}{4\\sqrt3} = \\tfrac{\\sqrt3}{12}s^2$. The hexagon is six equilateral triangles of area $\\tfrac{\\sqrt3}{4}s^2$, or $\\tfrac{3\\sqrt3}{2}s^2$ in all, which is 18 times as much. $180 \\div 18 = 10$.",
+        "steps": [
+          "1. In triangle $ABC$, $AB = BC$ and angle $B = 120^\\circ$, so angles $BAC$ and $BCA$ are $30^\\circ$. By symmetry angle $CBD = 30^\\circ$.",
+          "2. Triangle $BPC$: base $s$, base angles $30^\\circ$, height $\\tfrac{s}{2\\sqrt3}$, area $\\tfrac{\\sqrt3}{12}s^2$.",
+          "3. Hexagon: $6 \\cdot \\tfrac{\\sqrt3}{4}s^2 = \\tfrac{3\\sqrt3}{2}s^2 = 18 \\cdot \\tfrac{\\sqrt3}{12}s^2$.",
+          "4. Area of $BPC$: $\\tfrac{180}{18} = 10$."
+        ],
+        "fast": "Triangle $BPC$ is a $30$-$30$-$120$ triangle on one side of the hexagon; it is one third of the equilateral triangle on that side (whose apex is the center), which is one sixth of the hexagon.",
+        "trap": "Taking $P$ as the hexagon's center gives one equilateral triangle, 30. Halving that (15) assumes $P$ is halfway to the center; it is one third of the way."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "polygons-quadrilaterals",
+          "role": "primary"
+        }
+      ],
+      "setup": "two short diagonals of a regular hexagon from neighbouring vertices cross; the small triangle on the shared side has two 30-degree angles; its area as a fraction of the hexagon via the six equilateral triangles",
+      "variant": "a regular hexagon split into triangles",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "Compare the two quantities.",
+      "qc": {
+        "a": "$\\dfrac{10^{50} - 10^{48}}{10^{25} + 10^{24}}$",
+        "b": "$9 \\times 10^{24}$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "$10^{50} - 10^{48} = 10^{48}(100 - 1) = 99 \\times 10^{48}$ and $10^{25} + 10^{24} = 10^{24}(10 + 1) = 11 \\times 10^{24}$. The quotient is $\\tfrac{99}{11} \\times 10^{24} = 9 \\times 10^{24}$. Equal.",
+        "steps": [
+          "1. Numerator: $99 \\times 10^{48}$.",
+          "2. Denominator: $11 \\times 10^{24}$.",
+          "3. $\\tfrac{99}{11} = 9$, $10^{48 - 24} = 10^{24}$.",
+          "4. A $= 9 \\times 10^{24} =$ B."
+        ],
+        "fast": "Factor out the smaller power in each part: $\\tfrac{10^{48} \\cdot 99}{10^{24} \\cdot 11}$.",
+        "trap": "Keeping only the leading terms, $\\tfrac{10^{50}}{10^{25}} = 10^{25}$, makes A look greater. Subtracting exponents inside the difference ($10^{50} - 10^{48} = 10^2$) wrecks the size."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "estimation-sigfig",
+          "role": "primary"
+        }
+      ],
+      "setup": "a difference of powers of ten over a sum of powers of ten; factor the smaller power out of each so 99 over 11 cancels; the leading-terms estimate overshoots",
+      "variant": "scientific notation arithmetic with large powers of 10",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "A park district counted the visitors at four of its parks on one Saturday: $1{,}449$; $2{,}351$; $1{,}849$; and $3{,}248$.",
+      "qc": {
+        "a": "The sum of the four counts after each count is rounded to the nearest hundred",
+        "b": "The sum of the four counts, rounded to the nearest hundred"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Rounded first: $1{,}400 + 2{,}400 + 1{,}800 + 3{,}200 = 8{,}800$. Exact sum: $8{,}897$, which rounds to $8{,}900$. B is greater.",
+        "steps": [
+          "1. Each to the nearest hundred: 1,400; 2,400; 1,800; 3,200.",
+          "2. A $= 8{,}800$.",
+          "3. Exact sum $8{,}897 \\to 8{,}900 =$ B."
+        ],
+        "fast": "The rounding changes are $-49$, $+49$, $-49$, $-48$: net $-97$, enough to cross a hundred.",
+        "trap": "Assuming rounding before or after adding always agrees (C)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "estimation-sigfig",
+          "role": "primary"
+        }
+      ],
+      "setup": "four counts each rounded to the hundreds before adding, against the exact sum rounded to the hundreds; the dropped parts add past a hundred",
+      "variant": "rounding to a place, then computing",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "The number $x$ satisfies both $(x - 1)(x - 5) < 0$ and $(x - 3)(x - 7) < 0$.",
+      "qc": {
+        "a": "$(x - 4)^2$",
+        "b": "$1$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "A product of two factors is negative between its roots: $1 < x < 5$ and $3 < x < 7$. Both hold for $3 < x < 5$, where $x - 4$ lies strictly between $-1$ and $1$, so $(x - 4)^2 < 1$. B is greater.",
+        "steps": [
+          "1. $(x - 1)(x - 5) < 0 \\iff 1 < x < 5$.",
+          "2. $(x - 3)(x - 7) < 0 \\iff 3 < x < 7$.",
+          "3. Both: $3 < x < 5$, so $|x - 4| < 1$.",
+          "4. $(x - 4)^2 < 1$: B."
+        ],
+        "fast": "The overlap $(3, 5)$ is centered at 4 with half-width 1, and its ends are excluded.",
+        "trap": "Using only the first interval $(1, 5)$ lets $(x - 4)^2$ reach up to 9 (D). Treating the ends as included gives a tie at $x = 3$ or $5$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quadratic-inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "two factored products each negative give two between-root intervals; their overlap is centered at a point, so the squared distance from it stays below a value",
+      "variant": "sign analysis of a factored product (x - a)(x - b) < 0",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "The cube of a number $x$ is greater than $x$, and the square of $x$ is less than 4. Which of the following could be the value of $x$? Indicate all such values.",
+      "choices": [
+        "$-1.5$",
+        "$-0.5$",
+        "$0.5$",
+        "$1.5$",
+        "$2$",
+        "$2.5$"
+      ],
+      "key": {
+        "sel": [
+          1,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "$x^3 > x$ means $x(x - 1)(x + 1) > 0$: $-1 < x < 0$ or $x > 1$. $x^2 < 4$ means $-2 < x < 2$. Together: $-1 < x < 0$ or $1 < x < 2$. Of the choices, $-0.5$ and $1.5$.",
+        "steps": [
+          "1. $x^3 - x = x(x - 1)(x + 1) > 0$: signs give $(-1, 0)$ and $(1, \\infty)$.",
+          "2. $x^2 < 4$: $(-2, 2)$.",
+          "3. Intersection: $(-1, 0) \\cup (1, 2)$.",
+          "4. $-1.5$: cube $-3.375 < -1.5$, no. $-0.5$: $-0.125 > -0.5$, yes. $0.5$: no. $1.5$: yes. $2$ and $2.5$ fail $x^2 < 4$."
+        ],
+        "fast": "A negative number between $-1$ and $0$ shrinks toward 0 when cubed, so its cube is larger.",
+        "trap": "Dividing $x^3 > x$ by $x$ to get $x^2 > 1$ keeps $-1.5$ and loses $-0.5$; the division flips the inequality for negative $x$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quadratic-inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "a cube exceeding the number holds on two pieces, one between -1 and 0; intersect with a square bound and select possible values (dividing by x drops the negative piece)",
+      "variant": "powers against the number: where x^2 > x or x^3 < x",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q21",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "The table shows the parcels, in hundreds, that a courier shipped from three depots last month, by service. The number of Express parcels shipped from the East depot, $x$ hundred, is not shown. One of the courier's Express parcels from last month is to be selected at random. The probability that it was shipped from a depot at which Standard parcels made up more than half of that depot's parcels is $\\dfrac{3}{5}$. What is the value of $x$?",
+      "choices": [
+        "$10$",
+        "$15$",
+        "$20$",
+        "$25$",
+        "$30$"
+      ],
+      "figureId": "fig1",
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "North (30 of 40 Standard) qualifies; South (exactly half) does not. East qualifies only if $45 > x$. If East qualifies: $\\tfrac{10 + x}{30 + x} = \\tfrac35$, so $50 + 5x = 90 + 3x$ and $x = 20$, which is below 45, so East does qualify. If East did not qualify, $\\tfrac{10}{30 + x} = \\tfrac35$ would need $x$ negative. So $x = 20$.",
+        "steps": [
+          "1. Express total: $10 + 20 + x = 30 + x$ hundred.",
+          "2. Qualifying depots: North, and East when $x < 45$.",
+          "3. $\\tfrac{10 + x}{30 + x} = \\tfrac35 \\Rightarrow x = 20$.",
+          "4. Check: East has 45 of 65 Standard, more than half; the probability is $\\tfrac{30}{50} = \\tfrac35$."
+        ],
+        "fast": "Try the choices in $\\tfrac{10 + x}{30 + x}$: only $x = 20$ gives $\\tfrac{30}{50}$.",
+        "trap": "Counting South (exactly half is not more than half), or dividing by all parcels instead of the Express parcels. $x = 10$ gives $\\tfrac12$ and $x = 30$ gives $\\tfrac23$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-conditional",
+          "role": "primary"
+        }
+      ],
+      "setup": "run backwards: a conditional probability from a two-way table is given; the qualifying rows depend on the unknown cell; solve for the cell and check it keeps its row qualifying",
+      "variant": "conditional probability from a two-way table",
+      "revisits": "quant-008:s1q11",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q22",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "A state park charges $\\$9$ for each adult and $\\$5$ for each child. A tour group with 4 more children than adults paid at least $\\$90$ and at most $\\$140$ in admission.",
+      "qc": {
+        "a": "The greatest possible number of people in the tour group",
+        "b": "$20$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "With $a$ adults the cost is $9a + 5(a + 4) = 14a + 20$. From $90 \\le 14a + 20 \\le 140$: $5 \\le a \\le 8\\tfrac{4}{7}$, so $a$ is at most 8. The group then has $8 + 12 = 20$ people. Equal.",
+        "steps": [
+          "1. Cost: $14a + 20$.",
+          "2. $70 \\le 14a \\le 120$: $5 \\le a \\le 8.57$.",
+          "3. Whole $a$: at most 8 (cost $\\$132$).",
+          "4. People: $2a + 4 = 20$."
+        ],
+        "fast": "Largest $a$ with $14a \\le 120$ is 8; the group is $2 \\cdot 8 + 4$.",
+        "trap": "Rounding $8.57$ up to 9 ($\\$146$, over budget) gives 22; reporting adults or children alone gives 8 or 12."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "two prices with a fixed difference in the counts and a total bounded above and below; the count range is cut to whole numbers; compare the largest group size with a value",
+      "variant": "a word problem with an inequality constraint",
+      "revisits": "quant-008:s2q13",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q23",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "At a park's spring work day, 120 volunteers signed in: 60 repaired trails, 50 planted trees and 40 picked up litter. Ten of the volunteers did none of the three jobs, and 15 did all three. One of the volunteers who did at least one of the jobs is to be chosen at random. What is the probability that the volunteer chosen did exactly one job?",
+      "choices": [
+        "$\\dfrac{1}{11}$",
+        "$\\dfrac{17}{24}$",
+        "$\\dfrac{3}{4}$",
+        "$\\dfrac{17}{22}$",
+        "$\\dfrac{19}{22}$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "110 volunteers did at least one job, and the job counts add to 150. With $e_1$ and $e_2$ doing exactly one or two: $e_1 + e_2 + 15 = 110$ and $e_1 + 2e_2 + 45 = 150$. So $e_2 = 10$ and $e_1 = 85$, and the probability is $\\tfrac{85}{110} = \\tfrac{17}{22}$.",
+        "steps": [
+          "1. At least one job: $120 - 10 = 110$.",
+          "2. People: $e_1 + e_2 = 95$. Job counts: $e_1 + 2e_2 = 150 - 3 \\cdot 15 = 105$.",
+          "3. $e_2 = 10$, $e_1 = 85$.",
+          "4. $P = \\tfrac{85}{110} = \\tfrac{17}{22}$."
+        ],
+        "fast": "Extra counts beyond one per worker: $150 - 110 = 40 = e_2 + 2 \\cdot 15$, so $e_2 = 10$.",
+        "trap": "Dividing by all 120 volunteers gives $\\tfrac{17}{24}$; ignoring the exactly-two group ($e_1 = 95$) gives $\\tfrac{19}{22}$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "overlapping-sets",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "probability-basic",
+          "role": "secondary"
+        }
+      ],
+      "setup": "three jobs with the all-three and none counts given; counting by multiplicity gives the exactly-one count; then a probability whose base excludes those who did none",
+      "variant": "three-set Venn diagram",
+      "revisits": "quant-008:s2q7",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q24",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "A lawn in a city park is shaped like a right triangle whose two perpendicular edges measure 12 meters and 6 meters. A rectangular flower bed is laid out with two of its sides along those two edges and its fourth corner on the lawn's longest edge. Which of the following could be the area of the flower bed, in square meters? Indicate all such areas.",
+      "choices": [
+        "$8$",
+        "$16$",
+        "$17$",
+        "$18$",
+        "$24$",
+        "$36$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Put the bed $x$ meters along the 12-meter edge. Its corner on the long edge gives a height of $6 - \\tfrac{x}{2}$, so the area is $x\\left(6 - \\tfrac{x}{2}\\right)$ for $0 < x < 12$. It peaks at $x = 6$ with area $18$, half the lawn's 36, and takes every value in between down toward 0. So 8, 16, 17 and 18 are possible; 24 and 36 are not.",
+        "steps": [
+          "1. Long edge: $y = 6 - \\tfrac{x}{2}$.",
+          "2. Area: $A(x) = 6x - \\tfrac{x^2}{2} = 18 - \\tfrac12(x - 6)^2$.",
+          "3. Greatest: 18 at $x = 6$ (a 6-by-3 bed). Every area in $(0, 18]$ occurs.",
+          "4. The 4-by-4 square bed has area 16, which is not the greatest."
+        ],
+        "fast": "The best corner rectangle takes half of each leg: $6 \\times 3 = 18$, half the triangle.",
+        "trap": "Assuming the square bed is the largest caps the area at 16 and drops 17 and 18; that holds only when the legs are equal. Taking the whole lawn (36) or two thirds of it (24) as reachable."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "min-max-bounding",
+          "role": "primary"
+        }
+      ],
+      "setup": "a rectangle in the corner of a right triangle with unequal legs: the area peaks at half the triangle's area at half of each leg, not at the inscribed square; select attainable areas",
+      "variant": "optimizing a product or a difference under constraints",
+      "revisits": "quant-008:s2q14",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q25",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 3,
+      "prompt": "How many of the first-time visitors surveyed visited neither the sculpture hall nor the photography wing?",
+      "numeric": {
+        "kind": "single"
+      },
+      "setId": "d1",
+      "figureId": "d1",
+      "key": {
+        "value": "30"
+      },
+      "explanation": {
+        "key": "First-time visitors in at least one exhibit: $150 + 120 - 60 = 210$. Neither: $240 - 210 = 30$.",
+        "steps": [
+          "1. Union: $150 + 120 - 60 = 210$.",
+          "2. Neither: $240 - 210 = 30$."
+        ],
+        "fast": "Total minus the union.",
+        "trap": "Not subtracting the overlap makes the union 270, more than the group; subtracting it twice gives a union of 150 and 90 for neither."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "overlapping-sets",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: one group's two set sizes, overlap and total from a survey table; the neither count by inclusion-exclusion",
+      "variant": "the neither region from a two-set problem",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q26",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "Which of the following could be the number of returning visitors surveyed who visited neither the sculpture hall nor the photography wing? Indicate all such numbers.",
+      "choices": [
+        "$0$",
+        "$20$",
+        "$45$",
+        "$60$",
+        "$70$",
+        "$90$"
+      ],
+      "setId": "d1",
+      "figureId": "d1",
+      "key": {
+        "sel": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Let $b$ returning visitors visit both. Neither $= 160 - (90 + 100 - b) = b - 30$. The overlap is at least 30 (else neither is negative) and at most 90 (the smaller exhibit), so neither runs from 0 to 60. Of the choices: 0, 20, 45 and 60.",
+        "steps": [
+          "1. Neither $= 160 - 190 + b = b - 30$.",
+          "2. $b \\ge 30$ so that neither $\\ge 0$; $b \\le 90$ since the sculpture hall had 90.",
+          "3. Neither ranges over $0$ to $60$.",
+          "4. 70 and 90 would need $b = 100$ or $120$, more than 90."
+        ],
+        "fast": "Most neither: every sculpture visitor also saw photography, so only the 100 photography visitors are covered: $160 - 100 = 60$.",
+        "trap": "Subtracting the smaller exhibit ($160 - 90 = 70$) for the most neither, or taking the first-time row's overlap of 60 for the returning visitors."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "overlapping-sets",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: a group's two set sizes known but its overlap not recorded; the overlap runs from the forced minimum to the smaller set, so the neither count runs from zero to the group minus the larger set; select possible values",
+      "variant": "at least / at most counts from a survey with overlap",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q27",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "Suppose that among the surveyed visitors who visited the photography wing but not the sculpture hall, there were exactly as many returning visitors as first-time visitors. How many of the returning visitors surveyed visited neither of the two exhibits?",
+      "choices": [
+        "$10$",
+        "$20$",
+        "$30$",
+        "$40$",
+        "$60$"
+      ],
+      "setId": "d1",
+      "figureId": "d1",
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "First-time visitors who saw photography but not sculpture: $120 - 60 = 60$. So 60 returning visitors did too, and the returning overlap is $100 - 60 = 40$. Then $90 - 40 = 50$ saw only sculpture, and neither is $160 - (40 + 60 + 50) = 10$.",
+        "steps": [
+          "1. First-time photography only: $120 - 60 = 60$.",
+          "2. Returning photography only: 60, so returning both $= 100 - 60 = 40$.",
+          "3. Returning sculpture only: $90 - 40 = 50$.",
+          "4. Returning neither: $160 - 150 = 10$."
+        ],
+        "fast": "Returning neither $= b - 30$ with $b = 100 - 60 = 40$: 10.",
+        "trap": "Setting the two groups' overlaps equal ($b = 60$) gives 30; stopping at the overlap gives 40; reading the photography-only count as the answer gives 60."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "overlapping-sets",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: a cell of one group's two-by-two (photography only) is set equal to the same cell of the other group; that fixes the unrecorded overlap; then the neither cell",
+      "variant": "a double-matrix (two-way) table",
+      "solverRating": 3
+    }
+  ]
+}

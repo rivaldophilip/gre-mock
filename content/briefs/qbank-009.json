@@ -1,0 +1,1295 @@
+{
+ "testId": "qbank-009",
+ "measure": "quant",
+ "kind": "quant",
+ "seed": 16930,
+ "generatedAt": "2026-11-27T17:18:37.018Z",
+ "gaps": [
+  "revisit quant-008:s1q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q13 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q7 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q14 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q8 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q15 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q4 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q9 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q2 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q3 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q5 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q4 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q9 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q6 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q6 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q12 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q15 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q7 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q14 (you missed it; no sibling in the bank yet)"
+ ],
+ "slots": [
+  {
+   "slot": 1,
+   "qid": "s1q1",
+   "type": "mc",
+   "level": 5,
+   "concept": "overlapping-sets",
+   "name": "Overlapping sets, Venn diagrams",
+   "variant": "the most in exactly one, two or all three groups from the entry total"
+  },
+  {
+   "slot": 2,
+   "qid": "s1q2",
+   "type": "qc",
+   "level": 5,
+   "concept": "overlapping-sets",
+   "name": "Overlapping sets, Venn diagrams",
+   "variant": "the most in exactly one, two or all three groups from the entry total"
+  },
+  {
+   "slot": 3,
+   "qid": "s1q3",
+   "type": "numeric",
+   "level": 3,
+   "concept": "word-problems-rate",
+   "name": "Rate, work, distance and mixture problems",
+   "variant": "average speed over two legs"
+  },
+  {
+   "slot": 4,
+   "qid": "s1q4",
+   "type": "mc",
+   "level": 5,
+   "concept": "word-problems-rate",
+   "name": "Rate, work, distance and mixture problems",
+   "variant": "rate with a unit change mid-problem"
+  },
+  {
+   "slot": 5,
+   "qid": "s1q5",
+   "type": "mc",
+   "level": 3,
+   "concept": "coordinate-geometry",
+   "name": "Coordinate plane, lines, slope, distance",
+   "variant": "which quadrants a line passes through"
+  },
+  {
+   "slot": 6,
+   "qid": "s1q6",
+   "type": "qc",
+   "level": 3,
+   "concept": "coordinate-geometry",
+   "name": "Coordinate plane, lines, slope, distance",
+   "variant": "distance and midpoint"
+  },
+  {
+   "slot": 7,
+   "qid": "s1q7",
+   "type": "qc",
+   "level": 3,
+   "concept": "inequalities",
+   "name": "Linear and simultaneous inequalities",
+   "variant": "a chain a < b < c: what must be true of sums or differences"
+  },
+  {
+   "slot": 8,
+   "qid": "s1q8",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "inequalities",
+   "name": "Linear and simultaneous inequalities",
+   "variant": "ordering several expressions under a given range"
+  },
+  {
+   "slot": 9,
+   "qid": "s1q9",
+   "type": "mc",
+   "level": 3,
+   "concept": "remainders-units",
+   "name": "Remainders and units digits",
+   "variant": "units digit of a large power (cycle length)"
+  },
+  {
+   "slot": 10,
+   "qid": "s1q10",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "remainders-units",
+   "name": "Remainders and units digits",
+   "variant": "remainder written as a decimal part (n/d = q.25)"
+  },
+  {
+   "slot": 11,
+   "qid": "s1q11",
+   "type": "qc",
+   "level": 3,
+   "concept": "primes-factors",
+   "name": "Primes, factors, multiples, GCD/LCM",
+   "variant": "GCD / LCM from two products or a word problem"
+  },
+  {
+   "slot": 12,
+   "qid": "s1q12",
+   "type": "mc",
+   "level": 3,
+   "concept": "primes-factors",
+   "name": "Primes, factors, multiples, GCD/LCM",
+   "variant": "count of primes or factors in a stated range"
+  },
+  {
+   "slot": 13,
+   "qid": "s1q13",
+   "type": "qc",
+   "level": 3,
+   "concept": "abs-value-inequalities",
+   "name": "Absolute-value equations and inequalities",
+   "variant": "a tolerance stated as an absolute-value inequality"
+  },
+  {
+   "slot": 14,
+   "qid": "s1q14",
+   "type": "mc",
+   "level": 3,
+   "concept": "abs-value-inequalities",
+   "name": "Absolute-value equations and inequalities",
+   "variant": "an absolute-value equation with two cases, one extraneous"
+  },
+  {
+   "slot": 15,
+   "qid": "s1q15",
+   "type": "qc",
+   "level": 3,
+   "concept": "polygons-quadrilaterals",
+   "name": "Polygons and quadrilaterals",
+   "variant": "interior angle sum of an n-gon, and regular polygons"
+  },
+  {
+   "slot": 16,
+   "qid": "s1q16",
+   "type": "numeric",
+   "level": 5,
+   "concept": "polygons-quadrilaterals",
+   "name": "Polygons and quadrilaterals",
+   "variant": "a regular hexagon split into triangles"
+  },
+  {
+   "slot": 17,
+   "qid": "s1q17",
+   "type": "qc",
+   "level": 5,
+   "concept": "estimation-sigfig",
+   "name": "Estimation, rounding, scientific notation",
+   "variant": "scientific notation arithmetic with large powers of 10"
+  },
+  {
+   "slot": 18,
+   "qid": "s1q18",
+   "type": "qc",
+   "level": 3,
+   "concept": "estimation-sigfig",
+   "name": "Estimation, rounding, scientific notation",
+   "variant": "rounding to a place, then computing"
+  },
+  {
+   "slot": 19,
+   "qid": "s1q19",
+   "type": "qc",
+   "level": 5,
+   "concept": "quadratic-inequalities",
+   "name": "Quadratic and other nonlinear inequalities (sign analysis)",
+   "variant": "sign analysis of a factored product (x - a)(x - b) < 0"
+  },
+  {
+   "slot": 20,
+   "qid": "s1q20",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "quadratic-inequalities",
+   "name": "Quadratic and other nonlinear inequalities (sign analysis)",
+   "variant": "powers against the number: where x^2 > x or x^3 < x"
+  },
+  {
+   "slot": 21,
+   "qid": "s1q21",
+   "type": "mc",
+   "level": 4,
+   "concept": "probability-conditional",
+   "name": "Conditional probability and dependent events",
+   "variant": "conditional probability from a two-way table",
+   "revisit": {
+    "ref": "quant-008:s1q11",
+    "result": "missed",
+    "item": "One of the company's 2025 Express orders is to be selected at random. What is the probability that it was shipped from a warehouse at which Ground orders made up more than half of that warehouse's orders? · choices: $\\dfrac{3}{32}$ / $\\dfrac{3}{17}$ / $\\dfrac{5}{11}$ / $\\dfrac{1}{2}$ / $\\dfrac{6}{11}$",
+    "setup": "DI: P(from a qualifying group) among one category",
+    "change": "run it backwards: give what the earlier item asked for, and ask for one of its givens"
+   }
+  },
+  {
+   "slot": 22,
+   "qid": "s1q22",
+   "type": "qc",
+   "level": 4,
+   "concept": "inequalities",
+   "name": "Linear and simultaneous inequalities",
+   "variant": "a word problem with an inequality constraint",
+   "revisit": {
+    "ref": "quant-008:s2q13",
+    "result": "missed",
+    "item": "A theater charges \\$12 for each adult ticket and \\$7 for each child ticket. A group with 3 more children than adults spent at least \\$100 and at most \\$150 on tickets. Which of the following could be the number of adults in the group? Indicate all such numbers. · choices: 3 / 4 / 5 / 6 / 7 / 8",
+    "setup": "linear cost with a fixed difference in counts, bounded above and below; select possible counts",
+    "change": "change the format (quantitative comparison, multiple choice or numeric entry) and the question asked"
+   }
+  },
+  {
+   "slot": 23,
+   "qid": "s1q23",
+   "type": "mc",
+   "level": 5,
+   "concept": "overlapping-sets",
+   "name": "Overlapping sets, Venn diagrams",
+   "variant": "three-set Venn diagram",
+   "revisit": {
+    "ref": "quant-008:s2q7",
+    "result": "missed",
+    "item": "Of the 200 members of a sports club, 120 play tennis, 90 play golf and 75 swim. Twenty-five members do none of the three, and exactly 40 members do exactly two of the three. How many members do all three? · choices: 15 / 25 / 35 / 45 / 70",
+    "setup": "three sets with the exactly-two count and a neither count given; find the number in all three (counting by multiplicity)",
+    "change": "combine the same insight with a second concept"
+   }
+  },
+  {
+   "slot": 24,
+   "qid": "s1q24",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "min-max-bounding",
+   "name": "Bounding: minimum/maximum values under constraints",
+   "variant": "optimizing a product or a difference under constraints",
+   "revisit": {
+    "ref": "quant-008:s2q14",
+    "result": "missed",
+    "item": "A rectangle lies inside a right triangle with legs of lengths 6 and 8. Two sides of the rectangle lie along the legs, and the opposite corner of the rectangle lies on the hypotenuse. Which of the following could be the area of the rectangle? Indicate all such areas. · choices: $6$ / $10$ / $12$ / $13$ / $16$ / $24$",
+    "setup": "a rectangle in the corner of a right triangle: its area peaks at half the triangle's area; select attainable areas",
+    "change": "keep the insight but move the trap: a different wrong path should tempt"
+   }
+  },
+  {
+   "slot": 25,
+   "qid": "s1q25",
+   "type": "di",
+   "level": 3,
+   "concept": "overlapping-sets",
+   "name": "Overlapping sets, Venn diagrams",
+   "unit": "d1",
+   "variant": "the neither region from a two-set problem"
+  },
+  {
+   "slot": 26,
+   "qid": "s1q26",
+   "type": "di",
+   "level": 4,
+   "concept": "overlapping-sets",
+   "name": "Overlapping sets, Venn diagrams",
+   "unit": "d1",
+   "variant": "at least / at most counts from a survey with overlap"
+  },
+  {
+   "slot": 27,
+   "qid": "s1q27",
+   "type": "di",
+   "level": 5,
+   "concept": "overlapping-sets",
+   "name": "Overlapping sets, Venn diagrams",
+   "unit": "d1",
+   "variant": "a double-matrix (two-way) table"
+  }
+ ],
+ "units": [
+  {
+   "id": "d1",
+   "shape": "di3"
+  }
+ ],
+ "conceptSlots": [
+  {
+   "concept": "overlapping-sets",
+   "variant": "the most in exactly one, two or all three groups from the entry total"
+  },
+  {
+   "concept": "overlapping-sets",
+   "variant": "the most in exactly one, two or all three groups from the entry total"
+  },
+  {
+   "concept": "word-problems-rate",
+   "variant": "average speed over two legs"
+  },
+  {
+   "concept": "word-problems-rate",
+   "variant": "rate with a unit change mid-problem"
+  },
+  {
+   "concept": "coordinate-geometry",
+   "variant": "which quadrants a line passes through"
+  },
+  {
+   "concept": "coordinate-geometry",
+   "variant": "distance and midpoint"
+  },
+  {
+   "concept": "inequalities",
+   "variant": "a chain a < b < c: what must be true of sums or differences"
+  },
+  {
+   "concept": "inequalities",
+   "variant": "ordering several expressions under a given range"
+  },
+  {
+   "concept": "remainders-units",
+   "variant": "units digit of a large power (cycle length)"
+  },
+  {
+   "concept": "remainders-units",
+   "variant": "remainder written as a decimal part (n/d = q.25)"
+  },
+  {
+   "concept": "primes-factors",
+   "variant": "GCD / LCM from two products or a word problem"
+  },
+  {
+   "concept": "primes-factors",
+   "variant": "count of primes or factors in a stated range"
+  },
+  {
+   "concept": "abs-value-inequalities",
+   "variant": "a tolerance stated as an absolute-value inequality"
+  },
+  {
+   "concept": "abs-value-inequalities",
+   "variant": "an absolute-value equation with two cases, one extraneous"
+  },
+  {
+   "concept": "polygons-quadrilaterals",
+   "variant": "interior angle sum of an n-gon, and regular polygons"
+  },
+  {
+   "concept": "polygons-quadrilaterals",
+   "variant": "a regular hexagon split into triangles"
+  },
+  {
+   "concept": "estimation-sigfig",
+   "variant": "scientific notation arithmetic with large powers of 10"
+  },
+  {
+   "concept": "estimation-sigfig",
+   "variant": "rounding to a place, then computing"
+  },
+  {
+   "concept": "quadratic-inequalities",
+   "variant": "sign analysis of a factored product (x - a)(x - b) < 0"
+  },
+  {
+   "concept": "quadratic-inequalities",
+   "variant": "powers against the number: where x^2 > x or x^3 < x"
+  },
+  {
+   "concept": "probability-conditional",
+   "variant": "conditional probability from a two-way table"
+  },
+  {
+   "concept": "inequalities",
+   "variant": "a word problem with an inequality constraint"
+  },
+  {
+   "concept": "overlapping-sets",
+   "variant": "three-set Venn diagram"
+  },
+  {
+   "concept": "min-max-bounding",
+   "variant": "optimizing a product or a difference under constraints"
+  },
+  {
+   "concept": "overlapping-sets",
+   "variant": "the neither region from a two-set problem"
+  },
+  {
+   "concept": "overlapping-sets",
+   "variant": "at least / at most counts from a survey with overlap"
+  },
+  {
+   "concept": "overlapping-sets",
+   "variant": "a double-matrix (two-way) table"
+  }
+ ],
+ "targets": {
+  "concepts": [
+   "overlapping-sets",
+   "word-problems-rate",
+   "coordinate-geometry",
+   "inequalities",
+   "remainders-units",
+   "primes-factors",
+   "abs-value-inequalities",
+   "polygons-quadrilaterals",
+   "estimation-sigfig",
+   "quadratic-inequalities"
+  ]
+ },
+ "history": {
+  "overlapping-sets": [
+   {
+    "setup": "two-set problem with a neither bound; range of the number in exactly one",
+    "worn": true,
+    "items": 3
+   },
+   {
+    "setup": "three overlapping sets, everyone in at least one; greatest number in exactly one",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three sets with all-three and neither counts; number in exactly one",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the overlap stated as a percent of each set: equate the two expressions to compare the sets' sizes",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three sets with the exactly-two count and a neither count given; find the number in all three (counting by multiplicity)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two-way table with one cell relation linking two other cells; solve for a cell",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two sets where the both count is a multiple of the neither count; solve for neither",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three overlapping groups in a fixed population: the feasible range of the triple overlap (complement bound below, smallest group above)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two-way table with only margins given; one cell's range from keeping every other cell nonnegative",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "least overlap of two survey answers across two separate groups: bound each group separately; pooling the totals understates it",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the overlap stated as a percent of one set and as a percent of the other; the count in neither set from a table total",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two sets in a fixed population with a condition linking the neither count to the both count; the neither count is the both count plus a constant, so the link caps the overlap; the possible exactly-one counts",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three overlapping sets, everyone in at least one: the greatest possible exactly-one count is given; find the total",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: one set's size read as a percent of a percent from the figure, the other set's size given, the overlap a fraction of the first set; the count in neither within that group",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three sets covering a fixed population with given sizes; the surplus of the size sum over the population caps the triple overlap at half the surplus",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the overlap stated as a percent of each set, plus the difference of the set sizes; recover the sizes and the overlap; count those in exactly one set (remove the overlap twice)",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "word-problems-rate": [
+   {
+    "setup": "out and back at two speeds; average speed for the round trip",
+    "worn": true,
+    "items": 2
+   },
+   {
+    "setup": "two fill pipes and a drain together; time to fill",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "second traveller leaves later and faster on the same route; when it leads by a distance",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one crew starts alone, the other joins; finish at a set time; solo time",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "upstream and downstream legs with a current; time difference",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two legs with speeds in different units (km/h and m/s); total time",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "combined rate known and one machine slower by a fixed time: the rate equation becomes a quadratic",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two swimmers going back and forth in a pool; time of the second meeting",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "drain part of a solution and replace it with the pure substance to reach a target concentration; amount drained",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "inlet and drain open together for a stretch, then the drain closes; total time to fill",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a job measured in one unit while the rate switches to another unit partway; the time split from the total time, then the amount in the second unit",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two solutions mixed to a target concentration, then a stated amount of water dilutes it to a second concentration; the dilution fixes the mixture's size, then the mixing equation gives one part",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "inlet and drain rates in volume units; the extra fill time with the drain open gives the capacity",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three pairwise combined times given; adding the pair rates counts each worker twice, so halve to get the trio's rate",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "equal times downstream and upstream over different distances with the still-water speed known; the speeds are in the distance ratio; the current",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a weak and a strong solution blended to a fixed volume whose concentration must fall in a band; the band gives an interval for the weak amount, and a stock limit on the weak solution cuts it",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "both leg speeds and the overall average speed given; the average is a time-weighted mean, so solve for the time split first, then convert it to the fraction of the distance on one leg",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a box-shaped tank filled to a stated depth below its rim in two stages, the first rate per minute and the second per hour, with volume converted from cubic centimeters to liters; total minutes",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "an inlet's solo fill time and the net fill time with an unknown outflow running at once; recover the outflow's own emptying time by subtracting rates (subtracting the times is the trap)",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "coordinate-geometry": [
+   {
+    "setup": "line through a point perpendicular to a given line; its x-intercept",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "general-form line with sign conditions on products of coefficients; select what it must pass through",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "line through a point meets the x-axis at a given distance; it is perpendicular to a line with an unknown coefficient; find the coefficient",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a line through two given points; the sum of its two intercepts",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a V-shaped region bounded above by a horizontal line; count the lattice points row by row, odd rows rounding the half-width down",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a segment with one endpoint on each axis and a given midpoint; the endpoints from doubling the midpoint's coordinates; the segment's length (not the origin-to-midpoint distance)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two parallel lines; the perpendicular segment between them from a point on one (not the vertical gap)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two points written in terms of one unknown; the given slope fixes the unknown, then the y-intercept follows from the x-intercept (not the unknown itself)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two linear resource limits and nonnegativity bound a convex region; select the possible values of x + y (the maximum is at the crossing point, not at either line's intercept)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "line from a point and a slope; the signs of its intercepts tell which quadrant it misses",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two points with swapped coordinates: slope -1 and the intercept is their sum; with their distance, solve for one coordinate",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two lines with one unknown coefficient whose slopes are negative reciprocals for every value of it; compare their crossing angle with 90 degrees",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "inequalities": [
+   {
+    "setup": "DI: two linear growth projections; first year one exceeds the other",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "-1 < a < 0 < b < 1: select all inequalities that must hold",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two linear inequalities give an interval; compare x^2 with -4x",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "for which k a linear inequality holds for every x in an interval (check endpoints)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "6/x < 2 and a quadratic inequality; sign of x",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "compound linear inequality gives an x interval; select possible x^2",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three ordered numbers summing to zero; select the sign facts that must hold",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "linear cost with a fixed difference in counts, bounded above and below; select possible counts",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "which rewritten forms are equivalent to a linear inequality with a negative coefficient (the sign flips)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a quadratic inequality has a solution only when the discriminant is positive; select parameter values",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a chained ordering of x, 1/x and x^2 is given; select the values of x that satisfy it (sign cases)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a < b < c with no signs given; select the sum, difference and product inequalities that must hold",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two linear inequalities give a half-open negative interval and an absolute-value inequality gives a positive interval; the product's supremum is excluded; compare with it",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "an inequality between two quotients by the same negative number; select the rescaled forms that must hold (each multiplier a negative number or a positive square)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a line through a fixed intercept with an unknown slope must stay below a whole segment; the gap is linear, so both endpoints decide and the stricter one wins",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a variable between 1 and 2; select the three-term chains of powers, roots and reciprocals that hold on the whole interval (some flip at an interior point)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two compound linear inequalities, one with a negative coefficient, give half-open intervals; select the bounds on the difference and the sum that must hold, minding which ends are reached",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two kinds of vehicle with a seat requirement, a vehicle cap and a budget; test each count of one kind against all three; the feasible counts have a gap",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three ordered numbers with the first gap longer than the second; the gap comparison rearranges to the middle number exceeding the outer midpoint, so the mean of the three lies below the middle number",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a strict lower bound from one linear inequality (with a sign flip) and a parameter-dependent upper bound from another; the system has a solution only when the upper bound passes the lower one strictly; least integer parameter",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a strict load limit with a fixed extra weight and a minimum count; count the whole numbers that satisfy both bounds (strict top, inclusive count)",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "remainders-units": [
+   {
+    "setup": "remainder of a^n ± b^n mod a small number via power cycles",
+    "worn": true,
+    "items": 4
+   },
+   {
+    "setup": "k ≡ 5 mod 6; remainders of high powers of k mod 8 and mod 3",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "units digits of 3^n and 7^n combined (sum vs product) for every n",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two remainder conditions that conflict in parity: no such number; compare the count with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "n + 1 a multiple of 6; remainder of n^2 + n mod 12 vs a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the decimal part of n/d reduces to a fraction; the least divisor is its reduced denominator",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "from the last digit of a sum of powers back to the parity of n; then another power's last digit",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "remainder of the negative of a large power, via the power's cycle and the nonnegative-remainder rule",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "product of a long run of odd integers: an odd multiple of 25 ends in 25 or 75; the residue mod 4 decides",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a multiple of 3 with a known remainder mod 14; the remainder of the number divided by 3 is fixed because 3 and 14 are coprime; compare it with the original remainder",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two integers with the same remainder mod 6: their high even powers are fixed mod 24 through mod 8 and mod 3; compare the remainder of the sum of the powers with that of the square of the integers' sum",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the decimal part of n over a given divisor fixes the remainder; compare the remainder by a factor of that divisor with the reduced fraction's numerator",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two leftover conditions, each the same amount short of its divisor, with divisors that share a factor; solutions repeat every lcm; the least one above a threshold",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "last two digits of a product of three large numbers, each a little below a multiple of 100; multiply the small negative residues and convert the negative result",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a remainder mod 20 of a sum of two powers, one of whose units digit never changes; that constant units digit is not its remainder mod 20 (settle the tens with mod 4)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "units digit 1 for powers whose bases end in 3, 7 or 9: the cycle is 4 for 3 and 7 but 2 for 9; select the powers that qualify",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a remainder of a multiple of n is given; recover the remainder of n, then the remainder of -n (count back from the divisor)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the decimal part of the quotient and the remainder are both given; their ratio is the divisor, then rebuild the dividend",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two dividends with given remainders by the same unknown divisor: it divides both differences and must exceed the larger remainder; the least possible divisor",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the last two digits of a large power of 2: square the ending of the tenth power and use the self-reproducing ending 76; every choice shares the units digit",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a remainder mod 7 given; the remainders of negative and mixed-sign expressions (add the divisor to a negative residue) and whether quotients like (n + c)/7 are integers or of a fixed parity",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the two digits before the trailing zeros of a factorial: remove the factors of 10 (pair each 5 with a 2), then multiply the rest keeping only two digits",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two congruence conditions stated as multiples; the least solution is smaller than both divisors (a zero difference counts) and solutions repeat every lcm, not every product; compare the sum of the two least with a value",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "primes-factors": [
+   {
+    "setup": "x^2 - y^2 = N: count or list integer solutions from same-parity factor pairs",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "divisor-count function: d(n^2) vs 3·d(n) for an unknown n",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "divisor-count relation d(n^2) = 3·d(n) given; select the n that satisfy it",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a power of a composite dividing a factorial: the squared small prime limits, not the larger prime",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "divisors of a perfect square below its square root: pair d with N/d and set the root aside; compare the count with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "count the primes in two short ranges stated as integers with exactly two divisors; one range hides composites that look prime",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "divisor count of a product of powers of two composite numbers that share a prime (combine the exponents first)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "largest square tile that covers a rectangle exactly; the number of tiles (the GCD is the side, not the answer)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a multiple of a fixed number must be a perfect square; the possible multipliers are the least one times any square",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a product of the first n even numbers rewritten as a power of 2 times n!; the power of an odd prime comes from n!, not from the larger factorial",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two periodic events with a given gcd and lcm of their periods; list the coprime splits of lcm over gcd; compare the sum of the periods with its least value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one unknown multiplier must make one product a perfect square and another product a perfect cube; each prime's exponent meets an even condition and a multiple-of-three condition at once, so the solutions are the least one times sixth powers",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the trailing zeros of a product of consecutive integers that does not start at 1: count factors of 5 (2s are plentiful), with an extra 5 from each multiple of 25 in the range",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a perfect-square total split into equal square blocks: the block side must divide the square root of the total; count its divisors and drop the one-row block and the single block",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "count the integers in a range with exactly four divisors: products of two different primes and also cubes of primes (the second form is easy to miss); compare with a value",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "abs-value-inequalities": [
+   {
+    "setup": "sum of two absolute values |x - a| + |x - b| against a bound",
+    "worn": true,
+    "items": 3
+   },
+   {
+    "setup": "|x + c| < b gives an interval for x; compare x^2 with a constant (endpoint signs matter)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "forces opposite signs; compare (x + y)^2 with (x - y)^2",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "count integers with |x + a| > k|x - b|; compare with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "|x - a| = bx + c: two cases, one rejected because the right side would be negative",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two distances from a shared point on the number line: the third distance is their sum or difference",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "which absolute-value identities and inequalities hold for every real x (test a negative)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two different numbers equidistant from a fixed point: their sum is twice that point",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a side length within a tolerance; the area's greatest deviation from nominal against the linear estimate (the square term breaks the tie)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one unknown equidistant from two fixed numbers written as equal absolute values; compare it with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x times |x| equals a linear expression: a quadratic in each sign case, one root in the wrong case and no real root in the other; compare the sum of solutions with the sum of the quadratic's roots",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the sum of |x| and x is zero (x nonpositive, zero allowed); compare |x| minus x with zero",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a tolerance band around a nominal value written as an absolute-value inequality; the percent by which the top of the band exceeds the bottom (base is the bottom) against the spread over the nominal",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two linear equations, each with a different variable inside bars; of the sign cases, the natural-looking pair violates its own case; the product of the surviving pair",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "equal absolute values with both points depending on a parameter; the fixed solution is midway between them, or the two points coincide and every x works; select the parameter values",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two lengths each within its own tolerance; the difference of the lengths has a tolerance equal to the sum of the two (not their difference); written as an absolute-value inequality",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a strict distance interval and a non-strict outside-distance condition around a different center; count the integers in the overlap",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "an absolute value less than a linear expression; one half of the double inequality forces the variable negative, so |x| equals -x",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "polygons-quadrilaterals": [
+   {
+    "setup": "rhombus with side and one diagonal; area against a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "interior angle k times the exterior angle; number of diagonals",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "count the diagonals of a regular polygon, then remove those through the center",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the triangle on two adjacent vertices and an opposite vertex of a regular hexagon: its fraction of the hexagon's area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "trapezoid diagonals cut it into four triangles; two triangle areas give the trapezoid's area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "midpoints of a regular hexagon's sides form a smaller hexagon; the cut-off corner triangles with a 120-degree angle give the side ratio; compare areas",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one more side adds a given number of diagonals; find the number of diagonals of the smaller polygon",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "interior angle k times the exterior angle fixes n for two regular polygons of equal perimeter; side lengths in inverse ratio of n",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the diagonal count is a stated multiple of the side count; find n, then report the diagonals from one vertex (a neighbouring quantity)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the interior angle sum of a regular polygon is given; recover the number of sides, then divide for one angle",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a rhombus with one angle and its shorter diagonal; the 60-degree angle makes an equilateral triangle, so the short diagonal equals the side; area from the two diagonals",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a point inside a regular hexagon joined to all six vertices; alternate triangles' areas always sum to half (the distances to three alternate sides have a fixed sum); compare the two alternating sums",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a right trapezoid whose diagonal bisects a base angle; with the parallel sides that makes an isosceles triangle, so the short base equals the slanted leg; the long base from a right triangle",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "estimation-sigfig": [
+   {
+    "setup": "estimate a product and quotient of numbers in scientific notation",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "sum of many amounts each rounded to the nearest unit; bound the true total against the strict upper limit",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a difference of squares of two decimals near consecutive whole numbers: rounding each term misleads, factoring gives the product",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "square root of a number in scientific notation with an odd power of ten; compare with a power of ten",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "concentration times volume over a per-dose amount, with a unit conversion; round each factor and pick the nearest of closely spaced choices",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a difference of two numbers in scientific notation with different powers, divided by a negative power of ten",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a power of a small base against a power of ten with a different exponent; rewrite the base in powers of two, use 2 to the 10th as about a thousand, and bound the error",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a count known only after rounding to one place; rounding it to a coarser place directly against rounding the already-rounded figure (double rounding)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a sum of two numbers in scientific notation one power apart against the square of another; align the powers and square the coefficient",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two rounded measurements, one divided by the other; the quotient's range comes from opposite ends of the two rounding intervals; select values inside it",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two rates in different time units; convert one before taking the ratio; choices a factor of ten apart",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a product of powers of 4 and 25 rewritten as a power of ten times a leftover power of two; the leftover's own digit count adds to the zeros",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a count of seconds over many years against a power of ten; a coarse rounding of one factor overshoots the power, the exact product falls just short",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "quadratic-inequalities": [
+   {
+    "setup": "rational inequality k/x > x - c; multiplying through by x loses the negative branch; compare x with the left root",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x^3 < x with no sign given; compare x^2 with x across the two solution intervals",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a quartic inequality that factors as n^2 times a quadratic; dividing by n^2 silently admits n = 0, which fails the strict inequality; count the integers",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three ordered parameters with no values; one factored product negative (between its roots) and one positive (outside its roots) intersect to a sub-interval; the sign of a third pairing of the factors",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a two-sided bound on n squared with a non-square lower bound and a square upper bound; count the integers of both signs",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a linear-over-linear expression at least a constant; move everything to one side and read the sign chart; the boundary root is included and the pole excluded; count the integers",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a product of two linear factors, one with the variable's sign reversed, is negative; the solution is outside the roots, not between them",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two power inequalities on one number intersect to the negatives only; compare the cube with the number, which flips at -1",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a constant over a linear expression below a negative constant: only one sign of the denominator can work, and multiplying by it flips the inequality",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a quadratic inequality in the absolute value of the variable; the solution set is symmetric; count the integers including the boundary",
+    "worn": false,
+    "items": 1
+   }
+  ]
+ },
+ "exemplars": {
+  "overlapping-sets": [
+   "ogq-t2-s6-4",
+   "bb-t1s7-23"
+  ],
+  "word-problems-rate": [
+   "bb-t1s3-11",
+   "bb-t2s5-29"
+  ],
+  "coordinate-geometry": [
+   "ogq-t1-s6-11",
+   "bb-t2s2-12"
+  ],
+  "inequalities": [
+   "ogq-set3-8",
+   "ogq-t2-s5-24"
+  ],
+  "remainders-units": [
+   "ogq-t1-s6-7",
+   "bb-t1s3-8"
+  ],
+  "primes-factors": [
+   "bb-t3s2-30",
+   "ogq-t1-s6-21"
+  ],
+  "abs-value-inequalities": [
+   "ogq-t2-s5-21"
+  ],
+  "polygons-quadrilaterals": [
+   "ogq-set3-1",
+   "bb-t1s3-5"
+  ],
+  "estimation-sigfig": [
+   "bb-t1s3-3",
+   "bb-t2s5-17"
+  ],
+  "quadratic-inequalities": []
+ }
+}
