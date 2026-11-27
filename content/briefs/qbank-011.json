@@ -1,0 +1,1215 @@
+{
+ "testId": "qbank-011",
+ "measure": "quant",
+ "kind": "quant",
+ "seed": 21982,
+ "generatedAt": "2026-11-27T17:18:42.055Z",
+ "gaps": [
+  "revisit quant-009:s1q2 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q3 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q5 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q4 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q9 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q6 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q6 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q12 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q15 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q7 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q14 (you missed it; no sibling in the bank yet)",
+  "revisit quant-010:s1q7 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-010:s1q12 (you missed it; no sibling in the bank yet)",
+  "revisit quant-010:s1q3 (you missed it; no sibling in the bank yet)",
+  "revisit quant-010:s2q10 (you missed it; no sibling in the bank yet)",
+  "revisit quant-010:s2q5 (you missed it; no sibling in the bank yet)",
+  "revisit quant-010:s2q15 (you missed it; no sibling in the bank yet)",
+  "revisit quant-011:s1q3 (you missed it; no sibling in the bank yet)",
+  "revisit quant-011:s1q5 (you missed it; no sibling in the bank yet)"
+ ],
+ "slots": [
+  {
+   "slot": 1,
+   "qid": "s1q1",
+   "type": "qc",
+   "level": 5,
+   "concept": "frequency-distributions",
+   "name": "Frequency distributions and histograms",
+   "variant": "relative frequency and cumulative frequency"
+  },
+  {
+   "slot": 2,
+   "qid": "s1q2",
+   "type": "mc",
+   "level": 5,
+   "concept": "frequency-distributions",
+   "name": "Frequency distributions and histograms",
+   "variant": "median from a frequency table"
+  },
+  {
+   "slot": 3,
+   "qid": "s1q3",
+   "type": "mc",
+   "level": 4,
+   "concept": "frequency-distributions",
+   "name": "Frequency distributions and histograms",
+   "variant": "mean from a histogram's grouped data"
+  },
+  {
+   "slot": 4,
+   "qid": "s1q4",
+   "type": "mc",
+   "level": 5,
+   "concept": "pythagorean-special",
+   "name": "Pythagorean theorem and special right triangles",
+   "variant": "Pythagorean triples and their multiples"
+  },
+  {
+   "slot": 5,
+   "qid": "s1q5",
+   "type": "qc",
+   "level": 5,
+   "concept": "pythagorean-special",
+   "name": "Pythagorean theorem and special right triangles",
+   "variant": "a right triangle from a word problem or coordinates (distance)"
+  },
+  {
+   "slot": 6,
+   "qid": "s1q6",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "pythagorean-special",
+   "name": "Pythagorean theorem and special right triangles",
+   "variant": "altitude to the hypotenuse: similar right triangles"
+  },
+  {
+   "slot": 7,
+   "qid": "s1q7",
+   "type": "numeric",
+   "level": 4,
+   "concept": "inscribed-figures",
+   "name": "Inscribed and circumscribed figures, composite shapes",
+   "variant": "a shaded region: whole minus part"
+  },
+  {
+   "slot": 8,
+   "qid": "s1q8",
+   "type": "qc",
+   "level": 5,
+   "concept": "inscribed-figures",
+   "name": "Inscribed and circumscribed figures, composite shapes",
+   "variant": "a regular hexagon in a circle"
+  },
+  {
+   "slot": 9,
+   "qid": "s1q9",
+   "type": "mc",
+   "level": 3,
+   "concept": "number-sense-qc",
+   "name": "Number sense: sign, zero, magnitude cases",
+   "variant": "sign cases: negatives, zero and fractions between 0 and 1"
+  },
+  {
+   "slot": 10,
+   "qid": "s1q10",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "number-sense-qc",
+   "name": "Number sense: sign, zero, magnitude cases",
+   "variant": "the sign of a product or quotient from a condition (ab < 0, a/b > 1)"
+  },
+  {
+   "slot": 11,
+   "qid": "s1q11",
+   "type": "mc",
+   "level": 3,
+   "concept": "mean-median-mode",
+   "name": "Mean, median, mode, range",
+   "variant": "a sum from the mean and the count"
+  },
+  {
+   "slot": 12,
+   "qid": "s1q12",
+   "type": "numeric",
+   "level": 5,
+   "concept": "mean-median-mode",
+   "name": "Mean, median, mode, range",
+   "variant": "mode and range of a combined list"
+  },
+  {
+   "slot": 13,
+   "qid": "s1q13",
+   "type": "qc",
+   "level": 3,
+   "concept": "solids-volume",
+   "name": "Volume and surface area of solids",
+   "variant": "liquid poured between containers"
+  },
+  {
+   "slot": 14,
+   "qid": "s1q14",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "solids-volume",
+   "name": "Volume and surface area of solids",
+   "variant": "cubes painted or cut into smaller cubes"
+  },
+  {
+   "slot": 15,
+   "qid": "s1q15",
+   "type": "numeric",
+   "level": 5,
+   "concept": "probability-conditional",
+   "name": "Conditional probability and dependent events",
+   "variant": "dependent events in sequence"
+  },
+  {
+   "slot": 16,
+   "qid": "s1q16",
+   "type": "qc",
+   "level": 5,
+   "concept": "probability-conditional",
+   "name": "Conditional probability and dependent events",
+   "variant": "drawing without replacement"
+  },
+  {
+   "slot": 17,
+   "qid": "s1q17",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "area-perimeter",
+   "name": "Area and perimeter",
+   "variant": "a border or path around a rectangle"
+  },
+  {
+   "slot": 18,
+   "qid": "s1q18",
+   "type": "mc",
+   "level": 5,
+   "concept": "area-perimeter",
+   "name": "Area and perimeter",
+   "variant": "the area of an irregular composite figure"
+  },
+  {
+   "slot": 19,
+   "qid": "s1q19",
+   "type": "numeric",
+   "level": 5,
+   "concept": "algebraic-expressions",
+   "name": "Algebraic expressions, identities, simplification",
+   "variant": "an expression's value from a related expression (x + 1/x given)"
+  },
+  {
+   "slot": 20,
+   "qid": "s1q20",
+   "type": "qc",
+   "level": 5,
+   "concept": "algebraic-expressions",
+   "name": "Algebraic expressions, identities, simplification",
+   "variant": "expressions with nested parentheses and signs"
+  },
+  {
+   "slot": 21,
+   "qid": "s1q21",
+   "type": "qc",
+   "level": 4,
+   "concept": "number-sense-qc",
+   "name": "Number sense: sign, zero, magnitude cases",
+   "variant": "both quantities depend on one variable with a restricted range",
+   "revisit": {
+    "ref": "quant-009:s1q2",
+    "result": "missed",
+    "item": "$0.1 < x < 0.2$ · Quantity A: $\\dfrac{1}{x} - x$ | Quantity B: $5$",
+    "setup": "x in a narrow decimal interval; 1/x - x crosses the benchmark inside it (D)",
+    "change": "run it backwards: give what the earlier item asked for, and ask for one of its givens"
+   }
+  },
+  {
+   "slot": 22,
+   "qid": "s1q22",
+   "type": "mc",
+   "level": 5,
+   "concept": "figures-not-to-scale",
+   "name": "Reasoning from figures not drawn to scale",
+   "variant": "regions that look equal in area",
+   "revisit": {
+    "ref": "quant-009:s1q3",
+    "result": "missed",
+    "item": "In triangle $ABC$ (not shown), point $D$ lies on side $BC$ with $BD = 2 \\cdot DC$, and $E$ is the midpoint of segment $AD$. · Quantity A: The area of triangle $ABE$ | Quantity B: The area of triangle $ADC$",
+    "setup": "triangles sharing a height: split the area by a base ratio and then by a midpoint; compare two pieces",
+    "change": "change the format (quantitative comparison, multiple choice or numeric entry) and the question asked"
+   }
+  },
+  {
+   "slot": 23,
+   "qid": "s1q23",
+   "type": "qc",
+   "level": 5,
+   "concept": "probability-basic",
+   "name": "Probability: independent events, complement",
+   "variant": "geometric probability (a point in a region)",
+   "revisit": {
+    "ref": "quant-009:s2q5",
+    "result": "missed",
+    "item": "A point is chosen at random from the interior of a square with sides of length 2. · Quantity A: The probability that the point is less than 1 unit from the center of the square | Quantity B: $\\dfrac{3}{4}$",
+    "setup": "random point in a square: the probability of landing in the inscribed disk (pi/4) against a fraction",
+    "change": "combine the same insight with a second concept"
+   }
+  },
+  {
+   "slot": 24,
+   "qid": "s1q24",
+   "type": "qc",
+   "level": 5,
+   "concept": "remainders-units",
+   "name": "Remainders and units digits",
+   "variant": "remainder written as a decimal part (n/d = q.25)",
+   "revisit": {
+    "ref": "quant-009:s1q4",
+    "result": "guessed",
+    "item": "$n$ and $d$ are positive integers, and $\\dfrac{n}{d} = 14.36$. · Quantity A: The least possible value of $d$ | Quantity B: $25$",
+    "setup": "the decimal part of n/d reduces to a fraction; the least divisor is its reduced denominator",
+    "change": "keep the insight but move the trap: a different wrong path should tempt"
+   }
+  },
+  {
+   "slot": 25,
+   "qid": "s1q25",
+   "type": "di",
+   "level": 3,
+   "concept": "frequency-distributions",
+   "name": "Frequency distributions and histograms",
+   "unit": "d1",
+   "variant": "which interval contains the median or a percentile"
+  },
+  {
+   "slot": 26,
+   "qid": "s1q26",
+   "type": "di",
+   "level": 4,
+   "concept": "frequency-distributions",
+   "name": "Frequency distributions and histograms",
+   "unit": "d1",
+   "variant": "relative frequency and cumulative frequency"
+  },
+  {
+   "slot": 27,
+   "qid": "s1q27",
+   "type": "di",
+   "level": 5,
+   "concept": "frequency-distributions",
+   "name": "Frequency distributions and histograms",
+   "unit": "d1",
+   "variant": "which interval contains the median or a percentile"
+  }
+ ],
+ "units": [
+  {
+   "id": "d1",
+   "shape": "di3"
+  }
+ ],
+ "conceptSlots": [
+  {
+   "concept": "frequency-distributions",
+   "variant": "relative frequency and cumulative frequency"
+  },
+  {
+   "concept": "frequency-distributions",
+   "variant": "median from a frequency table"
+  },
+  {
+   "concept": "frequency-distributions",
+   "variant": "mean from a histogram's grouped data"
+  },
+  {
+   "concept": "pythagorean-special",
+   "variant": "Pythagorean triples and their multiples"
+  },
+  {
+   "concept": "pythagorean-special",
+   "variant": "a right triangle from a word problem or coordinates (distance)"
+  },
+  {
+   "concept": "pythagorean-special",
+   "variant": "altitude to the hypotenuse: similar right triangles"
+  },
+  {
+   "concept": "inscribed-figures",
+   "variant": "a shaded region: whole minus part"
+  },
+  {
+   "concept": "inscribed-figures",
+   "variant": "a regular hexagon in a circle"
+  },
+  {
+   "concept": "number-sense-qc",
+   "variant": "sign cases: negatives, zero and fractions between 0 and 1"
+  },
+  {
+   "concept": "number-sense-qc",
+   "variant": "the sign of a product or quotient from a condition (ab < 0, a/b > 1)"
+  },
+  {
+   "concept": "mean-median-mode",
+   "variant": "a sum from the mean and the count"
+  },
+  {
+   "concept": "mean-median-mode",
+   "variant": "mode and range of a combined list"
+  },
+  {
+   "concept": "solids-volume",
+   "variant": "liquid poured between containers"
+  },
+  {
+   "concept": "solids-volume",
+   "variant": "cubes painted or cut into smaller cubes"
+  },
+  {
+   "concept": "probability-conditional",
+   "variant": "dependent events in sequence"
+  },
+  {
+   "concept": "probability-conditional",
+   "variant": "drawing without replacement"
+  },
+  {
+   "concept": "area-perimeter",
+   "variant": "a border or path around a rectangle"
+  },
+  {
+   "concept": "area-perimeter",
+   "variant": "the area of an irregular composite figure"
+  },
+  {
+   "concept": "algebraic-expressions",
+   "variant": "an expression's value from a related expression (x + 1/x given)"
+  },
+  {
+   "concept": "algebraic-expressions",
+   "variant": "expressions with nested parentheses and signs"
+  },
+  {
+   "concept": "number-sense-qc",
+   "variant": "both quantities depend on one variable with a restricted range"
+  },
+  {
+   "concept": "figures-not-to-scale",
+   "variant": "regions that look equal in area"
+  },
+  {
+   "concept": "probability-basic",
+   "variant": "geometric probability (a point in a region)"
+  },
+  {
+   "concept": "remainders-units",
+   "variant": "remainder written as a decimal part (n/d = q.25)"
+  },
+  {
+   "concept": "frequency-distributions",
+   "variant": "which interval contains the median or a percentile"
+  },
+  {
+   "concept": "frequency-distributions",
+   "variant": "relative frequency and cumulative frequency"
+  },
+  {
+   "concept": "frequency-distributions",
+   "variant": "which interval contains the median or a percentile"
+  }
+ ],
+ "targets": {
+  "concepts": [
+   "frequency-distributions",
+   "pythagorean-special",
+   "inscribed-figures",
+   "number-sense-qc",
+   "mean-median-mode",
+   "solids-volume",
+   "probability-conditional",
+   "area-perimeter",
+   "algebraic-expressions"
+  ]
+ },
+ "history": {
+  "frequency-distributions": [
+   {
+    "setup": "DI: change in the median after moving one category's values",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one group's segments of a stacked interval graph; estimated mean from interval midpoints",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: cumulative frequency table; least value at which the cumulative share reaches a given percent (a percentile)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: median of one group from a frequency table where the two middle values fall in adjacent rows",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "several frequency columns over the same population; count the columns whose median falls in a given row (cumulative counts against the middle position)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "grouped whole-number data: the greatest possible mean of one row puts every value at its interval's top",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: a percentile within a subgroup that leaves out one group's lowest row; re-base on the subgroup before accumulating (accumulating the whole group's column points to the row below)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "cumulative relative frequency table; the count in a band of rows is the difference of two cumulative entries times the total",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two grouped columns over the same intervals, one in percents of its group and one in counts; convert, combine and locate the median of the pooled data",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "histogram of whole-number values with a long left tail; weighted mean from bar heights against the median found by counting to the middle position",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one frequency in a table is an unknown with a lower bound; the smallest allowed value makes the count even and puts the middle pair across two rows, larger values put it in one row",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "pythagorean-special": [
+   {
+    "setup": "oblique triangle with 45° and 30° angles split by an altitude into two special right triangles; area or a side",
+    "worn": true,
+    "items": 2
+   },
+   {
+    "setup": "altitude to the hypotenuse splits it into given segments; perimeter",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "30-60-90 right triangle with the altitude to the hypotenuse given; hypotenuse",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "quadrilateral split by a diagonal into a 45-45-90 and a 30-60-90 triangle; a side or the area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "box with a square base and a given height; the space diagonal gives the base area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a perpendicular splits a triangle into pieces whose leg ratios reveal 45-45-90 and 30-60-90 triangles; add the angles at the vertex (backwards)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "sliding ladder: two right triangles with the same hypotenuse (7-24-25, then 15-20-25)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a square whose diagonal exceeds its side by a given length: solve s sqrt2 = s + 1",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "walk with legs along compass directions; straight-line distance from the net legs",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "regular hexagon with a given side; the triangle on alternate vertices, its side from a 30-60-90 half of a 120-degree isosceles triangle; its area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "altitude to the hypotenuse and one hypotenuse segment given; the other segment from the geometric mean, then the area with the altitude as height",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a right triangle with integer sides and one given leg; select the possible hypotenuses (factor the difference of squares into same-parity pairs: primitive and scaled triples)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a box's space diagonal against the path along three edges between the same two corners; the difference",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "an isosceles trapezoid with 60-degree base angles and legs equal to the short base; the perimeter gives the side; heights cut off 30-60-90 triangles (half a regular hexagon)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a point inside a rectangle with its distances to three corners given and no dimensions; the distance to the fourth corner from two pairs of right triangles (opposite corners have equal sums of squares)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a square's side from its diagonal against the diagonal of a square whose side is half that diagonal; both are the same surd once rationalized",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two right triangles share a vertical leg, with both ground points on the same side so the bases differ by a given length; equate the two expressions for the shared leg",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a box given only by the diagonals of the three faces at one corner; each squared edge appears in two of them, so halve the sum of their squares for the space diagonal",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a square known only by its diagonal; its area against a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a trapezoid with 60-degree and 30-degree base angles and the leg at the 60-degree corner given; the shared height is the long leg of one 30-60-90 triangle and the short leg of the other; the longer base",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a right triangle with integer sides and a given perimeter; select the possible hypotenuses (scale the primitive triples whose perimeters divide it)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two travellers leave one point at right angles, one an hour later; their distance gives a quadratic in time; report the later one's distance (a neighbouring quantity)",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "inscribed-figures": [
+   {
+    "setup": "square inscribed in a semicircle with one side on the diameter",
+    "worn": true,
+    "items": 3
+   },
+   {
+    "setup": "incircle of a right triangle; distance from the incenter to a vertex or the circumcenter",
+    "worn": true,
+    "items": 2
+   },
+   {
+    "setup": "square in a circle in a larger square of given area; compare the inner square's area with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "equilateral triangle between its incircle and circumcircle; ring area gives the side",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "crescents on the legs of a right triangle inscribed in a circle: their total area equals the triangle's",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "circle through two vertices of a square and tangent to the opposite side; radius",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "four tangent circles in a square: the central gap is the centers' square minus four quarter disks",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "regular hexagon in a circle in a larger regular hexagon of given area; the inner area from the apothem-radius ratio",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "square on the diameter of a semicircle with its area given; the radius from the half-side, then semicircle minus square",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three semicircles on one segment (two inside the large one); a perpendicular half-chord at the split point gives the product of the parts; area of the region between them",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a rectangle with sides in a 2 to 1 ratio in a semicircle, the long side on the diameter; its area as a fraction of the semicircle (its diagonal is not a diameter)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "regular hexagon in a circle with the hexagon's perimeter given; the area of the circular segment cut off by one side (one-sixth sector minus an equilateral triangle)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "an equilateral triangle and a square inscribed in one circle: the triangle's side gives the radius, the radius gives the square",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a right triangle's inradius and hypotenuse given; equal tangent lengths make the legs sum to the hypotenuse plus a diameter, then area = inradius times semiperimeter (the legs are never found)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "equilateral triangle between its incircle and circumcircle; the ring's width (not its area) equals the inradius, which gives the side and the area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a non-square rectangle in a semicircle with its base on the diameter and its perimeter given; the top corner is half the base across and the full height up from the center, so the corner equation and the perimeter give a quadratic whose second root is a flat, degenerate rectangle; the area",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "number-sense-qc": [
+   {
+    "setup": "x between 0 and 1: compare the reciprocal 1/x with 1 + x",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "positive integer factor pairs of a fixed product; compare x + y with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x^3 < x restricts x; compare x^2 with |x| or -x",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "ab > 0 and a > b; compare 1/a with 1/b (same sign flips the order)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x > y and 1/x > 1/y force opposite signs; compare x - y with |x + y|",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x < 0 < y with x + y > 0; compare x/y with y/x",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "integer n with n^2 < 5: compare n^3 with n^2 (negative, zero and one cases)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x strictly between two integers: the sign of (x - 2)(x - 3) decides x^2 - 5x against -6",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x in a narrow decimal interval; 1/x - x crosses the benchmark inside it (D)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x/y > 1: compare x with y (sign of y decides: D)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x between 0 and 1: the mean of x and its reciprocal against 1 + x",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x rounds to a given integer; compare its square, rounded, with the square of that integer",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x between -1 and 0: an odd-power difference against an even-power difference; factor out the common positive factor and compare |x| with x^2",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two positive numbers with a fixed sum; their product against a value between the best whole-number product and the true maximum",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "negative number above -1: the sum of its reciprocal and the reciprocal of its square against zero",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a quadratic condition confines x to an interval on which every expression inside absolute-value bars keeps one sign; both quantities collapse to the same linear expression (equal throughout the interval, different outside it)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a number strictly between -1 and 1 with zero allowed; select the power inequalities that hold throughout (zero and negatives break some)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two inequalities, the square above the number and the number above its reciprocal; the solution set across both signs",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a quadratic inequality true at every integer fails at one non-integer, where a perfect square is zero",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x between -1 and 0: the median of x, its square, its cube, its reciprocal and the reciprocal of its square against x",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "mean-median-mode": [
+   {
+    "setup": "add one value so the median equals the mean",
+    "worn": true,
+    "items": 2
+   },
+   {
+    "setup": "five integers with given mean and median; greatest possible least value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: change in the mean per nest when one group is excluded",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: combined mean of two groups weighted by counts",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: possible median of two combined grouped distributions",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: change one category's values, then compare the mean and the median of the new list",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: medians of two percent columns with an even count (average the middle two); compare them",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: the range of combined groups from the extreme whiskers against one group's range",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: overall mean and count give the total; subtract known categories to get the mean of an open-ended category",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: least number of added top values that moves the median of a frequency table to a target (odd against even count)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two lists combined, one unknown; the unique-mode condition breaks a tie and forces the unknown, while the range condition is already met across both lists (a one-list reading of it is the trap)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: the overall total from counts times means; add a new group of equal values until the overall mean reaches a target; the new group's size",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: remove one value so the mean of the rest equals their median; the median of the rest depends on which half the removed value came from (case on its rank, then check)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two series read off one stacked bar graph (middle and top segments) pooled into one list; the median of the even-size pool, not the mean of the two medians",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one large value with the rest in a narrow band; must-be-true statements about mean against median and the effect of removing the large value, bounded by the band's two ends",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two lists of different odd sizes with given medians; the median of the even-size pool is bounded by the two medians by counting values on each side, and both ends are attainable",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "an even-size list with two unknowns a fixed gap apart and a given median; their places in the order are unknown, so the obvious middle-pair guess fails its check",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two lists with given modes and ranges; each span must contain its mode, so the combined range runs from the larger range (nested spans) to the mode gap plus both ranges; compare with a value in between",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "run backwards: the added value is given and the median of the enlarged list equals its mean; one original value is missing; case on its rank, solve each case and keep the one consistent with its case",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "solids-volume": [
+   {
+    "setup": "horizontal cylinder partly filled: circular-segment area times length",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "rectangular block painted on all faces but its base, then cut into unit cubes; count cubes with exactly two painted faces",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a cone filled to half its height poured into a cylinder: the water's volume scales with the cube of the depth",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "horizontal cylinder more than half full, the empty segment's central angle given: whole cross section minus the empty segment, times the length",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "rectangular solid with the three face areas at one corner given; the volume is the square root of their product",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a box cut by the plane through two diagonally opposite parallel edges: the cut's area gives the missing dimension; the surface area of one piece",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a diagonal partition of a box along two opposite parallel edges, three possible pairs; the largest uses the longest edges with the diagonal of the face of the other two",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a cylinder's radius and height scaled by different percents in opposite directions; the volume factor (radius squared) just above 1",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a closed cylinder with whole-number radius and height and a fixed volume; select the possible total surface areas",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two face diagonals and the space diagonal of a box given; the third face diagonal (each edge squared appears in two face diagonals)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a coated cube cut into unit cubes; the one-face count gives the edge, then the uncoated core",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "water from a cuboid poured into a cylinder that cannot hold it all: the depth is capped at the cylinder's height; compare with a value",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "probability-conditional": [
+   {
+    "setup": "DI: reverse conditional probability from percents of two groups",
+    "worn": true,
+    "items": 2
+   },
+   {
+    "setup": "without replacement: unconditional P(second is red) vs P(second red | first red)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two draws without replacement: P(both red | at least one red)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: conditional probability with a given overlap between categories",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: one pick from each of two groups, independently; P(exactly one meets a threshold)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: P(from a qualifying group) among one category",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: P(exactly one of two overlapping events) from a table; remove the overlap twice",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: greatest possible probability from interval-grouped data",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: draws without replacement from one group until the first of a category appears; probability it is the k-th draw",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: two draws without replacement from a frequency table; the probability both come from the same row",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: one pick from a restricted part of a frequency table; P(one group or one value) with the overlap counted once",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one event's probability read from a frequency column and a second given as a percent with no joint information; the least probability of both (sum minus one)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a rate within one group and that group's share of an event give the event's count in the other group; the probability within that other group",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two independent events with different probabilities; given that exactly one occurs, the probability it is a named one (ratio of the two one-only products)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two independent events, one probability and the probability that exactly one occurs given; solve for the other probability",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a two-way table with a condition that excludes a single cell (one row and one column at once, not either); the conditional share over the remaining total",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "run backwards: the probability that exactly one of two independent equal-chance picks succeeds is given; solve the quadratic for the shared chance and reject the root above one half; report the count",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "area-perimeter": [
+   {
+    "setup": "uniform border around a rectangle; border area against the outer dimensions or perimeter",
+    "worn": true,
+    "items": 3
+   },
+   {
+    "setup": "rectangle from perimeter and diagonal; area via (a+b)^2 - (a^2+b^2)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "rectangle with a fixed diagonal; select possible perimeters (range)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "trade length for width at a fixed perimeter until a square; the area gain",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "corner cut from a rectangle: perimeter of the remaining L shape",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "perimeter of a composite figure: count only the outside edges (shared sides drop out)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "rectangle cut into four by two cuts; three areas given, find the fourth (integer sides)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "similar rectangles: the perimeter ratio and the larger area give the smaller area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one side scaled by a percent; the other side's percent change that gives a target area increase (factors multiply, not add)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one pair of sides of known length scaled by a percent at a fixed perimeter, the other pair unknown; the percent change in area is one expression in the unknown side, bounded by an unreachable limit; select the possible percent changes",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a rectangle with a fixed perimeter; select the possible diagonal lengths (the square gives the least, a flat rectangle the unreachable greatest)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a rectilinear floor plan with one corner cut off and a semicircular bay; the missing height and the bay's diameter come from the labeled pieces; area = rectangle minus triangle plus half-disk",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the region within a fixed distance outside a rectangle: side strips plus rounded quarter-disk corners, not a square-cornered frame",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "L-shaped region from a corner cut: the perimeter equals the full rectangle's, which gives the missing side; area is the rectangle minus the cut",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "algebraic-expressions": [
+   {
+    "setup": "value of a symmetric expression (a^3 ± b^3, |a| + |b|, a^2 + b^2) from a ± b, ab or a^2 + b^2",
+    "worn": true,
+    "items": 3
+   },
+   {
+    "setup": "which expressions equal a rational expression on its whole domain (removable points)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "which expressions equal (a - b)^2 (a + b)^2 identically",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "difference of two rational expressions that both simplify; compare with a constant (the excluded values do not matter)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "remove nested brackets with sign changes; the expression collapses to one term",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "factor a difference of squares twice; select every polynomial factor, including composite ones",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "an identity in completed-square form: match constant terms to find k",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x + 1/x given; a non-symmetric polynomial in x reduces to a constant by repeatedly replacing x^2 with a linear expression",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x^2 + 1/x^2 given; recover x + 1/x by squaring back, with both signs possible",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "which regroupings equal a doubly nested difference of four letters",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a doubly nested expression with a subtracted negative term simplifies to a multiple of a given linear combination; its value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "which expressions equal a rational expression whose numerator factor is the negative of a denominator factor (the sign flip on cancelling), with one choice adding a new excluded point",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the product of the squares of a difference and a sum rewritten as the square of a difference of squares, with the base a power that matches another power; compare with a nearly equal expression",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a sum of two rational expressions in which one numerator factors with a reversed sign; the sum is a negative constant; compare it with zero",
+    "worn": false,
+    "items": 1
+   }
+  ]
+ },
+ "exemplars": {
+  "frequency-distributions": [
+   "ogq-set3-2",
+   "ogq-set3-13"
+  ],
+  "pythagorean-special": [
+   "bb-t2s2-14",
+   "bb-t2s5-28"
+  ],
+  "inscribed-figures": [
+   "ogq-set2-3"
+  ],
+  "number-sense-qc": [
+   "bb-t3s2-13",
+   "bb-t2s2-13"
+  ],
+  "mean-median-mode": [
+   "ogq-set3-15",
+   "ogq-set4-7"
+  ],
+  "solids-volume": [
+   "bb-t1s3-10",
+   "bb-t3s2-19"
+  ],
+  "probability-conditional": [
+   "ogq-set2-10"
+  ],
+  "area-perimeter": [
+   "bb-t2s5-30",
+   "bb-t3s6-30"
+  ],
+  "algebraic-expressions": [
+   "bb-t1s7-14",
+   "ogq-set3-9"
+  ]
+ }
+}

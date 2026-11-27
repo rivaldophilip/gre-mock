@@ -1,0 +1,1214 @@
+{
+  "id": "qbank-011",
+  "measure": "quant",
+  "title": "Quant bank batch 11",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Cumulative percent of the swimmers in each squad who completed at most the given number of laps",
+      "table": {
+        "head": [
+          "Laps completed",
+          "Squad X (40 swimmers)",
+          "Squad Y (60 swimmers)"
+        ],
+        "rows": [
+          [
+            "10",
+            "10%",
+            "5%"
+          ],
+          [
+            "11",
+            "30%",
+            "25%"
+          ],
+          [
+            "12",
+            "65%",
+            "45%"
+          ],
+          [
+            "13",
+            "90%",
+            "80%"
+          ],
+          [
+            "14",
+            "100%",
+            "100%"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fig2",
+      "caption": "Goals scored by a hockey team in each of its 50 games last season, listed from the most common number of goals to the least common",
+      "table": {
+        "head": [
+          "Goals in a game",
+          "Percent of games"
+        ],
+        "rows": [
+          [
+            "1",
+            "30%"
+          ],
+          [
+            "2",
+            "26%"
+          ],
+          [
+            "0",
+            "20%"
+          ],
+          [
+            "3",
+            "16%"
+          ],
+          [
+            "4",
+            "8%"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fig3",
+      "caption": "Speeds of the cyclists passing a checkpoint. Each interval includes its left endpoint but not its right endpoint. The bar for 25 to 30 kilometers per hour is not shown.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 250' width='360' height='250' font-family='sans-serif' font-size='12'><line x1='50' y1='200' x2='340' y2='200' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='44' y='204' fill='currentColor' text-anchor='end'>0</text><line x1='50' y1='168' x2='340' y2='168' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='44' y='172' fill='currentColor' text-anchor='end'>4</text><line x1='50' y1='136' x2='340' y2='136' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='44' y='140' fill='currentColor' text-anchor='end'>8</text><line x1='50' y1='104' x2='340' y2='104' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='44' y='108' fill='currentColor' text-anchor='end'>12</text><line x1='50' y1='72' x2='340' y2='72' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='44' y='76' fill='currentColor' text-anchor='end'>16</text><line x1='50' y1='40' x2='340' y2='40' stroke='currentColor' stroke-opacity='0.2' stroke-width='1'/><text x='44' y='44' fill='currentColor' text-anchor='end'>20</text><rect x='50' y='120' width='70' height='80' fill='currentColor' fill-opacity='0.25' stroke='currentColor' stroke-width='1.5'/><rect x='120' y='56' width='70' height='144' fill='currentColor' fill-opacity='0.25' stroke='currentColor' stroke-width='1.5'/><rect x='190' y='104' width='70' height='96' fill='currentColor' fill-opacity='0.25' stroke='currentColor' stroke-width='1.5'/><text x='295.0' y='190' fill='currentColor' text-anchor='middle' font-size='16'>?</text><text x='50' y='216' fill='currentColor' text-anchor='middle'>10</text><text x='120' y='216' fill='currentColor' text-anchor='middle'>15</text><text x='190' y='216' fill='currentColor' text-anchor='middle'>20</text><text x='260' y='216' fill='currentColor' text-anchor='middle'>25</text><text x='330' y='216' fill='currentColor' text-anchor='middle'>30</text><line x1='50' y1='200' x2='340' y2='200' stroke='currentColor' stroke-width='1.5'/><text x='190.0' y='236' fill='currentColor' text-anchor='middle'>Speed (kilometers per hour)</text><text x='14' y='120' fill='currentColor' text-anchor='middle' transform='rotate(-90 14 120)'>Number of cyclists</text></svg>"
+    },
+    {
+      "id": "fig4",
+      "caption": "A team pennant: a right triangle with a square patch (shaded parts are the pennant outside the patch)",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 200' width='340' height='200' font-family='sans-serif' font-size='13'><polygon points='40,38 40,82 128,82' fill='currentColor' fill-opacity='0.3' stroke='none'/><polygon points='128,82 128,170 304,170' fill='currentColor' fill-opacity='0.3' stroke='none'/><polygon points='40,38 40,170 304,170' fill='none' stroke='currentColor' stroke-width='1.5'/><polygon points='40,170 128,170 128,82 40,82' fill='none' stroke='currentColor' stroke-width='1.5'/><polyline points='50,170 50,160 40,160' fill='none' stroke='currentColor' stroke-width='1'/><text x='30' y='108.0' fill='currentColor' text-anchor='end'>6</text><text x='172.0' y='188' fill='currentColor' text-anchor='middle'>12</text></svg>"
+    },
+    {
+      "id": "fig5",
+      "caption": "Side view of a set of bleachers",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 230' width='260' height='230' font-family='sans-serif' font-size='13'><polygon points='40,210 220,210 220,165 175,165 175,120 130,120 130,75 85,75 85,30 40,30' fill='currentColor' fill-opacity='0.15' stroke='currentColor' stroke-width='1.5'/></svg>"
+    },
+    {
+      "id": "fig6",
+      "caption": "Note: Figure not drawn to scale.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 230' width='340' height='230' font-family='sans-serif' font-size='14'><polygon points='150,25 30,200 310,200' fill='none' stroke='currentColor' stroke-width='1.5'/><line x1='150' y1='25' x2='170.0' y2='200' stroke='currentColor' stroke-width='1.5'/><line x1='30' y1='200' x2='160.0' y2='112.5' stroke='currentColor' stroke-width='1.5'/><line x1='310' y1='200' x2='160.0' y2='112.5' stroke='currentColor' stroke-width='1.5'/><circle cx='150' cy='25' r='2.5' fill='currentColor'/><text x='150' y='17' fill='currentColor' text-anchor='middle'>A</text><circle cx='30' cy='200' r='2.5' fill='currentColor'/><text x='18' y='206' fill='currentColor' text-anchor='middle'>B</text><circle cx='310' cy='200' r='2.5' fill='currentColor'/><text x='322' y='206' fill='currentColor' text-anchor='middle'>C</text><circle cx='170.0' cy='200' r='2.5' fill='currentColor'/><text x='170.0' y='218' fill='currentColor' text-anchor='middle'>D</text><circle cx='160.0' cy='112.5' r='2.5' fill='currentColor'/><text x='172.0' y='112.5' fill='currentColor' text-anchor='middle'>E</text></svg>"
+    },
+    {
+      "id": "d1",
+      "caption": "Health-inspection scores of a city's restaurants, by year (each restaurant is inspected once a year)",
+      "table": {
+        "head": [
+          "Score",
+          "Number of restaurants, 2023",
+          "Number of restaurants, 2024"
+        ],
+        "rows": [
+          [
+            "50–59",
+            "12",
+            "10"
+          ],
+          [
+            "60–69",
+            "28",
+            "24"
+          ],
+          [
+            "70–79",
+            "45",
+            "52"
+          ],
+          [
+            "80–89",
+            "60",
+            "64"
+          ],
+          [
+            "90–100",
+            "55",
+            "70"
+          ],
+          [
+            "Total",
+            "200",
+            "220"
+          ]
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "figureId": "fig1",
+      "prompt": "A swim coach timed two squads, X and Y, and recorded how many laps each swimmer completed. The table gives, for each squad, the cumulative percent of its swimmers who completed at most each number of laps.",
+      "qc": {
+        "a": "The percent of all 100 swimmers in the two squads who completed exactly 12 laps",
+        "b": "$27$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Exactly 12 laps is the step from the 11-lap row to the 12-lap row: $65\\% - 30\\% = 35\\%$ of squad X and $45\\% - 25\\% = 20\\%$ of squad Y. In swimmers that is $0.35 \\cdot 40 = 14$ and $0.20 \\cdot 60 = 12$, so $26$ of the $100$ swimmers, $26\\%$, which is less than $27$.",
+        "steps": [
+          "1. Squad X, exactly 12 laps: $65\\% - 30\\% = 35\\%$ of $40$, or $14$ swimmers.",
+          "2. Squad Y, exactly 12 laps: $45\\% - 25\\% = 20\\%$ of $60$, or $12$ swimmers.",
+          "3. Together: $14 + 12 = 26$ of $100$ swimmers, so $26\\%$.",
+          "4. $26 < 27$: Quantity B is greater."
+        ],
+        "fast": "The pooled percent is a weighted mean of $35$ and $20$ with weights $40$ and $60$, so it sits below the plain mean $27.5$: $\\tfrac{40 \\cdot 35 + 60 \\cdot 20}{100} = 26$.",
+        "trap": "Averaging $35\\%$ and $20\\%$ gives $27.5$ and picks A, but squad Y is larger; reading the cumulative entries $65\\%$ and $45\\%$ as the share at exactly 12 laps also picks A."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "frequency-distributions",
+          "role": "primary"
+        }
+      ],
+      "setup": "two cumulative relative frequency columns for groups of different sizes; one value's share is a difference of cumulative entries in each, and the pooled share weights them by group size (not their plain mean)",
+      "variant": "relative frequency and cumulative frequency",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "figureId": "fig2",
+      "prompt": "The table shows the distribution of the number of goals a hockey team scored per game over its 50 games last season. What was the median number of goals per game?",
+      "choices": [
+        "$1$",
+        "$1.5$",
+        "$2$",
+        "$2.5$",
+        "$20$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The rows are listed by how common they are, not by the number of goals. In order of goals the percents are $0$: $20\\%$, $1$: $30\\%$, $2$: $26\\%$, $3$: $16\\%$, $4$: $8\\%$. The cumulative percent reaches exactly $50\\%$ at 1 goal, so the 25th game in order has 1 goal and the 26th has 2. The median is $\\tfrac{1 + 2}{2} = 1.5$.",
+        "steps": [
+          "1. Reorder by goals: $0, 1, 2, 3, 4$ with $20\\%, 30\\%, 26\\%, 16\\%, 8\\%$, that is $10, 15, 13, 8, 4$ games.",
+          "2. Cumulative counts: $10, 25, 38, 46, 50$.",
+          "3. With 50 games the median is the mean of the 25th and 26th values: $1$ and $2$.",
+          "4. Median $= 1.5$."
+        ],
+        "fast": "Games with 0 or 1 goal make up $20\\% + 30\\% = 50\\%$ exactly, so the median falls halfway between 1 and 2.",
+        "trap": "Counting down the rows as listed puts the 25th and 26th games in the second row (2 goals); stopping at the row where the cumulative share reaches $50\\%$ gives 1; the median of the percent column is $20$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "frequency-distributions",
+          "role": "primary"
+        }
+      ],
+      "setup": "a frequency table whose rows are sorted by frequency rather than by value; reorder by value, and the cumulative share hits exactly one half at a row boundary, so the median averages two adjacent values",
+      "variant": "median from a frequency table",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "figureId": "fig3",
+      "prompt": "The histogram shows the speeds of the cyclists who passed a checkpoint, but the bar for the interval from 25 to 30 kilometers per hour has been left off. When the midpoint of each interval is used as the speed of every cyclist in that interval, the estimated mean speed of all the cyclists is exactly $20$ kilometers per hour. How many cyclists had speeds in the interval from 25 to 30 kilometers per hour?",
+      "choices": [
+        "$8$",
+        "$10$",
+        "$12$",
+        "$16$",
+        "$38$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Measure each midpoint from the mean $20$: the bars give $10(12.5 - 20) + 18(17.5 - 20) + 12(22.5 - 20) = -75 - 45 + 30 = -90$. The deviations must sum to zero, and each cyclist in the missing bar adds $27.5 - 20 = 7.5$, so $7.5k = 90$ and $k = 12$.",
+        "steps": [
+          "1. Midpoints: $12.5$, $17.5$, $22.5$, $27.5$; shown counts $10$, $18$, $12$; missing count $k$.",
+          "2. Mean $20$: $\\dfrac{125 + 315 + 270 + 27.5k}{40 + k} = 20$.",
+          "3. $710 + 27.5k = 800 + 20k$, so $7.5k = 90$.",
+          "4. $k = 12$ (check: $\\tfrac{1{,}040}{52} = 20$)."
+        ],
+        "fast": "Balance around $20$: the left side is short by $90$, and each missing cyclist supplies $7.5$.",
+        "trap": "Making the last bar equal to the first ($10$), as if the bars balanced symmetrically about $20$, ignores the uneven middle bars; using left endpoints instead of midpoints gives $38$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "frequency-distributions",
+          "role": "primary"
+        }
+      ],
+      "setup": "histogram with one bar missing and the grouped (midpoint) mean of all the data given; the deviations of the midpoints from the mean balance to zero, which fixes the missing bar's height",
+      "variant": "mean from a histogram's grouped data",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A sailing race is run around a course shaped like a right triangle. Each of the three legs of the course is a whole number of kilometers, and the longest leg is $25$ kilometers. What is the least possible area, in square kilometers, of the triangular region enclosed by the course?",
+      "choices": [
+        "$84$",
+        "$96$",
+        "$150$",
+        "$168$",
+        "$300$"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "The two shorter legs $a$ and $b$ satisfy $a^2 + b^2 = 625$ with whole numbers. Besides $15$-$20$-$25$ (the $3$-$4$-$5$ triple times 5) there is the primitive triple $7$-$24$-$25$. The areas are $\\tfrac12 \\cdot 15 \\cdot 20 = 150$ and $\\tfrac12 \\cdot 7 \\cdot 24 = 84$; the least is $84$.",
+        "steps": [
+          "1. Need whole $a < b$ with $a^2 + b^2 = 625$.",
+          "2. Scaled triple: $3$-$4$-$5$ times 5 gives $15, 20$.",
+          "3. Primitive triple with hypotenuse 25: $7^2 + 24^2 = 49 + 576 = 625$.",
+          "4. No other pair works (check $a = 1, \\dots, 17$).",
+          "5. Areas $150$ and $84$: least $84$."
+        ],
+        "fast": "Hypotenuse 25 is both $5 \\cdot 5$ and the hypotenuse of $7$-$24$-$25$; the flatter triangle has the smaller area.",
+        "trap": "Seeing only the scaled $3$-$4$-$5$ triangle gives $150$; forgetting the $\\tfrac12$ gives $168$ or $300$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "primary"
+        }
+      ],
+      "setup": "integer right triangles with a given hypotenuse; one scaled triple and one primitive triple share it; compare their areas and take the least",
+      "variant": "Pythagorean triples and their multiples",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A delivery company keeps a drone depot at the point $(2, -1)$ in the $xy$-plane. It places a charging pad at every point with integer coordinates whose straight-line distance from the depot is exactly $5$.",
+      "qc": {
+        "a": "The number of charging pads",
+        "b": "$8$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Write a pad as $(2 + h, -1 + k)$ with integers $h, k$ and $h^2 + k^2 = 25$. The solutions are $(\\pm3, \\pm4)$ and $(\\pm4, \\pm3)$, which give 8 points, plus $(\\pm5, 0)$ and $(0, \\pm5)$, which give 4 more: $12$ pads in all, more than 8.",
+        "steps": [
+          "1. Offsets $(h, k)$ from the depot need $h^2 + k^2 = 25$.",
+          "2. From the $3$-$4$-$5$ triangle: $h = \\pm3, k = \\pm4$ (4 points) and $h = \\pm4, k = \\pm3$ (4 points).",
+          "3. Degenerate cases on the grid lines through the depot: $(\\pm5, 0)$, $(0, \\pm5)$ (4 points).",
+          "4. Total $12 > 8$."
+        ],
+        "fast": "Squares up to 25 that sum to 25: $0 + 25$ and $9 + 16$; count sign and order choices: $4 + 8 = 12$.",
+        "trap": "Counting only the $3$-$4$-$5$ offsets gives $8$ (equal); forgetting that $3$ and $4$ can swap, or that signs vary, gives even fewer."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "primary"
+        }
+      ],
+      "setup": "lattice points at a given distance from a lattice point; the offsets are the integer legs of right triangles with that hypotenuse, plus the axis offsets; compare the count with a value",
+      "variant": "a right triangle from a word problem or coordinates (distance)",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "Two straight roads meet at a right angle in town $C$. Town $A$ is $15$ kilometers from $C$ along one road, and town $B$ is $20$ kilometers from $C$ along the other. A straight highway joins $A$ and $B$, and a feeder road runs from $C$ to the point $D$ on the highway, meeting it at a right angle. Which of the following statements are true? Indicate all such statements.",
+      "choices": [
+        "The feeder road $CD$ is $12$ kilometers long.",
+        "$D$ is $9$ kilometers from $A$.",
+        "The areas of triangles $ACD$ and $CBD$ are in the ratio $3$ to $4$.",
+        "The perimeter of triangle $ACD$ is $36$ kilometers.",
+        "The feeder road $CD$ is $12.5$ kilometers long.",
+        "The area of triangle $CBD$ is $120$ square kilometers."
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "$AB = 25$. Twice the area of $ABC$ is $15 \\cdot 20 = 300 = 25 \\cdot CD$, so $CD = 12$. Triangle $ACD$ is similar to $ABC$ with ratio $\\tfrac{15}{25}$, so $AD = 9$ and its perimeter is $9 + 12 + 15 = 36$. Triangle $CBD$ has legs $12$ and $16$, area $96$. The two small triangles are similar with side ratio $3 : 4$, so their areas are in the ratio $9 : 16$.",
+        "steps": [
+          "1. $AB = \\sqrt{15^2 + 20^2} = 25$.",
+          "2. $CD = \\tfrac{15 \\cdot 20}{25} = 12$: true; $12.5$ is half the hypotenuse (the median, not the altitude): false.",
+          "3. $AD = \\tfrac{15^2}{25} = 9$: true; $DB = 16$.",
+          "4. Perimeter of $ACD$: $9 + 12 + 15 = 36$: true.",
+          "5. Area of $CBD = \\tfrac12 \\cdot 12 \\cdot 16 = 96$, not $120$; area ratio $\\left(\\tfrac34\\right)^2 = \\tfrac{9}{16}$, not $\\tfrac34$."
+        ],
+        "fast": "$ABC$ is $3$-$4$-$5$ times 5; the pieces are $9$-$12$-$15$ and $12$-$16$-$20$.",
+        "trap": "Taking the area ratio equal to the side ratio $3 : 4$; taking $CD$ as half of $AB$; using $CD$ and $CB$ as the legs of $CBD$ ($\\tfrac12 \\cdot 12 \\cdot 20 = 120$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "primary"
+        }
+      ],
+      "setup": "both legs of a right triangle given; the altitude to the hypotenuse makes two similar triangles; select true statements about the altitude, a hypotenuse piece, a piece's perimeter and the area ratio (the square of the side ratio)",
+      "variant": "altitude to the hypotenuse: similar right triangles",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "figureId": "fig4",
+      "prompt": "The figure shows a pennant in the shape of a right triangle with legs $6$ inches and $12$ inches. A square patch is sewn in the corner at the right angle, with the vertex of the square opposite that corner lying on the longest side of the pennant. What is the total area, in square inches, of the shaded parts of the pennant outside the patch?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "20"
+      },
+      "explanation": {
+        "key": "Put the right angle at the origin with legs along the axes; the long side is $\\tfrac{x}{12} + \\tfrac{y}{6} = 1$. The square's far corner is $(s, s)$, so $\\tfrac{s}{12} + \\tfrac{s}{6} = 1$, $s = 4$. Shaded area $= \\tfrac12 \\cdot 6 \\cdot 12 - 4^2 = 36 - 16 = 20$.",
+        "steps": [
+          "1. The pennant's area is $\\tfrac12 \\cdot 6 \\cdot 12 = 36$.",
+          "2. The small triangle above the square is similar to the pennant: $\\tfrac{6 - s}{s} = \\tfrac{6}{12}$, so $s = 4$.",
+          "3. The patch has area $16$.",
+          "4. Shaded: $36 - 16 = 20$."
+        ],
+        "fast": "The side of a square in the right-angle corner of a right triangle is $\\tfrac{ab}{a + b} = \\tfrac{72}{18} = 4$.",
+        "trap": "Guessing the square's side as half the short leg ($3$) gives $27$; taking the side as $6$, the short leg, leaves no shaded area at all."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inscribed-figures",
+          "role": "primary"
+        }
+      ],
+      "setup": "a square in the right-angle corner of a right triangle with its far vertex on the hypotenuse; the side from similar triangles; shaded triangle minus square",
+      "variant": "a shaded region: whole minus part",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A helipad is painted as a regular hexagon whose six vertices lie on a circular landing zone. The distance between two opposite (parallel) sides of the hexagon is $6$ meters.",
+      "qc": {
+        "a": "The area of the circular landing zone, in square meters",
+        "b": "$36$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "The distance between opposite sides is twice the hexagon's apothem, and the apothem of a regular hexagon is $\\tfrac{\\sqrt3}{2}$ times its circumradius $r$. So $r\\sqrt3 = 6$, $r = 2\\sqrt3$ and $r^2 = 12$. The circle's area is $12\\pi \\approx 37.7 > 36$.",
+        "steps": [
+          "1. The hexagon splits into 6 equilateral triangles of side $r$ (the circle's radius).",
+          "2. Each has height $\\tfrac{\\sqrt3}{2} r$, the apothem; opposite sides are $2$ apothems apart: $\\sqrt3\\, r = 6$.",
+          "3. $r^2 = \\tfrac{36}{3} = 12$; area $= 12\\pi$.",
+          "4. $12\\pi > 12 \\cdot 3 = 36$: A is greater."
+        ],
+        "fast": "$r^2 = \\tfrac{6^2}{3} = 12$, and $\\pi > 3$.",
+        "trap": "Taking the $6$ meters as the circle's diameter (that is the distance between opposite vertices) gives $9\\pi \\approx 28.3$ and picks B."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inscribed-figures",
+          "role": "primary"
+        }
+      ],
+      "setup": "regular hexagon in a circle with the distance between opposite sides given; that width is twice the apothem, not the diameter; the circle's area against a value",
+      "variant": "a regular hexagon in a circle",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "The numbers $x$ and $y$ satisfy $x < 0$ and $0 < y < 1$. Which of the following has the least value?",
+      "choices": [
+        "$x$",
+        "$xy$",
+        "$\\dfrac{x}{y}$",
+        "$xy^2$",
+        "$x + y$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Dividing by a number between 0 and 1 makes a number larger in size, and multiplying by it makes it smaller in size. Since $x$ is negative, $\\tfrac{x}{y}$ is the most negative: $\\tfrac{x}{y} < x < xy < xy^2$, and $x + y > x$.",
+        "steps": [
+          "1. Try $x = -1$, $y = \\tfrac12$: $x = -1$, $xy = -\\tfrac12$, $\\tfrac{x}{y} = -2$, $xy^2 = -\\tfrac14$, $x + y = -\\tfrac12$.",
+          "2. In general $\\tfrac1y > 1$, so $\\tfrac{x}{y} = x \\cdot \\tfrac1y < x$ for negative $x$.",
+          "3. $xy$ and $xy^2$ lie between $x$ and $0$; $x + y > x$.",
+          "4. Least: $\\tfrac{x}{y}$."
+        ],
+        "fast": "Plug in $x = -1$, $y = \\tfrac12$.",
+        "trap": "Thinking that multiplying always makes a negative number more negative picks $xy$ or $xy^2$; with $y < 1$ it moves the product toward zero."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-sense-qc",
+          "role": "primary"
+        }
+      ],
+      "setup": "a negative number and a positive fraction below 1; which of its products and quotient with the fraction is least (dividing by the fraction enlarges the negative's size)",
+      "variant": "sign cases: negatives, zero and fractions between 0 and 1",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "For nonzero numbers $x$, $y$ and $z$, $\\dfrac{x}{y} > 1$ and $xz < 0$. Which of the following must be true? Indicate all such statements.",
+      "choices": [
+        "$x > y$",
+        "$yz < 0$",
+        "$x^2 > y^2$",
+        "$x(x - y) > 0$",
+        "$xyz > 0$",
+        "$x + z > 0$"
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "$\\tfrac{x}{y} > 1$ forces $x$ and $y$ to have the same sign with $|x| > |y|$; $xz < 0$ gives $z$ the other sign. So $yz < 0$ and $x^2 > y^2$. Also $\\tfrac{x - y}{y} = \\tfrac{x}{y} - 1 > 0$, so $x - y$ has the sign of $y$, which is the sign of $x$: $x(x - y) > 0$. But $x > y$ fails when both are negative ($x = -3$, $y = -1$), and $xyz$ has the sign of $z$, which can be either.",
+        "steps": [
+          "1. $\\tfrac{x}{y} > 0$: $x, y$ same sign; $\\left|\\tfrac{x}{y}\\right| > 1$: $|x| > |y|$.",
+          "2. $z$ has the sign opposite to $x$, so opposite to $y$: $yz < 0$ (true).",
+          "3. $|x| > |y|$: $x^2 > y^2$ (true).",
+          "4. $\\tfrac{x - y}{y} > 0$: $x - y$ shares the sign of $y$ and of $x$: $x(x - y) > 0$ (true).",
+          "5. $x = -3, y = -1, z = 1$: $x < y$, $xyz = 3 > 0$, $x + z = -2 < 0$. $x = 3, y = 1, z = -1$: $xyz = -3 < 0$. So A, E and F can fail."
+        ],
+        "fast": "Test one all-positive case ($3, 1, -1$) and one negative case ($-3, -1, 1$); keep what holds in both.",
+        "trap": "Assuming positive numbers makes $x > y$ look forced; it reverses when $x$ and $y$ are both negative."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-sense-qc",
+          "role": "primary"
+        }
+      ],
+      "setup": "a quotient above 1 and a negative product over three nonzero numbers; select the sign and order statements forced in both sign cases (the order of x and y flips with the sign)",
+      "variant": "the sign of a product or quotient from a condition (ab < 0, a/b > 1)",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "The 8 riders of a cycling team finished a time trial with a mean time of $52$ minutes. After the slowest rider's time was disqualified, the mean time of the other 7 riders was $50$ minutes. What was the slowest rider's time, in minutes?",
+      "choices": [
+        "$54$",
+        "$58$",
+        "$62$",
+        "$66$",
+        "$70$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The 8 times total $8 \\cdot 52 = 416$ minutes and the other 7 total $7 \\cdot 50 = 350$, so the slowest time is $416 - 350 = 66$.",
+        "steps": [
+          "1. Total of 8 times: $8 \\cdot 52 = 416$.",
+          "2. Total of 7 times: $7 \\cdot 50 = 350$.",
+          "3. Slowest: $416 - 350 = 66$."
+        ],
+        "fast": "Each of the 7 is on average $2$ below $52$, so the removed time is $52 + 7 \\cdot 2 = 66$.",
+        "trap": "Adding the $2$-minute drop to $52$ gives $54$; the drop is spread over 7 riders."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "primary"
+        }
+      ],
+      "setup": "a mean and count give a total; removing one value changes the mean; the removed value is the difference of the two totals",
+      "variant": "a sum from the mean and the count",
+      "solverRating": 1
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "prompt": "Last week a ferry's five crossings took $23$, $26$, $26$, $29$ and $33$ minutes. This week, roadworks at the terminal added the same number of minutes, $k > 0$, to each of last week's five times. The list of all ten crossing times from the two weeks has exactly one mode. What is the range of the ten times, in minutes?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "17"
+      },
+      "explanation": {
+        "key": "This week's times are $23 + k, 26 + k, 26 + k, 29 + k, 33 + k$, with $26 + k$ twice. Combined, $26$ and $26 + k$ each appear at least twice, so one of them needs a third copy. $26$ gets one only if $26 - k$ is in last week's list ($k = 3$); $26 + k$ gets one only if it is in last week's list ($k = 3$ or $7$). At $k = 3$ both $26$ and $29$ appear 3 times, a tie. So $k = 7$, the mode is $33$, and the range is $(33 + 7) - 23 = 17$.",
+        "steps": [
+          "1. Each week's list has the value $26$ (last week) or $26 + k$ (this week) twice; no other value can reach 3 copies.",
+          "2. A single mode needs $26 + k$ or $26$ to gain a third copy from the other week.",
+          "3. $k = 3$: $26$ and $29$ both appear 3 times: two modes.",
+          "4. $k = 7$: $33$ appears 3 times, $26$ twice: one mode.",
+          "5. Range: $40 - 23 = 17$."
+        ],
+        "fast": "Shift the double $26$ onto another of last week's times without dragging a time onto $26$: only $+7$ works.",
+        "trap": "Taking the first shift that creates a triple, $k = 3$, gives a range of $13$, but that list has two modes; keeping last week's range $10$ ignores the shift."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "primary"
+        }
+      ],
+      "setup": "a list combined with a copy of itself shifted by an unknown constant; a unique mode needs the shifted double value to land on an original value, and the shift that also lands an original on the double makes a tie; the combined range",
+      "variant": "mode and range of a combined list",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "A cyclist's cylindrical water bottle has an inside radius of $4$ centimeters and is filled to a height of $15$ centimeters. All of the water is poured into an empty cylindrical jug with an inside radius of $8$ centimeters and a height of $20$ centimeters.",
+      "qc": {
+        "a": "The depth of the water in the jug, in centimeters",
+        "b": "$4$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The water's volume is $\\pi \\cdot 4^2 \\cdot 15 = 240\\pi$. In the jug it fills a base of area $\\pi \\cdot 8^2 = 64\\pi$ to depth $\\tfrac{240\\pi}{64\\pi} = 3.75$, less than $4$.",
+        "steps": [
+          "1. Volume: $16\\pi \\cdot 15 = 240\\pi$.",
+          "2. Jug base: $64\\pi$.",
+          "3. Depth: $\\tfrac{240}{64} = 3.75 < 4$."
+        ],
+        "fast": "Doubling the radius makes the base 4 times as large, so the depth is $\\tfrac{15}{4}$.",
+        "trap": "Doubling the radius and halving the depth gives $7.5$ (A greater); the base area grows with the square of the radius."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "solids-volume",
+          "role": "primary"
+        }
+      ],
+      "setup": "liquid moved from one cylinder to a wider one; the base area scales with the square of the radius, so the depth falls by that square",
+      "variant": "liquid poured between containers",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "A rectangular wooden block whose dimensions are whole numbers of centimeters is painted on all six faces and then cut into $1$-centimeter cubes, and the cubes are used as counters for a board game. Exactly $12$ of the cubes have no paint on them. Which of the following could be the number of cubes with paint on exactly one face? Indicate all such numbers.",
+      "choices": [
+        "$32$",
+        "$36$",
+        "$38$",
+        "$40$",
+        "$44$",
+        "$50$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2,
+          3,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "With dimensions $a \\times b \\times c$, the unpainted core is $(a - 2)(b - 2)(c - 2) = 12$, and the cubes with one painted face are $2[(a-2)(b-2) + (b-2)(c-2) + (a-2)(c-2)]$. The core can be $1 \\times 1 \\times 12$, $1 \\times 2 \\times 6$, $1 \\times 3 \\times 4$ or $2 \\times 2 \\times 3$, giving $2(1 + 12 + 12) = 50$, $2(2 + 12 + 6) = 40$, $2(3 + 12 + 4) = 38$ and $2(4 + 6 + 6) = 32$.",
+        "steps": [
+          "1. Unpainted cubes form an inner box $(a-2)(b-2)(c-2) = 12$.",
+          "2. One-face cubes sit on each face's interior: twice the sum of the core's three face areas.",
+          "3. Cores: $1 \\cdot 1 \\cdot 12 \\to 50$; $1 \\cdot 2 \\cdot 6 \\to 40$; $1 \\cdot 3 \\cdot 4 \\to 38$; $2 \\cdot 2 \\cdot 3 \\to 32$.",
+          "4. Possible: $32, 38, 40, 50$; $36$ and $44$ are not."
+        ],
+        "fast": "List the ways to write 12 as a product of three whole numbers; the one-face count is twice the core's surface-area sum.",
+        "trap": "Checking only the most cube-like core $2 \\times 2 \\times 3$ finds $32$ alone; using the block's own faces instead of the core's overcounts."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "solids-volume",
+          "role": "primary"
+        }
+      ],
+      "setup": "a painted block cut into unit cubes with the unpainted count given; factor it into the core's three dimensions, and each factorization gives a one-face count; select the possible counts",
+      "variant": "cubes painted or cut into smaller cubes",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "prompt": "A tennis match is won by the first player to win two sets. Against a particular opponent, Rosa wins the first set with probability $0.6$. After any set she wins, she wins the next set with probability $0.7$; after any set she loses, she wins the next set with probability $0.4$. What is the probability that Rosa wins the match? Give your answer as a decimal.",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "0.604"
+      },
+      "explanation": {
+        "key": "Rosa wins by WW, WLW or LWW. $P(\\text{WW}) = 0.6 \\cdot 0.7 = 0.42$. $P(\\text{WLW}) = 0.6 \\cdot 0.3 \\cdot 0.4 = 0.072$. $P(\\text{LWW}) = 0.4 \\cdot 0.4 \\cdot 0.7 = 0.112$. The total is $0.604$.",
+        "steps": [
+          "1. Winning sequences: WW, WLW, LWW.",
+          "2. Each set's probability depends on the set before it.",
+          "3. WW: $0.6 \\cdot 0.7 = 0.42$.",
+          "4. WLW: $0.6 \\cdot 0.3 \\cdot 0.4 = 0.072$.",
+          "5. LWW: $0.4 \\cdot 0.4 \\cdot 0.7 = 0.112$.",
+          "6. Sum: $0.604$."
+        ],
+        "fast": "Win set 1 then win the match: $0.6(0.7 + 0.3 \\cdot 0.4) = 0.492$; lose set 1 then win: $0.4 \\cdot 0.4 \\cdot 0.7 = 0.112$.",
+        "trap": "Using $0.6$ for every set gives $0.648$; dropping one of the three-set paths gives $0.532$ or $0.492$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-conditional",
+          "role": "primary"
+        }
+      ],
+      "setup": "a best-of-three contest where each set's win probability depends on the previous set's result; sum the three winning paths with the right conditional at each step",
+      "variant": "dependent events in sequence",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "A coach's kit bag holds $6$ red training bibs and $4$ white training bibs. Without looking, the coach pulls out one bib and then, without putting it back, a second bib.",
+      "qc": {
+        "a": "The probability that the two bibs are the same color",
+        "b": "The probability that the two bibs are different colors"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$P(\\text{same}) = \\tfrac{6}{10} \\cdot \\tfrac{5}{9} + \\tfrac{4}{10} \\cdot \\tfrac{3}{9} = \\tfrac{30 + 12}{90} = \\tfrac{7}{15}$, so $P(\\text{different}) = \\tfrac{8}{15}$. B is greater.",
+        "steps": [
+          "1. Both red: $\\tfrac{6}{10} \\cdot \\tfrac59 = \\tfrac{30}{90}$.",
+          "2. Both white: $\\tfrac{4}{10} \\cdot \\tfrac39 = \\tfrac{12}{90}$.",
+          "3. Same: $\\tfrac{42}{90} = \\tfrac{7}{15}$; different: $\\tfrac{8}{15}$.",
+          "4. $\\tfrac{8}{15} > \\tfrac{7}{15}$."
+        ],
+        "fast": "Different: $2 \\cdot \\tfrac{6}{10} \\cdot \\tfrac49 = \\tfrac{48}{90}$, more than half.",
+        "trap": "Treating the draws as independent gives $0.36 + 0.16 = 0.52$ for the same color, which picks A; removing the first bib makes a second bib of its color less likely."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-conditional",
+          "role": "primary"
+        }
+      ],
+      "setup": "two draws without replacement from two colors in unequal numbers; same color against different colors, where the with-replacement estimate gives the opposite order",
+      "variant": "drawing without replacement",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "A rectangular swimming pool is at least as long as it is wide; its length and width need not be whole numbers. A deck surrounds the pool. The deck is $2$ meters wide along each of the pool's two long sides and $3$ meters wide along each of its two short sides, and it fills the corners, so the deck and pool together form a rectangle. The deck alone (not counting the pool) has an area of $200$ square meters. Which of the following could be the perimeter of the pool, in meters? Indicate all such perimeters.",
+      "choices": [
+        "$66$",
+        "$72$",
+        "$80$",
+        "$86$",
+        "$88$",
+        "$90$"
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "With length $L$ and width $W$, the outer rectangle is $(L + 6)$ by $(W + 4)$, so the deck's area is $4L + 6W + 24 = 200$, or $2L + 3W = 88$. The perimeter is $2L + 2W = 88 - W$. Since $L \\ge W$, $88 - 3W \\ge 2W$, so $0 < W \\le 17.6$ and $70.4 \\le 88 - W < 88$. Of the choices, $72$, $80$ and $86$ fit.",
+        "steps": [
+          "1. Outer rectangle: $(L + 6)(W + 4) = LW + 4L + 6W + 24$.",
+          "2. Deck: $4L + 6W + 24 = 200$, so $2L + 3W = 88$.",
+          "3. Perimeter: $2L + 2W = 88 - W$.",
+          "4. $L \\ge W$: $2L = 88 - 3W \\ge 2W$, so $W \\le 17.6$; and $W > 0$.",
+          "5. Perimeter in $[70.4, 88)$: $72, 80, 86$."
+        ],
+        "fast": "The perimeter is $88$ minus the width, and the width is at most $17.6$ when the pool is square.",
+        "trap": "Leaving out the four $2 \\times 3$ corners gives $2L + 3W = 100$ and the window $[80, 100)$, which adds $88$ and $90$; dropping $L \\ge W$ lets the perimeter fall to about $58.7$, which adds $66$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "area-perimeter",
+          "role": "primary"
+        }
+      ],
+      "setup": "a frame of unequal widths on the long and short sides of a rectangle, corners included, with a given frame area; the inner perimeter is linear in one side, bounded by length at least width; select possible perimeters",
+      "variant": "a border or path around a rectangle",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "figureId": "fig5",
+      "prompt": "The figure shows the side view of a set of bleachers with 4 steps. All angles in the figure are right angles, and on every step the rise equals the tread, the same on all 4 steps. The perimeter of the figure is $80$ meters. What is the area of the figure, in square meters?",
+      "choices": [
+        "$200$",
+        "$250$",
+        "$300$",
+        "$320$",
+        "$400$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The horizontal pieces of the staircase edge add up to the base and the vertical pieces add up to the back, so the perimeter is $2(\\text{base} + \\text{height})$. With 4 equal square steps of size $s$, base and height are both $4s$: $2(8s) = 80$, $s = 5$. The figure is columns of $1, 2, 3, 4$ squares of area $25$: $10 \\cdot 25 = 250$.",
+        "steps": [
+          "1. Steps of rise and tread $s$: the base and the height are each $4s$.",
+          "2. The stepped edge's horizontal parts total $4s$ and its vertical parts total $4s$.",
+          "3. Perimeter $= 4s + 4s + 4s + 4s = 16s = 80$, so $s = 5$.",
+          "4. Area: $(1 + 2 + 3 + 4) s^2 = 10 \\cdot 25 = 250$."
+        ],
+        "fast": "Perimeter $= 16s$; area $= 10s^2$.",
+        "trap": "Treating the stepped edge as a slanted line gives a triangle of area $\\tfrac12 \\cdot 20 \\cdot 20 = 200$; treating the figure as the full $20 \\times 20$ square gives $400$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "area-perimeter",
+          "role": "primary"
+        }
+      ],
+      "setup": "a rectilinear staircase with equal square steps; its perimeter equals that of the bounding rectangle, which gives the step; the area is a triangular number of step squares",
+      "variant": "the area of an irregular composite figure",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "prompt": "The number $x$ satisfies $x + \\dfrac{1}{x} = 4$. What is the value of $\\dfrac{x^2}{x^4 - x^2 + 1}$?",
+      "numeric": {
+        "kind": "fraction"
+      },
+      "key": {
+        "value": "1/13"
+      },
+      "explanation": {
+        "key": "Divide the top and bottom by $x^2$: the expression is $\\dfrac{1}{x^2 - 1 + \\tfrac{1}{x^2}}$. Squaring the given equation gives $x^2 + 2 + \\tfrac{1}{x^2} = 16$, so $x^2 + \\tfrac{1}{x^2} = 14$ and the expression is $\\tfrac{1}{14 - 1} = \\tfrac{1}{13}$.",
+        "steps": [
+          "1. $\\dfrac{x^2}{x^4 - x^2 + 1} = \\dfrac{1}{x^2 - 1 + x^{-2}}$ ($x \\ne 0$).",
+          "2. $\\left(x + \\tfrac1x\\right)^2 = x^2 + 2 + \\tfrac{1}{x^2} = 16$.",
+          "3. $x^2 + \\tfrac{1}{x^2} = 14$.",
+          "4. Value: $\\tfrac{1}{13}$."
+        ],
+        "fast": "Flip it: $\\tfrac{x^4 - x^2 + 1}{x^2} = \\left(x^2 + \\tfrac{1}{x^2}\\right) - 1 = 13$.",
+        "trap": "Taking $x^2 + \\tfrac{1}{x^2} = 16$ (forgetting the middle term) gives $\\tfrac{1}{15}$; dropping the $-x^2$ term gives $\\tfrac{1}{14}$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "algebraic-expressions",
+          "role": "primary"
+        }
+      ],
+      "setup": "x + 1/x given; a ratio of a square over a quartic becomes the reciprocal of x^2 + 1/x^2 minus one after dividing by x^2",
+      "variant": "an expression's value from a related expression (x + 1/x given)",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "The numbers $a$, $b$ and $c$ satisfy $2a - [\\,b - (a - c)\\,] = 13$ and $a - (b - c) = 5$.",
+      "qc": {
+        "a": "$a - c$",
+        "b": "$4$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Clear the brackets: $2a - [\\,b - a + c\\,] = 3a - b - c = 13$ and $a - b + c = 5$. Subtracting, $2a - 2c = 8$, so $a - c = 4$, although $a$, $b$ and $c$ are not fixed individually.",
+        "steps": [
+          "1. $b - (a - c) = b - a + c$, so the first equation is $3a - b - c = 13$.",
+          "2. The second is $a - b + c = 5$.",
+          "3. Subtract: $2a - 2c = 8$.",
+          "4. $a - c = 4$: equal."
+        ],
+        "fast": "Subtracting the equations removes $b$ and leaves $2(a - c)$.",
+        "trap": "Expanding the inner bracket as $b - a - c$ turns the first equation into $3a - b + c = 13$; subtracting then gives $a = 3.5$ with $c$ free, which suggests D."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "algebraic-expressions",
+          "role": "primary"
+        }
+      ],
+      "setup": "two equations in three unknowns written with nested brackets; correct sign handling makes their difference a multiple of the quantity asked, so it is fixed though the unknowns are not",
+      "variant": "expressions with nested parentheses and signs",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q21",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "$\\dfrac{1}{x} - x = \\dfrac{15}{4}$ and $x < 1$.",
+      "qc": {
+        "a": "$x$",
+        "b": "$\\dfrac{1}{4}$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Multiply by $4x$: $4 - 4x^2 = 15x$, so $4x^2 + 15x - 4 = 0$, $(4x - 1)(x + 4) = 0$. Both $x = \\tfrac14$ and $x = -4$ are less than 1, and both work: $4 - \\tfrac14 = \\tfrac{15}{4}$ and $-\\tfrac14 + 4 = \\tfrac{15}{4}$. So $x$ may equal $\\tfrac14$ or be less: cannot be determined.",
+        "steps": [
+          "1. $4 - 4x^2 = 15x$, so $4x^2 + 15x - 4 = 0$.",
+          "2. $(4x - 1)(x + 4) = 0$: $x = \\tfrac14$ or $x = -4$.",
+          "3. Both satisfy $x < 1$ and the original equation.",
+          "4. $x = \\tfrac14$: equal; $x = -4$: B greater. Cannot be determined."
+        ],
+        "fast": "$\\tfrac14$ works by inspection; $-4$ works too, since swapping $x$ for $-\\tfrac1x$ leaves $\\tfrac1x - x$ unchanged.",
+        "trap": "Spotting $x = \\tfrac14$ and stopping picks C; the condition $x < 1$ looks restrictive but keeps the negative root."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-sense-qc",
+          "role": "primary"
+        }
+      ],
+      "setup": "the value of 1/x - x given with a loose upper bound on x; both roots of the resulting quadratic satisfy the bound, so x against one root is undetermined",
+      "variant": "both quantities depend on one variable with a restricted range",
+      "revisits": "quant-009:s1q2",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q22",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "figureId": "fig6",
+      "prompt": "In the figure, point $D$ lies on side $BC$ of triangle $ABC$ with $BD : DC = 3 : 2$, and point $E$ lies on segment $AD$ with $ED = 2 \\cdot AE$. Which of the following triangles has the same area as triangle $EBD$?",
+      "choices": [
+        "Triangle $ABE$",
+        "Triangle $AEC$",
+        "Triangle $EDC$",
+        "Triangle $ADC$",
+        "Triangle $BEC$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Let the area of $ABC$ be $1$. Triangles $ABD$ and $ADC$ share the height from $A$: they are $\\tfrac35$ and $\\tfrac25$. Within $ABD$, triangles $ABE$ and $EBD$ share the height from $B$ and have bases $AE : ED = 1 : 2$: $EBD = \\tfrac23 \\cdot \\tfrac35 = \\tfrac25$, the area of $ADC$. The others: $ABE = \\tfrac15$, $AEC = \\tfrac{2}{15}$, $EDC = \\tfrac{4}{15}$, $BEC = \\tfrac{2}{3}$.",
+        "steps": [
+          "1. $ABD = \\tfrac35$, $ADC = \\tfrac25$ of $ABC$ (same height, bases $3 : 2$).",
+          "2. $ABE : EBD = 1 : 2$, so $EBD = \\tfrac23 \\cdot \\tfrac35 = \\tfrac25$.",
+          "3. $AEC : EDC = 1 : 2$, so $EDC = \\tfrac23 \\cdot \\tfrac25 = \\tfrac{4}{15}$.",
+          "4. $EBD = ADC = \\tfrac25$."
+        ],
+        "fast": "$EBD$ is $\\tfrac23$ of $\\tfrac35$; $ADC$ is $\\tfrac25$; they match.",
+        "trap": "The figure draws $D$ as the midpoint of $BC$, which makes $EDC$ look equal to $EBD$; with $BD : DC = 3 : 2$ it is only $\\tfrac23$ as large."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "figures-not-to-scale",
+          "role": "primary"
+        }
+      ],
+      "setup": "a cevian split by a base ratio and a second point dividing it in a given ratio, drawn at the midpoints; the piece that looks equal is not, and the equal one is a larger triangle on the other side",
+      "variant": "regions that look equal in area",
+      "revisits": "quant-009:s1q3",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q23",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A delivery yard is a rectangle $20$ meters by $30$ meters, with a floodlight at each of its four corners. Each floodlight lights every point of the yard within $10$ meters of it. Two drones each land at a random point of the yard, independently of each other, with every point equally likely.",
+      "qc": {
+        "a": "The probability that both drones land on unlit ground",
+        "b": "$\\dfrac{1}{4}$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Each floodlight lights a quarter disk of radius $10$ inside the yard, and the four do not overlap (opposite corners along each side are at least $20$ apart). Lit area $= 4 \\cdot \\tfrac14 \\pi \\cdot 10^2 = 100\\pi$, so one drone lands unlit with probability $1 - \\tfrac{100\\pi}{600} = 1 - \\tfrac{\\pi}{6} \\approx 0.476$. Both: $(1 - \\tfrac{\\pi}{6})^2 \\approx 0.227 < 0.25$.",
+        "steps": [
+          "1. Each corner's lit part is a quarter disk of radius 10; adjacent corners are $20$ or $30$ apart, so no overlap.",
+          "2. Lit area: $100\\pi$; yard: $600$.",
+          "3. One drone unlit: $1 - \\tfrac{\\pi}{6} < \\tfrac12$ since $\\pi > 3$.",
+          "4. Both (independent): $\\left(1 - \\tfrac{\\pi}{6}\\right)^2 < \\tfrac14$."
+        ],
+        "fast": "With $\\pi = 3$ one drone would be unlit with probability exactly $\\tfrac12$; $\\pi > 3$ pushes it below, and squaring keeps it below $\\tfrac14$.",
+        "trap": "Rounding $\\pi$ to $3$ gives exactly $\\tfrac14$ (C); counting full disks of light gives a lit area larger than the yard."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-basic",
+          "role": "primary"
+        }
+      ],
+      "setup": "random point in a rectangle with quarter disks at the corners removed; the unlit share is one minus a multiple of pi, then squared for two independent points; against a fraction that pi = 3 would hit exactly",
+      "variant": "geometric probability (a point in a region)",
+      "revisits": "quant-009:s2q5",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q24",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "Dividing the positive integer $n$ by the positive integer $d$, where $30 < d < 50$, gives $6.35$.",
+      "qc": {
+        "a": "The remainder when $n$ is divided by $d$",
+        "b": "$14$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The remainder over the divisor is the decimal part: $\\tfrac{r}{d} = 0.35 = \\tfrac{7}{20}$. So $d$ is a multiple of $20$, and the only one between 30 and 50 is $40$. Then $r = 0.35 \\cdot 40 = 14$ (and $n = 254$). Equal.",
+        "steps": [
+          "1. $\\tfrac nd = 6 + \\tfrac rd$ with $0 \\le r < d$, so $\\tfrac rd = 0.35 = \\tfrac{7}{20}$.",
+          "2. $\\tfrac{7}{20}$ is in lowest terms, so $d$ is a multiple of $20$: $d = 40$.",
+          "3. $r = \\tfrac{7}{20} \\cdot 40 = 14$.",
+          "4. Check: $254 = 6 \\cdot 40 + 14$. Equal."
+        ],
+        "fast": "$0.35 = \\tfrac{7}{20} = \\tfrac{14}{40}$.",
+        "trap": "Reading the remainder off the decimal digits as $35$ picks A; using the reduced numerator $7$ (the remainder only when $d = 20$) picks B."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "remainders-units",
+          "role": "primary"
+        }
+      ],
+      "setup": "the decimal part of a quotient reduced to a fraction; the divisor's range picks one multiple of the reduced denominator, and the remainder scales with it; compare the remainder with a value",
+      "variant": "remainder written as a decimal part (n/d = q.25)",
+      "revisits": "quant-009:s1q4",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q25",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "setId": "d1",
+      "figureId": "d1",
+      "prompt": "Which interval contains the median of the 2023 inspection scores?",
+      "choices": [
+        "$50$–$59$",
+        "$60$–$69$",
+        "$70$–$79$",
+        "$80$–$89$",
+        "$90$–$100$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "In 2023 there were 200 scores, so the median is the mean of the 100th and 101st in order. The cumulative counts are $12$, $40$, $85$, $145$, $200$; the 100th and 101st scores both fall in $80$–$89$.",
+        "steps": [
+          "1. 200 scores: the median averages the 100th and 101st.",
+          "2. Cumulative: $12, 40, 85, 145, 200$.",
+          "3. Positions 86 to 145 are in $80$–$89$, so the median is there."
+        ],
+        "fast": "Below 80 there are only $85$ scores, fewer than half of 200.",
+        "trap": "Picking the middle row, $70$–$79$, without counting."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "frequency-distributions",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: the interval holding the median of one column, by cumulative counts against the middle position",
+      "variant": "which interval contains the median or a percentile",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q26",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "setId": "d1",
+      "figureId": "d1",
+      "prompt": "The percent of the year's inspections that scored below $80$ was greater in one year than in the other. Which year, and by approximately how many percentage points?",
+      "choices": [
+        "2023, by about $1$ percentage point",
+        "2023, by about $3$ percentage points",
+        "2024, by about $1$ percentage point",
+        "2024, by about $3$ percentage points",
+        "2023, by about $10$ percentage points"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Below 80: in 2023, $12 + 28 + 45 = 85$ of $200$, or $42.5\\%$; in 2024, $10 + 24 + 52 = 86$ of $220$, about $39.1\\%$. 2023 is greater by about $3.4$ percentage points.",
+        "steps": [
+          "1. 2023: $85$ of $200 = 42.5\\%$.",
+          "2. 2024: $86$ of $220 \\approx 39.1\\%$.",
+          "3. Difference: about $3.4$ points, 2023 higher."
+        ],
+        "fast": "Nearly equal counts over a larger 2024 total mean a smaller 2024 percent.",
+        "trap": "Comparing the counts ($86 > 85$) makes 2024 look higher by about 1."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "frequency-distributions",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: a cumulative count below a cutoff in two columns with different totals; compare the cumulative relative frequencies, whose order is the reverse of the counts'",
+      "variant": "relative frequency and cumulative frequency",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q27",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "setId": "d1",
+      "figureId": "d1",
+      "prompt": "In 2024, every restaurant that scored below $70$ was inspected again later in the year, and each restaurant's new score, which was $90$ or higher in every case, replaced its original 2024 score in the city's records. In the revised 2024 records, which interval contains the $25$th percentile of the scores?",
+      "choices": [
+        "$50$–$59$",
+        "$60$–$69$",
+        "$70$–$79$",
+        "$80$–$89$",
+        "$90$–$100$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The $10 + 24 = 34$ scores below 70 move to $90$–$100$, and the total stays $220$. Revised counts: $0, 0, 52, 64, 104$. The 25th percentile is near position $0.25 \\cdot 220 = 55$; the cumulative counts are $0, 0, 52, 116, 220$, so position 55 is in $80$–$89$.",
+        "steps": [
+          "1. 34 scores leave the two lowest rows and join $90$–$100$; still 220 scores.",
+          "2. Revised cumulative: $0, 0, 52, 116, 220$.",
+          "3. 25 percent of 220 is 55, past the $52$ scores in $70$–$79$.",
+          "4. The 25th percentile is in $80$–$89$."
+        ],
+        "fast": "Only 52 scores, under a quarter of 220, are left below 80.",
+        "trap": "Adding the new scores to the old ones (254 scores) puts position $63.5$ in $70$–$79$, as does using the original column; the replaced scores leave the low rows."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "frequency-distributions",
+          "role": "primary"
+        }
+      ],
+      "setup": "DI: low rows' members move to the top row (replaced, not added), so the total is unchanged; the percentile's position passes the remaining low counts into a higher interval",
+      "variant": "which interval contains the median or a percentile",
+      "solverRating": 3
+    }
+  ]
+}
