@@ -80,8 +80,24 @@ async function main() {
     const count = Math.max(20, Math.min(30, Number(opt("--count") ?? 24)));
     // the revisits and the DI set count toward --count; concept slots fill the rest
     const fill = count - Math.min(REVISIT_MAX, revisitGaps.length) - (gaps.some((g) => g.kind === "unit" && g.id === "di3") ? 3 : 0);
-    const concepts = ranked.slice(0, Math.max(4, Math.min(8, Math.round(fill / 4))));
-    const per = Math.max(2, Math.round(fill / concepts.length));
+    // the items the dry runs and shortfalls name (a concept, level and slot type each) come first: each such concept
+    // gets its named items, at least 2, up to 12 concepts; with none, 4-8 concepts share the batch evenly
+    const exact = new Map<string, number>();
+    for (const g of gaps) if (g.kind === "concept" && g.types) exact.set(g.id, (exact.get(g.id) ?? 0) + g.deficit);
+    const allot: [string, number][] = [];
+    if (exact.size) {
+      let left = fill;
+      for (const c of ranked) {
+        if (allot.length >= 12 || left < 2) break;
+        const k = Math.min(Math.max(2, exact.get(c) ?? 2), left);
+        allot.push([c, k]);
+        left -= k;
+      }
+      for (let i = 0; left > 0; i = (i + 1) % allot.length, left--) allot[i][1]++;
+    } else {
+      const chosen = ranked.slice(0, Math.max(4, Math.min(8, Math.round(fill / 4))));
+      for (const c of chosen) allot.push([c, Math.max(2, Math.round(fill / chosen.length))]);
+    }
     const typeLeft = new Map<string, number>(QUANT_TYPES.map(([t, n]) => [t, n + (gaps.find((g) => g.kind === "type" && g.id === t)?.deficit ?? 0)]));
     const nextType = () => {
       const t = [...typeLeft].sort((a, b) => b[1] - a[1])[0][0];
@@ -90,10 +106,11 @@ async function main() {
     };
     // the levels the concept's gaps name first (a dry-run or shortfall gap may name L3, or the same level twice), then
     // 4 and 5 in turn
-    for (const c of concepts) {
+    const concepts = allot.map(([c]) => c);
+    for (const [c, per] of allot) {
       const named = gaps
         .filter((g) => g.kind === "concept" && g.id === c && g.level)
-        .flatMap((g) => Array.from({ length: Math.max(1, g.deficit) }, (_, k) => ({ level: g.level!, type: g.types?.[k] })));
+        .flatMap((g) => Array.from({ length: Math.max(1, g.deficit) }, () => ({ level: g.level!, type: g.types?.[0] })));
       for (let i = 0; i < per; i++) {
         const want = named[i];
         const type = want?.type && typeLeft.has(want.type) ? (typeLeft.set(want.type, typeLeft.get(want.type)! - 4), want.type) : nextType();

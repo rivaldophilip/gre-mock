@@ -12,6 +12,8 @@ import type { Cand, Ctx, Fallback } from "../../lib/assemble/types";
 export const MOCKS_AHEAD = 2;
 /** The levels every concept and skill keeps unseen stock at. */
 export const STOCK_LEVELS = [4, 5];
+/** Dry runs of the next mocks, each with its own seed: a quiz's seed picks its targets, so one run sees one of many plans. */
+export const DRY_RUNS = 24;
 /** A batch is worth writing once the top gaps add up to this many items. */
 export const DEFICIT_THRESHOLD = 10;
 
@@ -65,10 +67,10 @@ export function simulatedTargets(ctx: Ctx, n = MOCKS_AHEAD, seed = 1) {
  * before took and damps its targets, as an untaken mock does. This is the exact demand (slot type, target and level)
  * that simulatedTargets only estimates, so L3 slots and a second L4 of one concept show up before a quiz falls back.
  */
-export function dryRunFallbacks(ctx: Ctx, n = MOCKS_AHEAD): Fallback[] {
+export function dryRunFallbacks(ctx: Ctx, n = MOCKS_AHEAD, seed?: number): Fallback[] {
   const out: Fallback[] = [];
   const byRef = new Map(ctx.items.map((c) => [c.ref, c]));
-  let c = ctx;
+  let c = seed === undefined ? ctx : { ...ctx, random: rng(seed) };
   for (let i = 0; i < n; i++) {
     const a = assembleMock(c);
     out.push(...a.fallbacks, ...a.failures);
@@ -84,8 +86,13 @@ export function dryRunFallbacks(ctx: Ctx, n = MOCKS_AHEAD): Fallback[] {
   return out;
 }
 
+/** The fallbacks of DRY_RUNS dry runs of the next mocks, one list per seed (an empty list: that plan fills exactly). */
+export function dryRuns(ctx: Ctx, runs = DRY_RUNS): Fallback[][] {
+  return Array.from({ length: runs }, (_, r) => dryRunFallbacks(ctx, MOCKS_AHEAD, 1 + r * 7919));
+}
+
 /** The ranked gaps, largest weighted deficit first. */
-export function bankGaps(ctx: Ctx, shortfalls: ShortfallRow[], revisitedRefs: Set<string>): Gap[] {
+export function bankGaps(ctx: Ctx, shortfalls: ShortfallRow[], revisitedRefs: Set<string>, runs: Fallback[][] = dryRuns(ctx)): Gap[] {
   const out: Gap[] = [];
   const isFresh = fresh(ctx);
   const stock = ctx.items.filter((c) => isFresh(c));
@@ -93,23 +100,38 @@ export function bankGaps(ctx: Ctx, shortfalls: ShortfallRow[], revisitedRefs: Se
   const { counts, words } = simulatedTargets(ctx);
   const kind = ctx.measure === "quant" ? "concept" : "skill";
 
-  // what the next mocks, assembled for real, would fall back on: one gap per target and level, as many items as slots
-  const dry = new Map<string, Gap>();
-  for (const f of dryRunFallbacks(ctx)) {
-    const targeted = (f.wantedKind === "concept" || f.wantedKind === "skill") && f.wantedId;
-    const id = targeted ? f.wantedId! : `${f.wantedKind}:${f.wantedId ?? f.slotType}`;
-    const key = `${id}|${f.wantedLevel ?? ""}`;
-    const g = dry.get(key);
-    if (g) {
-      g.need++;
-      g.deficit++;
-      g.types!.push(f.slotType);
-      continue;
+  // what the next mocks, assembled for real, would fall back on, over the dry runs' seeds: one gap per target, level
+  // and slot type, needing as many items as the most slots one run left short, weighted by the share of runs short
+  const dry = new Map<string, Gap & { hits: number }>();
+  const dryKey = (id: string, level: number | null, type: string) => `${id}|${level ?? ""}|${type}`;
+  for (const fallbacks of runs) {
+    const run = new Map<string, Fallback[]>();
+    for (const f of fallbacks) {
+      const targeted = (f.wantedKind === "concept" || f.wantedKind === "skill") && f.wantedId;
+      const key = dryKey(targeted ? f.wantedId! : `${f.wantedKind}:${f.wantedId ?? f.slotType}`, f.wantedLevel, f.slotType);
+      run.set(key, [...(run.get(key) ?? []), f]);
     }
-    const w = targeted ? 2 + (P.get(id) ?? 0) : 2;
-    dry.set(key, { kind: targeted ? kind : "shortfall", id, level: f.wantedLevel ?? undefined, types: [f.slotType], need: 1, have: 0, deficit: 1, weight: w, why: `the next ${MOCKS_AHEAD} mocks would fall back (dry run: ${f.slotType}, step ${f.step})` });
+    for (const [key, fs] of run) {
+      const g = dry.get(key);
+      const types = fs.map((f) => f.slotType);
+      if (g) {
+        g.hits++;
+        if (fs.length > g.need) Object.assign(g, { need: fs.length, deficit: fs.length });
+        g.types = [...new Set([...g.types!, ...types])];
+        continue;
+      }
+      const f = fs[0];
+      const targeted = (f.wantedKind === "concept" || f.wantedKind === "skill") && f.wantedId;
+      const id = key.split("|")[0];
+      dry.set(key, { kind: targeted ? kind : "shortfall", id, level: f.wantedLevel ?? undefined, types, need: fs.length, have: 0, deficit: fs.length, weight: targeted ? 2 + (P.get(id) ?? 0) : 2, why: "", hits: 1 });
+    }
   }
-  out.push(...dry.values());
+  for (const g of dry.values()) {
+    // a fallback in any run outranks the estimated draw counts (weight 1 + P); the likelier, the higher
+    g.weight *= 0.5 + (0.5 * g.hits) / runs.length;
+    g.why = `the next ${MOCKS_AHEAD} mocks would fall back in ${g.hits} of ${runs.length} dry runs (${g.types![0]})`;
+  }
+  out.push(...[...dry.values()].map(({ hits: _, ...g }) => g));
 
   // concepts and skills: unseen L4 and L5 for every one; the simulated mocks' targets need as many items as they draw
   for (const s of ctx.conceptScores) {
@@ -117,7 +139,7 @@ export function bankGaps(ctx: Ctx, shortfalls: ShortfallRow[], revisitedRefs: Se
     const mine = stock.filter((c) => c.primary === s.itemId);
     for (const level of STOCK_LEVELS) {
       const have = mine.filter((c) => c.difficulty === level).length;
-      if (!have && !dry.has(`${s.itemId}|${level}`)) out.push({ kind, id: s.itemId, level, need: 1, have, deficit: 1, weight: P.get(s.itemId) ?? 0.5, why: `no unseen L${level} item` });
+      if (!have && ![...dry.keys()].some((k) => k.startsWith(`${s.itemId}|${level}|`))) out.push({ kind, id: s.itemId, level, need: 1, have, deficit: 1, weight: P.get(s.itemId) ?? 0.5, why: `no unseen L${level} item` });
     }
     const want = counts.get(s.itemId) ?? 0;
     const have = mine.filter((c) => c.difficulty >= 3).length;
@@ -159,11 +181,22 @@ export function bankGaps(ctx: Ctx, shortfalls: ShortfallRow[], revisitedRefs: Se
 
   // open shortfalls a quiz logged, unless the stock now covers them or the dry run already asks for them; a concept or
   // skill one is a gap of that kind, so the brief writes it
+  // the same slot logged by several quizzes (each new or cancelled draft logs its own) is one gap
+  const logged = new Set<string>();
   for (const f of shortfalls) {
     if (f.resolvedAt) continue;
+    const once = `${f.wantedKind}|${f.wantedId ?? ""}|${f.wantedLevel ?? ""}|${f.slotType}`;
+    if (logged.has(once)) continue;
+    logged.add(once);
     if (covered(ctx, stock, f)) continue;
     const targeted = (f.wantedKind === "concept" || f.wantedKind === "skill") && f.wantedId;
-    if (targeted && dry.has(`${f.wantedId}|${f.wantedLevel ?? ""}`)) continue;
+    const seen = targeted ? dry.get(dryKey(f.wantedId!, f.wantedLevel, f.slotType)) : undefined;
+    if (seen) {
+      // a quiz really fell short here: full weight, whatever share of the dry runs did
+      seen.weight = 2 + (P.get(f.wantedId!) ?? 0);
+      seen.why += "; a quiz fell back here";
+      continue;
+    }
     const why = `a quiz ${f.step === 8 ? "could not be assembled" : `fell back (ladder step ${f.step})`}`;
     if (targeted) out.push({ kind, id: f.wantedId!, level: f.wantedLevel ?? undefined, types: [f.slotType], need: 1, have: 0, deficit: 1, weight: 2 + (P.get(f.wantedId!) ?? 0), why });
     else out.push({ kind: "shortfall", id: `${f.wantedKind}:${f.wantedId ?? f.slotType}`, level: f.wantedLevel ?? undefined, need: 1, have: 0, deficit: 1, weight: 2, why });

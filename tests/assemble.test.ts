@@ -309,10 +309,22 @@ describe("bank gaps dry run", () => {
     const { bankGaps, dryRunFallbacks } = await import("@/scripts/lib/bank-gaps");
     const base = quantCtx();
     const ctx = { ...base, items: base.items.filter((c) => c.difficulty !== 3 || c.unitId) };
-    const missed = dryRunFallbacks(ctx).filter((f) => f.wantedLevel === 3);
+    const missed = dryRunFallbacks(ctx, 2, 1).filter((f) => f.wantedLevel === 3);
     expect(missed.length).toBeGreaterThan(0);
     const gaps = bankGaps(ctx, [], new Set()).filter((g) => g.kind === "concept" && g.level === 3);
-    expect(gaps.reduce((t, g) => t + g.need, 0)).toBe(missed.filter((f) => f.wantedKind === "concept").length);
-    expect(gaps.every((g) => g.types?.length === g.need && g.why.includes("dry run"))).toBe(true);
+    // every L3 slot one plan leaves short is a gap (the other seeds' plans add theirs), with the slot's type
+    for (const f of missed.filter((f) => f.wantedKind === "concept")) expect(gaps.some((g) => g.id === f.wantedId && g.types?.[0] === f.slotType)).toBe(true);
+    expect(gaps.every((g) => g.why.includes("dry runs") && g.weight > 0)).toBe(true);
+  });
+});
+
+describe("bank gaps shortfalls", () => {
+  it("count a slot that several cancelled drafts logged once", async () => {
+    const { bankGaps } = await import("@/scripts/lib/bank-gaps");
+    const ctx = quantCtx();
+    const row = (id: number) => ({ id, slotType: "mc", wantedKind: "concept", wantedId: "c1", wantedLevel: 6, step: 2, resolvedAt: null });
+    const gaps = bankGaps(ctx, [row(1), row(2), row(3)], new Set(), []).filter((g) => g.id === "c1" && g.level === 6);
+    expect(gaps).toHaveLength(1);
+    expect(gaps[0]).toMatchObject({ kind: "concept", types: ["mc"], need: 1 });
   });
 });
