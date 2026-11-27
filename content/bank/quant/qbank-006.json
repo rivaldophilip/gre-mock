@@ -1,0 +1,1136 @@
+{
+  "id": "qbank-006",
+  "measure": "quant",
+  "title": "Quant bank batch 6",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Wing lengths of 40 sparrows. Gridlines every 2 millimeters.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 114' width='330' height='114' font-family='sans-serif' font-size='12'><line x1='70.0' y1='16' x2='70.0' y2='74' stroke='currentColor' stroke-opacity='0.35' stroke-width='1' stroke-dasharray='none'/><line x1='70.0' y1='74' x2='70.0' y2='80' stroke='currentColor' stroke-width='1'/><text x='70.0' y='93' fill='currentColor' text-anchor='middle'>50</text><line x1='79.6' y1='16' x2='79.6' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='79.6' y1='74' x2='79.6' y2='77' stroke='currentColor' stroke-width='1'/><line x1='89.2' y1='16' x2='89.2' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='89.2' y1='74' x2='89.2' y2='77' stroke='currentColor' stroke-width='1'/><line x1='98.8' y1='16' x2='98.8' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='98.8' y1='74' x2='98.8' y2='77' stroke='currentColor' stroke-width='1'/><line x1='108.4' y1='16' x2='108.4' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='108.4' y1='74' x2='108.4' y2='77' stroke='currentColor' stroke-width='1'/><line x1='118.0' y1='16' x2='118.0' y2='74' stroke='currentColor' stroke-opacity='0.35' stroke-width='1' stroke-dasharray='none'/><line x1='118.0' y1='74' x2='118.0' y2='80' stroke='currentColor' stroke-width='1'/><text x='118.0' y='93' fill='currentColor' text-anchor='middle'>60</text><line x1='127.6' y1='16' x2='127.6' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='127.6' y1='74' x2='127.6' y2='77' stroke='currentColor' stroke-width='1'/><line x1='137.2' y1='16' x2='137.2' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='137.2' y1='74' x2='137.2' y2='77' stroke='currentColor' stroke-width='1'/><line x1='146.8' y1='16' x2='146.8' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='146.8' y1='74' x2='146.8' y2='77' stroke='currentColor' stroke-width='1'/><line x1='156.4' y1='16' x2='156.4' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='156.4' y1='74' x2='156.4' y2='77' stroke='currentColor' stroke-width='1'/><line x1='166.0' y1='16' x2='166.0' y2='74' stroke='currentColor' stroke-opacity='0.35' stroke-width='1' stroke-dasharray='none'/><line x1='166.0' y1='74' x2='166.0' y2='80' stroke='currentColor' stroke-width='1'/><text x='166.0' y='93' fill='currentColor' text-anchor='middle'>70</text><line x1='175.6' y1='16' x2='175.6' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='175.6' y1='74' x2='175.6' y2='77' stroke='currentColor' stroke-width='1'/><line x1='185.2' y1='16' x2='185.2' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='185.2' y1='74' x2='185.2' y2='77' stroke='currentColor' stroke-width='1'/><line x1='194.8' y1='16' x2='194.8' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='194.8' y1='74' x2='194.8' y2='77' stroke='currentColor' stroke-width='1'/><line x1='204.4' y1='16' x2='204.4' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='204.4' y1='74' x2='204.4' y2='77' stroke='currentColor' stroke-width='1'/><line x1='214.0' y1='16' x2='214.0' y2='74' stroke='currentColor' stroke-opacity='0.35' stroke-width='1' stroke-dasharray='none'/><line x1='214.0' y1='74' x2='214.0' y2='80' stroke='currentColor' stroke-width='1'/><text x='214.0' y='93' fill='currentColor' text-anchor='middle'>80</text><line x1='223.6' y1='16' x2='223.6' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='223.6' y1='74' x2='223.6' y2='77' stroke='currentColor' stroke-width='1'/><line x1='233.2' y1='16' x2='233.2' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='233.2' y1='74' x2='233.2' y2='77' stroke='currentColor' stroke-width='1'/><line x1='242.8' y1='16' x2='242.8' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='242.8' y1='74' x2='242.8' y2='77' stroke='currentColor' stroke-width='1'/><line x1='252.4' y1='16' x2='252.4' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='252.4' y1='74' x2='252.4' y2='77' stroke='currentColor' stroke-width='1'/><line x1='262.0' y1='16' x2='262.0' y2='74' stroke='currentColor' stroke-opacity='0.35' stroke-width='1' stroke-dasharray='none'/><line x1='262.0' y1='74' x2='262.0' y2='80' stroke='currentColor' stroke-width='1'/><text x='262.0' y='93' fill='currentColor' text-anchor='middle'>90</text><line x1='271.6' y1='16' x2='271.6' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='271.6' y1='74' x2='271.6' y2='77' stroke='currentColor' stroke-width='1'/><line x1='281.2' y1='16' x2='281.2' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='281.2' y1='74' x2='281.2' y2='77' stroke='currentColor' stroke-width='1'/><line x1='290.8' y1='16' x2='290.8' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='290.8' y1='74' x2='290.8' y2='77' stroke='currentColor' stroke-width='1'/><line x1='300.4' y1='16' x2='300.4' y2='74' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='300.4' y1='74' x2='300.4' y2='77' stroke='currentColor' stroke-width='1'/><line x1='310.0' y1='16' x2='310.0' y2='74' stroke='currentColor' stroke-opacity='0.35' stroke-width='1' stroke-dasharray='none'/><line x1='310.0' y1='74' x2='310.0' y2='80' stroke='currentColor' stroke-width='1'/><text x='310.0' y='93' fill='currentColor' text-anchor='middle'>100</text><line x1='70.0' y1='74' x2='310.0' y2='74' stroke='currentColor' stroke-width='1.5'/><text x='190.0' y='109' fill='currentColor' text-anchor='middle'>Wing length (millimeters)</text><text x='8' y='46.0' fill='currentColor'>Wings</text><line x1='118.0' y1='42.0' x2='146.8' y2='42.0' stroke='currentColor' stroke-width='1.5'/><line x1='204.4' y1='42.0' x2='290.8' y2='42.0' stroke='currentColor' stroke-width='1.5'/><line x1='118.0' y1='34.0' x2='118.0' y2='50.0' stroke='currentColor' stroke-width='1.5'/><line x1='290.8' y1='34.0' x2='290.8' y2='50.0' stroke='currentColor' stroke-width='1.5'/><rect x='146.8' y='29.0' width='57.599999999999994' height='26.0' fill='currentColor' fill-opacity='0.12' stroke='currentColor' stroke-width='1.5'/><line x1='166.0' y1='29.0' x2='166.0' y2='55.0' stroke='currentColor' stroke-width='2.5'/></svg>"
+    },
+    {
+      "id": "fig2",
+      "caption": "Test scores of Class X (20 students) and Class Y (20 students). Gridlines every 2 points.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 166' width='330' height='166' font-family='sans-serif' font-size='12'><line x1='70.0' y1='16' x2='70.0' y2='126' stroke='currentColor' stroke-opacity='0.35' stroke-width='1' stroke-dasharray='none'/><line x1='70.0' y1='126' x2='70.0' y2='132' stroke='currentColor' stroke-width='1'/><text x='70.0' y='145' fill='currentColor' text-anchor='middle'>0</text><line x1='78.0' y1='16' x2='78.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='78.0' y1='126' x2='78.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='86.0' y1='16' x2='86.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='86.0' y1='126' x2='86.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='94.0' y1='16' x2='94.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='94.0' y1='126' x2='94.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='102.0' y1='16' x2='102.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='102.0' y1='126' x2='102.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='110.0' y1='16' x2='110.0' y2='126' stroke='currentColor' stroke-opacity='0.35' stroke-width='1' stroke-dasharray='none'/><line x1='110.0' y1='126' x2='110.0' y2='132' stroke='currentColor' stroke-width='1'/><text x='110.0' y='145' fill='currentColor' text-anchor='middle'>10</text><line x1='118.0' y1='16' x2='118.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='118.0' y1='126' x2='118.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='126.0' y1='16' x2='126.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='126.0' y1='126' x2='126.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='134.0' y1='16' x2='134.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='134.0' y1='126' x2='134.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='142.0' y1='16' x2='142.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='142.0' y1='126' x2='142.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='150.0' y1='16' x2='150.0' y2='126' stroke='currentColor' stroke-opacity='0.35' stroke-width='1' stroke-dasharray='none'/><line x1='150.0' y1='126' x2='150.0' y2='132' stroke='currentColor' stroke-width='1'/><text x='150.0' y='145' fill='currentColor' text-anchor='middle'>20</text><line x1='158.0' y1='16' x2='158.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='158.0' y1='126' x2='158.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='166.0' y1='16' x2='166.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='166.0' y1='126' x2='166.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='174.0' y1='16' x2='174.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='174.0' y1='126' x2='174.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='182.0' y1='16' x2='182.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='182.0' y1='126' x2='182.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='190.0' y1='16' x2='190.0' y2='126' stroke='currentColor' stroke-opacity='0.35' stroke-width='1' stroke-dasharray='none'/><line x1='190.0' y1='126' x2='190.0' y2='132' stroke='currentColor' stroke-width='1'/><text x='190.0' y='145' fill='currentColor' text-anchor='middle'>30</text><line x1='198.0' y1='16' x2='198.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='198.0' y1='126' x2='198.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='206.0' y1='16' x2='206.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='206.0' y1='126' x2='206.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='214.0' y1='16' x2='214.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='214.0' y1='126' x2='214.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='222.0' y1='16' x2='222.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='222.0' y1='126' x2='222.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='230.0' y1='16' x2='230.0' y2='126' stroke='currentColor' stroke-opacity='0.35' stroke-width='1' stroke-dasharray='none'/><line x1='230.0' y1='126' x2='230.0' y2='132' stroke='currentColor' stroke-width='1'/><text x='230.0' y='145' fill='currentColor' text-anchor='middle'>40</text><line x1='238.0' y1='16' x2='238.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='238.0' y1='126' x2='238.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='246.0' y1='16' x2='246.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='246.0' y1='126' x2='246.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='254.0' y1='16' x2='254.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='254.0' y1='126' x2='254.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='262.0' y1='16' x2='262.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='262.0' y1='126' x2='262.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='270.0' y1='16' x2='270.0' y2='126' stroke='currentColor' stroke-opacity='0.35' stroke-width='1' stroke-dasharray='none'/><line x1='270.0' y1='126' x2='270.0' y2='132' stroke='currentColor' stroke-width='1'/><text x='270.0' y='145' fill='currentColor' text-anchor='middle'>50</text><line x1='278.0' y1='16' x2='278.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='278.0' y1='126' x2='278.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='286.0' y1='16' x2='286.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='286.0' y1='126' x2='286.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='294.0' y1='16' x2='294.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='294.0' y1='126' x2='294.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='302.0' y1='16' x2='302.0' y2='126' stroke='currentColor' stroke-opacity='0.15' stroke-width='1' stroke-dasharray='2,2'/><line x1='302.0' y1='126' x2='302.0' y2='129' stroke='currentColor' stroke-width='1'/><line x1='310.0' y1='16' x2='310.0' y2='126' stroke='currentColor' stroke-opacity='0.35' stroke-width='1' stroke-dasharray='none'/><line x1='310.0' y1='126' x2='310.0' y2='132' stroke='currentColor' stroke-width='1'/><text x='310.0' y='145' fill='currentColor' text-anchor='middle'>60</text><line x1='70.0' y1='126' x2='310.0' y2='126' stroke='currentColor' stroke-width='1.5'/><text x='190.0' y='161' fill='currentColor' text-anchor='middle'>Test score</text><text x='8' y='46.0' fill='currentColor'>Class X</text><line x1='102.0' y1='42.0' x2='118.0' y2='42.0' stroke='currentColor' stroke-width='1.5'/><line x1='158.0' y1='42.0' x2='182.0' y2='42.0' stroke='currentColor' stroke-width='1.5'/><line x1='102.0' y1='34.0' x2='102.0' y2='50.0' stroke='currentColor' stroke-width='1.5'/><line x1='182.0' y1='34.0' x2='182.0' y2='50.0' stroke='currentColor' stroke-width='1.5'/><rect x='118.0' y='29.0' width='40.0' height='26.0' fill='currentColor' fill-opacity='0.12' stroke='currentColor' stroke-width='1.5'/><line x1='142.0' y1='29.0' x2='142.0' y2='55.0' stroke='currentColor' stroke-width='2.5'/><text x='8' y='98.0' fill='currentColor'>Class Y</text><line x1='198.0' y1='94.0' x2='214.0' y2='94.0' stroke='currentColor' stroke-width='1.5'/><line x1='254.0' y1='94.0' x2='286.0' y2='94.0' stroke='currentColor' stroke-width='1.5'/><line x1='198.0' y1='86.0' x2='198.0' y2='102.0' stroke='currentColor' stroke-width='1.5'/><line x1='286.0' y1='86.0' x2='286.0' y2='102.0' stroke='currentColor' stroke-width='1.5'/><rect x='214.0' y='81.0' width='40.0' height='26.0' fill='currentColor' fill-opacity='0.12' stroke='currentColor' stroke-width='1.5'/><line x1='238.0' y1='81.0' x2='238.0' y2='107.0' stroke='currentColor' stroke-width='2.5'/></svg>"
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 3,
+      "prompt": "The emblem on a school's new banner is a regular polygon whose interior angles add up to $2{,}340^\\circ$. What is the measure, in degrees, of each interior angle of the emblem?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "156"
+      },
+      "explanation": {
+        "key": "The angle sum of an $n$-sided polygon is $(n - 2) \\cdot 180^\\circ$, so $(n - 2) \\cdot 180 = 2{,}340$ gives $n - 2 = 13$ and $n = 15$. A regular polygon's angles are equal, so each is $\\tfrac{2{,}340}{15} = 156^\\circ$.",
+        "steps": [
+          "1. $(n - 2) \\cdot 180 = 2{,}340$, so $n - 2 = 13$.",
+          "2. $n = 15$ sides.",
+          "3. Each angle: $\\tfrac{2{,}340}{15} = 156$."
+        ],
+        "fast": "With $n = 15$, the exterior angle is $\\tfrac{360}{15} = 24^\\circ$, so each interior angle is $180 - 24 = 156^\\circ$.",
+        "trap": "Dividing $2{,}340$ by $13$ (the value of $n - 2$, not $n$) gives $180$, which no polygon's interior angle can be."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "polygons-quadrilaterals",
+          "role": "primary"
+        }
+      ],
+      "setup": "the interior angle sum of a regular polygon is given; recover the number of sides, then divide for one angle",
+      "variant": "interior angle sum of an n-gon, and regular polygons",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A floor tile sold by a hardware store is a rhombus. One of its angles measures $120^\\circ$, and its shorter diagonal is $6$ centimeters long. What is the area of the tile, in square centimeters?",
+      "choices": [
+        "$6\\sqrt{3}$",
+        "$9\\sqrt{3}$",
+        "$18\\sqrt{3}$",
+        "$36$",
+        "$36\\sqrt{3}$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The rhombus's other angles are $60^\\circ$ and $120^\\circ$. The shorter diagonal joins the two $120^\\circ$ corners and cuts off a triangle with two sides of the rhombus and the $60^\\circ$ angle between them: an equilateral triangle. So the side is $6$. The longer diagonal is twice the height of that triangle, $2 \\cdot 3\\sqrt{3} = 6\\sqrt{3}$. Area $= \\tfrac12 \\cdot 6 \\cdot 6\\sqrt{3} = 18\\sqrt{3}$.",
+        "steps": [
+          "1. Angles: $120^\\circ, 60^\\circ, 120^\\circ, 60^\\circ$.",
+          "2. The shorter diagonal is opposite a $60^\\circ$ angle in an isosceles triangle of two sides, so that triangle is equilateral: side $= 6$.",
+          "3. Longer diagonal $= 2 \\cdot \\tfrac{\\sqrt3}{2} \\cdot 6 = 6\\sqrt{3}$.",
+          "4. Area $= \\tfrac12 \\cdot 6 \\cdot 6\\sqrt3 = 18\\sqrt{3}$."
+        ],
+        "fast": "The rhombus is two equilateral triangles of side $6$: $2 \\cdot \\tfrac{\\sqrt3}{4} \\cdot 36 = 18\\sqrt3$.",
+        "trap": "Treating $6$ as the longer diagonal gives side $2\\sqrt3$ and area $6\\sqrt3$; counting only one equilateral triangle gives $9\\sqrt3$; forgetting the $\\tfrac12$ in the diagonal formula gives $36\\sqrt3$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "polygons-quadrilaterals",
+          "role": "primary"
+        }
+      ],
+      "setup": "a rhombus with one angle and its shorter diagonal; the 60-degree angle makes an equilateral triangle, so the short diagonal equals the side; area from the two diagonals",
+      "variant": "parallelogram, rhombus or trapezoid properties",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A biologist models one cell of a honeycomb as the regular hexagon $ABCDEF$. A point $P$ lies inside the hexagon, not necessarily at its center, and segments join $P$ to all six vertices, cutting the hexagon into six triangles.",
+      "qc": {
+        "a": "The sum of the areas of triangles $PAB$, $PCD$ and $PEF$",
+        "b": "The sum of the areas of triangles $PBC$, $PDE$ and $PFA$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Each triangle has one side of the hexagon (length $s$) as its base, so its area is $\\tfrac{s}{2}$ times the distance from $P$ to that side. Extend sides $AB$, $CD$ and $EF$: they form an equilateral triangle around the hexagon, and for any point inside an equilateral triangle the three distances to its sides add up to its height. So the distances from $P$ to $AB$, $CD$ and $EF$ have the same sum for every $P$, and the same holds for $BC$, $DE$ and $FA$. At the center all six distances are equal, so the two sums are equal there, and therefore everywhere. The quantities are equal.",
+        "steps": [
+          "1. Area of each triangle $= \\tfrac{s}{2} \\cdot$ (distance from $P$ to its side).",
+          "2. Lines $AB$, $CD$, $EF$ bound an equilateral triangle; the sum of $P$'s distances to them is that triangle's height, whatever $P$ is.",
+          "3. Likewise for $BC$, $DE$, $FA$.",
+          "4. At the center the two sums match, so they match for every $P$: each quantity is half the hexagon."
+        ],
+        "fast": "Try $P$ at the center (each sum is $3$ of $6$ equal triangles) and $P$ at vertex $A$ (sums $0 + 2 + 1$ and $1 + 2 + 0$ small triangles); both give equal halves, and the distance argument shows it always does.",
+        "trap": "Because $P$ is 'not necessarily at the center', it is tempting to answer D, assuming that moving $P$ toward one side enlarges one group of triangles; every gain on one side of a group is offset within the same group."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "polygons-quadrilaterals",
+          "role": "primary"
+        }
+      ],
+      "setup": "a point inside a regular hexagon joined to all six vertices; alternate triangles' areas always sum to half (the distances to three alternate sides have a fixed sum); compare the two alternating sums",
+      "variant": "a regular hexagon split into triangles",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A school garden bed has the shape of trapezoid $ABCD$, with side $AB$ parallel to side $DC$ and $DC$ longer than $AB$. Side $BC$ is perpendicular to $DC$ and is $12$ meters long, side $AD$ is $13$ meters long, and the diagonal $DB$ bisects angle $ADC$. What is the area of the bed, in square meters?",
+      "choices": [
+        "$126$",
+        "$156$",
+        "$168$",
+        "$186$",
+        "$216$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Since $AB \\parallel DC$, angle $ABD$ equals angle $BDC$ (alternate angles), and the bisector makes angle $BDC$ equal to angle $ADB$. So triangle $ABD$ has two equal angles at $B$ and $D$, and $AB = AD = 13$. The height is $BC = 12$; dropping a perpendicular from $A$ to $DC$ gives a right triangle with hypotenuse $13$ and leg $12$, so its other leg is $5$. Then $DC = 13 + 5 = 18$ and the area is $\\tfrac{13 + 18}{2} \\cdot 12 = 186$.",
+        "steps": [
+          "1. $\\angle ABD = \\angle BDC$ (parallel sides) $= \\angle ADB$ (bisector).",
+          "2. Triangle $ABD$ is isosceles: $AB = AD = 13$.",
+          "3. Height $12$; horizontal run of $AD$: $\\sqrt{13^2 - 12^2} = 5$.",
+          "4. $DC = AB + 5 = 18$ (the longer base).",
+          "5. Area $= \\tfrac{13 + 18}{2} \\cdot 12 = 186$."
+        ],
+        "fast": "Bisector plus parallel lines makes an isosceles triangle: the top base equals the slanted leg, $13$; the bottom is $13 + 5$.",
+        "trap": "Without the isosceles step the top base seems unknown; if $A$ sits beyond $D$ (an obtuse angle at $D$) the bottom would be $13 - 5 = 8$ and the area $126$, but that bottom is shorter than the top, which the stem rules out. Using $13 \\cdot 12$ or $18 \\cdot 12$ as if the bed were a rectangle gives $156$ or $216$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "polygons-quadrilaterals",
+          "role": "primary"
+        }
+      ],
+      "setup": "a right trapezoid whose diagonal bisects a base angle; with the parallel sides that makes an isosceles triangle, so the short base equals the slanted leg; the long base from a right triangle",
+      "variant": "parallelogram, rhombus or trapezoid properties",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 3,
+      "prompt": "For every number $x$, let $f(x) = 3x^2$. For two particular numbers $a$ and $b$, the value of $f(a + b)$ exceeds $f(a) + f(b)$ by $60$. What is the value of $ab$?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "10"
+      },
+      "explanation": {
+        "key": "$f(a + b) = 3(a + b)^2 = 3a^2 + 6ab + 3b^2$, while $f(a) + f(b) = 3a^2 + 3b^2$. The excess is $6ab = 60$, so $ab = 10$.",
+        "steps": [
+          "1. $f(a + b) = 3a^2 + 6ab + 3b^2$.",
+          "2. $f(a) + f(b) = 3a^2 + 3b^2$.",
+          "3. Difference $6ab = 60$, so $ab = 10$."
+        ],
+        "fast": "Only the cross term survives: $3 \\cdot 2ab = 60$.",
+        "trap": "Dropping the coefficient $3$ ($2ab = 60$) gives $30$; forgetting the $2$ in the cross term gives $20$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "functions",
+          "role": "primary"
+        }
+      ],
+      "setup": "a pure square function: f(a + b) exceeds f(a) + f(b) by the cross term only; from the excess find the product",
+      "variant": "f(a + b) against f(a) + f(b)",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A function $f$ repeats every $2$ units, so that $f(x + 2) = f(x)$ for all numbers $x$, and $f(x) = x^2$ for $0 \\le x < 2$. How many numbers $x$ with $-3 \\le x \\le 3$ satisfy $f(x) = 2$?",
+      "choices": [
+        "$1$",
+        "$2$",
+        "$3$",
+        "$4$",
+        "$6$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "On $0 \\le x < 2$, $f(x) = 2$ only at $x = \\sqrt2 \\approx 1.41$. Because $f$ repeats every $2$ units, the solutions are $\\sqrt2 + 2k$ for integers $k$: $\\sqrt2 - 4 \\approx -2.59$, $\\sqrt2 - 2 \\approx -0.59$, $\\sqrt2 \\approx 1.41$, and next $\\sqrt2 + 2 \\approx 3.41$, which is past $3$. So there are $3$ solutions.",
+        "steps": [
+          "1. One period: $x^2 = 2$ with $0 \\le x < 2$ gives only $x = \\sqrt2$.",
+          "2. All solutions: $x = \\sqrt2 + 2k$.",
+          "3. In $[-3, 3]$: $k = -2, -1, 0$; $k = 1$ gives $3.41$, outside.",
+          "4. Count: $3$."
+        ],
+        "fast": "Each 2-unit window holds exactly one solution; the window $[-3, 3]$ has length $6$ and catches $3$ of the points spaced $2$ apart starting at $-2.59$.",
+        "trap": "Solving $x^2 = 2$ as if $f(x) = x^2$ everywhere gives $\\pm\\sqrt2$ (2 solutions), but $-\\sqrt2$ is not a solution: $f(-\\sqrt2) = f(2 - \\sqrt2) = (0.59)^2 \\approx 0.34$. Counting one solution per unit of length, or both endpoints, gives $4$ or $6$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "functions",
+          "role": "primary"
+        }
+      ],
+      "setup": "a function repeating every two units, given by a square on one period; one solution per period counted over a window, and the negative root of the square is not a solution",
+      "variant": "a function property such as f(-x) = -f(x) or f(x + 1) = f(x)",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "Let $f(x) = x^2 - 2x$ and $g(x) = 2x + 1$. What is the sum of all values of $x$ for which $f(g(x)) = g(f(x))$?",
+      "choices": [
+        "$-2$",
+        "$-1$",
+        "$0$",
+        "$1$",
+        "$2$"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "$f(g(x)) = (2x + 1)^2 - 2(2x + 1) = 4x^2 - 1$ and $g(f(x)) = 2(x^2 - 2x) + 1 = 2x^2 - 4x + 1$. Setting them equal: $2x^2 + 4x - 2 = 0$, or $x^2 + 2x - 1 = 0$. Its roots ($-1 \\pm \\sqrt2$) are real and add to $-2$.",
+        "steps": [
+          "1. $f(g(x)) = 4x^2 + 4x + 1 - 4x - 2 = 4x^2 - 1$.",
+          "2. $g(f(x)) = 2x^2 - 4x + 1$.",
+          "3. $4x^2 - 1 = 2x^2 - 4x + 1 \\Rightarrow x^2 + 2x - 1 = 0$.",
+          "4. Discriminant $4 + 4 > 0$; sum of roots $= -2$."
+        ],
+        "fast": "Once the equation is $x^2 + 2x - 1 = 0$, the sum of the roots is minus the $x$-coefficient: $-2$.",
+        "trap": "Taking the sum of the roots as $+2$ (the coefficient's sign) or composing in the same order on both sides (which makes every $x$ work) leads to $2$ or to no single answer."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "functions",
+          "role": "primary"
+        }
+      ],
+      "setup": "a quadratic and a linear function composed in both orders; set the two compositions equal and sum the irrational roots of the resulting quadratic",
+      "variant": "composition f(g(x)), or solving f(x) = g(x)",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "For all nonzero numbers $x$ and $y$, the operation $\\diamond$ is defined by $x \\diamond y = \\dfrac{x + y}{xy}$.",
+      "qc": {
+        "a": "$(2 \\diamond 3) \\diamond 6$",
+        "b": "$2 \\diamond (3 \\diamond 6)$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$x \\diamond y = \\tfrac1x + \\tfrac1y$. A: $2 \\diamond 3 = \\tfrac12 + \\tfrac13 = \\tfrac56$, then $\\tfrac56 \\diamond 6 = \\tfrac65 + \\tfrac16 = \\tfrac{41}{30}$. B: $3 \\diamond 6 = \\tfrac13 + \\tfrac16 = \\tfrac12$, then $2 \\diamond \\tfrac12 = \\tfrac12 + 2 = \\tfrac52 = \\tfrac{75}{30}$. B is greater.",
+        "steps": [
+          "1. Rewrite: $x \\diamond y = \\tfrac1x + \\tfrac1y$.",
+          "2. A: $\\tfrac56 \\diamond 6 = \\tfrac65 + \\tfrac16 = \\tfrac{41}{30} \\approx 1.37$.",
+          "3. B: $2 \\diamond \\tfrac12 = \\tfrac12 + 2 = 2.5$.",
+          "4. B is greater."
+        ],
+        "fast": "The inner result is reciprocated by the outer step: a small inner value ($\\tfrac12$ in B) becomes a large reciprocal ($2$).",
+        "trap": "Assuming the operation can be regrouped like addition gives C; inverting only one of the two reciprocals in the second step gives a wrong A."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "functions",
+          "role": "primary"
+        }
+      ],
+      "setup": "a defined operation equal to a sum of reciprocals applied twice with the grouping moved; compare the two groupings (the operation is not associative)",
+      "variant": "a defined operation (x ◊ y = ...) applied twice",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "The numbers $a$ and $b$ are integers, and the equations $x + ay = 3$ and $bx + 4y = 6$ describe two lines in the $xy$-plane. For how many ordered pairs $(a, b)$ do the two lines have no point in common?",
+      "choices": [
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The lines are parallel or the same exactly when their coefficients are proportional, $\\tfrac{1}{b} = \\tfrac{a}{4}$, that is $ab = 4$. Integer pairs with $ab = 4$: $(1, 4)$, $(2, 2)$, $(4, 1)$, $(-1, -4)$, $(-2, -2)$, $(-4, -1)$. For $(2, 2)$ the second equation $2x + 4y = 6$ is twice the first, so the lines coincide and share every point. The other $5$ pairs give distinct parallel lines.",
+        "steps": [
+          "1. No unique solution when $1 \\cdot 4 - a \\cdot b = 0$: $ab = 4$.",
+          "2. Integer pairs: $6$ (three positive, three negative).",
+          "3. $(2, 2)$: $2x + 4y = 6$ is $2(x + 2y = 3)$, the same line (infinitely many solutions).",
+          "4. No solution: $6 - 1 = 5$ pairs."
+        ],
+        "fast": "Count the factor pairs of $4$ with signs ($6$), then drop the one pair that also scales the constant $3$ to $6$.",
+        "trap": "Using only positive factor pairs gives $3$ (or $2$ after removing $(2, 2)$); keeping $(2, 2)$ gives $6$, but coinciding lines have infinitely many common points, not none."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "linear-equations",
+          "role": "primary"
+        }
+      ],
+      "setup": "integer coefficient pairs that make a 2x2 system singular: the product condition has negative factor pairs too, and one pair makes the lines coincide, so it is excluded",
+      "variant": "a system with no solution or infinitely many",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "A teacher computes a course grade $G$ from an exam score $E$ and a homework score $H$, with the exam counting for $w$ percent of the grade: $G = \\dfrac{wE + (100 - w)H}{100}$, where $E \\ne H$. Which of the following expressions are equal to $w$? Indicate all such expressions.",
+      "choices": [
+        "$\\dfrac{100(G - H)}{E - H}$",
+        "$\\dfrac{100(H - G)}{H - E}$",
+        "$\\dfrac{100(G - H)}{E + H}$",
+        "$100 - \\dfrac{100(E - G)}{E - H}$",
+        "$\\dfrac{100G - H}{E - H}$",
+        "$\\dfrac{100(E - G)}{E - H}$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Multiply by $100$: $100G = wE + 100H - wH$. Collect $w$: $100G - 100H = w(E - H)$, so $w = \\tfrac{100(G - H)}{E - H}$. The second choice is the same fraction with numerator and denominator both negated. The fourth is $100 - \\tfrac{100(E - G)}{E - H} = \\tfrac{100(E - H) - 100(E - G)}{E - H} = \\tfrac{100(G - H)}{E - H}$, also equal. The last choice is $100 - w$, the homework's weight.",
+        "steps": [
+          "1. $100G = wE + 100H - wH$.",
+          "2. $100(G - H) = w(E - H)$.",
+          "3. $w = \\tfrac{100(G - H)}{E - H}$: the first choice.",
+          "4. Second: negate top and bottom, same value.",
+          "5. Fourth: combine over $E - H$; it reduces to the first.",
+          "6. Third ($E + H$), fifth ($100$ not on $H$) and sixth ($100 - w$) differ."
+        ],
+        "fast": "Test $E = 90$, $H = 70$, $w = 25$: $G = 75$. The first, second and fourth choices give $25$; the others give $\\tfrac{500}{160}$, $\\tfrac{7{,}430}{20}$ and $75$.",
+        "trap": "The sixth choice, $\\tfrac{100(E - G)}{E - H}$, looks like the answer with letters swapped, but it is the weight of homework; the fifth forgets that the $100$ multiplies $H$ too."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "linear-equations",
+          "role": "primary"
+        }
+      ],
+      "setup": "a weighted-grade formula solved for the weight: collect the weight's terms and factor; select the equivalent forms, including a negated fraction and one written as 100 minus the other weight",
+      "variant": "a literal equation: solve for one letter in terms of the others",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "In the $xy$-plane, the line $6x - 4y = 10$ and the line $kx - 2y = m$ do not intersect.",
+      "qc": {
+        "a": "$k$",
+        "b": "$m$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Lines that never meet are parallel and distinct. The first line is $y = \\tfrac32 x - \\tfrac52$; the second is $y = \\tfrac{k}{2}x - \\tfrac{m}{2}$. Equal slopes force $k = 3$. Distinct lines only require $-\\tfrac{m}{2} \\ne -\\tfrac52$, so $m$ can be any number except $5$: $m = 0$ makes A greater, $m = 10$ makes B greater.",
+        "steps": [
+          "1. Slopes: $\\tfrac32$ and $\\tfrac{k}{2}$, so $k = 3$.",
+          "2. Same line would need $m = 5$; not intersecting needs $m \\ne 5$.",
+          "3. $m = 0$: A $= 3 > 0$. $m = 10$: A $= 3 < 10$.",
+          "4. Cannot be determined."
+        ],
+        "fast": "Parallel fixes the coefficient; it only forbids one value of the constant.",
+        "trap": "Matching the whole equation to half of the first ($3x - 2y = 5$) gives $m = 5$ and B, but that is the same line, which meets the first everywhere."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "linear-equations",
+          "role": "primary"
+        }
+      ],
+      "setup": "two lines that never meet: the slopes force the coefficient, but the constant is only kept off one value; compare the coefficient with the constant",
+      "variant": "a system with no solution or infinitely many",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "The numbers $x$ and $y$ satisfy $4(x + 2y) - 2(x + 3y) = 18$. Which of the following can be determined from this equation alone? Indicate all such quantities.",
+      "choices": [
+        "The average of $x$ and $y$",
+        "$x - y$",
+        "$xy$",
+        "$x^2 + 2xy + y^2$",
+        "$(x + y)^2 - 2xy$",
+        "$5^x \\cdot 5^y$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          3,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "Expanding, $4x + 8y - 2x - 6y = 2x + 2y = 18$, so $x + y = 9$ and nothing else is fixed. The average is $\\tfrac92$; $x^2 + 2xy + y^2 = (x + y)^2 = 81$; $5^x \\cdot 5^y = 5^{x + y} = 5^9$. But $x - y$, $xy$ and $(x + y)^2 - 2xy = x^2 + y^2$ change along the line: $(x, y) = (9, 0)$ and $(4, 5)$ give $x - y = 9$ or $-1$, $xy = 0$ or $20$, $x^2 + y^2 = 81$ or $41$.",
+        "steps": [
+          "1. Simplify: $2x + 2y = 18$, so $x + y = 9$.",
+          "2. Average $= 4.5$: determined.",
+          "3. $x^2 + 2xy + y^2 = 81$: determined.",
+          "4. $5^x \\cdot 5^y = 5^9$: determined.",
+          "5. $x - y$, $xy$, $x^2 + y^2$: test $(9, 0)$ and $(4, 5)$; they change."
+        ],
+        "fast": "A quantity is fixed only if it can be written using $x + y$ alone; $(x + y)^2 - 2xy$ still carries a lone $xy$.",
+        "trap": "The fifth choice opens with $(x + y)^2$ and looks fixed, but subtracting $2xy$ leaves $x^2 + y^2$, which needs $xy$; and the power product is easy to dismiss until the exponents are added."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "linear-equations",
+          "role": "primary"
+        }
+      ],
+      "setup": "one linear equation in two unknowns simplifies to a fixed sum; select the expressions fixed by the sum alone (a perfect square of it, a power product), not one that still needs the product",
+      "variant": "solving for an expression (x + y) instead of each variable",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "The quiz scores of the $20$ students in a class are $81$, $66$, $74$, $93$, $59$, $72$, $88$, $74$, $65$, $70$, $96$, $77$, $62$, $74$, $85$, $68$, $90$, $73$, $79$ and $71$. The percentile rank of a score is the percent of the $20$ scores that are less than it. What is the percentile rank of a score of $74$? (Enter the percent as a number: for $25\\%$, enter 25.)",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "45"
+      },
+      "explanation": {
+        "key": "Scores below $74$: $59, 62, 65, 66, 68, 70, 71, 72, 73$, which is $9$ scores. The three scores equal to $74$ are not less than $74$. So the percentile rank is $\\tfrac{9}{20} = 45\\%$.",
+        "steps": [
+          "1. Sort: $59, 62, 65, 66, 68, 70, 71, 72, 73, 74, 74, 74, 77, 79, \\ldots$",
+          "2. Strictly below $74$: $9$.",
+          "3. $\\tfrac{9}{20} = 45\\%$."
+        ],
+        "fast": "Count only the scores under $74$; the ties sit at the rank, not below it.",
+        "trap": "Counting the tied $74$s as below gives $\\tfrac{12}{20} = 60$; counting one of them (the student's own) gives $50$; dividing by $19$ gives about $47.4$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quartiles-boxplots",
+          "role": "primary"
+        }
+      ],
+      "setup": "an unsorted list with a value that appears three times; percentile rank as the percent of values strictly below it, so the ties are left out",
+      "variant": "the percentile rank of a value in a list",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "Twelve students recorded how many books they read over the summer. Eleven of them read $2$, $4$, $4$, $7$, $9$, $10$, $13$, $15$, $15$, $18$ and $21$ books, and the twelfth read $k$ books, where $k$ is a nonnegative integer. (Here the first quartile is the median of the $6$ smallest numbers and the third quartile is the median of the $6$ largest.)",
+      "qc": {
+        "a": "The interquartile range of the $12$ numbers",
+        "b": "$11$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "If $k$ is very small ($k \\le 4$), the lower six are $k, 2, 4, 4, 7, 9$ in some order with $Q_1 = 4$, and the upper six are $10, 13, 15, 15, 18, 21$ with $Q_3 = 15$: IQR $11$. If $k \\ge 21$, $Q_1 = \\tfrac{4 + 7}{2} = 5.5$ and $Q_3 = \\tfrac{15 + 18}{2} = 16.5$: IQR $11$ again. But $k = 11$ gives lower six $2, 4, 4, 7, 9, 10$ ($Q_1 = 5.5$) and upper six $11, 13, 15, 15, 18, 21$ ($Q_3 = 15$): IQR $9.5$. So the IQR can equal $11$ or be less.",
+        "steps": [
+          "1. $k = 0$: $Q_1 = 4$, $Q_3 = 15$, IQR $= 11$.",
+          "2. $k = 30$: $Q_1 = 5.5$, $Q_3 = 16.5$, IQR $= 11$.",
+          "3. $k = 11$: $Q_1 = 5.5$, $Q_3 = 15$, IQR $= 9.5$.",
+          "4. Equal in some cases, B greater in others: D."
+        ],
+        "fast": "A middle value of $k$ pushes $Q_1$ up without pushing $Q_3$ up; the two extremes shift both quartiles together.",
+        "trap": "Testing only the extreme cases (a $k$ below everything and a $k$ above everything) gives $11$ both times and suggests C."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quartiles-boxplots",
+          "role": "primary"
+        }
+      ],
+      "setup": "an even-count list with one unknown value; the IQR matches a value when the unknown is at either extreme but shrinks when it lands in the middle; compare with that value",
+      "variant": "quartiles of a list with an even count",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "figureId": "fig1",
+      "prompt": "The box plot shows the wing lengths, in millimeters, of $40$ sparrows measured by a field biologist. (The first quartile is the median of the $20$ shortest wing lengths, and the third quartile is the median of the $20$ longest.) Which of the following statements must be true? Indicate all such statements.",
+      "choices": [
+        "The interquartile range is $12$ millimeters.",
+        "The range is at least $3$ times the interquartile range.",
+        "The mean wing length is greater than $70$ millimeters.",
+        "At least $30$ of the sparrows have wing lengths of $66$ millimeters or more.",
+        "If the longest wing length were $110$ millimeters instead, the interquartile range would be greater.",
+        "The median is closer to the least wing length than to the third quartile."
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The plot gives least $60$, $Q_1 = 66$, median $70$, $Q_3 = 78$, greatest $96$. IQR $= 78 - 66 = 12$ (true). Range $= 36 = 3 \\cdot 12$, so 'at least 3 times' holds (true). $Q_1$ is the average of the 10th and 11th lengths, so the 11th is at least $66$ and so are the 11th through 40th: $30$ sparrows (true). The mean is not fixed by a box plot: the long upper whisker suggests a high mean, but lengths packed at the bottom of each quarter give a mean of $69.4$ (nine lengths of $60$, ten each of $66$, $70$ and $78$, one of $96$). Changing only the maximum leaves $Q_1$ and $Q_3$ alone. The median is $10$ from the least value and $8$ from $Q_3$, so it is closer to $Q_3$.",
+        "steps": [
+          "1. Read: $60, 66, 70, 78, 96$.",
+          "2. IQR $= 12$: true.",
+          "3. Range $36 \\ge 36$: true.",
+          "4. Mean: can be below $70$ (values crowded low in each quarter): not forced.",
+          "5. 11th to 40th lengths are all $\\ge 66$: at least $30$, true.",
+          "6. A larger maximum does not move the quartiles: false.",
+          "7. $70 - 60 = 10 > 78 - 70 = 8$: false."
+        ],
+        "fast": "A box plot fixes the five numbers and the quarter counts, never the mean.",
+        "trap": "The right-skewed shape makes 'mean greater than $70$' look forced, and the exact equality $36 = 3 \\cdot 12$ tempts a reader to reject 'at least'. The median line sits near the left of the box, which makes it look closer to the least value than it is."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quartiles-boxplots",
+          "role": "primary"
+        }
+      ],
+      "setup": "one box plot read for its five numbers; select the statements forced by them: the IQR, a range-to-IQR bound met with equality, a count at or above the first quartile, but not the mean or an IQR change from a new maximum",
+      "variant": "reading quartiles and the IQR from a boxplot",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "figureId": "fig2",
+      "prompt": "The box plots summarize the scores of two classes on the same test; each class has $20$ students. (For each class, and for all $40$ scores together, the first quartile is the median of the lower half of the scores and the third quartile is the median of the upper half.)",
+      "qc": {
+        "a": "The interquartile range of all $40$ scores",
+        "b": "The median score of Class Y minus the median score of Class X"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Class X's highest score ($28$) is below Class Y's lowest ($32$), so when the $40$ scores are sorted, the lower $20$ are exactly Class X and the upper $20$ are exactly Class Y. The combined first quartile is then the median of Class X, $18$, and the combined third quartile is the median of Class Y, $42$. The combined IQR is $42 - 18 = 24$, which is the difference of the medians. Equal.",
+        "steps": [
+          "1. Read X: $8, 12, 18, 22, 28$; Y: $32, 36, 42, 46, 54$.",
+          "2. Every X score $<$ every Y score.",
+          "3. Combined lower half $=$ Class X, so combined $Q_1 = 18$.",
+          "4. Combined upper half $=$ Class Y, so combined $Q_3 = 42$.",
+          "5. A $= 24$, B $= 42 - 18 = 24$: equal."
+        ],
+        "fast": "Non-overlapping plots of equal-size groups: each group is one half of the combined list, so the combined quartiles are the two medians.",
+        "trap": "Combining the two IQRs ($10 + 10$, or their average $10$) or concluding that the combined quartiles depend on the unseen scores (D) misses that the halves are exactly the two classes."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quartiles-boxplots",
+          "role": "primary"
+        }
+      ],
+      "setup": "two equal-size groups whose box plots do not overlap; the combined lower and upper halves are the two groups, so the combined quartiles are the group medians; compare the combined IQR with the gap between the medians",
+      "variant": "comparing two boxplots",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "A credit union paid $\\$135$ in simple interest on a $\\$3{,}600$ savings certificate that was held for $9$ months. What annual rate of simple interest did the certificate earn?",
+      "choices": [
+        "$3.75\\%$",
+        "$4.5\\%$",
+        "$5\\%$",
+        "$6\\%$",
+        "$6.75\\%$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Simple interest $=$ principal $\\times$ annual rate $\\times$ time in years. Nine months is $\\tfrac34$ of a year: $135 = 3{,}600 \\cdot r \\cdot \\tfrac34 = 2{,}700r$, so $r = 0.05 = 5\\%$.",
+        "steps": [
+          "1. Time: $9$ months $= 0.75$ year.",
+          "2. $3{,}600 \\cdot 0.75 = 2{,}700$.",
+          "3. $r = \\tfrac{135}{2{,}700} = 0.05$."
+        ],
+        "fast": "$\\tfrac{135}{3{,}600} = 3.75\\%$ for $9$ months; scale to $12$ months: $3.75 \\cdot \\tfrac43 = 5\\%$.",
+        "trap": "Stopping at $\\tfrac{135}{3{,}600} = 3.75\\%$ gives the rate for $9$ months, not per year; multiplying by $\\tfrac{9}{12}$ instead of dividing gives a rate below that."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-interest",
+          "role": "primary"
+        }
+      ],
+      "setup": "interest earned over part of a year and the principal given; the annual rate is the interest over principal, scaled up from the part of a year",
+      "variant": "simple interest over a partial year",
+      "solverRating": 1
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "A furniture store pays each salesperson a monthly commission based on that month's total sales $s$: $5\\%$ of $s$ if $s$ is at most $\\$40{,}000$, and $8\\%$ of $s$ if $s$ is greater than $\\$40{,}000$. Which of the following could be a salesperson's commission for one month? Indicate all such amounts.",
+      "choices": [
+        "$\\$2{,}000$",
+        "$\\$2{,}400$",
+        "$\\$2{,}800$",
+        "$\\$3{,}200$",
+        "$\\$3{,}240$",
+        "$\\$4{,}000$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          4,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "At sales up to $\\$40{,}000$ the commission runs from $0$ to $0.05 \\cdot 40{,}000 = \\$2{,}000$. Just above $\\$40{,}000$ the whole amount earns $8\\%$, so the commission jumps to just above $\\$3{,}200$ and rises from there. Amounts from just over $\\$2{,}000$ through $\\$3{,}200$ are impossible. $\\$2{,}000$ (sales $\\$40{,}000$), $\\$3{,}240$ (sales $\\$40{,}500$) and $\\$4{,}000$ (sales $\\$50{,}000$) can occur.",
+        "steps": [
+          "1. Lower tier: commission $\\le 2{,}000$, reached at $s = 40{,}000$.",
+          "2. Upper tier: $0.08s$ with $s > 40{,}000$, so commission $> 3{,}200$.",
+          "3. $2{,}400$: $5\\%$ needs $s = 48{,}000$ (not allowed in that tier); $8\\%$ needs $s = 30{,}000$ (not allowed): impossible.",
+          "4. $2{,}800$: $s = 56{,}000$ or $35{,}000$, each in the wrong tier: impossible.",
+          "5. $3{,}200$: $8\\%$ needs $s = 40{,}000$, which earns $5\\%$: impossible.",
+          "6. $3{,}240$ ($s = 40{,}500$) and $4{,}000$ ($s = 50{,}000$): possible."
+        ],
+        "fast": "For each amount, find the sales in each tier and check that the sales fall in that tier.",
+        "trap": "Solving $0.08s = 3{,}200$ gives $s = 40{,}000$ and seems to allow $\\$3{,}200$, but at exactly $\\$40{,}000$ the $5\\%$ rate applies; treating the rates as marginal (like tax brackets) would make every amount above $\\$2{,}000$ possible."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-interest",
+          "role": "primary"
+        }
+      ],
+      "setup": "a commission rate that applies to all sales once a threshold is passed; the possible commissions leave a gap above the threshold, and the boundary amount of the upper rate is not reached; select the possible amounts",
+      "variant": "tiered pricing or commission",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "A school invested $\\$10{,}000$ of its scholarship fund, part in an account paying $3\\%$ annual simple interest and the rest in an account paying $5\\%$ annual simple interest. After $9$ months the two accounts had earned a total of $\\$285$ in interest. How many dollars were invested in the $5\\%$ account?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "4000"
+      },
+      "explanation": {
+        "key": "Let $x$ dollars go into the $5\\%$ account. Over $\\tfrac34$ of a year: $\\tfrac34 [0.05x + 0.03(10{,}000 - x)] = 285$, so $0.05x + 300 - 0.03x = 380$ and $0.02x = 80$: $x = 4{,}000$.",
+        "steps": [
+          "1. A full year would earn $\\tfrac{285}{0.75} = \\$380$.",
+          "2. $0.05x + 0.03(10{,}000 - x) = 380$.",
+          "3. $300 + 0.02x = 380$, so $x = 4{,}000$."
+        ],
+        "fast": "At $3\\%$ on everything a year earns $\\$300$; the extra $\\$80$ comes from $2\\%$ more on the $5\\%$ part: $\\tfrac{80}{0.02} = 4{,}000$.",
+        "trap": "Using $\\$285$ as a full year's interest gives $0.02x = -15$, a negative amount; solving for the $3\\%$ account answers $6{,}000$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-interest",
+          "role": "primary"
+        }
+      ],
+      "setup": "a fixed sum split between two simple-interest rates; the combined interest over part of a year is scaled to a full year before the mixture equation gives one part",
+      "variant": "simple interest over a partial year",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A store's loyalty program pays a customer back $2\\%$ of the first $\\$500$ the customer spends in a year, $5\\%$ of the amount spent above $\\$500$ up to $\\$2{,}000$, and $8\\%$ of any amount spent above $\\$2{,}000$. Last year Rosa spent more than $\\$2{,}000$ at the store.",
+      "qc": {
+        "a": "The amount the program paid Rosa back for last year",
+        "b": "$5\\%$ of the amount Rosa spent last year"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "For spending $s > 2{,}000$: payback $= 0.02 \\cdot 500 + 0.05 \\cdot 1{,}500 + 0.08(s - 2{,}000) = 10 + 75 + 0.08s - 160 = 0.08s - 75$. Compared with $0.05s$, the difference is $0.03s - 75$, which is zero at $s = 2{,}500$. At $s = 2{,}100$: A $= 93$, B $= 105$ (B greater). At $s = 3{,}000$: A $= 165$, B $= 150$ (A greater).",
+        "steps": [
+          "1. First two tiers pay $10 + 75 = \\$85$, against $5\\%$ of $2{,}000 = \\$100$.",
+          "2. Above $2{,}000$, A grows $8$ cents per dollar, B $5$: A catches up $3$ cents per dollar.",
+          "3. The $\\$15$ shortfall closes after $\\tfrac{15}{0.03} = \\$500$ more: $s = 2{,}500$.",
+          "4. $s$ can be either side: D."
+        ],
+        "fast": "At $\\$2{,}000$ the program has paid $\\$85$, $\\$15$ less than $5\\%$; the top rate gains $3\\%$ per dollar, so it pulls ahead only after another $\\$500$.",
+        "trap": "Seeing an $8\\%$ top rate and answering A forgets that the first $\\$2{,}000$ paid back less than $5\\%$; applying $8\\%$ to the whole amount gives A as well."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-interest",
+          "role": "primary"
+        }
+      ],
+      "setup": "a three-tier marginal payback rate with the amount only bounded below the top tier's start; the total payback against a flat rate on everything crosses over at a point inside the allowed range",
+      "variant": "tiered pricing or commission",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q21",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "On the same day, Dev deposited $\\$2{,}000$ in account S, which pays $10\\%$ annual simple interest, and $\\$2{,}000$ in account C, which pays $10\\%$ annual interest compounded annually. No other deposits or withdrawals were made. Which of the following statements are true? Indicate all such statements.",
+      "choices": [
+        "After $1$ year the two balances are equal.",
+        "After $3$ years the balance of account C is $\\$2{,}662$.",
+        "After $3$ years the balance of account C exceeds that of account S by $\\$60$.",
+        "Account C earns $\\$242$ in interest during the third year.",
+        "After $3$ years the balance of account C is $30\\%$ greater than the amount deposited.",
+        "Over the $3$ years, account C earns exactly $10\\%$ more interest than account S."
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "S grows by $\\$200$ a year: $2{,}200$, $2{,}400$, $2{,}600$. C grows by $10\\%$ of its current balance: $2{,}200$, $2{,}420$, $2{,}662$. After 1 year they match. C's third-year interest is $10\\%$ of $2{,}420 = 242$. After 3 years C exceeds S by $62$, not $60$; C is $33.1\\%$ above the deposit, not $30\\%$; C earned $662$ against S's $600$, which is $10.33\\%$ more, not exactly $10\\%$.",
+        "steps": [
+          "1. S: $2{,}200, 2{,}400, 2{,}600$.",
+          "2. C: $2{,}200, 2{,}420, 2{,}662$.",
+          "3. Year 1 equal: true. C after 3 years $2{,}662$: true.",
+          "4. Gap $62$: the third statement is false.",
+          "5. Third-year interest $242$: true.",
+          "6. $\\tfrac{662}{2{,}000} = 33.1\\%$: false. $\\tfrac{662}{600} - 1 \\approx 10.3\\%$: false."
+        ],
+        "fast": "Run both balances for three years; every statement is then a lookup.",
+        "trap": "Extending the second year's $\\$20$ gap evenly (or using $30\\%$ for three years of $10\\%$) treats compound growth as if it were simple."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponential-growth",
+          "role": "primary"
+        }
+      ],
+      "setup": "equal deposits at the same rate, one simple and one compounded yearly, run for three years; select the true statements on balances, a single year's interest, the gap and the percent gain",
+      "variant": "compound interest against simple interest",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q22",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A colony of yeast cells grows by a factor of $4$ every $6$ days. If it keeps growing in the same way, how many days does it take the colony to grow by a factor of $32$?",
+      "choices": [
+  "$8$",
+  "$12$",
+  "$15$",
+  "$24$",
+  "$48$"
+ ],
+      "key": {
+        "sel": [
+   2
+  ]
+      },
+      "explanation": {
+        "key": "Write both factors as powers of $2$: a factor of $4 = 2^2$ every $6$ days is a doubling every $3$ days, and $32 = 2^5$ is $5$ doublings, so it takes $5 \\times 3 = 15$ days.",
+        "steps": [
+          "1. $4 = 2^2$ per $6$ days, so the colony doubles every $3$ days.",
+          "2. $32 = 2^5$: five doublings.",
+          "3. $5 \\times 3 = 15$ days. Check: $4^{15/6} = 4^{2.5} = 32$."
+        ],
+        "fast": "$4^{t/6} = 32$ means $2^{t/3} = 2^5$, so $t = 15$.",
+        "trap": "Dividing $32$ by $4$ to get $8$ periods ($48$ days) treats the growth as additive; stopping at $2$ periods ($12$ days, a factor of $16$) or taking $32/4 \\cdot 3 = 24$ misses that the factor compounds."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponential-growth",
+          "role": "primary"
+        }
+      ],
+      "setup": "growth by a fixed factor per period; the number of days to reach a larger factor, solved by writing both factors as powers of a common base (a non-whole number of periods)",
+      "variant": "growth by a factor over a stated number of periods",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q23",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "prompt": "In a lab, culture A starts with $1{,}000$ bacteria and triples every $4$ hours. Culture B starts at the same moment with $9{,}000$ bacteria and increases by $200\\%$ every $6$ hours. After $36$ hours, the number of bacteria in culture A is how many times the number in culture B?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "3"
+      },
+      "explanation": {
+        "key": "An increase of $200\\%$ means the count becomes $300\\%$ of itself, a factor of $3$. In $36$ hours A triples $\\tfrac{36}{4} = 9$ times and B triples $\\tfrac{36}{6} = 6$ times. A $= 1{,}000 \\cdot 3^9$, B $= 9{,}000 \\cdot 3^6$, so $\\tfrac{A}{B} = \\tfrac{3^3}{9} = 3$.",
+        "steps": [
+          "1. B's factor per $6$ hours: $1 + 2 = 3$.",
+          "2. A: $9$ periods, $1{,}000 \\cdot 3^9$.",
+          "3. B: $6$ periods, $9{,}000 \\cdot 3^6$.",
+          "4. Ratio $= \\tfrac{3^9}{9 \\cdot 3^6} = \\tfrac{27}{9} = 3$."
+        ],
+        "fast": "Both triple; A gets $3$ extra triplings ($27$) against B's $9$-fold head start: $\\tfrac{27}{9} = 3$.",
+        "trap": "Reading 'increases by $200\\%$' as doubling gives B $= 9{,}000 \\cdot 2^6$ and a ratio near $34$; reading it as a factor of $2$ in one model but $3$ in the other mixes the bases."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponential-growth",
+          "role": "primary"
+        }
+      ],
+      "setup": "two growth models with different periods, one stated as a percent increase per period equal to the other's factor; count the periods for each over one span and take the ratio of the powers",
+      "variant": "comparing two exponential models",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q24",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "After an injection, the amount of a drug in a patient's bloodstream decreases by $20\\%$ every hour: each hour it loses $20\\%$ of the amount present at the start of that hour.",
+      "qc": {
+        "a": "The number of hours it takes for the amount to fall to half of its starting value",
+        "b": "$2.5$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Each hour multiplies the amount by $0.8$. After $2$ hours $0.64$ remains, after $3$ hours $0.512$, still more than half; the halfway point comes after more than $3$ hours (about $3.1$). So A is greater than $2.5$.",
+        "steps": [
+          "1. Hourly factor $0.8$.",
+          "2. $0.8^2 = 0.64$, $0.8^3 = 0.512 > 0.5$.",
+          "3. Half is reached only after $3$ hours: A $> 3 > 2.5$."
+        ],
+        "fast": "Three hours still leave more than half ($0.512$), so the halving time exceeds $3$.",
+        "trap": "Thinking of $20\\%$ as a fixed share of the starting amount gives $\\tfrac{50}{20} = 2.5$ hours and C; each hour's loss is $20\\%$ of a smaller amount, so the drug falls more slowly than that."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponential-growth",
+          "role": "primary"
+        }
+      ],
+      "setup": "a fixed percent loss per period; the time to fall to half against the linear estimate of 50 over the percent (compounding losses take longer)",
+      "variant": "doubling or halving time",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q25",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "revisits": "quant-007:s1q7",
+      "prompt": "For a class photo, a group of students stands in a single row, and the twins Leo and Lia are among them. The number of orders in which Leo and Lia are not side by side is $5$ times the number of orders in which they are side by side. How many students are in the row?",
+      "choices": [
+        "$6$",
+        "$7$",
+        "$10$",
+        "$11$",
+        "$12$"
+      ],
+      "key": {
+        "sel": [
+          4
+        ]
+      },
+      "explanation": {
+        "key": "With $n$ students, glue the twins into one block: $(n - 1)!$ orders of the block and the others, times $2$ orders inside the block, so $2(n - 1)!$ orders have them side by side. All orders number $n!$, so $n! - 2(n - 1)! = (n - 1)!(n - 2)$ have them apart. The ratio is $\\tfrac{(n - 1)!(n - 2)}{2(n - 1)!} = \\tfrac{n - 2}{2} = 5$, so $n = 12$.",
+        "steps": [
+          "1. Together: $2(n - 1)!$.",
+          "2. Apart: $n! - 2(n - 1)! = (n - 2)(n - 1)!$.",
+          "3. $\\tfrac{n - 2}{2} = 5 \\Rightarrow n = 12$.",
+          "4. Check $n = 12$: together $2 \\cdot 11!$, apart $10 \\cdot 11!$, ratio $5$."
+        ],
+        "fast": "Apart over together is $\\tfrac{n!}{2(n - 1)!} - 1 = \\tfrac{n}{2} - 1$; set it to $5$.",
+        "trap": "Forgetting that the twins can stand in $2$ orders inside their block makes the ratio $n - 1$ and gives $6$; forgetting to divide by that $2$ at the end gives $7$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-restrictions",
+          "role": "primary"
+        }
+      ],
+      "setup": "run backwards: the ratio of row orders with two people apart to those with them together is given; together is twice (n - 1)!, apart is the rest, so the ratio is (n - 2)/2; find n",
+      "variant": "two people must sit together, or apart",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q26",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "revisits": "quant-007:s2q2",
+      "prompt": "The largest angle of triangle $KLM$ is the angle at $K$, and that angle is acute. If $KL = 5$ and $KM = 12$, which of the following could be the length of side $LM$?",
+      "choices": [
+        "$11.5$",
+        "$12.5$",
+        "$13$",
+        "$13.5$",
+        "$14$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The largest angle is opposite the longest side, so $LM$, opposite $K$, is longer than $KM = 12$. The angle at $K$ is acute exactly when $LM^2 < KL^2 + KM^2 = 25 + 144 = 169$, so $LM < 13$. Only $12 < LM < 13$ works: $12.5$.",
+        "steps": [
+          "1. Angle $K$ largest $\\Rightarrow LM > 12$ (and $> 5$).",
+          "2. Angle $K$ acute $\\Rightarrow LM^2 < 5^2 + 12^2 = 169 \\Rightarrow LM < 13$.",
+          "3. Choices: $11.5$ too short; $13$ makes $K$ a right angle; $13.5$ and $14$ make it obtuse.",
+          "4. Only $12.5$."
+        ],
+        "fast": "$5$-$12$-$13$ is the right triangle; acute at $K$ means just under $13$, largest at $K$ means over $12$.",
+        "trap": "Using only the triangle inequality ($7 < LM < 17$) leaves four choices; forgetting that the largest angle sits across from the longest side keeps $11.5$; the boundary $13$ gives a right angle, not an acute one."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "primary"
+        }
+      ],
+      "setup": "two sides given, the angle between them is the largest and acute; the third side must be longer than both and below the Pythagorean value; pick the one possible length",
+      "variant": "larger side opposite the larger angle; obtuse vs acute from c^2 against a^2 + b^2",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q27",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "revisits": "quant-007:s2q14",
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "min-max-bounding",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "remainders-units",
+          "role": "secondary"
+        }
+      ],
+      "prompt": "At a school fair, $40$ raffle tickets numbered $1$ through $40$ sit in a box, and tickets are pulled out one at a time at random and kept out. Each goal below is followed by a number of pulls. Indicate each goal for which that number is exactly the smallest number of pulls certain to achieve the goal, however the pulls turn out.",
+      "choices": [
+        "Two tickets whose numbers leave the same remainder when divided by $6$: $7$ pulls",
+        "A ticket whose number is a multiple of $4$: $30$ pulls",
+        "Two tickets whose numbers add up to $41$: $21$ pulls",
+        "Three tickets whose numbers leave the same remainder when divided by $4$: $9$ pulls",
+        "Two tickets whose numbers differ by exactly $20$: $20$ pulls",
+        "One even-numbered ticket and one odd-numbered ticket: $3$ pulls"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Find the most pulls that can still miss the goal, then add $1$. Remainders by $6$: six classes, so $6$ pulls can all differ and the 7th must repeat: $7$ (true). Multiples of $4$: there are $10$, so $30$ pulls can all miss them: $31$ (false). Sums of $41$: the pairs $(1, 40), (2, 39), \\ldots, (20, 21)$ use every ticket once; $20$ pulls can take one from each pair, the 21st completes a pair: $21$ (true). Three with the same remainder by $4$: four classes of $10$ tickets; $8$ pulls can hold two of each, the 9th makes three: $9$ (true). Differing by $20$: the pairs $(1, 21), \\ldots, (20, 40)$ also use every ticket once, so $20$ pulls can miss and $21$ are needed (false). Even and odd: the first $20$ pulls can all be even, so $21$ are needed (false).",
+        "steps": [
+          "1. Same remainder mod $6$: $6 + 1 = 7$. True.",
+          "2. Multiple of $4$: $30$ non-multiples, so $31$. False.",
+          "3. Sum $41$: $20$ disjoint pairs, so $21$. True.",
+          "4. Three alike mod $4$: $4 \\cdot 2 + 1 = 9$. True.",
+          "5. Difference $20$: $20$ disjoint pairs, so $21$. False.",
+          "6. One of each parity: $20$ of one parity first, so $21$. False."
+        ],
+        "fast": "For each goal, build the longest run of pulls that still misses it; the answer is one more than that run.",
+        "trap": "Stopping at the count of tickets that miss the goal ($30$ non-multiples of $4$, $20$ pulls for the difference pairs) forgets the extra pull that forces it; 'one even and one odd' looks like two pulls of luck, but the worst case is all $20$ of one parity first."
+      },
+      "setup": "numbered tickets drawn without replacement; worst-case pulls to guarantee goals built on remainders, complementary sums and fixed differences; select the goals whose shown count is exact",
+      "variant": "worst-case count (pigeonhole)",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q28",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "revisits": "quant-007:s2q12",
+      "prompt": "At a school supply store, $4$ binders, $7$ notebooks and $10$ pens cost $\\$61$ in all, and $2$ binders, $3$ notebooks and $4$ pens cost $\\$27$ in all. What is the total cost of $1$ binder, $1$ notebook and $1$ pen?",
+      "choices": [
+        "$\\$10.00$",
+        "$\\$13.50$",
+        "$\\$17.00$",
+        "$\\$34.00$",
+        "The information given is not enough to tell."
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Look for numbers $m$ and $n$ with $m(4, 7, 10) + n(2, 3, 4) = (1, 1, 1)$. From $4m + 2n = 1$ and $7m + 3n = 1$: $m = -\\tfrac12$, $n = \\tfrac32$, and the pens check: $10(-\\tfrac12) + 4(\\tfrac32) = 1$. So the cost is $-\\tfrac12(61) + \\tfrac32(27) = -30.5 + 40.5 = \\$10$. ",
+        "steps": [
+          "1. Let $b, n, p$ be the prices: $4b + 7n + 10p = 61$, $2b + 3n + 4p = 27$.",
+          "2. $\\tfrac32 \\times$ second: $3b + 4.5n + 6p = 40.5$.",
+          "3. Half the first: $2b + 3.5n + 5p = 30.5$.",
+          "4. Subtract: $b + n + p = 10$.",
+          "5. Check one solution: $b = 4$, $n = 5$, $p = 1$ fits both totals and gives $10$."
+        ],
+        "fast": "Each list of counts goes up by the same step ($4, 7, 10$ by $3$; $2, 3, 4$ by $1$), so the equal-count list $(1, 1, 1)$ is a combination of the two: $\\tfrac32(27) - \\tfrac12(61) = 10$.",
+        "trap": "Subtracting the totals gives $2b + 4n + 6p = 34$, and halving it gives $b + 2n + 3p = 17$, which looks like the answer but is a different basket; seeing three unknowns and only two equations suggests 'not enough', but this particular basket is fixed."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "linear-equations",
+          "role": "primary"
+        }
+      ],
+      "setup": "two price totals for three items with arithmetic-progression counts; the one-of-each total is a combination of the two equations, while the easy difference gives a different basket",
+      "variant": "three variables, two equations: what can be determined",
+      "solverRating": 3
+    }
+  ]
+}

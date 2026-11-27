@@ -1,0 +1,768 @@
+{
+ "testId": "qbank-006",
+ "measure": "quant",
+ "kind": "quant",
+ "seed": 95645,
+ "generatedAt": "2026-11-27T12:18:15.693Z",
+ "gaps": [
+  "revisit quant-007:s1q7 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q2 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q14 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q12 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s1q7 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q10 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q1 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q2 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s1q8 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q5 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s1q1 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s1q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q13 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q7 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q14 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q8 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q15 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q4 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q9 (you missed it; no sibling in the bank yet)"
+ ],
+ "slots": [
+  {
+   "slot": 1,
+   "qid": "s1q1",
+   "type": "numeric",
+   "level": 3,
+   "concept": "polygons-quadrilaterals",
+   "name": "Polygons and quadrilaterals",
+   "variant": "interior angle sum of an n-gon, and regular polygons"
+  },
+  {
+   "slot": 2,
+   "qid": "s1q2",
+   "type": "mc",
+   "level": 4,
+   "concept": "polygons-quadrilaterals",
+   "name": "Polygons and quadrilaterals",
+   "variant": "parallelogram, rhombus or trapezoid properties"
+  },
+  {
+   "slot": 3,
+   "qid": "s1q3",
+   "type": "qc",
+   "level": 5,
+   "concept": "polygons-quadrilaterals",
+   "name": "Polygons and quadrilaterals",
+   "variant": "a regular hexagon split into triangles"
+  },
+  {
+   "slot": 4,
+   "qid": "s1q4",
+   "type": "mc",
+   "level": 5,
+   "concept": "polygons-quadrilaterals",
+   "name": "Polygons and quadrilaterals",
+   "variant": "parallelogram, rhombus or trapezoid properties"
+  },
+  {
+   "slot": 5,
+   "qid": "s1q5",
+   "type": "numeric",
+   "level": 3,
+   "concept": "functions",
+   "name": "Functions, notation, composition and defined operations",
+   "variant": "f(a + b) against f(a) + f(b)"
+  },
+  {
+   "slot": 6,
+   "qid": "s1q6",
+   "type": "mc",
+   "level": 5,
+   "concept": "functions",
+   "name": "Functions, notation, composition and defined operations",
+   "variant": "a function property such as f(-x) = -f(x) or f(x + 1) = f(x)"
+  },
+  {
+   "slot": 7,
+   "qid": "s1q7",
+   "type": "mc",
+   "level": 4,
+   "concept": "functions",
+   "name": "Functions, notation, composition and defined operations",
+   "variant": "composition f(g(x)), or solving f(x) = g(x)"
+  },
+  {
+   "slot": 8,
+   "qid": "s1q8",
+   "type": "qc",
+   "level": 4,
+   "concept": "functions",
+   "name": "Functions, notation, composition and defined operations",
+   "variant": "a defined operation (x ◊ y = ...) applied twice"
+  },
+  {
+   "slot": 9,
+   "qid": "s1q9",
+   "type": "mc",
+   "level": 5,
+   "concept": "linear-equations",
+   "name": "Linear equations and simultaneous equations",
+   "variant": "a system with no solution or infinitely many"
+  },
+  {
+   "slot": 10,
+   "qid": "s1q10",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "linear-equations",
+   "name": "Linear equations and simultaneous equations",
+   "variant": "a literal equation: solve for one letter in terms of the others"
+  },
+  {
+   "slot": 11,
+   "qid": "s1q11",
+   "type": "qc",
+   "level": 4,
+   "concept": "linear-equations",
+   "name": "Linear equations and simultaneous equations",
+   "variant": "a system with no solution or infinitely many"
+  },
+  {
+   "slot": 12,
+   "qid": "s1q12",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "linear-equations",
+   "name": "Linear equations and simultaneous equations",
+   "variant": "solving for an expression (x + y) instead of each variable"
+  },
+  {
+   "slot": 13,
+   "qid": "s1q13",
+   "type": "numeric",
+   "level": 4,
+   "concept": "quartiles-boxplots",
+   "name": "Quartiles, percentiles and boxplots",
+   "variant": "the percentile rank of a value in a list"
+  },
+  {
+   "slot": 14,
+   "qid": "s1q14",
+   "type": "qc",
+   "level": 5,
+   "concept": "quartiles-boxplots",
+   "name": "Quartiles, percentiles and boxplots",
+   "variant": "quartiles of a list with an even count"
+  },
+  {
+   "slot": 15,
+   "qid": "s1q15",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "quartiles-boxplots",
+   "name": "Quartiles, percentiles and boxplots",
+   "variant": "reading quartiles and the IQR from a boxplot"
+  },
+  {
+   "slot": 16,
+   "qid": "s1q16",
+   "type": "qc",
+   "level": 5,
+   "concept": "quartiles-boxplots",
+   "name": "Quartiles, percentiles and boxplots",
+   "variant": "comparing two boxplots"
+  },
+  {
+   "slot": 17,
+   "qid": "s1q17",
+   "type": "mc",
+   "level": 3,
+   "concept": "word-problems-interest",
+   "name": "Interest, profit, discount and cost problems",
+   "variant": "simple interest over a partial year"
+  },
+  {
+   "slot": 18,
+   "qid": "s1q18",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "word-problems-interest",
+   "name": "Interest, profit, discount and cost problems",
+   "variant": "tiered pricing or commission"
+  },
+  {
+   "slot": 19,
+   "qid": "s1q19",
+   "type": "numeric",
+   "level": 4,
+   "concept": "word-problems-interest",
+   "name": "Interest, profit, discount and cost problems",
+   "variant": "simple interest over a partial year"
+  },
+  {
+   "slot": 20,
+   "qid": "s1q20",
+   "type": "qc",
+   "level": 5,
+   "concept": "word-problems-interest",
+   "name": "Interest, profit, discount and cost problems",
+   "variant": "tiered pricing or commission"
+  },
+  {
+   "slot": 21,
+   "qid": "s1q21",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "exponential-growth",
+   "name": "Exponential growth and compound interest",
+   "variant": "compound interest against simple interest"
+  },
+  {
+   "slot": 22,
+   "qid": "s1q22",
+   "type": "mc",
+   "level": 4,
+   "concept": "exponential-growth",
+   "name": "Exponential growth and compound interest",
+   "variant": "growth by a factor over a stated number of periods"
+  },
+  {
+   "slot": 23,
+   "qid": "s1q23",
+   "type": "numeric",
+   "level": 5,
+   "concept": "exponential-growth",
+   "name": "Exponential growth and compound interest",
+   "variant": "comparing two exponential models"
+  },
+  {
+   "slot": 24,
+   "qid": "s1q24",
+   "type": "qc",
+   "level": 5,
+   "concept": "exponential-growth",
+   "name": "Exponential growth and compound interest",
+   "variant": "doubling or halving time"
+  },
+  {
+   "slot": 25,
+   "qid": "s1q25",
+   "type": "mc",
+   "level": 5,
+   "concept": "counting-restrictions",
+   "name": "Counting with restrictions and arrangements",
+   "variant": "two people must sit together, or apart",
+   "revisit": {
+    "ref": "quant-007:s1q7",
+    "result": "guessed",
+    "item": "Four adults and three children, including a girl named Mia and her father, are to stand in a row of 7 places for a photograph. No two children may stand next to each other, and Mia must stand next to her father. How many different arrangements of the 7 people are possible? · choices: 288 / 432 / 576 / 720 / 1,440",
+    "setup": "row with no two children adjacent and one child next to a given adult",
+    "change": "run it backwards: give what the earlier item asked for, and ask for one of its givens"
+   }
+  },
+  {
+   "slot": 26,
+   "qid": "s1q26",
+   "type": "mc",
+   "level": 5,
+   "concept": "triangles",
+   "name": "Triangles: similar, isosceles, equilateral, inequality",
+   "variant": "larger side opposite the larger angle; obtuse vs acute from c^2 against a^2 + b^2",
+   "revisit": {
+    "ref": "quant-007:s2q2",
+    "result": "missed",
+    "item": "In triangle $PQR$, $PQ = 7$, $QR = 4$, and $PQ$ is the longest side. One of the angles of triangle $PQR$ measures more than $90^\\circ$. · Quantity A: $PR$ | Quantity B: $6$",
+    "setup": "two sides given and an obtuse (or bounded) angle; the third side's range from c^2 against a^2 + b^2",
+    "change": "change the format (quantitative comparison, multiple choice or numeric entry) and the question asked"
+   }
+  },
+  {
+   "slot": 27,
+   "qid": "s1q27",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "min-max-bounding",
+   "name": "Bounding: minimum/maximum values under constraints",
+   "variant": "worst-case count (pigeonhole)",
+   "revisit": {
+    "ref": "quant-007:s2q14",
+    "result": "missed",
+    "item": "A drawer holds 10 red socks, 8 blue socks and 6 green socks. Socks are drawn one at a time without looking. For which of the following goals is the number shown the least number of draws that guarantees the goal? Indicate all such goals. · choices: Two socks of the same color: 4 / Three red socks: 17 / Two green socks: 19 / One blue sock: 17 / Two blue socks: 17",
+    "setup": "worst-case draws to guarantee a color condition (pigeonhole); select the true counts",
+    "change": "combine the same insight with a second concept"
+   }
+  },
+  {
+   "slot": 28,
+   "qid": "s1q28",
+   "type": "mc",
+   "level": 4,
+   "concept": "linear-equations",
+   "name": "Linear equations and simultaneous equations",
+   "variant": "three variables, two equations: what can be determined",
+   "revisit": {
+    "ref": "quant-007:s2q12",
+    "result": "missed",
+    "item": "At a café, 3 muffins, 5 scones and 7 croissants cost a total of 41 dollars, and 1 muffin, 3 scones and 5 croissants cost a total of 25 dollars. What is the total cost, in dollars, of 1 muffin, 2 scones and 3 croissants? · choices: 8.00 / 13.50 / 16.50 / 33.00 / It cannot be determined from the information given.",
+    "setup": "two linear equations in three unknowns; a third combination is determined",
+    "change": "keep the insight but move the trap: a different wrong path should tempt"
+   }
+  }
+ ],
+ "units": [],
+ "conceptSlots": [
+  {
+   "concept": "polygons-quadrilaterals",
+   "variant": "interior angle sum of an n-gon, and regular polygons"
+  },
+  {
+   "concept": "polygons-quadrilaterals",
+   "variant": "parallelogram, rhombus or trapezoid properties"
+  },
+  {
+   "concept": "polygons-quadrilaterals",
+   "variant": "a regular hexagon split into triangles"
+  },
+  {
+   "concept": "polygons-quadrilaterals",
+   "variant": "parallelogram, rhombus or trapezoid properties"
+  },
+  {
+   "concept": "functions",
+   "variant": "f(a + b) against f(a) + f(b)"
+  },
+  {
+   "concept": "functions",
+   "variant": "a function property such as f(-x) = -f(x) or f(x + 1) = f(x)"
+  },
+  {
+   "concept": "functions",
+   "variant": "composition f(g(x)), or solving f(x) = g(x)"
+  },
+  {
+   "concept": "functions",
+   "variant": "a defined operation (x ◊ y = ...) applied twice"
+  },
+  {
+   "concept": "linear-equations",
+   "variant": "a system with no solution or infinitely many"
+  },
+  {
+   "concept": "linear-equations",
+   "variant": "a literal equation: solve for one letter in terms of the others"
+  },
+  {
+   "concept": "linear-equations",
+   "variant": "a system with no solution or infinitely many"
+  },
+  {
+   "concept": "linear-equations",
+   "variant": "solving for an expression (x + y) instead of each variable"
+  },
+  {
+   "concept": "quartiles-boxplots",
+   "variant": "the percentile rank of a value in a list"
+  },
+  {
+   "concept": "quartiles-boxplots",
+   "variant": "quartiles of a list with an even count"
+  },
+  {
+   "concept": "quartiles-boxplots",
+   "variant": "reading quartiles and the IQR from a boxplot"
+  },
+  {
+   "concept": "quartiles-boxplots",
+   "variant": "comparing two boxplots"
+  },
+  {
+   "concept": "word-problems-interest",
+   "variant": "simple interest over a partial year"
+  },
+  {
+   "concept": "word-problems-interest",
+   "variant": "tiered pricing or commission"
+  },
+  {
+   "concept": "word-problems-interest",
+   "variant": "simple interest over a partial year"
+  },
+  {
+   "concept": "word-problems-interest",
+   "variant": "tiered pricing or commission"
+  },
+  {
+   "concept": "exponential-growth",
+   "variant": "compound interest against simple interest"
+  },
+  {
+   "concept": "exponential-growth",
+   "variant": "growth by a factor over a stated number of periods"
+  },
+  {
+   "concept": "exponential-growth",
+   "variant": "comparing two exponential models"
+  },
+  {
+   "concept": "exponential-growth",
+   "variant": "doubling or halving time"
+  },
+  {
+   "concept": "counting-restrictions",
+   "variant": "two people must sit together, or apart"
+  },
+  {
+   "concept": "triangles",
+   "variant": "larger side opposite the larger angle; obtuse vs acute from c^2 against a^2 + b^2"
+  },
+  {
+   "concept": "min-max-bounding",
+   "variant": "worst-case count (pigeonhole)"
+  },
+  {
+   "concept": "linear-equations",
+   "variant": "three variables, two equations: what can be determined"
+  }
+ ],
+ "targets": {
+  "concepts": [
+   "polygons-quadrilaterals",
+   "functions",
+   "linear-equations",
+   "quartiles-boxplots",
+   "word-problems-interest",
+   "exponential-growth"
+  ]
+ },
+ "history": {
+  "polygons-quadrilaterals": [
+   {
+    "setup": "rhombus with side and one diagonal; area against a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "interior angle k times the exterior angle; number of diagonals",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "count the diagonals of a regular polygon, then remove those through the center",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the triangle on two adjacent vertices and an opposite vertex of a regular hexagon: its fraction of the hexagon's area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "trapezoid diagonals cut it into four triangles; two triangle areas give the trapezoid's area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "midpoints of a regular hexagon's sides form a smaller hexagon; the cut-off corner triangles with a 120-degree angle give the side ratio; compare areas",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one more side adds a given number of diagonals; find the number of diagonals of the smaller polygon",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "interior angle k times the exterior angle fixes n for two regular polygons of equal perimeter; side lengths in inverse ratio of n",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the diagonal count is a stated multiple of the side count; find n, then report the diagonals from one vertex (a neighbouring quantity)",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "functions": [
+   {
+    "setup": "minimum value of f(f(x)) for a quadratic f",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a function on a finite domain given by a table; the inputs fixed by applying f twice; compare one such input with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "odd function with a period: one value fixes the value two units away and forces a zero at half the period",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "linear function with a nonzero constant term: compare f(a + b) with f(a) + f(b) (the constant counts twice)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "count the integers in the domain of a quotient of square roots whose denominator subtracts a constant from a root (one hidden excluded point)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "f of a linear expression in x given; the input that gives a stated output (the solved x is not the answer)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a defined operation nested with an unknown in the inner pair; the outer value gives a square, and only the negative root's value is offered",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "finite-domain table with one output repeated three times; the sum of two inputs sharing that output against a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "f given on a shifted input; completing the square gives an even closed form; a zero of f has two signs, and f one step above against one step below the zero flips with the sign",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "linear-equations": [
+   {
+    "setup": "counts of items at two or three prices from a total count and revenue",
+    "worn": true,
+    "items": 2
+   },
+   {
+    "setup": "for which k a 2x2 linear system has no solution",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "count integer k for which a 2x2 system has an integer solution",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three item counts, two price lists and totals; greatest possible count of one",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two linear equations in three unknowns; a third combination is determined",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "1/a + 1/b = 1/c with positive values: solve for c and compare it with a",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "solve y = (ax + b)/(x - 1) for x: collect the x terms and factor",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "sum and difference linked by a multiple: find both, then the larger is their average",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two equations that are multiples of one line: count the positive integer solutions of that line",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a price after a percent discount plus a flat fee, solved for the discount rate (move the fee before dividing; the fee's sign flips)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a 2x2 system with no solution fixes the constant (one root makes the lines coincide); the axis intercepts of the two parallel lines form a quadrilateral whose area comes from its perpendicular diagonals",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a product formula with a coefficient times a square root of two variables: solve for one variable under the root (square both sides, the coefficient included)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two equations in three unknowns in which two unknowns enter only as the same combination; a single unknown and that combination are both fixed; compare them",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a 2x2 system with a negative integer parameter and an integer solution; elimination gives (8 - k)x = 15, and 8 - k >= 9 leaves one divisor; then x + y",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "quartiles-boxplots": [
+   {
+    "setup": "add a new minimum and maximum to a list; compare the IQRs",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two boxplots on one scale; select statements forced by the five-number summaries (range, IQR, counts relative to the other's median)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a value's percentile rank before and after a batch of numbers is added: how many of the batch fall below it",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "read Q1 and Q3 off a boxplot; the outlier fence above Q3 and the least whole value past it",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two values above every value of an even-count list are added; both quartiles shift to averages of neighbours; compare the IQRs",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two box plots of groups of very different sizes, one wholly above a value and the other mostly below it; compare the counts above the value (a quarter of the large group outnumbers all of the small one)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "read Q1 and Q3 off a box plot; every value is scaled by a percent and then shifted by a constant; the new IQR (the shift cancels) against a value",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "word-problems-interest": [
+   {
+    "setup": "lots sold at markup and at a discount off list; cost per unit from total profit",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two deposits starting in different months in one simple-interest account; total interest at year's end",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "salary plus a flat commission against commission only above a threshold: the break-even sales",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "goods sold only in whole units with a non-whole need, then a fee on orders at or below a threshold: buying one more unit is cheaper",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "profit given as a percent of the selling price; the price rises by a percent with the cost fixed; the new profit as a percent of cost",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a fixed fee plus a two-tier per-unit rate; the total bill given; the total usage",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a price and a profit stated as a percent of cost give the cost; re-price so the same percent is of the selling price; the change in price",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a dollar markup over cost followed by a percent discount on the marked price; the profit left over gives the cost (the discount comes off cost plus markup)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a repayment of principal plus simple interest over a fraction of a year; count the months, scale the annual rate, divide by one plus the term rate",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two bookings with a fixed total length, each charged a flat fee up to a threshold and per started unit above it; the possible totals, including the split that lands exactly on the threshold and on a whole unit",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a percent markup on cost, then a sale discount stated both in dollars and as a percent of the regular price; the dollar amount gives the regular price, which is divided by one plus the markup to get the cost; the profit at the sale price",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two sales at the same price, a gain stated as a percent of the price and a loss stated as the same percent of the cost; find each cost on its own base; the net result is a loss, not break-even",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the same length bought from two shops that sell only whole units of different sizes; the shop with the lower rate per inch costs more once each purchase is rounded up to whole units",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "exponential-growth": [
+   {
+    "setup": "constant yearly growth with an overall 700% increase; percent over a third of the period",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two decaying amounts with different halving times and a starting ratio; time when they are equal",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the two-year gap between compound and simple interest is the principal times the rate squared: recover the rate, then the simple interest",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two exponential models whose different-looking bases and exponents rewrite to the same yearly factor; a constant ratio",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two exponential models each known at the same two times; the factor for half the gap is the square root; extrapolate both back and compare",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "constant percent growth with the overall percent increase over the period; the value at the halfway point against the average of the starting and ending values (geometric against arithmetic mean)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two deposits made one doubling period apart in an account with a fixed doubling time; the time from opening until the balance reaches a target (combine at the second deposit, then count doublings)",
+    "worn": false,
+    "items": 1
+   }
+  ]
+ },
+ "exemplars": {
+  "polygons-quadrilaterals": [
+   "ogq-set3-1",
+   "bb-t1s3-5"
+  ],
+  "functions": [
+   "bb-t1s7-10",
+   "ogq-t2-s5-22"
+  ],
+  "linear-equations": [
+   "ogq-t1-s6-8",
+   "bb-t1s3-27"
+  ],
+  "quartiles-boxplots": [
+   "ogq-t1-s6-13",
+   "ogq-t2-s5-4"
+  ],
+  "word-problems-interest": [
+   "bb-t1s3-28",
+   "bb-t1s7-16"
+  ],
+  "exponential-growth": []
+ }
+}

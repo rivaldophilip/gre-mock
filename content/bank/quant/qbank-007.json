@@ -1,0 +1,1222 @@
+{
+  "id": "qbank-007",
+  "measure": "quant",
+  "title": "Quant bank batch 7",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Cumulative percent of the 160 guests at a mountain lodge, by number of nights stayed",
+      "table": {
+        "head": [
+          "Nights stayed",
+          "Cumulative percent of guests"
+        ],
+        "rows": [
+          [
+            "1",
+            "15%"
+          ],
+          [
+            "2",
+            "40%"
+          ],
+          [
+            "3",
+            "70%"
+          ],
+          [
+            "4",
+            "85%"
+          ],
+          [
+            "5",
+            "100%"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fig2",
+      "caption": "Daily household energy use in two neighborhoods (Neighborhood A as a percent of its 40 households, Neighborhood B as a number of its 60 households)",
+      "table": {
+        "head": [
+          "Daily energy use (kilowatt-hours)",
+          "Neighborhood A (percent of households)",
+          "Neighborhood B (number of households)"
+        ],
+        "rows": [
+          [
+            "0 to less than 10",
+            "5%",
+            "18"
+          ],
+          [
+            "10 to less than 20",
+            "10%",
+            "20"
+          ],
+          [
+            "20 to less than 30",
+            "15%",
+            "10"
+          ],
+          [
+            "30 to less than 40",
+            "30%",
+            "8"
+          ],
+          [
+            "40 to less than 50",
+            "40%",
+            "4"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fig3",
+      "caption": "Number of seeds that sprouted in each of 40 seed trays (10 seeds planted per tray)",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 260' width='360' height='260' font-family='sans-serif' font-size='12'><line x1='50' y1='210.0' x2='320' y2='210.0' stroke='currentColor' stroke-opacity='0.25' stroke-width='1'/><text x='44' y='214.0' fill='currentColor' text-anchor='end'>0</text><line x1='50' y1='187.5' x2='320' y2='187.5' stroke='currentColor' stroke-opacity='0.25' stroke-width='1'/><text x='44' y='191.5' fill='currentColor' text-anchor='end'>2</text><line x1='50' y1='165.0' x2='320' y2='165.0' stroke='currentColor' stroke-opacity='0.25' stroke-width='1'/><text x='44' y='169.0' fill='currentColor' text-anchor='end'>4</text><line x1='50' y1='142.5' x2='320' y2='142.5' stroke='currentColor' stroke-opacity='0.25' stroke-width='1'/><text x='44' y='146.5' fill='currentColor' text-anchor='end'>6</text><line x1='50' y1='120.0' x2='320' y2='120.0' stroke='currentColor' stroke-opacity='0.25' stroke-width='1'/><text x='44' y='124.0' fill='currentColor' text-anchor='end'>8</text><line x1='50' y1='97.5' x2='320' y2='97.5' stroke='currentColor' stroke-opacity='0.25' stroke-width='1'/><text x='44' y='101.5' fill='currentColor' text-anchor='end'>10</text><line x1='50' y1='75.0' x2='320' y2='75.0' stroke='currentColor' stroke-opacity='0.25' stroke-width='1'/><text x='44' y='79.0' fill='currentColor' text-anchor='end'>12</text><line x1='50' y1='52.5' x2='320' y2='52.5' stroke='currentColor' stroke-opacity='0.25' stroke-width='1'/><text x='44' y='56.5' fill='currentColor' text-anchor='end'>14</text><line x1='50' y1='30.0' x2='320' y2='30.0' stroke='currentColor' stroke-opacity='0.25' stroke-width='1'/><text x='44' y='34.0' fill='currentColor' text-anchor='end'>16</text><rect x='60' y='165.0' width='50' height='45.0' fill='currentColor' fill-opacity='0.3' stroke='currentColor' stroke-width='1.5'/><text x='85.0' y='226' fill='currentColor' text-anchor='middle'>5</text><rect x='110' y='142.5' width='50' height='67.5' fill='currentColor' fill-opacity='0.3' stroke='currentColor' stroke-width='1.5'/><text x='135.0' y='226' fill='currentColor' text-anchor='middle'>6</text><rect x='160' y='120.0' width='50' height='90.0' fill='currentColor' fill-opacity='0.3' stroke='currentColor' stroke-width='1.5'/><text x='185.0' y='226' fill='currentColor' text-anchor='middle'>7</text><rect x='210' y='52.5' width='50' height='157.5' fill='currentColor' fill-opacity='0.3' stroke='currentColor' stroke-width='1.5'/><text x='235.0' y='226' fill='currentColor' text-anchor='middle'>8</text><rect x='260' y='120.0' width='50' height='90.0' fill='currentColor' fill-opacity='0.3' stroke='currentColor' stroke-width='1.5'/><text x='285.0' y='226' fill='currentColor' text-anchor='middle'>9</text><line x1='50' y1='210' x2='320' y2='210' stroke='currentColor' stroke-width='1.5'/><line x1='50' y1='210' x2='50' y2='20' stroke='currentColor' stroke-width='1.5'/><text x='185.0' y='246' fill='currentColor' text-anchor='middle'>Number of seeds that sprouted</text><text x='14' y='120.0' fill='currentColor' text-anchor='middle' transform='rotate(-90 14 120.0)'>Number of trays</text></svg>"
+    },
+    {
+      "id": "fig4",
+      "caption": "Houses fitted with solar panels by a roofing crew last month, by number of panels per house",
+      "table": {
+        "head": [
+          "Panels per house",
+          "8",
+          "10",
+          "12",
+          "14",
+          "16"
+        ],
+        "rows": [
+          [
+            "Number of houses",
+            "5",
+            "8",
+            "k",
+            "6",
+            "3"
+          ]
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "figureId": "fig1",
+      "prompt": "The table gives, for the 160 guests who stayed at a mountain lodge last season, the cumulative percent who stayed each number of nights or fewer. No guest stayed more than 5 nights. How many of the guests stayed more than 2 nights but no more than 4 nights?",
+      "choices": [
+        "24",
+        "48",
+        "72",
+        "96",
+        "136"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "A cumulative percent counts everyone up to that row. The guests who stayed 3 or 4 nights are those counted by 4 nights or fewer ($85\\%$) but not by 2 nights or fewer ($40\\%$): $45\\%$ of 160, which is 72.",
+        "steps": [
+          "1. 4 nights or fewer: $85\\%$. 2 nights or fewer: $40\\%$.",
+          "2. More than 2 but no more than 4: $85\\% - 40\\% = 45\\%$.",
+          "3. $0.45 \\times 160 = 72$."
+        ],
+        "fast": "Subtract the two cumulative entries that bracket the range: $85 - 40 = 45$ percent of 160.",
+        "trap": "Adding the 3-night and 4-night entries as if they were each row's own share ($70\\% + 85\\%$), using only the 4-night entry ($85\\%$ gives 136), or subtracting the 3-night entry instead of the 2-night entry ($15\\%$ gives 24)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "frequency-distributions",
+          "role": "primary"
+        }
+      ],
+      "setup": "cumulative relative frequency table; the count in a band of rows is the difference of two cumulative entries times the total",
+      "variant": "relative frequency and cumulative frequency",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "figureId": "fig2",
+      "prompt": "The table describes the daily energy use of the 40 households in Neighborhood A and the 60 households in Neighborhood B. For all 100 households taken together, which interval contains the median daily energy use?",
+      "choices": [
+        "0 to less than 10",
+        "10 to less than 20",
+        "20 to less than 30",
+        "30 to less than 40",
+        "40 to less than 50"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Neighborhood A is given in percents, so first turn its column into counts: $5\\%$, $10\\%$, $15\\%$, $30\\%$ and $40\\%$ of 40 are 2, 4, 6, 12 and 16. The combined counts are 20, 24, 16, 20 and 20. The median of 100 values is the average of the 50th and 51st; the running total is 20, then 44, then 60, so both lie in 20 to less than 30.",
+        "steps": [
+          "1. A's counts: $0.05 \\times 40 = 2$, $0.10 \\times 40 = 4$, $0.15 \\times 40 = 6$, $0.30 \\times 40 = 12$, $0.40 \\times 40 = 16$.",
+          "2. Combined: $2 + 18 = 20$, $4 + 20 = 24$, $6 + 10 = 16$, $12 + 8 = 20$, $16 + 4 = 20$.",
+          "3. Running totals: 20, 44, 60, 80, 100.",
+          "4. The 50th and 51st values are past 44 and within 60: the interval 20 to less than 30."
+        ],
+        "fast": "Convert A to counts, then count up to the middle: 20 and 44 fall short of 50, 60 passes it.",
+        "trap": "Adding A's percents to B's counts as if both were counts gives a column totaling 160 whose middle falls in 30 to less than 40; taking B's own median (10 to less than 20) or the tallest combined row (also 10 to less than 20) ignores A."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "frequency-distributions",
+          "role": "primary"
+        }
+      ],
+      "setup": "two grouped columns over the same intervals, one in percents of its group and one in counts; convert, combine and locate the median of the pooled data",
+      "variant": "which interval contains the median or a percentile",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "figureId": "fig3",
+      "prompt": "A farmer planted 10 seeds in each of 40 seed trays. The histogram shows how many trays had each number of seeds sprout.",
+      "qc": {
+        "a": "The mean number of seeds that sprouted per tray",
+        "b": "The median number of seeds that sprouted per tray"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Read the bars: 4 trays had 5, 6 had 6, 8 had 7, 14 had 8 and 8 had 9. The total is $20 + 36 + 56 + 112 + 72 = 296$, so the mean is $\\tfrac{296}{40} = 7.4$. The 20th and 21st values both fall in the 8 bar (running totals 4, 10, 18, 32), so the median is 8.",
+        "steps": [
+          "1. Frequencies: $4, 6, 8, 14, 8$ for $5, 6, 7, 8, 9$ (total 40).",
+          "2. Sum: $5(4) + 6(6) + 7(8) + 8(14) + 9(8) = 296$; mean $= 7.4$.",
+          "3. Running totals: 4, 10, 18, 32, 40; the 20th and 21st values are 8.",
+          "4. $7.4 < 8$: Quantity B is greater."
+        ],
+        "fast": "The tall bar sits at 8 and the long tail runs to the left (5, 6, 7), so the mean is pulled below the median.",
+        "trap": "Averaging the five bar values $5$ to $9$ without weights gives 7, or averaging the bar heights; or taking the middle bar (7) as the median instead of counting to the 20th and 21st trays."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "frequency-distributions",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "secondary"
+        }
+      ],
+      "setup": "histogram of whole-number values with a long left tail; weighted mean from bar heights against the median found by counting to the middle position",
+      "variant": "mean from a histogram's grouped data",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "figureId": "fig4",
+      "prompt": "The table shows how many houses a roofing crew fitted with each number of solar panels last month. The number of houses fitted with 12 panels, $k$, is at least 4.",
+      "qc": {
+        "a": "The median number of panels per house",
+        "b": "12"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "There are $22 + k$ houses, and 13 of them have fewer than 12 panels. For $k = 4$ there are 26 houses; the 13th has 10 panels and the 14th has 12, so the median is 11, less than 12. For $k = 5$ or more, the middle position or positions fall among the 12s, so the median is 12, equal. The relationship cannot be determined.",
+        "steps": [
+          "1. Houses: $5 + 8 + k + 6 + 3 = 22 + k$; houses with 8 or 10 panels: 13.",
+          "2. $k = 4$: 26 houses, median $= \\tfrac{10 + 12}{2} = 11$ (13th and 14th values).",
+          "3. $k = 5$: 27 houses, median is the 14th value, 12.",
+          "4. One case gives B greater, the other equal: (D)."
+        ],
+        "fast": "Check the smallest allowed $k$ first: with $k = 4$ the count is even and the middle pair straddles the 10 and 12 rows.",
+        "trap": "Trying $k = 5$ or a larger $k$, seeing a median of 12 every time and answering 'equal'; with an even count the median can be the average of two adjacent rows, a value (11) that is not in the table."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "frequency-distributions",
+          "role": "primary"
+        }
+      ],
+      "setup": "one frequency in a table is an unknown with a lower bound; the smallest allowed value makes the count even and puts the middle pair across two rows, larger values put it in one row",
+      "variant": "median from a frequency table",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A moving walkway at an airport is 150 meters long and moves at 0.75 meter per second. A traveler stands still on the walkway for its first 60 meters, then walks forward at 4.5 kilometers per hour, relative to the walkway, for the rest of its length. Compared with walking the same 150 meters on the floor beside the walkway at 4.5 kilometers per hour, how long does her trip on the walkway take?",
+      "choices": [
+        "45 seconds less",
+        "35 seconds less",
+        "5 seconds less",
+        "The same time",
+        "5 seconds more"
+      ],
+      "key": {
+        "sel": [
+          4
+        ]
+      },
+      "explanation": {
+        "key": "4.5 kilometers per hour is $\\tfrac{4500}{3600} = 1.25$ meters per second. Standing: $\\tfrac{60}{0.75} = 80$ seconds. Walking on the walkway: $1.25 + 0.75 = 2$ meters per second over 90 meters, 45 seconds. Total 125 seconds. On the floor: $\\tfrac{150}{1.25} = 120$ seconds. The walkway trip takes 5 seconds more.",
+        "steps": [
+          "1. $4.5$ kilometers per hour $= \\tfrac{4500 \\text{ m}}{3600 \\text{ s}} = 1.25$ m/s.",
+          "2. Standing part: $60 \\div 0.75 = 80$ s.",
+          "3. Walking part: $90 \\div (1.25 + 0.75) = 45$ s.",
+          "4. Walkway total: $125$ s; floor: $150 \\div 1.25 = 120$ s; difference: 5 s more."
+        ],
+        "fast": "Standing at 0.75 m/s is slower than walking at 1.25 m/s, and the 60 m she stands costs 32 s extra; walking the other 90 m with the belt saves only 27 s.",
+        "trap": "Assuming any time on a moving walkway saves time; or walking the whole 150 m at the combined speed (75 s, '45 seconds less'); or converting 4.5 kilometers per hour as 4.5 m/s or 0.45 m/s."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "units-conversion",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "word-problems-rate",
+          "role": "secondary"
+        }
+      ],
+      "setup": "speeds given in two different units; a trip split into a standing part at the belt's speed and a walking part at the summed speed, against walking the whole distance; the standing part makes it slower",
+      "variant": "rates with mixed units",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A baker's tin holds 2.5 cups of baking soda. Each batch of her biscuits uses 1 tablespoon plus $\\tfrac12$ teaspoon of baking soda. If 1 cup is 8 fluid ounces, 1 fluid ounce is 2 tablespoons and 1 tablespoon is 3 teaspoons, how many complete batches can she make from one full tin?",
+      "choices": [
+        "34",
+        "35",
+        "40",
+        "80",
+        "96"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Put everything in teaspoons. The tin: $2.5 \\times 8 \\times 2 \\times 3 = 120$ teaspoons. One batch: $3 + \\tfrac12 = 3.5$ teaspoons. $\\tfrac{120}{3.5} \\approx 34.3$, so 34 complete batches.",
+        "steps": [
+          "1. $2.5$ cups $= 20$ fluid ounces $= 40$ tablespoons $= 120$ teaspoons.",
+          "2. One batch: 1 tablespoon $+ \\tfrac12$ teaspoon $= 3.5$ teaspoons.",
+          "3. $120 \\div 3.5 = 34\\tfrac27$: 34 complete batches."
+        ],
+        "fast": "$120$ teaspoons over $3.5$ per batch: $35 \\times 3.5 = 122.5$ is too much, so 34.",
+        "trap": "Rounding $34\\tfrac27$ up to 35, ignoring the half teaspoon (40), or reading '1 tablespoon plus $\\tfrac12$ teaspoon' as $1.5$ teaspoons (80)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "units-conversion",
+          "role": "primary"
+        }
+      ],
+      "setup": "a container's volume in the largest unit and a per-batch amount mixing two smaller units; convert both through a three-link chain to the smallest unit and take the whole-number part",
+      "variant": "chained unit conversion",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "A builder is pouring a rectangular concrete slab 18 feet long, 12 feet wide and 4 inches thick. Which of the following amounts of concrete would be enough to pour the whole slab? (1 yard = 3 feet; 1 foot = 12 inches.) Select all such amounts.",
+      "choices": [
+        "2.5 cubic yards",
+        "3 cubic yards",
+        "70 cubic feet",
+        "75 cubic feet",
+        "120,000 cubic inches",
+        "130,000 cubic inches"
+      ],
+      "key": {
+        "sel": [
+          1,
+          3,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "The slab is $18 \\times 12 \\times \\tfrac13 = 72$ cubic feet. A cubic yard is $3^3 = 27$ cubic feet, so 72 cubic feet is $\\tfrac{72}{27} = 2\\tfrac23$ cubic yards. A cubic foot is $12^3 = 1{,}728$ cubic inches, so 72 cubic feet is $124{,}416$ cubic inches. Enough: 3 cubic yards, 75 cubic feet and 130,000 cubic inches.",
+        "steps": [
+          "1. Thickness: 4 inches $= \\tfrac13$ foot; volume $= 18 \\times 12 \\times \\tfrac13 = 72$ cubic feet.",
+          "2. In cubic yards: $72 \\div 27 = 2\\tfrac23$; 2.5 is short, 3 is enough.",
+          "3. In cubic feet: 70 is short, 75 is enough.",
+          "4. In cubic inches: $72 \\times 1{,}728 = 124{,}416$; 120,000 is short, 130,000 is enough."
+        ],
+        "fast": "72 cubic feet sits between $2.5 \\times 27 = 67.5$ and $3 \\times 27 = 81$, and between $120{,}000$ and $130{,}000$ cubic inches since $70 \\times 1{,}728 \\approx 121{,}000$ already.",
+        "trap": "Converting with the linear factors: $72 \\div 3 = 24$ cubic yards (so no yard amount looks enough) or $72 \\times 12 = 864$ cubic inches (so every inch amount looks enough); or leaving the thickness as 4 feet."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "units-conversion",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "solids-volume",
+          "role": "secondary"
+        }
+      ],
+      "setup": "a slab with one dimension in a smaller unit; its volume against offered amounts in three cubic units (each linear factor cubed); select those at least as large",
+      "variant": "area or volume unit conversion (squares and cubes)",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "prompt": "A hotel abroad offers a traveler two ways to pay for a stay. She can be charged 480 euros on her card, in which case her bank converts the euros to dollars at the day's exchange rate and then adds a fee of $2.5\\%$ of that dollar amount, or she can pay a flat $\\$615$ in advance. At what exchange rate, in euros per dollar, do the two ways cost her the same number of dollars?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "0.8"
+      },
+      "explanation": {
+        "key": "At $r$ euros per dollar, 480 euros is $\\tfrac{480}{r}$ dollars, and the fee makes the charge $1.025 \\times \\tfrac{480}{r} = \\tfrac{492}{r}$ dollars. Setting $\\tfrac{492}{r} = 615$ gives $r = \\tfrac{492}{615} = 0.8$ euros per dollar.",
+        "steps": [
+          "1. Euros to dollars at $r$ euros per dollar: divide, $\\tfrac{480}{r}$.",
+          "2. Add the fee: $1.025 \\times \\tfrac{480}{r} = \\tfrac{492}{r}$.",
+          "3. $\\tfrac{492}{r} = 615 \\Rightarrow r = 0.8$."
+        ],
+        "fast": "The card charge before the fee must be $\\tfrac{615}{1.025} = 600$ dollars, and 480 euros for 600 dollars is $0.8$ euro per dollar.",
+        "trap": "Giving the rate the other way up, dollars per euro ($1.25$); leaving out the fee ($\\tfrac{480}{615} \\approx 0.78$); or applying the fee to the euros after converting the wrong way."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "units-conversion",
+          "role": "primary"
+        }
+      ],
+      "setup": "a price in a foreign currency plus a percent fee on the converted amount against a flat price at home; the break-even rate, asked as foreign units per home unit",
+      "variant": "currency or exchange rates",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "A pastry dough is made of flour, sugar and butter only. By weight, the ratio of flour to sugar is 5 to 2, and the ratio of sugar to butter is 3 to 4.",
+      "qc": {
+        "a": "The weight of the flour in the dough",
+        "b": "The combined weight of the sugar and the butter in the dough"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Make the sugar terms match: $5 : 2 = 15 : 6$ and $3 : 4 = 6 : 8$, so flour : sugar : butter $= 15 : 6 : 8$. Flour is 15 parts and sugar plus butter is 14 parts, so Quantity A is greater.",
+        "steps": [
+          "1. Scale flour : sugar by 3: $15 : 6$.",
+          "2. Scale sugar : butter by 2: $6 : 8$.",
+          "3. Flour : sugar : butter $= 15 : 6 : 8$.",
+          "4. Compare 15 with $6 + 8 = 14$: A is greater."
+        ],
+        "fast": "Write the shared term as the LCM of 2 and 3, which is 6.",
+        "trap": "Reading the two ratios as if the sugar were 2 parts in both: flour 5 against sugar 2 plus butter 4, which is 6, so B looks greater."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "ratio-proportion",
+          "role": "primary"
+        }
+      ],
+      "setup": "two ratios share a middle term with different numbers; rescale to a common middle term and compare one part with the sum of the other two",
+      "variant": "combining two ratios that share a term (a:b and b:c)",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "In an orchard of apple, pear and cherry trees only, the ratio of apple trees to pear trees is 3 to 2, and cherry trees make up $\\tfrac16$ of all the trees. Which of the following statements must be true? Select all such statements.",
+      "choices": [
+        "Apple trees make up $\\tfrac35$ of all the trees.",
+        "Apple trees make up half of all the trees.",
+        "Pear trees make up $\\tfrac25$ of all the trees.",
+        "There are twice as many pear trees as cherry trees.",
+        "The number of apple trees is greater than the number of pear and cherry trees combined.",
+        "The total number of trees is a multiple of 6."
+      ],
+      "key": {
+        "sel": [
+          1,
+          3,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "The 3 to 2 ratio splits only the non-cherry trees, which are $\\tfrac56$ of the orchard. So apples are $\\tfrac35 \\times \\tfrac56 = \\tfrac12$ of all trees and pears are $\\tfrac25 \\times \\tfrac56 = \\tfrac13$. Pears ($\\tfrac13$) are twice the cherries ($\\tfrac16$). Apples ($\\tfrac12$) equal pears plus cherries ($\\tfrac12$), not more. With $N$ trees, $\\tfrac{N}{2}$, $\\tfrac{N}{3}$ and $\\tfrac{N}{6}$ are whole numbers, so $N$ is a multiple of 6.",
+        "steps": [
+          "1. Non-cherry share: $1 - \\tfrac16 = \\tfrac56$.",
+          "2. Apples: $\\tfrac35 \\cdot \\tfrac56 = \\tfrac12$; pears: $\\tfrac25 \\cdot \\tfrac56 = \\tfrac13$; cherries: $\\tfrac16$.",
+          "3. Statement 1 and statement 3 use the part-to-part ratio as a share of the whole: false.",
+          "4. Pears : cherries $= \\tfrac13 : \\tfrac16 = 2 : 1$: true.",
+          "5. Apples $= \\tfrac12$ and pears plus cherries $= \\tfrac12$: equal, so statement 5 is false.",
+          "6. $\\tfrac{N}{6}$ whole forces $N$ to be a multiple of 6, and then $\\tfrac{N}{2}$ and $\\tfrac{N}{3}$ are whole too: true."
+        ],
+        "fast": "Write the orchard as 6 equal parts: 1 cherry, and the other 5 split 3 to 2 into 3 apple and 2 pear.",
+        "trap": "Treating 3 to 2 as shares of the whole orchard ($\\tfrac35$ and $\\tfrac25$), or selecting statement 5 because apples are the largest group, when they only tie the other two combined."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "ratio-proportion",
+          "role": "primary"
+        }
+      ],
+      "setup": "a part-to-part ratio between two kinds plus a part-to-whole share for a third; must-be-true statements about each kind's share of the whole, a comparison that ties, and divisibility of the total",
+      "variant": "part-to-part vs part-to-whole confusion",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "On a hiking map drawn to a scale of 1 to 50,000, a trail measures 12.4 centimeters. A hiker covers the trail at a steady 4 kilometers per hour. How many minutes does the hike take?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "93"
+      },
+      "explanation": {
+        "key": "Each map centimeter is 50,000 real centimeters, which is 500 meters or 0.5 kilometer. The trail is $12.4 \\times 0.5 = 6.2$ kilometers, and $\\tfrac{6.2}{4} = 1.55$ hours, which is $1.55 \\times 60 = 93$ minutes.",
+        "steps": [
+          "1. $1$ cm on the map $= 50{,}000$ cm $= 500$ m $= 0.5$ km.",
+          "2. Trail: $12.4 \\times 0.5 = 6.2$ km.",
+          "3. Time: $6.2 \\div 4 = 1.55$ h $= 93$ min."
+        ],
+        "fast": "At 4 kilometers per hour the hiker takes 15 minutes per kilometer: $6.2 \\times 15 = 93$.",
+        "trap": "Reading 1.55 hours as 1 hour 55 minutes (115) or as 155 minutes, or converting 50,000 cm as 50 km per map centimeter."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "ratio-proportion",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "word-problems-rate",
+          "role": "secondary"
+        }
+      ],
+      "setup": "a dimensionless map scale gives a real length after a centimeter-to-kilometer change; a walking speed turns it into minutes",
+      "variant": "scale maps and models",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "For the walls of a new building, the cost of insulation is directly proportional to the insulation's thickness, and the yearly heating cost is inversely proportional to that thickness. With insulation 3 inches thick, the insulation would cost $\\$1{,}200$ and the yearly heating cost would also be $\\$1{,}200$.",
+      "qc": {
+        "a": "The insulation cost plus one year's heating cost with insulation 4 inches thick",
+        "b": "The insulation cost plus one year's heating cost with insulation 2 inches thick"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Insulation cost is $400t$ and heating cost is $\\tfrac{3{,}600}{t}$ dollars. At 4 inches: $1{,}600 + 900 = 2{,}500$. At 2 inches: $800 + 1{,}800 = 2{,}600$. Quantity B is greater.",
+        "steps": [
+          "1. Direct: $C = kt$ with $1{,}200 = 3k$, so $k = 400$.",
+          "2. Inverse: $H = \\tfrac{m}{t}$ with $1{,}200 = \\tfrac{m}{3}$, so $m = 3{,}600$.",
+          "3. $t = 4$: $1{,}600 + 900 = 2{,}500$.",
+          "4. $t = 2$: $800 + 1{,}800 = 2{,}600$. B is greater."
+        ],
+        "fast": "The direct part moves by $\\$400$ either way, but the inverse part falls by only $\\$300$ going to 4 inches and rises by $\\$600$ going to 2 inches.",
+        "trap": "Assuming the two changes mirror each other, one inch up and one inch down from 3, so the totals are equal; an inverse proportion changes by different amounts on the two sides."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "ratio-proportion",
+          "role": "primary"
+        }
+      ],
+      "setup": "one cost direct and one inverse in the same variable, equal at a middle value; compare the totals one unit above and one unit below (the inverse part is not symmetric)",
+      "variant": "direct vs inverse proportion",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "Which of the following are equal to $\\dfrac{1}{\\sqrt5 - 2}$? Select all such expressions.",
+      "choices": [
+        "$\\sqrt5 + 2$",
+        "$\\dfrac{\\sqrt5 + 2}{3}$",
+        "$\\sqrt{9 + 4\\sqrt5}$",
+        "$\\dfrac{1}{\\sqrt5} - \\dfrac12$",
+        "$(\\sqrt5 - 2)(9 + 4\\sqrt5)$",
+        "$\\dfrac{\\sqrt5 + 2}{\\sqrt5 - 2}$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Multiply by the conjugate: $\\dfrac{\\sqrt5 + 2}{(\\sqrt5)^2 - 2^2} = \\dfrac{\\sqrt5 + 2}{1} = \\sqrt5 + 2$. Its square is $5 + 4\\sqrt5 + 4 = 9 + 4\\sqrt5$, so $\\sqrt{9 + 4\\sqrt5} = \\sqrt5 + 2$. And $(\\sqrt5 - 2)(9 + 4\\sqrt5) = 9\\sqrt5 + 20 - 18 - 8\\sqrt5 = \\sqrt5 + 2$.",
+        "steps": [
+          "1. $\\dfrac{1}{\\sqrt5 - 2} \\cdot \\dfrac{\\sqrt5 + 2}{\\sqrt5 + 2} = \\dfrac{\\sqrt5 + 2}{5 - 4} = \\sqrt5 + 2$.",
+          "2. $(\\sqrt5 + 2)^2 = 9 + 4\\sqrt5$, and $\\sqrt5 + 2 > 0$: the third choice is equal.",
+          "3. $(\\sqrt5 - 2)(9 + 4\\sqrt5) = (\\sqrt5 - 2)(\\sqrt5 + 2)^2 = 1 \\cdot (\\sqrt5 + 2)$: equal.",
+          "4. $\\dfrac{\\sqrt5 + 2}{3}$ uses $5 - 2$ for the denominator; $\\dfrac{1}{\\sqrt5} - \\dfrac12$ splits a reciprocal over a difference; $\\dfrac{\\sqrt5 + 2}{\\sqrt5 - 2} = (\\sqrt5 + 2)^2 = 9 + 4\\sqrt5$. None is equal."
+        ],
+        "fast": "Every key is $\\sqrt5 + 2 \\approx 4.24$; the last choice is its square, about 17.9.",
+        "trap": "Squaring $\\sqrt5$ but not 2 in the conjugate product ($\\tfrac{\\sqrt5 + 2}{3}$), taking the reciprocal term by term, or rejecting the nested root and the product because they do not look like $\\sqrt5 + 2$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponents-roots",
+          "role": "primary"
+        }
+      ],
+      "setup": "a reciprocal of a surd difference; select the forms equal to it: the rationalized sum, a nested root whose radicand is its square, and a product that cancels through the conjugate",
+      "variant": "nested and conjugate radicals (rationalizing a denominator)",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "What is the value of $(0.0016)^{-3/4} \\cdot (0.008)^{2/3}$?",
+      "choices": [
+        "$0.2$",
+        "$0.5$",
+        "$5$",
+        "$50$",
+        "$3{,}125$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "$0.0016 = \\tfrac{16}{10{,}000} = \\left(\\tfrac{2}{10}\\right)^4$, so $(0.0016)^{-3/4} = \\left(\\tfrac{10}{2}\\right)^3 = 125$. $0.008 = \\left(\\tfrac{2}{10}\\right)^3$, so $(0.008)^{2/3} = \\left(\\tfrac{2}{10}\\right)^2 = 0.04$. The product is $125 \\times 0.04 = 5$.",
+        "steps": [
+          "1. $0.0016 = 0.2^4$; $(0.2^4)^{-3/4} = 0.2^{-3} = 125$.",
+          "2. $0.008 = 0.2^3$; $(0.2^3)^{2/3} = 0.2^2 = 0.04$.",
+          "3. $125 \\times 0.04 = 5$."
+        ],
+        "fast": "Both bases are powers of $0.2$: $0.2^{4 \\cdot (-3/4)} \\cdot 0.2^{3 \\cdot (2/3)} = 0.2^{-3 + 2} = 0.2^{-1} = 5$.",
+        "trap": "Treating both exponents as negative ($125 \\times 25 = 3{,}125$), or swapping which factor gets the reciprocal ($0.008 \\times 25 = 0.2$), or miscounting decimal places so that $0.0016$ becomes $0.02^4$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponents-roots",
+          "role": "primary"
+        }
+      ],
+      "setup": "two decimals that are powers of the same decimal, one under a negative fractional exponent and one under a positive one; write both as that base and add exponents",
+      "variant": "negative and fractional exponents",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "If $4^{x} \\cdot 8^{x} = 16^{x+2} \\cdot \\sqrt2$, what is the value of $x$?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "8.5"
+      },
+      "explanation": {
+        "key": "Write every factor as a power of 2: $2^{2x} \\cdot 2^{3x} = 2^{4(x+2)} \\cdot 2^{1/2}$. So $5x = 4x + 8 + \\tfrac12$ and $x = 8.5$.",
+        "steps": [
+          "1. $4^{x} = 2^{2x}$, $8^{x} = 2^{3x}$, $16^{x+2} = 2^{4x + 8}$, $\\sqrt2 = 2^{1/2}$.",
+          "2. Left: $2^{5x}$. Right: $2^{4x + 8.5}$.",
+          "3. $5x = 4x + 8.5$, so $x = 8.5$."
+        ],
+        "fast": "Exponents of 2: $2x + 3x$ against $4x + 8 + \\tfrac12$.",
+        "trap": "Writing $16^{x+2}$ as $2^{4x+2}$ (giving $x = 2.5$), or dropping the $\\sqrt2$ (giving $x = 8$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponents-roots",
+          "role": "primary"
+        }
+      ],
+      "setup": "a product of powers of 4 and 8 equal to a power of 16 times a square root of 2; one base, exponents equated, a half from the root",
+      "variant": "equations solved by rewriting to a common base",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "$x \\ge 1$",
+      "qc": {
+        "a": "$\\sqrt{x - 2\\sqrt{x - 1}}$",
+        "b": "$\\sqrt{x - 1} - 1$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The radicand is a perfect square: $x - 2\\sqrt{x-1} = (x - 1) - 2\\sqrt{x-1} + 1 = (\\sqrt{x-1} - 1)^2$. So Quantity A is $|\\sqrt{x-1} - 1|$, the absolute value of Quantity B. For $x \\ge 2$, $\\sqrt{x-1} \\ge 1$ and the two are equal; for $1 \\le x < 2$, B is negative and A is positive. The relationship cannot be determined.",
+        "steps": [
+          "1. Let $u = \\sqrt{x-1} \\ge 0$, so $x = u^2 + 1$.",
+          "2. A: $\\sqrt{u^2 + 1 - 2u} = \\sqrt{(u-1)^2} = |u - 1|$. B: $u - 1$.",
+          "3. $x = 5$: $u = 2$, both are $1$ (equal). $x = 1$: $u = 0$, A is $1$ and B is $-1$ (A greater). So D."
+        ],
+        "fast": "Denest: A is $|\\sqrt{x-1} - 1|$, which equals B only when B is not negative; $x = 1$ makes B negative.",
+        "trap": "Denesting to $\\sqrt{x-1} - 1$ without the absolute value, which gives C; it holds only for $x \\ge 2$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponents-roots",
+          "role": "primary"
+        }
+      ],
+      "setup": "a nested radical whose radicand is a perfect square of a difference; denesting gives an absolute value, so it equals the bare difference only when that difference is not negative (a hidden range of x)",
+      "variant": "nested and conjugate radicals (rationalizing a denominator)",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "For a constant $c$, the equation $x^2 - 6x + c = 0$ has two different real solutions, $r$ and $s$. Which of the following could be the value of $r^2 + s^2$? Select all such values.",
+      "choices": [
+        "9",
+        "16",
+        "18",
+        "20",
+        "36",
+        "50"
+      ],
+      "key": {
+        "sel": [
+          3,
+          4,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "$r + s = 6$ and $rs = c$, so $r^2 + s^2 = (r + s)^2 - 2rs = 36 - 2c$. Two different real solutions need $36 - 4c > 0$, that is $c < 9$, so $r^2 + s^2 > 36 - 18 = 18$. Every value above 18 is reachable: 20 ($c = 8$), 36 ($c = 0$) and 50 ($c = -7$).",
+        "steps": [
+          "1. Sum of the solutions $6$, product $c$.",
+          "2. $r^2 + s^2 = 36 - 2c$.",
+          "3. Distinct real solutions: discriminant $36 - 4c > 0 \\Rightarrow c < 9$.",
+          "4. So $r^2 + s^2 > 18$: 20, 36 and 50 qualify; 9, 16 and 18 do not."
+        ],
+        "fast": "Two different numbers with sum 6 have $r^2 + s^2$ above $3^2 + 3^2 = 18$, with no upper limit.",
+        "trap": "Selecting 18, which needs $r = s = 3$, a repeated solution; or using $(r + s)^2 - rs$ and getting a different bound."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quadratics-factoring",
+          "role": "primary"
+        }
+      ],
+      "setup": "a monic quadratic with fixed sum of roots and a free constant; the sum of squares of the roots from sum and product, bounded below by requiring two distinct real roots",
+      "variant": "sum and product of the roots",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "What is the sum of all the different real numbers $x$ for which $(x^2 + 2x)^2 - 2(x^2 + 2x) - 3 = 0$?",
+      "choices": [
+        "$-4$",
+        "$-3$",
+        "$-2$",
+        "$1$",
+        "$2$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Let $u = x^2 + 2x$: $u^2 - 2u - 3 = 0$, so $u = 3$ or $u = -1$. Then $x^2 + 2x - 3 = 0$ gives $x = 1$ or $x = -3$, and $x^2 + 2x + 1 = 0$ gives only $x = -1$ (a repeated root). The different solutions are $1, -3, -1$, with sum $-3$.",
+        "steps": [
+          "1. $u = x^2 + 2x$: $(u - 3)(u + 1) = 0$.",
+          "2. $u = 3$: $(x + 3)(x - 1) = 0$, so $x = -3, 1$.",
+          "3. $u = -1$: $(x + 1)^2 = 0$, so $x = -1$ only.",
+          "4. Sum of the different solutions: $1 - 3 - 1 = -3$."
+        ],
+        "fast": "Each quadratic in $x$ has root sum $-2$, but the second one is a perfect square, so its $-1$ counts once: $-2 + (-1) = -3$.",
+        "trap": "Adding the root sums of both quadratics ($-2 + -2 = -4$) counts $-1$ twice; summing the $u$ values ($2$) stops halfway."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quadratics-factoring",
+          "role": "primary"
+        }
+      ],
+      "setup": "a quadratic in a quadratic expression of x; back-substitution gives two quadratics, one a perfect square with a repeated root, so the sum of the different solutions is not the sum of both root sums",
+      "variant": "a quadratic in disguise (x^4, sqrt x or 1/x as the variable)",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "A builder has two square floor tiles. The side of the larger tile is 4 centimeters longer than the side of the smaller tile, and the area of the larger tile is 40 square centimeters more than the area of the smaller tile. What is the combined area, in square centimeters, of the two tiles?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "58"
+      },
+      "explanation": {
+        "key": "With sides $a > b$: $a - b = 4$ and $a^2 - b^2 = (a - b)(a + b) = 40$, so $a + b = 10$. Then $a = 7$ and $b = 3$, and $a^2 + b^2 = 49 + 9 = 58$.",
+        "steps": [
+          "1. $a^2 - b^2 = (a - b)(a + b)$: $40 = 4(a + b)$, so $a + b = 10$.",
+          "2. With $a - b = 4$: $a = 7$, $b = 3$.",
+          "3. $a^2 + b^2 = 58$."
+        ],
+        "fast": "$a^2 + b^2 = \\tfrac{(a + b)^2 + (a - b)^2}{2} = \\tfrac{100 + 16}{2} = 58$.",
+        "trap": "Taking the 40 as the answer, or squaring the difference of sides ($16$) and adding it to 40."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quadratics-factoring",
+          "role": "primary"
+        }
+      ],
+      "setup": "two squares whose sides differ by a given amount and areas by another; the difference of squares gives the sum of the sides, then the combined area",
+      "variant": "special products: (a+b)^2, (a-b)^2, a^2 - b^2",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "$c$ is a negative constant.",
+      "qc": {
+        "a": "The number of different real solutions of $x^2 - 4x = c$",
+        "b": "The number of different real solutions of $x^2 + cx - 4 = 0$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "B: the product of the roots is $-4 < 0$ (discriminant $c^2 + 16 > 0$), so there are always 2 solutions. A: $x^2 - 4x - c = 0$ has discriminant $16 + 4c$, which is positive for $-4 < c < 0$ (2 solutions), zero at $c = -4$ (1) and negative for $c < -4$ (0). A can equal B or be less: cannot be determined.",
+        "steps": [
+          "1. B: $x^2 + cx - 4 = 0$ has discriminant $c^2 + 16 > 0$: 2 solutions for every $c$.",
+          "2. A: rewrite as $x^2 - 4x - c = 0$; discriminant $16 + 4c$.",
+          "3. $c = -1$: $12 > 0$, 2 solutions (equal to B). $c = -5$: $-4 < 0$, none (less than B).",
+          "4. The relationship cannot be determined."
+        ],
+        "fast": "$x^2 - 4x$ never drops below $-4$, so it can equal a negative $c$ only when $c \\ge -4$.",
+        "trap": "Moving $c$ across without changing its sign (discriminant $16 - 4c$, always positive for negative $c$), which makes both quantities 2 and suggests 'equal'."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "quadratics-factoring",
+          "role": "primary"
+        }
+      ],
+      "setup": "a negative constant appears in two quadratics: in one it is moved across the equals sign and its sign decides the discriminant; in the other a negative constant term forces two roots",
+      "variant": "the discriminant: number of real solutions",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q21",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "For which of the following values of $k$ is $x = 5$ a solution of $|x - k| = |x - 2k + 6|$? Select all such values.",
+      "choices": [
+        "$2$",
+        "$4$",
+        "$\\dfrac{16}{3}$",
+        "$6$",
+        "$8$",
+        "$10$"
+      ],
+      "key": {
+        "sel": [
+          2,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "With $x = 5$: $|5 - k| = |11 - 2k|$. Either $5 - k = 11 - 2k$, giving $k = 6$, or $5 - k = -(11 - 2k)$, giving $k = \\tfrac{16}{3}$. For $k = \\tfrac{16}{3}$, 5 is the point midway between $k$ and $2k - 6 = \\tfrac{14}{3}$. For $k = 6$, the two points $k$ and $2k - 6$ are both 6, so the equation holds for every $x$, including 5.",
+        "steps": [
+          "1. Substitute: $|5 - k| = |11 - 2k|$.",
+          "2. Same sign: $5 - k = 11 - 2k \\Rightarrow k = 6$.",
+          "3. Opposite signs: $5 - k = 2k - 11 \\Rightarrow k = \\tfrac{16}{3}$.",
+          "4. Check: $k = \\tfrac{16}{3}$ gives $\\tfrac13 = \\tfrac13$; $k = 6$ gives $1 = 1$."
+        ],
+        "fast": "Midway: $\\tfrac{k + (2k - 6)}{2} = 5$ gives $\\tfrac{16}{3}$; and if the two points coincide ($k = 2k - 6$, so $k = 6$) every $x$ works.",
+        "trap": "Using only the midpoint rule and missing $k = 6$, where the two points are the same and the equation is an identity."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "abs-value-inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "equal absolute values with both points depending on a parameter; the fixed solution is midway between them, or the two points coincide and every x works; select the parameter values",
+      "variant": "|x - a| = |x - b|: the point midway",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q22",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A door frame's opening is built to a width $w$ that is within 2 millimeters of 900 millimeters, and the door to fit it is cut to a width $d$ that is within 3 millimeters of 894 millimeters. Which of the following describes all possible values of the gap $g = w - d$, in millimeters?",
+      "choices": [
+        "$|g - 6| \\le 1$",
+        "$|g - 6| \\le 2.5$",
+        "$|g - 6| \\le 3$",
+        "$|g - 6| \\le 5$",
+        "$|g - 6| \\le 6$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "$|w - 900| \\le 2$ gives $898 \\le w \\le 902$, and $|d - 894| \\le 3$ gives $891 \\le d \\le 897$. The gap is smallest with the narrowest opening and widest door, $898 - 897 = 1$, and largest the other way, $902 - 891 = 11$. So $1 \\le g \\le 11$, which is $|g - 6| \\le 5$.",
+        "steps": [
+          "1. $898 \\le w \\le 902$ and $891 \\le d \\le 897$.",
+          "2. Least gap: $898 - 897 = 1$. Greatest gap: $902 - 891 = 11$.",
+          "3. Center $6$, half-width $5$: $|g - 6| \\le 5$."
+        ],
+        "fast": "When one toleranced width is subtracted from another, the tolerances add: $2 + 3 = 5$.",
+        "trap": "Subtracting the tolerances because the widths are subtracted ($3 - 2 = 1$), averaging them ($2.5$) or keeping only the larger one ($3$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "abs-value-inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "two lengths each within its own tolerance; the difference of the lengths has a tolerance equal to the sum of the two (not their difference); written as an absolute-value inequality",
+      "variant": "a tolerance stated as an absolute-value inequality",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q23",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "How many integers $n$ satisfy both $|n - 3| < 8$ and $|n + 2| \\ge 4$?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "9"
+      },
+      "explanation": {
+        "key": "$|n - 3| < 8$: $n$ is less than 8 from 3, so $-5 < n < 11$, the integers $-4$ to $10$. $|n + 2| \\ge 4$: $n$ is at least 4 from $-2$, so $n \\le -6$ or $n \\ge 2$. Both: $2 \\le n \\le 10$, which is 9 integers.",
+        "steps": [
+          "1. $-8 < n - 3 < 8 \\Rightarrow -5 < n < 11$: integers $-4, \\ldots, 10$.",
+          "2. $n + 2 \\le -4$ or $n + 2 \\ge 4$: $n \\le -6$ or $n \\ge 2$.",
+          "3. The left piece misses the first interval; the right piece leaves $2, 3, \\ldots, 10$.",
+          "4. Count: $10 - 2 + 1 = 9$."
+        ],
+        "fast": "Distance from 3 under 8 and distance from $-2$ at least 4: only $2$ through $10$ qualify.",
+        "trap": "Counting the strict bound as inclusive (adding 11), counting $10 - 2 = 8$, or reading $|n + 2| \\ge 4$ as $-6 \\le n \\le 2$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "abs-value-inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "a strict distance interval and a non-strict outside-distance condition around a different center; count the integers in the overlap",
+      "variant": "|x - a| < b as a distance interval",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q24",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "$|2x + 3| < x + 3$",
+      "qc": {
+        "a": "$|x|$",
+        "b": "$-x$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "$|2x + 3| < x + 3$ means $-(x + 3) < 2x + 3 < x + 3$. The right half gives $x < 0$, the left half gives $x > -2$. So $-2 < x < 0$, every allowed $x$ is negative, and $|x| = -x$.",
+        "steps": [
+          "1. Split: $2x + 3 < x + 3$ and $2x + 3 > -x - 3$.",
+          "2. First: $x < 0$. Second: $3x > -6$, $x > -2$.",
+          "3. On $-2 < x < 0$, $|x| = -x$: equal."
+        ],
+        "fast": "Try $x = 1$: $5 < 4$ fails; any positive $x$ makes $2x + 3$ exceed $x + 3$, so $x$ must be negative.",
+        "trap": "Solving only the half $2x + 3 > -(x + 3)$ (giving $x > -2$), which seems to allow positive $x$, where $|x| > -x$, and answering 'cannot be determined'."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "abs-value-inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "an absolute value less than a linear expression; one half of the double inequality forces the variable negative, so |x| equals -x",
+      "variant": "|x| against x in QC",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q25",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A renovation is made up of $n$ different tasks, which a contractor will do one at a time in some order. The inspection, one of the tasks, may not be done first, and the framing must be done at some point before the roofing. If there are exactly 300 orders that meet both conditions, what is the value of $n$?",
+      "choices": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Of the $n!$ orders, exactly half have the framing before the roofing: $\\tfrac{n!}{2}$. Among those, the ones with the inspection first number $\\tfrac{(n - 1)!}{2}$. So the count is $\\tfrac{n! - (n - 1)!}{2} = \\tfrac{(n - 1)!\\,(n - 1)}{2}$. For $n = 6$: $\\tfrac{120 \\cdot 5}{2} = 300$.",
+        "steps": [
+          "1. Framing before roofing: half of all orders, $\\tfrac{n!}{2}$.",
+          "2. Forbidden: inspection first, with framing before roofing among the other $n - 1$: $\\tfrac{(n - 1)!}{2}$.",
+          "3. Allowed: $\\tfrac{(n - 1)!(n - 1)}{2}$.",
+          "4. $n = 5$: $\\tfrac{24 \\cdot 4}{2} = 48$; $n = 6$: $300$; $n = 7$: $2{,}160$. So $n = 6$."
+        ],
+        "fast": "The count is $(n - 1)! \\cdot \\tfrac{n - 1}{2}$; $300 = 120 \\cdot \\tfrac52$ points to $n = 6$.",
+        "trap": "Subtracting the inspection-first orders from all $n!$ orders without halving them too, or forgetting the halving for framing before roofing, so that no choice fits or a neighbor ($n = 5$, since $5! = 120$ is close to the numbers in play) looks right."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-restrictions",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "counting-permutations",
+          "role": "secondary"
+        }
+      ],
+      "setup": "orders of n tasks with one task barred from first place (complement) and one task required before another (half); the count is given and n is asked",
+      "variant": "complement counting: total minus the forbidden",
+      "revisits": "quant-008:s1q7",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q26",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 3,
+      "prompt": "A concrete patio is shaped like a rectangle with a 3-meter by 5-meter rectangle removed from one corner, so that every edge of the patio meets the next at a right angle. The patio's longest edge is 14 meters, and its perimeter is 46 meters. What is the area of the patio, in square meters?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "111"
+      },
+      "explanation": {
+        "key": "Removing a corner rectangle leaves the perimeter unchanged: the two new inner edges replace equal lengths of the outer sides. So the full rectangle has perimeter 46 and one side 14, making the other side $23 - 14 = 9$. Its area is $14 \\times 9 = 126$, and the patio's area is $126 - 15 = 111$.",
+        "steps": [
+          "1. The L shape's perimeter equals that of the full rectangle: 46.",
+          "2. Half the perimeter: 23; other side $23 - 14 = 9$.",
+          "3. Area: $14 \\times 9 - 3 \\times 5 = 126 - 15 = 111$."
+        ],
+        "fast": "Corner cuts never change the perimeter: $14 + w = 23$, $w = 9$.",
+        "trap": "Thinking the cut adds $2(3 + 5) = 16$ to the perimeter, so that the full rectangle's perimeter would be 30 and its other side 1; or subtracting the cut piece's perimeter."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "area-perimeter",
+          "role": "primary"
+        }
+      ],
+      "setup": "L-shaped region from a corner cut: the perimeter equals the full rectangle's, which gives the missing side; area is the rectangle minus the cut",
+      "variant": "the area of an irregular composite figure",
+      "revisits": "quant-008:s2q10",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q27",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "A water tank in the shape of a cube holds exactly 3 cubic meters, and a square concrete pad has an area of exactly 2 square meters.",
+      "qc": {
+        "a": "The length of an edge of the tank, in meters",
+        "b": "The length of a side of the pad, in meters"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "The edge is $3^{1/3}$ and the side is $2^{1/2}$. Raise both to the 6th power, which keeps the order of positive numbers: $(3^{1/3})^6 = 9$ and $(2^{1/2})^6 = 8$. Since $9 > 8$, the edge is longer.",
+        "steps": [
+          "1. Edge $= \\sqrt[3]{3}$; side $= \\sqrt2$.",
+          "2. Sixth powers: $3^2 = 9$ and $2^3 = 8$.",
+          "3. $9 > 8$, so Quantity A is greater."
+        ],
+        "fast": "The LCM of the root indices 3 and 2 is 6; compare $3^2$ with $2^3$.",
+        "trap": "Thinking the square root of 2 must beat a cube root because cube roots shrink numbers more, or comparing 3 with 2 and 'cube' with 'square' and calling it a tie."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "exponents-roots",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "solids-volume",
+          "role": "secondary"
+        },
+        {
+          "kind": "concept",
+          "id": "area-perimeter",
+          "role": "secondary"
+        }
+      ],
+      "setup": "a cube's edge from its volume against a square's side from its area; compare a cube root with a square root by raising both to the sixth power",
+      "variant": "comparing large powers or roots without a calculator",
+      "revisits": "quant-008:s2q1",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q28",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "A triangular gable wall is split by a straight horizontal beam, which runs from one sloping edge to the other parallel to the wall's base, into a triangular top section of area 9 square meters and a lower section of area 16 square meters.",
+      "qc": {
+        "a": "The length of the beam",
+        "b": "$\\tfrac34$ of the length of the wall's base"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The top section is similar to the whole wall, whose area is $9 + 16 = 25$. Areas of similar triangles are in the square of the side ratio, so the beam is $\\sqrt{\\tfrac{9}{25}} = \\tfrac35$ of the base. $\\tfrac35 < \\tfrac34$, so Quantity B is greater.",
+        "steps": [
+          "1. Beam parallel to base: the top triangle is similar to the whole wall.",
+          "2. Whole area $= 9 + 16 = 25$; area ratio $\\tfrac{9}{25}$.",
+          "3. Side ratio $= \\tfrac35$: beam $= 0.6 \\times$ base $< 0.75 \\times$ base."
+        ],
+        "fast": "Compare the triangle with the whole ($9 : 25$), not with the lower piece ($9 : 16$).",
+        "trap": "Taking the square root of $\\tfrac{9}{16}$, the top section against the lower section, which gives $\\tfrac34$ and an 'equal' answer; the lower section is a trapezoid, not a similar triangle."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "triangles",
+          "role": "primary"
+        }
+      ],
+      "setup": "a parallel cut gives a small triangle and a trapezoid with their areas; the side ratio comes from the small triangle against the whole, not against the trapezoid; compare the cut with a fraction of the base",
+      "variant": "similar triangles: side and area ratios",
+      "revisits": "quant-008:s2q2",
+      "solverRating": 3
+    }
+  ]
+}

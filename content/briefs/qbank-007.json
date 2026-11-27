@@ -1,0 +1,790 @@
+{
+ "testId": "qbank-007",
+ "measure": "quant",
+ "kind": "quant",
+ "seed": 3665,
+ "generatedAt": "2026-11-27T12:18:23.715Z",
+ "gaps": [
+  "revisit quant-008:s1q7 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q10 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q1 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q2 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s1q8 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q5 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s1q1 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s1q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q13 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q7 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q14 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q8 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q15 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q4 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q9 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q2 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q3 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s2q5 (you missed it; no sibling in the bank yet)",
+  "revisit quant-009:s1q4 (you guessed it; no sibling in the bank yet)"
+ ],
+ "slots": [
+  {
+   "slot": 1,
+   "qid": "s1q1",
+   "type": "mc",
+   "level": 3,
+   "concept": "frequency-distributions",
+   "name": "Frequency distributions and histograms",
+   "variant": "relative frequency and cumulative frequency"
+  },
+  {
+   "slot": 2,
+   "qid": "s1q2",
+   "type": "mc",
+   "level": 4,
+   "concept": "frequency-distributions",
+   "name": "Frequency distributions and histograms",
+   "variant": "which interval contains the median or a percentile"
+  },
+  {
+   "slot": 3,
+   "qid": "s1q3",
+   "type": "qc",
+   "level": 4,
+   "concept": "frequency-distributions",
+   "name": "Frequency distributions and histograms",
+   "variant": "mean from a histogram's grouped data"
+  },
+  {
+   "slot": 4,
+   "qid": "s1q4",
+   "type": "qc",
+   "level": 5,
+   "concept": "frequency-distributions",
+   "name": "Frequency distributions and histograms",
+   "variant": "median from a frequency table"
+  },
+  {
+   "slot": 5,
+   "qid": "s1q5",
+   "type": "mc",
+   "level": 5,
+   "concept": "units-conversion",
+   "name": "Units and measurement conversions",
+   "variant": "rates with mixed units"
+  },
+  {
+   "slot": 6,
+   "qid": "s1q6",
+   "type": "mc",
+   "level": 4,
+   "concept": "units-conversion",
+   "name": "Units and measurement conversions",
+   "variant": "chained unit conversion"
+  },
+  {
+   "slot": 7,
+   "qid": "s1q7",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "units-conversion",
+   "name": "Units and measurement conversions",
+   "variant": "area or volume unit conversion (squares and cubes)"
+  },
+  {
+   "slot": 8,
+   "qid": "s1q8",
+   "type": "numeric",
+   "level": 5,
+   "concept": "units-conversion",
+   "name": "Units and measurement conversions",
+   "variant": "currency or exchange rates"
+  },
+  {
+   "slot": 9,
+   "qid": "s1q9",
+   "type": "qc",
+   "level": 4,
+   "concept": "ratio-proportion",
+   "name": "Ratio and proportion",
+   "variant": "combining two ratios that share a term (a:b and b:c)"
+  },
+  {
+   "slot": 10,
+   "qid": "s1q10",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "ratio-proportion",
+   "name": "Ratio and proportion",
+   "variant": "part-to-part vs part-to-whole confusion"
+  },
+  {
+   "slot": 11,
+   "qid": "s1q11",
+   "type": "numeric",
+   "level": 4,
+   "concept": "ratio-proportion",
+   "name": "Ratio and proportion",
+   "variant": "scale maps and models"
+  },
+  {
+   "slot": 12,
+   "qid": "s1q12",
+   "type": "qc",
+   "level": 5,
+   "concept": "ratio-proportion",
+   "name": "Ratio and proportion",
+   "variant": "direct vs inverse proportion"
+  },
+  {
+   "slot": 13,
+   "qid": "s1q13",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "exponents-roots",
+   "name": "Exponents and radicals",
+   "variant": "nested and conjugate radicals (rationalizing a denominator)"
+  },
+  {
+   "slot": 14,
+   "qid": "s1q14",
+   "type": "mc",
+   "level": 5,
+   "concept": "exponents-roots",
+   "name": "Exponents and radicals",
+   "variant": "negative and fractional exponents"
+  },
+  {
+   "slot": 15,
+   "qid": "s1q15",
+   "type": "numeric",
+   "level": 4,
+   "concept": "exponents-roots",
+   "name": "Exponents and radicals",
+   "variant": "equations solved by rewriting to a common base"
+  },
+  {
+   "slot": 16,
+   "qid": "s1q16",
+   "type": "qc",
+   "level": 5,
+   "concept": "exponents-roots",
+   "name": "Exponents and radicals",
+   "variant": "nested and conjugate radicals (rationalizing a denominator)"
+  },
+  {
+   "slot": 17,
+   "qid": "s1q17",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "quadratics-factoring",
+   "name": "Factoring and quadratic equations",
+   "variant": "sum and product of the roots"
+  },
+  {
+   "slot": 18,
+   "qid": "s1q18",
+   "type": "mc",
+   "level": 5,
+   "concept": "quadratics-factoring",
+   "name": "Factoring and quadratic equations",
+   "variant": "a quadratic in disguise (x^4, sqrt x or 1/x as the variable)"
+  },
+  {
+   "slot": 19,
+   "qid": "s1q19",
+   "type": "numeric",
+   "level": 4,
+   "concept": "quadratics-factoring",
+   "name": "Factoring and quadratic equations",
+   "variant": "special products: (a+b)^2, (a-b)^2, a^2 - b^2"
+  },
+  {
+   "slot": 20,
+   "qid": "s1q20",
+   "type": "qc",
+   "level": 5,
+   "concept": "quadratics-factoring",
+   "name": "Factoring and quadratic equations",
+   "variant": "the discriminant: number of real solutions"
+  },
+  {
+   "slot": 21,
+   "qid": "s1q21",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "abs-value-inequalities",
+   "name": "Absolute-value equations and inequalities",
+   "variant": "|x - a| = |x - b|: the point midway"
+  },
+  {
+   "slot": 22,
+   "qid": "s1q22",
+   "type": "mc",
+   "level": 5,
+   "concept": "abs-value-inequalities",
+   "name": "Absolute-value equations and inequalities",
+   "variant": "a tolerance stated as an absolute-value inequality"
+  },
+  {
+   "slot": 23,
+   "qid": "s1q23",
+   "type": "numeric",
+   "level": 4,
+   "concept": "abs-value-inequalities",
+   "name": "Absolute-value equations and inequalities",
+   "variant": "|x - a| < b as a distance interval"
+  },
+  {
+   "slot": 24,
+   "qid": "s1q24",
+   "type": "qc",
+   "level": 5,
+   "concept": "abs-value-inequalities",
+   "name": "Absolute-value equations and inequalities",
+   "variant": "|x| against x in QC"
+  },
+  {
+   "slot": 25,
+   "qid": "s1q25",
+   "type": "mc",
+   "level": 5,
+   "concept": "counting-restrictions",
+   "name": "Counting with restrictions and arrangements",
+   "variant": "complement counting: total minus the forbidden",
+   "revisit": {
+    "ref": "quant-008:s1q7",
+    "result": "missed",
+    "item": "Six different talks, including talks by Alvarez, Brandt and Chen, are to be scheduled in six consecutive time slots, one talk per slot. Alvarez's talk must come earlier than Brandt's talk but not in the slot immediately before it, and Chen's talk cannot be in the first slot. How many different schedules are possible? · choices: 180 / 200 / 204 / 240 / 300",
+    "setup": "schedule with one item before another but not adjacent, plus a slot restriction",
+    "change": "run it backwards: give what the earlier item asked for, and ask for one of its givens"
+   }
+  },
+  {
+   "slot": 26,
+   "qid": "s1q26",
+   "type": "numeric",
+   "level": 3,
+   "concept": "area-perimeter",
+   "name": "Area and perimeter",
+   "variant": "the area of an irregular composite figure",
+   "revisit": {
+    "ref": "quant-008:s2q10",
+    "result": "missed",
+    "item": "From a rectangular sheet of plywood that measures 12 feet by 10 feet, a rectangle that measures 4 feet by 6 feet is cut away at one corner. The perimeter of the remaining piece is how many feet greater than the perimeter of the piece that was cut away? · choices: 4 / 16 / 20 / 24 / 44",
+    "setup": "corner cut from a rectangle: perimeter of the remaining L shape",
+    "change": "change the format (quantitative comparison, multiple choice or numeric entry) and the question asked"
+   }
+  },
+  {
+   "slot": 27,
+   "qid": "s1q27",
+   "type": "qc",
+   "level": 4,
+   "concept": "exponents-roots",
+   "name": "Exponents and radicals",
+   "variant": "comparing large powers or roots without a calculator",
+   "revisit": {
+    "ref": "quant-008:s2q1",
+    "result": "missed",
+    "item": "Compare the two quantities. · Quantity A: $\\sqrt[5]{5}$ | Quantity B: $\\sqrt[3]{3}$",
+    "setup": "5th root of 5 vs cube root of 3 (raise both to the 15th)",
+    "change": "combine the same insight with a second concept"
+   }
+  },
+  {
+   "slot": 28,
+   "qid": "s1q28",
+   "type": "qc",
+   "level": 4,
+   "concept": "triangles",
+   "name": "Triangles: similar, isosceles, equilateral, inequality",
+   "variant": "similar triangles: side and area ratios",
+   "revisit": {
+    "ref": "quant-008:s2q2",
+    "result": "missed",
+    "item": "In triangle $ABC$, point $D$ lies on side $AB$ and point $E$ lies on side $AC$ so that $DE$ is parallel to $BC$. $AD = 4$ and $DB = 2$. · Quantity A: The area of quadrilateral $DBCE$ | Quantity B: The area of triangle $ADE$",
+    "setup": "a line parallel to one side cuts off a similar triangle; compare the trapezoid with the small triangle (areas scale as squares)",
+    "change": "keep the insight but move the trap: a different wrong path should tempt"
+   }
+  }
+ ],
+ "units": [],
+ "conceptSlots": [
+  {
+   "concept": "frequency-distributions",
+   "variant": "relative frequency and cumulative frequency"
+  },
+  {
+   "concept": "frequency-distributions",
+   "variant": "which interval contains the median or a percentile"
+  },
+  {
+   "concept": "frequency-distributions",
+   "variant": "mean from a histogram's grouped data"
+  },
+  {
+   "concept": "frequency-distributions",
+   "variant": "median from a frequency table"
+  },
+  {
+   "concept": "units-conversion",
+   "variant": "rates with mixed units"
+  },
+  {
+   "concept": "units-conversion",
+   "variant": "chained unit conversion"
+  },
+  {
+   "concept": "units-conversion",
+   "variant": "area or volume unit conversion (squares and cubes)"
+  },
+  {
+   "concept": "units-conversion",
+   "variant": "currency or exchange rates"
+  },
+  {
+   "concept": "ratio-proportion",
+   "variant": "combining two ratios that share a term (a:b and b:c)"
+  },
+  {
+   "concept": "ratio-proportion",
+   "variant": "part-to-part vs part-to-whole confusion"
+  },
+  {
+   "concept": "ratio-proportion",
+   "variant": "scale maps and models"
+  },
+  {
+   "concept": "ratio-proportion",
+   "variant": "direct vs inverse proportion"
+  },
+  {
+   "concept": "exponents-roots",
+   "variant": "nested and conjugate radicals (rationalizing a denominator)"
+  },
+  {
+   "concept": "exponents-roots",
+   "variant": "negative and fractional exponents"
+  },
+  {
+   "concept": "exponents-roots",
+   "variant": "equations solved by rewriting to a common base"
+  },
+  {
+   "concept": "exponents-roots",
+   "variant": "nested and conjugate radicals (rationalizing a denominator)"
+  },
+  {
+   "concept": "quadratics-factoring",
+   "variant": "sum and product of the roots"
+  },
+  {
+   "concept": "quadratics-factoring",
+   "variant": "a quadratic in disguise (x^4, sqrt x or 1/x as the variable)"
+  },
+  {
+   "concept": "quadratics-factoring",
+   "variant": "special products: (a+b)^2, (a-b)^2, a^2 - b^2"
+  },
+  {
+   "concept": "quadratics-factoring",
+   "variant": "the discriminant: number of real solutions"
+  },
+  {
+   "concept": "abs-value-inequalities",
+   "variant": "|x - a| = |x - b|: the point midway"
+  },
+  {
+   "concept": "abs-value-inequalities",
+   "variant": "a tolerance stated as an absolute-value inequality"
+  },
+  {
+   "concept": "abs-value-inequalities",
+   "variant": "|x - a| < b as a distance interval"
+  },
+  {
+   "concept": "abs-value-inequalities",
+   "variant": "|x| against x in QC"
+  },
+  {
+   "concept": "counting-restrictions",
+   "variant": "complement counting: total minus the forbidden"
+  },
+  {
+   "concept": "area-perimeter",
+   "variant": "the area of an irregular composite figure"
+  },
+  {
+   "concept": "exponents-roots",
+   "variant": "comparing large powers or roots without a calculator"
+  },
+  {
+   "concept": "triangles",
+   "variant": "similar triangles: side and area ratios"
+  }
+ ],
+ "targets": {
+  "concepts": [
+   "frequency-distributions",
+   "units-conversion",
+   "ratio-proportion",
+   "exponents-roots",
+   "quadratics-factoring",
+   "abs-value-inequalities"
+  ]
+ },
+ "history": {
+  "frequency-distributions": [
+   {
+    "setup": "DI: change in the median after moving one category's values",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one group's segments of a stacked interval graph; estimated mean from interval midpoints",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: cumulative frequency table; least value at which the cumulative share reaches a given percent (a percentile)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: median of one group from a frequency table where the two middle values fall in adjacent rows",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "several frequency columns over the same population; count the columns whose median falls in a given row (cumulative counts against the middle position)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "grouped whole-number data: the greatest possible mean of one row puts every value at its interval's top",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: a percentile within a subgroup that leaves out one group's lowest row; re-base on the subgroup before accumulating (accumulating the whole group's column points to the row below)",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "units-conversion": [
+   {
+    "setup": "liters per second to cubic meters over hours",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "price per square inch; cost of an area given in square yards, with each linear factor squared inside the chain",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "money converted out, part spent abroad, the remainder converted back at a different rate",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "speed, fuel economy and fuel price; the fuel cost for a time given in minutes",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "rain depth over a land area gives a water volume, then a mass, through area, length and mass unit changes",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a floor area in square meters covered by square tiles measured in centimeters; the number of tiles (convert by the square of the length factor)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a price converted through two exchange rates in a chain (a cross rate); divide, not multiply, at the second rate",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "ratio-proportion": [
+   {
+    "setup": "ratio before and after adding or removing items of one or both kinds; a total",
+    "worn": true,
+    "items": 3
+   },
+   {
+    "setup": "chained ratios a:b and b:c with bounds; possible totals",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "mix two blends with different part ratios to reach a 1:1 mixture",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three-part budget ratio; one part grows to a given fraction of the total; new total",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "chained ratios a:b and b:c with a difference given; one count",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a map scale applies to lengths; the actual area scales by its square",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "workers and time are inversely proportional; scale the time",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "inverse proportion: a percent increase in one variable; the percent decrease in the other",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a model's surface-area ratio gives the linear scale; capacity scales by its cube",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a part-to-whole fraction before and a part-to-part ratio after adding members of one kind; compare the unchanged kind's count with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two ratios that each compare a different kind with the same shared kind (shared term second in both); one kind's fraction of the whole",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two blends combined into an even mixture, with both amounts and one blend's part-to-part ratio given; find the other blend's part-to-whole share",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a quantity varies directly with one variable and inversely with the square of another; both change by percents; the net percent change (the factors divide, the square applies to the factor)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the same object on two scale drawings; one drawing's scale and both drawn lengths give the other drawing's scale as a unitless ratio",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "exponents-roots": [
+   {
+    "setup": "(b^{n+k} ± b^n) over a similar sum of powers: factor out the common power",
+    "worn": true,
+    "items": 2
+   },
+   {
+    "setup": "sqrt(3·9^n) against a power of 3: rewrite as powers of 3",
+    "worn": true,
+    "items": 2
+   },
+   {
+    "setup": "sqrt(a+2) - sqrt(a) vs sqrt(a) - sqrt(a-2) (conjugates)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "0 < x < 1: compare two negative fractional powers of x (the more negative exponent gives the larger value)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "5th root of 5 vs cube root of 3 (raise both to the 15th)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a negative fractional power is given; raise it to another power by multiplying exponents",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "sqrt(a + 2sqrt b) - sqrt(a - 2sqrt b) denested; compare with a root",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "sum of reciprocals of consecutive root sums telescopes after rationalizing; select n making it an integer",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "sum of two powers with negative bases against the power of the negative sum; the exponent's parity decides the signs and flips the order",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a negative square-root power of a sum of two bases above 1 against the sum of the same powers of the bases (the exponent does not distribute)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "an exponential inequality with a base below 1 on one side and its reciprocal on the other; rewrite to one base, flip the inequality, compare x with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a large power of 5 against a power of 10: write 5 as 10 over 2 and bound the power of 2 with 2^10 above 10^3",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a difference of powers of 2 over a sum with one term written as a power of 4 equals a power of 2; factor out the common power in both and solve for the exponent",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "quadratics-factoring": [
+   {
+    "setup": "x^2 + kx + c with two distinct positive integer roots; possible k",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "squares of the sum and of the difference given; find the product",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "equation linear in x and sqrt x: substitute, reject the negative root; sum of solutions",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a cubic with no constant term has three distinct nonnegative integer solutions: factor out x (zero is one root), then factor pairs of the constant give the coefficient",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a product of two linear factors set equal to a positive constant with unknown parameters; the discriminant is a square plus a positive term, so the solution count is fixed",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two equations sharing a factor of one variable; cancelling it pins the other variable, but the factor can be zero and then frees it; compare the other variable with the pinned value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one squared quadratic equals another squared expression; factor as a difference of squares into two quadratics; the sum of all real roots (the one-sided equation misses a factor)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a quadratic with no real root bounds its constant; the same quadratic set equal to a positive number; compare its solution count with a value",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "abs-value-inequalities": [
+   {
+    "setup": "sum of two absolute values |x - a| + |x - b| against a bound",
+    "worn": true,
+    "items": 3
+   },
+   {
+    "setup": "|x + c| < b gives an interval for x; compare x^2 with a constant (endpoint signs matter)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "forces opposite signs; compare (x + y)^2 with (x - y)^2",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "count integers with |x + a| > k|x - b|; compare with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "|x - a| = bx + c: two cases, one rejected because the right side would be negative",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two distances from a shared point on the number line: the third distance is their sum or difference",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "which absolute-value identities and inequalities hold for every real x (test a negative)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two different numbers equidistant from a fixed point: their sum is twice that point",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a side length within a tolerance; the area's greatest deviation from nominal against the linear estimate (the square term breaks the tie)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one unknown equidistant from two fixed numbers written as equal absolute values; compare it with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x times |x| equals a linear expression: a quadratic in each sign case, one root in the wrong case and no real root in the other; compare the sum of solutions with the sum of the quadratic's roots",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the sum of |x| and x is zero (x nonpositive, zero allowed); compare |x| minus x with zero",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a tolerance band around a nominal value written as an absolute-value inequality; the percent by which the top of the band exceeds the bottom (base is the bottom) against the spread over the nominal",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two linear equations, each with a different variable inside bars; of the sign cases, the natural-looking pair violates its own case; the product of the surviving pair",
+    "worn": false,
+    "items": 1
+   }
+  ]
+ },
+ "exemplars": {
+  "frequency-distributions": [
+   "ogq-set3-2",
+   "ogq-set3-13"
+  ],
+  "units-conversion": [
+   "bb-t1s7-1",
+   "ogq-t1-s5-2"
+  ],
+  "ratio-proportion": [
+   "bb-t1s7-28",
+   "ogq-t1-s5-25"
+  ],
+  "exponents-roots": [
+   "bb-t2s2-15",
+   "ogq-t1-s5-16"
+  ],
+  "quadratics-factoring": [
+   "bb-t3s2-14",
+   "ogq-t2-s6-6"
+  ],
+  "abs-value-inequalities": [
+   "ogq-t2-s5-21"
+  ]
+ }
+}
