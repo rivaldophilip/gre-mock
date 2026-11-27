@@ -1,0 +1,904 @@
+{
+ "testId": "qbank-005",
+ "measure": "quant",
+ "kind": "quant",
+ "seed": 85993,
+ "generatedAt": "2026-11-27T12:18:06.040Z",
+ "gaps": [
+  "revisit quant-007:s1q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q5 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s1q6 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s1q7 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q2 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q14 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q12 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s1q7 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q10 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q1 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q2 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s1q8 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q5 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s1q1 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s1q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q13 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q7 (you missed it; no sibling in the bank yet)",
+  "revisit quant-008:s2q14 (you missed it; no sibling in the bank yet)"
+ ],
+ "slots": [
+  {
+   "slot": 1,
+   "qid": "s1q1",
+   "type": "qc",
+   "level": 3,
+   "concept": "geometry-coordinate",
+   "name": "Geometry in the coordinate plane",
+   "variant": "area of a polygon from its vertex coordinates"
+  },
+  {
+   "slot": 2,
+   "qid": "s1q2",
+   "type": "mc",
+   "level": 5,
+   "concept": "geometry-coordinate",
+   "name": "Geometry in the coordinate plane",
+   "variant": "reflection of a point across an axis or y = x"
+  },
+  {
+   "slot": 3,
+   "qid": "s1q3",
+   "type": "mc",
+   "level": 4,
+   "concept": "geometry-coordinate",
+   "name": "Geometry in the coordinate plane",
+   "variant": "a circle in the coordinate plane"
+  },
+  {
+   "slot": 4,
+   "qid": "s1q4",
+   "type": "qc",
+   "level": 5,
+   "concept": "geometry-coordinate",
+   "name": "Geometry in the coordinate plane",
+   "variant": "reflection of a point across an axis or y = x"
+  },
+  {
+   "slot": 5,
+   "qid": "s1q5",
+   "type": "qc",
+   "level": 5,
+   "concept": "integers-properties",
+   "name": "Integer properties, even/odd, divisibility",
+   "variant": "digits and place value of an unknown number"
+  },
+  {
+   "slot": 6,
+   "qid": "s1q6",
+   "type": "qc",
+   "level": 3,
+   "concept": "integers-properties",
+   "name": "Integer properties, even/odd, divisibility",
+   "variant": "even/odd parity of sums and products of unknown integers"
+  },
+  {
+   "slot": 7,
+   "qid": "s1q7",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "integers-properties",
+   "name": "Integer properties, even/odd, divisibility",
+   "variant": "divisibility of an expression such as n(n+1)(n+2) for every integer n"
+  },
+  {
+   "slot": 8,
+   "qid": "s1q8",
+   "type": "mc",
+   "level": 5,
+   "concept": "integers-properties",
+   "name": "Integer properties, even/odd, divisibility",
+   "variant": "consecutive integers: sum, product or count in a range"
+  },
+  {
+   "slot": 9,
+   "qid": "s1q9",
+   "type": "qc",
+   "level": 3,
+   "concept": "pythagorean-special",
+   "name": "Pythagorean theorem and special right triangles",
+   "variant": "45-45-90 triangle (square diagonal)"
+  },
+  {
+   "slot": 10,
+   "qid": "s1q10",
+   "type": "numeric",
+   "level": 5,
+   "concept": "pythagorean-special",
+   "name": "Pythagorean theorem and special right triangles",
+   "variant": "30-60-90 triangle inside a hexagon, rhombus or trapezoid"
+  },
+  {
+   "slot": 11,
+   "qid": "s1q11",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "pythagorean-special",
+   "name": "Pythagorean theorem and special right triangles",
+   "variant": "Pythagorean triples and their multiples"
+  },
+  {
+   "slot": 12,
+   "qid": "s1q12",
+   "type": "mc",
+   "level": 5,
+   "concept": "pythagorean-special",
+   "name": "Pythagorean theorem and special right triangles",
+   "variant": "a right triangle from a word problem or coordinates (distance)"
+  },
+  {
+   "slot": 13,
+   "qid": "s1q13",
+   "type": "mc",
+   "level": 3,
+   "concept": "graphs-of-functions",
+   "name": "Graphs of functions and parabolas, shifts and reflections",
+   "variant": "a shift, a stretch or a reflection of a graph"
+  },
+  {
+   "slot": 14,
+   "qid": "s1q14",
+   "type": "numeric",
+   "level": 5,
+   "concept": "graphs-of-functions",
+   "name": "Graphs of functions and parabolas, shifts and reflections",
+   "variant": "parabola vertex, axis of symmetry and intercepts"
+  },
+  {
+   "slot": 15,
+   "qid": "s1q15",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "graphs-of-functions",
+   "name": "Graphs of functions and parabolas, shifts and reflections",
+   "variant": "intersections of two graphs"
+  },
+  {
+   "slot": 16,
+   "qid": "s1q16",
+   "type": "numeric",
+   "level": 5,
+   "concept": "graphs-of-functions",
+   "name": "Graphs of functions and parabolas, shifts and reflections",
+   "variant": "parabola vertex, axis of symmetry and intercepts"
+  },
+  {
+   "slot": 17,
+   "qid": "s1q17",
+   "type": "mc",
+   "level": 3,
+   "concept": "weighted-average",
+   "name": "Weighted average and changing averages",
+   "variant": "the ratio of group sizes from the means"
+  },
+  {
+   "slot": 18,
+   "qid": "s1q18",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "weighted-average",
+   "name": "Weighted average and changing averages",
+   "variant": "combining the means of two groups"
+  },
+  {
+   "slot": 19,
+   "qid": "s1q19",
+   "type": "numeric",
+   "level": 5,
+   "concept": "weighted-average",
+   "name": "Weighted average and changing averages",
+   "variant": "the ratio of group sizes from the means"
+  },
+  {
+   "slot": 20,
+   "qid": "s1q20",
+   "type": "qc",
+   "level": 5,
+   "concept": "weighted-average",
+   "name": "Weighted average and changing averages",
+   "variant": "a mixture's concentration as a weighted average"
+  },
+  {
+   "slot": 21,
+   "qid": "s1q21",
+   "type": "mc",
+   "level": 4,
+   "concept": "remainders-units",
+   "name": "Remainders and units digits",
+   "variant": "last two digits of a product too large for the calculator"
+  },
+  {
+   "slot": 22,
+   "qid": "s1q22",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "remainders-units",
+   "name": "Remainders and units digits",
+   "variant": "remainder of a negative or fractional expression of n"
+  },
+  {
+   "slot": 23,
+   "qid": "s1q23",
+   "type": "numeric",
+   "level": 4,
+   "concept": "remainders-units",
+   "name": "Remainders and units digits",
+   "variant": "last two digits of a product too large for the calculator"
+  },
+  {
+   "slot": 24,
+   "qid": "s1q24",
+   "type": "qc",
+   "level": 5,
+   "concept": "remainders-units",
+   "name": "Remainders and units digits",
+   "variant": "two remainder conditions at once: smallest such number"
+  },
+  {
+   "slot": 25,
+   "qid": "s1q25",
+   "type": "mc",
+   "level": 4,
+   "concept": "probability-conditional",
+   "name": "Conditional probability and dependent events",
+   "variant": "exactly one of two independent events",
+   "revisit": {
+    "ref": "quant-007:s1q11",
+    "result": "missed",
+    "item": "One volunteer is chosen at random from the Northside volunteers and, independently, one from the Lakeview volunteers. Approximately what is the probability that exactly one of the two chosen volunteers logged at least 30 hours? · choices: 0.06 / 0.24 / 0.37 / 0.42 / 0.48",
+    "setup": "DI: one pick from each of two groups, independently; P(exactly one meets a threshold)",
+    "change": "run it backwards: give what the earlier item asked for, and ask for one of its givens"
+   }
+  },
+  {
+   "slot": 26,
+   "qid": "s1q26",
+   "type": "mc",
+   "level": 4,
+   "concept": "overlapping-sets",
+   "name": "Overlapping sets, Venn diagrams",
+   "variant": "overlap given as percents of different bases",
+   "revisit": {
+    "ref": "quant-007:s2q5",
+    "result": "missed",
+    "item": "At a club, 60 percent of the members who play chess also play go, and 40 percent of the members who play go also play chess. At least one member plays both games. · Quantity A: The number of members who play chess | Quantity B: The number of members who play go",
+    "setup": "the overlap stated as a percent of each set: equate the two expressions to compare the sets' sizes",
+    "change": "change the format (quantitative comparison, multiple choice or numeric entry) and the question asked"
+   }
+  },
+  {
+   "slot": 27,
+   "qid": "s1q27",
+   "type": "mc",
+   "level": 4,
+   "concept": "circles",
+   "name": "Circles: arcs, sectors, chords, tangents",
+   "variant": "chord length from the distance to the center",
+   "revisit": {
+    "ref": "quant-007:s1q6",
+    "result": "guessed",
+    "item": "A circle with center $O$ has radius 10, and chord $AB$ has length 16. Point $C$ lies on the circle, on the shorter of the two arcs from $A$ to $B$, so that $AC = BC$. What is the length of $AC$? · choices: $4\\sqrt{3}$ / $8$ / $4\\sqrt{5}$ / $10$ / $8\\sqrt{5}$",
+    "setup": "chord and radius give the distance to the center; chord to the arc midpoint",
+    "change": "combine the same insight with a second concept"
+   }
+  },
+  {
+   "slot": 28,
+   "qid": "s1q28",
+   "type": "mc",
+   "level": 5,
+   "concept": "counting-permutations",
+   "name": "Counting: permutations and combinations",
+   "variant": "circular arrangements",
+   "revisit": {
+    "ref": "quant-007:s2q11",
+    "result": "missed",
+    "item": "Eight people, among them two married couples, are to be seated around a circular table with eight seats. Seatings that differ only by a rotation are considered the same. In how many seatings does neither couple sit side by side? · choices: 2,160 / 2,640 / 3,600 / 4,080 / 5,040",
+    "setup": "circular seating; two pairs must not sit together (inclusion-exclusion)",
+    "change": "keep the insight but move the trap: a different wrong path should tempt"
+   }
+  }
+ ],
+ "units": [],
+ "conceptSlots": [
+  {
+   "concept": "geometry-coordinate",
+   "variant": "area of a polygon from its vertex coordinates"
+  },
+  {
+   "concept": "geometry-coordinate",
+   "variant": "reflection of a point across an axis or y = x"
+  },
+  {
+   "concept": "geometry-coordinate",
+   "variant": "a circle in the coordinate plane"
+  },
+  {
+   "concept": "geometry-coordinate",
+   "variant": "reflection of a point across an axis or y = x"
+  },
+  {
+   "concept": "integers-properties",
+   "variant": "digits and place value of an unknown number"
+  },
+  {
+   "concept": "integers-properties",
+   "variant": "even/odd parity of sums and products of unknown integers"
+  },
+  {
+   "concept": "integers-properties",
+   "variant": "divisibility of an expression such as n(n+1)(n+2) for every integer n"
+  },
+  {
+   "concept": "integers-properties",
+   "variant": "consecutive integers: sum, product or count in a range"
+  },
+  {
+   "concept": "pythagorean-special",
+   "variant": "45-45-90 triangle (square diagonal)"
+  },
+  {
+   "concept": "pythagorean-special",
+   "variant": "30-60-90 triangle inside a hexagon, rhombus or trapezoid"
+  },
+  {
+   "concept": "pythagorean-special",
+   "variant": "Pythagorean triples and their multiples"
+  },
+  {
+   "concept": "pythagorean-special",
+   "variant": "a right triangle from a word problem or coordinates (distance)"
+  },
+  {
+   "concept": "graphs-of-functions",
+   "variant": "a shift, a stretch or a reflection of a graph"
+  },
+  {
+   "concept": "graphs-of-functions",
+   "variant": "parabola vertex, axis of symmetry and intercepts"
+  },
+  {
+   "concept": "graphs-of-functions",
+   "variant": "intersections of two graphs"
+  },
+  {
+   "concept": "graphs-of-functions",
+   "variant": "parabola vertex, axis of symmetry and intercepts"
+  },
+  {
+   "concept": "weighted-average",
+   "variant": "the ratio of group sizes from the means"
+  },
+  {
+   "concept": "weighted-average",
+   "variant": "combining the means of two groups"
+  },
+  {
+   "concept": "weighted-average",
+   "variant": "the ratio of group sizes from the means"
+  },
+  {
+   "concept": "weighted-average",
+   "variant": "a mixture's concentration as a weighted average"
+  },
+  {
+   "concept": "remainders-units",
+   "variant": "last two digits of a product too large for the calculator"
+  },
+  {
+   "concept": "remainders-units",
+   "variant": "remainder of a negative or fractional expression of n"
+  },
+  {
+   "concept": "remainders-units",
+   "variant": "last two digits of a product too large for the calculator"
+  },
+  {
+   "concept": "remainders-units",
+   "variant": "two remainder conditions at once: smallest such number"
+  },
+  {
+   "concept": "probability-conditional",
+   "variant": "exactly one of two independent events"
+  },
+  {
+   "concept": "overlapping-sets",
+   "variant": "overlap given as percents of different bases"
+  },
+  {
+   "concept": "circles",
+   "variant": "chord length from the distance to the center"
+  },
+  {
+   "concept": "counting-permutations",
+   "variant": "circular arrangements"
+  }
+ ],
+ "targets": {
+  "concepts": [
+   "geometry-coordinate",
+   "integers-properties",
+   "pythagorean-special",
+   "graphs-of-functions",
+   "weighted-average",
+   "remainders-units"
+  ]
+ },
+ "history": {
+  "geometry-coordinate": [
+   {
+    "setup": "opposite vertices of a square given; find another vertex",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "triangle formed by a point and its images across y = x and across an axis; its area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a line through a fixed first-quadrant point cuts off a triangle of given area with the axes; the slope from the two intercepts",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "circle from its center and one point on it; length of the chord it cuts on an axis",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "adjacent vertices of a square on the two axes; find another vertex by turning the side vector 90 degrees (the center method for opposite vertices is the trap)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "convex quadrilateral with one vertex coordinate unknown and the area given; split by a diagonal, the absolute value gives two positions and convexity rejects one",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "circles tangent to both axes through a given point: the radius solves a quadratic with two roots; the distance between the two possible centers on the line y = x",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "shortest path from one point to an axis and on to a second point: reflect one point across the axis and join with a straight line; the touching point",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a circle given in expanded form; complete the square for the center and radius; select the points strictly inside (some lie exactly on the circle)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a triangle with two fixed vertices on the x-axis and the third on the y-axis; isosceles cases by which pair of sides is equal, the equal-sides-at-the-apex case impossible off the perpendicular bisector",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a point reflected across y = x and then across the x-axis is a quarter turn about the origin; select what must hold (the order of the reflections matters)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "area of a tilted quadrilateral from its vertices: an enclosing rectangle minus the corner triangles",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a circle through the origin and one point on each axis (the right angle at the origin makes a diameter); its second crossing with y = x",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a right triangle with legs on the axes set by a constant and the constant plus two; the area fixes |k(k + 2)|, and both roots give valid triangles; compare k with zero",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "integers-properties": [
+   {
+    "setup": "k^2 leaves remainder 1 mod 8; compare k mod 8 with k^3 mod 8",
+    "worn": true,
+    "items": 2
+   },
+   {
+    "setup": "n with exactly 3 divisors is p^2; compare divisor counts of n^2 and 2n",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "k^2 divisible by 72: greatest number that must divide k",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "reversing a two-digit number changes it by 9 times the digit difference; count the numbers",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "parity of ab + a + b through (a + 1)(b + 1) - 1; count pairs",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "count divisors of N divisible by one number but not another (from the prime factorization)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a sum of an odd number k of consecutive integers is k times the middle one; select which numbers qualify",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two parity conditions on three unknown integers (one leaves open which of two is even); which expression must be odd",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a digit condition makes a three-digit number a multiple of 11; compare the remainder with the units digit, which can be zero",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a run of consecutive integers ending at a given positive number has a small given sum; negatives cancel their opposites, which fixes the start; count the terms",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "product of four consecutive integers whose first is a multiple of a prime; select the numbers that must divide it (one plug-in makes extra divisors look forced)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "several integers with an odd sum and an even product; the greatest possible number of odd ones (the count of odd terms must be odd)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "run backwards: the divisor counts of n^2 and 2n are given; recover the possible prime shapes of n and compare its divisor count with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a run of consecutive days holding an exact number of one weekday; the possible run lengths lie strictly between the whole-week counts on either side",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "k one more than a multiple of 4 leaves a single factor of 2 in k(k+1)(k+2); its remainder mod 8 still varies; compare with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a square count is a multiple of one number and its side is a multiple of another; the side's forced divisor is the least common multiple of the square-root requirement and the second number, not their product",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "pythagorean-special": [
+   {
+    "setup": "oblique triangle with 45° and 30° angles split by an altitude into two special right triangles; area or a side",
+    "worn": true,
+    "items": 2
+   },
+   {
+    "setup": "altitude to the hypotenuse splits it into given segments; perimeter",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "30-60-90 right triangle with the altitude to the hypotenuse given; hypotenuse",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "quadrilateral split by a diagonal into a 45-45-90 and a 30-60-90 triangle; a side or the area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "box with a square base and a given height; the space diagonal gives the base area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a perpendicular splits a triangle into pieces whose leg ratios reveal 45-45-90 and 30-60-90 triangles; add the angles at the vertex (backwards)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "sliding ladder: two right triangles with the same hypotenuse (7-24-25, then 15-20-25)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a square whose diagonal exceeds its side by a given length: solve s sqrt2 = s + 1",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "walk with legs along compass directions; straight-line distance from the net legs",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "regular hexagon with a given side; the triangle on alternate vertices, its side from a 30-60-90 half of a 120-degree isosceles triangle; its area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "altitude to the hypotenuse and one hypotenuse segment given; the other segment from the geometric mean, then the area with the altitude as height",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a right triangle with integer sides and one given leg; select the possible hypotenuses (factor the difference of squares into same-parity pairs: primitive and scaled triples)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a box's space diagonal against the path along three edges between the same two corners; the difference",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "an isosceles trapezoid with 60-degree base angles and legs equal to the short base; the perimeter gives the side; heights cut off 30-60-90 triangles (half a regular hexagon)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a point inside a rectangle with its distances to three corners given and no dimensions; the distance to the fourth corner from two pairs of right triangles (opposite corners have equal sums of squares)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a square's side from its diagonal against the diagonal of a square whose side is half that diagonal; both are the same surd once rationalized",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two right triangles share a vertical leg, with both ground points on the same side so the bases differ by a given length; equate the two expressions for the shared leg",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a box given only by the diagonals of the three faces at one corner; each squared edge appears in two of them, so halve the sum of their squares for the space diagonal",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "graphs-of-functions": [
+   {
+    "setup": "parabola crossing the x-axis on both sides of the y-axis; compare b with c",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "piecewise-linear graph read at points between vertices after the input is reflected and shifted",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a graph symmetric about the y-axis shifted horizontally: compare values at two points equidistant from the new axis",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a function's unique maximum point; a reflected, stretched and shifted copy: compare where the copy's extreme value occurs with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a parabola against an absolute-value graph: solve on each piece and reject the roots outside that piece's domain; compare the count with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a graph symmetric about two parallel vertical lines: chaining the reflections links two values that neither reflection links alone; compare them",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a line through the origin against a V-shaped graph whose vertex is off the origin; the slopes for which they meet twice (between the flat line through the vertex and the far arm's slope)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "monic parabola with the gap between its x-intercepts and its y-intercept given; two mirror-image parabolas fit, so the vertex's side of the y-axis is undetermined",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a horizontal compression, a shift and a vertical stretch of a graph scale the area between it and the x-axis by the product of the two stretch factors (the shift changes nothing); compare with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a piecewise-linear graph read twice: find f(x) between vertices, then read f at that output; select the inputs where the composition is negative (not where f itself is negative)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a circle against a parabola: substitute to get a quadratic in y, keep the roots with x^2 = y + c nonnegative, and count one point (not two) where x = 0",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a graph unchanged by a half-turn about the origin with its formula given only for positive x; a value at a negative input fixes the unknown coefficient through f(-x) = -f(x); then evaluate at a positive input",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a level crossed twice on the negative side of a piecewise-linear graph, once at a grid point and once between grid lines on a steep segment; the graph read one unit to the right of each crossing falls on opposite sides of the level",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "weighted-average": [
+   {
+    "setup": "two group means and one group's size; find the other group's size from the overall mean",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "add members of one kind outside a category to dilute the category's share to a subgroup's share; count from stacked bars",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two group means and which group is larger; combined mean vs the midpoint of the means",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a frequency table gives a group's mean; a few new members with one equal score join; the rise in the mean",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a table of group sizes and means; which whole group joining a fixed group raises its mean the most (gap times share, not the largest gap)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: two pairs of groups, each pair's combined mean weighted by counts; the difference of the two combined means (the unweighted averages order the pairs the other way)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two solutions of known amounts and concentrations plus a fixed amount of a third; the third's concentration that brings the whole to a target (balance the solute, weighted by volume)",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "remainders-units": [
+   {
+    "setup": "remainder of a^n ± b^n mod a small number via power cycles",
+    "worn": true,
+    "items": 4
+   },
+   {
+    "setup": "k ≡ 5 mod 6; remainders of high powers of k mod 8 and mod 3",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "units digits of 3^n and 7^n combined (sum vs product) for every n",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two remainder conditions that conflict in parity: no such number; compare the count with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "n + 1 a multiple of 6; remainder of n^2 + n mod 12 vs a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the decimal part of n/d reduces to a fraction; the least divisor is its reduced denominator",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "from the last digit of a sum of powers back to the parity of n; then another power's last digit",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "remainder of the negative of a large power, via the power's cycle and the nonnegative-remainder rule",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "product of a long run of odd integers: an odd multiple of 25 ends in 25 or 75; the residue mod 4 decides",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a multiple of 3 with a known remainder mod 14; the remainder of the number divided by 3 is fixed because 3 and 14 are coprime; compare it with the original remainder",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two integers with the same remainder mod 6: their high even powers are fixed mod 24 through mod 8 and mod 3; compare the remainder of the sum of the powers with that of the square of the integers' sum",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the decimal part of n over a given divisor fixes the remainder; compare the remainder by a factor of that divisor with the reduced fraction's numerator",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two leftover conditions, each the same amount short of its divisor, with divisors that share a factor; solutions repeat every lcm; the least one above a threshold",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "last two digits of a product of three large numbers, each a little below a multiple of 100; multiply the small negative residues and convert the negative result",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a remainder mod 20 of a sum of two powers, one of whose units digit never changes; that constant units digit is not its remainder mod 20 (settle the tens with mod 4)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "units digit 1 for powers whose bases end in 3, 7 or 9: the cycle is 4 for 3 and 7 but 2 for 9; select the powers that qualify",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a remainder of a multiple of n is given; recover the remainder of n, then the remainder of -n (count back from the divisor)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "the decimal part of the quotient and the remainder are both given; their ratio is the divisor, then rebuild the dividend",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two dividends with given remainders by the same unknown divisor: it divides both differences and must exceed the larger remainder; the least possible divisor",
+    "worn": false,
+    "items": 1
+   }
+  ]
+ },
+ "exemplars": {
+  "geometry-coordinate": [
+   "ogq-set3-10"
+  ],
+  "integers-properties": [
+   "ogq-t1-s6-16",
+   "ogq-set3-6"
+  ],
+  "pythagorean-special": [
+   "bb-t2s2-14",
+   "bb-t2s5-28"
+  ],
+  "graphs-of-functions": [],
+  "weighted-average": [],
+  "remainders-units": [
+   "ogq-t1-s6-7",
+   "bb-t1s3-8"
+  ]
+ }
+}

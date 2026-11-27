@@ -1,0 +1,1120 @@
+{
+  "id": "qbank-005",
+  "measure": "quant",
+  "title": "Quant bank batch 5",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "On a rail yard's site plan in the $xy$-plane, triangular plot $P$ has vertices $(0, 0)$, $(8, 0)$ and $(11, 6)$, and triangular plot $Q$ has vertices $(1, -2)$, $(9, -2)$ and $(4, 4)$.",
+      "qc": {
+        "a": "The area of plot $P$",
+        "b": "The area of plot $Q$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Each plot has a horizontal side of length 8 and a third vertex 6 units above that side's line, so each area is $\\tfrac12 \\cdot 8 \\cdot 6 = 24$.",
+        "steps": [
+          "1. Plot $P$: base from $(0, 0)$ to $(8, 0)$ has length 8; the vertex $(11, 6)$ is 6 above the $x$-axis, so the height is 6 even though the vertex lies past the base's end.",
+          "2. Area of $P$: $\\tfrac12 \\cdot 8 \\cdot 6 = 24$.",
+          "3. Plot $Q$: base from $(1, -2)$ to $(9, -2)$ has length 8; the vertex $(4, 4)$ is $4 - (-2) = 6$ above that line.",
+          "4. Area of $Q$: $\\tfrac12 \\cdot 8 \\cdot 6 = 24$. The quantities are equal."
+        ],
+        "fast": "Same base length, same height above the base's line: same area, wherever the top vertex sits.",
+        "trap": "Thinking the slanted plot $P$ is bigger because its sides are longer, or measuring $Q$'s height as 4 (the $y$-coordinate) instead of $4 - (-2) = 6$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "geometry-coordinate",
+          "role": "primary"
+        }
+      ],
+      "setup": "two triangles with equal horizontal bases and equal heights, one obtuse with its apex past the base's end; compare the areas",
+      "variant": "area of a polygon from its vertex coordinates",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A drone's route planner mirrors each waypoint across the line $y = x$ in the $xy$-plane. Waypoint $P$ lies on the line $y = 3x - 2$, and its mirror image $Q$ is $6\\sqrt{2}$ units from $P$. What is the product of all possible values of the $x$-coordinate of $Q$?",
+      "choices": [
+        "$-80$",
+        "$-8$",
+        "$20$",
+        "$40$",
+        "$80$"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "With $P = (a, b)$, the mirror image is $Q = (b, a)$ and $PQ = \\sqrt{2}\\,|a - b|$, so $|b - a| = 6$. With $b = 3a - 2$: $|2a - 2| = 6$, so $a = 4$ or $a = -2$, giving $P = (4, 10)$ or $(-2, -8)$. Then $Q = (10, 4)$ or $(-8, -2)$, and the product of $Q$'s possible $x$-coordinates is $10 \\cdot (-8) = -80$.",
+        "steps": [
+          "1. Reflection across $y = x$ swaps the coordinates: $P = (a, b)$ gives $Q = (b, a)$.",
+          "2. $PQ = \\sqrt{(a - b)^2 + (b - a)^2} = \\sqrt{2}\\,|a - b| = 6\\sqrt{2}$, so $|a - b| = 6$.",
+          "3. $b = 3a - 2$ gives $|2a - 2| = 6$: $a = 4$ or $a = -2$.",
+          "4. $P = (4, 10)$ or $(-2, -8)$, so $Q = (10, 4)$ or $(-8, -2)$.",
+          "5. The $x$-coordinate of $Q$ is $P$'s $y$-coordinate: $10$ or $-8$; the product is $-80$."
+        ],
+        "fast": "$Q$'s $x$-coordinate is $P$'s $y$-coordinate, which must differ from $P$'s $x$-coordinate by 6 in either direction.",
+        "trap": "Multiplying $P$'s $x$-coordinates ($4 \\cdot (-2) = -8$) forgets that the mirror swaps the coordinates; dropping the absolute value keeps only $a = 4$ and one value."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "geometry-coordinate",
+          "role": "primary"
+        }
+      ],
+      "setup": "a point on a given line and its mirror image across y = x a given distance apart; two positions from the absolute value; the product of the image's x-coordinates (the swap moves P's y-coordinate into Q's x)",
+      "variant": "reflection of a point across an axis or y = x",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A courier company's map places a straight highway along the $x$-axis of the $xy$-plane. A circular delivery zone has its center on the highway, and the zone's boundary passes through depots at $(0, 4)$ and $(6, 2)$. What is the area of the delivery zone?",
+      "choices": [
+        "$16\\pi$",
+        "$20\\pi$",
+        "$25\\pi$",
+        "$40\\pi$",
+        "$52\\pi$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The center $(h, 0)$ is equally far from both depots: $h^2 + 16 = (h - 6)^2 + 4$, so $12h = 24$ and $h = 2$. Then $r^2 = 2^2 + 4^2 = 20$ and the area is $20\\pi$.",
+        "steps": [
+          "1. Let the center be $(h, 0)$.",
+          "2. Equal distances: $(0 - h)^2 + 4^2 = (6 - h)^2 + 2^2$.",
+          "3. $h^2 + 16 = h^2 - 12h + 40$, so $h = 2$.",
+          "4. $r^2 = (0 - 2)^2 + 4^2 = 20$; check: $(6 - 2)^2 + 2^2 = 20$.",
+          "5. Area $= \\pi r^2 = 20\\pi$."
+        ],
+        "fast": "Set the two squared distances from $(h, 0)$ equal; the $h^2$ terms cancel.",
+        "trap": "Putting the center at the origin ($r = 4$, area $16\\pi$), or using the distance between the depots, $\\sqrt{40}$, as the radius ($40\\pi$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "geometry-coordinate",
+          "role": "primary"
+        }
+      ],
+      "setup": "a circle whose center lies on an axis passes through two given points; equal distances fix the center; then the area",
+      "variant": "a circle in the coordinate plane",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "A warehouse robot's mapping software places the robot at $P = (a, b)$ in the $xy$-plane, where $b > 3$. The software reflects $P$ across the line $y = 3$ and then reflects the resulting point across the $x$-axis, giving point $R$.",
+      "qc": {
+        "a": "The $y$-coordinate of $R$",
+        "b": "$-b$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Across $y = 3$, $(a, b)$ goes to $(a, 6 - b)$; across the $x$-axis that goes to $(a, b - 6)$. So $R$ is $P$ moved 6 down, and A $-$ B $= (b - 6) - (-b) = 2b - 6 > 0$ because $b > 3$.",
+        "steps": [
+          "1. Reflecting across $y = 3$ keeps $x$ and sends $y$ to $3 + (3 - y) = 6 - y$: $(a, 6 - b)$.",
+          "2. Reflecting across the $x$-axis negates $y$: $R = (a, b - 6)$.",
+          "3. Compare $b - 6$ with $-b$: the difference is $2b - 6$.",
+          "4. $b > 3$ makes $2b - 6 > 0$, so Quantity A is greater (for example $b = 5$: $-1$ against $-5$)."
+        ],
+        "fast": "Two reflections across parallel lines 3 apart slide the point 6 units, here downward.",
+        "trap": "Treating the two mirrors as cancelling so that $R$ is $P$'s mirror in the $x$-axis ($y = -b$, 'equal'), or thinking the answer depends on whether $R$ lands above or below the axis."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "geometry-coordinate",
+          "role": "primary"
+        }
+      ],
+      "setup": "a point reflected across a horizontal line and then across the x-axis: two parallel mirrors make a slide of twice their gap; compare the image's y-coordinate with the negative of the original's",
+      "variant": "reflection of a point across an axis or y = x",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A shipping label carries a three-digit code $N$. Moving the first digit of $N$ to the end (so that 472 would become 724) gives a number that is 216 greater than $N$.",
+      "qc": {
+        "a": "The units digit of $N$",
+        "b": "The hundreds digit of $N$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Write $N = 100a + m$, where $a$ is the hundreds digit and $m$ the two-digit ending. The moved number is $10m + a$, so $9m - 99a = 216$ and $m = 11a + 24$. Then $N = 135, 246, 357, 468, 579$ or $690$. In the first five the units digit is 4 more than the hundreds digit, but in 690 it is 0.",
+        "steps": [
+          "1. $N = 100a + m$ with $0 \\le m \\le 99$; the new number is $10m + a$.",
+          "2. $(10m + a) - (100a + m) = 9m - 99a = 216$, so $m = 11a + 24$.",
+          "3. $m \\le 99$ allows $a = 1, \\dots, 6$: $N = 135, 246, 357, 468, 579, 690$.",
+          "4. $N = 135$: units 5 $>$ hundreds 1. $N = 690$: units 0 $<$ hundreds 6.",
+          "5. The relationship cannot be determined."
+        ],
+        "fast": "List $N = 111a + 24$; the last one, $a = 6$, carries into the tens and leaves a units digit of 0.",
+        "trap": "Spotting the pattern 'units digit $=$ hundreds digit $+ 4$' in 135, 246, 357 and answering A, without checking $a = 6$, where $m = 90$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "integers-properties",
+          "role": "primary"
+        }
+      ],
+      "setup": "moving the leading digit of a three-digit number to the end raises it by a given amount; place value gives a family of numbers, and the last member breaks the digit pattern; compare two digits",
+      "variant": "digits and place value of an unknown number",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "A packing machine fills $m$ cartons of 3 parts each and $n$ cartons of 5 parts each, where $m$ and $n$ are nonnegative integers, and the total number of parts, $3m + 5n$, is even.",
+      "qc": {
+        "a": "The remainder when $mn$ is divided by 2",
+        "b": "The remainder when $m + n$ is divided by 2"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "$3m + 5n$ has the parity of $m + n$, so $m + n$ is even and $m$, $n$ have the same parity. B is always 0. If both are even, $mn$ is even (A $= 0$); if both are odd, $mn$ is odd (A $= 1$).",
+        "steps": [
+          "1. $3m$ has the parity of $m$, and $5n$ that of $n$, so $3m + 5n$ even means $m + n$ even.",
+          "2. So $m$ and $n$ are both even or both odd, and Quantity B is 0.",
+          "3. $m = n = 2$: $mn = 4$, remainder 0, equal to B.",
+          "4. $m = n = 1$: $3 + 5 = 8$ is even, $mn = 1$, remainder 1, greater than B.",
+          "5. The relationship cannot be determined."
+        ],
+        "fast": "Same parity: the sum is even either way, but the product is odd when both are odd.",
+        "trap": "Concluding from 'the total is even' that something must be even, so that $mn$ is even and the answer is C; the case $m = n = 1$ breaks it."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "integers-properties",
+          "role": "primary"
+        }
+      ],
+      "setup": "a weighted sum with odd coefficients is even, so the two unknowns share a parity; compare the parity of their product with that of their sum",
+      "variant": "even/odd parity of sums and products of unknown integers",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "A factory stacks spacers in a pattern that uses $n(n + 1)(2n + 1)$ spacers for a stack of $n$ layers, where $n$ is an integer greater than 1. Whatever the number of layers, the spacer count is a multiple of which of the following? Indicate all such numbers.",
+      "choices": [
+        "$2$",
+        "$3$",
+        "$4$",
+        "$5$",
+        "$6$",
+        "$12$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "$n(n + 1)$ is a product of consecutive integers, so it is even. For 3: if $n$ leaves remainder 0 or 2 on division by 3, then $n$ or $n + 1$ is a multiple of 3; if it leaves remainder 1, then $2n + 1$ is. So 2, 3 and 6 always divide it. $n = 3$ gives $84$, not a multiple of 5, and $n = 2$ gives $30$, not a multiple of 4 or 12.",
+        "steps": [
+          "1. $n$ and $n + 1$ are consecutive, so one is even: 2 divides the product.",
+          "2. $n = 3k$: $n$ is a multiple of 3. $n = 3k + 2$: $n + 1$ is. $n = 3k + 1$: $2n + 1 = 6k + 3$ is. So 3 divides it.",
+          "3. 2 and 3 together give 6.",
+          "4. $n = 2$: $2 \\cdot 3 \\cdot 5 = 30$, so 4 and 12 need not divide it.",
+          "5. $n = 3$: $3 \\cdot 4 \\cdot 7 = 84$, so 5 need not divide it."
+        ],
+        "fast": "Try $n = 2$ and $n = 3$: $\\gcd(30, 84) = 6$; the divisors of 6 are the answers.",
+        "trap": "Plugging in only $n = 2$ (30) makes 5 look forced; plugging in only $n = 3$ (84) makes 4 and 12 look forced."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "integers-properties",
+          "role": "primary"
+        }
+      ],
+      "setup": "a product of two consecutive integers and a linear factor: 2 from the consecutive pair, 3 from casework on the residue mod 3; one plug-in makes extra divisors look forced",
+      "variant": "divisibility of an expression such as n(n+1)(n+2) for every integer n",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "Three consecutive integers have a product equal to 8 times their sum. What is the sum of all possible values of the greatest of the three integers?",
+      "choices": [
+        "$2$",
+        "$3$",
+        "$6$",
+        "$7$",
+        "$9$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Call the integers $k - 1$, $k$, $k + 1$. Their sum is $3k$ and their product $k(k^2 - 1)$, so $k(k^2 - 1) = 24k$: $k = 0$ or $k^2 = 25$. The greatest integer is $k + 1 = 1$, $6$ or $-4$, and these sum to 3.",
+        "steps": [
+          "1. Integers $k - 1, k, k + 1$: sum $3k$, product $(k - 1)k(k + 1) = k(k^2 - 1)$.",
+          "2. $k(k^2 - 1) = 8 \\cdot 3k$ gives $k(k^2 - 25) = 0$.",
+          "3. $k = 0$, $k = 5$ or $k = -5$: the triples $-1, 0, 1$; $4, 5, 6$; $-6, -5, -4$.",
+          "4. Greatest values: $1$, $6$, $-4$; their sum is $3$."
+        ],
+        "fast": "Center the triple on $k$; never divide by $k$ without keeping $k = 0$.",
+        "trap": "Dividing both sides by $k$ loses $-1, 0, 1$ (answer 2); keeping only positive integers gives 6; forgetting the negative triple gives 7."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "integers-properties",
+          "role": "primary"
+        }
+      ],
+      "setup": "three consecutive integers whose product is a multiple of their sum; centring on the middle one gives a cubic with a zero root and a negative root; sum the possible greatest values",
+      "variant": "consecutive integers: sum, product or count in a range",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "A square loading pad in a distribution center measures 10 meters along its diagonal.",
+      "qc": {
+        "a": "The area of the pad, in square meters",
+        "b": "$50$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The diagonal of a square is $s\\sqrt{2}$, so $s\\sqrt{2} = 10$ gives $s^2 = \\tfrac{100}{2} = 50$. The area is 50.",
+        "steps": [
+          "1. The diagonal cuts the square into two 45-45-90 triangles, so diagonal $= s\\sqrt{2}$.",
+          "2. $s = \\tfrac{10}{\\sqrt{2}} = 5\\sqrt{2}$.",
+          "3. Area $= s^2 = (5\\sqrt{2})^2 = 50$. The quantities are equal."
+        ],
+        "fast": "A square's area is half the square of its diagonal: $\\tfrac{10^2}{2} = 50$.",
+        "trap": "Using the diagonal as the side (area 100), or halving the diagonal to get a side of 5 (area 25)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "primary"
+        }
+      ],
+      "setup": "a square known only by its diagonal; its area against a value",
+      "variant": "45-45-90 triangle (square diagonal)",
+      "solverRating": 1
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "prompt": "The cross-section of a cargo bin is trapezoid $ABCD$, with side $AB$ parallel to side $CD$ and longer than it. The interior angle at $A$ measures $60^\\circ$, the interior angle at $B$ measures $30^\\circ$, $AD = 8$ and $CD = 5$. What is the length of $AB$?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "21"
+      },
+      "explanation": {
+        "key": "Drop perpendiculars from $D$ and $C$ to $AB$. At $A$, the 30-60-90 triangle with hypotenuse $AD = 8$ has height $4\\sqrt{3}$ and base 4. The height is shared, so at $B$ the 30-60-90 triangle has the $4\\sqrt{3}$ leg opposite $30^\\circ$ and base $4\\sqrt{3} \\cdot \\sqrt{3} = 12$. Then $AB = 4 + 5 + 12 = 21$.",
+        "steps": [
+          "1. Feet of the perpendiculars: $D'$ below $D$ and $C'$ below $C$; $D'C' = CD = 5$.",
+          "2. Triangle $AD'D$: $60^\\circ$ at $A$, hypotenuse 8, so $AD' = 4$ and $DD' = 4\\sqrt{3}$.",
+          "3. Triangle $BC'C$: $30^\\circ$ at $B$, and $CC' = 4\\sqrt{3}$ is the side opposite $30^\\circ$, so $BC' = 4\\sqrt{3} \\cdot \\sqrt{3} = 12$ (and $BC = 8\\sqrt{3}$).",
+          "4. $AB = AD' + D'C' + C'B = 4 + 5 + 12 = 21$."
+        ],
+        "fast": "The shared height $4\\sqrt{3}$ is the long leg at $A$ and the short leg at $B$.",
+        "trap": "Treating the trapezoid as isosceles ($AB = 5 + 4 + 4 = 13$), or giving the $30^\\circ$ corner the base $4\\sqrt{3} / \\sqrt{3} = 4$ (again 13)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "primary"
+        }
+      ],
+      "setup": "a trapezoid with 60-degree and 30-degree base angles and the leg at the 60-degree corner given; the shared height is the long leg of one 30-60-90 triangle and the short leg of the other; the longer base",
+      "variant": "30-60-90 triangle inside a hexagon, rhombus or trapezoid",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "A metal worker bends a rod 60 centimeters long into the three sides of a right triangle whose side lengths, in centimeters, are all integers. Which of the following could be the length of the triangle's hypotenuse, in centimeters? Indicate all such lengths.",
+      "choices": [
+        "$24$",
+        "$25$",
+        "$26$",
+        "$29$",
+        "$30$",
+        "$34$"
+      ],
+      "key": {
+        "sel": [
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The triangle's perimeter is 60. Primitive triples have perimeters 12 (3-4-5), 30 (5-12-13), 40 (8-15-17), 56 (7-24-25), 70, 84, …; only 12 and 30 divide 60. Scaling 3-4-5 by 5 gives 15-20-25 and scaling 5-12-13 by 2 gives 10-24-26. So the hypotenuse is 25 or 26.",
+        "steps": [
+          "1. Any integer right triangle is a multiple of a primitive triple, and its perimeter is the same multiple of the primitive perimeter.",
+          "2. Primitive perimeters at most 60: 12, 30, 40, 56. Those dividing 60: 12 and 30.",
+          "3. $5 \\times (3, 4, 5) = (15, 20, 25)$: $15 + 20 + 25 = 60$, $15^2 + 20^2 = 625 = 25^2$.",
+          "4. $2 \\times (5, 12, 13) = (10, 24, 26)$: $10 + 24 + 26 = 60$, $10^2 + 24^2 = 676 = 26^2$.",
+          "5. 8-15-17 has perimeter 40 and 7-24-25 has 56; neither scales to 60. Hypotenuse 25 or 26."
+        ],
+        "fast": "Scale each small triple's perimeter up to 60: only 3-4-5 ($\\times 5$) and 5-12-13 ($\\times 2$) fit.",
+        "trap": "Stopping at the first triple found (15-20-25), or picking 30 or 24 because $60 / 2 = 30$ or 24 is a leg of 10-24-26."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "primary"
+        }
+      ],
+      "setup": "a right triangle with integer sides and a given perimeter; select the possible hypotenuses (scale the primitive triples whose perimeters divide it)",
+      "variant": "Pythagorean triples and their multiples",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "A truck leaves a depot at noon and drives due north at 40 kilometers per hour. A second truck leaves the same depot at 1:00 p.m. and drives due east at 80 kilometers per hour. Both keep their speeds and directions. At the moment the trucks are 200 kilometers apart, how many kilometers has the second truck traveled?",
+      "choices": [
+        "$120$",
+        "$160$",
+        "$80\\sqrt{5}$",
+        "$200$",
+        "$240$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "At $t$ hours after noon, the first truck is $40t$ north and the second $80(t - 1)$ east. $(40t)^2 + (80(t - 1))^2 = 200^2$ reduces to $t^2 + 4(t - 1)^2 = 25$, so $5t^2 - 8t - 21 = 0$, $(5t + 7)(t - 3) = 0$ and $t = 3$. The second truck has driven $80 \\cdot 2 = 160$ km (a 120-160-200 right triangle).",
+        "steps": [
+          "1. Legs at time $t$ (hours after noon): $40t$ and $80(t - 1)$, with $t \\ge 1$.",
+          "2. $1600t^2 + 6400(t - 1)^2 = 40000$; divide by 1600: $t^2 + 4(t - 1)^2 = 25$.",
+          "3. $5t^2 - 8t - 21 = 0 = (5t + 7)(t - 3)$, so $t = 3$ (3:00 p.m.).",
+          "4. Second truck: $80 \\cdot (3 - 1) = 160$ km. Check: $120^2 + 160^2 = 200^2$."
+        ],
+        "fast": "Look for a 3-4-5 multiple: $120$ and $160$ make 200, and they fit $40 \\cdot 3$ and $80 \\cdot 2$.",
+        "trap": "Ignoring the one-hour delay ($40t$ and $80t$ give $t = \\sqrt{5}$ and $80\\sqrt{5}$ km), or answering with the first truck's distance, 120."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "primary"
+        }
+      ],
+      "setup": "two travellers leave one point at right angles, one an hour later; their distance gives a quadratic in time; report the later one's distance (a neighbouring quantity)",
+      "variant": "a right triangle from a word problem or coordinates (distance)",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "The graph of $y = f(x)$ meets the $x$-axis only at $x = -2$ and $x = 4$. At which values of $x$ does the graph of $y = f(2x)$ meet the $x$-axis?",
+      "choices": [
+        "$-4$ and $8$",
+        "$-1$ and $2$",
+        "$-2$ and $4$",
+        "$0$ and $6$",
+        "$-4$ and $2$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$f(2x) = 0$ exactly when $2x$ is a zero of $f$: $2x = -2$ or $2x = 4$, so $x = -1$ or $x = 2$.",
+        "steps": [
+          "1. $f(u) = 0$ only for $u = -2$ and $u = 4$.",
+          "2. Put $u = 2x$: $2x = -2$ gives $x = -1$; $2x = 4$ gives $x = 2$.",
+          "3. The graph of $f(2x)$ is the graph of $f$ squeezed toward the $y$-axis by a factor of 2."
+        ],
+        "fast": "Replacing $x$ by $2x$ halves every $x$-coordinate on the graph.",
+        "trap": "Doubling the zeros ($-4$ and $8$) reads the horizontal compression as a stretch."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "graphs-of-functions",
+          "role": "primary"
+        }
+      ],
+      "setup": "the zeros of a function given; the zeros after the input is multiplied by a constant (a horizontal compression, not a stretch)",
+      "variant": "a shift, a stretch or a reflection of a graph",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "prompt": "A soccer ball is kicked from ground level and travels along a parabola. When the ball is 10 meters from the kicker, measured horizontally, it is 6 meters above the ground, and it is again 6 meters above the ground when it is 30 meters from the kicker. What is the greatest height, in meters, that the ball reaches?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "8"
+      },
+      "explanation": {
+        "key": "Equal heights at 10 and 30 put the axis at 20. The ball starts on the ground at 0, so by symmetry it lands at 40: $h(x) = a\\,x(x - 40)$. From $h(10) = -300a = 6$, $a = -\\tfrac{1}{50}$, and the top is $h(20) = -\\tfrac{1}{50} \\cdot 20 \\cdot (-20) = 8$.",
+        "steps": [
+          "1. Axis of symmetry: halfway between 10 and 30, at $x = 20$.",
+          "2. The ball is at height 0 at $x = 0$; the mirror point across $x = 20$ is $x = 40$, the landing point.",
+          "3. $h(x) = a\\,x(x - 40)$; $h(10) = a \\cdot 10 \\cdot (-30) = 6$ gives $a = -\\tfrac{1}{50}$.",
+          "4. $h(20) = -\\tfrac{1}{50} \\cdot 20 \\cdot (-20) = 8$."
+        ],
+        "fast": "At a quarter of the way along, a parabola has reached $\\tfrac34$ of its peak: $6 \\div \\tfrac34 = 8$.",
+        "trap": "Assuming the height grows in proportion to the distance up to the peak ($6 \\cdot 2 = 12$), or taking the given height 6 as the top."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "graphs-of-functions",
+          "role": "primary"
+        }
+      ],
+      "setup": "two equal heights of a projectile give the axis; the launch at ground level mirrors to the landing point; intercept form gives the peak",
+      "variant": "parabola vertex, axis of symmetry and intercepts",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "In the $xy$-plane, the line $y = mx + 3$ and the parabola $y = x^2 - 4x + 7$ meet at exactly two points. Which of the following could be the value of $m$? Indicate all such values.",
+      "choices": [
+        "$-10$",
+        "$-8$",
+        "$-4$",
+        "$0$",
+        "$2$",
+        "$6$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          4,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "Setting the two equal gives $x^2 - (4 + m)x + 4 = 0$, which has two real roots when $(4 + m)^2 - 16 > 0$: $m > 0$ or $m < -8$. Of the choices, $-10$, $2$ and $6$.",
+        "steps": [
+          "1. $x^2 - 4x + 7 = mx + 3$ gives $x^2 - (4 + m)x + 4 = 0$.",
+          "2. Two points need a positive discriminant: $(4 + m)^2 > 16$.",
+          "3. $4 + m > 4$ or $4 + m < -4$: $m > 0$ or $m < -8$.",
+          "4. $m = 0$ and $m = -8$ make the line tangent (one point); $m = -4$ gives no point."
+        ],
+        "fast": "The boundary slopes are the two tangent lines through $(0, 3)$: slopes $0$ and $-8$.",
+        "trap": "Including the tangent cases $0$ and $-8$, or solving $(4 + m)^2 > 16$ as $m > 0$ only and missing the negative branch."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "graphs-of-functions",
+          "role": "primary"
+        }
+      ],
+      "setup": "a line through a fixed point on the y-axis against a parabola; two intersection points from a positive discriminant; the tangent slopes are excluded and the negative branch is easy to miss",
+      "variant": "intersections of two graphs",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "prompt": "A skate ramp's profile follows the curve $y = x^2 + bx + c$, whose lowest point is $(3, -20)$. The curve crosses the horizontal axis at $x = r$ and at $x = s$. What is the value of $r^2 + s^2$?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "58"
+      },
+      "explanation": {
+        "key": "The vertex form is $y = (x - 3)^2 - 20 = x^2 - 6x - 11$. So $r + s = 6$ and $rs = -11$, and $r^2 + s^2 = (r + s)^2 - 2rs = 36 + 22 = 58$.",
+        "steps": [
+          "1. A monic parabola with vertex $(3, -20)$: $y = (x - 3)^2 - 20$.",
+          "2. Expand: $x^2 - 6x + 9 - 20 = x^2 - 6x - 11$.",
+          "3. The roots satisfy $r + s = 6$ and $rs = -11$.",
+          "4. $r^2 + s^2 = 6^2 - 2(-11) = 58$. Check: $r, s = 3 \\pm 2\\sqrt{5}$, and $(3 + 2\\sqrt{5})^2 + (3 - 2\\sqrt{5})^2 = 2(9 + 20) = 58$."
+        ],
+        "fast": "$r^2 + s^2 = (r + s)^2 - 2rs$; the sum comes from the axis and the product from the constant term.",
+        "trap": "Subtracting $2rs$ with the wrong sign ($36 - 22 = 14$), or using $(r + s)^2 = 36$ as the answer."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "graphs-of-functions",
+          "role": "primary"
+        }
+      ],
+      "setup": "a monic parabola known by its vertex; the sum of the squares of its x-intercepts from the root sum and product (the product is negative)",
+      "variant": "parabola vertex, axis of symmetry and intercepts",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "prompt": "At a parcel hub, the morning-shift drivers average 120 deliveries per week and the evening-shift drivers average 150 deliveries per week. Every driver works exactly one of the two shifts, and all the drivers together average 130 deliveries per week. What fraction of the drivers work the evening shift?",
+      "choices": [
+        "$\\tfrac14$",
+        "$\\tfrac13$",
+        "$\\tfrac12$",
+        "$\\tfrac23$",
+        "$\\tfrac34$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The overall mean 130 is 10 above the morning mean and 20 below the evening mean, so the groups are in the inverse ratio: morning : evening $= 20 : 10 = 2 : 1$. The evening drivers are $\\tfrac13$ of all drivers.",
+        "steps": [
+          "1. Let $M$ and $V$ be the numbers of morning and evening drivers: $120M + 150V = 130(M + V)$.",
+          "2. $20V = 10M$, so $M = 2V$.",
+          "3. Evening fraction: $\\tfrac{V}{3V} = \\tfrac13$."
+        ],
+        "fast": "The overall mean sits closer to the bigger group: 10 from the morning mean against 20 from the evening mean.",
+        "trap": "Matching the distances directly to the groups ($10 : 20$, evening $\\tfrac23$), or answering the ratio $\\tfrac12$ instead of the fraction."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "weighted-average",
+          "role": "primary"
+        }
+      ],
+      "setup": "two shift means and the overall mean; the fraction of the whole in one group from the inverse ratio of the distances",
+      "variant": "the ratio of group sizes from the means",
+      "solverRating": 1
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "At a sorting depot, crew P has 10 workers who average 30 parcels per hour, and crew Q has $n$ workers who average 45 parcels per hour. The average for all the workers of both crews together is a whole number. Which of the following could be the value of $n$? Indicate all such values.",
+      "choices": [
+        "$5$",
+        "$10$",
+        "$15$",
+        "$20$",
+        "$25$",
+        "$30$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The combined mean is $\\tfrac{300 + 45n}{10 + n} = 45 - \\tfrac{150}{10 + n}$, a whole number exactly when $10 + n$ divides 150. Among the choices, $10 + n = 15, 25, 30$ work ($n = 5, 15, 20$); $20$, $35$ and $40$ do not divide 150.",
+        "steps": [
+          "1. Total parcels: $10 \\cdot 30 + 45n = 300 + 45n$; workers: $10 + n$.",
+          "2. $\\tfrac{300 + 45n}{10 + n} = \\tfrac{45(10 + n) - 150}{10 + n} = 45 - \\tfrac{150}{10 + n}$.",
+          "3. Whole number iff $(10 + n) \\mid 150$.",
+          "4. $n = 5$: 15 divides 150 (mean 35). $n = 15$: 25 (mean 39). $n = 20$: 30 (mean 40).",
+          "5. $n = 10$: mean 37.5. $n = 25$: $\\tfrac{150}{35}$ is not whole. $n = 30$: $\\tfrac{150}{40}$ is not whole."
+        ],
+        "fast": "Write the mean as $45$ minus a fraction; the fraction must be whole.",
+        "trap": "Choosing $n = 10$ because equal crews feel natural (the mean is then the midpoint, 37.5), or testing only whether $300 + 45n$ is a multiple of 5."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "weighted-average",
+          "role": "primary"
+        }
+      ],
+      "setup": "two crews with known means, one size unknown; the combined mean is a whole number, so the total size must divide the size-weighted gap (rewrite as the larger mean minus a fraction)",
+      "variant": "combining the means of two groups",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "prompt": "A track team has only sprinters and distance runners. The sprinters' mean weight is 62 kilograms, the distance runners' mean weight is 54 kilograms, and the whole team's mean weight is 57 kilograms. After 4 sprinters leave the team, the mean weight of the remaining team members is 56 kilograms. How many distance runners are on the team?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "15"
+      },
+      "explanation": {
+        "key": "From the means, sprinters : distance runners $= (57 - 54) : (62 - 57) = 3 : 5$ before, and $(56 - 54) : (62 - 56) = 1 : 3$ after. With $3k$ sprinters and $5k$ distance runners, $(3k - 4) : 5k = 1 : 3$ gives $9k - 12 = 5k$, so $k = 3$ and there are 15 distance runners.",
+        "steps": [
+          "1. Before: the mean 57 is 3 from 54 and 5 from 62, so sprinters : distance runners $= 3 : 5$; write $3k$ and $5k$.",
+          "2. After: the mean 56 is 2 from 54 and 6 from 62, so the ratio is $2 : 6 = 1 : 3$.",
+          "3. $\\tfrac{3k - 4}{5k} = \\tfrac13$: $9k - 12 = 5k$, $k = 3$.",
+          "4. Distance runners: $5k = 15$. Check: $\\tfrac{9 \\cdot 62 + 15 \\cdot 54}{24} = 57$ and $\\tfrac{5 \\cdot 62 + 15 \\cdot 54}{20} = 56$."
+        ],
+        "fast": "Read the size ratio off the means twice, before and after; the 4 departures link the two ratios.",
+        "trap": "Answering $k = 3$ or the sprinter count 9, or matching the distances to the wrong groups ($5 : 3$), which gives no whole-number team."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "weighted-average",
+          "role": "primary"
+        }
+      ],
+      "setup": "group means and the overall mean fix the size ratio; members of one group leave and the new overall mean fixes a second ratio; the two ratios give the counts",
+      "variant": "the ratio of group sizes from the means",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A machine's 40-liter coolant tank holds a mixture that is 25 percent antifreeze. Some of the mixture is drained, and the same volume of a mixture that is 70 percent antifreeze is added, so that the tank is again full and its contents are 40 percent antifreeze.",
+      "qc": {
+        "a": "The number of liters drained",
+        "b": "$14$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The final 40 percent is a weighted average of the 25 percent left in the tank and the 70 percent added: the added share is $\\tfrac{40 - 25}{70 - 25} = \\tfrac13$ of 40 liters, $13\\tfrac13$ liters, which is less than 14.",
+        "steps": [
+          "1. Let $x$ liters be drained and replaced; $40 - x$ liters of the 25 percent mixture stay.",
+          "2. Antifreeze: $0.25(40 - x) + 0.70x = 0.40 \\cdot 40 = 16$.",
+          "3. $10 + 0.45x = 16$, so $x = \\tfrac{6}{0.45} = \\tfrac{40}{3} \\approx 13.33$.",
+          "4. $13.33 < 14$: Quantity B is greater."
+        ],
+        "fast": "Weighted-average split: $\\tfrac{40 - 25}{70 - 25} = \\tfrac13$ of the tank is the new mixture.",
+        "trap": "Adding the 70 percent mixture without draining (solving $10 + 0.7x = 0.4(40 + x)$ gives 20, so A), or treating the added mixture as pure antifreeze ($x = 8$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "weighted-average",
+          "role": "primary"
+        }
+      ],
+      "setup": "drain part of a mixture and refill with a stronger, non-pure mixture to reach a target strength; the replaced volume as a weighted-average share; compare with a nearby value",
+      "variant": "a mixture's concentration as a weighted average",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q21",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A sorting machine's test starts with 1 token and doubles the number of tokens in every cycle, so after 60 cycles it holds $2^{60}$ tokens, a number with 19 digits. What are the last two digits of $2^{60}$?",
+      "choices": [
+        "$16$",
+        "$36$",
+        "$56$",
+        "$76$",
+        "$96$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Keep only the last two digits while multiplying: $2^{10} = 1024$ ends in 24, $2^{20}$ ends like $24^2 = 576$, in 76, and $76 \\cdot 76 = 5776$ ends in 76 again. So $2^{40}$ and $2^{60} = 2^{40} \\cdot 2^{20}$ end in 76.",
+        "steps": [
+          "1. $2^{10} = 1024$: last two digits 24.",
+          "2. $2^{20} = (2^{10})^2$: $24^2 = 576$, last two digits 76.",
+          "3. A number ending in 76 times a number ending in 76 ends in 76 ($76^2 = 5776$).",
+          "4. $2^{60} = (2^{20})^3$ ends in 76."
+        ],
+        "fast": "$2^{20}$ ends in 76, and 76 reproduces itself under multiplication.",
+        "trap": "Using only the units-digit cycle of 2 (period 4, units digit 6) cannot separate the choices, all of which end in 6; reusing 24 as the ending of every power of $2^{10}$ also fails."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "remainders-units",
+          "role": "primary"
+        }
+      ],
+      "setup": "the last two digits of a large power of 2: square the ending of the tenth power and use the self-reproducing ending 76; every choice shares the units digit",
+      "variant": "last two digits of a product too large for the calculator",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q22",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "When $n$ crates are loaded onto trucks that hold 7 crates each, with every truck but the last one full, 3 crates are left for the last truck; that is, $n = 7q + 3$ for some positive integer $q$. For any integer $m$, the remainder when $m$ is divided by 7 is the integer $r$ with $0 \\le r < 7$ such that $m - r$ is a multiple of 7. Which of the following must be true? Indicate all such statements.",
+      "choices": [
+        "The remainder when $-n$ is divided by 7 is 4.",
+        "The remainder when $-n$ is divided by 7 is 3.",
+        "The remainder when $n^2 - 5n$ is divided by 7 is 1.",
+        "$\\dfrac{n + 4}{7}$ is an integer.",
+        "$\\dfrac{n - 3}{7}$ is an odd integer.",
+        "The remainder when $10 - 4n$ is divided by 7 is 5."
+      ],
+      "key": {
+        "sel": [
+          0,
+          2,
+          3,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "Work with $n \\equiv 3$: $-n \\equiv -3 \\equiv 4$; $n^2 - 5n \\equiv 9 - 15 = -6 \\equiv 1$; $n + 4 \\equiv 0$, so $\\tfrac{n + 4}{7}$ is an integer; $10 - 4n \\equiv 10 - 12 = -2 \\equiv 5$. The remainder 3 for $-n$ is wrong, and $\\tfrac{n - 3}{7} = q$ can be even.",
+        "steps": [
+          "1. $-n = -7q - 3 = 7(-q - 1) + 4$: remainder 4. True.",
+          "2. So the remainder of $-n$ is not 3. False.",
+          "3. $n^2 - 5n$ has the remainder of $3^2 - 5 \\cdot 3 = -6 = 7(-1) + 1$: remainder 1. True.",
+          "4. $n + 4 = 7q + 7 = 7(q + 1)$, so $\\tfrac{n + 4}{7} = q + 1$ is an integer. True.",
+          "5. $\\tfrac{n - 3}{7} = q$; $q = 2$ ($n = 17$) makes it even. False.",
+          "6. $10 - 4n = 10 - 28q - 12 = 7(-4q - 1) + 5$: remainder 5. True."
+        ],
+        "fast": "Reduce every expression with $n \\to 3$, then add 7 to any negative result until it lands in $0$ to $6$.",
+        "trap": "Reading the remainder of $-n$ as 3 (or $-3$), and rejecting $n^2 - 5n$ and $10 - 4n$ because their reduced values $-6$ and $-2$ are negative instead of adding 7."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "remainders-units",
+          "role": "primary"
+        }
+      ],
+      "setup": "a remainder mod 7 given; the remainders of negative and mixed-sign expressions (add the divisor to a negative residue) and whether quotients like (n + c)/7 are integers or of a fixed parity",
+      "variant": "remainder of a negative or fractional expression of n",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q23",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "A depot can load its 12 distinct pallets onto a conveyor in $12!$ different orders, where $12!$ is the product of the integers from 1 to 12. This number ends in exactly two zeros. What two-digit number is formed by the two digits just before those two zeros?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "16"
+      },
+      "explanation": {
+        "key": "$12! = 2^{10} \\cdot 3^5 \\cdot 5^2 \\cdot 7 \\cdot 11$. Remove $10^2 = 2^2 \\cdot 5^2$, leaving $2^8 \\cdot 3^5 \\cdot 7 \\cdot 11$, and keep only last two digits: $256 \\to 56$; $56 \\cdot 243 \\to 56 \\cdot 43 = 2408 \\to 08$; $8 \\cdot 7 = 56$; $56 \\cdot 11 = 616 \\to 16$.",
+        "steps": [
+          "1. Factor: $12! = 2^{10} \\cdot 3^5 \\cdot 5^2 \\cdot 7 \\cdot 11$ (the 5s come from 5 and 10).",
+          "2. $\\tfrac{12!}{100} = 2^8 \\cdot 3^5 \\cdot 7 \\cdot 11$, which is not a multiple of 10.",
+          "3. Last two digits: $2^8 = 256 \\to 56$; $3^5 = 243 \\to 43$; $56 \\cdot 43 = 2408 \\to 08$.",
+          "4. $08 \\cdot 7 = 56$; $56 \\cdot 11 = 616 \\to 16$.",
+          "5. Indeed $12! = 479{,}001{,}600$."
+        ],
+        "fast": "Strip the two factors of 10 first, then multiply what is left keeping only the last two digits.",
+        "trap": "Multiplying 1 through 12 while keeping two digits without first removing the 2s and 5s gives 00; dropping only the 5s (not the matching 2s) shifts the answer."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "remainders-units",
+          "role": "primary"
+        }
+      ],
+      "setup": "the two digits before the trailing zeros of a factorial: remove the factors of 10 (pair each 5 with a 2), then multiply the rest keeping only two digits",
+      "variant": "last two digits of a product too large for the calculator",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q24",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "$n$ is a positive integer such that $n - 5$ is a multiple of 6 and $n - 1$ is a multiple of 4.",
+      "qc": {
+        "a": "The sum of the two least possible values of $n$",
+        "b": "$30$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "$n - 5 = 0$ is a multiple of 6 and $n - 1 = 4$ a multiple of 4, so $n = 5$ works. Solutions repeat every $\\operatorname{lcm}(6, 4) = 12$: $5, 17, 29, \\dots$ The two least sum to $22 < 30$.",
+        "steps": [
+          "1. Candidates from the first condition: $n = 5, 11, 17, 23, 29, \\dots$ ($0$ is a multiple of 6).",
+          "2. Of these, $n - 1$ is a multiple of 4 for $5$ ($4$), $17$ ($16$), $29$ ($28$); not for 11 or 23.",
+          "3. Solutions repeat every $\\operatorname{lcm}(6, 4) = 12$, not every $6 \\cdot 4 = 24$.",
+          "4. Two least: $5 + 17 = 22 < 30$. Quantity B is greater."
+        ],
+        "fast": "Check $n = 5$ first: both differences ($0$ and $4$) are multiples. Then step by 12.",
+        "trap": "Skipping $n = 5$ because $n - 5 = 0$ seems not to count ($17 + 29 = 46$), or stepping by 24 ($5 + 29 = 34$); both make A look greater."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "remainders-units",
+          "role": "primary"
+        }
+      ],
+      "setup": "two congruence conditions stated as multiples; the least solution is smaller than both divisors (a zero difference counts) and solutions repeat every lcm, not every product; compare the sum of the two least with a value",
+      "variant": "two remainder conditions at once: smallest such number",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q25",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "Two bins each hold 50 machine parts, and each bin holds the same number of defective parts, fewer than half of its parts. An inspector picks one part at random from each bin, the two picks independent of each other. The probability that exactly one of the two picked parts is defective is 0.32. How many defective parts does each bin hold?",
+      "choices": [
+        "$8$",
+        "$10$",
+        "$16$",
+        "$20$",
+        "$40$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "With $p = \\tfrac{k}{50}$ the chance that a pick is defective, exactly one is $2p(1 - p) = 0.32$, so $p^2 - p + 0.16 = 0$ and $p = 0.2$ or $0.8$. Fewer than half rules out $0.8$: $p = 0.2$, and $k = 0.2 \\cdot 50 = 10$.",
+        "steps": [
+          "1. Let $k$ be the defective count per bin and $p = \\tfrac{k}{50}$.",
+          "2. Exactly one defective: $p(1 - p) + (1 - p)p = 2p(1 - p)$.",
+          "3. $2p(1 - p) = 0.32$ gives $p^2 - p + 0.16 = 0$, $(p - 0.2)(p - 0.8) = 0$.",
+          "4. $k < 25$ means $p < 0.5$, so $p = 0.2$ and $k = 10$.",
+          "5. Check: $2 \\cdot 0.2 \\cdot 0.8 = 0.32$."
+        ],
+        "fast": "Try the choices: $k = 10$ gives $2 \\cdot \\tfrac{10}{50} \\cdot \\tfrac{40}{50} = 0.32$.",
+        "trap": "Halving 0.32 to get $p = 0.16$ (8 parts) forgets the factor $1 - p$; $0.32 \\cdot 50 = 16$ treats 0.32 as one bin's rate; 40 is the root that the 'fewer than half' condition rules out."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-conditional",
+          "role": "primary"
+        }
+      ],
+      "setup": "run backwards: the probability that exactly one of two independent equal-chance picks succeeds is given; solve the quadratic for the shared chance and reject the root above one half; report the count",
+      "variant": "exactly one of two independent events",
+      "revisits": "quant-007:s1q11",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q26",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "At a warehouse, 30 percent of the workers certified to drive forklifts are also certified to operate cranes, and 45 percent of the workers certified to operate cranes are also certified to drive forklifts. There are 60 more forklift-certified workers than crane-certified workers. How many workers hold exactly one of the two certifications?",
+      "choices": [
+        "$54$",
+        "$138$",
+        "$192$",
+        "$246$",
+        "$300$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Both groups contain the same doubly certified workers: $0.30F = 0.45C$, so $F = 1.5C$. Then $F - C = 0.5C = 60$ gives $C = 120$, $F = 180$ and both $= 54$. Exactly one: $(180 - 54) + (120 - 54) = 192$.",
+        "steps": [
+          "1. The workers with both certifications: $0.30F$ and also $0.45C$, so $0.30F = 0.45C$ and $F = 1.5C$.",
+          "2. $F - C = 0.5C = 60$: $C = 120$, $F = 180$.",
+          "3. Both: $0.30 \\cdot 180 = 54$ (and $0.45 \\cdot 120 = 54$).",
+          "4. Forklift only: $126$; crane only: $66$; exactly one: $192$."
+        ],
+        "fast": "Exactly one $= F + C - 2 \\cdot \\text{both} = 300 - 108 = 192$.",
+        "trap": "Subtracting the overlap once gives the at-least-one count, 246; adding $F + C = 300$ counts the 54 twice; 138 subtracts it three times."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "overlapping-sets",
+          "role": "primary"
+        }
+      ],
+      "setup": "the overlap stated as a percent of each set, plus the difference of the set sizes; recover the sizes and the overlap; count those in exactly one set (remove the overlap twice)",
+      "variant": "overlap given as percents of different bases",
+      "revisits": "quant-007:s2q5",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q27",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "On a dispatcher's map in the $xy$-plane, with distances in kilometers, a circular delivery zone of radius 13 is centered at the depot at the origin, and a straight highway follows the line $3x + 4y = 25$. How many kilometers of the highway lie inside the delivery zone?",
+      "choices": [
+        "$12$",
+        "$18$",
+        "$24$",
+        "$25$",
+        "$26$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The highway's distance from the center is $\\tfrac{|3 \\cdot 0 + 4 \\cdot 0 - 25|}{\\sqrt{3^2 + 4^2}} = 5$. The half-chord is $\\sqrt{13^2 - 5^2} = 12$, so 24 km of highway lie in the zone.",
+        "steps": [
+          "1. Distance from $(0, 0)$ to $3x + 4y = 25$: $\\tfrac{25}{5} = 5$ (the foot of the perpendicular is $(3, 4)$).",
+          "2. Radius, distance and half-chord form a right triangle: half-chord $= \\sqrt{169 - 25} = 12$.",
+          "3. Chord $= 24$.",
+          "4. Check by solving: the line meets $x^2 + y^2 = 169$ at $(12.6, -3.2)$ and $(-6.6, 11.2)$, which are $\\sqrt{19.2^2 + 14.4^2} = 24$ apart."
+        ],
+        "fast": "The perpendicular from the origin to $3x + 4y = 25$ lands at $(3, 4)$, 5 away; then 5-12-13.",
+        "trap": "Stopping at the half-chord (12), or measuring between the highway's axis intercepts, which are not on the circle."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "circles",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "geometry-coordinate",
+          "role": "secondary"
+        }
+      ],
+      "setup": "a circle centred at the origin and a slanted line; the line's distance from the centre and the radius give the half-chord; the length of line inside the circle",
+      "variant": "chord length from the distance to the center",
+      "revisits": "quant-007:s1q6",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q28",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "At a racing team's press event, 4 drivers from the Red team and 4 drivers from the Blue team, all 8 different people, sit around a circular table with 8 seats so that the two teams alternate around the table. Seatings that differ only by a rotation are considered the same. How many different seatings are possible?",
+      "choices": [
+        "$72$",
+        "$144$",
+        "$288$",
+        "$576$",
+        "$1{,}152$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Fix one Red driver's seat to remove rotations. The seats then alternate Blue, Red, Blue, … around the table, so the other 3 Red drivers fill the remaining Red seats in $3!$ ways and the 4 Blue drivers fill the Blue seats in $4!$ ways: $6 \\cdot 24 = 144$.",
+        "steps": [
+          "1. Rotations: seat one particular Red driver first; every seating has exactly one rotation with that driver there.",
+          "2. With that seat fixed, the alternation decides which seats are Red and which Blue; there is no further choice of pattern.",
+          "3. Other Red drivers: $3! = 6$. Blue drivers: $4! = 24$.",
+          "4. Total: $6 \\cdot 24 = 144$."
+        ],
+        "fast": "Fix one person; the rest is $3! \\cdot 4!$.",
+        "trap": "Multiplying by 2 for 'Red first or Blue first' (288) counts each seating twice, since on a circle a rotation turns one pattern into the other; $4! \\cdot 4! = 576$ forgets to remove rotations."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-permutations",
+          "role": "primary"
+        }
+      ],
+      "setup": "two groups alternate around a circular table; fixing one person removes the rotations and also fixes the alternation pattern, so there is no factor of 2 for which group starts",
+      "variant": "circular arrangements",
+      "revisits": "quant-007:s2q11",
+      "solverRating": 2
+    }
+  ]
+}
