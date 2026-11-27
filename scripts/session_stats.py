@@ -14,14 +14,18 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 STEPS = [  # (label, pattern over a Bash command), first match wins
+    ("bank:gaps", r"npm run.* bank:gaps\b"),
+    ("bank:brief", r"npm run.* bank:brief\b"),
+    ("bank:sync", r"npm run.* (bank:sync|register)\b"),
     ("brief", r"npm run.* brief\b"),
     ("check", r"npm run.* check\b"),
     ("validate", r"npm run.* validate\b"),
     ("tag", r"npm run.* tag\b"),
     ("blind --check", r"npm run.* blind\b.*--check"),
     ("blind copy", r"npm run.* blind\b"),
+    ("novelty --check", r"npm run.* novelty\b.*--check"),
+    ("novelty copy", r"npm run.* novelty\b"),
     ("verify.py", r"python3? .*content/verify/"),
-    ("register", r"npm run.* register\b"),
     ("git", r"^\s*git\b"),
 ]
 

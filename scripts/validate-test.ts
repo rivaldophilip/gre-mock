@@ -355,6 +355,9 @@ export function validateTest(raw: unknown, id: string): Validation {
         if (bare) err(`${where}: explanation.${field} has math outside $...$ ("${bare}"); write it as $...$ so it renders`);
       }
     }
+    // a \" left by a raw string in a generator script shows as a stray backslash
+    const texts = [q.prompt, q.qc?.a, q.qc?.b, ...(q.choices ?? []), ...(q.blanks ?? []).flat(), q.explanation.key, q.explanation.fast, q.explanation.trap, ...(q.explanation.steps ?? []), ...Object.values(q.explanation.distractors ?? {})];
+    if (texts.some((s) => s?.includes('\\"'))) err(`${where}: a stray backslash before a quote (\\") in its text; write the quote without it`);
     if (test.measure === "verbal" && q.type !== "rc_select") {
       const wrong = (q.type === "tc" ? q.blanks!.flatMap((b, i) => b.filter((_, j) => j !== sel[i])) : (q.choices ?? []).filter((_, j) => !sel.includes(j)));
       const missing = wrong.filter((c) => !(q.explanation.distractors && c in q.explanation.distractors));

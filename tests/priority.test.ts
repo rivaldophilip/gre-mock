@@ -234,6 +234,15 @@ describe("concept variants", () => {
     expect(assignVariants(["a"], variants, used, rng(1), new Map([[0, "retired form"]]))).toEqual(["a3"]);
   });
 
+  it("keeps a slot to the variants it allows, and to all when it allows none", () => {
+    const allow = (i: number, v: string) => (i === 0 ? v === "a2" : v === "none");
+    for (let seed = 1; seed <= 20; seed++) {
+      const out = assignVariants(["a", "a"], variants, new Map(), rng(seed), new Map(), allow);
+      expect(out[0]).toBe("a2");
+      expect(["a1", "a3"]).toContain(out[1]);
+    }
+  });
+
   it("does not change the history it is given", () => {
     const used = new Map([["a", new Map([["a1", 1]])]]);
     assignVariants(["a"], variants, used, rng(1));

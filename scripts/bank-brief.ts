@@ -38,6 +38,13 @@ function nextId(measure: "quant" | "verbal") {
 /** The slot type a format-changing quant revisit moves to. */
 const REFORMAT: Record<string, string> = { qc: "mc", mc: "numeric", mc_multi: "qc", numeric: "qc" };
 
+/** Whether a variant's wording allows a question type: a QC variant needs a qc slot, a "closest choice" one an mc slot. */
+function fitsType(variant: string | undefined, type: string) {
+  if (variant && /\bin QC\b/.test(variant)) return type === "qc";
+  if (variant && /closest choice/.test(variant)) return type === "mc";
+  return true;
+}
+
 /** The missed item a revisit gap names, as the brief shows it. */
 function revisitOf(ref: string, result: string, n: number, measure: "quant" | "verbal", byRef: Map<string, Question>) {
   const q = byRef.get(ref)!;
@@ -99,9 +106,9 @@ async function main() {
       const dataConcept = ranked.find((c) => ctx.conceptScores.find((s) => s.itemId === c)?.area === "data") ?? "data-interpretation-calc";
       for (const level of [3, 4, 5]) add({ type: "di", level, concept: dataConcept, name: names.get(dataConcept), unit: "d1" });
     }
-    // each slot takes the variant its concept was used least in (the revisits keep their earlier item's)
+    // each slot takes the variant its concept was used least in, among those its type can carry (the revisits keep their earlier item's)
     const fixed = new Map(slots.flatMap((s, i) => (s.revisit && s.variant ? [[i, s.variant] as const] : [])));
-    const vs = assignVariants(slots.map((s) => s.concept ?? ""), variants, variantsUsed(measure, metas, id), random, fixed);
+    const vs = assignVariants(slots.map((s) => s.concept ?? ""), variants, variantsUsed(measure, metas, id), random, fixed, (i, v) => fitsType(v, slots[i].type));
     slots.forEach((s, i) => (s.variant = vs[i]));
     const history = conceptHistory("quant");
     Object.assign(brief, {

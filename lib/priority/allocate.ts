@@ -245,7 +245,9 @@ export function pairSeKeys(
  * concept -> variant -> times used) and the earlier slots of this brief, ties random. So a concept that comes
  * back in mock after mock is tested a different way each time. A concept with no variants listed gets none.
  * `fixed` (slot index -> variant) pins a slot, such as a revisit that keeps its earlier item's form; a pin counts as a
- * use before any other slot picks, and one that is not among the concept's variants is ignored.
+ * use before any other slot picks, and one that is not among the concept's variants is ignored. `allow` (slot index,
+ * variant) limits a slot to the variants it allows, such as the ones its question type can carry; if it allows none,
+ * the slot picks from all.
  */
 export function assignVariants(
   concepts: string[],
@@ -253,6 +255,7 @@ export function assignVariants(
   used: Map<string, Map<string, number>>,
   random: () => number,
   fixed = new Map<number, string>(),
+  allow: (i: number, variant: string) => boolean = () => true,
 ): (string | undefined)[] {
   const count = new Map([...used].map(([c, m]) => [c, new Map(m)]));
   const pinned = new Map([...fixed].filter(([i, v]) => i < concepts.length && (variants[concepts[i]] ?? []).includes(v)));
@@ -262,8 +265,10 @@ export function assignVariants(
   }
   return concepts.map((c, i) => {
     if (pinned.has(i)) return pinned.get(i);
-    const options = variants[c] ?? [];
-    if (!options.length) return undefined;
+    const all = variants[c] ?? [];
+    if (!all.length) return undefined;
+    const fit = all.filter((v) => allow(i, v));
+    const options = fit.length ? fit : all;
     const seen = count.get(c) ?? new Map<string, number>();
     const least = Math.min(...options.map((v) => seen.get(v) ?? 0));
     const ties = options.filter((v) => (seen.get(v) ?? 0) === least);
