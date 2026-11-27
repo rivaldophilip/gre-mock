@@ -9,8 +9,8 @@ import { schema } from "../lib/db";
 import { buildCtx } from "../lib/assemble/context";
 import { contextRows } from "../lib/assemble/rows";
 import { oneTarget } from "./lib/accounts";
-import { bankNow } from "./lib/brief-parts";
-import { bankGaps, covered, DEFICIT_THRESHOLD, recommendBatch, type Gap } from "./lib/bank-gaps";
+import { bankNow, inFlightBriefs } from "./lib/brief-parts";
+import { afterPending, bankGaps, covered, DEFICIT_THRESHOLD, recommendBatch, type Gap } from "./lib/bank-gaps";
 
 export async function gapsFor(measure: "verbal" | "quant") {
   const { db, account } = await oneTarget();
@@ -21,7 +21,8 @@ export async function gapsFor(measure: "verbal" | "quant") {
   const done = shortfalls.filter((f) => covered(ctx, stock, f)).map((f) => f.id);
   if (done.length) await db.update(schema.shortfalls).set({ resolvedAt: new Date() }).where(inArray(schema.shortfalls.id, done));
   const revisited = new Set(metas.items.flatMap((i) => (i.revisits && i.status !== "gone" ? [i.revisits] : [])));
-  const gaps = bankGaps(ctx, shortfalls.filter((f) => !done.includes(f.id)), revisited);
+  // briefs still being authored count as written, so a sibling brief takes the next gaps
+  const gaps = afterPending(bankGaps(ctx, shortfalls.filter((f) => !done.includes(f.id)), revisited), inFlightBriefs(metas, measure));
   return { account, db, metas, ctx, gaps, resolved: done.length, stock: stock.length, batch: recommendBatch(measure, gaps) };
 }
 

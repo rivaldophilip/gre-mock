@@ -61,16 +61,25 @@ def close(a, b):
     return abs(Fraction(a) - Fraction(b)) < Fraction(1, 10**9) if isinstance(a, float) or isinstance(b, float) else a == b
 
 
+def test_path(test_id):
+    """Where a source lives, as lib/test-path.ts resolves it: bank batches, drill batches, then mocks."""
+    if re.fullmatch(r"[qv]bank-\d{3}", test_id):
+        return ROOT / "content" / "bank" / ("quant" if test_id[0] == "q" else "verbal") / f"{test_id}.json"
+    if re.fullmatch(r"drill-\d{3}", test_id):
+        return ROOT / "content" / "drill" / f"{test_id}.json"
+    return ROOT / "content" / "tests" / f"{test_id}.json"
+
+
 class Keys:
     def __init__(self, test_id):
         self.test_id = test_id
-        test = json.loads((ROOT / "content" / "tests" / f"{test_id}.json").read_text())
+        test = json.loads(test_path(test_id).read_text())
         self.q = {q["id"]: q for q in test["questions"]}
         self.checked, self.failed = set(), []
 
     def _q(self, qid):
         if qid not in self.q:
-            raise KeyError(f"{qid} is not a question of {self.test_id} (ids: s1q1..s1q12, s2q1..s2q15)")
+            raise KeyError(f"{qid} is not a question of {self.test_id} (ids: {', '.join(self.q)})")
         return self.q[qid]
 
     def choices(self, qid):

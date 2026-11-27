@@ -128,6 +128,31 @@ export function bankGaps(ctx: Ctx, shortfalls: ShortfallRow[], revisitedRefs: Se
   return out.sort((a, b) => b.deficit * b.weight - a.deficit * a.weight);
 }
 
+/** A brief still being authored, as far as its slots go. */
+export type PendingBrief = { slots?: { type?: string; level?: number; concept?: string; skill?: string; unit?: string; revisit?: { ref: string } }[] };
+
+/**
+ * The gaps left once briefs still being authored are written: their slots count as stock (a concept's or skill's level
+ * gap closes, its draw count and each type's count rise) and their revisits as written, so a sibling brief picks the
+ * next gaps instead of the same ones.
+ */
+export function afterPending(gaps: Gap[], briefs: PendingBrief[]): Gap[] {
+  const slots = briefs.flatMap((b) => b.slots ?? []);
+  const revisits = new Set(slots.flatMap((s) => (s.revisit ? [s.revisit.ref] : [])));
+  const target = (s: (typeof slots)[number]) => s.concept ?? s.skill;
+  return gaps
+    .flatMap((g) => {
+      if (g.kind === "revisit") return revisits.has(g.id) ? [] : [g];
+      let more = 0;
+      if (g.kind === "concept" || g.kind === "skill") more = slots.filter((s) => target(s) === g.id && (g.level ? s.level === g.level : (s.level ?? 0) >= 3)).length;
+      else if (g.kind === "type") more = slots.filter((s) => s.type === g.id && !s.unit).length;
+      if (!more) return [g];
+      const have = g.have + more;
+      return have >= g.need ? [] : [{ ...g, have, deficit: g.need - have }];
+    })
+    .sort((a, b) => b.deficit * b.weight - a.deficit * a.weight);
+}
+
 /** Whether unseen stock now fills what a shortfall wanted. */
 export function covered(ctx: Ctx, stock: Cand[], f: ShortfallRow): boolean {
   const lvl = (c: Cand) => f.wantedLevel === null || c.difficulty === f.wantedLevel;

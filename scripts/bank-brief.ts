@@ -35,6 +35,9 @@ function nextId(measure: "quant" | "verbal") {
   return `${prefix}-${String(Math.max(0, ...nums(path.join(BANK_DIR, measure)), ...nums("content/briefs")) + 1).padStart(3, "0")}`;
 }
 
+/** The slot type a format-changing quant revisit moves to. */
+const REFORMAT: Record<string, string> = { qc: "mc", mc: "numeric", mc_multi: "qc", numeric: "qc" };
+
 /** The missed item a revisit gap names, as the brief shows it. */
 function revisitOf(ref: string, result: string, n: number, measure: "quant" | "verbal", byRef: Map<string, Question>) {
   const q = byRef.get(ref)!;
@@ -68,8 +71,10 @@ async function main() {
     const ranked = [...new Set(gaps.filter((g) => g.kind === "concept").map((g) => g.id))];
     for (const s of [...ctx.conceptScores].sort((a, b) => b.P - a.P)) if (ranked.length < 4 && !ranked.includes(s.itemId) && s.area !== "reading" && s.area !== "argument") ranked.push(s.itemId);
     const count = Math.max(20, Math.min(30, Number(opt("--count") ?? 24)));
-    const concepts = ranked.slice(0, Math.max(4, Math.min(8, Math.round(count / 4))));
-    const per = Math.max(2, Math.round(count / concepts.length));
+    // the revisits and the DI set count toward --count; concept slots fill the rest
+    const fill = count - Math.min(REVISIT_MAX, revisitGaps.length) - (gaps.some((g) => g.kind === "unit" && g.id === "di3") ? 3 : 0);
+    const concepts = ranked.slice(0, Math.max(4, Math.min(8, Math.round(fill / 4))));
+    const per = Math.max(2, Math.round(fill / concepts.length));
     const typeLeft = new Map<string, number>(QUANT_TYPES.map(([t, n]) => [t, n + (gaps.find((g) => g.kind === "type" && g.id === t)?.deficit ?? 0)]));
     const nextType = () => {
       const t = [...typeLeft].sort((a, b) => b[1] - a[1])[0][0];
@@ -84,7 +89,10 @@ async function main() {
     revisitGaps.slice(0, REVISIT_MAX).forEach((g, n) => {
       const q = byRef.get(g.id)!;
       const concept = q.tags.find((t) => t.kind === "concept" && t.role === "primary")?.id;
-      add({ type: q.setId ? "mc" : q.type, level: Math.min(5, q.difficulty), concept, name: concept && names.get(concept), variant: q.variant, revisit: revisitOf(g.id, g.why.includes("guessed") ? "guessed" : "missed", n, measure, byRef) });
+      const revisit = revisitOf(g.id, g.why.includes("guessed") ? "guessed" : "missed", n, measure, byRef);
+      // a revisit told to change the format gets a slot of another type, since check holds each item to its slot's
+      const type = revisit.change.startsWith("change the format") ? (REFORMAT[q.type] ?? "mc") : q.setId ? "mc" : q.type;
+      add({ type, level: Math.min(5, q.difficulty), concept, name: concept && names.get(concept), variant: q.variant, revisit });
     });
     if (gaps.some((g) => g.kind === "unit" && g.id === "di3")) {
       units.push({ id: "d1", shape: "di3" });

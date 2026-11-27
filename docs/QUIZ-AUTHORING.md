@@ -66,7 +66,7 @@ A batch is a set of items written by topic for the question bank: `content/bank/
    - a third of the 3-blank TCs may be one sentence, the rest are 3–5 sentence passages;
    - a fifth of the TC blanks have all-phrase choices (the mock's 2 of 3 and 3 of 15, as ratios);
    - select-all items are not all 2-key.
-4. **Blind** as for a mock, with one solver. `blind --check` writes each item's raw rating into the file as `solverRating`; assembly caps the items rated 4+ per quiz section. A batch has no section balance to keep, so a too-easy item may always be retagged to its honest level, and there is no "too hard" round.
+4. **Blind** as for a mock, with one solver. `blind --check` writes each item's raw rating into the file as `solverRating`; assembly caps the items rated 4+ per quiz section. A batch has no section balance to keep, so a too-easy item may always be retagged to its honest level (check's slot match accepts a level below the slot's down to the recorded `solverRating` plus the offset), and there is no "too hard" round.
 5. **Novelty** as for a mock, with one judge. A quant batch lists each concept's earlier items once, then that concept's new items (with their cross-concept look-alikes), so the copy stays small.
 6. **Sync.** `npm run -s bank:sync -- <id>` refuses a batch without its blind and novelty records. Commit the batch, its brief and its verify script, then run `bank:gaps` again: it should shrink.
 

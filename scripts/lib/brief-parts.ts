@@ -31,7 +31,7 @@ export function clip(s: string, n: number) {
   return s.slice(0, i > 0 ? i : n) + "…";
 }
 
-type Brief = { testId: string; keyWords?: { id: string }[]; skillSlots?: { skill: string; variant?: string }[]; conceptSlots?: { concept: string; variant?: string }[]; slots?: { concept?: string; skill?: string; variant?: string }[]; distractorWords?: { untested?: { id: string }[]; review?: { id: string }[] }; passageWords?: { id: string }[] };
+type Brief = { testId: string; keyWords?: { id: string }[]; skillSlots?: { skill: string; variant?: string }[]; conceptSlots?: { concept: string; variant?: string }[]; slots?: { type?: string; level?: number; concept?: string; skill?: string; variant?: string; unit?: string; revisit?: { ref: string } }[]; distractorWords?: { untested?: { id: string }[]; review?: { id: string }[] }; passageWords?: { id: string }[] };
 
 /** Briefs on disk whose source the bank does not hold yet (still being authored), for this measure. */
 export function inFlightBriefs(metas: BankMetas, measure: string): Brief[] {

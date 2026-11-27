@@ -173,6 +173,15 @@ export type BatchBrief = {
 /** Questions a unit shape holds: rc4-long 4, rc2 2, arg1 1, di3 3. */
 export const shapeSize = (shape: string) => Number(/(\d+)/.exec(shape)?.[1] ?? 0);
 
+/** The blind solver's rating offset for a measure (data/solver-calibration.json), 1.5 when none is measured. */
+function solverOffset(measure: string): number {
+  try {
+    return (JSON.parse(fs.readFileSync("data/solver-calibration.json", "utf8")) as Record<string, { offset: number }>)[measure]?.offset ?? 1.5;
+  } catch {
+    return 1.5;
+  }
+}
+
 /**
  * A bank batch (content/bank/<measure>): every item in section 1 with an s1qN id, the brief's slots (type and level,
  * in any order) and units (each a passage or DI set with the shape's question count, its id the unit's id), and the
@@ -186,15 +195,25 @@ export function batchRules(test: Test, brief: BatchBrief): string[] {
     if (!/^s1q\d+$/.test(q.id)) out.push(`${q.id}: ids are s1q1, s1q2, …`);
   }
   const key = (type: string, level: number) => `${type} L${level}`;
-  const want = brief.slots.map((s) => key(s.type, s.level)).sort();
-  const got = test.questions.map((q) => key(blueprintType(q), q.difficulty)).sort();
-  const missing = [...want];
-  const extra: string[] = [];
-  for (const g of got) {
-    const i = missing.indexOf(g);
-    if (i >= 0) missing.splice(i, 1);
-    else extra.push(g);
-  }
+  // each item fills a slot of its type and level, or one above it when the blind check offered that retag: as low as
+  // the solver's calibrated rating and no lower. A matching, so a retagged item never strands an untouched one.
+  const offset = solverOffset(test.measure);
+  const fits = (q: Question, s: { type: string; level: number }) => {
+    if (blueprintType(q) !== s.type) return false;
+    if (q.difficulty === s.level) return true;
+    return q.solverRating !== undefined && q.difficulty < s.level && q.difficulty >= Math.max(1, Math.min(5, Math.round(q.solverRating + offset)));
+  };
+  const slotOf = new Map<number, number>(); // slot index -> item index
+  const place = (qi: number, seen: Set<number>): boolean =>
+    brief.slots.some((s, si) => {
+      if (seen.has(si) || !fits(test.questions[qi], s)) return false;
+      seen.add(si);
+      if (slotOf.has(si) && !place(slotOf.get(si)!, seen)) return false;
+      slotOf.set(si, qi);
+      return true;
+    });
+  const extra = test.questions.flatMap((q, qi) => (place(qi, new Set()) ? [] : [key(blueprintType(q), q.difficulty)])).sort();
+  const missing = brief.slots.flatMap((s, si) => (slotOf.has(si) ? [] : [key(s.type, s.level)])).sort();
   if (missing.length || extra.length)
     out.push(`slots: the brief wants ${missing.length ? missing.join(", ") : "nothing more"}${extra.length ? `; the batch has ${extra.join(", ")} it does not ask for` : ""} (type and level per item; retag only an honest level)`);
   for (const u of brief.units ?? []) {

@@ -5,6 +5,7 @@ vi.mock("server-only", () => ({}));
 import { SignJWT } from "jose";
 import { TestSchema, type Test } from "@/lib/types";
 import { bankRows, unitShape, stableJson } from "@/scripts/lib/bank-rows";
+import type { Gap } from "@/scripts/lib/bank-gaps";
 import { quizTest, quizIdOf, sourceTest, type Layout } from "@/lib/virtual-test";
 import { dbFor, dbUrl } from "@/lib/db";
 import { readSession } from "@/lib/auth";
@@ -146,6 +147,17 @@ describe("bank batches", () => {
     expect(short.join("\n")).toMatch(/the brief wants tc3 L5/);
   });
 
+  it("take a retag the blind check offered, and only one the solver's rating backs", () => {
+    // two slots at one type, levels 4 and 5; the L5 item was retagged to 4 after the solver rated it 2 (+1.5 = 3.5)
+    const qs = asBatch.questions.slice(0, 2).map((q) => ({ ...q, type: "se" as const, difficulty: 4 }));
+    const two = { ...asBatch, questions: [{ ...qs[0] }, { ...qs[1], solverRating: 2 }] };
+    const slots = { slots: [{ type: "se", level: 4 }, { type: "se", level: 5 }] };
+    expect(batchRules(two, slots).filter((m) => m.startsWith("slots"))).toEqual([]);
+    // the same retag without a rating, or below the rating's level, is refused
+    expect(batchRules({ ...two, questions: qs }, slots).join("\n")).toMatch(/the brief wants se L5/);
+    expect(batchRules({ ...two, questions: [qs[0], { ...qs[1], solverRating: 4 }] }, slots).join("\n")).toMatch(/the brief wants se L5/);
+  });
+
   it("check unit sizes against their shapes", () => {
     const v = load("content/tests/verbal-019.json");
     const b = { ...v, id: "vbank-902", questions: v.questions.map((q) => ({ ...q, section: 1 as const })) };
@@ -190,5 +202,23 @@ describe("novelty pools", () => {
     expect(heads.length).toBe(new Set(three.map((q) => q.tags.find((t) => t.role === "primary")!.id)).size);
     // the same items laid out the mock way repeat each pool under every item
     expect(noveltyCopy({ ...batch, id: "qbank-901" }).length).toBeLessThan(noveltyCopy({ ...batch, id: "quant-901" }).length / 2);
+  });
+});
+
+describe("sibling briefs", () => {
+  it("count a brief still being authored as written, so the next brief takes other gaps", async () => {
+    const { afterPending } = await import("@/scripts/lib/bank-gaps");
+    const gaps: Gap[] = [
+      { kind: "revisit", id: "quant-005:s2q1", need: 1, have: 0, deficit: 1, weight: 2.5, why: "" },
+      { kind: "revisit", id: "quant-006:s1q3", need: 1, have: 0, deficit: 1, weight: 2.5, why: "" },
+      { kind: "concept", id: "percent", level: 4, need: 1, have: 0, deficit: 1, weight: 1, why: "" },
+      { kind: "concept", id: "percent", level: 5, need: 1, have: 0, deficit: 1, weight: 1, why: "" },
+      { kind: "concept", id: "percent", need: 4, have: 1, deficit: 3, weight: 1, why: "" },
+      { kind: "type", id: "qc", need: 10, have: 2, deficit: 8, weight: 1.5, why: "" },
+    ];
+    const left = afterPending(gaps, [{ slots: [{ type: "qc", level: 4, concept: "percent" }, { type: "qc", level: 4, concept: "integers-properties", revisit: { ref: "quant-005:s2q1" } }] }]);
+    expect(left.map((g) => `${g.kind} ${g.id}${g.level ? ` L${g.level}` : ""}`)).toEqual(["type qc", "revisit quant-006:s1q3", "concept percent", "concept percent L5"]);
+    expect(left.find((g) => g.kind === "concept" && !g.level)).toMatchObject({ have: 2, deficit: 2 });
+    expect(left.find((g) => g.kind === "type")).toMatchObject({ have: 4, deficit: 6 });
   });
 });
