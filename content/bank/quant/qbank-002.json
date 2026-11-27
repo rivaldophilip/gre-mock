@@ -1,0 +1,1021 @@
+{
+  "id": "qbank-002",
+  "measure": "quant",
+  "title": "Quant bank batch 2",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Note: Figure not drawn to scale.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 190' width='300' height='190' font-family='serif' font-size='16'><polygon points='40,160 210,160 260,50 90,50' fill='none' stroke='currentColor' stroke-width='2'/><line x1='40' y1='160' x2='175' y2='50' stroke='currentColor' stroke-width='1.5'/><line x1='175' y1='50' x2='210' y2='160' stroke='currentColor' stroke-width='1.5'/><text x='24' y='178' fill='currentColor'>A</text><text x='214' y='178' fill='currentColor'>B</text><text x='264' y='44' fill='currentColor'>C</text><text x='76' y='44' fill='currentColor'>D</text><text x='169' y='42' fill='currentColor'>E</text></svg>"
+    },
+    {
+      "id": "fig2",
+      "caption": "Note: Figure not drawn to scale.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 210' width='300' height='210' font-family='serif' font-size='16'><rect x='30' y='20' width='240' height='160' fill='none' stroke='currentColor' stroke-width='2'/><line x1='30' y1='180' x2='270' y2='73' stroke='currentColor' stroke-width='1.5'/><line x1='30' y1='180' x2='190' y2='20' stroke='currentColor' stroke-width='1.5'/><text x='12' y='198' fill='currentColor'>A</text><text x='276' y='198' fill='currentColor'>B</text><text x='276' y='16' fill='currentColor'>C</text><text x='12' y='16' fill='currentColor'>D</text><text x='278' y='78' fill='currentColor'>P</text><text x='184' y='14' fill='currentColor'>Q</text></svg>"
+    },
+    {
+      "id": "fig3",
+      "caption": "Note: Figure not drawn to scale.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200' width='320' height='200' font-family='serif' font-size='16'><polygon points='30,175 130,30 290,175' fill='none' stroke='currentColor' stroke-width='2'/><line x1='97' y1='78' x2='203' y2='175' stroke='currentColor' stroke-width='1.5' stroke-dasharray='6 4'/><text x='12' y='192' fill='currentColor'>A</text><text x='124' y='22' fill='currentColor'>B</text><text x='294' y='192' fill='currentColor'>C</text><text x='78' y='74' fill='currentColor'>D</text><text x='198' y='194' fill='currentColor'>E</text></svg>"
+    },
+    {
+      "id": "fig4",
+      "caption": "Note: Figure not drawn to scale.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 90' width='320' height='90' font-family='serif' font-size='16'><line x1='30' y1='70' x2='290' y2='70' stroke='currentColor' stroke-opacity='0.35' stroke-width='1' stroke-dasharray='5 4'/><line x1='30' y1='70' x2='150' y2='50' stroke='currentColor' stroke-width='1.5'/><line x1='150' y1='50' x2='290' y2='70' stroke='currentColor' stroke-width='1.5'/><circle cx='30' cy='70' r='4' fill='currentColor'/><circle cx='150' cy='50' r='4' fill='currentColor'/><circle cx='290' cy='70' r='4' fill='currentColor'/><text x='22' y='88' fill='currentColor'>A</text><text x='144' y='36' fill='currentColor'>B</text><text x='284' y='88' fill='currentColor'>C</text></svg>"
+    },
+    {
+      "id": "fig5",
+      "caption": "Note: Figure not drawn to scale.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 190' width='260' height='190' font-family='serif' font-size='16'><polygon points='50,40 50,160 230,160' fill='none' stroke='currentColor' stroke-width='2'/><text x='36' y='36' fill='currentColor'>P</text><text x='34' y='178' fill='currentColor'>Q</text><text x='234' y='178' fill='currentColor'>R</text><text x='34' y='105' fill='currentColor' font-size='14'>6</text><text x='136' y='178' fill='currentColor' font-size='14'>8</text></svg>"
+    },
+    {
+      "id": "fig6",
+      "caption": "Orders logged by a bakery in one week, by item and size",
+      "table": {
+        "head": [
+          "Size",
+          "Bread",
+          "Pastry",
+          "Cake",
+          "Total"
+        ],
+        "rows": [
+          [
+            "Small",
+            "90",
+            "60",
+            "30",
+            "180"
+          ],
+          [
+            "Large",
+            "70",
+            "40",
+            "110",
+            "220"
+          ],
+          [
+            "Total",
+            "160",
+            "100",
+            "140",
+            "400"
+          ]
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "An orchard is a rectangular field with fence posts $A$, $B$, $C$ and $D$ at its corners, in that order around the field. A well $W$ stands inside the field, 4 meters from post $A$, 7 meters from post $B$ and 8 meters from post $C$. The length and width of the field are not known. How many meters is the well from post $D$?",
+      "choices": [
+        "$1$",
+        "$\\sqrt{31}$",
+        "$\\sqrt{47}$",
+        "$\\sqrt{65}$",
+        "$\\sqrt{97}$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Split the field by the horizontal and vertical lines through $W$. Each corner distance is the hypotenuse of a right triangle whose legs are two of $W$'s four distances to the sides, and the two opposite corners $A$ and $C$ together use all four legs, as do $B$ and $D$. So $WA^2 + WC^2 = WB^2 + WD^2$: $16 + 64 = 49 + WD^2$, and $WD = \\sqrt{31}$.",
+        "steps": [
+          "1. Let $W$ be $p$ and $q$ from sides $AD$ and $BC$, and $r$ and $s$ from sides $AB$ and $DC$.",
+          "2. Pythagorean theorem at each corner: $WA^2 = p^2 + r^2$, $WB^2 = q^2 + r^2$, $WC^2 = q^2 + s^2$, $WD^2 = p^2 + s^2$.",
+          "3. Opposite corners: $WA^2 + WC^2 = p^2 + q^2 + r^2 + s^2 = WB^2 + WD^2$.",
+          "4. $16 + 64 = 49 + WD^2$, so $WD^2 = 31$ and $WD = \\sqrt{31}$."
+        ],
+        "fast": "For a point inside a rectangle, the squared distances to opposite corners have equal sums: $4^2 + 8^2 = 7^2 + WD^2$.",
+        "trap": "Pairing adjacent corners as if they were opposite ($16 + 49 - 64 = 1$, or $49 + 64 - 16 = 97$), or treating the two nearest distances as the legs of one right triangle ($\\sqrt{65}$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "primary"
+        }
+      ],
+      "setup": "a point inside a rectangle with its distances to three corners given and no dimensions; the distance to the fourth corner from two pairs of right triangles (opposite corners have equal sums of squares)",
+      "variant": "a right triangle from a word problem or coordinates (distance)",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "A home-goods store sells a square floor tile whose diagonal is 6 inches long and a square coaster whose sides are 3 inches long.",
+      "qc": {
+        "a": "The side length of the tile, in inches",
+        "b": "The length of a diagonal of the coaster, in inches"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "A square's diagonal is $\\sqrt2$ times its side. The tile's side is $\\dfrac{6}{\\sqrt2} = 3\\sqrt2$, and the coaster's diagonal is $3\\sqrt2$: equal.",
+        "steps": [
+          "1. Tile: the diagonal splits it into two 45-45-90 triangles, so side $= \\dfrac{6}{\\sqrt2} = \\dfrac{6\\sqrt2}{2} = 3\\sqrt2$.",
+          "2. Coaster: diagonal $= 3\\sqrt2$.",
+          "3. The quantities are equal: (C)."
+        ],
+        "fast": "Dividing by $\\sqrt2$ and multiplying by $\\sqrt2$ meet in the middle: $\\dfrac{6}{\\sqrt2} = 3\\sqrt2$.",
+        "trap": "Halving the diagonal to get a side of 3 (answer B), or assuming $\\dfrac{6}{\\sqrt2}$ and $3\\sqrt2$ differ because they look different."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "primary"
+        }
+      ],
+      "setup": "a square's side from its diagonal against the diagonal of a square whose side is half that diagonal; both are the same surd once rationalized",
+      "variant": "45-45-90 triangle (square diagonal)",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "On a hop farm, a vertical pole is steadied by two taut wires running from its top to two stakes in the level ground. The foot of the pole and the two stakes lie on one straight line, and both stakes are on the same side of the pole, 4 feet apart. One wire is 13 feet long and the other is 15 feet long. How many feet tall is the pole?",
+      "choices": [
+        "$2\\sqrt{14}$",
+        "$9$",
+        "$12$",
+        "$\\sqrt{153}$",
+        "$\\sqrt{209}$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The shorter wire goes to the nearer stake. With $x$ the distance from the pole to the nearer stake and $h$ the height, $h^2 = 13^2 - x^2 = 15^2 - (x + 4)^2$. Then $8x + 16 = 56$, so $x = 5$ and $h = 12$.",
+        "steps": [
+          "1. Two right triangles share the pole as a leg: bases $x$ and $x + 4$, hypotenuses 13 and 15.",
+          "2. $169 - x^2 = 225 - (x^2 + 8x + 16)$, so $8x = 40$ and $x = 5$.",
+          "3. $h = \\sqrt{169 - 25} = 12$; check: $\\sqrt{225 - 81} = 12$."
+        ],
+        "fast": "Subtract the two equations: $15^2 - 13^2 = (x + 4)^2 - x^2$, a difference of squares, so $56 = 4(2x + 4)$ and $x = 5$.",
+        "trap": "Using the 4-foot gap as a leg of one wire's triangle ($\\sqrt{15^2 - 4^2} = \\sqrt{209}$ or $\\sqrt{13^2 - 4^2} = \\sqrt{153}$), or taking the square root of $15^2 - 13^2$ ($2\\sqrt{14}$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "primary"
+        }
+      ],
+      "setup": "two right triangles share a vertical leg, with both ground points on the same side so the bases differ by a given length; equate the two expressions for the shared leg",
+      "variant": "Pythagorean theorem used twice (a ladder, a path, a shared leg)",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "A gift box is a rectangular solid. On the three faces that meet at one corner of the box, the diagonals measure $\\sqrt{13}$, $\\sqrt{40}$ and $\\sqrt{45}$ centimeters.",
+      "qc": {
+        "a": "The length, in centimeters, of a segment joining two opposite corners of the box through its interior",
+        "b": "$7$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "With edges $a$, $b$ and $c$: $a^2 + b^2 = 13$, $a^2 + c^2 = 40$, $b^2 + c^2 = 45$. Adding counts each squared edge twice, so $a^2 + b^2 + c^2 = \\dfrac{98}{2} = 49$, and the space diagonal is 7.",
+        "steps": [
+          "1. Each face diagonal squared is the sum of two squared edges.",
+          "2. Sum of the three: $2(a^2 + b^2 + c^2) = 13 + 40 + 45 = 98$.",
+          "3. Space diagonal $= \\sqrt{a^2 + b^2 + c^2} = \\sqrt{49} = 7$ (the edges are 2, 3 and 6).",
+          "4. Equal: (C)."
+        ],
+        "fast": "Space diagonal squared is half the sum of the three squared face diagonals.",
+        "trap": "Adding the three squared face diagonals without halving gives $\\sqrt{98} \\approx 9.9$, answer A."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "pythagorean-special",
+          "role": "primary"
+        }
+      ],
+      "setup": "a box given only by the diagonals of the three faces at one corner; each squared edge appears in two of them, so halve the sum of their squares for the space diagonal",
+      "variant": "space diagonal of a rectangular box",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "mc_multi",
+      "figureId": "fig1",
+      "difficulty": 5,
+      "prompt": "A farmer's field is the parallelogram $ABCD$ shown, with an area of $4{,}800$ square meters. One straight irrigation channel runs from corner $A$ to a point $E$ on side $CD$, and a second runs from $E$ to corner $B$; $E$ is strictly between $C$ and $D$. Which of the following statements must be true? Indicate all such statements.",
+      "choices": [
+        "Triangle $ABE$ has an area of $2{,}400$ square meters.",
+        "Triangles $ADE$ and $BCE$ have equal areas.",
+        "The areas of triangles $ADE$ and $BCE$ add up to $2{,}400$ square meters.",
+        "$AE = BE$",
+        "If $DE$ is twice as long as $EC$, triangle $BCE$ has an area of 800 square meters."
+      ],
+      "key": {
+        "sel": [
+          0,
+          2,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Triangle $ABE$ has base $AB$ and the parallelogram's full height wherever $E$ sits on $CD$, so it is always half the field. The other two triangles share the remaining half in the ratio $DE : EC$, which is not given: only the drawing makes $E$ look like the midpoint.",
+        "steps": [
+          "1. Let $AB = DC = b$ and the height be $h$, so $bh = 4{,}800$.",
+          "2. Triangle $ABE$: $\\tfrac12 bh = 2{,}400$ for every position of $E$. The first statement holds.",
+          "3. $ADE + BCE = 4{,}800 - 2{,}400 = 2{,}400$. The third statement holds.",
+          "4. $ADE = \\tfrac12 \\cdot DE \\cdot h$ and $BCE = \\tfrac12 \\cdot EC \\cdot h$: equal only if $DE = EC$, which is not stated. $AE = BE$ fails too (it can fail even at the midpoint of a slanted parallelogram).",
+          "5. If $DE = 2EC$, then $EC = \\tfrac{b}{3}$ and $BCE = \\tfrac12 \\cdot \\tfrac{b}{3} \\cdot h = 800$. The last statement holds."
+        ],
+        "fast": "A triangle on one side of a parallelogram with its apex on the opposite side is always half; the point's position only shares out the other half.",
+        "trap": "Taking $E$ as the midpoint because it is drawn there, and selecting the equal-areas statement (and $AE = BE$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "figures-not-to-scale",
+          "role": "primary"
+        }
+      ],
+      "setup": "a point on one side of a parallelogram drawn at the midpoint; the triangle on the opposite side is always half, and the two side triangles split the other half by the point's ratio",
+      "variant": "a point looks like a midpoint but is not stated as one",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "mc",
+      "figureId": "fig2",
+      "difficulty": 4,
+      "prompt": "A bakery's sheet cake is the rectangle $ABCD$ shown, with $AB = 12$ inches and $BC = 8$ inches. Two straight cuts start at corner $A$: one ends at point $P$ on side $BC$, with $BP = 5$ inches, and the other ends at point $Q$ on side $CD$, with $DQ = 9$ inches. The cuts divide the cake into three pieces. The area of the largest piece is how many square inches greater than the area of the smallest piece?",
+      "choices": [
+        "$0$",
+        "$2$",
+        "$4$",
+        "$6$",
+        "$8$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The corner pieces are right triangles: $ABP = \\tfrac12 \\cdot 12 \\cdot 5 = 30$ and $ADQ = \\tfrac12 \\cdot 8 \\cdot 9 = 36$. The middle piece is $96 - 30 - 36 = 30$. Largest minus smallest: $36 - 30 = 6$.",
+        "steps": [
+          "1. Whole cake: $12 \\times 8 = 96$ square inches.",
+          "2. Triangle $ABP$ (right angle at $B$): $\\tfrac12 \\cdot 12 \\cdot 5 = 30$.",
+          "3. Triangle $ADQ$ (right angle at $D$, $AD = 8$): $\\tfrac12 \\cdot 8 \\cdot 9 = 36$.",
+          "4. Middle piece $APCQ$: $96 - 66 = 30$.",
+          "5. $36 - 30 = 6$."
+        ],
+        "fast": "Compute the two corner triangles from their legs and subtract both from 96.",
+        "trap": "Trusting the drawing, where the three pieces look equal (answer 0), or comparing a piece with a third of the cake, 32."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "figures-not-to-scale",
+          "role": "primary"
+        }
+      ],
+      "setup": "a rectangle cut into three pieces by two segments from one corner to the two far sides, drawn as equal thirds; the corner right triangles from their legs, the middle piece by subtraction",
+      "variant": "regions that look equal in area",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "numeric",
+      "figureId": "fig3",
+      "difficulty": 5,
+      "prompt": "A triangular wheat field $ABC$ has an area of 720 square meters. A straight drainage ditch runs from point $D$ on side $AB$ to point $E$ on side $AC$, where $AD = 40$ meters, $DB = 20$ meters, $AE = 30$ meters and $EC = 50$ meters. What is the area, in square meters, of the four-sided part of the field, $DBCE$?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "540"
+      },
+      "explanation": {
+        "key": "$\\dfrac{AD}{AB} = \\dfrac{40}{60} = \\dfrac23$ but $\\dfrac{AE}{AC} = \\dfrac{30}{80} = \\dfrac38$, so the ditch is not parallel to $BC$, whatever the drawing suggests. Triangles $ADE$ and $ABC$ share angle $A$, so their areas are in the ratio $\\dfrac{AD \\cdot AE}{AB \\cdot AC} = \\dfrac{40 \\cdot 30}{60 \\cdot 80} = \\dfrac14$. Triangle $ADE$ is 180, and $DBCE = 720 - 180 = 540$.",
+        "steps": [
+          "1. $AB = 60$ and $AC = 80$.",
+          "2. The ratios $\\tfrac23$ and $\\tfrac38$ differ, so $DE$ is not parallel to $BC$ and the triangles are not similar.",
+          "3. Area with a shared angle: $[ADE] = \\tfrac12 \\cdot AD \\cdot AE \\cdot \\sin A$ and $[ABC] = \\tfrac12 \\cdot AB \\cdot AC \\cdot \\sin A$, so $[ADE] = \\tfrac14 \\cdot 720 = 180$.",
+          "4. $720 - 180 = 540$."
+        ],
+        "fast": "Shared angle: multiply the two side fractions, $\\tfrac23 \\cdot \\tfrac38 = \\tfrac14$, and keep the other $\\tfrac34$ of 720.",
+        "trap": "Treating $DE$ as parallel to $BC$, as drawn, and scaling the area by $(\\tfrac23)^2$: $720 - 320 = 400$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "figures-not-to-scale",
+          "role": "primary"
+        }
+      ],
+      "setup": "a segment across a triangle drawn parallel to the third side, but its two side ratios differ; with the shared angle the area ratio is the product of the two ratios; the remaining quadrilateral's area",
+      "variant": "lines that look parallel or perpendicular but are not stated to be",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "qc",
+      "figureId": "fig4",
+      "difficulty": 4,
+      "prompt": "A wire fence runs straight from post $A$ to post $B$ and then straight from post $B$ to post $C$, as shown. The section from $A$ to $B$ is 30 meters long, the section from $B$ to $C$ is 40 meters long, and posts $A$ and $C$ are 50 meters apart.",
+      "qc": {
+        "a": "The distance, in meters, from post $B$ to the straight line through posts $A$ and $C$",
+        "b": "$20$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "The drawing shows only a shallow bend at $B$, as if $B$ sat just off line $AC$, but angle sizes are not to scale. Since $30^2 + 40^2 = 50^2$, angle $ABC$ is a right angle, and $B$'s distance from $AC$ is the altitude to the hypotenuse: $\\dfrac{30 \\cdot 40}{50} = 24 > 20$.",
+        "steps": [
+          "1. $A$, $B$ and $C$ form a triangle with sides 30, 40 and 50 (the fence is 70 meters long, more than $AC$).",
+          "2. $900 + 1{,}600 = 2{,}500$: a right triangle with the right angle at $B$.",
+          "3. Area $= \\tfrac12 \\cdot 30 \\cdot 40 = 600 = \\tfrac12 \\cdot 50 \\cdot d$, so $d = 24$.",
+          "4. $24 > 20$: (A)."
+        ],
+        "fast": "3-4-5 scaled by 10; the altitude to the hypotenuse is leg times leg over hypotenuse.",
+        "trap": "Trusting the shallow bend in the drawing: it makes angle $ABC$ look close to $180^\\circ$ and $B$ look only a few meters from line $AC$ (answer B), but the side lengths force a right angle."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "figures-not-to-scale",
+          "role": "primary"
+        }
+      ],
+      "setup": "a two-segment path drawn with a shallow bend, its middle point just off the line through its ends; the three distances form a right triangle, so the middle point's distance from that line is the altitude to the hypotenuse",
+      "variant": "a point that looks on a line or circle but is not stated to be",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "A boutique made 11 sales on a slow Tuesday. One sale was for $\\$400$, and each of the other 10 sales was for at least $\\$20$ and at most $\\$40$. Which of the following statements must be true? Indicate all such statements.",
+      "choices": [
+        "The mean of the 11 sales is greater than their median.",
+        "The mean of the 11 sales is greater than $\\$60$.",
+        "Removing the $\\$400$ sale from the list would lower the median.",
+        "Removing the $\\$400$ sale from the list would lower the mean by more than $\\$30$.",
+        "Removing the $\\$400$ sale from the list would lower the mean by more than $\\$35$.",
+        "At least 10 of the 11 sales are below the mean."
+      ],
+      "key": {
+        "sel": [
+          0,
+          3,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "Let $S$ be the total of the 10 small sales, so $200 \\le S \\le 400$. The mean, $\\dfrac{S + 400}{11}$, is at least $\\dfrac{600}{11} \\approx 54.5$, above every small sale, while the median is one of the small sales. Removing the $\\$400$ sale lowers the mean by $\\dfrac{S + 400}{11} - \\dfrac{S}{10} = \\dfrac{4{,}000 - S}{110}$, between about $\\$32.7$ and $\\$34.5$.",
+        "steps": [
+          "1. The median is the 6th smallest value, a small sale of at most $\\$40$; the mean is at least $\\$54.5$. So the mean exceeds the median, and all 10 small sales are below the mean.",
+          "2. If every small sale is $\\$20$, the mean is about $\\$54.5$: it need not exceed $\\$60$.",
+          "3. Without the $\\$400$ sale, the median is the average of the 5th and 6th smallest; if those two are equal, the median does not change.",
+          "4. The drop $\\dfrac{4{,}000 - S}{110}$ is least at $S = 400$ (about 32.7) and greatest at $S = 200$ (about 34.5): always more than 30, never more than 35."
+        ],
+        "fast": "Bound everything by the two extreme lists, all $\\$20$ and all $\\$40$.",
+        "trap": "Expecting the median to fall when the top value leaves (it can stay put), or estimating the drop as $\\dfrac{400}{11} \\approx 36$ and selecting the $\\$35$ statement."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "primary"
+        }
+      ],
+      "setup": "one large value with the rest in a narrow band; must-be-true statements about mean against median and the effect of removing the large value, bounded by the band's two ends",
+      "variant": "the mean against the median of a skewed list",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "At a high school, the 11 students in one chemistry section had a median exam score of 70, and the 15 students in the other section had a median score of 80 on the same exam. If $M$ is the median of all 26 scores, which of the following must be true?",
+      "choices": [
+        "$M = 75$",
+        "$M = \\dfrac{11(70) + 15(80)}{26}$",
+        "$70 \\le M \\le 80$",
+        "$70 < M < 80$",
+        "$75 \\le M \\le 80$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "At least 6 scores in the first section and at least 8 in the second are at most 80, so at least 14 of the 26 are at most 80, and both middle scores (13th and 14th) are at most 80. Likewise at least 6 + 8 = 14 scores are at least 70, so both middle scores are at least 70. Both ends occur, so only $70 \\le M \\le 80$ must hold.",
+        "steps": [
+          "1. $M$ is the average of the 13th and 14th scores in order.",
+          "2. Scores $\\le 80$: at least 6 from the first section (its median is 70) and 8 from the second: at least 14, so the 14th score is $\\le 80$ and $M \\le 80$.",
+          "3. Scores $\\ge 70$: at least 6 from the first section and 8 from the second (all $\\ge 80$): at least 14, so the 13th score is $\\ge 70$ and $M \\ge 70$.",
+          "4. $M = 80$: every first-section score 70 and every second-section score 80. $M = 70$: every first-section score 70, and the second section has seven scores of 0 and eight of 80.",
+          "5. So $M$ can be 70 or 80 and never leaves that interval: only the third choice must hold."
+        ],
+        "fast": "A pooled median always lies between the two group medians, and here it can sit on either end.",
+        "trap": "Averaging the two medians (75) or weighting them by section size, as for means; or assuming $M$ is strictly between the medians, though both ends can be reached."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "primary"
+        }
+      ],
+      "setup": "two lists of different odd sizes with given medians; the median of the even-size pool is bounded by the two medians by counting values on each side, and both ends are attainable",
+      "variant": "median of two lists combined",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "A beekeeper weighed the honey taken from each of her six hives this season. Four of the hives gave 4, 9, 11 and 15 kilograms. The other two gave $x$ and $x + 6$ kilograms, and the median of the six weights is 12 kilograms. How many kilograms of honey did the more productive of those two hives give?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "19"
+      },
+      "explanation": {
+        "key": "With six weights, the median is the average of the 3rd and 4th. The guess that $x$ and $x + 6$ are the middle pair gives $x = 9$, but then the list is 4, 9, 9, 11, 15, 15, with median 10. With $x$ between 11 and 15 and $x + 6$ above 15, the middle pair is 11 and $x$: $\\dfrac{11 + x}{2} = 12$, so $x = 13$ and the list 4, 9, 11, 13, 15, 19 has median 12. The answer is $x + 6 = 19$.",
+        "steps": [
+          "1. Median of six values $=$ average of the 3rd and 4th in order.",
+          "2. Middle pair $x$, $x + 6$: $x = 9$, which reorders the list and gives median 10. Rejected.",
+          "3. If $x \\le 9$, the 3rd and 4th values are at most 11, so the median is at most 11; if $x \\ge 15$, the middle pair is 11 and 15 (median 13).",
+          "4. So $11 < x < 15$ with $x + 6 > 15$: middle pair 11 and $x$, $x = 13$.",
+          "5. Check: 4, 9, 11, 13, 15, 19; median $\\dfrac{11 + 13}{2} = 12$. Larger hive: 19."
+        ],
+        "fast": "A median of 12 needs a middle pair summing to 24; only 11 and 13 fit with the list's order.",
+        "trap": "Assuming the two unknowns are the middle pair ($x = 9$, answer 15) without checking where they fall in the order."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "primary"
+        }
+      ],
+      "setup": "an even-size list with two unknowns a fixed gap apart and a given median; their places in the order are unknown, so the obvious middle-pair guess fails its check",
+      "variant": "median of a list with unknowns",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A test kitchen weighed the rolls from two batches, 9 rolls per batch. In batch P, the mode of the weights was 40 grams and the range was 12 grams. In batch Q, the mode of the weights was 46 grams and the range was 15 grams.",
+      "qc": {
+        "a": "The range, in grams, of the 18 weights combined",
+        "b": "$30$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Each batch's weights fill an interval that must contain its mode: a 12-gram interval containing 40 for P and a 15-gram interval containing 46 for Q. The combined range runs from the lower of the two minimums to the higher of the two maximums. It is 15 when P's interval sits inside Q's, and 33 when the intervals sit apart: both sides of 30 occur.",
+        "steps": [
+          "1. P's least weight is between 28 and 40 (its interval is 12 grams long and contains 40); Q's least weight is between 31 and 46.",
+          "2. Small case: P from 34 to 46 and Q from 32 to 47 (each with its mode repeated). Combined range $47 - 32 = 15 < 30$.",
+          "3. Large case: P from 28 to 40 and Q from 46 to 61. Combined range $61 - 28 = 33 > 30$.",
+          "4. Both happen: (D)."
+        ],
+        "fast": "The largest combined range is the gap between the modes plus both ranges, $6 + 12 + 15 = 33$; the smallest is the larger range, 15.",
+        "trap": "Capping the combined range at the sum of the two ranges, $12 + 15 = 27$, and answering B. The modes are 6 grams apart, so the two intervals need not overlap."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "mean-median-mode",
+          "role": "primary"
+        }
+      ],
+      "setup": "two lists with given modes and ranges; each span must contain its mode, so the combined range runs from the larger range (nested spans) to the mode gap plus both ranges; compare with a value in between",
+      "variant": "mode and range of a combined list",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "A pickle maker blends a brine that is $10\\%$ salt with a brine that is $25\\%$ salt to make 30 liters of brine that is at least $16\\%$ and at most $20\\%$ salt. She has only 16 liters of the $10\\%$ brine on hand but plenty of the $25\\%$ brine. Which of the following could be the number of liters of the $10\\%$ brine she uses? Indicate all such numbers.",
+      "choices": [
+        "$8$",
+        "$10$",
+        "$13$",
+        "$16$",
+        "$18$",
+        "$20$"
+      ],
+      "key": {
+        "sel": [
+          1,
+          2,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "With $x$ liters of the $10\\%$ brine, the salt is $0.10x + 0.25(30 - x) = 7.5 - 0.15x$ liters, which must be between $0.16(30) = 4.8$ and $0.20(30) = 6$. So $10 \\le x \\le 18$, and the 16 liters on hand cut that to $10 \\le x \\le 16$: 10, 13 and 16.",
+        "steps": [
+          "1. Salt in the blend: $7.5 - 0.15x$ liters.",
+          "2. At most $20\\%$: $7.5 - 0.15x \\le 6$, so $x \\ge 10$.",
+          "3. At least $16\\%$: $7.5 - 0.15x \\ge 4.8$, so $x \\le 18$.",
+          "4. Supply: $x \\le 16$. Possible amounts: $10 \\le x \\le 16$, so 10, 13 and 16."
+        ],
+        "fast": "Each liter of weak brine lowers the blend by half a percentage point from $25\\%$: $25 - 0.5x$ must be between 16 and 20, so $10 \\le x \\le 18$; then apply the stock limit of 16.",
+        "trap": "Stopping at $10 \\le x \\le 18$ and selecting 18, which needs more of the weak brine than she has; or flipping the bounds by forgetting that more weak brine makes the blend weaker."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-rate",
+          "role": "primary"
+        }
+      ],
+      "setup": "a weak and a strong solution blended to a fixed volume whose concentration must fall in a band; the band gives an interval for the weak amount, and a stock limit on the weak solution cuts it",
+      "variant": "mixing two solutions to a target concentration",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A tracked white stork covered one day's route partly by flapping flight, averaging 30 kilometers per hour, and partly by soaring on warm air, averaging 50 kilometers per hour. Its average speed for the whole route was 40 kilometers per hour. What fraction of the route's distance did the stork cover by flapping flight?",
+      "choices": [
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{3}{8}$",
+        "$\\dfrac{2}{5}$",
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{5}{8}$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "An average of 40, exactly midway between 30 and 50, means equal *times* at the two speeds, not equal distances. In equal times the stork covers 30 and 50 kilometers, so the flapping share of the distance is $\\dfrac{30}{30 + 50} = \\dfrac38$.",
+        "steps": [
+          "1. Let the stork spend $t_1$ hours flapping and $t_2$ hours soaring: $\\dfrac{30t_1 + 50t_2}{t_1 + t_2} = 40$.",
+          "2. $30t_1 + 50t_2 = 40t_1 + 40t_2$, so $10t_2 = 10t_1$: equal times.",
+          "3. Take one hour each: 30 km flapping, 50 km soaring, 80 km in all.",
+          "4. Flapping share of the distance: $\\dfrac{30}{80} = \\dfrac38$."
+        ],
+        "fast": "Average speed is a time-weighted mean: 40 is the midpoint, so the times are equal, and the distances are in the ratio $30 : 50$.",
+        "trap": "Reading the midpoint average as equal distances ($\\dfrac12$, which is the share of the time), or giving the slower speed the larger share ($\\dfrac58$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-rate",
+          "role": "primary"
+        }
+      ],
+      "setup": "both leg speeds and the overall average speed given; the average is a time-weighted mean, so solve for the time split first, then convert it to the fraction of the distance on one leg",
+      "variant": "average speed over two legs",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "A biology lab is filling a rectangular aquarium that is 80 centimeters long, 40 centimeters wide and 50 centimeters tall, starting empty, to a water depth of 45 centimeters. A hose pours in 4 liters per minute until the depth reaches 30 centimeters; then, so as not to stir up the gravel, a drip line takes over at 36 liters per hour. How many minutes does the filling take in all? (1 liter $= 1{,}000$ cubic centimeters.)",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "104"
+      },
+      "explanation": {
+        "key": "The base is $80 \\times 40 = 3{,}200$ square centimeters, so each centimeter of depth is 3.2 liters. The first 30 centimeters (96 liters) take $96 \\div 4 = 24$ minutes; the next 15 centimeters (48 liters) at 36 liters per hour take $\\dfrac{48}{36}$ hours, or 80 minutes. Total: 104 minutes.",
+        "steps": [
+          "1. 1 cm of depth: $3{,}200$ cm$^3$ = 3.2 liters.",
+          "2. Stage 1: $30 \\times 3.2 = 96$ liters at 4 liters per minute: 24 minutes.",
+          "3. Stage 2: from 30 to 45 cm is $15 \\times 3.2 = 48$ liters.",
+          "4. 36 liters per hour is 0.6 liter per minute: $48 \\div 0.6 = 80$ minutes.",
+          "5. $24 + 80 = 104$ minutes."
+        ],
+        "fast": "Convert the drip to liters per minute (0.6) before dividing.",
+        "trap": "Filling to the 50-centimeter rim instead of 45 (64 liters in stage 2, about 131 minutes in all), or reading 36 liters per hour as per minute."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-rate",
+          "role": "primary"
+        }
+      ],
+      "setup": "a box-shaped tank filled to a stated depth below its rim in two stages, the first rate per minute and the second per hour, with volume converted from cubic centimeters to liters; total minutes",
+      "variant": "rate with a unit change mid-problem",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "A café's iced-tea urn has a tap that, by itself, fills the empty urn in 20 minutes. During the lunch rush, customers draw tea from the urn at a steady rate while the tap stays open, and on one such day the empty urn took 60 minutes to fill.",
+      "qc": {
+        "a": "The number of minutes the customers, drawing at that rate, would take to empty a full urn with the tap shut",
+        "b": "$40$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Rates add, times do not. The tap fills $\\dfrac{1}{20}$ of the urn per minute and the net rate is $\\dfrac{1}{60}$, so the customers draw $\\dfrac{1}{20} - \\dfrac{1}{60} = \\dfrac{1}{30}$ per minute: 30 minutes to empty a full urn, less than 40.",
+        "steps": [
+          "1. Tap alone: $\\dfrac{1}{20}$ urn per minute.",
+          "2. Tap and customers together: $\\dfrac{1}{60}$ urn per minute.",
+          "3. Customers' rate: $\\dfrac{1}{20} - \\dfrac{1}{60} = \\dfrac{3 - 1}{60} = \\dfrac{1}{30}$ urn per minute.",
+          "4. Time to empty a full urn: 30 minutes $< 40$: (B)."
+        ],
+        "fast": "$\\dfrac{1}{d} = \\dfrac{1}{20} - \\dfrac{1}{60}$, so $d = 30$.",
+        "trap": "Subtracting the times, $60 - 20 = 40$, and answering C."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "word-problems-rate",
+          "role": "primary"
+        }
+      ],
+      "setup": "an inlet's solo fill time and the net fill time with an unknown outflow running at once; recover the outflow's own emptying time by subtracting rates (subtracting the times is the trap)",
+      "variant": "pipes filling and draining at once",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "The weights of the eggs laid by a farm's hens are approximately normally distributed, with a mean of 58 grams and a standard deviation of 4 grams. One egg is chosen at random. Using the approximation that $68\\%$, $95\\%$ and $99.7\\%$ of the weights lie within 1, 2 and 3 standard deviations of the mean, respectively, which of the following events have a probability greater than $0.15$? Indicate all such events.",
+      "choices": [
+        "The egg weighs more than 62 grams.",
+        "The egg weighs between 50 and 54 grams.",
+        "The egg weighs less than 54 grams or more than 66 grams.",
+        "The egg's weight differs from 58 grams by more than 8 grams.",
+        "The egg weighs less than 50 grams or between 62 and 66 grams."
+      ],
+      "key": {
+        "sel": [
+          0,
+          2,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "The rule splits each side of the mean into bands: $34\\%$ from 0 to 1 standard deviation, $13.5\\%$ from 1 to 2, $2.35\\%$ from 2 to 3 and $0.15\\%$ beyond 3. Here 54, 62 are 1 standard deviation out and 50, 66 are 2 out. The five events: $16\\%$, $13.5\\%$, $16\\% + 2.5\\% = 18.5\\%$, $5\\%$ and $2.5\\% + 13.5\\% = 16\\%$.",
+        "steps": [
+          "1. More than 62 (above $+1$): $\\dfrac{100 - 68}{2} = 16\\%$. Greater than 0.15.",
+          "2. 50 to 54 (from $-2$ to $-1$): $\\dfrac{95 - 68}{2} = 13.5\\%$. Not greater.",
+          "3. Below 54 or above 66: $16\\% + 2.5\\% = 18.5\\%$. Greater.",
+          "4. More than 8 grams from 58 (beyond $\\pm 2$): $5\\%$. Not greater.",
+          "5. Below 50 or 62 to 66: $2.5\\% + 13.5\\% = 16\\%$. Greater."
+        ],
+        "fast": "Convert every cutoff to standard deviations first, then add band shares.",
+        "trap": "Giving every band 1 standard deviation wide $16\\%$ (the band from 50 to 54 holds only $13.5\\%$), or dismissing the last event because each of its two pieces is below $15\\%$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "normal-distribution",
+          "role": "primary"
+        }
+      ],
+      "setup": "events built from unions of tails and bands at whole standard deviations; add the empirical-rule pieces for each event and compare with a threshold",
+      "variant": "the 68-95-99.7 rule for a probability",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "Two varieties of wheat are grown side by side. The stalk heights of variety R are normally distributed with a mean of 64 centimeters, and those of variety S are normally distributed with a mean of 76 centimeters; the two distributions have the same standard deviation. If $18\\%$ of the variety S stalks are shorter than 70 centimeters, what percent of the variety R stalks are between 64 and 70 centimeters tall?",
+      "choices": [
+        "$18\\%$",
+        "$32\\%$",
+        "$36\\%$",
+        "$64\\%$",
+        "$82\\%$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "70 centimeters is 6 below S's mean and 6 above R's mean, the same number of standard deviations because the standard deviations are equal. By symmetry, the share of R above 70 equals the share of S below 70, $18\\%$. Half of R is above 64, so $50\\% - 18\\% = 32\\%$ is between 64 and 70.",
+        "steps": [
+          "1. 70 sits midway between the means: $76 - 70 = 70 - 64 = 6$.",
+          "2. Equal standard deviations: $P(R > 70) = P(S < 70) = 18\\%$.",
+          "3. $P(R > 64) = 50\\%$, so $P(64 < R < 70) = 50\\% - 18\\% = 32\\%$."
+        ],
+        "fast": "Mirror the tail across the midpoint, then subtract it from one half.",
+        "trap": "Stopping at the mirrored tail ($18\\%$), or taking its complement ($82\\%$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "normal-distribution",
+          "role": "primary"
+        }
+      ],
+      "setup": "two normal distributions with equal standard deviations and a cutoff midway between their means; one's lower tail equals the other's upper tail, then the half-distribution gives a band",
+      "variant": "symmetry: P(X > m + a) = P(X < m - a)",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "prompt": "A food-safety lab probes the internal temperatures of roasted chickens, which are approximately normally distributed. Its summary sheet gives the mean in degrees Fahrenheit, 149 degrees Fahrenheit, but gives the standard deviation in Celsius degrees, 5 Celsius degrees. (A Celsius reading $C$ corresponds to the Fahrenheit reading $\\tfrac95 C + 32$.) Using the approximation that $95\\%$ of the temperatures lie within 2 standard deviations of the mean, a chicken that reads 131 degrees Fahrenheit is at approximately what percentile of the temperatures? Enter the percentile as a number (for the 40th percentile, enter 40).",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "2.5"
+      },
+      "explanation": {
+        "key": "A spread converts by the scale factor only: 5 Celsius degrees is $\\tfrac95 \\cdot 5 = 9$ Fahrenheit degrees (the $+32$ shifts readings, not differences). 131 is $149 - 131 = 18 = 2 \\cdot 9$ below the mean, so $z = -2$, and below that lies $\\dfrac{100 - 95}{2} = 2.5$ percent.",
+        "steps": [
+          "1. Standard deviation in Fahrenheit: $\\tfrac95 \\cdot 5 = 9$.",
+          "2. $z = \\dfrac{131 - 149}{9} = -2$.",
+          "3. Outside $\\pm 2$ standard deviations: $5\\%$, split equally between the tails, so $2.5\\%$ below.",
+          "4. Percentile: 2.5."
+        ],
+        "fast": "Scale the spread by $\\tfrac95$, ignore the 32, count standard deviations.",
+        "trap": "Converting the spread like a reading ($\\tfrac95 \\cdot 5 + 32 = 41$), or using 5 as if it were in Fahrenheit ($z = -3.6$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "normal-distribution",
+          "role": "primary"
+        }
+      ],
+      "setup": "a normal distribution with its mean and standard deviation reported in different units related by a linear conversion; scale the spread without the offset, then the z-score gives a tail percent",
+      "variant": "a percentile from a z-score",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 3,
+      "prompt": "The weights of a grocery chain's 5-kilogram bags of rice are approximately normally distributed, and $68\\%$ of the bags weigh within one standard deviation of the mean. Two bags are chosen at random, independently of each other.",
+      "qc": {
+        "a": "The probability that both bags weigh within one standard deviation of the mean",
+        "b": "$\\dfrac12$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Independent picks multiply: $0.68 \\times 0.68 = 0.4624$, which is less than $0.5$.",
+        "steps": [
+          "1. Each bag: probability 0.68 of lying within one standard deviation.",
+          "2. Both (independent): $0.68^2 = 0.4624$.",
+          "3. $0.4624 < 0.5$: (B)."
+        ],
+        "fast": "$0.7^2 = 0.49$ is already below one half, and $0.68 < 0.7$.",
+        "trap": "Comparing 0.68 itself with $\\tfrac12$ and answering A."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "normal-distribution",
+          "role": "primary"
+        }
+      ],
+      "setup": "the probability that two independent picks both land within one standard deviation; square the single-pick share and compare with one half",
+      "variant": "the 68-95-99.7 rule for a probability",
+      "solverRating": 1
+    },
+    {
+      "id": "s1q21",
+      "section": 1,
+      "type": "qc",
+      "figureId": "fig5",
+      "difficulty": 4,
+      "revisits": "quant-006:s1q3",
+      "prompt": "A triangular herb bed $PQR$ is edged with boards: $PQ = 6$ feet and $QR = 8$ feet. The third edge, $PR$, is longer than 9 feet.",
+      "qc": {
+        "a": "The area of the bed, in square feet",
+        "b": "$20$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The area is $\\tfrac12 \\cdot 6 \\cdot 8 \\cdot \\sin Q = 24 \\sin Q$, and $PR > 9$ only keeps angle $Q$ above about $79^\\circ$. At $PR = 10$ the angle is right and the area is 24; as $PR$ approaches 14 the bed flattens and the area approaches 0. Both sides of 20 occur.",
+        "steps": [
+          "1. Triangle inequality: $9 < PR < 14$.",
+          "2. $PR = 10$: $6^2 + 8^2 = 10^2$, a right angle at $Q$, area $\\tfrac12 \\cdot 6 \\cdot 8 = 24 > 20$.",
+          "3. $PR = 13$: semiperimeter 13.5, area $\\sqrt{13.5 \\cdot 7.5 \\cdot 5.5 \\cdot 0.5} \\approx 16.7 < 20$.",
+          "4. Both occur: (D)."
+        ],
+        "fast": "With two sides fixed, the area peaks at the right angle (24) and falls toward 0 as the angle opens; a lower bound on the third side does not stop it opening.",
+        "trap": "Trusting the right angle in the drawing (area 24, answer A)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "figures-not-to-scale",
+          "role": "primary"
+        }
+      ],
+      "setup": "two sides fixed and only a lower bound on the third, drawn as a right triangle; the area runs from the right-angle maximum down toward zero, so compare it with a value in between",
+      "variant": "an angle or length that can vary: answer D",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q22",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "revisits": "quant-006:s1q8",
+      "prompt": "Each of two numbers is pinned down by its own double inequality: $-3 \\le 1 - 2x < 5$ and $1 < y + 2 \\le 6$. Which of the following statements must be true? Indicate all such statements.",
+      "choices": [
+        "$x - y < 3$",
+        "$x - y > -6$",
+        "$x - y \\ge -5$",
+        "$x + y \\le 6$",
+        "$x + y < 6$",
+        "$x - y > -1$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Dividing by $-2$ flips both signs: $-2 < x \\le 2$. Subtracting 2: $-1 < y \\le 4$. The difference $x - y$ is largest with $x$ high and $y$ low and smallest with $x$ low and $y$ high: $-6 < x - y < 3$, neither end reached. The sum runs over $-3 < x + y \\le 6$, with 6 reached at $x = 2$, $y = 4$.",
+        "steps": [
+          "1. $-3 \\le 1 - 2x$ gives $x \\le 2$; $1 - 2x < 5$ gives $x > -2$.",
+          "2. $1 < y + 2 \\le 6$ gives $-1 < y \\le 4$.",
+          "3. $x - y < 2 - (-1) = 3$ (y never equals $-1$), and $x - y > -2 - 4 = -6$ (x never equals $-2$). So the first two statements hold.",
+          "4. $x - y \\ge -5$ fails at $x = -1.9$, $y = 4$ ($-5.9$); $x - y > -1$ fails at $x = 0$, $y = 3$.",
+          "5. $x + y \\le 2 + 4 = 6$ always, and $x + y = 6$ at $x = 2$, $y = 4$, so $x + y < 6$ fails."
+        ],
+        "fast": "For $x - y$, pair the top of one interval with the bottom of the other; keep track of which ends are open.",
+        "trap": "Subtracting like endpoints ($-2 - (-1) = -1$ and $2 - 4 = -2$) for the range of $x - y$, or treating the reachable 6 as an open end."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "inequalities",
+          "role": "primary"
+        }
+      ],
+      "setup": "two compound linear inequalities, one with a negative coefficient, give half-open intervals; select the bounds on the difference and the sum that must hold, minding which ends are reached",
+      "variant": "compound inequality: range of x + y or x - y or xy",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q23",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "revisits": "quant-006:s1q7",
+      "prompt": "A bank gives each new customer a security code that is a three-digit positive integer whose digits have a product of 48, and every such integer is equally likely to be the code. What is the probability that a customer's code is an even number greater than 500?",
+      "choices": [
+        "$\\dfrac{5}{21}$",
+        "$\\dfrac{5}{18}$",
+        "$\\dfrac{2}{7}$",
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{8}{21}$"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "With $48 = 2^4 \\cdot 3$ and digits from 1 to 9, the digit sets are {1, 6, 8}, {2, 3, 8} and {2, 4, 6} (6 orders each) and {3, 4, 4} (3 orders): 21 codes. An even code above 500 starts with 6 or 8 and ends in an even digit: 618, 816, 832, 624 and 642. Probability $\\dfrac{5}{21}$.",
+        "steps": [
+          "1. No digit can be 0, 5, 7 or 9 (none divides 48); split $2^4 \\cdot 3$ into three digits from 1, 2, 3, 4, 6 and 8.",
+          "2. Sets: {1, 6, 8}, {2, 3, 8}, {2, 4, 6}, {3, 4, 4}. Orders: $6 + 6 + 6 + 3 = 21$.",
+          "3. First digit 6 or 8 (above 500), last digit even: from {1, 6, 8}: 618, 816; from {2, 3, 8}: 832; from {2, 4, 6}: 624, 642; {3, 4, 4} has no first digit above 5.",
+          "4. $\\dfrac{5}{21}$."
+        ],
+        "fast": "Organize the digit sets by their largest digit (8, then 6, then 4) so the repeated-digit set {3, 4, 4} is not skipped.",
+        "trap": "Missing {3, 4, 4}, the set with a repeated digit, leaves 18 codes and gives $\\dfrac{5}{18}$; ignoring the even condition gives $\\dfrac{8}{21}$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "counting-restrictions",
+          "role": "primary"
+        }
+      ],
+      "setup": "an equally likely pick among three-digit numbers with a fixed digit product; list the digit multisets (one with a repeat) and their orders, then count the even ones above a bound",
+      "variant": "digits with restrictions (no repeats, even, > 500)",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q24",
+      "section": 1,
+      "type": "mc",
+      "figureId": "fig6",
+      "difficulty": 4,
+      "revisits": "quant-006:s1q11",
+      "prompt": "A neighborhood bakery logged its 400 orders for one week by item and size, as shown in the table. One of the 400 orders is chosen at random. Given that the order chosen was not an order for a large cake, what is the probability that it was an order for pastry?",
+      "choices": [
+        "$\\dfrac{1}{4}$",
+        "$\\dfrac{6}{29}$",
+        "$\\dfrac{10}{29}$",
+        "$\\dfrac{5}{13}$",
+        "$\\dfrac{2}{5}$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "\"Not a large cake\" removes a single cell, the 110 large cakes. That leaves $400 - 110 = 290$ orders, and all 100 pastry orders (small and large) are among them: $\\dfrac{100}{290} = \\dfrac{10}{29}$.",
+        "steps": [
+          "1. Condition: every order except the large cakes, $400 - 110 = 290$.",
+          "2. Pastry orders among them: $60 + 40 = 100$.",
+          "3. $\\dfrac{100}{290} = \\dfrac{10}{29}$."
+        ],
+        "fast": "Cross out the one excluded cell; read the pastry column total over what remains.",
+        "trap": "Reading the condition as \"neither large nor cake\" (the 150 small bread and pastry orders, giving $\\dfrac{60}{150} = \\dfrac25$), removing every cake ($\\dfrac{100}{260} = \\dfrac{5}{13}$), or ignoring the condition ($\\dfrac{100}{400}$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-conditional",
+          "role": "primary"
+        }
+      ],
+      "setup": "a two-way table with a condition that excludes a single cell (one row and one column at once, not either); the conditional share over the remaining total",
+      "variant": "conditional probability from a two-way table",
+      "solverRating": 2
+    }
+  ]
+}

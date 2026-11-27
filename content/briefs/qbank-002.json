@@ -1,0 +1,749 @@
+{
+ "testId": "qbank-002",
+ "measure": "quant",
+ "kind": "quant",
+ "seed": 66377,
+ "generatedAt": "2026-11-27T04:07:46.437Z",
+ "gaps": [
+  "revisit quant-006:s1q3 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s1q8 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s1q7 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s1q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s1q12 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q3 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q4 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q7 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q8 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q15 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q4 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s1q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q5 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s1q6 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s1q7 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q2 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q14 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q12 (you missed it; no sibling in the bank yet)"
+ ],
+ "slots": [
+  {
+   "slot": 1,
+   "qid": "s1q1",
+   "type": "mc",
+   "level": 5,
+   "concept": "pythagorean-special",
+   "name": "Pythagorean theorem and special right triangles",
+   "variant": "a right triangle from a word problem or coordinates (distance)"
+  },
+  {
+   "slot": 2,
+   "qid": "s1q2",
+   "type": "qc",
+   "level": 4,
+   "concept": "pythagorean-special",
+   "name": "Pythagorean theorem and special right triangles",
+   "variant": "45-45-90 triangle (square diagonal)"
+  },
+  {
+   "slot": 3,
+   "qid": "s1q3",
+   "type": "mc",
+   "level": 5,
+   "concept": "pythagorean-special",
+   "name": "Pythagorean theorem and special right triangles",
+   "variant": "Pythagorean theorem used twice (a ladder, a path, a shared leg)"
+  },
+  {
+   "slot": 4,
+   "qid": "s1q4",
+   "type": "qc",
+   "level": 4,
+   "concept": "pythagorean-special",
+   "name": "Pythagorean theorem and special right triangles",
+   "variant": "space diagonal of a rectangular box"
+  },
+  {
+   "slot": 5,
+   "qid": "s1q5",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "figures-not-to-scale",
+   "name": "Reasoning from figures not drawn to scale",
+   "variant": "a point looks like a midpoint but is not stated as one"
+  },
+  {
+   "slot": 6,
+   "qid": "s1q6",
+   "type": "mc",
+   "level": 4,
+   "concept": "figures-not-to-scale",
+   "name": "Reasoning from figures not drawn to scale",
+   "variant": "regions that look equal in area"
+  },
+  {
+   "slot": 7,
+   "qid": "s1q7",
+   "type": "numeric",
+   "level": 5,
+   "concept": "figures-not-to-scale",
+   "name": "Reasoning from figures not drawn to scale",
+   "variant": "lines that look parallel or perpendicular but are not stated to be"
+  },
+  {
+   "slot": 8,
+   "qid": "s1q8",
+   "type": "qc",
+   "level": 4,
+   "concept": "figures-not-to-scale",
+   "name": "Reasoning from figures not drawn to scale",
+   "variant": "a point that looks on a line or circle but is not stated to be"
+  },
+  {
+   "slot": 9,
+   "qid": "s1q9",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "mean-median-mode",
+   "name": "Mean, median, mode, range",
+   "variant": "the mean against the median of a skewed list"
+  },
+  {
+   "slot": 10,
+   "qid": "s1q10",
+   "type": "mc",
+   "level": 5,
+   "concept": "mean-median-mode",
+   "name": "Mean, median, mode, range",
+   "variant": "median of two lists combined"
+  },
+  {
+   "slot": 11,
+   "qid": "s1q11",
+   "type": "numeric",
+   "level": 4,
+   "concept": "mean-median-mode",
+   "name": "Mean, median, mode, range",
+   "variant": "median of a list with unknowns"
+  },
+  {
+   "slot": 12,
+   "qid": "s1q12",
+   "type": "qc",
+   "level": 5,
+   "concept": "mean-median-mode",
+   "name": "Mean, median, mode, range",
+   "variant": "mode and range of a combined list"
+  },
+  {
+   "slot": 13,
+   "qid": "s1q13",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "word-problems-rate",
+   "name": "Rate, work, distance and mixture problems",
+   "variant": "mixing two solutions to a target concentration"
+  },
+  {
+   "slot": 14,
+   "qid": "s1q14",
+   "type": "mc",
+   "level": 4,
+   "concept": "word-problems-rate",
+   "name": "Rate, work, distance and mixture problems",
+   "variant": "average speed over two legs"
+  },
+  {
+   "slot": 15,
+   "qid": "s1q15",
+   "type": "numeric",
+   "level": 5,
+   "concept": "word-problems-rate",
+   "name": "Rate, work, distance and mixture problems",
+   "variant": "rate with a unit change mid-problem"
+  },
+  {
+   "slot": 16,
+   "qid": "s1q16",
+   "type": "qc",
+   "level": 4,
+   "concept": "word-problems-rate",
+   "name": "Rate, work, distance and mixture problems",
+   "variant": "pipes filling and draining at once"
+  },
+  {
+   "slot": 17,
+   "qid": "s1q17",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "normal-distribution",
+   "name": "Normal distribution: 68-95-99.7 rule, z-scores, percentiles",
+   "variant": "the 68-95-99.7 rule for a probability"
+  },
+  {
+   "slot": 18,
+   "qid": "s1q18",
+   "type": "mc",
+   "level": 4,
+   "concept": "normal-distribution",
+   "name": "Normal distribution: 68-95-99.7 rule, z-scores, percentiles",
+   "variant": "symmetry: P(X > m + a) = P(X < m - a)"
+  },
+  {
+   "slot": 19,
+   "qid": "s1q19",
+   "type": "numeric",
+   "level": 5,
+   "concept": "normal-distribution",
+   "name": "Normal distribution: 68-95-99.7 rule, z-scores, percentiles",
+   "variant": "a percentile from a z-score"
+  },
+  {
+   "slot": 20,
+   "qid": "s1q20",
+   "type": "qc",
+   "level": 4,
+   "concept": "normal-distribution",
+   "name": "Normal distribution: 68-95-99.7 rule, z-scores, percentiles",
+   "variant": "the 68-95-99.7 rule for a probability"
+  },
+  {
+   "slot": 21,
+   "qid": "s1q21",
+   "type": "qc",
+   "level": 4,
+   "concept": "figures-not-to-scale",
+   "name": "Reasoning from figures not drawn to scale",
+   "variant": "an angle or length that can vary: answer D",
+   "revisit": {
+    "ref": "quant-006:s1q3",
+    "result": "missed",
+    "item": "In triangle $PQR$, $PQ = 6$, $QR = 8$, and the area of the triangle is 20. (The figure is not drawn to scale.) · Quantity A: $PR$ | Quantity B: 10",
+    "setup": "two sides and the area given (the included angle acute or obtuse); compare the third side with a value",
+    "change": "run it backwards: give what the earlier item asked for, and ask for one of its givens"
+   }
+  },
+  {
+   "slot": 22,
+   "qid": "s1q22",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "inequalities",
+   "name": "Linear and simultaneous inequalities",
+   "variant": "compound inequality: range of x + y or x - y or xy",
+   "revisit": {
+    "ref": "quant-006:s1q8",
+    "result": "missed",
+    "item": "The number $x$ satisfies $-2 \\le 3 - 5x < 18$. Which of the following could be the value of $x^2$? Indicate all such values. · choices: $-1$ / $0$ / $1$ / $4$ / $8.5$ / $9$",
+    "setup": "compound linear inequality gives an x interval; select possible x^2",
+    "change": "change the format (quantitative comparison, multiple choice or numeric entry) and the question asked"
+   }
+  },
+  {
+   "slot": 23,
+   "qid": "s1q23",
+   "type": "mc",
+   "level": 5,
+   "concept": "counting-restrictions",
+   "name": "Counting with restrictions and arrangements",
+   "variant": "digits with restrictions (no repeats, even, > 500)",
+   "revisit": {
+    "ref": "quant-006:s1q7",
+    "result": "missed",
+    "item": "How many four-digit positive integers have digits whose product is 24? · choices: $36$ / $48$ / $52$ / $60$ / $64$",
+    "setup": "count four-digit numbers whose digits have a given product",
+    "change": "combine the same insight with a second concept"
+   }
+  },
+  {
+   "slot": 24,
+   "qid": "s1q24",
+   "type": "mc",
+   "level": 4,
+   "concept": "probability-conditional",
+   "name": "Conditional probability and dependent events",
+   "variant": "conditional probability from a two-way table",
+   "revisit": {
+    "ref": "quant-006:s1q11",
+    "result": "missed",
+    "item": "In 2023, exactly 60 students were enrolled in both French and Mandarin, and no other student was enrolled in more than one of the three courses. One of the students enrolled in at least one of the three courses in 2023 is to be chosen at random. Given that the student chosen is not enrolled in Spanish, what is the probability that the student is enrolled in both French and Mandarin? · choices: $\\dfrac{1}{23}$ / $\\dfrac{1}{12}$ / $\\dfrac{1}{11}$ / $\\dfrac{2}{15}$ / $\\dfrac{2}{9}$",
+    "setup": "DI: conditional probability with a given overlap between categories",
+    "change": "keep the insight but move the trap: a different wrong path should tempt"
+   }
+  }
+ ],
+ "units": [],
+ "conceptSlots": [
+  {
+   "concept": "pythagorean-special",
+   "variant": "a right triangle from a word problem or coordinates (distance)"
+  },
+  {
+   "concept": "pythagorean-special",
+   "variant": "45-45-90 triangle (square diagonal)"
+  },
+  {
+   "concept": "pythagorean-special",
+   "variant": "Pythagorean theorem used twice (a ladder, a path, a shared leg)"
+  },
+  {
+   "concept": "pythagorean-special",
+   "variant": "space diagonal of a rectangular box"
+  },
+  {
+   "concept": "figures-not-to-scale",
+   "variant": "a point looks like a midpoint but is not stated as one"
+  },
+  {
+   "concept": "figures-not-to-scale",
+   "variant": "regions that look equal in area"
+  },
+  {
+   "concept": "figures-not-to-scale",
+   "variant": "lines that look parallel or perpendicular but are not stated to be"
+  },
+  {
+   "concept": "figures-not-to-scale",
+   "variant": "a point that looks on a line or circle but is not stated to be"
+  },
+  {
+   "concept": "mean-median-mode",
+   "variant": "the mean against the median of a skewed list"
+  },
+  {
+   "concept": "mean-median-mode",
+   "variant": "median of two lists combined"
+  },
+  {
+   "concept": "mean-median-mode",
+   "variant": "median of a list with unknowns"
+  },
+  {
+   "concept": "mean-median-mode",
+   "variant": "mode and range of a combined list"
+  },
+  {
+   "concept": "word-problems-rate",
+   "variant": "mixing two solutions to a target concentration"
+  },
+  {
+   "concept": "word-problems-rate",
+   "variant": "average speed over two legs"
+  },
+  {
+   "concept": "word-problems-rate",
+   "variant": "rate with a unit change mid-problem"
+  },
+  {
+   "concept": "word-problems-rate",
+   "variant": "pipes filling and draining at once"
+  },
+  {
+   "concept": "normal-distribution",
+   "variant": "the 68-95-99.7 rule for a probability"
+  },
+  {
+   "concept": "normal-distribution",
+   "variant": "symmetry: P(X > m + a) = P(X < m - a)"
+  },
+  {
+   "concept": "normal-distribution",
+   "variant": "a percentile from a z-score"
+  },
+  {
+   "concept": "normal-distribution",
+   "variant": "the 68-95-99.7 rule for a probability"
+  },
+  {
+   "concept": "figures-not-to-scale",
+   "variant": "an angle or length that can vary: answer D"
+  },
+  {
+   "concept": "inequalities",
+   "variant": "compound inequality: range of x + y or x - y or xy"
+  },
+  {
+   "concept": "counting-restrictions",
+   "variant": "digits with restrictions (no repeats, even, > 500)"
+  },
+  {
+   "concept": "probability-conditional",
+   "variant": "conditional probability from a two-way table"
+  }
+ ],
+ "targets": {
+  "concepts": [
+   "pythagorean-special",
+   "figures-not-to-scale",
+   "mean-median-mode",
+   "word-problems-rate",
+   "normal-distribution"
+  ]
+ },
+ "history": {
+  "pythagorean-special": [
+   {
+    "setup": "oblique triangle with 45° and 30° angles split by an altitude into two special right triangles; area or a side",
+    "worn": true,
+    "items": 2
+   },
+   {
+    "setup": "altitude to the hypotenuse splits it into given segments; perimeter",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "30-60-90 right triangle with the altitude to the hypotenuse given; hypotenuse",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "quadrilateral split by a diagonal into a 45-45-90 and a 30-60-90 triangle; a side or the area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "box with a square base and a given height; the space diagonal gives the base area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a perpendicular splits a triangle into pieces whose leg ratios reveal 45-45-90 and 30-60-90 triangles; add the angles at the vertex (backwards)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "sliding ladder: two right triangles with the same hypotenuse (7-24-25, then 15-20-25)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a square whose diagonal exceeds its side by a given length: solve s sqrt2 = s + 1",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "walk with legs along compass directions; straight-line distance from the net legs",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "regular hexagon with a given side; the triangle on alternate vertices, its side from a 30-60-90 half of a 120-degree isosceles triangle; its area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "altitude to the hypotenuse and one hypotenuse segment given; the other segment from the geometric mean, then the area with the altitude as height",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a right triangle with integer sides and one given leg; select the possible hypotenuses (factor the difference of squares into same-parity pairs: primitive and scaled triples)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a box's space diagonal against the path along three edges between the same two corners; the difference",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "an isosceles trapezoid with 60-degree base angles and legs equal to the short base; the perimeter gives the side; heights cut off 30-60-90 triangles (half a regular hexagon)",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "figures-not-to-scale": [
+   {
+    "setup": "isosceles triangle, point on the base with one segment given; compare the other segment (D)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "rhombus with side and diagonal given: area vs a value (fixed)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "median AD with BD = DC and a 3-4-5 right triangle forced; compare AC with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "AD = BD = DC forces a right angle; compare the sum of two sides with sqrt(2) times the third",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two sides and the area given (the included angle acute or obtuse); compare the third side with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "points on a line in unknown order with given distances and one betweenness fact; compare a distance with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "kite given only by side lengths: the angles between unequal sides are equal (SSS); no figure",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "triangles sharing a height: split the area by a base ratio and then by a midpoint; compare two pieces",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three side lengths, no figure: identify which side each angle faces; the larger side has the larger opposite angle",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "isosceles triangle, point on the base with one segment given; which statement must be true when the figure suggests the midpoint",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "quadrilateral with both pairs of opposite sides equal and one right angle marked: forced rectangle; compare the diagonal not through the marked angle's triangle with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a point at given distances from three vertices looks like the foot of an altitude; two right angles put it on the line through two vertices but not between them; compare that side with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two lines that look parallel cut by two transversals; the given pair of angles at one transversal does not sum to 180, and the angle sum of the enclosed quadrilateral fixes the pair at the other",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two triangles joined at a crossing point (a bowtie) with two angles given in one and one in the other; vertical angles make the remaining pairs share a sum; compare the unknown with the angle drawn equal to it",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a point drawn on a circle opposite a diameter, but its distance from the center is less than the radius; compare the third side of the triangle on the diameter with the right-triangle value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a right angle plus a point on the hypotenuse as far from the right-angle vertex as from one end; compare the two pieces of the hypotenuse (the point must be the midpoint, though drawn off-center)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one pair of parallel sides and the other pair equal, drawn as a symmetric trapezoid; a parallelogram also fits; compare the other base angle with the given one",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "mean-median-mode": [
+   {
+    "setup": "add one value so the median equals the mean",
+    "worn": true,
+    "items": 2
+   },
+   {
+    "setup": "five integers with given mean and median; greatest possible least value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: change in the mean per nest when one group is excluded",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: combined mean of two groups weighted by counts",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: possible median of two combined grouped distributions",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: change one category's values, then compare the mean and the median of the new list",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: medians of two percent columns with an even count (average the middle two); compare them",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: the range of combined groups from the extreme whiskers against one group's range",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: overall mean and count give the total; subtract known categories to get the mean of an open-ended category",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: least number of added top values that moves the median of a frequency table to a target (odd against even count)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two lists combined, one unknown; the unique-mode condition breaks a tie and forces the unknown, while the range condition is already met across both lists (a one-list reading of it is the trap)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: the overall total from counts times means; add a new group of equal values until the overall mean reaches a target; the new group's size",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: remove one value so the mean of the rest equals their median; the median of the rest depends on which half the removed value came from (case on its rank, then check)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two series read off one stacked bar graph (middle and top segments) pooled into one list; the median of the even-size pool, not the mean of the two medians",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "word-problems-rate": [
+   {
+    "setup": "out and back at two speeds; average speed for the round trip",
+    "worn": true,
+    "items": 2
+   },
+   {
+    "setup": "two fill pipes and a drain together; time to fill",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "second traveller leaves later and faster on the same route; when it leads by a distance",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "one crew starts alone, the other joins; finish at a set time; solo time",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "upstream and downstream legs with a current; time difference",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two legs with speeds in different units (km/h and m/s); total time",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "combined rate known and one machine slower by a fixed time: the rate equation becomes a quadratic",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two swimmers going back and forth in a pool; time of the second meeting",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "drain part of a solution and replace it with the pure substance to reach a target concentration; amount drained",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "inlet and drain open together for a stretch, then the drain closes; total time to fill",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a job measured in one unit while the rate switches to another unit partway; the time split from the total time, then the amount in the second unit",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two solutions mixed to a target concentration, then a stated amount of water dilutes it to a second concentration; the dilution fixes the mixture's size, then the mixing equation gives one part",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "inlet and drain rates in volume units; the extra fill time with the drain open gives the capacity",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three pairwise combined times given; adding the pair rates counts each worker twice, so halve to get the trio's rate",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "equal times downstream and upstream over different distances with the still-water speed known; the speeds are in the distance ratio; the current",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "normal-distribution": [
+   {
+    "setup": "variance given rather than SD; percentile at two SDs above the mean against the 95 from the empirical rule",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "an interval from one to three standard deviations above the mean: one tail band only, against a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "normal with known mean and one upper-tail probability; lower-tail probability at a nearer cutoff vs that probability",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two normal populations with different means and standard deviations; the cutoff farther in raw units is nearer in standard deviations; compare upper-tail percents",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "normal distribution with a known mean and one upper-tail percent; the percent in the band symmetric about the mean against a value (the two tails are equal)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two symmetric tail percents fix the mean and the standard deviation; the percent beyond a farther cutoff against a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "match the standard-deviation distance of a value in one normal distribution to find the equally ranked value in another; compare that value with the original",
+    "worn": false,
+    "items": 1
+   }
+  ]
+ },
+ "exemplars": {
+  "pythagorean-special": [
+   "bb-t2s2-14",
+   "bb-t2s5-28"
+  ],
+  "figures-not-to-scale": [],
+  "mean-median-mode": [
+   "ogq-set3-15",
+   "ogq-set4-7"
+  ],
+  "word-problems-rate": [
+   "bb-t1s3-11",
+   "bb-t2s5-29"
+  ],
+  "normal-distribution": [
+   "ogq-set3-5",
+   "ogq-t1-s5-9"
+  ]
+ }
+}

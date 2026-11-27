@@ -1,0 +1,1322 @@
+{
+  "id": "qbank-001",
+  "measure": "quant",
+  "title": "Quant bank batch 1",
+  "sections": [
+    {
+      "n": 1,
+      "minutes": 60
+    },
+    {
+      "n": 2,
+      "minutes": 1
+    }
+  ],
+  "passages": [],
+  "figures": [
+    {
+      "id": "fig1",
+      "caption": "Number of panels, out of the 10 made by each press, with each number of surface flaws",
+      "table": {
+        "head": [
+          "Press",
+          "1 flaw",
+          "2 flaws",
+          "3 flaws",
+          "4 flaws",
+          "5 flaws"
+        ],
+        "rows": [
+          [
+            "P",
+            "1",
+            "1",
+            "6",
+            "1",
+            "1"
+          ],
+          [
+            "Q",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          [
+            "R",
+            "3",
+            "1",
+            "2",
+            "1",
+            "3"
+          ],
+          [
+            "S",
+            "1",
+            "4",
+            "0",
+            "4",
+            "1"
+          ],
+          [
+            "T",
+            "0",
+            "5",
+            "0",
+            "5",
+            "0"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "fig2",
+      "caption": "Note: Figure not drawn to scale.",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 340 70' width='340' height='70' font-family='serif' font-size='16'><line x1='12' y1='28' x2='328' y2='28' stroke='currentColor' stroke-width='1.5'/><polygon points='334,28 324,23 324,33' fill='currentColor'/><polygon points='6,28 16,23 16,33' fill='currentColor'/><line x1='30' y1='21' x2='30' y2='35' stroke='currentColor' stroke-width='1.5'/><line x1='310' y1='21' x2='310' y2='35' stroke='currentColor' stroke-width='1.5'/><circle cx='100' cy='28' r='4' fill='currentColor'/><circle cx='170' cy='28' r='4' fill='currentColor'/><circle cx='240' cy='28' r='4' fill='currentColor'/><text x='30' y='56' text-anchor='middle' fill='currentColor'>0</text><text x='310' y='56' text-anchor='middle' fill='currentColor'>1</text><text x='100' y='56' text-anchor='middle' fill='currentColor' font-style='italic'>P</text><text x='170' y='56' text-anchor='middle' fill='currentColor' font-style='italic'>Q</text><text x='240' y='56' text-anchor='middle' fill='currentColor' font-style='italic'>R</text></svg>"
+    }
+  ],
+  "questions": [
+    {
+      "id": "s1q1",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A freight train has 10 cars coupled in a single line. An inspector picks 3 of the cars at random for a brake test, each set of 3 cars being equally likely. What is the probability that no two of the picked cars are coupled to each other?",
+      "choices": [
+        "$\\dfrac{2}{5}$",
+        "$\\dfrac{7}{15}$",
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{8}{15}$",
+        "$\\dfrac{3}{5}$"
+      ],
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Of the $\\binom{10}{3} = 120$ equally likely sets, $\\binom{8}{3} = 56$ have no two coupled cars, so the probability is $\\tfrac{56}{120} = \\tfrac{7}{15}$.",
+        "steps": [
+          "1. All sets: $\\binom{10}{3} = 120$.",
+          "2. If the picked cars are in positions $i < j < k$ with no two adjacent, then $i$, $j - 1$ and $k - 2$ are any 3 different numbers from 1 to 8, and every such choice comes back to a valid set. So there are $\\binom{8}{3} = 56$ sets.",
+          "3. $\\tfrac{56}{120} = \\tfrac{7}{15}$."
+        ],
+        "fast": "Sets with a coupled pair: $9$ adjacent pairs times $8$ choices of third car is $72$, but the $8$ runs of three cars were counted twice, so $64$; $120 - 64 = 56$.",
+        "trap": "Subtracting $9 \\times 8 = 72$ without correcting for the runs of three cars, which gives $\\tfrac{48}{120} = \\tfrac25$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-basic",
+          "role": "primary"
+        }
+      ],
+      "setup": "cars in a line, a random set of three; probability that no two chosen are adjacent (gap shifting, or subtracting adjacent sets with the runs of three counted once)",
+      "variant": "probability as a ratio of combinations (choose k of n)",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q2",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "In a penalty drill against a strong goalkeeper, a striker scores on each attempt with probability $\\tfrac13$, independently of every other attempt.",
+      "qc": {
+        "a": "The least number of attempts for which the probability that the striker scores at least once is greater than $0.9$",
+        "b": "$5$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "With $n$ attempts, P(no goal) $= \\left(\\tfrac23\\right)^n$, so the condition is $\\left(\\tfrac23\\right)^n < 0.1$. $\\left(\\tfrac23\\right)^5 = \\tfrac{32}{243} \\approx 0.132$ is too big, and $\\left(\\tfrac23\\right)^6 = \\tfrac{64}{729} \\approx 0.088$ works. The least number is 6, more than 5.",
+        "steps": [
+          "1. P(at least one goal in $n$ attempts) $= 1 - \\left(\\tfrac23\\right)^n$, which must exceed $0.9$: $\\left(\\tfrac23\\right)^n < 0.1$.",
+          "2. $n = 5$: $\\tfrac{32}{243}$, and $0.1 \\times 243 = 24.3 < 32$, so 5 attempts fall short.",
+          "3. $n = 6$: $\\tfrac{64}{729}$, and $0.1 \\times 729 = 72.9 > 64$, so 6 attempts are enough.",
+          "4. A $= 6 > 5$: (A)."
+        ],
+        "fast": "Each attempt multiplies the chance of no goal by $\\tfrac23$: about $0.67$, $0.44$, $0.30$, $0.20$, $0.13$, $0.09$. It first drops below $0.1$ at the sixth attempt.",
+        "trap": "Adding the chances ($n \\cdot \\tfrac13 > 0.9$ already at $n = 3$), or accepting 5 attempts because $\\left(\\tfrac23\\right)^5 \\approx 0.13$ looks close to $0.1$; both point to (B)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-basic",
+          "role": "primary"
+        }
+      ],
+      "setup": "independent attempts with a one-in-three chance; the least number of attempts for P(at least one success) to pass a threshold, found by powering the miss chance below the complement of the threshold",
+      "variant": "complement: at least one success",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q3",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A rooftop landing pad is a rectangle 6 meters long from west to east and 4 meters wide from south to north. A delivery drone touches down at a random point of the pad, every point being equally likely. What is the probability that the drone is closer to the pad's south edge than to its west edge?",
+      "choices": [
+        "$\\dfrac{1}{3}$",
+        "$\\dfrac{1}{2}$",
+        "$\\dfrac{3}{5}$",
+        "$\\dfrac{2}{3}$",
+        "$\\dfrac{3}{4}$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "Put the southwest corner at the origin. The distance to the south edge is $y$ and to the west edge is $x$, so the event is $y < x$. Its complement, $y > x$, is a triangle of area $\\tfrac12 \\cdot 4 \\cdot 4 = 8$ out of $24$, so the probability is $1 - \\tfrac{8}{24} = \\tfrac23$.",
+        "steps": [
+          "1. Coordinates: $0 \\le x \\le 6$, $0 \\le y \\le 4$; area $24$.",
+          "2. Closer to the south edge than to the west edge means $y < x$.",
+          "3. The part with $y > x$ is the triangle with vertices $(0, 0)$, $(0, 4)$ and $(4, 4)$, area $8$.",
+          "4. Probability $= \\tfrac{24 - 8}{24} = \\tfrac23$."
+        ],
+        "fast": "The line $y = x$ halves the western $4 \\times 4$ square; the eastern $2 \\times 4$ strip lies wholly on the south-edge side: $\\tfrac{8 + 8}{24}$.",
+        "trap": "Answering $\\tfrac12$ by symmetry, which holds only for a square pad."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-basic",
+          "role": "primary"
+        }
+      ],
+      "setup": "random point in a non-square rectangle; nearer one edge than an adjacent edge becomes y < x; the probability is not one half",
+      "variant": "geometric probability (a point in a region)",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q4",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A square plaza $ABCD$ has a gate post at each of the corners $A$ and $B$. A lamp is placed at a random point $P$ inside the plaza, every point being equally likely.",
+      "qc": {
+        "a": "The probability that angle $APB$ is acute",
+        "b": "$\\dfrac{3}{5}$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Angle $APB$ is a right angle exactly on the circle with diameter $AB$, obtuse inside it and acute outside it. Inside the plaza that circle covers a half-disk of radius $\\tfrac{s}{2}$, area $\\tfrac{\\pi s^2}{8}$. So the angle is acute with probability $1 - \\tfrac{\\pi}{8} \\approx 0.607$, more than $0.6$.",
+        "steps": [
+          "1. Let the side be $s$. A point sees segment $AB$ at a right angle exactly on the circle with diameter $AB$, at an obtuse angle inside that circle and at an acute angle outside it.",
+          "2. The circle's center is the midpoint of side $AB$, so only half of it lies in the plaza: area $\\tfrac12 \\pi \\left(\\tfrac s2\\right)^2 = \\tfrac{\\pi s^2}{8}$.",
+          "3. P(acute) $= 1 - \\tfrac{\\pi}{8} \\approx 1 - 0.393 = 0.607$.",
+          "4. $0.607 > 0.6$: (A)."
+        ],
+        "fast": "$\\tfrac{\\pi}{8} < \\tfrac{3.2}{8} = 0.4$, so P(acute) $> 0.6$.",
+        "trap": "Taking the whole disk on diameter $AB$, $\\tfrac{\\pi}{4}$ of the square, which gives $1 - \\tfrac{\\pi}{4} \\approx 0.21$ and (B); half of that disk lies outside the plaza."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-basic",
+          "role": "primary"
+        }
+      ],
+      "setup": "random point in a square; the angle subtended by one side is acute outside the half-disk on that side (Thales); compare with a fraction",
+      "variant": "geometric probability (a point in a region)",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q5",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "A foundry casts $x$ tonnes of brackets and $y$ tonnes of hinges in a day. The press limits its output to $x + 2y \\le 8$, the furnace limits it to $3x + y \\le 9$, and $x \\ge 0$, $y \\ge 0$. Which of the following could be the foundry's total output $x + y$, in tonnes, for a day? Indicate all such values.",
+      "choices": [
+        "$2.5$",
+        "$4.5$",
+        "$5$",
+        "$5.5$",
+        "$6$",
+        "$7$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The allowed region is the quadrilateral with corners $(0, 0)$, $(3, 0)$, $(2, 3)$ and $(0, 4)$. On it $x + y$ takes every value from $0$ up to its largest corner value, $2 + 3 = 5$, and nothing above 5.",
+        "steps": [
+          "1. Alone, $x + 2y \\le 8$ reaches the axes at $(8, 0)$ and $(0, 4)$, and $3x + y \\le 9$ at $(3, 0)$ and $(0, 9)$.",
+          "2. The two boundary lines cross where $x + 2(9 - 3x) = 8$: $x = 2$, $y = 3$.",
+          "3. Corners of the region: $(0, 0)$, $(3, 0)$, $(2, 3)$, $(0, 4)$, with totals $0$, $3$, $5$, $4$.",
+          "4. On a convex region a linear expression takes every value between its least and greatest corner values: $0 \\le x + y \\le 5$. So $2.5$, $4.5$ and $5$."
+        ],
+        "fast": "$\\tfrac25(x + 2y) + \\tfrac15(3x + y) = x + y$, so $x + y \\le \\tfrac25 \\cdot 8 + \\tfrac15 \\cdot 9 = 5$, and $(2, 3)$ reaches it.",
+        "trap": "Using each limit separately, $x \\le 3$ and $y \\le 4$, and allowing totals up to $7$; the point $(3, 4)$ breaks both limits."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "coordinate-geometry",
+          "role": "primary"
+        }
+      ],
+      "setup": "two linear resource limits and nonnegativity bound a convex region; select the possible values of x + y (the maximum is at the crossing point, not at either line's intercept)",
+      "variant": "a region defined by inequalities in the plane",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q6",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "On a planner's coordinate map of a rail yard, a straight spur track passes through the signal box at $(-4, 3)$ and falls 2 units for every 1 unit it runs in the positive $x$-direction. The track extends without end in both directions. Which quadrant of the map does the track never enter?",
+      "choices": [
+        "Quadrant I",
+        "Quadrant II",
+        "Quadrant III",
+        "Quadrant IV",
+        "None; it enters all four quadrants"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "The track is $y - 3 = -2(x + 4)$, or $y = -2x - 5$. Its $y$-intercept is $-5$ and its $x$-intercept is $-2.5$, both negative, so it passes through Quadrants II, III and IV and never enters Quadrant I.",
+        "steps": [
+          "1. Slope $-2$ through $(-4, 3)$: $y = -2x - 5$.",
+          "2. Intercepts: $(0, -5)$ and $(-2.5, 0)$.",
+          "3. For $x > 0$, $y < -5$, so the track is never in Quadrant I. It is in Quadrant II for $x < -2.5$, in Quadrant III for $-2.5 < x < 0$ and in Quadrant IV for $x > 0$."
+        ],
+        "fast": "A falling line misses Quadrant I exactly when its $y$-intercept is at most 0; here it is $-5$.",
+        "trap": "Assuming a falling line through a Quadrant II point runs from II through I to IV, as it would with a positive $y$-intercept; with intercept $-5$ it runs from II through III to IV."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "coordinate-geometry",
+          "role": "primary"
+        }
+      ],
+      "setup": "line from a point and a slope; the signs of its intercepts tell which quadrant it misses",
+      "variant": "which quadrants a line passes through",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q7",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "prompt": "Two survey stakes on a construction grid stand at $(p, q)$ and $(q, p)$, where $p > q$. The straight line through the stakes crosses the $y$-axis at $(0, 10)$, and the stakes are $6\\sqrt{2}$ units apart. What is the value of $p$?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "8"
+      },
+      "explanation": {
+        "key": "Swapping the coordinates makes the slope $\\tfrac{p - q}{q - p} = -1$, so the line is $y = -x + c$ with $c = p + q = 10$. The distance is $\\sqrt{2}\\,(p - q) = 6\\sqrt2$, so $p - q = 6$ and $p = 8$.",
+        "steps": [
+          "1. Slope $= \\tfrac{p - q}{q - p} = -1$ (as $p \\ne q$).",
+          "2. The line $y = -x + c$ passes through $(p, q)$, so $c = p + q$; hence $p + q = 10$.",
+          "3. Distance $= \\sqrt{(p - q)^2 + (q - p)^2} = \\sqrt2\\,(p - q) = 6\\sqrt2$, so $p - q = 6$.",
+          "4. $p = \\tfrac{10 + 6}{2} = 8$ (and $q = 2$)."
+        ],
+        "fast": "Points with swapped coordinates lie on a line of slope $-1$ whose $y$-intercept is their coordinate sum.",
+        "trap": "Reading the distance as $p - q = 6\\sqrt2$, or treating the intercept 10 as one of the coordinates."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "coordinate-geometry",
+          "role": "primary"
+        }
+      ],
+      "setup": "two points with swapped coordinates: slope -1 and the intercept is their sum; with their distance, solve for one coordinate",
+      "variant": "slope and intercepts from two points",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q8",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "Two laser beams are drawn across a lab's coordinate grid along the lines $kx + 3y = 6$ and $3x - ky = 5$, where $k$ is a nonzero constant whose value is not known.",
+      "qc": {
+        "a": "The measure of each angle formed where the two beams cross",
+        "b": "$90^\\circ$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "The slopes are $-\\tfrac{k}{3}$ and $\\tfrac{3}{k}$, whose product is $-1$ for every nonzero $k$. The beams are always perpendicular, so each angle is $90^\\circ$.",
+        "steps": [
+          "1. $kx + 3y = 6$ gives $y = -\\tfrac{k}{3}x + 2$: slope $-\\tfrac k3$.",
+          "2. $3x - ky = 5$ gives $y = \\tfrac3k x - \\tfrac5k$: slope $\\tfrac3k$.",
+          "3. Product: $-\\tfrac k3 \\cdot \\tfrac 3k = -1$, so the beams are perpendicular whatever $k$ is, and each angle is $90^\\circ$: (C)."
+        ],
+        "fast": "Swapping the coefficients and changing one sign ($k, 3$ to $3, -k$) always gives a perpendicular line.",
+        "trap": "Choosing (D) because $k$ is unknown; the product of the slopes does not depend on it."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "coordinate-geometry",
+          "role": "primary"
+        }
+      ],
+      "setup": "two lines with one unknown coefficient whose slopes are negative reciprocals for every value of it; compare their crossing angle with 90 degrees",
+      "variant": "parallel and perpendicular lines",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q9",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "At a velodrome, the five riders in heat P recorded lap times, in seconds, of $22$, $24$, $26$, $28$ and $30$. The lap times of the five riders in each of six other heats are listed below. Which of these heats had lap times with a greater standard deviation than heat P? Indicate all such heats.",
+      "choices": [
+        "$22, 22, 26, 30, 30$",
+        "$32, 34, 36, 38, 40$",
+        "$18, 26, 26, 26, 34$",
+        "$11, 12, 13, 14, 15$",
+        "$23, 25, 26, 27, 29$",
+        "$20, 24, 26, 28, 32$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          2,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "Heat P's times sit $4, 2, 0, 2, 4$ from their mean, 26. The first list ($4, 4, 0, 4, 4$ from 26), the third ($8, 0, 0, 0, 8$) and the last ($6, 2, 0, 2, 6$) are more spread out. The second is heat P shifted by 10, the fourth has gaps of 1 instead of 2, and the fifth ($3, 1, 0, 1, 3$) is tighter.",
+        "steps": [
+          "1. Heat P: mean $26$, deviations $4, 2, 0, 2, 4$, squares summing to $40$.",
+          "2. $22, 22, 26, 30, 30$: the same range, but the second and fourth values moved out to the ends; squares sum to $64$. Greater.",
+          "3. $32, 34, 36, 38, 40$: heat P plus 10, and adding a constant leaves the standard deviation unchanged. Not greater.",
+          "4. $18, 26, 26, 26, 34$: three values at the mean, but the ends are 8 away; squares sum to $128$. Greater.",
+          "5. $11, 12, 13, 14, 15$: gaps of 1 instead of 2, so half of heat P's standard deviation. Not greater.",
+          "6. $23, 25, 26, 27, 29$: deviations $3, 1, 0, 1, 3$, squares $20$. Not greater.",
+          "7. $20, 24, 26, 28, 32$: only the ends move out, to 6 away; squares $80$. Greater."
+        ],
+        "fast": "All six lists have five values, so compare sums of squared deviations from each list's own mean: $64$, $40$, $128$, $10$, $20$, $80$ against heat P's $40$.",
+        "trap": "Judging spread by the range (the first list has the same range as heat P) or by how many values sit at the mean (the third list has three there); both of those lists are more spread out."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "std-dev-normal",
+          "role": "primary"
+        }
+      ],
+      "setup": "select lists with a greater SD than a reference list: a shift, a halving, middle values moved to the ends at the same range, values piled at the mean with far ends",
+      "variant": "comparing the spread of two lists without computing",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q10",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "figureId": "fig1",
+      "prompt": "Each of five stamping presses made 10 steel panels, and every panel was inspected for surface flaws. The table shows, for each press, how many of its 10 panels had each number of flaws. For which press is the standard deviation of the number of flaws per panel greatest?",
+      "choices": [
+        "Press P",
+        "Press Q",
+        "Press R",
+        "Press S",
+        "Press T"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Every row is symmetric about 3 flaws, so every press has mean 3, and the question is which row puts the most weight far from 3. Press R has 6 of its 10 panels at 1 or 5 flaws; its mean squared deviation is $\\tfrac{3 \\cdot 4 + 1 + 0 + 1 + 3 \\cdot 4}{10} = 2.6$, the largest.",
+        "steps": [
+          "1. All five rows are symmetric about 3, so every mean is 3.",
+          "2. Mean squared deviation from 3: P $\\tfrac{4 + 1 + 0 + 1 + 4}{10} = 1.0$; Q $\\tfrac{2(4 + 1 + 0 + 1 + 4)}{10} = 2.0$; R $\\tfrac{12 + 1 + 0 + 1 + 12}{10} = 2.6$; S $\\tfrac{4 + 4 + 0 + 4 + 4}{10} = 1.6$; T $\\tfrac{5 + 5}{10} = 1.0$.",
+          "3. The largest is Press R."
+        ],
+        "fast": "R has six panels at the extremes 1 and 5; Q has four there, and P and S only two.",
+        "trap": "Picking Press Q because its panels are spread evenly over all five values; a row that piles panels at both ends is more spread out."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "std-dev-normal",
+          "role": "primary"
+        }
+      ],
+      "setup": "frequency table of five symmetric rows with the same mean; the greatest SD is the row with the most weight at both ends, not the uniform row",
+      "variant": "spread read from a dot plot or a frequency table",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q11",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "prompt": "In a crash-barrier test program, 20 trials of design X gave stopping distances with a mean of 70 meters and a standard deviation of 3 meters, and 5 trials of design Y gave stopping distances with a mean of 80 meters and a standard deviation of 8 meters. (Here the standard deviation of a list is the square root of the average of the squared differences between the values and the list's mean.) What is the standard deviation, in meters, of all 25 stopping distances together?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "6"
+      },
+      "explanation": {
+        "key": "The combined mean is $\\tfrac{20 \\cdot 70 + 5 \\cdot 80}{25} = 72$. A group's average squared distance from 72 is its own variance plus the squared gap between its mean and 72: $3^2 + 2^2 = 13$ for X and $8^2 + 8^2 = 128$ for Y. The combined variance is $\\tfrac{20 \\cdot 13 + 5 \\cdot 128}{25} = 36$, so the standard deviation is 6.",
+        "steps": [
+          "1. Combined mean: $\\tfrac{1400 + 400}{25} = 72$.",
+          "2. For a group with mean $m$ and standard deviation $s$, the average squared distance from 72 is $s^2 + (m - 72)^2$: X gives $9 + 4 = 13$, Y gives $64 + 64 = 128$.",
+          "3. Weighted by size: $\\tfrac{20 \\cdot 13 + 5 \\cdot 128}{25} = \\tfrac{260 + 640}{25} = 36$.",
+          "4. $\\sqrt{36} = 6$."
+        ],
+        "fast": "Variance of the whole $=$ average within-group variance, $\\tfrac{20 \\cdot 9 + 5 \\cdot 64}{25} = 20$, plus the variance of the group means about 72, $\\tfrac{20 \\cdot 4 + 5 \\cdot 64}{25} = 16$: total $36$.",
+        "trap": "Averaging the two standard deviations by size ($4$) or the two variances ($\\sqrt{20}$), which leaves out the 10-meter gap between the means."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "std-dev-normal",
+          "role": "primary"
+        }
+      ],
+      "setup": "two groups of different sizes, means and SDs; the combined SD from the within-group variances plus the spread of the group means about the combined mean",
+      "variant": "the standard deviation of two lists combined, when their means differ",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q12",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "Five judges each award a gymnast a score from 0 to 10, inclusive, and the mean of the five scores is 5. (The standard deviation of a list is the square root of the average of the squared differences between the values and the list's mean.)",
+      "qc": {
+        "a": "The greatest possible standard deviation of the five scores",
+        "b": "$5$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "Each score is at most 5 from the mean, but a standard deviation of 5 would need all five scores at 0 or 10, and five numbers that are each $\\pm 5$ cannot add to 0. The best is two scores of 0, two of 10 and one of 5, giving $\\sqrt{\\tfrac{100}{5}} = \\sqrt{20} \\approx 4.47$, less than 5.",
+        "steps": [
+          "1. Deviations $d$ from 5 lie between $-5$ and $5$ and add to $0$.",
+          "2. Each $d^2 \\le 5|d|$. The positive deviations total the same as the negative ones, and one of the two sides has at most 2 scores, so each side totals at most $10$ and $\\sum |d| \\le 20$.",
+          "3. So $\\sum d^2 \\le 100$, reached by $0, 0, 5, 10, 10$; the standard deviation is at most $\\sqrt{20} \\approx 4.47$.",
+          "4. A $< 5$: (B)."
+        ],
+        "fast": "With an odd number of scores, one score cannot sit at an end, so the standard deviation stays below the half-range of 5.",
+        "trap": "Taking the half-range, 5, as reachable (C); that needs every score at 0 or 10 with mean 5, which five judges cannot produce."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "std-dev-normal",
+          "role": "primary"
+        }
+      ],
+      "setup": "an odd number of scores in a fixed range with the mean at its centre; the greatest possible SD falls short of the half-range",
+      "variant": "the least or greatest possible standard deviation under a constraint",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q13",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "A strain gauge's calibrated reading $r$ can be any number with $-1 < r < 1$. Which of the following must be true? Indicate all such statements.",
+      "choices": [
+        "$r^2 < 1$",
+        "$r^3 \\le r^2$",
+        "$r^2 < |r|$",
+        "$r^3 < r$",
+        "$r^4 \\le r^2$",
+        "$r + r^2 \\ge 0$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          4
+        ]
+      },
+      "explanation": {
+        "key": "Since $|r| < 1$: $r^2 < 1$, $r^3 - r^2 = r^2(r - 1) \\le 0$ and $r^4 = r^2 \\cdot r^2 \\le r^2$. The others fail: at $r = 0$, $r^2 < |r|$ reads $0 < 0$; at $r = -\\tfrac12$, $r^3 = -\\tfrac18$ is not less than $-\\tfrac12$, and $r + r^2 = -\\tfrac14 < 0$.",
+        "steps": [
+          "1. $r^2 = |r|^2 < 1$: true.",
+          "2. $r^3 - r^2 = r^2(r - 1)$ with $r^2 \\ge 0$ and $r - 1 < 0$, so it is at most 0: true (equal at $r = 0$).",
+          "3. $r^2 < |r|$ fails at $r = 0$.",
+          "4. $r^3 < r$ fails for negative $r$: $-\\tfrac18 > -\\tfrac12$.",
+          "5. $r^4 = r^2 \\cdot r^2 \\le r^2$ because $0 \\le r^2 < 1$: true.",
+          "6. $r + r^2 = r(1 + r)$ is negative for $-1 < r < 0$: fails."
+        ],
+        "fast": "Test $r = 0$, $r = \\tfrac12$ and $r = -\\tfrac12$; only the first, second and fifth statements survive all three.",
+        "trap": "Testing only positive fractions, which makes $r^2 < |r|$ and $r^3 < r$ look true; zero and negatives break them."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-sense-qc",
+          "role": "primary"
+        }
+      ],
+      "setup": "a number strictly between -1 and 1 with zero allowed; select the power inequalities that hold throughout (zero and negatives break some)",
+      "variant": "sign cases: negatives, zero and fractions between 0 and 1",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q14",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 5,
+      "prompt": "An engineer's damping coefficient $c$ is a nonzero number for which $c^2 > c$ and $c > \\dfrac{1}{c}$. Which of the following describes all possible values of $c$?",
+      "choices": [
+        "$c > 1$",
+        "$c < -1$",
+        "$-1 < c < 0$",
+        "$-1 < c < 0$ or $c > 1$",
+        "$c < -1$ or $c > 1$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "$c^2 > c$ holds for $c < 0$ and for $c > 1$. For $c > 0$, $c > \\tfrac1c$ means $c^2 > 1$, so $c > 1$; for $c < 0$, multiplying by $c$ reverses it to $c^2 < 1$, so $-1 < c < 0$. Both conditions hold exactly for $-1 < c < 0$ or $c > 1$.",
+        "steps": [
+          "1. $c^2 > c$ means $c(c - 1) > 0$: $c < 0$ or $c > 1$.",
+          "2. $c > \\tfrac1c$: if $c > 0$, multiplying by $c$ gives $c^2 > 1$, so $c > 1$. If $c < 0$, multiplying by $c$ reverses the inequality: $c^2 < 1$, so $-1 < c < 0$.",
+          "3. Both: $c > 1$ passes both, $-1 < c < 0$ passes both, and $c < -1$ fails the second ($-2 > -\\tfrac12$ is false)."
+        ],
+        "fast": "Test $c = -2$: $-2 > -\\tfrac12$ is false, which removes every choice containing $c < -1$. Test $c = -\\tfrac12$: $\\tfrac14 > -\\tfrac12$ and $-\\tfrac12 > -2$ are both true.",
+        "trap": "Multiplying $c > \\tfrac1c$ by $c$ without reversing it for negative $c$, which gives $c^2 > 1$ everywhere and the choice $c < -1$ or $c > 1$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-sense-qc",
+          "role": "primary"
+        }
+      ],
+      "setup": "two inequalities, the square above the number and the number above its reciprocal; the solution set across both signs",
+      "variant": "a square or a reciprocal against the original number",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q15",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "A test rig checks the inequality $9x^2 + 4 > 12x$ at every whole-number load setting $x$, and it holds every time. For exactly one real value of $x$, however, the inequality is false. What is that value of $x$?",
+      "numeric": {
+        "kind": "fraction"
+      },
+      "key": {
+        "value": "2/3"
+      },
+      "explanation": {
+        "key": "$9x^2 - 12x + 4 = (3x - 2)^2$, which is positive except at $x = \\tfrac23$, where it is 0 and the strict inequality fails.",
+        "steps": [
+          "1. Move everything to one side: $9x^2 - 12x + 4 > 0$.",
+          "2. Factor: $(3x - 2)^2 > 0$.",
+          "3. A square is positive unless its base is 0, so the only failure is $3x - 2 = 0$, $x = \\tfrac23$, not a whole number, which is why the checks missed it."
+        ],
+        "fast": "Spot the perfect square $(3x)^2 - 2 \\cdot 3x \\cdot 2 + 2^2$.",
+        "trap": "Trusting the whole-number checks; the one failing value lies between 0 and 1."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-sense-qc",
+          "role": "primary"
+        }
+      ],
+      "setup": "a quadratic inequality true at every integer fails at one non-integer, where a perfect square is zero",
+      "variant": "non-integer test values that flip the relationship",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q16",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A signal filter uses a coefficient $x$ with $-1 < x < 0$. Its five gain values are $\\dfrac{1}{x}$, $x$, $x^2$, $x^3$ and $\\dfrac{1}{x^2}$.",
+      "qc": {
+        "a": "The median of the five gain values",
+        "b": "$x$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "For $-1 < x < 0$: $\\tfrac1x < -1 < x < x^3 < 0 < x^2 < 1 < \\tfrac1{x^2}$. The middle value is $x^3$, and $x^3 > x$ because cubing a negative fraction moves it toward 0.",
+        "steps": [
+          "1. Three values are negative ($\\tfrac1x$, $x$, $x^3$) and two positive ($x^2$, $\\tfrac{1}{x^2}$), so the median is the largest negative value.",
+          "2. $\\tfrac1x < -1 < x$.",
+          "3. $x^3 = x \\cdot x^2$ with $0 < x^2 < 1$, so $x^3$ is a fraction of $x$, closer to 0: $x < x^3 < 0$.",
+          "4. The median is $x^3 > x$: (A). For $x = -\\tfrac12$ the values are $-2, -\\tfrac12, -\\tfrac18, \\tfrac14, 4$."
+        ],
+        "fast": "Three negatives and two positives: the median is the negative value closest to 0, and that is $x^3$.",
+        "trap": "Ordering the negatives as if they were positive, with $x^3 < x$, which makes $x$ the median and gives (C)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-sense-qc",
+          "role": "primary"
+        }
+      ],
+      "setup": "x between -1 and 0: the median of x, its square, its cube, its reciprocal and the reciprocal of its square against x",
+      "variant": "x between -1 and 0: powers and reciprocals ordered",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q17",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "A tug pushes a barge along a straight channel with a force of $p$ newtons, and the current pushes it with a force of $q$ newtons, where a positive value means downstream, a negative value means upstream, and neither force is zero. The size of the net force, $|p + q|$, equals $|p| - |q|$. Which of the following must be true? Indicate all such statements.",
+      "choices": [
+        "$pq < 0$",
+        "$|p| \\ge |q|$",
+        "$p > 0$",
+        "$p + q \\ne 0$",
+        "$|q| < |p|$",
+        "$q < 0$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          1
+        ]
+      },
+      "explanation": {
+        "key": "If $p$ and $q$ had the same sign, $|p + q|$ would be $|p| + |q|$, which is more than $|p| - |q|$. So they have opposite signs, and then $|p + q|$ is the absolute value of $|p| - |q|$; that equals $|p| - |q|$ exactly when $|p| \\ge |q|$. Equal sizes are allowed ($p = 3$, $q = -3$), and either force may point downstream.",
+        "steps": [
+          "1. Same signs give $|p + q| = |p| + |q| > |p| - |q|$ (as $q \\ne 0$), so $pq < 0$.",
+          "2. With opposite signs, $|p + q|$ is the absolute value of $|p| - |q|$, which equals $|p| - |q|$ only if $|p| - |q| \\ge 0$: $|p| \\ge |q|$.",
+          "3. $p = 3$, $q = -3$ works ($0 = 3 - 3$), so $p + q$ can be 0 and $|q| < |p|$ can fail.",
+          "4. $p = -5$, $q = 2$ works ($3 = 5 - 2$), so neither $p > 0$ nor $q < 0$ must hold."
+        ],
+        "fast": "The net force is the tug's force reduced by the current's: they oppose each other, and the tug's is at least as strong.",
+        "trap": "Choosing the strict $|q| < |p|$ (equal and opposite forces fit the equation) or assuming the tug pushes downstream."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-line-abs",
+          "role": "primary"
+        }
+      ],
+      "setup": "|p + q| = |p| - |q| for nonzero signed values; select what must follow (opposite signs and |p| at least |q|, with equality allowed)",
+      "variant": "|a| + |b| against |a + b| for signed values",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q18",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "Along a straight rail line, positions are given by kilometer markers, with the depot at marker $3$ and the junction at marker $-6$. A new signal will be placed so that its distance from the depot is twice its distance from the junction. What is the sum of all possible markers for the signal?",
+      "choices": [
+        "$-18$",
+        "$-15$",
+        "$-12$",
+        "$-3$",
+        "$9$"
+      ],
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "The signal's marker $x$ satisfies $|x - 3| = 2|x + 6|$. Between the depot and the junction, $3 - x = 2(x + 6)$ gives $x = -3$; beyond the junction, $3 - x = -2(x + 6)$ gives $x = -15$. The sum is $-18$.",
+        "steps": [
+          "1. Distances as absolute values: $|x - 3| = 2|x + 6|$.",
+          "2. Between $-6$ and $3$: $3 - x = 2x + 12$, so $x = -3$ (check: $6 = 2 \\cdot 3$).",
+          "3. Left of $-6$: $3 - x = -2x - 12$, so $x = -15$ (check: $18 = 2 \\cdot 9$).",
+          "4. Right of $3$: $x - 3 = 2x + 12$ gives $x = -15$, which is not right of 3, so nothing new.",
+          "5. Sum: $-3 + (-15) = -18$."
+        ],
+        "fast": "Square both sides: $(x - 3)^2 = 4(x + 6)^2$ becomes $3x^2 + 54x + 135 = 0$, whose roots sum to $-\\tfrac{54}{3} = -18$.",
+        "trap": "Finding only the point between the depot and the junction, $-3$; the point beyond the junction is also twice as far from the depot."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-line-abs",
+          "role": "primary"
+        }
+      ],
+      "setup": "a point twice as far from one marker as from another: an internal and an external position; their sum",
+      "variant": "distance between two numbers as an absolute value",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q19",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "A pressure dial's needle points to a value $x$ that lies strictly between $\\tfrac34$ and $1$. Of the five numbers $x$, $x^3$, $2x - 1$, $\\sqrt{x}$ and $\\dfrac{1}{x}$, how many are less than $x^2$?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "2"
+      },
+      "explanation": {
+        "key": "For $\\tfrac34 < x < 1$: $x^3 < x^2$, and $x^2 - (2x - 1) = (x - 1)^2 > 0$, so $2x - 1 < x^2$. But $x^2 < x < \\sqrt x < 1 < \\tfrac1x$. Two of the numbers are less than $x^2$.",
+        "steps": [
+          "1. $x^3 = x \\cdot x^2 < x^2$ since $0 < x < 1$: less.",
+          "2. $x^2 - (2x - 1) = (x - 1)^2 > 0$: $2x - 1$ is less.",
+          "3. $x^2 = x \\cdot x < x$, and $x < \\sqrt x$ for $0 < x < 1$: $x$ and $\\sqrt x$ are greater.",
+          "4. $\\tfrac1x > 1 > x^2$: greater.",
+          "5. Count: 2."
+        ],
+        "fast": "Try $x = 0.9$: $x^2 = 0.81$; $0.729$ and $0.8$ are below it, while $0.9$, about $0.949$ and about $1.11$ are above.",
+        "trap": "Treating $2x - 1$ as close to $x$ (both are near 1) and counting it as greater than $x^2$; the gap $x^2 - (2x - 1)$ is a perfect square."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-line-abs",
+          "role": "primary"
+        }
+      ],
+      "setup": "x in a sub-interval of (0, 1): count the expressions below x^2 (the gap to 2x - 1 is a square)",
+      "variant": "ordering expressions of a number located between two marks",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q20",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "figureId": "fig2",
+      "prompt": "Points $P$, $Q$ and $R$ lie between 0 and 1 on the number line shown. Their coordinates are $x$, $x^2$ and $\\sqrt{x}$, in some order.",
+      "qc": {
+        "a": "The distance between $P$ and $Q$",
+        "b": "The distance between $Q$ and $R$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "For $0 < x < 1$, $x^2 < x < \\sqrt x$, so $P = x^2$, $Q = x$ and $R = \\sqrt x$, giving $PQ = x - x^2$ and $QR = \\sqrt x - x$. At $x = \\tfrac14$, $PQ = \\tfrac{3}{16} < \\tfrac14 = QR$; at $x = \\tfrac{9}{16}$, $PQ = \\tfrac{63}{256} > \\tfrac{48}{256} = QR$. So the relationship cannot be determined.",
+        "steps": [
+          "1. Between 0 and 1, squaring shrinks a number and taking a square root enlarges it: $x^2 < x < \\sqrt x$.",
+          "2. So, left to right, $P = x^2$, $Q = x$ and $R = \\sqrt x$; $PQ = x - x^2$ and $QR = \\sqrt x - x$.",
+          "3. $x = \\tfrac14$: $PQ = \\tfrac14 - \\tfrac1{16} = \\tfrac3{16}$ and $QR = \\tfrac12 - \\tfrac14 = \\tfrac14$: B is greater.",
+          "4. $x = \\tfrac9{16}$: $PQ = \\tfrac9{16} - \\tfrac{81}{256} = \\tfrac{63}{256}$ and $QR = \\tfrac34 - \\tfrac9{16} = \\tfrac{48}{256}$: A is greater.",
+          "5. (D)."
+        ],
+        "fast": "$\\tfrac{PQ}{QR} = \\tfrac{x(1 - x)}{\\sqrt x\\,(1 - \\sqrt x)} = \\sqrt x\\,(1 + \\sqrt x)$, which is below 1 for small $x$ and approaches 2 as $x$ approaches 1.",
+        "trap": "Trusting the even spacing in the drawing (C), or taking $x^2$, $x$ and $\\sqrt x$ to be evenly spaced because each is the one before it times $\\sqrt x$; equal ratios do not make equal gaps."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "number-line-abs",
+          "role": "primary"
+        }
+      ],
+      "setup": "three points between 0 and 1 carry x, x^2 and sqrt x in some order: the order fixes which is which, and the two gaps compare either way (D) though the figure spaces them evenly",
+      "variant": "positions of unlabeled points on a number line",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q21",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 5,
+      "prompt": "An architect's drafting program places a column at $P = (a, b)$, where $a < 0 < b$. Its diagonal mirror reflects a point across the line $y = x$, and its floor mirror reflects a point across the $x$-axis. The architect applies the diagonal mirror to $P$, giving $Q$, and then the floor mirror to $Q$, giving $R$. With $O$ the origin, which of the following must be true? Indicate all such statements.",
+      "choices": [
+        "$R$ lies in Quadrant I.",
+        "Applying the floor mirror to $P$ first and then the diagonal mirror also gives $R$.",
+        "$OR = OP$",
+        "$R$ is the reflection of $P$ across the $y$-axis.",
+        "$R$ is the reflection of $P$ across the line $y = -x$.",
+        "Segments $OP$ and $OR$ are perpendicular."
+      ],
+      "key": {
+        "sel": [
+          0,
+          2,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "$Q = (b, a)$ and $R = (b, -a)$. With $a < 0 < b$, both coordinates of $R$ are positive. $OR = \\sqrt{b^2 + a^2} = OP$, and the slopes of $OP$ and $OR$, $\\tfrac ba$ and $-\\tfrac ab$, multiply to $-1$: the two reflections amount to a quarter turn about $O$.",
+        "steps": [
+          "1. Diagonal mirror: $Q = (b, a)$. Floor mirror: $R = (b, -a)$.",
+          "2. $b > 0$ and $-a > 0$: $R$ is in Quadrant I. True.",
+          "3. Floor mirror first gives $(a, -b)$, then the diagonal mirror gives $(-b, a)$, which is in Quadrant III, not $R$. False.",
+          "4. $OR = \\sqrt{b^2 + a^2} = OP$. True.",
+          "5. Across the $y$-axis, $P$ goes to $(-a, b)$, which equals $(b, -a)$ only when $b = -a$. Not necessarily.",
+          "6. Across $y = -x$, $P$ goes to $(-b, -a)$, never $R$ since $b \\ne 0$. False.",
+          "7. Slopes of $OP$ and $OR$: $\\tfrac{b}{a}$ and $\\tfrac{-a}{b}$, with product $-1$. True."
+        ],
+        "fast": "Two mirror lines crossing at $45^\\circ$ combine into a $90^\\circ$ turn about the crossing point; the order of the mirrors sets the direction of the turn.",
+        "trap": "Treating the two reflections as a single reflection (across the $y$-axis or $y = -x$), or assuming the order of the mirrors does not matter."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "geometry-coordinate",
+          "role": "primary"
+        }
+      ],
+      "setup": "a point reflected across y = x and then across the x-axis is a quarter turn about the origin; select what must hold (the order of the reflections matters)",
+      "variant": "reflection of a point across an axis or y = x",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q22",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "On a site plan drawn on a coordinate grid in meters, the corners of a paved plaza are, in order, $(0, 1)$, $(5, 0)$, $(7, 4)$ and $(2, 7)$. What is the area of the plaza, in square meters?",
+      "choices": [
+        "$20$",
+        "$26$",
+        "$29$",
+        "$34$",
+        "$49$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "Enclose the plaza in the square $0 \\le x \\le 7$, $0 \\le y \\le 7$, area $49$. The four right triangles at its corners have areas $\\tfrac12 \\cdot 5 \\cdot 1 = 2.5$, $\\tfrac12 \\cdot 2 \\cdot 4 = 4$, $\\tfrac12 \\cdot 5 \\cdot 3 = 7.5$ and $\\tfrac12 \\cdot 2 \\cdot 6 = 6$, totaling $20$. The plaza is $49 - 20 = 29$.",
+        "steps": [
+          "1. The corners reach $x = 0$ and $x = 7$, $y = 0$ and $y = 7$: an enclosing $7 \\times 7$ square of area $49$.",
+          "2. Corner triangles: at $(0, 0)$ legs 5 and 1, area $2.5$; at $(7, 0)$ legs 2 and 4, area $4$; at $(7, 7)$ legs 5 and 3, area $7.5$; at $(0, 7)$ legs 2 and 6, area $6$.",
+          "3. $49 - (2.5 + 4 + 7.5 + 6) = 49 - 20 = 29$."
+        ],
+        "fast": "Shoelace: $\\tfrac12 \\left| (0 \\cdot 0 - 5 \\cdot 1) + (5 \\cdot 4 - 7 \\cdot 0) + (7 \\cdot 7 - 2 \\cdot 4) + (2 \\cdot 1 - 0 \\cdot 7) \\right| = \\tfrac12 \\cdot 58 = 29$.",
+        "trap": "Stopping at the corner triangles' total, $20$, or at the enclosing square, $49$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "geometry-coordinate",
+          "role": "primary"
+        }
+      ],
+      "setup": "area of a tilted quadrilateral from its vertices: an enclosing rectangle minus the corner triangles",
+      "variant": "area of a polygon from its vertex coordinates",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q23",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 5,
+      "prompt": "An architect lays out a circular fountain so that its rim passes through three survey pins at $(0, 0)$, $(10, 0)$ and $(0, 4)$ on a coordinate grid. The rim also crosses the line $y = x$ at a second point $(t, t)$ with $t \\ne 0$. What is the value of $t$?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "7"
+      },
+      "explanation": {
+        "key": "The pins on the axes make a right angle at the origin, so the segment joining $(10, 0)$ and $(0, 4)$ is a diameter: the center is $(5, 2)$ and $r^2 = 25 + 4 = 29$. On $y = x$: $(t - 5)^2 + (t - 2)^2 = 29$, so $2t^2 - 14t = 0$ and $t = 7$.",
+        "steps": [
+          "1. The chords from $(0, 0)$ to the other two pins are perpendicular, so the third side is a diameter (equivalently, the perpendicular bisectors $x = 5$ and $y = 2$ meet at the center).",
+          "2. Center $(5, 2)$; radius squared $5^2 + 2^2 = 29$.",
+          "3. $(t - 5)^2 + (t - 2)^2 = 29$ gives $2t^2 - 14t + 29 = 29$, so $t(t - 7) = 0$.",
+          "4. $t \\ne 0$, so $t = 7$."
+        ],
+        "fast": "A circle through the origin with center $(h, k)$ is $x^2 + y^2 = 2hx + 2ky$; on $y = x$ that gives $2t^2 = 2(h + k)t$, so $t = h + k = 7$.",
+        "trap": "Centering the circle at $(5, 0)$ with radius 5 (the pins on the $x$-axis alone), or answering with a coordinate of the center."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "geometry-coordinate",
+          "role": "primary"
+        }
+      ],
+      "setup": "a circle through the origin and one point on each axis (the right angle at the origin makes a diameter); its second crossing with y = x",
+      "variant": "a circle in the coordinate plane",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q24",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "prompt": "A triangular sail is plotted on a coordinate grid with its corners at $(0, 0)$, $(k, 0)$ and $(0, k + 2)$, where $k$ is a constant. The sail has an area of 24 square units.",
+      "qc": {
+        "a": "$k$",
+        "b": "$0$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The legs have lengths $|k|$ and $|k + 2|$, so $|k(k + 2)| = 48$. $k^2 + 2k - 48 = 0$ gives $k = 6$ or $k = -8$, and $k^2 + 2k + 48 = 0$ has no real roots. Both values give a real triangle of area 24 (legs 6 and 8, or 8 and 6), so $k$ may be above or below 0.",
+        "steps": [
+          "1. The right angle is at the origin: area $= \\tfrac12 |k| \\cdot |k + 2| = 24$, so $|k(k + 2)| = 48$.",
+          "2. $k(k + 2) = 48$: $(k - 6)(k + 8) = 0$, so $k = 6$ or $k = -8$.",
+          "3. $k(k + 2) = -48$: $k^2 + 2k + 48 = 0$ has a negative discriminant, so no solution.",
+          "4. $k = 6$ gives corners $(6, 0)$ and $(0, 8)$; $k = -8$ gives $(-8, 0)$ and $(0, -6)$. Both are valid: (D)."
+        ],
+        "fast": "$6 \\cdot 8 = 48$ and $(-8)(-6) = 48$: one sail in Quadrant I, one in Quadrant III.",
+        "trap": "Dropping $k = -8$ as if a length had to be positive; $k$ is a coordinate, and the length is $|k|$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "geometry-coordinate",
+          "role": "primary"
+        }
+      ],
+      "setup": "a right triangle with legs on the axes set by a constant and the constant plus two; the area fixes |k(k + 2)|, and both roots give valid triangles; compare k with zero",
+      "variant": "a triangle's vertices on the axes",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q25",
+      "section": 1,
+      "type": "mc_multi",
+      "difficulty": 4,
+      "prompt": "A canning plant makes closed steel cylinders whose radius and height, in centimeters, are both whole numbers and whose volume is $36\\pi$ cubic centimeters. Which of the following could be the total surface area, top and bottom included, of such a cylinder, in square centimeters? Indicate all such areas.",
+      "choices": [
+        "$42\\pi$",
+        "$44\\pi$",
+        "$48\\pi$",
+        "$72\\pi$",
+        "$74\\pi$",
+        "$84\\pi$"
+      ],
+      "key": {
+        "sel": [
+          0,
+          1,
+          4,
+          5
+        ]
+      },
+      "explanation": {
+        "key": "$r^2 h = 36$ allows $(r, h) = (1, 36)$, $(2, 9)$, $(3, 4)$ and $(6, 1)$. The total area $2\\pi r(r + h)$ is then $74\\pi$, $44\\pi$, $42\\pi$ and $84\\pi$.",
+        "steps": [
+          "1. $\\pi r^2 h = 36\\pi$, so $r^2$ divides 36: $r = 1, 2, 3$ or $6$.",
+          "2. Heights: $36, 9, 4, 1$.",
+          "3. $2\\pi r^2 + 2\\pi rh = 2\\pi r(r + h)$: $2\\pi \\cdot 37 = 74\\pi$, $4\\pi \\cdot 11 = 44\\pi$, $6\\pi \\cdot 7 = 42\\pi$, $12\\pi \\cdot 7 = 84\\pi$.",
+          "4. $48\\pi$ and $72\\pi$ do not occur ($72\\pi$ is the curved side alone for $r = 1$)."
+        ],
+        "fast": "List the square divisors of 36 (1, 4, 9, 36) for $r^2$, then compute $2\\pi r(r + h)$ for each.",
+        "trap": "Missing the flat $r = 6$ can or the thin $r = 1$ can, or counting only the curved side ($72\\pi$ for $r = 1$)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "solids-volume",
+          "role": "primary"
+        }
+      ],
+      "setup": "a closed cylinder with whole-number radius and height and a fixed volume; select the possible total surface areas",
+      "variant": "cylinder volume or surface area",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q26",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 4,
+      "prompt": "A rectangular shipping crate has length $\\ell$, width $w$ and height $h$. A diagonal of its bottom face (an $\\ell$-by-$w$ rectangle) is $\\sqrt{13}$ meters long, a diagonal of each end (a $w$-by-$h$ rectangle) is $3\\sqrt{5}$ meters long, and a brace from a bottom corner to the opposite top corner is $7$ meters long. How long, in meters, is a diagonal of each side (an $\\ell$-by-$h$ rectangle)?",
+      "choices": [
+        "$3$",
+        "$6$",
+        "$2\\sqrt{10}$",
+        "$\\sqrt{58}$",
+        "$7\\sqrt{2}$"
+      ],
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "$\\ell^2 + w^2 = 13$, $w^2 + h^2 = 45$ and $\\ell^2 + w^2 + h^2 = 49$. So $h^2 = 49 - 13 = 36$ and $\\ell^2 = 49 - 45 = 4$, and the side diagonal is $\\sqrt{\\ell^2 + h^2} = \\sqrt{40} = 2\\sqrt{10}$.",
+        "steps": [
+          "1. Squares: bottom $\\ell^2 + w^2 = 13$, end $w^2 + h^2 = 45$, brace $\\ell^2 + w^2 + h^2 = 49$.",
+          "2. Brace minus bottom: $h^2 = 36$. Brace minus end: $\\ell^2 = 4$.",
+          "3. Side diagonal: $\\sqrt{4 + 36} = \\sqrt{40} = 2\\sqrt{10}$ (the crate is $2 \\times 3 \\times 6$)."
+        ],
+        "fast": "The three face diagonals, squared, add to twice the brace squared: $13 + 45 + d^2 = 98$, so $d^2 = 40$.",
+        "trap": "Stopping at an edge ($h = 6$ or $w = 3$), or adding the squares of the two given face diagonals to get $\\sqrt{58}$."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "solids-volume",
+          "role": "primary"
+        }
+      ],
+      "setup": "two face diagonals and the space diagonal of a box given; the third face diagonal (each edge squared appears in two face diagonals)",
+      "variant": "rectangular solid: faces, volume, diagonal",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q27",
+      "section": 1,
+      "type": "numeric",
+      "difficulty": 4,
+      "prompt": "A cube of resin is coated with sealant on all six faces and then sawn into identical unit cubes, $n$ along each edge. Exactly 96 of the unit cubes have sealant on exactly one face. How many of the unit cubes have no sealant at all?",
+      "numeric": {
+        "kind": "single"
+      },
+      "key": {
+        "value": "64"
+      },
+      "explanation": {
+        "key": "Cubes with exactly one coated face fill the inside of each face: $6(n - 2)^2 = 96$, so $(n - 2)^2 = 16$ and $n = 6$. The uncoated cubes form the inner block, $(n - 2)^3 = 4^3 = 64$.",
+        "steps": [
+          "1. Each face has an $(n - 2) \\times (n - 2)$ block of cubes coated on that face only: $6(n - 2)^2$ in all.",
+          "2. $6(n - 2)^2 = 96$ gives $n - 2 = 4$, so $n = 6$.",
+          "3. Uncoated cubes: the inner $4 \\times 4 \\times 4$ block, $64$."
+        ],
+        "fast": "$96 \\div 6 = 16 = 4^2$, so the core is $4^3$.",
+        "trap": "Answering with $n = 6$ or the total $6^3 = 216$, or using $n - 1$ for the width of a face's interior."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "solids-volume",
+          "role": "primary"
+        }
+      ],
+      "setup": "a coated cube cut into unit cubes; the one-face count gives the edge, then the uncoated core",
+      "variant": "cubes painted or cut into smaller cubes",
+      "solverRating": 2
+    },
+    {
+      "id": "s1q28",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "prompt": "A lab's cubical tank, 20 centimeters along each inside edge, holds water to a depth of 9 centimeters. A technician pours water from the tank into an empty upright cylindrical jar with an inside radius of 6 centimeters and an inside height of 30 centimeters, stopping when the tank is empty or the jar is full.",
+      "qc": {
+        "a": "The depth, in centimeters, of the water in the jar when the technician stops",
+        "b": "$31$"
+      },
+      "key": {
+        "sel": [
+          1
+        ]
+      },
+      "explanation": {
+        "key": "The tank holds $20 \\cdot 20 \\cdot 9 = 3{,}600$ cubic centimeters. In the jar that would stand $\\tfrac{3{,}600}{36\\pi} = \\tfrac{100}{\\pi} \\approx 31.8$ centimeters deep, more than the jar's 30 centimeters. So the jar fills first, and the depth is 30, less than 31.",
+        "steps": [
+          "1. Water: $20 \\times 20 \\times 9 = 3{,}600$ cubic centimeters.",
+          "2. Jar capacity: $\\pi \\cdot 6^2 \\cdot 30 = 1{,}080\\pi \\approx 3{,}393$ cubic centimeters, less than $3{,}600$.",
+          "3. The jar is full before the tank is empty, so the depth is $30$.",
+          "4. $30 < 31$: (B)."
+        ],
+        "fast": "$\\tfrac{100}{\\pi} > 30$, so the jar overflows and its depth tops out at 30.",
+        "trap": "Computing $\\tfrac{100}{\\pi} \\approx 31.8$ and choosing (A) without checking it against the jar's height."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "solids-volume",
+          "role": "primary"
+        }
+      ],
+      "setup": "water from a cuboid poured into a cylinder that cannot hold it all: the depth is capped at the cylinder's height; compare with a value",
+      "variant": "liquid poured between containers",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q29",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 4,
+      "revisits": "quant-005:s2q1",
+      "prompt": "A conveyor stamps three consecutive serial numbers $k$, $k + 1$ and $k + 2$ on each crate, where $k$ is a positive integer that leaves a remainder of 1 when divided by 4. The crate's check code is the product $k(k + 1)(k + 2)$.",
+      "qc": {
+        "a": "The remainder when the check code is divided by 8",
+        "b": "$4$"
+      },
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "$k$ and $k + 2$ are odd, and $k + 1$ leaves remainder 2 on division by 4, so the code has exactly one factor of 2: it is twice an odd number, which leaves remainder 2 or 6 on division by 8. $k = 1$ gives $6$ (remainder 6); $k = 5$ gives $210$ (remainder 2).",
+        "steps": [
+          "1. $k = 4m + 1$: $k$ and $k + 2$ are odd, and $k + 1 = 4m + 2 = 2(2m + 1)$.",
+          "2. The code is 2 times an odd number, so on division by 8 it leaves 2 or 6.",
+          "3. $k = 1$: $1 \\cdot 2 \\cdot 3 = 6$, remainder $6 > 4$. $k = 5$: $5 \\cdot 6 \\cdot 7 = 210 = 26 \\cdot 8 + 2$, remainder $2 < 4$.",
+          "4. (D)."
+        ],
+        "fast": "Twice an odd number leaves 2 or 6 on division by 8; try $k = 1$ and $k = 5$.",
+        "trap": "Testing only $k = 1$ (code 6) and choosing (A)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "integers-properties",
+          "role": "primary"
+        }
+      ],
+      "setup": "k one more than a multiple of 4 leaves a single factor of 2 in k(k+1)(k+2); its remainder mod 8 still varies; compare with a value",
+      "variant": "divisibility of an expression such as n(n+1)(n+2) for every integer n",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q30",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "revisits": "quant-005:s2q3",
+      "prompt": "A steel fabricator cuts five beams of different lengths, each a whole number of meters and each at least 5 meters long, from stock totaling exactly 40 meters, with nothing left over.",
+      "qc": {
+        "a": "The greatest possible length, in meters, of the second-longest beam",
+        "b": "$10$"
+      },
+      "key": {
+        "sel": [
+          2
+        ]
+      },
+      "explanation": {
+        "key": "To make the second-longest beam as long as possible, keep the three shortest as short as allowed: $5 + 6 + 7 = 18$. That leaves $22$ meters for the two longest, and the longest must be longer than the second-longest $d$: $d + (d + 1) \\le 22$, so $d \\le 10$. Lengths $5, 6, 7, 10, 12$ reach it.",
+        "steps": [
+          "1. Order the lengths $a < b < c < d < e$; $d$ is the second-longest.",
+          "2. $a + b + c \\ge 5 + 6 + 7 = 18$, so $d + e \\le 22$.",
+          "3. $e \\ge d + 1$, so $2d + 1 \\le 22$: $d \\le 10.5$, and $d \\le 10$.",
+          "4. $5 + 6 + 7 + 10 + 12 = 40$ works, so A $= 10$: (C)."
+        ],
+        "fast": "Split the 22 meters left for the two longest beams into two different whole numbers with the smaller as large as possible: $10$ and $12$ (11 and 11 are not different).",
+        "trap": "Splitting the 22 meters evenly and taking 11, which would give two beams of the same length."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "min-max-bounding",
+          "role": "primary"
+        }
+      ],
+      "setup": "distinct integer lengths with a sum and a floor; greatest possible second-largest (the others pushed to the floor, the largest one above it)",
+      "variant": "greatest or least value of one item under a sum constraint",
+      "solverRating": 3
+    },
+    {
+      "id": "s1q31",
+      "section": 1,
+      "type": "qc",
+      "difficulty": 5,
+      "revisits": "quant-005:s2q5",
+      "prompt": "In a tabletop racing game, a player rolls a fair six-sided die numbered 1 through 6 and spins a fair spinner with eight equal sections numbered 1 through 8; the two results are independent. On one turn, the two results are different.",
+      "qc": {
+        "a": "The probability that the spinner's number is greater than the die's number on that turn",
+        "b": "$\\dfrac{5}{8}$"
+      },
+      "key": {
+        "sel": [
+          0
+        ]
+      },
+      "explanation": {
+        "key": "Of the $6 \\times 8 = 48$ equally likely pairs, 6 are ties, leaving 42. The spinner is greater in $7 + 6 + 5 + 4 + 3 + 2 = 27$ of them. Given that the results differ, the probability is $\\tfrac{27}{42} = \\tfrac{9}{14} \\approx 0.643$, more than $\\tfrac58 = 0.625$.",
+        "steps": [
+          "1. All pairs: $48$. Ties (both 1 through both 6): $6$. Pairs with different results: $42$.",
+          "2. Spinner greater: with the die at $d$, the spinner can be $d + 1$ through $8$, which is $8 - d$ ways: $7 + 6 + 5 + 4 + 3 + 2 = 27$.",
+          "3. Conditional probability: $\\tfrac{27}{42} = \\tfrac{9}{14}$.",
+          "4. $\\tfrac{9}{14}$ against $\\tfrac58$: $9 \\cdot 8 = 72 > 70 = 5 \\cdot 14$, so (A)."
+        ],
+        "fast": "A spin of 7 or 8 (12 pairs) always wins; the other 36 pairs have 6 ties and split their 30 non-ties evenly, 15 each. So $\\tfrac{12 + 15}{42} = \\tfrac{9}{14}$.",
+        "trap": "Ignoring the condition and using $\\tfrac{27}{48} = \\tfrac{9}{16}$, or using the symmetric value $\\tfrac12$; both are below $\\tfrac58$ and point to (B)."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "probability-basic",
+          "role": "primary"
+        },
+        {
+          "kind": "concept",
+          "id": "probability-conditional",
+          "role": "secondary"
+        }
+      ],
+      "setup": "independent results from a die and a spinner with different ranges; given that the results differ, the probability that the wider-range result is greater (ties leave the base)",
+      "variant": "probability from a count of outcomes with dice or coins",
+      "solverRating": 4
+    },
+    {
+      "id": "s1q32",
+      "section": 1,
+      "type": "mc",
+      "difficulty": 3,
+      "revisits": "quant-006:s1q5",
+      "prompt": "A city's bus fare rose 25 percent in March and then fell 25 percent in May, and the fare after the May change is $\\$12.00$. What was the fare before the March increase?",
+      "choices": [
+        "$\\$11.25$",
+        "$\\$12.00$",
+        "$\\$12.48$",
+        "$\\$12.80$",
+        "$\\$13.00$"
+      ],
+      "key": {
+        "sel": [
+          3
+        ]
+      },
+      "explanation": {
+        "key": "The two changes multiply the fare by $1.25 \\times 0.75 = 0.9375$, so the original fare was $12 \\div 0.9375 = 12.80$ dollars.",
+        "steps": [
+          "1. Net factor: $1.25 \\times 0.75 = 0.9375$, an overall drop of $6.25\\%$.",
+          "2. Original $\\times 0.9375 = 12$, so the original is $12 \\div 0.9375 = 12.80$.",
+          "3. Check: $12.80 \\times 1.25 = 16.00$, and $16.00 \\times 0.75 = 12.00$."
+        ],
+        "fast": "$0.9375 = \\tfrac{15}{16}$, so the original is $12 \\times \\tfrac{16}{15} = 12.80$ dollars.",
+        "trap": "Undoing the changes by applying them in reverse to the current fare (down 25 percent, then up 25 percent), which gives $12 \\times 0.75 \\times 1.25 = 11.25$ dollars; or assuming the two changes cancel."
+      },
+      "tags": [
+        {
+          "kind": "concept",
+          "id": "percent",
+          "role": "primary"
+        }
+      ],
+      "setup": "a fare up x% then down x% ends at a known value; recover the original by dividing by the net factor (not by applying the changes in reverse)",
+      "variant": "successive percent changes and reversal (up x%, then down x%)",
+      "solverRating": 1
+    }
+  ]
+}

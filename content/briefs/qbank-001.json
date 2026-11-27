@@ -1,0 +1,903 @@
+{
+ "testId": "qbank-001",
+ "measure": "quant",
+ "kind": "quant",
+ "seed": 80632,
+ "generatedAt": "2026-11-27T04:06:20.700Z",
+ "gaps": [
+  "revisit quant-005:s2q1 (you missed it; no sibling in the bank yet)",
+  "revisit quant-005:s2q3 (you missed it; no sibling in the bank yet)",
+  "revisit quant-005:s2q5 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s1q5 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s1q3 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s1q8 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s1q7 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s1q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s1q12 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q3 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q4 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q7 (you missed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q8 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-006:s2q15 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q4 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s1q11 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q5 (you missed it; no sibling in the bank yet)",
+  "revisit quant-007:s1q6 (you guessed it; no sibling in the bank yet)",
+  "revisit quant-007:s2q11 (you missed it; no sibling in the bank yet)"
+ ],
+ "slots": [
+  {
+   "slot": 1,
+   "qid": "s1q1",
+   "type": "mc",
+   "level": 4,
+   "concept": "probability-basic",
+   "name": "Probability: independent events, complement",
+   "variant": "probability as a ratio of combinations (choose k of n)"
+  },
+  {
+   "slot": 2,
+   "qid": "s1q2",
+   "type": "qc",
+   "level": 5,
+   "concept": "probability-basic",
+   "name": "Probability: independent events, complement",
+   "variant": "complement: at least one success"
+  },
+  {
+   "slot": 3,
+   "qid": "s1q3",
+   "type": "mc",
+   "level": 4,
+   "concept": "probability-basic",
+   "name": "Probability: independent events, complement",
+   "variant": "geometric probability (a point in a region)"
+  },
+  {
+   "slot": 4,
+   "qid": "s1q4",
+   "type": "qc",
+   "level": 5,
+   "concept": "probability-basic",
+   "name": "Probability: independent events, complement",
+   "variant": "geometric probability (a point in a region)"
+  },
+  {
+   "slot": 5,
+   "qid": "s1q5",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "coordinate-geometry",
+   "name": "Coordinate plane, lines, slope, distance",
+   "variant": "a region defined by inequalities in the plane"
+  },
+  {
+   "slot": 6,
+   "qid": "s1q6",
+   "type": "mc",
+   "level": 4,
+   "concept": "coordinate-geometry",
+   "name": "Coordinate plane, lines, slope, distance",
+   "variant": "which quadrants a line passes through"
+  },
+  {
+   "slot": 7,
+   "qid": "s1q7",
+   "type": "numeric",
+   "level": 5,
+   "concept": "coordinate-geometry",
+   "name": "Coordinate plane, lines, slope, distance",
+   "variant": "slope and intercepts from two points"
+  },
+  {
+   "slot": 8,
+   "qid": "s1q8",
+   "type": "qc",
+   "level": 4,
+   "concept": "coordinate-geometry",
+   "name": "Coordinate plane, lines, slope, distance",
+   "variant": "parallel and perpendicular lines"
+  },
+  {
+   "slot": 9,
+   "qid": "s1q9",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "std-dev-normal",
+   "name": "Standard deviation: spread, SD units, effect of shifting and scaling",
+   "variant": "comparing the spread of two lists without computing"
+  },
+  {
+   "slot": 10,
+   "qid": "s1q10",
+   "type": "mc",
+   "level": 4,
+   "concept": "std-dev-normal",
+   "name": "Standard deviation: spread, SD units, effect of shifting and scaling",
+   "variant": "spread read from a dot plot or a frequency table"
+  },
+  {
+   "slot": 11,
+   "qid": "s1q11",
+   "type": "numeric",
+   "level": 5,
+   "concept": "std-dev-normal",
+   "name": "Standard deviation: spread, SD units, effect of shifting and scaling",
+   "variant": "the standard deviation of two lists combined, when their means differ"
+  },
+  {
+   "slot": 12,
+   "qid": "s1q12",
+   "type": "qc",
+   "level": 4,
+   "concept": "std-dev-normal",
+   "name": "Standard deviation: spread, SD units, effect of shifting and scaling",
+   "variant": "the least or greatest possible standard deviation under a constraint"
+  },
+  {
+   "slot": 13,
+   "qid": "s1q13",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "number-sense-qc",
+   "name": "Number sense: sign, zero, magnitude cases",
+   "variant": "sign cases: negatives, zero and fractions between 0 and 1"
+  },
+  {
+   "slot": 14,
+   "qid": "s1q14",
+   "type": "mc",
+   "level": 5,
+   "concept": "number-sense-qc",
+   "name": "Number sense: sign, zero, magnitude cases",
+   "variant": "a square or a reciprocal against the original number"
+  },
+  {
+   "slot": 15,
+   "qid": "s1q15",
+   "type": "numeric",
+   "level": 4,
+   "concept": "number-sense-qc",
+   "name": "Number sense: sign, zero, magnitude cases",
+   "variant": "non-integer test values that flip the relationship"
+  },
+  {
+   "slot": 16,
+   "qid": "s1q16",
+   "type": "qc",
+   "level": 5,
+   "concept": "number-sense-qc",
+   "name": "Number sense: sign, zero, magnitude cases",
+   "variant": "x between -1 and 0: powers and reciprocals ordered"
+  },
+  {
+   "slot": 17,
+   "qid": "s1q17",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "number-line-abs",
+   "name": "Number line, absolute value of numbers",
+   "variant": "|a| + |b| against |a + b| for signed values"
+  },
+  {
+   "slot": 18,
+   "qid": "s1q18",
+   "type": "mc",
+   "level": 5,
+   "concept": "number-line-abs",
+   "name": "Number line, absolute value of numbers",
+   "variant": "distance between two numbers as an absolute value"
+  },
+  {
+   "slot": 19,
+   "qid": "s1q19",
+   "type": "numeric",
+   "level": 4,
+   "concept": "number-line-abs",
+   "name": "Number line, absolute value of numbers",
+   "variant": "ordering expressions of a number located between two marks"
+  },
+  {
+   "slot": 20,
+   "qid": "s1q20",
+   "type": "qc",
+   "level": 5,
+   "concept": "number-line-abs",
+   "name": "Number line, absolute value of numbers",
+   "variant": "positions of unlabeled points on a number line"
+  },
+  {
+   "slot": 21,
+   "qid": "s1q21",
+   "type": "mc_multi",
+   "level": 5,
+   "concept": "geometry-coordinate",
+   "name": "Geometry in the coordinate plane",
+   "variant": "reflection of a point across an axis or y = x"
+  },
+  {
+   "slot": 22,
+   "qid": "s1q22",
+   "type": "mc",
+   "level": 4,
+   "concept": "geometry-coordinate",
+   "name": "Geometry in the coordinate plane",
+   "variant": "area of a polygon from its vertex coordinates"
+  },
+  {
+   "slot": 23,
+   "qid": "s1q23",
+   "type": "numeric",
+   "level": 5,
+   "concept": "geometry-coordinate",
+   "name": "Geometry in the coordinate plane",
+   "variant": "a circle in the coordinate plane"
+  },
+  {
+   "slot": 24,
+   "qid": "s1q24",
+   "type": "qc",
+   "level": 4,
+   "concept": "geometry-coordinate",
+   "name": "Geometry in the coordinate plane",
+   "variant": "a triangle's vertices on the axes"
+  },
+  {
+   "slot": 25,
+   "qid": "s1q25",
+   "type": "mc_multi",
+   "level": 4,
+   "concept": "solids-volume",
+   "name": "Volume and surface area of solids",
+   "variant": "cylinder volume or surface area"
+  },
+  {
+   "slot": 26,
+   "qid": "s1q26",
+   "type": "mc",
+   "level": 5,
+   "concept": "solids-volume",
+   "name": "Volume and surface area of solids",
+   "variant": "rectangular solid: faces, volume, diagonal"
+  },
+  {
+   "slot": 27,
+   "qid": "s1q27",
+   "type": "numeric",
+   "level": 4,
+   "concept": "solids-volume",
+   "name": "Volume and surface area of solids",
+   "variant": "cubes painted or cut into smaller cubes"
+  },
+  {
+   "slot": 28,
+   "qid": "s1q28",
+   "type": "qc",
+   "level": 5,
+   "concept": "solids-volume",
+   "name": "Volume and surface area of solids",
+   "variant": "liquid poured between containers"
+  },
+  {
+   "slot": 29,
+   "qid": "s1q29",
+   "type": "qc",
+   "level": 4,
+   "concept": "integers-properties",
+   "name": "Integer properties, even/odd, divisibility",
+   "variant": "divisibility of an expression such as n(n+1)(n+2) for every integer n",
+   "revisit": {
+    "ref": "quant-005:s2q1",
+    "result": "missed",
+    "item": "$k$ is a positive integer, and the product $k(k+1)(k+2)$ is not divisible by 4. · Quantity A: The remainder when $k$ is divided by 4 | Quantity B: $1$",
+    "setup": "k(k+1)(k+2) not divisible by 4 fixes k mod 4; compare with a value",
+    "change": "run it backwards: give what the earlier item asked for, and ask for one of its givens"
+   }
+  },
+  {
+   "slot": 30,
+   "qid": "s1q30",
+   "type": "qc",
+   "level": 5,
+   "concept": "min-max-bounding",
+   "name": "Bounding: minimum/maximum values under constraints",
+   "variant": "greatest or least value of one item under a sum constraint",
+   "revisit": {
+    "ref": "quant-005:s2q3",
+    "result": "missed",
+    "item": "Four parcels in a mailroom have four different weights, each a whole number of kilograms. Their total weight is 30 kilograms, and no parcel weighs more than 10 kilograms. · Quantity A: The least possible weight, in kilograms, of the second-heaviest parcel | Quantity B: $7$",
+    "setup": "distinct integer weights with a sum and a cap; least possible second-largest",
+    "change": "change the format (quantitative comparison, multiple choice or numeric entry) and the question asked"
+   }
+  },
+  {
+   "slot": 31,
+   "qid": "s1q31",
+   "type": "qc",
+   "level": 5,
+   "concept": "probability-basic",
+   "name": "Probability: independent events, complement",
+   "variant": "probability from a count of outcomes with dice or coins",
+   "revisit": {
+    "ref": "quant-005:s2q5",
+    "result": "missed",
+    "item": "Kim draws one ticket at random from a box of 10 tickets numbered 1 through 10. Independently, Lee draws one ticket at random from a box of 12 tickets numbered 1 through 12. · Quantity A: The probability that the number on Kim's ticket is greater than the number on Lee's ticket | Quantity B: $\\dfrac25$",
+    "setup": "two independent draws from different-sized boxes; P(first > second) vs a value",
+    "change": "combine the same insight with a second concept"
+   }
+  },
+  {
+   "slot": 32,
+   "qid": "s1q32",
+   "type": "mc",
+   "level": 3,
+   "concept": "percent",
+   "name": "Percent, percent change, successive percent",
+   "variant": "successive percent changes and reversal (up x%, then down x%)",
+   "revisit": {
+    "ref": "quant-006:s1q5",
+    "result": "missed",
+    "item": "A farm stand raised the price of a jar of honey by 20 percent in June and then lowered the new price by 20 percent in September. In December it raised the September price by $p$ percent, which brought the price back exactly to its original value. To the nearest tenth, what is $p$? · choices: $0.0$ / $4.0$ / $4.2$ / $4.8$ / $20.0$",
+    "setup": "price up p% then down q% (or back to a reference); find the missing percent or value",
+    "change": "keep the insight but move the trap: a different wrong path should tempt"
+   }
+  }
+ ],
+ "units": [],
+ "conceptSlots": [
+  {
+   "concept": "probability-basic",
+   "variant": "probability as a ratio of combinations (choose k of n)"
+  },
+  {
+   "concept": "probability-basic",
+   "variant": "complement: at least one success"
+  },
+  {
+   "concept": "probability-basic",
+   "variant": "geometric probability (a point in a region)"
+  },
+  {
+   "concept": "probability-basic",
+   "variant": "geometric probability (a point in a region)"
+  },
+  {
+   "concept": "coordinate-geometry",
+   "variant": "a region defined by inequalities in the plane"
+  },
+  {
+   "concept": "coordinate-geometry",
+   "variant": "which quadrants a line passes through"
+  },
+  {
+   "concept": "coordinate-geometry",
+   "variant": "slope and intercepts from two points"
+  },
+  {
+   "concept": "coordinate-geometry",
+   "variant": "parallel and perpendicular lines"
+  },
+  {
+   "concept": "std-dev-normal",
+   "variant": "comparing the spread of two lists without computing"
+  },
+  {
+   "concept": "std-dev-normal",
+   "variant": "spread read from a dot plot or a frequency table"
+  },
+  {
+   "concept": "std-dev-normal",
+   "variant": "the standard deviation of two lists combined, when their means differ"
+  },
+  {
+   "concept": "std-dev-normal",
+   "variant": "the least or greatest possible standard deviation under a constraint"
+  },
+  {
+   "concept": "number-sense-qc",
+   "variant": "sign cases: negatives, zero and fractions between 0 and 1"
+  },
+  {
+   "concept": "number-sense-qc",
+   "variant": "a square or a reciprocal against the original number"
+  },
+  {
+   "concept": "number-sense-qc",
+   "variant": "non-integer test values that flip the relationship"
+  },
+  {
+   "concept": "number-sense-qc",
+   "variant": "x between -1 and 0: powers and reciprocals ordered"
+  },
+  {
+   "concept": "number-line-abs",
+   "variant": "|a| + |b| against |a + b| for signed values"
+  },
+  {
+   "concept": "number-line-abs",
+   "variant": "distance between two numbers as an absolute value"
+  },
+  {
+   "concept": "number-line-abs",
+   "variant": "ordering expressions of a number located between two marks"
+  },
+  {
+   "concept": "number-line-abs",
+   "variant": "positions of unlabeled points on a number line"
+  },
+  {
+   "concept": "geometry-coordinate",
+   "variant": "reflection of a point across an axis or y = x"
+  },
+  {
+   "concept": "geometry-coordinate",
+   "variant": "area of a polygon from its vertex coordinates"
+  },
+  {
+   "concept": "geometry-coordinate",
+   "variant": "a circle in the coordinate plane"
+  },
+  {
+   "concept": "geometry-coordinate",
+   "variant": "a triangle's vertices on the axes"
+  },
+  {
+   "concept": "solids-volume",
+   "variant": "cylinder volume or surface area"
+  },
+  {
+   "concept": "solids-volume",
+   "variant": "rectangular solid: faces, volume, diagonal"
+  },
+  {
+   "concept": "solids-volume",
+   "variant": "cubes painted or cut into smaller cubes"
+  },
+  {
+   "concept": "solids-volume",
+   "variant": "liquid poured between containers"
+  },
+  {
+   "concept": "integers-properties",
+   "variant": "divisibility of an expression such as n(n+1)(n+2) for every integer n"
+  },
+  {
+   "concept": "min-max-bounding",
+   "variant": "greatest or least value of one item under a sum constraint"
+  },
+  {
+   "concept": "probability-basic",
+   "variant": "probability from a count of outcomes with dice or coins"
+  },
+  {
+   "concept": "percent",
+   "variant": "successive percent changes and reversal (up x%, then down x%)"
+  }
+ ],
+ "targets": {
+  "concepts": [
+   "probability-basic",
+   "coordinate-geometry",
+   "std-dev-normal",
+   "number-sense-qc",
+   "number-line-abs",
+   "geometry-coordinate",
+   "solids-volume"
+  ]
+ },
+ "history": {
+  "probability-basic": [
+   {
+    "setup": "compare two binomial probabilities with p = 1/2 (at least / more heads than tails)",
+    "worn": true,
+    "items": 2
+   },
+   {
+    "setup": "three dice: P(product divisible by 4) via complement cases",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two independent draws from different-sized boxes; P(first > second) vs a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three independent choices among 4 options: P(exactly one option unused)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "P(A) and P(A or B) for independent events; compare P(B) with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "random point in a square: the probability of landing in the inscribed disk (pi/4) against a fraction",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "P(at least one success) with vs without replacement",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "random draw of several items from matched pairs; probability of exactly one complete pair (combinations ratio)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two independent uniform arrival times in one interval with a fixed stay: the meeting region is a band in a square; compare with a fraction",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "choose several from a group of two kinds; the probability of at least one of each kind by removing both single-kind selections",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "independent repeated trials with a success chance other than one half; exactly k successes in n trials (one arrangement times the number of arrangements)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "repeated independent trials stopped at the first failure; at least k trials means the first k - 1 all succeed; against one half",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "three dice, product a multiple of 12: complement counts for the factor 4 and for the factor 3, combined by inclusion-exclusion (the two events are not independent)",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "coordinate-geometry": [
+   {
+    "setup": "line through a point perpendicular to a given line; its x-intercept",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "general-form line with sign conditions on products of coefficients; select what it must pass through",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "line through a point meets the x-axis at a given distance; it is perpendicular to a line with an unknown coefficient; find the coefficient",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a line through two given points; the sum of its two intercepts",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a V-shaped region bounded above by a horizontal line; count the lattice points row by row, odd rows rounding the half-width down",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a segment with one endpoint on each axis and a given midpoint; the endpoints from doubling the midpoint's coordinates; the segment's length (not the origin-to-midpoint distance)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two parallel lines; the perpendicular segment between them from a point on one (not the vertical gap)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two points written in terms of one unknown; the given slope fixes the unknown, then the y-intercept follows from the x-intercept (not the unknown itself)",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "std-dev-normal": [
+   {
+    "setup": "two values added at mean ± 1 SD to a list; compare the new SD with the old",
+    "worn": true,
+    "items": 4
+   },
+   {
+    "setup": "DI with a normal assumption: count above mean + 1 SD across two groups",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "normal distribution: P(above +3σ... of those above +1σ) as a conditional fraction vs a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "normal: percents above/below two values give the mean and SD; compare two tail percents",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a list transformed by y = -2x + 30: the SD scales by |-2| and the shift does nothing",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two equal-size lists with equal SDs and different means; combined SD vs the common SD",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a list with one low outlier gets a new maximum that sits close to the mean; compare the new SD with the old",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two frequency columns that are mirror images of each other: equal standard deviations, means reflected about the middle score",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two normal groups with different means and SDs, one group's size and the combined count inside a fixed band given; the band sits at different SD distances in each group; solve for the other group's size",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two integer lists of the same size whose sums differ by one; compare their least possible standard deviations (a half-integer mean forces every value off the mean)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "DI: groups of three values read off the plot; a group with a slightly smaller range but two values bunched at one end has the larger standard deviation",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "number-sense-qc": [
+   {
+    "setup": "x between 0 and 1: compare the reciprocal 1/x with 1 + x",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "positive integer factor pairs of a fixed product; compare x + y with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x^3 < x restricts x; compare x^2 with |x| or -x",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "ab > 0 and a > b; compare 1/a with 1/b (same sign flips the order)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x > y and 1/x > 1/y force opposite signs; compare x - y with |x + y|",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x < 0 < y with x + y > 0; compare x/y with y/x",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "integer n with n^2 < 5: compare n^3 with n^2 (negative, zero and one cases)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x strictly between two integers: the sign of (x - 2)(x - 3) decides x^2 - 5x against -6",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x in a narrow decimal interval; 1/x - x crosses the benchmark inside it (D)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x/y > 1: compare x with y (sign of y decides: D)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x between 0 and 1: the mean of x and its reciprocal against 1 + x",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x rounds to a given integer; compare its square, rounded, with the square of that integer",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x between -1 and 0: an odd-power difference against an even-power difference; factor out the common positive factor and compare |x| with x^2",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two positive numbers with a fixed sum; their product against a value between the best whole-number product and the true maximum",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "negative number above -1: the sum of its reciprocal and the reciprocal of its square against zero",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a quadratic condition confines x to an interval on which every expression inside absolute-value bars keeps one sign; both quantities collapse to the same linear expression (equal throughout the interval, different outside it)",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "number-line-abs": [
+   {
+    "setup": "|x - a| < |x + b|: x is nearer a than -b; compare x with the midpoint",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "equally spaced ticks with two fractional labels; locate two unlabeled points and compare their sum with the tick spacing",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "opposite signs: the absolute difference equals the sum of the absolute values",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "x between two negative marks; compare x^2 with x + 1 (the crossover lies inside the interval)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two unknowns at given distances from the same point; their distance from each other is the difference or the sum of those distances; compare with a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a number located strictly between two positive marks; compare the reciprocal minus one with one minus the number (the difference is a square over the number)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "two signed moves with the net change and the total distance given; the product of the moves against a value",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a negative point left of -1 and a point between 0 and 1 read off the line; compare their product with the negative point (a fraction of a negative number is nearer zero)",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "geometry-coordinate": [
+   {
+    "setup": "opposite vertices of a square given; find another vertex",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "triangle formed by a point and its images across y = x and across an axis; its area",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a line through a fixed first-quadrant point cuts off a triangle of given area with the axes; the slope from the two intercepts",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "circle from its center and one point on it; length of the chord it cuts on an axis",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "adjacent vertices of a square on the two axes; find another vertex by turning the side vector 90 degrees (the center method for opposite vertices is the trap)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "convex quadrilateral with one vertex coordinate unknown and the area given; split by a diagonal, the absolute value gives two positions and convexity rejects one",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "circles tangent to both axes through a given point: the radius solves a quadratic with two roots; the distance between the two possible centers on the line y = x",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "shortest path from one point to an axis and on to a second point: reflect one point across the axis and join with a straight line; the touching point",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a circle given in expanded form; complete the square for the center and radius; select the points strictly inside (some lie exactly on the circle)",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a triangle with two fixed vertices on the x-axis and the third on the y-axis; isosceles cases by which pair of sides is equal, the equal-sides-at-the-apex case impossible off the perpendicular bisector",
+    "worn": false,
+    "items": 1
+   }
+  ],
+  "solids-volume": [
+   {
+    "setup": "horizontal cylinder partly filled: circular-segment area times length",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "rectangular block painted on all faces but its base, then cut into unit cubes; count cubes with exactly two painted faces",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a cone filled to half its height poured into a cylinder: the water's volume scales with the cube of the depth",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "horizontal cylinder more than half full, the empty segment's central angle given: whole cross section minus the empty segment, times the length",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "rectangular solid with the three face areas at one corner given; the volume is the square root of their product",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a box cut by the plane through two diagonally opposite parallel edges: the cut's area gives the missing dimension; the surface area of one piece",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a diagonal partition of a box along two opposite parallel edges, three possible pairs; the largest uses the longest edges with the diagonal of the face of the other two",
+    "worn": false,
+    "items": 1
+   },
+   {
+    "setup": "a cylinder's radius and height scaled by different percents in opposite directions; the volume factor (radius squared) just above 1",
+    "worn": false,
+    "items": 1
+   }
+  ]
+ },
+ "exemplars": {
+  "probability-basic": [
+   "ogq-t1-s6-24",
+   "ogq-t1-s5-6"
+  ],
+  "coordinate-geometry": [
+   "ogq-t1-s6-11",
+   "bb-t2s2-12"
+  ],
+  "std-dev-normal": [
+   "ogq-t2-s5-12"
+  ],
+  "number-sense-qc": [
+   "bb-t3s2-13",
+   "bb-t2s2-13"
+  ],
+  "number-line-abs": [
+   "ogq-t1-s5-7",
+   "bb-t1s7-12"
+  ],
+  "geometry-coordinate": [
+   "ogq-set3-10"
+  ],
+  "solids-volume": [
+   "bb-t1s3-10",
+   "bb-t3s2-19"
+  ]
+ }
+}
